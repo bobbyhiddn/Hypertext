@@ -333,6 +333,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             "search_queries": grounding.get("queries", []) if isinstance(grounding.get("queries"), list) else [],
         }
 
+        card_dir.mkdir(parents=True, exist_ok=True)
         with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
             yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
     else:
