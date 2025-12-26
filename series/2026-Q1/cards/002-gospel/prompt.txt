@@ -1,0 +1,271 @@
+Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).
+
+CARD_JSON:
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "orange",
+            "outline": "navy",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "GREEK",
+        "left_primary_key": "GREEK",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "GREEK_TRANSLIT",
+        "left_refs_label": "NT",
+        "left_refs_key": "NT_REFS",
+        "right_label": "HEB/ARAM",
+        "right_primary_key": "HEBREW",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "HEBREW_TRANSLIT",
+        "right_refs_label": "OT",
+        "right_refs_key": "OT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "002",
+    "WORD": "GOSPEL",
+    "GLOSS": "Good news; a joyful announcement of victory or salvation.",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "RARE",
+    "RARITY_ICON": "RARE",
+    "ART_PROMPT": "A golden sunrise breaking over a dark, rugged mountain range, illuminating a valley below with warm, radiant light; a lone runner in the distance silhouetted against the light, carrying a banner, dynamic and hopeful atmosphere, oil painting style",
+    "ABILITY_TEXT": "When played, reveal the top card of your deck. If its Lore stat is higher than this card's Context stat, add it to your hand; otherwise, place it at the bottom of your deck.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Isaiah 52:7",
+    "OT_VERSE_SNIPPET": "How beautiful upon the mountains are the feet of him that bringeth good tidings, that publisheth peace.",
+    "NT_VERSE_REF": "Romans 1:16",
+    "NT_VERSE_SNIPPET": "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth.",
+    "OT_VERSE_LINE": "Isaiah 52:7 — “How beautiful upon the mountains are the feet of him that bringeth good tidings, that publisheth peace.”",
+    "NT_VERSE_LINE": "Romans 1:16 — “For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth.”",
+    "GREEK": "εὐαγγέλιον",
+    "GREEK_TRANSLIT": "euangelion",
+    "HEBREW": "בָּשַׂר",
+    "HEBREW_TRANSLIT": "basar",
+    "OT_REFS": "Isa 40:9 • Isa 61:1 • Nah 1:15 • 2 Sam 18:31 • Ps 96:2",
+    "NT_REFS": "Mark 1:1 • 1 Cor 15:1-4 • Gal 1:6-9 • Eph 1:13 • Rev 14:6",
+    "TRIVIA_BULLETS": [
+      "The English word 'Gospel' derives from the Old English 'godspell', meaning 'good story' or 'good news'.",
+      "In the Roman world, 'euangelion' was a political term used for announcements of an emperor's birth or military victory.",
+      "The Hebrew root 'basar' originally referred to a messenger bringing fresh news from the battlefield, whether good or bad.",
+      "Mark 1:1 is widely considered the first usage of the term to describe a written narrative of Jesus' life.",
+      "Paul uses the term 'gospel' more frequently than any other New Testament writer, emphasizing it as a proclaimed message."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "euangelion greek definition and usage",
+      "basar hebrew definition and usage",
+      "etymology of gospel euangelion basar",
+      "key bible verses for gospel euangelion basar",
+      "gospel word study trivia"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVmblU7N-YgSc3BlmPTWvNMXAUlqoCbmb3HFs8iPt7OrXdNsJMp0hI7kBMi_XBtEYLCUBTgyHP22RCuVdYZhDdPLPKJZTdXvkDpus1B39EJLOSIVXQJHfnoo0T53nn",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR-iCcUG0u0i9cUykOvFmL1UfKhpKJK3cp177wIqEygvTejgLcjvFtlplTinb5_e_7cSINm25FesOUMT-HEx3jLWnN8suOBrqbRuzJW_lEHwDEWuBbXy3WKWoLWnEjN4cTAV61zz1S1TE0Yw2uLwUDb2X9W-A0hftPQVpPQjR7PW8sK5u9sLoeXLA=",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG07qX0AMJLRHEOmgoED3fDMIF3Np7SFekYqEjCrBzYdVu-bHwv_O04jklB-vsQR2Q3ZlYBvzfBSCpVrDZYu7mngXx4D9FBHA9OPyrafv7D6_3d98Xf6xewK2XhTdVqPjIFbjWRas4tY3uwk-a8jlY8YbiN9hFGgoHIPYzZoQmKRjd4FyA=",
+        "title": "thoughtcatalog.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_SYxKCOXlGooi9aZ539SnscSOnp2VAxzra0nAHoiafYoDzN5pVh3wMLprm-wI7ROdl4jhq9NbdExUTIbS-lum5eMCeow1aOIEiK3tWJqxZaphlsEiN18VUidc4-fQkogyWzLzglgx2hq_2A9NGwwn9yo0Q5OwkXwZVqyWjoxk",
+        "title": "crossway.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGofGC0DSWm0EFYQlwM5diG3uQPhz87VMHMDm3M2WJE2hcD3wgkh-eCAcZjUrWFaVo1mf404_XdCGu4uMEzU9xbkNnVrZjjM4DXy_BlMglp1fzu04Gu9ndXly2AEJ_kgA==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi6VXjtfe0GegEzeUXfosjTufKvJRBDZmsm2OAzYf83ga69bopkxbDxZql1EWnXYPiUlY4TNmdq9sKHxIilZJ0rVUYqrFN45bzlBpgELPzK3N4X_xeDGap4rsDydjNK08-80V5e74f0LtMozSn4Pi3Q0qM1ukScNAs0eVPcyXFZH-Um-gQ1uwGxgAjUpAoJDIKFKd1FjBDBJlJCntTTfXEb0e0fbiv2J2P84QIld_IY6oyZcKxTnBLlydu5bCrLQC63ZhbMo4a4NRZt8v33PgcTm9hk51m0k_GBgQHs3reAptsth0ZzbZNSa4d6OxLTqF9P3rQpepKyqLApy7Cevu16BxarIOWCQi-tDwdbdukmCSn32iM2z--hI-1wRmXPpx0s230pryFkY88",
+        "title": "tyndale.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXLWEU5aVQdE-X9ntIiGnH_e6Tqp9q3GF4cqSMtUVXSwieZVr1upNLOwQR56gcn-5IKVvE-KV8R4YoPHWoDeIL-450NHwOcOUvmZUu8mhcfH3rfj5I_-r0W2z4PPfkwHuUnT0=",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8gm62l0MUdz_cEP3YC3T9pwiYE6uTk3bhBA73vUZ9p7qpkTqMcnCe3ArBHPRFckVjDUU_qBRqR8i0V8zs0KtBEFb4rY2p_tlKk2enUsSaMAmGYd_kMZ0irmlaVh9x_rztammVVvg8IgUqAsq9ZpUzTzOFR55M",
+        "title": "dbryen.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_wDDaE8TBZjsXM4gIclnYQESt6fhAwVPIFHwaQwiFmByl3g4BMMXylgvtbhpEqsh2C6kC6U_5t9VcsBN5GKd_F-W-LCr2FGMaf_0huL2nykRGcxo7nsz3CkgMVEV8WfSIhVLnASslJJjQ5JggQQSo2uZz0vgD59SbZ-pghUZdqqSotQ==",
+        "title": "hebrewwordlessons.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiOSnNMhpFt9NeP4VCLtHapQa5oz2BMg_ADJVdo9IGoQ5_NCBwhVEA7_3zVTk5ywKoIrCEb1uJ1rVEF22rIYgblMU48biRWzcSHuTajvAXNZrxwEa1YPEVpCjH77Ee15I0ZPBeYX1gv1tyGcUvHcS3bbmk1kVr4EXe",
+        "title": "aleteia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEkSifQHlVBmfkoVIOf4J7UMyQinlIcWj3_zF15xt_Qt8dtAFAoi_VZls3ZyOug_KjkLKqQUVdet6TPg2mzaqBsqQLyZ2tRAj3InCUDBw7JGpYn6Toc3CklxtIKRQl3MNLzwUHy775jgJ3k4hYTriNYr4NgJ6yg393i573",
+        "title": "medium.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNgbf2OpOUyFz9JAtti85NwDdA3AN4XlqYgOD0d-qkDAWXkowKiImrSDWqz4cdfojiC6Vq3kJ-f1Msg0QxcZxC9_9_CEVcteRsfLRZgRDXcCam-y7b-jE5cckRvTS3M8eyUmxShxi13aopbkiImhEjdyhMLTP3444EY1n0HSWcfMquN19dc89qt1Sofb_1pVkD1u0=",
+        "title": "studylight.org"
+      }
+    ]
+  }
+}
