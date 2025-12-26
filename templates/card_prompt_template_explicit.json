@@ -1,0 +1,161 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": { "width": 1024, "height": 1536 },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window",
+      "print-ready color grading, restrained contrast, no neon saturation"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black",
+      "hex": {
+        "navy": "#0B1F3B",
+        "gold": "#C9A44C",
+        "parchment": "#F3E7C8",
+        "ink": "#111111",
+        "orange_mythic": "#F28C28",
+        "green_uncommon": "#2E8B57",
+        "white": "#FFFFFF"
+      }
+    },
+    "typography": {
+      "title": "classic serif display (sharp, print-like)",
+      "labels": "uppercase small caps (print-like)",
+      "body": "clean serif (high legibility)",
+      "glyph_support": ["Greek renders correctly", "Hebrew renders correctly right-to-left"],
+      "rendering_rules": [
+        "no warped text",
+        "no garbled text",
+        "no faux handwriting",
+        "consistent baseline and kerning",
+        "crisp edges, no blur"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": { "shape": "circle", "fill": "#FFFFFF", "outline": "#0B1F3B" },
+          "UNCOMMON": { "shape": "square", "fill": "#2E8B57", "outline": "#0B1F3B" },
+          "RARE": { "shape": "hexagon", "fill": "#C9A44C", "outline": "#0B1F3B" },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "#F28C28",
+            "outline": "#0B1F3B",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill (#0B1F3B) with gold outline (#C9A44C)",
+        "empty_style": "parchment fill (#F3E7C8) with navy outline (#0B1F3B)",
+        "fill_order": "left_to_right",
+        "binary_only": true,
+        "no_partial_fill": true,
+        "no_gradients_or_highlights": true,
+        "no_other_shapes": true
+      }
+    },
+    "color_grading": {
+      "look": "warm parchment base, cool navy accents, gold highlights",
+      "black_point": "not crushed",
+      "white_point": "not blown out",
+      "contrast": "moderate",
+      "saturation": "moderate",
+      "avoid": ["neon colors", "heavy HDR", "washed-out grayscale", "over-sharpen halos"]
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": { "left": "", "right": "" },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": { "icon_key": "RARITY_ICON", "text_key": "RARITY_TEXT" },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": ["no text inside artwork", "single coherent scene", "no modern objects"]
+    },
+    "stats_row": {
+      "stats": [
+        { "label": "LORE", "pips_key": "STAT_LORE" },
+        { "label": "CONTEXT", "pips_key": "STAT_CONTEXT" },
+        { "label": "COMPLEXITY", "pips_key": "STAT_COMPLEXITY" }
+      ]
+    },
+    "panels": [
+      { "label": "ABILITY", "content_key": "ABILITY_TEXT" },
+      { "label": "OT VERSE", "content_key": "OT_VERSE_LINE" },
+      { "label": "NT VERSE", "content_key": "NT_VERSE_LINE" },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      { "label": "TRIVIA", "bullets_key": "TRIVIA_BULLETS", "bullets_count": 4 }
+    ]
+  },
+  "content": {},
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": ["WILD_ID", "WILD_COUNTS_AS", "QUARTET_ID", "LETTER", "NOTES_INTERNAL"],
+    "frame_must_be_identical_across_cards": true,
+    "do_not_vary_frame_by_rarity": true,
+    "stat_pips_must_use_content_values": true,
+    "stat_pips_fill_left_to_right": true,
+    "stat_pips_binary_only": true,
+    "stat_pips_no_partial_fill": true,
+    "stat_pips_no_gradients_or_highlights": true,
+    "color_grading_must_follow_style_guide": true
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, render_instructions, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. Apply the palette exactly as specified, including the hex codes in style_guide.palette.hex, and follow style_guide.color_grading. Keep typography crisp and print-like; no warped or garbled text. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must use the specified orange fill and navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. FRAME/BORDERS: The navy+gold frame is identical for ALL cards regardless of rarity; do not add corner brackets, extra corner ornaments, or rarity-based embellishments. STAT PIPS: For each stat row (LORE/CONTEXT/COMPLEXITY), render EXACTLY 5 identical circular pips. Compute the number of filled pips from the integer values STAT_LORE / STAT_CONTEXT / STAT_COMPLEXITY. Fill the LEFTMOST N pips (left-to-right) using ONLY navy fill (#0B1F3B) with gold outline (#C9A44C). The remaining pips must be EMPTY using ONLY parchment fill (#F3E7C8) with navy outline (#0B1F3B). Pips are BINARY ONLY: each pip is either fully filled or fully empty. Do NOT render half-filled pips, partially filled wedges, progress-ring fills, gradients, gloss, bevel, highlights, shadows, or any shading inside pips. Do not change pip colors by rarity. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left)."
+}

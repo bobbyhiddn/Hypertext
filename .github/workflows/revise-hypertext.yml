@@ -39,7 +39,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml
+          pip install pyyaml google-genai
 
       - name: Revise card(s) (apply minimal JSON patch + rerender)
         env:

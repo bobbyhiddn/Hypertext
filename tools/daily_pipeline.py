@@ -23,12 +23,30 @@ except ImportError:
 DEFAULT_SERIES_DIR = Path("series/2026-Q1")
 DEFAULT_TEMPLATE_PATH = Path("templates/card_prompt_template.json")
 DEFAULT_DEMO_DIR = Path("demo_cards")
+RULES_PATH = Path("docs/rules.md")
 
 GAME_RULES_SNIPPET = (
     "- There is ONE shared deck. Do not say 'your deck'. Say 'the deck' or 'the shared deck'.\n"
     "- Abilities should be one short line.\n"
     "- Rarity patterns: COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique."
 )
+
+
+def _load_rules_appendix() -> str:
+    try:
+        with open(RULES_PATH, "r", encoding="utf-8") as f:
+            rules = f.read().strip()
+    except OSError:
+        rules = ""
+
+    if not rules:
+        return ""
+
+    return "\n\nRULES (appendix; follow these exactly):\n" + rules
+
+
+def _log(msg: str) -> None:
+    print(msg, flush=True)
 
 
 def slugify(word: str) -> str:
@@ -115,10 +133,12 @@ def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[di
         + ", ".join(existing_words)
         + ". "
         "For each item, choose: card_type (NOUN|VERB|ADJECTIVE|NAME|TITLE) and rarity (COMMON|UNCOMMON|RARE|MYTHIC). "
+        "IMPORTANT: Distribute rarities to form a balanced set (approx. 10% MYTHIC, 20% RARE, 30% UNCOMMON, 40% COMMON). "
         "Return ONLY valid JSON as an array of objects with keys: word, card_type, rarity. "
         "word should be uppercase and A-Z only (no spaces)."
     )
 
+    _log(f"[plan] generating queue entries (count={count})")
     text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.7, use_google_search=False)
     data = _parse_json_from_model(text)
     if not isinstance(data, list):
@@ -141,6 +161,7 @@ def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[di
 
 
 def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str) -> dict:
+    rules_appendix = _load_rules_appendix()
     prompt = (
         "You are generating research-backed metadata for a daily Bible word-study trading card. "
         "Return ONLY valid JSON with this exact shape: {\n"
@@ -162,12 +183,14 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         f"Rarity: {rarity}\n\n"
         "GAME RULES (must follow):\n"
         + GAME_RULES_SNIPPET
+        + rules_appendix
         + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
         "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique)."
     )
 
+    _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
     text, grounding = generate_text_with_grounding(
         prompt,
         model="gemini-3-pro-preview",
@@ -421,12 +444,55 @@ def _apply_json_patch(doc: dict, patch_ops: list[dict]) -> dict:
 
 
 def build_prompt_text(card: dict) -> str:
-    recipe = card.get("model_prompt", "").strip()
-    if not recipe:
-        raise RuntimeError("card.json missing model_prompt")
+    content = card.get("content", {})
+    if not content:
+        # Fallback to old behavior if no content dict
+        recipe = card.get("model_prompt", "").strip()
+        payload = json.dumps(card, ensure_ascii=False, indent=2)
+        return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
 
-    payload = json.dumps(card, ensure_ascii=False, indent=2)
-    return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
+    # Load the text template
+    template_path = Path(__file__).parent.parent / "templates" / "card_style_prompt_template.txt"
+    if not template_path.exists():
+        # Fallback if template missing
+        print(f"Warning: Template {template_path} not found. Using legacy JSON prompt.")
+        recipe = card.get("model_prompt", "").strip()
+        payload = json.dumps(card, ensure_ascii=False, indent=2)
+        return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
+        
+    with open(template_path, "r", encoding="utf-8") as f:
+        template_str = f.read()
+    
+    # Prepare data for formatting
+    data = dict(content)
+    
+    # Format trivia bullets
+    trivia = data.get("TRIVIA_BULLETS", [])
+    if isinstance(trivia, list):
+        formatted_trivia = "\n".join([f"• {item}" for item in trivia])
+        data["TRIVIA_BULLETS_FORMATTED"] = formatted_trivia
+    else:
+        data["TRIVIA_BULLETS_FORMATTED"] = ""
+
+    # Add rarity visual description
+    rarity = str(data.get("RARITY_TEXT", "COMMON")).upper()
+    rarity_desc_map = {
+        "COMMON": "COMMON (White Circle icon)",
+        "UNCOMMON": "UNCOMMON (Green Square icon)",
+        "RARE": "RARE (Gold Hexagon icon)",
+        "MYTHIC": "MYTHIC (Orange Rhombus icon)"
+    }
+    # We update the value passed to the template, but not the underlying card dict
+    data["RARITY_TEXT"] = rarity_desc_map.get(rarity, f"{rarity} (White Circle icon)")
+        
+    # Fill template
+    try:
+        return template_str.format(**data)
+    except KeyError as e:
+        print(f"Warning: Missing key {e} for prompt template. Falling back to legacy.")
+        recipe = card.get("model_prompt", "").strip()
+        payload = json.dumps(card, ensure_ascii=False, indent=2)
+        return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
 
 
 def find_latest_card_dir(cards_dir: Path) -> Path | None:
@@ -492,7 +558,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         print(f"Missing {template_path}")
         return 1
 
-    print(f"Template path: {template_path}")
+    _log(f"[phase plan] template exists: {template_path}")
 
     card = read_json(template_path)
     card.setdefault("content", {})
@@ -500,7 +566,10 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
     card_type = str(entry.get("card_type", "NOUN")).upper()
     rarity = str(entry.get("rarity", "COMMON")).upper()
 
+    _log(f"[phase plan] selected entry: #{number:03d} word={word} type={card_type} rarity={rarity}")
+
     if auto:
+        _log("[phase plan] auto mode: generating recipe")
         recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
         grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
         stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
@@ -522,6 +591,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         nt_snip = str(nt_verse.get("snippet", "")).strip()
 
         card["content"]["NUMBER"] = f"{number:03d}"
+        card["content"]["SERIES"] = series_dir.name
         card["content"]["WORD"] = word
         card["content"]["GLOSS"] = gloss
         card["content"]["CARD_TYPE"] = card_type
@@ -586,8 +656,11 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         card_dir.mkdir(parents=True, exist_ok=True)
         with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
             yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+        _log(f"[phase plan] wrote meta.yml")
     else:
+        _log("[phase plan] manual mode: using canned demo content")
         card["content"]["NUMBER"] = f"{number:03d}"
+        card["content"]["SERIES"] = series_dir.name
         card["content"]["WORD"] = word
         card["content"]["GLOSS"] = "learned visitors from the East"
         card["content"]["CARD_TYPE"] = card_type
@@ -632,12 +705,15 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         card["content"]["OT_REFS"] = "Dan 2:2 • Dan 4:7"
 
     write_json(card_dir / "card.json", card)
+    _log(f"[phase plan] wrote card.json")
 
     prompt_text = build_prompt_text(card)
     with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
         f.write(prompt_text)
+    _log(f"[phase plan] wrote prompt.txt")
 
     _seed_revise_file(card_dir)
+    _log(f"[phase plan] wrote revise.txt")
 
     out_png = card_dir / "outputs" / "card_1024x1536.png"
     render_post(
@@ -665,6 +741,9 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     if yaml is None:
         raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
 
+    _log(f"[phase demo] demo_dir={demo_dir}")
+    _log(f"[phase demo] template_path={template_path}")
+
     cards_dir = demo_dir
     number = next_number(cards_dir)
 
@@ -674,6 +753,8 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card_type = str(entry.get("card_type", "NOUN")).upper()
     rarity = str(entry.get("rarity", "COMMON")).upper()
 
+    _log(f"[phase demo] selected: #{number:03d} word={word} type={card_type} rarity={rarity}")
+
     card_dir = cards_dir / f"{number:03d}-{slug}"
     os.makedirs(card_dir, exist_ok=True)
 
@@ -681,6 +762,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
         print(f"Missing {template_path}")
         return 1
 
+    _log("[phase demo] generating recipe")
     recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
     grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
     stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
@@ -707,6 +789,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card.setdefault("content", {})
 
     card["content"]["NUMBER"] = f"{number:03d}"
+    card["content"]["SERIES"] = series_dir.name
     card["content"]["WORD"] = word
     card["content"]["GLOSS"] = gloss
     card["content"]["CARD_TYPE"] = card_type
@@ -737,12 +820,15 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card["grounding"] = grounding
 
     write_json(card_dir / "card.json", card)
+    _log(f"[phase demo] wrote card.json")
 
     prompt_text = build_prompt_text(card)
     with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
         f.write(prompt_text)
+    _log(f"[phase demo] wrote prompt.txt")
 
     _seed_revise_file(card_dir)
+    _log(f"[phase demo] wrote revise.txt")
 
     meta = {
         "number": f"{number:03d}",
@@ -774,9 +860,44 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     }
     with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+    _log(f"[phase demo] wrote meta.yml")
 
     out_png = card_dir / "outputs" / "card_1024x1536.png"
-    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(card_dir / "prompt.txt"), str(out_png)])
+    _log(f"[phase demo] generating image -> {out_png}")
+    
+    # Path to the style reference image
+    style_ref = Path("tools") / "clean_template_final.png"
+    
+    if style_ref.exists():
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_style.py"),
+            "--prompt-file", str(card_dir / "prompt.txt"),
+            "--style", str(style_ref),
+            "--out", str(out_png)
+        ]
+    else:
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_image.py"),
+            str(card_dir / "prompt.txt"),
+            str(out_png)
+        ]
+        
+    subprocess.check_call(cmd)
+    
+    # Run polish step
+    polish_cmd = [
+        sys.executable,
+        str(Path("tools") / "polish_card.py"),
+        str(out_png)
+    ]
+    try:
+        subprocess.check_call(polish_cmd)
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: Polish step failed: {e}")
+        
+    _log("[phase demo] image generation complete")
 
     render_post(
         str(card_dir / "post.md"),
@@ -798,7 +919,7 @@ def phase_imagegen(*, series_dir: Path) -> int:
     cards_dir = series_dir / "cards"
     out_name = "card_1024x1536.png"
 
-    print(f"Looking for card folders in: {cards_dir}")
+    _log(f"[phase imagegen] cards_dir={cards_dir}")
     target_dir = find_next_image_target(cards_dir, out_name)
     if target_dir is None:
         latest = find_latest_card_dir(cards_dir)
@@ -810,16 +931,122 @@ def phase_imagegen(*, series_dir: Path) -> int:
 
     prompt_file = target_dir / "prompt.txt"
     out_png = target_dir / "outputs" / out_name
+    
+    # Path to the style reference image
+    style_ref = Path("tools") / "clean_template_final.png"
+    if not style_ref.exists():
+        print(f"Warning: Style reference {style_ref} not found. Falling back to legacy generation.")
+        style_ref = None
 
-    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(prompt_file), str(out_png)])
+    _log(f"[phase imagegen] generating image for {target_dir.name} -> {out_png}")
+    
+    if style_ref:
+        # Use new Style Reference API
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_style.py"),
+            "--prompt-file", str(prompt_file),
+            "--style", str(style_ref),
+            "--out", str(out_png)
+        ]
+    else:
+        # Legacy fallback
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_image.py"),
+            str(prompt_file),
+            str(out_png)
+        ]
+        
+    subprocess.check_call(cmd)
+    
+    # Run polish step to remove lingering brackets
+    polish_cmd = [
+        sys.executable,
+        str(Path("tools") / "polish_card.py"),
+        str(out_png)
+    ]
+    try:
+        subprocess.check_call(polish_cmd)
+        _log("[phase imagegen] polish complete")
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: Polish step failed: {e}")
 
     print(f"Rendered image at {out_png}")
+    return 0
+
+
+def _generate_image_for_card_dir(*, card_dir: Path) -> int:
+    out_name = "card_1024x1536.png"
+    prompt_file = card_dir / "prompt.txt"
+    if not prompt_file.exists():
+        print(f"Missing {prompt_file}")
+        return 1
+
+    out_png = card_dir / "outputs" / out_name
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+
+    _log(f"[batch] generating image for {card_dir.name} -> {out_png}")
+    
+    # Use style reference if available
+    style_ref = Path("tools") / "clean_template_final.png"
+    if style_ref.exists():
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_style.py"),
+            "--prompt-file", str(prompt_file),
+            "--style", str(style_ref),
+            "--out", str(out_png)
+        ]
+    else:
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_image.py"),
+            str(prompt_file),
+            str(out_png)
+        ]
+        
+    subprocess.check_call(cmd)
+    
+    # Run polish step
+    polish_cmd = [
+        sys.executable,
+        str(Path("tools") / "polish_card.py"),
+        str(out_png)
+    ]
+    try:
+        subprocess.check_call(polish_cmd)
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: Polish step failed: {e}")
+        
+    print(f"Rendered image at {out_png}")
+    return 0
+
+
+def phase_batch(*, series_dir: Path, template_path: Path, auto: bool, batch: int) -> int:
+    cards_dir = series_dir / "cards"
+    for i in range(batch):
+        _log(f"[batch] run {i + 1}/{batch} starting")
+        before = find_latest_card_dir(cards_dir)
+        rc = phase_plan(series_dir=series_dir, template_path=template_path, auto=auto)
+        if rc != 0:
+            return rc
+        after = find_latest_card_dir(cards_dir)
+        if after is None or after == before:
+            _log("[batch] no new card planned; stopping")
+            return 0
+        rc = _generate_image_for_card_dir(card_dir=after)
+        if rc != 0:
+            return rc
+        _log(f"[batch] run {i + 1}/{batch} complete")
     return 0
 
 
 def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     if yaml is None:
         raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
+
+    _log(f"[phase revise] card_dir={card_dir}")
 
     card_path = card_dir / "card.json"
     if not card_path.exists():
@@ -843,26 +1070,25 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     card = read_json(card_path)
 
     allowed_paths_str = ", ".join(sorted(allowed_paths))
+    rules_appendix = _load_rules_appendix()
     prompt = (
-        "You are editing an existing Hypertext trading card JSON. "
-        "Given the CURRENT card JSON and HUMAN edit instructions, return ONLY a valid RFC 6902 JSON Patch array. "
-        "Use the minimal number of operations. Prefer replace operations on /content fields. "
-        "Do not rewrite the entire card. Do not change style_guide or layout. "
-        "Only allowed JSON Patch paths are: "
-        + allowed_paths_str
-        + ". "
-        "Do not change any other paths. "
+        "You are revising a Bible word-study trading card JSON. "
+        "Return ONLY a JSON Patch array (RFC 6902) to apply to the provided CARD_JSON.\n"
+        "The patch must only modify keys under: /content, /model_prompt, /render_instructions.\n"
         "Follow game rules: there is ONE shared deck; do not say 'your deck'. "
         "Allowed ops: add, replace. Do not use remove/move/copy/test.\n\n"
         "GAME RULES (must follow):\n"
         + GAME_RULES_SNIPPET
+        + rules_appendix
         + "\n\n"
         "HUMAN_EDIT_INSTRUCTIONS:\n"
         + instructions
-        + "\n\nCURRENT_CARD_JSON:\n"
+        + "\n\n"
+        "CARD_JSON:\n"
         + json.dumps(card, ensure_ascii=False, indent=2)
     )
 
+    _log("[phase revise] requesting JSON Patch from Gemini")
     text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.2, use_google_search=False)
     patch_ops = _parse_json_from_model(text)
     if not isinstance(patch_ops, list):
@@ -879,13 +1105,37 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     updated = _apply_json_patch(card, patch_ops)
 
     write_json(card_path, updated)
+    _log(f"[phase revise] wrote card.json")
 
     prompt_text = build_prompt_text(updated)
     with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
         f.write(prompt_text)
+    _log(f"[phase revise] wrote prompt.txt")
 
     out_png = card_dir / "outputs" / "card_1024x1536.png"
-    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(card_dir / "prompt.txt"), str(out_png)])
+    _log(f"[phase revise] generating image -> {out_png}")
+    
+    # Path to the style reference image
+    style_ref = Path("tools") / "clean_template_final.png"
+    
+    if style_ref.exists():
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_style.py"),
+            "--prompt-file", str(card_dir / "prompt.txt"),
+            "--style", str(style_ref),
+            "--out", str(out_png)
+        ]
+    else:
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_image.py"),
+            str(card_dir / "prompt.txt"),
+            str(out_png)
+        ]
+        
+    subprocess.check_call(cmd)
+    _log("[phase revise] image generation complete")
 
     content = updated.get("content", {}) if isinstance(updated.get("content"), dict) else {}
     render_post(
@@ -926,6 +1176,8 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
         print(f"Missing {card_path}")
         return 1
 
+    _log(f"[phase rebuild] card_dir={card_dir} regen_prompt={bool(regen_prompt)}")
+
     card = read_json(card_path)
 
     prompt_txt = card_dir / "prompt.txt"
@@ -937,9 +1189,32 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
         with open(prompt_txt, "w", encoding="utf-8") as f:
             f.write(prompt_text)
         prompt_path = prompt_txt
+        _log(f"[phase rebuild] wrote prompt.txt")
 
     out_png = card_dir / "outputs" / "card_1024x1536.png"
-    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(prompt_path), str(out_png)])
+    _log(f"[phase rebuild] generating image -> {out_png}")
+    
+    # Path to the style reference image
+    style_ref = Path("tools") / "clean_template_final.png"
+    
+    if style_ref.exists():
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_style.py"),
+            "--prompt-file", str(prompt_path),
+            "--style", str(style_ref),
+            "--out", str(out_png)
+        ]
+    else:
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_image.py"),
+            str(prompt_path),
+            str(out_png)
+        ]
+        
+    subprocess.check_call(cmd)
+    _log("[phase rebuild] image generation complete")
 
     content = card.get("content", {}) if isinstance(card.get("content"), dict) else {}
     render_post(
@@ -953,25 +1228,77 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
         trivia_items=content.get("TRIVIA_BULLETS", []) if isinstance(content.get("TRIVIA_BULLETS"), list) else [],
         image_rel_path=f"./outputs/{out_png.name}",
     )
-
     print(f"Rebuilt card assets at {card_dir}")
     return 0
 
 
+def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int) -> int:
+    rc = phase_plan(series_dir=series_dir, template_path=template_path, auto=auto)
+    if rc != 0:
+        return rc
+    return phase_imagegen(series_dir=series_dir)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
+    parser.add_argument("--batch", type=int, default=1)
     parser.add_argument("--demo-dir", default=str(DEFAULT_DEMO_DIR))
     parser.add_argument("--card-dir")
     parser.add_argument("--revise-file")
     parser.add_argument("--regen-prompt", action="store_true")
     args = parser.parse_args()
 
+    _log(
+        "[cli] "
+        + "phase="
+        + str(args.phase)
+        + " series="
+        + str(args.series)
+        + " template="
+        + str(args.template)
+        + (" demo_dir=" + str(args.demo_dir) if hasattr(args, "demo_dir") else "")
+        + (" card_dir=" + str(args.card_dir) if getattr(args, "card_dir", None) else "")
+        + (" auto=true" if getattr(args, "auto", False) else "")
+        + (" regen_prompt=true" if getattr(args, "regen_prompt", False) else "")
+    )
+
     series_dir = Path(args.series)
     template_path = Path(args.template)
+
+    batch = int(getattr(args, "batch", 1) or 1)
+    if batch < 1:
+        batch = 1
+    if batch > 10:
+        _log(f"[cli] batch clamped from {batch} to 10")
+        batch = 10
+
+    if batch > 1:
+        if args.phase == "plan":
+            return phase_batch(series_dir=series_dir, template_path=template_path, auto=args.auto, batch=batch)
+        if args.phase == "demo":
+            for i in range(batch):
+                _log(f"[batch demo] run {i + 1}/{batch}")
+                rc = phase_demo(series_dir=series_dir, template_path=template_path, demo_dir=Path(args.demo_dir))
+                if rc != 0:
+                    return rc
+            return 0
+        if args.phase == "full":
+            # For batch full, we just loop phase_full
+            for i in range(batch):
+                _log(f"[batch full] run {i + 1}/{batch}")
+                rc = phase_full(series_dir=series_dir, template_path=template_path, auto=args.auto, batch=1)
+                if rc != 0:
+                    return rc
+            return 0
+        print("--batch is only supported with --phase plan, --phase demo, or --phase full")
+        return 2
+
+    if args.phase == "full":
+        return phase_full(series_dir=series_dir, template_path=template_path, auto=args.auto, batch=1)
 
     if args.phase == "plan":
         return phase_plan(series_dir=series_dir, template_path=template_path, auto=args.auto)

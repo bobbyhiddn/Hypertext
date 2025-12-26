@@ -1,0 +1,34 @@
+{
+  "content": {
+    "NUMBER": "001",
+    "SERIES": "2026-Q1",
+    "WORD": "MAGI",
+    "GLOSS": "learned visitors from the East",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "MYTHIC",
+    "RARITY_ICON": "MYTHIC",
+    "ART_PROMPT": "A moonlit caravan of eastern scholars approaching a distant city beneath a brilliant star",
+    "ABILITY_TEXT": "On draw, you may reveal: spend 1 card from your hand to activate that card's on-reveal ability.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 2,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Daniel 2:2",
+    "OT_VERSE_SNIPPET": "summoned the magicians, enchanters, sorcerers, Chaldeans",
+    "NT_VERSE_REF": "Matthew 2:1",
+    "NT_VERSE_SNIPPET": "magi from the east came to Jerusalem",
+    "OT_VERSE_LINE": "Dan 2:2 — 'summoned the magicians, enchanters, sorcerers, Chaldeans...'",
+    "NT_VERSE_LINE": "Matt 2:1 — 'magi from the east came to Jerusalem...'",
+    "GREEK": "μάγος / μάγοι",
+    "GREEK_TRANSLIT": "magos / magoi",
+    "NT_REFS": "Matt 2:1 • Acts 13:6",
+    "HEBREW": "חרטמים / חכימין",
+    "HEBREW_TRANSLIT": "ḥarṭummîm / ḥăkîmîn",
+    "OT_REFS": "Dan 2:2 • Dan 4:7",
+    "TRIVIA_BULLETS": [
+      "Matthew never calls them kings, and never gives a number.",
+      "The same Greek root appears in Acts 13:6 in a negative context.",
+      "Daniel's court vocabulary overlaps with 'wise/magician' categories.",
+      "This label's moral weight is decided by context, not the word alone."
+    ]
+  }
+}

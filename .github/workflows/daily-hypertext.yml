@@ -22,7 +22,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml
+          pip install pyyaml google-genai
 
       - name: Prepare working tree (card.json + prompt + post)
         run: |
@@ -65,7 +65,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml
+          pip install pyyaml google-genai
 
       - name: Generate image (Nano Banana Pro)
         env:

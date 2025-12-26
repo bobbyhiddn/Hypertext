@@ -20,7 +20,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml
+          pip install pyyaml google-genai
 
       - name: Generate demo card (random word)
         env:

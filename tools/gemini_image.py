@@ -45,12 +45,26 @@ def generate_image(
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY (or GEMINI_TEXT_API_KEY) env var is not set.")
 
+    generation_config: dict = {
+        "responseModalities": ["TEXT", "IMAGE"],
+        "imageConfig": {"aspectRatio": aspect_ratio, "imageSize": image_size},
+    }
+
+    temp_raw = os.environ.get("GEMINI_IMAGE_TEMPERATURE")
+    if temp_raw is not None and str(temp_raw).strip() != "":
+        generation_config["temperature"] = float(temp_raw)
+
+    top_p_raw = os.environ.get("GEMINI_IMAGE_TOP_P")
+    if top_p_raw is not None and str(top_p_raw).strip() != "":
+        generation_config["topP"] = float(top_p_raw)
+
+    top_k_raw = os.environ.get("GEMINI_IMAGE_TOP_K")
+    if top_k_raw is not None and str(top_k_raw).strip() != "":
+        generation_config["topK"] = int(float(top_k_raw))
+
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "responseModalities": ["TEXT", "IMAGE"],
-            "imageConfig": {"aspectRatio": aspect_ratio, "imageSize": image_size},
-        },
+        "generationConfig": generation_config,
     }
 
     req = urllib.request.Request(

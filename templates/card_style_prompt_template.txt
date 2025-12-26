@@ -1,0 +1,39 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: {NUMBER}
+Word: {WORD}
+Gloss: {GLOSS}
+Type: {CARD_TYPE}
+DRAW Rarity (Top Right): {RARITY_TEXT}
+Stats: Lore {STAT_LORE}, Context {STAT_CONTEXT}, Complexity {STAT_COMPLEXITY}
+
+Art Description: {ART_PROMPT}. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: {ABILITY_TEXT}
+
+OT Verse: {OT_VERSE_REF} — "{OT_VERSE_SNIPPET}"
+NT Verse: {NT_VERSE_REF} — "{NT_VERSE_SNIPPET}"
+
+Greek: {GREEK}
+Greek Transliteration: {GREEK_TRANSLIT}
+NT Refs: {NT_REFS}
+
+Hebrew: {HEBREW}
+Hebrew Transliteration: {HEBREW_TRANSLIT}
+OT Refs: {OT_REFS}
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right)
+
+Trivia:
+{TRIVIA_BULLETS_FORMATTED}
+
+Series Footer: SERIES: {SERIES}
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- Do NOT print brackets [ ] or placeholders like [Ability description]. This follows for rarity as well.
+- Stat pips must be filled with navy pips equal to their values under Lore, Context, and Complexity. For example, 3 lore would look like 3 filled circles and two empty ones.
+- Do not add extra text or modify the layout.
