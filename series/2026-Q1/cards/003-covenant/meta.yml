@@ -1,0 +1,74 @@
+number: '003'
+word: COVENANT
+gloss: A solemn, binding agreement or promise, often sealed in blood, establishing
+  a relationship between two parties.
+card_type: NOUN
+rarity: MYTHIC
+art_prompt: 'A split scene: on the left, a smoking fire pot passing between halved
+  animal sacrifices under a starry sky; on the right, a golden chalice overflowing
+  with crimson wine that transforms into a ribbon of light connecting heaven and earth.'
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: When played, search the deck for any Promise card and put it into your hand.
+ot_verse:
+  ref: Jeremiah 31:31
+  snippet: I will make a new covenant with the house of Israel and with the house
+    of Judah.
+nt_verse:
+  ref: Matthew 26:28
+  snippet: For this is My blood of the new covenant, which is shed for many for the
+    remission of sins.
+greek:
+  text: διαθήκη
+  translit: diathēkē
+hebrew:
+  text: בְּרִית
+  translit: berit
+ot_refs: Gen 9:9 • Gen 15:18 • Ex 24:8 • 2 Sam 23:5 • Jer 31:31
+nt_refs: Luke 22:20 • Acts 3:25 • Gal 3:17 • Heb 8:6 • Heb 9:15
+trivia:
+- The Hebrew phrase for making a covenant is literally 'to cut a covenant' (karat
+  berit).
+- Ancient covenants were often ratified by walking between the severed halves of sacrificed
+  animals.
+- The Ark of the Covenant contained the stone tablets, a jar of manna, and Aaron's
+  rod.
+- In the Septuagint, the Greek word 'diatheke' was chosen over 'syntheke' to emphasize
+  God's initiative rather than a mutual contract.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLR6kjiuemj2tLDvJYEVaXbg9GU1KQhKykv4jRlNmQj_cADIUvUEkp9WumXBGs2-HkBELDn0OMyUoFnVorvRvyrWG-x7WMI0_8QhtoKBH9OQm_MF-JEobgjfydzbTSoj8TITJQt6vLKsxkTqXUA9TqBggQ6Efg8c8mgPxQCr83SHEiLIg=
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgykg1DqTNI03GwLTkyARZ3dw6-_m5OMITfCWGUgyFtrRfgrB9U0g16vA1bD6EZybYGI-zMOSH3ieIOMZcRHPEp335qDXenyyyeT1bprzYXHadRNcpm3V9ARb9CXSq6byiu95yZTcAN8OVxxOOR_OXQwBmaLBa89iplw==
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqgK0eOwyTDvfnaOyl-Ix8kc-xu6XqbebT6H8MZ5Z4ZmheYADIGtVTz9f_jU4Y8Rp3VajJVMpPzPowo41D7apRS-_DOxFnzBM9Obtz41ukEV2KYJSIWoBqNrlbXpA1kOZUuKjeNwekK5n9
+  title: prayersfor.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0AK22uYhbib1xIlkbV7U0SpBGcstUud4rvh2Hk_DPYpKpDG7NJBiOQyjerqgviF7Mp2-CCcRq77GHi03lMCT3K2lDLJjHu8QT8FzJZd4tmdDDfEz7-K1gwwU=
+  title: dailyverses.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIgd5aP0J5hPD7wcrqwKmk6_XvRXuX0fQOrtVBz19bxKPayMLbRKfWQPy9qLf3mclWMMN7t0us0ekSSISVUV3qs9KBVkVaBx9JjeqmVnZM4clMhd9ODBKX-sah4ROy3ikR_7nQVY2_6QShlMsVoffsJuf1fw4vj9ASPoRLu665BktSKi4TzAuk-qHUBLuuaOj6Y0Vm
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-sl0i49FmsppCveMIvxKeuyFACwo0PkiTjAfObem3foNbzBV4GlMP_YA-dJwXEelOJ6L_x9E2hLIdQR6jjnBRf7k7d7KiNgWokntsiGCop_Bd5GzlwTfXIimo8wgr-t68clgMzw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2Ip--FIND94D0nMB4MAlVFS2kkuCvFu4cFeK4tkLeF7ol-e43Ciz_sDj27oVBSaQwyt_D_OZcZnIaOdK7u2sCfuOiSfVHOU9ta55PfLYA0pV3jiUyqPDNzr0xXcuniRO2mExj_kE6YF3jKAapzbu8JQVx-elqgLHzN_OuhsRnz_xifv-i28CTKYcnngAJqTz8ZVP_qyRQE56eomtymqM=
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZwt5-elznjU1xCXhTUB7wFxoDiKgfACqe8MsieNYpQ7gnbVVmDLzzYUynsoLGXO8wZP7kL-vqXZSk3uXfvfTKc91vRFRq9Fuv-vR4CDb6O-VnN7puLjcnJVH_cdW9b8TyP8RflAt9oBwXhzHuaQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG87HokYvaweuw5qPBhKyj7kftv8KKNcjjBABDwZVFR0aFgU5PULDoSwVXXUJL__aNXOVHO8TKTKT06Ohy23ZKnicCMZPxEda5ujZDNjLIsCIrqEIEYvt49OAjsMB7t3CpJN0PyUJArEihIrA==
+  title: ligonier.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEk97HTzjjpuE__ryaXXTe3JCSs8yWVSceexU_I5L63iFWZF1H3__ypm8vKpKI1QMhKp1tmMAzSvtkq4_gjiO4R8QbcQSYYh2uTMZAmziVReikKtXzSQZbv9L6gLxUxOyZGjBcSJeM=
+  title: padfield.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa9TR0WKodMvn5SfjqzNQvC7gYJoN8_7imMC3OUuhjamGj5BqbvyuiwfqtUg-hQnpuAb8BIVZz6i2eNYVNvEo2_GXEGLSpHtHIOBXlxqO1rBMySYFba0D0xxe6ou2-rZKXkehOb4EC__Vz5Y8k0lO0bvGJzsPBy1N3LwfiqKRV0SVxGD8pA_HE86I3Lc3clM0wVMugZym7waNZE6WghLCf3aw=
+  title: agapebiblestudy.com
+search_queries:
+- ''
+- hebrew word for covenant
+- biblical definition of covenant
+- greek word for covenant
+- key bible verses about covenant old testament new testament
+- covenant bible trivia

@@ -1,0 +1,263 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "orange",
+            "outline": "navy",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "GREEK",
+        "left_primary_key": "GREEK",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "GREEK_TRANSLIT",
+        "left_refs_label": "NT",
+        "left_refs_key": "NT_REFS",
+        "right_label": "HEB/ARAM",
+        "right_primary_key": "HEBREW",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "HEBREW_TRANSLIT",
+        "right_refs_label": "OT",
+        "right_refs_key": "OT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "003",
+    "WORD": "COVENANT",
+    "GLOSS": "A solemn, binding agreement or promise, often sealed in blood, establishing a relationship between two parties.",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "MYTHIC",
+    "RARITY_ICON": "MYTHIC",
+    "ART_PROMPT": "A split scene: on the left, a smoking fire pot passing between halved animal sacrifices under a starry sky; on the right, a golden chalice overflowing with crimson wine that transforms into a ribbon of light connecting heaven and earth.",
+    "ABILITY_TEXT": "When played, search the deck for any Promise card and put it into your hand.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 4,
+    "OT_VERSE_REF": "Jeremiah 31:31",
+    "OT_VERSE_SNIPPET": "I will make a new covenant with the house of Israel and with the house of Judah.",
+    "NT_VERSE_REF": "Matthew 26:28",
+    "NT_VERSE_SNIPPET": "For this is My blood of the new covenant, which is shed for many for the remission of sins.",
+    "OT_VERSE_LINE": "Jeremiah 31:31 — “I will make a new covenant with the house of Israel and with the house of Judah.”",
+    "NT_VERSE_LINE": "Matthew 26:28 — “For this is My blood of the new covenant, which is shed for many for the remission of sins.”",
+    "GREEK": "διαθήκη",
+    "GREEK_TRANSLIT": "diathēkē",
+    "HEBREW": "בְּרִית",
+    "HEBREW_TRANSLIT": "berit",
+    "OT_REFS": "Gen 9:9 • Gen 15:18 • Ex 24:8 • 2 Sam 23:5 • Jer 31:31",
+    "NT_REFS": "Luke 22:20 • Acts 3:25 • Gal 3:17 • Heb 8:6 • Heb 9:15",
+    "TRIVIA_BULLETS": [
+      "The Hebrew phrase for making a covenant is literally 'to cut a covenant' (karat berit).",
+      "Ancient covenants were often ratified by walking between the severed halves of sacrificed animals.",
+      "The Ark of the Covenant contained the stone tablets, a jar of manna, and Aaron's rod.",
+      "In the Septuagint, the Greek word 'diatheke' was chosen over 'syntheke' to emphasize God's initiative rather than a mutual contract."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "hebrew word for covenant",
+      "biblical definition of covenant",
+      "greek word for covenant",
+      "key bible verses about covenant old testament new testament",
+      "covenant bible trivia"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLR6kjiuemj2tLDvJYEVaXbg9GU1KQhKykv4jRlNmQj_cADIUvUEkp9WumXBGs2-HkBELDn0OMyUoFnVorvRvyrWG-x7WMI0_8QhtoKBH9OQm_MF-JEobgjfydzbTSoj8TITJQt6vLKsxkTqXUA9TqBggQ6Efg8c8mgPxQCr83SHEiLIg=",
+        "title": "cgg.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgykg1DqTNI03GwLTkyARZ3dw6-_m5OMITfCWGUgyFtrRfgrB9U0g16vA1bD6EZybYGI-zMOSH3ieIOMZcRHPEp335qDXenyyyeT1bprzYXHadRNcpm3V9ARb9CXSq6byiu95yZTcAN8OVxxOOR_OXQwBmaLBa89iplw==",
+        "title": "thegospelcoalition.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqgK0eOwyTDvfnaOyl-Ix8kc-xu6XqbebT6H8MZ5Z4ZmheYADIGtVTz9f_jU4Y8Rp3VajJVMpPzPowo41D7apRS-_DOxFnzBM9Obtz41ukEV2KYJSIWoBqNrlbXpA1kOZUuKjeNwekK5n9",
+        "title": "prayersfor.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0AK22uYhbib1xIlkbV7U0SpBGcstUud4rvh2Hk_DPYpKpDG7NJBiOQyjerqgviF7Mp2-CCcRq77GHi03lMCT3K2lDLJjHu8QT8FzJZd4tmdDDfEz7-K1gwwU=",
+        "title": "dailyverses.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIgd5aP0J5hPD7wcrqwKmk6_XvRXuX0fQOrtVBz19bxKPayMLbRKfWQPy9qLf3mclWMMN7t0us0ekSSISVUV3qs9KBVkVaBx9JjeqmVnZM4clMhd9ODBKX-sah4ROy3ikR_7nQVY2_6QShlMsVoffsJuf1fw4vj9ASPoRLu665BktSKi4TzAuk-qHUBLuuaOj6Y0Vm",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-sl0i49FmsppCveMIvxKeuyFACwo0PkiTjAfObem3foNbzBV4GlMP_YA-dJwXEelOJ6L_x9E2hLIdQR6jjnBRf7k7d7KiNgWokntsiGCop_Bd5GzlwTfXIimo8wgr-t68clgMzw==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2Ip--FIND94D0nMB4MAlVFS2kkuCvFu4cFeK4tkLeF7ol-e43Ciz_sDj27oVBSaQwyt_D_OZcZnIaOdK7u2sCfuOiSfVHOU9ta55PfLYA0pV3jiUyqPDNzr0xXcuniRO2mExj_kE6YF3jKAapzbu8JQVx-elqgLHzN_OuhsRnz_xifv-i28CTKYcnngAJqTz8ZVP_qyRQE56eomtymqM=",
+        "title": "christianity.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZwt5-elznjU1xCXhTUB7wFxoDiKgfACqe8MsieNYpQ7gnbVVmDLzzYUynsoLGXO8wZP7kL-vqXZSk3uXfvfTKc91vRFRq9Fuv-vR4CDb6O-VnN7puLjcnJVH_cdW9b8TyP8RflAt9oBwXhzHuaQ==",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG87HokYvaweuw5qPBhKyj7kftv8KKNcjjBABDwZVFR0aFgU5PULDoSwVXXUJL__aNXOVHO8TKTKT06Ohy23ZKnicCMZPxEda5ujZDNjLIsCIrqEIEYvt49OAjsMB7t3CpJN0PyUJArEihIrA==",
+        "title": "ligonier.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEk97HTzjjpuE__ryaXXTe3JCSs8yWVSceexU_I5L63iFWZF1H3__ypm8vKpKI1QMhKp1tmMAzSvtkq4_gjiO4R8QbcQSYYh2uTMZAmziVReikKtXzSQZbv9L6gLxUxOyZGjBcSJeM=",
+        "title": "padfield.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa9TR0WKodMvn5SfjqzNQvC7gYJoN8_7imMC3OUuhjamGj5BqbvyuiwfqtUg-hQnpuAb8BIVZz6i2eNYVNvEo2_GXEGLSpHtHIOBXlxqO1rBMySYFba0D0xxe6ou2-rZKXkehOb4EC__Vz5Y8k0lO0bvGJzsPBy1N3LwfiqKRV0SVxGD8pA_HE86I3Lc3clM0wVMugZym7waNZE6WghLCf3aw=",
+        "title": "agapebiblestudy.com"
+      }
+    ]
+  }
+}
