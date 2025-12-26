@@ -158,7 +158,7 @@
     "RARITY_TEXT": "MYTHIC",
     "RARITY_ICON": "MYTHIC",
     "ART_PROMPT": "Two ancient stone tablets glowing with golden light, resting on a rough-hewn altar beneath a starry sky, with a faint ethereal cord binding them together.",
-    "ABILITY_TEXT": "Name a suit. Both players search the shared deck for a card of that suit and add it to their hand.",
+    "ABILITY_TEXT": "Declare a suit. All other players give you a card of that suit. If they cannot, they reveal their hand.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 4,
