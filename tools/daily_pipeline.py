@@ -63,10 +63,47 @@ def save_queue(queue_path: Path, queue: list[dict]) -> None:
 
 def _parse_json_from_model(text: str) -> dict:
     raw = text.strip()
-    if raw.startswith("```"):
-        raw = raw.strip("`")
-        raw = raw.replace("json\n", "", 1).replace("JSON\n", "", 1)
-    return json.loads(raw)
+    if not raw:
+        raise RuntimeError("Model returned empty response; expected JSON.")
+
+    candidates: list[str] = [raw]
+    if raw.startswith("```") and "```" in raw[3:]:
+        parts = raw.split("```")
+        if len(parts) >= 3:
+            fenced = parts[1]
+            fenced = fenced.lstrip()
+            if fenced.lower().startswith("json"):
+                fenced = fenced[4:]
+            candidates.append(fenced.strip())
+
+    decoder = json.JSONDecoder()
+    last_err: Exception | None = None
+
+    for cand in candidates:
+        s = cand.strip()
+        if not s:
+            continue
+        try:
+            return json.loads(s)
+        except Exception as e:
+            last_err = e
+
+        start_idx = None
+        for ch in ("{", "["):
+            i = s.find(ch)
+            if i != -1 and (start_idx is None or i < start_idx):
+                start_idx = i
+        if start_idx is None:
+            continue
+
+        try:
+            obj, _end = decoder.raw_decode(s[start_idx:])
+            return obj
+        except Exception as e:
+            last_err = e
+
+    snippet = raw[:400].replace("\n", "\\n")
+    raise RuntimeError(f"Failed to parse JSON from model output. Snippet: {snippet}") from last_err
 
 
 def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[dict]:
@@ -137,7 +174,17 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         temperature=0.2,
         use_google_search=True,
     )
-    data = _parse_json_from_model(text)
+    try:
+        data = _parse_json_from_model(text)
+    except Exception:
+        retry_prompt = prompt + "\n\nIMPORTANT: Return ONLY raw JSON (no markdown, no backticks, no commentary)."
+        text, grounding = generate_text_with_grounding(
+            retry_prompt,
+            model="gemini-3-pro-preview",
+            temperature=0.2,
+            use_google_search=True,
+        )
+        data = _parse_json_from_model(text)
     if not isinstance(data, dict):
         raise RuntimeError("Recipe generation did not return a JSON object.")
 
