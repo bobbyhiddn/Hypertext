@@ -1,11 +1,16 @@
 name: Revise Hypertext Card
 
 on:
+  push:
+    branches-ignore:
+      - main
+    paths:
+      - "**/revise.txt"
   workflow_dispatch:
     inputs:
       card_dir:
         description: "Path to card folder (e.g. series/2026-Q1/cards/002-gospel)"
-        required: true
+        required: false
         type: string
       revise_file:
         description: "Optional path to revise instruction file (defaults to <card_dir>/revise.txt)"
@@ -20,6 +25,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -30,28 +37,114 @@ jobs:
         run: |
           pip install pyyaml
 
-      - name: Revise card (apply minimal JSON patch + rerender)
+      - name: Revise card(s) (apply minimal JSON patch + rerender)
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
         run: |
-          if [[ -n "${{ inputs.revise_file }}" ]]; then
-            python tools/daily_pipeline.py --phase revise --card-dir "${{ inputs.card_dir }}" --revise-file "${{ inputs.revise_file }}"
+          set -euo pipefail
+          EVENT_NAME="${{ github.event_name }}"
+
+          REVISE_FILES=()
+          if [[ "${EVENT_NAME}" == "workflow_dispatch" ]]; then
+            if [[ -n "${{ inputs.revise_file }}" ]]; then
+              REVISE_FILES+=("${{ inputs.revise_file }}")
+            elif [[ -n "${{ inputs.card_dir }}" ]]; then
+              REVISE_FILES+=("${{ inputs.card_dir }}/revise.txt")
+            else
+              git fetch origin main || true
+              mapfile -t REVISE_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)revise\.txt$' || true)
+              if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
+                mapfile -t CANDIDATES < <(git ls-files | grep -E '(^|/)revise\.txt$' || true)
+                for REV in "${CANDIDATES[@]}"; do
+                  if grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
+                    REVISE_FILES+=("${REV}")
+                  fi
+                done
+
+                if [[ ${#REVISE_FILES[@]} -gt 1 ]]; then
+                  echo "Multiple revise.txt files contain instructions. Please rerun with workflow inputs to choose one:"
+                  printf ' - %s\n' "${REVISE_FILES[@]}"
+                  exit 2
+                fi
+              fi
+            fi
           else
-            python tools/daily_pipeline.py --phase revise --card-dir "${{ inputs.card_dir }}"
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.sha }}"
+            if [[ -z "${BEFORE}" || "${BEFORE}" == "0000000000000000000000000000000000000000" ]]; then
+              BEFORE="$(git rev-parse HEAD~1)"
+            fi
+            mapfile -t REVISE_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)revise\.txt$' || true)
           fi
+
+          if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
+            echo "No revise.txt changes detected."
+            exit 0
+          fi
+
+          echo "Revise files:"
+          printf ' - %s\n' "${REVISE_FILES[@]}"
+
+          for REV in "${REVISE_FILES[@]}"; do
+            if ! grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
+              echo "No meaningful instructions in ${REV} (boilerplate only). Skipping."
+              continue
+            fi
+            CARD_DIR="$(dirname "${REV}")"
+            echo "Running revise for ${CARD_DIR} using ${REV}"
+            python tools/daily_pipeline.py --phase revise --card-dir "${CARD_DIR}" --revise-file "${REV}"
+          done
 
       - name: Commit and push changes
         run: |
+          set -euo pipefail
+
           if [[ -z "$(git status --porcelain)" ]]; then
             echo "No changes to commit."
             exit 0
           fi
+
           git config user.name "hypertext-bot"
           git config user.email "hypertext-bot@users.noreply.github.com"
-          git add "${{ inputs.card_dir }}"
-          if [[ -n "${{ inputs.revise_file }}" ]]; then
-            git add "${{ inputs.revise_file }}" || true
+
+          EVENT_NAME="${{ github.event_name }}"
+          REVISE_FILES=()
+          if [[ "${EVENT_NAME}" == "workflow_dispatch" ]]; then
+            if [[ -n "${{ inputs.revise_file }}" ]]; then
+              REVISE_FILES+=("${{ inputs.revise_file }}")
+            elif [[ -n "${{ inputs.card_dir }}" ]]; then
+              REVISE_FILES+=("${{ inputs.card_dir }}/revise.txt")
+            else
+              git fetch origin main || true
+              mapfile -t REVISE_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)revise\.txt$' || true)
+              if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
+                mapfile -t CANDIDATES < <(git ls-files | grep -E '(^|/)revise\.txt$' || true)
+                for REV in "${CANDIDATES[@]}"; do
+                  if grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
+                    REVISE_FILES+=("${REV}")
+                  fi
+                done
+              fi
+            fi
+          else
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.sha }}"
+            if [[ -z "${BEFORE}" || "${BEFORE}" == "0000000000000000000000000000000000000000" ]]; then
+              BEFORE="$(git rev-parse HEAD~1)"
+            fi
+            mapfile -t REVISE_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)revise\.txt$' || true)
           fi
-          git commit -m "Revise card: ${{ inputs.card_dir }}"
+
+          declare -A DIRS=()
+          for REV in "${REVISE_FILES[@]}"; do
+            DIRS["$(dirname "${REV}")"]=1
+          done
+
+          for DIR in "${!DIRS[@]}"; do
+            git add "${DIR}/card.json" "${DIR}/prompt.txt" "${DIR}/post.md" "${DIR}/meta.yml" 2>/dev/null || true
+            git add "${DIR}/outputs" 2>/dev/null || true
+          done
+
+          git commit -m "Revise card(s)" || exit 0
           git push
