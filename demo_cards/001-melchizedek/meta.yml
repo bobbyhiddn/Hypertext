@@ -1,0 +1,39 @@
+number: '001'
+word: MELCHIZEDEK
+gloss: King of Righteousness
+card_type: NAME
+rarity: RARE
+art_prompt: A mysterious ancient king in priestly robes offering a chalice and bread,
+  standing before a desert altar with a soft golden ethereal glow, cinematic lighting,
+  no text.
+stats:
+  lore: 5
+  context: 2
+  complexity: 4
+ability: Draw cards equal to this card's COMPLEXITY.
+ot_verse:
+  ref: Genesis 14:18
+  snippet: And Melchizedek king of Salem brought out bread and wine. (ESV)
+nt_verse:
+  ref: Hebrews 7:17
+  snippet: You are a priest forever, after the order of Melchizedek. (ESV)
+greek:
+  text: Μελχισεδέκ
+  translit: Melchisedek
+hebrew:
+  text: מַלְכִּי־צֶדֶק
+  translit: Malki-Tzedek
+ot_refs: Gen 14:18 • Ps 110:4
+nt_refs: Heb 5:6 • Heb 5:10 • Heb 6:20 • Heb 7:1 • Heb 7:10
+trivia:
+- His name means 'King of Righteousness' and he ruled Salem (Peace).
+- Abraham paid him a tithe (tenth) of the spoils of war.
+- He appears in the Bible without genealogy, symbolizing an eternal priesthood.
+- Psalm 110 prophesies the Messiah will belong to his priestly order.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

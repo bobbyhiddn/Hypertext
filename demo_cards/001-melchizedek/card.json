@@ -1,0 +1,215 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "orange",
+            "outline": "navy",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "001",
+    "SERIES": "2026-Q1",
+    "WORD": "MELCHIZEDEK",
+    "GLOSS": "King of Righteousness",
+    "CARD_TYPE": "NAME",
+    "RARITY_TEXT": "RARE",
+    "RARITY_ICON": "RARE",
+    "ART_PROMPT": "A mysterious ancient king in priestly robes offering a chalice and bread, standing before a desert altar with a soft golden ethereal glow, cinematic lighting, no text.",
+    "ABILITY_TEXT": "Draw cards equal to this card's COMPLEXITY.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 2,
+    "STAT_COMPLEXITY": 4,
+    "OT_VERSE_REF": "Genesis 14:18",
+    "OT_VERSE_SNIPPET": "And Melchizedek king of Salem brought out bread and wine. (ESV)",
+    "NT_VERSE_REF": "Hebrews 7:17",
+    "NT_VERSE_SNIPPET": "You are a priest forever, after the order of Melchizedek. (ESV)",
+    "OT_VERSE_LINE": "Genesis 14:18 — “And Melchizedek king of Salem brought out bread and wine. (ESV)”",
+    "NT_VERSE_LINE": "Hebrews 7:17 — “You are a priest forever, after the order of Melchizedek. (ESV)”",
+    "GREEK": "Μελχισεδέκ",
+    "GREEK_TRANSLIT": "Melchisedek",
+    "HEBREW": "מַלְכִּי־צֶדֶק",
+    "HEBREW_TRANSLIT": "Malki-Tzedek",
+    "OT_REFS": "Gen 14:18 • Ps 110:4",
+    "NT_REFS": "Heb 5:6 • Heb 5:10 • Heb 6:20 • Heb 7:1 • Heb 7:10",
+    "TRIVIA_BULLETS": [
+      "His name means 'King of Righteousness' and he ruled Salem (Peace).",
+      "Abraham paid him a tithe (tenth) of the spoils of war.",
+      "He appears in the Bible without genealogy, symbolizing an eternal priesthood.",
+      "Psalm 110 prophesies the Messiah will belong to his priestly order."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [],
+    "sources": []
+  }
+}
