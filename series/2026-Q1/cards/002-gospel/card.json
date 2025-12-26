@@ -158,7 +158,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "A weary but triumphant messenger running across sunlit mountain peaks at dawn, holding a closed scroll case high, with golden rays of light breaking through storm clouds in the background",
-    "ABILITY_TEXT": "Reveal cards from the top of the shared deck equal to this card's Context stat; keep one and discard the rest.",
+    "ABILITY_TEXT": "You may reveal a card from your hand. Reveal cards from the top of the shared deck equal to that card's Lore stat; keep one and discard the rest.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 4,
     "STAT_COMPLEXITY": 3,
