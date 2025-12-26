@@ -2,7 +2,7 @@ name: Daily Hypertext (staged PR)
 
 on:
   schedule:
-    - cron: "15 13 * * *" # adjust
+    - cron: "0 11 * * *" # adjust
   workflow_dispatch: {}
 
 permissions:
@@ -69,7 +69,8 @@ jobs:
 
       - name: Generate image (Nano Banana Pro)
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
         run: |
           python tools/daily_pipeline.py --phase imagegen
 
