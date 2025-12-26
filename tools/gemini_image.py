@@ -2,10 +2,36 @@
 import base64
 import json
 import os
+import random
 import sys
+import time
+import urllib.error
 import urllib.request
 
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
+
+
+def _parse_retry_after_seconds(headers) -> int | None:
+    if not headers:
+        return None
+    value = headers.get("Retry-After")
+    if not value:
+        return None
+    try:
+        return int(value)
+    except ValueError:
+        return None
+
+
+def _read_http_error_body(e: urllib.error.HTTPError) -> str:
+    try:
+        body = e.read()
+    except Exception:
+        return ""
+    try:
+        return body.decode("utf-8", errors="replace")
+    except Exception:
+        return ""
 
 
 def generate_image(
@@ -34,9 +60,57 @@ def generate_image(
         method="POST",
     )
 
-    with urllib.request.urlopen(req) as resp:
-        raw = resp.read().decode("utf-8")
-        data = json.loads(raw)
+    max_attempts = int(os.environ.get("GEMINI_MAX_ATTEMPTS", "6"))
+    base_delay_s = float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2"))
+    timeout_s = float(os.environ.get("GEMINI_HTTP_TIMEOUT_S", "120"))
+
+    last_error: Exception | None = None
+    raw = ""
+    data: dict | None = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout_s) as resp:
+                raw = resp.read().decode("utf-8")
+                data = json.loads(raw)
+            last_error = None
+            break
+        except urllib.error.HTTPError as e:
+            body = _read_http_error_body(e)
+            retry_after = _parse_retry_after_seconds(getattr(e, "headers", None))
+            retriable = e.code in (429, 500, 502, 503, 504)
+
+            if retriable and attempt < max_attempts:
+                delay = retry_after if retry_after is not None else (base_delay_s * (2 ** (attempt - 1)))
+                delay = delay + random.random()
+                print(
+                    f"Gemini request failed with HTTP {e.code}. Retrying in {delay:.1f}s (attempt {attempt}/{max_attempts}).",
+                    file=sys.stderr,
+                )
+                if body:
+                    print(f"Gemini error body (truncated): {body[:800]}", file=sys.stderr)
+                time.sleep(delay)
+                last_error = e
+                continue
+
+            msg = f"Gemini request failed with HTTP {e.code}: {e.reason}"
+            if body:
+                msg += f"\nBody (truncated): {body[:2000]}"
+            raise RuntimeError(msg) from e
+        except urllib.error.URLError as e:
+            if attempt < max_attempts:
+                delay = base_delay_s * (2 ** (attempt - 1)) + random.random()
+                print(
+                    f"Gemini request failed with URLError: {e}. Retrying in {delay:.1f}s (attempt {attempt}/{max_attempts}).",
+                    file=sys.stderr,
+                )
+                time.sleep(delay)
+                last_error = e
+                continue
+            raise
+
+    if last_error is not None or data is None:
+        raise RuntimeError("Gemini request failed after retries.") from last_error
 
     candidates = data.get("candidates", [])
     if not candidates:
