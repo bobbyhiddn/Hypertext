@@ -1,0 +1,99 @@
+name: Daily Hypertext (staged PR)
+
+on:
+  schedule:
+    - cron: "15 13 * * *" # adjust
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install pyyaml
+
+      - name: Prepare working tree (card.json + prompt + post)
+        run: |
+          python tools/daily_pipeline.py --phase plan
+
+      - name: Upload artifacts (staged files)
+        uses: actions/upload-artifact@v4
+        with:
+          name: hypertext-staged
+          path: |
+            series/2026-Q1/cards/**
+            series/2026-Q1/deck/queue.yml
+
+  imagegen:
+    runs-on: ubuntu-latest
+    needs: plan
+    environment: imagegen
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download staged artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: hypertext-staged
+          path: .
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install pyyaml
+
+      - name: Generate image (Nano Banana Pro)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python tools/daily_pipeline.py --phase imagegen
+
+      - name: Upload rendered artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hypertext-rendered
+          path: |
+            series/2026-Q1/cards/**
+            series/2026-Q1/deck/queue.yml
+
+  pr:
+    runs-on: ubuntu-latest
+    needs: imagegen
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download rendered artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: hypertext-rendered
+          path: .
+
+      - name: Create PR branch, commit, open PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="daily/${DATE}"
+          git checkout -b "${BRANCH}"
+          git add series/2026-Q1/cards series/2026-Q1/deck/queue.yml
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+          git commit -m "Daily Hypertext: ${DATE}" || exit 0
+          git push --set-upstream origin "${BRANCH}"
+          gh pr create --title "Daily Hypertext: ${DATE}" --body "Staged daily card + Substack draft." --base main --head "${BRANCH}"
