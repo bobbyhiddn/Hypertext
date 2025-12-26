@@ -1,0 +1,64 @@
+number: '002'
+word: GOSPEL
+gloss: Good News
+card_type: NOUN
+rarity: RARE
+art_prompt: A lone messenger standing on a high mountain peak at sunrise, silhouette
+  against the golden light, blowing a shofar horn towards a valley city below; cinematic
+  lighting, oil painting style, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: 'PROCLAMATION: Reveal the top X cards of your deck, where X is this card''s
+  Lore. You may add one Noun card found this way to your hand.'
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful on the mountains are the feet of those who bring good news,
+    who proclaim peace...
+nt_verse:
+  ref: Romans 1:16
+  snippet: For I am not ashamed of the gospel, because it is the power of God that
+    brings salvation to everyone who believes...
+greek:
+  text: εὐαγγέλιον
+  translit: euangelion
+hebrew:
+  text: בְּשׂוֹרָה
+  translit: besorah
+ot_refs: 2 Sam 18:26 • Ps 40:9 • Isa 40:9 • Isa 52:7 • Isa 61:1 • Nah 1:15
+nt_refs: Matt 4:23 • Mark 1:1 • Acts 20:24 • Rom 1:16 • 1 Cor 15:1 • Gal 1:6
+trivia:
+- Derived from Old English 'godspel' (good story), a literal translation of the Greek.
+- In the Roman Empire, 'euangelion' was a political term used for the Emperor's birthday
+  or military victories.
+- Paul uses the noun form over 60 times, far more than the four Gospels combined.
+- The Hebrew equivalent 'besorah' originally referred to a fresh report from a battlefield.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGn21x1l9e7wQ64noZuS9ps1zyoVb6BxAcZQvcsXSaAYbLbYJBQmnSTAJqnbtveKlGR-vc0-TOMppwZAvxYi157k0_ZkJ3ba0B1CQFJDbqwZwkbqlIepCwlxkei0fRjJbxMK5yjjQUPGsX1tT3k
+  title: reversingverses.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErOLFtcEPiEPFvPX8F3QIhxfVMxNMjVqeQNJanL5wk_YEULzP7JZ2yM7n1aA-Cla4b0yi-1idu5hOILS3wEF2fDm5CUetkVPddD1ZmlffZ35lwWcrVOOscAfKQobswgY3_o5lql8BFdfmJVAw3Xn63vclxoXpp3Sig0dD4vSjcoEyiRw==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx04wWoy4R-raWwtpU9iYRRtryO65oENUEp_3VJkFG-t_4qYUK9pNFS3YjLzksWjFJep24LnOiK4tfoAQN5tu6ZCkon-hptunognkJfb096BoGhfadincHWYzo7H5REw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf1cT1jCkyEOu5LHR9t51qUd5R7IVzgYpPdMhH9uV5S3qtoeFKJ0ThZeQh2UYL8GSLFg_ru_2RBAMtTAgeAosNgikZoc__KRmqQQffMUfNPSYz1F1GRq2vEw4XQSQwl7LV1NbIqs_3Y31YfwCnt62Uo6mctZ1X9yTlAPAG7-FshuxLthY-tc_cZ2MDgJ3OVONV4FPV2dFatbUtCw==
+  title: timandsonya.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsYbUfEt52nJplrcNzftnXaJR6dv000Qu8KtC7vhQZFOfzHvK6bT0fC5jXrwg0fIjLsuY_DvDVro7ap7EQ-TelkP5X_tY4c5SZrNA8YgwmX8dEFovEoqvtKnLEF5XZ8QBsgROipWv0Y3eQyEKhlElFsA==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwsjBOLLloFEx6DJUuAWU8nXqqgygBTB7nhKEIsFg3i1kCNRHzXZii-kJJZ31hKQOiCewhlnDCYkFAboyDbov7DXyk_RGdN3bVH6t1bVo1pwhfe9CvNdtfqg93KNer
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0y-w0rh5YelqxoGbjc_0B5bqNNAy36o6wUy8c4NlYFfsKVcsHlzzA94_gmujX4GoDGRCfpEyCB6dnZclCbw8DlEdS_jpXv6FogKvVfsST6q3aYjoexBkGwb4ruUeKTDDBeWc8eGT9k1ldp1Y6UIZDJXymvhKahYH4LwGv5Z48nbTkax8ikD4IZ6mVCzuRF2YT7DKjU9D5QD_IC37uq2Upeetik0fssQjreii3DWYXACFJZK1RycjYDiyJQehYxmgmoS-4P2I1Xx5WD0pYdRkHDDBY0GI4pdLfeaE73emIQRLlleeaojVCdseQ-u1vKGEwJqsIfSVi7zvv--Vj0risyr_CkoRzT2T_iU5C_DrW76i17LP4CE7_p77NsO2yfbKWZ3cTpl03DTlC
+  title: tyndale.com
+search_queries:
+- ''
+- greek word for gospel euangelion definition
+- etymology of gospel godspel
+- hebrew word for gospel besorah
+- Isaiah 52:7 snippet
+- Romans 1:16 snippet
+- number of times paul uses euangelion
