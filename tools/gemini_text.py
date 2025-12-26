@@ -38,6 +38,22 @@ def generate_text(
     temperature: float | None = None,
     use_google_search: bool = False,
 ) -> str:
+    text, _grounding = generate_text_with_grounding(
+        prompt,
+        model=model,
+        temperature=temperature,
+        use_google_search=use_google_search,
+    )
+    return text
+
+
+def generate_text_with_grounding(
+    prompt: str,
+    *,
+    model: str | None = None,
+    temperature: float | None = None,
+    use_google_search: bool = False,
+) -> tuple[str, dict]:
     api_key = os.environ.get("GEMINI_TEXT_API_KEY") or os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_TEXT_API_KEY (or GEMINI_API_KEY) env var is not set.")
@@ -118,7 +134,8 @@ def generate_text(
     if not candidates:
         raise RuntimeError(f"No candidates returned. Raw: {raw[:500]}")
 
-    parts = candidates[0].get("content", {}).get("parts", [])
+    first = candidates[0]
+    parts = first.get("content", {}).get("parts", [])
     texts: list[str] = []
     for p in parts:
         t = p.get("text")
@@ -128,7 +145,30 @@ def generate_text(
     if not texts:
         raise RuntimeError(f"No text parts found. Raw: {raw[:800]}")
 
-    return "\n".join(texts).strip()
+    grounding_meta = first.get("groundingMetadata", {}) if isinstance(first.get("groundingMetadata"), dict) else {}
+    queries = grounding_meta.get("webSearchQueries", [])
+    if not isinstance(queries, list):
+        queries = []
+
+    sources: list[dict] = []
+    seen_uris: set[str] = set()
+    chunks = grounding_meta.get("groundingChunks", [])
+    if isinstance(chunks, list):
+        for c in chunks:
+            if not isinstance(c, dict):
+                continue
+            web = c.get("web")
+            if not isinstance(web, dict):
+                continue
+            uri = str(web.get("uri", "")).strip()
+            title = str(web.get("title", "")).strip()
+            if not uri or uri in seen_uris:
+                continue
+            seen_uris.add(uri)
+            sources.append({"uri": uri, "title": title})
+
+    text_out = "\n".join(texts).strip()
+    return text_out, {"queries": queries, "sources": sources}
 
 
 def main() -> int:

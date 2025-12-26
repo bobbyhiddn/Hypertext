@@ -12,7 +12,7 @@ TOOLS_DIR = Path(__file__).resolve().parent
 if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
-from gemini_text import generate_text
+from gemini_text import generate_text, generate_text_with_grounding
 from render_post import render_post
 
 try:
@@ -22,7 +22,7 @@ except ImportError:
 
 DEFAULT_SERIES_DIR = Path("series/2026-Q1")
 DEFAULT_TEMPLATE_PATH = Path("templates/card_prompt_template.json")
-DEFAULT_DEMO_DIR = Path("series/2026-Q1/demo")
+DEFAULT_DEMO_DIR = Path("demo_cards")
 
 
 def slugify(word: str) -> str:
@@ -122,10 +122,18 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique)."
     )
 
-    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.2, use_google_search=True)
+    text, grounding = generate_text_with_grounding(
+        prompt,
+        model="gemini-3-pro-preview",
+        temperature=0.2,
+        use_google_search=True,
+    )
     data = _parse_json_from_model(text)
     if not isinstance(data, dict):
         raise RuntimeError("Recipe generation did not return a JSON object.")
+
+    if isinstance(grounding, dict):
+        data["grounding"] = grounding
     return data
 
 
@@ -235,6 +243,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     if auto:
         recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
+        grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
         stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
         ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
         nt_verse = recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {}
@@ -284,6 +293,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         card["content"]["NT_REFS"] = str(recipe.get("nt_refs", "")).strip()
         card["content"]["TRIVIA_BULLETS"] = [str(x).strip() for x in trivia if str(x).strip()]
 
+        card["grounding"] = grounding
+
         meta = {
             "number": f"{number:03d}",
             "word": word,
@@ -309,6 +320,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             "quartet_id": None,
             "letter": None,
             "notes": None,
+            "sources": grounding.get("sources", []) if isinstance(grounding.get("sources"), list) else [],
+            "search_queries": grounding.get("queries", []) if isinstance(grounding.get("queries"), list) else [],
         }
 
         with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
@@ -390,7 +403,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     if yaml is None:
         raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
 
-    cards_dir = demo_dir / "cards"
+    cards_dir = demo_dir
     number = next_number(cards_dir)
 
     entry = _pick_demo_entry()
@@ -407,6 +420,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
         return 1
 
     recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
+    grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
     stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
     ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
     nt_verse = recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {}
@@ -458,6 +472,8 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card["content"]["NT_REFS"] = str(recipe.get("nt_refs", "")).strip()
     card["content"]["TRIVIA_BULLETS"] = trivia_items
 
+    card["grounding"] = grounding
+
     write_json(card_dir / "card.json", card)
 
     prompt_text = build_prompt_text(card)
@@ -489,6 +505,8 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
         "quartet_id": None,
         "letter": None,
         "notes": None,
+        "sources": grounding.get("sources", []) if isinstance(grounding.get("sources"), list) else [],
+        "search_queries": grounding.get("queries", []) if isinstance(grounding.get("queries"), list) else [],
     }
     with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)

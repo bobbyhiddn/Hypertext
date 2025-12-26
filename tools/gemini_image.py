@@ -41,9 +41,9 @@ def generate_image(
     aspect_ratio: str = "2:3",
     image_size: str = "2K",
 ) -> None:
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GEMINI_TEXT_API_KEY")
     if not api_key:
-        raise RuntimeError("GEMINI_API_KEY env var is not set.")
+        raise RuntimeError("GEMINI_API_KEY (or GEMINI_TEXT_API_KEY) env var is not set.")
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
