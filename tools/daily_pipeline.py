@@ -184,7 +184,7 @@ def _read_text(path: Path) -> str:
         return f.read()
 
 
-def _meaningful_revise_instructions(raw: str) -> str:
+def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
     def is_placeholder(s: str) -> bool:
         return "<" in s and ">" in s
 
@@ -200,6 +200,8 @@ def _meaningful_revise_instructions(raw: str) -> str:
     current_key: str | None = None
     rarity_lines: list[str] = []
     ability_lines: list[str] = []
+    stats_lines: list[str] = []
+    general_lines: list[str] = []
 
     for line in raw.splitlines():
         if line.lstrip().startswith("#"):
@@ -219,6 +221,20 @@ def _meaningful_revise_instructions(raw: str) -> str:
                 ability_lines.append(rest.strip())
             continue
 
+        if line.startswith("Stats_Change_Request:"):
+            current_key = "stats"
+            rest = line.split(":", 1)[1]
+            if not is_empty_value(rest):
+                stats_lines.append(rest.strip())
+            continue
+
+        if line.startswith("General_Revision_Request:"):
+            current_key = "general"
+            rest = line.split(":", 1)[1]
+            if not is_empty_value(rest):
+                general_lines.append(rest.strip())
+            continue
+
         if current_key is None:
             continue
 
@@ -231,12 +247,26 @@ def _meaningful_revise_instructions(raw: str) -> str:
             rarity_lines.append(line.rstrip())
         elif current_key == "ability":
             ability_lines.append(line.rstrip())
+        elif current_key == "stats":
+            stats_lines.append(line.rstrip())
+        elif current_key == "general":
+            general_lines.append(line.rstrip())
 
     rarity_req = "\n".join([x for x in rarity_lines if not is_empty_value(x)]).strip()
     ability_req = "\n".join([x for x in ability_lines if not is_empty_value(x)]).strip()
+    stats_req = "\n".join([x for x in stats_lines if not is_empty_value(x)]).strip()
+    general_req = "\n".join([x for x in general_lines if not is_empty_value(x)]).strip()
 
-    if not rarity_req and not ability_req:
-        return ""
+    allowed_paths: set[str] = set()
+    if rarity_req:
+        allowed_paths.update({"/content/RARITY_TEXT", "/content/RARITY_ICON"})
+    if ability_req:
+        allowed_paths.add("/content/ABILITY_TEXT")
+    if stats_req:
+        allowed_paths.update({"/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY"})
+
+    if not allowed_paths:
+        return "", set()
 
     out_lines: list[str] = []
     if rarity_req:
@@ -247,7 +277,20 @@ def _meaningful_revise_instructions(raw: str) -> str:
             out_lines.append("")
         out_lines.append("Ability change request:")
         out_lines.append(ability_req)
-    return "\n".join(out_lines).strip()
+
+    if stats_req:
+        if out_lines:
+            out_lines.append("")
+        out_lines.append("Stats change request:")
+        out_lines.append(stats_req)
+
+    if general_req:
+        if out_lines:
+            out_lines.append("")
+        out_lines.append("General revision request (context only; do not change extra fields):")
+        out_lines.append(general_req)
+
+    return "\n".join(out_lines).strip(), allowed_paths
 
 
 def _seed_revise_file(card_dir: Path) -> None:
@@ -742,7 +785,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         return 1
 
     raw_instructions = _read_text(revise_path)
-    instructions = _meaningful_revise_instructions(raw_instructions)
+    instructions, allowed_paths = _parse_revise_form(raw_instructions)
     if not instructions:
         print(
             f"No revision instructions found in {revise_path}. "
@@ -752,14 +795,18 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
 
     card = read_json(card_path)
 
+    allowed_paths_str = ", ".join(sorted(allowed_paths))
     prompt = (
         "You are editing an existing Hypertext trading card JSON. "
         "Given the CURRENT card JSON and HUMAN edit instructions, return ONLY a valid RFC 6902 JSON Patch array. "
         "Use the minimal number of operations. Prefer replace operations on /content fields. "
         "Do not rewrite the entire card. Do not change style_guide or layout. "
-        "Only allowed paths are /content/ABILITY_TEXT, /content/RARITY_TEXT, /content/RARITY_ICON. "
+        "Only allowed JSON Patch paths are: "
+        + allowed_paths_str
+        + ". "
+        "Do not change any other paths. "
         "Follow game rules: there is ONE shared deck; do not say 'your deck'. "
-        "Allowed ops: add, replace, remove. Do not use move/copy/test.\n\n"
+        "Allowed ops: add, replace. Do not use remove/move/copy/test.\n\n"
         "GAME RULES (must follow):\n"
         + GAME_RULES_SNIPPET
         + "\n\n"
@@ -774,7 +821,6 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     if not isinstance(patch_ops, list):
         raise RuntimeError("Revise step did not return a JSON Patch array.")
 
-    allowed_paths = {"/content/ABILITY_TEXT", "/content/RARITY_TEXT", "/content/RARITY_ICON"}
     for op in patch_ops:
         if not isinstance(op, dict):
             raise RuntimeError("Patch operations must be objects")
@@ -827,15 +873,54 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     return 0
 
 
+def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
+    card_path = card_dir / "card.json"
+    if not card_path.exists():
+        print(f"Missing {card_path}")
+        return 1
+
+    card = read_json(card_path)
+
+    prompt_txt = card_dir / "prompt.txt"
+    prompt_json = card_dir / "prompt.json"
+    prompt_path = prompt_txt if prompt_txt.exists() else prompt_json
+
+    if regen_prompt or not prompt_txt.exists():
+        prompt_text = build_prompt_text(card)
+        with open(prompt_txt, "w", encoding="utf-8") as f:
+            f.write(prompt_text)
+        prompt_path = prompt_txt
+
+    out_png = card_dir / "outputs" / "card_1024x1536.png"
+    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(prompt_path), str(out_png)])
+
+    content = card.get("content", {}) if isinstance(card.get("content"), dict) else {}
+    render_post(
+        str(card_dir / "post.md"),
+        word=str(content.get("WORD", "")),
+        gloss=str(content.get("GLOSS", "")),
+        ot_ref=str(content.get("OT_VERSE_REF", "")),
+        ot_snip=str(content.get("OT_VERSE_SNIPPET", "")),
+        nt_ref=str(content.get("NT_VERSE_REF", "")),
+        nt_snip=str(content.get("NT_VERSE_SNIPPET", "")),
+        trivia_items=content.get("TRIVIA_BULLETS", []) if isinstance(content.get("TRIVIA_BULLETS"), list) else [],
+        image_rel_path=f"./outputs/{out_png.name}",
+    )
+
+    print(f"Rebuilt card assets at {card_dir}")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
     parser.add_argument("--demo-dir", default=str(DEFAULT_DEMO_DIR))
     parser.add_argument("--card-dir")
     parser.add_argument("--revise-file")
+    parser.add_argument("--regen-prompt", action="store_true")
     args = parser.parse_args()
 
     series_dir = Path(args.series)
@@ -856,6 +941,12 @@ def main() -> int:
             return 2
         revise_file = Path(args.revise_file) if args.revise_file else None
         return phase_revise(card_dir=Path(args.card_dir), revise_file=revise_file)
+
+    if args.phase == "rebuild":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        return phase_rebuild(card_dir=Path(args.card_dir), regen_prompt=bool(args.regen_prompt))
 
     return 2
 

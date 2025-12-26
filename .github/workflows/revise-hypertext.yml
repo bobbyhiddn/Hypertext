@@ -6,6 +6,9 @@ on:
       - main
     paths:
       - "**/revise.txt"
+      - "**/card.json"
+      - "**/prompt.txt"
+      - "**/prompt.json"
   workflow_dispatch:
     inputs:
       card_dir:
@@ -23,6 +26,7 @@ permissions:
 jobs:
   revise:
     runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -46,6 +50,7 @@ jobs:
           EVENT_NAME="${{ github.event_name }}"
 
           REVISE_FILES=()
+          REBUILD_FILES=()
           if [[ "${EVENT_NAME}" == "workflow_dispatch" ]]; then
             if [[ -n "${{ inputs.revise_file }}" ]]; then
               REVISE_FILES+=("${{ inputs.revise_file }}")
@@ -54,6 +59,7 @@ jobs:
             else
               git fetch origin main || true
               mapfile -t REVISE_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)revise\.txt$' || true)
+              mapfile -t REBUILD_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)(card\.json|prompt\.(txt|json))$' || true)
               if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
                 mapfile -t CANDIDATES < <(git ls-files | grep -E '(^|/)revise\.txt$' || true)
                 for REV in "${CANDIDATES[@]}"; do
@@ -76,24 +82,51 @@ jobs:
               BEFORE="$(git rev-parse HEAD~1)"
             fi
             mapfile -t REVISE_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)revise\.txt$' || true)
+            mapfile -t REBUILD_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)(card\.json|prompt\.(txt|json))$' || true)
           fi
 
-          if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
-            echo "No revise.txt changes detected."
-            exit 0
-          fi
-
-          echo "Revise files:"
-          printf ' - %s\n' "${REVISE_FILES[@]}"
+          declare -A DIRS_REVISE=()
+          declare -A DIRS_REBUILD=()
 
           for REV in "${REVISE_FILES[@]}"; do
             if ! grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
-              echo "No meaningful instructions in ${REV} (boilerplate only). Skipping."
+              echo "No meaningful instructions in ${REV} (boilerplate only). Skipping revise."
               continue
             fi
-            CARD_DIR="$(dirname "${REV}")"
-            echo "Running revise for ${CARD_DIR} using ${REV}"
-            python tools/daily_pipeline.py --phase revise --card-dir "${CARD_DIR}" --revise-file "${REV}"
+            DIRS_REVISE["$(dirname "${REV}")"]="${REV}"
+          done
+
+          for F in "${REBUILD_FILES[@]}"; do
+            DIRS_REBUILD["$(dirname "${F}")"]=1
+          done
+
+          if [[ ${#DIRS_REVISE[@]} -eq 0 && ${#DIRS_REBUILD[@]} -eq 0 ]]; then
+            echo "No revise.txt/card.json/prompt.txt changes detected."
+            exit 0
+          fi
+
+          for DIR in "${!DIRS_REVISE[@]}"; do
+            REV="${DIRS_REVISE[${DIR}]}"
+            echo "Running revise for ${DIR} using ${REV}"
+            python tools/daily_pipeline.py --phase revise --card-dir "${DIR}" --revise-file "${REV}"
+            unset DIRS_REBUILD["${DIR}"] || true
+          done
+
+          for DIR in "${!DIRS_REBUILD[@]}"; do
+            REGEN=0
+            for F in "${REBUILD_FILES[@]}"; do
+              if [[ "${F}" == "${DIR}/card.json" ]]; then
+                REGEN=1
+                break
+              fi
+            done
+            if [[ ${REGEN} -eq 1 ]]; then
+              echo "Running rebuild for ${DIR} (regen prompt from card.json)"
+              python tools/daily_pipeline.py --phase rebuild --card-dir "${DIR}" --regen-prompt
+            else
+              echo "Running rebuild for ${DIR}"
+              python tools/daily_pipeline.py --phase rebuild --card-dir "${DIR}"
+            fi
           done
 
       - name: Commit and push changes
@@ -108,40 +141,25 @@ jobs:
           git config user.name "hypertext-bot"
           git config user.email "hypertext-bot@users.noreply.github.com"
 
-          EVENT_NAME="${{ github.event_name }}"
-          REVISE_FILES=()
-          if [[ "${EVENT_NAME}" == "workflow_dispatch" ]]; then
-            if [[ -n "${{ inputs.revise_file }}" ]]; then
-              REVISE_FILES+=("${{ inputs.revise_file }}")
-            elif [[ -n "${{ inputs.card_dir }}" ]]; then
-              REVISE_FILES+=("${{ inputs.card_dir }}/revise.txt")
-            else
-              git fetch origin main || true
-              mapfile -t REVISE_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)revise\.txt$' || true)
-              if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
-                mapfile -t CANDIDATES < <(git ls-files | grep -E '(^|/)revise\.txt$' || true)
-                for REV in "${CANDIDATES[@]}"; do
-                  if grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
-                    REVISE_FILES+=("${REV}")
-                  fi
-                done
+          declare -A CARD_DIRS=()
+          while read -r _status path; do
+            [[ -n "${path:-}" ]] || continue
+            d="$(dirname "${path}")"
+            while [[ "${d}" != "." && "${d}" != "/" ]]; do
+              if [[ -f "${d}/card.json" ]]; then
+                CARD_DIRS["${d}"]=1
+                break
               fi
-            fi
-          else
-            BEFORE="${{ github.event.before }}"
-            AFTER="${{ github.sha }}"
-            if [[ -z "${BEFORE}" || "${BEFORE}" == "0000000000000000000000000000000000000000" ]]; then
-              BEFORE="$(git rev-parse HEAD~1)"
-            fi
-            mapfile -t REVISE_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)revise\.txt$' || true)
+              d="$(dirname "${d}")"
+            done
+          done < <(git status --porcelain)
+
+          if [[ ${#CARD_DIRS[@]} -eq 0 ]]; then
+            echo "No card directories inferred from changes."
+            exit 0
           fi
 
-          declare -A DIRS=()
-          for REV in "${REVISE_FILES[@]}"; do
-            DIRS["$(dirname "${REV}")"]=1
-          done
-
-          for DIR in "${!DIRS[@]}"; do
+          for DIR in "${!CARD_DIRS[@]}"; do
             git add "${DIR}/card.json" "${DIR}/prompt.txt" "${DIR}/post.md" "${DIR}/meta.yml" 2>/dev/null || true
             git add "${DIR}/outputs" 2>/dev/null || true
           done
