@@ -218,15 +218,24 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     print(f"Queue entries: {len(queue)}")
 
-    entry = queue[0]
+    while queue:
+        entry = queue[0]
+        word = str(entry["word"]).upper()
+        slug = slugify(str(entry["word"]))
 
-    number = next_number(cards_dir)
-    word = str(entry["word"]).upper()
-    slug = slugify(str(entry["word"]))
-    card_dir = cards_dir / f"{number:03d}-{slug}"
+        existing_for_slug = glob.glob(str(cards_dir / f"[0-9][0-9][0-9]-{slug}"))
+        if existing_for_slug:
+            print(f"Word already exists as card folder: {existing_for_slug[0]}. Dropping queue entry {word}.")
+            queue = queue[1:]
+            save_queue(queue_path, queue)
+            continue
 
-    if card_dir.exists():
-        print(f"Card dir already exists: {card_dir}")
+        number = next_number(cards_dir)
+        card_dir = cards_dir / f"{number:03d}-{slug}"
+        break
+
+    if not queue:
+        print("Queue empty.")
         return 0
 
     if not template_path.exists():
