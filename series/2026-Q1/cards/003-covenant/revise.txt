@@ -1,0 +1,22 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# This form controls the ONLY allowed gameplay-impacting changes:
+# - Rarity
+# - Ability
+# - Stats
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - The revise pipeline will reject any changes outside the fields you fill in.
+# - General_Revision_Request provides extra context but does NOT grant permission to change fields.
+# - Lines starting with # are ignored.
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: Declare a suit. all other players give you a card of that suit. If they cannot, they reveal their hand. 
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <optional context; e.g. tone, complexity, fun-factor; still must fill specific change fields above>
