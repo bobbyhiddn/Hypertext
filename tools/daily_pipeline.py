@@ -24,6 +24,12 @@ DEFAULT_SERIES_DIR = Path("series/2026-Q1")
 DEFAULT_TEMPLATE_PATH = Path("templates/card_prompt_template.json")
 DEFAULT_DEMO_DIR = Path("demo_cards")
 
+GAME_RULES_SNIPPET = (
+    "- There is ONE shared deck. Do not say 'your deck'. Say 'the deck' or 'the shared deck'.\n"
+    "- Abilities should be one short line.\n"
+    "- Rarity patterns: COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique."
+)
+
 
 def slugify(word: str) -> str:
     out = []
@@ -117,6 +123,9 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         f"Word: {word}\n"
         f"Card type: {card_type}\n"
         f"Rarity: {rarity}\n\n"
+        "GAME RULES (must follow):\n"
+        + GAME_RULES_SNIPPET
+        + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
         "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique)."
@@ -173,6 +182,82 @@ def write_json(path: Path, obj: dict) -> None:
 def _read_text(path: Path) -> str:
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
+
+
+def _meaningful_revise_instructions(raw: str) -> str:
+    def is_placeholder(s: str) -> bool:
+        return "<" in s and ">" in s
+
+    def is_empty_value(s: str) -> bool:
+        if not s.strip():
+            return True
+        if s.strip() in ("-", "- -"):
+            return True
+        if is_placeholder(s.strip()):
+            return True
+        return False
+
+    current_key: str | None = None
+    rarity_lines: list[str] = []
+    ability_lines: list[str] = []
+
+    for line in raw.splitlines():
+        if line.lstrip().startswith("#"):
+            continue
+
+        if line.startswith("Rarity_Change_Request:"):
+            current_key = "rarity"
+            rest = line.split(":", 1)[1]
+            if not is_empty_value(rest):
+                rarity_lines.append(rest.strip())
+            continue
+
+        if line.startswith("Ability_Change_Request:"):
+            current_key = "ability"
+            rest = line.split(":", 1)[1]
+            if not is_empty_value(rest):
+                ability_lines.append(rest.strip())
+            continue
+
+        if current_key is None:
+            continue
+
+        if not line.strip():
+            continue
+        if is_placeholder(line.strip()):
+            continue
+
+        if current_key == "rarity":
+            rarity_lines.append(line.rstrip())
+        elif current_key == "ability":
+            ability_lines.append(line.rstrip())
+
+    rarity_req = "\n".join([x for x in rarity_lines if not is_empty_value(x)]).strip()
+    ability_req = "\n".join([x for x in ability_lines if not is_empty_value(x)]).strip()
+
+    if not rarity_req and not ability_req:
+        return ""
+
+    out_lines: list[str] = []
+    if rarity_req:
+        out_lines.append("Rarity change request:")
+        out_lines.append(rarity_req)
+    if ability_req:
+        if out_lines:
+            out_lines.append("")
+        out_lines.append("Ability change request:")
+        out_lines.append(ability_req)
+    return "\n".join(out_lines).strip()
+
+
+def _seed_revise_file(card_dir: Path) -> None:
+    target = card_dir / "revise.txt"
+    if target.exists():
+        return
+    template_path = Path("templates") / "revise_template.txt"
+    if not template_path.exists():
+        return
+    target.write_text(_read_text(template_path), encoding="utf-8")
 
 
 def _json_pointer_tokens(ptr: str) -> list[str]:
@@ -462,6 +547,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
     with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
         f.write(prompt_text)
 
+    _seed_revise_file(card_dir)
+
     out_png = card_dir / "outputs" / "card_1024x1536.png"
     render_post(
         str(card_dir / "post.md"),
@@ -565,6 +652,8 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
         f.write(prompt_text)
 
+    _seed_revise_file(card_dir)
+
     meta = {
         "number": f"{number:03d}",
         "word": word,
@@ -652,9 +741,13 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         print(f"Missing {revise_path}. Add your edit instructions there and rerun revise.")
         return 1
 
-    instructions = _read_text(revise_path).strip()
+    raw_instructions = _read_text(revise_path)
+    instructions = _meaningful_revise_instructions(raw_instructions)
     if not instructions:
-        print(f"Empty {revise_path}. Add your edit instructions there and rerun revise.")
+        print(
+            f"No revision instructions found in {revise_path}. "
+            "Edit revise.txt (add non-comment text) and rerun revise."
+        )
         return 1
 
     card = read_json(card_path)
@@ -663,8 +756,13 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         "You are editing an existing Hypertext trading card JSON. "
         "Given the CURRENT card JSON and HUMAN edit instructions, return ONLY a valid RFC 6902 JSON Patch array. "
         "Use the minimal number of operations. Prefer replace operations on /content fields. "
-        "Do not rewrite the entire card. Do not change style_guide or layout unless explicitly requested. "
+        "Do not rewrite the entire card. Do not change style_guide or layout. "
+        "Only allowed paths are /content/ABILITY_TEXT, /content/RARITY_TEXT, /content/RARITY_ICON. "
+        "Follow game rules: there is ONE shared deck; do not say 'your deck'. "
         "Allowed ops: add, replace, remove. Do not use move/copy/test.\n\n"
+        "GAME RULES (must follow):\n"
+        + GAME_RULES_SNIPPET
+        + "\n\n"
         "HUMAN_EDIT_INSTRUCTIONS:\n"
         + instructions
         + "\n\nCURRENT_CARD_JSON:\n"
@@ -675,6 +773,15 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     patch_ops = _parse_json_from_model(text)
     if not isinstance(patch_ops, list):
         raise RuntimeError("Revise step did not return a JSON Patch array.")
+
+    allowed_paths = {"/content/ABILITY_TEXT", "/content/RARITY_TEXT", "/content/RARITY_ICON"}
+    for op in patch_ops:
+        if not isinstance(op, dict):
+            raise RuntimeError("Patch operations must be objects")
+        if op.get("op") not in ("replace", "add"):
+            raise RuntimeError(f"Unsupported patch op for revise: {op.get('op')}")
+        if op.get("path") not in allowed_paths:
+            raise RuntimeError(f"Patch attempted to modify unsupported path: {op.get('path')}")
 
     updated = _apply_json_patch(card, patch_ops)
 
