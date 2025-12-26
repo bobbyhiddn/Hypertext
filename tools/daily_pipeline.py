@@ -98,10 +98,13 @@ def phase_plan(*, series_dir: Path, template_path: Path) -> int:
     queue_path = series_dir / "deck" / "queue.yml"
     cards_dir = series_dir / "cards"
 
+    print(f"Queue path: {queue_path}")
     queue = load_queue(queue_path)
     if not queue:
         print("Queue empty.")
         return 0
+
+    print(f"Queue entries: {len(queue)}")
 
     entry = queue[0]
 
@@ -117,6 +120,8 @@ def phase_plan(*, series_dir: Path, template_path: Path) -> int:
     if not template_path.exists():
         print(f"Missing {template_path}")
         return 1
+
+    print(f"Template path: {template_path}")
 
     card = read_json(template_path)
     card.setdefault("content", {})
@@ -190,6 +195,9 @@ def phase_plan(*, series_dir: Path, template_path: Path) -> int:
     save_queue(queue_path, queue[1:])
 
     print(f"Planned card at {card_dir}")
+    for p in sorted(card_dir.rglob("*")):
+        if p.is_file():
+            print(f"  wrote: {p}")
     return 0
 
 
@@ -197,12 +205,13 @@ def phase_imagegen(*, series_dir: Path) -> int:
     cards_dir = series_dir / "cards"
     out_name = "card_1024x1536.png"
 
+    print(f"Looking for card folders in: {cards_dir}")
     target_dir = find_next_image_target(cards_dir, out_name)
     if target_dir is None:
         latest = find_latest_card_dir(cards_dir)
         if latest is None:
             print("No cards found.")
-            return 0
+            return 1
         print("No missing images found.")
         return 0
 

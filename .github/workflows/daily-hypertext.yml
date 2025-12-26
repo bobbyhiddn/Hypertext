@@ -28,6 +28,10 @@ jobs:
         run: |
           python tools/daily_pipeline.py --phase plan
 
+      - name: "Debug: list planned outputs"
+        run: |
+          find series/2026-Q1 -maxdepth 3 -type f -print
+
       - name: Upload artifacts (staged files)
         uses: actions/upload-artifact@v4
         with:
@@ -47,7 +51,11 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: hypertext-staged
-          path: .
+          path: series/2026-Q1
+
+      - name: "Debug: list staged outputs"
+        run: |
+          find series/2026-Q1 -maxdepth 3 -type f -print
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -82,7 +90,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: hypertext-rendered
-          path: .
+          path: series/2026-Q1
 
       - name: Create PR branch, commit, open PR
         env:
