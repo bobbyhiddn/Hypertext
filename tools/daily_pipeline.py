@@ -8,6 +8,10 @@ import subprocess
 import sys
 from pathlib import Path
 
+TOOLS_DIR = Path(__file__).resolve().parent
+if str(TOOLS_DIR) not in sys.path:
+    sys.path.insert(0, str(TOOLS_DIR))
+
 from gemini_text import generate_text
 from render_post import render_post
 
@@ -204,132 +208,6 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         print("Queue empty.")
         return 0
 
-
-def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
-    if yaml is None:
-        raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
-
-    cards_dir = demo_dir / "cards"
-    number = next_number(cards_dir)
-
-    entry = _pick_demo_entry()
-    word = str(entry["word"]).upper()
-    slug = slugify(word)
-    card_type = str(entry.get("card_type", "NOUN")).upper()
-    rarity = str(entry.get("rarity", "COMMON")).upper()
-
-    card_dir = cards_dir / f"{number:03d}-{slug}"
-    os.makedirs(card_dir, exist_ok=True)
-
-    if not template_path.exists():
-        print(f"Missing {template_path}")
-        return 1
-
-    recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
-    stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
-    ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
-    nt_verse = recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {}
-    greek = recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {}
-    hebrew = recipe.get("hebrew", {}) if isinstance(recipe.get("hebrew"), dict) else {}
-
-    trivia = recipe.get("trivia", [])
-    if not isinstance(trivia, list):
-        trivia = []
-    trivia_items = _normalize_trivia([str(x) for x in trivia])
-
-    gloss = str(recipe.get("gloss", "")).strip()
-    art_prompt = str(recipe.get("art_prompt", "")).strip()
-    ability_text = str(recipe.get("ability_text", "")).strip()
-
-    ot_ref = str(ot_verse.get("ref", "")).strip()
-    ot_snip = str(ot_verse.get("snippet", "")).strip()
-    nt_ref = str(nt_verse.get("ref", "")).strip()
-    nt_snip = str(nt_verse.get("snippet", "")).strip()
-
-    card = read_json(template_path)
-    card.setdefault("content", {})
-
-    card["content"]["NUMBER"] = f"{number:03d}"
-    card["content"]["WORD"] = word
-    card["content"]["GLOSS"] = gloss
-    card["content"]["CARD_TYPE"] = card_type
-    card["content"]["RARITY_TEXT"] = rarity
-    card["content"]["RARITY_ICON"] = rarity
-    card["content"]["ART_PROMPT"] = art_prompt
-    card["content"]["ABILITY_TEXT"] = ability_text
-
-    card["content"]["STAT_LORE"] = int(stats.get("lore", 3))
-    card["content"]["STAT_CONTEXT"] = int(stats.get("context", 3))
-    card["content"]["STAT_COMPLEXITY"] = int(stats.get("complexity", 3))
-
-    card["content"]["OT_VERSE_REF"] = ot_ref
-    card["content"]["OT_VERSE_SNIPPET"] = ot_snip
-    card["content"]["NT_VERSE_REF"] = nt_ref
-    card["content"]["NT_VERSE_SNIPPET"] = nt_snip
-    card["content"]["OT_VERSE_LINE"] = f"{ot_ref} — “{ot_snip}”"
-    card["content"]["NT_VERSE_LINE"] = f"{nt_ref} — “{nt_snip}”"
-
-    card["content"]["GREEK"] = str(greek.get("text", "")).strip()
-    card["content"]["GREEK_TRANSLIT"] = str(greek.get("translit", "")).strip()
-    card["content"]["HEBREW"] = str(hebrew.get("text", "")).strip()
-    card["content"]["HEBREW_TRANSLIT"] = str(hebrew.get("translit", "")).strip()
-    card["content"]["OT_REFS"] = str(recipe.get("ot_refs", "")).strip()
-    card["content"]["NT_REFS"] = str(recipe.get("nt_refs", "")).strip()
-    card["content"]["TRIVIA_BULLETS"] = trivia_items
-
-    write_json(card_dir / "card.json", card)
-
-    prompt_text = build_prompt_text(card)
-    with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
-        f.write(prompt_text)
-
-    meta = {
-        "number": f"{number:03d}",
-        "word": word,
-        "gloss": gloss,
-        "card_type": card_type,
-        "rarity": rarity,
-        "art_prompt": art_prompt,
-        "stats": {
-            "lore": card["content"]["STAT_LORE"],
-            "context": card["content"]["STAT_CONTEXT"],
-            "complexity": card["content"]["STAT_COMPLEXITY"],
-        },
-        "ability": ability_text,
-        "ot_verse": {"ref": ot_ref, "snippet": ot_snip},
-        "nt_verse": {"ref": nt_ref, "snippet": nt_snip},
-        "greek": {"text": card["content"]["GREEK"], "translit": card["content"]["GREEK_TRANSLIT"]},
-        "hebrew": {"text": card["content"]["HEBREW"], "translit": card["content"]["HEBREW_TRANSLIT"]},
-        "ot_refs": card["content"]["OT_REFS"],
-        "nt_refs": card["content"]["NT_REFS"],
-        "trivia": trivia_items,
-        "wild_id": None,
-        "wild_counts_as": None,
-        "quartet_id": None,
-        "letter": None,
-        "notes": None,
-    }
-    with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
-        yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
-
-    out_png = card_dir / "outputs" / "card_1024x1536.png"
-    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(card_dir / "prompt.txt"), str(out_png)])
-
-    render_post(
-        str(card_dir / "post.md"),
-        word=word,
-        gloss=gloss,
-        ot_ref=ot_ref,
-        ot_snip=ot_snip,
-        nt_ref=nt_ref,
-        nt_snip=nt_snip,
-        trivia_items=trivia_items,
-        image_rel_path=f"./outputs/{out_png.name}",
-    )
-
-    print(f"Generated demo card at {card_dir}")
-    return 0
-
     print(f"Queue entries: {len(queue)}")
 
     entry = queue[0]
@@ -505,6 +383,132 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     for p in sorted(card_dir.rglob("*")):
         if p.is_file():
             print(f"  wrote: {p}")
+    return 0
+
+
+def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
+    if yaml is None:
+        raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
+
+    cards_dir = demo_dir / "cards"
+    number = next_number(cards_dir)
+
+    entry = _pick_demo_entry()
+    word = str(entry["word"]).upper()
+    slug = slugify(word)
+    card_type = str(entry.get("card_type", "NOUN")).upper()
+    rarity = str(entry.get("rarity", "COMMON")).upper()
+
+    card_dir = cards_dir / f"{number:03d}-{slug}"
+    os.makedirs(card_dir, exist_ok=True)
+
+    if not template_path.exists():
+        print(f"Missing {template_path}")
+        return 1
+
+    recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
+    stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
+    ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
+    nt_verse = recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {}
+    greek = recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {}
+    hebrew = recipe.get("hebrew", {}) if isinstance(recipe.get("hebrew"), dict) else {}
+
+    trivia = recipe.get("trivia", [])
+    if not isinstance(trivia, list):
+        trivia = []
+    trivia_items = _normalize_trivia([str(x) for x in trivia])
+
+    gloss = str(recipe.get("gloss", "")).strip()
+    art_prompt = str(recipe.get("art_prompt", "")).strip()
+    ability_text = str(recipe.get("ability_text", "")).strip()
+
+    ot_ref = str(ot_verse.get("ref", "")).strip()
+    ot_snip = str(ot_verse.get("snippet", "")).strip()
+    nt_ref = str(nt_verse.get("ref", "")).strip()
+    nt_snip = str(nt_verse.get("snippet", "")).strip()
+
+    card = read_json(template_path)
+    card.setdefault("content", {})
+
+    card["content"]["NUMBER"] = f"{number:03d}"
+    card["content"]["WORD"] = word
+    card["content"]["GLOSS"] = gloss
+    card["content"]["CARD_TYPE"] = card_type
+    card["content"]["RARITY_TEXT"] = rarity
+    card["content"]["RARITY_ICON"] = rarity
+    card["content"]["ART_PROMPT"] = art_prompt
+    card["content"]["ABILITY_TEXT"] = ability_text
+
+    card["content"]["STAT_LORE"] = int(stats.get("lore", 3))
+    card["content"]["STAT_CONTEXT"] = int(stats.get("context", 3))
+    card["content"]["STAT_COMPLEXITY"] = int(stats.get("complexity", 3))
+
+    card["content"]["OT_VERSE_REF"] = ot_ref
+    card["content"]["OT_VERSE_SNIPPET"] = ot_snip
+    card["content"]["NT_VERSE_REF"] = nt_ref
+    card["content"]["NT_VERSE_SNIPPET"] = nt_snip
+    card["content"]["OT_VERSE_LINE"] = f"{ot_ref} — “{ot_snip}”"
+    card["content"]["NT_VERSE_LINE"] = f"{nt_ref} — “{nt_snip}”"
+
+    card["content"]["GREEK"] = str(greek.get("text", "")).strip()
+    card["content"]["GREEK_TRANSLIT"] = str(greek.get("translit", "")).strip()
+    card["content"]["HEBREW"] = str(hebrew.get("text", "")).strip()
+    card["content"]["HEBREW_TRANSLIT"] = str(hebrew.get("translit", "")).strip()
+    card["content"]["OT_REFS"] = str(recipe.get("ot_refs", "")).strip()
+    card["content"]["NT_REFS"] = str(recipe.get("nt_refs", "")).strip()
+    card["content"]["TRIVIA_BULLETS"] = trivia_items
+
+    write_json(card_dir / "card.json", card)
+
+    prompt_text = build_prompt_text(card)
+    with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
+        f.write(prompt_text)
+
+    meta = {
+        "number": f"{number:03d}",
+        "word": word,
+        "gloss": gloss,
+        "card_type": card_type,
+        "rarity": rarity,
+        "art_prompt": art_prompt,
+        "stats": {
+            "lore": card["content"]["STAT_LORE"],
+            "context": card["content"]["STAT_CONTEXT"],
+            "complexity": card["content"]["STAT_COMPLEXITY"],
+        },
+        "ability": ability_text,
+        "ot_verse": {"ref": ot_ref, "snippet": ot_snip},
+        "nt_verse": {"ref": nt_ref, "snippet": nt_snip},
+        "greek": {"text": card["content"]["GREEK"], "translit": card["content"]["GREEK_TRANSLIT"]},
+        "hebrew": {"text": card["content"]["HEBREW"], "translit": card["content"]["HEBREW_TRANSLIT"]},
+        "ot_refs": card["content"]["OT_REFS"],
+        "nt_refs": card["content"]["NT_REFS"],
+        "trivia": trivia_items,
+        "wild_id": None,
+        "wild_counts_as": None,
+        "quartet_id": None,
+        "letter": None,
+        "notes": None,
+    }
+    with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
+        yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+
+    out_png = card_dir / "outputs" / "card_1024x1536.png"
+    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(card_dir / "prompt.txt"), str(out_png)])
+
+    render_post(
+        str(card_dir / "post.md"),
+        word=word,
+        gloss=gloss,
+        ot_ref=ot_ref,
+        ot_snip=ot_snip,
+        nt_ref=nt_ref,
+        nt_snip=nt_snip,
+        trivia_items=trivia_items,
+        image_rel_path=f"./outputs/{out_png.name}",
+    )
+
+    print(f"Generated demo card at {card_dir}")
     return 0
 
 
