@@ -1,0 +1,74 @@
+number: '001'
+word: MESSIAH
+gloss: Anointed One; the promised deliverer of Israel and redeemer of humanity.
+card_type: TITLE
+rarity: MYTHIC
+art_prompt: A close-up, dramatic scene of an ornate clay flask pouring golden oil
+  onto the head of a kneeling figure in silhouette, illuminated by a shaft of divine
+  light from above; ancient stone temple background, atmospheric dust motes, cinematic
+  lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Reveal the top 3 cards of your deck. You may put a 'Prophet', 'Priest', or
+  'King' card from among them into your hand. Put the rest on the bottom of your deck
+  in any order.
+ot_verse:
+  ref: Daniel 9:25
+  snippet: Know therefore and understand, that from the going forth of the commandment
+    to restore and to build Jerusalem unto the Messiah the Prince...
+nt_verse:
+  ref: John 1:41
+  snippet: He first findeth his own brother Simon, and saith unto him, We have found
+    the Messias, which is, being interpreted, the Christ.
+greek:
+  text: Μεσσίας
+  translit: Messias
+hebrew:
+  text: מָשִׁיחַ
+  translit: Mashiach
+ot_refs: Dan 9:25 • Ps 2:2 • Isa 61:1 • 1 Sam 2:10 • Hab 3:13
+nt_refs: John 1:41 • John 4:25
+trivia:
+- The Hebrew word 'Mashiach' literally means 'smeared with oil', referring to the
+  ritual of consecrating kings and priests.
+- In the New Testament, the Greek word 'Messias' appears only twice (both in John),
+  while its translation 'Christos' (Christ) appears over 500 times.
+- Surprisingly, the Persian King Cyrus is referred to as God's 'messiah' (anointed
+  one) in Isaiah 45:1 for his role in freeing the exiles.
+- 'The concept unites three major offices: Prophet, Priest, and King, all of which
+  were anointed roles in the Old Testament.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDv4UOAamdlTs_U_HIB7_HbmFMZoKe2pAYWnWk_rzyUD_q5EZPdk6apIB3KVR7sfssEW2S0sRY9839572d2FCKmt7GVfQ3P3B0k-EZ6nzDSfBnNDVqNYR_tDp00LnbVA2zu9bJ_3rdhOZOiP-ytxlGAPE08EY79k0=
+  title: bibleinfo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVjFd2oULTHUl6Ep9i3gavtPN8bNhtLW7eO3SDhKlU_BMj2Xb-ipYJBNUcGs8njt3kZqAbFhL7cRe5lUld53V8QqcPodbJ0qEZBoZmEtW4XozdM_VtjIlWkGcFz0-teJ4gXCjwjoKJBxSt0dpO6Wfp1VpTMg==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuNT_vc0PruYQqaly-IjOE0N8PEwiyD-u2yhRZvY-vfFxE2Zf3QcIwsugz9RMKzBAmSAgxvUL-Bh6Ankoul0AA13dnoFpBZZypzAMga-d3XNBqYTeyf1sd6BMbAsow58Vb941ebGQONrrztf_OAWwyp-yx1bi1xDY7AhTgfiAN-S2bOuvXUhUguBWx6vXq
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwoO_ZtfPJcJe45ADumH8OOSkupAqL5OTjtPaXpMK4T37UNCv8Oe95a7cgbTom6u0bLBhHiFbIX4XdFUXd1p7KyWJrqGjI_LxrpYuos3YPip5P1QVFkS7EB1oF8IDD
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGp9H3LJsEAHRVKPG_Ybib_UF1yLS4ro2hDLE1kuBVWXAAXpIuqJoP3JKbLSRdSNKHz4zb71Oy7d3GQHXa-nUnWMN_vmefAtGrVLZObcOkgdlVWA8nnUo5BOT8bKDsWRdezVBXY2VgEg==
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhgPi2LJnOgK0NG4EDKFFNBLePBjybJ7HLddO6e6hTdZbS4RwjQyvQjlq9zx8kOFf5O_2Mmg_KSWhw5fz_u9ZBHIdwnPapF2D0J3M8Xq7oU6r7a__OUYOKb8S6ZpY6HvjsYRVWFravEZDJMxTz7B9H7I_iCqQZ5oK6ZaoDIaZsIWXuYewY6veXO_UpMaRzfQ==
+  title: grace.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELXuxIAbaC_uM-mXJ24OAuExHt2jliWOKu6Y5QI8nngL9zTpsHSt9sAex7YAHG8ao_gnIBLzG2LK64sjqvz7YU2fhmG2fZxGxIXXCjhwPmmBMhTqsOgFIfYSWmvBA--b4=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2fzhFtwXD8sR9yXRH0Jg9NxHxz51OekfGnQZ-h8qo5HUjXmpJ3U8KDfQRrX06LpVq0yk6ho8DeVb2HJu7nEc0YHOKECvvP15dcqntqAdyLyc9qX6DRR-C2T_S9-hHE3mbpt8QU55EwsNWy7aQKXYQytzTUCjZE7jyGepzWCJhAhus
+  title: ebsco.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY7RZ_JPjqnDoUCZ93u8UtIEQHrZU5VA8gd07jnYjaOEw90xhW1mRI73aYU-HqHE2KTD33BIBZQPCVo2nIL1ZwbMTypqBO06HZq4JpElOSe0ZmOMXR_i2OCq5-4yzqAVm03Kdnpf5asAGjNe3gIdVxxSEtA51UsGvW8pwWTGQ_qg==
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwXmChI6fGGpAc78v1mjq8wbO57s9M1G6XQfe0ms3xY2W3RZg7P7CshiHhgezpvR2VRwXha_HF68XCrCjFdGH5jp-NSu5N2po85tP8agWrwB9hl4pZQM-4r4r2qQVtZfw6Rb5Up63fkdW0IBmmb-6jo8hb
+  title: gotquestions.org
+search_queries:
+- ''
+- meaning of Messiah hebrew greek bible
+- Messiah greek strongs number
+- Messiah hebrew strongs number
+- trivia facts about the word Messiah bible
+- key bible verses about Messiah OT and NT

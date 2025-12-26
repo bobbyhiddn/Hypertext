@@ -1,0 +1,259 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "orange",
+            "outline": "navy",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "GREEK",
+        "left_primary_key": "GREEK",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "GREEK_TRANSLIT",
+        "left_refs_label": "NT",
+        "left_refs_key": "NT_REFS",
+        "right_label": "HEB/ARAM",
+        "right_primary_key": "HEBREW",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "HEBREW_TRANSLIT",
+        "right_refs_label": "OT",
+        "right_refs_key": "OT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "001",
+    "WORD": "MESSIAH",
+    "GLOSS": "Anointed One; the promised deliverer of Israel and redeemer of humanity.",
+    "CARD_TYPE": "TITLE",
+    "RARITY_TEXT": "MYTHIC",
+    "RARITY_ICON": "MYTHIC",
+    "ART_PROMPT": "A close-up, dramatic scene of an ornate clay flask pouring golden oil onto the head of a kneeling figure in silhouette, illuminated by a shaft of divine light from above; ancient stone temple background, atmospheric dust motes, cinematic lighting.",
+    "ABILITY_TEXT": "Reveal the top 3 cards of your deck. You may put a 'Prophet', 'Priest', or 'King' card from among them into your hand. Put the rest on the bottom of your deck in any order.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 4,
+    "OT_VERSE_REF": "Daniel 9:25",
+    "OT_VERSE_SNIPPET": "Know therefore and understand, that from the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince...",
+    "NT_VERSE_REF": "John 1:41",
+    "NT_VERSE_SNIPPET": "He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ.",
+    "OT_VERSE_LINE": "Daniel 9:25 — “Know therefore and understand, that from the going forth of the commandment to restore and to build Jerusalem unto the Messiah the Prince...”",
+    "NT_VERSE_LINE": "John 1:41 — “He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ.”",
+    "GREEK": "Μεσσίας",
+    "GREEK_TRANSLIT": "Messias",
+    "HEBREW": "מָשִׁיחַ",
+    "HEBREW_TRANSLIT": "Mashiach",
+    "OT_REFS": "Dan 9:25 • Ps 2:2 • Isa 61:1 • 1 Sam 2:10 • Hab 3:13",
+    "NT_REFS": "John 1:41 • John 4:25",
+    "TRIVIA_BULLETS": [
+      "The Hebrew word 'Mashiach' literally means 'smeared with oil', referring to the ritual of consecrating kings and priests.",
+      "In the New Testament, the Greek word 'Messias' appears only twice (both in John), while its translation 'Christos' (Christ) appears over 500 times.",
+      "Surprisingly, the Persian King Cyrus is referred to as God's 'messiah' (anointed one) in Isaiah 45:1 for his role in freeing the exiles.",
+      "The concept unites three major offices: Prophet, Priest, and King, all of which were anointed roles in the Old Testament."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "meaning of Messiah hebrew greek bible",
+      "Messiah greek strongs number",
+      "Messiah hebrew strongs number",
+      "trivia facts about the word Messiah bible",
+      "key bible verses about Messiah OT and NT"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDv4UOAamdlTs_U_HIB7_HbmFMZoKe2pAYWnWk_rzyUD_q5EZPdk6apIB3KVR7sfssEW2S0sRY9839572d2FCKmt7GVfQ3P3B0k-EZ6nzDSfBnNDVqNYR_tDp00LnbVA2zu9bJ_3rdhOZOiP-ytxlGAPE08EY79k0=",
+        "title": "bibleinfo.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVjFd2oULTHUl6Ep9i3gavtPN8bNhtLW7eO3SDhKlU_BMj2Xb-ipYJBNUcGs8njt3kZqAbFhL7cRe5lUld53V8QqcPodbJ0qEZBoZmEtW4XozdM_VtjIlWkGcFz0-teJ4gXCjwjoKJBxSt0dpO6Wfp1VpTMg==",
+        "title": "blueletterbible.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuNT_vc0PruYQqaly-IjOE0N8PEwiyD-u2yhRZvY-vfFxE2Zf3QcIwsugz9RMKzBAmSAgxvUL-Bh6Ankoul0AA13dnoFpBZZypzAMga-d3XNBqYTeyf1sd6BMbAsow58Vb941ebGQONrrztf_OAWwyp-yx1bi1xDY7AhTgfiAN-S2bOuvXUhUguBWx6vXq",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwoO_ZtfPJcJe45ADumH8OOSkupAqL5OTjtPaXpMK4T37UNCv8Oe95a7cgbTom6u0bLBhHiFbIX4XdFUXd1p7KyWJrqGjI_LxrpYuos3YPip5P1QVFkS7EB1oF8IDD",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGp9H3LJsEAHRVKPG_Ybib_UF1yLS4ro2hDLE1kuBVWXAAXpIuqJoP3JKbLSRdSNKHz4zb71Oy7d3GQHXa-nUnWMN_vmefAtGrVLZObcOkgdlVWA8nnUo5BOT8bKDsWRdezVBXY2VgEg==",
+        "title": "knowing-jesus.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhgPi2LJnOgK0NG4EDKFFNBLePBjybJ7HLddO6e6hTdZbS4RwjQyvQjlq9zx8kOFf5O_2Mmg_KSWhw5fz_u9ZBHIdwnPapF2D0J3M8Xq7oU6r7a__OUYOKb8S6ZpY6HvjsYRVWFravEZDJMxTz7B9H7I_iCqQZ5oK6ZaoDIaZsIWXuYewY6veXO_UpMaRzfQ==",
+        "title": "grace.edu"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELXuxIAbaC_uM-mXJ24OAuExHt2jliWOKu6Y5QI8nngL9zTpsHSt9sAex7YAHG8ao_gnIBLzG2LK64sjqvz7YU2fhmG2fZxGxIXXCjhwPmmBMhTqsOgFIfYSWmvBA--b4=",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2fzhFtwXD8sR9yXRH0Jg9NxHxz51OekfGnQZ-h8qo5HUjXmpJ3U8KDfQRrX06LpVq0yk6ho8DeVb2HJu7nEc0YHOKECvvP15dcqntqAdyLyc9qX6DRR-C2T_S9-hHE3mbpt8QU55EwsNWy7aQKXYQytzTUCjZE7jyGepzWCJhAhus",
+        "title": "ebsco.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY7RZ_JPjqnDoUCZ93u8UtIEQHrZU5VA8gd07jnYjaOEw90xhW1mRI73aYU-HqHE2KTD33BIBZQPCVo2nIL1ZwbMTypqBO06HZq4JpElOSe0ZmOMXR_i2OCq5-4yzqAVm03Kdnpf5asAGjNe3gIdVxxSEtA51UsGvW8pwWTGQ_qg==",
+        "title": "christianity.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwXmChI6fGGpAc78v1mjq8wbO57s9M1G6XQfe0ms3xY2W3RZg7P7CshiHhgezpvR2VRwXha_HF68XCrCjFdGH5jp-NSu5N2po85tP8agWrwB9hl4pZQM-4r4r2qQVtZfw6Rb5Up63fkdW0IBmmb-6jo8hb",
+        "title": "gotquestions.org"
+      }
+    ]
+  }
+}
