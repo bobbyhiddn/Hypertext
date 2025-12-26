@@ -1,0 +1,74 @@
+number: '002'
+word: GOSPEL
+gloss: Good News
+card_type: NOUN
+rarity: RARE
+art_prompt: A golden sunrise breaking over a silhouette of a mountain range, with
+  a lone runner in the distance carrying a banner, dynamic lighting, digital painting
+  style, no text or letters
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Reveal the top card of the shared deck. If its Context is 4 or higher, place
+  it in your hand.
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful upon the mountains are the feet of him who brings good news,
+    who publishes peace...
+nt_verse:
+  ref: Mark 1:15
+  snippet: The time is fulfilled, and the kingdom of God is at hand; repent and believe
+    in the gospel.
+greek:
+  text: εὐαγγέλιον
+  translit: euangelion
+hebrew:
+  text: בָּשַׂר
+  translit: basar
+ot_refs: Isa 40:9 • Isa 61:1 • Nah 1:15 • Ps 96:2
+nt_refs: Rom 1:16 • 1 Cor 15:1-4 • Mark 16:15 • Gal 1:6-9
+trivia:
+- The English word comes from the Old English 'god-spell', meaning 'good story' or
+  'good tidings'.
+- In the Roman Empire, 'euangelion' was a secular term used for announcements of the
+  Emperor's birthday or military victories.
+- Mark is the only one of the four evangelists to use the word 'gospel' in the opening
+  line of his book.
+- The Hebrew root 'basar' can also mean 'flesh', implying a message that is delivered
+  in person or incarnated.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-MQwOE517VTbteOQZMT-GcZuOCtBTY-wMYjFsq-2-vmhrYS4NFsmJ8TcvAHYjkevyRv-quknev0f40SP2DmMKi73ZTHOV-ERsdmc6KFpN1Sl_CteFZ8chHQ-dKRVAH2tYEGHctmwcLfK2ji4WttJqZf0MaUvCKt9qdYtyrmKJgdL6-A==
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGx67MwXdltSOO9KrLp4ZkywqunyhCqfNXnAWnxRFvUaJ8E7WtxAZO2tMTeN_wqM6byXIwgDVxAlNNxl86k2P2tzNDgX5SXgg08AyBKBcnaE6vqp0GK-561YbbpSUw
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6QJxqYP8F2OHFBtTdqOihd21QPxtT3gtL_bWjWx_hpbdYOqSNYWkwxnKorkuAPo6vlJuNhfC7_c_x1_K-23ZNtsSxcMxl1GE9G8CtL5HnkJvBbfH4B4NG5TrXQkc=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHF7ic3o8jPTc7OnnNlfrfu_qt71qgH0C3tg53_LcljbqQDFWucGFw9-CFRG4KWTXahaIPX-jqyWFBVVhlNp-IX8w2vM9tvU3zgV9GgpHEafl9y9MutymPlvsei5KVLa_e8UXD1nLr10C4GyklKz1oG1uF
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG67K5_gyy872jE4XBZyrYfAwUzFH1NFRe1KgSwbx06xT8pixC5g25oj8ZudE1wM5CElLaQjSVNbyLp9wCJxPYLpkU4B8gZIlJJuKL0b783euDjgODiV-Xi2VxI5YXHmVsQuHYQROaGd3aBWXVvYlhyBYnogw==
+  title: catholic-resources.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNMKCWGM3xDZcda61MF9y6ciLXcJHD8EFdXO2ZGX9cQ9kT6xDzW8QF-teDPc0k6gCTnbmyfPK0TIEf9pm_1m_yrklNLRUNR3yCyzLl33J0jNQSDdRgJwCuaMAzB1TriAG-SIZgFgGEJVJmoaHrd8oaI6HPihCjRB4wg9nMovlnfPGeTkxZDzmcBOhTnO_xCWMZPGFmLmpLb-hSLKxD2CrraNQ2n6GiEgzS1QO_5P9XbRyPpPI=
+  title: newstartdiscipleship.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlo9LLOCELviy8VGibXtf7Fiu-posx2KPlE6CIPb09bzpcBetpS8zidxPyhCS6TjqCH343Aaa0mQo5pSHOZh5iFRI8DR7wLGYjO1b9IgGcxPZ8SpNe2o0YtNbQW5WwuOHhrJVtgpxF4MF2g1jwRiZQX9-Z_IQ0OgKBnvpqh_4iPpShp3Aj6dY8bS7FF6Rfb8vq1FkXJ_rb6NrkuesItE12rQ==
+  title: newstartdiscipleship.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0aoNOFSeKsJWcLUTG1ZQqB9mW9XnMZl6D_JCi62-BFtklaM8FHcDWhsqldYj-BUSLlKvIwP5feZqjoUSk3Qks1I9uGiE34XX-_Kp81xDWR7cMaouUMXxy0OceLOyvbRGkE_THXdJ5q8vUY6_1HUl7I5BnjN5bdXGHKbb5t3jE_rbTCypzT4L0u2cG7JPaT92nzvWsKvgt-n27CYBlizCUysMskOL5HnlqyHmaIHV-XjICogURv2kS0cn85Afrg3-RuZh-cTku4uZks6Su0c3CapiUSKqG8BuEbvrF7kFdsjFu1H6BPyVpgFTX1Hf-7tXhmUPCR1u2nszk6-tByHk0OInkjvuX7fYX_hLkF9WQ9T_WBYZAqLA8E1z5clpKBVBiolTcxyQwP9w=
+  title: tyndale.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_K2puV2Dsm8aZSy9EC7avzKiJn30j4x77tuudBb3Wg8AQRZAHu4-NxRnryxTX73FCJWSGhWUIM7XPEkpTf9MHUfnK8r2vbCLbUloZsC5NpUZoQmEcJvXkVDCHS_dcH6UETqs=
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRKVKjyN8ZGAoFWw24NiizX1S6h0vIjuthQIjn2P30BShqWPt10NJDx3yq7VpVDvzfy-J0Oz5YM8a9QhDPBD61_ETbbmKqvOfgp3Et3-bgUYJxVyANqxhgQzJmAYJ0doAd-g==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtNUxSz6bB2Onjz7H5RIWMXl9KaYvQcD5logEWX9YvdtHEsXzGLrNgZ3c3WHba10kYUFqSj90c3fGe6bKOZctewRUSRyQodyVqtjvT3W9u5aAjY-ybqGr7Z7ip9EwmxflKNUIDOGqHqrPv349WdwhA5T9jpgK3LyVmwe6sbBxiNZaq
+  title: hebrewwordlessons.com
+search_queries:
+- ''
+- greek word for gospel euangelion
+- etymology and trivia of the word gospel euangelion roman empire
+- hebrew word for gospel good news basar
+- New Testament verses containing gospel euangelion
+- Old Testament verses containing good news basar

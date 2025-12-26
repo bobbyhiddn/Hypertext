@@ -1,7 +1,3 @@
-# Ordered queue. Keep it boring on purpose.
-- word: MAGI
-  card_type: TITLE
-  rarity: MYTHIC
-- word: GOSPEL
+- word: GRACE
   card_type: NOUN
-  rarity: RARE
+  rarity: COMMON
