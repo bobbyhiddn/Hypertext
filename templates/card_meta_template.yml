@@ -1,0 +1,77 @@
+# Hypertext Card Metadata Template
+# Copy this file to series/YYYY-QN/cards/NNN-word/meta.yml and fill in values
+
+# === IDENTITY ===
+number: "001"                    # Card number (zero-padded 3 digits)
+word: "EXAMPLE"                  # English word (uppercase)
+gloss: "short definition here"   # Brief definition/translation
+card_type: "NOUN"                # NOUN | VERB | ADJECTIVE | NAME | TITLE
+
+# === RARITY ===
+rarity: "COMMON"                 # COMMON | UNCOMMON | RARE | MYTHIC
+# Icon is determined by rarity:
+#   COMMON: white circle
+#   UNCOMMON: green square
+#   RARE: gold hexagon
+#   MYTHIC: orange rhombus
+
+# === ARTWORK ===
+art_prompt: |
+  A single scene depicting...
+  (no text in art, no modern objects, coherent composition)
+
+# === STATS (1-5) ===
+stats:
+  lore: 3        # Meta-narrative alignment (how central to Biblical story)
+  context: 3     # Occurrence bucket (how often it appears)
+  complexity: 3  # Grammar depth (linguistic complexity)
+
+# === ABILITY ===
+# Must match rarity pattern:
+#   COMMON: simple ability
+#   UNCOMMON: suit-based ability
+#   RARE: references stats
+#   MYTHIC: unique, can reference other cards
+ability: "When played, draw one card."
+
+# === SCRIPTURE ===
+ot_verse:
+  ref: "Genesis 1:1"
+  snippet: "In the beginning..."
+
+nt_verse:
+  ref: "John 1:1"
+  snippet: "In the beginning was the Word..."
+
+# === LANGUAGES ===
+greek:
+  text: "λόγος"
+  translit: "logos"
+
+hebrew:
+  text: "דָּבָר"
+  translit: "dabar"
+
+# References (verse citations only)
+ot_refs: "Gen 1:1; Ps 33:6"
+nt_refs: "John 1:1; Heb 1:3"
+
+# === TRIVIA ===
+trivia:
+  - "First trivia bullet point"
+  - "Second trivia bullet point"
+  - "Third trivia bullet point"
+  - "Fourth trivia bullet point (optional)"
+
+# === HIDDEN METADATA (not rendered) ===
+# For TITLE cards only:
+wild_id: null           # Unique wild card identifier
+wild_counts_as: null    # What card types this can substitute for
+
+# For non-TITLE cards:
+quartet_id: null        # Group identifier for related cards
+letter: null            # Position in quartet (A, B, C, D)
+
+# Internal notes (never rendered):
+notes: |
+  Any internal notes about this card...

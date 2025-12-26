@@ -1,0 +1,289 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://hypertext.cards/schema/hypertext_card.schema.json",
+  "title": "Hypertext Card",
+  "description": "Schema for validating Hypertext trading card JSON files",
+  "type": "object",
+  "required": ["style_guide", "layout", "content", "render_instructions", "model_prompt"],
+  "properties": {
+    "style_guide": {
+      "type": "object",
+      "required": ["game_name", "card_type", "orientation", "aspect_ratio", "target_resolution", "visual_style", "palette", "typography", "iconography"],
+      "properties": {
+        "game_name": { "type": "string", "const": "Hypertext" },
+        "card_type": { "type": "string", "const": "word_study_trading_card" },
+        "orientation": { "type": "string", "const": "vertical" },
+        "aspect_ratio": { "type": "string", "const": "2:3" },
+        "target_resolution": {
+          "type": "object",
+          "required": ["width", "height"],
+          "properties": {
+            "width": { "type": "integer", "minimum": 1024 },
+            "height": { "type": "integer", "minimum": 1536 }
+          }
+        },
+        "visual_style": { "type": "array", "items": { "type": "string" } },
+        "palette": {
+          "type": "object",
+          "required": ["primary", "secondary", "background", "ink"],
+          "properties": {
+            "primary": { "type": "string" },
+            "secondary": { "type": "string" },
+            "background": { "type": "string" },
+            "ink": { "type": "string" }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "required": ["title", "labels", "body", "glyph_support"],
+          "properties": {
+            "title": { "type": "string" },
+            "labels": { "type": "string" },
+            "body": { "type": "string" },
+            "glyph_support": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "iconography": {
+          "type": "object",
+          "required": ["rarity_system", "stat_pips"],
+          "properties": {
+            "rarity_system": {
+              "type": "object",
+              "required": ["placement", "render_rule", "icons"],
+              "properties": {
+                "placement": { "type": "string" },
+                "render_rule": { "type": "string" },
+                "icons": {
+                  "type": "object",
+                  "required": ["COMMON", "UNCOMMON", "RARE", "MYTHIC"],
+                  "properties": {
+                    "COMMON": { "$ref": "#/$defs/rarityIcon" },
+                    "UNCOMMON": { "$ref": "#/$defs/rarityIcon" },
+                    "RARE": { "$ref": "#/$defs/rarityIcon" },
+                    "MYTHIC": { "$ref": "#/$defs/rarityIcon" }
+                  }
+                }
+              }
+            },
+            "stat_pips": {
+              "type": "object",
+              "required": ["shape", "max", "filled_style", "empty_style"],
+              "properties": {
+                "shape": { "type": "string", "const": "circle" },
+                "max": { "type": "integer", "const": 5 },
+                "filled_style": { "type": "string" },
+                "empty_style": { "type": "string" },
+                "no_other_shapes": { "type": "boolean", "const": true }
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "required": ["frame", "header", "art_panel", "stats_row", "panels"],
+      "properties": {
+        "frame": {
+          "type": "object",
+          "properties": {
+            "rounded_corners": { "type": "boolean" },
+            "navy_border": { "type": "string" },
+            "gold_trim": { "type": "string" },
+            "corner_filigree": { "type": "string" }
+          }
+        },
+        "top_microtext": {
+          "type": "object",
+          "properties": {
+            "left": { "type": "string", "maxLength": 0 },
+            "right": { "type": "string", "maxLength": 0 }
+          }
+        },
+        "header": { "type": "object" },
+        "art_panel": {
+          "type": "object",
+          "required": ["height_fraction", "rules"],
+          "properties": {
+            "height_fraction": { "type": "number", "minimum": 0.3, "maximum": 0.6 },
+            "frame_style": { "type": "string" },
+            "art_prompt_key": { "type": "string" },
+            "rules": {
+              "type": "array",
+              "items": { "type": "string" },
+              "contains": { "const": "no text inside artwork" }
+            }
+          }
+        },
+        "stats_row": {
+          "type": "object",
+          "required": ["stats"],
+          "properties": {
+            "stats": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "required": ["label", "pips_key"],
+                "properties": {
+                  "label": { "type": "string", "enum": ["LORE", "CONTEXT", "COMPLEXITY"] },
+                  "pips_key": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "panels": { "type": "array", "items": { "type": "object" } }
+      }
+    },
+    "content": {
+      "type": "object",
+      "required": ["NUMBER", "WORD", "GLOSS", "CARD_TYPE", "RARITY_TEXT", "ART_PROMPT", "STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY", "ABILITY_TEXT", "OT_VERSE_LINE", "NT_VERSE_LINE", "GREEK", "GREEK_TRANSLIT", "HEBREW", "HEBREW_TRANSLIT", "OT_REFS", "NT_REFS", "TRIVIA_BULLETS"],
+      "properties": {
+        "NUMBER": {
+          "type": "string",
+          "pattern": "^[0-9]{3}$",
+          "description": "Three-digit card number"
+        },
+        "WORD": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The English word"
+        },
+        "GLOSS": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Short definition"
+        },
+        "CARD_TYPE": {
+          "type": "string",
+          "enum": ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"]
+        },
+        "RARITY_TEXT": {
+          "type": "string",
+          "enum": ["COMMON", "UNCOMMON", "RARE", "MYTHIC"]
+        },
+        "RARITY_ICON": {
+          "type": "string",
+          "enum": ["COMMON", "UNCOMMON", "RARE", "MYTHIC"]
+        },
+        "ART_PROMPT": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Scene description for artwork"
+        },
+        "STAT_LORE": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "STAT_CONTEXT": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "STAT_COMPLEXITY": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "ABILITY_TEXT": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Card ability text"
+        },
+        "OT_VERSE_LINE": {
+          "type": "string",
+          "description": "Old Testament verse reference and snippet"
+        },
+        "NT_VERSE_LINE": {
+          "type": "string",
+          "description": "New Testament verse reference and snippet"
+        },
+        "GREEK": {
+          "type": "string",
+          "description": "Greek text"
+        },
+        "GREEK_TRANSLIT": {
+          "type": "string",
+          "description": "Greek transliteration"
+        },
+        "HEBREW": {
+          "type": "string",
+          "description": "Hebrew text"
+        },
+        "HEBREW_TRANSLIT": {
+          "type": "string",
+          "description": "Hebrew transliteration"
+        },
+        "OT_REFS": {
+          "type": "string",
+          "description": "Old Testament references"
+        },
+        "NT_REFS": {
+          "type": "string",
+          "description": "New Testament references"
+        },
+        "TRIVIA_BULLETS": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "items": { "type": "string" }
+        },
+        "WILD_ID": { "type": ["string", "null"] },
+        "WILD_COUNTS_AS": { "type": ["string", "null"] },
+        "QUARTET_ID": { "type": ["string", "null"] },
+        "LETTER": { "type": ["string", "null"] },
+        "NOTES_INTERNAL": { "type": ["string", "null"] }
+      }
+    },
+    "render_instructions": {
+      "type": "object",
+      "required": [
+        "strict_no_duplicate_headings",
+        "no_text_inside_art_panel",
+        "rarity_icon_must_be_exact_shape",
+        "output_must_contain_only_the_card",
+        "no_text_outside_card_border"
+      ],
+      "properties": {
+        "strict_no_duplicate_headings": { "type": "boolean", "const": true },
+        "single_panel_labels_render_once": { "type": "boolean", "const": true },
+        "no_extra_panels": { "type": "boolean", "const": true },
+        "text_accuracy_priority": { "type": "string" },
+        "no_warped_or_garbled_text": { "type": "boolean", "const": true },
+        "hebrew_right_to_left": { "type": "boolean", "const": true },
+        "no_text_inside_art_panel": { "type": "boolean", "const": true },
+        "prioritize_legibility": { "type": "boolean", "const": true },
+        "rarity_icon_must_be_exact_shape": { "type": "boolean", "const": true },
+        "rarity_text_must_match_exactly": { "type": "boolean", "const": true },
+        "output_must_contain_only_the_card": { "type": "boolean", "const": true },
+        "no_text_outside_card_border": { "type": "boolean", "const": true },
+        "no_captions_or_watermarks_outside_card": { "type": "boolean", "const": true },
+        "do_not_render_hidden_metadata": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "model_prompt": {
+      "type": "string",
+      "minLength": 100,
+      "description": "The prompt sent to the image generation model"
+    }
+  },
+  "$defs": {
+    "rarityIcon": {
+      "type": "object",
+      "required": ["shape", "fill", "outline"],
+      "properties": {
+        "shape": { "type": "string", "enum": ["circle", "square", "hexagon", "rhombus"] },
+        "fill": { "type": "string" },
+        "outline": { "type": "string" },
+        "sides": { "type": "integer" },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}
