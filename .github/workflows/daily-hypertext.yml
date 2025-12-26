@@ -45,7 +45,6 @@ jobs:
   imagegen:
     runs-on: ubuntu-latest
     needs: plan
-    environment: imagegen
     steps:
       - uses: actions/checkout@v4
 
