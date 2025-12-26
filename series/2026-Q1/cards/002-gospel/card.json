@@ -158,7 +158,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "A radiant golden sunrise breaking over a dark, rugged mountain range, illuminating a lone silhouette of a runner on the peak with a raised staff, symbolizing the arrival of hope",
-    "ABILITY_TEXT": "Reveal the top card of the shared deck. If its Context is 4 or higher, add it to your hand; otherwise, return it to the bottom.",
+    "ABILITY_TEXT": "Reveal a card from your hand. If its Lore is higher than 4, draw two cards.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 3,
