@@ -1,0 +1,86 @@
+number: '002'
+word: GOSPEL
+gloss: Good news; a joyful announcement of victory or salvation
+card_type: NOUN
+rarity: RARE
+art_prompt: A weary but triumphant messenger running across sunlit mountain peaks
+  at dawn, holding a closed scroll case high, with golden rays of light breaking through
+  storm clouds in the background
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Reveal cards from the top of the shared deck equal to this card's Context
+  stat; keep one and discard the rest.
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful on the mountains are the feet of those who bring good news,
+    who proclaim peace...
+nt_verse:
+  ref: Romans 1:16
+  snippet: For I am not ashamed of the gospel, because it is the power of God that
+    brings salvation to everyone who believes...
+greek:
+  text: εὐαγγέλιον
+  translit: euangelion
+hebrew:
+  text: בְּשׂוֹרָה
+  translit: besorah
+ot_refs: Isa 40:9 • Isa 52:7 • Isa 61:1 • Nah 1:15 • 2 Sam 18:26
+nt_refs: Mark 1:1 • Rom 1:16 • 1 Cor 15:1-4 • Gal 1:6-9 • Rev 14:6
+trivia:
+- Derived from the Old English 'godspell', meaning 'good story' or 'good tidings'.
+- In the Roman Empire, this term was used for imperial announcements, such as the
+  birthday or accession of Caesar.
+- The Greek word originally referred to the reward given to a messenger for bringing
+  good news, before coming to mean the message itself.
+- While there are four written Gospels, the New Testament often speaks of 'the gospel'
+  as a singular, unified message of salvation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRw3LZCL9V3TEj_24Ha0is-ZxdI0dVI0S33qRbUV-hwCS04-QhgxflodvYrZBuNbfD85Igy0_WZxC5rGrTmJTBoFP7D8MM5_AU7c7MN_CUG_wcYM3ptpUGrwioG7cl9v3QI3LC4Tw1IK2E2qBQSXLUiCvzxnJzdsnh-BSw6izmdJHzAFA=
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHAlKmBh6H80JkvwoWlXDMdOeZzgm2uXNJW0le2CfmiU4XBlKn7SbT4MPOugYncpDQYVQDkhcT3vbENIRQLO5a0aZF-0yrQW77GZWFO5oPhWV31t3Iai1PPmvefW4YcTUVYqxzR07LTnEbmUWzQvwQq8uvXyCB7f3n47WmKPqQUS_LqOdGY7PyKfGxO01T0FVn_GWo7sjdmOvCrZcP5MVzXMY=
+  title: newstartdiscipleship.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-2lDMlt7qy2oaTIqUe_pBTIBSqExAn06z-DIwXHi9FF2HJImHMuBfYHVq5cH7GugoS2I6EmNFY9t_G71osyQk3RXR0HXkMm_qdYiFv4H0PuRmKcOcZoP0sawX58k7hPPQzxuWJQiwlJFVStnGtTR40wJRtGmfPI_ufUI=
+  title: cara-ray.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdg2cMa8tGMVHl5HoJVguSbyZ2zL8yBeJHwZb5IrHq76iEHdnTaMymIW2XSnZZsvjH_2D9dnzeWXRlnQ4YAXl04IyX6yb0z7ZaK0vrIAFZWgu2njkwd0wS0VCon7szBQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVawX8VRD-FzJmt61Ej5kSUBgQ8IwWlI8OSsnyT7E7gpSASiTWVoLVqOgudRujxylCO_R_82hI4uIRNswYOz-eELENqUDq1elMuFwTrkpgmmhonav4gE_I5meDg1rGO0Xmh_vawRcKGL3G7zjcEcAatM7gAg==
+  title: allbibleinfo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlvjR9Y2Bn5Pc6RVDRfq87CtM3oyEMXRkmxv3AGhki-fYShmjhwfez3RxlhIua3URc_tebetgfwEZYBcQXfLBpCFED49p9EsN9yK_4WU6_0tlWnstWm6iuCkXiygjEG9A2XcKjIQfyfpkUZYh-JG4RfUpNrI28DYb6OZT3XiH61XC_BHb0QMJ2KpPPuKtebkPnEi6LIYUwNE5Wd37kzFjdlLPr3s8xurv-VDAbDo9DpWZ5wMpdGpyQ8Q9smo1VGOJYQ_IEJLU_WRYVfYQA6IB4jYh5zDAy8wyLvEK5b521J0O_-5SHRhNEs-deagx7fZXetwKAdBiDgq98uVg7UEzukwEy5YDuDcd6fD8plRgrvoZ99J-QDNlY_kPvtt9-_Xpyx3wNqkw_BRx2
+  title: tyndale.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHy-EURU7T6sT6uk-EX8toxyxXf23kKXJKkdOWH1KQfW0PvZ9ZP_d7w-zHSF5dKTPI_Rs3FPMkC1SPXnm3aCX4ZkdpJN65vS_ymyMTZcBF5zCDVVsL58wH3B-CkkQAOCFQx-48HSWUGIWMLX65hWvLRz7ODLs3mvS7aEnhKnBbO
+  title: compassion.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWiIRn3Njp0a-9ApfLDm_cOgchesyG3gRmzoVaMwAQXi6RFBmx_mi6jgJlgs4JAkrAdT3sSvHxG5vz-04gGCOAVWtoqunyjDykKyLusQgN2HYJcHZ7lt72MW26UAP4wNr09AWEK90blc3TbTf8io20OmRpL9dEVPhyU3hbBqd2ib5dRjaZpYxVwM78c684N4DYKSIcXeywzlw=
+  title: nextstepbiblestudy.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1ZY4QSfQ8s7-5fsK_PTOg176SCkelZfJInNeHTgJx7CQuXMVTj-iheAdmr_CW2YOWlxuvj3PkkrgJE65zFU9Imbb2fkP4X0HELc2EJ1J7ODzRQD7tjgBNZzM9l_plRmCnqPWEyeF-CtolnOJDsW5tadWLpCjYm3otuzKEj0h1V1D85Q==
+  title: hebrewwordlessons.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNY1ZtC5KtpS5mPZssBuyKuhbEvUKIdeaVadMh3ab6ikRyHNUupQ3DQIYTiWMjdQji4v2733LtOPzjzuv7pTtDPyVkgLMvLwabyazbLDMoDYjLvuxaX6H_oSkT4t8x
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3KmkWH37Ez_x3ktbMD45qTtrGiO93iyVdUgMc91EuUZxpXbmn3AaJ-cFeoTq0H9n7ytjh1hm9XmA7opjwXPy7M7ndNPboZFibb9iYjv_YQFwyCc8Hz3xDfQo63cbci4pAr0FzBlxenoZhthDcbWXmACz75iATbn8X51HXxg3yvJ5mrP4jLT8W
+  title: adornthegospel.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8i_S_Ku84Y6Z6JqDItiW3ov0WIWerw2JoPbdmio-yrvk6UQkUxLgSLyD-fTJGO42ojRWdGhJyt8JJFHcaXoF8bNW2dyEXl4u3WpHa_hqwWT84q451V83_nE1_U0gY7Pb6gIS_7LK5ps2QCjSr-hve
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtXpWsVW1ezvZGW2lC4IK_zr5je6OnRbahaD1g9efwZC-WLhOaRHsRIBCBsx5_73zIfBqf7attFhL_XcIj0O9N83LkMIjmY2o1bsgzHCPc4fe8DyllTZgjk9JniHgppDU=
+  title: dailyverses.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGh5EPuFrC-818rNZ5Ej_CJ6nacx299AHXWv3V9Uz1Htk1GsHgVam4XuE0roNXS9hyeis5-0teVTJojOZivwQAJm5wfF4MQCbBInV-qWsyGdQLWVVVPMhM4cG70nc9NxwXHsEY=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZWlLhRmyJRcPW_hw43_7nUpzK5ekIIaKTdKfX6m_D_jL0oMkrEsl5LtDhe9keTD8MLRysAZ6Vv6UyQ0JEygxxC4py9lPkCplrr4d_QzNLFlaTXHJR-dHBbuvVsRAa68EeKfl1t4Wpic374m_ahVzh1YwPLJq5TdKGig1n3FnFsi0u
+  title: funtrivia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWZTviqphRG6jgzTNPKAb4s8wXJAbTtqOtMYbJNLkwEmzDOMtCd7glffoeIBdPMCNG_ETHsTFKGAQtwomIgp8SVSY54XQGw2aS4aZ1CdULOVp6aHPvYr7o6LBl-oUQ8GTIJydw7Tiifgrkz6PyjjVU3wtu_E1-gmeDpks8T5mugpiNHoKmChj1sOnvJch7_wOHDBEsyeVGxsbLpJUJ7f4=
+  title: cru.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoizsxcuBAdnmsV-oD3JeAfrZdjBboCMaZKUyoIlLM5C6pBAwIXpiubyO-hI9523NDbb8J5Om-ALXhKTKY1Id0-GUUhhubA8U3Ih5GaVxipMAME0A1MMSogaXXLcg-kSz04tZ4H0ZMDhvEe3Y=
+  title: verseoftheday.com
+search_queries:
+- ''
+- euangelion greek meaning
+- basar hebrew meaning good news
+- Old Testament verses about good news
+- New Testament verses about gospel
+- trivia about the word gospel
+- etymology of gospel greek hebrew
