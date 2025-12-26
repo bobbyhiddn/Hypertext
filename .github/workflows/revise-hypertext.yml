@@ -1,0 +1,57 @@
+name: Revise Hypertext Card
+
+on:
+  workflow_dispatch:
+    inputs:
+      card_dir:
+        description: "Path to card folder (e.g. series/2026-Q1/cards/002-gospel)"
+        required: true
+        type: string
+      revise_file:
+        description: "Optional path to revise instruction file (defaults to <card_dir>/revise.txt)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  revise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install pyyaml
+
+      - name: Revise card (apply minimal JSON patch + rerender)
+        env:
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+        run: |
+          if [[ -n "${{ inputs.revise_file }}" ]]; then
+            python tools/daily_pipeline.py --phase revise --card-dir "${{ inputs.card_dir }}" --revise-file "${{ inputs.revise_file }}"
+          else
+            python tools/daily_pipeline.py --phase revise --card-dir "${{ inputs.card_dir }}"
+          fi
+
+      - name: Commit and push changes
+        run: |
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+          git add "${{ inputs.card_dir }}"
+          if [[ -n "${{ inputs.revise_file }}" ]]; then
+            git add "${{ inputs.revise_file }}" || true
+          fi
+          git commit -m "Revise card: ${{ inputs.card_dir }}"
+          git push

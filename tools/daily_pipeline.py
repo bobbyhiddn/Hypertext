@@ -170,6 +170,81 @@ def write_json(path: Path, obj: dict) -> None:
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
 
+def _read_text(path: Path) -> str:
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+def _json_pointer_tokens(ptr: str) -> list[str]:
+    if ptr == "":
+        return []
+    if not ptr.startswith("/"):
+        raise RuntimeError(f"Invalid JSON pointer: {ptr}")
+    parts = ptr.split("/")[1:]
+    return [p.replace("~1", "/").replace("~0", "~") for p in parts]
+
+
+def _get_parent_and_key(doc, tokens: list[str]):
+    if not tokens:
+        raise RuntimeError("Cannot operate on document root")
+
+    cur = doc
+    for t in tokens[:-1]:
+        if isinstance(cur, list):
+            idx = int(t)
+            cur = cur[idx]
+        else:
+            cur = cur[t]
+    return cur, tokens[-1]
+
+
+def _apply_json_patch(doc: dict, patch_ops: list[dict]) -> dict:
+    if not isinstance(patch_ops, list):
+        raise RuntimeError("Patch must be a JSON array")
+
+    for op in patch_ops:
+        if not isinstance(op, dict):
+            raise RuntimeError("Patch operations must be objects")
+
+        kind = op.get("op")
+        path = op.get("path")
+        if not isinstance(kind, str) or not isinstance(path, str):
+            raise RuntimeError("Patch operation must include string 'op' and 'path'")
+
+        tokens = _json_pointer_tokens(path)
+        parent, key = _get_parent_and_key(doc, tokens)
+
+        if kind in ("add", "replace"):
+            if "value" not in op:
+                raise RuntimeError(f"Patch op {kind} missing 'value'")
+            value = op["value"]
+
+            if isinstance(parent, list):
+                if key == "-":
+                    parent.append(value)
+                else:
+                    idx = int(key)
+                    if kind == "add":
+                        parent.insert(idx, value)
+                    else:
+                        parent[idx] = value
+            else:
+                parent[key] = value
+            continue
+
+        if kind == "remove":
+            if isinstance(parent, list):
+                idx = int(key)
+                del parent[idx]
+            else:
+                del parent[key]
+            continue
+
+        raise RuntimeError(f"Unsupported patch op: {kind}")
+
+    return doc
+
+
 def build_prompt_text(card: dict) -> str:
     recipe = card.get("model_prompt", "").strip()
     if not recipe:
@@ -563,13 +638,97 @@ def phase_imagegen(*, series_dir: Path) -> int:
     return 0
 
 
+def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
+    if yaml is None:
+        raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
+
+    card_path = card_dir / "card.json"
+    if not card_path.exists():
+        print(f"Missing {card_path}")
+        return 1
+
+    revise_path = revise_file if revise_file is not None else (card_dir / "revise.txt")
+    if not revise_path.exists():
+        print(f"Missing {revise_path}. Add your edit instructions there and rerun revise.")
+        return 1
+
+    instructions = _read_text(revise_path).strip()
+    if not instructions:
+        print(f"Empty {revise_path}. Add your edit instructions there and rerun revise.")
+        return 1
+
+    card = read_json(card_path)
+
+    prompt = (
+        "You are editing an existing Hypertext trading card JSON. "
+        "Given the CURRENT card JSON and HUMAN edit instructions, return ONLY a valid RFC 6902 JSON Patch array. "
+        "Use the minimal number of operations. Prefer replace operations on /content fields. "
+        "Do not rewrite the entire card. Do not change style_guide or layout unless explicitly requested. "
+        "Allowed ops: add, replace, remove. Do not use move/copy/test.\n\n"
+        "HUMAN_EDIT_INSTRUCTIONS:\n"
+        + instructions
+        + "\n\nCURRENT_CARD_JSON:\n"
+        + json.dumps(card, ensure_ascii=False, indent=2)
+    )
+
+    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.2, use_google_search=False)
+    patch_ops = _parse_json_from_model(text)
+    if not isinstance(patch_ops, list):
+        raise RuntimeError("Revise step did not return a JSON Patch array.")
+
+    updated = _apply_json_patch(card, patch_ops)
+
+    write_json(card_path, updated)
+
+    prompt_text = build_prompt_text(updated)
+    with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
+        f.write(prompt_text)
+
+    out_png = card_dir / "outputs" / "card_1024x1536.png"
+    subprocess.check_call([sys.executable, str(Path("tools") / "gemini_image.py"), str(card_dir / "prompt.txt"), str(out_png)])
+
+    content = updated.get("content", {}) if isinstance(updated.get("content"), dict) else {}
+    render_post(
+        str(card_dir / "post.md"),
+        word=str(content.get("WORD", "")),
+        gloss=str(content.get("GLOSS", "")),
+        ot_ref=str(content.get("OT_VERSE_REF", "")),
+        ot_snip=str(content.get("OT_VERSE_SNIPPET", "")),
+        nt_ref=str(content.get("NT_VERSE_REF", "")),
+        nt_snip=str(content.get("NT_VERSE_SNIPPET", "")),
+        trivia_items=content.get("TRIVIA_BULLETS", []) if isinstance(content.get("TRIVIA_BULLETS"), list) else [],
+        image_rel_path=f"./outputs/{out_png.name}",
+    )
+
+    meta_path = card_dir / "meta.yml"
+    if meta_path.exists():
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        if not isinstance(meta, dict):
+            meta = {}
+        prev = meta.get("revision")
+        try:
+            prev_i = int(prev) if prev is not None else 0
+        except Exception:
+            prev_i = 0
+        meta["revision"] = prev_i + 1
+        meta["revision_notes"] = instructions
+        with open(meta_path, "w", encoding="utf-8") as f:
+            yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+
+    print(f"Revised card at {card_dir}")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
     parser.add_argument("--demo-dir", default=str(DEFAULT_DEMO_DIR))
+    parser.add_argument("--card-dir")
+    parser.add_argument("--revise-file")
     args = parser.parse_args()
 
     series_dir = Path(args.series)
@@ -583,6 +742,13 @@ def main() -> int:
 
     if args.phase == "demo":
         return phase_demo(series_dir=series_dir, template_path=template_path, demo_dir=Path(args.demo_dir))
+
+    if args.phase == "revise":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        revise_file = Path(args.revise_file) if args.revise_file else None
+        return phase_revise(card_dir=Path(args.card_dir), revise_file=revise_file)
 
     return 2
 
