@@ -995,7 +995,7 @@ def phase_imagegen(*, series_dir: Path) -> int:
         ]
         
     subprocess.check_call(cmd)
-    
+
     # Run polish step to remove lingering brackets
     polish_cmd = [
         sys.executable,
