@@ -347,6 +347,23 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
         allowed_paths.add("/content/ABILITY_TEXT")
     if stats_req:
         allowed_paths.update({"/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY"})
+    if general_req:
+        # General revision unlocks ALL content fields
+        allowed_paths.update({
+            "/content/WORD", "/content/GLOSS", "/content/CARD_TYPE",
+            "/content/RARITY_TEXT", "/content/RARITY_ICON",
+            "/content/ART_PROMPT", "/content/ABILITY_TEXT",
+            "/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY",
+            "/content/OT_VERSE_LINE", "/content/NT_VERSE_LINE",
+            "/content/OT_VERSE_REF", "/content/OT_VERSE_SNIPPET",
+            "/content/NT_VERSE_REF", "/content/NT_VERSE_SNIPPET",
+            "/content/GREEK", "/content/GREEK_TRANSLIT",
+            "/content/HEBREW", "/content/HEBREW_TRANSLIT",
+            "/content/OT_REFS", "/content/NT_REFS",
+            "/content/TRIVIA_BULLETS",
+            "/content/WILD_ID", "/content/WILD_COUNTS_AS",
+            "/content/QUARTET_ID", "/content/LETTER", "/content/NOTES_INTERNAL",
+        })
 
     if not allowed_paths:
         return "", set()
@@ -370,7 +387,7 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
     if general_req:
         if out_lines:
             out_lines.append("")
-        out_lines.append("General revision request (context only; do not change extra fields):")
+        out_lines.append("General revision request (you may modify any content field as needed):")
         out_lines.append(general_req)
 
     return "\n".join(out_lines).strip(), allowed_paths
