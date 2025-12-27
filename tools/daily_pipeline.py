@@ -350,6 +350,7 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
     if general_req:
         # General revision unlocks ALL content fields plus model_prompt
         allowed_paths.update({
+            "/content/NUMBER", "/content/SERIES",
             "/content/WORD", "/content/GLOSS", "/content/CARD_TYPE",
             "/content/RARITY_TEXT", "/content/RARITY_ICON",
             "/content/ART_PROMPT", "/content/ABILITY_TEXT",
