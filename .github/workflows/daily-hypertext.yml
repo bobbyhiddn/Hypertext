@@ -67,7 +67,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: hypertext-staged
-          path: .
+          path: series/2026-Q1
 
       - name: Verify staged card exists
         run: |
@@ -125,7 +125,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: hypertext-rendered
-          path: .
+          path: series/2026-Q1
 
       - name: Verify rendered card exists
         run: |
@@ -176,7 +176,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: hypertext-reviewed
-          path: .
+          path: series/2026-Q1
 
       - name: Verify reviewed card exists
         run: |
