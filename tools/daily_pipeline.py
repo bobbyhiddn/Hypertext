@@ -86,27 +86,49 @@ FORMATTING_RUBRIC = """
 
 
 DEFAULT_STYLE_TEMPLATE = Path("tools") / "clean_template_final.png"
-NUM_STYLE_REF_CARDS = 2
+RARITY_ORDER = ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
 
 
-def _find_recent_card_images(series_root: Path, limit: int = NUM_STYLE_REF_CARDS) -> list[Path]:
-    """Find the N most recently modified rendered card images."""
+def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
+    """Find one card image per rarity from the series."""
     cards_dir = series_root / "cards"
     if not cards_dir.exists():
-        return []
-    matches = list(cards_dir.rglob("card_1024x1536.png"))
-    matches = [p for p in matches if p.is_file() and p.parent.name == "outputs"]
-    matches.sort(key=lambda p: p.stat().st_mtime, reverse=True)
-    return matches[:limit]
+        return {}
+    
+    rarity_map: dict[str, Path] = {}
+    for card_dir in sorted(cards_dir.iterdir()):
+        if not card_dir.is_dir():
+            continue
+        meta_file = card_dir / "meta.yml"
+        img_file = card_dir / "outputs" / "card_1024x1536.png"
+        if not meta_file.exists() or not img_file.exists():
+            continue
+        
+        try:
+            with open(meta_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip().startswith("rarity:"):
+                        rarity = line.split(":", 1)[1].strip().upper()
+                        if rarity in RARITY_ORDER and rarity not in rarity_map:
+                            rarity_map[rarity] = img_file
+                        break
+        except OSError:
+            continue
+    
+    return rarity_map
 
 
 def _build_style_refs(series_root: Path) -> list[str]:
-    """Build list of style reference paths: template + recent rendered cards."""
+    """Build list of style reference paths: template + one card per rarity."""
     refs: list[str] = []
     if DEFAULT_STYLE_TEMPLATE.exists():
         refs.append(str(DEFAULT_STYLE_TEMPLATE))
-    for p in _find_recent_card_images(series_root, NUM_STYLE_REF_CARDS):
-        refs.append(str(p))
+    
+    rarity_map = _find_card_by_rarity(series_root)
+    for rarity in RARITY_ORDER:
+        if rarity in rarity_map:
+            refs.append(str(rarity_map[rarity]))
+    
     return refs
 
 
