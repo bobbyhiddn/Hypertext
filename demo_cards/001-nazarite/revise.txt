@@ -19,4 +19,4 @@ Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say
 
 Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
 
-General_Revision_Request: <optional context; e.g. tone, art, complexity, fun-factor; still must fill specific change fields above>
+General_Revision_Request: replace the definition with the same defintion without brackets
