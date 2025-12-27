@@ -1,0 +1,51 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #006
+Word: REDEEM
+Gloss: To buy back, recover, or liberate by payment; to clear a debt or restore rights.
+Type: VERB
+DRAW Rarity (Top Right): RARE with gold diamond icon
+Stats: Lore 5, Context 4, Complexity 3
+
+Art Description: A heavy, rusted iron shackle lying open on a cold stone floor, illuminated by a single intense shaft of golden light breaking through shadows. Beside it, a small pile of ancient silver coins.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: Return 3 cards from the discard pile to your hand that have LORE 3 or higher.
+
+OT Verse: Psalm 107:2 — "Let the redeemed of the LORD say so, whom he has redeemed from the hand of the enemy."
+NT Verse: Galatians 3:13 — "Christ redeemed us from the curse of the law by becoming a curse for us."
+
+Greek: ἐξαγοράζω
+(Below Greek, smaller text) Transliteration: exagorazō
+NT Refs: Eph 1:7 • Titus 2:14 • 1 Pet 1:18 • Rev 5:9
+
+Hebrew: גָּאַל
+(Below Hebrew, smaller text) Transliteration: ga'al
+OT Refs: Job 19:25 • Isa 43:1 • Ruth 4:14 • Ex 6:6
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• The Hebrew 'ga'al' refers to a 'kinsman-redeemer' obligated to buy back enslaved relatives or lost property.
+• In the Greek marketplace, 'exagorazo' meant to buy a slave specifically to grant them freedom.
+• The Book of Ruth serves as a narrative case study of the kinsman-redeemer law in action.
+• Job's famous cry 'I know that my Redeemer lives' envisions a legal vindicator standing up for him.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+  WRONG: [#003] or [NOUN] or [RARE]
+  CORRECT: #003 or NOUN or RARE
+- Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
+  WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
+  CORRECT: Navy-blue filled circles (dark blue, like the card border color)
+  Filled navy circles = stat value, empty/outlined circles = remaining.
+  Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty with just outline)
+  The filled pips must be NAVY (dark blue) not gold/yellow.
+- Do not add extra text or modify the layout.
