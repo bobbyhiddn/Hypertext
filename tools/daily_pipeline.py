@@ -1110,7 +1110,8 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     prompt = (
         "You are revising a Bible word-study trading card JSON. "
         "Return ONLY a JSON Patch array (RFC 6902) to apply to the provided CARD_JSON.\n"
-        "The patch must only modify keys under: /content, /model_prompt, /render_instructions.\n"
+        "The patch must only modify keys under: /content or /model_prompt. "
+        "Do NOT modify /render_instructions, /style_guide, or /layout.\n"
         "Follow game rules: there is ONE shared deck; do not say 'your deck'. "
         "Allowed ops: add, replace. Do not use remove/move/copy/test.\n\n"
         "GAME RULES (must follow):\n"
