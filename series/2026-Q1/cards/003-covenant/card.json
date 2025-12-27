@@ -160,7 +160,7 @@
     "RARITY_TEXT": "GLORIOUS",
     "RARITY_ICON": "GLORIOUS",
     "ART_PROMPT": "A split stone altar with a glowing golden cord binding the two halves together, set under a vibrant rainbow in a dark starry sky, cinematic lighting.",
-    "ABILITY_TEXT": "Declare a suit. All other players give you a card of that suit. If they cannot, they reveal their hand.",
+    "ABILITY_TEXT": "Declare a card type; opponents must give you a matching card or reveal their hand.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 4,
