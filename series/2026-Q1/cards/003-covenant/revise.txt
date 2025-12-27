@@ -20,4 +20,4 @@ Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say
 
 Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
 
-General_Revision_Request: Replace the number in the top left with the same number without brackets. So [#XXX] to #XXX
+General_Revision_Request: Replace the number in the top left with the same number without brackets. So [#XXX] to #XXX. Replace the gold stat pips with navy stat pips. 
