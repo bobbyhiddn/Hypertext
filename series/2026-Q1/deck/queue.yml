@@ -1,8 +1,6 @@
-- word: COVENANT
-  card_type: NOUN
-  rarity: GLORIOUS
-  ability: Declare a suit. All other players give you a card of that suit. If they
-    cannot, they reveal their hand.
 - word: GRACE
   card_type: NOUN
   rarity: GLORIOUS
+- word: REDEMPTION
+  card_type: NOUN
+  rarity: RARE
