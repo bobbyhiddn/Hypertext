@@ -13,8 +13,8 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     outputs:
-      card_dir: ${{ steps.find-card.outputs.card_dir }}
-      card_slug: ${{ steps.find-card.outputs.card_slug }}
+      card_dir: ${{ steps.run-plan.outputs.card_dir }}
+      card_slug: ${{ steps.run-plan.outputs.card_slug }}
     steps:
       - uses: actions/checkout@v4
 
@@ -27,61 +27,33 @@ jobs:
         run: |
           pip install pyyaml google-genai
 
-      - name: Prepare working tree (card.json + prompt + post)
+      - name: Run plan phase
+        id: run-plan
         run: |
           python tools/daily_pipeline.py --phase plan --auto
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
 
-      - name: Find planned card directory from changed files
-        id: find-card
+      - name: Verify card was created
         run: |
-          set -euo pipefail
-
-          # Find card directories from git status (new/modified files)
-          declare -A CARD_DIRS=()
-          while read -r status path; do
-            [[ -n "${path:-}" ]] || continue
-            d="$(dirname "${path}")"
-            while [[ "${d}" != "." && "${d}" != "/" ]]; do
-              if [[ -f "${d}/card.json" ]]; then
-                CARD_DIRS["${d}"]=1
-                break
-              fi
-              d="$(dirname "${d}")"
-            done
-          done < <(git status --porcelain)
-
-          if [[ ${#CARD_DIRS[@]} -eq 0 ]]; then
-            echo "ERROR: No card directories found from changed files"
+          CARD_DIR="${{ steps.run-plan.outputs.card_dir }}"
+          if [[ -z "${CARD_DIR}" ]]; then
+            echo "ERROR: No card_dir output from plan phase"
             exit 1
           fi
-
-          if [[ ${#CARD_DIRS[@]} -gt 1 ]]; then
-            echo "WARNING: Multiple card directories changed, using first one"
-          fi
-
-          # Get the first (should be only) card directory
-          CARD_DIR="${!CARD_DIRS[*]}"
-          CARD_DIR="${CARD_DIR%% *}"  # Take first if multiple
-          CARD_SLUG=$(basename "${CARD_DIR}")
-
-          echo "card_dir=${CARD_DIR}" >> "$GITHUB_OUTPUT"
-          echo "card_slug=${CARD_SLUG}" >> "$GITHUB_OUTPUT"
-          echo "Planned card: ${CARD_DIR}"
-
-          # Verify the directory exists and has required files
           if [[ ! -f "${CARD_DIR}/card.json" ]]; then
             echo "ERROR: ${CARD_DIR}/card.json not found"
             exit 1
           fi
+          echo "Card created: ${CARD_DIR}"
+          ls -la "${CARD_DIR}"
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: hypertext-staged
           path: |
-            ${{ steps.find-card.outputs.card_dir }}
+            ${{ steps.run-plan.outputs.card_dir }}
             series/2026-Q1/deck/queue.yml
           if-no-files-found: error
 
