@@ -252,7 +252,7 @@ def review_card(
         ],
         "generationConfig": {
             "temperature": 0.1,  # Low temp for consistent scoring
-            "maxOutputTokens": 2048,
+            "maxOutputTokens": 8192,  # High limit to accommodate model thinking
         },
     }
 
@@ -277,8 +277,14 @@ def review_card(
 
             data = resp.json()
 
-            # Extract text from response
+            # Check for MAX_TOKENS finish reason - retry if we hit token limit
             candidates = data.get("candidates", [])
+            if candidates:
+                finish_reason = candidates[0].get("finishReason", "")
+                if finish_reason == "MAX_TOKENS":
+                    raise RuntimeError(f"Model hit token limit (MAX_TOKENS), retrying...")
+
+            # Extract text from response
             if not candidates:
                 raise RuntimeError(f"No candidates in response: {data}")
 
