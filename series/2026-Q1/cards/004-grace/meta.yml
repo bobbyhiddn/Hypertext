@@ -43,13 +43,18 @@ search_queries: []
 review_score: 100
 review_attempts: 2
 review_status: green
-revision: 1
+revision: 2
 revision_notes: 'Rarity change request:
 
   Let''s make grace an uncommon
 
 
+  Ability change request:
+
+  Let''s make the ability: You may give a card to another player, if you do, draw
+  2 cards.
+
+
   General revision request (you may modify any content field as needed):
 
-  Please move the transliterations under the original language words instead of beside
-  them.'
+  Make the art look like a gift being given to someone who doesn''t deserve it.'
