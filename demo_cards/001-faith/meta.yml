@@ -1,0 +1,42 @@
+number: '001'
+word: FAITH
+gloss: Complete trust, confidence, or reliance; the assurance of things hoped for.
+card_type: NOUN
+rarity: COMMON
+art_prompt: A single glowing mustard seed resting in the center of an open, weathered
+  hand, casting a warm golden light that illuminates a dark path ahead, realistic
+  digital painting style, cinematic lighting
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 1 card.
+ot_verse:
+  ref: Habakkuk 2:4
+  snippet: But the just shall live by his faith.
+nt_verse:
+  ref: Hebrews 11:1
+  snippet: Now faith is the substance of things hoped for, the evidence of things
+    not seen.
+greek:
+  text: πίστις
+  translit: Pistis
+hebrew:
+  text: אֱמוּנָה
+  translit: Emunah
+ot_refs: Gen 15:6 • Deut 32:20 • Psa 119:30 • Isa 7:9
+nt_refs: Mat 17:20 • Rom 1:17 • Eph 2:8 • Jam 2:17
+trivia:
+- The Hebrew root 'aman' implies firmness or support and also gives us the word 'Amen'.
+- Pistis appears 243 times in the New Testament, appearing most frequently in Romans.
+- Hebrews 11 is famously known as the 'Hall of Faith', listing historical figures
+  who trusted God.
+- In the Old Testament, the concept often emphasizes faithfulness, steadfastness,
+  and reliability rather than abstract belief.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
