@@ -1,0 +1,268 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "orange",
+            "outline": "navy",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "001",
+    "SERIES": "2026-Q1",
+    "WORD": "PRAY",
+    "GLOSS": "To address God with adoration, confession, supplication, or thanksgiving.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A pair of weathered hands clasped together in a beam of light, ancient parchment texture, warm golden hues, dramatic lighting, no text.",
+    "ABILITY_TEXT": "Draw 1 card.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "2 Chronicles 7:14",
+    "OT_VERSE_SNIPPET": "If my people... shall humble themselves, and pray, and seek my face...",
+    "NT_VERSE_REF": "1 Thessalonians 5:17",
+    "NT_VERSE_SNIPPET": "Pray without ceasing.",
+    "OT_VERSE_LINE": "2 Chronicles 7:14 — “If my people... shall humble themselves, and pray, and seek my face...”",
+    "NT_VERSE_LINE": "1 Thessalonians 5:17 — “Pray without ceasing.”",
+    "GREEK": "προσεύχομαι",
+    "GREEK_TRANSLIT": "proseuchomai",
+    "HEBREW": "פָּלַל",
+    "HEBREW_TRANSLIT": "palal",
+    "OT_REFS": "Gen 20:7 • 1 Sam 1:10 • Ps 5:2 • Dan 6:10",
+    "NT_REFS": "Matt 6:9 • Luke 18:1 • Phil 4:6 • Jas 5:16",
+    "TRIVIA_BULLETS": [
+      "The Hebrew verb *palal* implies 'intervening' or 'judging', suggesting prayer bridges a gap.",
+      "The Greek *proseuchomai* combines *pros* (towards) and *euchomai* (to wish or vow).",
+      "Forms of the word 'pray' appear over 300 times in most English translations.",
+      "The first use of *palal* is Abraham praying for Abimelech in Genesis 20:7.",
+      "Jesus' longest recorded prayer is found in John 17."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "first mention of pray in the bible",
+      "hebrew word for pray palal meaning",
+      "how many times does the word pray appear in the bible",
+      "greek word for pray proseuchomai meaning",
+      "trivia about the word pray in the bible"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMbwnxxpfeqR9MVNN-z5d5ArQd8pvsfwU31HgiLVQnimofvXVIsRLH2_isP90WbrjcRr8waub8U30bfqoQvsMYh21wKayT-lnIrdhXEtooLV7PPnmEwMYZCAC-vXZBB1iT",
+        "title": "bibletalk.tv"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU8N_XIU1vG5d21bbqpc8DL-lyyv0okOBIWhu2WqIhwmVJnA8wnEtOgvKG3_5PHUih1Uxb9c7UlcIT7Brv0jIMPLBvwmGroCX2Da91eht1YAXyP9tKIg0W6udAdu6hEcrPhEeli8WvfcjucHMXYtzHFIoMra2wjNDnEpY2ALOrMGCna4HC7aBps5tHb4hbBSK-NAhEtDRReQ==",
+        "title": "thegospelcoalition.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvASgj3hdLGKru0RonZjWtmbe6aVPmrOrr8Ig7IALFgjCjNDx3wgvmpO0U_KrmMJf_LcGxzNR0vIZBlL9eLlRPEvEi50WExPBoXGMrgX3IdVb5Mo8_crg47xMQdSewRYLzPXAU2yndUcCv972wT4GHwFGP8x4=",
+        "title": "alittleperspective.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOMviFZQRPFt9dL0MCfXthI7TFLT8jH59M_sl3IRGo7ACB1JvHgqYrwOZfijhsUJx4aSsmZIzI_jVp41FHkzUfGlpt8yJ-MlgopMW8GltzNIuc0R1J-avSRNmd1qtg3L3XCMTjveB2S1hFpEo1KTGiQjRorhugaX-Abg==",
+        "title": "shepherdsadvantageinc.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw71-wJYAf8cvEpR4tm9xyXRzLAkpBLpp65hvvUTrTcsKvnsQs66wPZihN_49U8rWP_CInCj4gFpi4ynYXBi1LyMDzGIfrc8XCPGydC5Ox4L8Q58iroDXghhr540RAqT_uISOKp6badWc2EDaOqQjUlDwcNL4hKYvj-oKuD9WvZlnAyW_Xk-5ycJ9KvmL-wGc=",
+        "title": "christianlearning.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6p-1xmY_aoUwcFCjX5rpzRWSx2aAr2YVf_uRWOjBD9qSToC_iVptPOi68PsoD_bFFtp-T7J5sjWQHTc-Elq9LUV0cLHamKluRSUsYBA1_gb9xUhiaqYiJGlqIB02AJQ==",
+        "title": "turningtogodsword.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqVlpBB3oTcSamCmT_-0JYd60f-zmLkeB0pEKYKct9jucmqKnyFF7x56fgVlr6NEJu9FUMl8stHSXXg3-hH5Qo-M4LrIaqqZRPW_DciyU81bs-a7Tz2ju1SAmdZbANcS09qGRCbBT7q4ZRwJ1ioWbLujTn7zPJGnr80jPbUu58ohyz",
+        "title": "lcbcchurch.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHglheCz1kssmqU4hQyE_Q67KYNlYYs26rKuyVoD2c-XBWzQXw6dYbWukl6_A-S-1RH0mP_5idZalt5t0k6G5MuTtB3MBCg-DyWGrD0M3E-W4RtMKIs6Rz1kBhumn9Bc_WFI64LI-6zLu-rRDRXTZD3gIt7ooP0aPklO484PJf36cI5sw==",
+        "title": "crossway.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLChAQ1jKMI4U6yiQXMe7YBUSYNjzXOMELTYd39R1ub0akVFjE6L1anG6Phd74dtMFJwo-t19rd306PftAcC8BfMD6A9s1fdKeSIvrJi1Hzmrs6mVT__NQQKs6_6MigzJV4abamJzuX5TfQO-YOC4elkjJgZEckvTcmrLdzYxP0tAoKw==",
+        "title": "tithe.ly"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5qSNzso0kGlCrLRRvNHQMgVvD5K8snWZbgoEteAGQTKEcSjAWCjNC62ug0CzS8KE4e2CpvgIBXGeQrq4SlaKFTkxcGNIwYaw6QndrddfGC0e14R9QHcYZpc_MAkWJ8Hz478r3O__4djyq7YNHSGcc1qsSzgXeIwI_ibI=",
+        "title": "catholicexchange.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdgwLFIt0v2kf3hnFg2wp2WX3MS9U5vHsR6Sw9muMKAWl9beAdNjL0EWybF9_XA6e-9iF_So_55sFMMj4yxK5078xn8g7xeOVoWCMlyId8B5ciSfVW6zk2BrXcPgw3HkNH6ntH7yKWEeOLFsi1cq1VamZuwxUZ1n4vjRVYY_XZWcahSbmEDzmrH5Z4vYQUBVI2zNn-bsTQBP8J6AuQyfzSgCnOxLo=",
+        "title": "wordpress.com"
+      }
+    ]
+  }
+}

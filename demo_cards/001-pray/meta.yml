@@ -1,0 +1,68 @@
+number: '001'
+word: PRAY
+gloss: To address God with adoration, confession, supplication, or thanksgiving.
+card_type: VERB
+rarity: COMMON
+art_prompt: A pair of weathered hands clasped together in a beam of light, ancient
+  parchment texture, warm golden hues, dramatic lighting, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 1 card.
+ot_verse:
+  ref: 2 Chronicles 7:14
+  snippet: If my people... shall humble themselves, and pray, and seek my face...
+nt_verse:
+  ref: 1 Thessalonians 5:17
+  snippet: Pray without ceasing.
+greek:
+  text: προσεύχομαι
+  translit: proseuchomai
+hebrew:
+  text: פָּלַל
+  translit: palal
+ot_refs: Gen 20:7 • 1 Sam 1:10 • Ps 5:2 • Dan 6:10
+nt_refs: Matt 6:9 • Luke 18:1 • Phil 4:6 • Jas 5:16
+trivia:
+- The Hebrew verb *palal* implies 'intervening' or 'judging', suggesting prayer bridges
+  a gap.
+- The Greek *proseuchomai* combines *pros* (towards) and *euchomai* (to wish or vow).
+- Forms of the word 'pray' appear over 300 times in most English translations.
+- The first use of *palal* is Abraham praying for Abimelech in Genesis 20:7.
+- Jesus' longest recorded prayer is found in John 17.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMbwnxxpfeqR9MVNN-z5d5ArQd8pvsfwU31HgiLVQnimofvXVIsRLH2_isP90WbrjcRr8waub8U30bfqoQvsMYh21wKayT-lnIrdhXEtooLV7PPnmEwMYZCAC-vXZBB1iT
+  title: bibletalk.tv
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU8N_XIU1vG5d21bbqpc8DL-lyyv0okOBIWhu2WqIhwmVJnA8wnEtOgvKG3_5PHUih1Uxb9c7UlcIT7Brv0jIMPLBvwmGroCX2Da91eht1YAXyP9tKIg0W6udAdu6hEcrPhEeli8WvfcjucHMXYtzHFIoMra2wjNDnEpY2ALOrMGCna4HC7aBps5tHb4hbBSK-NAhEtDRReQ==
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvASgj3hdLGKru0RonZjWtmbe6aVPmrOrr8Ig7IALFgjCjNDx3wgvmpO0U_KrmMJf_LcGxzNR0vIZBlL9eLlRPEvEi50WExPBoXGMrgX3IdVb5Mo8_crg47xMQdSewRYLzPXAU2yndUcCv972wT4GHwFGP8x4=
+  title: alittleperspective.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOMviFZQRPFt9dL0MCfXthI7TFLT8jH59M_sl3IRGo7ACB1JvHgqYrwOZfijhsUJx4aSsmZIzI_jVp41FHkzUfGlpt8yJ-MlgopMW8GltzNIuc0R1J-avSRNmd1qtg3L3XCMTjveB2S1hFpEo1KTGiQjRorhugaX-Abg==
+  title: shepherdsadvantageinc.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw71-wJYAf8cvEpR4tm9xyXRzLAkpBLpp65hvvUTrTcsKvnsQs66wPZihN_49U8rWP_CInCj4gFpi4ynYXBi1LyMDzGIfrc8XCPGydC5Ox4L8Q58iroDXghhr540RAqT_uISOKp6badWc2EDaOqQjUlDwcNL4hKYvj-oKuD9WvZlnAyW_Xk-5ycJ9KvmL-wGc=
+  title: christianlearning.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6p-1xmY_aoUwcFCjX5rpzRWSx2aAr2YVf_uRWOjBD9qSToC_iVptPOi68PsoD_bFFtp-T7J5sjWQHTc-Elq9LUV0cLHamKluRSUsYBA1_gb9xUhiaqYiJGlqIB02AJQ==
+  title: turningtogodsword.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqVlpBB3oTcSamCmT_-0JYd60f-zmLkeB0pEKYKct9jucmqKnyFF7x56fgVlr6NEJu9FUMl8stHSXXg3-hH5Qo-M4LrIaqqZRPW_DciyU81bs-a7Tz2ju1SAmdZbANcS09qGRCbBT7q4ZRwJ1ioWbLujTn7zPJGnr80jPbUu58ohyz
+  title: lcbcchurch.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHglheCz1kssmqU4hQyE_Q67KYNlYYs26rKuyVoD2c-XBWzQXw6dYbWukl6_A-S-1RH0mP_5idZalt5t0k6G5MuTtB3MBCg-DyWGrD0M3E-W4RtMKIs6Rz1kBhumn9Bc_WFI64LI-6zLu-rRDRXTZD3gIt7ooP0aPklO484PJf36cI5sw==
+  title: crossway.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLChAQ1jKMI4U6yiQXMe7YBUSYNjzXOMELTYd39R1ub0akVFjE6L1anG6Phd74dtMFJwo-t19rd306PftAcC8BfMD6A9s1fdKeSIvrJi1Hzmrs6mVT__NQQKs6_6MigzJV4abamJzuX5TfQO-YOC4elkjJgZEckvTcmrLdzYxP0tAoKw==
+  title: tithe.ly
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5qSNzso0kGlCrLRRvNHQMgVvD5K8snWZbgoEteAGQTKEcSjAWCjNC62ug0CzS8KE4e2CpvgIBXGeQrq4SlaKFTkxcGNIwYaw6QndrddfGC0e14R9QHcYZpc_MAkWJ8Hz478r3O__4djyq7YNHSGcc1qsSzgXeIwI_ibI=
+  title: catholicexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdgwLFIt0v2kf3hnFg2wp2WX3MS9U5vHsR6Sw9muMKAWl9beAdNjL0EWybF9_XA6e-9iF_So_55sFMMj4yxK5078xn8g7xeOVoWCMlyId8B5ciSfVW6zk2BrXcPgw3HkNH6ntH7yKWEeOLFsi1cq1VamZuwxUZ1n4vjRVYY_XZWcahSbmEDzmrH5Z4vYQUBVI2zNn-bsTQBP8J6AuQyfzSgCnOxLo=
+  title: wordpress.com
+search_queries:
+- ''
+- first mention of pray in the bible
+- hebrew word for pray palal meaning
+- how many times does the word pray appear in the bible
+- greek word for pray proseuchomai meaning
+- trivia about the word pray in the bible
