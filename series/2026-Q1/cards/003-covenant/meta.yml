@@ -1,0 +1,49 @@
+number: '003'
+word: COVENANT
+gloss: A solemn, binding agreement between two parties, often sealed by an oath or
+  blood sacrifice.
+card_type: NOUN
+rarity: GLORIOUS
+art_prompt: A split stone altar with a glowing golden cord binding the two halves
+  together, set under a vibrant rainbow in a dark starry sky, cinematic lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Declare a suit. All other players give you a card of that suit. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Jeremiah 31:31
+  snippet: I will make a new covenant with the house of Israel and with the house
+    of Judah.
+nt_verse:
+  ref: Luke 22:20
+  snippet: This cup that is poured out for you is the new covenant in my blood.
+greek:
+  text: διαθήκη
+  translit: diathēkē
+hebrew:
+  text: בְּרִית
+  translit: berith
+ot_refs: Gen 9:9 • Gen 15:18 • Ex 24:8 • Ps 89:3
+nt_refs: Matt 26:28 • Gal 3:17 • Heb 8:6 • Heb 12:24
+trivia:
+- The Hebrew idiom 'karat berith' literally means 'to cut a covenant', referring to
+  the practice of cutting sacrificial animals.
+- The Greek term 'diatheke' was chosen over 'syntheke' to emphasize God's sovereign
+  initiative rather than a mutual contract.
+- Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the
+  New Covenant.
+- In the ancient Near East, parties would walk between cut animal pieces to invoke
+  a curse upon themselves if they broke the vow.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 95
+review_attempts: 2
+review_status: yellow
+review_notes: Change the card type label in the top left corner from 'NOUND' to 'NOUN'.

@@ -1,0 +1,43 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #003
+Word: COVENANT
+Gloss: A solemn, binding agreement between two parties, often sealed by an oath or blood sacrifice.
+Type: NOUN
+DRAW Rarity (Top Right): GLORIOUS with orange diamond icon
+Stats: Lore 5, Context 5, Complexity 4
+
+Art Description: A split stone altar with a glowing golden cord binding the two halves together, set under a vibrant rainbow in a dark starry sky, cinematic lighting.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: Declare a suit. All other players give you a card of that suit. If they cannot, they reveal their hand.
+
+OT Verse: Jeremiah 31:31 — "I will make a new covenant with the house of Israel and with the house of Judah."
+NT Verse: Luke 22:20 — "This cup that is poured out for you is the new covenant in my blood."
+
+Greek: διαθήκη
+(Below Greek, smaller text) Transliteration: diathēkē
+NT Refs: Matt 26:28 • Gal 3:17 • Heb 8:6 • Heb 12:24
+
+Hebrew: בְּרִית
+(Below Hebrew, smaller text) Transliteration: berith
+OT Refs: Gen 9:9 • Gen 15:18 • Ex 24:8 • Ps 89:3
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• The Hebrew idiom 'karat berith' literally means 'to cut a covenant', referring to the practice of cutting sacrificial animals.
+• The Greek term 'diatheke' was chosen over 'syntheke' to emphasize God's sovereign initiative rather than a mutual contract.
+• Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant.
+• In the ancient Near East, parties would walk between cut animal pieces to invoke a curse upon themselves if they broke the vow.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL (not gold). Filled navy circles = stat value, empty/outlined circles = remaining. Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty). Do NOT use gold fill for stat pips. Do NOT use diamond shapes for stat pips.
+- Do not add extra text or modify the layout.
