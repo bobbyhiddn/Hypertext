@@ -1,0 +1,61 @@
+number: '001'
+word: HEAR
+gloss: To perceive sound; to listen with attention, understanding, and obedience.
+card_type: VERB
+rarity: COMMON
+art_prompt: A single drop of water falling into a still, dark blue pool, creating
+  bright golden concentric ripples that expand outward into the darkness.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 1 card.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Romans 10:17
+  snippet: So faith comes from hearing, and hearing through the word of Christ.
+greek:
+  text: ἀκούω
+  translit: akouo
+hebrew:
+  text: שָׁמַע
+  translit: shama
+ot_refs: Ex 2:24 • 1 Sam 3:10 • Ps 85:8 • Prov 8:34
+nt_refs: Matt 11:15 • Luke 8:18 • John 10:27 • Jas 1:19
+trivia:
+- The Hebrew 'shema' implies that if you have not obeyed, you have not truly heard.
+- This word forms the title of the central Jewish prayer, recited morning and evening.
+- The Greek 'akouo' is the etymological root of the English word 'acoustic'.
+- Jesus frequently used the idiom, 'He who has ears to hear, let him hear.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtX4cvkBbmbkgtthyKctjfiqJaKy43tv-oX5TSZ2H7y_m_Kbh68_U9jrNuvEJlIfb6decbp0g99vHgC94D1Ie74yRT7fxfIfupy6A2SPU6Jksu6ge-R9hRtLB9c0-XmQhRcFg=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRN-7J0OQRRf1du_czhcKJpvOOOznpohcftMx6RIOxpICzdIEQjbdFVpJAA2WPJxqJq4Wr0WVW0A3wI8AGrvq7dOfQ2QCJEkcTm6Hx6dRDQiyW4VlIwKBiDKcKsp8c
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG66cb9FUTu8WnyHEvVjnHkEKZna2gMkL_cYwYDg3s-f9tpokLOLbDg_G-rqXNrVZ9eszFUWiGvTirhpUifLYwOcB8sf3Os9DFqn9d7WuQ2moMxvpgBBtULtyCJEspOFxCoyjKCWrpV63Drypat3htUeHku1F3PEA==
+  title: dashhouse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKRgH76XJqNR5deAgnSeB5Ho_CqO0uqIrfDFDifePAvYAh48Xyta6Q4QyD1W5EmnZBNn8HUD4H1k-ApXMnBnWRNhbpfxiPlBzyp8TpNL9l_Q2DZKJbghM0R5y8_dg0V01nak64LXWvOtdo95tmTbhFhknorJZIDag=
+  title: fighterverses.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtELMSg2vSCCx8FKwgKOvgkBAMeiDwcZbvOCmZXfu1uSDoFikNy_RaAWM7m6A1Yp4174mK2971SLvyLC4uwlD-RXlVPCxRIWeTZSEZrlvOQEyJRkcFWy0wJszzJA5tSMx2IQKDATKq2_tagltq9-_QHzjO8Go_fvG60ywa2M6RHfkO8b0Gn7shIMaI4CzPoazqvA==
+  title: holyimpressions.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES5LBvSFg7IZKWx8g40V3CTOe2Q0GJKI3zB1TCvzZCAk0Vwj5KI4LkjNC51fgFzXkH5e44x4TXnDrj8UnDarrapXZaNNJNrOLt10NrTcS3tNY6GtfzLGrcDRQbMvj5S1JuPT0wVqLaq1MLNNUhpILqaadG
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2NGNpHLyr1lH83iNZtr3GLNJwpa4sqBBwlNr17Z_hscG-1bx2XDsbv7eIkwzLjUqdi_gn1AaXtxtUVfGaEILbFw5o2WhvJIPvnQ0ZSV5C0Mn1De4Wl-fUNHltOHuEpidJCsU2v5w_ISsSU6RO4AkbJ09C0zMAI_14aMFL_9GbWRGnqWmmTg==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR1la8hipOsFfoz-5wdNHflPp6P0GdLRy-GZ2gw6T0LhEOB02An6-C31JhMRyfkkszQ9h2YVrq5fD-3bwL2HykrTvSd4sTxwi3cXXZRsNq4tPjvaifUv1MAYYsmzCnEHo9sZtewR0J0SJIgDiLUVVb2-YvMHSkubRuKOytg7htEG5j2710cUCAue9GxZoZKPf71m4bS9I6WI0PNUiv4N7pyZA=
+  title: beauty4ashesministry.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzs6UCJMkvSAvvVibTKusPnjCZTZITMUFVOlAZ2gAAYK_W1ehw47WZ3Twd6scN3705m5-mV4O9Ec36c8hSmKDymdDVtSVhDvyikGah3kkTp2O85HkiiL9187vkglC9mWI=
+  title: biblehub.com
+search_queries:
+- ''
+- hebrew word for hear shema spelling
+- greek word for hear akouo spelling
+- bible verse hearing deuteronomy 6:4 snippet
+- bible verse hearing romans 10:17 snippet

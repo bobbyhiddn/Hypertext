@@ -1,0 +1,258 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "icons": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "MYTHIC": {
+            "shape": "rhombus",
+            "sides": 4,
+            "fill": "orange",
+            "outline": "navy",
+            "note": "true 4-sided diamond (rhombus), not a rotated square"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "001",
+    "SERIES": "2026-Q1",
+    "WORD": "HEAR",
+    "GLOSS": "To perceive sound; to listen with attention, understanding, and obedience.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A single drop of water falling into a still, dark blue pool, creating bright golden concentric ripples that expand outward into the darkness.",
+    "ABILITY_TEXT": "Draw 1 card.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Deuteronomy 6:4",
+    "OT_VERSE_SNIPPET": "Hear, O Israel: The LORD our God, the LORD is one.",
+    "NT_VERSE_REF": "Romans 10:17",
+    "NT_VERSE_SNIPPET": "So faith comes from hearing, and hearing through the word of Christ.",
+    "OT_VERSE_LINE": "Deuteronomy 6:4 — “Hear, O Israel: The LORD our God, the LORD is one.”",
+    "NT_VERSE_LINE": "Romans 10:17 — “So faith comes from hearing, and hearing through the word of Christ.”",
+    "GREEK": "ἀκούω",
+    "GREEK_TRANSLIT": "akouo",
+    "HEBREW": "שָׁמַע",
+    "HEBREW_TRANSLIT": "shama",
+    "OT_REFS": "Ex 2:24 • 1 Sam 3:10 • Ps 85:8 • Prov 8:34",
+    "NT_REFS": "Matt 11:15 • Luke 8:18 • John 10:27 • Jas 1:19",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'shema' implies that if you have not obeyed, you have not truly heard.",
+      "This word forms the title of the central Jewish prayer, recited morning and evening.",
+      "The Greek 'akouo' is the etymological root of the English word 'acoustic'.",
+      "Jesus frequently used the idiom, 'He who has ears to hear, let him hear.'"
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "hebrew word for hear shema spelling",
+      "greek word for hear akouo spelling",
+      "bible verse hearing deuteronomy 6:4 snippet",
+      "bible verse hearing romans 10:17 snippet"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtX4cvkBbmbkgtthyKctjfiqJaKy43tv-oX5TSZ2H7y_m_Kbh68_U9jrNuvEJlIfb6decbp0g99vHgC94D1Ie74yRT7fxfIfupy6A2SPU6Jksu6ge-R9hRtLB9c0-XmQhRcFg=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRN-7J0OQRRf1du_czhcKJpvOOOznpohcftMx6RIOxpICzdIEQjbdFVpJAA2WPJxqJq4Wr0WVW0A3wI8AGrvq7dOfQ2QCJEkcTm6Hx6dRDQiyW4VlIwKBiDKcKsp8c",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG66cb9FUTu8WnyHEvVjnHkEKZna2gMkL_cYwYDg3s-f9tpokLOLbDg_G-rqXNrVZ9eszFUWiGvTirhpUifLYwOcB8sf3Os9DFqn9d7WuQ2moMxvpgBBtULtyCJEspOFxCoyjKCWrpV63Drypat3htUeHku1F3PEA==",
+        "title": "dashhouse.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKRgH76XJqNR5deAgnSeB5Ho_CqO0uqIrfDFDifePAvYAh48Xyta6Q4QyD1W5EmnZBNn8HUD4H1k-ApXMnBnWRNhbpfxiPlBzyp8TpNL9l_Q2DZKJbghM0R5y8_dg0V01nak64LXWvOtdo95tmTbhFhknorJZIDag=",
+        "title": "fighterverses.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtELMSg2vSCCx8FKwgKOvgkBAMeiDwcZbvOCmZXfu1uSDoFikNy_RaAWM7m6A1Yp4174mK2971SLvyLC4uwlD-RXlVPCxRIWeTZSEZrlvOQEyJRkcFWy0wJszzJA5tSMx2IQKDATKq2_tagltq9-_QHzjO8Go_fvG60ywa2M6RHfkO8b0Gn7shIMaI4CzPoazqvA==",
+        "title": "holyimpressions.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES5LBvSFg7IZKWx8g40V3CTOe2Q0GJKI3zB1TCvzZCAk0Vwj5KI4LkjNC51fgFzXkH5e44x4TXnDrj8UnDarrapXZaNNJNrOLt10NrTcS3tNY6GtfzLGrcDRQbMvj5S1JuPT0wVqLaq1MLNNUhpILqaadG",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2NGNpHLyr1lH83iNZtr3GLNJwpa4sqBBwlNr17Z_hscG-1bx2XDsbv7eIkwzLjUqdi_gn1AaXtxtUVfGaEILbFw5o2WhvJIPvnQ0ZSV5C0Mn1De4Wl-fUNHltOHuEpidJCsU2v5w_ISsSU6RO4AkbJ09C0zMAI_14aMFL_9GbWRGnqWmmTg==",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFR1la8hipOsFfoz-5wdNHflPp6P0GdLRy-GZ2gw6T0LhEOB02An6-C31JhMRyfkkszQ9h2YVrq5fD-3bwL2HykrTvSd4sTxwi3cXXZRsNq4tPjvaifUv1MAYYsmzCnEHo9sZtewR0J0SJIgDiLUVVb2-YvMHSkubRuKOytg7htEG5j2710cUCAue9GxZoZKPf71m4bS9I6WI0PNUiv4N7pyZA=",
+        "title": "beauty4ashesministry.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzs6UCJMkvSAvvVibTKusPnjCZTZITMUFVOlAZ2gAAYK_W1ehw47WZ3Twd6scN3705m5-mV4O9Ec36c8hSmKDymdDVtSVhDvyikGah3kkTp2O85HkiiL9187vkglC9mWI=",
+        "title": "biblehub.com"
+      }
+    ]
+  }
+}
