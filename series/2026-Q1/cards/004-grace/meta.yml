@@ -43,7 +43,7 @@ search_queries: []
 review_score: 100
 review_attempts: 2
 review_status: green
-revision: 4
+revision: 5
 revision_notes: 'Rarity change request:
 
   Let''s make grace an uncommon
@@ -62,6 +62,4 @@ revision_notes: 'Rarity change request:
 
   General revision request (you may modify any content field as needed):
 
-  Please replace any half filled stat pips with full navy pips, and remove the brackets
-  around the card number in the top left corner, making the number #004 instead of
-  [#004].'
+  Ensure the stat pips are navy circles with gold outline, not gold circles.'
