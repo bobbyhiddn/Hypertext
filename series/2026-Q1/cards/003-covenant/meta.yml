@@ -47,8 +47,8 @@ review_score: 95
 review_attempts: 2
 review_status: yellow
 review_notes: Change the card type label in the top left corner from 'NOUND' to 'NOUN'.
-revision: 1
+revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  you misspelled "noun" in the type pip in the the top left, replace "nound" with
-  "noun"'
+  Replace the number in the top left with the same number without brackets. So [#XXX]
+  to #XXX'

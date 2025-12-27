@@ -160,7 +160,7 @@
     "RARITY_TEXT": "GLORIOUS",
     "RARITY_ICON": "GLORIOUS",
     "ART_PROMPT": "A split stone altar with a glowing golden cord binding the two halves together, set under a vibrant rainbow in a dark starry sky, cinematic lighting.",
-    "ABILITY_TEXT": "Declare a card type; opponents must give you a matching card or reveal their hand.",
+    "ABILITY_TEXT": "Name a type. Opponents give a matching card or reveal hand.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 4,
@@ -181,7 +181,9 @@
       "The Greek term 'diatheke' was chosen over 'syntheke' to emphasize God's sovereign initiative rather than a mutual contract.",
       "Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant.",
       "In the ancient Near East, parties would walk between cut animal pieces to invoke a curse upon themselves if they broke the vow."
-    ]
+    ],
+    "QUARTET_ID": "NOUN-01",
+    "LETTER": "A"
   },
   "render_instructions": {
     "strict_no_duplicate_headings": true,
@@ -205,7 +207,7 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card. Collector ID: #003 (ensure NO brackets). RARITY: 'GLORIOUS ◆' (orange diamond). STAT PIPS: Navy circles. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
   "grounding": {
     "queries": [],
     "sources": []
