@@ -770,6 +770,15 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
     for p in sorted(card_dir.rglob("*")):
         if p.is_file():
             print(f"  wrote: {p}")
+
+    # Write to GITHUB_OUTPUT if running in GitHub Actions
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a", encoding="utf-8") as f:
+            f.write(f"card_dir={card_dir}\n")
+            f.write(f"card_slug={card_dir.name}\n")
+        _log(f"[phase plan] wrote card_dir={card_dir} to GITHUB_OUTPUT")
+
     return 0
 
 
