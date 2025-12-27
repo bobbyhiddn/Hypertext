@@ -20,4 +20,4 @@ Ability_Change_Request: Let's make the ability: You may give a card to another p
 
 Stats_Change_Request: Set Lore to 4, set Context to 4
 
-General_Revision_Request: Please replace any half filled stat pips with full navy pips, and remove the brackets around the card number in the top left corner, making the number #004 instead of [#004].
+General_Revision_Request: Ensure the stat pips are navy circles with gold outline, not gold circles. 
