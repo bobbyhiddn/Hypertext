@@ -1,0 +1,73 @@
+number: '001'
+word: MAGI
+gloss: A priestly caste of Persian astrologers and dream interpreters; the 'wise men'
+  who sought the Messiah.
+card_type: TITLE
+rarity: GLORIOUS
+art_prompt: A small caravan of robed figures on camels traversing a vast, deep blue
+  desert at night, guided by a single brilliant star beaming down on a distant horizon
+  line.
+stats:
+  lore: 5
+  context: 2
+  complexity: 4
+ability: 'On draw, you may reveal: spend 1 card from your hand to activate that card''s
+  on-reveal ability. Then this card is spent.'
+ot_verse:
+  ref: Jeremiah 39:3
+  snippet: Then all the princes of the king of Babylon came in... Nergal-sharezer
+    the Rab-mag...
+nt_verse:
+  ref: Matthew 2:1
+  snippet: Now after Jesus was born in Bethlehem... behold, magi from the east came
+    to Jerusalem.
+greek:
+  text: μάγοι
+  translit: magoi
+hebrew:
+  text: רַב־מָג
+  translit: rab-mag
+ot_refs: Jer 39:3 • Dan 2:2 • Dan 2:48 • Dan 5:11
+nt_refs: Matt 2:1 • Matt 2:7 • Matt 2:16 • Acts 13:6
+trivia:
+- The term originally referred to a priestly caste in the Persian Empire, likely Zoroastrian.
+- Scripture never states there were three men, only that they brought three types
+  of gifts.
+- In the book of Daniel, the prophet was made chief over the 'wise men' of Babylon.
+- The Greek word 'magos' is also the root for the English word 'magic' and 'magician'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGK6ieba6piEBqULHnf_k_z32y5PMHMQMkTQPquXYx1zzWFwi2CZDx-B7os4qunhCZf0QmYSMh3iLu3PGGSZInq0hNqjVZkJB0Wc_1UbsrMZVHsoimnK2rYkbIg8z3DVhxm0R1HX1ZoEeYFe7AaicibQiAp7zvvNx2TYdA=
+  title: christiananswersnewage.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcq3cYYve6JC955BZA3BbJqVGE4xd4783o1rb0XobN1xfwCBT2f_Fr8hEmuEeE6IBkkBWqtOJ96PvWBKF5s6ogcKYZcTOFdy_fm9mUs2_Pk2Wvn_TRu_in7arorAln3zsY44MVduzFy7Q=
+  title: biblicalcyclopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHD_7CnZWubKule3gtS2lEwrWE6GRTz4p8lTTCs6a_A4WbNG_KtXVQuZr-FflV_7nAIM487PaHWXx-z1i_nRzPO2YRlYLw0UwdfxXSUD-RBFa0pFOImxB69QDmdkhUu4p7FJkjI4qht0s8hw==
+  title: biblicaltraining.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWAw2kLbrP5RpIQWcWfis3v2hIJsbTxsQMuAQHnYjVehnSjt1yJdXPFJhQv1I6F-TooekJGRwDZQE8b8FMNw0UhBz8i9Q8rYZ6JFlp7JMG2nWM6YumBa9cgUM_DKrMWZtoMCWUIaY=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHxzdgrbZX04e7ZeZlVY144dijZVXOLm0AY8PhgM1LX6M53CK3iRht88XwBvMQKjxp4nhBT5Mx2unQI9qbJNn__hTuZRyy1AofzkoUA7w7x_Fke1EL4vCO1QQ_S9g_DFIGIlU26c4X9KVXf6APhw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNqbRqem_2dUSi8Ce7FCmRa9rOaiUAtsLGPFvHWaX3SqnbQxEOJrwlOlVZca5Hu_G2w046regVJydZNqGaYDWKqqzSnzxtjP0OOzSFWGErDokVwoMxd0mpT_2xQ9gN3bqj_Blce1NTiuGP1E6Tzb32viL62oLgpU99H2Av5cPovb49lCO8FOdPaOZaDRn4dPjzBK7tL7BrNw==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEP4BELtXq9pPy-c6tnVv-JhlhylpsxP-wpVufWZKfcw-9X_Q14uMnE0w--Rbx8femhAO8iE5WwUiy9tztSxeLV5WOzx9xw0Tgy1eGfsHA5kRu9uYTwykh0wY_rKm3jQNCapgOgm6fv2xxmhzjenSA=
+  title: kingjamesbibledictionary.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpg-EL1NQoVEoGP2fKwOIKoDdqWEpQolUV-Ynxg-oykNe5mFW8btzU_6AaPDxStmoysp5K2cdpfjllEbco8Rls-v-68kwUDdctjFoJ5H4zq8-PxYz17a_ZXnMfpVwGKFF2pjI9WT5AlYPDl5-O_u1tJA9GrsvQkE6c
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQwOIKcCDZV34YEoNE24-ui0sqPhYQdEAvDIkLl5MFaZT4qdjUfKEpJv1zStlcZYvPnB0naQzfkoD_Ne2X_i-RjP8TC8ArnEwRsyiIPA90cNYN8nW5rQ62BGHbU2K10uD1VwIi3QiBwwrYbUJ4RBWlWItxrmt0i-p8XjFONPxrV71PiOjMvRlTZ0Y4fLln73LJ_SuvRThhTzSn8I9b9qYJ
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ9nY9TPKOYC7KmnN70YLbdy-OuXD7FGHylX9how8tji4DceME-uAuS_38Ninf4ojeZtwz6Z16445pXdZ72QMe6aJlid_VI8tUqDhe8o5-sl5AZHjojBMLxFeG65IWmmlERKQ3htot-34=
+  title: hebrewoldtestament.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaBYHvuRupXVfhuna4D4KeCPGlSq5x1PFZbVo6R6s_QKrG_ly1HnNa0Cjh6NsgZ4Bsee2BiCPCxdbgYN-u991tySoDu3wwRL8fGVIH-lCBnVzY0u7Qr8Z_4DXdu-2ixa1JSw8BClrlREOhFpq5RPqkvxQ8NDgu_vU=
+  title: defendinginerrancy.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELnp-yZJtPBYRo0iGn4fs8bjgwlpwKT_EE7SWdU4cLuPyKzlzc51uGSChkSPSPUyUF050rA15zDSEi_tvN54-fbpThF7JRPYG74xz-MEbNKLlrbWKk_LnnsXRJFjBwsO6xNJG11Tg=
+  title: wikipedia.org
+search_queries:
+- ''
+- Jeremiah 39:3 Rab-mag meaning
+- Daniel 2:2 Hebrew words for wise men
+- Magi Hebrew equivalent Old Testament
+- Greek word for Magi Matthew 2 transliteration
