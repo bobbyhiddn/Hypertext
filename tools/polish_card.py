@@ -21,15 +21,22 @@ def main() -> int:
         return 1
 
     prompt = (
-        "The image is a trading card. Your task is to remove typographic square brackets '[ ]' from the text fields. "
-        "CRITICAL RULES: "
-        "1. Detect any text enclosed in brackets, such as '[Some Text]'. "
-        "2. Erase ONLY the brackets '[' and ']' by filling them with the background color. "
-        "3. YOU MUST PRESERVE THE TEXT INSIDE. Do NOT delete the words. "
-        "   - CORRECT: '[Title]' -> 'Title' "
-        "   - WRONG:   '[Title]' -> '' (Empty space) "
-        "4. If the text is the definition/gloss under the title, keep the definition words exactly as they are. "
-        "5. Do not change any other part of the card. "
+        "Reproduce this trading card image EXACTLY as shown, with ONE small change: "
+        "remove any square bracket characters '[' or ']' that appear around text. "
+        "\n\n"
+        "IMPORTANT - What you MUST do:\n"
+        "- Output the COMPLETE card with ALL text, artwork, and design intact\n"
+        "- Keep every word, every letter, every piece of text that appears on the card\n"
+        "- The title text, definition text, ability text, and rarity label must ALL remain\n"
+        "- Only delete the bracket symbols themselves, nothing else\n"
+        "\n"
+        "Examples:\n"
+        "- '[Arcane Whisper]' becomes 'Arcane Whisper' (keep the words, remove only [ and ])\n"
+        "- '[RARE]' becomes 'RARE' (keep RARE, remove only [ and ])\n"
+        "- 'A mystical force [flows]' becomes 'A mystical force flows'\n"
+        "\n"
+        "If there are NO brackets in the image, output the image unchanged.\n"
+        "Do NOT leave blank spaces where text was. The text must remain readable."
     )
 
     print(f"Polishing card (removing brackets) -> {out_path}...")
