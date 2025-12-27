@@ -1,0 +1,43 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #002
+Word: GOSPEL
+Gloss: The proclamation of good news; specifically the message of salvation through Jesus Christ.
+Type: NOUN
+DRAW Rarity (Top Right): RARE with gold diamond icon
+Stats: Lore 5, Context 5, Complexity 3
+
+Art Description: A herald standing on a high mountain peak at sunrise, blowing a silver trumpet, golden light flooding a dark valley below, cinematic lighting, oil painting style, no text.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: You may reveal a card from your hand. Reveal cards from the top of the shared deck equal to that card's Lore stat; keep one and discard the rest.
+
+OT Verse: Isaiah 52:7 — "How beautiful upon the mountains are the feet of him who brings good news."
+NT Verse: Romans 1:16 — "For I am not ashamed of the gospel, for it is the power of God for salvation."
+
+Greek: εὐαγγέλιον
+(Below Greek, smaller text) Transliteration: euangelion
+NT Refs: Mark 1:1 • 1 Cor 15:1 • Gal 1:6 • Rev 14:6
+
+Hebrew: בְּשׂוֹרָה
+(Below Hebrew, smaller text) Transliteration: besorah
+OT Refs: Isa 40:9 • Isa 61:1 • Nah 1:15 • Ps 96:2
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• Derived from the Old English 'godspell', literally meaning 'good story' or 'good news'.
+• In secular ancient Greek, the word was used for announcements of military victory or an emperor's birth.
+• Paul defines the core content of the gospel in 1 Corinthians 15 as Christ's death, burial, and resurrection.
+• The Hebrew equivalent is rooted in the idea of a messenger bringing fresh tidings from the battlefront.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL (not gold). Filled navy circles = stat value, empty/outlined circles = remaining. Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty). Do NOT use gold fill for stat pips. Do NOT use diamond shapes for stat pips.
+- Do not add extra text or modify the layout.

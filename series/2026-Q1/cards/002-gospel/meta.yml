@@ -1,0 +1,48 @@
+number: '002'
+word: GOSPEL
+gloss: The proclamation of good news; specifically the message of salvation through
+  Jesus Christ.
+card_type: NOUN
+rarity: RARE
+art_prompt: A herald standing on a high mountain peak at sunrise, blowing a silver
+  trumpet, golden light flooding a dark valley below, cinematic lighting, oil painting
+  style, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: You may reveal a card from your hand. Reveal cards from the top of the shared
+  deck equal to that card's Lore stat; keep one and discard the rest.
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful upon the mountains are the feet of him who brings good news.
+nt_verse:
+  ref: Romans 1:16
+  snippet: For I am not ashamed of the gospel, for it is the power of God for salvation.
+greek:
+  text: εὐαγγέλιον
+  translit: euangelion
+hebrew:
+  text: בְּשׂוֹרָה
+  translit: besorah
+ot_refs: Isa 40:9 • Isa 61:1 • Nah 1:15 • Ps 96:2
+nt_refs: Mark 1:1 • 1 Cor 15:1 • Gal 1:6 • Rev 14:6
+trivia:
+- Derived from the Old English 'godspell', literally meaning 'good story' or 'good
+  news'.
+- In secular ancient Greek, the word was used for announcements of military victory
+  or an emperor's birth.
+- Paul defines the core content of the gospel in 1 Corinthians 15 as Christ's death,
+  burial, and resurrection.
+- The Hebrew equivalent is rooted in the idea of a messenger bringing fresh tidings
+  from the battlefront.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 100
+review_attempts: 2
+review_status: green
