@@ -1166,6 +1166,8 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
         subprocess.check_call(polish_cmd)
     except subprocess.CalledProcessError as e:
         print(f"Warning: Polish step failed: {e}")
+
+    _run_watermark(card_dir=card_dir, image_path=out_png)
         
     _log("[phase demo] image generation complete")
 
@@ -1243,6 +1245,8 @@ def phase_imagegen(*, series_dir: Path) -> int:
     except subprocess.CalledProcessError as e:
         print(f"Warning: Polish step failed: {e}")
 
+    _run_watermark(card_dir=target_dir, image_path=out_png)
+
     print(f"Rendered image at {out_png}")
     return 0
 
@@ -1298,6 +1302,8 @@ def _generate_image_for_card_dir(*, card_dir: Path) -> int:
         subprocess.check_call(polish_cmd)
     except subprocess.CalledProcessError as e:
         print(f"Warning: Polish step failed: {e}")
+
+    _run_watermark(card_dir=card_dir, image_path=out_png)
         
     print(f"Rendered image at {out_png}")
     return 0
@@ -1425,6 +1431,8 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     subprocess.check_call(cmd)
     _log("[phase revise] image generation complete")
 
+    _run_watermark(card_dir=card_dir, image_path=out_png)
+
     content = updated.get("content", {}) if isinstance(updated.get("content"), dict) else {}
     render_post(
         str(card_dir / "post.md"),
@@ -1507,6 +1515,8 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
     subprocess.check_call(cmd)
     _log("[phase rebuild] image generation complete")
 
+    _run_watermark(card_dir=card_dir, image_path=out_png)
+
     content = card.get("content", {}) if isinstance(card.get("content"), dict) else {}
     render_post(
         str(card_dir / "post.md"),
@@ -1577,6 +1587,34 @@ def _run_polish(image_path: Path) -> None:
         _log("[polish] bracket removal complete")
     except subprocess.CalledProcessError as e:
         _log(f"[polish] Warning: Polish step failed: {e}")
+
+
+def _run_watermark(*, card_dir: Path, image_path: Path) -> None:
+    """Generate watermark.svg and burn it into the PNG (bottom-right)."""
+    watermark_svg = card_dir / "watermark.svg"
+    cmd_svg = [
+        sys.executable,
+        str(Path("tools") / "watermark.py"),
+        "--card-dir",
+        str(card_dir),
+        "--out",
+        str(watermark_svg),
+    ]
+    cmd_apply = [
+        sys.executable,
+        str(Path("tools") / "apply_watermark.py"),
+        "--card-dir",
+        str(card_dir),
+        "--in",
+        str(image_path),
+    ]
+
+    try:
+        subprocess.check_call(cmd_svg)
+        subprocess.check_call(cmd_apply)
+        _log("[watermark] applied watermark")
+    except subprocess.CalledProcessError as e:
+        _log(f"[watermark] Warning: watermark step failed: {e}")
 
 
 def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:

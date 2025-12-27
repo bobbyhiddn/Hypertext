@@ -25,7 +25,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai
+          pip install pyyaml google-genai pillow
 
       - name: Run plan phase
         id: run-plan
@@ -87,12 +87,13 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai
+          pip install pyyaml google-genai pillow
 
       - name: Generate image (Nano Banana Pro)
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
         run: |
           python tools/daily_pipeline.py --phase imagegen
 
