@@ -13,6 +13,7 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from gemini_text import generate_text, generate_text_with_grounding
+from gemini_review import review_card, format_review_report, ReviewResult
 from render_post import render_post
 
 try:
@@ -160,14 +161,25 @@ def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[di
     return out
 
 
-def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str) -> dict:
+def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str, ability: str | None = None) -> dict:
     rules_appendix = _load_rules_appendix()
+
+    # If ability is provided, instruct the model to use it; otherwise generate one
+    if ability:
+        ability_instruction = (
+            f"  \"ability_text\": \"{ability}\" (USE THIS EXACT ABILITY - do not modify),\n"
+        )
+        ability_note = f"ABILITY (use exactly as provided): {ability}\n\n"
+    else:
+        ability_instruction = "  \"ability_text\": string,\n"
+        ability_note = ""
+
     prompt = (
         "You are generating research-backed metadata for a daily Bible word-study trading card. "
         "Return ONLY valid JSON with this exact shape: {\n"
         "  \"gloss\": string,\n"
         "  \"art_prompt\": string (must NOT mention text/letters/words/writing),\n"
-        "  \"ability_text\": string,\n"
+        + ability_instruction +
         "  \"stats\": {\"lore\": int 1-5, \"context\": int 1-5, \"complexity\": int 1-5},\n"
         "  \"ot_verse\": {\"ref\": string, \"snippet\": string},\n"
         "  \"nt_verse\": {\"ref\": string, \"snippet\": string},\n"
@@ -181,13 +193,14 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         f"Word: {word}\n"
         f"Card type: {card_type}\n"
         f"Rarity: {rarity}\n\n"
+        + ability_note +
         "GAME RULES (must follow):\n"
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
-        "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique)."
+        + ("" if ability else "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique).")
     )
 
     _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
@@ -334,6 +347,23 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
         allowed_paths.add("/content/ABILITY_TEXT")
     if stats_req:
         allowed_paths.update({"/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY"})
+    if general_req:
+        # General revision unlocks ALL content fields
+        allowed_paths.update({
+            "/content/WORD", "/content/GLOSS", "/content/CARD_TYPE",
+            "/content/RARITY_TEXT", "/content/RARITY_ICON",
+            "/content/ART_PROMPT", "/content/ABILITY_TEXT",
+            "/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY",
+            "/content/OT_VERSE_LINE", "/content/NT_VERSE_LINE",
+            "/content/OT_VERSE_REF", "/content/OT_VERSE_SNIPPET",
+            "/content/NT_VERSE_REF", "/content/NT_VERSE_SNIPPET",
+            "/content/GREEK", "/content/GREEK_TRANSLIT",
+            "/content/HEBREW", "/content/HEBREW_TRANSLIT",
+            "/content/OT_REFS", "/content/NT_REFS",
+            "/content/TRIVIA_BULLETS",
+            "/content/WILD_ID", "/content/WILD_COUNTS_AS",
+            "/content/QUARTET_ID", "/content/LETTER", "/content/NOTES_INTERNAL",
+        })
 
     if not allowed_paths:
         return "", set()
@@ -357,7 +387,7 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
     if general_req:
         if out_lines:
             out_lines.append("")
-        out_lines.append("General revision request (context only; do not change extra fields):")
+        out_lines.append("General revision request (you may modify any content field as needed):")
         out_lines.append(general_req)
 
     return "\n".join(out_lines).strip(), allowed_paths
@@ -565,12 +595,17 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     card_type = str(entry.get("card_type", "NOUN")).upper()
     rarity = str(entry.get("rarity", "COMMON")).upper()
+    ability = entry.get("ability")  # Optional: if provided in queue, use it
+    if ability:
+        ability = str(ability).strip()
 
     _log(f"[phase plan] selected entry: #{number:03d} word={word} type={card_type} rarity={rarity}")
+    if ability:
+        _log(f"[phase plan] using provided ability: {ability[:50]}...")
 
     if auto:
         _log("[phase plan] auto mode: generating recipe")
-        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
+        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=ability)
         grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
         stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
         ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
@@ -1232,6 +1267,164 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
     return 0
 
 
+def _generate_image_only(*, card_dir: Path) -> Path:
+    """Generate image without polish. Returns path to generated image."""
+    out_name = "card_1024x1536.png"
+    prompt_file = card_dir / "prompt.txt"
+    if not prompt_file.exists():
+        raise RuntimeError(f"Missing {prompt_file}")
+
+    out_png = card_dir / "outputs" / out_name
+    out_png.parent.mkdir(parents=True, exist_ok=True)
+
+    _log(f"[imagegen] generating image for {card_dir.name} -> {out_png}")
+
+    style_ref = Path("tools") / "clean_template_final.png"
+    if style_ref.exists():
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_style.py"),
+            "--prompt-file", str(prompt_file),
+            "--style", str(style_ref),
+            "--out", str(out_png)
+        ]
+    else:
+        cmd = [
+            sys.executable,
+            str(Path("tools") / "gemini_image.py"),
+            str(prompt_file),
+            str(out_png)
+        ]
+
+    subprocess.check_call(cmd)
+    return out_png
+
+
+def _run_polish(image_path: Path) -> None:
+    """Run polish step to remove brackets."""
+    polish_cmd = [
+        sys.executable,
+        str(Path("tools") / "polish_card.py"),
+        str(image_path)
+    ]
+    try:
+        subprocess.check_call(polish_cmd)
+        _log("[polish] bracket removal complete")
+    except subprocess.CalledProcessError as e:
+        _log(f"[polish] Warning: Polish step failed: {e}")
+
+
+def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
+    """
+    Review a generated card image and iteratively improve it.
+
+    Flow:
+    1. Score the card image against the checklist
+    2. If score < 90%: rebuild image entirely
+    3. If score >= 90%: run polish (bracket removal), then re-score
+    4. Repeat up to max_attempts times
+    5. If final score < 100%: flag as yellow in meta.yml
+
+    Returns 0 on success (score >= 90), 1 on failure.
+    """
+    if yaml is None:
+        raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
+
+    _log(f"[phase review] card_dir={card_dir}")
+
+    card_path = card_dir / "card.json"
+    if not card_path.exists():
+        print(f"Missing {card_path}")
+        return 1
+
+    out_png = card_dir / "outputs" / "card_1024x1536.png"
+    if not out_png.exists():
+        print(f"Missing {out_png}. Run imagegen first.")
+        return 1
+
+    card_json = read_json(card_path)
+    word = card_json.get("content", {}).get("WORD", "UNKNOWN")
+
+    best_score = 0
+    best_result: ReviewResult | None = None
+
+    for attempt in range(1, max_attempts + 1):
+        _log(f"[phase review] attempt {attempt}/{max_attempts} for {word}")
+
+        # Score the current image
+        try:
+            result = review_card(out_png, card_json, pass_threshold=90)
+        except Exception as e:
+            _log(f"[phase review] Review failed: {e}")
+            return 1
+
+        _log(f"[phase review] Score: {result.score}/100")
+        print(format_review_report(result))
+
+        if result.score > best_score:
+            best_score = result.score
+            best_result = result
+
+        # Perfect score - we're done
+        if result.score >= 100:
+            _log(f"[phase review] Perfect score achieved!")
+            break
+
+        # If this is the last attempt, don't regenerate
+        if attempt >= max_attempts:
+            break
+
+        # Score < 90: full rebuild
+        if result.score < 90:
+            _log(f"[phase review] Score {result.score} < 90, rebuilding image...")
+            try:
+                _generate_image_only(card_dir=card_dir)
+            except Exception as e:
+                _log(f"[phase review] Image regeneration failed: {e}")
+                return 1
+
+        # Score >= 90 but < 100: polish and retry
+        else:
+            _log(f"[phase review] Score {result.score} >= 90, running polish...")
+            _run_polish(out_png)
+
+    # Update meta.yml with review status
+    meta_path = card_dir / "meta.yml"
+    if meta_path.exists():
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        if not isinstance(meta, dict):
+            meta = {}
+    else:
+        meta = {}
+
+    meta["review_score"] = best_score
+    meta["review_attempts"] = max_attempts
+
+    if best_score >= 100:
+        meta["review_status"] = "green"
+        status_msg = "PASS (100%)"
+    elif best_score >= 90:
+        meta["review_status"] = "yellow"
+        status_msg = f"NEEDS MANUAL REVIEW ({best_score}%)"
+        if best_result and best_result.corrections:
+            meta["review_notes"] = "; ".join(best_result.corrections[:3])
+    else:
+        meta["review_status"] = "red"
+        status_msg = f"FAILED ({best_score}%)"
+        if best_result and best_result.corrections:
+            meta["review_notes"] = "; ".join(best_result.corrections[:3])
+
+    with open(meta_path, "w", encoding="utf-8") as f:
+        yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+
+    _log(f"[phase review] Final status: {status_msg}")
+    print(f"Review complete for {word}: {status_msg}")
+
+    # Return success if score >= 90 (yellow or green)
+    return 0 if best_score >= 90 else 1
+
+
 def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int) -> int:
     rc = phase_plan(series_dir=series_dir, template_path=template_path, auto=auto)
     if rc != 0:
@@ -1241,7 +1434,7 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "full"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "review", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
@@ -1321,6 +1514,12 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_rebuild(card_dir=Path(args.card_dir), regen_prompt=bool(args.regen_prompt))
+
+    if args.phase == "review":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        return phase_review(card_dir=Path(args.card_dir))
 
     return 2
 
