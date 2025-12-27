@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypertext — {SERIES_NAME}</title>
+  <link rel="stylesheet" href="../../assets/gallery.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a class="brand-title" href="../../index.html">HYPERTEXT</a>
+      <div class="brand-subtitle">{SERIES_NAME}</div>
+    </div>
+
+    <div class="header-actions">
+      <a class="btn" href="../../index.html">All series</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" id="controls">
+      <div class="control-row">
+        <div class="control">
+          <label for="search">Search</label>
+          <input id="search" type="search" placeholder="Search word or gloss…" autocomplete="off" />
+        </div>
+
+        <div class="control">
+          <label for="sort">Sort</label>
+          <select id="sort">
+            <option value="number-asc">Number (asc)</option>
+            <option value="number-desc">Number (desc)</option>
+            <option value="word-asc">Word (A→Z)</option>
+            <option value="word-desc">Word (Z→A)</option>
+            <option value="rarity-desc">Rarity (high→low)</option>
+            <option value="rarity-asc">Rarity (low→high)</option>
+            <option value="type-asc">Type (A→Z)</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="rarity">Rarity</label>
+          <select id="rarity">
+            <option value="ALL">All</option>
+            <option value="COMMON">Common</option>
+            <option value="UNCOMMON">Uncommon</option>
+            <option value="RARE">Rare</option>
+            <option value="GLORIOUS">Glorious</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="ALL">All</option>
+            <option value="NOUN">Noun</option>
+            <option value="VERB">Verb</option>
+            <option value="ADJECTIVE">Adjective</option>
+            <option value="NAME">Name</option>
+            <option value="TITLE">Title</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label>&nbsp;</label>
+          <button class="btn" id="reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="stats" id="stats">
+        <div class="pill">Total: <span data-stat="total">0</span></div>
+        <div class="pill">Common: <span data-stat="common">0</span></div>
+        <div class="pill">Uncommon: <span data-stat="uncommon">0</span></div>
+        <div class="pill">Rare: <span data-stat="rare">0</span></div>
+        <div class="pill">Glorious: <span data-stat="glorious">0</span></div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <!-- CARDS_INJECTION_POINT -->
+    </section>
+
+    <footer class="footer">
+      <div class="muted">Generated on {GENERATION_DATE}</div>
+    </footer>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close></div>
+    <div class="lightbox-panel">
+      <button class="lightbox-close" data-close aria-label="Close">×</button>
+      <div class="lightbox-meta">
+        <div class="lightbox-title" id="lbTitle"></div>
+        <div class="lightbox-subtitle muted" id="lbSubtitle"></div>
+        <a class="btn" id="lbDownload" download>Download PNG</a>
+      </div>
+      <img id="lbImg" alt="" />
+    </div>
+  </div>
+
+  <script src="../../assets/gallery.js"></script>
+</body>
+</html>

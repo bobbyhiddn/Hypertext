@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hypertext — Series</title>
+  <link rel="stylesheet" href="./assets/gallery.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-title">HYPERTEXT</div>
+      <div class="brand-subtitle">Deck Gallery</div>
+    </div>
+    <div class="header-actions">
+      <a class="btn" href="./series/">Browse all series</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Series</h1>
+      <p class="muted">Choose a series to view its cards. Filter and sort within each series.</p>
+    </section>
+
+    <section class="series-grid" id="seriesGrid">
+      <!-- SERIES_INJECTION_POINT -->
+    </section>
+
+    <footer class="footer">
+      <div class="muted">Generated on {GENERATION_DATE}</div>
+    </footer>
+  </main>
+
+  <script src="./assets/gallery.js"></script>
+</body>
+</html>
