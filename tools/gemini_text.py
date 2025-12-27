@@ -80,7 +80,7 @@ def generate_text_with_grounding(
 
     max_attempts = int(os.environ.get("GEMINI_TEXT_MAX_ATTEMPTS", "6"))
     base_delay_s = float(os.environ.get("GEMINI_TEXT_RETRY_BASE_DELAY_S", "2"))
-    timeout_s = float(os.environ.get("GEMINI_TEXT_HTTP_TIMEOUT_S", "120"))
+    timeout_s = float(os.environ.get("GEMINI_TEXT_HTTP_TIMEOUT_S", "240"))
 
     last_error: Exception | None = None
     raw = ""
@@ -93,6 +93,17 @@ def generate_text_with_grounding(
                 data = json.loads(raw)
             last_error = None
             break
+        except TimeoutError as e:
+            if attempt < max_attempts:
+                delay = base_delay_s * (2 ** (attempt - 1)) + random.random()
+                print(
+                    f"Gemini text request timed out. Retrying in {delay:.1f}s (attempt {attempt}/{max_attempts}).",
+                    file=sys.stderr,
+                )
+                time.sleep(delay)
+                last_error = e
+                continue
+            raise
         except urllib.error.HTTPError as e:
             body = _read_http_error_body(e)
             retry_after = _parse_retry_after_seconds(getattr(e, "headers", None))
