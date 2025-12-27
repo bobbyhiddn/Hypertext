@@ -21,22 +21,15 @@ def main() -> int:
         return 1
 
     prompt = (
-        "Reproduce this trading card image EXACTLY as shown, with ONE small change: "
-        "remove any square bracket characters '[' or ']' that appear around text. "
-        "\n\n"
-        "IMPORTANT - What you MUST do:\n"
-        "- Output the COMPLETE card with ALL text, artwork, and design intact\n"
-        "- Keep every word, every letter, every piece of text that appears on the card\n"
-        "- The title text, definition text, ability text, and rarity label must ALL remain\n"
-        "- Only delete the bracket symbols themselves, nothing else\n"
-        "\n"
-        "Examples:\n"
-        "- '[Arcane Whisper]' becomes 'Arcane Whisper' (keep the words, remove only [ and ])\n"
-        "- '[RARE]' becomes 'RARE' (keep RARE, remove only [ and ])\n"
-        "- 'A mystical force [flows]' becomes 'A mystical force flows'\n"
-        "\n"
-        "If there are NO brackets in the image, output the image unchanged.\n"
-        "Do NOT leave blank spaces where text was. The text must remain readable."
+        "You are a copy machine. Reproduce this trading card EXACTLY, pixel-perfect, with one exception: "
+        "if you see square brackets [ ] around any text, redraw that text without the brackets.\n\n"
+        "RULES:\n"
+        "1. Copy the ENTIRE card exactly - frame, artwork, all text, all icons\n"
+        "2. If text says '[WORD]', write 'WORD' instead (no brackets)\n"
+        "3. If text says '[RARE]', write 'RARE' instead (no brackets)\n"
+        "4. ALL words inside brackets MUST appear in the output, just without the [ ] characters\n"
+        "5. If there are no brackets, output the image completely unchanged\n\n"
+        "The stat pips, rarity diamond, artwork, and layout must be identical to the input."
     )
 
     print(f"Polishing card (removing brackets) -> {out_path}...")

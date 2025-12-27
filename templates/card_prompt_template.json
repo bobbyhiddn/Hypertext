@@ -27,12 +27,12 @@
     "iconography": {
       "rarity_system": {
         "placement": "top_right_small",
-        "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
         "icons": {
-          "COMMON": { "shape": "circle", "fill": "white", "outline": "navy" },
-          "UNCOMMON": { "shape": "square", "fill": "green", "outline": "navy" },
-          "RARE": { "shape": "hexagon", "fill": "gold", "outline": "navy" },
-          "MYTHIC": { "shape": "rhombus", "sides": 4, "fill": "orange", "outline": "navy", "note": "true 4-sided diamond (rhombus), not a rotated square" }
+          "COMMON": { "shape": "diamond", "fill": "white", "outline": "navy" },
+          "UNCOMMON": { "shape": "diamond", "fill": "green", "outline": "navy" },
+          "RARE": { "shape": "diamond", "fill": "gold", "outline": "navy" },
+          "GLORIOUS": { "shape": "diamond", "fill": "orange", "outline": "navy" }
         }
       },
       "stat_pips": {
@@ -114,5 +114,5 @@
     "no_captions_or_watermarks_outside_card": true,
     "do_not_render_hidden_metadata": ["WILD_ID", "WILD_COUNTS_AS", "QUARTET_ID", "LETTER", "NOTES_INTERNAL"]
   },
-  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided rhombus and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left)."
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
 }

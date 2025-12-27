@@ -8,12 +8,12 @@ gloss: "short definition here"   # Brief definition/translation
 card_type: "NOUN"                # NOUN | VERB | ADJECTIVE | NAME | TITLE
 
 # === RARITY ===
-rarity: "COMMON"                 # COMMON | UNCOMMON | RARE | MYTHIC
+rarity: "COMMON"                 # COMMON | UNCOMMON | RARE | GLORIOUS
 # Icon is determined by rarity:
 #   COMMON: white circle
 #   UNCOMMON: green square
 #   RARE: gold hexagon
-#   MYTHIC: orange rhombus
+#   GLORIOUS: orange rhombus
 
 # === ARTWORK ===
 art_prompt: |
@@ -31,7 +31,7 @@ stats:
 #   COMMON: simple ability
 #   UNCOMMON: suit-based ability
 #   RARE: references stats
-#   MYTHIC: unique, can reference other cards
+#   GLORIOUS: unique, can reference other cards
 ability: "When played, draw one card."
 
 # === SCRIPTURE ===

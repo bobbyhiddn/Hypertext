@@ -2,7 +2,7 @@ Generate a trading card following the EXACT layout, frame, and geometry of the r
 
 REPLACE the content with the following text. Do NOT use brackets or placeholders.
 
-Card Number: {NUMBER}
+Card Number: #{NUMBER}
 Word: {WORD}
 Gloss: {GLOSS}
 Type: {CARD_TYPE}
@@ -34,6 +34,7 @@ Series Footer: SERIES: {SERIES}
 CRITICAL RULES:
 - Maintain the reference card's navy/gold frame EXACTLY.
 - Keep the exact same text box positions and styles.
-- Do NOT print brackets [ ] or placeholders like [Ability description]. This follows for rarity as well.
-- Stat pips must be filled with navy pips equal to their values under Lore, Context, and Complexity. For example, 3 lore would look like 3 filled circles and two empty ones.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small NAVY circles only. Filled circles = stat value, empty circles = remaining. Example: Lore 3 = ●●●○○ (3 filled, 2 empty). Do NOT use diamond shapes for stat pips.
 - Do not add extra text or modify the layout.

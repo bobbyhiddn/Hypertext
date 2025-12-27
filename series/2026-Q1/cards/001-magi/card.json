@@ -4,7 +4,10 @@
     "card_type": "word_study_trading_card",
     "orientation": "vertical",
     "aspect_ratio": "2:3",
-    "target_resolution": { "width": 1024, "height": 1536 },
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
     "visual_style": [
       "premium trading card layout",
       "antique parchment background with subtle grain",
@@ -32,10 +35,22 @@
         "placement": "top_right_small",
         "render_rule": "Render a small flat icon followed immediately by the rarity text. No parentheses. No 'Rarity:' label. No extra symbols. No gradients.",
         "icons": {
-          "COMMON": { "shape": "circle", "fill": "white", "outline": "navy" },
-          "UNCOMMON": { "shape": "square", "fill": "green", "outline": "navy" },
-          "RARE": { "shape": "hexagon", "fill": "gold", "outline": "navy" },
-          "MYTHIC": {
+          "COMMON": {
+            "shape": "circle",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "square",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "hexagon",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
             "shape": "rhombus",
             "sides": 4,
             "fill": "orange",
@@ -66,7 +81,10 @@
     },
     "header": {
       "collector_id_left": "#{NUMBER}",
-      "rarity_icon_and_text_right": { "icon_key": "RARITY_ICON", "text_key": "RARITY_TEXT" },
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
       "type_badge_left": "{CARD_TYPE}",
       "title_center_key": "WORD",
       "subtitle_center_key": "GLOSS"
@@ -84,15 +102,33 @@
     },
     "stats_row": {
       "stats": [
-        { "label": "LORE", "pips_key": "STAT_LORE" },
-        { "label": "CONTEXT", "pips_key": "STAT_CONTEXT" },
-        { "label": "COMPLEXITY", "pips_key": "STAT_COMPLEXITY" }
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
       ]
     },
     "panels": [
-      { "label": "ABILITY", "content_key": "ABILITY_TEXT" },
-      { "label": "OT VERSE", "content_key": "OT_VERSE_LINE" },
-      { "label": "NT VERSE", "content_key": "NT_VERSE_LINE" },
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
       {
         "type": "split",
         "left_label": "GREEK",
@@ -117,8 +153,8 @@
   },
   "content": {
     "NUMBER": "001",
-    "RARITY_TEXT": "MYTHIC",
-    "RARITY_ICON": "MYTHIC",
+    "RARITY_TEXT": "GLORIOUS",
+    "RARITY_ICON": "GLORIOUS",
     "CARD_TYPE": "TITLE",
     "WORD": "MAGI",
     "GLOSS": "learned visitors from the East",
@@ -147,7 +183,8 @@
     ],
     "WILD_ID": "TITLE-01",
     "WILD_COUNTS_AS": "NOUN or NAME (on meld only)",
-    "NOTES_INTERNAL": "Hidden metadata only. Do not render as visible rule panels."
+    "NOTES_INTERNAL": "Hidden metadata only. Do not render as visible rule panels.",
+    "SERIES": "2026-Q1"
   },
   "render_instructions": {
     "strict_no_duplicate_headings": true,
@@ -169,5 +206,5 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext such as 'GAME: HYPERTEXT' or 'DECK: WORD STUDIES' anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For MYTHIC, the icon must be a true 4-sided diamond (rhombus), not a rotated square, and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. The top 44% must be an illustration matching ART_PROMPT with no text inside the artwork. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left)."
+  "model_prompt": "Generate a premium vertical trading card using the provided style_guide, layout, and content. Output must contain ONLY the card; do not add any surrounding text, captions, watermarks, or extra labels outside the card border. Do not render any top microtext such as 'GAME: HYPERTEXT' or 'DECK: WORD STUDIES' anywhere. The rarity indicator must be a small flat icon followed immediately by the rarity word from RARITY_TEXT. For GLORIOUS, the icon must be a true 4-sided diamond (rhombus), not a rotated square, and it must be orange with a navy outline. Do not print '(Rarity)' and do not print 'Rarity:'. For stats, use only circular pips. The top 44% must be an illustration matching ART_PROMPT with no text inside the artwork. Render only these sections: header, stats, ability, OT verse, NT verse, Greek/Heb split strip, and trivia bullets. Do not add rulebook panels. Each heading appears once. Ensure Greek and Hebrew render correctly (Hebrew right-to-left)."
 }

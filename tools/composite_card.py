@@ -97,7 +97,7 @@ RARITY_ICONS = {
     "COMMON": {"shape": "circle", "fill": COLORS["white"], "outline": COLORS["navy"]},
     "UNCOMMON": {"shape": "square", "fill": COLORS["green_uncommon"], "outline": COLORS["navy"]},
     "RARE": {"shape": "hexagon", "fill": COLORS["gold"], "outline": COLORS["navy"]},
-    "MYTHIC": {"shape": "rhombus", "fill": COLORS["orange_mythic"], "outline": COLORS["navy"]},
+    "GLORIOUS": {"shape": "rhombus", "fill": COLORS["orange_mythic"], "outline": COLORS["navy"]},
 }
 
 

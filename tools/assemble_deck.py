@@ -88,7 +88,7 @@ def extract_card_info(card: dict, card_path: Path) -> dict:
 def generate_decklist(cards_info: list[dict], series_name: str) -> dict:
     """Generate a decklist manifest."""
     # Count by rarity
-    rarity_counts = {'COMMON': 0, 'UNCOMMON': 0, 'RARE': 0, 'MYTHIC': 0}
+    rarity_counts = {'COMMON': 0, 'UNCOMMON': 0, 'RARE': 0, 'GLORIOUS': 0}
     type_counts = {'NOUN': 0, 'VERB': 0, 'ADJECTIVE': 0, 'NAME': 0, 'TITLE': 0}
 
     for card in cards_info:
