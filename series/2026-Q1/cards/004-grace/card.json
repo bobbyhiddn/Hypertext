@@ -157,10 +157,10 @@
     "WORD": "GRACE",
     "GLOSS": "Unmerited favor; a gift freely given without claim or expectation of return.",
     "CARD_TYPE": "NOUN",
-    "RARITY_TEXT": "GLORIOUS",
-    "RARITY_ICON": "GLORIOUS",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
     "ART_PROMPT": "A single drop of brilliant golden light falling into a dark, still ocean, creating ripples that transform the water into liquid light. Cinematic lighting, ethereal atmosphere, photorealistic style. No text or writing.",
-    "ABILITY_TEXT": "Return 1 card from the Spent pile to your hand.",
+    "ABILITY_TEXT": "Discard a NOUN to draw 2.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 4,
@@ -205,7 +205,7 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip (render transliterations BELOW the original words), trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
   "grounding": {
     "queries": [],
     "sources": []

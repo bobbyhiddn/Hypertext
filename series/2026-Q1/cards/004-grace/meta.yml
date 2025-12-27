@@ -43,3 +43,13 @@ search_queries: []
 review_score: 100
 review_attempts: 2
 review_status: green
+revision: 1
+revision_notes: 'Rarity change request:
+
+  Let''s make grace an uncommon
+
+
+  General revision request (you may modify any content field as needed):
+
+  Please move the transliterations under the original language words instead of beside
+  them.'
