@@ -99,11 +99,16 @@ def build_card_html(meta: dict, image_rel: str) -> str:
 
 
 def build_series_card_html(*, series_name: str, href: str, cover_rel: str, card_count: int) -> str:
+    cover_html = (
+        f"<img class=\"series-cover\" src=\"{cover_rel}\" alt=\"{series_name} cover\" loading=\"lazy\" />"
+        if cover_rel
+        else "<div class=\"series-cover\" aria-hidden=\"true\"></div>"
+    )
     return (
         f"<div class=\"series-card\">"
         f"<a href=\"{href}\">"
-        f"<img class=\"series-cover\" src=\"{cover_rel}\" alt=\"{series_name} cover\" loading=\"lazy\" />"
-        f"<div class=\"series-meta\">"
+        + cover_html
+        + f"<div class=\"series-meta\">"
         f"<div class=\"series-title\">{series_name}</div>"
         f"<div class=\"series-sub\">{card_count} cards</div>"
         f"<div class=\"series-badges\">"
@@ -199,8 +204,7 @@ def main():
                 cover_rel = rel
 
         if not cover_rel:
-            # placeholder cover using an asset-less empty box is fine; keep empty
-            cover_rel = "./images/" + (images_dir.iterdir().__next__().name if any(images_dir.iterdir()) else "")
+            cover_rel = ""
 
         series_template = _read_text(args.series_template)
         series_page = (
@@ -216,7 +220,7 @@ def main():
             build_series_card_html(
                 series_name=series_name,
                 href=f"./series/{series_name}/",
-                cover_rel=f"./series/{series_name}/{cover_rel.lstrip('./')}",
+                cover_rel=(f"./series/{series_name}/{cover_rel.lstrip('./')}" if cover_rel else ""),
                 card_count=len(cards),
             )
         )
