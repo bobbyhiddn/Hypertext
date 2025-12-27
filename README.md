@@ -59,7 +59,7 @@ hypertext/
 | VERB | Action word |
 | ADJECTIVE | Descriptive word |
 | NAME | Proper name |
-| TITLE | Special/wild card |
+| TITLE | Wild card (substitutes for NOUN/NAME) OR collect as own suit (double points) |
 
 ## Rarity System
 

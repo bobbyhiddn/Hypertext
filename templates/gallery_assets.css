@@ -54,6 +54,18 @@ a{color:inherit; text-decoration:none}
 
 .header-actions{display:flex; gap:10px; align-items:center}
 
+.header-nav{display:flex; gap:6px; align-items:center}
+.nav-link{
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted);
+  transition: color .12s ease, background .12s ease;
+}
+.nav-link:hover{color: var(--text); background: rgba(255,255,255,0.06)}
+.nav-link.active{color: var(--text); background: rgba(255,255,255,0.08)}
+
 .btn{
   display:inline-flex;
   align-items:center;

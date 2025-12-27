@@ -43,7 +43,7 @@ Each card has:
 | **VERB** | Action or state |
 | **ADJECTIVE** | Descriptive word |
 | **NAME** | Proper noun (person or place) |
-| **TITLE** | Wild card—can substitute for NOUN or NAME when completing a Quartet (limit 1 per meld) |
+| **TITLE** | Wild card—can substitute for NOUN or NAME (not VERB or ADJECTIVE) when completing a Quartet (limit 1 per meld). Can also form a pure TITLE Quartet. |
 
 ---
 
@@ -193,7 +193,7 @@ In order:
 
 | Scoring | Points |
 |---------|--------|
-| Score a Quartet | 4 |
+| Score a Quartet | 4 (Standard) / 8 (Title Suit) |
 | Personal Objective | Varies |
 | Season Goal | Varies |
 
