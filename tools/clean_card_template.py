@@ -145,7 +145,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--in", dest="in_path", default=str(os.path.join("tools", "raw_template.png")))
     parser.add_argument("--out", dest="out_path", default=str(os.path.join("templates", "blank_template.png")))
-    parser.add_argument("--model", default=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-2.5-flash-image"))
+    parser.add_argument("--model", default=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image-preview"))
     parser.add_argument("--image-size", default=os.environ.get("GEMINI_IMAGE_SIZE", "2K"))
     parser.add_argument("--max-attempts", type=int, default=int(os.environ.get("GEMINI_MAX_ATTEMPTS", "6")))
     parser.add_argument("--retry-base-delay-s", type=float, default=float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2")))

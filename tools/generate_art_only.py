@@ -14,7 +14,7 @@ import time
 import urllib.error
 import urllib.request
 
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateImage"
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
 
 # Art panel dimensions (slightly larger for quality, will be resized)
 ART_WIDTH = 1024
@@ -54,15 +54,8 @@ def generate_art_only(
         f"- No modern objects or anachronisms\n"
     )
 
-    # Try the newer image generation endpoint first
-    endpoints = [
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateImage",
-        "https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict",
-        "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-preview-image-generation:generateContent",
-    ]
-
-    # Use the standard generateContent endpoint with image output
-    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent"
+    # Use the Gemini 3 image generation endpoint
+    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
     
     payload = {
         "contents": [{"parts": [{"text": full_prompt}]}],
