@@ -38,7 +38,7 @@ def describe_image(image_path: str):
     prompt = "Describe the top-right corner of this card template. Is there a Rarity Icon (diamond/shape)? Is there text? Describe exactly what is in that corner."
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash-exp",
+        model="gemini-3-pro-preview",
         contents=[image_part, prompt]
     )
     

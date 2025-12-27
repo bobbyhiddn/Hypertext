@@ -183,7 +183,7 @@ def review_card(
     Args:
         image_path: Path to the card image
         card_json: The card.json data with expected content
-        model: Gemini model to use (default from env or gemini-2.5-flash)
+        model: Gemini model to use (default from env or gemini-3-pro-preview)
         pass_threshold: Minimum score to pass (default 90)
         max_attempts: Retry attempts on API failure
         base_delay_s: Base delay for exponential backoff
@@ -198,7 +198,7 @@ def review_card(
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
 
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash")
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
 
     # Extract expected content from card.json
     content = card_json.get("content", {})

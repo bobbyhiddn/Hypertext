@@ -296,7 +296,7 @@ def main() -> int:
     parser.add_argument("--prompt-json", default=str(Path("tools") / "test_prompt.json"))
     parser.add_argument("--template", default=None)
     parser.add_argument("--out", default=str(Path("tools") / "demo_card.png"))
-    parser.add_argument("--model", default=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-2.5-flash-image"))
+    parser.add_argument("--model", default=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image-preview"))
     parser.add_argument("--max-attempts", type=int, default=int(os.environ.get("GEMINI_MAX_ATTEMPTS", "6")))
     parser.add_argument("--retry-base-delay-s", type=float, default=float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2")))
     parser.add_argument("--prompt", default=None)

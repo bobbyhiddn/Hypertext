@@ -23,7 +23,7 @@ def main():
             in_path, 
             out_path, 
             prompt=prompt,
-            model=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-2.5-flash-image"),
+            model=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image-preview"),
             image_size="2K",
             max_attempts=6,
             base_delay_s=2.0,
