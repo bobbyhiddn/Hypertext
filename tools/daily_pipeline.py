@@ -348,7 +348,7 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
     if stats_req:
         allowed_paths.update({"/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY"})
     if general_req:
-        # General revision unlocks ALL content fields
+        # General revision unlocks ALL content fields plus model_prompt
         allowed_paths.update({
             "/content/WORD", "/content/GLOSS", "/content/CARD_TYPE",
             "/content/RARITY_TEXT", "/content/RARITY_ICON",
@@ -363,6 +363,7 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
             "/content/TRIVIA_BULLETS",
             "/content/WILD_ID", "/content/WILD_COUNTS_AS",
             "/content/QUARTET_ID", "/content/LETTER", "/content/NOTES_INTERNAL",
+            "/model_prompt",  # Allow updating the generation prompt
         })
 
     if not allowed_paths:
