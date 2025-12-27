@@ -161,14 +161,25 @@ def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[di
     return out
 
 
-def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str) -> dict:
+def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str, ability: str | None = None) -> dict:
     rules_appendix = _load_rules_appendix()
+
+    # If ability is provided, instruct the model to use it; otherwise generate one
+    if ability:
+        ability_instruction = (
+            f"  \"ability_text\": \"{ability}\" (USE THIS EXACT ABILITY - do not modify),\n"
+        )
+        ability_note = f"ABILITY (use exactly as provided): {ability}\n\n"
+    else:
+        ability_instruction = "  \"ability_text\": string,\n"
+        ability_note = ""
+
     prompt = (
         "You are generating research-backed metadata for a daily Bible word-study trading card. "
         "Return ONLY valid JSON with this exact shape: {\n"
         "  \"gloss\": string,\n"
         "  \"art_prompt\": string (must NOT mention text/letters/words/writing),\n"
-        "  \"ability_text\": string,\n"
+        + ability_instruction +
         "  \"stats\": {\"lore\": int 1-5, \"context\": int 1-5, \"complexity\": int 1-5},\n"
         "  \"ot_verse\": {\"ref\": string, \"snippet\": string},\n"
         "  \"nt_verse\": {\"ref\": string, \"snippet\": string},\n"
@@ -182,13 +193,14 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         f"Word: {word}\n"
         f"Card type: {card_type}\n"
         f"Rarity: {rarity}\n\n"
+        + ability_note +
         "GAME RULES (must follow):\n"
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
-        "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique)."
+        + ("" if ability else "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique).")
     )
 
     _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
@@ -566,12 +578,17 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     card_type = str(entry.get("card_type", "NOUN")).upper()
     rarity = str(entry.get("rarity", "COMMON")).upper()
+    ability = entry.get("ability")  # Optional: if provided in queue, use it
+    if ability:
+        ability = str(ability).strip()
 
     _log(f"[phase plan] selected entry: #{number:03d} word={word} type={card_type} rarity={rarity}")
+    if ability:
+        _log(f"[phase plan] using provided ability: {ability[:50]}...")
 
     if auto:
         _log("[phase plan] auto mode: generating recipe")
-        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
+        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=ability)
         grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
         stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
         ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
