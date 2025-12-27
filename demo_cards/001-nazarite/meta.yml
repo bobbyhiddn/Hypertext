@@ -1,0 +1,73 @@
+number: '001'
+word: NAZARITE
+gloss: A person consecrated to God by a special vow of separation and holiness.
+card_type: TITLE
+rarity: UNCOMMON
+art_prompt: A silhouette of a man with very long hair standing on a rocky precipice
+  at sunset, holding a wooden staff, ancient near eastern setting, warm lighting,
+  no text.
+stats:
+  lore: 4
+  context: 2
+  complexity: 3
+ability: Reveal a NAME card from your hand to draw 2 cards.
+ot_verse:
+  ref: Numbers 6:2
+  snippet: When either man or woman shall separate themselves to vow a vow of a Nazarite,
+    to separate himself unto the LORD...
+nt_verse:
+  ref: Acts 18:18
+  snippet: 'Paul... sailed thence into Syria, and with him Priscilla and Aquila; having
+    shorn his head in Cenchrea: for he had a vow.'
+greek:
+  text: Ναζιραῖος
+  translit: Naziraios
+hebrew:
+  text: נָזִיר
+  translit: Nazir
+ot_refs: Num 6 • Judg 13 • Judg 16 • 1 Sam 1 • Amos 2
+nt_refs: Luke 1 • Acts 18 • Acts 21
+trivia:
+- 'The vow had three prohibitions: no fruit of the vine (wine/grapes), no razor on
+  the head, and no contact with dead bodies.'
+- Samson, Samuel, and John the Baptist are the only explicit lifelong Nazarites mentioned
+  in Scripture.
+- Often confused with 'Nazarene,' which refers to a resident of Nazareth (like Jesus).
+- The Apostle Paul took a temporary Nazarite vow to demonstrate his Jewish faithfulness
+  (Acts 21).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHk7Dho82HG8FqKg0DmzJVViMioPPmkTe4YBWEw1jmfOIEvyRupSNOYhC1oQqIg_HU5Odf8cIelEGXZPlSS2WkwUWPa6KQxIi6HXFVcAWrVvRIInOlQl231-KTlNFixhpuuNfUIdcYro_smLDOHPm1BlvX7teJltGZ9s9zXW7s2TfZFTY4XftI_IsGoUNmdO4lOv2b0ZhZwfXMGVJJSWgn_QHJp_WBqXms=
+  title: spiritandtruth.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWTxxYlD4k0cKo8y8nBrFn0tRF06cuA400-0SIQsuXgFBddHKW7mNIwtkLdfqWeu1Z4oKF8525x9ySYzh2xlcXppGjcR4C_kSg3ER-bokFo3sX3JFxA9JUaSNSce0NadBToQSYOUvTYLcygSG63Q==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAq7ZVlCRtE1U9T_jCL0cFrnKNEkbqpWn15KOUSYke_XQvjL7e-oH6mauwltzRxJkAd6x2iyXil6BZYEtBN9AA6PYsWZsREOG1eHPABSauw9xNAUj6reyM4iWkJbc-dFIdXaTBPo9mksWn7LsJRng=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtxutjJO77GbBXR5zDmcoPi-kfj7XVEw1QYQXCHHZ-9T3v4rl3hLkJdNC6N9K5bS4ywr8AOEBM4QQJ02aE4wrvp63bRcYiftEUbBDteTfwfu3R_7mGm4jzdiHV9YHOeA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN_xPYDhaU_Kuf5Q4fBckUdOUeteQTm9jYnpEIF9ShZvzqoRLs87AbtOlJy8PeCHvRZ19_tgeO2DDgXgsghPsRNfFJZVeuudAEDjAju45WX4AOrt1HIbFRo44jcMGMedmiiWCNY7bWHnkZKGhfqfoMdOGL5gRfHc9D7jzNOdgwzb8Uv7snP1H_opnwoWpSQlwv56OWXz3C2ow=
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP7PTiW7rMbSbhRsY2fO0BBmX2HbblrKg8v0tJvBO8oYchHSADQ0K3zC2x4zLJslyX8URY6RRfK4kNLzldyueKKrq0vqefd5m0AifgTI5zLRG6NyRx5dCzBZQM9B5E9hk=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0qDULllRsOln4uh3Jkow-OAJdFBkYhjBBXE-2u9reUmpMsYdxiN1qfednGHkfkEkhpyEX6UydYDPGuA3GtovHwCQkMAfpdTjAtUAXvYL5OnYuv5a0nENGbTiK5a5Sk0H_3PfyszdiT8-I6A==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVf_IOkGRmn7n98qWaIi_wh-dndZRSzu_znMKL72LXhP1mlm599cRVYCw-EQku25cJvMr9vsA4TDNH_U--j9aAViRqH0jIVY3No0gPrlS5Oas841hAbr9FANca3kAE39fbMSWFj5c8XkM=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4OoO49rx7KczidlDaPzOcQSloUeGzzwteDNrdmoo9EhmCk0K-JrX3YMRapGGaBdf-DwyxUWqh28TWuz4kkRZewwaatpHDSGgewz19eHQ8HvRuxGah8xvoiksWqPbVm-vz9yBa4nh__PjjBbUKPu1nxS6t5vB-OAWlncqI
+  title: bibleversestudy.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwFVBsbGapGDIaWGVAjmsuz5_zsbP9xfEZjcqy-ezRElAb3G6Ruj8NulUW8gxDtn3C1RLhYOYIWbLs2HT8fDlIX_Wwkg4G8y9J2Ak0v4cN9332pIJL1WEdQvwZLrbLtneW
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_ZOnQ8LewdItTCp8moRWRgPy7b9i1GGCpWo_TKRXIbH3LhXarcjZgpIfVBRIgAGo71iwYclwfCNuyQ8I4Y2ZTaewlnQq-u8KwMRdxi9aFQL8qYJfD2s97y_C8TpFXzWAuHTej9yIAwme6ZRQigJdOf2WgaPdf
+  title: jointhejourney.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkH-N9BqCYrlKeesV7OqL8LRo6CoYhF3BQssBn4dH-8jjE2qP9Udca2HNogYf6cMg0X5c4k-i7Tiy_2BE_q0EtzNACsHdVBCG8RX9hbXYOKXJ_5Db_8iDnSpCyGneihjS6x7okxic8lk282VPA8nKMqZ5tswGlckk5hagHUzRZHMfUU1zlwNOf_tsLqKQqTQm4hYK96NweiU86l7rPCKETwtpiVxL2
+  title: bereaninsights.org
+search_queries:
+- ''
+- Nazarite vs Nazarene distinction
+- Nazarite Hebrew and Greek word
+- Did Paul take a Nazarite vow Acts 18 21
+- Nazarite vow New Testament verse reference
