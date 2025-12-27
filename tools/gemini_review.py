@@ -18,9 +18,11 @@ from pathlib import Path
 from typing import Any
 
 try:
-    import requests
+    from google import genai
+    from google.genai import types
 except ImportError:
-    requests = None
+    genai = None
+    types = None
 
 
 @dataclass
@@ -277,6 +279,38 @@ def _parse_json_response(text: str) -> dict:
         raise RuntimeError(f"Failed to parse response as JSON: {e}\nResponse: {raw[:500]}")
 
 
+def _image_part_from_path(image_path: Path):
+    """Create an image part from a file path using the SDK."""
+    with open(image_path, "rb") as f:
+        img_bytes = f.read()
+    mime_type = _get_mime_type(image_path)
+    
+    image_part = None
+    if hasattr(types.Part, "from_bytes"):
+        try:
+            image_part = types.Part.from_bytes(data=img_bytes, mime_type=mime_type)
+        except Exception:
+            pass
+    
+    if image_part is None and hasattr(types.Part, "from_image"):
+        try:
+            image_part = types.Part.from_image(image=img_bytes, mime_type=mime_type)
+        except Exception:
+            pass
+    
+    if image_part is None:
+        try:
+            blob_cls = getattr(types, "Blob", None)
+            if blob_cls:
+                image_part = types.Part(inline_data=blob_cls(data=img_bytes, mime_type=mime_type))
+            else:
+                image_part = types.Part(inline_data={"mime_type": mime_type, "data": img_bytes})
+        except Exception as e:
+            raise RuntimeError(f"Failed to construct image part: {e}")
+    
+    return image_part
+
+
 def _call_gemini(
     prompt: str,
     *,
@@ -285,70 +319,47 @@ def _call_gemini(
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
 ) -> str:
-    """Make a Gemini API call, optionally with an image."""
-    if requests is None:
-        raise RuntimeError("requests library required. Install with: pip install requests")
+    """Make a Gemini API call using the SDK, optionally with an image."""
+    if genai is None:
+        raise RuntimeError("google-genai package required. Install with: pip install google-genai")
 
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    client = genai.Client(api_key=api_key)
 
-    parts = []
+    contents = []
     if image_path:
-        image_data = _encode_image(image_path)
-        mime_type = _get_mime_type(image_path)
-        parts.append({
-            "inline_data": {
-                "mime_type": mime_type,
-                "data": image_data,
-            }
-        })
-    parts.append({"text": prompt})
+        contents.append(_image_part_from_path(image_path))
+    contents.append(types.Part.from_text(text=prompt))
 
-    payload = {
-        "contents": [{"parts": parts}],
-        "generationConfig": {
-            "temperature": 0.1,
-            "maxOutputTokens": 8192,
-        },
-    }
-
-    headers = {
-        "Content-Type": "application/json",
-        "x-goog-api-key": api_key,
-    }
+    config = types.GenerateContentConfig(
+        temperature=0.1,
+        max_output_tokens=8192,
+    )
 
     last_error: Exception | None = None
     for attempt in range(max_attempts):
         try:
-            resp = requests.post(url, json=payload, headers=headers, timeout=120)
+            response = client.models.generate_content(
+                model=model,
+                contents=contents,
+                config=config,
+            )
 
-            if resp.status_code == 429:
-                retry_after = int(resp.headers.get("Retry-After", base_delay_s * (2 ** attempt)))
-                time.sleep(retry_after)
-                continue
+            if not response.candidates:
+                raise RuntimeError("No candidates in response")
 
-            resp.raise_for_status()
-            data = resp.json()
+            candidate = response.candidates[0]
+            parts = candidate.content.parts if candidate.content else []
 
-            candidates = data.get("candidates", [])
-            if not candidates:
-                raise RuntimeError(f"No candidates in response: {data}")
-
-            # Check for token limit
-            finish_reason = candidates[0].get("finishReason", "")
-            if finish_reason == "MAX_TOKENS":
-                raise RuntimeError("Model hit token limit")
-
-            parts = candidates[0].get("content", {}).get("parts", [])
             if not parts:
-                raise RuntimeError(f"No parts in response: {data}")
+                raise RuntimeError("No parts in response")
 
-            response_text = parts[0].get("text", "")
+            response_text = parts[0].text if hasattr(parts[0], "text") else ""
             if not response_text:
-                raise RuntimeError(f"Empty text in response: {data}")
+                raise RuntimeError("Empty text in response")
 
             return response_text
 
