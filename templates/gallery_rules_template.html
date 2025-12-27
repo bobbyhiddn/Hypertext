@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rules of Play - Hypertext</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/gallery.css">
+  <style>
+    .rules-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(11, 16, 32, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      line-height: 1.6;
+    }
+    .rules-container h1 { font-size: 32px; margin-bottom: 24px; color: var(--accent); }
+    .rules-container h2 { font-size: 24px; margin-top: 32px; margin-bottom: 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+    .rules-container h3 { font-size: 18px; margin-top: 24px; margin-bottom: 12px; color: var(--text-muted); }
+    .rules-container ul, .rules-container ol { padding-left: 24px; margin-bottom: 16px; }
+    .rules-container li { margin-bottom: 8px; }
+    .rules-container table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    .rules-container th, .rules-container td { border: 1px solid var(--border); padding: 12px; text-align: left; }
+    .rules-container th { background: rgba(255, 255, 255, 0.05); }
+    .rules-container p { margin-bottom: 16px; }
+    .rules-container hr { border: 0; border-top: 1px solid var(--border); margin: 32px 0; }
+    @media (max-width: 600px) {
+      .rules-container { padding: 20px; }
+      .rules-container h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-header">
+    <a href="../index.html" class="logo">Hypertext</a>
+    <nav class="nav">
+      <a href="../index.html">Series</a>
+      <a href="../rules/index.html" class="active">Rules</a>
+    </nav>
+  </div>
+
+  <main class="container">
+    <div class="rules-container">
+      <!-- RULES_CONTENT_INJECTION_POINT -->
+    </div>
+
+    <footer class="footer">
+      <div class="muted">Generated on {GENERATION_DATE}</div>
+    </footer>
+  </main>
+</body>
+</html>
