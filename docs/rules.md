@@ -66,12 +66,14 @@ If you choose not to pay the cost (or cannot), simply keep the card in your hand
 
 Abilities should provide **card advantage**—not just replace themselves. "Draw a card" alone is not an ability; it's neutral tempo. Abilities must generate value beyond the card itself.
 
+Abilities should be concise (one short to medium line) and match the word's flavor.
+
 | Rarity | Ability Pattern |
 |--------|-----------------|
 | **COMMON** | Simple effect with immediate value |
 | **UNCOMMON** | Type-based effect (references card types like NOUN, VERB) |
-| **RARE** | Stat-based effect (scales with LORE, CONTEXT, or COMPLEXITY) |
-| **GLORIOUS** | Unique powerful effect, may combo with other cards |
+| **RARE** | Stat-based effect (scales with LORE, CONTEXT, or COMPLEXITY). Must not reference its own stats. |
+| **GLORIOUS** | Unique/combo effect. Performs an action that is thematically consistent with the card's flavor, and does more than any other suit. |
 
 ---
 
