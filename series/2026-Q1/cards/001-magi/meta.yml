@@ -1,0 +1,68 @@
+number: '001'
+word: MAGI
+gloss: Wise men, astrologers, or priestly officials from the East; the root of 'magic'.
+card_type: TITLE
+rarity: GLORIOUS
+art_prompt: Silhouetted figures in ancient Persian priestly robes riding camels across
+  a dark blue desert at night, gazing up at a brilliant, singular star emitting a
+  vertical beam of light; atmospheric, mysterious, cinematic lighting.
+stats:
+  lore: 5
+  context: 2
+  complexity: 4
+ability: 'On draw, you may reveal: spend 1 card from your hand to activate that card''s
+  on-reveal ability. Then this card is spent.'
+ot_verse:
+  ref: Jeremiah 39:3
+  snippet: '...Nergal-Sharezer, Rab-Mag, and all the rest of the officials of the
+    king of Babylon...'
+nt_verse:
+  ref: Matthew 2:1
+  snippet: '...behold, magi from the east arrived in Jerusalem, saying, ''Where is
+    he who has been born King of the Jews?'''
+greek:
+  text: μάγοι
+  translit: magoi
+hebrew:
+  text: רַב־מָג
+  translit: rab-mag
+ot_refs: Jer 39:3 • Jer 39:13 • Dan 2:2 • Dan 2:48
+nt_refs: Matt 2:1 • Matt 2:7 • Matt 2:16 • Acts 13:6
+trivia:
+- The English word 'magic' is etymologically derived from this term.
+- Scripture never specifies there were three men, only that there were three gifts.
+- Likely Zoroastrian astronomer-priests from the Parthian Empire (modern Iran).
+- The prophet Daniel was appointed chief of the wise men in Babylon, possibly establishing
+  the legacy these men followed.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgg7BqKL3yNdMxmi5lK2qqaCTDrW0DkMK9-AG9jskCuVP4pO_jvnTdLtJRn89xP5o8I6LXXnE97HG_DXculBlM3Gi3lVS-1rE_78QCyw_jbHSPWuSIeGrDFulm52jGek2QwQYhDKcwPj4=
+  title: bibletruthpublishers.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfFQDNUO6CXMvQuHSMtlR_vTBAgG2q_JdqoYrRAd4E-_xQivpHEzchNqiGg4oyitAc-uzSLpOaE3TNYqFcOKDiuPgoGUTZjXmWqTtqoj7SooRsCAM15Cip7xDdP-VHXQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpXRxGiwAB9R5KO_RDI5elwLcmTTbFR6HkSMa2bjfdoLdQN5mcmCa34ZU_bCs0tjiZ8uQakm1xvSPfc2iYS1lEEt-JhOJm3uBLAhL8e1MpUd21NL_RUSChTBKUVkL4GbG3gmxFiHoMXLK3XlR8DSqyNp-rIvoQQl5x
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdLBEOiyoHpc6A7TZDWjcdl_DCKpN3TBEg4L6zdc0MwvKkV65PSnlVDYRdzuxECy5clYjLz-mVGGwxt4NKqPltNuIDDeLgPjMRxe6N_MpRyYPOPCRpbPNVYj6WCNpJtCzQ9A8MLuDltwOUEeSQmC2KatDo6E11erZnpLI=
+  title: time.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHudGsKaTgfOu7J_rHCDx-TdT-ndOYibP4hbzZCXvy0Isp0pcZ_xxZP3r9CkAsXCSXlcu1ar4NvaT8n0lTP0NV24j7sSY7VqYWDab9ToIH8fTwsFfSYbJD-McMMuSysW_937EZspG59F-VBQdlOXOpxEKA=
+  title: cfan.org.uk
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbLFuWvtSIgmU8LKDFtHkk7_WScbwQXFIauhLilGYokDuIQq7CyrTeY_GSrk-5IQBekuKUzWYHXvhhMnEBm_PytgUGxbJK_1MS74yXOYdLiKWkZYEjFsC_wvcuhMkyTxuifzcPA2Ya
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTx7bsCnqt2rr2wgi4RndO8zdKfO3vDn6G8k8XHuGej7qJWmEMkeQnK5Sq6WXZ36JjUHaSLpXCJOuE3VoJoPezEv2oLPjyF_ud4-ZdBJCQN035cbU-oopw8msC9nV9ghgFC7IC9SUu9ZM=
+  title: biblicalcyclopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_estB_8GIiwgLDGKAsO8Jr_3cs6l6GpSuL4fiUiYQ9sGTzmtq8m7PWnKw05lw5Hje-B75iMAiIA8wuFxQFug6Ia1_Z-qsJRsDIbNJfnEy90QHHIDccaIP2jjW9UdEVuVf_0wTtFShrV4D41rUiB53OCI-shlmy2Wbp9jN1O-yrIK3fyeaGKUc-hXIqLW2nZs=
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUPWPqmZ2WUKXENUc6HQWe8XzamD_LTByyth4otZ9qlpCnYQsX1WWuDFL7Ag41gqeAaRPfmZDMjkAt5yt1okZzOP7C7E2-DZfMmtliPXXBGLc1wIDJ2Awj2JcmkDNNi0Jwr0Bfm-yCsAgNWifbZxxEs569Tw1iWEuR0DMUdwyXyIZYZpyZMXMgqKlltJA=
+  title: pastorjeremyhelmuth.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2sSJpXfGIzBLEo_CIW9eSJRoPK6mpAXlSN6W1mWGCjSJ6MydVsrfCZ3Y1cAybFxJFLTwmrPJ_wdVOKVbJiOquxT_rc918S4ILvQKUmm7gFlz-yDKj7mfj6vx03ixKNysPGmfKHkBaeHHulHJ-ZeKlGbQJ9Q==
+  title: catholic.com
+search_queries:
+- ''
+- Magi biblical trivia
+- Magi Hebrew word Bible Jeremiah 39:3
+- Magi Old Testament references Daniel
+- Greek word for Magi Matthew 2 transliteration
