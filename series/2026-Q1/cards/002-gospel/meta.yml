@@ -1,0 +1,72 @@
+number: '002'
+word: GOSPEL
+gloss: Good news; the message of God's victory and salvation through Jesus Christ.
+card_type: NOUN
+rarity: RARE
+art_prompt: A silhouette of a herald standing on a jagged mountain peak at sunrise,
+  blowing a long horn; golden light floods a dark valley below, dispersing shadows.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: You may reveal a card from your hand. Reveal cards from the top of the shared
+  deck equal to that card's Lore stat; keep one and discard the rest.
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful upon the mountains are the feet of him that bringeth good
+    tidings, that publisheth peace...
+nt_verse:
+  ref: Romans 1:16
+  snippet: 'For I am not ashamed of the gospel of Christ: for it is the power of God
+    unto salvation to every one that believeth...'
+greek:
+  text: εὐαγγέλιον
+  translit: Euangelion
+hebrew:
+  text: בְּשׂוֹרָה
+  translit: Besorah
+ot_refs: Isa 40:9 • Isa 52:7 • Isa 61:1 • Nah 1:15
+nt_refs: Mark 1:1 • Rom 1:16 • 1 Cor 15:1-4 • Gal 1:6-9
+trivia:
+- Derived from Old English 'god-spell' (good story), a translation of the Greek 'euangelion'.
+- In the Roman world, 'euangelion' was a technical term for news of military victory
+  or an emperor's birth.
+- The 'Proto-Evangelium' (First Gospel) in Genesis 3:15 promises the seed of the woman
+  will crush the serpent.
+- Paul explicitly defines the content of the gospel in 1 Corinthians 15 as Jesus'
+  death, burial, and resurrection.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrAzzuOKG2yv0zc6i2ose0YMABPdIfniykhpAl2R8SEHRQ9rk0HWyq3LVFxhLDRI12-oNvtBD6VzDdRyhoN92T_YHeCNLWuggKiqKfmjedkXOG8j7ZXqIMELbcgcunmMFKLqOiVjKfWRm1eOr1BhFR1Jw0nvNzPf353OWH9FazPYUmeA==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcjWK27mFsRUGnG3wjV-ySTCno2n2CWX4WpzHvodX8PUQIGcroa--XnqjVUVcC9xBVlwbrfsDiWpsi1PX6AtK9iCKQhoCM7TX8J648OxhcC7ikqeArhfwWCzLSj__p_XLefGaWrFT_K18idGGwLT2JCVkIN070
+  title: dbryen.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUvCpElxCqj93CHLlN7Yr4JNvn4xEJnjffB_e3RwWhcNUY3wW9mg8RD5LjJ-xGF8QeUyApl_4rviJLoqS51NkhXIhXBn0cavaVBNT2BzemeGxaW-EihLDQX_63GhPI
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiCISLKQa7GPOO4gRTy4G7H76HYxwEQ_YmJwmMBUhzFUXrgCaJCu2BBISIKKWb8eD-8614cBxUNlpFWwsLeoehnriXnO7rTSfPPiHDoxcX68jc60Ua7yOQzRnzHVfZlIHsIU_a
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvHzBfXpyFN9ZiSqcAUfa4MDUupkmsDQybHrW5D4JBngWWlwE6rOTOMtWYLr2_WPCOxm_Wg_7NrMBSOoRgZ2iMsRkKJkowXjJevOv3_GZdv0y7lMu-QQyH_yjAeotGVw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkINTi9edGpKmnkpxKMf2KtbjLdsTpdT8rs1M44K-P_PwJHr5k1C3S-EZnFnPFIJ42ZiRdnErSLTwv7Ocb4ZHWg2laEKbl6MR8fGirxg4QH9of2HTRUbU0X-5Jse5CecG90xfUCwNq9Px_TRjt1ZWykEcS-kCW-GageZcsZ3tLcxRXH_abvz2NTJMTEdvmLakfwPQDcwXXcRFOHE0zn8hxxR5wsG5gs1lzAZywXtZnriHxoNHMKXQP5pmboaIwB_oxpxX7
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6N6gVqmBSEwdKMbDagwIWj3ZWVOtg_jhgN1lwi98Go49bX9-2V_VUXlkuxWb3DRcahaaH9_n6qf1N4oML8x-Cg5GbS2Bb7DYXQ52Z8Oczyt78QUjvm85yAjwIXWZ1C0ozRcW9nAGX3-VjEFZ3_zQROUcPhtxjHe0=
+  title: truthmagazine.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFibHwtu0lRQUz82CgpmrMxr1_Rv7vDfqwyhSoPv4oj3h0hkjF71ht1pUJkzJy4-ZU5Ju2FjtT6z61EIm9khnppPP1LjNnhHle9QwrZ2_xBOojxXz7mNyS_BMIw9JV-jsH7Fljd7rUfBhWcja1wJQj_exwSM-sURyTJarA=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4w_Hav8RdVXx7EoknSZ7Ew-RV0FLrlO8tuj6PbcfigUV82-IqV4tkmtXH8JV8yE4kG_ff_3WfwXv43CHu3zn6SNOye9Q8IXYlJS2429JBP4-H0FzamvZCGxJ4ksMQhrrJrQ==
+  title: netbible.org
+search_queries:
+- euangelion original meaning
+- etymology of gospel god-spell
+- hebrew word for gospel good news
+- Romans 1:16 snippet
+- Isaiah 52:7 snippet
+review_score: 95
+review_attempts: 2
+review_status: yellow
+review_notes: Change the rarity icon shape in the top right corner from a diamond
+  to a gold hexagon to match the RARE classification.

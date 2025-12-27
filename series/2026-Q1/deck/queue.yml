@@ -1,8 +1,3 @@
-- word: GOSPEL
-  card_type: NOUN
-  rarity: RARE
-  ability: You may reveal a card from your hand. Reveal cards from the top of the
-    shared deck equal to that card's Lore stat; keep one and discard the rest.
 - word: COVENANT
   card_type: NOUN
   rarity: GLORIOUS

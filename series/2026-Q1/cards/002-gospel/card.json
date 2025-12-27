@@ -1,0 +1,256 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "002",
+    "SERIES": "2026-Q1",
+    "WORD": "GOSPEL",
+    "GLOSS": "Good news; the message of God's victory and salvation through Jesus Christ.",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "RARE",
+    "RARITY_ICON": "RARE",
+    "ART_PROMPT": "A silhouette of a herald standing on a jagged mountain peak at sunrise, blowing a long horn; golden light floods a dark valley below, dispersing shadows.",
+    "ABILITY_TEXT": "You may reveal a card from your hand. Reveal cards from the top of the shared deck equal to that card's Lore stat; keep one and discard the rest.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Isaiah 52:7",
+    "OT_VERSE_SNIPPET": "How beautiful upon the mountains are the feet of him that bringeth good tidings, that publisheth peace...",
+    "NT_VERSE_REF": "Romans 1:16",
+    "NT_VERSE_SNIPPET": "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth...",
+    "OT_VERSE_LINE": "Isaiah 52:7 — “How beautiful upon the mountains are the feet of him that bringeth good tidings, that publisheth peace...”",
+    "NT_VERSE_LINE": "Romans 1:16 — “For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth...”",
+    "GREEK": "εὐαγγέλιον",
+    "GREEK_TRANSLIT": "Euangelion",
+    "HEBREW": "בְּשׂוֹרָה",
+    "HEBREW_TRANSLIT": "Besorah",
+    "OT_REFS": "Isa 40:9 • Isa 52:7 • Isa 61:1 • Nah 1:15",
+    "NT_REFS": "Mark 1:1 • Rom 1:16 • 1 Cor 15:1-4 • Gal 1:6-9",
+    "TRIVIA_BULLETS": [
+      "Derived from Old English 'god-spell' (good story), a translation of the Greek 'euangelion'.",
+      "In the Roman world, 'euangelion' was a technical term for news of military victory or an emperor's birth.",
+      "The 'Proto-Evangelium' (First Gospel) in Genesis 3:15 promises the seed of the woman will crush the serpent.",
+      "Paul explicitly defines the content of the gospel in 1 Corinthians 15 as Jesus' death, burial, and resurrection."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "euangelion original meaning",
+      "etymology of gospel god-spell",
+      "hebrew word for gospel good news",
+      "Romans 1:16 snippet",
+      "Isaiah 52:7 snippet"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrAzzuOKG2yv0zc6i2ose0YMABPdIfniykhpAl2R8SEHRQ9rk0HWyq3LVFxhLDRI12-oNvtBD6VzDdRyhoN92T_YHeCNLWuggKiqKfmjedkXOG8j7ZXqIMELbcgcunmMFKLqOiVjKfWRm1eOr1BhFR1Jw0nvNzPf353OWH9FazPYUmeA==",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcjWK27mFsRUGnG3wjV-ySTCno2n2CWX4WpzHvodX8PUQIGcroa--XnqjVUVcC9xBVlwbrfsDiWpsi1PX6AtK9iCKQhoCM7TX8J648OxhcC7ikqeArhfwWCzLSj__p_XLefGaWrFT_K18idGGwLT2JCVkIN070",
+        "title": "dbryen.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUvCpElxCqj93CHLlN7Yr4JNvn4xEJnjffB_e3RwWhcNUY3wW9mg8RD5LjJ-xGF8QeUyApl_4rviJLoqS51NkhXIhXBn0cavaVBNT2BzemeGxaW-EihLDQX_63GhPI",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiCISLKQa7GPOO4gRTy4G7H76HYxwEQ_YmJwmMBUhzFUXrgCaJCu2BBISIKKWb8eD-8614cBxUNlpFWwsLeoehnriXnO7rTSfPPiHDoxcX68jc60Ua7yOQzRnzHVfZlIHsIU_a",
+        "title": "britannica.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvHzBfXpyFN9ZiSqcAUfa4MDUupkmsDQybHrW5D4JBngWWlwE6rOTOMtWYLr2_WPCOxm_Wg_7NrMBSOoRgZ2iMsRkKJkowXjJevOv3_GZdv0y7lMu-QQyH_yjAeotGVw==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkINTi9edGpKmnkpxKMf2KtbjLdsTpdT8rs1M44K-P_PwJHr5k1C3S-EZnFnPFIJ42ZiRdnErSLTwv7Ocb4ZHWg2laEKbl6MR8fGirxg4QH9of2HTRUbU0X-5Jse5CecG90xfUCwNq9Px_TRjt1ZWykEcS-kCW-GageZcsZ3tLcxRXH_abvz2NTJMTEdvmLakfwPQDcwXXcRFOHE0zn8hxxR5wsG5gs1lzAZywXtZnriHxoNHMKXQP5pmboaIwB_oxpxX7",
+        "title": "quora.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6N6gVqmBSEwdKMbDagwIWj3ZWVOtg_jhgN1lwi98Go49bX9-2V_VUXlkuxWb3DRcahaaH9_n6qf1N4oML8x-Cg5GbS2Bb7DYXQ52Z8Oczyt78QUjvm85yAjwIXWZ1C0ozRcW9nAGX3-VjEFZ3_zQROUcPhtxjHe0=",
+        "title": "truthmagazine.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFibHwtu0lRQUz82CgpmrMxr1_Rv7vDfqwyhSoPv4oj3h0hkjF71ht1pUJkzJy4-ZU5Ju2FjtT6z61EIm9khnppPP1LjNnhHle9QwrZ2_xBOojxXz7mNyS_BMIw9JV-jsH7Fljd7rUfBhWcja1wJQj_exwSM-sURyTJarA=",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4w_Hav8RdVXx7EoknSZ7Ew-RV0FLrlO8tuj6PbcfigUV82-IqV4tkmtXH8JV8yE4kG_ff_3WfwXv43CHu3zn6SNOye9Q8IXYlJS2429JBP4-H0FzamvZCGxJ4ksMQhrrJrQ==",
+        "title": "netbible.org"
+      }
+    ]
+  }
+}
