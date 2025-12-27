@@ -1,6 +1,9 @@
-- word: REDEMPTION
-  card_type: NOUN
+- word: REDEEM
+  card_type: VERB
   rarity: RARE
-- word: PRAYER
-  card_type: NOUN
+- word: PRAY
+  card_type: VERB
+  rarity: UNCOMMON
+- word: BEAUTIFUL
+  card_type: ADJECTIVE
   rarity: COMMON

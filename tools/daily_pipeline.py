@@ -35,9 +35,11 @@ DEFAULT_DEMO_DIR = Path("demo_cards")
 RULES_PATH = Path("docs/rules.md")
 
 GAME_RULES_SNIPPET = (
-    "- There is ONE shared deck. Do not say 'your deck'. Say 'the deck' or 'the shared deck'.\n"
-    "- Abilities should be one short line.\n"
-    "- Rarity patterns: COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique."
+    "- There is ONE shared deck. Do not say 'your deck'. Say 'the deck'.\n"
+    "- Abilities should be one short to medium line.\n"
+    "- NEVER write abilities that just 'draw a card' - that's neutral tempo, not advantage. The ability must match the word in 'flavor'.\n"
+    "- Abilities MUST provide card advantage (value beyond the card itself).\n"
+    "- Rarity patterns: COMMON simple value; UNCOMMON type-based (NOUN/VERB/ADJECTIVE/NAME/TITLE); RARE stat-based(Must not reference its own stats); GLORIOUS unique/combo(Performs an action that is thematically consistent with the card's flavor, and does more than any other suit.)."
 )
 
 # Visual formatting standards that MUST be followed for card rendering
@@ -87,6 +89,63 @@ FORMATTING_RUBRIC = """
 
 DEFAULT_STYLE_TEMPLATE = Path("tools") / "clean_template_final.png"
 RARITY_ORDER = ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
+RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}
+
+
+def _load_series_stats(series_dir: Path) -> dict:
+    """Load series stats from stats.yml."""
+    stats_path = series_dir / "stats.yml"
+    if not stats_path.exists() or yaml is None:
+        return {"counts": {r: 0 for r in RARITY_ORDER}, "total": 0, "targets": RARITY_TARGETS}
+    
+    with open(stats_path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    
+    counts = data.get("counts", {})
+    for r in RARITY_ORDER:
+        counts.setdefault(r, 0)
+    
+    return {
+        "counts": counts,
+        "total": data.get("total", sum(counts.values())),
+        "targets": data.get("targets", RARITY_TARGETS),
+    }
+
+
+def _save_series_stats(series_dir: Path, stats: dict) -> None:
+    """Save series stats to stats.yml."""
+    if yaml is None:
+        return
+    stats_path = series_dir / "stats.yml"
+    
+    data = {
+        "series": series_dir.name,
+        "cycle_days": 90,
+        "start_date": "2025-01-01",
+        "targets": stats.get("targets", RARITY_TARGETS),
+        "counts": stats["counts"],
+        "total": stats["total"],
+    }
+    
+    with open(stats_path, "w", encoding="utf-8") as f:
+        yaml.safe_dump(data, f, default_flow_style=False, sort_keys=False)
+
+
+def _get_needed_rarity(stats: dict) -> str:
+    """Determine which rarity is most under-represented vs targets."""
+    counts = stats["counts"]
+    targets = stats.get("targets", RARITY_TARGETS)
+    total = max(stats["total"], 1)
+    
+    # Calculate deficit: target% - current%
+    deficits = {}
+    for rarity in RARITY_ORDER:
+        current_pct = (counts.get(rarity, 0) / total) * 100
+        target_pct = targets.get(rarity, 25)
+        deficits[rarity] = target_pct - current_pct
+    
+    # Return rarity with highest deficit
+    return max(deficits, key=deficits.get)
 
 
 def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
@@ -118,9 +177,15 @@ def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
     return rarity_map
 
 
-def _build_style_refs(series_root: Path) -> list[str]:
-    """Build list of style reference paths: template + one card per rarity."""
+def _build_style_refs(series_root: Path) -> tuple[list[str], dict[int, str]]:
+    """Build list of style reference paths: template + one card per rarity.
+    
+    Returns:
+        Tuple of (refs list, rarity_labels dict mapping 1-indexed position to rarity)
+    """
     refs: list[str] = []
+    rarity_labels: dict[int, str] = {}
+    
     if DEFAULT_STYLE_TEMPLATE.exists():
         refs.append(str(DEFAULT_STYLE_TEMPLATE))
     
@@ -128,15 +193,28 @@ def _build_style_refs(series_root: Path) -> list[str]:
     for rarity in RARITY_ORDER:
         if rarity in rarity_map:
             refs.append(str(rarity_map[rarity]))
+            rarity_labels[len(refs)] = rarity  # 1-indexed position
     
-    return refs
+    return refs, rarity_labels
 
 
-def _build_style_cmd_args(style_refs: list[str]) -> list[str]:
+def _build_style_cmd_args(
+    style_refs: list[str],
+    rarity_labels: dict[int, str] | None = None,
+    target_rarity: str | None = None,
+) -> list[str]:
     """Build CLI args for gemini_style.py from style ref list."""
     args: list[str] = []
     for ref in style_refs:
         args.extend(["--style", ref])
+    
+    if rarity_labels:
+        for pos, rarity in rarity_labels.items():
+            args.extend(["--rarity-label", f"{pos}:{rarity}"])
+    
+    if target_rarity:
+        args.extend(["--target-rarity", target_rarity])
+    
     return args
 
 
@@ -232,7 +310,20 @@ def _parse_json_from_model(text: str) -> dict:
     raise RuntimeError(f"Failed to parse JSON from model output. Snippet: {snippet}") from last_err
 
 
-def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[dict]:
+def _generate_queue_entries(*, count: int, existing_words: list[str], needed_rarities: list[str] | None = None) -> list[dict]:
+    # Build rarity instruction based on what's needed
+    if needed_rarities:
+        rarity_instruction = (
+            f"IMPORTANT: The series needs these rarities most urgently: {', '.join(needed_rarities)}. "
+            f"Assign the FIRST entry rarity={needed_rarities[0]}. "
+            "Distribute remaining entries to help balance the set."
+        )
+    else:
+        rarity_instruction = (
+            "IMPORTANT: Distribute rarities to form a balanced set "
+            "(approx. 10% GLORIOUS, 15% RARE, 35% UNCOMMON, 40% COMMON)."
+        )
+    
     prompt = (
         "Generate "
         + str(count)
@@ -241,7 +332,7 @@ def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[di
         + ", ".join(existing_words)
         + ". "
         "For each item, choose: card_type (NOUN|VERB|ADJECTIVE|NAME|TITLE) and rarity (COMMON|UNCOMMON|RARE|GLORIOUS). "
-        "IMPORTANT: Distribute rarities to form a balanced set (approx. 10% GLORIOUS, 20% RARE, 30% UNCOMMON, 40% COMMON). "
+        + rarity_instruction + " "
         "Return ONLY valid JSON as an array of objects with keys: word, card_type, rarity. "
         "word should be uppercase and A-Z only (no spaces)."
     )
@@ -664,7 +755,18 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         if len(queue) < min_queue:
             needed = min_queue - len(queue)
             print(f"Queue below minimum ({len(queue)}/{min_queue}). Generating {needed} new queue entries...")
-            queue.extend(_generate_queue_entries(count=needed, existing_words=existing_words))
+            
+            # Calculate needed rarities from stats
+            stats = _load_series_stats(series_dir)
+            needed_rarities = []
+            for _ in range(needed):
+                nr = _get_needed_rarity(stats)
+                needed_rarities.append(nr)
+                stats["counts"][nr] = stats["counts"].get(nr, 0) + 1
+                stats["total"] += 1
+            
+            _log(f"[plan] needed rarities based on stats: {needed_rarities}")
+            queue.extend(_generate_queue_entries(count=needed, existing_words=existing_words, needed_rarities=needed_rarities))
             save_queue(queue_path, queue)
 
     if not queue:
@@ -1028,13 +1130,13 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     out_png = card_dir / "outputs" / "card_1024x1536.png"
     _log(f"[phase demo] generating image -> {out_png}")
     
-    style_refs = _build_style_refs(DEFAULT_DEMO_DIR.parent)
+    style_refs, rarity_labels = _build_style_refs(DEFAULT_DEMO_DIR.parent)
     if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(card_dir / "prompt.txt"),
-            *_build_style_cmd_args(style_refs),
+            *_build_style_cmd_args(style_refs, rarity_labels, rarity),
             "--out", str(out_png)
         ]
     else:
@@ -1093,15 +1195,23 @@ def phase_imagegen(*, series_dir: Path) -> int:
     prompt_file = target_dir / "prompt.txt"
     out_png = target_dir / "outputs" / out_name
 
-    _log(f"[phase imagegen] generating image for {target_dir.name} -> {out_png}")
+    # Get target rarity from meta.yml
+    target_rarity = None
+    meta_file = target_dir / "meta.yml"
+    if meta_file.exists() and yaml:
+        with open(meta_file, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        target_rarity = meta.get("rarity", "").upper() or None
+
+    _log(f"[phase imagegen] generating image for {target_dir.name} -> {out_png} (rarity={target_rarity})")
     
-    style_refs = _build_style_refs(series_dir)
+    style_refs, rarity_labels = _build_style_refs(series_dir)
     if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_file),
-            *_build_style_cmd_args(style_refs),
+            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity),
             "--out", str(out_png)
         ]
     else:
@@ -1140,17 +1250,25 @@ def _generate_image_for_card_dir(*, card_dir: Path) -> int:
     out_png = card_dir / "outputs" / out_name
     out_png.parent.mkdir(parents=True, exist_ok=True)
 
-    _log(f"[batch] generating image for {card_dir.name} -> {out_png}")
+    # Get target rarity from meta.yml
+    target_rarity = None
+    meta_file = card_dir / "meta.yml"
+    if meta_file.exists() and yaml:
+        with open(meta_file, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        target_rarity = meta.get("rarity", "").upper() or None
+
+    _log(f"[batch] generating image for {card_dir.name} -> {out_png} (rarity={target_rarity})")
     
     # Infer series_dir from card_dir (card_dir is series/XXXX/cards/NNN-word)
     series_dir = card_dir.parent.parent
-    style_refs = _build_style_refs(series_dir)
+    style_refs, rarity_labels = _build_style_refs(series_dir)
     if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_file),
-            *_build_style_cmd_args(style_refs),
+            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity),
             "--out", str(out_png)
         ]
     else:
@@ -1273,16 +1391,20 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     _log(f"[phase revise] wrote prompt.txt")
 
     out_png = card_dir / "outputs" / "card_1024x1536.png"
-    _log(f"[phase revise] generating image -> {out_png}")
+    
+    # Get target rarity from updated card
+    target_rarity = updated.get("content", {}).get("RARITY_TEXT", "").upper() or None
+    
+    _log(f"[phase revise] generating image -> {out_png} (rarity={target_rarity})")
     
     series_dir = card_dir.parent.parent
-    style_refs = _build_style_refs(series_dir)
+    style_refs, rarity_labels = _build_style_refs(series_dir)
     if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(card_dir / "prompt.txt"),
-            *_build_style_cmd_args(style_refs),
+            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity),
             "--out", str(out_png)
         ]
     else:
@@ -1351,16 +1473,20 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
         _log(f"[phase rebuild] wrote prompt.txt")
 
     out_png = card_dir / "outputs" / "card_1024x1536.png"
-    _log(f"[phase rebuild] generating image -> {out_png}")
+    
+    # Get target rarity from card
+    target_rarity = card.get("content", {}).get("RARITY_TEXT", "").upper() or None
+    
+    _log(f"[phase rebuild] generating image -> {out_png} (rarity={target_rarity})")
     
     series_dir = card_dir.parent.parent
-    style_refs = _build_style_refs(series_dir)
+    style_refs, rarity_labels = _build_style_refs(series_dir)
     if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_path),
-            *_build_style_cmd_args(style_refs),
+            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity),
             "--out", str(out_png)
         ]
     else:
@@ -1400,16 +1526,24 @@ def _generate_image_only(*, card_dir: Path) -> Path:
     out_png = card_dir / "outputs" / out_name
     out_png.parent.mkdir(parents=True, exist_ok=True)
 
-    _log(f"[imagegen] generating image for {card_dir.name} -> {out_png}")
+    # Get target rarity from meta.yml
+    target_rarity = None
+    meta_file = card_dir / "meta.yml"
+    if meta_file.exists() and yaml:
+        with open(meta_file, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        target_rarity = meta.get("rarity", "").upper() or None
+
+    _log(f"[imagegen] generating image for {card_dir.name} -> {out_png} (rarity={target_rarity})")
 
     series_dir = card_dir.parent.parent
-    style_refs = _build_style_refs(series_dir)
+    style_refs, rarity_labels = _build_style_refs(series_dir)
     if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_file),
-            *_build_style_cmd_args(style_refs),
+            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity),
             "--out", str(out_png)
         ]
     else:

@@ -53,14 +53,29 @@ Each card has:
 
 ## Rarity & Abilities
 
-Abilities trigger **only when a card is revealed on draw** (see Turn Sequence). Rarity determines ability complexity:
+When you draw a card, you may either **keep it** (add to hand silently) or **play its ability** by paying its cost.
 
-| Rarity | Icon | Ability Pattern |
-|--------|------|-----------------|
-| **COMMON** | ○ White circle | Simple effect (e.g., "Draw 1 card") |
-| **UNCOMMON** | ■ Green square | Type-based effect (e.g., "Discard a VERB to draw 2") |
-| **RARE** | ⬡ Gold hexagon | Stat-based effect (e.g., "Draw cards equal to this card's LORE") |
-| **GLORIOUS** | ◆ Orange diamond | Unique effect, may reference other cards |
+### Ability Costs
+
+| Rarity | Icon | Cost to Play Ability |
+|--------|------|---------------------|
+| **COMMON** | ◆ White diamond | Reveal the card (no discard) |
+| **UNCOMMON** | ◆ Green diamond | Discard 1 card from hand |
+| **RARE** | ◆ Gold diamond | Discard 2 cards from hand |
+| **GLORIOUS** | ◆ Orange diamond | Discard 3 cards from hand |
+
+If you choose not to pay the cost (or cannot), simply keep the card in your hand.
+
+### Ability Design Principles
+
+Abilities should provide **card advantage**—not just replace themselves. "Draw a card" alone is not an ability; it's neutral tempo. Abilities must generate value beyond the card itself.
+
+| Rarity | Ability Pattern |
+|--------|-----------------|
+| **COMMON** | Simple effect with immediate value |
+| **UNCOMMON** | Type-based effect (references card types like NOUN, VERB) |
+| **RARE** | Stat-based effect (scales with LORE, CONTEXT, or COMPLEXITY) |
+| **GLORIOUS** | Unique powerful effect, may combo with other cards |
 
 ---
 

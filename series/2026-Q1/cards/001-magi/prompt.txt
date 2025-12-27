@@ -4,33 +4,33 @@ REPLACE the content with the following text. Do NOT use brackets or placeholders
 
 Card Number: #001
 Word: MAGI
-Gloss: Wise men, astrologers, or priestly officials from the East; the root of 'magic'.
+Gloss: Learned visitors from the East; wise men, astrologers, or priestly officials.
 Type: TITLE
 DRAW Rarity (Top Right): GLORIOUS with orange diamond icon
-Stats: Lore 5, Context 2, Complexity 4
+Stats: Lore 5, Context 1, Complexity 3
 
-Art Description: Silhouetted figures in ancient Persian priestly robes riding camels across a dark blue desert at night, gazing up at a brilliant, singular star emitting a vertical beam of light; atmospheric, mysterious, cinematic lighting.. Art style must match the premium antique parchment aesthetic of the reference.
+Art Description: A moonlit caravan of eastern scholars on camels approaching a distant city beneath a brilliant star; ancient Near Eastern desert; painterly mythic realism; NO TEXT OR WRITING IN ART.. Art style must match the premium antique parchment aesthetic of the reference.
 
-Ability Text: On draw, you may reveal: spend 1 card from your hand to activate that card's on-reveal ability. Then this card is spent.
+Ability Text: On reveal, you may spend 1 card from your hand to activate that card's ability. Then this card is spent.
 
-OT Verse: Jeremiah 39:3 — "...Nergal-Sharezer, Rab-Mag, and all the rest of the officials of the king of Babylon..."
-NT Verse: Matthew 2:1 — "...behold, magi from the east arrived in Jerusalem, saying, 'Where is he who has been born King of the Jews?'"
+OT Verse: Daniel 2:2 — "summoned the magicians, enchanters, sorcerers, Chaldeans..."
+NT Verse: Matthew 2:1 — "magi from the east came to Jerusalem..."
 
-Greek: μάγοι
-(Below Greek, smaller text) Transliteration: magoi
-NT Refs: Matt 2:1 • Matt 2:7 • Matt 2:16 • Acts 13:6
+Greek: μάγος / μάγοι
+(Below Greek, smaller text) Transliteration: magos / magoi
+NT Refs: Matt 2:1 • Acts 13:6
 
-Hebrew: רַב־מָג
-(Below Hebrew, smaller text) Transliteration: rab-mag
-OT Refs: Jer 39:3 • Jer 39:13 • Dan 2:2 • Dan 2:48
+Hebrew: חרטמים / חכימין
+(Below Hebrew, smaller text) Transliteration: ḥarṭummîm / ḥăkîmîn
+OT Refs: Dan 2:2 • Dan 4:7
 
 (Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
 
 Trivia:
-• The English word 'magic' is etymologically derived from this term.
-• Scripture never specifies there were three men, only that there were three gifts.
-• Likely Zoroastrian astronomer-priests from the Parthian Empire (modern Iran).
-• The prophet Daniel was appointed chief of the wise men in Babylon, possibly establishing the legacy these men followed.
+• Matthew never calls them kings, and never gives a number.
+• The same Greek root appears in Acts 13:6 in a negative context.
+• Daniel's court vocabulary overlaps with 'wise/magician' categories.
+• This label's moral weight is decided by context, not the word alone.
 
 Series Footer: SERIES: 2026-Q1
 
@@ -38,6 +38,14 @@ CRITICAL RULES:
 - Maintain the reference card's navy/gold frame EXACTLY.
 - Keep the exact same text box positions and styles.
 - NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+  WRONG: [#003] or [NOUN] or [RARE]
+  CORRECT: #003 or NOUN or RARE
+- Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
 - Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
-- Stat pips: Use small circles with SOLID NAVY FILL (not gold). Filled navy circles = stat value, empty/outlined circles = remaining. Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty). Do NOT use gold fill for stat pips. Do NOT use diamond shapes for stat pips.
+- Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
+  WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
+  CORRECT: Navy-blue filled circles (dark blue, like the card border color)
+  Filled navy circles = stat value, empty/outlined circles = remaining.
+  Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty with just outline)
+  The filled pips must be NAVY (dark blue) not gold/yellow.
 - Do not add extra text or modify the layout.

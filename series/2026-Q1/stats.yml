@@ -1,0 +1,20 @@
+# Series Statistics - Auto-updated by pipeline
+series: 2026-Q1
+cycle_days: 90
+start_date: 2025-01-01
+
+# Target rarity distribution (must sum to 100)
+targets:
+  GLORIOUS: 10
+  RARE: 15
+  UNCOMMON: 35
+  COMMON: 40
+
+# Current counts (updated after each card generation)
+counts:
+  GLORIOUS: 2  # 001-magi, 003-covenant
+  RARE: 1      # 002-gospel
+  UNCOMMON: 1  # 004-grace
+  COMMON: 1    # 005-walk
+
+total: 5

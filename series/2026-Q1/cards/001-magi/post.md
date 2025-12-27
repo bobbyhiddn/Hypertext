@@ -3,17 +3,17 @@
 ![MAGI card](./outputs/card_1024x1536.png)
 
 ## Word
-**MAGI** — Wise men, astrologers, or priestly officials from the East; the root of 'magic'.
+**MAGI** — Learned visitors from the East; wise men, astrologers, or priestly officials.
 
 ## Old Testament
-> Jeremiah 39:3 — “...Nergal-Sharezer, Rab-Mag, and all the rest of the officials of the king of Babylon...”
+> Daniel 2:2 — “summoned the magicians, enchanters, sorcerers, Chaldeans...”
 
 ## New Testament
-> Matthew 2:1 — “...behold, magi from the east arrived in Jerusalem, saying, 'Where is he who has been born King of the Jews?'”
+> Matthew 2:1 — “magi from the east came to Jerusalem...”
 
 ## Trivia
-- The English word 'magic' is etymologically derived from this term.
-- Scripture never specifies there were three men, only that there were three gifts.
-- Likely Zoroastrian astronomer-priests from the Parthian Empire (modern Iran).
-- The prophet Daniel was appointed chief of the wise men in Babylon, possibly establishing the legacy these men followed.
+- Matthew never calls them kings, and never gives a number.
+- The same Greek root appears in Acts 13:6 in a negative context.
+- Daniel's court vocabulary overlaps with 'wise/magician' categories.
+- This label's moral weight is decided by context, not the word alone.
 

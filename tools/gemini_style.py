@@ -61,7 +61,17 @@ def generate_with_styles(
     aspect_ratio: str = "2:3",
     guidance_scale: float | None = None,
     num_inference_steps: int | None = None,
+    rarity_labels: dict[int, str] | None = None,
+    target_rarity: str | None = None,
 ) -> None:
+    """
+    Generate an image with style references.
+    
+    Args:
+        rarity_labels: Optional dict mapping 1-indexed image position to rarity name
+                      e.g. {2: "COMMON", 3: "UNCOMMON", 4: "RARE", 5: "GLORIOUS"}
+        target_rarity: Optional target rarity - the matching reference will be highlighted
+    """
     if genai is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
 
@@ -81,8 +91,19 @@ def generate_with_styles(
     # Build clear labeling for each reference image
     ref_labels = []
     ref_labels.append("[1] = Clean template (layout/frame reference)")
+    
+    primary_ref = None
     for i in range(2, len(style_image_paths) + 1):
-        ref_labels.append(f"[{i}] = Example card (style/formatting reference)")
+        rarity = rarity_labels.get(i) if rarity_labels else None
+        if rarity:
+            is_primary = (target_rarity and rarity.upper() == target_rarity.upper())
+            if is_primary:
+                ref_labels.append(f"[{i}] = {rarity} example card ⭐ PRIMARY RARITY REFERENCE")
+                primary_ref = i
+            else:
+                ref_labels.append(f"[{i}] = {rarity} example card")
+        else:
+            ref_labels.append(f"[{i}] = Example card (style/formatting reference)")
     
     # Remove conflicting "[1]" reference from prompt if present
     cleaned_prompt = prompt_text.replace(
@@ -92,13 +113,22 @@ def generate_with_styles(
     
     example_refs = "/".join(str(i) for i in range(2, len(style_image_paths) + 1)) if len(style_image_paths) > 1 else "1"
     
+    # Build primary rarity instruction if we have a match
+    primary_instruction = ""
+    if primary_ref and target_rarity:
+        primary_instruction = (
+            f"\n⭐ IMPORTANT: This card is {target_rarity} rarity. "
+            f"Pay CLOSEST attention to [{primary_ref}] for the rarity badge style and any rarity-specific formatting.\n"
+        )
+    
     style_instruction = (
         f"You are provided {len(style_image_paths)} reference images:\n"
         + "\n".join(ref_labels) + "\n\n"
         f"Generate a {orientation} trading card that EXACTLY matches:\n"
         f"- The layout and frame structure from [1] (template)\n"
-        f"- The corner styles, stat pip style (navy circles), rarity badge style, and text formatting from [{example_refs}] (example cards)\n\n"
-        f"CRITICAL: Copy the exact visual style of the example cards [{example_refs}] for all UI elements.\n\n"
+        f"- The corner styles, stat pip style (navy circles), rarity badge style, and text formatting from [{example_refs}] (example cards)\n"
+        + primary_instruction +
+        f"\nCRITICAL: Copy the exact visual style of the example cards [{example_refs}] for all UI elements.\n\n"
     )
     
     full_prompt = style_instruction + cleaned_prompt
@@ -182,6 +212,8 @@ def main() -> int:
     parser.add_argument("--style", required=True, action="append", help="Path to reference style image (repeatable)")
     parser.add_argument("--out", required=True, help="Output PNG path")
     parser.add_argument("--model", default="gemini-3-pro-image-preview", help="Gemini model ID")
+    parser.add_argument("--rarity-label", action="append", help="Rarity label for style image at position (format: POS:RARITY e.g. 2:COMMON)")
+    parser.add_argument("--target-rarity", help="Target rarity for this card (highlights matching reference)")
     
     args = parser.parse_args()
     
@@ -197,12 +229,23 @@ def main() -> int:
         print("Error: Must provide either --prompt or --prompt-file", file=sys.stderr)
         return 1
     
+    # Parse rarity labels
+    rarity_labels = None
+    if args.rarity_label:
+        rarity_labels = {}
+        for label in args.rarity_label:
+            if ":" in label:
+                pos, rarity = label.split(":", 1)
+                rarity_labels[int(pos)] = rarity.upper()
+    
     try:
         generate_with_styles(
             prompt_text=prompt_text,
             style_image_paths=args.style,
             out_path=args.out,
             model=args.model,
+            rarity_labels=rarity_labels,
+            target_rarity=args.target_rarity,
         )
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
