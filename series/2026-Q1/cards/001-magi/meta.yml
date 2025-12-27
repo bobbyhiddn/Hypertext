@@ -66,3 +66,8 @@ search_queries:
 - Magi Hebrew word Bible Jeremiah 39:3
 - Magi Old Testament references Daniel
 - Greek word for Magi Matthew 2 transliteration
+revision: 1
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  In the HEB/ARAM and GREEK panel, remove "transliteration:" prefix from the TRANSLIT
+  lines; display only the transliterated words.'
