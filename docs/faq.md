@@ -30,7 +30,7 @@ During active production, we aim for one new card per day or every other day. Ca
 - **COMMON** (white circle): Frequently occurring words with simple abilities
 - **UNCOMMON** (green square): Less common words with suit-based abilities
 - **RARE** (gold hexagon): Notable words with stat-referencing abilities
-- **MYTHIC** (orange rhombus): Significant theological terms with unique abilities
+- **GLORIOUS** (orange rhombus): Significant theological terms with unique abilities
 
 ## Stats
 

@@ -15,12 +15,12 @@ Identity
 - card_type: NOUN | VERB | ADJECTIVE | NAME | TITLE
 
 Rarity
-- rarity_text: COMMON | UNCOMMON | RARE | MYTHIC
-- rarity_icon: depends on rarity
-  - COMMON: white circle
-  - UNCOMMON: green square
-  - RARE: gold hexagon
-  - MYTHIC: orange rhombus (true 4-sided diamond, not rotated square)
+- rarity_text: COMMON | UNCOMMON | RARE | GLORIOUS
+- rarity_icon: diamond shape, color varies by rarity
+  - COMMON: white diamond
+  - UNCOMMON: green diamond
+  - RARE: gold diamond
+  - GLORIOUS: orange diamond
 
 Artwork
 - art_prompt: one scene, no text in art
@@ -36,7 +36,7 @@ Ability text
   - COMMON: simple ability
   - UNCOMMON: suit-based
   - RARE: references stats
-  - MYTHIC: unique, can reference other cards
+  - GLORIOUS: unique, can reference other cards
 
 Scripture
 - ot_verse_ref + ot_verse_snippet (short)

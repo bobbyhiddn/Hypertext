@@ -57,7 +57,7 @@ hypertext/
 | COMMON | White circle | Simple ability |
 | UNCOMMON | Green square | Suit-based ability |
 | RARE | Gold hexagon | References stats |
-| MYTHIC | Orange rhombus | Unique, can reference other cards |
+| GLORIOUS | Orange rhombus | Unique, can reference other cards |
 
 ## Roadmap
 

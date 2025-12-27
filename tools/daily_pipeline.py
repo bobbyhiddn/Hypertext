@@ -28,7 +28,7 @@ RULES_PATH = Path("docs/rules.md")
 GAME_RULES_SNIPPET = (
     "- There is ONE shared deck. Do not say 'your deck'. Say 'the deck' or 'the shared deck'.\n"
     "- Abilities should be one short line.\n"
-    "- Rarity patterns: COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique."
+    "- Rarity patterns: COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique."
 )
 
 
@@ -132,8 +132,8 @@ def _generate_queue_entries(*, count: int, existing_words: list[str]) -> list[di
         "Avoid any words already used: "
         + ", ".join(existing_words)
         + ". "
-        "For each item, choose: card_type (NOUN|VERB|ADJECTIVE|NAME|TITLE) and rarity (COMMON|UNCOMMON|RARE|MYTHIC). "
-        "IMPORTANT: Distribute rarities to form a balanced set (approx. 10% MYTHIC, 20% RARE, 30% UNCOMMON, 40% COMMON). "
+        "For each item, choose: card_type (NOUN|VERB|ADJECTIVE|NAME|TITLE) and rarity (COMMON|UNCOMMON|RARE|GLORIOUS). "
+        "IMPORTANT: Distribute rarities to form a balanced set (approx. 10% GLORIOUS, 20% RARE, 30% UNCOMMON, 40% COMMON). "
         "Return ONLY valid JSON as an array of objects with keys: word, card_type, rarity. "
         "word should be uppercase and A-Z only (no spaces)."
     )
@@ -187,7 +187,7 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
-        "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; MYTHIC unique)."
+        "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique)."
     )
 
     _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
@@ -477,13 +477,13 @@ def build_prompt_text(card: dict) -> str:
     # Add rarity visual description
     rarity = str(data.get("RARITY_TEXT", "COMMON")).upper()
     rarity_desc_map = {
-        "COMMON": "COMMON (White Circle icon)",
-        "UNCOMMON": "UNCOMMON (Green Square icon)",
-        "RARE": "RARE (Gold Hexagon icon)",
-        "MYTHIC": "MYTHIC (Orange Rhombus icon)"
+        "COMMON": "COMMON with white diamond icon",
+        "UNCOMMON": "UNCOMMON with green diamond icon",
+        "RARE": "RARE with gold diamond icon",
+        "GLORIOUS": "GLORIOUS with orange diamond icon"
     }
     # We update the value passed to the template, but not the underlying card dict
-    data["RARITY_TEXT"] = rarity_desc_map.get(rarity, f"{rarity} (White Circle icon)")
+    data["RARITY_TEXT"] = rarity_desc_map.get(rarity, f"{rarity} with white diamond icon")
         
     # Fill template
     try:

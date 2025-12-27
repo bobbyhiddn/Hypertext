@@ -27,7 +27,7 @@ Each card has:
 | **Word** | The English word |
 | **Gloss** | Short definition |
 | **Type** | NOUN, VERB, ADJECTIVE, NAME, or TITLE |
-| **Rarity** | COMMON, UNCOMMON, RARE, or MYTHIC |
+| **Rarity** | COMMON, UNCOMMON, RARE, or GLORIOUS |
 | **Art** | Thematic illustration |
 | **Stats** | LORE, CONTEXT, COMPLEXITY (1–5 each) |
 | **Ability** | Effect when revealed |
@@ -60,7 +60,7 @@ Abilities trigger **only when a card is revealed on draw** (see Turn Sequence). 
 | **COMMON** | ○ White circle | Simple effect (e.g., "Draw 1 card") |
 | **UNCOMMON** | ■ Green square | Type-based effect (e.g., "Discard a VERB to draw 2") |
 | **RARE** | ⬡ Gold hexagon | Stat-based effect (e.g., "Draw cards equal to this card's LORE") |
-| **MYTHIC** | ◆ Orange diamond | Unique effect, may reference other cards |
+| **GLORIOUS** | ◆ Orange diamond | Unique effect, may reference other cards |
 
 ---
 
@@ -147,7 +147,7 @@ Dealt at setup, kept secret until game end. Examples:
 |-----------|-----------|
 | **Grammarian** | Score 2 points for each Quartet you contributed to where your card had COMPLEXITY 4+. |
 | **Evangelist** | Score 3 points if you contributed to 4+ different Quartets. |
-| **Theologian** | Score 2 points for each MYTHIC card you revealed during the game. |
+| **Theologian** | Score 2 points for each GLORIOUS card you revealed during the game. |
 | **Scribe** | Score 1 point for each card remaining in your hand at game end. |
 | **Prophet** | Score 4 points if you played the closing card on 2+ Quartets. |
 | **Linguist** | Score 2 points for each Quartet you contributed to containing both Greek and Hebrew terms with COMPLEXITY 3+. |

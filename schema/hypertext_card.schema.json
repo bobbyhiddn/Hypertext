@@ -55,12 +55,12 @@
                 "render_rule": { "type": "string" },
                 "icons": {
                   "type": "object",
-                  "required": ["COMMON", "UNCOMMON", "RARE", "MYTHIC"],
+                  "required": ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"],
                   "properties": {
                     "COMMON": { "$ref": "#/$defs/rarityIcon" },
                     "UNCOMMON": { "$ref": "#/$defs/rarityIcon" },
                     "RARE": { "$ref": "#/$defs/rarityIcon" },
-                    "MYTHIC": { "$ref": "#/$defs/rarityIcon" }
+                    "GLORIOUS": { "$ref": "#/$defs/rarityIcon" }
                   }
                 }
               }
@@ -162,11 +162,11 @@
         },
         "RARITY_TEXT": {
           "type": "string",
-          "enum": ["COMMON", "UNCOMMON", "RARE", "MYTHIC"]
+          "enum": ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
         },
         "RARITY_ICON": {
           "type": "string",
-          "enum": ["COMMON", "UNCOMMON", "RARE", "MYTHIC"]
+          "enum": ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
         },
         "ART_PROMPT": {
           "type": "string",

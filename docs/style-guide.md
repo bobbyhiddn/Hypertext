@@ -72,9 +72,9 @@ All icons are flat, minimal, no gradients.
 | COMMON | Circle | White | Navy |
 | UNCOMMON | Square | Green | Navy |
 | RARE | Hexagon | Gold | Navy |
-| MYTHIC | Rhombus (4-sided diamond) | Orange | Navy |
+| GLORIOUS | Rhombus (4-sided diamond) | Orange | Navy |
 
-**Important**: MYTHIC uses a true 4-sided rhombus (diamond shape), not a rotated square.
+**Important**: GLORIOUS uses a true 4-sided rhombus (diamond shape), not a rotated square.
 
 ### Stat Pips
 - Shape: Circle only (no other shapes)
