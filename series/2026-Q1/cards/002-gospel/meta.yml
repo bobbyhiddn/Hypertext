@@ -1,0 +1,79 @@
+number: '002'
+word: GOSPEL
+gloss: Good news; a joyful announcement of victory or salvation.
+card_type: NOUN
+rarity: RARE
+art_prompt: A lone figure standing on a high mountain peak at sunrise, holding a torch
+  aloft, with golden light breaking through dark storm clouds in the valley below.
+  Cinematic, epic, ethereal style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: You may reveal a card from your hand. Reveal cards from the top of the shared
+  deck equal to that card's Lore stat; keep one and discard the rest.
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful upon the mountains are the feet of him who brings good news,
+    who publishes peace...
+nt_verse:
+  ref: Romans 1:16
+  snippet: For I am not ashamed of the gospel, for it is the power of God for salvation
+    to everyone who believes...
+greek:
+  text: εὐαγγέλιον
+  translit: euangelion
+hebrew:
+  text: בְּשׂוֹרָה
+  translit: besorah
+ot_refs: Isa 40:9 • Isa 61:1 • Nah 1:15 • 2 Sam 18:26
+nt_refs: Mark 1:1 • 1 Cor 15:1 • Gal 1:6 • Rev 14:6
+trivia:
+- Derived from Old English 'godspell' (good story), a calque of the Greek 'euangelion'.
+- In the Roman Empire, this term was used for imperial announcements, such as a military
+  victory or the emperor's birthday.
+- The 'Proto-Evangelium' (first gospel) is often identified as the promise in Genesis
+  3:15.
+- Paul specifically defines the content of the gospel in 1 Corinthians 15 as Christ's
+  death, burial, and resurrection.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWQxaDql0hefSHv0fx5WPpdEn1lEQzB83nSR4bY6TC8Hkux8Q_8KdM6eMl4mn7DL-ySE_bH1_101t8X-cmFuDzwEKr-Pul4m506H1WOUOi3qnmC-dz0mQFB5RvEoTRv1nV_q8xfI4h4g992lExwgfp7YvXoNV5iIli3Q81QU8=
+  title: christianlibrary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp15Ujlbpk7EAUJnl0XLapFdveBC6iGxo20O9r1SMHUUJ974Sf0dPfvlhtySqK28bmwcC38AJ8goJijopSlzBddRHsPDlJtzf94SNFTSPS3Y7KpeZvxUu7rfWkTHm-XkhxaaUQMMo=
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsTFHa298ldRzRTBlBs75zxGi6XQWGsujxSJ48pnsvmCpvIxI8utgiSQDrUWcN9xo3XWTQrK7DAGVFejDDbJAnOmXU8q-FGjUJHPO1FNPrHFwltogD7AVB5Pte5qbeY6EorgIkhS41UOQ=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd-e3kblT5s2BLqLABBLrcyn2oXs6bxoLFbF6Xuok2FjmJHmBTqrxvj8fcStzeIKObYId2eyaZnSXUj6WpAJJeDAHs7k2v_KJqo-9aop7HopZWr_7i_ypvZ5vR1gYHlAHtIw5PJ86r7MKf4LuBeVqty7ymJ1Qv6CBj1WzRqGtHfmFG9P0bJFJxcUfg8AI-WFYAyIiljMHGCisD
+  title: researchgate.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnKbGAsS8TCCBADNweS01TXrIG2IdXv191lFfLPH0QoXJDxcaQcnQ7lIosGjVisFhOZISnp6awl60i0F92jrvkpcr-_bf4yhllwNSbiy5QjufPecwfH5yNMYZ8aUjdBVBS-TGNeWslwGrglI-GyWYbEDoxqrvRyvzZd4Yyc428g9cs
+  title: chabad.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwJ10jrwHgCw2-PHnGUD8rvP7qM7Xi-DcTeExpVmBxvasoSxWMCpR4nPbbT-0mljcgHOdRwPkhMG7ZXu1OjDScrXA_2eHA5odlAtMFPkAjNVtPVdt0_EEr_vIJhmM=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2YZwUkktef1Lwl6G7I3qbV_vEqlmGJzhb8sneXZcYXHWvxidmYqhFdISLBvcYyLLiEG4F4HLxShSEdkvqZWo2C1JMXg7-zan6cLwpH8N0MnXUu7MZsdcDTOvwKWY98GvzupikNHNl-55IboRC4O_fOnftsxNu_xOKEwS61jzRcB2OIXs=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzc6WznMNQIRNzA9UpQVFKHDAU3nDBFdIq_A1WAnS4AVO3m1Rw7aTrEBI5hMmca-4cCmQQHvkXHvuRmrKqCJm72rMj3INaAUEYBvb8latjJYOk0i4-taEnNE6pJ9gHEIE=
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECGBdLym7oq4c2usvTZ9j209YgiyWiKlv6hRXJU38biZfzXJ8kG8SuTuh8LT1HjRfk4hUWMw7Y1K1NfLNI_AHTGechxNjbRXj_DVwAJIrAQ-uxP8zOykY9ngavFGlTJmcgGVG06EOD8faX
+  title: substack.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoFfllUKAv6IR0X1lOYnMmwBR3OUOw651gAOPPI3LnqlgCqzyobuQMsBfT_K_Y-9FFfYm-KbrQDzm1qSLJnp2J92fEAhD2i4GMLv5fCoYRknWRQWRKd4u0DVaE17ezn-W3DZZBo03jYveY6H2qISO-fy6GAYzBHe3XxVDMnXI7op_ynO-uM8q2i8U_5y-lbSPvaD3lvw==
+  title: ourrabbijesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF61WghX2yGSeJS2iOm3PyNjqu6DOBBFVoH481mQnNzWcAcVuKS6o0B28eUXAJihjoAAba-sMNvFR0WBVg2CgWIMutAvfDYLVfk3EUoa2aLHCOT7LgVpzpA1KD2JMKTh53tGP71gwTrKRF4drfV
+  title: wordorigins.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECkFltNiYSNuhONCAuHrmo_aj6P8pq9vzjGgE2FN77YD9whiDqlKJVvNbaSAZ6qM58bgCQ_5TXZyoCltyLrJTLjb2cheerJMzvsRrx9QIlPcQJhGffASvHK1j5KsISprCpNM0=
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2MwGGInrrrYRPTuYG3BZFUOFHOvFrm3rdPo-kPw6QiISQrUSayBI1yKwCt7iyhC9CBnINaaL_9XBns5kTM5_LDJr6ZI72HrrBYDBBnOrEgdXyfkCgrhZnjoCcXFV9e96WERFtXV5ltYAW7OW7AsZ3T_JKH_Uy89T3ZwHN
+  title: engediresourcecenter.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxWpL4GoRJmRqlMZfCPMcFz-1G030i-Ftdvd1gOe6rXfxVv9-D2K1Cm8hkD2L8lBEZ_8GOwU6VnGddMNuudJBQ8hnj5y_YBecL_g-E74E4vvJbIlbevJsorIKdeugtG7a9QN9C42VkiIt_qYncKQRx1iWEhXaxXQ==
+  title: truthmagazine.com
+search_queries:
+- ''
+- etymology of gospel godspell
+- hebrew word for gospel good news
+- Isaiah 52:7 hebrew snippet
+- Romans 1:16 greek snippet
+- euangelion roman imperial cult

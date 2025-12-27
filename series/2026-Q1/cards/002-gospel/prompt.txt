@@ -1,0 +1,43 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #002
+Word: GOSPEL
+Gloss: Good news; a joyful announcement of victory or salvation.
+Type: NOUN
+DRAW Rarity (Top Right): RARE with gold diamond icon
+Stats: Lore 5, Context 5, Complexity 3
+
+Art Description: A lone figure standing on a high mountain peak at sunrise, holding a torch aloft, with golden light breaking through dark storm clouds in the valley below. Cinematic, epic, ethereal style.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: You may reveal a card from your hand. Reveal cards from the top of the shared deck equal to that card's Lore stat; keep one and discard the rest.
+
+OT Verse: Isaiah 52:7 — "How beautiful upon the mountains are the feet of him who brings good news, who publishes peace..."
+NT Verse: Romans 1:16 — "For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes..."
+
+Greek: εὐαγγέλιον
+(Below Greek, smaller text) Transliteration: euangelion
+NT Refs: Mark 1:1 • 1 Cor 15:1 • Gal 1:6 • Rev 14:6
+
+Hebrew: בְּשׂוֹרָה
+(Below Hebrew, smaller text) Transliteration: besorah
+OT Refs: Isa 40:9 • Isa 61:1 • Nah 1:15 • 2 Sam 18:26
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• Derived from Old English 'godspell' (good story), a calque of the Greek 'euangelion'.
+• In the Roman Empire, this term was used for imperial announcements, such as a military victory or the emperor's birthday.
+• The 'Proto-Evangelium' (first gospel) is often identified as the promise in Genesis 3:15.
+• Paul specifically defines the content of the gospel in 1 Corinthians 15 as Christ's death, burial, and resurrection.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL (not gold). Filled navy circles = stat value, empty/outlined circles = remaining. Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty). Do NOT use gold fill for stat pips. Do NOT use diamond shapes for stat pips.
+- Do not add extra text or modify the layout.
