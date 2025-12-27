@@ -1614,11 +1614,17 @@ def _run_watermark(*, card_dir: Path, image_path: Path) -> None:
     ]
 
     try:
-        subprocess.check_call(cmd_svg)
-        subprocess.check_call(cmd_apply)
+        r1 = subprocess.run(cmd_svg, capture_output=True, text=True, check=True)
+        r2 = subprocess.run(cmd_apply, capture_output=True, text=True, check=True)
         _log("[watermark] applied watermark")
     except subprocess.CalledProcessError as e:
+        stdout = (e.stdout or "").strip()
+        stderr = (e.stderr or "").strip()
         _log(f"[watermark] Warning: watermark step failed: {e}")
+        if stdout:
+            _log(f"[watermark] stdout: {stdout}")
+        if stderr:
+            _log(f"[watermark] stderr: {stderr}")
 
 
 def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:

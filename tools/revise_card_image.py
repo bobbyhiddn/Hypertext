@@ -13,6 +13,7 @@ import argparse
 import base64
 import os
 import sys
+import subprocess
 from pathlib import Path
 
 try:
@@ -147,6 +148,24 @@ def revise_card(
         f.write(image_bytes)
 
     print(f"Saved revised card to: {out_path}")
+
+    try:
+        out_p = Path(out_path)
+        # If out is .../series/<series>/cards/<card>/outputs/<file>.png, then card_dir is parent of outputs.
+        if out_p.suffix.lower() == ".png" and out_p.parent.name == "outputs":
+            card_dir = out_p.parent.parent
+            watermark_cmd = [
+                sys.executable,
+                str(Path("tools") / "apply_watermark.py"),
+                "--card-dir",
+                str(card_dir),
+                "--in",
+                str(out_p),
+            ]
+            subprocess.check_call(watermark_cmd)
+            print("Applied watermark")
+    except Exception as e:
+        print(f"Warning: watermark step failed: {e}")
 
 
 def main() -> int:
