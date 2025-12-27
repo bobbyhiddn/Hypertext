@@ -281,7 +281,7 @@ def _call_gemini(
     prompt: str,
     *,
     image_path: Path | None = None,
-    model: str = "gemini-2.5-flash-preview-05-20",
+    model: str = "gemini-3-pro-preview",
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
 ) -> str:
@@ -370,7 +370,7 @@ def describe_card(
 
     This is a pure observation step - no judgment or scoring.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash-preview-05-20")
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
 
     response_text = _call_gemini(
         DESCRIBE_PROMPT,
@@ -423,7 +423,7 @@ def score_against_rubric(
 
     This is a pure judgment step - comparing observations to expectations.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash-preview-05-20")
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
 
     # Extract expected content
     content = card_json.get("content", {})
@@ -526,7 +526,7 @@ def review_card(
 
     This separation ensures more accurate evaluation.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash-preview-05-20")
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
 
     # Stage 1: Describe
     description = describe_card(image_path, model=model)
