@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
-Vision-based card review and scoring system.
+Multi-stage vision-based card review and scoring system.
 
-Uses Gemini's vision API to evaluate generated cards against a quality checklist.
-Returns a score out of 100 and detailed feedback for corrections.
+Uses a two-stage approach:
+1. DESCRIBE: LLM describes what it sees on the card image
+2. SCORE: A separate call compares the description against the rubric
+
+This separation ensures more accurate evaluation by forcing the model
+to first observe, then judge.
 """
 import base64
 import json
 import os
 import time
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +24,39 @@ except ImportError:
 
 
 @dataclass
+class CardDescription:
+    """Detailed description of what the LLM sees on the card."""
+    card_number: str
+    card_number_format: str  # e.g., "#003", "[#003]", "003"
+    word: str
+    gloss: str
+    card_type: str
+    rarity_text: str
+    rarity_icon_shape: str  # "diamond", "circle", "square", etc.
+    rarity_icon_color: str  # "orange", "gold", "green", etc.
+    stat_pip_shape: str  # "circle", "diamond", "square", etc.
+    stat_pip_fill_color: str  # "navy", "gold", "blue", etc.
+    stat_lore: int
+    stat_context: int
+    stat_complexity: int
+    ability_text: str
+    ot_verse_visible: bool
+    nt_verse_visible: bool
+    greek_text_visible: bool
+    hebrew_text_visible: bool
+    trivia_bullet_count: int
+    has_brackets: bool
+    bracket_locations: list[str]
+    art_description: str
+    text_inside_art: bool
+    frame_intact: bool
+    all_panels_visible: bool
+    missing_panels: list[str]
+    garbled_text_locations: list[str]
+    raw_response: str = ""
+
+
+@dataclass
 class ReviewResult:
     """Result of a card review."""
     score: int  # 0-100
@@ -27,65 +64,119 @@ class ReviewResult:
     categories: dict[str, dict[str, Any]]  # Category -> {score, max, issues}
     corrections: list[str]  # List of specific corrections needed
     needs_rebuild: bool  # True if score < 90 (full rebuild needed)
-    raw_response: str  # Raw model response for debugging
+    description: CardDescription | None = None  # The description from stage 1
+    raw_response: str = ""  # Raw model response for debugging
 
 
-# Scoring rubric - 100 points total
-REVIEW_RUBRIC = """
-## CARD REVIEW RUBRIC (100 points total)
+# Stage 1: Description prompt - just observe, don't judge
+DESCRIBE_PROMPT = """You are examining a trading card image. Describe EXACTLY what you see.
 
-Score each category. Deduct points for issues found. Return JSON.
+Do NOT judge quality or correctness. Just report what is visible.
 
-### 1. FORMATTING & STRUCTURE (35 points max)
-- Card frame/border present and intact (5 pts) - deduct if frame broken, missing corners, or incomplete
-- All required panels visible (10 pts) - need: Header, Art, Stats Row, Ability, OT Verse, NT Verse, Greek/Hebrew split, Trivia. Deduct 1-2 pts per missing panel
-- Stat pips are circles only (5 pts) - deduct all if squares/stars/other shapes used
-- Rarity icon matches rarity text (5 pts) - COMMON=white circle, UNCOMMON=green square, RARE=gold hexagon, GLORIOUS=orange diamond. Deduct if wrong shape/color
-- Card number visible and formatted (5 pts) - should be 3 digits like "001"
-- No duplicate headings/sections (5 pts) - deduct if any section header appears twice
+Examine and report:
 
-### 2. TEXT CLARITY & ACCURACY (30 points max)
-- Word/Title clearly readable (5 pts) - the main word at top must be crisp and legible
-- Gloss clearly readable (5 pts) - subtitle/definition must be readable
-- Ability text fully rendered (5 pts) - no cutoff, no missing words, complete sentence
-- Verse references readable (5 pts) - both OT and NT verse lines must be legible
-- Greek/Hebrew render correctly (5 pts) - Hebrew should be right-to-left, Greek should be proper glyphs; transliterations should display only the words without "transliteration:" or "TRANSLIT:" prefix
-- No garbled/warped/broken text (5 pts) - deduct for any distorted, smeared, or illegible text anywhere
+1. CARD NUMBER: What text appears in the card number area? Report the exact format (e.g., "#003" vs "[#003]" vs "003")
+2. WORD/TITLE: What is the main word/title at the top?
+3. GLOSS: What is the subtitle/definition text?
+4. CARD TYPE: What type label is shown (NOUN, VERB, etc.)?
+5. RARITY: What rarity text is shown? What SHAPE is the rarity icon (circle/square/diamond/hexagon)? What COLOR is it?
+6. STAT PIPS: What SHAPE are the stat pips (circles/diamonds/squares/stars)? What COLOR are the FILLED pips (navy/gold/blue/other)? Count filled pips for each stat (Lore, Context, Complexity).
+7. ABILITY TEXT: What does the ability text say?
+8. VERSES: Is the OT verse section visible? Is the NT verse section visible?
+9. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible?
+10. TRIVIA: How many trivia bullet points are visible?
+11. BRACKETS: Are there any square brackets [ ] visible on the card? Where?
+12. ART PANEL: Briefly describe the artwork. Is there any TEXT inside the art panel?
+13. FRAME: Is the card frame/border intact and complete?
+14. PANELS: Are all expected panels visible? List any missing sections.
+15. TEXT QUALITY: Is any text garbled, warped, or illegible? Where?
 
-### 3. ART QUALITY (20 points max)
-- Art matches the word/theme (8 pts) - the artwork should clearly relate to the card's word
-- No text inside artwork (5 pts) - the art panel should be pure illustration, no letters/words
-- Art fills panel appropriately (4 pts) - no awkward cropping, no excessive empty space
-- Art style consistent (3 pts) - painterly, mythic realism, parchment-friendly tones
-
-### 4. CONTENT ALIGNMENT (15 points max)
-- Ability matches card flavor (5 pts) - the game ability should thematically connect to the word's meaning
-- Trivia bullets present (5 pts) - should have 3-5 bullet points visible
-- No visible brackets [ ] (5 pts) - deduct all 5 if any square brackets remain around text
+Return ONLY JSON in this exact format:
+```json
+{
+  "card_number": "<exact text shown>",
+  "card_number_format": "<format like '#003' or '[#003]' or '003'>",
+  "word": "<main word>",
+  "gloss": "<subtitle text>",
+  "card_type": "<type shown>",
+  "rarity_text": "<rarity word>",
+  "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
+  "rarity_icon_color": "<color name>",
+  "stat_pip_shape": "<circle|diamond|square|star|other>",
+  "stat_pip_fill_color": "<navy|gold|blue|other color>",
+  "stat_lore": <number of filled pips>,
+  "stat_context": <number of filled pips>,
+  "stat_complexity": <number of filled pips>,
+  "ability_text": "<ability text>",
+  "ot_verse_visible": true|false,
+  "nt_verse_visible": true|false,
+  "greek_text_visible": true|false,
+  "hebrew_text_visible": true|false,
+  "trivia_bullet_count": <number>,
+  "has_brackets": true|false,
+  "bracket_locations": ["location1", "location2"],
+  "art_description": "<brief description>",
+  "text_inside_art": true|false,
+  "frame_intact": true|false,
+  "all_panels_visible": true|false,
+  "missing_panels": ["panel1", "panel2"],
+  "garbled_text_locations": ["location1", "location2"]
+}
+```
 """
 
-REVIEW_PROMPT_TEMPLATE = """You are a quality control reviewer for Hypertext trading cards.
+# Stage 2: Scoring prompt - compare description against expected content
+SCORE_PROMPT_TEMPLATE = """You are scoring a trading card based on a description of what was observed.
 
-Analyze this card image against the expected content and score it using the rubric.
-
-## EXPECTED CARD CONTENT:
+## EXPECTED CONTENT:
+- Card Number: #{number} (format must be #XXX, not [#XXX] or XXX)
 - Word: {word}
 - Gloss: {gloss}
 - Card Type: {card_type}
-- Rarity: {rarity} (icon should be: {rarity_icon_desc})
-- Card Number: {number}
-- Ability: {ability}
+- Rarity: {rarity} (icon should be a DIAMOND shape, {rarity_color} colored)
 - Stats: LORE={lore}, CONTEXT={context}, COMPLEXITY={complexity}
+- Stat pips must be CIRCLES with NAVY fill (not gold, not diamonds)
+- Ability: {ability}
 
-{rubric}
+## OBSERVED DESCRIPTION:
+{description_json}
+
+## SCORING RUBRIC (100 points total):
+
+### 1. FORMATTING & STRUCTURE (35 points max)
+- Card frame intact (5 pts) - deduct if frame broken or incomplete
+- All panels visible (10 pts) - deduct 2 pts per missing panel
+- Stat pips are CIRCLES (5 pts) - deduct ALL 5 if not circles
+- Stat pips are NAVY filled (5 pts) - deduct ALL 5 if gold/yellow/other color
+- Rarity icon is DIAMOND shape (5 pts) - deduct all if wrong shape
+- Card number format is #XXX (5 pts) - deduct all if brackets [#XXX] or missing hash
+
+### 2. TEXT CLARITY & ACCURACY (30 points max)
+- Word/title matches expected (5 pts)
+- Gloss matches expected (5 pts)
+- Ability text complete and correct (5 pts)
+- Verses visible (5 pts)
+- Greek/Hebrew visible (5 pts)
+- No garbled/warped text (5 pts) - deduct for any illegible text
+
+### 3. ART QUALITY (20 points max)
+- Art present and fills panel (8 pts)
+- No text inside artwork (5 pts) - deduct all if text in art
+- Art style appropriate (4 pts)
+- Art relates to word theme (3 pts)
+
+### 4. CONTENT ALIGNMENT (15 points max)
+- Stat pip counts match expected (5 pts)
+- Trivia bullets present (5 pts) - should have 3-5
+- No brackets [ ] anywhere (5 pts) - deduct ALL if any brackets visible
 
 ## YOUR TASK:
-1. Examine the card image carefully
-2. Score each category based on what you see
+1. Compare the observed description against expected content
+2. Score each category based on the rubric
 3. List specific issues found
-4. Suggest specific corrections needed
+4. Provide specific corrections needed (be actionable)
 
-## RESPONSE FORMAT (JSON only):
+Return ONLY JSON:
 ```json
 {{
   "formatting": {{
@@ -115,15 +206,13 @@ Analyze this card image against the expected content and score it using the rubr
   ]
 }}
 ```
-
-Return ONLY the JSON, no other text.
 """
 
-RARITY_ICON_DESCRIPTIONS = {
-    "COMMON": "white circle with navy outline",
-    "UNCOMMON": "green square with navy outline",
-    "RARE": "gold hexagon with navy outline",
-    "GLORIOUS": "orange diamond (rhombus) with navy outline"
+RARITY_COLORS = {
+    "COMMON": "white",
+    "UNCOMMON": "green",
+    "RARE": "gold",
+    "GLORIOUS": "orange"
 }
 
 
@@ -144,7 +233,7 @@ def _get_mime_type(image_path: Path) -> str:
     }.get(ext, "image/png")
 
 
-def _parse_review_response(text: str) -> dict:
+def _parse_json_response(text: str) -> dict:
     """Parse JSON response from model, handling markdown fences."""
     raw = text.strip()
 
@@ -165,7 +254,239 @@ def _parse_review_response(text: str) -> dict:
     try:
         return json.loads(raw)
     except json.JSONDecodeError as e:
-        raise RuntimeError(f"Failed to parse review response as JSON: {e}\nResponse: {raw[:500]}")
+        raise RuntimeError(f"Failed to parse response as JSON: {e}\nResponse: {raw[:500]}")
+
+
+def _call_gemini(
+    prompt: str,
+    *,
+    image_path: Path | None = None,
+    model: str = "gemini-2.5-flash-preview-05-20",
+    max_attempts: int = 3,
+    base_delay_s: float = 2.0,
+) -> str:
+    """Make a Gemini API call, optionally with an image."""
+    if requests is None:
+        raise RuntimeError("requests library required. Install with: pip install requests")
+
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+
+    parts = []
+    if image_path:
+        image_data = _encode_image(image_path)
+        mime_type = _get_mime_type(image_path)
+        parts.append({
+            "inline_data": {
+                "mime_type": mime_type,
+                "data": image_data,
+            }
+        })
+    parts.append({"text": prompt})
+
+    payload = {
+        "contents": [{"parts": parts}],
+        "generationConfig": {
+            "temperature": 0.1,
+            "maxOutputTokens": 8192,
+        },
+    }
+
+    headers = {
+        "Content-Type": "application/json",
+        "x-goog-api-key": api_key,
+    }
+
+    last_error: Exception | None = None
+    for attempt in range(max_attempts):
+        try:
+            resp = requests.post(url, json=payload, headers=headers, timeout=120)
+
+            if resp.status_code == 429:
+                retry_after = int(resp.headers.get("Retry-After", base_delay_s * (2 ** attempt)))
+                time.sleep(retry_after)
+                continue
+
+            resp.raise_for_status()
+            data = resp.json()
+
+            candidates = data.get("candidates", [])
+            if not candidates:
+                raise RuntimeError(f"No candidates in response: {data}")
+
+            # Check for token limit
+            finish_reason = candidates[0].get("finishReason", "")
+            if finish_reason == "MAX_TOKENS":
+                raise RuntimeError("Model hit token limit")
+
+            parts = candidates[0].get("content", {}).get("parts", [])
+            if not parts:
+                raise RuntimeError(f"No parts in response: {data}")
+
+            response_text = parts[0].get("text", "")
+            if not response_text:
+                raise RuntimeError(f"Empty text in response: {data}")
+
+            return response_text
+
+        except Exception as e:
+            last_error = e
+            if attempt < max_attempts - 1:
+                time.sleep(base_delay_s * (2 ** attempt))
+
+    raise RuntimeError(f"API call failed after {max_attempts} attempts: {last_error}")
+
+
+def describe_card(
+    image_path: Path,
+    *,
+    model: str | None = None,
+) -> CardDescription:
+    """
+    Stage 1: Have the LLM describe what it sees on the card.
+
+    This is a pure observation step - no judgment or scoring.
+    """
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash-preview-05-20")
+
+    response_text = _call_gemini(
+        DESCRIBE_PROMPT,
+        image_path=image_path,
+        model=model,
+    )
+
+    data = _parse_json_response(response_text)
+
+    return CardDescription(
+        card_number=data.get("card_number", ""),
+        card_number_format=data.get("card_number_format", ""),
+        word=data.get("word", ""),
+        gloss=data.get("gloss", ""),
+        card_type=data.get("card_type", ""),
+        rarity_text=data.get("rarity_text", ""),
+        rarity_icon_shape=data.get("rarity_icon_shape", ""),
+        rarity_icon_color=data.get("rarity_icon_color", ""),
+        stat_pip_shape=data.get("stat_pip_shape", ""),
+        stat_pip_fill_color=data.get("stat_pip_fill_color", ""),
+        stat_lore=data.get("stat_lore", 0),
+        stat_context=data.get("stat_context", 0),
+        stat_complexity=data.get("stat_complexity", 0),
+        ability_text=data.get("ability_text", ""),
+        ot_verse_visible=data.get("ot_verse_visible", False),
+        nt_verse_visible=data.get("nt_verse_visible", False),
+        greek_text_visible=data.get("greek_text_visible", False),
+        hebrew_text_visible=data.get("hebrew_text_visible", False),
+        trivia_bullet_count=data.get("trivia_bullet_count", 0),
+        has_brackets=data.get("has_brackets", False),
+        bracket_locations=data.get("bracket_locations", []),
+        art_description=data.get("art_description", ""),
+        text_inside_art=data.get("text_inside_art", False),
+        frame_intact=data.get("frame_intact", True),
+        all_panels_visible=data.get("all_panels_visible", True),
+        missing_panels=data.get("missing_panels", []),
+        garbled_text_locations=data.get("garbled_text_locations", []),
+        raw_response=response_text,
+    )
+
+
+def score_against_rubric(
+    description: CardDescription,
+    card_json: dict,
+    *,
+    model: str | None = None,
+) -> ReviewResult:
+    """
+    Stage 2: Score the description against the expected content and rubric.
+
+    This is a pure judgment step - comparing observations to expectations.
+    """
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash-preview-05-20")
+
+    # Extract expected content
+    content = card_json.get("content", {})
+    word = content.get("WORD", "UNKNOWN")
+    gloss = content.get("GLOSS", "")
+    card_type = content.get("CARD_TYPE", "")
+    rarity = content.get("RARITY_TEXT", "COMMON")
+    number = content.get("NUMBER", "000")
+    ability = content.get("ABILITY_TEXT", "")
+    lore = content.get("STAT_LORE", 0)
+    context_stat = content.get("STAT_CONTEXT", 0)
+    complexity = content.get("STAT_COMPLEXITY", 0)
+
+    rarity_color = RARITY_COLORS.get(rarity, "white")
+
+    # Convert description to JSON for the prompt
+    description_dict = {
+        "card_number": description.card_number,
+        "card_number_format": description.card_number_format,
+        "word": description.word,
+        "gloss": description.gloss,
+        "card_type": description.card_type,
+        "rarity_text": description.rarity_text,
+        "rarity_icon_shape": description.rarity_icon_shape,
+        "rarity_icon_color": description.rarity_icon_color,
+        "stat_pip_shape": description.stat_pip_shape,
+        "stat_pip_fill_color": description.stat_pip_fill_color,
+        "stat_lore": description.stat_lore,
+        "stat_context": description.stat_context,
+        "stat_complexity": description.stat_complexity,
+        "ability_text": description.ability_text,
+        "ot_verse_visible": description.ot_verse_visible,
+        "nt_verse_visible": description.nt_verse_visible,
+        "greek_text_visible": description.greek_text_visible,
+        "hebrew_text_visible": description.hebrew_text_visible,
+        "trivia_bullet_count": description.trivia_bullet_count,
+        "has_brackets": description.has_brackets,
+        "bracket_locations": description.bracket_locations,
+        "art_description": description.art_description,
+        "text_inside_art": description.text_inside_art,
+        "frame_intact": description.frame_intact,
+        "all_panels_visible": description.all_panels_visible,
+        "missing_panels": description.missing_panels,
+        "garbled_text_locations": description.garbled_text_locations,
+    }
+
+    prompt = SCORE_PROMPT_TEMPLATE.format(
+        number=number,
+        word=word,
+        gloss=gloss,
+        card_type=card_type,
+        rarity=rarity,
+        rarity_color=rarity_color,
+        lore=lore,
+        context=context_stat,
+        complexity=complexity,
+        ability=ability,
+        description_json=json.dumps(description_dict, indent=2),
+    )
+
+    response_text = _call_gemini(prompt, model=model)
+    review_data = _parse_json_response(response_text)
+
+    total_score = review_data.get("total_score", 0)
+
+    categories = {
+        "formatting": review_data.get("formatting", {"score": 0, "max": 35, "issues": []}),
+        "text_clarity": review_data.get("text_clarity", {"score": 0, "max": 30, "issues": []}),
+        "art_quality": review_data.get("art_quality", {"score": 0, "max": 20, "issues": []}),
+        "content_alignment": review_data.get("content_alignment", {"score": 0, "max": 15, "issues": []}),
+    }
+
+    corrections = review_data.get("corrections", [])
+
+    return ReviewResult(
+        score=total_score,
+        passed=total_score >= 90,
+        categories=categories,
+        corrections=corrections,
+        needs_rebuild=total_score < 90,
+        description=description,
+        raw_response=response_text,
+    )
 
 
 def review_card(
@@ -178,163 +499,77 @@ def review_card(
     base_delay_s: float = 2.0,
 ) -> ReviewResult:
     """
-    Review a generated card image against expected content.
+    Full two-stage review of a card image.
 
-    Args:
-        image_path: Path to the card image
-        card_json: The card.json data with expected content
-        model: Gemini model to use (default from env or gemini-3-pro-preview)
-        pass_threshold: Minimum score to pass (default 90)
-        max_attempts: Retry attempts on API failure
-        base_delay_s: Base delay for exponential backoff
+    Stage 1: Describe what's on the card (observation only)
+    Stage 2: Score the description against the rubric (judgment)
 
-    Returns:
-        ReviewResult with score, issues, and corrections
+    This separation ensures more accurate evaluation.
     """
-    if requests is None:
-        raise RuntimeError("requests library required. Install with: pip install requests")
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-2.5-flash-preview-05-20")
 
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if not api_key:
-        raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
+    # Stage 1: Describe
+    description = describe_card(image_path, model=model)
 
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    # Stage 2: Score
+    result = score_against_rubric(description, card_json, model=model)
+    result.passed = result.score >= pass_threshold
 
-    # Extract expected content from card.json
-    content = card_json.get("content", {})
-    word = content.get("WORD", "UNKNOWN")
-    gloss = content.get("GLOSS", "")
-    card_type = content.get("CARD_TYPE", "")
-    rarity = content.get("RARITY_TEXT", "COMMON")
-    number = content.get("NUMBER", "000")
-    ability = content.get("ABILITY_TEXT", "")
-    lore = content.get("STAT_LORE", 0)
-    context = content.get("STAT_CONTEXT", 0)
-    complexity = content.get("STAT_COMPLEXITY", 0)
+    return result
 
-    rarity_icon_desc = RARITY_ICON_DESCRIPTIONS.get(rarity, "unknown icon")
 
-    # Build prompt
-    prompt = REVIEW_PROMPT_TEMPLATE.format(
-        word=word,
-        gloss=gloss,
-        card_type=card_type,
-        rarity=rarity,
-        rarity_icon_desc=rarity_icon_desc,
-        number=number,
-        ability=ability,
-        lore=lore,
-        context=context,
-        complexity=complexity,
-        rubric=REVIEW_RUBRIC,
-    )
-
-    # Encode image
-    image_data = _encode_image(image_path)
-    mime_type = _get_mime_type(image_path)
-
-    # Build API request
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-
-    payload = {
-        "contents": [
-            {
-                "parts": [
-                    {
-                        "inline_data": {
-                            "mime_type": mime_type,
-                            "data": image_data,
-                        }
-                    },
-                    {"text": prompt},
-                ]
-            }
-        ],
-        "generationConfig": {
-            "temperature": 0.1,  # Low temp for consistent scoring
-            "maxOutputTokens": 8192,  # High limit to accommodate model thinking
-        },
-    }
-
-    headers = {
-        "Content-Type": "application/json",
-        "x-goog-api-key": api_key,
-    }
-
-    # Make request with retries
-    last_error: Exception | None = None
-    for attempt in range(max_attempts):
-        try:
-            resp = requests.post(url, json=payload, headers=headers, timeout=120)
-
-            if resp.status_code == 429:
-                # Rate limited - use Retry-After or exponential backoff
-                retry_after = int(resp.headers.get("Retry-After", base_delay_s * (2 ** attempt)))
-                time.sleep(retry_after)
-                continue
-
-            resp.raise_for_status()
-
-            data = resp.json()
-
-            # Check for MAX_TOKENS finish reason - retry if we hit token limit
-            candidates = data.get("candidates", [])
-            if candidates:
-                finish_reason = candidates[0].get("finishReason", "")
-                if finish_reason == "MAX_TOKENS":
-                    raise RuntimeError(f"Model hit token limit (MAX_TOKENS), retrying...")
-
-            # Extract text from response
-            if not candidates:
-                raise RuntimeError(f"No candidates in response: {data}")
-
-            parts = candidates[0].get("content", {}).get("parts", [])
-            if not parts:
-                raise RuntimeError(f"No parts in response: {data}")
-
-            response_text = parts[0].get("text", "")
-            if not response_text:
-                raise RuntimeError(f"Empty text in response: {data}")
-
-            # Parse the review
-            review_data = _parse_review_response(response_text)
-
-            # Build result
-            total_score = review_data.get("total_score", 0)
-
-            categories = {
-                "formatting": review_data.get("formatting", {"score": 0, "max": 35, "issues": []}),
-                "text_clarity": review_data.get("text_clarity", {"score": 0, "max": 30, "issues": []}),
-                "art_quality": review_data.get("art_quality", {"score": 0, "max": 20, "issues": []}),
-                "content_alignment": review_data.get("content_alignment", {"score": 0, "max": 15, "issues": []}),
-            }
-
-            corrections = review_data.get("corrections", [])
-
-            return ReviewResult(
-                score=total_score,
-                passed=total_score >= pass_threshold,
-                categories=categories,
-                corrections=corrections,
-                needs_rebuild=total_score < 90,
-                raw_response=response_text,
-            )
-
-        except Exception as e:
-            last_error = e
-            if attempt < max_attempts - 1:
-                time.sleep(base_delay_s * (2 ** attempt))
-
-    raise RuntimeError(f"Review failed after {max_attempts} attempts: {last_error}")
+def format_description_report(description: CardDescription) -> str:
+    """Format a card description as a human-readable report."""
+    lines = [
+        "## Card Description (What the LLM Sees)",
+        "",
+        f"**Card Number:** {description.card_number} (format: {description.card_number_format})",
+        f"**Word:** {description.word}",
+        f"**Gloss:** {description.gloss}",
+        f"**Type:** {description.card_type}",
+        f"**Rarity:** {description.rarity_text} ({description.rarity_icon_shape} icon, {description.rarity_icon_color})",
+        "",
+        "### Stats",
+        f"- Pip Shape: {description.stat_pip_shape}",
+        f"- Pip Fill Color: {description.stat_pip_fill_color}",
+        f"- Lore: {description.stat_lore}/5",
+        f"- Context: {description.stat_context}/5",
+        f"- Complexity: {description.stat_complexity}/5",
+        "",
+        "### Content Visibility",
+        f"- OT Verse: {'✓' if description.ot_verse_visible else '✗'}",
+        f"- NT Verse: {'✓' if description.nt_verse_visible else '✗'}",
+        f"- Greek: {'✓' if description.greek_text_visible else '✗'}",
+        f"- Hebrew: {'✓' if description.hebrew_text_visible else '✗'}",
+        f"- Trivia bullets: {description.trivia_bullet_count}",
+        "",
+        "### Issues Detected",
+        f"- Brackets visible: {'YES - ' + ', '.join(description.bracket_locations) if description.has_brackets else 'No'}",
+        f"- Text in art: {'YES' if description.text_inside_art else 'No'}",
+        f"- Frame intact: {'Yes' if description.frame_intact else 'NO - damaged'}",
+        f"- Missing panels: {', '.join(description.missing_panels) if description.missing_panels else 'None'}",
+        f"- Garbled text: {', '.join(description.garbled_text_locations) if description.garbled_text_locations else 'None'}",
+        "",
+        f"### Art Description",
+        f"{description.art_description}",
+    ]
+    return "\n".join(lines)
 
 
 def format_review_report(result: ReviewResult) -> str:
     """Format a review result as a human-readable report."""
-    lines = [
+    lines = []
+
+    # Include description if available
+    if result.description:
+        lines.append(format_description_report(result.description))
+        lines.extend(["", "---", ""])
+
+    lines.extend([
         f"## Card Review Score: {result.score}/100",
         "",
         "### Category Breakdown:",
-    ]
+    ])
 
     for name, data in result.categories.items():
         score = data.get("score", 0)
@@ -363,24 +598,29 @@ def format_review_report(result: ReviewResult) -> str:
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Review a Hypertext card image")
+    parser = argparse.ArgumentParser(description="Review a Hypertext card image (two-stage)")
     parser.add_argument("image_path", help="Path to card image")
     parser.add_argument("card_json_path", help="Path to card.json")
     parser.add_argument("--threshold", type=int, default=90, help="Pass threshold (default 90)")
+    parser.add_argument("--describe-only", action="store_true", help="Only run description stage")
 
     args = parser.parse_args()
 
-    with open(args.card_json_path, "r", encoding="utf-8") as f:
-        card_data = json.load(f)
+    if args.describe_only:
+        description = describe_card(Path(args.image_path))
+        print(format_description_report(description))
+    else:
+        with open(args.card_json_path, "r", encoding="utf-8") as f:
+            card_data = json.load(f)
 
-    result = review_card(
-        Path(args.image_path),
-        card_data,
-        pass_threshold=args.threshold,
-    )
+        result = review_card(
+            Path(args.image_path),
+            card_data,
+            pass_threshold=args.threshold,
+        )
 
-    print(format_review_report(result))
-    print(f"\nRaw score: {result.score}")
+        print(format_review_report(result))
+        print(f"\nRaw score: {result.score}")
 
-    import sys
-    sys.exit(0 if result.passed else 1)
+        import sys
+        sys.exit(0 if result.passed else 1)

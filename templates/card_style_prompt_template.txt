@@ -35,6 +35,14 @@ CRITICAL RULES:
 - Maintain the reference card's navy/gold frame EXACTLY.
 - Keep the exact same text box positions and styles.
 - NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+  WRONG: [#003] or [NOUN] or [RARE]
+  CORRECT: #003 or NOUN or RARE
+- Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
 - Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
-- Stat pips: Use small circles with SOLID NAVY FILL (not gold). Filled navy circles = stat value, empty/outlined circles = remaining. Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty). Do NOT use gold fill for stat pips. Do NOT use diamond shapes for stat pips.
+- Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
+  WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
+  CORRECT: Navy-blue filled circles (dark blue, like the card border color)
+  Filled navy circles = stat value, empty/outlined circles = remaining.
+  Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty with just outline)
+  The filled pips must be NAVY (dark blue) not gold/yellow.
 - Do not add extra text or modify the layout.

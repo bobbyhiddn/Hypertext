@@ -13,7 +13,15 @@ if str(TOOLS_DIR) not in sys.path:
     sys.path.insert(0, str(TOOLS_DIR))
 
 from gemini_text import generate_text, generate_text_with_grounding
-from gemini_review import review_card, format_review_report, ReviewResult
+from gemini_review import (
+    review_card,
+    describe_card,
+    score_against_rubric,
+    format_review_report,
+    format_description_report,
+    ReviewResult,
+    CardDescription,
+)
 from render_post import render_post
 
 try:
@@ -1327,14 +1335,14 @@ def _run_polish(image_path: Path) -> None:
 
 def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     """
-    Review a generated card image and iteratively improve it.
+    Multi-stage review of a generated card image with iterative improvement.
 
-    Flow:
-    1. Score the card image against the checklist
-    2. If score < 90%: rebuild image entirely
-    3. If score >= 90%: run polish (bracket removal), then re-score
-    4. Repeat up to max_attempts times
-    5. If final score < 100%: flag as yellow in meta.yml
+    New Flow:
+    1. DESCRIBE: Have LLM describe what it sees on the card (observation only)
+    2. SCORE: Compare description against rubric in separate call (judgment)
+    3. DECIDE: If score < 90, rebuild. If score >= 90 but < 100, revise.
+    4. ITERATE: Try up to max_attempts times to reach 100/100
+    5. FLAG: If not 100 after max_attempts, flag warning for user to revise
 
     Returns 0 on success (score >= 90), 1 on failure.
     """
@@ -1358,46 +1366,112 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
 
     best_score = 0
     best_result: ReviewResult | None = None
+    all_descriptions: list[CardDescription] = []
 
     for attempt in range(1, max_attempts + 1):
-        _log(f"[phase review] attempt {attempt}/{max_attempts} for {word}")
+        _log(f"[phase review] === ATTEMPT {attempt}/{max_attempts} for {word} ===")
 
-        # Score the current image
+        # Stage 1: DESCRIBE - Have LLM observe the card
+        _log(f"[phase review] Stage 1: Describing card...")
         try:
-            result = review_card(out_png, card_json, pass_threshold=90)
+            description = describe_card(out_png)
+            all_descriptions.append(description)
         except Exception as e:
-            _log(f"[phase review] Review failed: {e}")
+            _log(f"[phase review] Description failed: {e}")
+            return 1
+
+        # Print what the LLM sees
+        print("\n" + "=" * 60)
+        print(format_description_report(description))
+        print("=" * 60 + "\n")
+
+        # Stage 2: SCORE - Compare description against rubric
+        _log(f"[phase review] Stage 2: Scoring against rubric...")
+        try:
+            result = score_against_rubric(description, card_json)
+            result.passed = result.score >= 90
+        except Exception as e:
+            _log(f"[phase review] Scoring failed: {e}")
             return 1
 
         _log(f"[phase review] Score: {result.score}/100")
-        print(format_review_report(result))
+
+        # Print score breakdown
+        print("\n" + "-" * 40)
+        for name, data in result.categories.items():
+            score = data.get("score", 0)
+            max_score = data.get("max", 0)
+            issues = data.get("issues", [])
+            status = "✓" if score == max_score else "⚠" if score >= max_score * 0.7 else "✗"
+            print(f"{status} {name.replace('_', ' ').title()}: {score}/{max_score}")
+            for issue in issues:
+                print(f"    - {issue}")
+        print("-" * 40 + "\n")
+
+        if result.corrections:
+            print("Corrections needed:")
+            for i, correction in enumerate(result.corrections, 1):
+                print(f"  {i}. {correction}")
+            print()
 
         if result.score > best_score:
             best_score = result.score
             best_result = result
 
-        # Perfect score - we're done
+        # Stage 3: DECIDE - Perfect score means we're done
         if result.score >= 100:
             _log(f"[phase review] Perfect score achieved!")
             break
 
         # If this is the last attempt, don't regenerate
         if attempt >= max_attempts:
+            _log(f"[phase review] Max attempts reached. Final score: {result.score}/100")
             break
 
-        # Score < 90: full rebuild
+        # Stage 4: ITERATE based on score
         if result.score < 90:
-            _log(f"[phase review] Score {result.score} < 90, rebuilding image...")
+            # Score < 90: full rebuild needed
+            _log(f"[phase review] Score {result.score} < 90, REBUILDING image...")
             try:
                 _generate_image_only(card_dir=card_dir)
             except Exception as e:
                 _log(f"[phase review] Image regeneration failed: {e}")
                 return 1
-
-        # Score >= 90 but < 100: polish and retry
         else:
-            _log(f"[phase review] Score {result.score} >= 90, running polish...")
-            _run_polish(out_png)
+            # Score >= 90 but < 100: targeted revision based on corrections
+            _log(f"[phase review] Score {result.score} >= 90, attempting targeted REVISION...")
+
+            # Build revision instructions from corrections
+            if result.corrections:
+                revision_instructions = _build_revision_from_corrections(description, result.corrections)
+                _log(f"[phase review] Auto-revision: {revision_instructions}")
+
+                # Write temporary revise instructions
+                revise_path = card_dir / "revise.txt"
+                original_revise = None
+                if revise_path.exists():
+                    with open(revise_path, "r", encoding="utf-8") as f:
+                        original_revise = f.read()
+
+                # Write auto-generated revision
+                with open(revise_path, "w", encoding="utf-8") as f:
+                    f.write(f"# Auto-generated revision from review (attempt {attempt})\n")
+                    f.write(f"General_Revision_Request:\n{revision_instructions}\n")
+
+                # Run the image regeneration (not full revise, just image)
+                try:
+                    _generate_image_only(card_dir=card_dir)
+                except Exception as e:
+                    _log(f"[phase review] Revision image regeneration failed: {e}")
+
+                # Restore original revise.txt
+                if original_revise is not None:
+                    with open(revise_path, "w", encoding="utf-8") as f:
+                        f.write(original_revise)
+            else:
+                # No corrections specified, just run polish
+                _log(f"[phase review] No specific corrections, running polish...")
+                _run_polish(out_png)
 
     # Update meta.yml with review status
     meta_path = card_dir / "meta.yml"
@@ -1412,28 +1486,93 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     meta["review_score"] = best_score
     meta["review_attempts"] = max_attempts
 
+    # Store description summary for debugging
+    if all_descriptions:
+        last_desc = all_descriptions[-1]
+        meta["last_description"] = {
+            "card_number_format": last_desc.card_number_format,
+            "stat_pip_shape": last_desc.stat_pip_shape,
+            "stat_pip_fill_color": last_desc.stat_pip_fill_color,
+            "has_brackets": last_desc.has_brackets,
+            "bracket_locations": last_desc.bracket_locations if last_desc.has_brackets else [],
+        }
+
     if best_score >= 100:
         meta["review_status"] = "green"
         status_msg = "PASS (100%)"
     elif best_score >= 90:
         meta["review_status"] = "yellow"
-        status_msg = f"NEEDS MANUAL REVIEW ({best_score}%)"
+        status_msg = f"NEEDS MANUAL REVISION ({best_score}%) - review failed to reach 100 after {max_attempts} attempts"
         if best_result and best_result.corrections:
             meta["review_notes"] = "; ".join(best_result.corrections[:3])
+        # Add user warning
+        meta["user_action_required"] = True
+        meta["user_warning"] = f"Card scored {best_score}/100. Please review and revise manually."
     else:
         meta["review_status"] = "red"
         status_msg = f"FAILED ({best_score}%)"
         if best_result and best_result.corrections:
             meta["review_notes"] = "; ".join(best_result.corrections[:3])
+        meta["user_action_required"] = True
+        meta["user_warning"] = f"Card scored only {best_score}/100. Rebuild required."
 
     with open(meta_path, "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
 
     _log(f"[phase review] Final status: {status_msg}")
+    print(f"\n{'='*60}")
     print(f"Review complete for {word}: {status_msg}")
+    if best_score < 100:
+        print(f"⚠️  WARNING: Card did not reach 100/100. Manual revision recommended.")
+    print(f"{'='*60}\n")
 
     # Return success if score >= 90 (yellow or green)
     return 0 if best_score >= 90 else 1
+
+
+def _build_revision_from_corrections(description: CardDescription, corrections: list[str]) -> str:
+    """
+    Build revision instructions from review corrections and description.
+
+    Focuses on the most common issues: stat pip color, brackets, card number format.
+    """
+    instructions = []
+
+    # Check for stat pip color issue
+    if description.stat_pip_fill_color.lower() not in ("navy", "dark blue", "blue"):
+        instructions.append(
+            f"CRITICAL: Stat pips are currently {description.stat_pip_fill_color}. "
+            "They MUST be NAVY (dark blue) filled circles, not gold or yellow."
+        )
+
+    # Check for stat pip shape issue
+    if description.stat_pip_shape.lower() != "circle":
+        instructions.append(
+            f"CRITICAL: Stat pips are {description.stat_pip_shape} shapes. "
+            "They MUST be CIRCLES only, never diamonds, squares, or stars."
+        )
+
+    # Check for bracket issues
+    if description.has_brackets:
+        locations = ", ".join(description.bracket_locations) if description.bracket_locations else "various locations"
+        instructions.append(
+            f"CRITICAL: Remove ALL square brackets [ ]. Found at: {locations}. "
+            "Write text directly without any brackets."
+        )
+
+    # Check for card number format
+    if description.card_number_format and "[" in description.card_number_format:
+        instructions.append(
+            f"CRITICAL: Card number format is '{description.card_number_format}'. "
+            "It MUST be '#XXX' format (e.g., #003), NOT '[#XXX]'."
+        )
+
+    # Add any other corrections from the review
+    for correction in corrections[:3]:  # Limit to top 3
+        if correction not in "\n".join(instructions):
+            instructions.append(correction)
+
+    return "\n".join(instructions) if instructions else "Improve image quality and text clarity."
 
 
 def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int) -> int:
