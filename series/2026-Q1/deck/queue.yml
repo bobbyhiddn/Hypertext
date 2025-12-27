@@ -1,18 +1,13 @@
-- word: MAGI
-  card_type: TITLE
-  rarity: GLORIOUS
-  ability: "On draw, you may reveal: spend 1 card from your hand to activate that card's on-reveal ability. Then this card is spent."
-
 - word: GOSPEL
   card_type: NOUN
   rarity: RARE
-  ability: "You may reveal a card from your hand. Reveal cards from the top of the shared deck equal to that card's Lore stat; keep one and discard the rest."
-
+  ability: You may reveal a card from your hand. Reveal cards from the top of the
+    shared deck equal to that card's Lore stat; keep one and discard the rest.
 - word: COVENANT
   card_type: NOUN
   rarity: GLORIOUS
-  ability: "Declare a suit. All other players give you a card of that suit. If they cannot, they reveal their hand."
-
+  ability: Declare a suit. All other players give you a card of that suit. If they
+    cannot, they reveal their hand.
 - word: GRACE
   card_type: NOUN
   rarity: GLORIOUS
