@@ -18,6 +18,6 @@ Rarity_Change_Request: Let's make grace an uncommon
 
 Ability_Change_Request: Let's make the ability: You may give a card to another player, if you do, draw 2 cards.
 
-Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+Stats_Change_Request: Set Lore to 4, set Context to 4
 
-General_Revision_Request: Please make the stat pips navy, not gold, and make the number #004 instead of [#004]
+General_Revision_Request: Please make the stat pips navy, not gold, and make the number #004 instead of [#004].
