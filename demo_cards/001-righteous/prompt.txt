@@ -1,0 +1,51 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #001
+Word: RIGHTEOUS
+Gloss: Acting in accord with divine or moral law; free from guilt or sin.
+Type: ADJECTIVE
+DRAW Rarity (Top Right): UNCOMMON with green diamond icon
+Stats: Lore 5, Context 5, Complexity 3
+
+Art Description: A golden balance scale resting on a rough stone altar, illuminated by a single vertical shaft of light in a dark chamber, realistic oil painting style, cinematic lighting. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: Discard 1 ADJECTIVE to draw 2 cards.
+
+OT Verse: Habakkuk 2:4 — "...but the righteous shall live by his faith."
+NT Verse: Romans 1:17 — "...as it is written, 'The righteous shall live by faith.'"
+
+Greek: δίκαιος
+(Below Greek, smaller text) Transliteration: dikaios
+NT Refs: Matt 25:46 • Rom 3:10 • 2 Tim 4:8 • 1 Pet 3:12
+
+Hebrew: צַדִּיק
+(Below Hebrew, smaller text) Transliteration: tsaddiq
+OT Refs: Gen 7:1 • Ps 1:6 • Prov 10:11 • Isa 53:11
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• In both Hebrew and Greek, the words for 'righteousness' and 'justice' share the same linguistic root.
+• Noah is the first person explicitly called 'righteous' in the Bible (Genesis 6:9).
+• The phrase 'The righteous shall live by faith' is quoted three times in the New Testament: Romans, Galatians, and Hebrews.
+• Jesus is referred to as 'the Righteous One' in Acts 7:52 and 1 John 2:1.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+  WRONG: [#003] or [NOUN] or [RARE]
+  CORRECT: #003 or NOUN or RARE
+- Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
+  WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
+  CORRECT: Navy-blue filled circles (dark blue, like the card border color)
+  Filled navy circles = stat value, empty/outlined circles = remaining.
+  Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty with just outline)
+  The filled pips must be NAVY (dark blue) not gold/yellow.
+- Do not add extra text or modify the layout.

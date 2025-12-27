@@ -1,0 +1,41 @@
+number: '001'
+word: RIGHTEOUS
+gloss: Acting in accord with divine or moral law; free from guilt or sin.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+art_prompt: A golden balance scale resting on a rough stone altar, illuminated by
+  a single vertical shaft of light in a dark chamber, realistic oil painting style,
+  cinematic lighting
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Discard 1 ADJECTIVE to draw 2 cards.
+ot_verse:
+  ref: Habakkuk 2:4
+  snippet: '...but the righteous shall live by his faith.'
+nt_verse:
+  ref: Romans 1:17
+  snippet: '...as it is written, ''The righteous shall live by faith.'''
+greek:
+  text: δίκαιος
+  translit: dikaios
+hebrew:
+  text: צַדִּיק
+  translit: tsaddiq
+ot_refs: Gen 7:1 • Ps 1:6 • Prov 10:11 • Isa 53:11
+nt_refs: Matt 25:46 • Rom 3:10 • 2 Tim 4:8 • 1 Pet 3:12
+trivia:
+- In both Hebrew and Greek, the words for 'righteousness' and 'justice' share the
+  same linguistic root.
+- Noah is the first person explicitly called 'righteous' in the Bible (Genesis 6:9).
+- 'The phrase ''The righteous shall live by faith'' is quoted three times in the New
+  Testament: Romans, Galatians, and Hebrews.'
+- Jesus is referred to as 'the Righteous One' in Acts 7:52 and 1 John 2:1.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
