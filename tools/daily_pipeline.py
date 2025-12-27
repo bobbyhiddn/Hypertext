@@ -40,6 +40,50 @@ GAME_RULES_SNIPPET = (
     "- Rarity patterns: COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique."
 )
 
+# Visual formatting standards that MUST be followed for card rendering
+FORMATTING_RUBRIC = """
+## CARD FORMATTING STANDARDS (must follow exactly)
+
+### Card Number Format
+- Format: #XXX (e.g., #001, #042)
+- WRONG: [#001], 001, #1
+- CORRECT: #001
+
+### Stat Pips
+- Shape: CIRCLES only (never diamonds, squares, or stars)
+- Filled pip color: NAVY (dark blue, matching the card border)
+- Empty pip color: Outlined circles with parchment fill
+- WRONG: Gold-filled circles, yellow pips, diamond shapes
+- CORRECT: Navy-blue solid filled circles for the stat value
+
+### Rarity Icon
+- Shape: DIAMOND for all rarities
+- Position: Top right, after rarity text
+- Colors by rarity:
+  - COMMON: white diamond
+  - UNCOMMON: green diamond
+  - RARE: gold diamond
+  - GLORIOUS: orange diamond
+- Format: "RARE ◆" (text then icon, not "◆ RARE")
+
+### Brackets
+- NEVER use square brackets [ ] anywhere on the card
+- WRONG: [NOUN], [#003], [RARE]
+- CORRECT: NOUN, #003, RARE
+
+### Text Display
+- Greek text: Standard left-to-right display
+- Hebrew text: Right-to-left display
+- Transliteration: Show ONLY the transliterated word, no "transliteration:" prefix
+- WRONG: "transliteration: diatheke" or "TRANSLIT: diatheke"
+- CORRECT: "diathēkē"
+
+### General
+- Do NOT make changes beyond what was specifically requested
+- Preserve existing correct formatting when making changes
+- Only modify the specific fields mentioned in the revision request
+"""
+
 
 def _load_rules_appendix() -> str:
     try:
@@ -1131,11 +1175,15 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         "Do NOT modify /render_instructions, /style_guide, or /layout.\n"
         "Follow game rules: there is ONE shared deck; do not say 'your deck'. "
         "Allowed ops: add, replace. Do not use remove/move/copy/test.\n\n"
+        "IMPORTANT: Only make changes that are EXPLICITLY requested in the HUMAN_EDIT_INSTRUCTIONS below. "
+        "Do NOT make any other changes, improvements, or reformatting beyond what was asked.\n\n"
         "GAME RULES (must follow):\n"
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
-        "HUMAN_EDIT_INSTRUCTIONS:\n"
+        + FORMATTING_RUBRIC
+        + "\n\n"
+        "HUMAN_EDIT_INSTRUCTIONS (ONLY make these specific changes):\n"
         + instructions
         + "\n\n"
         "CARD_JSON:\n"

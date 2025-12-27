@@ -69,23 +69,43 @@ class ReviewResult:
 
 
 # Stage 1: Description prompt - just observe, don't judge
-DESCRIBE_PROMPT = """You are examining a trading card image. Describe EXACTLY what you see.
+# Includes ideal card template so the LLM knows what elements to look for
+DESCRIBE_PROMPT = """You are examining a Hypertext trading card image. Your job is to describe EXACTLY what you see.
 
-Do NOT judge quality or correctness. Just report what is visible.
+Do NOT judge quality or correctness. Just report what is actually visible on the card.
 
-Examine and report:
+## IDEAL CARD LAYOUT (what elements to look for)
 
-1. CARD NUMBER: What text appears in the card number area? Report the exact format (e.g., "#003" vs "[#003]" vs "003")
+A correctly formatted Hypertext card should have these elements:
+- HEADER AREA: Card number (format: #XXX), card type label, main word/title, gloss/subtitle
+- TOP RIGHT: Rarity text followed by a diamond-shaped icon
+- ART PANEL: Large illustration in the middle, no text inside the art
+- STATS ROW: Three stats (LORE, CONTEXT, COMPLEXITY) each with 5 small circle-shaped pips
+  - Filled pips should be NAVY (dark blue) color
+  - Empty pips should be outlined/hollow
+- ABILITY PANEL: One line of game ability text
+- VERSE PANELS: OT verse reference and snippet, NT verse reference and snippet
+- GREEK/HEBREW STRIP: Greek text on one side, Hebrew text on other, with transliterations below
+- TRIVIA SECTION: 3-5 bullet points of biblical trivia
+- FOOTER: Series identifier
+- FRAME: Navy border with gold trim, no brackets [ ] anywhere
+
+## WHAT TO EXAMINE AND REPORT
+
+1. CARD NUMBER: What text appears in the card number area? Report the EXACT format you see (e.g., "#003" vs "[#003]" vs "003" vs "#003 NOUN")
 2. WORD/TITLE: What is the main word/title at the top?
 3. GLOSS: What is the subtitle/definition text?
 4. CARD TYPE: What type label is shown (NOUN, VERB, etc.)?
 5. RARITY: What rarity text is shown? What SHAPE is the rarity icon (circle/square/diamond/hexagon)? What COLOR is it?
-6. STAT PIPS: What SHAPE are the stat pips (circles/diamonds/squares/stars)? What COLOR are the FILLED pips (navy/gold/blue/other)? Count filled pips for each stat (Lore, Context, Complexity).
+6. STAT PIPS:
+   - What SHAPE are the stat pips? (circles/diamonds/squares/stars)
+   - What COLOR are the FILLED pips? (navy/dark blue/gold/yellow/other - be specific)
+   - Count filled pips for each stat (Lore, Context, Complexity)
 7. ABILITY TEXT: What does the ability text say?
-8. VERSES: Is the OT verse section visible? Is the NT verse section visible?
-9. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible?
+8. VERSES: Is the OT verse section visible and readable? Is the NT verse section visible and readable?
+9. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible? Are transliterations shown?
 10. TRIVIA: How many trivia bullet points are visible?
-11. BRACKETS: Are there any square brackets [ ] visible on the card? Where?
+11. BRACKETS: Are there any square brackets [ ] visible ANYWHERE on the card? If yes, list exact locations.
 12. ART PANEL: Briefly describe the artwork. Is there any TEXT inside the art panel?
 13. FRAME: Is the card frame/border intact and complete?
 14. PANELS: Are all expected panels visible? List any missing sections.
@@ -94,8 +114,8 @@ Examine and report:
 Return ONLY JSON in this exact format:
 ```json
 {
-  "card_number": "<exact text shown>",
-  "card_number_format": "<format like '#003' or '[#003]' or '003'>",
+  "card_number": "<exact text shown, e.g., '#003 NOUN' or '[#003]'>",
+  "card_number_format": "<just the number format: '#003' or '[#003]' or '003'>",
   "word": "<main word>",
   "gloss": "<subtitle text>",
   "card_type": "<type shown>",
@@ -103,10 +123,10 @@ Return ONLY JSON in this exact format:
   "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
   "rarity_icon_color": "<color name>",
   "stat_pip_shape": "<circle|diamond|square|star|other>",
-  "stat_pip_fill_color": "<navy|gold|blue|other color>",
-  "stat_lore": <number of filled pips>,
-  "stat_context": <number of filled pips>,
-  "stat_complexity": <number of filled pips>,
+  "stat_pip_fill_color": "<navy|dark blue|gold|yellow|blue|other - be specific>",
+  "stat_lore": <number of filled pips 0-5>,
+  "stat_context": <number of filled pips 0-5>,
+  "stat_complexity": <number of filled pips 0-5>,
   "ability_text": "<ability text>",
   "ot_verse_visible": true|false,
   "nt_verse_visible": true|false,
