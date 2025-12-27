@@ -50,3 +50,12 @@ review_status: yellow
 review_notes: Increase Context stat pips from 4 to 5
 user_action_required: true
 user_warning: Card scored 95/100. Please review and revise manually.
+revision: 1
+revision_notes: 'Ability change request:
+
+  Let''s make a more thematic ability that is common strength.
+
+
+  Stats change request:
+
+  Set Lore to 1.'
