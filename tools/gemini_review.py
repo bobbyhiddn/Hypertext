@@ -49,7 +49,7 @@ Score each category. Deduct points for issues found. Return JSON.
 - Gloss clearly readable (5 pts) - subtitle/definition must be readable
 - Ability text fully rendered (5 pts) - no cutoff, no missing words, complete sentence
 - Verse references readable (5 pts) - both OT and NT verse lines must be legible
-- Greek/Hebrew render correctly (5 pts) - Hebrew should be right-to-left, Greek should be proper glyphs
+- Greek/Hebrew render correctly (5 pts) - Hebrew should be right-to-left, Greek should be proper glyphs; transliterations should display only the words without "transliteration:" or "TRANSLIT:" prefix
 - No garbled/warped/broken text (5 pts) - deduct for any distorted, smeared, or illegible text anywhere
 
 ### 3. ART QUALITY (20 points max)
