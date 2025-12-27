@@ -43,7 +43,7 @@ search_queries: []
 review_score: 100
 review_attempts: 2
 review_status: green
-revision: 2
+revision: 3
 revision_notes: 'Rarity change request:
 
   Let''s make grace an uncommon
@@ -55,6 +55,11 @@ revision_notes: 'Rarity change request:
   2 cards.
 
 
+  Stats change request:
+
+  Set Lore to 4, set Context to 4
+
+
   General revision request (you may modify any content field as needed):
 
-  Make the art look like a gift being given to someone who doesn''t deserve it.'
+  Please make the stat pips navy, not gold, and make the number #004 instead of [#004].'
