@@ -1334,6 +1334,11 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
 
     _log(f"[phase review] card_dir={card_dir}")
 
+    # Check if card directory exists first
+    if not card_dir.exists():
+        print(f"Card directory {card_dir} does not exist. Nothing to review.")
+        return 0
+
     card_path = card_dir / "card.json"
     if not card_path.exists():
         print(f"Missing {card_path}")
