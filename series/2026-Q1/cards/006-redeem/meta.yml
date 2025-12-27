@@ -1,0 +1,53 @@
+number: '006'
+word: REDEEM
+gloss: To buy back, recover, or liberate by payment; to clear a debt or restore rights.
+card_type: VERB
+rarity: RARE
+art_prompt: A heavy, rusted iron shackle lying open on a cold stone floor, illuminated
+  by a single intense shaft of golden light breaking through shadows. Beside it, a
+  small pile of ancient silver coins.
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Return 3 cards from the discard pile to your hand that have LORE 3 or higher.
+ot_verse:
+  ref: Psalm 107:2
+  snippet: Let the redeemed of the LORD say so, whom he has redeemed from the hand
+    of the enemy.
+nt_verse:
+  ref: Galatians 3:13
+  snippet: Christ redeemed us from the curse of the law by becoming a curse for us.
+greek:
+  text: ἐξαγοράζω
+  translit: exagorazō
+hebrew:
+  text: גָּאַל
+  translit: ga'al
+ot_refs: Job 19:25 • Isa 43:1 • Ruth 4:14 • Ex 6:6
+nt_refs: Eph 1:7 • Titus 2:14 • 1 Pet 1:18 • Rev 5:9
+trivia:
+- The Hebrew 'ga'al' refers to a 'kinsman-redeemer' obligated to buy back enslaved
+  relatives or lost property.
+- In the Greek marketplace, 'exagorazo' meant to buy a slave specifically to grant
+  them freedom.
+- The Book of Ruth serves as a narrative case study of the kinsman-redeemer law in
+  action.
+- Job's famous cry 'I know that my Redeemer lives' envisions a legal vindicator standing
+  up for him.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#006'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: green
