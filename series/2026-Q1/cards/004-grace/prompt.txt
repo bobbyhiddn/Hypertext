@@ -1,0 +1,43 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #004
+Word: GRACE
+Gloss: Unmerited favor; a gift freely given without claim or expectation of return.
+Type: NOUN
+DRAW Rarity (Top Right): GLORIOUS with orange diamond icon
+Stats: Lore 5, Context 5, Complexity 4
+
+Art Description: A single drop of brilliant golden light falling into a dark, still ocean, creating ripples that transform the water into liquid light. Cinematic lighting, ethereal atmosphere, photorealistic style. No text or writing.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: Return 1 card from the Spent pile to your hand.
+
+OT Verse: Genesis 6:8 — "But Noah found grace in the eyes of the LORD."
+NT Verse: Ephesians 2:8 — "For by grace you have been saved through faith."
+
+Greek: χάρις
+(Below Greek, smaller text) Transliteration: charis
+NT Refs: John 1:14 • Rom 3:24 • Eph 2:8 • Heb 4:16
+
+Hebrew: חֵן
+(Below Hebrew, smaller text) Transliteration: chen
+OT Refs: Gen 6:8 • Ex 33:19 • Ps 84:11 • Prov 3:34
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• The Greek word 'charis' is the etymological root of the English words 'charity' and 'charisma'.
+• In the Old Testament, 'chen' often implies a superior stooping down to show kindness to an inferior.
+• The Apostle Paul uses the word 'grace' over 100 times across his epistles.
+• Grace is often distinguished from mercy: mercy is not receiving the punishment one deserves, while grace is receiving a blessing one does not deserve.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL (not gold). Filled navy circles = stat value, empty/outlined circles = remaining. Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty). Do NOT use gold fill for stat pips. Do NOT use diamond shapes for stat pips.
+- Do not add extra text or modify the layout.

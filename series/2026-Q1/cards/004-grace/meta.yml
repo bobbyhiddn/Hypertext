@@ -1,0 +1,45 @@
+number: '004'
+word: GRACE
+gloss: Unmerited favor; a gift freely given without claim or expectation of return.
+card_type: NOUN
+rarity: GLORIOUS
+art_prompt: A single drop of brilliant golden light falling into a dark, still ocean,
+  creating ripples that transform the water into liquid light. Cinematic lighting,
+  ethereal atmosphere, photorealistic style. No text or writing.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Return 1 card from the Spent pile to your hand.
+ot_verse:
+  ref: Genesis 6:8
+  snippet: But Noah found grace in the eyes of the LORD.
+nt_verse:
+  ref: Ephesians 2:8
+  snippet: For by grace you have been saved through faith.
+greek:
+  text: χάρις
+  translit: charis
+hebrew:
+  text: חֵן
+  translit: chen
+ot_refs: Gen 6:8 • Ex 33:19 • Ps 84:11 • Prov 3:34
+nt_refs: John 1:14 • Rom 3:24 • Eph 2:8 • Heb 4:16
+trivia:
+- The Greek word 'charis' is the etymological root of the English words 'charity'
+  and 'charisma'.
+- In the Old Testament, 'chen' often implies a superior stooping down to show kindness
+  to an inferior.
+- The Apostle Paul uses the word 'grace' over 100 times across his epistles.
+- 'Grace is often distinguished from mercy: mercy is not receiving the punishment
+  one deserves, while grace is receiving a blessing one does not deserve.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 100
+review_attempts: 2
+review_status: green
