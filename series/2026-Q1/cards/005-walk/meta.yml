@@ -1,0 +1,52 @@
+number: '005'
+word: WALK
+gloss: To journey; to conduct one's life or behave in a certain way.
+card_type: VERB
+rarity: COMMON
+art_prompt: A pair of worn leather sandals resting on a dusty path that winds toward
+  a distant mountain, footprints visible in the earth, warm sunset lighting, photorealistic
+  style.
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+ability: Draw 1 card.
+ot_verse:
+  ref: Micah 6:8
+  snippet: And what does the Lord require of you... but to walk humbly with your God?
+nt_verse:
+  ref: 2 Corinthians 5:7
+  snippet: For we walk by faith, not by sight.
+greek:
+  text: περιπατέω
+  translit: peripateo
+hebrew:
+  text: הָלַךְ
+  translit: halak
+ot_refs: Gen 5:24 • Deut 5:33 • Ps 23:4 • Isa 2:3
+nt_refs: Rom 6:4 • Gal 5:16 • Eph 4:1 • 1 Jn 1:7
+trivia:
+- The Hebrew term for Jewish law, 'Halakhah', literally means 'the way to walk'.
+- Enoch and Noah are the only two people in Genesis explicitly said to have 'walked
+  with God'.
+- In the New Testament, 'walking' is the dominant metaphor for moral conduct and daily
+  living.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#005'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: yellow
+review_notes: Increase Context stat pips from 4 to 5
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.

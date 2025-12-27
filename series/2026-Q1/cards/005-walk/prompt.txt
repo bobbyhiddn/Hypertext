@@ -1,0 +1,50 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #005
+Word: WALK
+Gloss: To journey; to conduct one's life or behave in a certain way.
+Type: VERB
+DRAW Rarity (Top Right): COMMON with white diamond icon
+Stats: Lore 3, Context 5, Complexity 2
+
+Art Description: A pair of worn leather sandals resting on a dusty path that winds toward a distant mountain, footprints visible in the earth, warm sunset lighting, photorealistic style.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: Draw 1 card.
+
+OT Verse: Micah 6:8 — "And what does the Lord require of you... but to walk humbly with your God?"
+NT Verse: 2 Corinthians 5:7 — "For we walk by faith, not by sight."
+
+Greek: περιπατέω
+(Below Greek, smaller text) Transliteration: peripateo
+NT Refs: Rom 6:4 • Gal 5:16 • Eph 4:1 • 1 Jn 1:7
+
+Hebrew: הָלַךְ
+(Below Hebrew, smaller text) Transliteration: halak
+OT Refs: Gen 5:24 • Deut 5:33 • Ps 23:4 • Isa 2:3
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• The Hebrew term for Jewish law, 'Halakhah', literally means 'the way to walk'.
+• Enoch and Noah are the only two people in Genesis explicitly said to have 'walked with God'.
+• In the New Testament, 'walking' is the dominant metaphor for moral conduct and daily living.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+  WRONG: [#003] or [NOUN] or [RARE]
+  CORRECT: #003 or NOUN or RARE
+- Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
+  WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
+  CORRECT: Navy-blue filled circles (dark blue, like the card border color)
+  Filled navy circles = stat value, empty/outlined circles = remaining.
+  Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty with just outline)
+  The filled pips must be NAVY (dark blue) not gold/yellow.
+- Do not add extra text or modify the layout.
