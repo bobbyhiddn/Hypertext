@@ -1,0 +1,273 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "001",
+    "SERIES": "2026-Q1",
+    "WORD": "MAGI",
+    "GLOSS": "Wise men, astrologers, or priests from the East who visited the infant Jesus.",
+    "CARD_TYPE": "TITLE",
+    "RARITY_TEXT": "GLORIOUS",
+    "RARITY_ICON": "GLORIOUS",
+    "ART_PROMPT": "Three silhouetted figures on camels traversing a vast desert dune at night under a deep blue starry sky, focusing on one exceptionally bright star, ethereal lighting, oil painting style",
+    "ABILITY_TEXT": "On draw, you may reveal: spend 1 card from your hand to activate that card's on-reveal ability. Then this card is spent.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 2,
+    "STAT_COMPLEXITY": 4,
+    "OT_VERSE_REF": "Jeremiah 39:3",
+    "OT_VERSE_SNIPPET": "...Nergal-Sharezer the Rab-mag, and all the rest of the officials...",
+    "NT_VERSE_REF": "Matthew 2:1",
+    "NT_VERSE_SNIPPET": "...Magi from the east came to Jerusalem...",
+    "OT_VERSE_LINE": "Jeremiah 39:3 — “...Nergal-Sharezer the Rab-mag, and all the rest of the officials...”",
+    "NT_VERSE_LINE": "Matthew 2:1 — “...Magi from the east came to Jerusalem...”",
+    "GREEK": "μάγοι",
+    "GREEK_TRANSLIT": "magoi",
+    "HEBREW": "רַב־מָג",
+    "HEBREW_TRANSLIT": "rab-mag",
+    "OT_REFS": "Jer 39:3 • Dan 2:2 • Dan 2:48 • Num 24:17",
+    "NT_REFS": "Matt 2:1 • Matt 2:11 • Acts 8:9 • Acts 13:6",
+    "TRIVIA_BULLETS": [
+      "Derived from the Old Persian word 'magu', referring to a priestly caste skilled in astrology.",
+      "Scripture never states there were three men, only three gifts: gold, frankincense, and myrrh.",
+      "The title 'Rab-mag' (Chief Magus) appears in Jeremiah, a rank Daniel likely held in Babylon.",
+      "They were not kings, but likely advisors and astronomers from the Parthian Empire."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Magi etymology biblical",
+      "Greek word for Magi Matthew 2",
+      "Daniel 2 wise men Hebrew terms",
+      "Jeremiah 39:3 Rab-mag meaning",
+      "Hebrew word for Magi in Old Testament"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnU7mxlUqb5sgtvTpD_Q6Z0KDpT1Ff-S3_Z7IWhyZnKZRf_tDL1blh19h3Qem3QYK5ba8qfafm1Azz3xcrHX-Islk_VnT9t_NMUJqVR0qq4TfwGYYDjDMKfLwirji8xlAsr_am4h4=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmd8OTYK6x_MKBg8hdXblv5VMuXiPirob9FiWMDRQSqxgh7mHEwRBEjh53PvD43Vt3BFlfUAxGhWoxnsw_gVsms2ijWDX6Z0JXNGcd3wKQZk971NQLRTPwrRZncmHY3S17dHX6Fv2nPEXgEuU=",
+        "title": "danielprophecies.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ShxribWkc6gnQ273P55u_fXhH91jHot7r8DSSTqVS7BNoUuqtgzW_ohpMGCf5dgRjiZL8GrOCAIoMGamg2SrQASIR9JlP8gh-5d8dxcWCsv6POBy9YmZGbMx_-Aip5Xny6x2GBpdCHNH",
+        "title": "biblicaltraining.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU8d-sV1Djn4nIprDBIkSQE85P1asqr_yQBLtWb5_ohzO7rknyHbiBeYoQB_MGFhmctq4pz0Hwa1DoUFxs2CyXJiqzSyPtp4iz9o4COnRlusPuenRZ3cUw0uPfHK8gkspaZKeAKLD_DusrJEAJf6Q5BuOwASDRbzG7YjpTkl8A7DYq4-ye40i9sIFkbiQ=",
+        "title": "youthpastortheologian.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7GEHUDj_N8kvO1JY135MFt_5NJCgwNEUuTN9oX9w-nY6S_RGu44SP2t0jnQCD5ETFTULurfBXLZV-Q4ncmxPReWCGsByAK5YS6lwA6AjldMr5eN1SIvzG4YyyZEtJB4PQgd577yZtsyPlF1h575KIfqoGsB_pAb4MdJ_G3nC7",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu-SBPgkgZupzSC_nbLyCMBBAwUdjJGR08uB41ZCll_3QJh2X5TRnIE4A43ypoNMH54B8iXDhpgeexIdMq9PTJ1DdppyZSzOOnhyNX-z5RjpitqSJ8D3QaONCX5OGD-8ZRvmUei2LHxjxgDXrW",
+        "title": "generationword.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_BFC3I3aKUIkdz2Uo_LA-RBpMUCRh4s01xXd_VTvJ9fagU8vxIinadN2MRsw5cU8SwAkyLD0nNS3UQ_5974LQJevhgmpsulZYAtLc93veBAjnLfyLrMYiUgkw0QFDnmMXH2hfdeEXNnFW0eO7OsTaH5wH5wkogHg=",
+        "title": "quora.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGnOsb8KRm0FqcaHn8soeoZmL7rpF-2W7UxYYWeH-wSAPaVgsM8UjOMD69Lev72CpuJGpx9gAF6fZjazxtIhrI8CsNciEXZUMc3OHSGMuASje6ggSVAggBeuHe-xAog8JEvjzSFub27Q==",
+        "title": "biblicalcyclopedia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQ7SCAcBPxwi-J-CZQHTgyjUA_S2W8WLRtjEnf_1Nbg0oTVsAuGdu8z5Dxpm3FSGMoFPMQWYn7VVxDX1FFm8FZmJ28qhvjgAHLpheonqPPh69IpKIRml7D1_T_ZreOv3wa0vXC0weaGFWMbGKmWz3np5yqqMUUNPjD3Z2Cv4lCxiTI3efBP_rG_crEjOa0swr9w2a_m3SucnP1p6pVx7WKYq35vfs=",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIB4B41N_FuQ08fPVHUkXC7IsSDhPVJqj-sWkHXT3tn9-SCzzklszEZ5cq0HRvs_BKkxeWVbj4_pB2zE0uhAvJZiATIQmNHCknZ4DdJzeibOwlFqkB2kWHZUwE4q2OvwjvLBcvfcRmp8j1c3XaOWeZRsorxZ0fYReCn9OYEjF_FQfF9sglvefpc4F-X8v3cO1Ob_ZU5_98TcT7-AUeLY4=",
+        "title": "stackexchange.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPdzPjY8nwWsNzZQxJPO6m-s5vrB9UMkLTLsBZOLAeFO5Jsrmc1WVu8SPCK7C8itlALBMllBRDdq8Tc35BPDU3tUNcAz0u-1nb8PUFHpMcb-Ca_aH5xv6CkZfVhWFM1tnpK-qeAg==",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMDe0oVSBZh5kn4dfKsSLt0ADeP3iWFjik9ojAEl3GEumUjgnFGUUyW34c2UhfThqSzUyH-OfIUJMiAATrrcVZhegXVLe2wp2PruLCasglM80BEt9tApFGsJLPp_Sf9ztK7X_ZqnkTFUHfpRJo",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZL9dUfXMh8MwapKfSUDluKhstSe7oFVPdE3KdORHOWo7AvUE7FeLgB_4d-iJ-tuofLNpQ_RvXqdgLowLePkMf8YnmKJ907bk1hKMwV1IMHP8NPNzDy8BECSIUtwpq0XOZS44MOmj_bim5X7pWtQ==",
+        "title": "kingjamesbibledictionary.com"
+      }
+    ]
+  }
+}

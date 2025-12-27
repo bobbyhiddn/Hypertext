@@ -1,0 +1,43 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #001
+Word: MAGI
+Gloss: Wise men, astrologers, or priests from the East who visited the infant Jesus.
+Type: TITLE
+DRAW Rarity (Top Right): GLORIOUS with orange diamond icon
+Stats: Lore 5, Context 2, Complexity 4
+
+Art Description: Three silhouetted figures on camels traversing a vast desert dune at night under a deep blue starry sky, focusing on one exceptionally bright star, ethereal lighting, oil painting style. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: On draw, you may reveal: spend 1 card from your hand to activate that card's on-reveal ability. Then this card is spent.
+
+OT Verse: Jeremiah 39:3 — "...Nergal-Sharezer the Rab-mag, and all the rest of the officials..."
+NT Verse: Matthew 2:1 — "...Magi from the east came to Jerusalem..."
+
+Greek: μάγοι
+Greek Transliteration: magoi
+NT Refs: Matt 2:1 • Matt 2:11 • Acts 8:9 • Acts 13:6
+
+Hebrew: רַב־מָג
+Hebrew Transliteration: rab-mag
+OT Refs: Jer 39:3 • Dan 2:2 • Dan 2:48 • Num 24:17
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right)
+
+Trivia:
+• Derived from the Old Persian word 'magu', referring to a priestly caste skilled in astrology.
+• Scripture never states there were three men, only three gifts: gold, frankincense, and myrrh.
+• The title 'Rab-mag' (Chief Magus) appears in Jeremiah, a rank Daniel likely held in Babylon.
+• They were not kings, but likely advisors and astronomers from the Parthian Empire.
+
+Series Footer: SERIES: 2026-Q1
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small NAVY circles only. Filled circles = stat value, empty circles = remaining. Example: Lore 3 = ●●●○○ (3 filled, 2 empty). Do NOT use diamond shapes for stat pips.
+- Do not add extra text or modify the layout.
