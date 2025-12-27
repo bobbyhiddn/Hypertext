@@ -26,6 +26,13 @@ def load_card_meta(card_dir: Path) -> dict | None:
     if not meta_path.exists():
         return None
 
+    try:
+        with open(meta_path, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f)
+    except Exception as e:
+        print(f"Error loading {meta_path}: {e}")
+        return None
+
 
 def _read_text(path: Path) -> str:
     with open(path, "r", encoding="utf-8") as f:
@@ -56,13 +63,7 @@ def _find_series_dirs(series_dir: Path) -> list[Path]:
         if p.is_dir() and _is_series_dir(p):
             out.append(p)
     return out
-    
-    try:
-        with open(meta_path, "r", encoding="utf-8") as f:
-            return yaml.safe_load(f)
-    except Exception as e:
-        print(f"Error loading {meta_path}: {e}")
-        return None
+
 
 def _safe_int(v, default: int = 0) -> int:
     try:
