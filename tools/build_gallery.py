@@ -6,6 +6,11 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
+try:
+    import markdown
+except ImportError:
+    markdown = None
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Build static gallery site")
     parser.add_argument(
@@ -17,6 +22,8 @@ def parse_args():
     parser.add_argument("--out-dir", type=Path, default=Path("_site"), help="Output directory for static site")
     parser.add_argument("--index-template", type=Path, default=Path("templates/gallery_index_template.html"), help="Root index HTML template")
     parser.add_argument("--series-template", type=Path, default=Path("templates/gallery_series_template.html"), help="Per-series HTML template")
+    parser.add_argument("--rules-template", type=Path, default=Path("templates/gallery_rules_template.html"), help="Rules page HTML template")
+    parser.add_argument("--rules-md", type=Path, default=Path("docs/rules.md"), help="Source markdown for rules")
     parser.add_argument("--assets-css", type=Path, default=Path("templates/gallery_assets.css"), help="CSS asset source")
     parser.add_argument("--assets-js", type=Path, default=Path("templates/gallery_assets.js"), help="JS asset source")
     return parser.parse_args()
@@ -150,11 +157,36 @@ def _collect_series_cards(series_dir: Path) -> list[dict]:
     valid_cards.sort(key=lambda x: str(x["meta"].get("number", "999")))
     return valid_cards
 
+def _build_rules_page(*, rules_md_path: Path, template_path: Path, out_dir: Path, generation_date: str) -> None:
+    if not rules_md_path.exists() or not template_path.exists():
+        print(f"Skipping rules page: missing {rules_md_path} or {template_path}")
+        return
+
+    if markdown is None:
+        print("Skipping rules page: markdown package not installed")
+        return
+
+    md_text = _read_text(rules_md_path)
+    # Convert MD to HTML with tables support
+    html_content = markdown.markdown(md_text, extensions=["tables", "fenced_code"])
+
+    template = _read_text(template_path)
+    page = (
+        template.replace("<!-- RULES_CONTENT_INJECTION_POINT -->", html_content)
+        .replace("{GENERATION_DATE}", generation_date)
+    )
+
+    rules_out_dir = out_dir / "rules"
+    rules_out_dir.mkdir(parents=True, exist_ok=True)
+    _write_text(rules_out_dir / "index.html", page)
+    print(f"Built rules page at {rules_out_dir / 'index.html'}")
+
+
 def main():
     args = parse_args()
 
     # Validate inputs
-    for p in [args.index_template, args.series_template, args.assets_css, args.assets_js]:
+    for p in [args.index_template, args.series_template, args.assets_css, args.assets_js, args.rules_template]:
         if not p.exists():
             print(f"Missing required gallery file: {p}")
             return 1
@@ -237,6 +269,14 @@ def main():
     _write_text(
         args.out_dir / "series" / "index.html",
         "<!doctype html><meta charset=\"utf-8\"><meta http-equiv=\"refresh\" content=\"0; url=../index.html\">",
+    )
+
+    # Build rules page
+    _build_rules_page(
+        rules_md_path=args.rules_md,
+        template_path=args.rules_template,
+        out_dir=args.out_dir,
+        generation_date=generation_date
     )
 
     print(f"Gallery built at {args.out_dir / 'index.html'} with {len(series_dirs)} series")
