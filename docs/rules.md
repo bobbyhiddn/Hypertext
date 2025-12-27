@@ -2,17 +2,13 @@
 
 ## Overview
 
-Hypertext is a word-study trading card game for 2–4 players. Complete **Quartets**—sets of four related cards—before the deck runs out. Score points through contributions, timing, and hidden objectives.
-
-The deck is your shared opponent. If the table fails to complete enough Quartets, everyone loses.
+Hypertext is a word-study trading card game for 2–4 players. Build and score **Quartets**—sets of four related cards—to earn points. The goal is to finish with the highest score.
 
 ---
 
 ## Components
 
-- **60 Card Deck** (15 Quartets × 4 cards each)
-- **Personal Objective Cards** (12)
-- **Season Goal Cards** (9)
+- **90 Card Deck** (22 Quartets × 4 cards each + 2 extra cards)
 - **Score Tracker / Tokens**
 
 ---
@@ -23,7 +19,7 @@ Each card has:
 
 | Element | Description |
 |---------|-------------|
-| **Number** | Collector ID (#001–#060) |
+| **Number** | Collector ID (#001–#090) |
 | **Word** | The English word |
 | **Gloss** | Short definition |
 | **Type** | NOUN, VERB, ADJECTIVE, NAME, or TITLE |
@@ -99,9 +95,7 @@ Stats exist to scale or constrain abilities:
    - 2 players: 3 Goals
    - 3 players: 4 Goals
    - 4 players: 5 Goals
-4. **Deal 2 Personal Objectives** to each player. Keep 1, discard the other face-down.
-5. **Reveal 3 Season Goals** (shared end-game scoring conditions).
-6. Place the remaining deck face-down. Create a face-up **discard pile**.
+4. Place the remaining deck face-down. Create a face-up **discard pile**.
 
 ---
 
@@ -147,70 +141,30 @@ If you did not play a card this turn, you **may** discard 1 card face-up. (This 
 
 When a Quartet Goal reaches A + B + C + D:
 
-1. **Closer Bonus:** The player who played the 4th card scores **2 points**.
-2. **Contribution Points:** Each other player who contributed to that Quartet scores **1 point per card** they played.
-3. **Remove** the completed Quartet from play.
+1. The player who played the 4th card **scores the Quartet** for **4 points**.
+2. Move the completed Quartet (all 4 cards) to the face-up **discard pile**.
+3. **Remove** the completed Quartet Goal from play.
 4. **Reveal** a new Quartet Goal from the deck (if able).
-
----
-
-## Personal Objectives
-
-Dealt at setup, kept secret until game end. Examples:
-
-| Objective | Condition |
-|-----------|-----------|
-| **Grammarian** | Score 2 points for each Quartet you contributed to where your card had COMPLEXITY 4+. |
-| **Evangelist** | Score 3 points if you contributed to 4+ different Quartets. |
-| **Theologian** | Score 2 points for each GLORIOUS card you revealed during the game. |
-| **Scribe** | Score 1 point for each card remaining in your hand at game end. |
-| **Prophet** | Score 4 points if you played the closing card on 2+ Quartets. |
-| **Linguist** | Score 2 points for each Quartet you contributed to containing both Greek and Hebrew terms with COMPLEXITY 3+. |
-
----
-
-## Season Goals
-
-Revealed at setup. All players who qualify score these at game end. Examples:
-
-| Season Goal | Condition |
-|-------------|-----------|
-| **Lore Keepers** | Score 1 point per Quartet you contributed to that totals 12+ LORE across its 4 cards. |
-| **Pentecost** | Score 2 points if you contributed at least 1 card to a NAME Quartet. |
-| **Exegesis** | Score 1 point per VERB Quartet you contributed to. |
-| **Deep Study** | Score 2 points if you contributed to a Quartet where all 4 cards have COMPLEXITY 3+. |
-| **Concordance** | Score 1 point for each unique card type (NOUN, VERB, etc.) among your contributions. |
 
 ---
 
 ## Game End
 
-The game ends when:
+The game ends when any player reaches **20 points**.
 
-- The **deck is empty**, AND
-- **No player can legally play** a card to any active Goal.
+If the deck runs out of cards before anyone reaches 20, finish the round so all players take the same number of turns.
 
-Finish the round so all players take the same number of turns.
+In practice, 20 points is typically reachable in fewer than ~22 turns because each scored Quartet is worth 4 points.
 
 ---
 
 ## Final Scoring
 
-1. **Quartet Contributions** — Points earned during play (closer bonuses + contribution points).
-2. **Personal Objective** — Reveal and score.
-3. **Season Goals** — All qualifying players score.
+1. **Quartets Scored** — Points earned during play (4 per scored Quartet).
 
-### Threshold Check
+If a player reached 20 points, they win immediately.
 
-Count total Quartets completed by all players.
-
-| Players | Minimum Quartets | Result if Below |
-|---------|------------------|-----------------|
-| 2 | 5 | The deck wins. All players lose. |
-| 3 | 6 | The deck wins. All players lose. |
-| 4 | 7 | The deck wins. All players lose. |
-
-If the threshold is met, **highest score wins**.
+If the deck ran out first, highest score wins.
 
 ---
 
@@ -237,8 +191,7 @@ In order:
 
 | Scoring | Points |
 |---------|--------|
-| Play closing card | 2 |
-| Contribute a card | 1 (when Quartet completes) |
+| Score a Quartet | 4 |
 | Personal Objective | Varies |
 | Season Goal | Varies |
 

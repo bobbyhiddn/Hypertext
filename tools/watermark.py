@@ -8,6 +8,34 @@ import sys
 from pathlib import Path
 
 
+def _try_load_env_file() -> None:
+    """Best-effort loader for a local .env file (KEY=VALUE per line).
+
+    This is intentionally dependency-free; it only fills env vars that are missing.
+    """
+    repo_root = Path(__file__).resolve().parent.parent
+    env_path = repo_root / ".env"
+    if not env_path.exists():
+        return
+
+    try:
+        lines = env_path.read_text(encoding="utf-8").splitlines()
+    except Exception:
+        return
+
+    for raw in lines:
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        k = k.strip()
+        v = v.strip().strip('"').strip("'")
+        if k and k not in os.environ:
+            os.environ[k] = v
+
+
 def _load_card_identity(card_dir: Path) -> dict:
     card_path = card_dir / "card.json"
     if not card_path.exists():
@@ -40,6 +68,9 @@ def _canonical_payload(identity: dict) -> str:
 
 def _get_key() -> bytes:
     key = os.environ.get("HYPERTEXT_SIGNING_KEY")
+    if not key:
+        _try_load_env_file()
+        key = os.environ.get("HYPERTEXT_SIGNING_KEY")
     if not key:
         raise RuntimeError("Missing env var HYPERTEXT_SIGNING_KEY")
     return key.encode("utf-8")
@@ -124,7 +155,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate cryptographic watermark SVG")
     parser.add_argument("--card-dir", required=True, help="Card directory (contains card.json)")
     parser.add_argument("--out", help="Output SVG path (default: <card-dir>/watermark.svg)")
-    parser.add_argument("--size", type=int, default=72, help="SVG pixel size")
+    parser.add_argument("--size", type=int, default=36, help="SVG pixel size")
     args = parser.parse_args()
 
     card_dir = Path(args.card_dir)

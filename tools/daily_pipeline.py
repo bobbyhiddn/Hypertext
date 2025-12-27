@@ -35,7 +35,11 @@ DEFAULT_DEMO_DIR = Path("demo_cards")
 RULES_PATH = Path("docs/rules.md")
 
 GAME_RULES_SNIPPET = (
-    "- There is ONE shared deck. Do not say 'your deck'. Say 'the deck'.\n"
+    "- There is ONE shared 90-card deck. Do not say 'your deck'. Say 'the deck'.\n"
+    "- The goal is to be the first to reach 20 points (if the deck runs out first, highest score wins).\n"
+    "- Scoring: when a player completes a Quartet, they score 4 points and the completed Quartet is moved to the face-up discard pile.\n"
+    "- There are no Season Goals or Personal Objectives.\n"
+    "- The game ends immediately when a player reaches 20 points.\n"
     "- Abilities should be one short to medium line.\n"
     "- NEVER write abilities that just 'draw a card' - that's neutral tempo, not advantage. The ability must match the word in 'flavor'.\n"
     "- Abilities MUST provide card advantage (value beyond the card itself).\n"

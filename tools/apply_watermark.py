@@ -26,8 +26,8 @@ def _draw_diamond_sigil(*, overlay: Image.Image, sig_hex: str, size_px: int) -> 
     draw = ImageDraw.Draw(overlay)
 
     # Colors (RGBA)
-    navy = (10, 25, 47, 120)
-    gold = (197, 160, 89, 110)
+    navy = (10, 25, 47, 175)
+    gold = (197, 160, 89, 185)
 
     w = h = size_px
     cx = w / 2
@@ -79,8 +79,8 @@ def apply_watermark(*, card_dir: Path, in_png: Path, out_png: Path | None, size_
     sigil = Image.new("RGBA", (size_px, size_px), (0, 0, 0, 0))
     _draw_diamond_sigil(overlay=sigil, sig_hex=sig_hex, size_px=size_px)
 
-    x = img.size[0] - inset_px - size_px
-    y = img.size[1] - inset_px - size_px
+    x = img.size[0] - inset_px - size_px - 16
+    y = img.size[1] - inset_px - size_px - 8
     overlay.paste(sigil, (x, y), sigil)
 
     out = Image.alpha_composite(img, overlay).convert("RGB")
@@ -95,8 +95,8 @@ def main() -> int:
     parser.add_argument("--card-dir", required=True)
     parser.add_argument("--in", dest="in_png", help="Input PNG path (default: <card-dir>/outputs/card_1024x1536.png)")
     parser.add_argument("--out", dest="out_png", help="Output PNG path (default: overwrite input)")
-    parser.add_argument("--size", type=int, default=72)
-    parser.add_argument("--inset", type=int, default=18)
+    parser.add_argument("--size", type=int, default=36)
+    parser.add_argument("--inset", type=int, default=12)
     args = parser.parse_args()
 
     card_dir = Path(args.card_dir)
