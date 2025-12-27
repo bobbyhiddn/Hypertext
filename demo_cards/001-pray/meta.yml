@@ -1,0 +1,39 @@
+number: '001'
+word: PRAY
+gloss: To address God with adoration, confession, supplication, or thanksgiving.
+card_type: VERB
+rarity: COMMON
+art_prompt: A lone figure kneeling on a rocky mountaintop at twilight, silhouetted
+  against a vast starry sky, hands raised, ethereal light descending, soft atmospheric
+  lighting, digital painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 1 card.
+ot_verse:
+  ref: 2 Chronicles 7:14
+  snippet: if my people... will humble themselves and pray and seek my face...
+nt_verse:
+  ref: 1 Thessalonians 5:17
+  snippet: pray without ceasing
+greek:
+  text: προσεύχομαι
+  translit: proseuchomai
+hebrew:
+  text: פָּלַל
+  translit: palal
+ot_refs: 1 Sam 1:10 • Ps 5:2 • Dan 6:10 • Jon 2:1
+nt_refs: Matt 6:6 • Luke 18:1 • Phil 4:6 • Jas 5:16
+trivia:
+- The Hebrew verb 'palal' implies intervention, judgment, or arbitration.
+- The Greek 'proseuchomai' combines 'pros' (towards) and 'euchomai' (to wish or vow).
+- Incense is frequently used in Scripture as a metaphor for the prayers of the saints.
+- Depending on the translation, forms of this word appear over 600 times in the Bible.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
