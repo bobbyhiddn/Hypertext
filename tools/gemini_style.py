@@ -76,9 +76,32 @@ def generate_with_styles(
 
     client = genai.Client(api_key=api_key)
 
-    style_refs = " ".join(f"[{i}]" for i in range(1, len(style_image_paths) + 1))
     orientation = "portrait (2:3 aspect ratio, taller than wide)" if aspect_ratio == "2:3" else f"aspect ratio {aspect_ratio}"
-    full_prompt = f"Generate a {orientation} image in style {style_refs} based on: {prompt_text}"
+    
+    # Build clear labeling for each reference image
+    ref_labels = []
+    ref_labels.append("[1] = Clean template (layout/frame reference)")
+    for i in range(2, len(style_image_paths) + 1):
+        ref_labels.append(f"[{i}] = Example card (style/formatting reference)")
+    
+    # Remove conflicting "[1]" reference from prompt if present
+    cleaned_prompt = prompt_text.replace(
+        "Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].",
+        ""
+    ).strip()
+    
+    example_refs = "/".join(str(i) for i in range(2, len(style_image_paths) + 1)) if len(style_image_paths) > 1 else "1"
+    
+    style_instruction = (
+        f"You are provided {len(style_image_paths)} reference images:\n"
+        + "\n".join(ref_labels) + "\n\n"
+        f"Generate a {orientation} trading card that EXACTLY matches:\n"
+        f"- The layout and frame structure from [1] (template)\n"
+        f"- The corner styles, stat pip style (navy circles), rarity badge style, and text formatting from [{example_refs}] (example cards)\n\n"
+        f"CRITICAL: Copy the exact visual style of the example cards [{example_refs}] for all UI elements.\n\n"
+    )
+    
+    full_prompt = style_instruction + cleaned_prompt
 
     image_parts = []
     for p in style_image_paths:
