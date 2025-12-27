@@ -208,3 +208,24 @@ jobs:
           git commit -m "Daily Hypertext: ${DATE}" || exit 0
           git push --set-upstream origin "${BRANCH}"
           gh pr create --title "Daily Hypertext: ${DATE} (${CARD_SLUG})" --body "Staged daily card + Substack draft." --base main --head "${BRANCH}"
+
+      - name: Comment rendered PNG on PR
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          CARD_DIR: ${{ needs.plan.outputs.card_dir }}
+          CARD_SLUG: ${{ needs.plan.outputs.card_slug }}
+        run: |
+          set -euo pipefail
+
+          PR_URL="$(gh pr view --json url -q .url)"
+          if [[ -z "${PR_URL}" ]]; then
+            echo "No PR URL found."
+            exit 1
+          fi
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+
+          PNG_PATH="${CARD_DIR}/outputs/card_1024x1536.png"
+          RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
+
+          gh pr comment "${PR_URL}" --body $'### Rendered card\n\n'"![${CARD_SLUG}](${RAW_URL})"

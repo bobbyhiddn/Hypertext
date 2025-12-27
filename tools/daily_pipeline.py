@@ -33,6 +33,39 @@ GAME_RULES_SNIPPET = (
 )
 
 
+DEFAULT_STYLE_TEMPLATE = Path("tools") / "clean_template_final.png"
+NUM_STYLE_REF_CARDS = 2
+
+
+def _find_recent_card_images(series_root: Path, limit: int = NUM_STYLE_REF_CARDS) -> list[Path]:
+    """Find the N most recently modified rendered card images."""
+    cards_dir = series_root / "cards"
+    if not cards_dir.exists():
+        return []
+    matches = list(cards_dir.rglob("card_1024x1536.png"))
+    matches = [p for p in matches if p.is_file() and p.parent.name == "outputs"]
+    matches.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+    return matches[:limit]
+
+
+def _build_style_refs(series_root: Path) -> list[str]:
+    """Build list of style reference paths: template + recent rendered cards."""
+    refs: list[str] = []
+    if DEFAULT_STYLE_TEMPLATE.exists():
+        refs.append(str(DEFAULT_STYLE_TEMPLATE))
+    for p in _find_recent_card_images(series_root, NUM_STYLE_REF_CARDS):
+        refs.append(str(p))
+    return refs
+
+
+def _build_style_cmd_args(style_refs: list[str]) -> list[str]:
+    """Build CLI args for gemini_style.py from style ref list."""
+    args: list[str] = []
+    for ref in style_refs:
+        args.extend(["--style", ref])
+    return args
+
+
 def _load_rules_appendix() -> str:
     try:
         with open(RULES_PATH, "r", encoding="utf-8") as f:
@@ -597,30 +630,40 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     card_type = str(entry.get("card_type", "NOUN")).upper()
     rarity = str(entry.get("rarity", "COMMON")).upper()
-    ability = entry.get("ability")  # Optional: if provided in queue, use it
-    if ability:
-        ability = str(ability).strip()
+    
+    # Optional queue overrides
+    q_ability = entry.get("ability")
+    q_gloss = entry.get("gloss")
+    q_art_prompt = entry.get("art_prompt")
+    q_stats = entry.get("stats") if isinstance(entry.get("stats"), dict) else None
+    q_ot_verse = entry.get("ot_verse") if isinstance(entry.get("ot_verse"), dict) else None
+    q_nt_verse = entry.get("nt_verse") if isinstance(entry.get("nt_verse"), dict) else None
+    q_greek = entry.get("greek") if isinstance(entry.get("greek"), dict) else None
+    q_hebrew = entry.get("hebrew") if isinstance(entry.get("hebrew"), dict) else None
+    q_ot_refs = entry.get("ot_refs")
+    q_nt_refs = entry.get("nt_refs")
+    q_trivia = entry.get("trivia") if isinstance(entry.get("trivia"), list) else None
 
     _log(f"[phase plan] selected entry: #{number:03d} word={word} type={card_type} rarity={rarity}")
-    if ability:
-        _log(f"[phase plan] using provided ability: {ability[:50]}...")
+    if q_ability:
+        _log(f"[phase plan] using provided ability: {str(q_ability)[:50]}...")
 
     if auto:
         _log("[phase plan] auto mode: generating recipe")
-        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=ability)
+        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=q_ability)
         grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
-        stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
-        ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
-        nt_verse = recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {}
-        greek = recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {}
-        hebrew = recipe.get("hebrew", {}) if isinstance(recipe.get("hebrew"), dict) else {}
-        trivia = recipe.get("trivia", [])
+        stats = q_stats if q_stats else (recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {})
+        ot_verse = q_ot_verse if q_ot_verse else (recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {})
+        nt_verse = q_nt_verse if q_nt_verse else (recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {})
+        greek = q_greek if q_greek else (recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {})
+        hebrew = q_hebrew if q_hebrew else (recipe.get("hebrew", {}) if isinstance(recipe.get("hebrew"), dict) else {})
+        trivia = q_trivia if q_trivia else recipe.get("trivia", [])
         if not isinstance(trivia, list):
             trivia = []
 
-        gloss = str(recipe.get("gloss", "")).strip()
-        art_prompt = str(recipe.get("art_prompt", "")).strip()
-        ability_text = str(recipe.get("ability_text", "")).strip()
+        gloss = str(q_gloss).strip() if q_gloss else str(recipe.get("gloss", "")).strip()
+        art_prompt = str(q_art_prompt).strip() if q_art_prompt else str(recipe.get("art_prompt", "")).strip()
+        ability_text = str(q_ability).strip() if q_ability else str(recipe.get("ability_text", "")).strip()
 
         ot_ref = str(ot_verse.get("ref", "")).strip()
         ot_snip = str(ot_verse.get("snippet", "")).strip()
@@ -655,8 +698,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         card["content"]["HEBREW"] = str(hebrew.get("text", "")).strip()
         card["content"]["HEBREW_TRANSLIT"] = str(hebrew.get("translit", "")).strip()
 
-        card["content"]["OT_REFS"] = str(recipe.get("ot_refs", "")).strip()
-        card["content"]["NT_REFS"] = str(recipe.get("nt_refs", "")).strip()
+        card["content"]["OT_REFS"] = str(q_ot_refs).strip() if q_ot_refs else str(recipe.get("ot_refs", "")).strip()
+        card["content"]["NT_REFS"] = str(q_nt_refs).strip() if q_nt_refs else str(recipe.get("nt_refs", "")).strip()
         card["content"]["TRIVIA_BULLETS"] = [str(x).strip() for x in trivia if str(x).strip()]
 
         card["grounding"] = grounding
@@ -911,15 +954,13 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     out_png = card_dir / "outputs" / "card_1024x1536.png"
     _log(f"[phase demo] generating image -> {out_png}")
     
-    # Path to the style reference image
-    style_ref = Path("tools") / "clean_template_final.png"
-    
-    if style_ref.exists():
+    style_refs = _build_style_refs(DEFAULT_DEMO_DIR.parent)
+    if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(card_dir / "prompt.txt"),
-            "--style", str(style_ref),
+            *_build_style_cmd_args(style_refs),
             "--out", str(out_png)
         ]
     else:
@@ -977,26 +1018,19 @@ def phase_imagegen(*, series_dir: Path) -> int:
 
     prompt_file = target_dir / "prompt.txt"
     out_png = target_dir / "outputs" / out_name
-    
-    # Path to the style reference image
-    style_ref = Path("tools") / "clean_template_final.png"
-    if not style_ref.exists():
-        print(f"Warning: Style reference {style_ref} not found. Falling back to legacy generation.")
-        style_ref = None
 
     _log(f"[phase imagegen] generating image for {target_dir.name} -> {out_png}")
     
-    if style_ref:
-        # Use new Style Reference API
+    style_refs = _build_style_refs(series_dir)
+    if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_file),
-            "--style", str(style_ref),
+            *_build_style_cmd_args(style_refs),
             "--out", str(out_png)
         ]
     else:
-        # Legacy fallback
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_image.py"),
@@ -1034,14 +1068,15 @@ def _generate_image_for_card_dir(*, card_dir: Path) -> int:
 
     _log(f"[batch] generating image for {card_dir.name} -> {out_png}")
     
-    # Use style reference if available
-    style_ref = Path("tools") / "clean_template_final.png"
-    if style_ref.exists():
+    # Infer series_dir from card_dir (card_dir is series/XXXX/cards/NNN-word)
+    series_dir = card_dir.parent.parent
+    style_refs = _build_style_refs(series_dir)
+    if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_file),
-            "--style", str(style_ref),
+            *_build_style_cmd_args(style_refs),
             "--out", str(out_png)
         ]
     else:
@@ -1162,15 +1197,14 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
     out_png = card_dir / "outputs" / "card_1024x1536.png"
     _log(f"[phase revise] generating image -> {out_png}")
     
-    # Path to the style reference image
-    style_ref = Path("tools") / "clean_template_final.png"
-    
-    if style_ref.exists():
+    series_dir = card_dir.parent.parent
+    style_refs = _build_style_refs(series_dir)
+    if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(card_dir / "prompt.txt"),
-            "--style", str(style_ref),
+            *_build_style_cmd_args(style_refs),
             "--out", str(out_png)
         ]
     else:
@@ -1241,15 +1275,14 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
     out_png = card_dir / "outputs" / "card_1024x1536.png"
     _log(f"[phase rebuild] generating image -> {out_png}")
     
-    # Path to the style reference image
-    style_ref = Path("tools") / "clean_template_final.png"
-    
-    if style_ref.exists():
+    series_dir = card_dir.parent.parent
+    style_refs = _build_style_refs(series_dir)
+    if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_path),
-            "--style", str(style_ref),
+            *_build_style_cmd_args(style_refs),
             "--out", str(out_png)
         ]
     else:
@@ -1291,13 +1324,14 @@ def _generate_image_only(*, card_dir: Path) -> Path:
 
     _log(f"[imagegen] generating image for {card_dir.name} -> {out_png}")
 
-    style_ref = Path("tools") / "clean_template_final.png"
-    if style_ref.exists():
+    series_dir = card_dir.parent.parent
+    style_refs = _build_style_refs(series_dir)
+    if style_refs:
         cmd = [
             sys.executable,
             str(Path("tools") / "gemini_style.py"),
             "--prompt-file", str(prompt_file),
-            "--style", str(style_ref),
+            *_build_style_cmd_args(style_refs),
             "--out", str(out_png)
         ]
     else:

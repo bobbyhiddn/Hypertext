@@ -22,6 +22,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   revise:
@@ -166,3 +167,35 @@ jobs:
 
           git commit -m "Revise card(s)" || exit 0
           git push
+
+      - name: Comment revised PNG on PR (if PR exists)
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+
+          PR_URL="$(gh pr view --json url -q .url 2>/dev/null || true)"
+          if [[ -z "${PR_URL}" ]]; then
+            echo "No PR found for this branch; skipping PR comment."
+            exit 0
+          fi
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+
+          mapfile -t PNGS < <(git show --name-only --pretty="" HEAD | grep -E '/outputs/card_1024x1536\.png$' || true)
+          if [[ ${#PNGS[@]} -eq 0 ]]; then
+            echo "No revised card_1024x1536.png found in latest commit; skipping PR comment."
+            exit 0
+          fi
+
+          BODY=$'### Revised render(s)\n'
+          for PNG_PATH in "${PNGS[@]}"; do
+            CARD_DIR="$(dirname "$(dirname "${PNG_PATH}")")"
+            CARD_SLUG="$(basename "${CARD_DIR}")"
+            RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
+            BODY+=$'\n'
+            BODY+="![${CARD_SLUG}](${RAW_URL})"
+            BODY+=$'\n'
+          done
+
+          gh pr comment "${PR_URL}" --body "${BODY}"

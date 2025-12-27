@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """
-Generate images using Gemini 3 Pro with Style Reference.
+Revise a card image using Gemini with multiple style references.
 
-This script implements the Gemini Style Reference API pattern to generate
-images that follow the visual style of a provided reference image.
+This script takes:
+1. The current (incorrect) card image - labeled with revision instructions
+2. The clean template
+3. Example cards (Magi, Gospel, Covenant) as style references
+
+The model sees what needs to be fixed and has correct examples to reference.
 """
 import argparse
 import base64
 import os
 import sys
-import time
 from pathlib import Path
 
 try:
@@ -19,9 +22,11 @@ except ImportError:
     genai = None
     types = None
 
+
 def _read_image_bytes(path: str) -> bytes:
     with open(path, "rb") as f:
         return f.read()
+
 
 def _image_part_from_bytes(img_bytes: bytes):
     image_part = None
@@ -52,23 +57,17 @@ def _image_part_from_bytes(img_bytes: bytes):
 
     return image_part
 
-def generate_with_styles(
-    prompt_text: str,
-    style_image_paths: list[str],
+
+def revise_card(
+    current_card_path: str,
+    revision_instructions: str,
+    style_ref_paths: list[str],
     out_path: str,
     *,
-    model: str = "gemini-3-pro-preview",
-    aspect_ratio: str = "2:3",
-    guidance_scale: float | None = None,
-    num_inference_steps: int | None = None,
+    model: str = "gemini-3-pro-image-preview",
 ) -> None:
     if genai is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
-
-    if not style_image_paths:
-        raise RuntimeError("At least one style image is required.")
-    if len(style_image_paths) > 16:
-        raise RuntimeError("At most 16 style images are supported.")
 
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GEMINI_TEXT_API_KEY")
     if not api_key:
@@ -76,24 +75,41 @@ def generate_with_styles(
 
     client = genai.Client(api_key=api_key)
 
-    style_refs = " ".join(f"[{i}]" for i in range(1, len(style_image_paths) + 1))
-    orientation = "portrait (2:3 aspect ratio, taller than wide)" if aspect_ratio == "2:3" else f"aspect ratio {aspect_ratio}"
-    full_prompt = f"Generate a {orientation} image in style {style_refs} based on: {prompt_text}"
+    # Build image parts: current card first, then style refs
+    current_bytes = _read_image_bytes(current_card_path)
+    current_part = _image_part_from_bytes(current_bytes)
 
-    image_parts = []
-    for p in style_image_paths:
+    style_parts = []
+    for p in style_ref_paths:
         img_bytes = _read_image_bytes(p)
-        image_parts.append(_image_part_from_bytes(img_bytes))
+        style_parts.append(_image_part_from_bytes(img_bytes))
+
+    # Build prompt:
+    # Image [1] = current card (to fix)
+    # Images [2], [3], [4], [5] = template and example cards (correct style)
+    style_labels = " ".join(f"[{i}]" for i in range(2, len(style_ref_paths) + 2))
+    
+    prompt = (
+        f"Image [1] is a trading card that needs revision. "
+        f"Images {style_labels} show the correct template and example cards with proper styling.\n\n"
+        f"REVISION INSTRUCTIONS:\n{revision_instructions}\n\n"
+        f"Generate a corrected portrait (2:3 aspect ratio, taller than wide) version of image [1] "
+        f"that applies the revision instructions while matching the style and quality of images {style_labels}. "
+        f"Keep all other content from image [1] exactly the same - only fix what the instructions specify."
+    )
 
     contents = [
-        *image_parts,
-        types.Part.from_text(text=full_prompt),
+        current_part,
+        *style_parts,
+        types.Part.from_text(text=prompt),
     ]
 
-    print("Generating with style references:")
-    for p in style_image_paths:
-        print(f"- {p}")
-    print(f"Prompt: {full_prompt}")
+    print("Revising card with references:")
+    print(f"[1] Current card: {current_card_path}")
+    for i, p in enumerate(style_ref_paths, start=2):
+        print(f"[{i}] {p}")
+    print(f"\nRevision instructions: {revision_instructions}")
+    print(f"Prompt: {prompt[:200]}...")
 
     config = types.GenerateContentConfig(
         response_modalities=["IMAGE"],
@@ -130,62 +146,42 @@ def generate_with_styles(
     with open(out_path, "wb") as f:
         f.write(image_bytes)
 
-    print(f"Saved generated image to: {out_path}")
+    print(f"Saved revised card to: {out_path}")
 
-def generate_with_style(
-    prompt_text: str,
-    style_image_path: str,
-    out_path: str,
-    *,
-    model: str = "gemini-3-pro-preview",
-    aspect_ratio: str = "2:3",
-    guidance_scale: float | None = None,
-    num_inference_steps: int | None = None,
-) -> None:
-    generate_with_styles(
-        prompt_text=prompt_text,
-        style_image_paths=[style_image_path],
-        out_path=out_path,
-        model=model,
-        aspect_ratio=aspect_ratio,
-        guidance_scale=guidance_scale,
-        num_inference_steps=num_inference_steps,
-    )
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate image with Gemini Style Reference")
-    parser.add_argument("--prompt", help="Text description of the image content")
-    parser.add_argument("--prompt-file", help="Path to text file containing the prompt")
-    parser.add_argument("--style", required=True, action="append", help="Path to reference style image (repeatable)")
+    parser = argparse.ArgumentParser(description="Revise a card image with style references")
+    parser.add_argument("--card", required=True, help="Path to current card image to revise")
+    parser.add_argument("--instructions", required=True, help="Revision instructions text")
+    parser.add_argument("--style", action="append", default=[], help="Style reference image (repeatable)")
     parser.add_argument("--out", required=True, help="Output PNG path")
     parser.add_argument("--model", default="gemini-3-pro-image-preview", help="Gemini model ID")
-    
+
     args = parser.parse_args()
-    
-    prompt_text = args.prompt
-    if args.prompt_file:
-        if not os.path.exists(args.prompt_file):
-            print(f"Error: Prompt file not found: {args.prompt_file}", file=sys.stderr)
-            return 1
-        with open(args.prompt_file, "r", encoding="utf-8") as f:
-            prompt_text = f.read().strip()
-            
-    if not prompt_text:
-        print("Error: Must provide either --prompt or --prompt-file", file=sys.stderr)
+
+    if not os.path.exists(args.card):
+        print(f"Error: Card image not found: {args.card}", file=sys.stderr)
         return 1
-    
+
+    for s in args.style:
+        if not os.path.exists(s):
+            print(f"Error: Style reference not found: {s}", file=sys.stderr)
+            return 1
+
     try:
-        generate_with_styles(
-            prompt_text=prompt_text,
-            style_image_paths=args.style,
+        revise_card(
+            current_card_path=args.card,
+            revision_instructions=args.instructions,
+            style_ref_paths=args.style,
             out_path=args.out,
             model=args.model,
         )
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
-        
+
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
