@@ -999,6 +999,13 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             f.write(f"card_slug={card_dir.name}\n")
         _log(f"[phase plan] wrote card_dir={card_dir} to GITHUB_OUTPUT")
 
+    # Update series stats
+    stats = _load_series_stats(series_dir)
+    stats["counts"][rarity] = stats["counts"].get(rarity, 0) + 1
+    stats["total"] = sum(stats["counts"].values())
+    _save_series_stats(series_dir, stats)
+    _log(f"[phase plan] updated stats.yml: {rarity} count now {stats['counts'][rarity]}, total {stats['total']}")
+
     return 0
 
 
@@ -1814,6 +1821,21 @@ def _build_revision_from_corrections(description: CardDescription, corrections: 
     return "\n".join(instructions) if instructions else "Improve image quality and text clarity."
 
 
+def phase_gallery(*, series_dir: Path, out_dir: Path) -> int:
+    """Build the static gallery site."""
+    cmd = [
+        sys.executable,
+        str(Path("tools") / "build_gallery.py"),
+        "--series-dir", str(series_dir),
+        "--out-dir", str(out_dir)
+    ]
+    try:
+        subprocess.check_call(cmd)
+        return 0
+    except subprocess.CalledProcessError:
+        return 1
+
+
 def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int) -> int:
     rc = phase_plan(series_dir=series_dir, template_path=template_path, auto=auto)
     if rc != 0:
@@ -1823,7 +1845,7 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "review", "full"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "review", "gallery", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
@@ -1832,6 +1854,7 @@ def main() -> int:
     parser.add_argument("--card-dir")
     parser.add_argument("--revise-file")
     parser.add_argument("--regen-prompt", action="store_true")
+    parser.add_argument("--out-dir", default="_site")
     args = parser.parse_args()
 
     _log(
@@ -1909,6 +1932,9 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_review(card_dir=Path(args.card_dir))
+
+    if args.phase == "gallery":
+        return phase_gallery(series_dir=series_dir, out_dir=Path(args.out_dir))
 
     return 2
 

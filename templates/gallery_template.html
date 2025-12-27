@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertext Deck Gallery</title>
+    <style>
+        :root {
+            --bg-color: #f4f1ea;
+            --text-color: #2c3e50;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --navy: #0a192f;
+            --gold: #c5a059;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--navy);
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--navy);
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            background: none;
+            border: 1px solid var(--navy);
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--navy);
+            color: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card-item {
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .card-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-meta {
+            padding: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: var(--navy);
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .card-info {
+            font-size: 0.9em;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rarity-tag {
+            font-weight: bold;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        .rarity-common { color: #555; }
+        .rarity-uncommon { color: #2e7d32; }
+        .rarity-rare { color: #f57f17; }
+        .rarity-glorious { color: #e65100; }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HYPERTEXT</h1>
+        <p>Word Study Trading Card Game</p>
+    </header>
+
+    <div class="controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="COMMON">Common</button>
+        <button class="filter-btn" data-filter="UNCOMMON">Uncommon</button>
+        <button class="filter-btn" data-filter="RARE">Rare</button>
+        <button class="filter-btn" data-filter="GLORIOUS">Glorious</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery">
+        <!-- CARDS_INJECTION_POINT -->
+    </div>
+
+    <footer>
+        <p>Generated on {GENERATION_DATE}</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.card-item');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.rarity === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

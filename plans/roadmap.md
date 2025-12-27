@@ -100,7 +100,7 @@ Improve style reference selection by matching suit AND rarity when sufficient ca
 ## 4. GitHub Pages Deck Gallery
 
 **Priority:** Medium  
-**Status:** Planned
+**Status:** ✅ Complete
 
 Build a static site (GitHub Pages) that displays card decks by series, updated automatically when new cards are created.
 
@@ -112,17 +112,17 @@ Build a static site (GitHub Pages) that displays card decks by series, updated a
 - Auto-updated via GitHub Actions after daily pipeline completes
 
 **Technical Approach:**
-- Static site generator (e.g., Jekyll, Astro, or plain HTML/JS)
+- Static site generator (custom script `tools/build_gallery.py`)
 - Card metadata from `meta.yml` files
 - Card images from `outputs/card_1024x1536.png`
-- Workflow step to rebuild/deploy site after card generation
+- Workflow `deploy-gallery.yml` builds and deploys to `github-pages` environment
 
 **Tasks:**
-- [ ] Design gallery layout and card display
-- [ ] Create static site scaffold in `/docs` or `/site`
-- [ ] Write build script to aggregate card data
-- [ ] Add GitHub Actions step to deploy to Pages
-- [ ] Implement rarity sorting/filtering
+- [x] Design gallery layout and card display
+- [x] Create static site scaffold in `/docs` or `/site`
+- [x] Write build script to aggregate card data
+- [x] Add GitHub Actions step to deploy to Pages
+- [x] Implement rarity sorting/filtering
 
 ---
 
