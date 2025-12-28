@@ -1,0 +1,265 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "007",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "PRAY",
+    "GLOSS": "To make a solemn request or petition to God; to intercede or ask for divine intervention.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A single beam of golden light piercing through dark storm clouds to illuminate a lonely mountain peak.",
+    "ABILITY_TEXT": "Name a card type. Reveal the top 3 cards of the Tower. Add all matching cards to your hand, then discard the rest.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Jeremiah 29:12",
+    "OT_VERSE_SNIPPET": "Then you will call on me and come and pray to me, and I will listen to you.",
+    "NT_VERSE_REF": "1 Thessalonians 5:17",
+    "NT_VERSE_SNIPPET": "Pray without ceasing.",
+    "OT_VERSE_LINE": "Jeremiah 29:12 — “Then you will call on me and come and pray to me, and I will listen to you.”",
+    "NT_VERSE_LINE": "1 Thessalonians 5:17 — “Pray without ceasing.”",
+    "GREEK": "προσεύχομαι",
+    "GREEK_TRANSLIT": "proseuchomai",
+    "HEBREW": "פָּלַל",
+    "HEBREW_TRANSLIT": "palal",
+    "OT_REFS": "Gen 20:7 • 1 Sam 1:10 • 2 Chr 7:14 • Ps 5:2",
+    "NT_REFS": "Matt 6:9 • Luke 18:1 • Jas 5:16 • Phil 4:6",
+    "TRIVIA_BULLETS": [
+      "The first recorded prayer in the Bible is in Genesis 4:26, when men began to 'call on the name of the Lord'.",
+      "The Hebrew word 'palal' implies intervention or judgment, suggesting prayer is an act of intercession.",
+      "Jesus' longest recorded prayer is found in John 17, known as the High Priestly Prayer.",
+      "The Bible records over 650 different prayers."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "first mention of pray in the bible",
+      "hebrew word for pray palal meaning",
+      "greek word for pray proseuchomai meaning",
+      "bible verse pray short snippet",
+      "trivia about the word pray in the bible"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKErXwVYuYUHdZ4TSEtYvSWxevXMvAE0dLQDktLdvxm-SdSZvn5hS4MixUxK3gHYG6Y0xuNniyUurNhbR0UgHFSQdhv1yiMBcnPyOSXNqnIU19YC986Wf-FJ2YTAZEvVO_nonVlwT2Ovo2WvF6tayfiVJQrnSVPx9LPiVUwJMrj0VG4NYXId0KOwQ=",
+        "title": "opendoors.org.hk"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwXZBWfgMXYASh1ck8YSIF6JOD7Y7hadHobSje0-KS9vV_LTUHehYoIt8c6HiZF1kdzP6CVYJ8H8t_FOTlVIUhzpKphxav46BbzYbcBBK8D1TZy_QgkW0ODKG2i8fXY_FrMw==",
+        "title": "barabbas.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG5SiTJGO4Cs74MbxNt82Q-_vTijlXQAWvffVu8aO1zB19joX5vSCFZpQku7WAv9cDffM-L0_2xDbCdI-X-cO6RhAXTpFZXp-Zw1Vr0hVaUlZJw4_cf98B9H55u-Z-AWGQgvYqKaXzAC1ounaX6qILkMzYinSOAixMmC4=",
+        "title": "crossway.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMgdtpZomZn0vqjm7TnCZaf_N-nW4DyZui6a2pVyrd-Oeiya54TSUG-yO5wyVvQ3L9lnvWm8dTj80hvimqasMTmOhRN1lh5qix6jX4NJSim2D_yDjH0f2uOcoLK_MgowjzUA==",
+        "title": "bibletalk.tv"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHB2tQIbw04-MqOmcuvR52iuI6GhTfLND1vR6bDtfuRsXPLISiHVGQSesZvlSLPx7plSkT1l3p6oQwOjye5HD0em9Fhllj78WfigRZczJF5TKjpdkFM2ho4bi1rkwHwjlDtB0UTroMzLvqGN63Lc5yUF1w-buQ=",
+        "title": "blueletterbible.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMAVp0qH9ABAvti5XgcPt_nIPBkoPe125-crjfee2G1WJ0U8-fDQP0vvqPGQGyV8nSyLUSZ6wxiZ1a8BFqRqVWIDcM39RV6M53Xd9uB_O27xhNM0Kb7TtaDWHPWPQL9_cxG0Q1XqN2J59TqAS3kLvLbJezpqj0sqHDpxVBz_dt-cVoB5Ua2ia-4D_2oxGDEpHVxw==",
+        "title": "studylight.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjKMF868D17ZEity2D16lP1Hs6aG0Uzf4OxSp4qeBk1ylF5GYGZ-IpB7LDBC661uvbeQ1Iv8t85ox7cyBX4mz-vz-ZEPdYNLPq12d5eNnA8eF2V2aiYJmCdKwxKuA0cZ0VpEGcrPdFhnyEpIgwFjCPo9llJd5HAJTnEbs=",
+        "title": "shepherdsadvantageinc.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVV12p-KO9B0oqq_8G08Wh00RY9YTisuUOX6Bp87gFz6h0JbsL8eMG4ef6Cq9s7TAyNKoE3uR3DT4qWZhPYUQTIirV7Gor5TBoeoTemX_QA7vvfzxz-mxrY77jOglnkov0imxlWHxmmA==",
+        "title": "christswords.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_5-BdVdo1vRhJuIwj8dCBwv_HJRyiD0Im29oqORMM-IUTZZ1klHgNs4Y32EhUesdzN70CH5RNcFsfIwMyEcIeErCo-q-PZkoFzB59FG06IxpOCoQc3pFIPpn7JsxNOqE5rfXbkvW3SIlzuLcuTDs_T9h66hjCG6hoCw==",
+        "title": "lisalageorge.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGvjlkz_Q_fdGnxCYYSEA9JC1t-uziuS3dvcIJXBx5gP9uKMOmrns_Xge2sbn9IUucm56VEBVL1JdusOLsWHBZDv7TtCan-B_LIVpGuFSzzE5ohidoCiXI4oPjASHoVxjgQPz_m7NRvpo0rWGX90eon4GJmCaQX7JVCQ==",
+        "title": "abide.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGletYHbF2BQmF4UJxZzuvJ4Kcn4OCpVEty8aR6-ekQVITHPCkkWtLdSd7965gJ0RX7BHtBZomFXSkVTnESD5HyWnNRDWeo3QkdbgIMLQHQizlKwomqHJogxnM2NPClWdeFdOM8-eCrgbVdAYWr9dtUrnC-tEKawRmw526be_QiIgzoTuI=",
+        "title": "tithe.ly"
+      }
+    ]
+  }
+}
