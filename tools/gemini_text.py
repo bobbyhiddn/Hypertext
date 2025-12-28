@@ -146,6 +146,32 @@ def generate_text_with_grounding(
         raise RuntimeError(f"No candidates returned. Raw: {raw[:500]}")
 
     first = candidates[0]
+    finish_reason = first.get("finishReason", "")
+
+    # Check for malformed function call - this is a retriable API error
+    if finish_reason == "MALFORMED_FUNCTION_CALL":
+        # Retry the request without grounding as a fallback
+        print(
+            f"Gemini returned MALFORMED_FUNCTION_CALL. Retrying without grounding...",
+            file=sys.stderr,
+        )
+        # Fall back to non-grounded request
+        payload_no_ground = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {"temperature": temperature},
+        }
+        body_no_ground = json.dumps(payload_no_ground).encode("utf-8")
+        req_no_ground = urllib.request.Request(url, data=body_no_ground, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req_no_ground, timeout=timeout_s) as resp:
+                raw = resp.read().decode("utf-8")
+                data = json.loads(raw)
+            candidates = data.get("candidates", [])
+            if candidates:
+                first = candidates[0]
+        except Exception as e:
+            raise RuntimeError(f"Fallback request without grounding also failed: {e}") from e
+
     parts = first.get("content", {}).get("parts", [])
     texts: list[str] = []
     for p in parts:

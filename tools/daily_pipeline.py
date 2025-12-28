@@ -6,6 +6,8 @@ import os
 import random
 import subprocess
 import sys
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 TOOLS_DIR = Path(__file__).resolve().parent
@@ -33,6 +35,67 @@ DEFAULT_SERIES_DIR = Path("series/2026-Q1")
 DEFAULT_TEMPLATE_PATH = Path("templates/card_prompt_template.json")
 DEFAULT_DEMO_DIR = Path("demo_cards")
 RULES_PATH = Path("docs/rules.md")
+
+# Game rules snippet for ability generation guidance
+GAME_RULES_SNIPPET = (
+    "GAME MECHANICS:\n"
+    "- There is ONE shared 90-card deck (the 'Tower'). Say 'the Tower' or 'the deck', never 'your deck'.\n"
+    "- Players have hands, Pages (face-up scored cards), and access to Sheol (shared discard).\n"
+    "- Scoring: Complete a phase (5-7 cards matching a type pattern) = score points.\n"
+    "- 'Letters' are tokens earned by completing your Lot (personal phase).\n\n"
+    "ABILITY DESIGN PRINCIPLES:\n"
+    "- THE WORD DEFINES THE ABILITY. Ask: 'What does this word MEAN?' then design an ability that EMBODIES that meaning.\n"
+    "- Example: SCATTER = disperse things → 'Each player discards 1, then draws 1'\n"
+    "- Example: REFUGE = safety/shelter → 'Your Pages cannot be targeted this turn'\n"
+    "- Example: HARVEST = gathering crops → 'Add the top card of Sheol to your hand'\n"
+    "- The mechanic MUST make sense for the word. A player should read the ability and think 'yes, that fits!'\n"
+    "- Be CREATIVE and UNIQUE. Avoid formulaic patterns.\n"
+    "- One short-to-medium sentence. Clear, memorable, flavorful.\n\n"
+    "BANNED (never use):\n"
+    "- 'Draw a card' as the ENTIRE ability with no flavor (boring, no theme)\n"
+    "- 'Search the Tower/deck' effects (too powerful, slows game)\n"
+    "- Generic effects with no thematic connection\n"
+    "- Abilities that just copy other cards in the set\n\n"
+    "DRAWING IS FINE when thematic! Examples:\n"
+    "- GOOD: 'Draw 1, then return a card from hand to top of Tower' (thematic to gathering)\n"
+    "- GOOD: 'Draw 2, discard 1' (thematic to water/satisfaction)\n"
+    "- GOOD: 'Draw 1 for each NAME in your Pages' (thematic to legacy)\n"
+    "- BAD: 'Draw 2 cards' (no flavor, no theme, boring)\n\n"
+    "ABILITY INSPIRATION BY RARITY:\n"
+    "- COMMON: Simple value with flavor (e.g., BREAD: 'Look at top 3 of Tower, add 1 to hand')\n"
+    "- UNCOMMON: Type-based or conditional (e.g., SHEPHERD: 'Return a NAME from Sheol to your hand')\n"
+    "- RARE: Stat-based, opponent interaction, or powerful effects "
+    "(e.g., PROPHET: 'Name a card type; opponent must discard one of that type or reveal their hand')\n"
+    "- GLORIOUS: Unique, game-changing, deeply thematic "
+    "(e.g., RESURRECTION: 'Return up to 3 cards from Sheol to the Tower, then each player draws 1')\n\n"
+    "CREATIVE MECHANICS TO USE:\n"
+    "- Opponent interaction: force discard, reveal hand, steal from hand/Pages, name a card they must discard\n"
+    "- Sheol manipulation: return cards, exile cards, peek, shuffle into Tower, 'bury' cards face-down\n"
+    "- Tower manipulation: look at top X, rearrange top cards, put cards on bottom, mill cards to Sheol\n"
+    "- Letter economy: gain Letters, steal Letters, convert Letters to cards\n"
+    "- Phase/Lot manipulation: swap Lots with opponent, peek at Lots, record to opponent's Lot\n"
+    "- Stat comparisons: if LORE > target's LORE, then... (compare any stat between cards)\n"
+    "- Pages-based effects: for each NOUN in your Pages, do X; bonus if you control all 5 types\n"
+    "- Conditional triggers: if you have no NAMEs in hand; if Sheol has 10+ cards; if you're behind in points\n"
+    "- Turn order effects: reverse turn order, skip next player, take extra turn\n"
+    "- Protection effects: prevent opponent from targeting your Pages/hand this round\n"
+    "- Copying effects: use another card's ability from Sheol, repeat your last ability\n"
+    "- Trade effects: swap a card with opponent, exchange top card of Tower with Sheol\n"
+    "- Reveal effects: reveal top X of Tower, opponent chooses one for you (or vice versa)\n"
+    "- Threshold effects: if your Pages have 3+ ADJECTIVEs, this ability is upgraded\n"
+    "- Type matching: discard 2-4 cards of the same type for scaling effects (e.g., 'Discard 2 NOUNs: draw 3')\n"
+    "- Redeem interaction: prevent opponents from redeeming this turn, or force a redeem\n"
+    "- Hand size matters: bonus if you have 7+ cards, or if fewer cards than opponent\n"
+    "- TITLE/wild synergy: TITLEs count as NOUN or NAME—effects that reward or punish wilds\n"
+    "- Stat totals: add LORE across your Pages, if total > 10 then gain bonus\n"
+    "- Rarity matters: if you control a GLORIOUS in Pages, this ability is stronger\n"
+    "- Racing effects: bonus if you have fewer cards in hand than opponents (racing to empty)\n"
+    "- Silence: target opponent cannot activate abilities this turn\n"
+    "- All-players effects: each player draws 1, each player discards a NOUN, etc.\n"
+    "- Letter-paid bonus (RARE): if a Letter was spent to activate this, gain a bonus effect\n"
+    "- Sacrifice Pages (GLORIOUS only, very rare): discard from your PAGES for devastating effects\n"
+    "- Sacrifice Letters (GLORIOUS only, very rare): spend Letters for game-changing power"
+)
 
 # Visual formatting standards that MUST be followed for card rendering
 FORMATTING_RUBRIC = """
@@ -81,62 +144,339 @@ FORMATTING_RUBRIC = """
 
 DEFAULT_STYLE_TEMPLATE = Path("tools") / "clean_template_final.png"
 RARITY_ORDER = ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
-RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}
+RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}  # percentages
+
+TYPE_ORDER = ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"]
+TYPE_TARGETS = {"NOUN": 16, "VERB": 20, "ADJECTIVE": 20, "NAME": 16, "TITLE": 18}  # counts for 90-card set
 
 
 def _load_series_stats(series_dir: Path) -> dict:
     """Load series stats from stats.yml."""
     stats_path = series_dir / "stats.yml"
     if not stats_path.exists() or yaml is None:
-        return {"counts": {r: 0 for r in RARITY_ORDER}, "total": 0, "targets": RARITY_TARGETS}
-    
+        return {
+            "rarity_counts": {r: 0 for r in RARITY_ORDER},
+            "rarity_targets": RARITY_TARGETS,
+            "type_counts": {t: 0 for t in TYPE_ORDER},
+            "type_targets": TYPE_TARGETS,
+            "total": 0,
+        }
+
     with open(stats_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f) or {}
-    
-    counts = data.get("counts", {})
+
+    # Handle both old format ("counts"/"targets") and new format ("rarity_counts"/"rarity_targets")
+    rarity_counts = data.get("rarity_counts", data.get("counts", {}))
     for r in RARITY_ORDER:
-        counts.setdefault(r, 0)
-    
+        rarity_counts.setdefault(r, 0)
+
+    type_counts = data.get("type_counts", {})
+    for t in TYPE_ORDER:
+        type_counts.setdefault(t, 0)
+
     return {
-        "counts": counts,
-        "total": data.get("total", sum(counts.values())),
-        "targets": data.get("targets", RARITY_TARGETS),
+        "rarity_counts": rarity_counts,
+        "rarity_targets": data.get("rarity_targets", data.get("targets", RARITY_TARGETS)),
+        "type_counts": type_counts,
+        "type_targets": data.get("type_targets", TYPE_TARGETS),
+        "total": data.get("total", sum(rarity_counts.values())),
     }
 
 
 def _save_series_stats(series_dir: Path, stats: dict) -> None:
-    """Save series stats to stats.yml."""
+    """Save series stats to stats.yml. Preserves theme if present."""
     if yaml is None:
         return
     stats_path = series_dir / "stats.yml"
-    
+
+    # Load existing data to preserve theme and other fields
+    existing = {}
+    if stats_path.exists():
+        with open(stats_path, "r", encoding="utf-8") as f:
+            existing = yaml.safe_load(f) or {}
+
     data = {
         "series": series_dir.name,
+        "theme": existing.get("theme", ""),
         "cycle_days": 90,
-        "start_date": "2025-01-01",
-        "targets": stats.get("targets", RARITY_TARGETS),
-        "counts": stats["counts"],
+        "start_date": existing.get("start_date", "2026-01-01"),
+        "rarity_targets": stats.get("rarity_targets", RARITY_TARGETS),
+        "type_targets": stats.get("type_targets", TYPE_TARGETS),
+        "rarity_counts": stats["rarity_counts"],
+        "type_counts": stats["type_counts"],
         "total": stats["total"],
     }
-    
+
     with open(stats_path, "w", encoding="utf-8") as f:
-        yaml.safe_dump(data, f, default_flow_style=False, sort_keys=False)
+        yaml.safe_dump(data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
+
+# --------------------------------------------------------------------------
+# Cards Index Tracking (git-compatible YAML-based tracking)
+# --------------------------------------------------------------------------
+
+def _load_cards_index(series_dir: Path) -> dict:
+    """Load the cards index from cards_index.yml.
+
+    The index tracks:
+    - words: list of all words used in the series
+    - abilities: list of ability pattern summaries
+    - cards: list of card metadata (number, word, type, rarity, ability_summary)
+    """
+    index_path = series_dir / "cards_index.yml"
+    if not index_path.exists() or yaml is None:
+        return {
+            "words": [],
+            "ability_patterns": [],
+            "cards": [],
+        }
+
+    with open(index_path, "r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+
+    return {
+        "words": data.get("words", []),
+        "ability_patterns": data.get("ability_patterns", []),
+        "cards": data.get("cards", []),
+    }
+
+
+def _save_cards_index(series_dir: Path, index: dict) -> None:
+    """Save the cards index to cards_index.yml."""
+    if yaml is None:
+        return
+
+    index_path = series_dir / "cards_index.yml"
+
+    data = {
+        "words": sorted(set(str(w).upper() for w in index.get("words", []))),
+        "ability_patterns": sorted(set(index.get("ability_patterns", []))),
+        "cards": index.get("cards", []),
+    }
+
+    with open(index_path, "w", encoding="utf-8") as f:
+        yaml.safe_dump(data, f, default_flow_style=False, sort_keys=False, allow_unicode=True)
+
+
+def _extract_ability_pattern(ability_text: str) -> str:
+    """Extract a normalized ability pattern for tracking duplicates.
+
+    Returns a simplified pattern like:
+    - "look_top_add"
+    - "discard_draw"
+    - "type_effect_noun"
+    - "stat_effect_lore"
+    """
+    if not ability_text:
+        return ""
+
+    text = ability_text.lower()
+    patterns = []
+
+    # Check for common mechanics
+    if "look at" in text and "top" in text:
+        patterns.append("look_top")
+    if "add" in text and "hand" in text:
+        patterns.append("add_hand")
+    if "discard" in text:
+        patterns.append("discard")
+    if "draw" in text:
+        patterns.append("draw")
+    if "sheol" in text:
+        patterns.append("sheol")
+    if "pages" in text:
+        patterns.append("pages")
+    if "tower" in text:
+        patterns.append("tower")
+
+    # Check for type references
+    for card_type in ["noun", "verb", "adjective", "name", "title"]:
+        if card_type in text:
+            patterns.append(f"type_{card_type}")
+            break
+
+    # Check for stat references
+    for stat in ["lore", "context", "complexity"]:
+        if stat in text:
+            patterns.append(f"stat_{stat}")
+            break
+
+    # Check for conditional triggers
+    if "when" in text or "if" in text:
+        patterns.append("conditional")
+    if "opponent" in text:
+        patterns.append("opponent")
+    if "choose" in text or "select" in text:
+        patterns.append("choice")
+
+    return "_".join(sorted(patterns)) if patterns else "unique"
+
+
+def _add_card_to_index(
+    series_dir: Path,
+    *,
+    number: int,
+    word: str,
+    card_type: str,
+    rarity: str,
+    ability_text: str,
+) -> None:
+    """Add a card to the series index for tracking."""
+    index = _load_cards_index(series_dir)
+
+    word_upper = word.upper()
+    if word_upper not in index["words"]:
+        index["words"].append(word_upper)
+
+    ability_pattern = _extract_ability_pattern(ability_text)
+    if ability_pattern and ability_pattern not in index["ability_patterns"]:
+        index["ability_patterns"].append(ability_pattern)
+
+    # Add card entry
+    card_entry = {
+        "number": number,
+        "word": word_upper,
+        "type": card_type.upper(),
+        "rarity": rarity.upper(),
+        "ability_pattern": ability_pattern,
+    }
+
+    # Check if card already exists (by number) and update if so
+    existing_idx = None
+    for i, c in enumerate(index["cards"]):
+        if c.get("number") == number:
+            existing_idx = i
+            break
+
+    if existing_idx is not None:
+        index["cards"][existing_idx] = card_entry
+    else:
+        index["cards"].append(card_entry)
+
+    _save_cards_index(series_dir, index)
+
+
+def _get_existing_words_from_index(series_dir: Path) -> list[str]:
+    """Get list of words already used in the series."""
+    index = _load_cards_index(series_dir)
+    return [w.upper() for w in index.get("words", [])]
+
+
+def _get_existing_ability_patterns(series_dir: Path) -> list[str]:
+    """Get list of ability patterns already used in the series."""
+    index = _load_cards_index(series_dir)
+    return index.get("ability_patterns", [])
+
+
+def _rebuild_cards_index(series_dir: Path) -> dict:
+    """Rebuild the cards index by scanning existing card directories.
+
+    This is useful for initializing the index from existing cards or
+    recovering from a corrupted index file.
+
+    Handles both structures:
+    - series_dir/cards/001-word/  (main series)
+    - series_dir/001-word/  (demo cards)
+    """
+    if yaml is None:
+        return {"words": [], "ability_patterns": [], "cards": []}
+
+    # Try series_dir/cards first, then series_dir itself
+    cards_dir = series_dir / "cards"
+    if not cards_dir.exists():
+        cards_dir = series_dir
+    if not cards_dir.exists():
+        return {"words": [], "ability_patterns": [], "cards": []}
+
+    words: list[str] = []
+    ability_patterns: list[str] = []
+    cards: list[dict] = []
+
+    for card_path in sorted(cards_dir.iterdir()):
+        if not card_path.is_dir():
+            continue
+
+        meta_file = card_path / "meta.yml"
+        if not meta_file.exists():
+            continue
+
+        try:
+            with open(meta_file, "r", encoding="utf-8") as f:
+                meta = yaml.safe_load(f) or {}
+        except Exception:
+            continue
+
+        word = str(meta.get("word", "")).upper()
+        if not word:
+            continue
+
+        number_str = meta.get("number", "")
+        try:
+            number = int(number_str)
+        except (ValueError, TypeError):
+            # Try to extract from directory name
+            try:
+                number = int(card_path.name.split("-")[0])
+            except (ValueError, IndexError):
+                continue
+
+        card_type = str(meta.get("card_type", "NOUN")).upper()
+        rarity = str(meta.get("rarity", "COMMON")).upper()
+        ability_text = str(meta.get("ability", ""))
+
+        words.append(word)
+        pattern = _extract_ability_pattern(ability_text)
+        if pattern:
+            ability_patterns.append(pattern)
+
+        cards.append({
+            "number": number,
+            "word": word,
+            "type": card_type,
+            "rarity": rarity,
+            "ability_pattern": pattern,
+        })
+
+    index = {
+        "words": sorted(set(words)),
+        "ability_patterns": sorted(set(ability_patterns)),
+        "cards": cards,
+    }
+
+    _save_cards_index(series_dir, index)
+    return index
 
 
 def _get_needed_rarity(stats: dict) -> str:
-    """Determine which rarity is most under-represented vs targets."""
-    counts = stats["counts"]
-    targets = stats.get("targets", RARITY_TARGETS)
+    """Determine which rarity is most under-represented vs targets (percentage-based)."""
+    counts = stats["rarity_counts"]
+    targets = stats.get("rarity_targets", RARITY_TARGETS)
     total = max(stats["total"], 1)
-    
+
     # Calculate deficit: target% - current%
     deficits = {}
     for rarity in RARITY_ORDER:
         current_pct = (counts.get(rarity, 0) / total) * 100
         target_pct = targets.get(rarity, 25)
         deficits[rarity] = target_pct - current_pct
-    
+
     # Return rarity with highest deficit
+    return max(deficits, key=deficits.get)
+
+
+def _get_needed_type(stats: dict) -> str:
+    """Determine which card type is most under-represented vs targets (count-based)."""
+    counts = stats["type_counts"]
+    targets = stats.get("type_targets", TYPE_TARGETS)
+
+    # Calculate deficit: target_count - current_count
+    deficits = {}
+    for card_type in TYPE_ORDER:
+        current = counts.get(card_type, 0)
+        target = targets.get(card_type, 18)
+        deficits[card_type] = target - current
+
+    # Return type with highest deficit
     return max(deficits, key=deficits.get)
 
 
@@ -167,6 +507,19 @@ def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
             continue
     
     return rarity_map
+
+
+def _get_series_display_name(series_dir: Path) -> str:
+    """Get series display name including theme (e.g., '2026-Q1 Babel')."""
+    series_name = series_dir.name
+    stats_file = series_dir / "stats.yml"
+    if stats_file.exists() and yaml:
+        with open(stats_file, "r", encoding="utf-8") as f:
+            stats = yaml.safe_load(f) or {}
+        theme = stats.get("theme", "").strip()
+        if theme:
+            return f"{series_name} {theme}"
+    return series_name
 
 
 def _build_style_refs(series_root: Path) -> tuple[list[str], dict[int, str]]:
@@ -302,29 +655,127 @@ def _parse_json_from_model(text: str) -> dict:
     raise RuntimeError(f"Failed to parse JSON from model output. Snippet: {snippet}") from last_err
 
 
-def _generate_queue_entries(*, count: int, existing_words: list[str], needed_rarities: list[str] | None = None) -> list[dict]:
+# Era/theme descriptions for constraining word selection
+SERIES_THEME_PROMPTS = {
+    "Babel": (
+        "SERIES THEME: Babel (Pre-Abraham Era, Genesis 1-11)\n\n"
+        "RARITY CONSTRAINTS:\n"
+        "- COMMON & UNCOMMON: Any Biblical word that has both Greek and Hebrew equivalents. "
+        "These are general vocabulary cards.\n"
+        "- RARE & GLORIOUS: MUST be specific to the Pre-Abraham era (Genesis 1-11). "
+        "Words relevant to: Creation, Eden, the Fall, Cain & Abel, the Flood, Noah, "
+        "the Tower of Babel, early humanity, origins, divine names, and primordial concepts. "
+        "Examples: EDEN, SERPENT, TREE, CURSE, BLOOD, FLOOD, ARK, COVENANT, BABEL, TONGUE, SCATTER, "
+        "ADAM, EVE, CAIN, ABEL, NOAH, NEPHILIM, NIMROD, CREATE, FALL, SIN, DEATH, LIFE.\n\n"
+        "All words MUST have both Greek (NT/LXX) and Hebrew (OT) forms."
+    ),
+    "Egypt": (
+        "SERIES THEME: Egypt (Patriarchs to Exodus)\n\n"
+        "RARITY CONSTRAINTS:\n"
+        "- COMMON & UNCOMMON: Any Biblical word that has both Greek and Hebrew equivalents.\n"
+        "- RARE & GLORIOUS: MUST be specific to the Egyptian era (Genesis 37 - Exodus). "
+        "Words relevant to: Joseph, slavery, Pharaoh, plagues, Moses, deliverance, Passover, "
+        "the wilderness, and God's mighty acts against Egypt.\n\n"
+        "All words MUST have both Greek (NT/LXX) and Hebrew (OT) forms."
+    ),
+    "Israel": (
+        "SERIES THEME: Israel (Conquest to United Kingdom)\n\n"
+        "RARITY CONSTRAINTS:\n"
+        "- COMMON & UNCOMMON: Any Biblical word that has both Greek and Hebrew equivalents.\n"
+        "- RARE & GLORIOUS: MUST be specific to the Israelite era (Joshua - Solomon). "
+        "Words relevant to: conquest, judges, kings, the united kingdom, temple, "
+        "David, Solomon, worship, and the promised land.\n\n"
+        "All words MUST have both Greek (NT/LXX) and Hebrew (OT) forms."
+    ),
+}
+
+
+def _generate_queue_entries(
+    *,
+    count: int,
+    existing_words: list[str],
+    needed_rarities: list[str] | None = None,
+    needed_types: list[str] | None = None,
+    series_dir: Path | None = None,
+) -> list[dict]:
+    # Get theme constraint if series_dir provided
+    theme_instruction = ""
+    if series_dir and yaml:
+        stats_file = series_dir / "stats.yml"
+        if stats_file.exists():
+            with open(stats_file, "r", encoding="utf-8") as f:
+                stats = yaml.safe_load(f) or {}
+            theme = stats.get("theme", "").strip()
+            if theme and theme in SERIES_THEME_PROMPTS:
+                theme_instruction = SERIES_THEME_PROMPTS[theme] + "\n\n"
+
+    # Build specific assignments if we have both types and rarities
+    specific_assignments = ""
+    if needed_rarities and needed_types and len(needed_rarities) == count and len(needed_types) == count:
+        assignments = []
+        for i, (rarity, card_type) in enumerate(zip(needed_rarities, needed_types), 1):
+            assignments.append(f"  Entry {i}: card_type={card_type}, rarity={rarity}")
+        specific_assignments = (
+            "REQUIRED ASSIGNMENTS (you MUST follow these exactly):\n"
+            + "\n".join(assignments)
+            + "\n\n"
+        )
+
     # Build rarity instruction based on what's needed
-    if needed_rarities:
+    if needed_rarities and not specific_assignments:
         rarity_instruction = (
             f"IMPORTANT: The series needs these rarities most urgently: {', '.join(needed_rarities)}. "
             f"Assign the FIRST entry rarity={needed_rarities[0]}. "
             "Distribute remaining entries to help balance the set."
         )
-    else:
+    elif not specific_assignments:
         rarity_instruction = (
             "IMPORTANT: Distribute rarities to form a balanced set "
             "(approx. 10% GLORIOUS, 15% RARE, 35% UNCOMMON, 40% COMMON)."
         )
-    
+    else:
+        rarity_instruction = ""
+
+    # Build type instruction if needed (without specific assignments)
+    if needed_types and not specific_assignments:
+        type_instruction = (
+            f"IMPORTANT: The series needs these types most urgently: {', '.join(needed_types)}. "
+            f"Assign the FIRST entry card_type={needed_types[0]}. "
+        )
+    elif not specific_assignments:
+        type_instruction = (
+            "Distribute types to form a balanced set "
+            "(approx. NOUN:18%, VERB:22%, ADJECTIVE:22%, NAME:18%, TITLE:20%)."
+        )
+    else:
+        type_instruction = ""
+
+    # Rarity-weight guidance: match word importance to rarity
+    rarity_weight_guide = (
+        "RARITY MUST MATCH WORD IMPORTANCE:\n"
+        "- GLORIOUS: Central theological terms, divine names, pivotal narrative words "
+        "(e.g., MESSIAH, YAHWEH, RESURRECTION, COVENANT, GLORY, REDEEM)\n"
+        "- RARE: Significant theological concepts, major figures, key events "
+        "(e.g., PROPHET, KING, TEMPLE, SACRIFICE, MIRACLE, APOSTLE)\n"
+        "- UNCOMMON: Important but more common biblical vocabulary "
+        "(e.g., PRAY, BLESS, FAITH, SERVANT, SHEPHERD, WITNESS)\n"
+        "- COMMON: Everyday biblical words, simple concepts "
+        "(e.g., WALK, HEAR, BREAD, WATER, HOUSE, STONE)\n\n"
+        "Pick words that FIT the assigned rarity. Don't assign KING as COMMON or WATER as GLORIOUS.\n\n"
+    )
+
     prompt = (
-        "Generate "
+        theme_instruction
+        + rarity_weight_guide
+        + specific_assignments
+        + "Generate "
         + str(count)
         + " distinct English words for a daily Biblical word-study trading card project. "
         "Avoid any words already used: "
-        + ", ".join(existing_words)
+        + (", ".join(existing_words) if existing_words else "none")
         + ". "
-        "For each item, choose: card_type (NOUN|VERB|ADJECTIVE|NAME|TITLE) and rarity (COMMON|UNCOMMON|RARE|GLORIOUS). "
-        + rarity_instruction + " "
+        "For each item, provide: card_type (NOUN|VERB|ADJECTIVE|NAME|TITLE) and rarity (COMMON|UNCOMMON|RARE|GLORIOUS). "
+        + rarity_instruction + " " + type_instruction + " "
         "Return ONLY valid JSON as an array of objects with keys: word, card_type, rarity. "
         "word should be uppercase and A-Z only (no spaces)."
     )
@@ -742,23 +1193,39 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
     print(f"Queue path: {queue_path}")
     queue = load_queue(queue_path)
     if auto:
-        existing_words = [str(x.get("word", "")).upper() for x in queue if isinstance(x, dict)]
+        # Combine words from queue AND from series index (for deduplication)
+        queue_words = [str(x.get("word", "")).upper() for x in queue if isinstance(x, dict)]
+        index_words = _get_existing_words_from_index(series_dir)
+        existing_words = list(set(queue_words + index_words))
+        _log(f"[plan] existing words (queue + index): {len(existing_words)} total")
+
         min_queue = int(os.environ.get("HYPERTEXT_MIN_QUEUE", "3"))
         if len(queue) < min_queue:
             needed = min_queue - len(queue)
             print(f"Queue below minimum ({len(queue)}/{min_queue}). Generating {needed} new queue entries...")
-            
-            # Calculate needed rarities from stats
+
+            # Calculate needed rarities and types from stats
             stats = _load_series_stats(series_dir)
             needed_rarities = []
+            needed_types = []
             for _ in range(needed):
                 nr = _get_needed_rarity(stats)
+                nt = _get_needed_type(stats)
                 needed_rarities.append(nr)
-                stats["counts"][nr] = stats["counts"].get(nr, 0) + 1
+                needed_types.append(nt)
+                stats["rarity_counts"][nr] = stats["rarity_counts"].get(nr, 0) + 1
+                stats["type_counts"][nt] = stats["type_counts"].get(nt, 0) + 1
                 stats["total"] += 1
-            
-            _log(f"[plan] needed rarities based on stats: {needed_rarities}")
-            queue.extend(_generate_queue_entries(count=needed, existing_words=existing_words, needed_rarities=needed_rarities))
+
+            _log(f"[plan] needed rarities: {needed_rarities}")
+            _log(f"[plan] needed types: {needed_types}")
+            queue.extend(_generate_queue_entries(
+                count=needed,
+                existing_words=existing_words,
+                needed_rarities=needed_rarities,
+                needed_types=needed_types,
+                series_dir=series_dir,
+            ))
             save_queue(queue_path, queue)
 
     if not queue:
@@ -839,7 +1306,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         nt_snip = str(nt_verse.get("snippet", "")).strip()
 
         card["content"]["NUMBER"] = f"{number:03d}"
-        card["content"]["SERIES"] = series_dir.name
+        card["content"]["SERIES"] = _get_series_display_name(series_dir)
         card["content"]["WORD"] = word
         card["content"]["GLOSS"] = gloss
         card["content"]["CARD_TYPE"] = card_type
@@ -908,7 +1375,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
     else:
         _log("[phase plan] manual mode: using canned demo content")
         card["content"]["NUMBER"] = f"{number:03d}"
-        card["content"]["SERIES"] = series_dir.name
+        card["content"]["SERIES"] = _get_series_display_name(series_dir)
         card["content"]["WORD"] = word
         card["content"]["GLOSS"] = "learned visitors from the East"
         card["content"]["CARD_TYPE"] = card_type
@@ -991,42 +1458,198 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             f.write(f"card_slug={card_dir.name}\n")
         _log(f"[phase plan] wrote card_dir={card_dir} to GITHUB_OUTPUT")
 
-    # Update series stats
+    # Update series stats with both rarity and type
     stats = _load_series_stats(series_dir)
-    stats["counts"][rarity] = stats["counts"].get(rarity, 0) + 1
-    stats["total"] = sum(stats["counts"].values())
+    stats["rarity_counts"][rarity] = stats["rarity_counts"].get(rarity, 0) + 1
+    stats["type_counts"][card_type] = stats["type_counts"].get(card_type, 0) + 1
+    stats["total"] = sum(stats["rarity_counts"].values())
     _save_series_stats(series_dir, stats)
-    _log(f"[phase plan] updated stats.yml: {rarity} count now {stats['counts'][rarity]}, total {stats['total']}")
+    _log(f"[phase plan] updated stats.yml: {card_type}/{rarity}, total={stats['total']}")
+
+    # Add card to series index for tracking
+    ability_text = card["content"].get("ABILITY_TEXT", "")
+    _add_card_to_index(
+        series_dir,
+        number=number,
+        word=word,
+        card_type=card_type,
+        rarity=rarity,
+        ability_text=ability_text,
+    )
+    _log(f"[phase plan] updated cards_index.yml")
 
     return 0
 
 
-def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
+def _plan_demo_card_with_number(
+    *,
+    series_dir: Path,
+    template_path: Path,
+    demo_dir: Path,
+    number: int,
+    entry: dict,
+) -> Path | None:
+    """Plan a single demo card with a pre-assigned number (for parallel execution).
+
+    Returns card_dir or None on failure.
+    """
     if yaml is None:
         raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
 
-    _log(f"[phase demo] demo_dir={demo_dir}")
-    _log(f"[phase demo] template_path={template_path}")
+    word = str(entry["word"]).upper()
+    slug = slugify(word)
+    card_type = str(entry.get("card_type", "NOUN")).strip().upper()
+    rarity = str(entry.get("rarity", "COMMON")).strip().upper()
+
+    _log(f"[demo plan] planning: #{number:03d} word={word} type={card_type} rarity={rarity}")
+
+    card_dir = demo_dir / f"{number:03d}-{slug}"
+    os.makedirs(card_dir, exist_ok=True)
+
+    if not template_path.exists():
+        print(f"Missing {template_path}")
+        return None
+
+    try:
+        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
+    except Exception as e:
+        _log(f"[demo plan] recipe generation failed for #{number:03d} {word}: {e}")
+        return None
+
+    grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
+    stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
+    ot_verse = recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {}
+    nt_verse = recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {}
+    greek = recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {}
+    hebrew = recipe.get("hebrew", {}) if isinstance(recipe.get("hebrew"), dict) else {}
+
+    trivia = recipe.get("trivia", [])
+    if not isinstance(trivia, list):
+        trivia = []
+    try:
+        trivia_items = _normalize_trivia([str(x) for x in trivia])
+    except Exception:
+        trivia_items = ["Trivia item 1", "Trivia item 2", "Trivia item 3"]
+
+    gloss = str(recipe.get("gloss", "")).strip()
+    art_prompt = str(recipe.get("art_prompt", "")).strip()
+    ability_text = str(recipe.get("ability_text", "")).strip()
+
+    ot_ref = str(ot_verse.get("ref", "")).strip()
+    ot_snip = str(ot_verse.get("snippet", "")).strip()
+    nt_ref = str(nt_verse.get("ref", "")).strip()
+    nt_snip = str(nt_verse.get("snippet", "")).strip()
+
+    card = read_json(template_path)
+    card.setdefault("content", {})
+
+    card["content"]["NUMBER"] = f"{number:03d}"
+    card["content"]["SERIES"] = _get_series_display_name(series_dir)
+    card["content"]["WORD"] = word
+    card["content"]["GLOSS"] = gloss
+    card["content"]["CARD_TYPE"] = card_type
+    card["content"]["RARITY_TEXT"] = rarity
+    card["content"]["RARITY_ICON"] = rarity
+    card["content"]["ART_PROMPT"] = art_prompt
+    card["content"]["ABILITY_TEXT"] = ability_text
+
+    card["content"]["STAT_LORE"] = int(stats.get("lore", 3))
+    card["content"]["STAT_CONTEXT"] = int(stats.get("context", 3))
+    card["content"]["STAT_COMPLEXITY"] = int(stats.get("complexity", 3))
+
+    card["content"]["OT_VERSE_REF"] = ot_ref
+    card["content"]["OT_VERSE_SNIPPET"] = ot_snip
+    card["content"]["NT_VERSE_REF"] = nt_ref
+    card["content"]["NT_VERSE_SNIPPET"] = nt_snip
+    card["content"]["OT_VERSE_LINE"] = f'{ot_ref} — "{ot_snip}"'
+    card["content"]["NT_VERSE_LINE"] = f'{nt_ref} — "{nt_snip}"'
+
+    card["content"]["GREEK"] = str(greek.get("text", "")).strip()
+    card["content"]["GREEK_TRANSLIT"] = str(greek.get("translit", "")).strip()
+    card["content"]["HEBREW"] = str(hebrew.get("text", "")).strip()
+    card["content"]["HEBREW_TRANSLIT"] = str(hebrew.get("translit", "")).strip()
+    card["content"]["OT_REFS"] = str(recipe.get("ot_refs", "")).strip()
+    card["content"]["NT_REFS"] = str(recipe.get("nt_refs", "")).strip()
+    card["content"]["TRIVIA_BULLETS"] = trivia_items
+
+    card["grounding"] = grounding
+
+    write_json(card_dir / "card.json", card)
+
+    prompt_text = build_prompt_text(card)
+    with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
+        f.write(prompt_text)
+
+    _seed_revise_file(card_dir)
+
+    meta = {
+        "number": f"{number:03d}",
+        "word": word,
+        "gloss": gloss,
+        "card_type": card_type,
+        "rarity": rarity,
+        "art_prompt": art_prompt,
+        "stats": {
+            "lore": card["content"]["STAT_LORE"],
+            "context": card["content"]["STAT_CONTEXT"],
+            "complexity": card["content"]["STAT_COMPLEXITY"],
+        },
+        "ability": ability_text,
+    }
+    with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
+        yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+
+    out_png = card_dir / "outputs" / "card_1024x1536.png"
+    render_post(
+        str(card_dir / "post.md"),
+        word=word,
+        gloss=gloss,
+        ot_ref=ot_ref,
+        ot_snip=ot_snip,
+        nt_ref=nt_ref,
+        nt_snip=nt_snip,
+        trivia_items=trivia_items,
+        image_rel_path=f"./outputs/{out_png.name}",
+    )
+
+    _log(f"[demo plan] completed: #{number:03d} {word}")
+    return card_dir
+
+
+def _plan_demo_card(
+    *,
+    series_dir: Path,
+    template_path: Path,
+    demo_dir: Path,
+    entry: dict | None = None,
+) -> Path | None:
+    """Plan a single demo card (text gen + file creation). Returns card_dir or None on failure.
+
+    If entry is provided, uses that word/type/rarity. Otherwise picks randomly.
+    """
+    if yaml is None:
+        raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
 
     cards_dir = demo_dir
     number = next_number(cards_dir)
 
-    entry = _pick_demo_entry()
+    if entry is None:
+        entry = _pick_demo_entry()
     word = str(entry["word"]).upper()
     slug = slugify(word)
-    card_type = str(entry.get("card_type", "NOUN")).upper()
-    rarity = str(entry.get("rarity", "COMMON")).upper()
+    card_type = str(entry.get("card_type", "NOUN")).strip().upper()
+    rarity = str(entry.get("rarity", "COMMON")).strip().upper()
 
-    _log(f"[phase demo] selected: #{number:03d} word={word} type={card_type} rarity={rarity}")
+    _log(f"[demo plan] selected: #{number:03d} word={word} type={card_type} rarity={rarity}")
 
     card_dir = cards_dir / f"{number:03d}-{slug}"
     os.makedirs(card_dir, exist_ok=True)
 
     if not template_path.exists():
         print(f"Missing {template_path}")
-        return 1
+        return None
 
-    _log("[phase demo] generating recipe")
+    _log("[demo plan] generating recipe")
     recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity)
     grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
     stats = recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {}
@@ -1053,7 +1676,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card.setdefault("content", {})
 
     card["content"]["NUMBER"] = f"{number:03d}"
-    card["content"]["SERIES"] = series_dir.name
+    card["content"]["SERIES"] = _get_series_display_name(series_dir)
     card["content"]["WORD"] = word
     card["content"]["GLOSS"] = gloss
     card["content"]["CARD_TYPE"] = card_type
@@ -1070,8 +1693,8 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card["content"]["OT_VERSE_SNIPPET"] = ot_snip
     card["content"]["NT_VERSE_REF"] = nt_ref
     card["content"]["NT_VERSE_SNIPPET"] = nt_snip
-    card["content"]["OT_VERSE_LINE"] = f"{ot_ref} — “{ot_snip}”"
-    card["content"]["NT_VERSE_LINE"] = f"{nt_ref} — “{nt_snip}”"
+    card["content"]["OT_VERSE_LINE"] = f'{ot_ref} — "{ot_snip}"'
+    card["content"]["NT_VERSE_LINE"] = f'{nt_ref} — "{nt_snip}"'
 
     card["content"]["GREEK"] = str(greek.get("text", "")).strip()
     card["content"]["GREEK_TRANSLIT"] = str(greek.get("translit", "")).strip()
@@ -1084,15 +1707,15 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     card["grounding"] = grounding
 
     write_json(card_dir / "card.json", card)
-    _log(f"[phase demo] wrote card.json")
+    _log(f"[demo plan] wrote card.json")
 
     prompt_text = build_prompt_text(card)
     with open(card_dir / "prompt.txt", "w", encoding="utf-8") as f:
         f.write(prompt_text)
-    _log(f"[phase demo] wrote prompt.txt")
+    _log(f"[demo plan] wrote prompt.txt")
 
     _seed_revise_file(card_dir)
-    _log(f"[phase demo] wrote revise.txt")
+    _log(f"[demo plan] wrote revise.txt")
 
     meta = {
         "number": f"{number:03d}",
@@ -1124,45 +1747,10 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     }
     with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
-    _log(f"[phase demo] wrote meta.yml")
+    _log(f"[demo plan] wrote meta.yml")
 
+    # Write post.md
     out_png = card_dir / "outputs" / "card_1024x1536.png"
-    _log(f"[phase demo] generating image -> {out_png}")
-    
-    style_refs, rarity_labels = _build_style_refs(DEFAULT_DEMO_DIR.parent)
-    if style_refs:
-        cmd = [
-            sys.executable,
-            str(Path("tools") / "gemini_style.py"),
-            "--prompt-file", str(card_dir / "prompt.txt"),
-            *_build_style_cmd_args(style_refs, rarity_labels, rarity),
-            "--out", str(out_png)
-        ]
-    else:
-        cmd = [
-            sys.executable,
-            str(Path("tools") / "gemini_image.py"),
-            str(card_dir / "prompt.txt"),
-            str(out_png)
-        ]
-        
-    subprocess.check_call(cmd)
-    
-    # Run polish step
-    polish_cmd = [
-        sys.executable,
-        str(Path("tools") / "polish_card.py"),
-        str(out_png)
-    ]
-    try:
-        subprocess.check_call(polish_cmd)
-    except subprocess.CalledProcessError as e:
-        print(f"Warning: Polish step failed: {e}")
-
-    _run_watermark(card_dir=card_dir, image_path=out_png)
-        
-    _log("[phase demo] image generation complete")
-
     render_post(
         str(card_dir / "post.md"),
         word=word,
@@ -1175,7 +1763,307 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
         image_rel_path=f"./outputs/{out_png.name}",
     )
 
+    return card_dir
+
+
+def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
+    """Generate a single demo card (plan + image)."""
+    _log(f"[phase demo] demo_dir={demo_dir}")
+    _log(f"[phase demo] template_path={template_path}")
+
+    card_dir = _plan_demo_card(series_dir=series_dir, template_path=template_path, demo_dir=demo_dir)
+    if card_dir is None:
+        return 1
+
+    # Generate image (no watermark for demo cards)
+    rc = _generate_image_for_card_dir(
+        card_dir=card_dir,
+        skip_polish=False,
+        skip_watermark=True,  # Demo cards don't need watermarks
+        style_series_dir=series_dir,  # Use main series for style references
+    )
+    if rc != 0:
+        return rc
+
     print(f"Generated demo card at {card_dir}")
+    return 0
+
+
+def phase_demo_batch(
+    *,
+    series_dir: Path,
+    template_path: Path,
+    demo_dir: Path,
+    batch: int,
+    parallel: int = 1,
+    skip_polish: bool = False,
+) -> int:
+    """Generate multiple demo cards with parallel planning and image generation.
+
+    Uses demo_dir for its own stats and index tracking, while using series_dir
+    for style references and theme constraints.
+
+    Flow:
+    1. Image-first: Generate images for existing recipes that lack images
+    2. Parallel planning: Pre-allocate numbers, plan new cards in parallel
+    3. Parallel image gen: Generate images for newly planned cards
+    """
+    demo_dir.mkdir(parents=True, exist_ok=True)
+    out_name = "card_1024x1536.png"
+
+    # -------------------------------------------------------------------------
+    # PHASE 0: Image-first - Generate images for existing recipes missing images
+    # -------------------------------------------------------------------------
+    cards_needing_images: list[Path] = []
+    for entry in sorted(demo_dir.iterdir()):
+        if not entry.is_dir():
+            continue
+        prompt_file = entry / "prompt.txt"
+        out_png = entry / "outputs" / out_name
+        if prompt_file.exists() and not out_png.exists():
+            cards_needing_images.append(entry)
+
+    if cards_needing_images:
+        _log(f"[demo batch] found {len(cards_needing_images)} existing recipes without images, generating first...")
+
+        def generate_one(card_dir: Path) -> tuple[Path, int]:
+            rc = _generate_image_for_card_dir(
+                card_dir=card_dir,
+                skip_polish=skip_polish,
+                skip_watermark=True,
+                style_series_dir=series_dir,
+            )
+            return card_dir, rc
+
+        failed_existing: list[Path] = []
+        completed = 0
+
+        if parallel <= 1:
+            for card_dir in cards_needing_images:
+                card_dir, rc = generate_one(card_dir)
+                completed += 1
+                if rc != 0:
+                    failed_existing.append(card_dir)
+                _log(f"[demo batch] image-first: {completed}/{len(cards_needing_images)} ({card_dir.name})")
+        else:
+            with ThreadPoolExecutor(max_workers=parallel) as executor:
+                futures = {executor.submit(generate_one, cd): cd for cd in cards_needing_images}
+                for future in as_completed(futures):
+                    card_dir, rc = future.result()
+                    completed += 1
+                    if rc != 0:
+                        failed_existing.append(card_dir)
+                    _log(f"[demo batch] image-first: {completed}/{len(cards_needing_images)} ({card_dir.name})")
+
+        if failed_existing:
+            _log(f"[demo batch] {len(failed_existing)} existing cards failed image generation:")
+            for cd in failed_existing:
+                _log(f"  - {cd.name}")
+
+        _log(f"[demo batch] image-first phase complete: {completed - len(failed_existing)}/{len(cards_needing_images)} succeeded")
+
+    # -------------------------------------------------------------------------
+    # PHASE 1: Count existing cards, determine how many new cards to plan
+    # -------------------------------------------------------------------------
+    demo_stats = _load_series_stats(demo_dir)
+    existing_total = demo_stats.get("total", 0)
+    cards_to_plan = max(0, batch - existing_total)
+
+    if cards_to_plan == 0:
+        _log(f"[demo batch] already have {existing_total} cards, batch target {batch} reached")
+        return 0
+
+    _log(f"[demo batch] have {existing_total} cards, planning {cards_to_plan} more to reach {batch}...")
+
+    # -------------------------------------------------------------------------
+    # PHASE 2: Pre-generate word/type/rarity queue (single API call)
+    # -------------------------------------------------------------------------
+    series_words = _get_existing_words_from_index(series_dir)
+    demo_words = _get_existing_words_from_index(demo_dir)
+    existing_words = list(set(series_words + demo_words))
+    _log(f"[demo batch] found {len(series_words)} series words + {len(demo_words)} demo words = {len(existing_words)} total to avoid")
+
+    # Calculate needed rarities/types based on current stats
+    planning_stats = dict(demo_stats)  # Copy for planning
+    needed_rarities = []
+    needed_types = []
+    for _ in range(cards_to_plan):
+        nr = _get_needed_rarity(planning_stats)
+        nt = _get_needed_type(planning_stats)
+        needed_rarities.append(nr)
+        needed_types.append(nt)
+        planning_stats["rarity_counts"][nr] = planning_stats["rarity_counts"].get(nr, 0) + 1
+        planning_stats["type_counts"][nt] = planning_stats["type_counts"].get(nt, 0) + 1
+        planning_stats["total"] += 1
+
+    _log(f"[demo batch] planned rarities: {needed_rarities}")
+    _log(f"[demo batch] planned types: {needed_types}")
+
+    try:
+        queue_entries = _generate_queue_entries(
+            count=cards_to_plan,
+            existing_words=existing_words,
+            needed_rarities=needed_rarities,
+            needed_types=needed_types,
+            series_dir=series_dir,
+        )
+    except Exception as e:
+        _log(f"[demo batch] failed to generate queue: {e}")
+        return 1
+
+    # Log actual distribution
+    type_counts: dict[str, int] = {}
+    rarity_counts: dict[str, int] = {}
+    for entry in queue_entries:
+        t = entry.get("card_type", "NOUN")
+        r = entry.get("rarity", "COMMON")
+        type_counts[t] = type_counts.get(t, 0) + 1
+        rarity_counts[r] = rarity_counts.get(r, 0) + 1
+    _log(f"[demo batch] actual types: {type_counts}")
+    _log(f"[demo batch] actual rarities: {rarity_counts}")
+
+    # -------------------------------------------------------------------------
+    # PHASE 3: Pre-allocate card numbers and plan in parallel
+    # -------------------------------------------------------------------------
+    start_number = next_number(demo_dir)
+    _log(f"[demo batch] pre-allocating numbers {start_number} to {start_number + cards_to_plan - 1}")
+
+    # Assign numbers to entries
+    numbered_entries = [
+        (start_number + i, entry) for i, entry in enumerate(queue_entries)
+    ]
+
+    planned_cards: list[Path] = []
+    planned_entries: list[dict] = []
+    plan_lock = threading.Lock()
+
+    def plan_one(number: int, entry: dict) -> tuple[int, dict, Path | None]:
+        _log(f"[demo batch] planning #{number:03d}: {entry['word']} ({entry['card_type']}, {entry['rarity']})")
+        card_dir = _plan_demo_card_with_number(
+            series_dir=series_dir,
+            template_path=template_path,
+            demo_dir=demo_dir,
+            number=number,
+            entry=entry,
+        )
+        return number, entry, card_dir
+
+    if parallel <= 1:
+        # Sequential planning
+        for number, entry in numbered_entries:
+            number, entry, card_dir = plan_one(number, entry)
+            if card_dir is None:
+                _log(f"[demo batch] planning failed for #{number:03d}")
+                continue
+            planned_cards.append(card_dir)
+            planned_entries.append(entry)
+
+            # Update index
+            meta_file = card_dir / "meta.yml"
+            ability_text = ""
+            if meta_file.exists() and yaml:
+                with open(meta_file, "r", encoding="utf-8") as f:
+                    meta = yaml.safe_load(f) or {}
+                ability_text = meta.get("ability", "")
+
+            _add_card_to_index(
+                demo_dir,
+                number=number,
+                word=entry["word"],
+                card_type=entry["card_type"],
+                rarity=entry["rarity"],
+                ability_text=ability_text,
+            )
+    else:
+        # Parallel planning
+        with ThreadPoolExecutor(max_workers=parallel) as executor:
+            futures = {
+                executor.submit(plan_one, num, ent): (num, ent)
+                for num, ent in numbered_entries
+            }
+            for future in as_completed(futures):
+                number, entry, card_dir = future.result()
+                if card_dir is None:
+                    _log(f"[demo batch] planning failed for #{number:03d}")
+                    continue
+
+                with plan_lock:
+                    planned_cards.append(card_dir)
+                    planned_entries.append(entry)
+
+                    # Update index (thread-safe via lock)
+                    meta_file = card_dir / "meta.yml"
+                    ability_text = ""
+                    if meta_file.exists() and yaml:
+                        with open(meta_file, "r", encoding="utf-8") as f:
+                            meta = yaml.safe_load(f) or {}
+                        ability_text = meta.get("ability", "")
+
+                    _add_card_to_index(
+                        demo_dir,
+                        number=number,
+                        word=entry["word"],
+                        card_type=entry["card_type"],
+                        rarity=entry["rarity"],
+                        ability_text=ability_text,
+                    )
+
+                _log(f"[demo batch] planned {len(planned_cards)}/{cards_to_plan}")
+
+    if not planned_cards:
+        _log("[demo batch] no cards were planned")
+        return 1
+
+    # Update stats with actual planned counts
+    actual_stats = _load_series_stats(demo_dir)
+    for entry in planned_entries:
+        actual_stats["rarity_counts"][entry["rarity"]] = actual_stats["rarity_counts"].get(entry["rarity"], 0) + 1
+        actual_stats["type_counts"][entry["card_type"]] = actual_stats["type_counts"].get(entry["card_type"], 0) + 1
+        actual_stats["total"] += 1
+    _save_series_stats(demo_dir, actual_stats)
+    _log(f"[demo batch] updated stats.yml: total={actual_stats['total']}")
+
+    # -------------------------------------------------------------------------
+    # PHASE 4: Generate images for newly planned cards in parallel
+    # -------------------------------------------------------------------------
+    _log(f"[demo batch] generating images for {len(planned_cards)} new cards with {parallel} workers...")
+
+    def generate_one(card_dir: Path) -> tuple[Path, int]:
+        rc = _generate_image_for_card_dir(
+            card_dir=card_dir,
+            skip_polish=skip_polish,
+            skip_watermark=True,
+            style_series_dir=series_dir,
+        )
+        return card_dir, rc
+
+    failed_cards: list[Path] = []
+    completed_count = 0
+
+    if parallel <= 1:
+        for card_dir in planned_cards:
+            card_dir, rc = generate_one(card_dir)
+            completed_count += 1
+            if rc != 0:
+                failed_cards.append(card_dir)
+            _log(f"[demo batch] image: {completed_count}/{len(planned_cards)}")
+    else:
+        with ThreadPoolExecutor(max_workers=parallel) as executor:
+            futures = {executor.submit(generate_one, cd): cd for cd in planned_cards}
+            for future in as_completed(futures):
+                card_dir, rc = future.result()
+                completed_count += 1
+                if rc != 0:
+                    failed_cards.append(card_dir)
+                _log(f"[demo batch] image: {completed_count}/{len(planned_cards)} ({card_dir.name})")
+
+    if failed_cards:
+        _log(f"[demo batch] {len(failed_cards)} cards failed image generation:")
+        for cd in failed_cards:
+            _log(f"  - {cd.name}")
+        return 1
+
+    _log(f"[demo batch] all {len(planned_cards)} new cards completed successfully")
     return 0
 
 
@@ -1243,7 +2131,13 @@ def phase_imagegen(*, series_dir: Path) -> int:
     return 0
 
 
-def _generate_image_for_card_dir(*, card_dir: Path) -> int:
+def _generate_image_for_card_dir(
+    *,
+    card_dir: Path,
+    skip_polish: bool = False,
+    skip_watermark: bool = False,
+    style_series_dir: Path | None = None,
+) -> int:
     out_name = "card_1024x1536.png"
     prompt_file = card_dir / "prompt.txt"
     if not prompt_file.exists():
@@ -1262,9 +2156,9 @@ def _generate_image_for_card_dir(*, card_dir: Path) -> int:
         target_rarity = meta.get("rarity", "").upper() or None
 
     _log(f"[batch] generating image for {card_dir.name} -> {out_png} (rarity={target_rarity})")
-    
-    # Infer series_dir from card_dir (card_dir is series/XXXX/cards/NNN-word)
-    series_dir = card_dir.parent.parent
+
+    # Use provided style_series_dir, or infer from card_dir (card_dir is series/XXXX/cards/NNN-word)
+    series_dir = style_series_dir if style_series_dir else card_dir.parent.parent
     style_refs, rarity_labels = _build_style_refs(series_dir)
     if style_refs:
         cmd = [
@@ -1281,42 +2175,105 @@ def _generate_image_for_card_dir(*, card_dir: Path) -> int:
             str(prompt_file),
             str(out_png)
         ]
-        
-    subprocess.check_call(cmd)
-    
-    # Run polish step
-    polish_cmd = [
-        sys.executable,
-        str(Path("tools") / "polish_card.py"),
-        str(out_png)
-    ]
-    try:
-        subprocess.check_call(polish_cmd)
-    except subprocess.CalledProcessError as e:
-        print(f"Warning: Polish step failed: {e}")
 
-    _run_watermark(card_dir=card_dir, image_path=out_png)
-        
+    subprocess.check_call(cmd)
+
+    # Run polish step (optional)
+    if not skip_polish:
+        polish_cmd = [
+            sys.executable,
+            str(Path("tools") / "polish_card.py"),
+            str(out_png)
+        ]
+        try:
+            subprocess.check_call(polish_cmd)
+        except subprocess.CalledProcessError as e:
+            print(f"Warning: Polish step failed: {e}")
+    else:
+        _log(f"[batch] skipping polish step")
+
+    # Run watermark step (optional)
+    if not skip_watermark:
+        _run_watermark(card_dir=card_dir, image_path=out_png)
+    else:
+        _log(f"[batch] skipping watermark step")
+
     print(f"Rendered image at {out_png}")
     return 0
 
 
-def phase_batch(*, series_dir: Path, template_path: Path, auto: bool, batch: int) -> int:
+def phase_batch(
+    *,
+    series_dir: Path,
+    template_path: Path,
+    auto: bool,
+    batch: int,
+    parallel: int = 1,
+    skip_polish: bool = False,
+    skip_watermark: bool = False,
+) -> int:
     cards_dir = series_dir / "cards"
+    planned_cards: list[Path] = []
+
+    # Phase 1: Plan all cards sequentially (need unique card numbers)
+    _log(f"[batch] planning {batch} cards...")
     for i in range(batch):
-        _log(f"[batch] run {i + 1}/{batch} starting")
+        _log(f"[batch] planning card {i + 1}/{batch}")
         before = find_latest_card_dir(cards_dir)
         rc = phase_plan(series_dir=series_dir, template_path=template_path, auto=auto)
         if rc != 0:
-            return rc
+            _log(f"[batch] planning failed at card {i + 1}")
+            break
         after = find_latest_card_dir(cards_dir)
         if after is None or after == before:
             _log("[batch] no new card planned; stopping")
-            return 0
-        rc = _generate_image_for_card_dir(card_dir=after)
-        if rc != 0:
-            return rc
-        _log(f"[batch] run {i + 1}/{batch} complete")
+            break
+        planned_cards.append(after)
+
+    if not planned_cards:
+        _log("[batch] no cards were planned")
+        return 0
+
+    _log(f"[batch] planned {len(planned_cards)} cards, generating images with {parallel} parallel workers...")
+
+    # Phase 2: Generate images in parallel
+    failed_cards: list[Path] = []
+    completed_count = 0
+
+    def generate_one(card_dir: Path) -> tuple[Path, int]:
+        rc = _generate_image_for_card_dir(
+            card_dir=card_dir,
+            skip_polish=skip_polish,
+            skip_watermark=skip_watermark,
+        )
+        return card_dir, rc
+
+    if parallel <= 1:
+        # Sequential execution
+        for card_dir in planned_cards:
+            card_dir, rc = generate_one(card_dir)
+            completed_count += 1
+            if rc != 0:
+                failed_cards.append(card_dir)
+            _log(f"[batch] completed {completed_count}/{len(planned_cards)}")
+    else:
+        # Parallel execution
+        with ThreadPoolExecutor(max_workers=parallel) as executor:
+            futures = {executor.submit(generate_one, cd): cd for cd in planned_cards}
+            for future in as_completed(futures):
+                card_dir, rc = future.result()
+                completed_count += 1
+                if rc != 0:
+                    failed_cards.append(card_dir)
+                _log(f"[batch] completed {completed_count}/{len(planned_cards)} ({card_dir.name})")
+
+    if failed_cards:
+        _log(f"[batch] {len(failed_cards)} cards failed image generation:")
+        for cd in failed_cards:
+            _log(f"  - {cd.name}")
+        return 1
+
+    _log(f"[batch] all {len(planned_cards)} cards completed successfully")
     return 0
 
 
@@ -1880,7 +2837,7 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "review", "gallery", "full"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "rebuild-index", "review", "gallery", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
@@ -1890,6 +2847,9 @@ def main() -> int:
     parser.add_argument("--revise-file")
     parser.add_argument("--regen-prompt", action="store_true")
     parser.add_argument("--out-dir", default="_site")
+    parser.add_argument("--skip-polish", action="store_true", help="Skip the polish step (bracket removal)")
+    parser.add_argument("--skip-watermark", action="store_true", help="Skip watermark generation")
+    parser.add_argument("--parallel", type=int, default=1, help="Number of cards to generate in parallel (default: 1)")
     args = parser.parse_args()
 
     _log(
@@ -1912,20 +2872,34 @@ def main() -> int:
     batch = int(getattr(args, "batch", 1) or 1)
     if batch < 1:
         batch = 1
-    if batch > 10:
-        _log(f"[cli] batch clamped from {batch} to 10")
-        batch = 10
+    if batch > 100:
+        _log(f"[cli] batch clamped from {batch} to 100")
+        batch = 100
+
+    parallel = max(1, getattr(args, "parallel", 1) or 1)
+    skip_polish = getattr(args, "skip_polish", False)
+    skip_watermark = getattr(args, "skip_watermark", False)
 
     if batch > 1:
         if args.phase == "plan":
-            return phase_batch(series_dir=series_dir, template_path=template_path, auto=args.auto, batch=batch)
+            return phase_batch(
+                series_dir=series_dir,
+                template_path=template_path,
+                auto=args.auto,
+                batch=batch,
+                parallel=parallel,
+                skip_polish=skip_polish,
+                skip_watermark=skip_watermark,
+            )
         if args.phase == "demo":
-            for i in range(batch):
-                _log(f"[batch demo] run {i + 1}/{batch}")
-                rc = phase_demo(series_dir=series_dir, template_path=template_path, demo_dir=Path(args.demo_dir))
-                if rc != 0:
-                    return rc
-            return 0
+            return phase_demo_batch(
+                series_dir=series_dir,
+                template_path=template_path,
+                demo_dir=Path(args.demo_dir),
+                batch=batch,
+                parallel=parallel,
+                skip_polish=skip_polish,
+            )
         if args.phase == "full":
             # For batch full, we just loop phase_full
             for i in range(batch):
@@ -1961,6 +2935,17 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_rebuild(card_dir=Path(args.card_dir), regen_prompt=bool(args.regen_prompt))
+
+    if args.phase == "rebuild-index":
+        _log(f"[rebuild-index] scanning {series_dir} for existing cards...")
+        index = _rebuild_cards_index(series_dir)
+        print(f"Rebuilt cards index for {series_dir}")
+        print(f"  Words: {len(index['words'])}")
+        print(f"  Ability patterns: {len(index['ability_patterns'])}")
+        print(f"  Cards: {len(index['cards'])}")
+        for card in index["cards"]:
+            print(f"    #{card['number']:03d} {card['word']} ({card['type']}, {card['rarity']})")
+        return 0
 
     if args.phase == "review":
         if not args.card_dir:
