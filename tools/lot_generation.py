@@ -211,7 +211,7 @@ Return only the paragraph, no quotes or explanation."""
 
 
 def phase_render(series_dir: Path, parallel: int = 1) -> int:
-    """Render all 30 phase card PNGs using programmatic composition."""
+    """Render all 30 phase card PNGs using Gemini with style references."""
     if yaml is None:
         _log("Error: pyyaml required. Install with: pip install pyyaml")
         return 1
@@ -219,7 +219,7 @@ def phase_render(series_dir: Path, parallel: int = 1) -> int:
     # Import lot_renderer from the same tools directory
     sys.path.insert(0, str(TOOLS_DIR))
     try:
-        from lot_renderer import render_lot_card
+        from lot_renderer import render_lot_card_with_series
     except ImportError as e:
         _log(f"Error importing lot_renderer: {e}")
         _log("Make sure lot_renderer.py exists in the tools directory.")
@@ -258,7 +258,7 @@ def phase_render(series_dir: Path, parallel: int = 1) -> int:
         _log(f"[{pid:02d}] Rendering {name}...")
 
         try:
-            render_lot_card(card_data, out_path)
+            render_lot_card_with_series(card_data, out_path, series_dir)
             rendered_count += 1
         except Exception as e:
             _log(f"    Error rendering: {e}")

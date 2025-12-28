@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Programmatic renderer for Hypertext Lot (Phase) cards.
-Uses PIL/Pillow to compose cards matching the established visual style.
+Renderer for Hypertext Lot (Phase) cards using Gemini with style references.
+
+Uses the same Gemini style reference approach as the main card pipeline.
+Generates LOT cards that match the established visual style.
 
 Card Layout:
   ┌─────────────────────────────────────┐
@@ -30,131 +32,84 @@ Card Layout:
 """
 
 import sys
-import textwrap
 from pathlib import Path
 from typing import Any
 
-try:
-    from PIL import Image, ImageDraw, ImageFont
-except ImportError:
-    Image = None  # type: ignore
-    ImageDraw = None  # type: ignore
-    ImageFont = None  # type: ignore
+TOOLS_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = TOOLS_DIR.parent
+TEMPLATES_DIR = PROJECT_ROOT / "templates"
 
-# Card dimensions (standard poker card ratio, high resolution)
-CARD_WIDTH = 1024
-CARD_HEIGHT = 1536
+# Default style template for LOT cards (if it exists)
+DEFAULT_LOT_TEMPLATE = TEMPLATES_DIR / "lot_template.png"
 
-# Colors (from style guide)
-NAVY = (10, 25, 47)          # #0a192f - primary dark color
-GOLD = (197, 160, 89)        # #c5a059 - accent color
-PARCHMENT = (241, 233, 210)  # #f1e9d2 - background
-INK = (30, 30, 30)           # #1e1e1e - text color
-WHITE = (255, 255, 255)
-
-# Type abbreviations for display
-TYPE_ABBREV = {
-    "ADJECTIVE": "ADJ",
-    "NOUN": "NOUN",
-    "VERB": "VERB",
-    "NAME": "NAME",
-    "TITLE": "TITLE",
-    "ANY": "ANY",
-    "MATCH": "MATCH",
+# Type icon descriptions for the prompt
+TYPE_ICONS = {
+    "NOUN": "closed book icon",
+    "VERB": "writing pen icon",
+    "ADJECTIVE": "pen with sparkles icon",
+    "NAME": "person silhouette icon",
+    "TITLE": "framed diamond/portrait icon",
+    "ANY": "star/wildcard icon",
+    "MATCH": "matching pair icon",
 }
 
 
-def _get_font(size: int, bold: bool = False, italic: bool = False) -> Any:
-    """Get a font, falling back to default if custom fonts not available."""
-    if ImageFont is None:
-        raise RuntimeError("Pillow required: pip install pillow")
-
-    # Try to load system fonts in order of preference
-    font_candidates = []
-
-    if bold and italic:
-        font_candidates = [
-            "/usr/share/fonts/truetype/dejavu/DejaVuSerif-BoldItalic.ttf",
-            "/usr/share/fonts/truetype/liberation/LiberationSerif-BoldItalic.ttf",
-        ]
-    elif bold:
-        font_candidates = [
-            "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
-            "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf",
-        ]
-    elif italic:
-        font_candidates = [
-            "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Italic.ttf",
-            "/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf",
-        ]
-    else:
-        font_candidates = [
-            "/usr/share/fonts/truetype/dejavu/DejaVuSerif.ttf",
-            "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
-        ]
-
-    for font_path in font_candidates:
-        if Path(font_path).exists():
-            try:
-                return ImageFont.truetype(font_path, size)
-            except OSError:
-                continue
-
-    # Fall back to default font
-    try:
-        return ImageFont.load_default()
-    except Exception:
-        return None
+def _log(msg: str) -> None:
+    """Log a message to stderr."""
+    print(msg, file=sys.stderr)
 
 
-def _draw_rounded_rect(
-    draw: Any,
-    coords: tuple[int, int, int, int],
-    radius: int,
-    fill: tuple[int, int, int] | None = None,
-    outline: tuple[int, int, int] | None = None,
-    width: int = 1
-) -> None:
-    """Draw a rounded rectangle."""
-    x1, y1, x2, y2 = coords
-
-    if fill:
-        # Draw filled rounded rectangle
-        draw.rounded_rectangle(coords, radius=radius, fill=fill, outline=outline, width=width)
-    elif outline:
-        draw.rounded_rectangle(coords, radius=radius, outline=outline, width=width)
-
-
-def _wrap_text(text: str, font: Any, max_width: int, draw: Any) -> list[str]:
-    """Wrap text to fit within max_width pixels."""
-    if not text:
-        return []
-
-    words = text.split()
-    lines = []
-    current_line = ""
-
-    for word in words:
-        test_line = f"{current_line} {word}".strip()
-        bbox = draw.textbbox((0, 0), test_line, font=font)
-        line_width = bbox[2] - bbox[0]
-
-        if line_width <= max_width:
-            current_line = test_line
-        else:
-            if current_line:
-                lines.append(current_line)
-            current_line = word
-
-    if current_line:
-        lines.append(current_line)
-
-    return lines
-
-
-def render_lot_card(card_data: dict[str, Any], out_path: Path) -> None:
+def _build_lot_style_refs(series_dir: Path) -> list[str]:
     """
-    Render a single lot card to PNG.
+    Build list of style reference paths for LOT cards.
+
+    Looks for:
+    1. LOT template image (templates/lot_template.png)
+    2. Existing LOT card images in the series
+    3. Falls back to main card template if no LOT-specific refs exist
+    """
+    refs: list[str] = []
+
+    # First, try LOT-specific template
+    if DEFAULT_LOT_TEMPLATE.exists():
+        refs.append(str(DEFAULT_LOT_TEMPLATE))
+
+    # Look for existing LOT cards in this series as style references
+    lots_dir = series_dir / "lots"
+    if lots_dir.exists():
+        for lot_dir in sorted(lots_dir.iterdir()):
+            if not lot_dir.is_dir():
+                continue
+            lot_img = lot_dir / "outputs" / "lot_1024x1536.png"
+            if lot_img.exists():
+                refs.append(str(lot_img))
+                # Use up to 3 existing LOT cards as references
+                if len(refs) >= 4:
+                    break
+
+    # If no LOT refs found, try the main card template
+    if not refs:
+        main_template = TEMPLATES_DIR / "clean_template.png"
+        if main_template.exists():
+            refs.append(str(main_template))
+
+        # Also look for existing main deck cards as style reference
+        cards_dir = series_dir / "cards"
+        if cards_dir.exists():
+            for card_dir in sorted(cards_dir.iterdir()):
+                if not card_dir.is_dir():
+                    continue
+                card_img = card_dir / "outputs" / "card_1024x1536.png"
+                if card_img.exists():
+                    refs.append(str(card_img))
+                    break  # Just one main card for reference
+
+    return refs
+
+
+def _build_lot_prompt(card_data: dict[str, Any]) -> str:
+    """
+    Build a detailed prompt for Gemini to generate a LOT card.
 
     card_data expects:
       - id: int
@@ -168,282 +123,173 @@ def render_lot_card(card_data: dict[str, Any], out_path: Path) -> None:
       - series: str
       - theme: str (optional)
     """
-    if Image is None or ImageDraw is None:
-        raise RuntimeError("Pillow required: pip install pillow")
-
-    # Load fonts
-    font_title = _get_font(72, bold=True)
-    font_flavor = _get_font(28, italic=True)
-    font_reward = _get_font(42, bold=True)
-    font_bonus = _get_font(24, italic=True)
-    font_body = _get_font(22)
-    font_badge = _get_font(24, bold=True)
-    font_footer = _get_font(20)
-    font_display = _get_font(26, bold=True)
-    font_context_header = _get_font(28, bold=True)
-    font_context = _get_font(20)
-
-    # Create base image with parchment background
-    img = Image.new("RGB", (CARD_WIDTH, CARD_HEIGHT), PARCHMENT)
-    draw = ImageDraw.Draw(img)
-
-    # Draw navy outer border
-    border_margin = 20
-    border_width = 8
-    draw.rectangle(
-        [border_margin, border_margin, CARD_WIDTH - border_margin, CARD_HEIGHT - border_margin],
-        outline=NAVY,
-        width=border_width
-    )
-
-    # Draw gold inner accent border
-    inner_margin = 32
-    draw.rectangle(
-        [inner_margin, inner_margin, CARD_WIDTH - inner_margin, CARD_HEIGHT - inner_margin],
-        outline=GOLD,
-        width=2
-    )
-
-    # Header badges
-    badge_y_top = 50
-    badge_y_bottom = 90
-    badge_radius = 8
-
-    # LOT badge (top left)
-    lot_badge_left = 60
-    lot_badge_right = 160
-    _draw_rounded_rect(
-        draw,
-        (lot_badge_left, badge_y_top, lot_badge_right, badge_y_bottom),
-        radius=badge_radius,
-        fill=NAVY
-    )
-    lot_center_x = (lot_badge_left + lot_badge_right) // 2
-    lot_center_y = (badge_y_top + badge_y_bottom) // 2
-    draw.text((lot_center_x, lot_center_y), "LOT", font=font_badge, fill=PARCHMENT, anchor="mm")
-
-    # X-CARD badge (top right)
-    card_count = card_data.get("cards", 5)
-    badge_text = f"{card_count}-CARD"
-    card_badge_right = CARD_WIDTH - 60
-    card_badge_left = CARD_WIDTH - 180
-    _draw_rounded_rect(
-        draw,
-        (card_badge_left, badge_y_top, card_badge_right, badge_y_bottom),
-        radius=badge_radius,
-        fill=NAVY
-    )
-    card_center_x = (card_badge_left + card_badge_right) // 2
-    card_center_y = (badge_y_top + badge_y_bottom) // 2
-    draw.text((card_center_x, card_center_y), badge_text, font=font_badge, fill=PARCHMENT, anchor="mm")
-
-    # Phase name (large centered title)
-    name = card_data.get("name", "UNKNOWN")
-    name_y = 160
-    draw.text((CARD_WIDTH // 2, name_y), name, font=font_title, fill=INK, anchor="mm")
-
-    # Flavor text (italic subtitle)
-    flavor = card_data.get("flavor", "")
-    if flavor:
-        # Wrap flavor text if too long
-        flavor_lines = _wrap_text(flavor, font_flavor, CARD_WIDTH - 120, draw)
-        flavor_y = 235
-        for line in flavor_lines[:2]:  # Max 2 lines
-            draw.text((CARD_WIDTH // 2, flavor_y), line, font=font_flavor, fill=INK, anchor="mm")
-            flavor_y += 32
-
-    # Reward banner (navy background)
-    banner_left = 60
-    banner_right = CARD_WIDTH - 60
-    banner_top = 310
-    banner_bottom = 430
-    draw.rectangle([banner_left, banner_top, banner_right, banner_bottom], fill=NAVY)
-
-    # Reward text
-    points = card_data.get("points", 8)
-    reward_y = 350
-    draw.text(
-        (CARD_WIDTH // 2, reward_y),
-        f"REWARD: {points} Points",
-        font=font_reward,
-        fill=GOLD,
-        anchor="mm"
-    )
-
-    # Wreath bonus text
-    bonus_y = 400
-    draw.text(
-        (CARD_WIDTH // 2, bonus_y),
-        "Wreath Bonus: +2 Points (First to record)",
-        font=font_bonus,
-        fill=PARCHMENT,
-        anchor="mm"
-    )
-
-    # Composition panel
-    comp_left = 60
-    comp_right = CARD_WIDTH - 60
-    comp_top = 470
-    comp_bottom = 620
-    draw.rectangle([comp_left, comp_top, comp_right, comp_bottom], outline=NAVY, width=3)
-
-    # Composition header
-    comp_header_y = comp_top + 35
-    draw.text(
-        (CARD_WIDTH // 2, comp_header_y),
-        "REQUIRED COMPOSITION",
-        font=font_badge,
-        fill=NAVY,
-        anchor="mm"
-    )
-
-    # Draw horizontal separator line
-    sep_y = comp_top + 60
-    draw.line([(comp_left + 20, sep_y), (comp_right - 20, sep_y)], fill=GOLD, width=1)
-
-    # Composition display (the formula)
-    display = card_data.get("display", "")
-    display_y = comp_top + 110
-    draw.text(
-        (CARD_WIDTH // 2, display_y),
-        display,
-        font=font_display,
-        fill=INK,
-        anchor="mm"
-    )
-
-    # Type icons representation (simplified text version)
-    # Draw a visual representation of the composition
-    composition = card_data.get("composition", [])
-    if composition:
-        # Create a simplified icon-like representation
-        icon_y = comp_top + 150
-        icon_spacing = min(80, (comp_right - comp_left - 80) // max(len(composition), 1))
-        total_width = icon_spacing * (len(composition) - 1)
-        start_x = (CARD_WIDTH - total_width) // 2
-
-        for i, card_type in enumerate(composition[:7]):  # Max 7 icons
-            x = start_x + i * icon_spacing
-            # Draw a small box for each type
-            box_size = 30
-            box_half = box_size // 2
-            draw.rounded_rectangle(
-                [x - box_half, icon_y - box_half, x + box_half, icon_y + box_half],
-                radius=4,
-                outline=NAVY,
-                width=2
-            )
-            # Draw abbreviated type letter
-            abbrev = TYPE_ABBREV.get(card_type, card_type)
-            letter = abbrev[0] if abbrev else "?"
-            draw.text((x, icon_y), letter, font=font_badge, fill=NAVY, anchor="mm")
-
-    # Context panel
-    context_left = 60
-    context_right = CARD_WIDTH - 60
-    context_top = 1050
-    context_bottom = 1420
-    draw.rectangle([context_left, context_top, context_right, context_bottom], outline=NAVY, width=3)
-
-    # Context header
-    context_header_y = context_top + 40
-    draw.text(
-        (CARD_WIDTH // 2, context_header_y),
-        "CONTEXT",
-        font=font_context_header,
-        fill=NAVY,
-        anchor="mm"
-    )
-
-    # Draw separator line under context header
-    ctx_sep_y = context_top + 65
-    draw.line([(context_left + 20, ctx_sep_y), (context_right - 20, ctx_sep_y)], fill=GOLD, width=1)
-
-    # Context body (word wrapped)
-    context = card_data.get("context", "")
-    if context:
-        context_lines = _wrap_text(context, font_context, context_right - context_left - 60, draw)
-        context_body_y = context_top + 95
-        line_height = 28
-        max_lines = 11  # Limit to prevent overflow
-
-        for i, line in enumerate(context_lines[:max_lines]):
-            draw.text(
-                (CARD_WIDTH // 2, context_body_y + i * line_height),
-                line,
-                font=font_context,
-                fill=INK,
-                anchor="mm"
-            )
-
-    # Decorative corner elements
-    corner_size = 20
-    corner_offset = 45
-
-    # Top-left corner
-    draw.line([
-        (corner_offset, corner_offset + corner_size),
-        (corner_offset, corner_offset),
-        (corner_offset + corner_size, corner_offset)
-    ], fill=GOLD, width=3)
-
-    # Top-right corner
-    draw.line([
-        (CARD_WIDTH - corner_offset - corner_size, corner_offset),
-        (CARD_WIDTH - corner_offset, corner_offset),
-        (CARD_WIDTH - corner_offset, corner_offset + corner_size)
-    ], fill=GOLD, width=3)
-
-    # Bottom-left corner
-    draw.line([
-        (corner_offset, CARD_HEIGHT - corner_offset - corner_size),
-        (corner_offset, CARD_HEIGHT - corner_offset),
-        (corner_offset + corner_size, CARD_HEIGHT - corner_offset)
-    ], fill=GOLD, width=3)
-
-    # Bottom-right corner
-    draw.line([
-        (CARD_WIDTH - corner_offset - corner_size, CARD_HEIGHT - corner_offset),
-        (CARD_WIDTH - corner_offset, CARD_HEIGHT - corner_offset),
-        (CARD_WIDTH - corner_offset, CARD_HEIGHT - corner_offset - corner_size)
-    ], fill=GOLD, width=3)
-
-    # Series footer
-    series = card_data.get("series", "2026-Q1")
-    footer_y = CARD_HEIGHT - 60
-    draw.text(
-        (80, footer_y),
-        f"SERIES: {series} Lots",
-        font=font_footer,
-        fill=INK,
-        anchor="lm"
-    )
-
-    # Phase ID badge (bottom right)
     pid = card_data.get("id", 0)
-    draw.text(
-        (CARD_WIDTH - 80, footer_y),
-        f"#{pid:02d}",
-        font=font_footer,
-        fill=INK,
-        anchor="rm"
-    )
+    name = card_data.get("name", "UNKNOWN")
+    cards = card_data.get("cards", 5)
+    points = card_data.get("points", 8)
+    display = card_data.get("display", "")
+    composition = card_data.get("composition", [])
+    flavor = card_data.get("flavor", "")
+    context = card_data.get("context", "")
+    series = card_data.get("series", "2026-Q1")
 
-    # Save image
+    # Build composition description with icons
+    comp_desc_parts = []
+    for card_type in composition:
+        icon_desc = TYPE_ICONS.get(card_type, f"{card_type} icon")
+        comp_desc_parts.append(f"{card_type} ({icon_desc})")
+    comp_description = " + ".join(comp_desc_parts) if comp_desc_parts else display
+
+    prompt = f"""Generate a LOT (Phase) card for the Hypertext Biblical trading card game.
+
+This is a PHASE CARD that players collect to score points. It shows what combination of cards they need to complete this phase.
+
+CARD SPECIFICATIONS:
+- Orientation: Portrait (2:3 aspect ratio, taller than wide)
+- Size: 1024 x 1536 pixels
+- Style: Elegant Biblical/theological aesthetic with navy (#0a192f), gold (#c5a059), and parchment (#f1e9d2) colors
+
+EXACT LAYOUT (top to bottom):
+
+1. HEADER BADGES (top of card):
+   - Left badge: Navy rounded rectangle with "LOT" in parchment/cream text
+   - Right badge: Navy rounded rectangle with "{cards}-CARD" in parchment/cream text
+
+2. PHASE NAME (large, centered):
+   - Title: "{name}" in large elegant serif font, dark ink color
+   - Subtitle below: "{flavor}" in smaller italic text
+
+3. REWARD BANNER (navy background strip):
+   - Main text: "REWARD: {points} Points" in gold
+   - Below that: "Wreath Bonus: +2 Points (First to record)" in smaller parchment text
+
+4. COMPOSITION PANEL (bordered box):
+   - Header: "REQUIRED COMPOSITION" centered
+   - Gold separator line
+   - Show the required card types: {display}
+   - Visual representation with small icons for each type:
+     {comp_description}
+
+5. CONTEXT PANEL (bordered box, lower portion):
+   - Header: "CONTEXT" centered in navy
+   - Gold separator line
+   - Educational text: "{context}"
+
+6. FOOTER:
+   - Left: "SERIES: {series} Lots"
+   - Right: "#{pid:02d}"
+
+DECORATIVE ELEMENTS:
+- Navy outer border with gold inner accent border
+- Gold decorative corner elements (L-shaped brackets in each corner)
+- Elegant, clean typography throughout
+
+CRITICAL REQUIREMENTS:
+- DO NOT include any brackets [] in the output
+- DO NOT include placeholder text - use the exact values provided
+- Maintain the elegant Biblical/seminary aesthetic
+- All text must be clearly legible
+- Match the navy/gold/parchment color scheme exactly
+"""
+
+    return prompt
+
+
+def render_lot_card(card_data: dict[str, Any], out_path: Path, style_refs: list[str] | None = None) -> None:
+    """
+    Render a single lot card to PNG using Gemini with style references.
+
+    card_data expects:
+      - id: int
+      - name: str
+      - cards: int (5, 6, or 7)
+      - points: int (8, 10, or 12)
+      - display: str
+      - composition: list[str]
+      - flavor: str
+      - context: str
+      - series: str
+      - theme: str (optional)
+
+    style_refs: Optional list of style reference image paths.
+                If not provided, will attempt to find LOT templates/examples.
+    """
+    # Import gemini_style from the same tools directory
+    sys.path.insert(0, str(TOOLS_DIR))
+    try:
+        from gemini_style import generate_with_styles
+    except ImportError as e:
+        raise RuntimeError(f"Could not import gemini_style: {e}")
+
+    # Build prompt
+    prompt = _build_lot_prompt(card_data)
+
+    # Get style references if not provided
+    if style_refs is None:
+        # Try to infer series_dir from out_path
+        # out_path is typically: series/2026-Q1/lots/01-remnant/outputs/lot_1024x1536.png
+        try:
+            series_dir = out_path.parent.parent.parent.parent
+            style_refs = _build_lot_style_refs(series_dir)
+        except Exception:
+            style_refs = []
+
+    # Write prompt to file (for debugging/reference)
+    prompt_path = out_path.parent.parent / "prompt.txt"
+    prompt_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(prompt_path, "w", encoding="utf-8") as f:
+        f.write(prompt)
+
+    # Generate the image
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "PNG")
+
+    if style_refs:
+        _log(f"  Using {len(style_refs)} style reference(s)")
+        generate_with_styles(
+            prompt_text=prompt,
+            style_image_paths=style_refs,
+            out_path=str(out_path),
+            aspect_ratio="2:3",
+        )
+    else:
+        # Fall back to basic image generation without style refs
+        try:
+            from gemini_image import generate_image
+            _log("  No style references found, using basic generation")
+            generate_image(prompt, str(out_path), aspect_ratio="2:3")
+        except ImportError:
+            raise RuntimeError(
+                "No style references found and gemini_image not available. "
+                "Create a LOT template at templates/lot_template.png or generate some LOT cards first."
+            )
+
+
+def render_lot_card_with_series(
+    card_data: dict[str, Any],
+    out_path: Path,
+    series_dir: Path,
+) -> None:
+    """
+    Render a LOT card with explicit series directory for finding style refs.
+
+    This is the preferred method when calling from lot_generation.py.
+    """
+    style_refs = _build_lot_style_refs(series_dir)
+    render_lot_card(card_data, out_path, style_refs=style_refs)
 
 
 def main() -> int:
     """CLI for testing individual card rendering."""
     import argparse
 
-    parser = argparse.ArgumentParser(description="Render a test lot card")
+    parser = argparse.ArgumentParser(description="Render a test lot card using Gemini")
     parser.add_argument("--out", default="test_lot.png", help="Output path")
     parser.add_argument("--name", default="REMNANT", help="Phase name")
     parser.add_argument("--id", type=int, default=1, help="Phase ID")
     parser.add_argument("--cards", type=int, default=5, help="Card count")
     parser.add_argument("--points", type=int, default=8, help="Point value")
+    parser.add_argument("--style", action="append", help="Style reference image (repeatable)")
+    parser.add_argument("--series", help="Series directory for finding style refs")
     args = parser.parse_args()
 
     test_data = {
@@ -464,9 +310,17 @@ def main() -> int:
         "theme": "Babel",
     }
 
-    render_lot_card(test_data, Path(args.out))
-    print(f"Rendered test card to {args.out}")
-    return 0
+    style_refs = args.style
+    if args.series and not style_refs:
+        style_refs = _build_lot_style_refs(Path(args.series))
+
+    try:
+        render_lot_card(test_data, Path(args.out), style_refs=style_refs)
+        print(f"Rendered test card to {args.out}")
+        return 0
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":
