@@ -11,6 +11,7 @@ Hypertext is a word-study trading card game for 2–8 players. Collect cards by 
 - **90 Card Main Deck / The Tower** (5 types)
 - **30 Phase Cards**
 - **Letter Tokens**
+- **Wreath Tokens** (2)
 - **Score Tracker**
 
 ---
@@ -74,50 +75,50 @@ Activated cards cannot be recorded—they go to Sheol (along with any cards disc
 
 Phases define the **type composition** required to record a valid set. All phases require 5–7 cards.
 
-### 5-Card Phases (12–13 pts)
+### 5-Card Phases (8 pts)
 
 | Phase | Composition | Points |
 |-------|-------------|--------|
-| **Remnant** | 5 same type | 12 |
-| **Pentateuch** | 5 different types | 12 |
-| **Scroll** | NAME + VERB + ADJ + NOUN + TITLE | 12 |
-| **Witness** | NAME + NAME + VERB + NOUN + ADJ | 12 |
-| **Epistle** | NAME + VERB + VERB + NOUN + NOUN | 12 |
-| **Psalm** | ADJ + ADJ + ADJ + VERB + NOUN | 13 |
-| **Parable** | NOUN + NOUN + NOUN + VERB + ADJ | 12 |
-| **Oracle** | VERB + VERB + ADJ + NAME + NOUN | 12 |
-| **Covenant** | NAME + VERB + NOUN + NOUN + ADJ | 12 |
-| **Benediction** | TITLE + TITLE + ADJ + NOUN + NAME | 13 |
-| **Altar** | NOUN + NOUN + NOUN + NOUN + VERB | 13 |
-| **Foundation** | NAME + NAME + NAME + NOUN + VERB | 13 |
-| **Proverb** | ADJ + ADJ + VERB + NOUN + TITLE | 12 |
-| **Lament** | ADJ + ADJ + ADJ + ADJ + NOUN | 13 |
+| **Remnant** | 5 same type | 8 |
+| **Pentateuch** | 5 different types | 8 |
+| **Scroll** | NAME + VERB + ADJ + NOUN + TITLE | 8 |
+| **Witness** | NAME + NAME + VERB + NOUN + ADJ | 8 |
+| **Epistle** | NAME + VERB + VERB + NOUN + NOUN | 8 |
+| **Psalm** | ADJ + ADJ + ADJ + VERB + NOUN | 8 |
+| **Parable** | NOUN + NOUN + NOUN + VERB + ADJ | 8 |
+| **Oracle** | VERB + VERB + ADJ + NAME + NOUN | 8 |
+| **Covenant** | NAME + VERB + NOUN + NOUN + ADJ | 8 |
+| **Benediction** | TITLE + TITLE + ADJ + NOUN + NAME | 8 |
+| **Altar** | NOUN + NOUN + NOUN + NOUN + VERB | 8 |
+| **Foundation** | NAME + NAME + NAME + NOUN + VERB | 8 |
+| **Proverb** | ADJ + ADJ + VERB + NOUN + TITLE | 8 |
+| **Lament** | ADJ + ADJ + ADJ + ADJ + NOUN | 8 |
 
-### 6-Card Phases (14–16 pts)
-
-| Phase | Composition | Points |
-|-------|-------------|--------|
-| **Congregation** | 6 any mix | 14 |
-| **Assembly** | 3 + 3 (two types) | 14 |
-| **Trinity** | 2 + 2 + 2 (three types) | 14 |
-| **Tabernacle** | NOUN + NOUN + NOUN + NAME + NAME + NAME | 15 |
-| **Chorus** | VERB + VERB + VERB + ADJ + ADJ + ADJ | 15 |
-| **Sanctuary** | NOUN + NOUN + NOUN + NOUN + NAME + NAME | 15 |
-| **Hymnal** | ADJ + ADJ + VERB + VERB + NOUN + NOUN | 14 |
-| **Gospel** | NAME + VERB + NOUN + ADJ + TITLE + VERB | 14 |
-| **Jubilee** | VERB + VERB + VERB + VERB + ADJ + ADJ | 15 |
-| **Wisdom** | ADJ + ADJ + ADJ + ADJ + NOUN + NOUN | 15 |
-| **Prophecy** | ADJ + ADJ + NAME + NAME + NOUN + VERB | 14 |
-| **Selah** | 6 same type | 16 |
-
-### 7-Card Phases (16–20 pts)
+### 6-Card Phases (10 pts)
 
 | Phase | Composition | Points |
 |-------|-------------|--------|
-| **Creation** | 3 + 2 + 2 (three types) | 16 |
-| **Revelation** | All 5 types + 2 same | 17 |
-| **Exodus** | VERB + VERB + VERB + NAME + NAME + NOUN + NOUN | 17 |
-| **Apocalypse** | 7 same type | 20 |
+| **Congregation** | 6 any mix | 10 |
+| **Assembly** | 3 + 3 (two types) | 10 |
+| **Trinity** | 2 + 2 + 2 (three types) | 10 |
+| **Tabernacle** | NOUN + NOUN + NOUN + NAME + NAME + NAME | 10 |
+| **Chorus** | VERB + VERB + VERB + ADJ + ADJ + ADJ | 10 |
+| **Sanctuary** | NOUN + NOUN + NOUN + NOUN + NAME + NAME | 10 |
+| **Hymnal** | ADJ + ADJ + VERB + VERB + NOUN + NOUN | 10 |
+| **Gospel** | NAME + VERB + NOUN + ADJ + TITLE + VERB | 10 |
+| **Jubilee** | VERB + VERB + VERB + VERB + ADJ + ADJ | 10 |
+| **Wisdom** | ADJ + ADJ + ADJ + ADJ + NOUN + NOUN | 10 |
+| **Prophecy** | ADJ + ADJ + NAME + NAME + NOUN + VERB | 10 |
+| **Selah** | 6 same type | 10 |
+
+### 7-Card Phases (12 pts)
+
+| Phase | Composition | Points |
+|-------|-------------|--------|
+| **Creation** | 3 + 2 + 2 (three types) | 12 |
+| **Revelation** | All 5 types + 2 same | 12 |
+| **Exodus** | VERB + VERB + VERB + NAME + NAME + NOUN + NOUN | 12 |
+| **Apocalypse** | 7 same type | 12 |
 
 ---
 
@@ -132,11 +133,22 @@ Phases define the **type composition** required to record a valid set. All phase
 
 ---
 
+## The Judge
+
+Appoint one player as Judge for the game. The Judge:
+
+- Tracks all players' scores at the end of each chapter
+- Holds the Wreath tokens and awards them each chapter
+- Arbitrates disputes (who called Redeem first, timing conflicts)
+- The Judge plays normally; the role is administrative only
+
+---
+
 ## Two Phase Types
 
 | Phase Type | Location | Reward | Cards Go... |
 |------------|----------|--------|-------------|
-| **Board Phase** | Center of table | Points (12–20) + closer bonus | Your Pages (open) |
+| **Board Phase** | Center of table | Points (8–12) + Record Wreath | Your Pages (open) |
 | **Lot** | In front of you | 1 Letter (worth 5 pts) | Sheol |
 
 - **Board Phase:** Score points. Cards stay on table in your Pages.
@@ -172,7 +184,7 @@ You may record as many times as you are able:
 - Play cards from hand matching the Board Phase composition exactly.
 - Place cards face-up in your Pages.
 - Score the phase's point value.
-- **First player** to record the Board Phase gets **+5 closer bonus**.
+- **First player** to record the Board Phase takes the **Record Wreath (+2 points)**.
 
 **Record Lot:**
 - Play cards from hand matching your Lot composition exactly.
@@ -188,7 +200,18 @@ You may record as many times as you are able:
 
 **Discard 1 card** to Sheol.
 
-If your hand is empty, the chapter ends immediately (skip to Chapter End).
+If your hand is empty, the chapter ends immediately (skip to Chapter End). The first player to empty their hand takes the **Empty Wreath (+2 points)**.
+
+---
+
+## Wreath Bonuses
+
+Two Wreath tokens are awarded each chapter:
+
+- **Record Wreath:** First player to record the Board Phase (+2 points)
+- **Empty Wreath:** First player to empty their hand (+2 points)
+
+A player may earn both Wreaths in the same chapter.
 
 ---
 
@@ -209,7 +232,7 @@ When a player discards at End, any other player may call **"Redeem!"** to take t
 When a player empties their hand:
 
 1. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
-2. **Score records:** Points already earned during play.
+2. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
 3. **Convert Letters:** Each Letter = 5 points. Add to score.
 4. **Hand penalty:** -1 point per card remaining in hand.
 5. **Reset:**
@@ -269,8 +292,11 @@ If two or more players are tied for highest score after 12 chapters:
 
 | Source | Points |
 |--------|--------|
-| Board Phase record | 12–20 (by phase) |
-| Closer bonus | +5 (first to record Board Phase) |
+| 5-card Board Phase | 8 |
+| 6-card Board Phase | 10 |
+| 7-card Board Phase | 12 |
+| Record Wreath | +2 |
+| Empty Wreath | +2 |
 | Letter conversion | 5 per Letter |
 | Hand penalty | -1 per card |
 
@@ -318,7 +344,7 @@ The tension in Hypertext:
 
 - **Play vs. Record:** Abilities give tempo, but activated cards can't record. Burn for advantage or hold for points?
 - **Board vs. Lot:** Board Phases score big but don't shrink your hand. Lots dump cards fast but score less.
-- **Racing:** First to record the Board Phase gets +5. But overcommitting leaves you vulnerable if you can't empty your hand.
+- **Racing:** First to record the Board Phase earns the Record Wreath (+2). First to empty their hand earns the Empty Wreath (+2). But overcommitting leaves you vulnerable if you can't score.
 - **Letter Economy:** Letters fuel extra activations and convert to points. Spend for tempo or bank for score?
 - **Redeem:** Watch the discard—snatch what you need, but you'll owe an extra card next turn.
 
@@ -336,7 +362,10 @@ The tension in Hypertext:
 | **Lot** | Your personal phase; what falls to you |
 | **Tower** | The draw pile—language dispersed from Babel |
 | **Sheol** | The discard pile—the grave |
-| **Closer** | First player to record the Board Phase (+5 bonus) |
+| **Judge** | Appointed player who tracks score and arbitrates timing disputes |
+| **Wreath** | Token awarded for being first (+2 points each) |
+| **Record Wreath** | +2 points for first player to record the Board Phase |
+| **Empty Wreath** | +2 points for first player to empty their hand |
 | **Letter** | Token earned from Lot records (worth 5 pts) |
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
