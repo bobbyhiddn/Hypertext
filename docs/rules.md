@@ -51,12 +51,13 @@ Each card has:
 
 ## Rarity & Abilities
 
-Abilities activate when you **reveal** a card. You may activate at two times:
+Abilities activate when you **reveal** a card during the Play phase.
 
-1. **At Draw (free):** Reveal the card you just drew, pay rarity cost, resolve ability. Card and cost go to Sheol (not redeemable).
-2. **During Turn (costs Letter):** Spend 1 Letter, reveal a card from hand, pay rarity cost, resolve ability. Card and cost go to Sheol (not redeemable).
+**Free Activation:** Once per turn, you may reveal the card you just drew.
 
-Activated cards cannot be recorded—they go to the Sheol (along with any cards discarded to pay the activation cost). **Activated cards and their costs cannot be redeemed.**
+**Letter Activation:** Spend 1 Letter to reveal a card from your hand (repeatable).
+
+Activated cards cannot be recorded—they go to Sheol (along with any cards discarded to pay the activation cost). **Activated cards and their costs cannot be redeemed.**
 
 ### Ability Costs
 
@@ -66,11 +67,6 @@ Activated cards cannot be recorded—they go to the Sheol (along with any cards 
 | **UNCOMMON** | ◆ Green | Discard 1 from hand |
 | **RARE** | ◆ Gold | Discard 2 from hand |
 | **GLORIOUS** | ◆ Orange | Discard 3 from hand |
-
-### Activation Limits
-
-- 1 free activation per turn (at draw)
-- Unlimited activations via Letter spend (during turn)
 
 ---
 
@@ -152,17 +148,23 @@ Phases define the **type composition** required to record a valid set. All phase
 
 ### 1. Draw
 
-Choose one:
-- **Draw** 1 card from the Tower, OR
-- **Redeem** the top card of Sheol, if it was an end-of-turn discard (you must then discard 1 card at end of turn; limit 1 redeem per turn)
+Draw 1 card from the Tower.
 
-### 2. Reveal or Keep (if drawing from deck)
+### 2. Play
 
-Choose one:
-- **Reveal:** Show the drawn card. Pay its rarity cost. Resolve ability. Card and cost go to Sheol (not redeemable).
-- **Keep:** Add card to hand silently. No ability triggers.
+**Free Activation (once per turn):**
+- You may reveal the card you just drew.
+- Pay its rarity cost (discard cards from hand).
+- Resolve ability.
+- Card and cost go to Sheol (not redeemable).
 
-### 3. Record (Optional, Repeatable)
+**Letter Activation (repeatable):**
+- Spend 1 Letter to reveal a card from your hand.
+- Pay its rarity cost.
+- Resolve ability.
+- Card and cost go to Sheol (not redeemable).
+
+### 3. Record
 
 You may record as many times as you are able:
 
@@ -174,28 +176,31 @@ You may record as many times as you are able:
 
 **Record Lot:**
 - Play cards from hand matching your Lot composition exactly.
-- Cards go to the Sheol.
+- Cards go to Sheol.
 - Earn **1 Letter token**.
 
-You may record both Board Phase and Lot in the same turn, multiple times each if able.
+**Record to Opponent's Lot:**
+- Play cards from hand matching any opponent's Lot exactly.
+- Cards go to Sheol.
+- You score nothing but dump cards.
 
-### 4. Letter Activation (Optional, Repeatable)
+### 4. End
 
-Spend 1 Letter to activate a card from your hand:
-- Reveal the card.
-- Pay its rarity cost (discard cards from hand).
-- Resolve ability.
-- Card and cost go to Sheol (not redeemable).
-
-Repeat as many times as you have Letters.
-
-### 5. Discard
-
-Choose one:
-- **Discard 1 card** to Sheol, OR
-- **Play to opponent's phase:** Record a complete set matching any opponent's Lot (cards go to Sheol; you score nothing but dump cards)
+**Discard 1 card** to Sheol.
 
 If your hand is empty, the chapter ends immediately (skip to Chapter End).
+
+---
+
+## Redeem
+
+When a player discards at End, any other player may call **"Redeem!"** to take that card.
+
+- First to call becomes the card's **redeemer**.
+- The redeemer takes the discarded card into their hand.
+- The redeemer must discard 1 card at the end of their next turn (in addition to their normal discard).
+- Limit: 1 redeem per player per chapter.
+- Activated cards and their costs **cannot be redeemed**—only End discards.
 
 ---
 
@@ -234,7 +239,7 @@ If two or more players are tied for highest score after 12 chapters:
 1. Only tied players participate in a 13th chapter.
 2. Deal 7 cards to each tied player.
 3. Flip a new Board Phase.
-4. Play proceeds normally (draw, record, discard).
+4. Play proceeds normally (draw, play, record, end).
 5. **First to record the Board Phase wins the game.**
 6. No points scored—just victory.
 
@@ -244,16 +249,21 @@ If two or more players are tied for highest score after 12 chapters:
 
 ### Turn Actions
 
+| Phase | Actions |
+|-------|---------|
+| **1. Draw** | Take 1 from Tower |
+| **2. Play** | Free activation (drawn card) + Letter activations |
+| **3. Record** | Board Phase / Lot / Opponent's Lot |
+| **4. End** | Discard 1 to Sheol (can be redeemed) |
+
+### Other Actions
+
 | Action | Effect |
 |--------|--------|
-| **Draw** | Take 1 from Tower |
-| **Redeem** | Take top of Sheol (end-of-turn only), must discard 1 later (1/turn) |
-| **Reveal** | Activate drawn card → Sheol (not redeemable) |
-| **Keep** | Add drawn card to hand |
+| **Activate** | Reveal card, pay cost → Sheol (not redeemable) |
+| **Redeem** | Call on opponent's End discard; take card, owe extra discard |
 | **Record Board** | Score points, cards to Pages |
 | **Record Lot** | Earn Letter, cards to Sheol |
-| **Letter Activate** | Spend Letter, activate from hand |
-| **Discard** | 1 card to Sheol OR full phase to opponent |
 
 ### Scoring Summary
 
@@ -306,10 +316,11 @@ When all phases have been used as Board Phases, reshuffle the phase deck. The Bo
 
 The tension in Hypertext:
 
-- **Reveal vs. Keep:** Abilities give tempo, but activated cards can't record. Burn for advantage or hold for points?
+- **Play vs. Record:** Abilities give tempo, but activated cards can't record. Burn for advantage or hold for points?
 - **Board vs. Lot:** Board Phases score big but don't shrink your hand. Lots dump cards fast but score less.
 - **Racing:** First to record the Board Phase gets +5. But overcommitting leaves you vulnerable if you can't empty your hand.
 - **Letter Economy:** Letters fuel extra activations and convert to points. Spend for tempo or bank for score?
+- **Redeem:** Watch the discard—snatch what you need, but you'll owe an extra card next turn.
 
 ---
 
@@ -327,7 +338,8 @@ The tension in Hypertext:
 | **Sheol** | The discard pile—the grave |
 | **Closer** | First player to record the Board Phase (+5 bonus) |
 | **Letter** | Token earned from Lot records (worth 5 pts) |
-| **Redeem** | Take top of Sheol (only end-of-turn discards); must discard 1 at end of turn |
+| **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
+| **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |
 | **Matthias Rule** | Tiebreaker 13th chapter; first to record wins |
 
