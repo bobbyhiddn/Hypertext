@@ -1,0 +1,51 @@
+Generate a trading card following the EXACT layout, frame, and geometry of the reference style [1].
+
+REPLACE the content with the following text. Do NOT use brackets or placeholders.
+
+Card Number: #007
+Word: PRAY
+Gloss: To make a solemn request or petition to God; to intercede or ask for divine intervention.
+Type: VERB
+DRAW Rarity (Top Right): UNCOMMON with green diamond icon
+Stats: Lore 5, Context 5, Complexity 2
+
+Art Description: A single beam of golden light piercing through dark storm clouds to illuminate a lonely mountain peak.. Art style must match the premium antique parchment aesthetic of the reference.
+
+Ability Text: Name a card type. Reveal the top 3 cards of the Tower. Add all matching cards to your hand, then discard the rest.
+
+OT Verse: Jeremiah 29:12 — "Then you will call on me and come and pray to me, and I will listen to you."
+NT Verse: 1 Thessalonians 5:17 — "Pray without ceasing."
+
+Greek: προσεύχομαι
+(Below Greek, smaller text) Transliteration: proseuchomai
+NT Refs: Matt 6:9 • Luke 18:1 • Jas 5:16 • Phil 4:6
+
+Hebrew: פָּלַל
+(Below Hebrew, smaller text) Transliteration: palal
+OT Refs: Gen 20:7 • 1 Sam 1:10 • 2 Chr 7:14 • Ps 5:2
+
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+
+Trivia:
+• The first recorded prayer in the Bible is in Genesis 4:26, when men began to 'call on the name of the Lord'.
+• The Hebrew word 'palal' implies intervention or judgment, suggesting prayer is an act of intercession.
+• Jesus' longest recorded prayer is found in John 17, known as the High Priestly Prayer.
+• The Bible records over 650 different prayers.
+
+Series Footer: SERIES: 2026-Q1 Babel
+
+CRITICAL RULES:
+- Maintain the reference card's navy/gold frame EXACTLY.
+- Keep the exact same text box positions and styles.
+- NEVER print brackets [ ] anywhere on the card. Write text directly without brackets.
+  WRONG: [#003] or [NOUN] or [RARE]
+  CORRECT: #003 or NOUN or RARE
+- Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
+- Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
+  WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
+  CORRECT: Navy-blue filled circles (dark blue, like the card border color)
+  Filled navy circles = stat value, empty/outlined circles = remaining.
+  Example: Lore 3 = ●●●○○ (3 navy-filled, 2 empty with just outline)
+  The filled pips must be NAVY (dark blue) not gold/yellow.
+- Do not add extra text or modify the layout.
