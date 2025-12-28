@@ -39,8 +39,9 @@ TOOLS_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = TOOLS_DIR.parent
 TEMPLATES_DIR = PROJECT_ROOT / "templates"
 
-# Default style template for LOT cards (if it exists)
-DEFAULT_LOT_TEMPLATE = TEMPLATES_DIR / "lot_template.png"
+# Default style template directory and file for LOT cards
+LOT_STYLES_DIR = TEMPLATES_DIR / "lots"
+DEFAULT_LOT_TEMPLATE = TEMPLATES_DIR / "lot_template.png"  # Legacy single-file location
 
 # Type icon descriptions for the prompt
 TYPE_ICONS = {
@@ -63,27 +64,36 @@ def _build_lot_style_refs(series_dir: Path) -> list[str]:
     """
     Build list of style reference paths for LOT cards.
 
-    Looks for:
-    1. LOT template image (templates/lot_template.png)
-    2. Existing LOT card images in the series
-    3. Falls back to main card template if no LOT-specific refs exist
+    Looks for (in order):
+    1. PNG files in templates/lots/ directory (primary style refs)
+    2. Legacy LOT template (templates/lot_template.png)
+    3. Existing LOT card images in the series
+    4. Falls back to main card template if no LOT-specific refs exist
     """
     refs: list[str] = []
 
-    # First, try LOT-specific template
-    if DEFAULT_LOT_TEMPLATE.exists():
+    # First, check templates/lots/ directory for style reference PNGs
+    if LOT_STYLES_DIR.exists():
+        for png_file in sorted(LOT_STYLES_DIR.glob("*.png")):
+            refs.append(str(png_file))
+            _log(f"  Style ref: {png_file.name}")
+            # Use up to 4 style references from templates/lots/
+            if len(refs) >= 4:
+                break
+
+    # Legacy: single template file
+    if not refs and DEFAULT_LOT_TEMPLATE.exists():
         refs.append(str(DEFAULT_LOT_TEMPLATE))
 
-    # Look for existing LOT cards in this series as style references
+    # Look for existing LOT cards in this series as additional style references
     lots_dir = series_dir / "lots"
-    if lots_dir.exists():
+    if lots_dir.exists() and len(refs) < 4:
         for lot_dir in sorted(lots_dir.iterdir()):
             if not lot_dir.is_dir():
                 continue
             lot_img = lot_dir / "outputs" / "lot_1024x1536.png"
             if lot_img.exists():
                 refs.append(str(lot_img))
-                # Use up to 3 existing LOT cards as references
                 if len(refs) >= 4:
                     break
 

@@ -128,7 +128,7 @@ Phases define the **type composition** required to record a valid set. All phase
 2. **Shuffle** the phase deck (30 phases).
 3. **Deal 7 cards** to each player.
 4. **Deal 1 Phase card** to each player face-up (Lot).
-5. **Flip 1 Phase card** to the center (Board Phase).
+5. **Flip 1 Phase card** to the center (Chapter).
 6. Place remaining decks face-down. Start a face-up **Sheol** (discard pile).
 
 ---
