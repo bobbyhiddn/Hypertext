@@ -1,0 +1,221 @@
+# Universal phase definitions for Hypertext LOT cards
+# DO NOT MODIFY PER SERIES - only flavor/context vary by series theme
+# Phase names, compositions, and points are universal across all series
+
+phases:
+  # 5-Card Phases (8 points each)
+  - id: 1
+    name: REMNANT
+    cards: 5
+    points: 8
+    composition: [NOUN, NOUN, NOUN, NOUN, NOUN]
+    display: "5 same type"
+
+  - id: 2
+    name: PENTATEUCH
+    cards: 5
+    points: 8
+    composition: [NOUN, VERB, ADJECTIVE, NAME, TITLE]
+    display: "5 different types"
+
+  - id: 3
+    name: SCROLL
+    cards: 5
+    points: 8
+    composition: [NAME, VERB, ADJECTIVE, NOUN, TITLE]
+    display: "NAME + VERB + ADJ + NOUN + TITLE"
+
+  - id: 4
+    name: WITNESS
+    cards: 5
+    points: 8
+    composition: [NAME, NAME, VERB, NOUN, ADJECTIVE]
+    display: "NAME + NAME + VERB + NOUN + ADJ"
+
+  - id: 5
+    name: EPISTLE
+    cards: 5
+    points: 8
+    composition: [NAME, VERB, VERB, NOUN, NOUN]
+    display: "NAME + VERB + VERB + NOUN + NOUN"
+
+  - id: 6
+    name: PSALM
+    cards: 5
+    points: 8
+    composition: [ADJECTIVE, ADJECTIVE, ADJECTIVE, VERB, NOUN]
+    display: "ADJ + ADJ + ADJ + VERB + NOUN"
+
+  - id: 7
+    name: PARABLE
+    cards: 5
+    points: 8
+    composition: [NOUN, NOUN, NOUN, VERB, ADJECTIVE]
+    display: "NOUN + NOUN + NOUN + VERB + ADJ"
+
+  - id: 8
+    name: ORACLE
+    cards: 5
+    points: 8
+    composition: [VERB, VERB, ADJECTIVE, NAME, NOUN]
+    display: "VERB + VERB + ADJ + NAME + NOUN"
+
+  - id: 9
+    name: COVENANT
+    cards: 5
+    points: 8
+    composition: [NAME, VERB, NOUN, NOUN, ADJECTIVE]
+    display: "NAME + VERB + NOUN + NOUN + ADJ"
+
+  - id: 10
+    name: BENEDICTION
+    cards: 5
+    points: 8
+    composition: [TITLE, TITLE, ADJECTIVE, NOUN, NAME]
+    display: "TITLE + TITLE + ADJ + NOUN + NAME"
+
+  - id: 11
+    name: ALTAR
+    cards: 5
+    points: 8
+    composition: [NOUN, NOUN, NOUN, NOUN, VERB]
+    display: "NOUN + NOUN + NOUN + NOUN + VERB"
+
+  - id: 12
+    name: FOUNDATION
+    cards: 5
+    points: 8
+    composition: [NAME, NAME, NAME, NOUN, VERB]
+    display: "NAME + NAME + NAME + NOUN + VERB"
+
+  - id: 13
+    name: PROVERB
+    cards: 5
+    points: 8
+    composition: [ADJECTIVE, ADJECTIVE, VERB, NOUN, TITLE]
+    display: "ADJ + ADJ + VERB + NOUN + TITLE"
+
+  - id: 14
+    name: LAMENT
+    cards: 5
+    points: 8
+    composition: [ADJECTIVE, ADJECTIVE, ADJECTIVE, ADJECTIVE, NOUN]
+    display: "ADJ + ADJ + ADJ + ADJ + NOUN"
+
+  # 6-Card Phases (10 points each)
+  - id: 15
+    name: CONGREGATION
+    cards: 6
+    points: 10
+    composition: [ANY, ANY, ANY, ANY, ANY, ANY]
+    display: "6 any mix"
+
+  - id: 16
+    name: ASSEMBLY
+    cards: 6
+    points: 10
+    composition: [MATCH, MATCH, MATCH, MATCH, MATCH, MATCH]
+    display: "3 + 3 (two types)"
+    constraint: "two_types_three_each"
+
+  - id: 17
+    name: TRINITY
+    cards: 6
+    points: 10
+    composition: [MATCH, MATCH, MATCH, MATCH, MATCH, MATCH]
+    display: "2 + 2 + 2 (three types)"
+    constraint: "three_types_two_each"
+
+  - id: 18
+    name: TABERNACLE
+    cards: 6
+    points: 10
+    composition: [NOUN, NOUN, NOUN, NAME, NAME, NAME]
+    display: "NOUN x3 + NAME x3"
+
+  - id: 19
+    name: CHORUS
+    cards: 6
+    points: 10
+    composition: [VERB, VERB, VERB, ADJECTIVE, ADJECTIVE, ADJECTIVE]
+    display: "VERB x3 + ADJ x3"
+
+  - id: 20
+    name: SANCTUARY
+    cards: 6
+    points: 10
+    composition: [NOUN, NOUN, NOUN, NOUN, NAME, NAME]
+    display: "NOUN x4 + NAME x2"
+
+  - id: 21
+    name: HYMNAL
+    cards: 6
+    points: 10
+    composition: [ADJECTIVE, ADJECTIVE, VERB, VERB, NOUN, NOUN]
+    display: "ADJ x2 + VERB x2 + NOUN x2"
+
+  - id: 22
+    name: GOSPEL
+    cards: 6
+    points: 10
+    composition: [NAME, VERB, NOUN, ADJECTIVE, TITLE, VERB]
+    display: "NAME + VERB + NOUN + ADJ + TITLE + VERB"
+
+  - id: 23
+    name: JUBILEE
+    cards: 6
+    points: 10
+    composition: [VERB, VERB, VERB, VERB, ADJECTIVE, ADJECTIVE]
+    display: "VERB x4 + ADJ x2"
+
+  - id: 24
+    name: WISDOM
+    cards: 6
+    points: 10
+    composition: [ADJECTIVE, ADJECTIVE, ADJECTIVE, ADJECTIVE, NOUN, NOUN]
+    display: "ADJ x4 + NOUN x2"
+
+  - id: 25
+    name: PROPHECY
+    cards: 6
+    points: 10
+    composition: [ADJECTIVE, ADJECTIVE, NAME, NAME, NOUN, VERB]
+    display: "ADJ x2 + NAME x2 + NOUN + VERB"
+
+  - id: 26
+    name: SELAH
+    cards: 6
+    points: 10
+    composition: [NOUN, NOUN, NOUN, NOUN, NOUN, NOUN]
+    display: "6 same type"
+
+  # 7-Card Phases (12 points each)
+  - id: 27
+    name: CREATION
+    cards: 7
+    points: 12
+    composition: [MATCH, MATCH, MATCH, MATCH, MATCH, MATCH, MATCH]
+    display: "3 + 2 + 2 (three types)"
+    constraint: "three_types_322"
+
+  - id: 28
+    name: REVELATION
+    cards: 7
+    points: 12
+    composition: [NOUN, VERB, ADJECTIVE, NAME, TITLE, MATCH, MATCH]
+    display: "All 5 types + 2 same"
+    constraint: "all_five_plus_pair"
+
+  - id: 29
+    name: EXODUS
+    cards: 7
+    points: 12
+    composition: [VERB, VERB, VERB, NAME, NAME, NOUN, NOUN]
+    display: "VERB x3 + NAME x2 + NOUN x2"
+
+  - id: 30
+    name: APOCALYPSE
+    cards: 7
+    points: 12
+    composition: [NOUN, NOUN, NOUN, NOUN, NOUN, NOUN, NOUN]
+    display: "7 same type"
