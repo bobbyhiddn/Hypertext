@@ -3280,6 +3280,96 @@
       ]
     },
     {
+      "Name": "ScriptingTrigger",
+      "Transform": {
+        "posX": -6,
+        "posY": 1.5,
+        "posZ": 0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 4,
+        "scaleY": 2,
+        "scaleZ": 6
+      },
+      "Nickname": "Sheol (Discard)",
+      "ColorDiffuse": {
+        "r": 0.3,
+        "g": 0.1,
+        "b": 0.1
+      },
+      "Description": "Discard pile - the grave"
+    },
+    {
+      "Name": "BlockSquare",
+      "Transform": {
+        "posX": 0,
+        "posY": 1,
+        "posZ": 6,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1.5,
+        "scaleY": 0.2,
+        "scaleZ": 0.8
+      },
+      "Nickname": "DEAL 7",
+      "Description": "Click to deal 7 cards to each player",
+      "ColorDiffuse": {
+        "r": 0.1,
+        "g": 0.4,
+        "b": 0.1
+      },
+      "Locked": true,
+      "LuaScript": "\nfunction onLoad()\n    self.createButton({\n        click_function = \"dealCards\",\n        function_owner = self,\n        label = \"DEAL 7\",\n        position = {0, 0.5, 0},\n        width = 1200,\n        height = 600,\n        font_size = 300,\n    })\nend\n\nfunction dealCards()\n    for _, deck in ipairs(getObjectsWithTag(\"MainDeck\")) do\n        if deck.type == \"Deck\" then\n            for _, player in ipairs(Player.getPlayers()) do\n                deck.deal(7, player.color)\n            end\n        end\n    end\n    -- Fallback: find deck by nickname\n    for _, obj in ipairs(getAllObjects()) do\n        if obj.getName() == \"Hypertext Main Deck\" and obj.type == \"Deck\" then\n            for _, player in ipairs(Player.getPlayers()) do\n                obj.deal(7, player.color)\n            end\n            break\n        end\n    end\nend\n"
+    },
+    {
+      "Name": "BlockSquare",
+      "Transform": {
+        "posX": 2,
+        "posY": 1,
+        "posZ": 6,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1.5,
+        "scaleY": 0.2,
+        "scaleZ": 0.8
+      },
+      "Nickname": "SHUFFLE",
+      "Description": "Click to shuffle the main deck",
+      "ColorDiffuse": {
+        "r": 0.1,
+        "g": 0.1,
+        "b": 0.5
+      },
+      "Locked": true,
+      "LuaScript": "\nfunction onLoad()\n    self.createButton({\n        click_function = \"shuffleDeck\",\n        function_owner = self,\n        label = \"SHUFFLE\",\n        position = {0, 0.5, 0},\n        width = 1200,\n        height = 600,\n        font_size = 300,\n    })\nend\n\nfunction shuffleDeck()\n    for _, obj in ipairs(getAllObjects()) do\n        if obj.getName() == \"Hypertext Main Deck\" and obj.type == \"Deck\" then\n            obj.shuffle()\n            broadcastToAll(\"Deck shuffled!\", {1, 1, 1})\n            break\n        end\n    end\nend\n"
+    },
+    {
+      "Name": "BlockSquare",
+      "Transform": {
+        "posX": 4,
+        "posY": 1,
+        "posZ": 6,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1.5,
+        "scaleY": 0.2,
+        "scaleZ": 0.8
+      },
+      "Nickname": "NEW CHAPTER",
+      "Description": "Reset for new chapter - returns cards from Sheol to deck",
+      "ColorDiffuse": {
+        "r": 0.5,
+        "g": 0.3,
+        "b": 0.1
+      },
+      "Locked": true,
+      "LuaScript": "\nfunction onLoad()\n    self.createButton({\n        click_function = \"newChapter\",\n        function_owner = self,\n        label = \"NEW CHAPTER\",\n        position = {0, 0.5, 0},\n        width = 1400,\n        height = 600,\n        font_size = 250,\n    })\nend\n\nfunction newChapter()\n    broadcastToAll(\"New Chapter! Reshuffle Sheol into Tower.\", {1, 0.8, 0.2})\nend\n"
+    },
+    {
       "Name": "Chip_100",
       "Transform": {
         "posX": 8.0,

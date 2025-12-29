@@ -524,6 +524,167 @@ def _export_for_tts(
         deck_obj["Transform"]["posX"] = i * 3
         tts_objects.append(deck_obj)
 
+    # Add Sheol (discard) zone
+    sheol_zone = {
+        "Name": "ScriptingTrigger",
+        "Transform": {
+            "posX": -6,
+            "posY": 1.5,
+            "posZ": 0,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 4,
+            "scaleY": 2,
+            "scaleZ": 6,
+        },
+        "Nickname": "Sheol (Discard)",
+        "ColorDiffuse": {"r": 0.3, "g": 0.1, "b": 0.1},
+        "Description": "Discard pile - the grave",
+    }
+    tts_objects.append(sheol_zone)
+    _log(f"  Added Sheol (discard) zone")
+
+    # Add control buttons as tokens with scripts
+    button_color = {"r": 0.2, "g": 0.2, "b": 0.3}
+
+    # Deal button
+    deal_button = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": -4,
+            "posY": 1,
+            "posZ": 8,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1.5,
+            "scaleY": 0.2,
+            "scaleZ": 0.8,
+        },
+        "Nickname": "DEAL 7",
+        "Description": "Click to deal 7 cards to each player",
+        "ColorDiffuse": {"r": 0.1, "g": 0.4, "b": 0.1},
+        "Locked": True,
+        "LuaScript": '''
+function onLoad()
+    self.createButton({
+        click_function = "dealCards",
+        function_owner = self,
+        label = "DEAL 7",
+        position = {0, 0.5, 0},
+        width = 1200,
+        height = 600,
+        font_size = 300,
+    })
+end
+
+function dealCards()
+    for _, deck in ipairs(getObjectsWithTag("MainDeck")) do
+        if deck.type == "Deck" then
+            for _, player in ipairs(Player.getPlayers()) do
+                deck.deal(7, player.color)
+            end
+        end
+    end
+    -- Fallback: find deck by nickname
+    for _, obj in ipairs(getAllObjects()) do
+        if obj.getName() == "Hypertext Main Deck" and obj.type == "Deck" then
+            for _, player in ipairs(Player.getPlayers()) do
+                obj.deal(7, player.color)
+            end
+            break
+        end
+    end
+end
+''',
+    }
+    tts_objects.append(deal_button)
+
+    # Shuffle button
+    shuffle_button = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": 0,
+            "posY": 1,
+            "posZ": 8,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1.5,
+            "scaleY": 0.2,
+            "scaleZ": 0.8,
+        },
+        "Nickname": "SHUFFLE",
+        "Description": "Click to shuffle the main deck",
+        "ColorDiffuse": {"r": 0.1, "g": 0.1, "b": 0.5},
+        "Locked": True,
+        "LuaScript": '''
+function onLoad()
+    self.createButton({
+        click_function = "shuffleDeck",
+        function_owner = self,
+        label = "SHUFFLE",
+        position = {0, 0.5, 0},
+        width = 1200,
+        height = 600,
+        font_size = 300,
+    })
+end
+
+function shuffleDeck()
+    for _, obj in ipairs(getAllObjects()) do
+        if obj.getName() == "Hypertext Main Deck" and obj.type == "Deck" then
+            obj.shuffle()
+            broadcastToAll("Deck shuffled!", {1, 1, 1})
+            break
+        end
+    end
+end
+''',
+    }
+    tts_objects.append(shuffle_button)
+
+    # Reset button
+    reset_button = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": 4,
+            "posY": 1,
+            "posZ": 8,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1.5,
+            "scaleY": 0.2,
+            "scaleZ": 0.8,
+        },
+        "Nickname": "NEW CHAPTER",
+        "Description": "Reset for new chapter - returns cards from Sheol to deck",
+        "ColorDiffuse": {"r": 0.5, "g": 0.3, "b": 0.1},
+        "Locked": True,
+        "LuaScript": '''
+function onLoad()
+    self.createButton({
+        click_function = "newChapter",
+        function_owner = self,
+        label = "NEW CHAPTER",
+        position = {0, 0.5, 0},
+        width = 1400,
+        height = 600,
+        font_size = 250,
+    })
+end
+
+function newChapter()
+    broadcastToAll("New Chapter! Reshuffle Sheol into Tower.", {1, 0.8, 0.2})
+end
+''',
+    }
+    tts_objects.append(reset_button)
+
+    _log(f"  Added Deal, Shuffle, and New Chapter buttons")
+
     # Add Letter tokens (24 - one for each Greek letter, covers Hebrew's 22)
     # Blue color
     blue_color = {"r": 0.2, "g": 0.4, "b": 0.9}
