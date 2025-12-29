@@ -77,3 +77,12 @@ last_description:
   has_brackets: false
   bracket_locations: []
 review_status: green
+revision: 1
+revision_notes: 'Ability change request:
+
+  Change the ability to look at target player''s hand and draw 1
+
+
+  Stats change request:
+
+  set context to 3'
