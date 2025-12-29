@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: ORACLE
+Lot ID: 08
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes square brackets around card type names (e.g., [VERB]) which violates the requirement for no brackets

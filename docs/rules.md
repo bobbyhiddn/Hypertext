@@ -128,7 +128,7 @@ Phases define the **type composition** required to record a valid set. All phase
 2. **Shuffle** the phase deck (30 phases).
 3. **Deal 7 cards** to each player.
 4. **Deal 1 Phase card** to each player face-up (Lot).
-5. **Flip 1 Phase card** to the center (Board Phase).
+5. **Flip 1 Phase card** to the center (Chapter).
 6. Place remaining decks face-down. Start a face-up **Sheol** (discard pile).
 
 ---
@@ -149,10 +149,18 @@ Appoint one player as Judge for the game. The Judge:
 | Phase Type | Location | Reward | Cards Go... |
 |------------|----------|--------|-------------|
 | **Board Phase** | Center of table | Points (8–12) + Record Wreath | Your Pages (open) |
-| **Lot** | In front of you | 1 Letter (worth 5 pts) | Sheol |
+| **Lot** | In front of you | Letters (see below) | Sheol |
 
 - **Board Phase:** Score points. Cards stay on table in your Pages.
 - **Lot:** Earn Letters. Cards leave your hand to Sheol.
+
+### Lot Letter Rewards
+
+| Lot Size | Letters Earned |
+|----------|----------------|
+| 5-card | 1 Letter |
+| 6-card | 1 Letter |
+| 7-card | 2 Letters |
 
 ---
 
@@ -189,7 +197,7 @@ You may record as many times as you are able:
 **Record Lot:**
 - Play cards from hand matching your Lot composition exactly.
 - Cards go to Sheol.
-- Earn **1 Letter token**.
+- Earn **1 Letter token** (or **2 Letters** for 7-card Lots).
 
 **Record to Opponent's Lot:**
 - Play cards from hand matching any opponent's Lot exactly.
@@ -286,7 +294,7 @@ If two or more players are tied for highest score after 12 chapters:
 | **Activate** | Reveal card, pay cost → Sheol (not redeemable) |
 | **Redeem** | Call on opponent's End discard; take card, owe extra discard |
 | **Record Board** | Score points, cards to Pages |
-| **Record Lot** | Earn Letter, cards to Sheol |
+| **Record Lot** | Earn 1 Letter (2 for 7-card), cards to Sheol |
 
 ### Scoring Summary
 
@@ -366,7 +374,7 @@ The tension in Hypertext:
 | **Wreath** | Token awarded for being first (+2 points each) |
 | **Record Wreath** | +2 points for first player to record the Board Phase |
 | **Empty Wreath** | +2 points for first player to empty their hand |
-| **Letter** | Token earned from Lot records (worth 5 pts) |
+| **Letter** | Token earned from Lot records (1 per Lot, 2 for 7-card; worth 5 pts each) |
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |

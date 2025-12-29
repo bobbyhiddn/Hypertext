@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hypertext-tools"
+version = "0.1.0"
+description = "Biblical word-study trading card game toolkit"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.0.0",
+    "Pillow>=10.0.0",
+    "PyYAML>=6.0",
+    "google-genai>=0.3.0",
+]
+
+[project.optional-dependencies]
+dev = ["jsonschema", "markdown"]
+
+[project.scripts]
+hypertext = "hypertext.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+hypertext = ["templates/*", "templates/**/*"]

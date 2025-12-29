@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: WITNESS
+Lot ID: 04
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes literal square brackets (e.g., [NAME]) instead of clean labels (NAME)

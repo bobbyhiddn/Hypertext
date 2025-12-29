@@ -1,0 +1,10 @@
+{
+  "lot_id": 28,
+  "phase_name": "REVELATION",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text contains square brackets ('[NOUN]'), but expected format is plain text without brackets"
+  ],
+  "attempt": 1
+}

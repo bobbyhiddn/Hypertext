@@ -1,0 +1,10 @@
+{
+  "lot_id": 22,
+  "phase_name": "GOSPEL",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes square brackets around types (e.g. [NAME]) which violates the expected format"
+  ],
+  "attempt": 1
+}

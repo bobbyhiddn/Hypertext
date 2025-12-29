@@ -1,0 +1,10 @@
+{
+  "lot_id": 12,
+  "phase_name": "FOUNDATION",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes square brackets around type names (e.g. [NOUN]), expected plain text"
+  ],
+  "attempt": 1
+}

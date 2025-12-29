@@ -25,12 +25,12 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai pillow
+          pip install -e package/
 
       - name: Run plan phase
         id: run-plan
         run: |
-          python tools/daily_pipeline.py --phase plan --auto
+          python -m hypertext.pipeline.daily --phase plan --auto
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
 
@@ -87,7 +87,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai pillow
+          pip install -e package/
 
       - name: Generate image (Nano Banana Pro)
         env:
@@ -95,7 +95,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
           HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
         run: |
-          python tools/daily_pipeline.py --phase imagegen
+          python -m hypertext.pipeline.daily --phase imagegen
 
       - name: Verify image was generated
         run: |
@@ -150,13 +150,13 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai requests
+          pip install -e package/
 
       - name: Run review stage
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
         run: |
-          python tools/daily_pipeline.py --phase review --card-dir "${{ needs.plan.outputs.card_dir }}"
+          python -m hypertext.pipeline.daily --phase review --card-dir "${{ needs.plan.outputs.card_dir }}"
 
       - name: Upload reviewed artifacts
         uses: actions/upload-artifact@v4

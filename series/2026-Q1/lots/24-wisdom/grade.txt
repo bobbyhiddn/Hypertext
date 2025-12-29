@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: WISDOM
+Lot ID: 24
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes literal square brackets around type names (e.g., [ADJECTIVE] instead of ADJECTIVE)

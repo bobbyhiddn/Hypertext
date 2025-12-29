@@ -1,0 +1,10 @@
+{
+  "lot_id": 25,
+  "phase_name": "PROPHECY",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes literal square brackets (e.g., [ADJECTIVE]) around type names, which is explicitly forbidden in the expected style"
+  ],
+  "attempt": 1
+}

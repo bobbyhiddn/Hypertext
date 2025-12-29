@@ -1,0 +1,52 @@
+LOT CARD GRADING RUBRIC
+Generated from style reference images
+============================================================
+
+Based on the visual analysis of the provided reference images (`Lot_Template.png`, `Creation.png`, and `Epistle.png`), here is the exact style definition for a LOT card.
+
+### 1. HEADER
+*   **Top Left Badge:** A dark navy, irregular hexagonal "tab" shape with a gold border. It contains the text **"LOT"** in white, uppercase, serif font.
+*   **Top Right Badge:** A rectangular dark navy box with a gold border. It is divided into two text lines:
+    *   **Upper Line:** "CARD COUNT" (Small, uppercase serif font, white).
+    *   **Lower Line:** "[Number]-CARD" (e.g., "7-CARD" or "X-CARDS") in a larger, uppercase serif font, white.
+
+### 2. TITLE AREA
+*   **Position:** Centered in the upper quarter of the card on the parchment background.
+*   **Main Title:** Large, **BOLD**, uppercase serif font in black ink (e.g., **"CREATION"**).
+*   **Subtitle:** Located immediately below the main title. It is styled in a smaller, *italicized* serif font in black ink (e.g., *"The seven days of forming and filling the cosmos."*).
+
+### 3. REWARD SECTION
+*   **Banner Shape:** A dark navy "ribbon" style banner with inward-notched ends (swallowtail). It spans nearly the full width of the card. It has a gold double-border.
+*   **Main Text:** Centered. "REWARD: [Number] Points" (or "Example Points"). Font is large, serif, and cream/white.
+*   **Subtext:** Centered below the main reward text inside the banner. "Wreath Bonus: +2 Points (First to record)". Font is smaller, italicized serif, and cream/white.
+
+### 4. COMPOSITION AREA
+*   **Container:** A wide, rectangular box with chamfered (cut-out) corners. It features a double border (thick outer black line, thin inner line).
+*   **Layout:** A horizontal equation of icons and text connected by plus signs (**+**).
+*   **Components:** Each element in the sequence consists of three stacked parts:
+    1.  **Icon:** A dark navy/black vector icon (e.g., Book, Pencil, Sparkle Pencil, Quill, Frame).
+    2.  **Bracketed Text:** Uppercase text describing the word type inside square brackets (e.g., **[NOUN]**, **[VERB]**, **[NAME]**).
+    3.  **Underline Bracket:** A graphic bracket line `|_|` cupping the text.
+*   **Icon Mapping:**
+    *   **Book Icon:** [NOUN]
+    *   **Pencil Icon:** [VERB]
+    *   **Pencil with Sparkles Icon:** [ADJECTIVE]
+    *   **Feather/Quill Icon:** [NAME]
+    *   **Ornate Frame Icon:** [TITLE]
+
+### 5. CONTEXT SECTION
+*   **Container:** A rectangular box located in the lower third of the card. It features ornate, gold/metallic filigree flourishes in the bottom-left and bottom-right corners.
+*   **Header:** A dark navy strip at the top of the box containing the word **"CONTEXT"** in white, uppercase serif font.
+*   **Body Text:** Located on the parchment background inside the box. Text is black, serif font, standard sentence case, and center-aligned. It provides a 1-2 sentence summary of the card's theme.
+
+### 6. FOOTER
+*   **Style:** A solid dark navy bar running across the very bottom edge of the card.
+*   **Text:** Aligned to the left. Text reads: "SERIES: 20XX-QX Lots" in a small, grey/white serif font.
+
+### 7. FRAME/COLORS
+*   **Color Palette:**
+    *   **Background:** Textured parchment/aged paper (Beige/Tan).
+    *   **Primary Accents:** Dark Navy Blue.
+    *   **Secondary Accents:** Gold/Brass (used for borders and corner flourishes).
+    *   **Text:** Black (on parchment) and White (on Navy backgrounds).
+*   **Borders:** The entire card is framed by a thin gold line, surrounded by a thick navy border, surrounded by another thin gold line at the very edge.

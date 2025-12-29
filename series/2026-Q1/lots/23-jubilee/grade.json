@@ -1,0 +1,10 @@
+{
+  "lot_id": 23,
+  "phase_name": "JUBILEE",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes square brackets around types (e.g., '[VERB]') which violates the style guide expectation of plain text labels"
+  ],
+  "attempt": 1
+}

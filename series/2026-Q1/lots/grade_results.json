@@ -1,0 +1,160 @@
+[
+  {
+    "lot_id": 1,
+    "phase_name": "REMNANT",
+    "score": 85,
+    "passed": false,
+    "issues": [
+      "Composition type labels incorrectly include square brackets (observed '[NOUN]', expected 'NOUN').",
+      "Wreath bonus text capitalization mismatch (observed 'First to Record', expected 'First to record') - Critical failure."
+    ]
+  },
+  {
+    "lot_id": 2,
+    "phase_name": "PENTATEUCH",
+    "score": 0,
+    "passed": false,
+    "issues": [
+      "STYLE MISMATCH (automatic fail): The test card uses an inverted color scheme for the context section (solid navy background with white text) and lacks the explicit 'CONTEXT' header bar found in the references. Additionally, the composition section lacks the required text labels under the icons."
+    ]
+  },
+  {
+    "lot_id": 3,
+    "phase_name": "SCROLL",
+    "score": 0,
+    "passed": false,
+    "issues": [
+      "STYLE MISMATCH (automatic fail): The test card uses an ornate 'curly' design style with line-based headers and a full-width reward bar, whereas the references utilize a strict straight-line geometric border, a floating ribbon reward banner, and solid navy block headers."
+    ]
+  },
+  {
+    "lot_id": 4,
+    "phase_name": "WITNESS",
+    "score": 90,
+    "passed": true,
+    "issues": [
+      "Composition type labels include square brackets (e.g., [NAME]) but should be plain text (e.g., NAME).",
+      "Wreath Bonus text uses Title Case ('First to Record') instead of the expected lowercase format ('First to record')."
+    ]
+  },
+  {
+    "lot_id": 5,
+    "phase_name": "EPISTLE",
+    "score": 0,
+    "passed": false,
+    "issues": [
+      "STYLE MISMATCH (automatic fail): The test card uses a completely different design language: the reward banner is the wrong shape, the composition area uses a node-link style with circles rather than the bracketed text format, and the ornate scrollwork borders of the reference are replaced with simpler blue geometric lines."
+    ]
+  },
+  {
+    "lot_id": 6,
+    "phase_name": "PSALM",
+    "score": 90,
+    "passed": false,
+    "issues": [
+      "CRITICAL FAILURE: Wreath Bonus text mismatch. Expected '(First to record)' (lowercase 'r'), but observed '(First to Record)' (uppercase 'R')."
+    ]
+  },
+  {
+    "lot_id": 7,
+    "phase_name": "PARABLE",
+    "score": 0,
+    "passed": false,
+    "issues": [
+      "STYLE MISMATCH (automatic fail): Structural layout mismatch: The reference cards use a 'ribbon' shape for rewards and ornate curly frames for sections. The test card uses a rectangular plaque for rewards and straight geometric frames. Additionally, the composition section differs significantly (card graphics on a shelf vs. simple icons with bracketed text), and the context header style is different."
+    ]
+  },
+  {
+    "lot_id": 8,
+    "phase_name": "ORACLE",
+    "score": 95,
+    "passed": true,
+    "issues": [
+      "Composition type labels include square brackets (e.g., '[VERB]') which violates the expected style of plain text labels."
+    ]
+  },
+  {
+    "lot_id": 9,
+    "phase_name": "COVENANT",
+    "score": 90,
+    "passed": true,
+    "issues": [
+      "Composition labels incorrectly use square brackets (e.g., '[NAME]') instead of plain text (e.g., 'NAME').",
+      "Wreath Bonus text casing mismatch: Observed 'Record' (capitalized), expected 'record' (lowercase)."
+    ]
+  },
+  {
+    "lot_id": 10,
+    "phase_name": "BENEDICTION",
+    "score": 85,
+    "passed": false,
+    "issues": [
+      "Wreath bonus text mismatch: Expected '(First to record)' with lowercase 'r', observed '(First to Record)' (CRITICAL)",
+      "Composition type labels incorrectly formatted with square brackets (e.g., '[TITLE] + [TITLE]...')"
+    ]
+  },
+  {
+    "lot_id": 11,
+    "phase_name": "ALTAR",
+    "score": 0,
+    "passed": false,
+    "issues": [
+      "STYLE MISMATCH (automatic fail): Major template mismatch. The test card uses a thick blue vector frame with spikes instead of the reference's thin double-line parchment border. The reward banner wraps around the card edges rather than being a floating swallowtail ribbon. The composition area lacks the decorative bounding box and bracket notation '[NOUN]' found in the references. The icons are solid silhouettes rather than outlined illustrations."
+    ]
+  },
+  {
+    "lot_id": 12,
+    "phase_name": "FOUNDATION",
+    "score": 95,
+    "passed": true,
+    "issues": [
+      "Composition text includes square brackets around card types (e.g., [NAME]) instead of plain text"
+    ]
+  },
+  {
+    "lot_id": 13,
+    "phase_name": "PROVERB",
+    "score": 90,
+    "passed": true,
+    "issues": [
+      "Composition labels incorrectly include square brackets (observed '[ADJ]', expected 'ADJ')",
+      "Wreath bonus text capitalization mismatch (observed 'First to Record', expected 'First to record')"
+    ]
+  },
+  {
+    "lot_id": 14,
+    "phase_name": "LAMENT",
+    "score": 90,
+    "passed": true,
+    "issues": [
+      "Composition card type labels contain square brackets (e.g., '[ADJ]'), which should be removed.",
+      "Wreath Bonus text capitalization mismatch: observed 'First to Record', expected 'First to record' (lowercase 'r')."
+    ]
+  },
+  {
+    "lot_id": 15,
+    "phase_name": "CONGREGATION",
+    "score": 75,
+    "passed": false,
+    "issues": [
+      "Wreath Bonus text mismatch: Observed 'Record' (capitalized), expected lowercase 'record'",
+      "Composition section missing icons and text labels; observed empty grid slots instead of 'Type + Type' format"
+    ]
+  },
+  {
+    "lot_id": 16,
+    "phase_name": "ASSEMBLY",
+    "score": 100,
+    "passed": true,
+    "issues": []
+  },
+  {
+    "lot_id": 17,
+    "phase_name": "TRINITY",
+    "score": 90,
+    "passed": false,
+    "issues": [
+      "Wreath Bonus text mismatch: Expected '(First to record)', observed '(First to Record)' - CRITICAL failure due to incorrect capitalization"
+    ]
+  }
+]

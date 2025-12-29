@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: PROPHECY
+Lot ID: 25
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes literal square brackets (e.g., [ADJECTIVE]) around type names, which is explicitly forbidden in the expected style

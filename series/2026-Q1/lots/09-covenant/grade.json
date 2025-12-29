@@ -1,0 +1,10 @@
+{
+  "lot_id": 9,
+  "phase_name": "COVENANT",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text contains literal square brackets around type names (e.g., '[NAME]'), violating the prohibition on square brackets in the type labels."
+  ],
+  "attempt": 1
+}

@@ -1,0 +1,10 @@
+{
+  "lot_id": 1,
+  "phase_name": "REMNANT",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes literal square brackets (e.g., [NOUN]) which should not be present"
+  ],
+  "attempt": 1
+}

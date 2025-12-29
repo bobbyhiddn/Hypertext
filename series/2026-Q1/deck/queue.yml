@@ -1,6 +1,6 @@
-- word: BEAUTIFUL
-  card_type: ADJECTIVE
-  rarity: COMMON
 - word: SEE
+  card_type: VERB
+  rarity: COMMON
+- word: BUILD
   card_type: VERB
   rarity: COMMON
