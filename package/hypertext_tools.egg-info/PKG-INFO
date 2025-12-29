@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: hypertext-tools
+Version: 0.1.0
+Summary: Biblical word-study trading card game toolkit
+Author: Hypertext Project
+Requires-Python: >=3.10
+Requires-Dist: click>=8.0.0
+Requires-Dist: Pillow>=10.0.0
+Requires-Dist: PyYAML>=6.0
+Requires-Dist: google-genai>=0.3.0
+Provides-Extra: dev
+Requires-Dist: jsonschema; extra == "dev"
+Requires-Dist: markdown; extra == "dev"
+Dynamic: author
+Dynamic: requires-python

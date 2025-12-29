@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: REVELATION
+Lot ID: 28
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text contains square brackets ('[NOUN]'), but expected format is plain text without brackets

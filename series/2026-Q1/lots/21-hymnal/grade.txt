@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: HYMNAL
+Lot ID: 21
+Score: 95/100
+Status: PASS
+Attempt: 2/3
+
+Issues:
+  - Composition type labels include square brackets (e.g., [ADJECTIVE]) where plain text is expected

@@ -30,11 +30,11 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install pyyaml markdown
+        run: pip install -e package/
 
       - name: Build Gallery
         run: |
-          python tools/daily_pipeline.py --phase gallery --series series --out-dir _site
+          python -m hypertext.pipeline.daily --phase gallery --series series --out-dir _site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

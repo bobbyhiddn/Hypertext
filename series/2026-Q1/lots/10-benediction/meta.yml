@@ -1,0 +1,12 @@
+id: 10
+name: BENEDICTION
+cards: 5
+points: 8
+display: TITLE + TITLE + ADJ + NOUN + NAME
+flavor: May mercy speak where human tongues have failed.
+context: Contrasting the linguistic chaos of Babel, the benediction is the authoritative
+  pronouncement of God's "good word" that places His name upon His people (Numbers
+  6:27). This liturgical act seals the faithful in divine favor, transforming the
+  uncertainty of dispersion into the assurance of covenant peace.
+render_attempts: 1
+final_score: 95

@@ -1,0 +1,10 @@
+{
+  "lot_id": 11,
+  "phase_name": "ALTAR",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text incorrectly contains square brackets around type names (e.g., [NOUN] instead of NOUN)"
+  ],
+  "attempt": 1
+}

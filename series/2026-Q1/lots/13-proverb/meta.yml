@@ -1,0 +1,12 @@
+id: 13
+name: PROVERB
+cards: 5
+points: 8
+display: ADJ + ADJ + VERB + NOUN + TITLE
+flavor: Better a silent heart than a tower of babbling tongues.
+context: Representing the antithesis of Babel’s confusion, the biblical proverb (*mashal*)
+  grounds the believer in the fear of the Lord rather than the hubris of human autonomy
+  (Proverbs 1:7). This phase emphasizes the didactic application of divine wisdom
+  to dismantle the folly of self-exaltation.
+render_attempts: 1
+final_score: 95

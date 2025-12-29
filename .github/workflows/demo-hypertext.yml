@@ -20,14 +20,14 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai
+          pip install -e package/
 
       - name: Generate demo card (random word)
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
         run: |
-          python tools/daily_pipeline.py --phase demo
+          python -m hypertext.pipeline.daily --phase demo
 
       - name: Create PR branch, commit, open PR
         env:

@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: EPISTLE
+Lot ID: 05
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition card type labels include square brackets (e.g., [NAME]) which violates the expected format

@@ -1,0 +1,12 @@
+id: 4
+name: WITNESS
+cards: 5
+points: 8
+display: NAME + NAME + VERB + NOUN + ADJ
+flavor: Bear witness as one voice fractures into a thousand cries.
+context: Just as the Lord descended to observe the city and the tower, this phase
+  emphasizes the divine scrutiny of human motivations and the inevitable judgment
+  of pride (Genesis 11:5). The dispersion at Babel stands as an enduring witness that
+  collective rebellion cannot thwart God’s sovereign command to fill the earth.
+render_attempts: 1
+final_score: 95

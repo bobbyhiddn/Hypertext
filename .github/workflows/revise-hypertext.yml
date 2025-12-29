@@ -40,7 +40,7 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install pyyaml google-genai
+          pip install -e package/
 
       - name: Revise card(s) (apply minimal JSON patch + rerender)
         env:
@@ -109,7 +109,7 @@ jobs:
           for DIR in "${!DIRS_REVISE[@]}"; do
             REV="${DIRS_REVISE[${DIR}]}"
             echo "Running revise for ${DIR} using ${REV}"
-            python tools/daily_pipeline.py --phase revise --card-dir "${DIR}" --revise-file "${REV}"
+            python -m hypertext.pipeline.daily --phase revise --card-dir "${DIR}" --revise-file "${REV}"
             unset DIRS_REBUILD["${DIR}"] || true
           done
 
@@ -123,10 +123,10 @@ jobs:
             done
             if [[ ${REGEN} -eq 1 ]]; then
               echo "Running rebuild for ${DIR} (regen prompt from card.json)"
-              python tools/daily_pipeline.py --phase rebuild --card-dir "${DIR}" --regen-prompt
+              python -m hypertext.pipeline.daily --phase rebuild --card-dir "${DIR}" --regen-prompt
             else
               echo "Running rebuild for ${DIR}"
-              python tools/daily_pipeline.py --phase rebuild --card-dir "${DIR}"
+              python -m hypertext.pipeline.daily --phase rebuild --card-dir "${DIR}"
             fi
           done
 

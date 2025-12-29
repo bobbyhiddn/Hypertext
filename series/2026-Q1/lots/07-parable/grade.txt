@@ -1,0 +1,11 @@
+LOT CARD GRADE
+==============
+Phase: PARABLE
+Lot ID: 07
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes literal square brackets (e.g., [NOUN]) contrary to reference style
+  - Inconsistent formatting in Composition text (ADJECTIVE lacks brackets while others have them)

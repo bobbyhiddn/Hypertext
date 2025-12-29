@@ -1,0 +1,10 @@
+{
+  "lot_id": 5,
+  "phase_name": "EPISTLE",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition card type labels include square brackets (e.g., [NAME]) which violates the expected format"
+  ],
+  "attempt": 1
+}
