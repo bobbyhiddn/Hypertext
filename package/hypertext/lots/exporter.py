@@ -20,6 +20,7 @@ Usage:
 import argparse
 import json
 import sys
+import uuid
 from pathlib import Path
 from typing import Any
 
@@ -265,6 +266,66 @@ def _create_sprite_sheet(
     return actual_cols, actual_rows
 
 
+def _create_tts_token(
+    nickname: str,
+    color: dict,
+    position: tuple[float, float, float] = (0, 1, 0),
+) -> dict:
+    """Create a TTS token/chip object."""
+    return {
+        "Name": "Chip_100",
+        "Transform": {
+            "posX": position[0],
+            "posY": position[1],
+            "posZ": position[2],
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1,
+        },
+        "Nickname": nickname,
+        "ColorDiffuse": color,
+    }
+
+
+def _create_tts_token_stack(
+    nickname: str,
+    color: dict,
+    count: int,
+    position: tuple[float, float, float] = (0, 1, 0),
+) -> dict:
+    """Create a stack of TTS tokens."""
+    tokens = []
+    for i in range(count):
+        token = _create_tts_token(nickname, color, (0, 0, 0))
+        tokens.append(token)
+
+    return {
+        "Name": "Chip_100",
+        "Transform": {
+            "posX": position[0],
+            "posY": position[1],
+            "posZ": position[2],
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1,
+        },
+        "Nickname": nickname,
+        "ColorDiffuse": color,
+        "States": {str(i+1): tokens[i] for i in range(len(tokens))} if count > 1 else {},
+    }
+
+
+def _generate_guid() -> str:
+    """Generate a TTS-style GUID (6 hex chars)."""
+    return uuid.uuid4().hex[:6]
+
+
 def _create_tts_deck_json(
     deck_name: str,
     face_url: str,
@@ -272,6 +333,7 @@ def _create_tts_deck_json(
     num_cards: int,
     cols: int,
     rows: int,
+    deck_id: int = 1,
 ) -> dict:
     """
     Create a Tabletop Simulator deck JSON object.
@@ -283,56 +345,69 @@ def _create_tts_deck_json(
         num_cards: Total number of cards
         cols: Columns in sprite sheet
         rows: Rows in sprite sheet
+        deck_id: Deck identifier (1, 2, etc.) for CardID calculation
 
     Returns:
         TTS deck object dictionary
     """
-    # Build card IDs (100, 101, 102, ... for deck 1)
-    deck_ids = [100 + i for i in range(num_cards)]
+    deck_key = str(deck_id)
+    base_id = deck_id * 100
+
+    # Custom deck definition
+    custom_deck = {
+        deck_key: {
+            "FaceURL": face_url,
+            "BackURL": back_url,
+            "NumWidth": cols,
+            "NumHeight": rows,
+            "BackIsHidden": True,
+            "UniqueBack": False,
+        }
+    }
+
+    # Build card IDs
+    deck_ids = [base_id + i for i in range(num_cards)]
 
     # Build contained objects (one per card)
     contained = []
     for i in range(num_cards):
+        card_id = base_id + i
         contained.append({
+            "GUID": _generate_guid(),
             "Name": "Card",
             "Transform": {
-                "posX": 0, "posY": 0, "posZ": 0,
-                "rotX": 0, "rotY": 180, "rotZ": 180,
-                "scaleX": 1, "scaleY": 1, "scaleZ": 1,
+                "posX": 0,
+                "posY": 0,
+                "posZ": 0,
+                "rotX": 0,
+                "rotY": 180,
+                "rotZ": 180,
+                "scaleX": 1,
+                "scaleY": 1,
+                "scaleZ": 1,
             },
-            "Nickname": "",
-            "CardID": 100 + i,
-            "CustomDeck": {
-                "1": {
-                    "FaceURL": face_url,
-                    "BackURL": back_url,
-                    "NumWidth": cols,
-                    "NumHeight": rows,
-                    "BackIsHidden": True,
-                    "UniqueBack": False,
-                }
-            },
+            "Nickname": f"Card {i + 1}",
+            "CardID": card_id,
+            "CustomDeck": custom_deck,
         })
 
     return {
+        "GUID": _generate_guid(),
         "Name": "DeckCustom",
         "Transform": {
-            "posX": 0, "posY": 1, "posZ": 0,
-            "rotX": 0, "rotY": 180, "rotZ": 180,
-            "scaleX": 1, "scaleY": 1, "scaleZ": 1,
+            "posX": 0,
+            "posY": 1,
+            "posZ": 0,
+            "rotX": 0,
+            "rotY": 180,
+            "rotZ": 180,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1,
         },
         "Nickname": deck_name,
         "DeckIDs": deck_ids,
-        "CustomDeck": {
-            "1": {
-                "FaceURL": face_url,
-                "BackURL": back_url,
-                "NumWidth": cols,
-                "NumHeight": rows,
-                "BackIsHidden": True,
-                "UniqueBack": False,
-            }
-        },
+        "CustomDeck": custom_deck,
         "ContainedObjects": contained,
     }
 
@@ -464,10 +539,204 @@ def _export_for_tts(
             deck["count"],
             deck["cols"],
             deck["rows"],
+            deck_id=i + 1,  # Main deck = 1, Lots = 2
         )
         # Offset position for multiple decks
-        deck_obj["Transform"]["posX"] = i * 3
+        deck_obj["Transform"]["posX"] = i * 4
+        deck_obj["Transform"]["posZ"] = -2
         tts_objects.append(deck_obj)
+
+    # Add Sheol (discard) zone
+    sheol_zone = {
+        "Name": "ScriptingTrigger",
+        "Transform": {
+            "posX": -6,
+            "posY": 1.5,
+            "posZ": 0,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 4,
+            "scaleY": 2,
+            "scaleZ": 6,
+        },
+        "Nickname": "Sheol (Discard)",
+        "ColorDiffuse": {"r": 0.3, "g": 0.1, "b": 0.1},
+        "Description": "Discard pile - the grave",
+    }
+    tts_objects.append(sheol_zone)
+    _log(f"  Added Sheol (discard) zone")
+
+    # Add control buttons as tokens with scripts
+    button_color = {"r": 0.2, "g": 0.2, "b": 0.3}
+
+    # Deal button
+    deal_button = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": -4,
+            "posY": 1,
+            "posZ": 8,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1.5,
+            "scaleY": 0.2,
+            "scaleZ": 0.8,
+        },
+        "Nickname": "DEAL 7",
+        "Description": "Click to deal 7 cards to each player",
+        "ColorDiffuse": {"r": 0.1, "g": 0.4, "b": 0.1},
+        "Locked": True,
+        "LuaScript": '''
+function onLoad()
+    self.createButton({
+        click_function = "dealCards",
+        function_owner = self,
+        label = "DEAL 7",
+        position = {0, 0.5, 0},
+        width = 1200,
+        height = 600,
+        font_size = 300,
+    })
+end
+
+function dealCards()
+    for _, deck in ipairs(getObjectsWithTag("MainDeck")) do
+        if deck.type == "Deck" then
+            for _, player in ipairs(Player.getPlayers()) do
+                deck.deal(7, player.color)
+            end
+        end
+    end
+    -- Fallback: find deck by nickname
+    for _, obj in ipairs(getAllObjects()) do
+        if obj.getName() == "Hypertext Main Deck" and obj.type == "Deck" then
+            for _, player in ipairs(Player.getPlayers()) do
+                obj.deal(7, player.color)
+            end
+            break
+        end
+    end
+end
+''',
+    }
+    tts_objects.append(deal_button)
+
+    # Shuffle button
+    shuffle_button = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": 0,
+            "posY": 1,
+            "posZ": 8,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1.5,
+            "scaleY": 0.2,
+            "scaleZ": 0.8,
+        },
+        "Nickname": "SHUFFLE",
+        "Description": "Click to shuffle the main deck",
+        "ColorDiffuse": {"r": 0.1, "g": 0.1, "b": 0.5},
+        "Locked": True,
+        "LuaScript": '''
+function onLoad()
+    self.createButton({
+        click_function = "shuffleDeck",
+        function_owner = self,
+        label = "SHUFFLE",
+        position = {0, 0.5, 0},
+        width = 1200,
+        height = 600,
+        font_size = 300,
+    })
+end
+
+function shuffleDeck()
+    for _, obj in ipairs(getAllObjects()) do
+        if obj.getName() == "Hypertext Main Deck" and obj.type == "Deck" then
+            obj.shuffle()
+            broadcastToAll("Deck shuffled!", {1, 1, 1})
+            break
+        end
+    end
+end
+''',
+    }
+    tts_objects.append(shuffle_button)
+
+    # Reset button
+    reset_button = {
+        "Name": "BlockSquare",
+        "Transform": {
+            "posX": 4,
+            "posY": 1,
+            "posZ": 8,
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1.5,
+            "scaleY": 0.2,
+            "scaleZ": 0.8,
+        },
+        "Nickname": "NEW CHAPTER",
+        "Description": "Reset for new chapter - returns cards from Sheol to deck",
+        "ColorDiffuse": {"r": 0.5, "g": 0.3, "b": 0.1},
+        "Locked": True,
+        "LuaScript": '''
+function onLoad()
+    self.createButton({
+        click_function = "newChapter",
+        function_owner = self,
+        label = "NEW CHAPTER",
+        position = {0, 0.5, 0},
+        width = 1400,
+        height = 600,
+        font_size = 250,
+    })
+end
+
+function newChapter()
+    broadcastToAll("New Chapter! Reshuffle Sheol into Tower.", {1, 0.8, 0.2})
+end
+''',
+    }
+    tts_objects.append(reset_button)
+
+    _log(f"  Added Deal, Shuffle, and New Chapter buttons")
+
+    # Add Letter tokens (24 - one for each Greek letter, covers Hebrew's 22)
+    # Blue color
+    blue_color = {"r": 0.2, "g": 0.4, "b": 0.9}
+    for i in range(24):
+        letter_token = _create_tts_token(
+            "Letter Token",
+            blue_color,
+            position=(8 + (i % 6) * 0.8, 1, -2 + (i // 6) * 0.8),
+        )
+        tts_objects.append(letter_token)
+    _log(f"  Added 24 Letter tokens (blue)")
+
+    # Add Wreath tokens (2) - Alpha and Omega
+    # Gold color for wreaths
+    gold_color = {"r": 0.85, "g": 0.65, "b": 0.2}
+
+    alpha_wreath = _create_tts_token(
+        "Α - Record Wreath",
+        gold_color,
+        position=(8, 1, 2),
+    )
+    tts_objects.append(alpha_wreath)
+
+    omega_wreath = _create_tts_token(
+        "Ω - Empty Wreath",
+        gold_color,
+        position=(9.2, 1, 2),
+    )
+    tts_objects.append(omega_wreath)
+    _log(f"  Added Alpha (Record) and Omega (Empty) Wreath tokens (gold)")
 
     # Wrap in TTS save format
     tts_save = {
@@ -476,7 +745,7 @@ def _export_for_tts(
         "Date": "",
         "Table": "",
         "Sky": "",
-        "Note": "Hypertext card game. Update FaceURL and BackURL with your hosted image URLs.",
+        "Note": "Hypertext card game. Main deck (90 cards), Lot deck (30 phases), 24 Letter tokens, 2 Wreath tokens.",
         "Rules": "",
         "PlayerTurn": "",
         "ObjectStates": tts_objects,
