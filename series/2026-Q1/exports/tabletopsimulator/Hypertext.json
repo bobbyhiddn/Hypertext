@@ -4,7 +4,7 @@
   "Date": "",
   "Table": "",
   "Sky": "",
-  "Note": "Hypertext card game. Update FaceURL and BackURL with your hosted image URLs.",
+  "Note": "Hypertext card game. Main deck (90 cards), Lot deck (30 phases), 24 Letter tokens, 2 Wreath tokens.",
   "Rules": "",
   "PlayerTurn": "",
   "ObjectStates": [
@@ -3278,6 +3278,526 @@
           }
         }
       ]
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.0,
+        "posY": 1,
+        "posZ": -2.0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.8,
+        "posY": 1,
+        "posZ": -2.0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 9.6,
+        "posY": 1,
+        "posZ": -2.0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 10.4,
+        "posY": 1,
+        "posZ": -2.0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 11.2,
+        "posY": 1,
+        "posZ": -2.0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 12.0,
+        "posY": 1,
+        "posZ": -2.0,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.0,
+        "posY": 1,
+        "posZ": -1.2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.8,
+        "posY": 1,
+        "posZ": -1.2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 9.6,
+        "posY": 1,
+        "posZ": -1.2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 10.4,
+        "posY": 1,
+        "posZ": -1.2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 11.2,
+        "posY": 1,
+        "posZ": -1.2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 12.0,
+        "posY": 1,
+        "posZ": -1.2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.0,
+        "posY": 1,
+        "posZ": -0.3999999999999999,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.8,
+        "posY": 1,
+        "posZ": -0.3999999999999999,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 9.6,
+        "posY": 1,
+        "posZ": -0.3999999999999999,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 10.4,
+        "posY": 1,
+        "posZ": -0.3999999999999999,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 11.2,
+        "posY": 1,
+        "posZ": -0.3999999999999999,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 12.0,
+        "posY": 1,
+        "posZ": -0.3999999999999999,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.0,
+        "posY": 1,
+        "posZ": 0.40000000000000036,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.8,
+        "posY": 1,
+        "posZ": 0.40000000000000036,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 9.6,
+        "posY": 1,
+        "posZ": 0.40000000000000036,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 10.4,
+        "posY": 1,
+        "posZ": 0.40000000000000036,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 11.2,
+        "posY": 1,
+        "posZ": 0.40000000000000036,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 12.0,
+        "posY": 1,
+        "posZ": 0.40000000000000036,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Letter Token",
+      "ColorDiffuse": {
+        "r": 0.2,
+        "g": 0.4,
+        "b": 0.9
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 8.0,
+        "posY": 1,
+        "posZ": 2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Wreath Token",
+      "ColorDiffuse": {
+        "r": 0.9,
+        "g": 0.2,
+        "b": 0.2
+      }
+    },
+    {
+      "Name": "Chip_100",
+      "Transform": {
+        "posX": 9.2,
+        "posY": 1,
+        "posZ": 2,
+        "rotX": 0,
+        "rotY": 0,
+        "rotZ": 0,
+        "scaleX": 1,
+        "scaleY": 1,
+        "scaleZ": 1
+      },
+      "Nickname": "Wreath Token",
+      "ColorDiffuse": {
+        "r": 0.9,
+        "g": 0.2,
+        "b": 0.2
+      }
     }
   ]
 }

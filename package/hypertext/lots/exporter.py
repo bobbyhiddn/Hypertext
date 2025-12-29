@@ -265,6 +265,61 @@ def _create_sprite_sheet(
     return actual_cols, actual_rows
 
 
+def _create_tts_token(
+    nickname: str,
+    color: dict,
+    position: tuple[float, float, float] = (0, 1, 0),
+) -> dict:
+    """Create a TTS token/chip object."""
+    return {
+        "Name": "Chip_100",
+        "Transform": {
+            "posX": position[0],
+            "posY": position[1],
+            "posZ": position[2],
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1,
+        },
+        "Nickname": nickname,
+        "ColorDiffuse": color,
+    }
+
+
+def _create_tts_token_stack(
+    nickname: str,
+    color: dict,
+    count: int,
+    position: tuple[float, float, float] = (0, 1, 0),
+) -> dict:
+    """Create a stack of TTS tokens."""
+    tokens = []
+    for i in range(count):
+        token = _create_tts_token(nickname, color, (0, 0, 0))
+        tokens.append(token)
+
+    return {
+        "Name": "Chip_100",
+        "Transform": {
+            "posX": position[0],
+            "posY": position[1],
+            "posZ": position[2],
+            "rotX": 0,
+            "rotY": 0,
+            "rotZ": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1,
+        },
+        "Nickname": nickname,
+        "ColorDiffuse": color,
+        "States": {str(i+1): tokens[i] for i in range(len(tokens))} if count > 1 else {},
+    }
+
+
 def _create_tts_deck_json(
     deck_name: str,
     face_url: str,
@@ -469,6 +524,30 @@ def _export_for_tts(
         deck_obj["Transform"]["posX"] = i * 3
         tts_objects.append(deck_obj)
 
+    # Add Letter tokens (24 - one for each Greek letter, covers Hebrew's 22)
+    # Blue color
+    blue_color = {"r": 0.2, "g": 0.4, "b": 0.9}
+    for i in range(24):
+        letter_token = _create_tts_token(
+            "Letter Token",
+            blue_color,
+            position=(8 + (i % 6) * 0.8, 1, -2 + (i // 6) * 0.8),
+        )
+        tts_objects.append(letter_token)
+    _log(f"  Added 24 Letter tokens (blue)")
+
+    # Add Wreath tokens (2)
+    # Red color
+    red_color = {"r": 0.9, "g": 0.2, "b": 0.2}
+    for i in range(2):
+        wreath_token = _create_tts_token(
+            "Wreath Token",
+            red_color,
+            position=(8 + i * 1.2, 1, 2),
+        )
+        tts_objects.append(wreath_token)
+    _log(f"  Added 2 Wreath tokens (red)")
+
     # Wrap in TTS save format
     tts_save = {
         "SaveName": "Hypertext",
@@ -476,7 +555,7 @@ def _export_for_tts(
         "Date": "",
         "Table": "",
         "Sky": "",
-        "Note": "Hypertext card game. Update FaceURL and BackURL with your hosted image URLs.",
+        "Note": "Hypertext card game. Main deck (90 cards), Lot deck (30 phases), 24 Letter tokens, 2 Wreath tokens.",
         "Rules": "",
         "PlayerTurn": "",
         "ObjectStates": tts_objects,
