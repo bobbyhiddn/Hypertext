@@ -20,6 +20,7 @@ Usage:
 import argparse
 import json
 import sys
+import uuid
 from pathlib import Path
 from typing import Any
 
@@ -320,6 +321,11 @@ def _create_tts_token_stack(
     }
 
 
+def _generate_guid() -> str:
+    """Generate a TTS-style GUID (6 hex chars)."""
+    return uuid.uuid4().hex[:6]
+
+
 def _create_tts_deck_json(
     deck_name: str,
     face_url: str,
@@ -327,6 +333,7 @@ def _create_tts_deck_json(
     num_cards: int,
     cols: int,
     rows: int,
+    deck_id: int = 1,
 ) -> dict:
     """
     Create a Tabletop Simulator deck JSON object.
@@ -338,56 +345,69 @@ def _create_tts_deck_json(
         num_cards: Total number of cards
         cols: Columns in sprite sheet
         rows: Rows in sprite sheet
+        deck_id: Deck identifier (1, 2, etc.) for CardID calculation
 
     Returns:
         TTS deck object dictionary
     """
-    # Build card IDs (100, 101, 102, ... for deck 1)
-    deck_ids = [100 + i for i in range(num_cards)]
+    deck_key = str(deck_id)
+    base_id = deck_id * 100
+
+    # Custom deck definition
+    custom_deck = {
+        deck_key: {
+            "FaceURL": face_url,
+            "BackURL": back_url,
+            "NumWidth": cols,
+            "NumHeight": rows,
+            "BackIsHidden": True,
+            "UniqueBack": False,
+        }
+    }
+
+    # Build card IDs
+    deck_ids = [base_id + i for i in range(num_cards)]
 
     # Build contained objects (one per card)
     contained = []
     for i in range(num_cards):
+        card_id = base_id + i
         contained.append({
+            "GUID": _generate_guid(),
             "Name": "Card",
             "Transform": {
-                "posX": 0, "posY": 0, "posZ": 0,
-                "rotX": 0, "rotY": 180, "rotZ": 180,
-                "scaleX": 1, "scaleY": 1, "scaleZ": 1,
+                "posX": 0,
+                "posY": 0,
+                "posZ": 0,
+                "rotX": 0,
+                "rotY": 180,
+                "rotZ": 180,
+                "scaleX": 1,
+                "scaleY": 1,
+                "scaleZ": 1,
             },
-            "Nickname": "",
-            "CardID": 100 + i,
-            "CustomDeck": {
-                "1": {
-                    "FaceURL": face_url,
-                    "BackURL": back_url,
-                    "NumWidth": cols,
-                    "NumHeight": rows,
-                    "BackIsHidden": True,
-                    "UniqueBack": False,
-                }
-            },
+            "Nickname": f"Card {i + 1}",
+            "CardID": card_id,
+            "CustomDeck": custom_deck,
         })
 
     return {
+        "GUID": _generate_guid(),
         "Name": "DeckCustom",
         "Transform": {
-            "posX": 0, "posY": 1, "posZ": 0,
-            "rotX": 0, "rotY": 180, "rotZ": 180,
-            "scaleX": 1, "scaleY": 1, "scaleZ": 1,
+            "posX": 0,
+            "posY": 1,
+            "posZ": 0,
+            "rotX": 0,
+            "rotY": 180,
+            "rotZ": 180,
+            "scaleX": 1,
+            "scaleY": 1,
+            "scaleZ": 1,
         },
         "Nickname": deck_name,
         "DeckIDs": deck_ids,
-        "CustomDeck": {
-            "1": {
-                "FaceURL": face_url,
-                "BackURL": back_url,
-                "NumWidth": cols,
-                "NumHeight": rows,
-                "BackIsHidden": True,
-                "UniqueBack": False,
-            }
-        },
+        "CustomDeck": custom_deck,
         "ContainedObjects": contained,
     }
 
@@ -519,9 +539,11 @@ def _export_for_tts(
             deck["count"],
             deck["cols"],
             deck["rows"],
+            deck_id=i + 1,  # Main deck = 1, Lots = 2
         )
         # Offset position for multiple decks
-        deck_obj["Transform"]["posX"] = i * 3
+        deck_obj["Transform"]["posX"] = i * 4
+        deck_obj["Transform"]["posZ"] = -2
         tts_objects.append(deck_obj)
 
     # Add Sheol (discard) zone

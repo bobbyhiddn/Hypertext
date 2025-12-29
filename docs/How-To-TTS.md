@@ -117,15 +117,43 @@ When you spawn Hypertext, you get:
 
 ---
 
+## Solo/Hotseat Setup (Multiple Players, One Computer)
+
+To test or play solo with multiple player seats:
+
+1. **Open Game**: Games > Classic > Custom
+2. **Open Menu**: Click the **Menu** button (top right) or press **Esc**
+3. **Game Settings**: Options > Game
+4. **Enable Hotseat**: Check "Hotseat Mode" (allows switching between seats)
+5. **Add Players**:
+   - Top of screen shows player seats (colored circles)
+   - Click a seat color to "sit" in that position
+   - Right-click empty seats > "Promote to Player" to add AI seats
+6. **Switch Players**: Click different colored seats to control different hands
+
+### Hand Zones
+Each player color has their own hand zone:
+- Cards in your hand zone are hidden from other players
+- In hotseat mode, switch seats to see each player's perspective
+
+---
+
 ## Game Setup (2-8 Players)
 
 1. **Clear table**: Box select all > Delete (or Games > Classic > Custom)
 2. **Spawn game**: Objects > Saved Objects > Hypertext
 3. **Position decks**: Drag Main Deck and Lot Deck to center
-4. **Click SHUFFLE** to shuffle the Main Deck
-5. **Click DEAL 7** to deal 7 cards to each player
-6. **Deal 1 Lot** to each player (hover Lot deck, press 1, repeat for each player)
-7. **Flip 1 Lot** face-up to the center as the Board Phase
+4. **Shuffle**: Right-click Main Deck > Shuffle (or hover and press R)
+5. **Deal 7 to each player**:
+   - Hover over Main Deck
+   - Press **7** to deal 7 cards
+   - Cards go to the current player's hand
+   - Switch seats and repeat for each player
+6. **Deal 1 Lot** to each player:
+   - Hover Lot deck, press **1**
+   - Drag the Lot card to that player's area
+   - Repeat for each player
+7. **Flip 1 Lot** face-up to the center as the Board Phase (press F to flip)
 8. **Designate Sheol**: The red zone is for discards
 
 ---
