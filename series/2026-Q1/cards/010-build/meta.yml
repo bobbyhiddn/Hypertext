@@ -1,0 +1,91 @@
+number: '010'
+word: BUILD
+gloss: To construct, establish, or strengthen by assembling parts; to edify.
+card_type: VERB
+rarity: COMMON
+art_prompt: Ancient stone masonry tools resting on a partially constructed limestone
+  wall, golden hour lighting, dust motes dancing in the air, realistic oil painting
+  style
+stats:
+  lore: 2
+  context: 5
+  complexity: 2
+ability: Look at the top 3 cards of the Tower, then put them back in any order.
+ot_verse:
+  ref: Psalm 127:1
+  snippet: Unless the Lord builds the house, the builders labor in vain.
+nt_verse:
+  ref: Matthew 16:18
+  snippet: And I tell you that you are Peter, and on this rock I will build my church.
+greek:
+  text: οἰκοδομέω
+  translit: oikodomeō
+hebrew:
+  text: בָּנָה
+  translit: banah
+ot_refs: Gen 11:4 • Ex 25:8 • 1 Kgs 6:2 • Neh 2:17
+nt_refs: Matt 7:24 • 1 Cor 3:10 • Eph 2:20 • 1 Pet 2:5
+trivia:
+- The Hebrew word 'banah' (build) shares a root with 'ben' (son), implying children
+  'build' a family.
+- In the New Testament, 'edify' translates 'oikodomeō', literally meaning 'house-building'.
+- Jesus was a 'tekton', often translated 'carpenter' but more accurately a builder
+  or stonemason.
+- Believers are described as 'living stones' being built into a spiritual house (1
+  Peter 2:5).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzwV0hx_cSPowgoFj9VYLE1hzJZMmIlBx6OYE1sdeTozqkEZ7BBDWZ49XjAeUrrPeudr-vkTKhh6CSTjAqW3A-WSXSXj7tmQGJtFFbWKkvqZAoGX4ufoANLthAZLdfmN2TiK_AmCUvKFu08UQVWw8lxNzWFendpYwHlwpnjSrNKcsdq7q0ADdwrBFLU2TvGf9c-eA=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTCWuthKFRKVRZ-0zd9QkgPJmZgm-Thm9HrVI79HlPA7STE1DVlBZwwZpvfk1dkBaUfhAc9KSoCeKy6fMrS7ydt6whhOHabvQOHfSHcm0o5H5IRxirsmhVV6Uup2nmirbUDppyuxuo-QJW83zYLDHaBHfJvS9VDxG4ciuli1TGGu3nN3xw_iOubRI=
+  title: livingintheshadowofhishand.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpdzOmKKd01nLmFc063gasqyP9kLMlAUVFGqtXbYQkM_Q7RjfrE4WqsmR-0UUA6kfaI6dWTj-08RL6GJmQD2a8QMHkGYg7Hw0F1wotRlnBSuPU6MtTHnh05lMaRErzf-Yp9fRsODRzuBYKK2U=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2ErZ1ZdIjtxCaa8_MR7-xYkSoDmn0V9IPaZ-t-U6Z_om-2oA7iwc6WR_vdPgIJLnxSktfPOqIAeEQhMpBHn8iOyNHruxqMgNjYhiEmrLZvfZ7mTa7khWu-UhTpGWvL9A=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx_XrvD433lpMRmyrtP86HFa7M-zkhBawUVUam4f1UZfw3g5gM_wbDP_Fa5QhuNClCXkV4ivUHVcn8Mm8NT5eCQhpO9sN73LiNUqNIPh2bwGwH-dqHJwjA0YBZjE7x0wwxaPhjbuz9
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz0lLGzGUnc8Bi2yoY9Mzw-Htur_b8Lgl-45Gs7fWSYl9DjC9T6MD4Ch9l_IIl5LTcKYdrTYNW-wBiYDcmsG8l1Wohf0hzcqeep6Vp-6jrEOh1ftGpKif4904Yp-ZsoUtKkbaDxXdWALgPMtpEEDWcbccA6kRBwJf-6Fz7gOxNx3doKiyzE7WIRF_vRnBA
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtJFMOMsmSdwXV_EEZdZs2BhXT9pUzhQ9Xr9hnZfg173Z-SkPibAJmd8qONvdj438PloR6vnQERT98v-stknkKfTSOrkeicxg0mxJYbDe9363teqec6laQBh1rrZNEwb2roIyGaGnsw5tDbXW-L5zRomhx7cGbQKOeC6JUx3aXq7YYZYiqYPrqm1Vavbzla8w=
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9T0PJZDbnDXWV2sBKvmFczZvDfW_yNZxAWBi8_XQIIV8nPfLK-sKhxs4tmnuIE6WbYzp9aCmgfrsaBwWcmf6sUWJX4is2XjL3gxEsKHegYUVClJANnbRokM8_pTW8jcG6j3v0vJROzgw00-KiHooKMFXJEYbxwh23ukQh
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNePepB6pc4GtTOvC865pqOe9n0JZh8GJaXN5II-VcY_JNiupFecjKxc6gt659PAP0DtPA-gtL1xLhTQihpnrhRkcrIh6hdKLXZ8fvBcgz78k0cwSbd55V-igOrkYdJsV19EhGO8uJOSggpZDikGFSi1HEOvSK_-cz6Ome_pCZkGtJaxQ=
+  title: reform-magazine.co.uk
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsLMVmjfMS-Xem9X3uZxfWAJzxflLzIRbWHn_Lb8w7S-Hb4k60DON_dViGA6dAXnDrpuE9hHeaxiG73Sh4CeEAtWrEPf8cZBCz-owLnCLt7EIgbsD6ExpAC9Xj6X0tw-Me_y4Xeq-Q_GUlj7UJSV8KVnC8AdIBohfP39QB
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkuSWwDAZQ_4ccCDhn0NIRJZQl8y4gotadikog-bC-o2TCPVwKW7rAydzTxgtAP01taZzwX_YpIzBtGgonCxM4GNTrWD4W8XT1oaNMW-vNMVhjjl3q5q9YeW_VtjXLkw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhCDN31UfuXDTh-4V3jI-HZZqVSa2QANXorv6zgDz9ZwALkGBGo6rtUhOuYKIy_W1QsG6V8wvYdw0jlP_hRjILBwh-g2qHdE4YD7zcSu34GjomJr9RjZSQwf9c4qorxjcm2plB-OWOOdXYBaKdAPXMIlrEamSs
+  title: ezraproject.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX1tqvDEuxy0gczB6MzTQQ70bvgfG82cqLdh_ZS1bagOp_tonxJvZjh80mYa-sFj_7u65pIibHhu0HaBv0vykgdgoiX9-FRgWVyK-PmidHpiXfUelYcWB_jsmUcQIcETcu3onZUzIzm1gMTA==
+  title: gotquestions.org
+- uri: https://www.google.com/search?q=time+in+%CE%A0%CE%B5%CF%81%CE%B9%CF%86%CE%AD%CF%81%CE%B5%CE%B9%CE%B1+%CE%A3%CF%84%CE%B5%CF%81%CE%B5%CE%AC%CF%82+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82,+GR
+  title: ''
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaA14_qZthdcZ56rvIUgqH2COTGDA3j7QiB3xpxLa5qT48ecocsxKEjPUNKWXBQ-pz-w-T28ClyLb6MHyZp6M7LyAYOZFvzI5XbN1UgOlyEtaXIaoBHzaoEcOj7kUUqfqYdr_yLEekW1QECEo=
+  title: ministryvoice.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo55hlI-2spJ0VknvcMXmaqNvDYM5HDuOrSBix0a131XpEGHMiD643pF_Gr5Xrx-5nu8gAG3_3k0bcYrTfhaSUYwWzJ5WzCxLjQ0W4gsBQdOFAEFkbggZHeMB4WR89VZUlalMsYtVEb-fiHhsqmZyKFw==
+  title: bibleref.com
+search_queries:
+- ''
+- Greek word for build oikodomeo meaning
+- Psalm 127:1 snippet
+- Hebrew word for build banah ben connection
+- Matthew 16:18 snippet
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#010'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: yellow
+review_notes: Increase Context stat pips from 4 to 5 to match the expected stats.
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.

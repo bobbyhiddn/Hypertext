@@ -1,0 +1,284 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "010",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "BUILD",
+    "GLOSS": "To construct, establish, or strengthen by assembling parts; to edify.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "Ancient stone masonry tools resting on a partially constructed limestone wall, golden hour lighting, dust motes dancing in the air, realistic oil painting style",
+    "ABILITY_TEXT": "Look at the top 3 cards of the Tower, then put them back in any order.",
+    "STAT_LORE": 2,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Psalm 127:1",
+    "OT_VERSE_SNIPPET": "Unless the Lord builds the house, the builders labor in vain.",
+    "NT_VERSE_REF": "Matthew 16:18",
+    "NT_VERSE_SNIPPET": "And I tell you that you are Peter, and on this rock I will build my church.",
+    "OT_VERSE_LINE": "Psalm 127:1 — “Unless the Lord builds the house, the builders labor in vain.”",
+    "NT_VERSE_LINE": "Matthew 16:18 — “And I tell you that you are Peter, and on this rock I will build my church.”",
+    "GREEK": "οἰκοδομέω",
+    "GREEK_TRANSLIT": "oikodomeō",
+    "HEBREW": "בָּנָה",
+    "HEBREW_TRANSLIT": "banah",
+    "OT_REFS": "Gen 11:4 • Ex 25:8 • 1 Kgs 6:2 • Neh 2:17",
+    "NT_REFS": "Matt 7:24 • 1 Cor 3:10 • Eph 2:20 • 1 Pet 2:5",
+    "TRIVIA_BULLETS": [
+      "The Hebrew word 'banah' (build) shares a root with 'ben' (son), implying children 'build' a family.",
+      "In the New Testament, 'edify' translates 'oikodomeō', literally meaning 'house-building'.",
+      "Jesus was a 'tekton', often translated 'carpenter' but more accurately a builder or stonemason.",
+      "Believers are described as 'living stones' being built into a spiritual house (1 Peter 2:5)."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Greek word for build oikodomeo meaning",
+      "Psalm 127:1 snippet",
+      "Hebrew word for build banah ben connection",
+      "Matthew 16:18 snippet"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzwV0hx_cSPowgoFj9VYLE1hzJZMmIlBx6OYE1sdeTozqkEZ7BBDWZ49XjAeUrrPeudr-vkTKhh6CSTjAqW3A-WSXSXj7tmQGJtFFbWKkvqZAoGX4ufoANLthAZLdfmN2TiK_AmCUvKFu08UQVWw8lxNzWFendpYwHlwpnjSrNKcsdq7q0ADdwrBFLU2TvGf9c-eA=",
+        "title": "studylight.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTCWuthKFRKVRZ-0zd9QkgPJmZgm-Thm9HrVI79HlPA7STE1DVlBZwwZpvfk1dkBaUfhAc9KSoCeKy6fMrS7ydt6whhOHabvQOHfSHcm0o5H5IRxirsmhVV6Uup2nmirbUDppyuxuo-QJW83zYLDHaBHfJvS9VDxG4ciuli1TGGu3nN3xw_iOubRI=",
+        "title": "livingintheshadowofhishand.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpdzOmKKd01nLmFc063gasqyP9kLMlAUVFGqtXbYQkM_Q7RjfrE4WqsmR-0UUA6kfaI6dWTj-08RL6GJmQD2a8QMHkGYg7Hw0F1wotRlnBSuPU6MtTHnh05lMaRErzf-Yp9fRsODRzuBYKK2U=",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2ErZ1ZdIjtxCaa8_MR7-xYkSoDmn0V9IPaZ-t-U6Z_om-2oA7iwc6WR_vdPgIJLnxSktfPOqIAeEQhMpBHn8iOyNHruxqMgNjYhiEmrLZvfZ7mTa7khWu-UhTpGWvL9A=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx_XrvD433lpMRmyrtP86HFa7M-zkhBawUVUam4f1UZfw3g5gM_wbDP_Fa5QhuNClCXkV4ivUHVcn8Mm8NT5eCQhpO9sN73LiNUqNIPh2bwGwH-dqHJwjA0YBZjE7x0wwxaPhjbuz9",
+        "title": "bible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz0lLGzGUnc8Bi2yoY9Mzw-Htur_b8Lgl-45Gs7fWSYl9DjC9T6MD4Ch9l_IIl5LTcKYdrTYNW-wBiYDcmsG8l1Wohf0hzcqeep6Vp-6jrEOh1ftGpKif4904Yp-ZsoUtKkbaDxXdWALgPMtpEEDWcbccA6kRBwJf-6Fz7gOxNx3doKiyzE7WIRF_vRnBA",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtJFMOMsmSdwXV_EEZdZs2BhXT9pUzhQ9Xr9hnZfg173Z-SkPibAJmd8qONvdj438PloR6vnQERT98v-stknkKfTSOrkeicxg0mxJYbDe9363teqec6laQBh1rrZNEwb2roIyGaGnsw5tDbXW-L5zRomhx7cGbQKOeC6JUx3aXq7YYZYiqYPrqm1Vavbzla8w=",
+        "title": "thegospelcoalition.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9T0PJZDbnDXWV2sBKvmFczZvDfW_yNZxAWBi8_XQIIV8nPfLK-sKhxs4tmnuIE6WbYzp9aCmgfrsaBwWcmf6sUWJX4is2XjL3gxEsKHegYUVClJANnbRokM8_pTW8jcG6j3v0vJROzgw00-KiHooKMFXJEYbxwh23ukQh",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNePepB6pc4GtTOvC865pqOe9n0JZh8GJaXN5II-VcY_JNiupFecjKxc6gt659PAP0DtPA-gtL1xLhTQihpnrhRkcrIh6hdKLXZ8fvBcgz78k0cwSbd55V-igOrkYdJsV19EhGO8uJOSggpZDikGFSi1HEOvSK_-cz6Ome_pCZkGtJaxQ=",
+        "title": "reform-magazine.co.uk"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsLMVmjfMS-Xem9X3uZxfWAJzxflLzIRbWHn_Lb8w7S-Hb4k60DON_dViGA6dAXnDrpuE9hHeaxiG73Sh4CeEAtWrEPf8cZBCz-owLnCLt7EIgbsD6ExpAC9Xj6X0tw-Me_y4Xeq-Q_GUlj7UJSV8KVnC8AdIBohfP39QB",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkuSWwDAZQ_4ccCDhn0NIRJZQl8y4gotadikog-bC-o2TCPVwKW7rAydzTxgtAP01taZzwX_YpIzBtGgonCxM4GNTrWD4W8XT1oaNMW-vNMVhjjl3q5q9YeW_VtjXLkw==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhCDN31UfuXDTh-4V3jI-HZZqVSa2QANXorv6zgDz9ZwALkGBGo6rtUhOuYKIy_W1QsG6V8wvYdw0jlP_hRjILBwh-g2qHdE4YD7zcSu34GjomJr9RjZSQwf9c4qorxjcm2plB-OWOOdXYBaKdAPXMIlrEamSs",
+        "title": "ezraproject.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX1tqvDEuxy0gczB6MzTQQ70bvgfG82cqLdh_ZS1bagOp_tonxJvZjh80mYa-sFj_7u65pIibHhu0HaBv0vykgdgoiX9-FRgWVyK-PmidHpiXfUelYcWB_jsmUcQIcETcu3onZUzIzm1gMTA==",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://www.google.com/search?q=time+in+%CE%A0%CE%B5%CF%81%CE%B9%CF%86%CE%AD%CF%81%CE%B5%CE%B9%CE%B1+%CE%A3%CF%84%CE%B5%CF%81%CE%B5%CE%AC%CF%82+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82,+GR",
+        "title": ""
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaA14_qZthdcZ56rvIUgqH2COTGDA3j7QiB3xpxLa5qT48ecocsxKEjPUNKWXBQ-pz-w-T28ClyLb6MHyZp6M7LyAYOZFvzI5XbN1UgOlyEtaXIaoBHzaoEcOj7kUUqfqYdr_yLEekW1QECEo=",
+        "title": "ministryvoice.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo55hlI-2spJ0VknvcMXmaqNvDYM5HDuOrSBix0a131XpEGHMiD643pF_Gr5Xrx-5nu8gAG3_3k0bcYrTfhaSUYwWzJ5WzCxLjQ0W4gsBQdOFAEFkbggZHeMB4WR89VZUlalMsYtVEb-fiHhsqmZyKFw==",
+        "title": "bibleref.com"
+      }
+    ]
+  }
+}
