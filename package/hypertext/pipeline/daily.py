@@ -138,7 +138,9 @@ FORMATTING_RUBRIC = """
 """
 
 
-DEFAULT_STYLE_TEMPLATE = Path("package/hypertext/templates") / "card_template.png"
+# Use absolute path so it works in parallel workers regardless of cwd
+_THIS_DIR = Path(__file__).resolve().parent
+DEFAULT_STYLE_TEMPLATE = _THIS_DIR.parent / "templates" / "card_template.png"
 RARITY_ORDER = ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
 RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}  # percentages
 
@@ -1956,16 +1958,19 @@ def phase_demo_batch(
     batch: int,
     parallel: int = 1,
     skip_polish: bool = False,
+    skip_review: bool = False,
 ) -> int:
-    """Generate multiple demo cards with parallel planning and image generation.
+    """Generate multiple demo cards with pipelined parallel execution.
 
     Uses demo_dir for its own stats and index tracking, while using series_dir
     for style references and theme constraints.
 
-    Flow:
-    1. Image-first: Generate images for existing recipes that lack images
-    2. Parallel planning: Pre-allocate numbers, plan new cards in parallel
-    3. Parallel image gen: Generate images for newly planned cards
+    Pipeline flow (cards flow through stages concurrently):
+    1. Plan card recipe (text generation)
+    2. Generate card image (style-referenced)
+    3. Review and grade card (unless skip_review=True)
+
+    Cards don't wait for all planning to complete before image generation starts.
     """
     demo_dir.mkdir(parents=True, exist_ok=True)
     out_name = "card_1024x1536.png"
@@ -2082,7 +2087,7 @@ def phase_demo_batch(
     _log(f"[demo batch] actual rarities: {rarity_counts}")
 
     # -------------------------------------------------------------------------
-    # PHASE 3: Pre-allocate card numbers and plan in parallel
+    # PHASE 3: Pipeline - plan → generate → review per card (concurrent)
     # -------------------------------------------------------------------------
     start_number = next_number(demo_dir)
     _log(f"[demo batch] pre-allocating numbers {start_number} to {start_number + cards_to_plan - 1}")
@@ -2092,12 +2097,21 @@ def phase_demo_batch(
         (start_number + i, entry) for i, entry in enumerate(queue_entries)
     ]
 
-    planned_cards: list[Path] = []
-    planned_entries: list[dict] = []
-    plan_lock = threading.Lock()
+    # Results tracking (thread-safe)
+    results_lock = threading.Lock()
+    successful_cards: list[Path] = []
+    failed_cards: list[Path] = []
+    review_scores: list[int] = []
+    stats_updates: list[dict] = []
 
-    def plan_one(number: int, entry: dict) -> tuple[int, dict, Path | None]:
-        _log(f"[demo batch] planning #{number:03d}: {entry['word']} ({entry['card_type']}, {entry['rarity']})")
+    def process_card(number: int, entry: dict) -> None:
+        """Full pipeline for one card: plan → generate → review."""
+        word = entry['word']
+        card_type = entry['card_type']
+        rarity = entry['rarity']
+
+        # STEP 1: Plan
+        _log(f"[pipeline] #{number:03d} planning: {word} ({card_type}, {rarity})")
         card_dir = _plan_demo_card_with_number(
             series_dir=series_dir,
             template_path=template_path,
@@ -2105,125 +2119,107 @@ def phase_demo_batch(
             number=number,
             entry=entry,
         )
-        return number, entry, card_dir
 
-    if parallel <= 1:
-        # Sequential planning
-        for number, entry in numbered_entries:
-            number, entry, card_dir = plan_one(number, entry)
-            if card_dir is None:
-                _log(f"[demo batch] planning failed for #{number:03d}")
-                continue
-            planned_cards.append(card_dir)
-            planned_entries.append(entry)
+        if card_dir is None:
+            _log(f"[pipeline] #{number:03d} planning FAILED")
+            with results_lock:
+                failed_cards.append(None)  # Track failure
+            return
 
-            # Update index
-            meta_file = card_dir / "meta.yml"
-            ability_text = ""
-            if meta_file.exists() and yaml:
-                with open(meta_file, "r", encoding="utf-8") as f:
-                    meta = yaml.safe_load(f) or {}
-                ability_text = meta.get("ability", "")
+        # Update index
+        meta_file = card_dir / "meta.yml"
+        ability_text = ""
+        if meta_file.exists() and yaml:
+            with open(meta_file, "r", encoding="utf-8") as f:
+                meta = yaml.safe_load(f) or {}
+            ability_text = meta.get("ability", "")
 
+        with results_lock:
             _add_card_to_index(
                 demo_dir,
                 number=number,
-                word=entry["word"],
-                card_type=entry["card_type"],
-                rarity=entry["rarity"],
+                word=word,
+                card_type=card_type,
+                rarity=rarity,
                 ability_text=ability_text,
             )
-    else:
-        # Parallel planning
-        with ThreadPoolExecutor(max_workers=parallel) as executor:
-            futures = {
-                executor.submit(plan_one, num, ent): (num, ent)
-                for num, ent in numbered_entries
-            }
-            for future in as_completed(futures):
-                number, entry, card_dir = future.result()
-                if card_dir is None:
-                    _log(f"[demo batch] planning failed for #{number:03d}")
-                    continue
+            stats_updates.append(entry)
 
-                with plan_lock:
-                    planned_cards.append(card_dir)
-                    planned_entries.append(entry)
-
-                    # Update index (thread-safe via lock)
-                    meta_file = card_dir / "meta.yml"
-                    ability_text = ""
-                    if meta_file.exists() and yaml:
-                        with open(meta_file, "r", encoding="utf-8") as f:
-                            meta = yaml.safe_load(f) or {}
-                        ability_text = meta.get("ability", "")
-
-                    _add_card_to_index(
-                        demo_dir,
-                        number=number,
-                        word=entry["word"],
-                        card_type=entry["card_type"],
-                        rarity=entry["rarity"],
-                        ability_text=ability_text,
-                    )
-
-                _log(f"[demo batch] planned {len(planned_cards)}/{cards_to_plan}")
-
-    if not planned_cards:
-        _log("[demo batch] no cards were planned")
-        return 1
-
-    # Update stats with actual planned counts
-    actual_stats = _load_series_stats(demo_dir)
-    for entry in planned_entries:
-        actual_stats["rarity_counts"][entry["rarity"]] = actual_stats["rarity_counts"].get(entry["rarity"], 0) + 1
-        actual_stats["type_counts"][entry["card_type"]] = actual_stats["type_counts"].get(entry["card_type"], 0) + 1
-        actual_stats["total"] += 1
-    _save_series_stats(demo_dir, actual_stats)
-    _log(f"[demo batch] updated stats.yml: total={actual_stats['total']}")
-
-    # -------------------------------------------------------------------------
-    # PHASE 4: Generate images for newly planned cards in parallel
-    # -------------------------------------------------------------------------
-    _log(f"[demo batch] generating images for {len(planned_cards)} new cards with {parallel} workers...")
-
-    def generate_one(card_dir: Path) -> tuple[Path, int]:
+        # STEP 2: Generate image
+        _log(f"[pipeline] #{number:03d} generating image: {word}")
         rc = _generate_image_for_card_dir(
             card_dir=card_dir,
             skip_polish=skip_polish,
             skip_watermark=True,
             style_series_dir=series_dir,
         )
-        return card_dir, rc
 
-    failed_cards: list[Path] = []
-    completed_count = 0
+        if rc != 0:
+            _log(f"[pipeline] #{number:03d} image generation FAILED")
+            with results_lock:
+                failed_cards.append(card_dir)
+            return
+
+        # STEP 3: Review (unless skipped)
+        score = 0
+        if not skip_review:
+            _log(f"[pipeline] #{number:03d} reviewing: {word}")
+            try:
+                phase_review(card_dir=card_dir, max_attempts=2)
+                # Read score from meta.yml
+                if meta_file.exists() and yaml:
+                    with open(meta_file, "r", encoding="utf-8") as f:
+                        meta = yaml.safe_load(f) or {}
+                    score = meta.get("review_score", 0)
+                _log(f"[pipeline] #{number:03d} review complete: score={score}")
+            except Exception as e:
+                _log(f"[pipeline] #{number:03d} review failed: {e}")
+
+        with results_lock:
+            successful_cards.append(card_dir)
+            if not skip_review:
+                review_scores.append(score)
+
+        _log(f"[pipeline] #{number:03d} COMPLETE: {word} (score={score})")
+
+    _log(f"[demo batch] starting pipeline with {parallel} workers...")
 
     if parallel <= 1:
-        for card_dir in planned_cards:
-            card_dir, rc = generate_one(card_dir)
-            completed_count += 1
-            if rc != 0:
-                failed_cards.append(card_dir)
-            _log(f"[demo batch] image: {completed_count}/{len(planned_cards)}")
+        for number, entry in numbered_entries:
+            process_card(number, entry)
     else:
         with ThreadPoolExecutor(max_workers=parallel) as executor:
-            futures = {executor.submit(generate_one, cd): cd for cd in planned_cards}
+            futures = [
+                executor.submit(process_card, num, ent)
+                for num, ent in numbered_entries
+            ]
+            # Wait for all to complete
             for future in as_completed(futures):
-                card_dir, rc = future.result()
-                completed_count += 1
-                if rc != 0:
-                    failed_cards.append(card_dir)
-                _log(f"[demo batch] image: {completed_count}/{len(planned_cards)} ({card_dir.name})")
+                try:
+                    future.result()
+                except Exception as e:
+                    _log(f"[pipeline] worker exception: {e}")
 
-    if failed_cards:
-        _log(f"[demo batch] {len(failed_cards)} cards failed image generation:")
-        for cd in failed_cards:
-            _log(f"  - {cd.name}")
-        return 1
+    # Update stats with actual completed counts
+    if stats_updates:
+        actual_stats = _load_series_stats(demo_dir)
+        for entry in stats_updates:
+            actual_stats["rarity_counts"][entry["rarity"]] = actual_stats["rarity_counts"].get(entry["rarity"], 0) + 1
+            actual_stats["type_counts"][entry["card_type"]] = actual_stats["type_counts"].get(entry["card_type"], 0) + 1
+            actual_stats["total"] += 1
+        _save_series_stats(demo_dir, actual_stats)
+        _log(f"[demo batch] updated stats.yml: total={actual_stats['total']}")
 
-    _log(f"[demo batch] all {len(planned_cards)} new cards completed successfully")
-    return 0
+    # Summary
+    if review_scores:
+        avg_score = sum(review_scores) / len(review_scores)
+        passing = len([s for s in review_scores if s >= 90])
+        _log(f"[demo batch] review summary: avg={avg_score:.1f}, passing={passing}/{len(review_scores)}")
+
+    total_success = len(successful_cards)
+    total_failed = len(failed_cards)
+    _log(f"[demo batch] complete: {total_success} succeeded, {total_failed} failed")
+    return 0 if total_failed == 0 else 1
 
 
 def phase_imagegen(*, series_dir: Path) -> int:
@@ -3028,6 +3024,7 @@ def main() -> int:
     parser.add_argument("--out-dir", default="_site")
     parser.add_argument("--skip-polish", action="store_true", help="Skip the polish step (bracket removal)")
     parser.add_argument("--skip-watermark", action="store_true", help="Skip watermark generation")
+    parser.add_argument("--no-review", action="store_true", help="Skip review/grading phase in demo batch")
     parser.add_argument("--parallel", type=int, default=1, help="Number of cards to generate in parallel (default: 1)")
     args = parser.parse_args()
 
@@ -3078,6 +3075,7 @@ def main() -> int:
                 batch=batch,
                 parallel=parallel,
                 skip_polish=skip_polish,
+                skip_review=getattr(args, 'no_review', False),
             )
         if args.phase == "full":
             # For batch full, we just loop phase_full
