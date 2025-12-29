@@ -9,7 +9,7 @@
   "PlayerTurn": "",
   "ObjectStates": [
     {
-      "GUID": "d16eaf",
+      "GUID": "1df206",
       "Name": "DeckCustom",
       "Transform": {
         "posX": 0,
@@ -117,17 +117,17 @@
       ],
       "CustomDeck": {
         "1": {
-          "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-          "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+          "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+          "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
           "NumWidth": 10,
-          "NumHeight": 9,
+          "NumHeight": 10,
           "BackIsHidden": true,
           "UniqueBack": false
         }
       },
       "ContainedObjects": [
         {
-          "GUID": "8de1fe",
+          "GUID": "5eca63",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -144,17 +144,17 @@
           "CardID": 100,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "caaf31",
+          "GUID": "0e93d4",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -171,17 +171,17 @@
           "CardID": 101,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "84eadd",
+          "GUID": "aa0eed",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -198,17 +198,17 @@
           "CardID": 102,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c3b495",
+          "GUID": "00a773",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -225,17 +225,17 @@
           "CardID": 103,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "d74c1a",
+          "GUID": "0ce7d5",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -252,17 +252,17 @@
           "CardID": 104,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "38656c",
+          "GUID": "ad2600",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -279,17 +279,17 @@
           "CardID": 105,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c31970",
+          "GUID": "1efc1c",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -306,17 +306,17 @@
           "CardID": 106,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c4a758",
+          "GUID": "e2c8f1",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -333,17 +333,17 @@
           "CardID": 107,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "f46d60",
+          "GUID": "30e3d1",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -360,17 +360,17 @@
           "CardID": 108,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "28f552",
+          "GUID": "205ac6",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -387,17 +387,17 @@
           "CardID": 109,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "38b107",
+          "GUID": "f7cca8",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -414,17 +414,17 @@
           "CardID": 110,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "6ae270",
+          "GUID": "e974fe",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -441,17 +441,17 @@
           "CardID": 111,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c4eeae",
+          "GUID": "407278",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -468,17 +468,17 @@
           "CardID": 112,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "fd9378",
+          "GUID": "70b27c",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -495,17 +495,17 @@
           "CardID": 113,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "638932",
+          "GUID": "7c5a8c",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -522,17 +522,17 @@
           "CardID": 114,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "903dbf",
+          "GUID": "7b4fd2",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -549,17 +549,17 @@
           "CardID": 115,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "752c96",
+          "GUID": "2fbca1",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -576,17 +576,17 @@
           "CardID": 116,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "74d435",
+          "GUID": "1b38cc",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -603,17 +603,17 @@
           "CardID": 117,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "33697f",
+          "GUID": "63b9e3",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -630,17 +630,17 @@
           "CardID": 118,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "18cbd1",
+          "GUID": "c1779a",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -657,17 +657,17 @@
           "CardID": 119,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "32ee54",
+          "GUID": "b3236c",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -684,17 +684,17 @@
           "CardID": 120,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "864ac5",
+          "GUID": "35c412",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -711,17 +711,17 @@
           "CardID": 121,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "d3bf77",
+          "GUID": "7cacff",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -738,17 +738,17 @@
           "CardID": 122,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "e76028",
+          "GUID": "d6bab7",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -765,17 +765,17 @@
           "CardID": 123,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "7e9644",
+          "GUID": "b7170b",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -792,17 +792,17 @@
           "CardID": 124,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "83c0bd",
+          "GUID": "c78885",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -819,17 +819,17 @@
           "CardID": 125,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "0b5d91",
+          "GUID": "46b689",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -846,17 +846,17 @@
           "CardID": 126,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "b89cdd",
+          "GUID": "b53505",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -873,17 +873,17 @@
           "CardID": 127,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "3ed204",
+          "GUID": "0da1a4",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -900,17 +900,17 @@
           "CardID": 128,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "8167d0",
+          "GUID": "97d6ee",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -927,17 +927,17 @@
           "CardID": 129,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "4dc8fa",
+          "GUID": "ea4388",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -954,17 +954,17 @@
           "CardID": 130,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "4c175d",
+          "GUID": "a28dcd",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -981,17 +981,17 @@
           "CardID": 131,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "6c3331",
+          "GUID": "ca28ad",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1008,17 +1008,17 @@
           "CardID": 132,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "d9bbe9",
+          "GUID": "c97ceb",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1035,17 +1035,17 @@
           "CardID": 133,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "47d446",
+          "GUID": "28efcb",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1062,17 +1062,17 @@
           "CardID": 134,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "16a2ce",
+          "GUID": "3af609",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1089,17 +1089,17 @@
           "CardID": 135,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "771c76",
+          "GUID": "c7b648",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1116,17 +1116,17 @@
           "CardID": 136,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "7fe78f",
+          "GUID": "0c2ba6",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1143,17 +1143,17 @@
           "CardID": 137,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "a9cd07",
+          "GUID": "131c6e",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1170,17 +1170,17 @@
           "CardID": 138,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "768d2f",
+          "GUID": "738f50",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1197,17 +1197,17 @@
           "CardID": 139,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "94e5e2",
+          "GUID": "b165c1",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1224,17 +1224,17 @@
           "CardID": 140,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "3649fc",
+          "GUID": "8d852b",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1251,17 +1251,17 @@
           "CardID": 141,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "26a4ff",
+          "GUID": "e7ee48",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1278,17 +1278,17 @@
           "CardID": 142,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "22ed1a",
+          "GUID": "210600",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1305,17 +1305,17 @@
           "CardID": 143,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "5a63c7",
+          "GUID": "a42877",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1332,17 +1332,17 @@
           "CardID": 144,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "476e48",
+          "GUID": "e4742f",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1359,17 +1359,17 @@
           "CardID": 145,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "96ff68",
+          "GUID": "e72b86",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1386,17 +1386,17 @@
           "CardID": 146,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "5f9d42",
+          "GUID": "685e58",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1413,17 +1413,17 @@
           "CardID": 147,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "9198dc",
+          "GUID": "5c39c3",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1440,17 +1440,17 @@
           "CardID": 148,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "145cd3",
+          "GUID": "1600dd",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1467,17 +1467,17 @@
           "CardID": 149,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "d638ce",
+          "GUID": "266441",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1494,17 +1494,17 @@
           "CardID": 150,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "340bfb",
+          "GUID": "ae03b9",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1521,17 +1521,17 @@
           "CardID": 151,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "5d6599",
+          "GUID": "bc2238",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1548,17 +1548,17 @@
           "CardID": 152,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "de8e48",
+          "GUID": "c8ee34",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1575,17 +1575,17 @@
           "CardID": 153,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "97d460",
+          "GUID": "4f6001",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1602,17 +1602,17 @@
           "CardID": 154,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "2f5161",
+          "GUID": "31dd5f",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1629,17 +1629,17 @@
           "CardID": 155,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "bb82c2",
+          "GUID": "a6c3d2",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1656,17 +1656,17 @@
           "CardID": 156,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "27280d",
+          "GUID": "340f3b",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1683,17 +1683,17 @@
           "CardID": 157,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "3b64a0",
+          "GUID": "b704e9",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1710,17 +1710,17 @@
           "CardID": 158,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "abb079",
+          "GUID": "96c15f",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1737,17 +1737,17 @@
           "CardID": 159,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "b31bf0",
+          "GUID": "42ff11",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1764,17 +1764,17 @@
           "CardID": 160,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "e44bac",
+          "GUID": "4562be",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1791,17 +1791,17 @@
           "CardID": 161,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "6e33d1",
+          "GUID": "2af0b1",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1818,17 +1818,17 @@
           "CardID": 162,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "9dd2e0",
+          "GUID": "e3be3f",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1845,17 +1845,17 @@
           "CardID": 163,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "ccadab",
+          "GUID": "d1d09d",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1872,17 +1872,17 @@
           "CardID": 164,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "27328b",
+          "GUID": "d024dc",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1899,17 +1899,17 @@
           "CardID": 165,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "3e45d4",
+          "GUID": "0737f6",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1926,17 +1926,17 @@
           "CardID": 166,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "05f0a4",
+          "GUID": "196aef",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1953,17 +1953,17 @@
           "CardID": 167,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "62f3c9",
+          "GUID": "8c6337",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -1980,17 +1980,17 @@
           "CardID": 168,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "cace55",
+          "GUID": "f6795d",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2007,17 +2007,17 @@
           "CardID": 169,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "fe0c22",
+          "GUID": "0653d2",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2034,17 +2034,17 @@
           "CardID": 170,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c0c83f",
+          "GUID": "eb8499",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2061,17 +2061,17 @@
           "CardID": 171,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "4c42ba",
+          "GUID": "ce6fe9",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2088,17 +2088,17 @@
           "CardID": 172,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "60230f",
+          "GUID": "3f96b2",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2115,17 +2115,17 @@
           "CardID": 173,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "fe68bb",
+          "GUID": "bd3f36",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2142,17 +2142,17 @@
           "CardID": 174,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "05354e",
+          "GUID": "f1a9b8",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2169,17 +2169,17 @@
           "CardID": 175,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c14535",
+          "GUID": "f5a578",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2196,17 +2196,17 @@
           "CardID": 176,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "f6800a",
+          "GUID": "21d63a",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2223,17 +2223,17 @@
           "CardID": 177,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c7be06",
+          "GUID": "2b59fc",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2250,17 +2250,17 @@
           "CardID": 178,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "955902",
+          "GUID": "7df80d",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2277,17 +2277,17 @@
           "CardID": 179,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "ba0873",
+          "GUID": "7a18cc",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2304,17 +2304,17 @@
           "CardID": 180,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "c0abba",
+          "GUID": "a48e9c",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2331,17 +2331,17 @@
           "CardID": 181,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "f1b45f",
+          "GUID": "31d6af",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2358,17 +2358,17 @@
           "CardID": 182,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "2d9c60",
+          "GUID": "55cc32",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2385,17 +2385,17 @@
           "CardID": 183,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "1c1295",
+          "GUID": "98c236",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2412,17 +2412,17 @@
           "CardID": 184,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "61e2d0",
+          "GUID": "b77c04",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2439,17 +2439,17 @@
           "CardID": 185,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "334f6c",
+          "GUID": "0b5a27",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2466,17 +2466,17 @@
           "CardID": 186,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "bf9e23",
+          "GUID": "d2b257",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2493,17 +2493,17 @@
           "CardID": 187,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "592b0d",
+          "GUID": "7b1788",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2520,17 +2520,17 @@
           "CardID": 188,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "18c8d8",
+          "GUID": "a174fd",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2547,10 +2547,10 @@
           "CardID": 189,
           "CustomDeck": {
             "1": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/main_deck_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 9,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
@@ -2559,7 +2559,7 @@
       ]
     },
     {
-      "GUID": "fb91a2",
+      "GUID": "0c2990",
       "Name": "DeckCustom",
       "Transform": {
         "posX": 4,
@@ -2607,17 +2607,17 @@
       ],
       "CustomDeck": {
         "2": {
-          "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-          "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+          "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+          "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
           "NumWidth": 10,
-          "NumHeight": 3,
+          "NumHeight": 10,
           "BackIsHidden": true,
           "UniqueBack": false
         }
       },
       "ContainedObjects": [
         {
-          "GUID": "379ae0",
+          "GUID": "bdfa1c",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2634,17 +2634,17 @@
           "CardID": 200,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "6cb728",
+          "GUID": "8f2bb7",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2661,17 +2661,17 @@
           "CardID": 201,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "e1d659",
+          "GUID": "6d4df8",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2688,17 +2688,17 @@
           "CardID": 202,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "8a6a66",
+          "GUID": "25c170",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2715,17 +2715,17 @@
           "CardID": 203,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "cba040",
+          "GUID": "4bc272",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2742,17 +2742,17 @@
           "CardID": 204,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "a15280",
+          "GUID": "77b73a",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2769,17 +2769,17 @@
           "CardID": 205,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "17679d",
+          "GUID": "234b46",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2796,17 +2796,17 @@
           "CardID": 206,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "ce10f0",
+          "GUID": "fc2c95",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2823,17 +2823,17 @@
           "CardID": 207,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "61ba6e",
+          "GUID": "ee8d8d",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2850,17 +2850,17 @@
           "CardID": 208,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "2f1eb7",
+          "GUID": "e4d187",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2877,17 +2877,17 @@
           "CardID": 209,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "909188",
+          "GUID": "76c563",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2904,17 +2904,17 @@
           "CardID": 210,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "61888c",
+          "GUID": "a2899d",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2931,17 +2931,17 @@
           "CardID": 211,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "fa643d",
+          "GUID": "b043bc",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2958,17 +2958,17 @@
           "CardID": 212,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "80bc49",
+          "GUID": "4a557b",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -2985,17 +2985,17 @@
           "CardID": 213,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "e06091",
+          "GUID": "bbb2a3",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3012,17 +3012,17 @@
           "CardID": 214,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "9fbd74",
+          "GUID": "04d160",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3039,17 +3039,17 @@
           "CardID": 215,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "1a5ada",
+          "GUID": "dfcf4f",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3066,17 +3066,17 @@
           "CardID": 216,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "0f5a7c",
+          "GUID": "30281e",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3093,17 +3093,17 @@
           "CardID": 217,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "58da24",
+          "GUID": "f1d643",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3120,17 +3120,17 @@
           "CardID": 218,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "772794",
+          "GUID": "161ada",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3147,17 +3147,17 @@
           "CardID": 219,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "2d4529",
+          "GUID": "deb321",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3174,17 +3174,17 @@
           "CardID": 220,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "8acae8",
+          "GUID": "efb0ab",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3201,17 +3201,17 @@
           "CardID": 221,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "5c8ad0",
+          "GUID": "0de177",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3228,17 +3228,17 @@
           "CardID": 222,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "689afd",
+          "GUID": "5ba08a",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3255,17 +3255,17 @@
           "CardID": 223,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "baa8ca",
+          "GUID": "c10e71",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3282,17 +3282,17 @@
           "CardID": 224,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "b3adb4",
+          "GUID": "c56276",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3309,17 +3309,17 @@
           "CardID": 225,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "feb0d6",
+          "GUID": "2f369e",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3336,17 +3336,17 @@
           "CardID": 226,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "0beb53",
+          "GUID": "41f30e",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3363,17 +3363,17 @@
           "CardID": 227,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "8851ce",
+          "GUID": "7cbec2",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3390,17 +3390,17 @@
           "CardID": 228,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }
           }
         },
         {
-          "GUID": "72c162",
+          "GUID": "e7b5bb",
           "Name": "Card",
           "Transform": {
             "posX": 0,
@@ -3417,10 +3417,10 @@
           "CardID": 229,
           "CustomDeck": {
             "2": {
-              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png",
-              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png",
+              "FaceURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/lots_sheet.png?v=1766978598",
+              "BackURL": "https://raw.githubusercontent.com/bobbyhiddn/Hypertext/main/series/2026-Q1/exports/tabletopsimulator/card_back.png?v=1766978598",
               "NumWidth": 10,
-              "NumHeight": 3,
+              "NumHeight": 10,
               "BackIsHidden": true,
               "UniqueBack": false
             }

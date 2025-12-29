@@ -20,6 +20,7 @@ Usage:
 import argparse
 import json
 import sys
+import time
 import uuid
 from pathlib import Path
 from typing import Any
@@ -222,6 +223,7 @@ def _create_sprite_sheet(
     Create a sprite sheet from card directories.
 
     Creates placeholder images for missing cards to maintain alignment.
+    Always creates a full grid (cols x max_rows) for TTS compatibility.
 
     Args:
         card_dirs: List of card directories (in order)
@@ -239,8 +241,9 @@ def _create_sprite_sheet(
         return 0, 0, 0
 
     num_cards = min(len(card_dirs), cols * max_rows)
-    actual_cols = min(cols, num_cards)
-    actual_rows = (num_cards + actual_cols - 1) // actual_cols
+    actual_cols = cols  # Always use full width
+    # Always use full grid height for TTS compatibility
+    actual_rows = max_rows
 
     sheet_width = actual_cols * card_width
     sheet_height = actual_rows * card_height
@@ -519,15 +522,19 @@ def _export_for_tts(
     # Determine URL base
     if url_base:
         base = url_base.rstrip("/")
+        # Add cache buster
+        cache_buster = f"?v={int(time.time())}"
         _log(f"  Using URL base: {base}")
+        _log(f"  Cache buster: {cache_buster}")
     else:
         base = "YOUR_URL_HERE"
+        cache_buster = ""
         _log("  NOTE: Update URLs in Hypertext.json before importing to TTS")
 
     tts_objects = []
     for i, deck in enumerate(decks):
-        face_url = f"{base}/{deck['sheet']}"
-        back_url = f"{base}/card_back.png"
+        face_url = f"{base}/{deck['sheet']}{cache_buster}"
+        back_url = f"{base}/card_back.png{cache_buster}"
 
         deck_obj = _create_tts_deck_json(
             deck["name"],
