@@ -3762,7 +3762,7 @@
     {
       "Name": "Chip_100",
       "Transform": {
-        "posX": 8.0,
+        "posX": 8,
         "posY": 1,
         "posZ": 2,
         "rotX": 0,
@@ -3772,10 +3772,10 @@
         "scaleY": 1,
         "scaleZ": 1
       },
-      "Nickname": "Wreath Token",
+      "Nickname": "\u0391 - Record Wreath",
       "ColorDiffuse": {
-        "r": 0.9,
-        "g": 0.2,
+        "r": 0.85,
+        "g": 0.65,
         "b": 0.2
       }
     },
@@ -3792,10 +3792,10 @@
         "scaleY": 1,
         "scaleZ": 1
       },
-      "Nickname": "Wreath Token",
+      "Nickname": "\u03a9 - Empty Wreath",
       "ColorDiffuse": {
-        "r": 0.9,
-        "g": 0.2,
+        "r": 0.85,
+        "g": 0.65,
         "b": 0.2
       }
     }

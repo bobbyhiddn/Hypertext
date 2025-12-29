@@ -536,17 +536,24 @@ def _export_for_tts(
         tts_objects.append(letter_token)
     _log(f"  Added 24 Letter tokens (blue)")
 
-    # Add Wreath tokens (2)
-    # Red color
-    red_color = {"r": 0.9, "g": 0.2, "b": 0.2}
-    for i in range(2):
-        wreath_token = _create_tts_token(
-            "Wreath Token",
-            red_color,
-            position=(8 + i * 1.2, 1, 2),
-        )
-        tts_objects.append(wreath_token)
-    _log(f"  Added 2 Wreath tokens (red)")
+    # Add Wreath tokens (2) - Alpha and Omega
+    # Gold color for wreaths
+    gold_color = {"r": 0.85, "g": 0.65, "b": 0.2}
+
+    alpha_wreath = _create_tts_token(
+        "Α - Record Wreath",
+        gold_color,
+        position=(8, 1, 2),
+    )
+    tts_objects.append(alpha_wreath)
+
+    omega_wreath = _create_tts_token(
+        "Ω - Empty Wreath",
+        gold_color,
+        position=(9.2, 1, 2),
+    )
+    tts_objects.append(omega_wreath)
+    _log(f"  Added Alpha (Record) and Omega (Empty) Wreath tokens (gold)")
 
     # Wrap in TTS save format
     tts_save = {
