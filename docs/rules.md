@@ -168,12 +168,14 @@ Appoint one player as Judge for the game. The Judge:
 
 ### 1. Draw
 
-Draw 1 card from the Tower.
+Reveal the top card of the Tower. Choose one:
+- **Take it**: Add the revealed card to your hand.
+- **Pass**: Return it face-down to the top, then draw 2 cards.
 
 ### 2. Play
 
 **Free Activation (once per turn):**
-- You may reveal the card you just drew.
+- You may reveal the card you just drew (if you took the top card).
 - Pay its rarity cost (discard cards from hand).
 - Resolve ability.
 - Card and cost go to Sheol (not redeemable).
@@ -282,8 +284,8 @@ If two or more players are tied for highest score after 12 chapters:
 
 | Phase | Actions |
 |-------|---------|
-| **1. Draw** | Take 1 from Tower |
-| **2. Play** | Free activation (drawn card) + Letter activations |
+| **1. Draw** | Reveal top card: Take it OR pass (return it, draw 2) |
+| **2. Play** | Free activation (if took top card) + Letter activations |
 | **3. Record** | Board Phase / Lot / Opponent's Lot |
 | **4. End** | Discard 1 to Sheol (can be redeemed) |
 

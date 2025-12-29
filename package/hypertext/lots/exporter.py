@@ -210,60 +210,67 @@ def _export_card_set(
 
 
 def _create_sprite_sheet(
-    card_images: list[Path],
+    card_dirs: list[Path],
     out_path: Path,
     card_width: int,
     card_height: int,
+    src_filename: str,
     cols: int = 10,
-    max_rows: int = 7,
-) -> tuple[int, int]:
+    max_rows: int = 10,
+) -> tuple[int, int, int]:
     """
-    Create a sprite sheet from individual card images.
+    Create a sprite sheet from card directories.
+
+    Creates placeholder images for missing cards to maintain alignment.
 
     Args:
-        card_images: List of card image paths (in order)
+        card_dirs: List of card directories (in order)
         out_path: Output path for sprite sheet
         card_width: Width of each card
         card_height: Height of each card
+        src_filename: Source image filename (e.g., "card_1024x1536.png")
         cols: Number of columns in sprite sheet
         max_rows: Maximum rows per sheet
 
     Returns:
-        (actual_cols, actual_rows) used in the sheet
+        (actual_cols, actual_rows, cards_found) used in the sheet
     """
-    if not card_images:
-        return 0, 0
+    if not card_dirs:
+        return 0, 0, 0
 
-    num_cards = len(card_images)
+    num_cards = min(len(card_dirs), cols * max_rows)
     actual_cols = min(cols, num_cards)
     actual_rows = (num_cards + actual_cols - 1) // actual_cols
-
-    if actual_rows > max_rows:
-        _log(f"    Warning: {num_cards} cards exceeds max {cols * max_rows} per sheet")
-        actual_rows = max_rows
 
     sheet_width = actual_cols * card_width
     sheet_height = actual_rows * card_height
 
-    sheet = Image.new("RGB", (sheet_width, sheet_height), (0, 0, 0))
+    sheet = Image.new("RGB", (sheet_width, sheet_height), (30, 30, 30))
+    cards_found = 0
 
-    for i, img_path in enumerate(card_images[:cols * actual_rows]):
+    for i, card_dir in enumerate(card_dirs[:num_cards]):
         row = i // actual_cols
         col = i % actual_cols
         x = col * card_width
         y = row * card_height
 
-        try:
-            card_img = Image.open(img_path)
-            card_img = card_img.resize((card_width, card_height), Image.LANCZOS)
-            sheet.paste(card_img, (x, y))
-        except Exception as e:
-            _log(f"    Error loading {img_path.name}: {e}")
+        img_path = card_dir / "outputs" / src_filename
+        if img_path.exists():
+            try:
+                card_img = Image.open(img_path)
+                card_img = card_img.resize((card_width, card_height), Image.LANCZOS)
+                sheet.paste(card_img, (x, y))
+                cards_found += 1
+            except Exception as e:
+                _log(f"    Error loading {card_dir.name}: {e}")
+        else:
+            # Create placeholder for missing card
+            _log(f"    Missing: {card_dir.name} (placeholder added)")
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     sheet.save(out_path, "PNG")
 
-    return actual_cols, actual_rows
+    return actual_cols, actual_rows, cards_found
 
 
 def _create_tts_token(
@@ -447,31 +454,26 @@ def _export_for_tts(
         source_label = f" (from {cards_source.name})" if cards_source else ""
         _log(f"  Main deck{source_label}:")
 
-        # Collect card images
-        card_images = []
-        card_dirs = sorted([
+        # Collect card directories
+        card_dirs_list = sorted([
             d for d in cards_dir.iterdir()
             if d.is_dir() and not d.name.startswith(".") and d.name != "refs"
         ])
         if limit > 0:
-            card_dirs = card_dirs[:limit]
+            card_dirs_list = card_dirs_list[:limit]
 
-        for card_dir in card_dirs:
-            img_path = card_dir / "outputs" / "card_1024x1536.png"
-            if img_path.exists():
-                card_images.append(img_path)
-
-        if card_images:
+        if card_dirs_list:
             sheet_path = export_dir / "main_deck_sheet.png"
-            actual_cols, actual_rows = _create_sprite_sheet(
-                card_images, sheet_path, card_width, card_height, cols, max_rows
+            actual_cols, actual_rows, cards_found = _create_sprite_sheet(
+                card_dirs_list, sheet_path, card_width, card_height,
+                "card_1024x1536.png", cols, max_rows
             )
-            _log(f"    Created sprite sheet: {len(card_images)} cards ({actual_cols}x{actual_rows})")
+            _log(f"    Created sprite sheet: {cards_found}/{len(card_dirs_list)} cards ({actual_cols}x{actual_rows})")
 
             decks.append({
                 "name": "Hypertext Main Deck",
                 "sheet": "main_deck_sheet.png",
-                "count": len(card_images),
+                "count": len(card_dirs_list),  # Total slots including placeholders
                 "cols": actual_cols,
                 "rows": actual_rows,
             })
@@ -481,28 +483,23 @@ def _export_for_tts(
         source_label = f" (from {lots_source.name})" if lots_source else ""
         _log(f"  Lot cards{source_label}:")
 
-        lot_images = []
-        lot_dirs = sorted([
+        lot_dirs_list = sorted([
             d for d in lots_dir.iterdir()
             if d.is_dir() and not d.name.startswith(".") and d.name != "refs"
         ])
 
-        for lot_dir in lot_dirs:
-            img_path = lot_dir / "outputs" / "lot_1024x1536.png"
-            if img_path.exists():
-                lot_images.append(img_path)
-
-        if lot_images:
+        if lot_dirs_list:
             sheet_path = export_dir / "lots_sheet.png"
-            actual_cols, actual_rows = _create_sprite_sheet(
-                lot_images, sheet_path, card_width, card_height, cols, max_rows
+            actual_cols, actual_rows, lots_found = _create_sprite_sheet(
+                lot_dirs_list, sheet_path, card_width, card_height,
+                "lot_1024x1536.png", cols, max_rows
             )
-            _log(f"    Created sprite sheet: {len(lot_images)} lots ({actual_cols}x{actual_rows})")
+            _log(f"    Created sprite sheet: {lots_found}/{len(lot_dirs_list)} lots ({actual_cols}x{actual_rows})")
 
             decks.append({
                 "name": "Hypertext Lots",
                 "sheet": "lots_sheet.png",
-                "count": len(lot_images),
+                "count": len(lot_dirs_list),
                 "cols": actual_cols,
                 "rows": actual_rows,
             })
