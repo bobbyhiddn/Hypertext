@@ -2,7 +2,15 @@
 
 ## Overview
 
-Hypertext is a word-study trading card game for 2–8 players. Collect cards by type to record sets matching phase requirements. Race to empty your hand while scoring points through strategic records. The player with the most points after 12 chapters wins.
+Hypertext is a word-study trading card game for 2–8 players. Collect cards by type to record sets matching phase requirements. Race to empty your hand while scoring points through strategic records. The player with the most points after all chapters wins.
+
+### Scaled Rounds by Player Count
+
+| Players | Chapters | Special Rules | Chapter Flavor | Matthias Flavor |
+|---------|----------|---------------|----------------|-----------------|
+| 2 | 3 | No redeeming | *"On the third day He rose"* | *"Thereafter, the lot fell on Matthias"* |
+| 3–4 | 6 | — | *"Two were proposed, that twelve be restored"* | *"The lot was cast between them"* |
+| 5+ | 12 | — | *"Twelve apostles; twelve gates"* | *"Matthias numbered with them, alongside Paul"* |
 
 ---
 
@@ -257,7 +265,7 @@ When a player empties their hand:
 
 ## Game End
 
-The game ends after **12 chapters**.
+The game ends after completing the number of chapters for your player count (see Scaled Rounds table in Overview).
 
 The player with the highest total score wins.
 
@@ -267,12 +275,12 @@ The player with the highest total score wins.
 
 > *"And they cast lots, and the lot fell on Matthias."* — Acts 1:26
 
-If two or more players are tied for highest score after 12 chapters:
+If two or more players are tied for highest score after the final chapter:
 
-1. Only tied players participate in a 13th chapter.
+1. Only tied players participate in a tiebreaker chapter.
 2. Deal 7 cards to each tied player.
-3. Flip a new Board Phase.
-4. Play proceeds normally (draw, play, record, end).
+3. Flip a new Board Phase (chapter lot only—no player Lots are dealt).
+4. Play proceeds normally (draw, play, record, end) but without Lots to record to.
 5. **First to record the Board Phase wins the game.**
 6. No points scored—just victory.
 
@@ -367,7 +375,7 @@ The tension in Hypertext:
 | **Set** | A completed group of cards matching a phase recipe |
 | **Phase** | The required type composition for a valid set (5–7 cards) |
 | **Record** | Play cards from hand to complete a set |
-| **Chapter** | One round of play; game lasts 12 chapters |
+| **Chapter** | One round of play; game length varies by player count (3–12 chapters) |
 | **Pages** | Your face-up area of scored Board Phase records |
 | **Lot** | Your personal phase; what falls to you |
 | **Tower** | The draw pile—language dispersed from Babel |
@@ -380,7 +388,7 @@ The tension in Hypertext:
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |
-| **Matthias Rule** | Tiebreaker 13th chapter; first to record wins |
+| **Matthias Rule** | Tiebreaker chapter (no player Lots); first to record the Board Phase wins |
 
 ---
 
