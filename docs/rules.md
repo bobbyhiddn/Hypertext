@@ -249,16 +249,17 @@ When a player discards at End, any other player may call **"Redeem!"** to take t
 
 When a player empties their hand:
 
-1. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
-2. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
-3. **Convert Letters:** Each Letter = 5 points. Add to score.
-4. **Hand penalty:** -1 point per card remaining in hand.
-5. **Reset:**
+1. **Award Empty Wreathe**: Give the empty wreath to the accomplishing player.
+2. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
+3. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
+4. **Reset Letters:** After scoring letters(3 points each), reset all letters.
+5. **Hand penalty:** -1 point per card remaining in hand.
+6. **Reset:**
     - All Letters reset to 0.
     - Collect all Lot cards, reshuffle into phase deck.
     - Deal new Lot to each player.
-    - Flip new Board Phase (no repeats; redraw if duplicate).
-    - Reshuffle Sheol into Tower if needed.
+    - Flip new Chapter Lot (no repeats; redraw if duplicate; only relevant if lots have reshuffled).
+    - Reshuffle Sheol into Tower. Flip top card of Tower into Sheol.
     - Deal 7 new cards to each player.
 
 ---
@@ -280,7 +281,7 @@ If two or more players are tied for highest score after the final chapter:
 1. Only tied players participate in a tiebreaker chapter.
 2. Deal 7 cards to each tied player.
 3. Flip a new Board Phase (chapter lot only—no player Lots are dealt).
-4. Play proceeds normally (draw, play, record, end) but without Lots to record to.
+4. Play proceeds normally (draw, play, record, end).
 5. **First to record the Board Phase wins the game.**
 6. No points scored—just victory.
 
@@ -294,7 +295,7 @@ If two or more players are tied for highest score after the final chapter:
 |-------|---------|
 | **1. Draw** | Reveal top card: Take it OR pass (return it, draw 2) |
 | **2. Play** | Free activation (if took top card) + Letter activations |
-| **3. Record** | Board Phase / Lot / Opponent's Lot |
+| **3. Record** | Chapter / Lot / Opponent's Lot |
 | **4. End** | Discard 1 to Sheol (can be redeemed) |
 
 ### Other Actions
@@ -302,8 +303,8 @@ If two or more players are tied for highest score after the final chapter:
 | Action | Effect |
 |--------|--------|
 | **Activate** | Reveal card, pay cost → Sheol (not redeemable) |
-| **Redeem** | Call on opponent's End discard; take card, owe extra discard |
-| **Record Board** | Score points, cards to Pages |
+| **Redeem** | Call on opponent's End discard; Take card into hand; If multiple people call, Judge decides who gets it |
+| **Record Chapter Lot** | Score points, cards to Pages |
 | **Record Lot** | Earn 2 Letters (3 for 7-card), cards to Sheol |
 
 ### Scoring Summary
@@ -315,7 +316,7 @@ If two or more players are tied for highest score after the final chapter:
 | 7-card Board Phase | 12 |
 | Record Wreath | +2 |
 | Empty Wreath | +2 |
-| Letter conversion | 5 per Letter |
+| Letter conversion | 3 per Letter |
 | Hand penalty | -1 per card |
 
 ### Activation Costs
