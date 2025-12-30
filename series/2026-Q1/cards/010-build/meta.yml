@@ -1,0 +1,87 @@
+number: '010'
+word: BUILD
+gloss: To construct, establish, or strengthen; to edify or raise up a structure or
+  family.
+card_type: VERB
+rarity: COMMON
+art_prompt: Ancient stone foundation blocks being set in place with a plumb line and
+  trowel under a bright sky; no text.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Look at the top 3 cards of the Tower, then put them back in any order.
+ot_verse:
+  ref: Psalm 127:1
+  snippet: Unless the LORD builds the house, the builders labor in vain.
+nt_verse:
+  ref: Matthew 16:18
+  snippet: On this rock I will build my church, and the gates of Hades will not overcome
+    it.
+greek:
+  text: οἰκοδομέω
+  translit: oikodomeō
+hebrew:
+  text: בָּנָה
+  translit: banah
+ot_refs: Gen 2:22 • Gen 11:4 • 2Sam 7:27 • Neh 4:6 • Jer 31:4
+nt_refs: Matt 7:24 • 1Cor 3:10 • Eph 2:20 • 1Pet 2:5 • Jude 1:20
+trivia:
+- The Hebrew word 'banah' (build) shares a root with 'ben' (son), linking house-building
+  to family-building.
+- In the New Testament, the word for 'edification' literally translates to 'house-building'
+  (oikodomeō).
+- Jesus was a 'tekton', a term often translated as 'carpenter' but more accurately
+  meaning 'builder' or 'stonemason'.
+- Ancient builders used a cornerstone to align the entire structure; the Messiah is
+  often called the 'chief cornerstone'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVXwKw3tPnAcjfLN99uR_doo57hIzdN0BZgGl3795QpTGDOBxEfit6sDIaAFlo2mLWGByJMPs_KFnWR2OGppM6kBuFKKKvUH7C2lPHvqNxmGUFzr3xDzE6l3QCAbxVfgbPAyx01S6fkbhItSDNIEUS7zdvpuL6RZfcvShX5Ki2wFuE9pYvXg0-98uUcRT3QLPLqKaewZq1-D_trfY=
+  title: alivechristians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFocd5pK_6O13SuRDS9Wari5ffrWEz3jfM6R9wdg4Ix5VA0s30GuiZnRSUgZ0YMmE9a09HtZdFFa00gN0pNY11BHmhpgvcw-mCvzvrKNalZCMbey1BzHrrRNUfU7F7_V0D5_vWKa1G60q6wLgshHJjGBFkLrmrsXtS1c7j3QXsjwUnVsDgs_dlRiAasicdLhf94Kbg=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBnfedPyX75BimC9OoM_kLe7n-HN6sLJn8Lmb1h8LHHEBJKVRrxd4stFnqVe_dKxKHT06BpjP7AUvjdg_5qzQ8EyKopzrWaOCwv4UsqLj5GYsubLNB9DqEPYilgz28qQKJlkpcVXjltCWakQ==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP2Oj-ClLeBg6IyEyVLRRnPgVZCnhoWrIN923kUZXTC9JpArEqC6L7jTVFDjNdX8hZhIIgRej6asQLOOeXDoLhxs1hQ9wR4tEj6J7LqbTQQSye9NUbLtFlmLguBQwKHwkd9QsC9af8JQ==
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN66eVv8p-wuubNKSpkg64Q9MiGcyHFVlRcBW2mkQGPLrTpdNRpSfKYwe3dMfTLYum7lqmsZOinx0FVlfJKQt9rwM8BycxfUGEA0Vl0JjHJKbEjvZvbChPpsVdOrb_aRnG1oR94XPna_2t9fHcEJ6eYBcCd6Xtf6B72aw6745JKD65z6M-MLeV9nvlZN15IdQ=
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt-TPH_LbEb5dijqXXELJc8kJ9_8FRhiE7NOjNae3w8bpGzbWExyFdFi_VXaMJeTLZK5zMQMtcCJgOYJGzMWccenjzfOeGm-4o98IOleTkLmUKhCu6KOsKhrGh0ctFNFkShzjTfAZrZodkcUrQjLD_xA==
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECaumRPKogGvZlp5fSysHlTFxcsOUHSEBFh9FsxTEBnxgWBiLUa2t988RutviZvZfNs1eSvuhEAdoZrO9GF4R-oJQJy2xvJfeMNF2WRcwv9mBz3orBUR5wTGpkQogMKagK7ROz4tHSCTdVW_IQ42DeHD0TOUwHPo_rkTGAThdzff0GWLw=
+  title: reform-magazine.co.uk
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4RIHjKQMc7VUOVHEwll052aiEv5uYHES6cMmXywt2sd5cwMaUouc0bqEkBJakhiJO33GVBvfmbV1lM0eXFLYyqfqqv-L48vKNwPhE6YopzPma11f5ghtPqgBvsoA-
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFX88t1cs63x3Q07T7YRk7EIEv-h_m-Itewjj1ynJyBXYhh20ZITpD8XxUbdbYBNVWoQYY8K525f-EPulDuRHxvUfTKa_x41QNiynrNTfzFnSYqVU-cr4lK2zZUUC2nsLbaYbmEk8HqyDupM1F-p3dWP8hN6x3BXjVGlD6d7t-PdA0qo35MesCyOcydaNCxBz4u
+  title: equipgodspeople.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkMZNrhKJj_N4ZaPeUYlnkfZVme_WwVugDQ6i5e2lYgmVlg8UmqwF_cg71Hokd1dpEml5iDEN_-1Lzv5ukGqTaoBqnqwOrYQ9ndAksTDKH7MVxGDtCTA8RSCuYjzmj5g==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5xDzScE1n-WOSAQRuXCIO3xXCkkZXKDxAwA2qd259aOLo5iLoMqoy1FNWpU0QT--WdMNa_nb7BQgGQKarYe5NmCTcveWOAex14gGgH9qYI_iMzbVmTy45VE6SM53_VsRSEVtYfE2UI-psEeqOu-teRu5w-bL1iEgq9mAFzYEzsMhEHO1vF4UCrfcCwXn4joY=
+  title: equipgodspeople.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTOAAiyAWyvoQkHs4mMItT2dJNeqL49cFzPNpqWrA3xXDizc6HxHFAaZ4a2FHEFGvfgWIQ-Z9cSpKJSiqxbUk6p49w7XwIz9NDbXo6OHMxThrv5VWoWXgDFX1Q8nQIuKdSC7bvpG_f6Q==
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_NX7ru2wYFNdEiKS7zl6tXY5iPxzxlTiRwmuRc-LPvMa-jVxLcUAn5WFbQlqblop6oPZNtE0bNqDEwRQ1P8ovUygSVVRG92Jjgi1jpHZTsJCm4EvmeGCkDHFUirR1CFVflwSa9tUWmw==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECJUBUvoMxzlQo2wBa7DBn5Z23ddEcR00kOj1_yaUvPulMDJJSUy3X0RhvldhO5hWNcYe7BBz5_hb5MFth5KQbnWR9_Kr2GlZ3NqPtEOUxe6XH7PzBu_ZNvWlA9Il53ZtV1ReKHoyeAEkl0Ip2ZEJ2b72ed4ne6coZMV5MlAV8Q9XZPhVC-HSl90U=
+  title: livingintheshadowofhishand.com
+search_queries:
+- ''
+- greek word for build oikodomeo transliteration
+- hebrew word for build banah transliteration
+- etymology of banah and ben hebrew
+- Psalm 127:1 snippet
+- Matthew 16:18 snippet
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#010'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: green
