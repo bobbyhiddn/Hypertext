@@ -476,6 +476,23 @@ def _get_needed_type(stats: dict) -> str:
     return max(deficits, key=deficits.get)
 
 
+def _get_card_rarity(card_img_path: Path) -> str | None:
+    """Get the rarity of a card from its meta.yml."""
+    # card_img_path is like .../cards/word/outputs/card_1024x1536.png
+    card_dir = card_img_path.parent.parent
+    meta_file = card_dir / "meta.yml"
+    if not meta_file.exists():
+        return None
+    try:
+        with open(meta_file, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip().startswith("rarity:"):
+                    return line.split(":", 1)[1].strip().upper()
+    except OSError:
+        pass
+    return None
+
+
 def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
     """Find one card image per rarity from the series."""
     cards_dir = series_root / "cards"
@@ -611,11 +628,17 @@ def _build_style_refs(
     For fix_mode=True (revise/polish):
         [1] = Current card being fixed
         [2] = Template
-        [3+] = Matching cards (same rarity+type)
+        [3+] = Example cards
 
     For fix_mode=False (rebuild/generate):
         [1] = Template
-        [2+] = Matching cards (same rarity+type)
+        [2+] = Example cards
+
+    Example card selection priority (fills up to 3 cards):
+        1. Same rarity + same type
+        2. Same rarity only
+        3. Same type only (tracks actual rarity for PRIMARY highlighting)
+        4. Any cards from series (tracks actual rarity)
 
     Args:
         series_root: Series directory for finding example cards.
@@ -625,7 +648,7 @@ def _build_style_refs(
         fix_mode: If True, includes current card as first reference.
 
     Returns:
-        Tuple of (refs list, rarity_labels dict, fix_mode flag)
+        Tuple of (refs list, rarity_labels dict mapping position to rarity, fix_mode flag)
     """
     refs: list[str] = []
     rarity_labels: dict[int, str] = {}
@@ -648,28 +671,57 @@ def _build_style_refs(
         max_cards=3,
     )
 
-    # If no exact matches, fall back to same rarity only
-    if not matching_cards and target_rarity:
-        matching_cards = _find_matching_cards(
+    # If not enough matches, try same rarity only
+    if len(matching_cards) < 3 and target_rarity:
+        more_cards = _find_matching_cards(
             series_root,
             target_rarity=target_rarity,
             target_type=None,
             exclude_card=exclude_dir,
-            max_cards=3,
+            max_cards=3 - len(matching_cards),
         )
+        for card in more_cards:
+            if card not in matching_cards:
+                matching_cards.append(card)
 
-    # If still no matches, fall back to any cards
-    if not matching_cards:
+    # Track actual rarities for cards that don't match target_rarity
+    fallback_rarities: dict[Path, str] = {}
+
+    # If still not enough, try same type only (these may have different rarities)
+    if len(matching_cards) < 3 and target_type:
+        more_cards = _find_matching_cards(
+            series_root,
+            target_rarity=None,
+            target_type=target_type,
+            exclude_card=exclude_dir,
+            max_cards=3 - len(matching_cards),
+        )
+        for card in more_cards:
+            if card not in matching_cards:
+                matching_cards.append(card)
+                # Track actual rarity since it may differ from target
+                actual_rarity = _get_card_rarity(card)
+                if actual_rarity:
+                    fallback_rarities[card] = actual_rarity
+
+    # If still not enough, fill with any cards from the series
+    if len(matching_cards) < 3:
         rarity_map = _find_card_by_rarity(series_root)
         for rarity in RARITY_ORDER:
             if rarity in rarity_map:
-                matching_cards.append(rarity_map[rarity])
-                if len(matching_cards) >= 3:
-                    break
+                card_path = rarity_map[rarity]
+                if card_path not in matching_cards:
+                    matching_cards.append(card_path)
+                    fallback_rarities[card_path] = rarity
+                    if len(matching_cards) >= 3:
+                        break
 
     for card_path in matching_cards:
         refs.append(str(card_path))
-        if target_rarity:
+        # Use actual rarity for fallback cards, target_rarity for matched cards
+        if card_path in fallback_rarities:
+            rarity_labels[len(refs)] = fallback_rarities[card_path]
+        elif target_rarity:
             rarity_labels[len(refs)] = target_rarity
 
     return refs, rarity_labels, fix_mode
