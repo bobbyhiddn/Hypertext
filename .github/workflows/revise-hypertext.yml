@@ -5,10 +5,10 @@ on:
     branches-ignore:
       - main
     paths:
-      - "**/revise.txt"
-      - "**/card.json"
-      - "**/prompt.txt"
-      - "**/prompt.json"
+      - "series/**/revise.txt"
+      - "series/**/card.json"
+      - "series/**/prompt.txt"
+      - "series/**/prompt.json"
   workflow_dispatch:
     inputs:
       card_dir:
