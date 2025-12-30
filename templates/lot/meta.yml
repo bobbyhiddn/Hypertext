@@ -1,58 +1,48 @@
-# Hypertext Lot Template Metadata
-# This file tracks the template version and generation settings
-
-version: "1"
-name: "Lot Template v1"
-description: "Premium navy/gold lot card template for card combinations and rewards"
-created: "2024-12-30"
-updated: "2024-12-30"
-
-# Template specifications
+created: '2024-12-30'
+description: Premium navy/gold lot card template for card combinations and rewards
+generation:
+  model: gemini-3-pro-image-preview
+  prompt_file: prompt.txt
+  style_refs: []
+layout:
+  composition:
+    icons: book (NOUN), pencil (VERB), sparkle pen (ADJECTIVE), quill (NAME), frame
+      (TITLE)
+    style: horizontal equation in decorative box
+  context_section:
+    body: parchment box with narrative text
+    header: navy bar with "CONTEXT"
+  footer:
+    series: 'SERIES: 20XX-QX Lots'
+  header:
+    card_count: top-right (navy rectangle with count)
+    lot_badge: top-left (navy tab with "LOT")
+  reward_banner:
+    main_text: 'REWARD: X Points'
+    secondary_text: 'Wreath Bonus: +2 Points (First to record)'
+    style: navy ribbon with gold trim
+  title_section:
+    subtitle: centered italicized
+    title: centered large bold
+name: Lot Template v1
 specs:
+  aspect_ratio: '2:3'
   orientation: vertical
-  aspect_ratio: "2:3"
   resolution:
-    width: 1024
     height: 1536
-
-# Visual style
+    width: 1024
 style:
-  palette:
-    primary: navy
-    secondary: gold
-    background: warm parchment
-    ink: near-black
   frame:
     border: thick navy with gold trim
     corners: rounded with ornate flourishes
+  palette:
+    background: warm parchment
+    ink: near-black
+    primary: navy
+    secondary: gold
   typography:
-    title: large bold serif
-    subtitle: italicized serif
     body: clean serif
-
-# Layout zones
-layout:
-  header:
-    lot_badge: top-left (navy tab with "LOT")
-    card_count: top-right (navy rectangle with count)
-  title_section:
-    title: centered large bold
-    subtitle: centered italicized
-  reward_banner:
-    style: navy ribbon with gold trim
-    main_text: "REWARD: X Points"
-    secondary_text: "Wreath Bonus: +2 Points (First to record)"
-  composition:
-    style: horizontal equation in decorative box
-    icons: book (NOUN), pencil (VERB), sparkle pen (ADJECTIVE), quill (NAME), frame (TITLE)
-  context_section:
-    header: navy bar with "CONTEXT"
-    body: parchment box with narrative text
-  footer:
-    series: "SERIES: 20XX-QX Lots"
-
-# Generation tracking
-generation:
-  model: gemini-3-pro-image-preview
-  style_refs: []
-  prompt_file: prompt.txt
+    subtitle: italicized serif
+    title: large bold serif
+updated: '2025-12-30'
+version: '2'
