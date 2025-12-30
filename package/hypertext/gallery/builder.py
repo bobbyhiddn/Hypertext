@@ -180,8 +180,8 @@ def _build_rules_page(*, rules_md_path: Path, template_path: Path, out_dir: Path
         return
 
     md_text = _read_text(rules_md_path)
-    # Convert MD to HTML with tables support
-    html_content = markdown.markdown(md_text, extensions=["tables", "fenced_code"])
+    # Convert MD to HTML with tables support and proper list handling
+    html_content = markdown.markdown(md_text, extensions=["tables", "fenced_code", "sane_lists"])
 
     template = _read_text(template_path)
     page = (
