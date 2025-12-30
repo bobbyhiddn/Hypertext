@@ -2812,6 +2812,9 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         changes_path = card_dir / ".revision_changes.txt"
         changes_path.write_text("Rebuild: image regenerated from scratch\n", encoding="utf-8")
 
+        # Reset revise.txt with Rebuild: false so user can trigger new rebuilds
+        _seed_revise_file(card_dir, force=True)
+
         print(f"Rebuilt card at {card_dir}")
         return 0
 

@@ -1,0 +1,33 @@
+Reproduce and refine the provided card template reference image.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Ensures clean, crisp rendering of all elements
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium trading card layout with antique parchment background
+- Frame: Navy and gold collector frame with rounded corners
+
+LAYOUT TO PRESERVE:
+- Header: Collector ID (left), Rarity badge (right), Title/Subtitle (center)
+- Art Panel: ~44% height with gold inner frame
+- Stats Row: LORE, CONTEXT, COMPLEXITY with navy circle pips
+- Text Panels: Ability, OT Verse, NT Verse, Greek/Hebrew strip, Trivia
+- Footer: Series info on navy strip
+
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges
+- Consistent typography throughout
+- Proper stat pip rendering (navy circles only)
+- Clear panel separation
+
+CRITICAL RULES:
+- NEVER print brackets [ ] anywhere on the card
+- Stat pips: Use ONLY navy-blue filled circles (not gold, not diamonds)
+- Hebrew text must render right-to-left
+- Output ONLY the card - no surrounding text or watermarks

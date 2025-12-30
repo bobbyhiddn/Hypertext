@@ -1,0 +1,58 @@
+# Hypertext Lot Template Metadata
+# This file tracks the template version and generation settings
+
+version: "1"
+name: "Lot Template v1"
+description: "Premium navy/gold lot card template for card combinations and rewards"
+created: "2024-12-30"
+updated: "2024-12-30"
+
+# Template specifications
+specs:
+  orientation: vertical
+  aspect_ratio: "2:3"
+  resolution:
+    width: 1024
+    height: 1536
+
+# Visual style
+style:
+  palette:
+    primary: navy
+    secondary: gold
+    background: warm parchment
+    ink: near-black
+  frame:
+    border: thick navy with gold trim
+    corners: rounded with ornate flourishes
+  typography:
+    title: large bold serif
+    subtitle: italicized serif
+    body: clean serif
+
+# Layout zones
+layout:
+  header:
+    lot_badge: top-left (navy tab with "LOT")
+    card_count: top-right (navy rectangle with count)
+  title_section:
+    title: centered large bold
+    subtitle: centered italicized
+  reward_banner:
+    style: navy ribbon with gold trim
+    main_text: "REWARD: X Points"
+    secondary_text: "Wreath Bonus: +2 Points (First to record)"
+  composition:
+    style: horizontal equation in decorative box
+    icons: book (NOUN), pencil (VERB), sparkle pen (ADJECTIVE), quill (NAME), frame (TITLE)
+  context_section:
+    header: navy bar with "CONTEXT"
+    body: parchment box with narrative text
+  footer:
+    series: "SERIES: 20XX-QX Lots"
+
+# Generation tracking
+generation:
+  model: gemini-3-pro-image-preview
+  style_refs: []
+  prompt_file: prompt.txt
