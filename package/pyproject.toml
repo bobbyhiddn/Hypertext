@@ -13,10 +13,8 @@ dependencies = [
     "PyYAML>=6.0",
     "google-genai>=0.3.0",
     "jsonschema>=4.0.0",
+    "markdown>=3.0.0",
 ]
-
-[project.optional-dependencies]
-dev = ["markdown"]
 
 [project.scripts]
 hypertext = "hypertext.cli:cli"
