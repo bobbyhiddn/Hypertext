@@ -8,6 +8,7 @@ applies any revisions from revise.txt, and generates refined templates.
 
 import argparse
 import os
+import re
 import subprocess
 import sys
 from datetime import datetime
@@ -193,6 +194,31 @@ def _update_meta(meta_path: Path, version: str) -> None:
         yaml.dump(meta, f, default_flow_style=False, allow_unicode=True)
 
 
+def _reset_rebuild_flag(revise_path: Path) -> None:
+    """Reset the Rebuild flag to false in revise.txt after a rebuild.
+
+    This allows the user to trigger new rebuilds by setting it to true again.
+    """
+    if not revise_path.exists():
+        return
+
+    with open(revise_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Replace "Rebuild: true" with "Rebuild: false" (case-insensitive for value)
+    new_content = re.sub(
+        r'^(Rebuild:\s*)true\s*$',
+        r'\1false',
+        content,
+        flags=re.MULTILINE | re.IGNORECASE
+    )
+
+    if new_content != content:
+        with open(revise_path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        _log("Reset Rebuild flag to false in revise.txt")
+
+
 def phase_refine(
     template_type: str,
     version: str,
@@ -293,6 +319,10 @@ def phase_refine(
 
     # Update meta
     _update_meta(meta_path, version)
+
+    # Reset rebuild flag so user can trigger new rebuilds
+    if rebuild:
+        _reset_rebuild_flag(revise_path)
 
     return 0
 
