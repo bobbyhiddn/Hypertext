@@ -52,6 +52,16 @@
           "GLORIOUS": { "shape": "diamond", "fill": "#F28C28", "outline": "#0B1F3B" }
         }
       },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": { "display": "+🂠", "meaning": "discard 1 card to activate" },
+          "GLORIOUS": { "display": "+🂠🂠", "meaning": "discard 2 cards to activate" }
+        }
+      },
       "stat_pips": {
         "shape": "circle",
         "max": 5,
@@ -151,5 +161,5 @@
     "stat_pips_no_gradients_or_highlights": true,
     "color_grading_must_follow_style_guide": true
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. Apply palette exactly as specified. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. FRAME: Navy+gold frame identical for ALL cards. STAT PIPS: Render EXACTLY 5 circular pips per stat. Navy fill (#0B1F3B) with gold outline for filled, parchment fill (#F3E7C8) with navy outline for empty. Pips are BINARY ONLY. Do NOT use diamonds for stat pips. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. Apply palette exactly as specified. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. FRAME: Navy+gold frame identical for ALL cards. STAT PIPS: Render EXACTLY 5 circular pips per stat. Navy fill (#0B1F3B) with gold outline for filled, parchment fill (#F3E7C8) with navy outline for empty. Pips are BINARY ONLY. Do NOT use diamonds for stat pips. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
 }

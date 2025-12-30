@@ -35,6 +35,16 @@
           "GLORIOUS": { "shape": "diamond", "fill": "orange", "outline": "navy" }
         }
       },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": { "display": "+🂠", "meaning": "discard 1 card to activate" },
+          "GLORIOUS": { "display": "+🂠🂠", "meaning": "discard 2 cards to activate" }
+        }
+      },
       "stat_pips": {
         "shape": "circle",
         "max": 5,
@@ -114,5 +124,5 @@
     "no_captions_or_watermarks_outside_card": true,
     "do_not_render_hidden_metadata": ["WILD_ID", "WILD_COUNTS_AS", "QUARTET_ID", "LETTER", "NOTES_INTERNAL"]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
 }
