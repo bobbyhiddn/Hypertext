@@ -21,7 +21,7 @@
 # - Leave a field blank to keep it unchanged.
 # - Lines starting with # are ignored (except Card_ fields below).
 
-Rebuild: false
+Rebuild: true
 
 Rarity_Change_Request: <leave blank unless changing rarity>
 
@@ -39,8 +39,8 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Gloss: To construct, establish, or strengthen; to edify or raise up a structure or family.
 # Card_Type: VERB
 # Card_Rarity: COMMON
-# Card_Ability: Look at the top 3 cards of the Tower, then put them back in any order.
-# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Ability: Look at the top 3 cards of the Tower, then put them back in any order. You may place a card from your hand among those cards.
+# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 2
 # Card_Art_Prompt: Ancient stone foundation blocks being set in place with a plumb line and trowel under a bright sky; no text.
 # Card_OT_Verse: Psalm 127:1 — Unless the LORD builds the house, the builders labor in vain.
 # Card_NT_Verse: Matthew 16:18 — On this rock I will build my church, and the gates of Hades will not overcome it.
