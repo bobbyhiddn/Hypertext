@@ -1,59 +1,51 @@
-# Hypertext Card Template Metadata
-# This file tracks the template version and generation settings
-
-version: "1"
-name: "Card Template v1"
-description: "Premium navy/gold trading card template with antique parchment aesthetic"
-created: "2024-12-30"
-updated: "2024-12-30"
-
-# Template specifications
-specs:
-  orientation: vertical
-  aspect_ratio: "2:3"
-  resolution:
-    width: 1024
-    height: 1536
-
-# Visual style
-style:
-  palette:
-    primary: navy
-    secondary: gold
-    background: warm parchment
-    ink: near-black
-  frame:
-    border: thick navy with gold trim
-    corners: rounded with subtle filigree
-  typography:
-    title: classic serif display
-    labels: uppercase small caps
-    body: clean serif
-
-# Layout zones
+created: '2024-12-30'
+description: Premium navy/gold trading card template with antique parchment aesthetic
+generation:
+  model: gemini-3-pro-image-preview
+  prompt_file: prompt.txt
+  style_refs: []
 layout:
+  art_panel:
+    frame_style: gold inner frame with navy outline
+    height_fraction: 0.44
+  footer:
+    series: bottom-left
   header:
     collector_id: top-left
     rarity_badge: top-right
-    title: center
     subtitle: below title
-  art_panel:
-    height_fraction: 0.44
-    frame_style: gold inner frame with navy outline
+    title: center
   stats_row:
-    stats: [LORE, CONTEXT, COMPLEXITY]
     pip_style: navy circles (solid fill)
+    stats:
+    - LORE
+    - CONTEXT
+    - COMPLEXITY
   text_panels:
-    - ability
-    - ot_verse
-    - nt_verse
-    - greek_hebrew_strip
-    - trivia
-  footer:
-    series: bottom-left
-
-# Generation tracking
-generation:
-  model: gemini-3-pro-image-preview
-  style_refs: []
-  prompt_file: prompt.txt
+  - ability
+  - ot_verse
+  - nt_verse
+  - greek_hebrew_strip
+  - trivia
+name: Card Template v1
+specs:
+  aspect_ratio: '2:3'
+  orientation: vertical
+  resolution:
+    height: 1536
+    width: 1024
+style:
+  frame:
+    border: thick navy with gold trim
+    corners: rounded with subtle filigree
+  palette:
+    background: warm parchment
+    ink: near-black
+    primary: navy
+    secondary: gold
+  typography:
+    body: clean serif
+    labels: uppercase small caps
+    title: classic serif display
+updated: '2025-12-30'
+version: '2'
