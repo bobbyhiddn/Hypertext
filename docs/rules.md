@@ -6,12 +6,11 @@ Hypertext is a word-study trading card game for 2–8 players. Collect cards by 
 
 ### Scaled Rounds by Player Count
 
-| Players | Chapters | Special Rules |
-|---------|----------|---------------|
-| 2 | 4 | No redeeming |
-| 3 | 6 | — |
-| 4 | 9 | — |
-| 5+ | 12 | — |
+| Players | Chapters | Special Rules | Flavor |
+|---------|----------|---------------|--------|
+| 2 | 3 | No redeeming | *"On the third day He rose"* |
+| 3–4 | 6 | — | *"Six days of creation"* |
+| 5+ | 12 | — | *"Twelve apostles; twelve gates of the New Jerusalem"* |
 
 ---
 
@@ -376,7 +375,7 @@ The tension in Hypertext:
 | **Set** | A completed group of cards matching a phase recipe |
 | **Phase** | The required type composition for a valid set (5–7 cards) |
 | **Record** | Play cards from hand to complete a set |
-| **Chapter** | One round of play; game length varies by player count (4–12 chapters) |
+| **Chapter** | One round of play; game length varies by player count (3–12 chapters) |
 | **Pages** | Your face-up area of scored Board Phase records |
 | **Lot** | Your personal phase; what falls to you |
 | **Tower** | The draw pile—language dispersed from Babel |
