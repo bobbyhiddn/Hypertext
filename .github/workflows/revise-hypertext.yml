@@ -194,8 +194,26 @@ jobs:
             CARD_SLUG="$(basename "${CARD_DIR}")"
             RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
             BODY+=$'\n'
+            BODY+="#### ${CARD_SLUG}"
+            BODY+=$'\n\n'
             BODY+="![${CARD_SLUG}](${RAW_URL})"
             BODY+=$'\n'
+
+            # Include revision changes if the file exists
+            CHANGES_FILE="${CARD_DIR}/.revision_changes.txt"
+            if [[ -f "${CHANGES_FILE}" ]]; then
+              BODY+=$'\n'
+              BODY+="<details>"
+              BODY+=$'\n'
+              BODY+="<summary>Changes applied</summary>"
+              BODY+=$'\n\n'
+              BODY+="$(cat "${CHANGES_FILE}")"
+              BODY+=$'\n\n'
+              BODY+="</details>"
+              BODY+=$'\n'
+              # Clean up the changes file (don't commit it)
+              rm -f "${CHANGES_FILE}"
+            fi
           done
 
           gh pr comment "${PR_URL}" --body "${BODY}"
