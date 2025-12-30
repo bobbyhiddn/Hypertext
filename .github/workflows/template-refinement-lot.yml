@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       rebuild:
-        description: 'Rebuild from scratch (ignore current template)'
+        description: Rebuild from scratch (ignore current template)
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 permissions:
@@ -27,8 +27,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: |
-          pip install -e package/
+        run: pip install -e package/
 
       - name: Run refinement phase
         id: run-refine
@@ -36,22 +35,16 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
         run: |
-          python -m hypertext.pipeline.template \
-            --type lot \
-            --phase refine \
-            ${{ inputs.rebuild == 'true' && '--rebuild' || '' }}
-
-          # Extract version from meta.yml for PR title
+          python -m hypertext.pipeline.template --type lot --phase refine ${{ inputs.rebuild && '--rebuild' || '' }}
           VERSION=$(grep '^version:' templates/lot/meta.yml | sed 's/version: *//' | tr -d '"')
           echo "template_version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Verify template was generated
         run: |
           if [[ ! -f "templates/lot/outputs/template_1024x1536.png" ]]; then
-            echo "ERROR: Template not found at templates/lot/outputs/template_1024x1536.png"
+            echo "ERROR: Template not found"
             exit 1
           fi
-          echo "Template generated successfully"
           ls -la templates/lot/outputs/
 
       - name: Upload artifacts
@@ -63,7 +56,7 @@ jobs:
 
   pr:
     runs-on: ubuntu-latest
-    needs: [refine]
+    needs: refine
     steps:
       - uses: actions/checkout@v4
 
@@ -75,46 +68,39 @@ jobs:
 
       - name: Verify template exists
         run: |
-          echo "Template dir: templates/lot/"
           if [[ ! -f "templates/lot/outputs/template_1024x1536.png" ]]; then
             echo "ERROR: Template not found after artifact download"
-            ls -la templates/lot/outputs/ || echo "Directory does not exist"
             exit 1
           fi
           ls -la templates/lot/
 
-      - name: Create PR branch, commit, open PR
+      - name: Create PR branch and open PR
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
           VERSION: ${{ needs.refine.outputs.template_version }}
         run: |
           DATE=$(date -u +%Y-%m-%d)
-
           BRANCH="template/lot-${DATE}-${GITHUB_RUN_ID}"
+
           git checkout -b "${BRANCH}"
           git add templates/lot/
           git config user.name "hypertext-bot"
           git config user.email "hypertext-bot@users.noreply.github.com"
           git commit -m "Refine lot template (v${VERSION})" || exit 0
           git push --set-upstream origin "${BRANCH}"
+
           gh pr create \
             --title "Lot Template Refinement (v${VERSION})" \
-            --body "$(cat <<EOF
-## Lot Template Refinement
+            --body "## Lot Template Refinement
 
-**Version:** ${VERSION}
-**Date:** ${DATE}
+          **Version:** ${VERSION}
+          **Date:** ${DATE}
 
-### Changes
-- Generated refined lot template using style reference method
-
-### Files
-- \`templates/lot/meta.yml\` - Template metadata (version tracked here)
-- \`templates/lot/prompt.txt\` - Generation prompt
-- \`templates/lot/revise.txt\` - Revision form
-- \`templates/lot/outputs/template_1024x1536.png\` - Generated template image
-EOF
-)" \
+          ### Files
+          - templates/lot/meta.yml
+          - templates/lot/prompt.txt
+          - templates/lot/revise.txt
+          - templates/lot/outputs/template_1024x1536.png" \
             --base main \
             --head "${BRANCH}"
 
@@ -123,16 +109,10 @@ EOF
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
           VERSION: ${{ needs.refine.outputs.template_version }}
         run: |
-          set -euo pipefail
-
           PR_URL="$(gh pr view --json url -q .url)"
-          if [[ -z "${PR_URL}" ]]; then
-            echo "No PR URL found."
-            exit 1
-          fi
-
           REF="$(git rev-parse --abbrev-ref HEAD)"
           PNG_PATH="templates/lot/outputs/template_1024x1536.png"
           RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
+          gh pr comment "${PR_URL}" --body "### Refined Lot Template (v${VERSION})
 
-          gh pr comment "${PR_URL}" --body $'### Refined Lot Template (v'"${VERSION}"$')\n\n'"![Lot Template](${RAW_URL})"
+          ![Lot Template](${RAW_URL})"
