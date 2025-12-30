@@ -23,6 +23,9 @@ Thumbs.db
 # Build artifacts
 _site/
 
+# Temporary revision changes file (used for PR comments, not committed)
+.revision_changes.txt
+
 # NPM stuff
 node_modules/
 package-lock.json
