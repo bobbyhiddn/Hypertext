@@ -3,10 +3,6 @@ name: Refine Lot Template
 on:
   workflow_dispatch:
     inputs:
-      version:
-        description: 'Template version to refine (or "new" for next version)'
-        required: true
-        default: 'new'
       rebuild:
         description: 'Rebuild from scratch (ignore current template)'
         required: false
@@ -21,7 +17,6 @@ jobs:
   refine:
     runs-on: ubuntu-latest
     outputs:
-      template_dir: ${{ steps.run-refine.outputs.template_dir }}
       template_version: ${{ steps.run-refine.outputs.template_version }}
     steps:
       - uses: actions/checkout@v4
@@ -35,46 +30,6 @@ jobs:
         run: |
           pip install -e package/
 
-      - name: Determine version
-        id: version
-        run: |
-          if [[ "${{ inputs.version }}" == "new" ]]; then
-            # Find highest existing version and increment
-            HIGHEST=$(ls -d templates/lot/v* 2>/dev/null | sed 's/.*v//' | sort -n | tail -1)
-            if [[ -z "$HIGHEST" ]]; then
-              NEW_VERSION="1"
-            else
-              NEW_VERSION=$((HIGHEST + 1))
-            fi
-          else
-            NEW_VERSION="${{ inputs.version }}"
-          fi
-          echo "version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
-          echo "Template version: v${NEW_VERSION}"
-
-      - name: Prepare template directory
-        id: prepare
-        run: |
-          VERSION="${{ steps.version.outputs.version }}"
-          TEMPLATE_DIR="templates/lot/v${VERSION}"
-
-          # Create directory if it doesn't exist
-          mkdir -p "${TEMPLATE_DIR}/outputs"
-
-          # If new version, copy from previous version as base
-          if [[ ! -f "${TEMPLATE_DIR}/meta.yml" ]]; then
-            PREV_VERSION=$((VERSION - 1))
-            if [[ -d "templates/lot/v${PREV_VERSION}" ]]; then
-              echo "Copying from v${PREV_VERSION} as base..."
-              cp "templates/lot/v${PREV_VERSION}/meta.yml" "${TEMPLATE_DIR}/" 2>/dev/null || true
-              cp "templates/lot/v${PREV_VERSION}/prompt.txt" "${TEMPLATE_DIR}/" 2>/dev/null || true
-              cp "templates/lot/v${PREV_VERSION}/revise.txt" "${TEMPLATE_DIR}/" 2>/dev/null || true
-              cp "templates/lot/v${PREV_VERSION}/outputs/template_1024x1536.png" "${TEMPLATE_DIR}/outputs/" 2>/dev/null || true
-            fi
-          fi
-
-          echo "template_dir=${TEMPLATE_DIR}" >> "$GITHUB_OUTPUT"
-
       - name: Run refinement phase
         id: run-refine
         env:
@@ -83,29 +38,27 @@ jobs:
         run: |
           python -m hypertext.pipeline.template \
             --type lot \
-            --version "${{ steps.version.outputs.version }}" \
             --phase refine \
             ${{ inputs.rebuild == 'true' && '--rebuild' || '' }}
 
-          echo "template_dir=${{ steps.prepare.outputs.template_dir }}" >> "$GITHUB_OUTPUT"
-          echo "template_version=${{ steps.version.outputs.version }}" >> "$GITHUB_OUTPUT"
+          # Extract version from meta.yml for PR title
+          VERSION=$(grep '^version:' templates/lot/meta.yml | sed 's/version: *//' | tr -d '"')
+          echo "template_version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - name: Verify template was generated
         run: |
-          TEMPLATE_DIR="${{ steps.prepare.outputs.template_dir }}"
-          if [[ ! -f "${TEMPLATE_DIR}/outputs/template_1024x1536.png" ]]; then
-            echo "ERROR: Template not found at ${TEMPLATE_DIR}/outputs/template_1024x1536.png"
+          if [[ ! -f "templates/lot/outputs/template_1024x1536.png" ]]; then
+            echo "ERROR: Template not found at templates/lot/outputs/template_1024x1536.png"
             exit 1
           fi
           echo "Template generated successfully"
-          ls -la "${TEMPLATE_DIR}/outputs/"
+          ls -la templates/lot/outputs/
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
           name: lot-template-refined
-          path: |
-            ${{ steps.prepare.outputs.template_dir }}
+          path: templates/lot/
           if-no-files-found: error
 
   pr:
@@ -118,19 +71,17 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: lot-template-refined
-          path: templates/lot
+          path: templates/lot/
 
       - name: Verify template exists
         run: |
-          VERSION="${{ needs.refine.outputs.template_version }}"
-          TEMPLATE_DIR="templates/lot/v${VERSION}"
-          echo "Template dir: ${TEMPLATE_DIR}"
-          if [[ ! -f "${TEMPLATE_DIR}/outputs/template_1024x1536.png" ]]; then
+          echo "Template dir: templates/lot/"
+          if [[ ! -f "templates/lot/outputs/template_1024x1536.png" ]]; then
             echo "ERROR: Template not found after artifact download"
-            ls -la "${TEMPLATE_DIR}/outputs/" || echo "Directory does not exist"
+            ls -la templates/lot/outputs/ || echo "Directory does not exist"
             exit 1
           fi
-          ls -la "${TEMPLATE_DIR}"
+          ls -la templates/lot/
 
       - name: Create PR branch, commit, open PR
         env:
@@ -138,34 +89,32 @@ jobs:
           VERSION: ${{ needs.refine.outputs.template_version }}
         run: |
           DATE=$(date -u +%Y-%m-%d)
-          TEMPLATE_DIR="templates/lot/v${VERSION}"
 
-          BRANCH="template/lot-v${VERSION}-${GITHUB_RUN_ID}"
+          BRANCH="template/lot-${DATE}-${GITHUB_RUN_ID}"
           git checkout -b "${BRANCH}"
-          git add "${TEMPLATE_DIR}"
+          git add templates/lot/
           git config user.name "hypertext-bot"
           git config user.email "hypertext-bot@users.noreply.github.com"
-          git commit -m "Refine lot template v${VERSION}" || exit 0
+          git commit -m "Refine lot template (v${VERSION})" || exit 0
           git push --set-upstream origin "${BRANCH}"
           gh pr create \
-            --title "Lot Template Refinement: v${VERSION}" \
-            --body "$(cat <<'EOF'
-          ## Lot Template Refinement
+            --title "Lot Template Refinement (v${VERSION})" \
+            --body "$(cat <<EOF
+## Lot Template Refinement
 
-          **Version:** v${{ needs.refine.outputs.template_version }}
-          **Date:** $(date -u +%Y-%m-%d)
+**Version:** ${VERSION}
+**Date:** ${DATE}
 
-          ### Changes
-          - Generated new lot template using style reference method
-          - Template stored in `templates/lot/v${{ needs.refine.outputs.template_version }}/`
+### Changes
+- Generated refined lot template using style reference method
 
-          ### Files
-          - `meta.yml` - Template metadata
-          - `prompt.txt` - Generation prompt
-          - `revise.txt` - Revision form
-          - `outputs/template_1024x1536.png` - Generated template image
-          EOF
-          )" \
+### Files
+- \`templates/lot/meta.yml\` - Template metadata (version tracked here)
+- \`templates/lot/prompt.txt\` - Generation prompt
+- \`templates/lot/revise.txt\` - Revision form
+- \`templates/lot/outputs/template_1024x1536.png\` - Generated template image
+EOF
+)" \
             --base main \
             --head "${BRANCH}"
 
@@ -183,9 +132,7 @@ jobs:
           fi
 
           REF="$(git rev-parse --abbrev-ref HEAD)"
-
-          TEMPLATE_DIR="templates/lot/v${VERSION}"
-          PNG_PATH="${TEMPLATE_DIR}/outputs/template_1024x1536.png"
+          PNG_PATH="templates/lot/outputs/template_1024x1536.png"
           RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
 
-          gh pr comment "${PR_URL}" --body $'### Refined Lot Template v'"${VERSION}"$'\n\n'"![Lot Template v${VERSION}](${RAW_URL})"
+          gh pr comment "${PR_URL}" --body $'### Refined Lot Template (v'"${VERSION}"$')\n\n'"![Lot Template](${RAW_URL})"

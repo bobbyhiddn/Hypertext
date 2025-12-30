@@ -4,10 +4,12 @@
 This module handles the refinement of card and lot templates using the
 style reference method. It reads prompts from the template directory,
 applies any revisions from revise.txt, and generates refined templates.
+
+Templates are stored in a flat structure (templates/card/, templates/lot/)
+with version tracking in meta.yml. Git history provides version control.
 """
 
 import argparse
-import os
 import re
 import subprocess
 import sys
@@ -22,10 +24,10 @@ def _log(msg: str) -> None:
     print(f"[template] {msg}", flush=True)
 
 
-def _get_template_dir(template_type: str, version: str) -> Path:
-    """Get the template directory for a given type and version."""
+def _get_template_dir(template_type: str) -> Path:
+    """Get the template directory for a given type."""
     repo_root = Path(__file__).parent.parent.parent.parent
-    return repo_root / "templates" / template_type / f"v{version}"
+    return repo_root / "templates" / template_type
 
 
 def _get_current_template_path(template_type: str) -> Path:
@@ -179,19 +181,31 @@ def _build_refinement_prompt(base_prompt: str, revisions: dict) -> str:
     return "\n".join(prompt_parts)
 
 
-def _update_meta(meta_path: Path, version: str) -> None:
-    """Update the meta.yml with generation timestamp."""
+def _update_meta(meta_path: Path) -> int:
+    """Update the meta.yml with generation timestamp and increment version.
+
+    Returns the new version number.
+    """
     if not meta_path.exists():
-        return
+        return 1
 
     with open(meta_path, "r", encoding="utf-8") as f:
         meta = yaml.safe_load(f) or {}
 
+    # Increment version
+    current_version = meta.get("version", "0")
+    try:
+        new_version = int(current_version) + 1
+    except (ValueError, TypeError):
+        new_version = 1
+
+    meta["version"] = str(new_version)
     meta["updated"] = datetime.now().strftime("%Y-%m-%d")
-    meta["version"] = version
 
     with open(meta_path, "w", encoding="utf-8") as f:
         yaml.dump(meta, f, default_flow_style=False, allow_unicode=True)
+
+    return new_version
 
 
 def _reset_rebuild_flag(revise_path: Path) -> None:
@@ -221,22 +235,20 @@ def _reset_rebuild_flag(revise_path: Path) -> None:
 
 def phase_refine(
     template_type: str,
-    version: str,
     rebuild: bool = False,
 ) -> int:
     """Refine a template using style references.
 
     Args:
         template_type: Either 'card' or 'lot'
-        version: Version number (e.g., '1', '2')
         rebuild: If True, generate fresh without using current as reference
 
     Returns:
         Exit code (0 for success)
     """
-    _log(f"Starting template refinement: {template_type} v{version}")
+    _log(f"Starting template refinement: {template_type}")
 
-    template_dir = _get_template_dir(template_type, version)
+    template_dir = _get_template_dir(template_type)
     if not template_dir.exists():
         _log(f"ERROR: Template directory not found: {template_dir}")
         return 1
@@ -317,8 +329,9 @@ def phase_refine(
 
     _log(f"Template generated: {out_png}")
 
-    # Update meta
-    _update_meta(meta_path, version)
+    # Update meta with new version
+    new_version = _update_meta(meta_path)
+    _log(f"Updated meta.yml to version {new_version}")
 
     # Reset rebuild flag so user can trigger new rebuilds
     if rebuild:
@@ -337,11 +350,6 @@ def main() -> int:
         help="Template type to refine"
     )
     parser.add_argument(
-        "--version",
-        required=True,
-        help="Version number (e.g., '1', '2')"
-    )
-    parser.add_argument(
         "--phase",
         required=True,
         choices=["refine"],
@@ -358,7 +366,6 @@ def main() -> int:
     if args.phase == "refine":
         return phase_refine(
             template_type=args.type,
-            version=args.version,
             rebuild=args.rebuild,
         )
 
