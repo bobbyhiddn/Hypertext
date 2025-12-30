@@ -85,3 +85,26 @@ last_description:
   has_brackets: false
   bracket_locations: []
 review_status: green
+revision: 1
+revision_notes: "General revision request (you may modify any content field as needed):\n\
+  # Card_Word: BUILD\n# Card_Gloss: To construct, establish, or strengthen; to edify\
+  \ or raise up a structure or family.\n# Card_Type: VERB\n# Card_Rarity: COMMON\n\
+  # Card_Ability: Look at the top 3 cards of the Tower, then put them back in any\
+  \ order. You may place a card from your hand among those cards.\n# Card_Stats: LORE\
+  \ 3 | CONTEXT 3 | COMPLEXITY 2\n# Card_Art_Prompt: Ancient stone foundation blocks\
+  \ being set in place with a plumb line and trowel under a bright sky; no text.\n\
+  # Card_OT_Verse: Psalm 127:1 — Unless the LORD builds the house, the builders labor\
+  \ in vain.\n# Card_NT_Verse: Matthew 16:18 — On this rock I will build my church,\
+  \ and the gates of Hades will not overcome it.\n# Card_Hebrew: בָּנָה (banah)\n\
+  # Card_Greek: οἰκοδομέω (oikodomeō)\n# Card_Trivia_1: The Hebrew word 'banah' (build)\
+  \ shares a root with 'ben' (son), linking house-building to family-building.\n#\
+  \ Card_Trivia_2: In the New Testament, the word for 'edification' literally translates\
+  \ to 'house-building' (oikodomeō).\n# Card_Trivia_3: Jesus was a 'tekton', a term\
+  \ often translated as 'carpenter' but more accurately meaning 'builder' or 'stonemason'.\n\
+  # Card_Trivia_4: Ancient builders used a cornerstone to align the entire structure;\
+  \ the Messiah is often called the 'chief cornerstone'.\n\nCard field changes (from\
+  \ preview):\n  ABILITY_TEXT: 'Look at the top 3 cards of the Tower, then put them\
+  \ back in any order.' -> 'Look at the top 3 cards of the Tower, then put them back\
+  \ in any order. You may place a card from your hand among those cards.'\n  STAT_CONTEXT:\
+  \ '4' -> '3'"
+last_rebuild: true
