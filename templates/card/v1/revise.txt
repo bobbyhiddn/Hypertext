@@ -1,0 +1,65 @@
+# Hypertext Card Template Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Refine Card Template" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the template from scratch
+#
+# Revision Categories:
+# - Frame_Revision: Changes to borders, corners, filigree
+# - Layout_Revision: Changes to panel positions, sizes, spacing
+# - Typography_Revision: Changes to fonts, text styles, sizing
+# - Color_Revision: Changes to palette, gradients, fills
+# - Stats_Revision: Changes to stat pips, icons, indicators
+# - General_Revision: Any other changes
+#
+# Notes:
+# - Leave a field blank to keep it unchanged
+# - Lines starting with # are ignored
+# - Be specific about what should change and how
+
+Rebuild: false
+
+Frame_Revision: <describe changes to borders, corners, frame decorations>
+
+Layout_Revision: <describe changes to panel positions, sizes, or spacing>
+
+Typography_Revision: <describe changes to fonts, text styles, or sizing>
+
+Color_Revision: <describe changes to colors, palette, or fills>
+
+Stats_Revision: <describe changes to stat pips or indicator style>
+
+General_Revision: <describe any other changes>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT TEMPLATE SETTINGS (for reference)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Frame:
+#   - Border: Thick navy with gold trim
+#   - Corners: Rounded with subtle filigree
+#   - Background: Warm parchment with subtle grain
+#
+# Layout:
+#   - Header: Collector ID (left), Rarity (right), Title/Subtitle (center)
+#   - Art Panel: 44% height, gold frame with navy outline
+#   - Stats Row: 3 stats with 5 pips each
+#   - Text Panels: Ability, OT Verse, NT Verse, Greek/Hebrew, Trivia
+#   - Footer: Series info on dark navy strip
+#
+# Typography:
+#   - Title: Classic serif display
+#   - Labels: Uppercase small caps
+#   - Body: Clean serif
+#
+# Colors:
+#   - Primary: Navy (#102030 approx)
+#   - Secondary: Gold (#C0A060 approx)
+#   - Background: Parchment/tan
+#   - Ink: Near-black
+#
+# Stats:
+#   - Pip shape: Circles (not diamonds)
+#   - Filled pips: Solid navy fill
+#   - Empty pips: Parchment fill with navy outline

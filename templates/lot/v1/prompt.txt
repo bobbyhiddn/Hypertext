@@ -1,0 +1,33 @@
+Reproduce and refine the provided lot template reference image.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Ensures clean, crisp rendering of all elements
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium lot card with antique parchment background
+- Frame: Navy and gold with ornate corner flourishes
+
+LAYOUT TO PRESERVE:
+- Header: LOT badge (left), Card Count badge (right)
+- Title Section: Title + subtitle centered
+- Reward Banner: Navy ribbon with gold trim and forked ends
+- Composition Section: Horizontal equation with type icons
+- Context Section: Navy header bar + parchment body
+- Footer: Series info on navy strip
+
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges and ribbon shapes
+- Consistent icon styling (book, pencil, quill, etc.)
+- Clear panel separation
+- Proper gold trim rendering
+
+CRITICAL RULES:
+- Maintain double border style (outer gold, navy gap, inner gold)
+- Icons should be simple and elegant
+- Output ONLY the card - no surrounding text or watermarks
