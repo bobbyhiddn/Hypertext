@@ -118,7 +118,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: lot-template-refined
-          path: templates/lot
+          path: templates/lot/v${{ needs.refine.outputs.template_version }}
 
       - name: Verify template exists
         run: |
