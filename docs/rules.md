@@ -254,12 +254,12 @@ When a player empties their hand:
 3. **Convert Letters:** Each Letter = 5 points. Add to score.
 4. **Hand penalty:** -1 point per card remaining in hand.
 5. **Reset:**
-   - All Letters reset to 0.
-   - Collect all Lot cards, reshuffle into phase deck.
-   - Deal new Lot to each player.
-   - Flip new Board Phase (no repeats; redraw if duplicate).
-   - Reshuffle Sheol into Tower if needed.
-   - Deal 7 new cards to each player.
+    - All Letters reset to 0.
+    - Collect all Lot cards, reshuffle into phase deck.
+    - Deal new Lot to each player.
+    - Flip new Board Phase (no repeats; redraw if duplicate).
+    - Reshuffle Sheol into Tower if needed.
+    - Deal 7 new cards to each player.
 
 ---
 
