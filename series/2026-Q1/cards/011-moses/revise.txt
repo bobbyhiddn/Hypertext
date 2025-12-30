@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MOSES
+# Card_Gloss: To draw out; the deliverer, lawgiver, and prophet of Israel who led the Exodus.
+# Card_Type: NAME
+# Card_Rarity: RARE
+# Card_Ability: Reveal the top 5 cards of the Tower. Choose a card type. Add all matching cards to your hand and discard the rest.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: An ancient wooden staff striking a dark, turbulent body of water, causing it to split and reveal a dry path illuminated by a pillar of fire in the distance, cinematic lighting, realistic style
+# Card_OT_Verse: Exodus 2:10 — She named him Moses, saying, 'I drew him out of the water.'
+# Card_NT_Verse: John 1:17 — For the law was given through Moses; grace and truth came through Jesus Christ.
+# Card_Hebrew: מֹשֶׁה (Mosheh)
+# Card_Greek: Μωϋσῆς (Mōusēs)
+# Card_Trivia_1: Born to Amram and Jochebed of the tribe of Levi.
+# Card_Trivia_2: His name sounds like the Hebrew verb 'mashah', meaning 'to draw out'.
+# Card_Trivia_3: Lived 120 years: 40 in Egypt, 40 in Midian, 40 in the wilderness.
+# Card_Trivia_4: Spoke with God 'face to face' as a man speaks with his friend.

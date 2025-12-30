@@ -1,0 +1,84 @@
+number: '011'
+word: MOSES
+gloss: To draw out; the deliverer, lawgiver, and prophet of Israel who led the Exodus.
+card_type: NAME
+rarity: RARE
+art_prompt: An ancient wooden staff striking a dark, turbulent body of water, causing
+  it to split and reveal a dry path illuminated by a pillar of fire in the distance,
+  cinematic lighting, realistic style
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Reveal the top 5 cards of the Tower. Choose a card type. Add all matching
+  cards to your hand and discard the rest.
+ot_verse:
+  ref: Exodus 2:10
+  snippet: She named him Moses, saying, 'I drew him out of the water.'
+nt_verse:
+  ref: John 1:17
+  snippet: For the law was given through Moses; grace and truth came through Jesus
+    Christ.
+greek:
+  text: Μωϋσῆς
+  translit: Mōusēs
+hebrew:
+  text: מֹשֶׁה
+  translit: Mosheh
+ot_refs: Ex 2 • Ex 3 • Ex 14 • Ex 20 • Deut 34
+nt_refs: Mt 17 • Jn 1 • Acts 7 • Heb 11 • Rev 15
+trivia:
+- Born to Amram and Jochebed of the tribe of Levi.
+- His name sounds like the Hebrew verb 'mashah', meaning 'to draw out'.
+- 'Lived 120 years: 40 in Egypt, 40 in Midian, 40 in the wilderness.'
+- Spoke with God 'face to face' as a man speaks with his friend.
+- Traditionally attributed as the author of the Pentateuch (Torah).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP5lpu4NtfnvZMPGUlIqRY6eJpuUSA33w_vXZ-7tCuKhn7CngXRYiABopstCbPRBBhQhE4jWeEx9jd8LVpcMmkC271inZQlDOstinMmi44PscKl0LL9upzlP9s4Yl8NRDrhKwUVwB-CA==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHm-Xr_EiUgnvL8oJH5an9cCUlz6jGDe_oVV86kLuKnBeQ80wnw5OZYYZ0QuIg4x1SEs9KDveO8vcsm8KI3UnqxNUja5pRCUe00opQyDDgd64ZRcPHU4Eo2wht-dHMycAI=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXwiXavXIuSbkaLKD6mAvsxluIivn8hewXOqCo6J8irRFsP6GFVvj3Sjhyg5DA0Z7qj0ukwEiuiE7SHkNmsW7yYCHD6kP57TFDvRhWUss8z4sRE6PUryPZUy-8ZN4AopjcbBXN7D3X4aiJc10aFodL_rniX4V1NJL3oEwsqA7u9Q==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx6hqh47psRF0h1mHM8s7jJ1XYP1GnyntXK8t0BnPcYMaz7kYlpZ5eKiHn07lVSPQgYaJRpgk_m6wrcQ-vj91BopP0yn_skEdLKNSxVZhV9qjxuRILpeXEJnGZ4PKlL9yuVZYeGVXq5jDw
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBrprmRgM7wXZGmvPag8-gSbzewZDf_dC8Cmd3qSeV-U3Vb9i4CfDbOBTQmoviVXfHeooR-7YuTwTktWQS2q8IeiMY7ACRi8f7ZuD884xQ-mvcrvRF5wVzRYM4itw=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxaYE9fRcbW6UhBLuezYSLs7NjsSnB54fyYQBKRfsJ6Fu9lAAP8ffZ1DPWHVDmbmBuFV3JRq2ggnh2gF9OnVk3UCIeT4ibDMqQhEDqEmis2cLzRFgLaThhs-hHjKqY_LZpJT6bv1IP
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-3kj0147V8gbUAj5LY_OxW8pe1McKszlQkNXi6aiBWQCAxEAZKY4NdjXTzpgtavTFBnXQwKg-Goa7Rije-NlwM0D3-MawyxSsQlk71b_LLsSwEL6jotYZ7IWkdwTwxcopNQ==
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElFOjkOc7HDZin2-_4q5677YuDnLANACYy0O0PlQnnpAw5qaBQwrx7cRWoA4-aR2YttwKrCZoPITgnloz11C6tkqAzSRkX2NrsAz1AB7qKrUsxDknIEfCOYB_YKw49m9lb1DpNHSPXg87A2Pg5ZPjl
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJLvq_YIt1iC16gLye5Oi1SZeXaIGez0FJudmqfEEr6KIVyfo5lPl08uNeAD3stwrtKP8oApo5HhlHq_sV2_LuemhmjydEFJC5AH9RPrKMQdcKIbsx7Gdvc-eQ6ORppcmnog==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0g-KGjPg--Go-SIiSPG-hKgE9La6pRCo53x_QlRdNGoI4P36syfCz1lAyuAA8erYhIz0zd9YA11n3upzyl65jZOcqWSMksTQ05z_DR77Lf5iOI0Ij3eSSFu8c46cJ0ywsByaAKMw=
+  title: parentingpatch.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZM8d8HoXoAk1G7JXFprDwSO4UjC1WFzhi0JEJQgLxFa9vDx6N_LogSuDFpZ47UAekx3LN6sE6z_NMlEXYvtT_SEfu7S7ooWTjB72tjDiEL3R0kOcU0asbeXDy83kN4N2OG_JCdt2ib4nCYEmB-XYBpft6GrKg2CQbtKN-v5gwdtrS_1T9
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpb-JrtZVarX3hGUzZXKiVT2M075w8OjQBpz7Mh5JmqAVz2MtX-dY-XTri95PdY1Hp2j7cybsFxzO9BlKVZ1DIqKbonlZ4WyWuE5064w7hkBUsYRf-nDw1j0Y-Wo45kjPtt5vXa23rZKNLWFZJAgTS5jj-Ucq1zSNI6sZqdSFKX1SV
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4bsD_QWumA63hMGQJF4vHcwjoPojOjwWK5M5X_1E5yfTqbHmzwygiKw7aHVPMg0ZzJb2jMsgfgHJW2_GOKMIaFjJqd8m55pPowbL-DiSxQuofNoRQ2x5WQTb0DVpoIKw5x3XiGEmPD_rNSyHkkUjmSZnQXfzhIJWC5A8Vdg0sf7Hqxz6ZabtKdheITcVMC0J0iiaPWVibauJfHYLEd2wGCrVduqj4WOCMZRD3QUcdrHWt7bdzpugOTmxD-WUVdw==
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrngf0GSBguhJTLvcqjBzWKs_KAll3ZUIWpp3tm0S1GxkUTIHgvbKRDwXBeO6YbaJmxYSHZtxxMLp0oyqPvMo3ZhTwhCwCXozCv4b4M0WgdNh9cagGgQQtm-h8sn3YHH47ajO-H9MZE2FQ9ig8_UG5UG5M0GRW9qasC3IthFDGQHOHoQ==
+  title: biblegateway.com
+search_queries:
+- ''
+- etymology of Moses Hebrew mashah
+- Exodus 2:10 NIV
+- John 1:17 NIV
+- Moses Greek spelling and transliteration
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#011'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: green
