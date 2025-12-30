@@ -8,7 +8,7 @@ Hypertext is a word-study trading card game for 2–8 players. Collect cards by 
 
 | Players | Chapters | Special Rules | Flavor |
 |---------|----------|---------------|--------|
-| 2 | 3 | No redeeming | *"On the third day He rose"* |
+| 2 | 3 | No redeeming | *"They cast lots, and the lot fell on Matthias"* |
 | 3–4 | 6 | — | *"Six days of creation"* |
 | 5+ | 12 | — | *"Twelve apostles; twelve gates of the New Jerusalem"* |
 
