@@ -165,7 +165,7 @@ CARD_JSON:
     "ART_PROMPT": "Ancient stone masonry tools resting on a partially constructed limestone wall, golden hour lighting, dust motes dancing in the air, realistic oil painting style",
     "ABILITY_TEXT": "Look at the top 3 cards of the Tower, then put them back in any order.",
     "STAT_LORE": 2,
-    "STAT_CONTEXT": 5,
+    "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 2,
     "OT_VERSE_REF": "Psalm 127:1",
     "OT_VERSE_SNIPPET": "Unless the Lord builds the house, the builders labor in vain.",

@@ -89,3 +89,12 @@ review_status: yellow
 review_notes: Increase Context stat pips from 4 to 5 to match the expected stats.
 user_action_required: true
 user_warning: Card scored 95/100. Please review and revise manually.
+revision: 1
+revision_notes: 'Stats change request:
+
+  Set context to 3
+
+
+  General revision request (you may modify any content field as needed):
+
+  Make sure the diamond is white.'
