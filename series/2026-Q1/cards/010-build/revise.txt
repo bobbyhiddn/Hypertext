@@ -18,6 +18,6 @@ Rarity_Change_Request: <leave blank unless changing rarity>
 
 Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
 
-Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+Stats_Change_Request: Set context to 3
 
-General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+General_Revision_Request: Make sure the diamond is white.
