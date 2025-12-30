@@ -4,16 +4,32 @@ import glob
 import json
 import os
 import random
+import signal
 import subprocess
 import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+# Global shutdown flag for Ctrl+C handling
+_shutdown_requested = threading.Event()
+
+
+def _signal_handler(signum, frame):
+    """Handle Ctrl+C by forcing immediate exit."""
+    print("\n[CTRL+C] Forcing immediate shutdown...")
+    os._exit(1)  # Force exit without cleanup - kills all threads immediately
+
+
+# Register signal handler for immediate shutdown
+signal.signal(signal.SIGINT, _signal_handler)
+signal.signal(signal.SIGTERM, _signal_handler)
+
 from hypertext.gemini.text import generate_text, generate_text_with_grounding
 from hypertext.gemini.review import (
     review_card,
     describe_card,
+    describe_card_style_references,
     score_against_rubric,
     format_review_report,
     format_description_report,
@@ -60,24 +76,24 @@ GAME_RULES_SNIPPET = (
     "ABILITY INSPIRATION BY RARITY:\n"
     "- COMMON: Simple value with flavor (e.g., BREAD: 'Look at top 3 of Tower, add 1 to hand')\n"
     "- UNCOMMON: Type-based or conditional (e.g., SHEPHERD: 'Return a NAME from Sheol to your hand')\n"
-    "- RARE: Stat-based, opponent interaction, or powerful effects "
-    "(e.g., PROPHET: 'Name a card type; opponent must discard one of that type or reveal their hand')\n"
+    "- RARE: Stat-based, player interaction, or powerful effects "
+    "(e.g., PROPHET: 'Name a card type; target player must discard one of that type or reveal their hand')\n"
     "- GLORIOUS: Unique, game-changing, deeply thematic "
     "(e.g., RESURRECTION: 'Return up to 3 cards from Sheol to the Tower, then each player draws 1')\n\n"
     "CREATIVE MECHANICS TO USE:\n"
-    "- Opponent interaction: force discard, reveal hand, steal from hand/Pages, name a card they must discard\n"
+    "- Player interaction: 'target player' (can target yourself for strategic benefit!) discards, reveals hand, etc.\n"
     "- Sheol manipulation: return cards, exile cards, peek, shuffle into Tower, 'bury' cards face-down\n"
     "- Tower manipulation: look at top X, rearrange top cards, put cards on bottom, mill cards to Sheol\n"
     "- Letter economy: gain Letters, steal Letters, convert Letters to cards\n"
-    "- Phase/Lot manipulation: swap Lots with opponent, peek at Lots, record to opponent's Lot\n"
+    "- Phase/Lot manipulation: swap Lots with target player, peek at Lots, record to target player's Lot\n"
     "- Stat comparisons: if LORE > target's LORE, then... (compare any stat between cards)\n"
     "- Pages-based effects: for each NOUN in your Pages, do X; bonus if you control all 5 types\n"
     "- Conditional triggers: if you have no NAMEs in hand; if Sheol has 10+ cards; if you're behind in points\n"
     "- Turn order effects: reverse turn order, skip next player, take extra turn\n"
-    "- Protection effects: prevent opponent from targeting your Pages/hand this round\n"
+    "- Protection effects: prevent target player from targeting your Pages/hand this round\n"
     "- Copying effects: use another card's ability from Sheol, repeat your last ability\n"
-    "- Trade effects: swap a card with opponent, exchange top card of Tower with Sheol\n"
-    "- Reveal effects: reveal top X of Tower, opponent chooses one for you (or vice versa)\n"
+    "- Trade effects: swap a card with target player, exchange top card of Tower with Sheol\n"
+    "- Reveal effects: reveal top X of Tower, target player chooses one for you (or vice versa)\n"
     "- Threshold effects: if your Pages have 3+ ADJECTIVEs, this ability is upgraded\n"
     "- Type matching: discard 2-4 cards of the same type for scaling effects (e.g., 'Discard 2 NOUNs: draw 3')\n"
     "- Redeem interaction: prevent opponents from redeeming this turn, or force a redeem\n"
@@ -86,7 +102,7 @@ GAME_RULES_SNIPPET = (
     "- Stat totals: add LORE across your Pages, if total > 10 then gain bonus\n"
     "- Rarity matters: if you control a GLORIOUS in Pages, this ability is stronger\n"
     "- Racing effects: bonus if you have fewer cards in hand than opponents (racing to empty)\n"
-    "- Silence: target opponent cannot activate abilities this turn\n"
+    "- Silence: target player cannot activate abilities this turn\n"
     "- All-players effects: each player draws 1, each player discards a NOUN, etc.\n"
     "- Letter-paid bonus (RARE): if a Letter was spent to activate this, gain a bonus effect\n"
     "- Sacrifice Pages (GLORIOUS only, very rare): discard from your PAGES for devastating effects\n"
@@ -141,6 +157,7 @@ FORMATTING_RUBRIC = """
 # Use absolute path so it works in parallel workers regardless of cwd
 _THIS_DIR = Path(__file__).resolve().parent
 DEFAULT_STYLE_TEMPLATE = _THIS_DIR.parent / "templates" / "card_template.png"
+DEFAULT_STYLE_RUBRIC = _THIS_DIR.parent / "templates" / "card_style_rubric.txt"
 RARITY_ORDER = ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
 RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}  # percentages
 
@@ -1927,12 +1944,13 @@ def _plan_demo_card(
     return card_dir
 
 
-def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
+def phase_demo(*, style_series_dir: Path, template_path: Path, demo_dir: Path) -> int:
     """Generate a single demo card (plan + image)."""
     _log(f"[phase demo] demo_dir={demo_dir}")
     _log(f"[phase demo] template_path={template_path}")
+    _log(f"[phase demo] style_series_dir={style_series_dir}")
 
-    card_dir = _plan_demo_card(series_dir=series_dir, template_path=template_path, demo_dir=demo_dir)
+    card_dir = _plan_demo_card(series_dir=style_series_dir, template_path=template_path, demo_dir=demo_dir)
     if card_dir is None:
         return 1
 
@@ -1941,7 +1959,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
         card_dir=card_dir,
         skip_polish=False,
         skip_watermark=True,  # Demo cards don't need watermarks
-        style_series_dir=series_dir,  # Use main series for style references
+        style_series_dir=style_series_dir,  # Use main series for style references
     )
     if rc != 0:
         return rc
@@ -1952,7 +1970,7 @@ def phase_demo(*, series_dir: Path, template_path: Path, demo_dir: Path) -> int:
 
 def phase_demo_batch(
     *,
-    series_dir: Path,
+    style_series_dir: Path,
     template_path: Path,
     demo_dir: Path,
     batch: int,
@@ -1962,8 +1980,8 @@ def phase_demo_batch(
 ) -> int:
     """Generate multiple demo cards with pipelined parallel execution.
 
-    Uses demo_dir for its own stats and index tracking, while using series_dir
-    for style references and theme constraints.
+    Uses demo_dir for output and stats tracking, while using style_series_dir
+    for style references (typically series/2026-Q1 with existing cards).
 
     Pipeline flow (cards flow through stages concurrently):
     1. Plan card recipe (text generation)
@@ -1995,7 +2013,7 @@ def phase_demo_batch(
                 card_dir=card_dir,
                 skip_polish=skip_polish,
                 skip_watermark=True,
-                style_series_dir=series_dir,
+                style_series_dir=style_series_dir,
             )
             return card_dir, rc
 
@@ -2042,7 +2060,7 @@ def phase_demo_batch(
     # -------------------------------------------------------------------------
     # PHASE 2: Pre-generate word/type/rarity queue (single API call)
     # -------------------------------------------------------------------------
-    series_words = _get_existing_words_from_index(series_dir)
+    series_words = _get_existing_words_from_index(style_series_dir)
     demo_words = _get_existing_words_from_index(demo_dir)
     existing_words = list(set(series_words + demo_words))
     _log(f"[demo batch] found {len(series_words)} series words + {len(demo_words)} demo words = {len(existing_words)} total to avoid")
@@ -2069,7 +2087,7 @@ def phase_demo_batch(
             existing_words=existing_words,
             needed_rarities=needed_rarities,
             needed_types=needed_types,
-            series_dir=series_dir,
+            series_dir=style_series_dir,
         )
     except Exception as e:
         _log(f"[demo batch] failed to generate queue: {e}")
@@ -2113,7 +2131,7 @@ def phase_demo_batch(
         # STEP 1: Plan
         _log(f"[pipeline] #{number:03d} planning: {word} ({card_type}, {rarity})")
         card_dir = _plan_demo_card_with_number(
-            series_dir=series_dir,
+            series_dir=style_series_dir,
             template_path=template_path,
             demo_dir=demo_dir,
             number=number,
@@ -2151,7 +2169,7 @@ def phase_demo_batch(
             card_dir=card_dir,
             skip_polish=skip_polish,
             skip_watermark=True,
-            style_series_dir=series_dir,
+            style_series_dir=style_series_dir,
         )
 
         if rc != 0:
@@ -2219,6 +2237,41 @@ def phase_demo_batch(
     total_success = len(successful_cards)
     total_failed = len(failed_cards)
     _log(f"[demo batch] complete: {total_success} succeeded, {total_failed} failed")
+
+    # Final pass: check grade.json for actual pass/fail status
+    _log(f"[demo batch] checking grade results...")
+    graded_passed = 0
+    graded_failed = 0
+    failed_card_names = []
+
+    for card_dir in sorted(demo_dir.iterdir()):
+        if not card_dir.is_dir():
+            continue
+        if not card_dir.name[0].isdigit():
+            continue
+
+        grade_path = card_dir / "grade.json"
+        if grade_path.exists():
+            grade = read_json(grade_path)
+            if grade.get("passed", False):
+                graded_passed += 1
+            else:
+                graded_failed += 1
+                failed_card_names.append(card_dir.name)
+
+    _log(f"[demo batch] grade results: {graded_passed} passed, {graded_failed} failed")
+    if failed_card_names:
+        _log(f"[demo batch] failed cards: {', '.join(failed_card_names[:10])}{'...' if len(failed_card_names) > 10 else ''}")
+
+        # Ask if user wants to run rebuild-failed
+        try:
+            response = input(f"\n{graded_failed} cards failed grading. Run rebuild-failed now? [y/N]: ").strip().lower()
+            if response == 'y':
+                _log(f"[demo batch] running rebuild-failed phase...")
+                phase_rebuild_failed(cards_dir=demo_dir, parallel=1)
+        except (EOFError, KeyboardInterrupt):
+            _log(f"[demo batch] skipping rebuild-failed")
+
     return 0 if total_failed == 0 else 1
 
 
@@ -2299,20 +2352,33 @@ def _generate_image_for_card_dir(
     out_png = card_dir / "outputs" / out_name
     out_png.parent.mkdir(parents=True, exist_ok=True)
 
-    # Get target rarity and type from meta.yml
+    # Get target rarity, type, and style_series from meta.yml
     target_rarity = None
     target_type = None
+    stored_style_series = None
     meta_file = card_dir / "meta.yml"
+    meta = {}
     if meta_file.exists() and yaml:
         with open(meta_file, "r", encoding="utf-8") as f:
             meta = yaml.safe_load(f) or {}
         target_rarity = meta.get("rarity", "").upper() or None
         target_type = meta.get("type", "").upper() or None
+        stored_style_series = meta.get("style_series_dir")
 
     _log(f"[batch] generating image for {card_dir.name} -> {out_png} (rarity={target_rarity}, type={target_type})")
 
-    # Use provided style_series_dir, or infer from card_dir (card_dir is series/XXXX/cards/NNN-word)
-    series_dir = style_series_dir if style_series_dir else card_dir.parent.parent
+    # Use provided style_series_dir, stored value from meta, or infer from card_dir
+    if style_series_dir:
+        series_dir = style_series_dir
+        # Store for future rebuilds (e.g., review phase)
+        if yaml and str(style_series_dir) != stored_style_series:
+            meta["style_series_dir"] = str(style_series_dir)
+            with open(meta_file, "w", encoding="utf-8") as f:
+                yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+    elif stored_style_series:
+        series_dir = Path(stored_style_series)
+    else:
+        series_dir = card_dir.parent.parent
     style_refs, rarity_labels, fix_mode = _build_style_refs(
         series_dir,
         target_rarity=target_rarity,
@@ -2515,7 +2581,26 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
 
     _log(f"[phase revise] generating image -> {out_png} (rarity={target_rarity}, type={target_type})")
 
-    series_dir = card_dir.parent.parent
+    # Get stored style_series_dir from meta.yml (set during initial generation)
+    stored_style_series = None
+    meta_path = card_dir / "meta.yml"
+    if meta_path.exists() and yaml:
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        stored_style_series = meta.get("style_series_dir")
+
+    # Use stored style_series_dir if available, otherwise infer from card path
+    if stored_style_series:
+        series_dir = Path(stored_style_series)
+        _log(f"[phase revise] using stored style_series_dir: {series_dir}")
+    else:
+        # For demo cards (no stored path), default to the main series with style refs
+        if "demo_cards" in str(card_dir) or not (card_dir.parent.parent / "cards").exists():
+            series_dir = DEFAULT_SERIES_DIR
+            _log(f"[phase revise] Demo card detected, using default series: {series_dir}")
+        else:
+            series_dir = card_dir.parent.parent
+
     # Revise uses fix_mode - include current card as first reference
     style_refs, rarity_labels, fix_mode = _build_style_refs(
         series_dir,
@@ -2605,7 +2690,26 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
 
     _log(f"[phase rebuild] generating image -> {out_png} (rarity={target_rarity}, type={target_type})")
 
-    series_dir = card_dir.parent.parent
+    # Get stored style_series_dir from meta.yml (set during initial generation)
+    stored_style_series = None
+    meta_path = card_dir / "meta.yml"
+    if meta_path.exists() and yaml:
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        stored_style_series = meta.get("style_series_dir")
+
+    # Use stored style_series_dir if available, otherwise infer from card path
+    if stored_style_series:
+        series_dir = Path(stored_style_series)
+        _log(f"[phase rebuild] using stored style_series_dir: {series_dir}")
+    else:
+        # For demo cards (no stored path), default to the main series with style refs
+        if "demo_cards" in str(card_dir) or not (card_dir.parent.parent / "cards").exists():
+            series_dir = DEFAULT_SERIES_DIR
+            _log(f"[phase rebuild] Demo card detected, using default series: {series_dir}")
+        else:
+            series_dir = card_dir.parent.parent
+
     # Rebuild does NOT use fix_mode - generating fresh from scratch
     style_refs, rarity_labels, fix_mode = _build_style_refs(
         series_dir,
@@ -2648,6 +2752,85 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
     return 0
 
 
+def phase_rebuild_failed(*, cards_dir: Path, parallel: int = 1) -> int:
+    """Find all failed cards and rebuild them.
+
+    Scans cards_dir for cards with grade.json where passed=false,
+    then rebuilds each one.
+
+    Args:
+        cards_dir: Directory containing card folders (e.g., demo_cards)
+        parallel: Number of cards to rebuild in parallel
+
+    Returns:
+        Number of cards that still failed after rebuild
+    """
+    _log(f"[phase rebuild_failed] Scanning {cards_dir} for failed cards...")
+
+    failed_cards = []
+
+    for card_dir in sorted(cards_dir.iterdir()):
+        if not card_dir.is_dir():
+            continue
+        if not card_dir.name[0].isdigit():
+            continue
+
+        grade_path = card_dir / "grade.json"
+        if not grade_path.exists():
+            continue
+
+        grade = read_json(grade_path)
+        if not grade.get("passed", True):
+            failed_cards.append(card_dir)
+            _log(f"  Found failed: {card_dir.name} (score: {grade.get('score', '?')})")
+
+    if not failed_cards:
+        print("No failed cards found!")
+        return 0
+
+    print(f"Found {len(failed_cards)} failed cards to rebuild:")
+    for card_dir in failed_cards:
+        print(f"  - {card_dir.name}")
+    print()
+
+    # Rebuild each failed card
+    still_failed = 0
+    for i, card_dir in enumerate(failed_cards):
+        print(f"\n[{i+1}/{len(failed_cards)}] Rebuilding {card_dir.name}...")
+
+        try:
+            result = phase_rebuild(card_dir=card_dir, regen_prompt=False)
+            if result != 0:
+                still_failed += 1
+                continue
+
+            # Re-grade after rebuild
+            _log(f"[phase rebuild_failed] Re-grading {card_dir.name}...")
+            grade_result = phase_grade(card_dir=card_dir)
+
+            # Check if it passed now
+            grade_path = card_dir / "grade.json"
+            if grade_path.exists():
+                grade = read_json(grade_path)
+                if grade.get("passed", False):
+                    print(f"  {card_dir.name} now PASSED (score: {grade.get('score', '?')})")
+                else:
+                    print(f"  {card_dir.name} still FAILED (score: {grade.get('score', '?')})")
+                    still_failed += 1
+            else:
+                still_failed += 1
+
+        except Exception as e:
+            print(f"  ERROR rebuilding {card_dir.name}: {e}")
+            still_failed += 1
+
+    print(f"\n=== Rebuild Complete ===")
+    print(f"Rebuilt: {len(failed_cards)} cards")
+    print(f"Still failed: {still_failed}")
+
+    return still_failed
+
+
 def _generate_image_only(*, card_dir: Path) -> Path:
     """Generate image without polish. Returns path to generated image."""
     out_name = "card_1024x1536.png"
@@ -2658,19 +2841,31 @@ def _generate_image_only(*, card_dir: Path) -> Path:
     out_png = card_dir / "outputs" / out_name
     out_png.parent.mkdir(parents=True, exist_ok=True)
 
-    # Get target rarity and type from meta.yml
+    # Get target rarity, type, and style_series from meta.yml
     target_rarity = None
     target_type = None
+    stored_style_series = None
     meta_file = card_dir / "meta.yml"
     if meta_file.exists() and yaml:
         with open(meta_file, "r", encoding="utf-8") as f:
             meta = yaml.safe_load(f) or {}
         target_rarity = meta.get("rarity", "").upper() or None
         target_type = meta.get("type", "").upper() or None
+        stored_style_series = meta.get("style_series_dir")
 
     _log(f"[imagegen] generating image for {card_dir.name} -> {out_png} (rarity={target_rarity}, type={target_type})")
 
-    series_dir = card_dir.parent.parent
+    # Use stored style_series_dir if available, otherwise infer from card path
+    if stored_style_series:
+        series_dir = Path(stored_style_series)
+        _log(f"[imagegen] using stored style_series_dir: {series_dir}")
+    else:
+        # For demo cards (no stored path), default to the main series with style refs
+        if "demo_cards" in str(card_dir) or not (card_dir.parent.parent / "cards").exists():
+            series_dir = DEFAULT_SERIES_DIR
+            _log(f"[imagegen] Demo card detected, using default series: {series_dir}")
+        else:
+            series_dir = card_dir.parent.parent
     style_refs, rarity_labels, fix_mode = _build_style_refs(
         series_dir,
         target_rarity=target_rarity,
@@ -2740,11 +2935,209 @@ def _run_watermark(*, card_dir: Path, image_path: Path) -> None:
             _log(f"[watermark] stderr: {stderr}")
 
 
+def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
+    """
+    Grade-only phase for a card image (no rebuild, just assessment).
+
+    Like lot grading - uses two-stage approach:
+    1. First analyze style references to build a rubric
+    2. Then grade the test card against both refs and rubric
+
+    Returns 0 on success, 1 on error.
+    """
+    if yaml is None:
+        raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
+
+    _log(f"[phase grade] card_dir={card_dir}")
+
+    card_path = card_dir / "card.json"
+    if not card_path.exists():
+        print(f"Missing {card_path}")
+        return 1
+
+    out_png = card_dir / "outputs" / "card_1024x1536.png"
+    if not out_png.exists():
+        print(f"Missing {out_png}. Run imagegen first.")
+        return 1
+
+    card_json = read_json(card_path)
+    content = card_json.get("content", {})
+    word = content.get("WORD", "UNKNOWN")
+    target_rarity = content.get("RARITY", "COMMON")
+    target_type = content.get("CARD_TYPE", "NOUN")
+
+    _log(f"[phase grade] Grading {word} ({target_type}, {target_rarity})")
+
+    # Determine style series directory
+    if style_series_dir:
+        series_dir = style_series_dir
+        _log(f"[phase grade] Using explicit style_series_dir: {series_dir}")
+    else:
+        # Check meta.yml for stored style_series_dir
+        stored_style_series = None
+        meta_path = card_dir / "meta.yml"
+        if meta_path.exists():
+            with open(meta_path, "r", encoding="utf-8") as f:
+                meta = yaml.safe_load(f) or {}
+            stored_style_series = meta.get("style_series_dir")
+
+        if stored_style_series:
+            series_dir = Path(stored_style_series)
+            _log(f"[phase grade] Using stored style_series_dir: {series_dir}")
+        else:
+            # For demo cards, default to main series
+            if "demo_cards" in str(card_dir) or not (card_dir.parent.parent / "cards").exists():
+                series_dir = DEFAULT_SERIES_DIR
+                _log(f"[phase grade] Demo card detected, using default series: {series_dir}")
+            else:
+                series_dir = card_dir.parent.parent
+                _log(f"[phase grade] Using inferred series_dir: {series_dir}")
+
+    # Build style references
+    _log(f"[phase grade] Building style refs from {series_dir}...")
+    style_refs, rarity_labels, _ = _build_style_refs(
+        series_dir,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=False,
+    )
+
+    _log(f"[phase grade] Built {len(style_refs)} style reference(s):")
+    for i, ref in enumerate(style_refs, 1):
+        ref_path = Path(ref)
+        label = rarity_labels.get(i, "")
+        if "template" in ref.lower():
+            _log(f"  [{i}] TEMPLATE: {ref_path.name}")
+        else:
+            _log(f"  [{i}] REFERENCE: {ref_path.name} {label}")
+
+    if len(style_refs) < 2:
+        _log("[phase grade] WARNING: Only 1 style reference - style matching may be unreliable!")
+        _log("[phase grade] Expected: 1 template + 3 matching cards = 4 references")
+
+    # Load static style rubric (pre-generated from reference analysis)
+    _log("[phase grade] Loading style rubric...")
+    style_rubric = None
+    if DEFAULT_STYLE_RUBRIC.exists():
+        with open(DEFAULT_STYLE_RUBRIC, "r", encoding="utf-8") as f:
+            style_rubric = f.read()
+        _log(f"[phase grade] Loaded style rubric ({len(style_rubric)} chars) from {DEFAULT_STYLE_RUBRIC.name}")
+    else:
+        _log(f"[phase grade] WARNING: Style rubric not found at {DEFAULT_STYLE_RUBRIC}")
+        _log("[phase grade] Generating rubric dynamically (slower)...")
+        try:
+            style_rubric = describe_card_style_references(style_refs)
+            _log(f"[phase grade] Style rubric generated ({len(style_rubric)} chars)")
+        except Exception as e:
+            _log(f"[phase grade] Style rubric generation failed: {e}")
+            style_rubric = None
+
+    # STAGE 2: Describe the card with style refs AND rubric for comparison
+    _log("[phase grade] ")
+    _log("[phase grade] " + "=" * 50)
+    _log("[phase grade] STAGE 2: GRADING TEST CARD")
+    _log("[phase grade] " + "=" * 50)
+    _log(f"[phase grade] Describing card with {len(style_refs)} style refs + rubric...")
+    try:
+        description = describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
+    except Exception as e:
+        _log(f"[phase grade] Description failed: {e}")
+        return 1
+
+    # Check style match
+    style_match = description.style_matches_reference
+    style_reason = description.style_mismatch_reason or ""
+
+    _log(f"[phase grade] Style match: {style_match}")
+    if not style_match:
+        _log(f"[phase grade] ⚠️ STYLE MISMATCH: {style_reason}")
+
+    # Score against rubric
+    _log(f"[phase grade] Scoring content against rubric...")
+    try:
+        result = score_against_rubric(description, card_json)
+    except Exception as e:
+        _log(f"[phase grade] Scoring failed: {e}")
+        return 1
+
+    # CRITICAL: Style mismatch = score of 0, automatic fail
+    content_score = result.score
+    if style_match:
+        final_score = content_score
+    else:
+        final_score = 0  # Style mismatch overrides content score
+
+    passed = style_match and result.passed
+
+    _log(f"[phase grade] Content Score: {content_score}/100")
+    _log(f"[phase grade] Final Score: {final_score}/100 {'(style mismatch override)' if not style_match else ''}")
+    _log(f"[phase grade] Passed: {passed}")
+
+    if result.corrections:
+        _log("[phase grade] Corrections needed:")
+        for corr in result.corrections:
+            _log(f"  - {corr}")
+
+    # Save grade.json
+    grade_json_path = card_dir / "grade.json"
+    grade_data = {
+        "word": word,
+        "card_type": target_type,
+        "rarity": target_rarity,
+        "content_score": content_score,
+        "final_score": final_score,
+        "passed": passed,
+        "style_matches_reference": style_match,
+        "style_mismatch_reason": style_reason,
+        "corrections": result.corrections,
+        "categories": result.categories,
+        "style_refs_count": len(style_refs),
+        "style_refs": [Path(r).name for r in style_refs],
+    }
+    with open(grade_json_path, "w", encoding="utf-8") as f:
+        json.dump(grade_data, f, indent=2)
+    _log(f"[phase grade] Saved {grade_json_path}")
+
+    # Save grade.txt - match terminal output format
+    grade_txt_path = card_dir / "grade.txt"
+    status = "PASS" if passed else "FAIL"
+    lines = [
+        "=" * 60,
+        f"GRADE RESULT: {word}",
+        "=" * 60,
+        f"Score: {final_score}/100" + (f" (content: {content_score}/100)" if not style_match else ""),
+        f"Status: {status}",
+        f"Style Match: {style_match}",
+    ]
+    if not style_match:
+        lines.append(f"Style Issue: {style_reason}")
+    lines.append(f"Style Refs: {len(style_refs)}")
+    for ref in style_refs:
+        lines.append(f"  - {Path(ref).name}")
+    if result.corrections:
+        lines.append("")
+        lines.append("Corrections Needed:")
+        for corr in result.corrections:
+            lines.append(f"  - {corr}")
+    lines.append("=" * 60)
+    with open(grade_txt_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    _log(f"[phase grade] Saved {grade_txt_path}")
+
+    # Print summary (same format as grade.txt)
+    print()
+    for line in lines:
+        print(line)
+
+    return 0 if passed else 1
+
+
 def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     """
     Multi-stage review of a generated card image with iterative improvement.
 
     New Flow:
+    0. STYLE CHECK: Compare against references - mismatch = auto-fail & rebuild
     1. DESCRIBE: Have LLM describe what it sees on the card (observation only)
     2. SCORE: Compare description against rubric in separate call (judgment)
     3. DECIDE: If score < 90, rebuild. If score >= 90 but < 100, revise.
@@ -2769,23 +3162,88 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         return 1
 
     card_json = read_json(card_path)
-    word = card_json.get("content", {}).get("WORD", "UNKNOWN")
+    content = card_json.get("content", {})
+    word = content.get("WORD", "UNKNOWN")
+    target_rarity = content.get("RARITY", "COMMON")
+    target_type = content.get("CARD_TYPE", "NOUN")
+
+    # Get stored style_series_dir from meta.yml (set during initial generation)
+    stored_style_series = None
+    meta_path = card_dir / "meta.yml"
+    if meta_path.exists():
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        stored_style_series = meta.get("style_series_dir")
+
+    # Use stored style_series_dir if available, otherwise infer from card path
+    if stored_style_series:
+        series_dir = Path(stored_style_series)
+        _log(f"[phase review] Using stored style_series_dir: {series_dir}")
+    else:
+        # For demo cards (no stored path), default to the main series with style refs
+        if "demo_cards" in str(card_dir) or not (card_dir.parent.parent / "cards").exists():
+            series_dir = DEFAULT_SERIES_DIR
+            _log(f"[phase review] Demo card detected, using default series: {series_dir}")
+        else:
+            series_dir = card_dir.parent.parent
+
+    # Build style references for comparison
+    style_refs, _, _ = _build_style_refs(
+        series_dir,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=False,
+    )
+    _log(f"[phase review] Using {len(style_refs)} style references for comparison")
+
+    # Load static style rubric
+    style_rubric = None
+    if DEFAULT_STYLE_RUBRIC.exists():
+        with open(DEFAULT_STYLE_RUBRIC, "r", encoding="utf-8") as f:
+            style_rubric = f.read()
+        _log(f"[phase review] Loaded style rubric from {DEFAULT_STYLE_RUBRIC.name}")
 
     best_score = 0
     best_result: ReviewResult | None = None
     all_descriptions: list[CardDescription] = []
+    style_mismatch_count = 0
 
     for attempt in range(1, max_attempts + 1):
         _log(f"[phase review] === ATTEMPT {attempt}/{max_attempts} for {word} ===")
 
-        # Stage 1: DESCRIBE - Have LLM observe the card
-        _log(f"[phase review] Stage 1: Describing card...")
+        # Stage 1: DESCRIBE - Have LLM observe the card (with style refs + rubric for comparison)
+        _log(f"[phase review] Stage 1: Describing card with {len(style_refs)} style refs + rubric...")
         try:
-            description = describe_card(out_png)
+            description = describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
             all_descriptions.append(description)
         except Exception as e:
             _log(f"[phase review] Description failed: {e}")
             return 1
+
+        # STYLE MISMATCH CHECK - automatic fail if card doesn't match references
+        if not description.style_matches_reference:
+            style_mismatch_count += 1
+            reason = description.style_mismatch_reason or "Style does not match reference cards"
+            _log(f"[phase review] ⚠️ STYLE MISMATCH (auto-fail): {reason}")
+            print(f"\n{'='*60}")
+            print(f"⚠️ STYLE MISMATCH DETECTED - AUTOMATIC FAIL")
+            print(f"Reason: {reason}")
+            print(f"{'='*60}\n")
+
+            # If this is the last attempt, we're done
+            if attempt >= max_attempts:
+                _log(f"[phase review] Max attempts reached with style mismatch. Failing card.")
+                best_score = 0
+                break
+
+            # Rebuild the card with fresh generation
+            _log(f"[phase review] Rebuilding card due to style mismatch...")
+            try:
+                _generate_image_only(card_dir=card_dir)
+            except Exception as e:
+                _log(f"[phase review] Rebuild failed: {e}")
+                return 1
+            continue  # Go to next attempt
 
         # Print what the LLM sees
         print("\n" + "=" * 60)
@@ -2909,7 +3367,19 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
             "stat_pip_fill_color": last_desc.stat_pip_fill_color,
             "has_brackets": last_desc.has_brackets,
             "bracket_locations": last_desc.bracket_locations if last_desc.has_brackets else [],
+            "style_matches_reference": last_desc.style_matches_reference,
+            "style_mismatch_reason": last_desc.style_mismatch_reason if not last_desc.style_matches_reference else "",
         }
+
+    # Track style mismatch info
+    if style_mismatch_count > 0:
+        meta["style_mismatch_count"] = style_mismatch_count
+        if all_descriptions:
+            # Find first mismatch reason
+            for desc in all_descriptions:
+                if not desc.style_matches_reference:
+                    meta["style_mismatch_reason"] = desc.style_mismatch_reason
+                    break
 
     if best_score >= 100:
         meta["review_status"] = "green"
@@ -2933,7 +3403,49 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     with open(meta_path, "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
 
+    # Write grade.json with detailed results
+    # Card passes if score >= 90 AND no style mismatches
+    grade_json_path = card_dir / "grade.json"
+    passed = best_score >= 90 and style_mismatch_count == 0
+    grade_data = {
+        "word": word,
+        "card_type": target_type,
+        "rarity": target_rarity,
+        "score": best_score,
+        "passed": passed,
+        "attempts": max_attempts,
+        "style_mismatch_count": style_mismatch_count,
+        "corrections": best_result.corrections if best_result else [],
+        "categories": best_result.categories if best_result else {},
+    }
+    with open(grade_json_path, "w", encoding="utf-8") as f:
+        json.dump(grade_data, f, indent=2)
+
+    # Write grade.txt with human-readable summary
+    grade_txt_path = card_dir / "grade.txt"
+    status = "PASS" if passed else "FAIL"
+    lines = [
+        "CARD GRADE",
+        "==========",
+        f"Word: {word}",
+        f"Type: {target_type}",
+        f"Rarity: {target_rarity}",
+        f"Score: {best_score}/100",
+        f"Status: {status}",
+        f"Attempts: {max_attempts}",
+        "",
+    ]
+    if style_mismatch_count > 0:
+        lines.append(f"Style Mismatches: {style_mismatch_count}")
+    if best_result and best_result.corrections:
+        lines.append("Corrections Needed:")
+        for c in best_result.corrections:
+            lines.append(f"  - {c}")
+    with open(grade_txt_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
     _log(f"[phase review] Final status: {status_msg}")
+    _log(f"[phase review] Wrote grade.json and grade.txt to {card_dir}")
     print(f"\n{'='*60}")
     print(f"Review complete for {word}: {status_msg}")
     if best_score < 100:
@@ -3012,8 +3524,9 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "rebuild-index", "review", "gallery", "full"], required=True)
-    parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR))
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "revise", "rebuild", "rebuild-failed", "rebuild-index", "review", "grade", "gallery", "full"], required=True)
+    parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR), help="Series directory (for demo phase: output dir)")
+    parser.add_argument("--style-series", default=str(DEFAULT_SERIES_DIR), help="Series to use for style references (default: series/2026-Q1)")
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
     parser.add_argument("--auto", action="store_true")
     parser.add_argument("--batch", type=int, default=1)
@@ -3043,6 +3556,7 @@ def main() -> int:
     )
 
     series_dir = Path(args.series)
+    style_series_dir = Path(args.style_series)
     template_path = Path(args.template)
 
     batch = int(getattr(args, "batch", 1) or 1)
@@ -3069,7 +3583,7 @@ def main() -> int:
             )
         if args.phase == "demo":
             return phase_demo_batch(
-                series_dir=series_dir,
+                style_series_dir=style_series_dir,
                 template_path=template_path,
                 demo_dir=Path(args.demo_dir),
                 batch=batch,
@@ -3098,7 +3612,7 @@ def main() -> int:
         return phase_imagegen(series_dir=series_dir)
 
     if args.phase == "demo":
-        return phase_demo(series_dir=series_dir, template_path=template_path, demo_dir=Path(args.demo_dir))
+        return phase_demo(style_series_dir=style_series_dir, template_path=template_path, demo_dir=Path(args.demo_dir))
 
     if args.phase == "revise":
         if not args.card_dir:
@@ -3112,6 +3626,10 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_rebuild(card_dir=Path(args.card_dir), regen_prompt=bool(args.regen_prompt))
+
+    if args.phase == "rebuild-failed":
+        cards_dir = Path(args.demo_dir) if args.demo_dir else DEFAULT_DEMO_DIR
+        return phase_rebuild_failed(cards_dir=cards_dir, parallel=args.parallel)
 
     if args.phase == "rebuild-index":
         _log(f"[rebuild-index] scanning {series_dir} for existing cards...")
@@ -3129,6 +3647,12 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_review(card_dir=Path(args.card_dir))
+
+    if args.phase == "grade":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        return phase_grade(card_dir=Path(args.card_dir), style_series_dir=style_series_dir)
 
     if args.phase == "gallery":
         return phase_gallery(series_dir=series_dir, out_dir=Path(args.out_dir))

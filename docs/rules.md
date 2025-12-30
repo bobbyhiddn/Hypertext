@@ -98,7 +98,6 @@ Phases define the **type composition** required to record a valid set. All phase
 
 | Phase | Composition | Points |
 |-------|-------------|--------|
-| **Congregation** | 6 any mix | 10 |
 | **Assembly** | 3 + 3 (two types) | 10 |
 | **Trinity** | 2 + 2 + 2 (three types) | 10 |
 | **Tabernacle** | NOUN + NOUN + NOUN + NAME + NAME + NAME | 10 |
@@ -111,14 +110,14 @@ Phases define the **type composition** required to record a valid set. All phase
 | **Prophecy** | ADJ + ADJ + NAME + NAME + NOUN + VERB | 10 |
 | **Selah** | 6 same type | 10 |
 
-### 7-Card Phases (12 pts)
+### 7-Card Phases (14 pts)
 
 | Phase | Composition | Points |
 |-------|-------------|--------|
-| **Creation** | 3 + 2 + 2 (three types) | 12 |
-| **Revelation** | All 5 types + 2 same | 12 |
-| **Exodus** | VERB + VERB + VERB + NAME + NAME + NOUN + NOUN | 12 |
-| **Apocalypse** | 7 same type | 12 |
+| **Creation** | 3 + 2 + 2 (three types) | 14 |
+| **Revelation** | All 5 types + 2 same | 14 |
+| **Exodus** | VERB + VERB + VERB + NAME + NAME + NOUN + NOUN | 14 |
+| **Apocalypse** | 7 same type | 14 |
 
 ---
 
@@ -243,7 +242,7 @@ When a player empties their hand:
 
 1. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
 2. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
-3. **Convert Letters:** Each Letter = 5 points. Add to score.
+3. **Convert Letters:** Each Letter = 4 points. Add to score.
 4. **Hand penalty:** -1 point per card remaining in hand.
 5. **Reset:**
    - All Letters reset to 0.
@@ -304,10 +303,10 @@ If two or more players are tied for highest score after 12 chapters:
 |--------|--------|
 | 5-card Board Phase | 8 |
 | 6-card Board Phase | 10 |
-| 7-card Board Phase | 12 |
+| 7-card Board Phase | 14 |
 | Record Wreath | +2 |
 | Empty Wreath | +2 |
-| Letter conversion | 5 per Letter |
+| Letter conversion | 4 per Letter |
 | Hand penalty | -1 per card |
 
 ### Activation Costs
@@ -376,7 +375,7 @@ The tension in Hypertext:
 | **Wreath** | Token awarded for being first (+2 points each) |
 | **Record Wreath** | +2 points for first player to record the Board Phase |
 | **Empty Wreath** | +2 points for first player to empty their hand |
-| **Letter** | Token earned from Lot records (1 per Lot, 2 for 7-card; worth 5 pts each) |
+| **Letter** | Token earned from Lot records (1 per Lot, 2 for 7-card; worth 4 pts each) |
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |
@@ -389,8 +388,8 @@ The tension in Hypertext:
 ### 5-Card (14 phases)
 Remnant, Pentateuch, Scroll, Witness, Epistle, Psalm, Parable, Oracle, Covenant, Benediction, Altar, Foundation, Proverb, Lament
 
-### 6-Card (12 phases)
-Congregation, Assembly, Trinity, Tabernacle, Chorus, Sanctuary, Hymnal, Gospel, Jubilee, Wisdom, Prophecy, Selah
+### 6-Card (11 phases)
+Assembly, Trinity, Tabernacle, Chorus, Sanctuary, Hymnal, Gospel, Jubilee, Wisdom, Prophecy, Selah
 
 ### 7-Card (4 phases)
 Creation, Revelation, Exodus, Apocalypse

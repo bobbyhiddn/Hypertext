@@ -156,26 +156,64 @@ def generate_with_styles(
         )
 
     if fix_mode:
-        style_instruction = (
-            f"You are provided {len(style_image_paths)} reference images:\n"
-            + "\n".join(ref_labels) + "\n\n"
-            f"You are FIXING the card in [1]. Reproduce it EXACTLY with the requested corrections.\n"
-            f"- PRESERVE all content, layout, artwork, and style from [1]\n"
-            f"- Use [{template_ref}] for frame/layout reference\n"
-            f"- Use [{example_refs}] for style consistency verification\n"
-            + primary_instruction +
-            f"\nCRITICAL: The output should be nearly identical to [1], with only the specified fixes applied.\n\n"
-        )
+        style_instruction = f"""IMAGE ROLES:
+{chr(10).join(ref_labels)}
+
+TASK:
+Fix the card in [1]. Reproduce it EXACTLY with only the specified corrections applied.
+
+PRESERVATION (from [1] - the card being fixed):
+- Keep ALL content, layout, artwork, and overall appearance
+- Maintain exact positioning of all elements
+- Preserve the artistic style and coloring
+
+STRUCTURE REFERENCE (from [{template_ref}]):
+- Use for frame/border verification
+- Verify text zone positions match
+
+STYLE VERIFICATION (from [{example_refs}]):
+- Verify UI elements match (stat pips, rarity badge, borders)
+- Confirm overall style consistency
+{primary_instruction}
+CRITICAL: Output should be nearly identical to [1], with ONLY the specified fixes applied.
+
+"""
     else:
-        style_instruction = (
-            f"You are provided {len(style_image_paths)} reference images:\n"
-            + "\n".join(ref_labels) + "\n\n"
-            f"Generate a {orientation} trading card that EXACTLY matches:\n"
-            f"- The layout and frame structure from [{template_ref}] (template)\n"
-            f"- The corner styles, stat pip style (navy circles), rarity badge style, and text formatting from [{example_refs}] (example cards)\n"
-            + primary_instruction +
-            f"\nCRITICAL: Copy the exact visual style of the example cards [{example_refs}] for all UI elements.\n\n"
-        )
+        style_instruction = f"""IMAGE ROLES:
+{chr(10).join(ref_labels)}
+
+TASK:
+Generate a new Hypertext trading card in {orientation} format.
+
+STRUCTURE (copy EXACTLY from [{template_ref}] - the template):
+- Border/frame structure and proportions
+- Text zone positions and sizes
+- Panel arrangement and spacing
+- Chamfered (diagonally cut) corner style
+
+STYLE (match EXACTLY from [{example_refs}] - the example cards):
+- Simple, straight borders with chamfered corners (NOT ornate/decorative)
+- Navy/gold/parchment color scheme
+- Stat pips as CIRCLES filled with navy color
+- Centered "OT VERSE" and "NT VERSE" headers ABOVE the verse text
+- Rarity badge style and positioning
+- Font styles and text formatting
+{primary_instruction}
+PRESERVATION RULES:
+- Border must be SIMPLE and STRAIGHT like the references (no scrollwork, no flourishes)
+- Corners must be CHAMFERED (cut diagonal) not rounded or ornate
+- Verse section headers must be CENTERED ABOVE the text, not in side boxes
+- Stat pips must be CIRCLES, not diamonds or squares
+
+AVOID:
+- Ornate or decorative borders
+- Rounded corners or scrollwork flourishes
+- Verse labels in side boxes instead of centered headers
+- Non-circular stat pips
+- Text rendering errors
+- Style drift from references
+
+"""
 
     full_prompt = style_instruction + cleaned_prompt
 

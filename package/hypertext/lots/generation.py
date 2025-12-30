@@ -162,7 +162,9 @@ LOT_SCORE_TEMPLATE = """Score this LOT card based on what was observed vs expect
 ## EXPECTED (from reference style):
 - Phase Name: {phase_name}
 - Card Count: "{cards}-CARD" with "CARD COUNT" label above it
-- Reward: "REWARD: {points} Points"
+- Reward section (two lines):
+  - "As Board Phase: {points} Points"
+  - "As Personal Lot: {letters} Letter(s)"
 - Wreath Bonus: "Wreath Bonus: +2 Points (First to record)" - note lowercase "record"
 - Composition: Icons with type labels like NOUN + VERB (NO square brackets around type names)
 - Context: Navy "CONTEXT" header bar with text below
@@ -188,8 +190,9 @@ LOT_SCORE_TEMPLATE = """Score this LOT card based on what was observed vs expect
 - Italic flavor/subtitle present (5 pts)
 
 ### REWARD BANNER (20 pts)
-- "REWARD: {points} Points" correct (10 pts)
-- Wreath bonus includes "(First to record)" (10 pts) - CRITICAL
+- Shows Board Phase reward ({points} Points) (7 pts)
+- Shows Personal Lot reward ({letters} Letter) (6 pts)
+- Wreath bonus includes "(First to record)" (7 pts) - CRITICAL
 
 ### COMPOSITION (15 pts)
 - Has icons for card types (5 pts)
@@ -539,10 +542,14 @@ def score_lot_card(
         "style_mismatch_reason": description.style_mismatch_reason,
     }
 
+    # Letter rewards: 5-6 card lots give 1 Letter, 7-card lots give 2 Letters
+    letters = 2 if cards >= 7 else 1
+
     prompt = LOT_SCORE_TEMPLATE.format(
         phase_name=phase_name,
         cards=cards,
         points=points,
+        letters=letters,
         description_json=json.dumps(desc_dict, indent=2),
     )
 
@@ -932,14 +939,47 @@ def _generate_single_phase_content(
     theme: str,
     semaphore: threading.Semaphore,
     generate_text_func,
-) -> tuple[int, str, str, Optional[str]]:
-    """Generate flavor and context for a single phase. Returns (pid, flavor, context, error)."""
+) -> tuple[int, str, str, str, Optional[str]]:
+    """Generate flavor, context, and verse for a single phase.
+
+    Returns (pid, flavor, context, verse, error).
+    """
     pid = phase["id"]
     name = phase["name"]
 
     _log(f"[{pid:02d}] {name}: generating...")
 
     with semaphore:
+        # Generate verse reference
+        verse_prompt = f"""Find the most relevant single Bible verse reference for a Biblical trading card game phase card.
+
+Phase name: {name}
+Card requirement: {phase['display']}
+Series theme: {theme}
+
+Return ONLY the verse reference in parentheses format, e.g.:
+(Genesis 11:4)
+(Matthew 13:11)
+(Proverbs 9:10)
+
+The verse should:
+- Be directly connected to the phase name's Biblical meaning
+- Be a single verse (not a range)
+- Be formatted exactly as: (Book Chapter:Verse)
+
+Return only the verse reference in parentheses, nothing else."""
+
+        try:
+            verse = generate_text_func(verse_prompt, temperature=0.3).strip()
+            # Ensure proper format
+            if not verse.startswith("("):
+                verse = f"({verse}"
+            if not verse.endswith(")"):
+                verse = f"{verse})"
+        except Exception as e:
+            _log(f"[{pid:02d}] Error generating verse: {e}")
+            verse = ""
+
         # Generate flavor
         flavor_prompt = f"""Generate a short, evocative flavor subtitle for a Biblical trading card game phase card.
 
@@ -959,7 +999,7 @@ Return only the flavor text, no quotes or explanation."""
             flavor = generate_text_func(flavor_prompt, temperature=0.7).strip().strip('"')
         except Exception as e:
             _log(f"[{pid:02d}] Error generating flavor: {e}")
-            return (pid, "", "", str(e))
+            return (pid, "", "", "", str(e))
 
         # Generate context
         context_prompt = f"""Generate a brief educational context for a Biblical trading card game phase card.
@@ -979,12 +1019,12 @@ Return only the text, no quotes or explanation."""
             context = generate_text_func(context_prompt, temperature=0.5).strip().strip('"')
         except Exception as e:
             _log(f"[{pid:02d}] Error generating context: {e}")
-            return (pid, flavor, "", str(e))
+            return (pid, flavor, "", verse, str(e))
 
     if flavor:
         _log(f"[{pid:02d}] flavor: {flavor[:50]}...")
 
-    return (pid, flavor, context, None)
+    return (pid, flavor, context, verse, None)
 
 
 def phase_generate(series_dir: Path, parallel: int = 1) -> int:
@@ -1049,14 +1089,14 @@ def phase_generate(series_dir: Path, parallel: int = 1) -> int:
     generated_count = 0
     error_count = 0
 
-    def process_result(pid: int, flavor: str, context: str, error: Optional[str]) -> None:
+    def process_result(pid: int, flavor: str, context: str, verse: str, error: Optional[str]) -> None:
         nonlocal generated_count, error_count
         if error:
             error_count += 1
             return
 
         with content_lock:
-            existing_content[pid] = {"flavor": flavor, "context": context}
+            existing_content[pid] = {"flavor": flavor, "context": context, "verse": verse}
             data["content"] = existing_content
             _save_content(content_path, data, lock=None)  # Already holding lock
             generated_count += 1
@@ -1065,10 +1105,10 @@ def phase_generate(series_dir: Path, parallel: int = 1) -> int:
     if parallel == 1:
         # Sequential
         for phase in phases_to_generate:
-            pid, flavor, context, error = _generate_single_phase_content(
+            pid, flavor, context, verse, error = _generate_single_phase_content(
                 phase, theme, semaphore, generate_text
             )
-            process_result(pid, flavor, context, error)
+            process_result(pid, flavor, context, verse, error)
     else:
         # Parallel
         with ThreadPoolExecutor(max_workers=parallel) as executor:
@@ -1082,8 +1122,8 @@ def phase_generate(series_dir: Path, parallel: int = 1) -> int:
 
             for future in as_completed(futures):
                 try:
-                    pid, flavor, context, error = future.result()
-                    process_result(pid, flavor, context, error)
+                    pid, flavor, context, verse, error = future.result()
+                    process_result(pid, flavor, context, verse, error)
                 except Exception as e:
                     pid = futures[future]
                     _log(f"[{pid:02d}] Unexpected error: {e}")
@@ -1118,6 +1158,7 @@ def _render_single_lot(
         **phase,
         "flavor": phase_content.get("flavor", ""),
         "context": phase_content.get("context", ""),
+        "verse": phase_content.get("verse", ""),
         "series": series_dir.name,
         "theme": theme,
     }
@@ -1184,6 +1225,7 @@ def _render_single_lot_with_review(
         **phase,
         "flavor": phase_content.get("flavor", ""),
         "context": phase_content.get("context", ""),
+        "verse": phase_content.get("verse", ""),
         "series": series_dir.name,
         "theme": theme,
     }

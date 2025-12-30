@@ -45,6 +45,7 @@ class CardDescription:
     ability_text: str
     ot_verse_visible: bool
     nt_verse_visible: bool
+    verse_label_style: str  # "centered_above", "side_boxes", "other"
     greek_text_visible: bool
     hebrew_text_visible: bool
     trivia_bullet_count: int
@@ -53,9 +54,13 @@ class CardDescription:
     art_description: str
     text_inside_art: bool
     frame_intact: bool
+    frame_corner_style: str  # "chamfered", "ornate_scrollwork", "rounded", "square", "other"
     all_panels_visible: bool
     missing_panels: list[str]
     garbled_text_locations: list[str]
+    # Style match (CRITICAL for quality control)
+    style_matches_reference: bool = True  # False = automatic fail
+    style_mismatch_reason: str = ""
     raw_response: str = ""
 
 
@@ -142,8 +147,137 @@ Return ONLY JSON in this exact format:
   "frame_intact": true|false,
   "all_panels_visible": true|false,
   "missing_panels": ["panel1", "panel2"],
-  "garbled_text_locations": ["location1", "location2"]
+  "garbled_text_locations": ["location1", "location2"],
+  "style_matches_reference": true|false,
+  "style_mismatch_reason": "<if false, explain differences from references>"
 }
+```
+"""
+
+# Prompt to analyze style reference images and build a rubric
+DESCRIBE_STYLE_REFS_PROMPT = """You are provided {ref_count} Hypertext trading card reference images:
+{image_labels}
+
+Examine each image and describe the EXACT visual style that defines a correctly rendered Hypertext card.
+
+Describe in detail:
+
+1. FRAME/BORDER: What is the border style? (straight edges, rounded corners, ornate decorations?) What colors?
+
+2. HEADER AREA: How is the card number formatted? Where is it positioned? What about the card type label?
+
+3. TITLE SECTION: How is the main word/title styled? Font style? Size? Position?
+
+4. RARITY DISPLAY: What shape is the rarity icon? (diamond, circle, square?) What position?
+
+5. ART PANEL: What style is the artwork? How is it framed? Any decorative borders?
+
+6. STAT PIPS: What SHAPE are the stat pips? (circles, diamonds, squares?) What COLOR are filled pips?
+
+7. VERSE SECTIONS: How are OT and NT verse sections styled? Headers? Text alignment? Background colors?
+
+8. TRIVIA SECTION: How are the bullet points formatted? What styling?
+
+9. GREEK/HEBREW STRIP: Where is it positioned? How is it styled?
+
+10. FOOTER: What appears at the bottom? What styling?
+
+11. COLOR SCHEME: What are the primary colors used throughout? Navy? Gold? Parchment?
+
+Be EXTREMELY SPECIFIC about visual details - this will be used to grade other cards for style consistency.
+Any card that differs in these structural/style elements is a STYLE MISMATCH and must FAIL."""
+
+
+# Stage 1b: Description prompt WITH style reference comparison
+# Used when style reference images are provided for comparison
+DESCRIBE_WITH_REFS_PROMPT = """You are a STRICT quality control inspector. Your job is to REJECT cards that don't match the reference style.
+
+## STYLE RUBRIC (the AUTHORITATIVE reference for what cards MUST look like):
+{style_rubric}
+
+## IMAGES PROVIDED
+{image_labels}
+
+## YOUR TASK: FIND STYLE DIFFERENCES
+
+Compare the TEST CARD (image [{test_idx}]) against the REFERENCE images. Look for ANY visual differences.
+
+### CRITICAL STYLE CHECKS - IN ORDER OF IMPORTANCE:
+
+**#1 BORDER/FRAME STYLE (MOST IMPORTANT):**
+- CORRECT style has: SIMPLE STRAIGHT borders with CHAMFERED (diagonally cut) corners
+- WRONG styles include: ornate/decorative borders, scrollwork, curved flourishes, rounded corners
+- If the border looks "fancy" or "decorative" compared to references = AUTOMATIC FAIL
+- The references have PLAIN, SIMPLE, STRAIGHT-EDGED frames
+
+**#2 VERSE SECTION LAYOUT:**
+- CORRECT: "OT VERSE" and "NT VERSE" text is CENTERED ABOVE the verse content
+- WRONG: Labels in dark boxes/pills on the LEFT SIDE of the text
+- If verse labels are positioned differently than references = STYLE MISMATCH
+
+**#3 STAT PIP SHAPE:** Must be CIRCLES (not diamonds, squares, stars)
+
+**#4 OVERALL AESTHETIC:** Does the card look like it belongs with the references, or does it look like a DIFFERENT card game entirely?
+
+### HOW TO DECIDE:
+1. Look at the BORDER of each reference card - note how simple/plain it is
+2. Look at the BORDER of the test card - is it equally simple, or more decorative?
+3. If the test card has MORE decoration, flourishes, or ornate elements = FAIL
+4. When in doubt, REJECT the card (false negatives are better than false positives)
+
+## WHAT TO REPORT
+
+Describe the TEST CARD:
+1. CARD NUMBER: Exact format
+2. WORD/TITLE: Main word
+3. GLOSS: Subtitle
+4. CARD TYPE: Type label
+5. RARITY: Text and icon
+6. STAT PIPS: Shape, color, counts
+7. ABILITY TEXT: Full text
+8. VERSE LAYOUT: Are labels CENTERED ABOVE text or IN SIDE BOXES?
+9. GREEK/HEBREW: Visible?
+10. TRIVIA: Bullet count
+11. BRACKETS: Any [ ] visible?
+12. ART: Brief description
+13. FRAME/BORDER: Is it SIMPLE/STRAIGHT or ORNATE/DECORATIVE? Describe the corners.
+14. STYLE VERDICT: PASS only if it matches references. FAIL if ANY structural difference.
+
+Return ONLY JSON in this exact format:
+```json
+{{
+  "card_number": "<exact text shown>",
+  "card_number_format": "<just the number format: '#003' or '[#003]' or '003'>",
+  "word": "<main word>",
+  "gloss": "<subtitle text>",
+  "card_type": "<type shown>",
+  "rarity_text": "<rarity word>",
+  "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
+  "rarity_icon_color": "<color name>",
+  "stat_pip_shape": "<circle|diamond|square|star|other>",
+  "stat_pip_fill_color": "<navy|dark blue|gold|yellow|blue|other>",
+  "stat_lore": <number of filled pips 0-5>,
+  "stat_context": <number of filled pips 0-5>,
+  "stat_complexity": <number of filled pips 0-5>,
+  "ability_text": "<ability text>",
+  "ot_verse_visible": true|false,
+  "nt_verse_visible": true|false,
+  "verse_label_style": "<centered_above|side_boxes|other>",
+  "greek_text_visible": true|false,
+  "hebrew_text_visible": true|false,
+  "trivia_bullet_count": <number>,
+  "has_brackets": true|false,
+  "bracket_locations": ["location1", "location2"],
+  "art_description": "<brief description>",
+  "text_inside_art": true|false,
+  "frame_intact": true|false,
+  "frame_corner_style": "<chamfered|ornate_scrollwork|rounded|square|other>",
+  "all_panels_visible": true|false,
+  "missing_panels": ["panel1", "panel2"],
+  "garbled_text_locations": ["location1", "location2"],
+  "style_matches_reference": true|false,
+  "style_mismatch_reason": "<if false, explain ALL structural differences from references>"
+}}
 ```
 """
 
@@ -318,11 +452,21 @@ def _call_gemini(
     prompt: str,
     *,
     image_path: Path | None = None,
+    image_paths: list[Path] | None = None,
     model: str = "gemini-3-pro-preview",
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
 ) -> str:
-    """Make a Gemini API call using the SDK, optionally with an image."""
+    """Make a Gemini API call using the SDK, optionally with image(s).
+
+    Args:
+        prompt: Text prompt to send
+        image_path: Single image path (for backwards compatibility)
+        image_paths: List of image paths (for multi-image comparison)
+        model: Model to use
+        max_attempts: Number of retry attempts
+        base_delay_s: Base delay for exponential backoff
+    """
     if genai is None:
         raise RuntimeError("google-genai package required. Install with: pip install google-genai")
 
@@ -333,7 +477,11 @@ def _call_gemini(
     client = genai.Client(api_key=api_key)
 
     contents = []
-    if image_path:
+    # Handle multiple images first (for reference comparison)
+    if image_paths:
+        for img_path in image_paths:
+            contents.append(_image_part_from_path(img_path))
+    elif image_path:
         contents.append(_image_part_from_path(image_path))
     contents.append(types.Part.from_text(text=prompt))
 
@@ -374,24 +522,149 @@ def _call_gemini(
     raise RuntimeError(f"API call failed after {max_attempts} attempts: {last_error}")
 
 
+def describe_card_style_references(
+    style_refs: list[str | Path],
+    *,
+    model: str | None = None,
+) -> str:
+    """Analyze style reference images to build a grading rubric.
+
+    Like lot grading - first describes what correct cards look like,
+    then uses this description when grading test cards.
+
+    Args:
+        style_refs: List of reference image paths
+        model: Gemini model to use
+
+    Returns:
+        Text description of what a correct Hypertext card looks like
+    """
+    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+
+    if not style_refs:
+        return "No style references provided."
+
+    # Build image paths and labels
+    image_paths = []
+    labels = []
+    for i, ref_path in enumerate(style_refs, 1):
+        ref_p = Path(ref_path)
+        if ref_p.exists():
+            image_paths.append(ref_p)
+            if "template" in str(ref_p).lower():
+                labels.append(f"[{i}] TEMPLATE: {ref_p.name}")
+            else:
+                labels.append(f"[{i}] REFERENCE CARD: {ref_p.name}")
+
+    if not image_paths:
+        return "No valid style reference images found."
+
+    prompt = DESCRIBE_STYLE_REFS_PROMPT.format(
+        ref_count=len(image_paths),
+        image_labels="\n".join(labels),
+    )
+
+    try:
+        response_text = _call_gemini(
+            prompt,
+            image_paths=image_paths,
+            model=model,
+        )
+        return response_text
+    except Exception as e:
+        return f"Error analyzing style references: {e}"
+
+
 def describe_card(
     image_path: Path,
     *,
+    style_refs: list[str | Path] | None = None,
+    style_rubric: str | None = None,
     model: str | None = None,
 ) -> CardDescription:
     """Stage 1: Have the LLM describe what it sees on the card.
 
     This is a pure observation step - no judgment or scoring.
+    When style_refs are provided, also checks if card matches reference style.
+
+    Args:
+        image_path: Path to the card image to describe
+        style_refs: Optional list of reference image paths for style comparison
+        style_rubric: Optional pre-generated description of correct style (from describe_card_style_references)
+        model: Gemini model to use
     """
     model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
 
-    response_text = _call_gemini(
-        DESCRIBE_PROMPT,
-        image_path=image_path,
-        model=model,
-    )
+    if style_refs:
+        # Build image list: refs first, then test card
+        image_paths = []
+        labels = []
+
+        for i, ref_path in enumerate(style_refs, 1):
+            ref_p = Path(ref_path)
+            if ref_p.exists():
+                image_paths.append(ref_p)
+                labels.append(f"[{i}] REFERENCE: {ref_p.name}")
+
+        # Add the test card
+        test_idx = len(image_paths) + 1
+        image_paths.append(Path(image_path))
+        labels.append(f"[{test_idx}] TEST CARD: {Path(image_path).name}")
+
+        # Use the reference comparison prompt with style rubric
+        ref_count = len(style_refs)
+        rubric_text = style_rubric or "No pre-analyzed rubric available. Compare visually to reference images."
+        prompt = DESCRIBE_WITH_REFS_PROMPT.format(
+            style_rubric=rubric_text,
+            image_labels="\n".join(labels),
+            ref_count=ref_count if ref_count > 0 else 1,
+            test_idx=test_idx,
+        )
+
+        response_text = _call_gemini(
+            prompt,
+            image_paths=image_paths,
+            model=model,
+        )
+    else:
+        # No refs, use simple describe prompt
+        response_text = _call_gemini(
+            DESCRIBE_PROMPT,
+            image_path=image_path,
+            model=model,
+        )
 
     data = _parse_json_response(response_text)
+
+    # Check for automatic style mismatch based on specific fields
+    verse_style = data.get("verse_label_style", "centered_above")
+    frame_corners = data.get("frame_corner_style", "chamfered").lower()
+
+    # If verse labels are in side boxes, that's an automatic style mismatch
+    explicit_mismatch = data.get("style_matches_reference", True)
+    auto_mismatch_reasons = []
+
+    if verse_style == "side_boxes":
+        auto_mismatch_reasons.append("Verse labels are in side boxes instead of centered above")
+        explicit_mismatch = False
+
+    # Any non-chamfered frame style is a mismatch
+    bad_frame_styles = ["ornate", "scrollwork", "ornate_scrollwork", "decorative", "rounded", "curved", "fancy", "flourish", "other"]
+    if any(bad in frame_corners for bad in bad_frame_styles):
+        auto_mismatch_reasons.append(f"Frame style is '{frame_corners}' - must be simple/chamfered")
+        explicit_mismatch = False
+    elif frame_corners not in ["chamfered", "simple", "straight", "diagonal"]:
+        # Unknown style - flag it
+        auto_mismatch_reasons.append(f"Frame style '{frame_corners}' doesn't match reference (expected chamfered)")
+        explicit_mismatch = False
+
+    # Combine mismatch reasons
+    mismatch_reason = data.get("style_mismatch_reason", "")
+    if auto_mismatch_reasons:
+        if mismatch_reason:
+            mismatch_reason = mismatch_reason + "; " + "; ".join(auto_mismatch_reasons)
+        else:
+            mismatch_reason = "; ".join(auto_mismatch_reasons)
 
     return CardDescription(
         card_number=data.get("card_number", ""),
@@ -410,6 +683,7 @@ def describe_card(
         ability_text=data.get("ability_text", ""),
         ot_verse_visible=data.get("ot_verse_visible", False),
         nt_verse_visible=data.get("nt_verse_visible", False),
+        verse_label_style=verse_style,
         greek_text_visible=data.get("greek_text_visible", False),
         hebrew_text_visible=data.get("hebrew_text_visible", False),
         trivia_bullet_count=data.get("trivia_bullet_count", 0),
@@ -418,9 +692,12 @@ def describe_card(
         art_description=data.get("art_description", ""),
         text_inside_art=data.get("text_inside_art", False),
         frame_intact=data.get("frame_intact", True),
+        frame_corner_style=frame_corners,
         all_panels_visible=data.get("all_panels_visible", True),
         missing_panels=data.get("missing_panels", []),
         garbled_text_locations=data.get("garbled_text_locations", []),
+        style_matches_reference=explicit_mismatch,
+        style_mismatch_reason=mismatch_reason,
         raw_response=response_text,
     )
 

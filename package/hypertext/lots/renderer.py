@@ -181,6 +181,14 @@ def _build_lot_prompt(card_data: dict[str, Any], style_refs: list[str] | None = 
     flavor = card_data.get("flavor", "")
     context = card_data.get("context", "")
     series = card_data.get("series", "2026-Q1")
+    verse = card_data.get("verse", "")  # e.g., "(Genesis 11:4)"
+
+    # Letter rewards: 5-6 card lots give 1 Letter, 7-card lots give 2 Letters
+    letters = 2 if cards >= 7 else 1
+    letters_display = f"{letters} Letter" if letters == 1 else f"{letters} Letters"
+
+    # Verse display for title (if provided)
+    verse_display = f" {verse}" if verse else ""
 
     # Build composition WITHOUT brackets (brackets are wrong)
     comp_parts = []
@@ -209,11 +217,13 @@ Generate a new LOT card using the structural layout from the template image.
 Apply the visual style, coloring, shading, and artistic finish from the example cards.
 
 CARD CONTENT:
-- Title: "{name}"
+- Title: "{name}"{verse_display}
 - Subtitle (italic): "{flavor}"
 - Top left badge: "LOT"
 - Top right: "CARD COUNT" label (small) above "{cards}-CARD" value (larger)
-- Reward banner: "REWARD: {points} Points"
+- Reward section (two lines):
+  - "As Board Phase: {points} Points"
+  - "As Personal Lot: {letters_display}"
 - Wreath bonus: "Wreath Bonus: +2 Points (First to record)"
 - Composition: {comp_display}
 - Context header: "CONTEXT"

@@ -1,0 +1,84 @@
+CARD STYLE RUBRIC
+Generated from style reference images
+============================================================
+
+Based on the provided template and reference cards, here is the exact visual style guide for a Hypertext trading card:
+
+**1. FRAME/BORDER**
+*   **Style:** The card features a double-line border. The outer edge is a thin dark navy line. Inside that is a thicker parchment margin, followed by an inner border consisting of a thin dark line and a decorative gold/bronze inner stroke.
+*   **Corners:** The main card frame has standard 90-degree corners, but the internal content boxes (Art, Ability, Verses, Languages, Trivia) all feature **chamfered (notched/cut)** corners, giving them an octagonal appearance rather than a perfect rectangle.
+
+**2. HEADER AREA**
+*   **Left Side:** Contains the Card Number (format `#XXX`) followed by the Part of Speech (e.g., VERB, NOUN, ADJECTIVE). The Part of Speech is enclosed in a **dark navy pill-shaped (rounded lozenge)** container with white text.
+*   **Right Side:** Contains the Rarity Label (e.g., COMMON) and a Rarity Icon. These are enclosed in a **dark navy pill-shaped** container with white text.
+*   **Position:** These elements sit at the very top of the parchment background, just below the top border.
+
+**3. TITLE SECTION**
+*   **Main Title:** Centered, Large, All-Caps, **Serif font** (Black/Dark Navy).
+*   **Definition:** Located immediately below the title. Centered, **Italicized Serif font**, Sentence case.
+*   **Background:** Sits directly on the main parchment texture.
+
+**4. RARITY DISPLAY**
+*   **Shape:** A **Diamond** icon.
+*   **Position:** Inside the right-side header pill, to the right of the rarity text (e.g., "COMMON [Diamond]").
+*   **Color:** White icon against the dark navy background of the header pill.
+
+**5. ART PANEL**
+*   **Frame:** A rectangular box with **chamfered (notched) corners**. It has a double border: a thin black outer line and an inner gold/bronze bevel effect.
+*   **Style:** Realistic digital painting or high-quality photobash.
+*   **Aspect Ratio:** Wide landscape format (approx 2:1 width-to-height).
+
+**6. STAT PIPS**
+*   **Shape:** **Circles**.
+*   **Categories:** Three distinct categories labeled LORE, CONTEXT, COMPLEXITY in small-caps serif font.
+*   **Count:** 5 pips per category.
+*   **Style:**
+    *   **Empty Pips:** Gold/Brown outline with parchment interior.
+    *   **Filled Pips:** Solid **Dark Navy/Black**.
+
+**7. VERSE SECTIONS**
+*   **Structure:** Two distinct stacked boxes (OT VERSE and NT VERSE).
+*   **Shape:** Rectangular with **chamfered corners**.
+*   **Headers:** "OT VERSE" and "NT VERSE" are centered in small-caps bold serif font at the top of their respective boxes.
+*   **Text:** Centered Serif font. Format is typically "[Citation] — [Text]".
+*   **Separation:** The boxes are separated by a thin horizontal gap.
+
+**8. TRIVIA SECTION**
+*   **Location:** The bottom-most content box.
+*   **Header:** The word "TRIVIA" is centered at the top of the box (overlapping the border slightly or sitting just inside).
+*   **Formatting:** A list of 3 bullet points.
+*   **Bullets:** Solid black circular dots.
+*   **Text:** Serif font, left-aligned relative to the bullet indentation.
+
+**9. GREEK/HEBREW STRIP**
+*   **Position:** Between the Verse sections and the Trivia section.
+*   **Structure:** A single wide box with chamfered corners, split vertically down the middle by a dark line.
+*   **Content:**
+    *   One side contains **HEBREW/ARAMAIC** (or HEB/ARAM).
+    *   The other side contains **GREEK**.
+*   **Internal Styling:**
+    *   Header: Small-caps serif (e.g., "GREEK").
+    *   Word: Large original script (Greek or Hebrew characters).
+    *   Transliteration: Italicized serif below the script.
+    *   Citations: Small text listing references (e.g., "NT Refs: Rom 6:4").
+
+**10. FOOTER**
+*   **Background:** A solid **Dark Navy** bar spanning the full width of the card bottom.
+*   **Text:** "SERIES: [Year]-[Quarter] [Name]" (e.g., SERIES: 2026-Q1 Babel).
+*   **Font:** White, Serif, Small-caps.
+*   **Alignment:** Text is aligned to the left. A small logo/icon appears in the bottom right corner.
+
+**11. COLOR SCHEME**
+*   **Primary Background:** **Parchment/Beige** texture (simulating old paper).
+*   **Primary Text/Lines:** **Dark Navy** (almost black).
+*   **Accents:** **Gold/Bronze** (used for stat pip outlines and inner art borders).
+*   **Headers/Footers:** **Dark Navy** background with **White** text.
+
+---
+
+CRITICAL STYLE CHECKS (any mismatch = AUTOMATIC FAIL):
+
+1. **BORDER STYLE**: Must be SIMPLE with chamfered internal boxes - NOT ornate/decorative/scrollwork
+2. **VERSE HEADERS**: "OT VERSE" and "NT VERSE" must be CENTERED ABOVE the verse text - NOT in side boxes
+3. **STAT PIPS**: Must be CIRCLES - NOT diamonds, squares, or other shapes
+4. **COLOR SCHEME**: Navy/gold/parchment - NOT other color schemes

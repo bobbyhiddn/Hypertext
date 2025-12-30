@@ -79,7 +79,7 @@ def resize_to_safe_zone(
     image: Image.Image,
     fill_color: tuple = (30, 30, 30),
 ) -> Image.Image:
-    """Resize image to fit safe zone, maintaining aspect ratio.
+    """Resize image to fit safe zone, maintaining aspect ratio (letterbox).
 
     Args:
         image: Source image
@@ -108,48 +108,115 @@ def resize_to_safe_zone(
     return result
 
 
+def crop_to_fill(
+    image: Image.Image,
+    target_width: int,
+    target_height: int,
+) -> Image.Image:
+    """Scale and center-crop image to fill target dimensions exactly.
+
+    Scales up to cover the entire target area, then crops excess.
+    No letterboxing - image fills the entire space.
+
+    Args:
+        image: Source image
+        target_width: Target width in pixels
+        target_height: Target height in pixels
+
+    Returns:
+        Image cropped to exact target dimensions
+    """
+    w, h = image.size
+
+    # Calculate scale to FILL (cover) the target - use max, not min
+    scale_w = target_width / w
+    scale_h = target_height / h
+    scale = max(scale_w, scale_h)
+
+    # Resize to cover
+    new_w = int(w * scale)
+    new_h = int(h * scale)
+    resized = image.resize((new_w, new_h), Image.Resampling.LANCZOS)
+
+    # Center crop to target dimensions
+    left = (new_w - target_width) // 2
+    top = (new_h - target_height) // 2
+    right = left + target_width
+    bottom = top + target_height
+
+    return resized.crop((left, top, right, bottom))
+
+
 def prepare_for_print(
     image: Image.Image,
-    fill_color: tuple = (30, 30, 30),
+    mode: str = "resize",
+    border: bool = True,
+    border_percent: float = 0.10,
+    border_color: tuple = (0, 0, 0),
 ) -> Image.Image:
-    """Prepare image for TGC print (resize + add bleed).
+    """Prepare image for TGC print.
 
     Args:
         image: Source card image (any size)
-        fill_color: Background color for letterboxing
+        mode: "resize" (scale to exact dimensions),
+              "fill" (crop to fill), or "fit" (letterbox)
+        border: If True, shrink image and add border for cut lines
+        border_percent: Border size as percentage (0.10 = 10%)
+        border_color: RGB tuple for border color (default black)
 
     Returns:
-        Print-ready image (825x1125 with bleed)
+        Print-ready image (825x1125)
     """
     # Convert to RGB if needed
     if image.mode != "RGB":
         image = image.convert("RGB")
 
-    # Resize to safe zone
-    safe_zone = resize_to_safe_zone(image, fill_color)
+    if mode == "resize":
+        # Direct resize to exact TGC dimensions
+        resized = image.resize((PRINT_WIDTH, PRINT_HEIGHT), Image.Resampling.LANCZOS)
+    elif mode == "fill":
+        # Crop to fill - scales up and center-crops, no black bars
+        resized = crop_to_fill(image, PRINT_WIDTH, PRINT_HEIGHT)
+    else:
+        # Fit with letterboxing
+        safe_zone = resize_to_safe_zone(image)
+        resized = add_bleed(safe_zone)
 
-    # Add bleed margins
-    with_bleed = add_bleed(safe_zone)
+    # Add border if requested
+    if border:
+        # Calculate inner image size (shrunk by border_percent)
+        inner_width = int(PRINT_WIDTH * (1 - border_percent))
+        inner_height = int(PRINT_HEIGHT * (1 - border_percent))
 
-    return with_bleed
+        # Shrink the image
+        shrunk = resized.resize((inner_width, inner_height), Image.Resampling.LANCZOS)
+
+        # Create black canvas and center the shrunk image
+        result = Image.new("RGB", (PRINT_WIDTH, PRINT_HEIGHT), border_color)
+        x = (PRINT_WIDTH - inner_width) // 2
+        y = (PRINT_HEIGHT - inner_height) // 2
+        result.paste(shrunk, (x, y))
+        return result
+
+    return resized
 
 
 def process_card_file(
     input_path: Path,
     output_path: Path,
-    fill_color: tuple = (30, 30, 30),
+    mode: str = "fill",
 ) -> None:
     """Process a card image file for print.
 
     Args:
         input_path: Source image path
         output_path: Destination path for print-ready image
-        fill_color: Background color for letterboxing
+        mode: "fill" (crop to fill) or "fit" (letterbox)
     """
     logger.info(f"Processing {input_path.name} for print...")
 
     image = Image.open(input_path)
-    result = prepare_for_print(image, fill_color)
+    result = prepare_for_print(image, mode)
 
     # Ensure output directory exists
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -163,13 +230,13 @@ def process_card_file(
 def process_card_back(
     input_path: Path,
     output_path: Path,
-    fill_color: tuple = (30, 30, 30),
+    mode: str = "fill",
 ) -> None:
     """Process card back image for print (same as card face processing).
 
     Args:
         input_path: Source card back image
         output_path: Destination path
-        fill_color: Background color for letterboxing
+        mode: "fill" (crop to fill) or "fit" (letterbox)
     """
-    process_card_file(input_path, output_path, fill_color)
+    process_card_file(input_path, output_path, mode)
