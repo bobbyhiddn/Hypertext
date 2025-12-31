@@ -1,0 +1,93 @@
+number: '011'
+word: MOSES
+gloss: The great prophet, lawgiver, and deliverer of Israel who led the Exodus and
+  received the Torah.
+card_type: NAME
+rarity: RARE
+art_prompt: A rugged, elderly figure viewed from behind, standing on a rocky cliff
+  edge holding a wooden staff high; before him a massive body of dark water is violently
+  splitting apart to reveal a dry path, illuminated by a pillar of fire in the distance,
+  cinematic lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Reveal the top 5 cards of the Tower. An opponent splits them into two piles.
+  Add one pile to your hand and discard the other.
+ot_verse:
+  ref: Deuteronomy 34:10
+  snippet: Since then, no prophet has risen in Israel like Moses, whom the Lord knew
+    face to face.
+nt_verse:
+  ref: John 1:17
+  snippet: For the law was given through Moses; grace and truth came through Jesus
+    Christ.
+greek:
+  text: Μωϋσῆς
+  translit: Mōusēs
+hebrew:
+  text: מֹשֶׁה
+  translit: Mosheh
+ot_refs: Exodus 3 • Exodus 14 • Exodus 20 • Numbers 12 • Deuteronomy 34
+nt_refs: Matthew 17 • Acts 7 • Hebrews 11 • Jude 9 • Revelation 15
+trivia:
+- His name means 'drawn out' in Hebrew, as he was pulled from the Nile by Pharaoh's
+  daughter.
+- Traditionally credited with writing the first five books of the Bible, known as
+  the Pentateuch.
+- 'Lived exactly 120 years: 40 in Egypt, 40 in Midian, and 40 leading Israel in the
+  wilderness.'
+- The only person in the Old Testament said to speak with God 'face to face' as a
+  friend.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKqRq7Jvu-t9S6zVhttKz-PfPr6k-JskfSI5z-Bus2brZivoPu354X3Ip38-ALQGX164WA6IDofqzuyK1PlwoeMnbmSuIaU8ur9e5xW5hAc63j8MQ3ntYJLM2ohnNj69YkzmePEhiR2kVRM7KP8I1hIw==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuCwAm8CEq03DPiWMB5KUpB8ZV8HEQbIuWuO_SC5VivsjRYXFMiF7zfsOGJ2vCrOhUV0JFt-lLXLhunKj6o8E7RbHDZN-ZMoOXCWDGCaJQE2HhsBrzT-ij692N-20t3HongHGGfLErXMUgntJUUYeZiSPj6fVjV9XBOVjMinhkfaPuy1PuJRcRgOXfqGAjbdRDipAiDO3_yACfqdnfxLoh7O87c43XjZMOnqLdJc53VetlW8_5dvDNllyQuDNDUhgc
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmdmQTNOedwbRHTQgEqd2DBBtnISxQ5DzOTeKH07Wl3PIFOzK1EC51z0fdWrLIdMIZmBP8GEllO3TdHMPyGRVEYXZISj-T92yEUjVpt3_AfkihiaqwaDcoQ4Lmxb1H2Y13Vu1LwC62e_Arfw==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTGfuEnsOv7L8Wzcy_TpyWoKMks-mlcZwwYku10wbUUAwbZu4qXu9EbMFoj_8Fv2MeWq5qFoUNdu6BLrNBqcj2QjUeWXAOdYUZoRhBDDRtYnb26dDq-b95Fib31GIRtjaVOk3KUA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwCUVrwBIjPa2CuNmw7Mq_SZs4jzbR26aLiu9pt1C3syviMuIFH-KnZYJfZmCGGpaULCOGZNqI2d3cmoBkxiWKumFKzZwJP-glcQawcDyoTiUnfi3dVhZEMcpROcUHiRWaIh4rJURUhfKuJqk=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSILkL2tWmBnwGhfz3YoXKqYXuOx4fn0rg5H94YGQpBHi-YWZ2r0kaZqreC-_joDMvRo5UpnBXumuTLua-fiGE7v_Rn_qBnggSHMWkaTpjHJUvh8I6xwvj2lz4EHCtPGa5MPZU1qamvW4Lhm77mSE0deXi6_lehMaIpMYJRMBiCjw=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKAAKoFNPk8cV1ZcTiqEOXpw7JxHuottut8561A3_8UZPbGo9pxJ7smvjWsRBUYiIUovhqhrzKrxQne-JdbMr-wLbTMiiXcdSKSJnVRuhJshk_RhXBLrhQWOdRRlzfsKI=
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUtM1gAcGagVxjpPP9NlgblCEcJYc9-cQbda1n93SpNoXv1Ge1O9kmx5sM0JoPzfEETctsN2nSzD_KoPwTE_9XaJziOYG_nYYnKUUE8533EO-CSk6iznJW1_K0ly5Gk0Lmi7jl0YN5aUzfNQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBFHTK6QApz_KtvIrS5-YUCITp3bu4AiRyhTG3q89Fec5cZbArGaVNdXstEF4xorwMin6q-3_z7qMRUtg7oBzL1M5-zdvSz17AB3P-n_iOViCcdeokQ8A8FaFRM6pP
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwGzibCDKY2ieO6tPHgeHW-jz-ARHEfKTbkVptvdDQ8wYoR7dVh8FRFOR9vg520h6_r6uiiDNZEZ7o6tI6gKwdzfepAXVGQJHkMifZjcMUHUge8WISfxkbJ2eNX_CuRnY2PUA2PAM8f0TsMTRbpnabjA==
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrZYyhrNnCXldH9zVS5-wYRWv61X-hEy8AydB94PGeIvSpBBrSsZ_NSb_kP0BGAoOONqlHjVGpkxd1x2ChI2kH_JQ6-lHiZTTdqhxuENhTQ7cKdGwWe8OPpiV_Hv6c9g==
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESQyrSJTg47mIzFJ3KSW9uGlaqQ9-eplx4jV9JnIzJBUqHMRbyCmIYQAEm6tIkESdCrOyGgqgpUMJZ4XfuPSTg43M9t1C6T0Do-rDd0B8rKEpvUal4ZtkLqKWLSI6k
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5UU1Dw2zPUzZG585H3sg80LNrm5LUwdVz3PeExWaVUIlrlR-7RXt2MQd0vxXDfvXafxp0yETsaiNCaxs217NnIgFFbnLGwgp_HHtoxT62tWUVuLJVoQipVTQ-vdDAnrJk4-b-nnPJM-rWTWMv
+  title: biblestudytools.com
+search_queries:
+- ''
+- Moses Greek spelling
+- Moses Hebrew meaning
+- Moses trivia Bible
+- Moses verse Deuteronomy 34:10
+- Moses verse John 1:17
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#011'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: yellow
+review_notes: Increase Context stat pips from 4 to 5; Increase Complexity stat pips
+  from 3.5 to 4
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.
