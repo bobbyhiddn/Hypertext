@@ -158,11 +158,49 @@ FORMATTING_RUBRIC = """
 _THIS_DIR = Path(__file__).resolve().parent
 DEFAULT_STYLE_TEMPLATE = _THIS_DIR.parent / "templates" / "card_template.png"
 DEFAULT_STYLE_RUBRIC = _THIS_DIR.parent / "templates" / "card_style_rubric.txt"
+
+# Versioned template directory (repo-level, not package)
+_REPO_ROOT = _THIS_DIR.parent.parent.parent
+_CARD_TEMPLATE_DIR = _REPO_ROOT / "templates" / "card"
+
 RARITY_ORDER = ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"]
 RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}  # percentages
 
 TYPE_ORDER = ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"]
 TYPE_TARGETS = {"NOUN": 16, "VERB": 20, "ADJECTIVE": 20, "NAME": 16, "TITLE": 18}  # counts for 90-card set
+
+
+def _get_subtype_template(subtype: str) -> Path | None:
+    """Get the template path for a specific subtype (rarity or type).
+
+    Checks versioned template folders for matching subtype templates.
+    Subtypes: common, uncommon, rare, glorious, noun, name, adjective, verb, title
+
+    Returns:
+        Path to template image if exists, None otherwise.
+    """
+    if not _CARD_TEMPLATE_DIR.exists():
+        return None
+
+    # Get current version from meta.yml
+    meta_path = _CARD_TEMPLATE_DIR / "meta.yml"
+    version = 1
+    if meta_path.exists():
+        try:
+            import yaml
+            with open(meta_path, "r", encoding="utf-8") as f:
+                meta = yaml.safe_load(f) or {}
+            version = int(meta.get("version", 1))
+        except (ValueError, TypeError):
+            version = 1
+
+    # Check for subtype template in versioned folder
+    subtype_lower = subtype.lower()
+    template_path = _CARD_TEMPLATE_DIR / f"v{version:03d}" / subtype_lower / "template_1024x1536.png"
+
+    if template_path.exists():
+        return template_path
+    return None
 
 
 def _load_series_stats(series_dir: Path) -> dict:
@@ -682,9 +720,21 @@ def _build_style_refs(
     if fix_mode and current_card_path and current_card_path.exists():
         refs.append(str(current_card_path))
 
-    # Template comes next
+    # Base template comes next
     if DEFAULT_STYLE_TEMPLATE.exists():
         refs.append(str(DEFAULT_STYLE_TEMPLATE))
+
+    # Add rarity-specific template if available
+    if target_rarity:
+        rarity_template = _get_subtype_template(target_rarity)
+        if rarity_template:
+            refs.append(str(rarity_template))
+
+    # Add type-specific template if available
+    if target_type:
+        type_template = _get_subtype_template(target_type)
+        if type_template:
+            refs.append(str(type_template))
 
     # Find matching cards (same rarity+type)
     exclude_dir = current_card_path.parent.parent if current_card_path else None

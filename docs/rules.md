@@ -2,7 +2,15 @@
 
 ## Overview
 
-Hypertext is a word-study trading card game for 2–8 players. Collect cards by type to record sets matching phase requirements. Race to empty your hand while scoring points through strategic records. The player with the most points after 12 chapters wins.
+Hypertext is a word-study trading card game for 2–8 players. Collect cards by type to record sets matching phase requirements. Race to empty your hand while scoring points through strategic records. The player with the most points after all chapters wins.
+
+### Scaled Rounds by Player Count
+
+| Players | Chapters | Special Rules | Chapter Flavor | Matthias Flavor |
+|---------|----------|---------------|----------------|-----------------|
+| 2 | 3 | No redeeming | *"On the third day He rose"* | *"Thereafter, the lot fell on Matthias"* |
+| 3–4 | 6 | — | *"Two were proposed, that twelve be restored"* | *"The lot was cast between them"* |
+| 5+ | 12 | — | *"Twelve apostles; twelve gates"* | *"Matthias numbered with them, alongside Paul"* |
 
 ---
 
@@ -240,23 +248,24 @@ When a player discards at End, any other player may call **"Redeem!"** to take t
 
 When a player empties their hand:
 
-1. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
-2. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
-3. **Convert Letters:** Each Letter = 4 points. Add to score.
-4. **Hand penalty:** -1 point per card remaining in hand.
-5. **Reset:**
-   - All Letters reset to 0.
-   - Collect all Lot cards, reshuffle into phase deck.
-   - Deal new Lot to each player.
-   - Flip new Board Phase (no repeats; redraw if duplicate).
-   - Reshuffle Sheol into Tower if needed.
-   - Deal 7 new cards to each player.
+1. **Award Empty Wreath**: Give the empty wreath to the accomplishing player.
+2. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
+3. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
+4. **Reset Letters:** After scoring letters (3 points each), reset all letters.
+5. **Hand penalty:** -1 point per card remaining in hand.
+6. **Reset:**
+    - All Letters reset to 0.
+    - Collect all Lot cards, reshuffle into phase deck.
+    - Deal new Lot to each player.
+    - Flip new Chapter Lot (no repeats; redraw if duplicate; only relevant if lots have reshuffled).
+    - Reshuffle Sheol into Tower. Flip top card of Tower into Sheol.
+    - Deal 7 new cards to each player.
 
 ---
 
 ## Game End
 
-The game ends after **12 chapters**.
+The game ends after completing the number of chapters for your player count (see Scaled Rounds table in Overview).
 
 The player with the highest total score wins.
 
@@ -266,11 +275,11 @@ The player with the highest total score wins.
 
 > *"And they cast lots, and the lot fell on Matthias."* — Acts 1:26
 
-If two or more players are tied for highest score after 12 chapters:
+If two or more players are tied for highest score after the final chapter:
 
-1. Only tied players participate in a 13th chapter.
+1. Only tied players participate in a tiebreaker chapter.
 2. Deal 7 cards to each tied player.
-3. Flip a new Board Phase.
+3. Flip a new Board Phase (chapter lot only—no player Lots are dealt).
 4. Play proceeds normally (draw, play, record, end).
 5. **First to record the Board Phase wins the game.**
 6. No points scored—just victory.
@@ -285,7 +294,7 @@ If two or more players are tied for highest score after 12 chapters:
 |-------|---------|
 | **1. Draw** | Reveal top card: Take it OR pass (return it, draw 2) |
 | **2. Play** | Free activation (if took top card) + Letter activations |
-| **3. Record** | Board Phase / Lot / Opponent's Lot |
+| **3. Record** | Chapter / Lot / Opponent's Lot |
 | **4. End** | Discard 1 to Sheol (can be redeemed) |
 
 ### Other Actions
@@ -293,8 +302,8 @@ If two or more players are tied for highest score after 12 chapters:
 | Action | Effect |
 |--------|--------|
 | **Activate** | Reveal card, pay cost → Sheol (not redeemable) |
-| **Redeem** | Call on opponent's End discard; take card, owe extra discard |
-| **Record Board** | Score points, cards to Pages |
+| **Redeem** | Call on opponent's End discard; Take card into hand; If multiple people call, Judge decides who gets it |
+| **Record Chapter Lot** | Score points, cards to Pages |
 | **Record Lot** | Earn 2 Letters (3 for 7-card), cards to Sheol |
 
 ### Scoring Summary
@@ -306,7 +315,7 @@ If two or more players are tied for highest score after 12 chapters:
 | 7-card Board Phase | 14 |
 | Record Wreath | +2 |
 | Empty Wreath | +2 |
-| Letter conversion | 4 per Letter |
+| Letter conversion | 3 per Letter |
 | Hand penalty | -1 per card |
 
 ### Activation Costs
@@ -366,7 +375,7 @@ The tension in Hypertext:
 | **Set** | A completed group of cards matching a phase recipe |
 | **Phase** | The required type composition for a valid set (5–7 cards) |
 | **Record** | Play cards from hand to complete a set |
-| **Chapter** | One round of play; game lasts 12 chapters |
+| **Chapter** | One round of play; game length varies by player count (3–12 chapters) |
 | **Pages** | Your face-up area of scored Board Phase records |
 | **Lot** | Your personal phase; what falls to you |
 | **Tower** | The draw pile—language dispersed from Babel |
@@ -375,11 +384,11 @@ The tension in Hypertext:
 | **Wreath** | Token awarded for being first (+2 points each) |
 | **Record Wreath** | +2 points for first player to record the Board Phase |
 | **Empty Wreath** | +2 points for first player to empty their hand |
-| **Letter** | Token earned from Lot records (own: 2 per Lot, 3 for 7-card; opponent's: 1 per Lot, 2 for 7-card; worth 4 pts each) |
+| **Letter** | Token earned from Lot records (own: 2 per Lot, 3 for 7-card; opponent's: 1 per Lot, 2 for 7-card; worth 3 pts each) |
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |
-| **Matthias Rule** | Tiebreaker 13th chapter; first to record wins |
+| **Matthias Rule** | Tiebreaker chapter (no player Lots); first to record the Board Phase wins |
 
 ---
 

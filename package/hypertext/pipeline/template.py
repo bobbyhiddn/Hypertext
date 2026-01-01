@@ -72,7 +72,8 @@ def _get_subtype_dir(template_dir: Path, version: int, subtype: str = "base") ->
 def _get_valid_subtypes(template_type: str) -> list[str]:
     """Get valid subtypes for a template type."""
     if template_type == "card":
-        return ["base", "common", "uncommon", "rare", "glorious"]
+        # Rarity subtypes + Type subtypes
+        return ["base", "common", "uncommon", "rare", "glorious", "noun", "name", "adjective", "verb", "title"]
     elif template_type == "lot":
         return ["base", "5-card", "6-card", "7-card"]
     return ["base"]
@@ -317,14 +318,7 @@ def phase_refine(
     revise_path = template_dir / "revise.txt"
     meta_path = template_dir / "meta.yml"
 
-    # Check for subtype-specific prompt first, fall back to parent prompt
-    subtype_prompt_path = _get_subtype_dir(template_dir, _get_current_version(template_dir) or 1, subtype) / "prompt.txt"
-    if subtype_prompt_path.exists():
-        prompt_path = subtype_prompt_path
-    else:
-        prompt_path = template_dir / "prompt.txt"
-
-    # Determine version number
+    # Determine version number first (needed for prompt path resolution)
     current_version = _get_current_version(template_dir)
     if current_version == 0:
         current_version = 1  # Start at v001 if no version exists
@@ -346,6 +340,16 @@ def phase_refine(
             # Subtype doesn't exist - add it to current version
             new_version = current_version
             _log(f"Creating new {subtype} template in v{new_version:03d}")
+
+    # Check for subtype-specific prompt first, fall back to parent prompt
+    # Use the version we're building into for prompt lookup
+    subtype_prompt_path = _get_subtype_dir(template_dir, new_version, subtype) / "prompt.txt"
+    if subtype_prompt_path.exists():
+        prompt_path = subtype_prompt_path
+        _log(f"Using subtype-specific prompt: {subtype_prompt_path}")
+    else:
+        prompt_path = template_dir / "prompt.txt"
+        _log(f"Using parent prompt: {prompt_path}")
 
     # Create subtype directory within version
     subtype_dir = _get_subtype_dir(template_dir, new_version, subtype)

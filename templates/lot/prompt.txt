@@ -25,7 +25,7 @@ EXACT LAYOUT (top to bottom):
 
 3. REWARD BANNER
    - Shape: Dark navy blue ribbon banner with forked ends and gold trim/border
-   - Main Text: "REWARD: Example Points" in large cream/white bold serif
+   - Main Text: "REWARD: X Points / X Letters" in large cream/white bold serif (points and letters on SAME LINE)
    - Secondary Text: "Wreath Bonus: +2 Points (First to record)" in smaller italicized white serif below
 
 4. COMPOSITION SECTION
@@ -69,6 +69,7 @@ REFINEMENT GOALS:
 - Forked ribbon ends should be crisp and symmetrical
 
 CRITICAL RULES:
+- Reward text MUST show points and letters on the SAME LINE: "REWARD: X Points / X Letters"
 - Word types in composition MUST be in square brackets: [NOUN], [VERB], [ADJECTIVE], [NAME], [TITLE]
 - Maintain double border style throughout
 - Icons should be simple, elegant, and consistent in style
