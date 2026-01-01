@@ -1,0 +1,75 @@
+Reproduce and refine the provided lot template reference image.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Ensures clean, crisp rendering of all elements
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium lot card with antique parchment background
+- Frame: Double border (outer thin gold line, thick dark navy gap, inner thin gold line)
+- Background: Textured parchment/aged paper (Beige/Tan)
+
+EXACT LAYOUT (top to bottom):
+
+1. HEADER AREA
+   - Top-Left Badge: Dark navy blue trapezoid/tab pointing downward with "LOT" in white serif all-caps
+   - Top-Right Badge: Dark navy rectangle with gold inner border, "CARD COUNT" (small white sans-serif) above, "X-CARDS" (larger white serif) below
+
+2. TITLE SECTION
+   - Main Title: "TEMPLATE LOT" centered, large bold black serif font
+   - Subtitle: "Example Subtitle for Card Type" centered below, black italicized serif font
+
+3. REWARD BANNER
+   - Shape: Dark navy blue ribbon banner with forked ends and gold trim/border
+   - Main Text: "REWARD: Example Points" in large cream/white bold serif
+   - Secondary Text: "Wreath Bonus: +2 Points (First to record)" in smaller italicized white serif below
+
+4. COMPOSITION SECTION
+   - Format: Horizontal equation string inside rectangular box with decorative corner borders
+   - Icons & Text Sequence (left to right):
+     * Closed Book icon + "[NOUN]"
+     * Plus sign
+     * Pencil icon + "[VERB]"
+     * Plus sign
+     * Pen with sparkles icon + "[ADJECTIVE]"
+     * Plus sign
+     * Feather Quill icon + "[NAME]"
+     * Plus sign
+     * Framed Picture icon + "[TITLE]"
+
+5. CONTEXT SECTION
+   - Header: Dark navy blue bar with gold ornate corner flourishes, "CONTEXT" in white bold serif
+   - Body: Parchment-colored box below with placeholder text in black serif font
+
+6. FOOTER
+   - Dark navy blue strip at very bottom
+   - Left Text: "SERIES: 20XX-QX Lots" in grey/faded white text
+
+COLOR PALETTE:
+- Navy Blue: approximately #102030
+- Gold/Tan: approximately #C0A060
+- Parchment background: Beige/Tan textured
+- Text: Near-black for body, white/cream for badges and banners
+
+TYPOGRAPHY:
+- Titles: Bold serif font
+- Subtitles: Italicized serif font
+- Body text: Clean serif font
+- Badge text: Mix of sans-serif (labels) and serif (values)
+
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges and ribbon shapes
+- Consistent, elegant icon styling
+- Clear panel separation with proper gold trim
+- Forked ribbon ends should be crisp and symmetrical
+
+CRITICAL RULES:
+- Word types in composition MUST be in square brackets: [NOUN], [VERB], [ADJECTIVE], [NAME], [TITLE]
+- Maintain double border style throughout
+- Icons should be simple, elegant, and consistent in style
+- Output ONLY the card - no surrounding text or watermarks

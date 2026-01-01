@@ -907,7 +907,7 @@ def main() -> int:
     """CLI entrypoint for card review."""
     parser = argparse.ArgumentParser(description="Review a Hypertext card image (two-stage)")
     parser.add_argument("image_path", help="Path to card image")
-    parser.add_argument("card_json_path", help="Path to card.json")
+    parser.add_argument("card_json_path", nargs="?", help="Path to card.json (optional for --describe-only)")
     parser.add_argument("--threshold", type=int, default=90, help="Pass threshold (default 90)")
     parser.add_argument("--describe-only", action="store_true", help="Only run description stage")
 
@@ -917,6 +917,10 @@ def main() -> int:
         description = describe_card(Path(args.image_path))
         print(format_description_report(description))
     else:
+        if not args.card_json_path:
+            print("ERROR: card_json_path is required for full review (use --describe-only for description only)")
+            return 1
+
         with open(args.card_json_path, "r", encoding="utf-8") as f:
             card_data = json.load(f)
 

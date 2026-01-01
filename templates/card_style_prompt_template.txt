@@ -39,6 +39,10 @@ CRITICAL RULES:
   CORRECT: #003 or NOUN or RARE
 - Card number format: Use hash followed by 3 digits. WRONG: [#003] or 003. CORRECT: #003
 - Rarity display (top right): Print the rarity word followed by a small diamond icon. The diamond color matches rarity: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. Format: "RARE ◆" not "◆ RARE".
+- Cost indicator (below rarity, RARE and GLORIOUS only): Display activation cost below the rarity diamond.
+  RARE: Show "+🂠" (plus and one card icon) below the rarity.
+  GLORIOUS: Show "+🂠🂠" (plus and two card icons) below the rarity.
+  COMMON and UNCOMMON: No cost indicator.
 - Stat pips: Use small circles with SOLID NAVY FILL for filled pips.
   WRONG: Gold-filled circles, yellow circles, diamond shapes, star shapes, square shapes
   CORRECT: Navy-blue filled circles (dark blue, like the card border color)

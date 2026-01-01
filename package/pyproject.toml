@@ -12,10 +12,11 @@ dependencies = [
     "Pillow>=10.0.0",
     "PyYAML>=6.0",
     "google-genai>=0.3.0",
+    "jsonschema>=4.0.0",
 ]
 
 [project.optional-dependencies]
-dev = ["jsonschema", "markdown"]
+dev = ["markdown"]
 
 [project.scripts]
 hypertext = "hypertext.cli:cli"

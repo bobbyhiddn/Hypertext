@@ -19,9 +19,9 @@
 #
 # Notes:
 # - Leave a field blank to keep it unchanged.
-# - Lines starting with # are ignored.
+# - Lines starting with # are ignored (except Card_ fields below).
 
-Rebuild: false
+Rebuild: true
 
 Rarity_Change_Request: <leave blank unless changing rarity>
 
@@ -35,18 +35,18 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # CURRENT CARD (edit values below to request changes)
 # ─────────────────────────────────────────────────────────────────────────────
 #
-# Card_Word: <WORD>
-# Card_Gloss: <GLOSS>
-# Card_Type: <TYPE>
-# Card_Rarity: <RARITY>
-# Card_Ability: <ABILITY>
-# Card_Stats: LORE <L> | CONTEXT <C> | COMPLEXITY <X>
-# Card_Art_Prompt: <ART_PROMPT>
-# Card_OT_Verse: <OT_REF> — <OT_SNIPPET>
-# Card_NT_Verse: <NT_REF> — <NT_SNIPPET>
-# Card_Hebrew: <HEBREW> (<HEBREW_TRANSLIT>)
-# Card_Greek: <GREEK> (<GREEK_TRANSLIT>)
-# Card_Trivia_1: <TRIVIA_1>
-# Card_Trivia_2: <TRIVIA_2>
-# Card_Trivia_3: <TRIVIA_3>
-# Card_Trivia_4: <TRIVIA_4>
+# Card_Word: BUILD
+# Card_Gloss: To construct, establish, or strengthen; to edify or raise up a structure or family.
+# Card_Type: VERB
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 3 cards of the Tower, then put them back in any order. You may place a card from your hand among those cards.
+# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: Ancient stone foundation blocks being set in place with a plumb line and trowel under a bright sky; no text.
+# Card_OT_Verse: Psalm 127:1 — Unless the LORD builds the house, the builders labor in vain.
+# Card_NT_Verse: Matthew 16:18 — On this rock I will build my church, and the gates of Hades will not overcome it.
+# Card_Hebrew: בָּנָה (banah)
+# Card_Greek: οἰκοδομέω (oikodomeō)
+# Card_Trivia_1: The Hebrew word 'banah' (build) shares a root with 'ben' (son), linking house-building to family-building.
+# Card_Trivia_2: In the New Testament, the word for 'edification' literally translates to 'house-building' (oikodomeō).
+# Card_Trivia_3: Jesus was a 'tekton', a term often translated as 'carpenter' but more accurately meaning 'builder' or 'stonemason'.
+# Card_Trivia_4: Ancient builders used a cornerstone to align the entire structure; the Messiah is often called the 'chief cornerstone'.

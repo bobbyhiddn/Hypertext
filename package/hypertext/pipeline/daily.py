@@ -495,6 +495,23 @@ def _get_needed_type(stats: dict) -> str:
     return max(deficits, key=deficits.get)
 
 
+def _get_card_rarity(card_img_path: Path) -> str | None:
+    """Get the rarity of a card from its meta.yml."""
+    # card_img_path is like .../cards/word/outputs/card_1024x1536.png
+    card_dir = card_img_path.parent.parent
+    meta_file = card_dir / "meta.yml"
+    if not meta_file.exists():
+        return None
+    try:
+        with open(meta_file, "r", encoding="utf-8") as f:
+            for line in f:
+                if line.strip().startswith("rarity:"):
+                    return line.split(":", 1)[1].strip().upper()
+    except OSError:
+        pass
+    return None
+
+
 def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
     """Find one card image per rarity from the series."""
     cards_dir = series_root / "cards"
@@ -575,7 +592,7 @@ def _find_matching_cards(
                         line = line.strip()
                         if line.startswith("rarity:"):
                             card_rarity = line.split(":", 1)[1].strip().upper()
-                        elif line.startswith("type:"):
+                        elif line.startswith("card_type:"):
                             card_type = line.split(":", 1)[1].strip().upper()
             except OSError:
                 continue
@@ -604,16 +621,22 @@ def _find_matching_cards(
     return matches
 
 
-def _get_series_display_name(series_dir: Path) -> str:
-    """Get series display name including theme (e.g., '2026-Q1 Babel')."""
-    series_name = series_dir.name
+def _get_series_theme(series_dir: Path) -> str:
+    """Get the series theme/set name (e.g., 'Babel')."""
     stats_file = series_dir / "stats.yml"
     if stats_file.exists() and yaml:
         with open(stats_file, "r", encoding="utf-8") as f:
             stats = yaml.safe_load(f) or {}
-        theme = stats.get("theme", "").strip()
-        if theme:
-            return f"{series_name} {theme}"
+        return stats.get("theme", "").strip()
+    return ""
+
+
+def _get_series_display_name(series_dir: Path) -> str:
+    """Get series display name including theme (e.g., '2026-Q1 Babel')."""
+    series_name = series_dir.name
+    theme = _get_series_theme(series_dir)
+    if theme:
+        return f"{series_name} {theme}"
     return series_name
 
 
@@ -630,11 +653,17 @@ def _build_style_refs(
     For fix_mode=True (revise/polish):
         [1] = Current card being fixed
         [2] = Template
-        [3+] = Matching cards (same rarity+type)
+        [3+] = Example cards
 
     For fix_mode=False (rebuild/generate):
         [1] = Template
-        [2+] = Matching cards (same rarity+type)
+        [2+] = Example cards
+
+    Example card selection priority (fills up to 3 cards):
+        1. Same rarity + same type
+        2. Same rarity only
+        3. Same type only (tracks actual rarity for PRIMARY highlighting)
+        4. Any cards from series (tracks actual rarity)
 
     Args:
         series_root: Series directory for finding example cards.
@@ -644,7 +673,7 @@ def _build_style_refs(
         fix_mode: If True, includes current card as first reference.
 
     Returns:
-        Tuple of (refs list, rarity_labels dict, fix_mode flag)
+        Tuple of (refs list, rarity_labels dict mapping position to rarity, fix_mode flag)
     """
     refs: list[str] = []
     rarity_labels: dict[int, str] = {}
@@ -667,28 +696,57 @@ def _build_style_refs(
         max_cards=3,
     )
 
-    # If no exact matches, fall back to same rarity only
-    if not matching_cards and target_rarity:
-        matching_cards = _find_matching_cards(
+    # If not enough matches, try same rarity only
+    if len(matching_cards) < 3 and target_rarity:
+        more_cards = _find_matching_cards(
             series_root,
             target_rarity=target_rarity,
             target_type=None,
             exclude_card=exclude_dir,
-            max_cards=3,
+            max_cards=3 - len(matching_cards),
         )
+        for card in more_cards:
+            if card not in matching_cards:
+                matching_cards.append(card)
 
-    # If still no matches, fall back to any cards
-    if not matching_cards:
+    # Track actual rarities for cards that don't match target_rarity
+    fallback_rarities: dict[Path, str] = {}
+
+    # If still not enough, try same type only (these may have different rarities)
+    if len(matching_cards) < 3 and target_type:
+        more_cards = _find_matching_cards(
+            series_root,
+            target_rarity=None,
+            target_type=target_type,
+            exclude_card=exclude_dir,
+            max_cards=3 - len(matching_cards),
+        )
+        for card in more_cards:
+            if card not in matching_cards:
+                matching_cards.append(card)
+                # Track actual rarity since it may differ from target
+                actual_rarity = _get_card_rarity(card)
+                if actual_rarity:
+                    fallback_rarities[card] = actual_rarity
+
+    # If still not enough, fill with any cards from the series
+    if len(matching_cards) < 3:
         rarity_map = _find_card_by_rarity(series_root)
         for rarity in RARITY_ORDER:
             if rarity in rarity_map:
-                matching_cards.append(rarity_map[rarity])
-                if len(matching_cards) >= 3:
-                    break
+                card_path = rarity_map[rarity]
+                if card_path not in matching_cards:
+                    matching_cards.append(card_path)
+                    fallback_rarities[card_path] = rarity
+                    if len(matching_cards) >= 3:
+                        break
 
     for card_path in matching_cards:
         refs.append(str(card_path))
-        if target_rarity:
+        # Use actual rarity for fallback cards, target_rarity for matched cards
+        if card_path in fallback_rarities:
+            rarity_labels[len(refs)] = fallback_rarities[card_path]
+        elif target_rarity:
             rarity_labels[len(refs)] = target_rarity
 
     return refs, rarity_labels, fix_mode
@@ -1086,7 +1144,34 @@ def _read_text(path: Path) -> str:
         return f.read()
 
 
-def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
+class ReviseFormResult:
+    """Result from parsing a revise.txt form."""
+    def __init__(
+        self,
+        instructions: str,
+        allowed_paths: set[str],
+        rebuild: bool = False,
+        card_changes: dict[str, tuple[str, str]] | None = None,
+    ):
+        self.instructions = instructions
+        self.allowed_paths = allowed_paths
+        self.rebuild = rebuild
+        # card_changes maps field name -> (old_value, new_value)
+        self.card_changes = card_changes or {}
+
+
+# Mapping from Card_* fields in revise.txt to card.json content paths
+_CARD_PREVIEW_FIELDS = {
+    "Card_Word": "WORD",
+    "Card_Gloss": "GLOSS",
+    "Card_Type": "CARD_TYPE",
+    "Card_Rarity": "RARITY_TEXT",
+    "Card_Ability": "ABILITY_TEXT",
+    "Card_Art_Prompt": "ART_PROMPT",
+}
+
+
+def _parse_revise_form(raw: str, card: dict | None = None) -> ReviseFormResult:
     def is_placeholder(s: str) -> bool:
         return "<" in s and ">" in s
 
@@ -1099,15 +1184,38 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
             return True
         return False
 
+    rebuild = False
     current_key: str | None = None
     rarity_lines: list[str] = []
     ability_lines: list[str] = []
     stats_lines: list[str] = []
     general_lines: list[str] = []
+    card_preview_values: dict[str, str] = {}
 
     for line in raw.splitlines():
-        if line.lstrip().startswith("#"):
+        stripped = line.strip()
+
+        # Skip comments (but Card_ fields in comments are intentional)
+        if line.lstrip().startswith("#") and not stripped.startswith("# Card_"):
             continue
+
+        # Parse Rebuild field
+        if line.startswith("Rebuild:"):
+            val = line.split(":", 1)[1].strip().lower()
+            rebuild = val in ("true", "yes", "1")
+            continue
+
+        # Parse Card_ preview fields (they appear as comments: # Card_Word: value)
+        for prefix in ("# Card_", "Card_"):
+            if stripped.startswith(prefix):
+                rest = stripped[len(prefix):]
+                if ":" in rest:
+                    field_name, value = rest.split(":", 1)
+                    field_key = f"Card_{field_name.strip()}"
+                    value = value.strip()
+                    if not is_placeholder(value):
+                        card_preview_values[field_key] = value
+                break
 
         if line.startswith("Rarity_Change_Request:"):
             current_key = "rarity"
@@ -1159,6 +1267,102 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
     stats_req = "\n".join([x for x in stats_lines if not is_empty_value(x)]).strip()
     general_req = "\n".join([x for x in general_lines if not is_empty_value(x)]).strip()
 
+    # Detect changes in Card_ preview fields
+    card_changes: dict[str, tuple[str, str]] = {}
+    if card is not None:
+        content = card.get("content", {})
+        for preview_field, json_field in _CARD_PREVIEW_FIELDS.items():
+            if preview_field in card_preview_values:
+                new_val = card_preview_values[preview_field]
+                old_val = str(content.get(json_field, ""))
+                if new_val != old_val:
+                    card_changes[json_field] = (old_val, new_val)
+
+        # Handle Card_Stats specially: "LORE 3 | CONTEXT 4 | COMPLEXITY 2"
+        if "Card_Stats" in card_preview_values:
+            stats_str = card_preview_values["Card_Stats"]
+            import re
+            lore_match = re.search(r"LORE\s*(\d+)", stats_str, re.IGNORECASE)
+            context_match = re.search(r"CONTEXT\s*(\d+)", stats_str, re.IGNORECASE)
+            complexity_match = re.search(r"COMPLEXITY\s*(\d+)", stats_str, re.IGNORECASE)
+            if lore_match:
+                new_val = int(lore_match.group(1))
+                old_val = content.get("STAT_LORE", 0)
+                if new_val != old_val:
+                    card_changes["STAT_LORE"] = (str(old_val), str(new_val))
+            if context_match:
+                new_val = int(context_match.group(1))
+                old_val = content.get("STAT_CONTEXT", 0)
+                if new_val != old_val:
+                    card_changes["STAT_CONTEXT"] = (str(old_val), str(new_val))
+            if complexity_match:
+                new_val = int(complexity_match.group(1))
+                old_val = content.get("STAT_COMPLEXITY", 0)
+                if new_val != old_val:
+                    card_changes["STAT_COMPLEXITY"] = (str(old_val), str(new_val))
+
+        # Handle verse fields: "Card_OT_Verse: REF — SNIPPET"
+        if "Card_OT_Verse" in card_preview_values:
+            verse_str = card_preview_values["Card_OT_Verse"]
+            if "—" in verse_str:
+                ref, snippet = verse_str.split("—", 1)
+                ref = ref.strip()
+                snippet = snippet.strip()
+                old_ref = content.get("OT_VERSE_REF", "")
+                old_snippet = content.get("OT_VERSE_SNIPPET", "")
+                if ref != old_ref:
+                    card_changes["OT_VERSE_REF"] = (old_ref, ref)
+                if snippet != old_snippet:
+                    card_changes["OT_VERSE_SNIPPET"] = (old_snippet, snippet)
+
+        if "Card_NT_Verse" in card_preview_values:
+            verse_str = card_preview_values["Card_NT_Verse"]
+            if "—" in verse_str:
+                ref, snippet = verse_str.split("—", 1)
+                ref = ref.strip()
+                snippet = snippet.strip()
+                old_ref = content.get("NT_VERSE_REF", "")
+                old_snippet = content.get("NT_VERSE_SNIPPET", "")
+                if ref != old_ref:
+                    card_changes["NT_VERSE_REF"] = (old_ref, ref)
+                if snippet != old_snippet:
+                    card_changes["NT_VERSE_SNIPPET"] = (old_snippet, snippet)
+
+        # Handle Hebrew/Greek: "Card_Hebrew: רָאָה (Ra'ah)"
+        if "Card_Hebrew" in card_preview_values:
+            heb_str = card_preview_values["Card_Hebrew"]
+            if "(" in heb_str and ")" in heb_str:
+                heb = heb_str[:heb_str.index("(")].strip()
+                translit = heb_str[heb_str.index("(")+1:heb_str.index(")")].strip()
+                old_heb = content.get("HEBREW", "")
+                old_translit = content.get("HEBREW_TRANSLIT", "")
+                if heb != old_heb:
+                    card_changes["HEBREW"] = (old_heb, heb)
+                if translit != old_translit:
+                    card_changes["HEBREW_TRANSLIT"] = (old_translit, translit)
+
+        if "Card_Greek" in card_preview_values:
+            greek_str = card_preview_values["Card_Greek"]
+            if "(" in greek_str and ")" in greek_str:
+                greek = greek_str[:greek_str.index("(")].strip()
+                translit = greek_str[greek_str.index("(")+1:greek_str.index(")")].strip()
+                old_greek = content.get("GREEK", "")
+                old_translit = content.get("GREEK_TRANSLIT", "")
+                if greek != old_greek:
+                    card_changes["GREEK"] = (old_greek, greek)
+                if translit != old_translit:
+                    card_changes["GREEK_TRANSLIT"] = (old_translit, translit)
+
+        # Handle trivia bullets
+        trivia_bullets = content.get("TRIVIA_BULLETS", [])
+        for i in range(1, 5):
+            key = f"Card_Trivia_{i}"
+            if key in card_preview_values:
+                new_val = card_preview_values[key]
+                old_val = trivia_bullets[i-1] if i <= len(trivia_bullets) else ""
+                if new_val != old_val:
+                    card_changes[f"TRIVIA_{i}"] = (old_val, new_val)
+
     allowed_paths: set[str] = set()
     if rarity_req:
         allowed_paths.update({"/content/RARITY_TEXT", "/content/RARITY_ICON"})
@@ -1166,8 +1370,8 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
         allowed_paths.add("/content/ABILITY_TEXT")
     if stats_req:
         allowed_paths.update({"/content/STAT_LORE", "/content/STAT_CONTEXT", "/content/STAT_COMPLEXITY"})
-    if general_req:
-        # General revision unlocks ALL content fields plus model_prompt
+    if general_req or card_changes:
+        # General revision or card preview changes unlock ALL content fields plus model_prompt
         allowed_paths.update({
             "/content/NUMBER", "/content/SERIES",
             "/content/WORD", "/content/GLOSS", "/content/CARD_TYPE",
@@ -1186,8 +1390,9 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
             "/model_prompt",  # Allow updating the generation prompt
         })
 
-    if not allowed_paths:
-        return "", set()
+    # Return early if nothing to do (but rebuild alone is valid)
+    if not allowed_paths and not rebuild:
+        return ReviseFormResult("", set(), rebuild=False, card_changes={})
 
     out_lines: list[str] = []
     if rarity_req:
@@ -1211,11 +1416,109 @@ def _parse_revise_form(raw: str) -> tuple[str, set[str]]:
         out_lines.append("General revision request (you may modify any content field as needed):")
         out_lines.append(general_req)
 
-    return "\n".join(out_lines).strip(), allowed_paths
+    # Add card preview changes to instructions
+    if card_changes:
+        if out_lines:
+            out_lines.append("")
+        out_lines.append("Card field changes (from preview):")
+        for field, (old_val, new_val) in card_changes.items():
+            out_lines.append(f"  {field}: '{old_val}' -> '{new_val}'")
+
+    return ReviseFormResult(
+        "\n".join(out_lines).strip(),
+        allowed_paths,
+        rebuild=rebuild,
+        card_changes=card_changes,
+    )
 
 
-def _seed_revise_file(card_dir: Path) -> None:
+def _build_revise_content(card: dict) -> str:
+    """Build the content of revise.txt with current card data populated."""
+    content = card.get("content", {})
+
+    # Get trivia bullets
+    trivia = content.get("TRIVIA_BULLETS", [])
+    trivia_1 = trivia[0] if len(trivia) > 0 else ""
+    trivia_2 = trivia[1] if len(trivia) > 1 else ""
+    trivia_3 = trivia[2] if len(trivia) > 2 else ""
+    trivia_4 = trivia[3] if len(trivia) > 3 else ""
+
+    lines = [
+        "# Hypertext Card Revision Form (revise.txt)",
+        "#",
+        "# Edit this file in your PR branch, then run the \"Revise Hypertext Card\" workflow.",
+        "#",
+        "# Options:",
+        "# - Rebuild: Set to 'true' to regenerate the card image from scratch",
+        "#   (useful when revisions aren't fixing stubborn visual issues)",
+        "#",
+        "# Specific fields for targeted changes:",
+        "# - Rarity_Change_Request: changes rarity only",
+        "# - Ability_Change_Request: changes ability only",
+        "# - Stats_Change_Request: changes stats only",
+        "#",
+        "# General_Revision_Request: unlocks ALL content fields for broad revisions",
+        "# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)",
+        "#",
+        "# Card Preview: Shows current card data. Edit values directly to request changes.",
+        "# The system will detect your edits and apply them automatically.",
+        "#",
+        "# Notes:",
+        "# - Leave a field blank to keep it unchanged.",
+        "# - Lines starting with # are ignored (except Card_ fields below).",
+        "",
+        "Rebuild: false",
+        "",
+        "Rarity_Change_Request: <leave blank unless changing rarity>",
+        "",
+        "Ability_Change_Request: <describe the new ability; avoid saying \"your deck\"; say \"the deck\" or \"the shared deck\">",
+        "",
+        "Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>",
+        "",
+        "General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>",
+        "",
+        "# ─────────────────────────────────────────────────────────────────────────────",
+        "# CURRENT CARD (edit values below to request changes)",
+        "# ─────────────────────────────────────────────────────────────────────────────",
+        "#",
+        f"# Card_Word: {content.get('WORD', '')}",
+        f"# Card_Gloss: {content.get('GLOSS', '')}",
+        f"# Card_Type: {content.get('CARD_TYPE', '')}",
+        f"# Card_Rarity: {content.get('RARITY_TEXT', '')}",
+        f"# Card_Ability: {content.get('ABILITY_TEXT', '')}",
+        f"# Card_Stats: LORE {content.get('STAT_LORE', 0)} | CONTEXT {content.get('STAT_CONTEXT', 0)} | COMPLEXITY {content.get('STAT_COMPLEXITY', 0)}",
+        f"# Card_Art_Prompt: {content.get('ART_PROMPT', '')}",
+        f"# Card_OT_Verse: {content.get('OT_VERSE_REF', '')} — {content.get('OT_VERSE_SNIPPET', '')}",
+        f"# Card_NT_Verse: {content.get('NT_VERSE_REF', '')} — {content.get('NT_VERSE_SNIPPET', '')}",
+        f"# Card_Hebrew: {content.get('HEBREW', '')} ({content.get('HEBREW_TRANSLIT', '')})",
+        f"# Card_Greek: {content.get('GREEK', '')} ({content.get('GREEK_TRANSLIT', '')})",
+        f"# Card_Trivia_1: {trivia_1}",
+        f"# Card_Trivia_2: {trivia_2}",
+        f"# Card_Trivia_3: {trivia_3}",
+        f"# Card_Trivia_4: {trivia_4}",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def _seed_revise_file(card_dir: Path, force: bool = False) -> None:
+    """Seed or update revise.txt with current card data.
+
+    Args:
+        card_dir: Path to the card directory
+        force: If True, regenerate even if file exists (to update card preview)
+    """
     target = card_dir / "revise.txt"
+    card_path = card_dir / "card.json"
+
+    # If card.json exists, build revise.txt with current card data
+    if card_path.exists():
+        if target.exists() and not force:
+            return
+        card = read_json(card_path)
+        target.write_text(_build_revise_content(card), encoding="utf-8")
+        return
+
+    # Fallback to template if no card.json
     if target.exists():
         return
     template_path = Path("templates") / "revise_template.txt"
@@ -1523,6 +1826,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             "gloss": gloss,
             "card_type": card_type,
             "rarity": rarity,
+            "series": series_dir.name,
+            "set": _get_series_theme(series_dir),
             "art_prompt": art_prompt,
             "stats": {
                 "lore": card["content"]["STAT_LORE"],
@@ -1760,12 +2065,18 @@ def _plan_demo_card_with_number(
 
     _seed_revise_file(card_dir)
 
+    # For demo cards, use "Demo" as the set name
+    demo_series = series_dir.name if series_dir else "2026-Q1"
+    demo_set = "Demo"
+
     meta = {
         "number": f"{number:03d}",
         "word": word,
         "gloss": gloss,
         "card_type": card_type,
         "rarity": rarity,
+        "series": demo_series,
+        "set": demo_set,
         "art_prompt": art_prompt,
         "stats": {
             "lore": card["content"]["STAT_LORE"],
@@ -1895,12 +2206,19 @@ def _plan_demo_card(
     _seed_revise_file(card_dir)
     _log(f"[demo plan] wrote revise.txt")
 
+    # For demo cards, use "Demo" as the set name
+    # Use style series for the series identifier, or fall back to current year-quarter
+    demo_series = series_dir.name if series_dir else "2026-Q1"
+    demo_set = "Demo"
+
     meta = {
         "number": f"{number:03d}",
         "word": word,
         "gloss": gloss,
         "card_type": card_type,
         "rarity": rarity,
+        "series": demo_series,
+        "set": demo_set,
         "art_prompt": art_prompt,
         "stats": {
             "lore": card["content"]["STAT_LORE"],
@@ -2515,18 +2833,85 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         print(f"Missing {revise_path}. Add your edit instructions there and rerun revise.")
         return 1
 
+    card = read_json(card_path)
     raw_instructions = _read_text(revise_path)
-    instructions, allowed_paths = _parse_revise_form(raw_instructions)
-    if not instructions:
+    form_result = _parse_revise_form(raw_instructions, card=card)
+
+    # Handle rebuild-only case (no content changes, just regenerate image)
+    if form_result.rebuild and not form_result.instructions:
+        _log("[phase revise] Rebuild requested with no content changes")
+        # Just regenerate the image from scratch
+        out_png = card_dir / "outputs" / "card_1024x1536.png"
+        target_rarity = card.get("content", {}).get("RARITY_TEXT", "").upper() or None
+        target_type = card.get("content", {}).get("TYPE", "").upper() or None
+
+        _log(f"[phase revise] rebuilding image -> {out_png} (rarity={target_rarity}, type={target_type})")
+
+        series_dir = card_dir.parent.parent
+        # Rebuild does NOT use fix_mode - generating fresh from scratch
+        style_refs, rarity_labels, _ = _build_style_refs(
+            series_dir,
+            target_rarity=target_rarity,
+            target_type=target_type,
+            fix_mode=False,
+        )
+        if style_refs:
+            cmd = [
+                sys.executable, "-m", "hypertext.gemini.style",
+                "--prompt-file", str(card_dir / "prompt.txt"),
+                *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, False),
+                "--out", str(out_png)
+            ]
+        else:
+            cmd = [
+                sys.executable, "-m", "hypertext.gemini.image",
+                str(card_dir / "prompt.txt"),
+                str(out_png)
+            ]
+
+        subprocess.check_call(cmd)
+        _log("[phase revise] image rebuild complete")
+
+        _run_watermark(card_dir=card_dir, image_path=out_png)
+
+        # Update meta with rebuild note
+        meta_path = card_dir / "meta.yml"
+        if meta_path.exists():
+            with open(meta_path, "r", encoding="utf-8") as f:
+                meta = yaml.safe_load(f) or {}
+            if not isinstance(meta, dict):
+                meta = {}
+            prev = meta.get("revision")
+            try:
+                prev_i = int(prev) if prev is not None else 0
+            except Exception:
+                prev_i = 0
+            meta["revision"] = prev_i + 1
+            meta["revision_notes"] = "Rebuild (image regenerated from scratch)"
+            with open(meta_path, "w", encoding="utf-8") as f:
+                yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
+
+        # Write changes file for PR comment
+        changes_path = card_dir / ".revision_changes.txt"
+        changes_path.write_text("Rebuild: image regenerated from scratch\n", encoding="utf-8")
+
+        # Reset revise.txt with Rebuild: false so user can trigger new rebuilds
+        _seed_revise_file(card_dir, force=True)
+
+        print(f"Rebuilt card at {card_dir}")
+        return 0
+
+    # Normal revision flow (with or without rebuild)
+    if not form_result.instructions:
         print(
             f"No revision instructions found in {revise_path}. "
-            "Edit revise.txt (add non-comment text) and rerun revise."
+            "Edit revise.txt (add non-comment text) or set Rebuild: true and rerun revise."
         )
         return 1
 
-    card = read_json(card_path)
+    instructions = form_result.instructions
+    allowed_paths = form_result.allowed_paths
 
-    allowed_paths_str = ", ".join(sorted(allowed_paths))
     rules_appendix = _load_rules_appendix()
     prompt = (
         "You are revising a Bible word-study trading card JSON. "
@@ -2601,19 +2986,25 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         else:
             series_dir = card_dir.parent.parent
 
-    # Revise uses fix_mode - include current card as first reference
-    style_refs, rarity_labels, fix_mode = _build_style_refs(
+    # If rebuild flag is set, use fix_mode=False to generate fresh image
+    # Otherwise, use fix_mode for incremental fixes
+    use_fix_mode = not form_result.rebuild and out_png.exists()
+
+    if form_result.rebuild:
+        _log("[phase revise] Rebuild requested - generating fresh image")
+
+    style_refs, rarity_labels, _ = _build_style_refs(
         series_dir,
-        current_card_path=out_png if out_png.exists() else None,
+        current_card_path=out_png if use_fix_mode else None,
         target_rarity=target_rarity,
         target_type=target_type,
-        fix_mode=out_png.exists(),  # Only fix mode if image exists
+        fix_mode=use_fix_mode,
     )
     if style_refs:
         cmd = [
             sys.executable, "-m", "hypertext.gemini.style",
             "--prompt-file", str(card_dir / "prompt.txt"),
-            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, fix_mode),
+            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, use_fix_mode),
             "--out", str(out_png)
         ]
     else:
@@ -2641,6 +3032,37 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
         image_rel_path=f"./outputs/{out_png.name}",
     )
 
+    # Build changes summary for PR comment
+    changes_lines: list[str] = []
+    if form_result.rebuild:
+        changes_lines.append("**Mode:** Rebuild (fresh image generation)")
+    else:
+        changes_lines.append("**Mode:** Revise (incremental fix)")
+
+    if form_result.card_changes:
+        changes_lines.append("")
+        changes_lines.append("**Field changes:**")
+        for field, (old_val, new_val) in form_result.card_changes.items():
+            # Truncate long values for readability
+            old_display = old_val[:50] + "..." if len(old_val) > 50 else old_val
+            new_display = new_val[:50] + "..." if len(new_val) > 50 else new_val
+            changes_lines.append(f"- `{field}`: {old_display} → {new_display}")
+
+    if instructions:
+        changes_lines.append("")
+        changes_lines.append("**Instructions:**")
+        # Add first few lines of instructions
+        instr_lines = instructions.split("\n")[:5]
+        for line in instr_lines:
+            if line.strip():
+                changes_lines.append(f"> {line}")
+        if len(instructions.split("\n")) > 5:
+            changes_lines.append("> ...")
+
+    # Write changes to file for workflow to read
+    changes_path = card_dir / ".revision_changes.txt"
+    changes_path.write_text("\n".join(changes_lines), encoding="utf-8")
+
     meta_path = card_dir / "meta.yml"
     if meta_path.exists():
         with open(meta_path, "r", encoding="utf-8") as f:
@@ -2654,10 +3076,16 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None) -> int:
             prev_i = 0
         meta["revision"] = prev_i + 1
         meta["revision_notes"] = instructions
+        if form_result.rebuild:
+            meta["last_rebuild"] = True
         with open(meta_path, "w", encoding="utf-8") as f:
             yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
 
-    print(f"Revised card at {card_dir}")
+    # Update revise.txt with new card data for next revision
+    _seed_revise_file(card_dir, force=True)
+
+    action = "Rebuilt" if form_result.rebuild else "Revised"
+    print(f"{action} card at {card_dir}")
     return 0
 
 

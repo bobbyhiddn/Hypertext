@@ -155,11 +155,11 @@ Appoint one player as Judge for the game. The Judge:
 
 ### Lot Letter Rewards
 
-| Lot Size | Letters Earned |
-|----------|----------------|
-| 5-card | 1 Letter |
-| 6-card | 1 Letter |
-| 7-card | 2 Letters |
+| Lot Size | Own Lot | Opponent's Lot |
+|----------|---------|----------------|
+| 5-card | 2 Letters | 1 Letter |
+| 6-card | 2 Letters | 1 Letter |
+| 7-card | 3 Letters | 2 Letters |
 
 ---
 
@@ -198,12 +198,12 @@ You may record as many times as you are able:
 **Record Lot:**
 - Play cards from hand matching your Lot composition exactly.
 - Cards go to Sheol.
-- Earn **1 Letter token** (or **2 Letters** for 7-card Lots).
+- Earn **2 Letters** (or **3 Letters** for 7-card Lots).
 
 **Record to Opponent's Lot:**
 - Play cards from hand matching any opponent's Lot exactly.
 - Cards go to Sheol.
-- You score nothing but dump cards.
+- Earn **1 Letter** (or **2 Letters** for 7-card Lots).
 
 ### 4. End
 
@@ -295,7 +295,7 @@ If two or more players are tied for highest score after 12 chapters:
 | **Activate** | Reveal card, pay cost → Sheol (not redeemable) |
 | **Redeem** | Call on opponent's End discard; take card, owe extra discard |
 | **Record Board** | Score points, cards to Pages |
-| **Record Lot** | Earn 1 Letter (2 for 7-card), cards to Sheol |
+| **Record Lot** | Earn 2 Letters (3 for 7-card), cards to Sheol |
 
 ### Scoring Summary
 
@@ -375,7 +375,7 @@ The tension in Hypertext:
 | **Wreath** | Token awarded for being first (+2 points each) |
 | **Record Wreath** | +2 points for first player to record the Board Phase |
 | **Empty Wreath** | +2 points for first player to empty their hand |
-| **Letter** | Token earned from Lot records (1 per Lot, 2 for 7-card; worth 4 pts each) |
+| **Letter** | Token earned from Lot records (own: 2 per Lot, 3 for 7-card; opponent's: 1 per Lot, 2 for 7-card; worth 4 pts each) |
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |

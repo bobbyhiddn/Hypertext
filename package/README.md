@@ -14,6 +14,7 @@ pip install -e .
 | Command | Description |
 |---------|-------------|
 | `python -m hypertext.pipeline.daily` | Main card generation pipeline |
+| `python -m hypertext.pipeline.template` | Template refinement pipeline |
 | `python -m hypertext.tgc prep` | Prepare cards for TGC upload |
 | `python -m hypertext.tgc print` | Export print-ready PDFs |
 | `python -m hypertext.lots.generation` | Generate phase/lot cards |
@@ -48,6 +49,42 @@ python -m hypertext.pipeline.daily --phase rebuild-failed --cards-dir demo_cards
 - `grade` - Quality check cards against rubric
 - `demo` - Full pipeline for demo cards
 - `rebuild-failed` - Re-run pipeline for cards that failed grading
+
+---
+
+### Template Refinement (`hypertext.pipeline.template`)
+
+Refine card and lot templates using style references.
+
+```bash
+# Refine the card template
+python -m hypertext.pipeline.template --type card --phase refine
+
+# Refine the lot template
+python -m hypertext.pipeline.template --type lot --phase refine
+
+# Force rebuild from scratch (ignore current template)
+python -m hypertext.pipeline.template --type card --phase refine --rebuild
+```
+
+**Template Structure:**
+```
+templates/
+├── card/
+│   ├── prompt.txt      # Base generation prompt
+│   ├── revise.txt      # Revision form (edit to request changes)
+│   ├── meta.yml        # Version tracking
+│   └── outputs/
+│       └── template_1024x1536.png
+└── lot/
+    └── (same structure)
+```
+
+**Workflow:**
+1. Edit `templates/card/revise.txt` with desired changes
+2. Run the refine command
+3. Template auto-syncs to `package/hypertext/templates/`
+4. All card generation now uses the updated template
 
 ---
 

@@ -1,0 +1,118 @@
+name: Refine Card Template
+
+on:
+  workflow_dispatch:
+    inputs:
+      rebuild:
+        description: Rebuild from scratch (ignore current template)
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    outputs:
+      template_version: ${{ steps.run-refine.outputs.template_version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -e package/
+
+      - name: Run refinement phase
+        id: run-refine
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+        run: |
+          python -m hypertext.pipeline.template --type card --phase refine ${{ inputs.rebuild && '--rebuild' || '' }}
+          VERSION=$(grep '^version:' templates/card/meta.yml | sed 's/version: *//' | tr -d '"')
+          echo "template_version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Verify template was generated
+        run: |
+          if [[ ! -f "templates/card/outputs/template_1024x1536.png" ]]; then
+            echo "ERROR: Template not found"
+            exit 1
+          fi
+          ls -la templates/card/outputs/
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-template-refined
+          path: templates/card/
+          if-no-files-found: error
+
+  pr:
+    runs-on: ubuntu-latest
+    needs: refine
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download refined artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: card-template-refined
+          path: templates/card/
+
+      - name: Verify template exists
+        run: |
+          if [[ ! -f "templates/card/outputs/template_1024x1536.png" ]]; then
+            echo "ERROR: Template not found after artifact download"
+            exit 1
+          fi
+          ls -la templates/card/
+
+      - name: Create PR branch and open PR
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          VERSION: ${{ needs.refine.outputs.template_version }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="template/card-${DATE}-${GITHUB_RUN_ID}"
+
+          git checkout -b "${BRANCH}"
+          git add templates/card/
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+          git commit -m "Refine card template (v${VERSION})" || exit 0
+          git push --set-upstream origin "${BRANCH}"
+
+          gh pr create \
+            --title "Card Template Refinement (v${VERSION})" \
+            --body "## Card Template Refinement
+
+          **Version:** ${VERSION}
+          **Date:** ${DATE}
+
+          ### Files
+          - templates/card/meta.yml
+          - templates/card/prompt.txt
+          - templates/card/revise.txt
+          - templates/card/outputs/template_1024x1536.png" \
+            --base main \
+            --head "${BRANCH}"
+
+      - name: Comment rendered template on PR
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          VERSION: ${{ needs.refine.outputs.template_version }}
+        run: |
+          PR_URL="$(gh pr view --json url -q .url)"
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+          PNG_PATH="templates/card/outputs/template_1024x1536.png"
+          RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
+          gh pr comment "${PR_URL}" --body "### Refined Card Template (v${VERSION})
+
+          ![Card Template](${RAW_URL})"

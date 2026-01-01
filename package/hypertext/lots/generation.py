@@ -266,8 +266,41 @@ def _image_part_from_bytes(img_bytes: bytes):
 GRADING_MODEL = "gemini-3-pro-preview"  # Vision model for grading
 
 
+def _get_template_rubric() -> str | None:
+    """Check for a pre-generated template rubric.
+
+    Returns:
+        Rubric text if found, None otherwise
+    """
+    repo_root = Path(__file__).parent.parent.parent.parent
+    template_dir = repo_root / "templates" / "lot"
+    meta_path = template_dir / "meta.yml"
+
+    # Get current version from meta.yml
+    if meta_path.exists():
+        with open(meta_path, "r", encoding="utf-8") as f:
+            meta = yaml.safe_load(f) or {}
+        try:
+            version = int(meta.get("version", 0))
+        except (ValueError, TypeError):
+            version = 0
+    else:
+        version = 0
+
+    if version > 0:
+        rubric_path = template_dir / f"v{version:03d}" / "rubric.txt"
+        if rubric_path.exists():
+            with open(rubric_path, "r", encoding="utf-8") as f:
+                return f.read()
+
+    return None
+
+
 def describe_style_references(series_dir: Path) -> str:
-    """Describe the style reference images to establish the grading rubric.
+    """Get the grading rubric for lot cards.
+
+    First checks for a pre-generated template rubric. If not found,
+    generates one from style reference images.
 
     Args:
         series_dir: Path to series directory
@@ -275,6 +308,13 @@ def describe_style_references(series_dir: Path) -> str:
     Returns:
         Text description of what a correct LOT card looks like
     """
+    # First, check for pre-generated template rubric
+    template_rubric = _get_template_rubric()
+    if template_rubric:
+        _log("Using pre-generated template rubric")
+        return template_rubric
+
+    # Fall back to generating rubric from style references
     if genai is None or types is None:
         raise RuntimeError("google-genai package required: pip install google-genai")
 
@@ -288,6 +328,8 @@ def describe_style_references(series_dir: Path) -> str:
 
     if not style_refs:
         return "No style references found. Using default rubric."
+
+    _log("Generating rubric from style references (no template rubric found)")
 
     client = genai.Client(api_key=api_key)
 

@@ -1,0 +1,48 @@
+created: '2024-12-30'
+description: Premium navy/gold lot card template for card combinations and rewards
+generation:
+  model: gemini-3-pro-image-preview
+  prompt_file: prompt.txt
+  style_refs: []
+layout:
+  composition:
+    icons: book (NOUN), pencil (VERB), sparkle pen (ADJECTIVE), quill (NAME), frame
+      (TITLE)
+    style: horizontal equation in decorative box
+  context_section:
+    body: parchment box with narrative text
+    header: navy bar with "CONTEXT"
+  footer:
+    series: 'SERIES: 20XX-QX Lots'
+  header:
+    card_count: top-right (navy rectangle with count)
+    lot_badge: top-left (navy tab with "LOT")
+  reward_banner:
+    main_text: 'REWARD: X Points'
+    secondary_text: 'Wreath Bonus: +2 Points (First to record)'
+    style: navy ribbon with gold trim
+  title_section:
+    subtitle: centered italicized
+    title: centered large bold
+name: Lot Template v1
+specs:
+  aspect_ratio: '2:3'
+  orientation: vertical
+  resolution:
+    height: 1536
+    width: 1024
+style:
+  frame:
+    border: thick navy with gold trim
+    corners: rounded with ornate flourishes
+  palette:
+    background: warm parchment
+    ink: near-black
+    primary: navy
+    secondary: gold
+  typography:
+    body: clean serif
+    subtitle: italicized serif
+    title: large bold serif
+updated: '2025-12-30 20:05:23'
+version: '2'
