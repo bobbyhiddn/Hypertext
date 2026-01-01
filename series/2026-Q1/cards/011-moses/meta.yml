@@ -1,0 +1,74 @@
+number: '011'
+word: MOSES
+gloss: The deliverer of Israel who drew his people out of Egypt and received the Law.
+card_type: NAME
+rarity: RARE
+art_prompt: A figure seen from behind standing on a cliff edge, holding a staff high
+  over a churning dark sea that is splitting apart. Lightning in the sky. Epic, cinematic
+  lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Reveal the top 4 cards of the Tower and split them into two piles; an opponent
+  chooses one pile for you to add to hand, discard the rest.
+ot_verse:
+  ref: Exodus 2:10
+  snippet: She named him Moses, saying, 'I drew him out of the water.'
+nt_verse:
+  ref: John 1:17
+  snippet: For the law was given through Moses; grace and truth came through Jesus
+    Christ.
+greek:
+  text: Μωϋσῆς
+  translit: Mōusēs
+hebrew:
+  text: מֹשֶׁה
+  translit: Mosheh
+ot_refs: Exod 2-40 • Lev • Num • Deut
+nt_refs: Matt 17 • Acts 7 • Heb 11 • Rev 15
+trivia:
+- Born in Egypt, hidden in a basket, and raised by Pharaoh's daughter.
+- Traditionally credited as the author of the Torah (the first five books).
+- Spoke with God face-to-face; his face shone so brightly he wore a veil.
+- His name sounds like the Hebrew 'mashah', meaning 'to draw out'.
+- 'Lived 120 years: 40 in Egypt, 40 in Midian, 40 in the wilderness.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF70AOewEuaV4HJrdJai8p6jbwGJG4Wz6YvHYZ9-gPUtpjbdr1v36eRJMgcaJkxNH2PazPA0l7WhOW7gYJ_goVX0no11i2scXmYorHRRaE1JjBlwa97egNWYVuS2Y_Dp1MGG66SkTQWUz15IB2j
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_huTjd1kDDaIy_gsSNyXjtp78BPCthbLErwJ-yc8LMv7ekl2tH9sknVVNNZRJODSZ0Mnei9p3igb2x0aXVOscDY_RoLeswLTq_UuhWcydVteNi9q_52SbT7ehyuYzbZEgayA_DFylO74lvg==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPX0CSqJY05ZJNUEslKxP7N_PrpF-GqDxe6QWY6Ja8lPIUK1mgfCL03BQau8A_WC7Rv8HicF_Vy_LfqFS-gbKS1Tiu3F2vRRyFIOUqLPgIIAsZ1aBDD9LIWu_vbZGIjUUNZ5RUv27GbNG6
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9MU6YofmUs9cTYTJbr2IovRJf63YxfsYtRa4jBy6b9hkkqydrRLZbMHXl77zk7xkYGIfP3cVvAiAnJ_ddBoiQtt2pPp62E-B6zwytnJwnrHUBBjB05YFHCn8QFS0GtIYf
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFplkZFhVkYtosbcLFHWDL3Z1aNx44xv0NhUTqZi9N1E2qP162CjX8Hti21MzgnmCQG_wbRsRbAD8JEIMg90ZdBeP_pRpPvzyOrKRELYcu8Qo3cg-jZBHkONFGz0ul6QXt28OxNEkDPSOU=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7Os04xAp5SGNhgUwDvmN-DEnYga0RMkGJLoJFDe8WzEUdsWXUWwZhbYnBLO4vPx4IFbSeb1NMWeOpJS8lbYcXyJMZhcvPdudigfwmYm_fofe1gIij35QOuOkxu7P8zQOHI28u8_oWRcUlgzaPHdY5z7-p1_7IsZs1O5Q-8CX2GAM=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZ7vhav7fO1GX3UA81SEDzg5Gy24KBvIwj-rBMtR3W_nqR6IoUD6F1-OXlRkLrzjaSkog1cnDCEzDso_nwJ4WvO7rG7UCKpovZ3RymkMiUSrVsEWQkeQTKptMMZOnh
+  title: biblehub.com
+search_queries:
+- ''
+- Moses Hebrew meaning and etymology
+- Exodus 2:10 NIV
+- John 1:17 NIV
+- Moses Bible trivia
+- Moses Greek transliteration
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#011'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: yellow
+review_notes: Increase Complexity stat from 3.5 to 4 to match expected values.
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.
