@@ -1,0 +1,36 @@
+{
+  "word": "ABRAHAM",
+  "card_type": "NAME",
+  "rarity": "COMMON",
+  "score": 95,
+  "passed": false,
+  "attempts": 2,
+  "style_mismatch_count": 1,
+  "corrections": [
+    "Increase Complexity stat from 2 to 3"
+  ],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 10,
+      "max": 15,
+      "issues": [
+        "Complexity stat count is 2, expected 3"
+      ]
+    }
+  }
+}

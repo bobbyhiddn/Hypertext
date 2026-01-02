@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ETERNAL
+# Card_Gloss: Lasting or existing forever; without beginning or end.
+# Card_Type: ADJECTIVE
+# Card_Rarity: RARE
+# Card_Ability: Return a card from Sheol to your hand.
+# Card_Stats: LORE 5 | CONTEXT 3 | COMPLEXITY 4
+# Card_Art_Prompt: A seamless golden ring floating in a star-filled void, glowing with an inner light that has no beginning or end.
+# Card_OT_Verse: Deuteronomy 33:27 — The eternal God is thy refuge, and underneath are the everlasting arms...
+# Card_NT_Verse: Romans 6:23 — ...the gift of God is eternal life through Jesus Christ our Lord.
+# Card_Hebrew: קֶדֶם (qedem)
+# Card_Greek: αἰώνιος (aiōnios)
+# Card_Trivia_1: The Hebrew word 'qedem' in Deut 33:27 literally means 'ancient' or 'east', implying a time before time.
+# Card_Trivia_2: The Greek 'aionios' is derived from 'aion' (age), suggesting a quality of life found in God rather than just endless duration.
+# Card_Trivia_3: In theology, 'eternal' (timeless) is often distinguished from 'everlasting' (unending time).
+# Card_Trivia_4: Eternal life in the Gospel of John is defined relationally: knowing the only true God.

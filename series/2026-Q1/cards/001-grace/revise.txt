@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: GRACE
+# Card_Gloss: Unmerited favor; a free gift.
+# Card_Type: NOUN
+# Card_Rarity: COMMON
+# Card_Ability: Draw 1 card. If you have no Letters, draw 1 additional card.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A single drop of golden light falling into an open, cupped hand, dark background, cinematic lighting, ethereal style
+# Card_OT_Verse: Genesis 6:8 — But Noah found grace in the eyes of the LORD.
+# Card_NT_Verse: Ephesians 2:8 — For by grace are ye saved through faith; and that not of yourselves...
+# Card_Hebrew: חֵן (chen)
+# Card_Greek: χάρις (charis)
+# Card_Trivia_1: "Charis" (Greek) originally meant "beauty" or "charm" before the New Testament gave it deep theological weight.
+# Card_Trivia_2: "Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting a superior showing kindness to an inferior.
+# Card_Trivia_3: Grace is often defined as receiving what you do not deserve, while mercy is not receiving the punishment you do deserve.
+# Card_Trivia_4: The Apostle Paul uses the word "grace" over 100 times in his letters, making it a central theme of his theology.

@@ -1,0 +1,34 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #{NUMBER}
+WORD: {WORD}
+GLOSS: {GLOSS}
+TYPE: {CARD_TYPE} (use matching type icon from references)
+RARITY: {RARITY_TEXT} (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: {STAT_LORE}/5 filled
+CONTEXT: {STAT_CONTEXT}/5 filled
+COMPLEXITY: {STAT_COMPLEXITY}/5 filled
+
+ABILITY:
+{ABILITY_TEXT}
+
+VERSES:
+OT: {OT_VERSE_LINE}
+NT: {NT_VERSE_LINE}
+
+LANGUAGES:
+Hebrew: {HEBREW} ({HEBREW_TRANSLIT}) - {OT_REFS}
+Greek: {GREEK} ({GREEK_TRANSLIT}) - {NT_REFS}
+
+TRIVIA:
+{TRIVIA_BULLETS_FORMATTED}
+
+ART: {ART_PROMPT}
+
+FOOTER: {SERIES}
+
+Output only the card image.

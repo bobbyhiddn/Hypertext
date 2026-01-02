@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: ETERNAL
+GLOSS: Lasting or existing forever; without beginning or end.
+TYPE: ADJECTIVE (use matching type icon from references)
+RARITY: RARE (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 4/5 filled
+
+ABILITY:
+Return a card from Sheol to your hand.
+
+VERSES:
+OT: Deuteronomy 33:27 — "The eternal God is thy refuge, and underneath are the everlasting arms..."
+NT: Romans 6:23 — "...the gift of God is eternal life through Jesus Christ our Lord."
+
+LANGUAGES:
+Hebrew: קֶדֶם (qedem) - Gen 21:33 • Isa 40:28 • Ps 90:2 • Eccl 3:11
+Greek: αἰώνιος (aiōnios) - John 3:16 • John 17:3 • 2 Cor 4:18 • 1 John 5:11
+
+TRIVIA:
+• The Hebrew word 'qedem' in Deut 33:27 literally means 'ancient' or 'east', implying a time before time.
+• The Greek 'aionios' is derived from 'aion' (age), suggesting a quality of life found in God rather than just endless duration.
+• In theology, 'eternal' (timeless) is often distinguished from 'everlasting' (unending time).
+• Eternal life in the Gospel of John is defined relationally: knowing the only true God.
+
+ART: A seamless golden ring floating in a star-filled void, glowing with an inner light that has no beginning or end.
+
+FOOTER: Example
+
+Output only the card image.

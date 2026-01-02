@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #020
+WORD: MESSIAH
+GLOSS: The promised deliverer and anointed king; the savior of the world.
+TYPE: TITLE (use matching type icon from references)
+RARITY: GLORIOUS (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Return up to 2 cards from Sheol to your hand, then draw 1.
+
+VERSES:
+OT: Daniel 9:25 — "Know therefore... that from the going forth of the commandment... unto the Messiah the Prince shall be seven weeks..."
+NT: John 1:41 — "He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ."
+
+LANGUAGES:
+Hebrew: מָשִׁיחַ (Mashiach) - Dan 9:25 • Psa 2:2 • Isa 61:1
+Greek: Μεσσίας (Messias) - Joh 1:41 • Joh 4:25 • Mat 16:16
+
+TRIVIA:
+• Derived from the Hebrew 'Mashiach', meaning 'Anointed One', referring to the ritual oil used for kings and priests.
+• The Greek transliteration 'Messias' appears only twice in the New Testament (John 1:41, 4:25).
+• Translated into Greek as 'Christos', which became the English title 'Christ'.
+
+ART: A golden scepter resting on a stone altar, illuminated by a single vertical beam of intense light, with oil dripping down the side
+
+FOOTER: Example
+
+Output only the card image.

@@ -1,0 +1,52 @@
+# Hypertext Lot Template Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Refine Lot Template" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the template from scratch
+#
+# Revision Categories:
+# - Frame_Revision: Changes to borders, corners, ribbon decorations
+# - Layout_Revision: Changes to panel positions, sizes, spacing
+# - Typography_Revision: Changes to fonts, text styles, sizing
+# - Color_Revision: Changes to palette, gradients, fills
+# - Icon_Revision: Changes to composition icons (book, pencil, quill, etc.)
+# - Banner_Revision: Changes to reward banner style
+# - General_Revision: Any other changes
+#
+# Notes:
+# - Leave a field blank to keep it unchanged
+# - Lines starting with # are ignored
+# - Be specific about what should change and how
+
+Rebuild: false
+
+Frame_Revision:
+#   - Background: Textured parchment/aged paper (beige/tan)
+#
+# Layout:
+#   - Header: LOT badge (left), Card Count badge (right)
+#   - Title Section: Title + subtitle centered
+#   - Reward Banner: Navy ribbon with gold trim, forked ends
+#   - Composition: Horizontal equation with icons and type labels
+#   - Context: Navy header bar + parchment body box
+#   - Footer: Series info on navy strip
+#
+# Typography:
+#   - Title: Large bold black serif
+#   - Subtitle: Italicized black serif
+#   - Labels: White serif on navy backgrounds
+#   - Body: Clean black serif on parchment
+#
+# Colors:
+#   - Primary: Navy blue (#102030 approx)
+#   - Secondary: Gold/tan (#C0A060 approx)
+#   - Background: Parchment/beige
+#   - Text: Black (on parchment), white/cream (on navy)
+#
+# Icons:
+#   - NOUN: Closed book
+#   - VERB: Pencil/pen
+#   - ADJECTIVE: Pen with sparkles
+#   - NAME: Feather quill
+#   - TITLE: Framed picture

@@ -1,0 +1,70 @@
+number: '013'
+word: MOSES
+gloss: To draw out; the great leader and lawgiver of Israel
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Example
+art_prompt: A woven wicker basket floating gently among tall green papyrus reeds at
+  the edge of a wide river, soft golden sunlight filtering through the vegetation,
+  ancient Egyptian architecture visible in the hazy distance
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Draw 2 cards, then discard 1 card.
+style_series_dir: series\2026-Q1
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#003'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+review_status: green
+revision: 1
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  The rarity badge incorrectly shows RARE. Change it to COMMON, matching the COMMON
+  rarity styling from the reference cards (GRACE, REDEEM).
+
+  # Card_Word: MOSES
+
+  # Card_Gloss: To draw out; the great leader and lawgiver of Israel
+
+  # Card_Type: NAME
+
+  # Card_Rarity: COMMON
+
+  # Card_Ability: Draw 2 cards, then discard 1 card.
+
+  # Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 4
+
+  # Card_Art_Prompt: A woven wicker basket floating gently among tall green papyrus
+  reeds at the edge of a wide river, soft golden sunlight filtering through the vegetation,
+  ancient Egyptian architecture visible in the hazy distance
+
+  # Card_OT_Verse: Exodus 2:10 — She named him Moses, saying, ''I drew him out of
+  the water.''
+
+  # Card_NT_Verse: John 1:17 — For the law was given through Moses; grace and truth
+  came through Jesus Christ.
+
+  # Card_Hebrew: מֹשֶׁה (Mosheh)
+
+  # Card_Greek: Μωϋσῆς (Mōusēs)
+
+  # Card_Trivia_1: The name Moses sounds like the Hebrew verb ''masha'', meaning ''to
+  draw out''.
+
+  # Card_Trivia_2: Traditionally credited with writing the first five books of the
+  Bible (the Pentateuch).
+
+  # Card_Trivia_3: His life is divided into three 40-year periods: Prince of Egypt,
+  Shepherd in Midian, and Leader in the Wilderness.
+
+  # Card_Trivia_4: He is the most frequently mentioned human in the New Testament.'
+last_rebuild: true

@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: RIGHTEOUS
+# Card_Gloss: Morally right or justifiable; acting in accord with divine or moral law; free from guilt or sin.
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Return an ADJECTIVE from Sheol to your hand.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A golden plumb line hanging perfectly straight, glowing with inner light, set against a backdrop of crooked, shadowy stone pillars. The light from the line reveals the imperfections of the surrounding architecture.
+# Card_OT_Verse: Psalm 1:6 — For the LORD knoweth the way of the righteous: but the way of the ungodly shall perish.
+# Card_NT_Verse: Romans 1:17 — As it is written, The righteous shall live by faith.
+# Card_Hebrew: צַדִּיק (Tsaddiq)
+# Card_Greek: δίκαιος (Dikaios)
+# Card_Trivia_1: The Hebrew 'tsaddiq' implies adherence to a standard, often used in legal contexts for one who is innocent.
+# Card_Trivia_2: In the New Testament, righteousness is often presented as a gift from God (imputed) rather than solely earned by human effort.
+# Card_Trivia_3: The 'Breastplate of Righteousness' is a key piece of the spiritual armor described in Ephesians 6.
+# Card_Trivia_4: Abraham's belief in God was credited to him as righteousness long before the Law of Moses was given.

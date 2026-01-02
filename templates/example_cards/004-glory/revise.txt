@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: GLORY
+# Card_Gloss: Magnificence, weight, honor, or the manifest presence of God.
+# Card_Type: NOUN
+# Card_Rarity: GLORIOUS
+# Card_Ability: Discard your hand, then draw 7 cards.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A blinding, golden radiance erupting from behind a torn heavy velvet veil, illuminating a dark stone temple interior with intense beams of light.
+# Card_OT_Verse: Exodus 33:18 — And he said, 'Please, show me Your glory.'
+# Card_NT_Verse: John 1:14 — We beheld His glory, the glory as of the only begotten of the Father.
+# Card_Hebrew: כָּבוֹד (kabod)
+# Card_Greek: δόξα (doxa)
+# Card_Trivia_1: The Hebrew word 'kabod' literally means 'weight' or 'heaviness,' suggesting that God's glory has tangible substance.
+# Card_Trivia_2: In the New Testament, 'doxa' shifts from its secular meaning of 'opinion' to describing the manifest radiance of God.
+# Card_Trivia_3: The 'Shekinah' glory describes God's visible dwelling presence, a concept central to the tabernacle though the specific word is not in the Bible.
+# Card_Trivia_4: Moses asked to see God's glory but was only allowed to see His 'back,' as His full presence would be fatal to a mortal.

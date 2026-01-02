@@ -1,0 +1,43 @@
+Reproduce and refine the provided card template reference image.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Ensures clean, crisp rendering of all elements
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium trading card layout with antique parchment background
+- Frame: Navy and gold collector frame with rounded corners
+
+LAYOUT TO PRESERVE:
+- Header: Collector ID (left), Rarity label (right), Title/Subtitle (center)
+- Art Panel: ~44% height with gold inner frame
+- Stats Row: LORE, CONTEXT, COMPLEXITY with navy circle pips
+- Text Panels: Ability, OT Verse, NT Verse, Greek/Hebrew strip, Trivia
+- Footer: Navy strip with "Series: 20XX QX - Set" format (e.g., "Series: 2026 Q1 - Babel")
+
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges
+- Consistent typography throughout
+- Proper stat pip rendering (empty navy circles)
+- Clear panel separation
+
+CRITICAL RULES:
+- NEVER print brackets [ ] anywhere on the card
+- Rarity badge: Display only the word "Rarity" (no diamond icon, no specific rarity name like "GLORIOUS")
+- Hebrew text must render right-to-left
+- Output ONLY the card - no surrounding text or watermarks
+
+IMPORTANT CHANGES FROM REFERENCE (do NOT copy these from reference image):
+- Stat pips: The reference may show FILLED pips - IGNORE THIS.
+  Instead, render ALL stat pips as EMPTY/HOLLOW navy-blue circle OUTLINES ONLY.
+  Each stat row should show 5 unfilled circular outlines (like ○ ○ ○ ○ ○, not ● ● ● ○ ○).
+  The pips should have a navy stroke/border but NO fill - the parchment background should show through.
+
+
+REQUESTED REFINEMENTS:
+STATS CHANGES: CRITICAL - The stat pips MUST be EMPTY/HOLLOW circles. Do NOT fill them with solid color. Each pip should be a thin navy-blue circular OUTLINE with the parchment background visible INSIDE the circle. Think of them as unfilled radio buttons or empty checkboxes - just the ring/border, no fill inside. The reference image has this WRONG - ignore any filled pips in the reference and render them as hollow outlines instead.

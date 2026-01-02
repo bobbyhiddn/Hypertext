@@ -1,44 +1,24 @@
 words:
-- COVENANT
-- GOSPEL
+- BUILD
 - GRACE
-- MAGI
-- REDEEM
-- WALK
+- MIGHTY
 ability_patterns:
-- conditional
 - conditional_draw
-- discard_stat_lore
-- draw
-- unique
+- look_top_tower
+- sheol_type_verb
 cards:
 - number: 1
-  word: MAGI
-  type: TITLE
-  rarity: GLORIOUS
-  ability_pattern: unique
-- number: 2
-  word: GOSPEL
-  type: NOUN
-  rarity: RARE
-  ability_pattern: discard_stat_lore
-- number: 3
-  word: COVENANT
-  type: NOUN
-  rarity: GLORIOUS
-  ability_pattern: conditional
-- number: 4
   word: GRACE
   type: NOUN
-  rarity: UNCOMMON
+  rarity: COMMON
   ability_pattern: conditional_draw
-- number: 5
-  word: WALK
+- number: 2
+  word: BUILD
   type: VERB
   rarity: COMMON
-  ability_pattern: draw
-- number: 6
-  word: REDEEM
-  type: VERB
-  rarity: RARE
-  ability_pattern: discard_stat_lore
+  ability_pattern: look_top_tower
+- number: 3
+  word: MIGHTY
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_verb

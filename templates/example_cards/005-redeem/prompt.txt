@@ -1,0 +1,35 @@
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #005
+WORD: REDEEM
+GLOSS: To buy back, recover, or liberate by payment; to restore from captivity or death.
+TYPE: VERB (use matching type icon from references)
+RARITY: COMMON with white diamond icon
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to your hand, then discard 1 card.
+
+VERSES:
+OT: Job 19:25 — "I know that my redeemer lives, and that in the end he will stand on the earth."
+NT: Galatians 3:13 — "Christ redeemed us from the curse of the law by becoming a curse for us."
+
+LANGUAGES:
+Hebrew: גָּאַל (ga'al) - Ex 6:6 • Lev 25:25 • Ruth 4:4 • Ps 19:14 • Isa 43:1
+Greek: ἐξαγοράζω (exagorazō) - Rom 3:24 • Gal 4:5 • Eph 1:7 • Tit 2:14 • 1 Pet 1:18
+
+TRIVIA:
+• The Hebrew 'ga'al' refers to a 'kinsman-redeemer' obligated to buy back family land or relatives sold into slavery.
+• Boaz is the famous kinsman-redeemer in the book of Ruth, foreshadowing Christ.
+• Job's declaration of a living Redeemer is one of the oldest attestations of resurrection hope.
+• In the New Testament, the ransom price ('lytron') for redemption is identified as the blood of Christ.
+
+ART: A pair of rusted iron shackles lying open and empty on a cold stone floor, illuminated by a single beam of warm golden light breaking through the darkness.
+
+FOOTER: Example
+
+Output only the card image.

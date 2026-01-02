@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #015
+WORD: ELIJAH
+GLOSS: My God is Yahweh; the prophet who called down fire and ascended in a whirlwind.
+TYPE: NAME (use matching type icon from references)
+RARITY: RARE (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Name a card type. Target player reveals their hand and discards all cards of that type.
+
+VERSES:
+OT: 1 Kings 18:39 — "And when all the people saw it, they fell on their faces: and they said, The LORD, he is the God."
+NT: Matthew 17:3 — "And, behold, there appeared unto them Moses and Elijah talking with him."
+
+LANGUAGES:
+Hebrew: אֵלִיָּהוּ (Eliyahu) - 1Ki 17-19 • 2Ki 1-2 • Mal 4:5
+Greek: Ἠλίας (Ēlias) - Mt 11:14 • Mt 17:3 • Jas 5:17
+
+TRIVIA:
+• Name means 'My God is Yahweh'.
+• Challenged 450 prophets of Baal to a contest by fire on Mount Carmel.
+• Taken up to heaven in a whirlwind, one of only two men never to die.
+• Appeared alongside Moses at the Transfiguration of Jesus.
+
+ART: A rugged prophet in a hairy mantle standing on a mountain peak, calling down a massive pillar of fire from a dark stormy sky onto a stone altar, dramatic lighting, no text.
+
+FOOTER: Example
+
+Output only the card image.

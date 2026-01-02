@@ -1,0 +1,293 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "005",
+    "SERIES": "Example",
+    "WORD": "REDEEM",
+    "GLOSS": "To buy back, recover, or liberate by payment; to restore from captivity or death.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A pair of rusted iron shackles lying open and empty on a cold stone floor, illuminated by a single beam of warm golden light breaking through the darkness.",
+    "ABILITY_TEXT": "Return a card from Sheol to your hand, then discard 1 card.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Job 19:25",
+    "OT_VERSE_SNIPPET": "I know that my redeemer lives, and that in the end he will stand on the earth.",
+    "NT_VERSE_REF": "Galatians 3:13",
+    "NT_VERSE_SNIPPET": "Christ redeemed us from the curse of the law by becoming a curse for us.",
+    "OT_VERSE_LINE": "Job 19:25 — \"I know that my redeemer lives, and that in the end he will stand on the earth.\"",
+    "NT_VERSE_LINE": "Galatians 3:13 — \"Christ redeemed us from the curse of the law by becoming a curse for us.\"",
+    "GREEK": "ἐξαγοράζω",
+    "GREEK_TRANSLIT": "exagorazō",
+    "HEBREW": "גָּאַל",
+    "HEBREW_TRANSLIT": "ga'al",
+    "OT_REFS": "Ex 6:6 • Lev 25:25 • Ruth 4:4 • Ps 19:14 • Isa 43:1",
+    "NT_REFS": "Rom 3:24 • Gal 4:5 • Eph 1:7 • Tit 2:14 • 1 Pet 1:18",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'ga'al' refers to a 'kinsman-redeemer' obligated to buy back family land or relatives sold into slavery.",
+      "Boaz is the famous kinsman-redeemer in the book of Ruth, foreshadowing Christ.",
+      "Job's declaration of a living Redeemer is one of the oldest attestations of resurrection hope.",
+      "In the New Testament, the ransom price ('lytron') for redemption is identified as the blood of Christ."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Hebrew word for redeem ga'al meaning",
+      "Galatians 3:13 NIV snippet",
+      "Greek word for redeem lytroo vs exagorazo",
+      "Job 19:25 KJV snippet",
+      "Bible trivia about redemption kinsman redeemer"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4p1AL1WNie1-Vvob3T4oPRieWltlsDasN-eX3U8zIO7n45mhwmirwaP5WIbO7H5O1kr6op3NlOMfathRyc5YHir5YzJkt2nD9MosreYTf5LIi7-LGfU7rhGRuZLebRe5xXpeqN_SIZ5MYzF_7Xx6dz1qNEK7bxg==",
+        "title": "abarim-publications.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw3DXkXdyJEnFeP6e3c2Wdg8w1ZpdLpasXM6I6GP3L7WvFQLvEuZ4jmnfunQNFkK-zKv8ORHURJLRLE0TwQGIMwfHyqnnReCTkZ0ArzG2KDBHKjm6q6fw1ScTW7Vr_mqynpK26cQyu4g==",
+        "title": "bibleserver.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqghS0D1otiW9GvaUIbjoItYbClaTNszGPCUR1W5MANaUKwjOGsSQ9QJ1zuu8o1b-b-0-M4vVleTiHu0H5A5ChGgiMsb2a2z7jtE7rJ5LgxfwaUmyZeiXnvdJArzeyr2r5TUsp3TLa0w==",
+        "title": "biblia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHj7nhqoF9TKWViqKnXT7nCPiDFEu7o3E_X1dkWWTN-0L4Xwyr-nc5mK94cFrcv1WHPwlntJxvLuyNCC75pQleOvCs81YlEACjH0oNN-8axGTTBaVMGGnW5U5QP9oVvr-D6JvIL_Yl1HJtQtA6Ltg==",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG95xeG-uREtlajgVNE93_fH4NVvijeePZ9tNCZCyFF2oT9s8t79_nqWwf7uFgOwi6Zetv9o-BoH-EeipVdcvagGL6WJ5qQbPzv4v5s6KisU3T8L0TWclaL1_SErVIxeWH3tgNxn45fBKs=",
+        "title": "biblia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAtp_-8BYRzVwYLbhQI5IAYT1eNA8nNY1bqKz-8JJngwniZiyZPkC2QvObfVIFGMm0t_F8_o7W6meyqgRFZINhZnclM1w1U5lZ5UqLej--_GpSDPyv0eQ8VCMPWZ6pr155bBpPOt0u-cMFvwgsKs7e",
+        "title": "christianity.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe7gLpTErqla3cxZfGKirzaCmkEagVODRqkGLlCDhz9yo6E4XvBjhob1uemdbU7RLoi5IPckAQp7bcEKuPgmRrJz6f0MNpxn_h58AgF7gVp4Cx86jkeH-13NDgr_E5XV9QgUn7us1judBLj6xbXmwtXu8v",
+        "title": "bibleref.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3rZjh7jNsyQD9fVeT6-Bc2me5KM3gQg0fGjcBXKYFBijoqMJQDXhwomyahZ_eJ4jf4F3TJ4CXLIgPHr_8QYOR8kk_qFHiyuFbEU2J6GeaYT9kr-s5CDeHG6b3Nbc4PBgwx-_4jSPb",
+        "title": "bible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDzZvipa9VukkWzIvtyM8x-ZhdsMxI9FJq4v8iGEEiQdOBEVoKGNwsN_L1CSdDbGl7AzRJ_b1M8rLmNPsNk-qr7Im4yFM5bWxmrV_Olc_G7U1tsUrnjHTrZtZyeldc1UeV8z6MrZwjXCxZ2wiOY1da1_OVycnNAmU=",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkoWq-51Y46_B-wEtsMCizq7mUqumIGvT1faIQIhjb_OrmwsUUOp-wBU9q02damBQArZUV9rGuUoaFBB4mk1q7tZjrzsedvkC0x1jpmMiWbMZjwCFyZ0VNV5Jtjo9_XnkwCLdt_8pSl3wzYzDI",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjDu9EJ5RJ-gyonRPt1J11fJzUVDVJGvzHSCgmj2otCku-LtxdzyflRqlsi1gTA6VxixTGbAfAXmFO4W0Vys7VENPtmAzomxb_SA3-11joSbGctY0PpNhVAVZjWlM69wBEt4GaoIeblnNkvyKpzSFkCsApTMqet3F2GBwX",
+        "title": "bibliatrivia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4-o3eChismocr42sElu7VUku5lDOTIW-wT_tor5JvB5idNuCtQpFSHrRJDarHoK4TFQvcAPNF30Js-THZ9tPaWq0JPnrfVs-Ks7QqfvcjrMOI44LzKiF_GHUbEu3PCalyFugbduLyImD9PAGQJPcDtx8lovtPOWtpNRL5ISCNF9ojTztV",
+        "title": "wordpress.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJHB_jVN1d2IIh7EW4YELtc75p7ni-1tDpGgvxY0-_EE-JrUxbW5HFJGhqsxK0mwwLoZMq-jHV_h89bZscFAm1Of9ziVFTE2U7Y_Tr3SzMbko9wCFdEEQOLn8AiGpCP9KHUWI5q0QAWMr3YHgpoEyed4i8Pw==",
+        "title": "shannonbaptist.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdl9FfUqJywom6VBdiRgZ8L-O4UqYWCHutZfbRdQdBRn7vY80F5mau8I_ulmvl-p8cswpvhJ6MkT3MRUvRo_-JYD3FG83A_-cNGf7JHQTQwBRtdI3W26mN8BC4Rf-Kb2Q0tSORdbmB68RpH4SdFJ2SwTAxMGMFQXjsx75e44qJrTD5v9bblghanMMkwMpIjyL1Xpv4aohlQJJCSyjIErHts-XLDYw=",
+        "title": "crosswalk.com"
+      }
+    ]
+  }
+}

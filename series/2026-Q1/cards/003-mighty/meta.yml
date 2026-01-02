@@ -1,0 +1,70 @@
+number: '003'
+word: MIGHTY
+gloss: Possessing great power, strength, or authority; effective and potent.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A colossal, ancient mountain peak piercing through a layer of dark, swirling
+  storm clouds, illuminated by a single, intense shaft of golden sunlight from above.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Return a VERB from Sheol to your hand.
+ot_verse:
+  ref: Isaiah 9:6
+  snippet: And his name shall be called Wonderful, Counsellor, The mighty God...
+nt_verse:
+  ref: Luke 1:49
+  snippet: For he that is mighty hath done to me great things; and holy is his name.
+greek:
+  text: δυνατός
+  translit: dunatos
+hebrew:
+  text: גִּבּוֹר
+  translit: gibbor
+ot_refs: Gen 10:8 • Deut 10:17 • Ps 24:8 • Jer 32:18
+nt_refs: Luke 24:19 • 1 Cor 1:26 • Eph 1:19 • Rev 19:6
+trivia:
+- The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty
+  Men'.
+- In Isaiah 9:6, the Messiah is given the title 'El Gibbor', meaning 'Mighty God'.
+- The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern
+  word 'dynamite'.
+- Luke 1:49 refers to God simply as 'Ho Dunatos'—'The Mighty One'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHXmy271HBojHsG6kBaTwVezklQX6t5IgDWnjJzUBEg38dSKIxOGGnx7GXM7D76Fwmyz-U8XTSETU-At3-_JEFMriNVwddi6zglzIgI4owEfx9yhKK4fjsICtvQF5h
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDQ2SyFtHnGQYRe3i74Y2IeKq_CmNTWUOKcZpXdmIV7HPfxs9vSH0C9XdGu4dHnD6Aw2naQy0iAvb3T-vczW4c_lmRuHx94lvk0HPeI3ex-VD1OvYz3sBd1IS0-_KfATeHYa6p
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1LEQnevPavFEnscxKhDWeKp1aKCTLTASbqSrnJjFyBQ_E6MGeXydlHw4Uq_rv_DjZ9_C_1zBI-1vZQtqaIOimxl9kZWqYuRS8AOB2IlD2ovWGETAOkXOAXevU4o2uICuC
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQd2zmjLuRBtUCiUOf9pbrf88RzkGXciNe8DxmSJezs2wgQASCXw4xyZfIvGUENwReXjbo40Mu2CmQRl-Yy2UJ0RldupEoNLI9GTxu-d0_L_iIlDaNlIPtSxemaEc=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHagcP1V0gsB1p9BWZXstESgcEYBSsif3wbIdkseFk0zzOGknvYR8KnH4UQfX25oThGaYIuQEQ04tqLHEtoop7KZJups1kwLaGQxAz1JXT3IY_92_RwYXu6Kv9cAkYEEoy6mL6tkfFcCMcrW-F9VkETMs-u8A9ZKWwiFYOqfuBLjE8P9MFerX1KCBYz
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrWfy6RYIw4ooxiPsBMQqc6J7vJv4GRtAqD1pAyVyutplDFzTPta8SWa7gVexHlEJcUwsoHvITcLfEu9WFiJlVGdsTKleyYppMa-gWbY9ZrsegP2W6zv74-Vz2WaF2zCmA4wJbVsgR55jBiMTKwn2VVAtNGMl-Zvy5fNtA4H5hHhF5
+  title: charisfoundationromania.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDw5oO_JL2m6TWiX2b2WLH6EDpgshzAW5cpMZwtR5tCiURaWY3sJQm6G2j9gKQjwQ7ZIT4XzQNYUyzP4Bm7fS-RQmmK6eAWSL5RcVkWo4zJ4WiqWt5Ku_apNBvTG59lrAmJAqDxsG_3M9TRy5-psY48TGUwYN_9FtXTYPFlZL6OJopTlxSd8BuAnMJ3tcRlva0LdrVS7z8HFYwx8iFPi1iOIAqlFecuFNaep-lcrqrbjuNkV7RCKhke1z17iJ4v6MCSXWmvwI7
+  title: jewsforjesus.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEasqToN8cMtnqu8WY079rVNuHi6cs3xplHYlQv3VIL3s_yfLA7FlgHiKq02f7fvy4vT6w1_2A4_6-nPiG3Wp-MVjCPz4NZUF-ECPlJ58nhuTOCrpdQLGBSXzYuzhvQ9tBFlpj3eTAqmAyffSCXoCoeACM=
+  title: comelybankchurch.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFD2R1xV2RnKSEeQurzz8NSeULnFHbnGeCHToBO8BISivUYrOHmouubGfpi57pLsJ4fInsjT0IuVWtiVGWwuc0V_wSnZWyOS8HrmzNbfkk14WEFFwUt2rqCg0CXc1J-OJAYkE7nu6Pqo0zP__5mIX0JeaHSF9Roa3mx39ryyqIAW69PlQ==
+  title: todaydevotional.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAGmt-CBLVu4JAbmVzZ0wRu7fNiCiia6PHXU3HI20dxcDjV0_fasLXJVANgHeyDuOI5pQKEKgA90R51Z-rbamnykZeWDXqWyQ40zx53uaeNQqMjF6md0fVPJZYVmaE_MQzlAs6aqirX3-Ua4m6VaGXNhVdjQ==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtCy7hg08HwEdzkJxiKMoFbzFBgkAxJfmwNMZrK3R8Qtye3ea71TVc_PeV9s0fft0h0t_Au33EdL9nv1xdCLLoEjopWKuzaTewVm7_ItBSEjeKpKZDW78Db4Ke4pf6cHqJtEZYWlom6iu6lV808XdUY2iFOMQhSg==
+  title: biblicalwarfare.com
+search_queries:
+- ''
+- Mighty men of David trivia
+- Hebrew word for Mighty Gibbor
+- Greek word for Mighty Dunatos
+- Luke 1:49 he that is mighty greek
+- Isaiah 9:6 mighty god hebrew

@@ -121,15 +121,21 @@ def generate_with_styles(
         example_start = 2
 
     primary_ref = None
+    has_legacy_refs = False
     for i in range(example_start, len(style_image_paths) + 1):
         rarity = rarity_labels.get(i) if rarity_labels else None
         if rarity:
-            is_primary = (target_rarity and rarity.upper() == target_rarity.upper())
-            if is_primary:
-                ref_labels.append(f"[{i}] = {rarity} example card ⭐ PRIMARY RARITY REFERENCE")
-                primary_ref = i
-            else:
+            # Check if this is a legacy reference (missing type icon)
+            if "LEGACY" in rarity.upper():
+                has_legacy_refs = True
                 ref_labels.append(f"[{i}] = {rarity} example card")
+            else:
+                is_primary = (target_rarity and rarity.upper() == target_rarity.upper())
+                if is_primary:
+                    ref_labels.append(f"[{i}] = {rarity} example card ⭐ PRIMARY RARITY REFERENCE")
+                    primary_ref = i
+                else:
+                    ref_labels.append(f"[{i}] = {rarity} example card")
         else:
             ref_labels.append(f"[{i}] = Example card (style/formatting reference)")
 
@@ -155,26 +161,35 @@ def generate_with_styles(
             f"Pay CLOSEST attention to [{primary_ref}] for the rarity badge style and any rarity-specific formatting.\n"
         )
 
+    # Add instruction about type icons when using legacy references
+    legacy_instruction = ""
+    if has_legacy_refs:
+        legacy_instruction = (
+            "\n⚠️ LEGACY REFS: Some example cards are MISSING TYPE ICONS. "
+            "Get the type icon from the TYPE-SPECIFIC TEMPLATE (look for template with matching card type). "
+            "The type icon goes inside the circle in the top-left corner.\n"
+        )
+
     if fix_mode:
         style_instruction = f"""IMAGE ROLES:
 {chr(10).join(ref_labels)}
 
 TASK:
-Fix the card in [1]. Reproduce it EXACTLY with only the specified corrections applied.
+Fix the image in [1]. Reproduce it EXACTLY with only the specified corrections applied.
 
-PRESERVATION (from [1] - the card being fixed):
+PRESERVATION (from [1] - the image being fixed):
 - Keep ALL content, layout, artwork, and overall appearance
 - Maintain exact positioning of all elements
 - Preserve the artistic style and coloring
 
 STRUCTURE REFERENCE (from [{template_ref}]):
 - Use for frame/border verification
-- Verify text zone positions match
+- Verify element positions match
 
 STYLE VERIFICATION (from [{example_refs}]):
-- Verify UI elements match (stat pips, rarity badge, borders)
+- Verify UI elements match the style references
 - Confirm overall style consistency
-{primary_instruction}
+{primary_instruction}{legacy_instruction}
 CRITICAL: Output should be nearly identical to [1], with ONLY the specified fixes applied.
 
 """
@@ -183,35 +198,29 @@ CRITICAL: Output should be nearly identical to [1], with ONLY the specified fixe
 {chr(10).join(ref_labels)}
 
 TASK:
-Generate a new Hypertext trading card in {orientation} format.
+Generate a new image in {orientation} format.
 
 STRUCTURE (copy EXACTLY from [{template_ref}] - the template):
 - Border/frame structure and proportions
-- Text zone positions and sizes
-- Panel arrangement and spacing
-- Chamfered (diagonally cut) corner style
+- Panel positions and sizes
+- Layout arrangement and spacing
+- Overall geometry
 
-STYLE (match EXACTLY from [{example_refs}] - the example cards):
-- Simple, straight borders with chamfered corners (NOT ornate/decorative)
-- Navy/gold/parchment color scheme
-- Stat pips as CIRCLES filled with navy color
-- Centered "OT VERSE" and "NT VERSE" headers ABOVE the verse text
-- Rarity badge style and positioning
-- Font styles and text formatting
-{primary_instruction}
+STYLE (match EXACTLY from [{example_refs}] - the examples):
+- Visual style, colors, and aesthetic
+- Border/frame styling
+- Typography and text formatting
+- Element styling and finish
+{primary_instruction}{legacy_instruction}
 PRESERVATION RULES:
-- Border must be SIMPLE and STRAIGHT like the references (no scrollwork, no flourishes)
-- Corners must be CHAMFERED (cut diagonal) not rounded or ornate
-- Verse section headers must be CENTERED ABOVE the text, not in side boxes
-- Stat pips must be CIRCLES, not diamonds or squares
+- Match the structural layout from the template reference
+- Match the visual style from the example references
+- Maintain consistency with all reference images
 
 AVOID:
-- Ornate or decorative borders
-- Rounded corners or scrollwork flourishes
-- Verse labels in side boxes instead of centered headers
-- Non-circular stat pips
-- Text rendering errors
 - Style drift from references
+- Layout changes from template
+- Inconsistent element styling
 
 """
 

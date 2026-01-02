@@ -54,37 +54,73 @@ python -m hypertext.pipeline.daily --phase rebuild-failed --cards-dir demo_cards
 
 ### Template Refinement (`hypertext.pipeline.template`)
 
-Refine card and lot templates using style references.
+Refine card and lot templates using style references with version control and subtypes.
 
 ```bash
-# Refine the card template
-python -m hypertext.pipeline.template --type card --phase refine
+# Refine base template (creates new version)
+python -m hypertext.pipeline.template --type lot --phase refine --subtype base
 
-# Refine the lot template
-python -m hypertext.pipeline.template --type lot --phase refine
+# Rebuild a subtype from scratch
+python -m hypertext.pipeline.template --type lot --phase refine --subtype 5-card --from-scratch
 
-# Force rebuild from scratch (ignore current template)
-python -m hypertext.pipeline.template --type card --phase refine --rebuild
+# Rebuild all subtypes for a version
+python -m hypertext.pipeline.template --type lot --phase rebuild --version 1
+
+# Skip certain subtypes during rebuild
+python -m hypertext.pipeline.template --type lot --phase rebuild --version 1 --skip base
+
+# Re-run a failed refinement (overwrite existing version)
+python -m hypertext.pipeline.template --type lot --phase refine --version 1 --subtype 5-card --target-version 1
+
+# Use custom style reference
+python -m hypertext.pipeline.template --type lot --phase refine --subtype base --style-ref path/to/template.png
+
+# Compile current version as new v001 (reset history)
+python -m hypertext.pipeline.template --type lot --phase compile --version 3
+
+# Generate rubric description
+python -m hypertext.pipeline.template --type lot --phase describe --version 1 --subtype base
+
+# List versions
+python -m hypertext.pipeline.template --type lot --phase list
 ```
 
 **Template Structure:**
 ```
 templates/
 ├── card/
-│   ├── prompt.txt      # Base generation prompt
-│   ├── revise.txt      # Revision form (edit to request changes)
-│   ├── meta.yml        # Version tracking
-│   └── outputs/
-│       └── template_1024x1536.png
+│   ├── prompt.txt          # Parent prompt (fallback)
+│   ├── revise.txt          # Global revision form
+│   ├── meta.yml            # Version tracking
+│   └── v001/
+│       ├── revise.txt      # Version-specific revisions
+│       ├── base/
+│       │   ├── prompt.txt
+│       │   ├── rubric.txt
+│       │   └── template_1024x1536.png
+│       ├── common/
+│       ├── uncommon/
+│       ├── rare/
+│       └── glorious/
 └── lot/
-    └── (same structure)
+    └── v001/
+        ├── revise.txt
+        ├── base/           # Base template with X placeholders
+        ├── 5-card/         # 5-card lot (fills in values)
+        ├── 6-card/
+        └── 7-card/
 ```
 
+**Subtypes:**
+- **Card:** base, common, uncommon, rare, glorious (rarity-specific styling)
+- **Lot:** base, 5-card, 6-card, 7-card (card count variations)
+
 **Workflow:**
-1. Edit `templates/card/revise.txt` with desired changes
-2. Run the refine command
-3. Template auto-syncs to `package/hypertext/templates/`
-4. All card generation now uses the updated template
+1. Edit `templates/lot/v001/revise.txt` with desired changes
+2. Run refine command for the target subtype
+3. Revision fields auto-clear after success
+4. Base subtype auto-syncs to `package/hypertext/templates/`
+5. Use `compile` to lock in a version as new v001
 
 ---
 

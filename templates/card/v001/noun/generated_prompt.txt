@@ -1,0 +1,62 @@
+Reproduce and refine the provided card template reference image for a NOUN type card.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Ensures clean, crisp rendering of all elements
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium trading card layout with antique parchment background
+- Frame: Navy and gold collector frame with rounded corners
+- Card Type: NOUN (represented by Closed Book icon)
+
+EXACT LAYOUT (top to bottom):
+
+1. HEADER AREA
+   - Top-Left: Card number "#XXX" followed by TYPE PILL (navy rounded rectangle with "NOUN" in WHITE text)
+   - Type Circle: Navy circle with gold border INSIDE the pill, containing a WHITE CLOSED BOOK icon
+   - Top-Right: RARITY AREA - navy pill with "Rarity" placeholder text in WHITE serif
+     * NO diamond shape - diamonds only appear on rarity-specific templates
+   - Center: Card title in large bold black serif, subtitle below in italics
+
+2. ART PANEL
+   - ~44% of card height
+   - Gold inner frame border
+   - Art placeholder area
+
+3. STATS ROW
+   - Three stat categories: LORE, CONTEXT, COMPLEXITY
+   - Each shows 5 circular pips (empty/hollow navy outlines as placeholder)
+   - Navy blue circle outlines on parchment background
+
+4. TEXT PANELS
+   - Ability panel with navy header bar
+   - OT Verse panel with centered header
+   - NT Verse panel with centered header
+   - Greek/Hebrew reference strip
+   - Trivia panel at bottom
+
+5. FOOTER
+   - Navy blue strip at very bottom
+   - Left Text: "Series: 20XX QX - Set" in grey/faded white text
+
+COLOR PALETTE:
+- Navy Blue: approximately #102030
+- Gold/Tan: approximately #C0A060
+- Parchment background: Beige/Tan textured
+- Text: Near-black for body, white/cream for headers
+
+CRITICAL RULES:
+- TYPE AREA: Type pill shows "NOUN" in WHITE text, type circle contains WHITE Closed Book icon
+  The icon must be WHITE/light colored against the navy circle background
+- RARITY AREA: Show ONLY "Rarity" text in WHITE - NO diamond shape (diamonds are for rarity templates only)
+- Stat pips MUST be empty/hollow navy circle outlines (not filled)
+- Corners should be rounded (not chamfered)
+- Output ONLY the card - no surrounding text or watermarks
+
+
+REQUESTED REFINEMENTS:
+ADDITIONAL CHANGES: Match the stylized corners and border style exactly to the base template reference.

@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #016
+WORD: ABRAHAM
+GLOSS: Father of a multitude; the first patriarch of Israel and example of faith.
+TYPE: NAME (use matching type icon from references)
+RARITY: GLORIOUS (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Reveal the top 10 cards of the Tower. Add all NAMEs and TITLEs to your hand, then shuffle the rest into the Tower.
+
+VERSES:
+OT: Genesis 17:5 — "No longer shall your name be called Abram, but your name shall be Abraham, for I have made you the father of a multitude..."
+NT: Romans 4:3 — "Abraham believed God, and it was counted to him as righteousness."
+
+LANGUAGES:
+Hebrew: אַבְרָהָם (Avraham) - Gen 12-25 • Ex 3:6 • Isa 41:8 • Ps 105:9
+Greek: Ἀβραάμ (Abraam) - Matt 1:1 • John 8:39 • Gal 3:7 • Heb 11:8
+
+TRIVIA:
+• Originally named Abram ('exalted father'), renamed Abraham ('father of a multitude').
+• Revered as a patriarch by Judaism, Christianity, and Islam.
+• Referred to in Scripture as the 'Friend of God'.
+• Buried in the Cave of Machpelah alongside Sarah.
+
+ART: A lone silhouette standing on a desert dune at night, looking up at a vast swirling galaxy of innumerable bright stars, deep blues and golds, vintage storybook style
+
+FOOTER: Example
+
+Output only the card image.

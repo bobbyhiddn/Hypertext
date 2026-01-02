@@ -1,0 +1,35 @@
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #013
+WORD: MOSES
+GLOSS: To draw out; the great leader and lawgiver of Israel
+TYPE: NAME (use matching type icon from references)
+RARITY: COMMON
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 4/5 filled
+
+ABILITY:
+Draw 2 cards, then discard 1 card.
+
+VERSES:
+OT: Exodus 2:10 — "She named him Moses, saying, 'I drew him out of the water.'"
+NT: John 1:17 — "For the law was given through Moses; grace and truth came through Jesus Christ."
+
+LANGUAGES:
+Hebrew: מֹשֶׁה (Mosheh) - Ex 2:10 • Ex 3:2 • Ex 14:21 • Ex 20:1 • Deut 34:10
+Greek: Μωϋσῆς (Mōusēs) - Matt 17:3 • Acts 7:20 • Heb 11:24 • Jude 1:9 • Rev 15:3
+
+TRIVIA:
+• The name Moses sounds like the Hebrew verb 'masha', meaning 'to draw out'.
+• Traditionally credited with writing the first five books of the Bible (the Pentateuch).
+• His life is divided into three 40-year periods: Prince of Egypt, Shepherd in Midian, and Leader in the Wilderness.
+• He is the most frequently mentioned human in the New Testament.
+
+ART: A woven wicker basket floating gently among tall green papyrus reeds at the edge of a wide river, soft golden sunlight filtering through the vegetation, ancient Egyptian architecture visible in the hazy distance
+
+FOOTER: Example
+
+Output only the card image.

@@ -903,6 +903,46 @@ def format_review_report(result: ReviewResult) -> str:
     return "\n".join(lines)
 
 
+def describe_palette(image_path: Path, model: str | None = None) -> str:
+    """Describe symbols/icons in a palette image without card-specific assumptions.
+
+    Args:
+        image_path: Path to the palette image
+        model: Optional model override
+
+    Returns:
+        Text description of each symbol in the palette
+    """
+    if genai is None:
+        raise ImportError("google-genai package required")
+
+    client = genai.Client()
+    model_name = model or os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+
+    with open(image_path, "rb") as f:
+        image_bytes = f.read()
+
+    prompt = """Describe each symbol/icon in this image in detail.
+
+For each distinct symbol you see:
+1. Identify its position (left to right, or row/column if arranged in a grid)
+2. Describe the exact visual appearance - shapes, lines, elements
+3. What object or concept it represents
+4. Any distinguishing features that make it unique
+
+Be specific and precise about visual details. These descriptions will be used as a reference rubric for recreating the symbols accurately."""
+
+    response = client.models.generate_content(
+        model=model_name,
+        contents=[
+            types.Part.from_bytes(data=image_bytes, mime_type="image/png"),
+            prompt,
+        ],
+    )
+
+    return response.text
+
+
 def main() -> int:
     """CLI entrypoint for card review."""
     parser = argparse.ArgumentParser(description="Review a Hypertext card image (two-stage)")
@@ -910,10 +950,15 @@ def main() -> int:
     parser.add_argument("card_json_path", nargs="?", help="Path to card.json (optional for --describe-only)")
     parser.add_argument("--threshold", type=int, default=90, help="Pass threshold (default 90)")
     parser.add_argument("--describe-only", action="store_true", help="Only run description stage")
+    parser.add_argument("--describe-palette", action="store_true", help="Describe symbols in a palette image")
 
     args = parser.parse_args()
 
-    if args.describe_only:
+    if args.describe_palette:
+        description = describe_palette(Path(args.image_path))
+        print(description)
+        return 0
+    elif args.describe_only:
         description = describe_card(Path(args.image_path))
         print(format_description_report(description))
     else:

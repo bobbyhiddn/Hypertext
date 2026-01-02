@@ -1,37 +1,27 @@
-# Series Statistics - Auto-updated by pipeline
 series: 2026-Q1
 theme: Babel
 cycle_days: 90
 start_date: 2026-01-01
-
-# Target rarity distribution (percentages, must sum to 100)
 rarity_targets:
   GLORIOUS: 10
   RARE: 15
   UNCOMMON: 35
   COMMON: 40
-
-# Target type distribution (counts for 90-card set)
 type_targets:
   NOUN: 16
   VERB: 20
   ADJECTIVE: 20
   NAME: 16
   TITLE: 18
-
-# Current rarity counts (updated after each card generation)
 rarity_counts:
-  GLORIOUS: 2
-  RARE: 1
+  GLORIOUS: 0
+  RARE: 0
   UNCOMMON: 1
-  COMMON: 1
-
-# Current type counts (updated after each card generation)
+  COMMON: 2
 type_counts:
-  NOUN: 0
-  VERB: 0
-  ADJECTIVE: 0
+  NOUN: 1
+  VERB: 1
+  ADJECTIVE: 1
   NAME: 0
   TITLE: 0
-
-total: 5
+total: 3

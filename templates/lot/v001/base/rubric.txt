@@ -1,0 +1,59 @@
+# Lot Template v001/base Rubric
+# Generated: 2026-01-01 09:37:31
+# Source: template_1024x1536.png
+
+Based on the provided reference image (`template_1024x1536.png`), here is the **EXACT** visual style guide for a "Lot" type Hypertext card.
+
+**1. FRAME/BORDER**
+*   **Outer Edge:** A thin, double-line border in black/dark navy surrounding the entire card content.
+*   **Main Background:** A textured, beige/tan parchment paper effect.
+*   **Corner Style:** The main outer frame has chamfered (cut/angled) corners, not rounded or perfectly square.
+*   **Inner Decorations:** The bottom "Context" box features ornate, metallic/gold scrollwork flourishes in the top-left and top-right corners of its header bar.
+
+**2. HEADER AREA**
+*   **Top Left:** A navy blue tab with a gold border containing the text "LOT" in white, uppercase, serif font.
+*   **Top Right:** A rectangular navy blue box with a gold border.
+    *   **Label:** "CARD COUNT" in small, white, uppercase serif text at the top.
+    *   **Value:** "X-CARDS" in larger, white, uppercase serif text below the label.
+
+**3. TITLE SECTION**
+*   **Main Title:** Centered at the top. Font is large, bold, black, uppercase serif (e.g., "NAME").
+*   **Subtitle:** Centered immediately below the main title. Font is smaller, black, italicized serif (e.g., "Example subtitle").
+
+**4. REWARD BANNER**
+*   **Style:** A prominent navy blue ribbon banner with "folded" forked ends on the left and right. It has a gold inner border.
+*   **Banner Text:**
+    *   Top line: "REWARD: X Points / X Letters" in white, serif font.
+    *   Bottom line: "Wreath Bonus: +2 Points (First to record)" in white, italicized serif font.
+
+**5. VERSE LINE**
+*   **Style:** A single line of text located between the Reward Banner and the Composition Section.
+*   **Formatting:** Centered, black, italicized serif font.
+*   **Format:** "Example verse text - Book 1:1"
+
+**6. COMPOSITION SECTION**
+*   **Container:** A wide rectangular box with decorative corner borders.
+*   **Content:** A horizontal row of icons representing card types (Book for NOUN, Pencil for VERB, Pen with sparkles for ADJECTIVE, Quill for NAME, Framed Picture for TITLE).
+*   **Styling:**
+    *   Icons are black silhouettes.
+    *   Below each icon is a label in brackets (e.g., `[NOUN]`, `[VERB]`, `[ADJECTIVE]`, `[NAME]`, `[TITLE]`) in a serif font.
+    *   Mathematical "plus" signs (`+`) separate the icon groups.
+
+**7. CONTEXT SECTION**
+*   **Container:** A large box at the bottom of the card labeled "CONTEXT".
+*   **Header:** A navy blue bar with gold trim and ornate corner scrolls. Text is "CONTEXT" in white, bold, uppercase serif.
+*   **Body:** Parchment background within a double-line border.
+*   **Text:** Black, serif font. The text is centered and describes the rules/context.
+
+**8. FOOTER**
+*   **Style:** A solid navy blue bar spanning the entire bottom width.
+*   **Text:** "SERIES: [Year]-[Code] Lots" (e.g., 20XX-QX Lots).
+*   **Font:** Small, grey/faded white, serif font, aligned to the left.
+
+**9. COLOR SCHEME**
+*   **Primary Background:** Textured Parchment (Beige/Tan).
+*   **Primary Accent:** Navy Blue (Headers, Banners, Footer).
+*   **Trim/Highlight:** Gold/Ochre (Borders of navy boxes).
+*   **Text Colors:** Black (on parchment), White (on Navy).
+
+**Any card failing to match these specific layouts, fonts, and color codes is a STYLE MISMATCH.**

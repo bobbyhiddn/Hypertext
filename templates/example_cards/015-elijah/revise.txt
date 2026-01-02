@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ELIJAH
+# Card_Gloss: My God is Yahweh; the prophet who called down fire and ascended in a whirlwind.
+# Card_Type: NAME
+# Card_Rarity: RARE
+# Card_Ability: Name a card type. Target player reveals their hand and discards all cards of that type.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A rugged prophet in a hairy mantle standing on a mountain peak, calling down a massive pillar of fire from a dark stormy sky onto a stone altar, dramatic lighting, no text.
+# Card_OT_Verse: 1 Kings 18:39 — And when all the people saw it, they fell on their faces: and they said, The LORD, he is the God.
+# Card_NT_Verse: Matthew 17:3 — And, behold, there appeared unto them Moses and Elijah talking with him.
+# Card_Hebrew: אֵלִיָּהוּ (Eliyahu)
+# Card_Greek: Ἠλίας (Ēlias)
+# Card_Trivia_1: Name means 'My God is Yahweh'.
+# Card_Trivia_2: Challenged 450 prophets of Baal to a contest by fire on Mount Carmel.
+# Card_Trivia_3: Taken up to heaven in a whirlwind, one of only two men never to die.
+# Card_Trivia_4: Appeared alongside Moses at the Transfiguration of Jesus.

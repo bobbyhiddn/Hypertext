@@ -1,0 +1,35 @@
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #014
+WORD: DAVID
+GLOSS: The second king of Israel, a shepherd, poet, and warrior described as a man after God's own heart.
+TYPE: NAME (use matching type icon from references)
+RARITY: UNCOMMON
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a TITLE from Sheol to your hand.
+
+VERSES:
+OT: 1 Samuel 16:13 — "Then Samuel took the horn of oil and anointed him... and the Spirit of the Lord rushed upon David from that day forward."
+NT: Revelation 22:16 — "I am the root and the descendant of David, the bright morning star."
+
+LANGUAGES:
+Hebrew: דָּוִד (David) - 1 Sam • 2 Sam • 1 Chron • Psalms
+Greek: Δαυίδ (Dauid) - Matt • Luke • Acts • Rom • Rev
+
+TRIVIA:
+• His name means 'Beloved' in Hebrew.
+• Traditionally attributed with authorship of 73 Psalms.
+• Reigned as king for 40 years: 7 in Hebron and 33 in Jerusalem.
+• Jesus is referred to as the 'Son of David' 17 times in Matthew.
+
+ART: A rustic wooden harp resting against a rough stone, with a simple leather sling and five smooth river stones lying nearby in the grass, illuminated by a golden ray of sunlight.
+
+FOOTER: Example
+
+Output only the card image.

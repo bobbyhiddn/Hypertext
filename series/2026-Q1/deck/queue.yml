@@ -1,9 +1,9 @@
-- word: MOSES
-  card_type: NAME
-  rarity: RARE
-- word: EAT
+- word: GRACE
+  card_type: NOUN
+  rarity: COMMON
+- word: BUILD
   card_type: VERB
   rarity: COMMON
-- word: MAKE
-  card_type: VERB
-  rarity: COMMON
+- word: MIGHTY
+  card_type: ADJECTIVE
+  rarity: UNCOMMON

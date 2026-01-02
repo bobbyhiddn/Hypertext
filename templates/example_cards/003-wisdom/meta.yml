@@ -1,0 +1,74 @@
+number: '003'
+word: WISDOM
+gloss: The quality of having experience, knowledge, and good judgment; the application
+  of truth.
+card_type: NOUN
+rarity: RARE
+series: 2026-Q1
+set: Example
+art_prompt: Seven ancient stone pillars rising from a foundation of swirling clouds
+  into a brilliant, piercing golden light, ethereal architecture, cinematic lighting,
+  photorealistic style
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Look at the top 5 cards of the Tower; add 2 to your hand and discard the
+  rest.
+style_series_dir: series\2026-Q1
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#003'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+review_status: yellow
+review_notes: Increase LORE stat pips from 4 to 5 to match the expected stats.
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.
+revision: 2
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  # Card_Word: WISDOM
+
+  # Card_Gloss: The quality of having experience, knowledge, and good judgment; the
+  application of truth.
+
+  # Card_Type: NOUN
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Look at the top 5 cards of the Tower; add 2 to your hand and discard
+  the rest.
+
+  # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
+
+  # Card_Art_Prompt: Seven ancient stone pillars rising from a foundation of swirling
+  clouds into a brilliant, piercing golden light, ethereal architecture, cinematic
+  lighting, photorealistic style
+
+  # Card_OT_Verse: Proverbs 9:10 — The fear of the LORD is the beginning of wisdom:
+  and the knowledge of the holy is understanding.
+
+  # Card_NT_Verse: James 3:17 — But the wisdom that is from above is first pure, then
+  peaceable, gentle, and easy to be intreated...
+
+  # Card_Hebrew: חָכְמָה (Chokhmah)
+
+  # Card_Greek: σοφία (Sophia)
+
+  # Card_Trivia_1: In Proverbs 9, Wisdom is personified as a woman who has built her
+  house upon seven pillars.
+
+  # Card_Trivia_2: King Solomon famously asked God for an understanding heart to judge
+  people rather than for wealth or long life.
+
+  # Card_Trivia_3: The Greek word ''sophia'' is the root of ''philosophy'', which
+  literally means ''the love of wisdom''.
+
+  # Card_Trivia_4: The Apostle Paul describes Christ as ''the power of God and the
+  wisdom of God'' in 1 Corinthians.'

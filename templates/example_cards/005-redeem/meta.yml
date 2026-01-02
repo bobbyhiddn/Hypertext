@@ -1,0 +1,16 @@
+number: '005'
+word: REDEEM
+gloss: To buy back, recover, or liberate by payment; to restore from captivity or
+  death.
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Example
+art_prompt: A pair of rusted iron shackles lying open and empty on a cold stone floor,
+  illuminated by a single beam of warm golden light breaking through the darkness.
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Return a card from Sheol to your hand, then discard 1 card.
+style_series_dir: series\2026-Q1

@@ -1,0 +1,17 @@
+number: '010'
+word: RIGHTEOUS
+gloss: Morally right or justifiable; acting in accord with divine or moral law; free
+  from guilt or sin.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Example
+art_prompt: A golden plumb line hanging perfectly straight, glowing with inner light,
+  set against a backdrop of crooked, shadowy stone pillars. The light from the line
+  reveals the imperfections of the surrounding architecture.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Return an ADJECTIVE from Sheol to your hand.
+style_series_dir: series\2026-Q1

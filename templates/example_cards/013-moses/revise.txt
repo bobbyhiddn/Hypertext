@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request:
+
+Ability_Change_Request:
+
+Stats_Change_Request:
+
+General_Revision_Request: Fix the ability text box styling to match the other example cards - same border, background, and text formatting as GRACE and REDEEM.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MOSES
+# Card_Gloss: To draw out; the great leader and lawgiver of Israel
+# Card_Type: NAME
+# Card_Rarity: COMMON
+# Card_Ability: Draw 2 cards, then discard 1 card.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 4
+# Card_Art_Prompt: A woven wicker basket floating gently among tall green papyrus reeds at the edge of a wide river, soft golden sunlight filtering through the vegetation, ancient Egyptian architecture visible in the hazy distance
+# Card_OT_Verse: Exodus 2:10 — She named him Moses, saying, 'I drew him out of the water.'
+# Card_NT_Verse: John 1:17 — For the law was given through Moses; grace and truth came through Jesus Christ.
+# Card_Hebrew: מֹשֶׁה (Mosheh)
+# Card_Greek: Μωϋσῆς (Mōusēs)
+# Card_Trivia_1: The name Moses sounds like the Hebrew verb 'masha', meaning 'to draw out'.
+# Card_Trivia_2: Traditionally credited with writing the first five books of the Bible (the Pentateuch).
+# Card_Trivia_3: His life is divided into three 40-year periods: Prince of Egypt, Shepherd in Midian, and Leader in the Wilderness.
+# Card_Trivia_4: He is the most frequently mentioned human in the New Testament.

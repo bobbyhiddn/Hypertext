@@ -1,0 +1,15 @@
+number: '004'
+word: GLORY
+gloss: Magnificence, weight, honor, or the manifest presence of God.
+card_type: NOUN
+rarity: GLORIOUS
+series: 2026-Q1
+set: Example
+art_prompt: A blinding, golden radiance erupting from behind a torn heavy velvet veil,
+  illuminating a dark stone temple interior with intense beams of light.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Discard your hand, then draw 7 cards.
+style_series_dir: series\2026-Q1

@@ -1,0 +1,121 @@
+number: '001'
+word: GRACE
+gloss: Unmerited favor; a free gift.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single drop of golden light falling into an open, cupped hand, dark
+  background, cinematic lighting, ethereal style
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Draw 1 card. If you have no Letters, draw 1 additional card.
+ot_verse:
+  ref: Genesis 6:8
+  snippet: But Noah found grace in the eyes of the LORD.
+nt_verse:
+  ref: Ephesians 2:8
+  snippet: For by grace are ye saved through faith; and that not of yourselves...
+greek:
+  text: χάρις
+  translit: charis
+hebrew:
+  text: חֵן
+  translit: chen
+ot_refs: Gen 6:8 • Ex 33:17 • Ps 84:11
+nt_refs: Rom 3:24 • Eph 2:8 • 2 Cor 12:9
+trivia:
+- '"Charis" (Greek) originally meant "beauty" or "charm" before the New Testament
+  gave it deep theological weight.'
+- '"Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting a superior
+  showing kindness to an inferior.'
+- Grace is often defined as receiving what you do not deserve, while mercy is not
+  receiving the punishment you do deserve.
+- The Apostle Paul uses the word "grace" over 100 times in his letters, making it
+  a central theme of his theology.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZ3s9fyqUC71RROnIDGOSmuA3SB3nLPHSj_TO0xmgyiz8kXyOmuf-XG7I2MPWuBu27_FsHoDU9GozPakhNqseyc1-RWzSSP7sPLOp29Nf9Gt5QAOKUvoFYuYdU72t4BA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4-Ku3a9NKoS-04QkKkY3S-3J8XYFiTIdAlkIt0jsDObo1YN2CyMEshSHUhHo-MpKrdW-DgC8j1Qs47xJMHo4Mmo2TG_EGbDZ5GPKEI-pVIuFmGoJ0SLmV8aSlY7rjlbiZ2iBEDtDVMy1_CJDoUehNe6Qhn9Hw4QhPW5m5t6vARMe4lQnvVoqxhu7U9A==
+  title: irvingtonumc.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm5HpS-1aXIqTA7cZQvSkDaj8xmcZo4C3Po2ZUgksF99Modr-qsxbxOBjOhtpLZgEYLdH-ZlqIQPeb8F5GreGg5EIqqxawzo9YXPPJXbzbjsYqICSyGVB4ovGTrKTpsJlQLa2xs_aB3u782GPbaxmqvrrp
+  title: biblestudylessons.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEylONVZ_qA6V_H7eVAFyVPFlpCs8AzhsmbPZgwIrxRZIceexdnOPoWvkwWuo3a7vVrwFAqd5og8MF_WmSztm0urNzlyWEP5ecWEmkPKLHrzfveMlycyRtGc79WcSKCYsvNzcR4sN3zO_W_MN-o9kjufkMPlxfpNBJzSU1a5TVEws0p4FuLFE9r
+  title: firmisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSvdbOjprTNx-m-c05Hw0B7dBZ48VrHnObZIUXitQHN0yfnUCGueUtQAz5YHAGqktppITk-J0nG3QlV_Xk5KyaVsuNGWRuRY8OcZ9PrI8l8AlLwMd_ovAJAPs9B5diLukcciLgeEgOhFCzQbx2MZ8xfN4=
+  title: donotdepart.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPWJCIEI9DaCBSbBDfYOcjA66MeGp7NKVMr6bIVSfAk0bUvlmvLHkBxGjHufnqTEt3T14xX1TiBjdc9yYhNUmUcwGnX8HXvJxaT26B4Cq0c9tzJ9VC7cpfLM0ur-d5umvFQpXmOLy9yvb-klwW21hCgtsXNRfKjeyw2ro7lCHORLQ1yagzITE0Lw5Dr9UpQO4YduIABgo=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAXbOa_3OejA81aKVWpfLXN5UOpkzj-xnnftlHvBipHb_1fc2weQd7_-uo0RS2JldDDjtbdYYD1QXllCQ6GvQPfR_0p7jx1xdWdisSdewsDbdo9rL7s-xkod2boeitGk3ysHlYMHI=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHORkVz0Ip7mauBX3qZEaZ8_ZEWnF3j9KP1g-fAQXAtP0HT5foValDn3pOa3PM5uVNCsiOGIqV03BIydXB2oBeMzAg1mYdFhw_FX48u1hogeagj4CsuZAfS2242JxmdJqxg-_O4yCA0cP2Z5Rs6X3AjMz0hcRk=
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEreRanb3aodldhB0YDCgkyjmkhYTr3pSnQFv-o789ZQfFwM8jyba826RGzF1ra7I2S1LcyCQnf5rbZUKiIC4Njiy6-rImhl1ftysSixF8I6u1BmJARZPwwANQlLU-pAvIk6SiYzVWCB2qKnRJa72ZPECyn1S10HTng6sbiACyIdGR_UNbfvy_-p_nxNog3LJAbpbeK_rU=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6C68uABtVNOXBz6GIFlKdRT5sa8_yXnrSLcOBmKhoe4ipN9bRbSrO6mHPIkoLsECZU_gT2zd0Z0donwM4CrK1RmPEu80uxDRt0YiDiXG0mvxkYURnQZOe1zdt0R24OVB9ct4wBa5EunZrB2JXeFyErWNS
+  title: faithalone.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEv1wxbN-5ghkn-WTKdAXJD2tNa0twPIY2Jp47yqatSEUO2cyqcrJYLfsxtpBK4rDTOWILC_ntZxB3TlUpjJewowcmwk2z415YwHs3RT4T9gq-Yx7JJY5aCbgOzu7t_AGk6
+  title: skipmoen.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwqwWupna3MyxyixvqPFU3Y8QdFA8hCNfS5dpTgPn4tYabsGb6bc6QKJKjzH_ioC04_-Dqo1wrA9zOWk__oWw9jHDMlcmjoaBy7OoMLVV0xZoy1cHbwUlXYfm55YA417W_5Fenq2rOKiHtCgEw_iySdXV5xhjcl0ih
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgqLV34KmvjNW4lxCTRChBOLRMYjcXfh1Bu16yKV515cDKvVEQZcUvhWWgnqGtSJVqZUAyBqRgNwOJU2c12vCIvOQ21Gcz82llACLRzj7l4bvY11yX7zCRU1NdGrqN
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAyqZiQk9z94N6nCd8XEwiAVYvU4IDpxaZceuEWXFXm90fQHSPuVdKUKsVZWtjeAK7V-lRC_tjFK1h_tiejd_jl_PLpF4wiMyo42AZTItMtOUJA08MiahtuGqWXNx2_L1EndiG27y0Nbp8bXKhMIf8EYM9WmpugjtxZTGicg==
+  title: biblebrodown.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzJ2Tv6Kgg4Zxiaumrj6_yqYnEb6YDcCiqPaiwmp1nfFixVchBTfXkWHtosT7Ql089vrIexKqeKN6ef5gUDOr0nY1-G95eI0HJbZNL5R10eNCQr3DdYs6oUgyLrsFGZ8dsjMjim870AZSjutWXQtY7
+  title: gotquestions.org
+search_queries:
+- ''
+- greek word for grace charis definition
+- Genesis 6:8 hebrew grace
+- hebrew word for grace chen vs chesed
+- Ephesians 2:8 greek grace
+revision: 1
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  Fix the stat pips to be NAVY colored (dark blue, not black or other colors). Fix
+  the COMMON rarity diamond to be WHITE. Match the styling from the example cards
+  exactly.
+
+  # Card_Word: GRACE
+
+  # Card_Gloss: Unmerited favor; a free gift.
+
+  # Card_Type: NOUN
+
+  # Card_Rarity: COMMON
+
+  # Card_Ability: Draw 1 card. If you have no Letters, draw 1 additional card.
+
+  # Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+
+  # Card_Art_Prompt: A single drop of golden light falling into an open, cupped hand,
+  dark background, cinematic lighting, ethereal style
+
+  # Card_OT_Verse: Genesis 6:8 — But Noah found grace in the eyes of the LORD.
+
+  # Card_NT_Verse: Ephesians 2:8 — For by grace are ye saved through faith; and that
+  not of yourselves...
+
+  # Card_Hebrew: חֵן (chen)
+
+  # Card_Greek: χάρις (charis)
+
+  # Card_Trivia_1: "Charis" (Greek) originally meant "beauty" or "charm" before the
+  New Testament gave it deep theological weight.
+
+  # Card_Trivia_2: "Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting
+  a superior showing kindness to an inferior.
+
+  # Card_Trivia_3: Grace is often defined as receiving what you do not deserve, while
+  mercy is not receiving the punishment you do deserve.
+
+  # Card_Trivia_4: The Apostle Paul uses the word "grace" over 100 times in his letters,
+  making it a central theme of his theology.'

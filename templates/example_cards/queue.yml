@@ -1,0 +1,72 @@
+# Example Cards Queue - All 20 Type/Rarity Combinations
+# These cards serve as style references for the full pipeline
+
+# NOUN cards (001-004)
+- word: GRACE
+  card_type: NOUN
+  rarity: COMMON
+- word: COVENANT
+  card_type: NOUN
+  rarity: UNCOMMON
+- word: WISDOM
+  card_type: NOUN
+  rarity: RARE
+- word: GLORY
+  card_type: NOUN
+  rarity: GLORIOUS
+
+# VERB cards (005-008)
+- word: REDEEM
+  card_type: VERB
+  rarity: COMMON
+- word: FORGIVE
+  card_type: VERB
+  rarity: UNCOMMON
+- word: SANCTIFY
+  card_type: VERB
+  rarity: RARE
+- word: BLESS
+  card_type: VERB
+  rarity: GLORIOUS
+
+# ADJECTIVE cards (009-012)
+- word: HOLY
+  card_type: ADJECTIVE
+  rarity: COMMON
+- word: RIGHTEOUS
+  card_type: ADJECTIVE
+  rarity: UNCOMMON
+- word: ETERNAL
+  card_type: ADJECTIVE
+  rarity: RARE
+- word: SACRED
+  card_type: ADJECTIVE
+  rarity: GLORIOUS
+
+# NAME cards (013-016)
+- word: MOSES
+  card_type: NAME
+  rarity: COMMON
+- word: DAVID
+  card_type: NAME
+  rarity: UNCOMMON
+- word: ELIJAH
+  card_type: NAME
+  rarity: RARE
+- word: ABRAHAM
+  card_type: NAME
+  rarity: GLORIOUS
+
+# TITLE cards (017-020)
+- word: SHEPHERD
+  card_type: TITLE
+  rarity: COMMON
+- word: REDEEMER
+  card_type: TITLE
+  rarity: UNCOMMON
+- word: SAVIOR
+  card_type: TITLE
+  rarity: RARE
+- word: MESSIAH
+  card_type: TITLE
+  rarity: GLORIOUS

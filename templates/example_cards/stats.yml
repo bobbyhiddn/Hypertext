@@ -1,0 +1,20 @@
+series: example_cards
+theme: ''
+cycle_days: 90
+start_date: '2026-01-01'
+rarity_targets:
+  COMMON: 40
+  UNCOMMON: 35
+  RARE: 15
+  GLORIOUS: 10
+type_targets:
+  NOUN: 16
+  VERB: 20
+  ADJECTIVE: 20
+  NAME: 16
+  TITLE: 18
+rarity_counts:
+  RARE: 1
+type_counts:
+  TITLE: 1
+total: 1

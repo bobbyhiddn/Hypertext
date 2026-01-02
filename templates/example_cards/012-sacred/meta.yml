@@ -1,0 +1,18 @@
+number: '012'
+word: SACRED
+gloss: Dedicated or set apart for the service or worship of a deity; worthy of spiritual
+  respect.
+card_type: ADJECTIVE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Example
+art_prompt: A glowing, unapproachable burning bush on a dark mountain peak, radiating
+  intense white and gold light that forms a protective spherical barrier, ethereal
+  atmosphere, cinematic lighting, no text
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return a card from Sheol to your hand. Until your next turn, opponents cannot
+  activate abilities or call Redeem.
+style_series_dir: series\2026-Q1

@@ -21,19 +21,9 @@
 
 Rebuild: false
 
-Frame_Revision: <describe changes to borders, corners, frame decorations>
+Frame_Revision:
 
-Layout_Revision: <describe changes to panel positions, sizes, or spacing>
-
-Typography_Revision: <describe changes to fonts, text styles, or sizing>
-
-Color_Revision: <describe changes to colors, palette, or fills>
-
-Icon_Revision: <describe changes to composition icons>
-
-Banner_Revision: <describe changes to reward banner style>
-
-General_Revision: <describe any other changes>
+Color_Revision:
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT TEMPLATE SETTINGS (for reference)

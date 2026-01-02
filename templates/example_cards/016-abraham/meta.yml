@@ -1,0 +1,35 @@
+number: '016'
+word: ABRAHAM
+gloss: Father of a multitude; the first patriarch of Israel and example of faith.
+card_type: NAME
+rarity: GLORIOUS
+series: 2026-Q1
+set: Example
+art_prompt: A lone silhouette standing on a desert dune at night, looking up at a
+  vast swirling galaxy of innumerable bright stars, deep blues and golds, vintage
+  storybook style
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Reveal the top 10 cards of the Tower. Add all NAMEs and TITLEs to your hand,
+  then shuffle the rest into the Tower.
+style_series_dir: series\2026-Q1
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#003'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+style_mismatch_count: 1
+style_mismatch_reason: Stat pips are filled with Gold/Orange instead of Dark Navy.
+  All section headers (Ability, Verses, Languages, Trivia) use solid dark navy bars
+  with white text, whereas reference cards use plain dark text on parchment background.
+review_status: yellow
+review_notes: Increase Complexity stat from 2 to 3
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.

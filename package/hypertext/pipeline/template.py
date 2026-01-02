@@ -79,6 +79,52 @@ def _get_valid_subtypes(template_type: str) -> list[str]:
     return ["base"]
 
 
+def _get_subtype_category(subtype: str) -> str:
+    """Get the category of a subtype (type, rarity, or base)."""
+    type_subtypes = ["noun", "name", "adjective", "verb", "title"]
+    rarity_subtypes = ["common", "uncommon", "rare", "glorious"]
+    if subtype in type_subtypes:
+        return "type"
+    elif subtype in rarity_subtypes:
+        return "rarity"
+    return "base"
+
+
+def _create_subtype_revise_template(subtype: str) -> str:
+    """Generate a clean revise.txt template for a subtype folder."""
+    return f"""# {subtype.upper()} Template Revision Form
+#
+# This revise.txt applies only to the {subtype.upper()} subtype template.
+# Edit fields below, then run:
+#   python -m hypertext.pipeline.template --type card --phase refine --subtype {subtype}
+#
+# Revision Categories:
+# - Frame_Revision: Changes to borders, corners, filigree
+# - Layout_Revision: Changes to panel positions, sizes, spacing
+# - Typography_Revision: Changes to fonts, text styles, sizing
+# - Color_Revision: Changes to palette, gradients, fills
+# - Stats_Revision: Changes to stat pips, icons, indicators
+# - General_Revision: Any other changes
+#
+# Notes:
+# - Leave a field blank to keep it unchanged
+# - Lines starting with # are ignored
+
+Rebuild: false
+Frame_Revision:
+
+Layout_Revision:
+
+Typography_Revision:
+
+Color_Revision:
+
+Stats_Revision:
+
+General_Revision:
+"""
+
+
 def _get_current_template_path(template_type: str, subtype: str = "base") -> Path:
     """Get the path to the current version's template image."""
     template_dir = _get_template_dir(template_type)
@@ -92,70 +138,85 @@ def _get_current_template_path(template_type: str, subtype: str = "base") -> Pat
 def _get_style_refs_for_template(
     template_type: str,
     base_versions: list[int] | None = None,
+    subtype: str = "base",
 ) -> list[str]:
     """Get style reference images for template generation.
 
-    For templates, we use:
-    - [1] = Current template (to refine) or specified base version(s)
-    - [2+] = Example cards/lots for style consistency
+    For subtypes, includes:
+    1. The existing subtype template (if refining an existing subtype)
+    2. The base template from the same version
+    3. Symbol palettes (type symbols, rarity diamonds) if available
 
     Args:
         template_type: Either 'card' or 'lot'
         base_versions: Optional list of version numbers to use as base references
+        subtype: The subtype being generated (used to find subtype-specific refs)
     """
-    repo_root = Path(__file__).parent.parent.parent.parent
     template_dir = _get_template_dir(template_type)
+    repo_root = template_dir.parent
     style_refs = []
 
-    # Primary reference: specified versions or current template
-    if base_versions:
-        for v in base_versions:
+    # Determine which version(s) to pull refs from
+    versions_to_check = base_versions if base_versions else []
+    if not versions_to_check:
+        current_version = _get_current_version(template_dir)
+        if current_version > 0:
+            versions_to_check = [current_version]
+
+    for v in versions_to_check:
+        # 1. First, add the SUBTYPE-SPECIFIC template if it exists (and subtype != base)
+        #    This allows the model to see what the existing subtype looks like
+        if subtype != "base":
+            subtype_png = _get_subtype_dir(template_dir, v, subtype) / "template_1024x1536.png"
+            if subtype_png.exists():
+                style_refs.append(str(subtype_png))
+                _log(f"  Including existing {subtype} template as reference")
+
+        # 2. Then add the base template
+        base_png = _get_subtype_dir(template_dir, v, "base") / "template_1024x1536.png"
+        if base_png.exists():
+            style_refs.append(str(base_png))
+        else:
+            # Legacy fallback: template at version root
             version_png = _get_version_dir(template_dir, v) / "template_1024x1536.png"
             if version_png.exists():
                 style_refs.append(str(version_png))
             else:
-                _log(f"WARNING: Version {v} template not found: {version_png}")
-    else:
-        # Default to package template (current synced version)
+                # Fall back to v001 base template if current version doesn't have one
+                v001_base_png = _get_subtype_dir(template_dir, 1, "base") / "template_1024x1536.png"
+                if v001_base_png.exists() and str(v001_base_png) not in style_refs:
+                    style_refs.append(str(v001_base_png))
+                    _log(f"  Falling back to v001 base template")
+                else:
+                    _log(f"WARNING: Version {v} base template not found")
+
+    # If still no refs, try package template
+    if not style_refs:
         pkg_template = _get_pkg_template_path(template_type)
         if pkg_template.exists():
             style_refs.append(str(pkg_template))
 
-    # Add example references based on type
+    # 3. Add symbol palettes if available (for card templates)
+    # Only include palettes relevant to the subtype category
     if template_type == "card":
-        # Use existing example cards from templates directory
-        pkg_templates = repo_root / "package" / "hypertext" / "templates"
-        for name in ["Creation.png", "Epistle.png"]:
-            ref = pkg_templates / name
-            if ref.exists():
-                style_refs.append(str(ref))
+        palettes_dir = repo_root / "palettes"
+        category = _get_subtype_category(subtype)
 
-        # Also check series for good examples
-        series_cards = repo_root / "series" / "2026-Q1" / "cards"
-        if series_cards.exists():
-            for card_dir in sorted(series_cards.iterdir())[:2]:
-                card_png = card_dir / "outputs" / "card_1024x1536.png"
-                if card_png.exists():
-                    style_refs.append(str(card_png))
+        # Type symbols palette - only for type subtypes and base
+        if category in ("type", "base"):
+            type_palette = palettes_dir / "type_symbols_palette.png"
+            if type_palette.exists():
+                style_refs.append(str(type_palette))
+                _log(f"  Including type symbols palette")
 
-    elif template_type == "lot":
-        # Use lot examples from templates/lots
-        lot_templates = repo_root / "templates" / "lots"
-        for name in ["Creation.png", "Epistle.png", "Lot_Template.png"]:
-            ref = lot_templates / name
-            if ref.exists():
-                style_refs.append(str(ref))
+        # Rarity diamonds palette - only for rarity subtypes and base
+        if category in ("rarity", "base"):
+            rarity_palette = palettes_dir / "rarity_diamonds_palette.png"
+            if rarity_palette.exists():
+                style_refs.append(str(rarity_palette))
+                _log(f"  Including rarity diamonds palette")
 
-        # Also check series lots
-        series_lots = repo_root / "series" / "2026-Q1" / "lots"
-        if series_lots.exists():
-            for lot_dir in sorted(series_lots.iterdir())[:2]:
-                lot_png = lot_dir / "outputs" / "lot_1024x1536.png"
-                if lot_png.exists():
-                    style_refs.append(str(lot_png))
-
-    # Limit to reasonable number
-    return style_refs[:5]
+    return style_refs
 
 
 def _parse_revise_form(revise_path: Path) -> dict:
@@ -281,6 +342,41 @@ def _reset_rebuild_flag(revise_path: Path) -> None:
         _log("Reset Rebuild flag to false in revise.txt")
 
 
+def _reset_revision_fields(revise_path: Path) -> None:
+    """Reset all revision fields to empty in revise.txt after successful refinement."""
+    if not revise_path.exists():
+        return
+
+    with open(revise_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # List of revision field names to reset
+    revision_fields = [
+        "Frame_Revision",
+        "Layout_Revision",
+        "Typography_Revision",
+        "Color_Revision",
+        "Icon_Revision",
+        "Banner_Revision",
+        "General_Revision",
+    ]
+
+    new_content = content
+    for field in revision_fields:
+        # Match field with any content until end of line, replace with empty field
+        new_content = re.sub(
+            rf'^({field}:)\s*.+$',
+            r'\1',
+            new_content,
+            flags=re.MULTILINE
+        )
+
+    if new_content != content:
+        with open(revise_path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        _log("Reset revision fields in revise.txt")
+
+
 def phase_refine(
     template_type: str,
     rebuild: bool = False,
@@ -288,6 +384,8 @@ def phase_refine(
     base_versions: list[int] | None = None,
     subtype: str = "base",
     target_version: int | None = None,
+    style_refs: list[str] | None = None,
+    extra_refs: list[str] | None = None,
 ) -> int:
     """Refine a template using style references.
 
@@ -298,6 +396,8 @@ def phase_refine(
         base_versions: Optional list of version numbers to use as style references
         subtype: Template subtype (e.g., 'common', 'rare' for cards; '5-card', '7-card' for lots)
         target_version: If specified, generate into this version folder (in-place rebuild)
+        style_refs: Optional list of custom style reference paths (overrides automatic selection)
+        extra_refs: Optional list of additional reference paths (added to automatic selection)
 
     Returns:
         Exit code (0 for success)
@@ -315,7 +415,7 @@ def phase_refine(
         _log(f"ERROR: Template directory not found: {template_dir}")
         return 1
 
-    revise_path = template_dir / "revise.txt"
+    global_revise_path = template_dir / "revise.txt"
     meta_path = template_dir / "meta.yml"
 
     # Determine version number first (needed for prompt path resolution)
@@ -323,30 +423,70 @@ def phase_refine(
     if current_version == 0:
         current_version = 1  # Start at v001 if no version exists
 
-    # If target_version specified, use it (in-place rebuild)
+    # Find the most recent version containing this subtype template
+    def _find_subtype_source_version() -> int:
+        """Search backwards to find the most recent version with this subtype template."""
+        for v in range(current_version, 0, -1):
+            subtype_png = _get_subtype_dir(template_dir, v, subtype) / "template_1024x1536.png"
+            if subtype_png.exists():
+                return v
+        return 1  # Default to v001
+
+    # Determine source version (the version we're refining FROM)
+    # If target_version specified, source is the previous version (for in-place rebuild)
     if target_version is not None:
         new_version = target_version
-        _log(f"Rebuilding {subtype} template in-place at v{new_version:03d}")
+        source_version = base_versions[0] if base_versions else max(1, target_version - 1)
+        _log(f"Rebuilding {subtype} template in-place at v{new_version:03d} (source: v{source_version:03d})")
     else:
+        # Find where this subtype actually exists (may not be current_version)
+        existing_subtype_version = _find_subtype_source_version()
+        source_version = base_versions[0] if base_versions else existing_subtype_version
+
         # Check if this subtype already exists in current version
         current_subtype_dir = _get_subtype_dir(template_dir, current_version, subtype)
         current_subtype_png = current_subtype_dir / "template_1024x1536.png"
 
         if current_subtype_png.exists():
-            # Subtype exists - create new version for refinement
+            # Subtype exists in current version - create new version for refinement
             new_version = current_version + 1
             _log(f"Refining existing {subtype} template: v{current_version:03d} -> v{new_version:03d}")
         else:
-            # Subtype doesn't exist - add it to current version
+            # Subtype doesn't exist in current version - add it, using source from earlier version
             new_version = current_version
-            _log(f"Creating new {subtype} template in v{new_version:03d}")
+            if source_version != current_version:
+                _log(f"Creating {subtype} template in v{new_version:03d} (source: v{source_version:03d})")
+            else:
+                _log(f"Creating new {subtype} template in v{new_version:03d}")
+
+    # Look for subtype-specific revise.txt first, then version-specific, then global
+    subtype_revise_path = _get_subtype_dir(template_dir, source_version, subtype) / "revise.txt"
+    version_revise_path = _get_version_dir(template_dir, source_version) / "revise.txt"
+    if subtype_revise_path.exists():
+        revise_path = subtype_revise_path
+        _log(f"Using subtype-specific revise.txt: {subtype_revise_path}")
+    elif version_revise_path.exists():
+        revise_path = version_revise_path
+        _log(f"Using version-specific revise.txt: {version_revise_path}")
+    else:
+        revise_path = global_revise_path
+        _log(f"Using global revise.txt: {global_revise_path}")
 
     # Check for subtype-specific prompt first, fall back to parent prompt
-    # Use the version we're building into for prompt lookup
-    subtype_prompt_path = _get_subtype_dir(template_dir, new_version, subtype) / "prompt.txt"
-    if subtype_prompt_path.exists():
-        prompt_path = subtype_prompt_path
-        _log(f"Using subtype-specific prompt: {subtype_prompt_path}")
+    # Look in SOURCE version first, then new version, then v001, then parent
+    source_subtype_prompt = _get_subtype_dir(template_dir, source_version, subtype) / "prompt.txt"
+    new_subtype_prompt = _get_subtype_dir(template_dir, new_version, subtype) / "prompt.txt"
+    v001_subtype_prompt = _get_subtype_dir(template_dir, 1, subtype) / "prompt.txt"
+
+    if source_subtype_prompt.exists():
+        prompt_path = source_subtype_prompt
+        _log(f"Using subtype-specific prompt from source: {source_subtype_prompt}")
+    elif new_subtype_prompt.exists():
+        prompt_path = new_subtype_prompt
+        _log(f"Using subtype-specific prompt: {new_subtype_prompt}")
+    elif v001_subtype_prompt.exists():
+        prompt_path = v001_subtype_prompt
+        _log(f"Using subtype-specific prompt from v001: {v001_subtype_prompt}")
     else:
         prompt_path = template_dir / "prompt.txt"
         _log(f"Using parent prompt: {prompt_path}")
@@ -384,10 +524,34 @@ def phase_refine(
     with open(subtype_dir / "generated_prompt.txt", "w", encoding="utf-8") as f:
         f.write(full_prompt)
 
-    # Get style references
-    if base_versions:
-        _log(f"Using base versions: {base_versions}")
-    style_refs = _get_style_refs_for_template(template_type, base_versions)
+    # Get style references - use custom if provided, otherwise auto-select
+    if style_refs:
+        _log(f"Using {len(style_refs)} custom style reference(s)")
+        # Validate paths exist
+        valid_refs = []
+        for ref in style_refs:
+            ref_path = Path(ref)
+            if ref_path.exists():
+                valid_refs.append(str(ref_path))
+            else:
+                _log(f"WARNING: Style ref not found: {ref}")
+        style_refs = valid_refs
+    else:
+        # Use source_version if no explicit base_versions provided
+        versions_for_refs = base_versions if base_versions else [source_version]
+        if base_versions:
+            _log(f"Using base versions: {base_versions}")
+        style_refs = _get_style_refs_for_template(template_type, versions_for_refs, subtype)
+
+    # Add extra references (supplements automatic selection, doesn't override)
+    if extra_refs:
+        for ref in extra_refs:
+            ref_path = Path(ref)
+            if ref_path.exists():
+                style_refs.append(str(ref_path))
+                _log(f"  Adding extra reference: {ref}")
+            else:
+                _log(f"WARNING: Extra ref not found: {ref}")
 
     if not style_refs:
         _log("WARNING: No style references found, using basic image generation")
@@ -458,6 +622,35 @@ def phase_refine(
     # Reset rebuild flag so user can trigger new rebuilds
     if rebuild:
         _reset_rebuild_flag(revise_path)
+
+    # Reset revision fields after successful refinement (ephemeral changes)
+    _reset_revision_fields(revise_path)
+
+    # Copy clean revise.txt to new version folder for future refinements
+    new_version_dir = _get_version_dir(template_dir, new_version)
+    new_version_revise = new_version_dir / "revise.txt"
+    if not new_version_revise.exists() and global_revise_path.exists():
+        shutil.copy2(global_revise_path, new_version_revise)
+        # Reset the copied file's fields to ensure it's clean
+        _reset_revision_fields(new_version_revise)
+        _reset_rebuild_flag(new_version_revise)
+        _log(f"Created version-specific revise.txt: {new_version_revise}")
+
+    # Copy subtype-specific revise.txt to new subtype folder if source had one
+    if subtype != "base":
+        new_subtype_revise = subtype_dir / "revise.txt"
+        source_subtype_revise = _get_subtype_dir(template_dir, source_version, subtype) / "revise.txt"
+        if not new_subtype_revise.exists():
+            if source_subtype_revise.exists():
+                shutil.copy2(source_subtype_revise, new_subtype_revise)
+                _reset_revision_fields(new_subtype_revise)
+                _reset_rebuild_flag(new_subtype_revise)
+                _log(f"Created subtype-specific revise.txt: {new_subtype_revise}")
+            else:
+                # Generate a clean subtype-specific template
+                with open(new_subtype_revise, "w", encoding="utf-8") as f:
+                    f.write(_create_subtype_revise_template(subtype))
+                _log(f"Created subtype-specific revise.txt: {new_subtype_revise}")
 
     _log(f"Template v{new_version:03d} complete!")
     return 0
@@ -554,16 +747,19 @@ def phase_list(template_type: str) -> int:
     return 0
 
 
-def phase_compile(template_type: str, version: int | None = None) -> int:
+def phase_compile(template_type: str, version: int | None = None, rubric_rewrite: bool = False) -> int:
     """Compile a template version as the new v001, resetting version history.
 
     This takes the specified version (or current) and makes it the new v001,
     deleting all other version folders. Use this when you're happy with a
-    template and want to start fresh.
+    template and want to start fresh. Preserves:
+    - All subtypes with generated templates from the source version
+    - All subtype folders (with prompts) from v001 that don't have templates yet
 
     Args:
         template_type: Either 'card' or 'lot'
         version: Version to compile (default: current version)
+        rubric_rewrite: If True, regenerate the rubric for base template
 
     Returns:
         Exit code (0 for success)
@@ -579,26 +775,66 @@ def phase_compile(template_type: str, version: int | None = None) -> int:
     # Use specified version or current
     source_version = version if version is not None else current_version
     source_dir = _get_version_dir(template_dir, source_version)
-    source_png = source_dir / "template_1024x1536.png"
+    v001_dir = _get_version_dir(template_dir, 1)
 
-    if not source_png.exists():
-        _log(f"ERROR: Version {source_version} template not found: {source_png}")
+    # Check for subtype structure (new) or flat structure (legacy)
+    valid_subtypes = _get_valid_subtypes(template_type)
+    found_subtypes = []  # Subtypes with generated templates in source
+    v001_subtypes = []   # Subtypes that exist in v001 (may just have prompts)
+
+    for subtype in valid_subtypes:
+        # Check source version for generated templates
+        subtype_dir = source_dir / subtype
+        subtype_png = subtype_dir / "template_1024x1536.png"
+        if subtype_png.exists():
+            found_subtypes.append(subtype)
+
+        # Also check v001 for subtypes with prompts (even without templates)
+        v001_subtype_dir = v001_dir / subtype
+        if v001_subtype_dir.exists() and subtype not in found_subtypes:
+            v001_subtypes.append(subtype)
+
+    # Legacy fallback: check for flat template in version root
+    legacy_png = source_dir / "template_1024x1536.png"
+    is_legacy = legacy_png.exists() and not found_subtypes
+
+    if not found_subtypes and not is_legacy:
+        _log(f"ERROR: Version {source_version} has no templates (checked subtypes: {valid_subtypes})")
         return 1
 
     _log(f"Compiling {template_type} template v{source_version:03d} as new v001")
+    if found_subtypes:
+        _log(f"  Found subtypes with templates: {', '.join(found_subtypes)}")
+    if v001_subtypes:
+        _log(f"  Preserving subtypes from v001 (prompts only): {', '.join(v001_subtypes)}")
 
-    # Create temporary copy of source template
+    # Create temporary copies of all templates and prompts
     import tempfile
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmp:
-        tmp_path = Path(tmp.name)
-    shutil.copy2(source_png, tmp_path)
+    tmp_dir = Path(tempfile.mkdtemp())
 
-    # Also save the prompt if it exists
-    source_prompt = source_dir / "prompt.txt"
-    tmp_prompt = None
-    if source_prompt.exists():
-        tmp_prompt = Path(tempfile.mktemp(suffix=".txt"))
-        shutil.copy2(source_prompt, tmp_prompt)
+    if is_legacy:
+        # Legacy: single template at version root
+        shutil.copy2(legacy_png, tmp_dir / "template_1024x1536.png")
+        source_prompt = source_dir / "prompt.txt"
+        if source_prompt.exists():
+            shutil.copy2(source_prompt, tmp_dir / "prompt.txt")
+    else:
+        # New structure: copy each subtype folder from source version
+        for subtype in found_subtypes:
+            subtype_src = source_dir / subtype
+            subtype_tmp = tmp_dir / subtype
+            shutil.copytree(subtype_src, subtype_tmp)
+
+        # Also preserve v001 subtypes that don't have templates yet (just prompts)
+        for subtype in v001_subtypes:
+            v001_subtype_src = v001_dir / subtype
+            subtype_tmp = tmp_dir / subtype
+            shutil.copytree(v001_subtype_src, subtype_tmp)
+
+    # Copy version-level revise.txt if exists
+    source_revise = source_dir / "revise.txt"
+    if source_revise.exists():
+        shutil.copy2(source_revise, tmp_dir / "revise.txt")
 
     # Delete all version folders
     deleted = 0
@@ -614,28 +850,58 @@ def phase_compile(template_type: str, version: int | None = None) -> int:
     new_v001 = _get_version_dir(template_dir, 1)
     new_v001.mkdir(parents=True, exist_ok=True)
 
-    # Copy template to v001
-    new_png = new_v001 / "template_1024x1536.png"
-    shutil.copy2(tmp_path, new_png)
-    tmp_path.unlink()  # Clean up temp file
+    # Combine all subtypes to preserve
+    all_subtypes = found_subtypes + v001_subtypes
 
-    # Copy prompt if we saved it
-    if tmp_prompt and tmp_prompt.exists():
-        shutil.copy2(tmp_prompt, new_v001 / "prompt.txt")
-        tmp_prompt.unlink()
+    if is_legacy:
+        # Legacy: copy to base subtype
+        base_dir = new_v001 / "base"
+        base_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(tmp_dir / "template_1024x1536.png", base_dir / "template_1024x1536.png")
+        tmp_prompt = tmp_dir / "prompt.txt"
+        if tmp_prompt.exists():
+            shutil.copy2(tmp_prompt, base_dir / "prompt.txt")
+        all_subtypes = ["base"]  # For logging later
+    else:
+        # New structure: copy all subtype folders (both with templates and prompts-only)
+        for subtype in all_subtypes:
+            shutil.copytree(tmp_dir / subtype, new_v001 / subtype)
+
+    # Copy revise.txt to new v001
+    tmp_revise = tmp_dir / "revise.txt"
+    if tmp_revise.exists():
+        shutil.copy2(tmp_revise, new_v001 / "revise.txt")
+        # Reset the fields in the new revise.txt
+        _reset_revision_fields(new_v001 / "revise.txt")
+        _reset_rebuild_flag(new_v001 / "revise.txt")
+
+    # Clean up temp directory
+    shutil.rmtree(tmp_dir)
 
     _log(f"Created new v001 from former v{source_version:03d}")
 
     # Update meta.yml
     _update_meta(meta_path, 1)
 
-    # Sync to package
-    pkg_template = _get_pkg_template_path(template_type)
-    if pkg_template.parent.exists():
-        shutil.copy2(new_png, pkg_template)
-        _log(f"Synced to package: {pkg_template}")
+    # Sync base subtype to package
+    base_png = new_v001 / "base" / "template_1024x1536.png"
+    if base_png.exists():
+        pkg_template = _get_pkg_template_path(template_type)
+        if pkg_template.parent.exists():
+            shutil.copy2(base_png, pkg_template)
+            _log(f"Synced base to package: {pkg_template}")
 
-    _log("Compile complete! Version history reset to v001")
+    _log(f"Compile complete! Version history reset to v001 with subtypes: {', '.join(all_subtypes)}")
+
+    # Auto-generate rubric for base template (only if --rubric-rewrite flag is set)
+    if rubric_rewrite and "base" in all_subtypes:
+        _log("Regenerating rubric for base template...")
+        describe_result = phase_describe(template_type, version=1, subtype="base")
+        if describe_result != 0:
+            _log("WARNING: Failed to generate rubric, but compile succeeded")
+    elif "base" in all_subtypes:
+        _log("Skipping rubric generation (use --rubric-rewrite to regenerate)")
+
     return 0
 
 
@@ -715,6 +981,8 @@ def phase_rebuild_all(
     template_type: str,
     version: int | None = None,
     skip: list[str] | None = None,
+    style_refs: list[str] | None = None,
+    extra_refs: list[str] | None = None,
 ) -> int:
     """Rebuild all subtypes in a version.
 
@@ -722,6 +990,8 @@ def phase_rebuild_all(
         template_type: Either 'card' or 'lot'
         version: Version to rebuild (default: current version)
         skip: List of subtypes to skip (e.g., ['base'])
+        style_refs: Optional list of custom style reference paths
+        extra_refs: Optional list of additional reference paths
 
     Returns:
         Exit code (0 for success)
@@ -768,6 +1038,8 @@ def phase_rebuild_all(
             rebuild=True,
             subtype=subtype,
             target_version=target_version,
+            style_refs=style_refs,
+            extra_refs=extra_refs,
         )
 
         if result == 0:
@@ -836,6 +1108,32 @@ def main() -> int:
         action="append",
         help="Subtypes to skip during rebuild (can specify multiple, e.g., --skip base --skip common)"
     )
+    parser.add_argument(
+        "--rubric-rewrite",
+        action="store_true",
+        dest="rubric_rewrite",
+        help="Regenerate the rubric during compile (skipped by default)"
+    )
+    parser.add_argument(
+        "--style-ref",
+        type=str,
+        action="append",
+        dest="style_refs",
+        help="Custom style reference image path (can specify up to 8, overrides automatic selection)"
+    )
+    parser.add_argument(
+        "--extra-ref",
+        type=str,
+        action="append",
+        dest="extra_refs",
+        help="Additional style reference (added to automatic selection, e.g., a known-good template)"
+    )
+    parser.add_argument(
+        "--target-version",
+        type=int,
+        dest="target_version",
+        help="Target version to generate into (overwrites existing, for re-running failed refinements)"
+    )
 
     args = parser.parse_args()
 
@@ -846,6 +1144,9 @@ def main() -> int:
             revision=args.revision,
             base_versions=args.base_versions,
             subtype=args.subtype,
+            target_version=args.target_version,
+            style_refs=args.style_refs,
+            extra_refs=args.extra_refs,
         )
     elif args.phase == "revert":
         return phase_revert(
@@ -858,6 +1159,7 @@ def main() -> int:
         return phase_compile(
             template_type=args.type,
             version=args.version,
+            rubric_rewrite=args.rubric_rewrite,
         )
     elif args.phase == "describe":
         return phase_describe(
@@ -870,6 +1172,8 @@ def main() -> int:
             template_type=args.type,
             version=args.version,
             skip=args.skip,
+            style_refs=args.style_refs,
+            extra_refs=args.extra_refs,
         )
 
     return 0

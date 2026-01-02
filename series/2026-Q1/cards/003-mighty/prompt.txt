@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #003
+WORD: MIGHTY
+GLOSS: Possessing great power, strength, or authority; effective and potent.
+TYPE: ADJECTIVE (use matching type icon from references)
+RARITY: UNCOMMON (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a VERB from Sheol to your hand.
+
+VERSES:
+OT: Isaiah 9:6 — “And his name shall be called Wonderful, Counsellor, The mighty God...”
+NT: Luke 1:49 — “For he that is mighty hath done to me great things; and holy is his name.”
+
+LANGUAGES:
+Hebrew: גִּבּוֹר (gibbor) - Gen 10:8 • Deut 10:17 • Ps 24:8 • Jer 32:18
+Greek: δυνατός (dunatos) - Luke 24:19 • 1 Cor 1:26 • Eph 1:19 • Rev 19:6
+
+TRIVIA:
+• The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty Men'.
+• In Isaiah 9:6, the Messiah is given the title 'El Gibbor', meaning 'Mighty God'.
+• The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern word 'dynamite'.
+• Luke 1:49 refers to God simply as 'Ho Dunatos'—'The Mighty One'.
+
+ART: A colossal, ancient mountain peak piercing through a layer of dark, swirling storm clouds, illuminated by a single, intense shaft of golden sunlight from above.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

@@ -1,0 +1,81 @@
+# Card Template v001/base Rubric
+# Generated: 2026-01-01 14:24:57
+# Source: template_1024x1536.png
+
+Based on the provided template image, here is the exact visual style definition for a correctly rendered Hypertext card:
+
+**1. FRAME/BORDER**
+*   **Outer Edge:** The card is framed by a thick, solid **dark navy blue** border.
+*   **Inner Stroke:** Immediately inside the navy border is a thin **gold/tan** stroke.
+*   **Main Background:** The card background features a textured **parchment/paper** effect (beige/tan variations).
+*   **Content Frame:** The internal content area is surrounded by a thin, double-line border (dark outer line, lighter gold inner line) with **chamfered (cut) corners** at the top left and right.
+
+**2. HEADER AREA**
+*   **Card Number:** Located in the top-left corner. Formatted as `#XXX` in a black, serif typeface.
+*   **Part of Speech Label:** Located immediately to the right of the card number. It is a **dark navy blue lozenge (pill shape)** containing white, all-caps, serif text (e.g., "NOUN").
+
+**3. TITLE SECTION**
+*   **Main Title:** Centered horizontally at the top. Text is **large, all-caps, bold, black serif font**.
+*   **Definition:** Located directly below the title. Text is **smaller, italicized, black serif font**.
+
+**4. RARITY DISPLAY**
+*   **Label:** Located in the top-right corner. It is a **dark navy blue tab** with a chamfered bottom-left corner. It contains the text "Rarity" in white serif font.
+*   **Icon Placeholder:** There is a large **dark navy blue circle** with a gold rim located in the top-left area, below the card number/part of speech tag.
+
+**5. ART PANEL**
+*   **Style:** A large, empty rectangular space intended for artwork.
+*   **Frame:** It is enclosed by a distinct **gold/tan frame** that features **incurved (indented) corners** at all four points.
+*   **Background:** The interior of the placeholder shows the standard parchment texture.
+
+**6. STAT PIPS**
+*   **Shape:** The pips are **perfect circles (rings)**.
+*   **Arrangement:** Three categories (LORE, CONTEXT, COMPLEXITY) are arranged horizontally below the art panel.
+*   **Formatting:** Each category has a bold, all-caps serif header followed by a row of **5 circular pips**. In the template, these are outlined in dark grey/black and unfilled.
+
+**7. VERSE SECTIONS**
+*   **Structure:** Three stacked panels: "ABILITY", "OT VERSE", and "NT VERSE".
+*   **Panel Style:** Each panel has a **gold/tan gradient background** and a border with **chamfered (cut) corners**.
+*   **Typography:** Headers are centered, bold, all-caps serif. Body text is centered serif font.
+
+**8. TRIVIA SECTION**
+*   **Location:** At the bottom of the main content area.
+*   **Header:** The word "TRIVIA" is centered, bold, and all-caps serif.
+*   **Formatting:** Bullet points are **solid black circles**. Text is left-aligned (indented) serif font. The background is the standard parchment texture, not the gold gradient used for verses.
+
+**9. GREEK/HEBREW STRIP**
+*   **Position:** Located between the "NT VERSE" panel and the "TRIVIA" section.
+*   **Style:** Two side-by-side panels sharing the **gold/tan gradient background** and chamfered borders.
+*   **Left Panel:** Labeled "HEBREW/ARAMAIC".
+*   **Right Panel:** Labeled "GREEK".
+*   **Content:** Contains placeholders for the word, transliteration, and citations in centered serif text.
+
+**10. FOOTER**
+*   **Style:** A solid **dark navy blue strip** running the full width of the bottom of the card.
+*   **Text:** White/light grey serif text, left-aligned, reading "SERIES: 20XX QX - Set".
+
+**11. COLOR SCHEME**
+*   **Primary Background:** Textured Beige/Parchment.
+*   **Primary Accents:** Dark Navy Blue (Borders, Footer, Header Tags).
+*   **Secondary Accents:** Gold/Tan (Panel backgrounds, inner borders).
+*   **Text Color:** Primarily Black (White text only on Navy backgrounds).
+
+**12. TYPE ICONS (inside Type Circle)**
+The Type Circle is the navy circle with gold rim inside the type pill. It must contain a WHITE icon specific to the card type:
+
+*   **NOUN:** Closed book - rectangular shape with visible spine on left, slightly curved corner
+*   **VERB:** Slanted pencil - long cylinder tapering to point, rounded eraser at top
+*   **ADJECTIVE:** Sparkle pencil - pencil with two small four-pointed stars emanating from middle
+*   **NAME:** Feather quill - single feather/quill pen shape
+*   **TITLE:** Ornate frame - decorative empty picture frame
+
+**CRITICAL:** The type icon must match the card's type exactly. Wrong icons are a major error.
+
+**13. RARITY DIAMONDS**
+The Rarity Diamond appears next to the rarity text in the top-right area:
+
+*   **COMMON:** Solid WHITE diamond with navy outline
+*   **UNCOMMON:** Solid GREEN diamond (#2E8B57) with navy outline
+*   **RARE:** Solid GOLD diamond (#C9A44C) with navy outline, plus a small "+" and card icon below
+*   **GLORIOUS:** Solid ORANGE diamond (#F28C28) with navy outline, plus a small "+" and two card icons below
+
+**CRITICAL:** The diamond color must match the rarity exactly. Wrong colors are a major error.

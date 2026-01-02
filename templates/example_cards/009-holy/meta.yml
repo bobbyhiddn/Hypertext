@@ -1,0 +1,17 @@
+number: 009
+word: HOLY
+gloss: Set apart; sacred; distinct from the common or profane
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Example
+art_prompt: A single, brilliant white ember resting on a rough, dark stone surface,
+  illuminating the surrounding shadows with sharp, distinct light; high contrast,
+  ethereal and pure atmosphere
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Look at the top 2 cards of the Tower. Add 1 to your hand and place the other
+  on the bottom of the Tower.
+style_series_dir: series\2026-Q1

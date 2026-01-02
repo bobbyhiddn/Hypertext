@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #012
+WORD: SACRED
+GLOSS: Dedicated or set apart for the service or worship of a deity; worthy of spiritual respect.
+TYPE: ADJECTIVE (use matching type icon from references)
+RARITY: GLORIOUS (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Return a card from Sheol to your hand. Until your next turn, opponents cannot activate abilities or call Redeem.
+
+VERSES:
+OT: Exodus 3:5 — "Remove your sandals from your feet, for the place on which you stand is holy ground."
+NT: 2 Timothy 3:15 — "From childhood you have known the sacred writings, which are able to make you wise for salvation."
+
+LANGUAGES:
+Hebrew: קָדוֹשׁ (qadosh) - Ex 3:5 • Lev 19:2 • Isa 6:3 • Ezek 44:23
+Greek: ἱερός (hieros) - 2 Tim 3:15 • 1 Cor 9:13 • 1 Pet 1:15 • Matt 7:6
+
+TRIVIA:
+• Derived from the Latin 'sacer', meaning 'set apart' or 'consecrated'.
+• In Greek, 'hieros' refers to sacred things (like the temple), while 'hagios' refers to a holy nature.
+• The Hebrew 'qadosh' implies a separation from the common or profane.
+• Ancient temples were often called 'hieron' (sacred place) to distinguish them from common ground.
+
+ART: A glowing, unapproachable burning bush on a dark mountain peak, radiating intense white and gold light that forms a protective spherical barrier, ethereal atmosphere, cinematic lighting, no text
+
+FOOTER: Example
+
+Output only the card image.

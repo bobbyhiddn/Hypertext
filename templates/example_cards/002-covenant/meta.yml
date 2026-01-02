@@ -1,0 +1,28 @@
+number: '002'
+word: COVENANT
+gloss: A binding agreement, solemn promise, or compact between two or more parties,
+  often sealed by an oath.
+card_type: NOUN
+rarity: UNCOMMON
+series: 2026-Q1
+set: Example
+art_prompt: Two weathered hands clasping firmly over a rough stone altar, a glowing
+  golden ethereal cord wrapping around their wrists binding them together, dramatic
+  lighting, ancient atmosphere
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Swap a card from your hand with a NOUN or NAME from Sheol.
+style_series_dir: series\2026-Q1
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#003'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+review_status: green

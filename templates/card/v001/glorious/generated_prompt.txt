@@ -1,0 +1,67 @@
+Reproduce and refine the provided card TEMPLATE reference image for GLORIOUS rarity.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined TEMPLATE version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Uses PLACEHOLDER text throughout (not actual card content)
+- Ensures clean, crisp rendering of all elements
+
+THIS IS A TEMPLATE - use placeholder text like "Title", "Subtitle", "Ability text here", etc.
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium trading card layout with antique parchment background
+- Frame: Navy and gold collector frame with rounded corners
+- Rarity: GLORIOUS (indicated by ORANGE diamond - highest rarity)
+
+EXACT LAYOUT (top to bottom):
+
+1. HEADER AREA
+   - Top-Left: Card number "#XXX" followed by TYPE PILL (navy rounded rectangle with white "TYPE" text)
+   - Type Circle: Navy circle with gold border inside the pill (empty - no icon for rarity templates)
+   - Top-Right: RARITY AREA with three elements:
+     * "Glorious" text in WHITE serif on navy background
+     * FILLED ORANGE diamond (◆) next to text - solid orange fill (#F28C28) with navy outline
+     * BONUS CARDS SYMBOL below the rarity pill: a small "+" plus sign followed by TWO tiny vertical rectangles (two card icons side by side) - all in white/cream, matching the card aesthetic
+   - Center: Placeholder "Title" in large bold black serif, "Subtitle" below in italics
+
+2. ART PANEL
+   - ~44% of card height
+   - Gold inner frame border
+   - Art placeholder area (empty or subtle pattern)
+
+3. STATS ROW
+   - Three stat categories: LORE, CONTEXT, COMPLEXITY
+   - Each shows 5 circular pips
+   - ALL pips must be EMPTY/HOLLOW navy circle outlines (this is a template)
+   - Pattern: ○ ○ ○ ○ ○ (all empty outlines, not filled)
+   - Navy blue circle outlines on parchment background
+
+4. TEXT PANELS
+   - Ability panel with navy header bar and placeholder text
+   - OT Verse panel with centered header
+   - NT Verse panel with centered header
+   - Greek/Hebrew reference strip
+   - Trivia panel at bottom
+
+5. FOOTER
+   - Navy blue strip at very bottom
+   - Left Text: "Series: 20XX QX - Set" in grey/faded white text
+
+COLOR PALETTE:
+- Navy Blue: approximately #102030
+- Gold/Tan: approximately #C0A060
+- Parchment background: Beige/Tan textured
+- Text: Near-black for body, white/cream for headers
+
+CRITICAL RULES:
+- RARITY AREA: "Glorious" text in WHITE + FILLED ORANGE diamond (◆) next to it
+  The diamond must be FILLED with solid orange (#F28C28), navy outline
+  Include bonus symbol below: "+" plus sign followed by TWO small vertical rectangles (two card icons)
+- TYPE AREA: Type pill with white "TYPE" text, type circle empty (no icon)
+- Stat pips: ALL must be EMPTY/HOLLOW navy circle outlines (not filled) - this is a template
+- Use placeholder text throughout - do NOT generate actual card content
+- Corners should be rounded (not chamfered)
+- Output ONLY the card template - no surrounding text or watermarks

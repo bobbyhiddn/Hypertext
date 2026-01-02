@@ -1,0 +1,29 @@
+Generate a 7-CARD lot template based on the base template reference.
+
+TEMPLATE OVERRIDES (replace base template values):
+- Card Count Badge: "7-CARD" (not X-CARD)
+- Reward Banner: "REWARD: 14 Points / 3 Letters" (not X Points / X Letters)
+- Composition: Exactly 7 card type icons
+
+COMPOSITION SECTION (7 icons total):
+- Icons & Text Sequence (left to right, exactly 7 items):
+  * Closed Book icon + "[NOUN]"
+  * Plus sign
+  * Closed Book icon + "[NOUN]"
+  * Plus sign
+  * Closed Book icon + "[NOUN]"
+  * Plus sign
+  * Pencil icon + "[VERB]"
+  * Plus sign
+  * Pencil icon + "[VERB]"
+  * Plus sign
+  * Pen with sparkles icon + "[ADJECTIVE]"
+  * Plus sign
+  * Framed Picture icon + "[TITLE]"
+
+CRITICAL RULES:
+- Card count badge MUST say "7-CARD"
+- Reward MUST show "REWARD: 14 Points / 3 Letters" on same line
+- Composition MUST show exactly 7 card type icons (3 books, 2 pencils, 1 sparkle pen, 1 frame)
+- Word types MUST be in square brackets: [NOUN], [VERB], [ADJECTIVE], [TITLE]
+- All other layout, styling, and elements should match the base template exactly

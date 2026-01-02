@@ -1,0 +1,18 @@
+number: '017'
+word: SHEPHERD
+gloss: One who tends, feeds, and guards a flock; metaphorically, a spiritual leader
+  or God.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Example
+art_prompt: A weathered wooden staff with a hooked end resting against a rough stone
+  in a lush green pasture under a soft twilight sky, silhouette of a flock in the
+  distance, warm lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Look at the top 2 cards of the Tower; put one into your hand and the other
+  on the bottom.
+style_series_dir: series\2026-Q1

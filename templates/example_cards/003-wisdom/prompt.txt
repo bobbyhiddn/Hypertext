@@ -1,0 +1,60 @@
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #003
+WORD: WISDOM
+GLOSS: The quality of having experience, knowledge, and good judgment; the application of truth.
+TYPE: NOUN (use matching type icon from references)
+RARITY: RARE with gold diamond icon
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Look at the top 5 cards of the Tower; add 2 to your hand and discard the rest.
+
+VERSES:
+OT: Proverbs 9:10 — The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding.
+NT: James 3:17 — But the wisdom that is from above is first pure, then peaceable, gentle, and easy to be intreated...
+
+LANGUAGES:
+Hebrew: חָכְמָה (Chokhmah) - Job 28:28 • Ps 111:10 • Prov 4:7 • Eccl 2:13
+Greek: σοφία (Sophia) - Matt 11:19 • 1 Cor 1:24 • Eph 1:17 • Col 2:3
+
+TRIVIA:
+• In Proverbs 9, Wisdom is personified as a woman who has built her house upon seven pillars.
+• King Solomon famously asked God for an understanding heart to judge people rather than for wealth or long life.
+• The Greek word 'sophia' is the root of 'philosophy', which literally means 'the love of wisdom'.
+• The Apostle Paul describes Christ as 'the power of God and the wisdom of God' in 1 Corinthians.
+
+ART: Seven ancient stone pillars rising from a foundation of swirling clouds into a brilliant, piercing golden light, ethereal architecture, cinematic lighting, photorealistic style
+
+FOOTER: Example
+
+Output only the card image.
+
+
+REVISION INSTRUCTIONS:
+Fix the NOUN icon in the type circle (closed book) and ensure all stat pips are fully filled or empty, no half pips
+
+REVISION INSTRUCTIONS:
+Fix the NOUN icon in the type circle (closed book) and ensure all stat pips are fully filled or empty, no half pips
+
+REVISION INSTRUCTIONS:
+Fix the NOUN icon in the type circle (closed book) and ensure all stat pips are fully filled or empty, no half pips
+
+REVISION INSTRUCTIONS:
+Add the + card icons in the top right corner from the reference image to this version.
+
+REVISION INSTRUCTIONS:
+Remove the left card icon in the top right corner. Also, ensure all pips are filled. Finally, use the correct noun icon as per the other noun card. It's close, but we need those three changes to be complete.
+
+REVISION INSTRUCTIONS:
+Replace the right noun icon with the + Card icon from the reference.
+
+REVISION INSTRUCTIONS:
+Use the noun icon from the style reference and set the rarity to rare, not card. Also, set the pips to the card stats in the prompt, not completely filled. But it's close. 
+
+REVISION INSTRUCTIONS:
+Only issue now is the context pips need to be set to 3, and lore needs to be set to 4

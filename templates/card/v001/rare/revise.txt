@@ -1,0 +1,20 @@
+# RARE Template Revision Form
+#
+# This revise.txt applies only to the RARE subtype template.
+# Edit fields below, then run:
+#   python -m hypertext.pipeline.template --type card --phase refine --subtype rare
+#
+# Revision Categories:
+# - Frame_Revision: Changes to borders, corners, filigree
+# - Layout_Revision: Changes to panel positions, sizes, spacing
+# - Typography_Revision: Changes to fonts, text styles, sizing
+# - Color_Revision: Changes to palette, gradients, fills
+# - Stats_Revision: Changes to stat pips, icons, indicators
+# - General_Revision: Any other changes
+#
+# Notes:
+# - Leave a field blank to keep it unchanged
+# - Lines starting with # are ignored
+
+Rebuild: false
+Frame_Revision:

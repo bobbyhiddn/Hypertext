@@ -34,7 +34,7 @@ Based on the provided template and reference cards, here is the exact visual sty
 *   **Count:** 5 pips per category.
 *   **Style:**
     *   **Empty Pips:** Gold/Brown outline with parchment interior.
-    *   **Filled Pips:** Solid **Dark Navy/Black**.
+    *   **Filled Pips:** Solid **NAVY** (#0B1F3B dark blue) - NOT black.
 
 **7. VERSE SECTIONS**
 *   **Structure:** Two distinct stacked boxes (OT VERSE and NT VERSE).
@@ -46,7 +46,7 @@ Based on the provided template and reference cards, here is the exact visual sty
 **8. TRIVIA SECTION**
 *   **Location:** The bottom-most content box.
 *   **Header:** The word "TRIVIA" is centered at the top of the box (overlapping the border slightly or sitting just inside).
-*   **Formatting:** A list of 3 bullet points.
+*   **Formatting:** A list of exactly 3 bullet points (no more, no less).
 *   **Bullets:** Solid black circular dots.
 *   **Text:** Serif font, left-aligned relative to the bullet indentation.
 
@@ -80,5 +80,7 @@ CRITICAL STYLE CHECKS (any mismatch = AUTOMATIC FAIL):
 
 1. **BORDER STYLE**: Must be SIMPLE with chamfered internal boxes - NOT ornate/decorative/scrollwork
 2. **VERSE HEADERS**: "OT VERSE" and "NT VERSE" must be CENTERED ABOVE the verse text - NOT in side boxes
-3. **STAT PIPS**: Must be CIRCLES - NOT diamonds, squares, or other shapes
+3. **STAT PIPS**: Must be CIRCLES filled with NAVY color (dark blue #0B1F3B) - NOT black, NOT other shapes
 4. **COLOR SCHEME**: Navy/gold/parchment - NOT other color schemes
+5. **RARITY BADGE**: Must match the recipe rarity exactly (COMMON/UNCOMMON/RARE/GLORIOUS). COMMON = white diamond, UNCOMMON = green, RARE = gold, GLORIOUS = orange
+6. **TYPE ICON**: Must show correct icon for card type in top-left circle: NOUN = closed book, VERB = running figure, ADJECTIVE = scroll, NAME = crown, TITLE = star

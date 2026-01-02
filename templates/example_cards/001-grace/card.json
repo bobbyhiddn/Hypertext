@@ -1,0 +1,273 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "001",
+    "SERIES": "Example",
+    "WORD": "GRACE",
+    "GLOSS": "Unmerited favor; a free gift given to the undeserving",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A single, brilliant drop of golden light falling from above into a pair of weathered, open hands emerging from shadow. The light illuminates the hands warmly, contrasting with a dark, muted background. Ethereal, soft, oil painting style.",
+    "ABILITY_TEXT": "Draw 1 card. If you have 3 or fewer cards in hand, draw 2 instead.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Genesis 6:8",
+    "OT_VERSE_SNIPPET": "But Noah found grace in the eyes of the LORD.",
+    "NT_VERSE_REF": "Ephesians 2:8",
+    "NT_VERSE_SNIPPET": "For by grace you have been saved through faith... it is the gift of God.",
+    "OT_VERSE_LINE": "Genesis 6:8 — \"But Noah found grace in the eyes of the LORD.\"",
+    "NT_VERSE_LINE": "Ephesians 2:8 — \"For by grace you have been saved through faith... it is the gift of God.\"",
+    "GREEK": "Χάρις",
+    "GREEK_TRANSLIT": "Charis",
+    "HEBREW": "חֵן",
+    "HEBREW_TRANSLIT": "Chen",
+    "OT_REFS": "Gen 6:8 • Ex 34:6 • Psa 84:11 • Zech 12:10",
+    "NT_REFS": "Eph 2:8 • Rom 3:24 • 2 Cor 12:9 • John 1:16",
+    "TRIVIA_BULLETS": [
+      "The Greek word 'charis' is the root of the English word 'charisma,' meaning 'gift.'",
+      "Hebrew 'chen' implies a superior stooping down in kindness to show favor to an inferior.",
+      "Often remembered by the acronym: God's Riches At Christ's Expense.",
+      "The name John (Yochanan) means 'Yahweh is gracious.'"
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "greek word for grace charis definition",
+      "Ephesians 2:8 snippet",
+      "hebrew word for grace chen vs chesed",
+      "bible trivia word grace",
+      "Genesis 6:8 snippet"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeCz7GC32A4nE2mhyxgCeJ-WDS-PLjJyZlkN0mccWfoNpqXASKwYuim9fnqP44bT36FZGvDiSqd2beDd8i_-q7J5kaxBz718P-_drgAT_nFDoKbcldkc-f7gopdbv-rjUFOp05m_D3t_l9Y-320qnJC6H9fhjR7_wxWuj8icmLSibNUN9v3bMzz0L5BzKg8LZ6kq_uRzpMPXp3DEVxZV0f",
+        "title": "beauty4ashesministry.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0bhBs7T-MtL2fTu9QDyxEsK80xVZWTcaCWw5it39Z1XpTzGB-8tnE-zyZlsu2I_1ubdT1xw-zfLI7wncm5fEXRs5a6OhG_eXAfaViG3KadkY4ku2MviEaTobEp4jZ",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQiaI-aRE2AbS2J-oHGr520nqA6S4nIvmZY__ubKqNRS6eXN9kYgGXeDfU1d-Qx1vQ3rrk4-BQyWEDkH1tsXxsCyM47yVgWOg2lYG_QcQ-QfRcsdw2WLIV2P_4x7LVssEeAfhDAaTT",
+        "title": "weebly.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs653itx1293PLmhYoV3S_zUS0V3STD-DEodvOqJDf0gWLJyjv_-SH_odVY4bWiE12DpDv-9bPGYxkauOnrNY9tRtvAcp1ltnQ-67Ohwa2cjGtmsGEtsfEZb9499yafDSH24D9VIawJRtiU0NV1rRZ-4Y=",
+        "title": "donotdepart.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3FM9AKgXWFBqqxuWTVqsgOTKhfXEfjr4AymVFS7h08U1NmTwHvwkjB_fo7sApakRKO5ScTtkT7gZlWyLLgDrXOTZGR_5jPCxe059A-OSjufpuIY4x_VO-Lix7Lf_9JPjVP32VYLfu4Wj2ANQ=",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQCSsaBpOXDusA9o0j_-KYbfpdGDQApeG-gtJjKSCtcNzBCcjirLvAfhwIhkTSPzFjk0-tDGrvkEjoDkjIj3i17HbV9tw7IQIXjb3E97spvipw1NP0SdBZNUDmsv7qyPO7IE1c9Gw=",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVTX76g9NwqqxPUec-UtXdkYsLzEGBfzfjB0wAvDjMfE_yOEu9ldJ7q0SMWisTt-owZMJz2Syfohtg3aa9FrVpwyroFb7dqNOYgi9ptIVss2ooBv6LtLPff97-jL60qsz5PmfIZTgMCiYVx0EGgGQqmJsvhFk=",
+        "title": "hebrew4christians.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBQNBSPwA_6WywUSbvSA1TaaADr8VOkmgvP4GlmcVoIZIdxR-MHZ8FB1BzR_T-ZyE0lsuS_Yv0eW9olFQIzM_nQ16k3R5MHOGOT2b2eN3_e0EAhLkGT2yBYooml9h_dzdbbwi2Zz_GEKeO6L-YcDasU_1nW6WRcxl23q0p8jKX",
+        "title": "bibleproject.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx4f0lsjnkB6b1ZrufcB4j-gjsm4Qp6OzwfLTz-ogc1bJtD0H8j_r3AkGA6Htp2sjrxpYRpoRidQLcWWGy41feLCUrH020Pwf0a8opYuduNK08foULT9XIrHfsYo_i9g==",
+        "title": "biblehub.com"
+      }
+    ]
+  }
+}

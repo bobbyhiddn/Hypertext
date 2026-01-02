@@ -1,0 +1,15 @@
+number: '020'
+word: MESSIAH
+gloss: The promised deliverer and anointed king; the savior of the world.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Example
+art_prompt: A golden scepter resting on a stone altar, illuminated by a single vertical
+  beam of intense light, with oil dripping down the side
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return up to 2 cards from Sheol to your hand, then draw 1.
+style_series_dir: series\2026-Q1

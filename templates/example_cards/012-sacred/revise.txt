@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: SACRED
+# Card_Gloss: Dedicated or set apart for the service or worship of a deity; worthy of spiritual respect.
+# Card_Type: ADJECTIVE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Return a card from Sheol to your hand. Until your next turn, opponents cannot activate abilities or call Redeem.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A glowing, unapproachable burning bush on a dark mountain peak, radiating intense white and gold light that forms a protective spherical barrier, ethereal atmosphere, cinematic lighting, no text
+# Card_OT_Verse: Exodus 3:5 — Remove your sandals from your feet, for the place on which you stand is holy ground.
+# Card_NT_Verse: 2 Timothy 3:15 — From childhood you have known the sacred writings, which are able to make you wise for salvation.
+# Card_Hebrew: קָדוֹשׁ (qadosh)
+# Card_Greek: ἱερός (hieros)
+# Card_Trivia_1: Derived from the Latin 'sacer', meaning 'set apart' or 'consecrated'.
+# Card_Trivia_2: In Greek, 'hieros' refers to sacred things (like the temple), while 'hagios' refers to a holy nature.
+# Card_Trivia_3: The Hebrew 'qadosh' implies a separation from the common or profane.
+# Card_Trivia_4: Ancient temples were often called 'hieron' (sacred place) to distinguish them from common ground.
