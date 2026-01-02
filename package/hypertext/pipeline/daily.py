@@ -2238,6 +2238,7 @@ def _plan_demo_card(
     template_path: Path,
     demo_dir: Path,
     entry: dict | None = None,
+    series_display: str | None = "Demo",
 ) -> Path | None:
     """Plan a single demo card (text gen + file creation). Returns card_dir or None on failure.
 
