@@ -77,12 +77,10 @@ search_queries:
 - Genesis 6:8 hebrew grace
 - hebrew word for grace chen vs chesed
 - Ephesians 2:8 greek grace
-revision: 1
+revision: 3
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Fix the stat pips to be NAVY colored (dark blue, not black or other colors). Fix
-  the COMMON rarity diamond to be WHITE. Match the styling from the example cards
-  exactly.
+  Make the rarity diamond white in the top right corner, no other changes.
 
   # Card_Word: GRACE
 
