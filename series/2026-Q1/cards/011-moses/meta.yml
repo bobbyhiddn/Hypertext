@@ -1,0 +1,48 @@
+number: '011'
+word: MOSES
+gloss: Drawn out; to pull out or rescue
+card_type: NAME
+rarity: RARE
+art_prompt: A woven wicker basket floating gently among tall green papyrus reeds at
+  the edge of a river, illuminated by a single shaft of divine golden light from above
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Return 2 cards from Sheol to your hand.
+ot_verse:
+  ref: Exodus 2:10
+  snippet: 'She called his name Moses: and she said, Because I drew him out of the
+    water.'
+nt_verse:
+  ref: John 1:17
+  snippet: For the law was given by Moses, but grace and truth came by Jesus Christ.
+greek:
+  text: Μωϋσῆς
+  translit: Mōusēs
+hebrew:
+  text: מֹשֶׁה
+  translit: Mosheh
+ot_refs: Exodus 3 • Exodus 14 • Exodus 20 • Numbers 12 • Deuteronomy 34
+nt_refs: Matthew 17 • Acts 7 • Hebrews 11 • Jude 1:9 • Revelation 15
+trivia:
+- His name means 'drawn out,' referencing his rescue from the Nile.
+- Traditionally credited with writing the Torah (the first five books of the Bible).
+- 'Lived 120 years: 40 as a prince, 40 as a shepherd, and 40 as a leader.'
+- Spoke with God 'face to face' as a man speaks to his friend.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#011'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: green
