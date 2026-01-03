@@ -64,17 +64,19 @@
 
 ## Iconography
 
-### Rarity Icons
-All icons are flat, minimal, no gradients.
+### Rarity Pill (Top Right)
+The rarity indicator appears in the top-right corner as a navy pill containing:
+1. Rarity text (e.g., "COMMON", "RARE")
+2. A diamond icon to the right of the text
 
-| Rarity | Shape | Fill | Outline |
-|--------|-------|------|---------|
-| COMMON | Circle | White | Navy |
-| UNCOMMON | Square | Green | Navy |
-| RARE | Hexagon | Gold | Navy |
-| GLORIOUS | Rhombus (4-sided diamond) | Orange | Navy |
+| Rarity | Pill Background | Text Color | Diamond Fill |
+|--------|-----------------|------------|--------------|
+| COMMON | Navy (#1a2744) | White | White |
+| UNCOMMON | Navy (#1a2744) | White | Green (#4a7c59) |
+| RARE | Navy (#1a2744) | White | Gold (#c9a227) |
+| GLORIOUS | Navy (#1a2744) | White | Orange (#f28c28) |
 
-**Important**: GLORIOUS uses a true 4-sided rhombus (diamond shape), not a rotated square.
+**Important**: The pill background is always navy. Only the diamond fill color varies by rarity. The diamond shape is consistent across all rarities (4-sided rhombus).
 
 ### Stat Pips
 - Shape: Circle only (no other shapes)
