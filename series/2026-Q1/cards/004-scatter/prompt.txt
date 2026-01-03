@@ -1,0 +1,44 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #004
+WORD: SCATTER
+GLOSS: To separate and drive off in various directions; to disperse or spread widely.
+TYPE: VERB
+  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
+    - NOUN → Closed Book icon
+    - VERB → Pencil icon
+    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
+    - NAME → Feather Quill icon
+    - TITLE → Crown icon
+  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
+  Copy the exact icon style from the type-specific template reference.
+RARITY: RARE (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player shuffles their hand into the Tower, then draws that many cards.
+
+VERSES:
+OT: Genesis 11:9 — “From thence did the Lord scatter them abroad upon the face of all the earth.”
+NT: Matthew 26:31 — “I will smite the shepherd, and the sheep of the flock shall be scattered abroad.”
+
+LANGUAGES:
+Hebrew: פּוּץ (pûṣ) - Gen 11 • Deut 28 • Ps 147 • Jer 31 • Zech 13
+Greek: διασκορπίζω (diaskorpizō) - Matt 26 • Mark 14 • John 11 • Acts 8 • James 1
+
+TRIVIA:
+• The Tower of Babel narrative is the primary biblical etiology for the scattering of nations.
+• The Greek term 'diaspora' literally means 'a scattering' or 'sowing across'.
+• Jesus quoted Zechariah 13:7 to predict the disciples fleeing upon His arrest.
+
+ART: A stone tower in the distance, silhouetted against a twilight sky, with many small glowing embers or seeds blowing wildly away from it in the wind across a vast desert landscape.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

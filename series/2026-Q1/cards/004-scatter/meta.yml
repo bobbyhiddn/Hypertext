@@ -1,0 +1,86 @@
+number: '004'
+word: SCATTER
+gloss: To separate and drive off in various directions; to disperse or spread widely.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A stone tower in the distance, silhouetted against a twilight sky, with
+  many small glowing embers or seeds blowing wildly away from it in the wind across
+  a vast desert landscape.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player shuffles their hand into the Tower, then draws that many cards.
+ot_verse:
+  ref: Genesis 11:9
+  snippet: From thence did the Lord scatter them abroad upon the face of all the earth.
+nt_verse:
+  ref: Matthew 26:31
+  snippet: I will smite the shepherd, and the sheep of the flock shall be scattered
+    abroad.
+greek:
+  text: διασκορπίζω
+  translit: diaskorpizō
+hebrew:
+  text: פּוּץ
+  translit: pûṣ
+ot_refs: Gen 11 • Deut 28 • Ps 147 • Jer 31 • Zech 13
+nt_refs: Matt 26 • Mark 14 • John 11 • Acts 8 • James 1
+trivia:
+- The Tower of Babel narrative is the primary biblical etiology for the scattering
+  of nations.
+- The Greek term 'diaspora' literally means 'a scattering' or 'sowing across'.
+- Jesus quoted Zechariah 13:7 to predict the disciples fleeing upon His arrest.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFelemdXdaOBdr5Pi7pzALJm9cNmW7Ad6kXFFqqkJ_HfVaDKEduoBFguByEZu2vRje-PwnNSyyHHTMi8s44YWbnaE2K1n9DO6_SSbWQfqzQGmDWdt0H4zeUd9hXyTgpKG3P5A==
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxYZS7n_Q-8r6w3xm0gAHeuB4DG5cauuIKKyoQwgkmiJ4bXXoCH2I819oyPta37VxKhr2sjKPpBY-vUU7FN6T7NFN2vnDEXlvax1ZzC0phvFRXek6aRfdZ6ytu7uQVIqiUmfZk
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3coNdF28MXdGD_7Ms5TIff-dlB-8qPzp3gkLpj5RU6QzXgjZh_7z_oo6LRyjby20i87Bb8YptELE-K7PYqsERA4Gq4Rb_CvJmt41ziJMt1YhBNDovOqEzbQ971_6hvrkoxGxsigkU5nOWMDFMkBq2BmZh4PgxS2SPow6clWlQ1a8P
+  title: chabad.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2m9xLFOuVA8N7x-KFs64ZOySG13u9dWnw8p1_vVsnLoiM8vFj7nRIJ_sEtxsOv2ZYQcLxhn06NMADeRD3PH5By0j9-Gm2T1hTjxBDTMd0qFbJBEyBoIkyhPyWppCIdSH1sVylYq-423DQI3CDfyjc6I5UK93COSSz
+  title: qbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQvdZoNab-JNqnRTQk_uL1qrmCJZqfPzWtxSw1klGwrEtLgHjq-FQiMLRZLsCJx-Nkx-D4KfQ9Bw-HH9lR-N0Gj_PZiE3Pt2pLXMgp-a6awg3hCwTHan61jK2lTANcsXkmTcupgVJZHaM2H_A=
+  title: enduringword.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaiQjEp5QtOl9VTbpSmc6wRCNSNmxIK1Lj4V6dj-Jj7K5QzNgg4fuBStUBP0qDR8zMdAkPtoHAEJ9dIKBKs5Ov5L13o5s2wDqug8sn3D1WVfvZdSwL9p8rAH2yjmZ3Ba8WdZP-D0ufqkQdzUViJTn5TkA=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXYuMdP2Pn7gKsrnIxMctku3frRMMljlu0oYwBvL_jXu1nLDS7FrAp2FSYWoTZuUGPcH57bgcu0H_X2GLGksdAk3fdwKssFftXqo1-Jg9frdoT6HuoC2O9SjppZ3-k
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXeJ6nKwaeKgrzgqB4AM0EAtAKArpgQMnAFRXtf_LF2tQH8DhUEXrFTvrlOjzmhNtQ_PX9XNCnHCHd37roRXiEdLyzuk_zO3B80aPPVt2iox2b--WMFjjq4068z3zyr9pCAxfZBL0wXmE=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_h7mwy2ehJ8W5CP_uXkQabm2dUFnDHMW-7VV3mENM6Pd-xECxlmVAeYS9ydDOO8lQ8DQd0W1wsqFzMBC6xfQn8CjEZbB4cQVGlv8ZpGq6I9xedYlr0kzFdS4qHSFR8q0Cqn6UPoTQx8s6HJTnNdrAUWeAK3CTBVq7CvYHjuXzrnOiQhNUjBmbKHwCiwZB2de8A0k0WFfrNqtJMoH3TIcxLivCi9Xxzz_ZhA==
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRmwN3jUm0LNYK4qB8_GSCfAOSzp9aTac4RtyiwmwZK8F9jCqRvvibqf6WXDgfaIvka8M-Tx9Lwa06YyZk2MU2V1lunooregVxNhbahDeLkFTv9uNdZX-Br0GIwh0NmZS6VM9dfdHRAWp_riE=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGp8mi60IIq3MJz4cxQA-2kZAOl7Z0pgqo2QTmDViVraCY49S82syhM-UVZ9ojqsnsjmc9tc0ZGjqdiEtdqFZhLV2ucKqeGqGYzL-WUh1fUumKQPDeb_MxuxLgx8sBt26clPcXiEb52p4aOg6oXEAcpRZDDZnpq
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ9qF025uca-0bAX8CQfxFF9cUEbnbn5BflVbQzYISz-4IyGHzIGZ3OtkZlS8tWfeezuNnwxe7p0qZax6RQJsqxJ6jbhJW7Yo-vYXMbBBLDdGtUYc3leoPuB55Jg==
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSLJygeei1sZTtsFbsVZGeiccz5TtFSzuXzqYnoq6POeS-_JF3a7_Q1tcLcPvsC9Mu3D4aqZWx-amrH9rLX5BRkO5a3-luk0f4dVY2D56Eyd98gcDIfew7z3qaMuLHixsYA5dFJFlrBzLUeoJe_zMfG2jW_gWdXAN82yweJ7QYtNQMeU1LZMfOShURym_6YAD9UgNjSnOjd_e2ijsUetKG
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwPpsGBfIVaAm3uXjfbvqG-xAqVFRpY09rNZfJ8AmvUGPP3WPvMY2S3lJSvJPq7JUcXlpFREOKj1NBsdRoaXA5mntTJ_lFeimQv3TnErD3fQrMHRzclvlOi6P5RQ-nBw==
+  title: sefaria.org
+search_queries:
+- ''
+- Greek word for scatter Acts 8:1
+- Greek word for scatter Matthew 26:31
+- Hebrew word for scatter Genesis 11:9
+- Hebrew word for scatter Ecclesiastes 3:5
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#004'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+review_status: green
