@@ -3844,8 +3844,10 @@ def _generate_image_only(*, card_dir: Path) -> Path:
     if is_example_card:
         _log(f"[imagegen] Example card detected - using templates only")
 
+    # Exclude current card to prevent self-reference during rebuilds
     style_refs, rarity_labels, fix_mode = _build_style_refs(
         series_dir,
+        current_card_path=out_png,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
@@ -4193,9 +4195,10 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     if is_example_card:
         _log(f"[phase review] Example card detected - using templates only")
 
-    # Build style references for comparison
+    # Build style references for comparison (exclude current card to prevent self-reference)
     style_refs, _, _ = _build_style_refs(
         series_dir,
+        current_card_path=out_png,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
