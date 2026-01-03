@@ -19,9 +19,14 @@ Based on the provided template and reference cards, here is the exact visual sty
 *   **Background:** Sits directly on the main parchment texture.
 
 **4. RARITY DISPLAY**
-*   **Shape:** A **Diamond** icon.
-*   **Position:** Inside the right-side header pill, to the right of the rarity text (e.g., "COMMON [Diamond]").
-*   **Color:** White icon against the dark navy background of the header pill.
+*   **Shape:** A **Diamond** icon, with additional icons for higher rarities.
+*   **Position:** Inside the right-side header pill, to the right of the rarity text.
+*   **Color by Rarity:**
+    *   COMMON = white/light diamond only
+    *   UNCOMMON = green diamond only
+    *   RARE = gold diamond + card icon (shows "+" and card deck symbol)
+    *   GLORIOUS = orange diamond + card+card icon (shows two overlapping cards)
+*   **Background:** Dark navy pill with white text.
 
 **5. ART PANEL**
 *   **Frame:** A rectangular box with **chamfered (notched) corners**. It has a double border: a thin black outer line and an inner gold/bronze bevel effect.
@@ -82,5 +87,9 @@ CRITICAL STYLE CHECKS (any mismatch = AUTOMATIC FAIL):
 2. **VERSE HEADERS**: "OT VERSE" and "NT VERSE" must be CENTERED ABOVE the verse text - NOT in side boxes
 3. **STAT PIPS**: Must be CIRCLES filled with NAVY color (dark blue #0B1F3B) - NOT black, NOT other shapes
 4. **COLOR SCHEME**: Navy/gold/parchment - NOT other color schemes
-5. **RARITY BADGE**: Must match the recipe rarity exactly (COMMON/UNCOMMON/RARE/GLORIOUS). COMMON = white diamond, UNCOMMON = green, RARE = gold, GLORIOUS = orange
-6. **TYPE ICON**: Must show correct icon for card type in top-left circle: NOUN = closed book, VERB = running figure, ADJECTIVE = scroll, NAME = crown, TITLE = star
+5. **RARITY BADGE**: Must match the recipe rarity exactly:
+   - COMMON = white diamond only
+   - UNCOMMON = green diamond only
+   - RARE = gold diamond with +card icon (this extra icon is VALID for RARE)
+   - GLORIOUS = orange diamond with card+card icon (this extra icon is VALID for GLORIOUS)
+6. **TYPE ICON**: Must show correct WHITE icon for card type in top-left navy circle: NOUN = closed book, VERB = pencil, ADJECTIVE = sparkle pencil (pencil with stars), NAME = feather quill, TITLE = crown

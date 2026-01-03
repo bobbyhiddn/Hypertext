@@ -11,13 +11,13 @@ TARGET TEMPLATE SPECIFICATIONS:
 - Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
 - Style: Premium trading card layout with antique parchment background
 - Frame: Navy and gold collector frame with rounded corners
-- Card Type: TITLE (represented by Framed Picture icon)
+- Card Type: TITLE (represented by Crown icon)
 
 EXACT LAYOUT (top to bottom):
 
 1. HEADER AREA
    - Top-Left: Card number "#XXX" followed by TYPE PILL (navy rounded rectangle with "TITLE" in WHITE text)
-   - Type Circle: Navy circle with gold border INSIDE the pill, containing a WHITE FRAMED PICTURE icon
+   - Type Circle: Navy circle with gold border INSIDE the pill, containing a WHITE CROWN icon
    - Top-Right: RARITY AREA - navy pill with "Rarity" placeholder text in WHITE serif
      * NO diamond shape - diamonds only appear on rarity-specific templates
    - Center: Card title in large bold black serif, subtitle below in italics
@@ -50,7 +50,7 @@ COLOR PALETTE:
 - Text: Near-black for body, white/cream for headers
 
 CRITICAL RULES:
-- TYPE AREA: Type pill shows "TITLE" in WHITE text, type circle contains WHITE Framed Picture icon
+- TYPE AREA: Type pill shows "TITLE" in WHITE text, type circle contains WHITE Crown icon
   The icon must be WHITE/light colored against the navy circle background
 - RARITY AREA: Show ONLY "Rarity" text in WHITE - NO diamond shape (diamonds are for rarity templates only)
 - Stat pips MUST be empty/hollow navy circle outlines (not filled)

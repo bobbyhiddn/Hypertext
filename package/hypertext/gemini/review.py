@@ -34,6 +34,7 @@ class CardDescription:
     word: str
     gloss: str
     card_type: str
+    type_icon_shape: str  # "book", "pencil", "sparkle_pencil", "quill", "crown", "none", etc.
     rarity_text: str
     rarity_icon_shape: str  # "diamond", "circle", "square", etc.
     rarity_icon_color: str  # "orange", "gold", "green", etc.
@@ -85,6 +86,7 @@ Do NOT judge quality or correctness. Just report what is actually visible on the
 
 A correctly formatted Hypertext card should have these elements:
 - HEADER AREA: Card number (format: #XXX), card type label, main word/title, gloss/subtitle
+- TYPE ICON: WHITE icon in navy circle (top-left): NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil, NAME=quill, TITLE=crown
 - TOP RIGHT: Rarity text followed by a diamond-shaped icon
 - ART PANEL: Large illustration in the middle, no text inside the art
 - STATS ROW: Three stats (LORE, CONTEXT, COMPLEXITY) each with 5 small circle-shaped pips
@@ -103,20 +105,21 @@ A correctly formatted Hypertext card should have these elements:
 2. WORD/TITLE: What is the main word/title at the top?
 3. GLOSS: What is the subtitle/definition text?
 4. CARD TYPE: What type label is shown (NOUN, VERB, etc.)?
-5. RARITY: What rarity text is shown? What SHAPE is the rarity icon (circle/square/diamond/hexagon)? What COLOR is it?
-6. STAT PIPS:
+5. TYPE ICON: What icon is in the top-left navy circle? (book/pencil/sparkle_pencil/quill/crown/none/other)
+6. RARITY: What rarity text is shown? What SHAPE is the rarity icon (circle/square/diamond/hexagon)? What COLOR is it?
+7. STAT PIPS:
    - What SHAPE are the stat pips? (circles/diamonds/squares/stars)
    - What COLOR are the FILLED pips? (navy/dark blue/gold/yellow/other - be specific)
    - Count filled pips for each stat (Lore, Context, Complexity)
-7. ABILITY TEXT: What does the ability text say?
-8. VERSES: Is the OT verse section visible and readable? Is the NT verse section visible and readable?
-9. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible? Are transliterations shown?
-10. TRIVIA: How many trivia bullet points are visible?
-11. BRACKETS: Are there any square brackets [ ] visible ANYWHERE on the card? If yes, list exact locations.
-12. ART PANEL: Briefly describe the artwork. Is there any TEXT inside the art panel?
-13. FRAME: Is the card frame/border intact and complete?
-14. PANELS: Are all expected panels visible? List any missing sections.
-15. TEXT QUALITY: Is any text garbled, warped, or illegible? Where?
+8. ABILITY TEXT: What does the ability text say?
+9. VERSES: Is the OT verse section visible and readable? Is the NT verse section visible and readable?
+10. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible? Are transliterations shown?
+11. TRIVIA: How many trivia bullet points are visible?
+12. BRACKETS: Are there any square brackets [ ] visible ANYWHERE on the card? If yes, list exact locations.
+13. ART PANEL: Briefly describe the artwork. Is there any TEXT inside the art panel?
+14. FRAME: Is the card frame/border intact and complete?
+15. PANELS: Are all expected panels visible? List any missing sections.
+16. TEXT QUALITY: Is any text garbled, warped, or illegible? Where?
 
 Return ONLY JSON in this exact format:
 ```json
@@ -126,6 +129,7 @@ Return ONLY JSON in this exact format:
   "word": "<main word>",
   "gloss": "<subtitle text>",
   "card_type": "<type shown>",
+  "type_icon_shape": "<book|pencil|sparkle_pencil|quill|crown|none|other>",
   "rarity_text": "<rarity word>",
   "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
   "rarity_icon_color": "<color name>",
@@ -217,7 +221,12 @@ Compare the TEST CARD (image [{test_idx}]) against the REFERENCE images. Look fo
 
 **#3 STAT PIP SHAPE:** Must be CIRCLES (not diamonds, squares, stars)
 
-**#4 OVERALL AESTHETIC:** Does the card look like it belongs with the references, or does it look like a DIFFERENT card game entirely?
+**#4 TYPE ICON (TOP-LEFT CIRCLE):**
+- CORRECT: WHITE icon inside navy circle in top-left corner
+- Icons by type: NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil (pencil with stars), NAME=quill, TITLE=crown
+- WRONG: Missing icon, wrong icon for type, or icon not matching references
+
+**#5 OVERALL AESTHETIC:** Does the card look like it belongs with the references, or does it look like a DIFFERENT card game entirely?
 
 ### HOW TO DECIDE:
 1. Look at the BORDER of each reference card - note how simple/plain it is
@@ -251,6 +260,7 @@ Return ONLY JSON in this exact format:
   "word": "<main word>",
   "gloss": "<subtitle text>",
   "card_type": "<type shown>",
+  "type_icon_shape": "<book|pencil|sparkle_pencil|quill|crown|none|other>",
   "rarity_text": "<rarity word>",
   "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
   "rarity_icon_color": "<color name>",
@@ -658,6 +668,25 @@ def describe_card(
         auto_mismatch_reasons.append(f"Frame style '{frame_corners}' doesn't match reference (expected chamfered)")
         explicit_mismatch = False
 
+    # Type icon validation - check if icon matches expected for card type
+    type_icon = data.get("type_icon_shape", "").lower()
+    card_type = data.get("card_type", "").upper()
+    expected_icons = {
+        "NOUN": ["book", "closed_book", "closed book"],
+        "VERB": ["pencil"],
+        "ADJECTIVE": ["sparkle_pencil", "sparkle pencil", "pencil_stars", "pencil with stars"],
+        "NAME": ["quill", "feather", "feather_quill", "feather quill"],
+        "TITLE": ["crown"],
+    }
+    if card_type in expected_icons:
+        valid_icons = expected_icons[card_type]
+        if type_icon and type_icon not in ["none", "other", ""] and not any(valid in type_icon for valid in valid_icons):
+            auto_mismatch_reasons.append(f"Type icon '{type_icon}' doesn't match {card_type} (expected: {valid_icons[0]})")
+            explicit_mismatch = False
+        elif type_icon in ["none", ""]:
+            auto_mismatch_reasons.append(f"Missing type icon for {card_type} - should be {valid_icons[0]}")
+            explicit_mismatch = False
+
     # Combine mismatch reasons
     mismatch_reason = data.get("style_mismatch_reason", "")
     if auto_mismatch_reasons:
@@ -672,6 +701,7 @@ def describe_card(
         word=data.get("word", ""),
         gloss=data.get("gloss", ""),
         card_type=data.get("card_type", ""),
+        type_icon_shape=data.get("type_icon_shape", ""),
         rarity_text=data.get("rarity_text", ""),
         rarity_icon_shape=data.get("rarity_icon_shape", ""),
         rarity_icon_color=data.get("rarity_icon_color", ""),
@@ -735,6 +765,7 @@ def score_against_rubric(
         "word": description.word,
         "gloss": description.gloss,
         "card_type": description.card_type,
+        "type_icon_shape": description.type_icon_shape,
         "rarity_text": description.rarity_text,
         "rarity_icon_shape": description.rarity_icon_shape,
         "rarity_icon_color": description.rarity_icon_color,
