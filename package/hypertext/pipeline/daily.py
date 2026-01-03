@@ -900,6 +900,79 @@ def _build_style_cmd_args(
     return args
 
 
+def _write_generation_log(
+    card_dir: Path,
+    *,
+    style_refs: list[str],
+    rarity_labels: dict[int, str],
+    target_rarity: str | None,
+    target_type: str | None,
+    fix_mode: bool,
+    prompt_file: Path | None = None,
+    phase: str = "generate",
+) -> None:
+    """Write a generation.log file alongside the card with generation metadata.
+
+    This log captures crucial information about how the card was generated,
+    including which style reference images were used.
+
+    Args:
+        card_dir: Directory containing the card (log written to outputs/).
+        style_refs: List of style reference image paths used.
+        rarity_labels: Mapping of position -> rarity for style refs.
+        target_rarity: Target rarity for this card.
+        target_type: Target type for this card.
+        fix_mode: Whether fix mode was used (current card as first ref).
+        prompt_file: Path to the prompt file used.
+        phase: Name of the generation phase (e.g., "imagegen", "revise", "rebuild").
+    """
+    from datetime import datetime
+
+    log_path = card_dir / "outputs" / "generation.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    lines = [
+        f"=== Generation Log ===",
+        f"Timestamp: {timestamp}",
+        f"Phase: {phase}",
+        f"Target Rarity: {target_rarity or 'N/A'}",
+        f"Target Type: {target_type or 'N/A'}",
+        f"Fix Mode: {fix_mode}",
+        f"",
+        f"Style References ({len(style_refs)} total):",
+    ]
+
+    for i, ref in enumerate(style_refs, start=1):
+        ref_path = Path(ref)
+        # Make path relative if possible for readability
+        try:
+            rel_path = ref_path.relative_to(Path.cwd())
+        except ValueError:
+            rel_path = ref_path
+        rarity_note = f" [{rarity_labels.get(i, '')}]" if i in rarity_labels else ""
+        position_note = ""
+        if fix_mode and i == 1:
+            position_note = " (CURRENT CARD)"
+        elif (fix_mode and i == 2) or (not fix_mode and i == 1):
+            position_note = " (TEMPLATE)" if "template" in str(ref).lower() else ""
+        lines.append(f"  [{i}] {rel_path}{rarity_note}{position_note}")
+
+    if prompt_file:
+        lines.extend([
+            f"",
+            f"Prompt File: {prompt_file}",
+        ])
+
+    lines.append("")  # Trailing newline
+
+    with open(log_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    _log(f"[{phase}] wrote generation.log to {log_path}")
+
+
 def _load_rules_appendix() -> str:
     try:
         with open(RULES_PATH, "r", encoding="utf-8") as f:
@@ -2987,6 +3060,18 @@ def phase_imagegen(*, series_dir: Path) -> int:
         
     subprocess.check_call(cmd)
 
+    # Write generation log with style reference info
+    _write_generation_log(
+        target_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_file,
+        phase="imagegen",
+    )
+
     # Skip polish here - review phase will run polish after evaluation
     # This avoids running polish twice in the daily flow: imagegen → review → polish
     _log("[phase imagegen] skipping polish (will run after review)")
@@ -3070,6 +3155,18 @@ def _generate_image_for_card_dir(
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_file,
+        phase="batch",
+    )
 
     # Run polish step (optional)
     if not skip_polish:
@@ -3243,6 +3340,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
             ]
 
         subprocess.check_call(cmd)
+
+        # Write generation log with style reference info
+        _write_generation_log(
+            card_dir,
+            style_refs=style_refs,
+            rarity_labels=rarity_labels,
+            target_rarity=target_rarity,
+            target_type=target_type,
+            fix_mode=use_fix_mode,
+            prompt_file=prompt_path,
+            phase="revise-image-only",
+        )
+
         _log("[phase revise] image-only revision complete")
         _run_watermark(card_dir=card_dir, image_path=out_png)
         print(f"Revised card (image-only) at {card_dir}")
@@ -3320,6 +3430,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
             ]
 
         subprocess.check_call(cmd)
+
+        # Write generation log with style reference info
+        _write_generation_log(
+            card_dir,
+            style_refs=style_refs,
+            rarity_labels=rarity_labels,
+            target_rarity=target_rarity,
+            target_type=target_type,
+            fix_mode=False,
+            prompt_file=card_dir / "prompt.txt",
+            phase="revise-rebuild",
+        )
+
         _log("[phase revise] image rebuild complete")
 
         _run_watermark(card_dir=card_dir, image_path=out_png)
@@ -3490,6 +3613,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=use_fix_mode,
+        prompt_file=card_dir / "prompt.txt",
+        phase="revise",
+    )
+
     _log("[phase revise] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
@@ -3635,6 +3771,19 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_path,
+        phase="rebuild",
+    )
+
     _log("[phase rebuild] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
@@ -3797,6 +3946,19 @@ def _generate_image_only(*, card_dir: Path) -> Path:
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_file,
+        phase="imagegen",
+    )
+
     return out_png
 
 
