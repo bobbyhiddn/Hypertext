@@ -696,20 +696,17 @@ def _build_style_refs(
     """Build list of style reference paths for image generation.
 
     Uses ONLY cards matching BOTH type AND rarity for cleanest references.
-    As the collection grows, more matching refs become available.
+    Example cards are always included as premium references.
 
-    For fix_mode=True (revise/polish):
-        [1] = Current card being fixed
-        [2+] = Cards matching BOTH type AND rarity
-        [last] = Rarity template (weakest - just for badge reference)
-
-    For fix_mode=False (rebuild/generate):
-        [1+] = Cards matching BOTH type AND rarity
+    Reference priority order:
+        [1] = Current card being fixed (fix_mode only)
+        [2+] = Example cards matching type AND rarity (always searched)
+        [3+] = Series cards matching type AND rarity (unless templates_only)
         [last] = Rarity template (weakest - just for badge reference)
 
     Args:
-        series_root: Series directory for finding example cards.
-        current_card_path: Path to current card image (for fix mode).
+        series_root: Series directory for finding series cards.
+        current_card_path: Path to current card image (excluded from refs).
         target_rarity: Target rarity to match.
         target_type: Target type to match.
         fix_mode: If True, includes current card as first reference.
@@ -730,38 +727,37 @@ def _build_style_refs(
     if target_rarity:
         rarity_template_path = _get_subtype_template(target_rarity)
 
-    # For templates_only mode, collect example cards sorted by type first, then rarity
+    # Always collect matching example cards (premium references)
     example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]
 
-    if templates_only:
-        example_cards_dir = Path("templates/example_cards")
-        if example_cards_dir.exists():
-            # Collect ONLY cards matching BOTH type AND rarity (cleanest refs)
-            for card_dir in sorted(example_cards_dir.iterdir()):
-                if not card_dir.is_dir():
-                    continue
-                card_png = card_dir / "outputs" / "card_1024x1536.png"
-                if not card_png.exists():
-                    continue
-                # Skip the card we're currently generating
-                if current_card_path and card_png.resolve() == current_card_path.resolve():
-                    continue
-                # Get metadata
-                meta_path = card_dir / "meta.yml"
-                card_type_meta = ""
-                card_rarity_meta = ""
-                if meta_path.exists() and yaml:
-                    with open(meta_path, "r", encoding="utf-8") as f:
-                        meta = yaml.safe_load(f) or {}
-                    card_type_meta = (meta.get("card_type") or meta.get("type", "")).upper()
-                    card_rarity_meta = meta.get("rarity", "").upper()
+    example_cards_dir = Path("templates/example_cards")
+    if example_cards_dir.exists():
+        # Collect ONLY cards matching BOTH type AND rarity (cleanest refs)
+        for card_dir in sorted(example_cards_dir.iterdir()):
+            if not card_dir.is_dir():
+                continue
+            card_png = card_dir / "outputs" / "card_1024x1536.png"
+            if not card_png.exists():
+                continue
+            # Skip the card we're currently generating
+            if current_card_path and card_png.resolve() == current_card_path.resolve():
+                continue
+            # Get metadata
+            meta_path = card_dir / "meta.yml"
+            card_type_meta = ""
+            card_rarity_meta = ""
+            if meta_path.exists() and yaml:
+                with open(meta_path, "r", encoding="utf-8") as f:
+                    meta = yaml.safe_load(f) or {}
+                card_type_meta = (meta.get("card_type") or meta.get("type", "")).upper()
+                card_rarity_meta = meta.get("rarity", "").upper()
 
-                # Only include if it matches BOTH type AND rarity
-                matches_type = target_type and card_type_meta == target_type
-                matches_rarity = target_rarity and card_rarity_meta == target_rarity
+            # Only include if it matches BOTH type AND rarity
+            matches_type = target_type and card_type_meta == target_type
+            matches_rarity = target_rarity and card_rarity_meta == target_rarity
 
-                if matches_type and matches_rarity:
-                    example_refs.append((card_png, card_rarity_meta))
+            if matches_type and matches_rarity:
+                example_refs.append((card_png, card_rarity_meta))
 
     # Add example cards (strongest references)
     for card_png, card_rarity_meta in example_refs:
