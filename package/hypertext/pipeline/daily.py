@@ -697,18 +697,17 @@ def _build_style_refs(
 
     For fix_mode=True (revise/polish):
         [1] = Current card being fixed
-        [2] = Template
-        [3+] = Example cards
+        [2+] = Example cards (type matches first, then rarity matches)
+        [last] = Rarity template (weakest - just for badge reference)
 
     For fix_mode=False (rebuild/generate):
-        [1] = Template
-        [2+] = Example cards
+        [1+] = Example cards (type matches first, then rarity matches)
+        [last] = Rarity template (weakest - just for badge reference)
 
-    Example card selection priority (fills up to 3 cards):
-        1. Same rarity + same type
-        2. Same rarity only
-        3. Same type only (tracks actual rarity for PRIMARY highlighting)
-        4. Any cards from series (tracks actual rarity)
+    Example card selection priority:
+        1. Same type (strongest - for layout/structure)
+        2. Same rarity (for badge styling)
+        3. Any cards from series (fills remaining slots)
 
     Args:
         series_root: Series directory for finding example cards.
@@ -728,16 +727,12 @@ def _build_style_refs(
     if fix_mode and current_card_path and current_card_path.exists():
         refs.append(str(current_card_path))
 
-    # Collect type and rarity templates for later (added last as weakest refs)
-    type_template_path: Path | None = None
+    # Only use rarity template (type templates show type icons, not rarity badges)
     rarity_template_path: Path | None = None
-    if target_type:
-        type_template_path = _get_subtype_template(target_type)
     if target_rarity:
         rarity_template_path = _get_subtype_template(target_rarity)
 
-    # For templates_only mode, collect example cards sorted by similarity
-    # Examples are now the STRONGEST references (positions 1-3)
+    # For templates_only mode, collect example cards sorted by type first, then rarity
     example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]
 
     if templates_only:
@@ -765,95 +760,66 @@ def _build_style_refs(
                     card_rarity_meta = meta.get("rarity", "").upper()
                 available_examples.append((card_png, card_type_meta, card_rarity_meta))
 
-            # Sort by overall similarity (type + rarity) to find best match
-            def overall_similarity(item: tuple[Path, str, str]) -> int:
+            # Sort by TYPE first (strongest), then rarity
+            def type_first_similarity(item: tuple[Path, str, str]) -> tuple[int, int]:
                 _, ex_type, ex_rarity = item
-                score = 0
-                if target_type and ex_type == target_type:
-                    score += 2  # Type match
-                if target_rarity and ex_rarity == target_rarity:
-                    score += 2  # Rarity match (equal weight for best match)
-                return -score  # Negative for descending sort
+                type_score = 2 if (target_type and ex_type == target_type) else 0
+                rarity_score = 1 if (target_rarity and ex_rarity == target_rarity) else 0
+                return (-type_score, -rarity_score)  # Negative for descending sort
 
-            available_examples.sort(key=overall_similarity)
+            available_examples.sort(key=type_first_similarity)
 
-            # Best match is first, then sort rest by rarity priority
-            if available_examples:
-                example_refs.append((available_examples[0][0], available_examples[0][2]))
+            # Take up to 3 examples
+            for card_png, _, card_rarity_meta in available_examples[:3]:
+                example_refs.append((card_png, card_rarity_meta))
 
-                # For remaining examples, prioritize RARITY match, type secondary
-                rest = available_examples[1:]
-                def rarity_first(item: tuple[Path, str, str]) -> tuple[int, int]:
-                    _, ex_type, ex_rarity = item
-                    rarity_score = 2 if (target_rarity and ex_rarity == target_rarity) else 0
-                    type_score = 1 if (target_type and ex_type == target_type) else 0
-                    return (-rarity_score, -type_score)  # Negative for descending
-
-                rest.sort(key=rarity_first)
-                for card_png, _, card_rarity_meta in rest[:2]:
-                    example_refs.append((card_png, card_rarity_meta))
-
-    # Style refs ordered by priority (earlier = stronger weight in Gemini):
-    # 1-3. Example cards (strongest - real completed cards)
+    # Add example cards (strongest references)
     for card_png, card_rarity_meta in example_refs:
         refs.append(str(card_png))
         if card_rarity_meta:
             rarity_labels[len(refs)] = card_rarity_meta
 
-    # 4. Type template (weaker - just for type icon reference)
-    if type_template_path:
-        refs.append(str(type_template_path))
-
-    # 5. Rarity template (weakest - just for rarity badge reference)
-    if rarity_template_path:
-        refs.append(str(rarity_template_path))
-
-    # Skip series cards if templates_only mode (for example cards)
+    # For series cards mode, find matching cards prioritizing TYPE first
     if not templates_only:
-        # Find matching cards (same rarity+type)
         exclude_dir = current_card_path.parent.parent if current_card_path else None
-        matching_cards = _find_matching_cards(
-            series_root,
-            target_rarity=target_rarity,
-            target_type=target_type,
-            exclude_card=exclude_dir,
-            max_cards=3,
-        )
 
-        # If not enough matches, try same rarity only
-        if len(matching_cards) < 3 and target_rarity:
-            more_cards = _find_matching_cards(
+        # First priority: same TYPE (for layout/structure)
+        type_matching_cards: list[Path] = []
+        if target_type:
+            type_matching_cards = _find_matching_cards(
                 series_root,
-                target_rarity=target_rarity,
-                target_type=None,
-                exclude_card=exclude_dir,
-                max_cards=3 - len(matching_cards),
-            )
-            for card in more_cards:
-                if card not in matching_cards:
-                    matching_cards.append(card)
-
-        # Track actual rarities for cards that don't match target_rarity
-        fallback_rarities: dict[Path, str] = {}
-
-        # If still not enough, try same type only (these may have different rarities)
-        if len(matching_cards) < 3 and target_type:
-            more_cards = _find_matching_cards(
-                series_root,
-                target_rarity=None,
+                target_rarity=None,  # Any rarity
                 target_type=target_type,
                 exclude_card=exclude_dir,
-                max_cards=3 - len(matching_cards),
+                max_cards=3,
             )
-            for card in more_cards:
-                if card not in matching_cards:
-                    matching_cards.append(card)
-                    # Track actual rarity since it may differ from target
-                    actual_rarity = _get_card_rarity(card)
-                    if actual_rarity:
-                        fallback_rarities[card] = actual_rarity
 
-        # If still not enough, fill with any cards from the series
+        # Track actual rarities for all cards
+        card_rarities: dict[Path, str] = {}
+        for card in type_matching_cards:
+            actual_rarity = _get_card_rarity(card)
+            if actual_rarity:
+                card_rarities[card] = actual_rarity
+
+        # Second priority: same RARITY (for badge styling)
+        rarity_matching_cards: list[Path] = []
+        if target_rarity and len(type_matching_cards) < 3:
+            rarity_matching_cards = _find_matching_cards(
+                series_root,
+                target_rarity=target_rarity,
+                target_type=None,  # Any type
+                exclude_card=exclude_dir,
+                max_cards=3 - len(type_matching_cards),
+            )
+            # Remove duplicates
+            rarity_matching_cards = [c for c in rarity_matching_cards if c not in type_matching_cards]
+            for card in rarity_matching_cards:
+                card_rarities[card] = target_rarity
+
+        # Combine: type matches first (strongest), then rarity matches
+        matching_cards = type_matching_cards + rarity_matching_cards
+
+        # Fill remaining slots with any cards from series
         if len(matching_cards) < 3:
             rarity_map = _find_card_by_rarity(series_root)
             for rarity in RARITY_ORDER:
@@ -861,17 +827,19 @@ def _build_style_refs(
                     card_path = rarity_map[rarity]
                     if card_path not in matching_cards:
                         matching_cards.append(card_path)
-                        fallback_rarities[card_path] = rarity
+                        card_rarities[card_path] = rarity
                         if len(matching_cards) >= 3:
                             break
 
+        # Add series cards to refs
         for card_path in matching_cards:
             refs.append(str(card_path))
-            # Use actual rarity for fallback cards, target_rarity for matched cards
-            if card_path in fallback_rarities:
-                rarity_labels[len(refs)] = fallback_rarities[card_path]
-            elif target_rarity:
-                rarity_labels[len(refs)] = target_rarity
+            if card_path in card_rarities:
+                rarity_labels[len(refs)] = card_rarities[card_path]
+
+    # Rarity template added LAST (weakest - just for badge reference)
+    if rarity_template_path:
+        refs.append(str(rarity_template_path))
 
     return refs, rarity_labels, fix_mode
 
