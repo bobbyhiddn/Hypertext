@@ -3838,11 +3838,12 @@ def _run_watermark(*, card_dir: Path, image_path: Path) -> None:
     except subprocess.CalledProcessError as e:
         stdout = (e.stdout or "").strip()
         stderr = (e.stderr or "").strip()
-        _log(f"[watermark] Warning: watermark step failed: {e}")
+        _log(f"[watermark] ERROR: watermark step failed: {e}")
         if stdout:
             _log(f"[watermark] stdout: {stdout}")
         if stderr:
             _log(f"[watermark] stderr: {stderr}")
+        raise RuntimeError(f"Watermark signing failed: {e}") from e
 
 
 def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
