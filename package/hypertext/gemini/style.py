@@ -161,13 +161,23 @@ def generate_with_styles(
             f"Pay CLOSEST attention to [{primary_ref}] for the rarity badge style and any rarity-specific formatting.\n"
         )
 
-    # Add instruction about type icons when using legacy references
+    # Always include type icon instruction
+    type_icon_instruction = (
+        "\n🎯 TYPE ICON (REQUIRED): The top-left navy circle MUST contain the correct WHITE type icon:\n"
+        "   - NOUN = closed book\n"
+        "   - VERB = pencil\n"
+        "   - ADJECTIVE = sparkle pencil (pencil with small stars)\n"
+        "   - NAME = feather quill\n"
+        "   - TITLE = crown\n"
+        "   Match the icon style from the type-specific template reference.\n"
+    )
+
+    # Add extra warning when using legacy references that may be missing icons
     legacy_instruction = ""
     if has_legacy_refs:
         legacy_instruction = (
-            "\n⚠️ LEGACY REFS: Some example cards are MISSING TYPE ICONS. "
-            "Get the type icon from the TYPE-SPECIFIC TEMPLATE (look for template with matching card type). "
-            "The type icon goes inside the circle in the top-left corner.\n"
+            "\n⚠️ LEGACY REFS: Some example cards are MISSING TYPE ICONS - ignore their type circle area. "
+            "Always use the type icon from the TYPE-SPECIFIC TEMPLATE instead.\n"
         )
 
     if fix_mode:
@@ -189,7 +199,7 @@ STRUCTURE REFERENCE (from [{template_ref}]):
 STYLE VERIFICATION (from [{example_refs}]):
 - Verify UI elements match the style references
 - Confirm overall style consistency
-{primary_instruction}{legacy_instruction}
+{primary_instruction}{type_icon_instruction}{legacy_instruction}
 CRITICAL: Output should be nearly identical to [1], with ONLY the specified fixes applied.
 
 """
@@ -211,7 +221,7 @@ STYLE (match EXACTLY from [{example_refs}] - the examples):
 - Border/frame styling
 - Typography and text formatting
 - Element styling and finish
-{primary_instruction}{legacy_instruction}
+{primary_instruction}{type_icon_instruction}{legacy_instruction}
 PRESERVATION RULES:
 - Match the structural layout from the template reference
 - Match the visual style from the example references
