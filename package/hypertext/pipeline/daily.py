@@ -1806,10 +1806,10 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             if not q_out_png.exists():
                 incomplete_count += 1
 
-        min_queue = int(os.environ.get("HYPERTEXT_MIN_QUEUE", "3"))
-        if incomplete_count < min_queue:
-            needed = min_queue - incomplete_count
-            print(f"Incomplete queue entries below minimum ({incomplete_count}/{min_queue}). Generating {needed} new queue entries...")
+        # Add one new entry if all current entries are complete
+        if incomplete_count == 0:
+            needed = 1
+            print(f"All queue entries complete. Generating 1 new queue entry...")
 
             # Calculate needed rarities and types from stats
             stats = _load_series_stats(series_dir)
