@@ -695,20 +695,17 @@ def _build_style_refs(
 ) -> tuple[list[str], dict[int, str], bool]:
     """Build list of style reference paths for image generation.
 
+    Uses ONLY cards matching BOTH type AND rarity for cleanest references.
+    As the collection grows, more matching refs become available.
+
     For fix_mode=True (revise/polish):
         [1] = Current card being fixed
-        [2] = Template
-        [3+] = Example cards
+        [2+] = Cards matching BOTH type AND rarity
+        [last] = Rarity template (weakest - just for badge reference)
 
     For fix_mode=False (rebuild/generate):
-        [1] = Template
-        [2+] = Example cards
-
-    Example card selection priority (fills up to 3 cards):
-        1. Same rarity + same type
-        2. Same rarity only
-        3. Same type only (tracks actual rarity for PRIMARY highlighting)
-        4. Any cards from series (tracks actual rarity)
+        [1+] = Cards matching BOTH type AND rarity
+        [last] = Rarity template (weakest - just for badge reference)
 
     Args:
         series_root: Series directory for finding example cards.
@@ -728,23 +725,18 @@ def _build_style_refs(
     if fix_mode and current_card_path and current_card_path.exists():
         refs.append(str(current_card_path))
 
-    # Collect type and rarity templates for later (added last as weakest refs)
-    type_template_path: Path | None = None
+    # Only use rarity template (type templates show type icons, not rarity badges)
     rarity_template_path: Path | None = None
-    if target_type:
-        type_template_path = _get_subtype_template(target_type)
     if target_rarity:
         rarity_template_path = _get_subtype_template(target_rarity)
 
-    # For templates_only mode, collect example cards sorted by similarity
-    # Examples are now the STRONGEST references (positions 1-3)
+    # For templates_only mode, collect example cards sorted by type first, then rarity
     example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]
 
     if templates_only:
         example_cards_dir = Path("templates/example_cards")
         if example_cards_dir.exists():
-            # Collect all completed example cards with their metadata
-            available_examples: list[tuple[Path, str, str]] = []  # (path, type, rarity)
+            # Collect ONLY cards matching BOTH type AND rarity (cleanest refs)
             for card_dir in sorted(example_cards_dir.iterdir()):
                 if not card_dir.is_dir():
                     continue
@@ -763,115 +755,43 @@ def _build_style_refs(
                         meta = yaml.safe_load(f) or {}
                     card_type_meta = (meta.get("card_type") or meta.get("type", "")).upper()
                     card_rarity_meta = meta.get("rarity", "").upper()
-                available_examples.append((card_png, card_type_meta, card_rarity_meta))
 
-            # Sort by overall similarity (type + rarity) to find best match
-            def overall_similarity(item: tuple[Path, str, str]) -> int:
-                _, ex_type, ex_rarity = item
-                score = 0
-                if target_type and ex_type == target_type:
-                    score += 2  # Type match
-                if target_rarity and ex_rarity == target_rarity:
-                    score += 2  # Rarity match (equal weight for best match)
-                return -score  # Negative for descending sort
+                # Only include if it matches BOTH type AND rarity
+                matches_type = target_type and card_type_meta == target_type
+                matches_rarity = target_rarity and card_rarity_meta == target_rarity
 
-            available_examples.sort(key=overall_similarity)
-
-            # Best match is first, then sort rest by rarity priority
-            if available_examples:
-                example_refs.append((available_examples[0][0], available_examples[0][2]))
-
-                # For remaining examples, prioritize RARITY match, type secondary
-                rest = available_examples[1:]
-                def rarity_first(item: tuple[Path, str, str]) -> tuple[int, int]:
-                    _, ex_type, ex_rarity = item
-                    rarity_score = 2 if (target_rarity and ex_rarity == target_rarity) else 0
-                    type_score = 1 if (target_type and ex_type == target_type) else 0
-                    return (-rarity_score, -type_score)  # Negative for descending
-
-                rest.sort(key=rarity_first)
-                for card_png, _, card_rarity_meta in rest[:2]:
+                if matches_type and matches_rarity:
                     example_refs.append((card_png, card_rarity_meta))
 
-    # Style refs ordered by priority (earlier = stronger weight in Gemini):
-    # 1-3. Example cards (strongest - real completed cards)
+    # Add example cards (strongest references)
     for card_png, card_rarity_meta in example_refs:
         refs.append(str(card_png))
         if card_rarity_meta:
             rarity_labels[len(refs)] = card_rarity_meta
 
-    # 4. Type template (weaker - just for type icon reference)
-    if type_template_path:
-        refs.append(str(type_template_path))
-
-    # 5. Rarity template (weakest - just for rarity badge reference)
-    if rarity_template_path:
-        refs.append(str(rarity_template_path))
-
-    # Skip series cards if templates_only mode (for example cards)
+    # For series cards mode, find ONLY cards matching BOTH type AND rarity
     if not templates_only:
-        # Find matching cards (same rarity+type)
         exclude_dir = current_card_path.parent.parent if current_card_path else None
-        matching_cards = _find_matching_cards(
-            series_root,
-            target_rarity=target_rarity,
-            target_type=target_type,
-            exclude_card=exclude_dir,
-            max_cards=3,
-        )
 
-        # If not enough matches, try same rarity only
-        if len(matching_cards) < 3 and target_rarity:
-            more_cards = _find_matching_cards(
+        # Only use cards that match BOTH type AND rarity (cleanest refs)
+        matching_cards: list[Path] = []
+        if target_type and target_rarity:
+            matching_cards = _find_matching_cards(
                 series_root,
                 target_rarity=target_rarity,
-                target_type=None,
-                exclude_card=exclude_dir,
-                max_cards=3 - len(matching_cards),
-            )
-            for card in more_cards:
-                if card not in matching_cards:
-                    matching_cards.append(card)
-
-        # Track actual rarities for cards that don't match target_rarity
-        fallback_rarities: dict[Path, str] = {}
-
-        # If still not enough, try same type only (these may have different rarities)
-        if len(matching_cards) < 3 and target_type:
-            more_cards = _find_matching_cards(
-                series_root,
-                target_rarity=None,
                 target_type=target_type,
                 exclude_card=exclude_dir,
-                max_cards=3 - len(matching_cards),
+                max_cards=3,
             )
-            for card in more_cards:
-                if card not in matching_cards:
-                    matching_cards.append(card)
-                    # Track actual rarity since it may differ from target
-                    actual_rarity = _get_card_rarity(card)
-                    if actual_rarity:
-                        fallback_rarities[card] = actual_rarity
 
-        # If still not enough, fill with any cards from the series
-        if len(matching_cards) < 3:
-            rarity_map = _find_card_by_rarity(series_root)
-            for rarity in RARITY_ORDER:
-                if rarity in rarity_map:
-                    card_path = rarity_map[rarity]
-                    if card_path not in matching_cards:
-                        matching_cards.append(card_path)
-                        fallback_rarities[card_path] = rarity
-                        if len(matching_cards) >= 3:
-                            break
-
+        # Add series cards to refs
         for card_path in matching_cards:
             refs.append(str(card_path))
-            # Use actual rarity for fallback cards, target_rarity for matched cards
-            if card_path in fallback_rarities:
-                rarity_labels[len(refs)] = fallback_rarities[card_path]
-            elif target_rarity:
-                rarity_labels[len(refs)] = target_rarity
+            rarity_labels[len(refs)] = target_rarity
+
+    # Rarity template added LAST (weakest - just for badge reference)
+    if rarity_template_path:
+        refs.append(str(rarity_template_path))
 
     return refs, rarity_labels, fix_mode
 
@@ -898,6 +818,79 @@ def _build_style_cmd_args(
         args.append("--fix-mode")
 
     return args
+
+
+def _write_generation_log(
+    card_dir: Path,
+    *,
+    style_refs: list[str],
+    rarity_labels: dict[int, str],
+    target_rarity: str | None,
+    target_type: str | None,
+    fix_mode: bool,
+    prompt_file: Path | None = None,
+    phase: str = "generate",
+) -> None:
+    """Write a generation.log file alongside the card with generation metadata.
+
+    This log captures crucial information about how the card was generated,
+    including which style reference images were used.
+
+    Args:
+        card_dir: Directory containing the card (log written to outputs/).
+        style_refs: List of style reference image paths used.
+        rarity_labels: Mapping of position -> rarity for style refs.
+        target_rarity: Target rarity for this card.
+        target_type: Target type for this card.
+        fix_mode: Whether fix mode was used (current card as first ref).
+        prompt_file: Path to the prompt file used.
+        phase: Name of the generation phase (e.g., "imagegen", "revise", "rebuild").
+    """
+    from datetime import datetime
+
+    log_path = card_dir / "outputs" / "generation.log"
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    lines = [
+        f"=== Generation Log ===",
+        f"Timestamp: {timestamp}",
+        f"Phase: {phase}",
+        f"Target Rarity: {target_rarity or 'N/A'}",
+        f"Target Type: {target_type or 'N/A'}",
+        f"Fix Mode: {fix_mode}",
+        f"",
+        f"Style References ({len(style_refs)} total):",
+    ]
+
+    for i, ref in enumerate(style_refs, start=1):
+        ref_path = Path(ref)
+        # Make path relative if possible for readability
+        try:
+            rel_path = ref_path.relative_to(Path.cwd())
+        except ValueError:
+            rel_path = ref_path
+        rarity_note = f" [{rarity_labels.get(i, '')}]" if i in rarity_labels else ""
+        position_note = ""
+        if fix_mode and i == 1:
+            position_note = " (CURRENT CARD)"
+        elif (fix_mode and i == 2) or (not fix_mode and i == 1):
+            position_note = " (TEMPLATE)" if "template" in str(ref).lower() else ""
+        lines.append(f"  [{i}] {rel_path}{rarity_note}{position_note}")
+
+    if prompt_file:
+        lines.extend([
+            f"",
+            f"Prompt File: {prompt_file}",
+        ])
+
+    lines.append("")  # Trailing newline
+
+    with open(log_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    _log(f"[{phase}] wrote generation.log to {log_path}")
 
 
 def _load_rules_appendix() -> str:
@@ -2987,6 +2980,18 @@ def phase_imagegen(*, series_dir: Path) -> int:
         
     subprocess.check_call(cmd)
 
+    # Write generation log with style reference info
+    _write_generation_log(
+        target_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_file,
+        phase="imagegen",
+    )
+
     # Skip polish here - review phase will run polish after evaluation
     # This avoids running polish twice in the daily flow: imagegen → review → polish
     _log("[phase imagegen] skipping polish (will run after review)")
@@ -3070,6 +3075,18 @@ def _generate_image_for_card_dir(
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_file,
+        phase="batch",
+    )
 
     # Run polish step (optional)
     if not skip_polish:
@@ -3243,6 +3260,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
             ]
 
         subprocess.check_call(cmd)
+
+        # Write generation log with style reference info
+        _write_generation_log(
+            card_dir,
+            style_refs=style_refs,
+            rarity_labels=rarity_labels,
+            target_rarity=target_rarity,
+            target_type=target_type,
+            fix_mode=use_fix_mode,
+            prompt_file=prompt_path,
+            phase="revise-image-only",
+        )
+
         _log("[phase revise] image-only revision complete")
         _run_watermark(card_dir=card_dir, image_path=out_png)
         print(f"Revised card (image-only) at {card_dir}")
@@ -3320,6 +3350,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
             ]
 
         subprocess.check_call(cmd)
+
+        # Write generation log with style reference info
+        _write_generation_log(
+            card_dir,
+            style_refs=style_refs,
+            rarity_labels=rarity_labels,
+            target_rarity=target_rarity,
+            target_type=target_type,
+            fix_mode=False,
+            prompt_file=card_dir / "prompt.txt",
+            phase="revise-rebuild",
+        )
+
         _log("[phase revise] image rebuild complete")
 
         _run_watermark(card_dir=card_dir, image_path=out_png)
@@ -3490,6 +3533,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=use_fix_mode,
+        prompt_file=card_dir / "prompt.txt",
+        phase="revise",
+    )
+
     _log("[phase revise] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
@@ -3635,6 +3691,19 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_path,
+        phase="rebuild",
+    )
+
     _log("[phase rebuild] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
@@ -3797,6 +3866,19 @@ def _generate_image_only(*, card_dir: Path) -> Path:
         ]
 
     subprocess.check_call(cmd)
+
+    # Write generation log with style reference info
+    _write_generation_log(
+        card_dir,
+        style_refs=style_refs,
+        rarity_labels=rarity_labels,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=fix_mode,
+        prompt_file=prompt_file,
+        phase="imagegen",
+    )
+
     return out_png
 
 
