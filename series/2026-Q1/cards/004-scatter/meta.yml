@@ -1,0 +1,55 @@
+number: '004'
+word: SCATTER
+gloss: To separate and drive off in various directions; to disperse or diffuse.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A dandelion head exploding in a gust of wind, seeds drifting chaotically
+  across a dark, stormy landscape.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Target player shuffles their hand into the Tower, then draws 4 cards.
+ot_verse:
+  ref: Genesis 11:9
+  snippet: The Lord scattered them abroad from there over the face of all the earth.
+nt_verse:
+  ref: Acts 8:4
+  snippet: Therefore those who were scattered went everywhere preaching the word.
+greek:
+  text: διασπείρω
+  translit: diaspeirō
+hebrew:
+  text: פּוּץ
+  translit: puts
+ot_refs: Gen 11:9 • Num 10:35 • Zech 13:7 • Ezek 34:5
+nt_refs: Matt 9:36 • John 11:52 • Acts 8:1 • James 1:1
+trivia:
+- The term 'Diaspora' comes from this Greek root, referring to Jews living outside
+  Israel.
+- At Babel, scattering was a judgment; in Acts, it became the catalyst for global
+  mission.
+- Sheep without a shepherd are frequently described as 'scattered' in scripture.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#004'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+review_status: yellow
+review_notes: Increase Context stat pips from 4 to 5 to match expected stats
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.

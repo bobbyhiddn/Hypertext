@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: SCATTER
+# Card_Gloss: To separate and drive off in various directions; to disperse or diffuse.
+# Card_Type: VERB
+# Card_Rarity: RARE
+# Card_Ability: Target player shuffles their hand into the Tower, then draws 4 cards.
+# Card_Stats: LORE 4 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A dandelion head exploding in a gust of wind, seeds drifting chaotically across a dark, stormy landscape.
+# Card_OT_Verse: Genesis 11:9 — The Lord scattered them abroad from there over the face of all the earth.
+# Card_NT_Verse: Acts 8:4 — Therefore those who were scattered went everywhere preaching the word.
+# Card_Hebrew: פּוּץ (puts)
+# Card_Greek: διασπείρω (diaspeirō)
+# Card_Trivia_1: The term 'Diaspora' comes from this Greek root, referring to Jews living outside Israel.
+# Card_Trivia_2: At Babel, scattering was a judgment; in Acts, it became the catalyst for global mission.
+# Card_Trivia_3: Sheep without a shepherd are frequently described as 'scattered' in scripture.

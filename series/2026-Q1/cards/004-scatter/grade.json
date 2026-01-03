@@ -1,0 +1,36 @@
+{
+  "word": "SCATTER",
+  "card_type": "VERB",
+  "rarity": "COMMON",
+  "score": 95,
+  "passed": true,
+  "attempts": 2,
+  "style_mismatch_count": 0,
+  "corrections": [
+    "Increase Context stat pips from 4 to 5 to match expected stats"
+  ],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 10,
+      "max": 15,
+      "issues": [
+        "Context stat count is 4, expected 5"
+      ]
+    }
+  }
+}
