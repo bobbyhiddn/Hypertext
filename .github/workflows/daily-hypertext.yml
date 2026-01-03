@@ -155,6 +155,7 @@ jobs:
       - name: Run review stage
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
         run: |
           python -m hypertext.pipeline.daily --phase review --card-dir "${{ needs.plan.outputs.card_dir }}"
 

@@ -3896,7 +3896,15 @@ def _run_polish(image_path: Path) -> None:
 
 
 def _run_watermark(*, card_dir: Path, image_path: Path) -> None:
-    """Generate watermark.svg and burn it into the PNG (bottom-right)."""
+    """Generate watermark.svg and burn it into the PNG (bottom-right).
+
+    If HYPERTEXT_SIGNING_KEY is not set, skips watermarking with a warning.
+    """
+    # Check if signing key is available before attempting watermark
+    if not os.environ.get("HYPERTEXT_SIGNING_KEY"):
+        _log("[watermark] HYPERTEXT_SIGNING_KEY not set, skipping watermark")
+        return
+
     watermark_svg = card_dir / "watermark.svg"
     cmd_svg = [
         sys.executable, "-m", "hypertext.watermark.crypto",
