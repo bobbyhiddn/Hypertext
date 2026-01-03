@@ -29,7 +29,7 @@ Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say
 
 Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
 
-General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+General_Revision_Request: The + card symbol in the top right is missing. Your style reference has it. 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)
