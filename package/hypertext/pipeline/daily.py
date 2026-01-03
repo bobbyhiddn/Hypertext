@@ -1795,10 +1795,21 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         existing_words = list(set(queue_words + index_words))
         _log(f"[plan] existing words (queue + index): {len(existing_words)} total")
 
+        # Count incomplete entries (those without completed card output)
+        incomplete_count = 0
+        for idx, q_entry in enumerate(queue):
+            q_number = idx + 1
+            q_word = str(q_entry.get("word", "")).upper() if isinstance(q_entry, dict) else ""
+            q_slug = slugify(q_word)
+            q_card_dir = cards_dir / f"{q_number:03d}-{q_slug}"
+            q_out_png = q_card_dir / "outputs" / "card_1024x1536.png"
+            if not q_out_png.exists():
+                incomplete_count += 1
+
         min_queue = int(os.environ.get("HYPERTEXT_MIN_QUEUE", "3"))
-        if len(queue) < min_queue:
-            needed = min_queue - len(queue)
-            print(f"Queue below minimum ({len(queue)}/{min_queue}). Generating {needed} new queue entries...")
+        if incomplete_count < min_queue:
+            needed = min_queue - incomplete_count
+            print(f"Incomplete queue entries below minimum ({incomplete_count}/{min_queue}). Generating {needed} new queue entries...")
 
             # Calculate needed rarities and types from stats
             stats = _load_series_stats(series_dir)
