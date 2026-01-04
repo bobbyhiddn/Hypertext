@@ -1,0 +1,44 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #001
+WORD: FAITHFUL
+GLOSS: Steadfast in affection or allegiance; firm in adherence to promises; reliable and consistent.
+TYPE: ADJECTIVE
+  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
+    - NOUN → Closed Book icon
+    - VERB → Pencil icon
+    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
+    - NAME → Feather Quill icon
+    - TITLE → Crown icon
+  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
+  Copy the exact icon style from the type-specific template reference.
+RARITY: UNCOMMON (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to the top of the Tower.
+
+VERSES:
+OT: Deuteronomy 7:9 — "Know therefore that the LORD thy God... is the faithful God, which keepeth covenant and mercy."
+NT: 2 Timothy 2:13 — "If we believe not, yet he abideth faithful: he cannot deny himself."
+
+LANGUAGES:
+Hebrew: נֶאֱמָן (ne'eman) - Lam 3:23 • Ps 36:5 • Ps 89:1 • Hos 2:20
+Greek: πιστός (pistos) - 1 Cor 1:9 • 1 Cor 10:13 • 1 John 1:9 • Rev 19:11
+
+TRIVIA:
+• The Hebrew adjective 'ne'eman' shares a root with 'amen', meaning 'firm' or 'supported'.
+• In Greek, 'pistos' can mean both 'trusting' (active faith) and 'trustworthy' (reliable character).
+• God's faithfulness is frequently paired with His 'hesed' (loyal love) in the Old Testament.
+
+ART: An ancient, rusted iron anchor wedged firmly into a jagged rock amidst crashing ocean waves, illuminated by a single shaft of golden sunlight breaking through dark storm clouds.
+
+FOOTER: Demo
+
+Output only the card image.
