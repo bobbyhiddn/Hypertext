@@ -1,0 +1,44 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #005
+WORD: CREATE
+GLOSS: To bring into existence from nothing; to form, shape, or design.
+TYPE: VERB
+  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
+    - NOUN → Closed Book icon
+    - VERB → Pencil icon
+    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
+    - NAME → Feather Quill icon
+    - TITLE → Crown icon
+  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
+  Copy the exact icon style from the type-specific template reference.
+RARITY: RARE (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Draw 1 card for each different card type in your Pages.
+
+VERSES:
+OT: Genesis 1:1 — “In the beginning God created the heaven and the earth.”
+NT: Ephesians 2:10 — “For we are his workmanship, created in Christ Jesus unto good works.”
+
+LANGUAGES:
+Hebrew: בָּרָא (bara) - Gen 1:1 • Gen 1:27 • Ps 51:10 • Isa 40:28 • Isa 45:12
+Greek: κτίζω (ktizō) - Eph 2:10 • Col 1:16 • Rev 4:11 • Rom 1:25 • Eph 3:9
+
+TRIVIA:
+• The Hebrew verb 'bara' is used exclusively for God's creative acts in the Bible.
+• Creation 'ex nihilo' (out of nothing) is a distinct theological concept from reshaping matter.
+• This is the very first verb used in the Scriptures.
+
+ART: A pair of glowing, translucent hands shaping a swirling galaxy of dust and stars into a perfect sphere; cosmic background, ethereal style, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

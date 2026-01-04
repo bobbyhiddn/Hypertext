@@ -1,0 +1,55 @@
+number: '005'
+word: CREATE
+gloss: To bring into existence from nothing; to form, shape, or design.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of glowing, translucent hands shaping a swirling galaxy of dust
+  and stars into a perfect sphere; cosmic background, ethereal style, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Draw 1 card for each different card type in your Pages.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: Ephesians 2:10
+  snippet: For we are his workmanship, created in Christ Jesus unto good works.
+greek:
+  text: κτίζω
+  translit: ktizō
+hebrew:
+  text: בָּרָא
+  translit: bara
+ot_refs: Gen 1:1 • Gen 1:27 • Ps 51:10 • Isa 40:28 • Isa 45:12
+nt_refs: Eph 2:10 • Col 1:16 • Rev 4:11 • Rom 1:25 • Eph 3:9
+trivia:
+- The Hebrew verb 'bara' is used exclusively for God's creative acts in the Bible.
+- Creation 'ex nihilo' (out of nothing) is a distinct theological concept from reshaping
+  matter.
+- This is the very first verb used in the Scriptures.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#005'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+review_status: yellow
+review_notes: Increase LORE stat pips from 4 to 5; Increase CONTEXT stat pips from
+  4 to 5
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.
