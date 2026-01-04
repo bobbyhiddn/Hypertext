@@ -1,0 +1,13 @@
+=== Generation Log ===
+Timestamp: 2026-01-04 14:29:57
+Phase: batch
+Target Rarity: UNCOMMON
+Target Type: ADJECTIVE
+Fix Mode: False
+
+Style References (3 total):
+  [1] templates/example_cards/010-righteous/outputs/card_1024x1536.png [UNCOMMON] (TEMPLATE)
+  [2] series/2026-Q1/cards/003-mighty/outputs/card_1024x1536.png [UNCOMMON]
+  [3] templates/card/v001/uncommon/template_1024x1536.png
+
+Prompt File: demo_cards/001-righteous/prompt.txt
