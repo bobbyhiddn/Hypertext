@@ -1,0 +1,225 @@
+name: Daily Hypertext (continue)
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  process-comment:
+    runs-on: ubuntu-latest
+    # Only run on PR comments (not issue comments) from users with write access
+    if: |
+      github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'daily-hypertext') &&
+      (
+        github.event.comment.author_association == 'OWNER' ||
+        github.event.comment.author_association == 'MEMBER' ||
+        github.event.comment.author_association == 'COLLABORATOR'
+      )
+    outputs:
+      action: ${{ steps.parse.outputs.action }}
+      card_dir: ${{ steps.find-card.outputs.card_dir }}
+      card_slug: ${{ steps.find-card.outputs.card_slug }}
+    steps:
+      - name: Parse comment for action
+        id: parse
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          COMMENT_LOWER="$(echo "${COMMENT_BODY}" | tr '[:upper:]' '[:lower:]' | xargs)"
+
+          # Check for approval keywords
+          if [[ "${COMMENT_LOWER}" =~ ^(approve|lgtm|looks\ good|ship\ it|approved)$ ]]; then
+            echo "action=review" >> $GITHUB_OUTPUT
+            echo "Detected approval command - will run review stage"
+          else
+            echo "action=revise" >> $GITHUB_OUTPUT
+            echo "Detected revision instructions - will run revise stage"
+          fi
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.issue.pull_request.head_ref || github.head_ref }}
+          fetch-depth: 0
+
+      - name: Find card directory
+        id: find-card
+        run: |
+          # Find the card directory in the PR branch
+          CARD_DIR="$(find series -type f -name 'card.json' -path '*/cards/*' | head -1 | xargs dirname)"
+          if [[ -z "${CARD_DIR}" ]]; then
+            echo "ERROR: No card.json found in series/*/cards/"
+            exit 1
+          fi
+          CARD_SLUG="$(basename "${CARD_DIR}")"
+          echo "card_dir=${CARD_DIR}" >> $GITHUB_OUTPUT
+          echo "card_slug=${CARD_SLUG}" >> $GITHUB_OUTPUT
+          echo "Found card: ${CARD_DIR}"
+
+      - name: Acknowledge comment
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          ACTION: ${{ steps.parse.outputs.action }}
+        run: |
+          if [[ "${ACTION}" == "review" ]]; then
+            gh pr comment "${{ github.event.issue.number }}" --body "Starting **review** stage... :mag:"
+          else
+            gh pr comment "${{ github.event.issue.number }}" --body "Starting **revise** stage with your instructions... :pencil2:"
+          fi
+
+  review:
+    runs-on: ubuntu-latest
+    needs: [process-comment]
+    if: needs.process-comment.outputs.action == 'review'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.issue.pull_request.head_ref || github.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -e package/
+
+      - name: Run review stage
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          python -m hypertext.pipeline.daily --phase review --card-dir "${CARD_DIR}"
+
+      - name: Commit and push reviewed card
+        env:
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes from review."
+            exit 0
+          fi
+
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+
+          git add "${CARD_DIR}"
+          git commit -m "Review: apply automated review feedback"
+          git push
+
+      - name: Comment reviewed PNG on PR
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+          CARD_SLUG: ${{ needs.process-comment.outputs.card_slug }}
+        run: |
+          set -euo pipefail
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+          PNG_PATH="${CARD_DIR}/outputs/card_1024x1536.png"
+          RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1&t=$(date +%s)"
+
+          # Read grade if available
+          GRADE_INFO=""
+          if [[ -f "${CARD_DIR}/outputs/grade.txt" ]]; then
+            GRADE_INFO=$'\n\n<details>\n<summary>Review grade</summary>\n\n```\n'"$(cat "${CARD_DIR}/outputs/grade.txt")"$'\n```\n\n</details>'
+          fi
+
+          gh pr comment "${{ github.event.issue.number }}" --body "### Reviewed card :white_check_mark:
+
+Review stage complete.
+${GRADE_INFO}
+
+![${CARD_SLUG}](${RAW_URL})"
+
+  revise:
+    runs-on: ubuntu-latest
+    needs: [process-comment]
+    if: needs.process-comment.outputs.action == 'revise'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.issue.pull_request.head_ref || github.head_ref }}
+          fetch-depth: 0
+
+      - name: Write revision instructions
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          echo "${COMMENT_BODY}" > "${CARD_DIR}/revise.txt"
+          echo "Revision instructions written to ${CARD_DIR}/revise.txt"
+          cat "${CARD_DIR}/revise.txt"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -e package/
+
+      - name: Run revise stage
+        env:
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          python -m hypertext.pipeline.daily --phase revise --card-dir "${CARD_DIR}" --revise-file "${CARD_DIR}/revise.txt"
+
+      - name: Commit and push revised card
+        env:
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes from revise."
+            exit 0
+          fi
+
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+
+          # Don't commit the revise.txt - just the outputs
+          git add "${CARD_DIR}/card.json" "${CARD_DIR}/prompt.txt" "${CARD_DIR}/post.md" "${CARD_DIR}/meta.yml" 2>/dev/null || true
+          git add "${CARD_DIR}/outputs" 2>/dev/null || true
+          git commit -m "Revise: apply manual revision instructions"
+          git push
+
+      - name: Comment revised PNG on PR
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+          CARD_SLUG: ${{ needs.process-comment.outputs.card_slug }}
+        run: |
+          set -euo pipefail
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+          PNG_PATH="${CARD_DIR}/outputs/card_1024x1536.png"
+          RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1&t=$(date +%s)"
+
+          # Include revision changes if the file exists
+          CHANGES_INFO=""
+          CHANGES_FILE="${CARD_DIR}/.revision_changes.txt"
+          if [[ -f "${CHANGES_FILE}" ]]; then
+            CHANGES_INFO=$'\n\n<details>\n<summary>Changes applied</summary>\n\n'"$(cat "${CHANGES_FILE}")"$'\n\n</details>'
+            rm -f "${CHANGES_FILE}"
+          fi
+
+          gh pr comment "${{ github.event.issue.number }}" --body "### Revised card :pencil2:
+
+Revision complete.${CHANGES_INFO}
+
+Comment \`approve\` to run review, or provide more revision instructions.
+
+![${CARD_SLUG}](${RAW_URL})"

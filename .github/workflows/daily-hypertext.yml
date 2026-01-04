@@ -1,14 +1,9 @@
-name: Daily Hypertext (staged PR)
+name: Daily Hypertext
 
 on:
   schedule:
     - cron: "0 11 * * *" # adjust
-  workflow_dispatch:
-    inputs:
-      require_review_approval:
-        description: 'Require manual approval before review stage'
-        type: boolean
-        default: true
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -121,22 +116,9 @@ jobs:
             series/2026-Q1/deck/queue.yml
           if-no-files-found: error
 
-  review-gate:
+  initial-pr:
     runs-on: ubuntu-latest
     needs: [plan, imagegen]
-    if: ${{ github.event.inputs.require_review_approval == 'true' || github.event_name == 'schedule' }}
-    environment: review-gate
-    steps:
-      - name: Approval checkpoint
-        run: |
-          echo "Manual approval received. Proceeding to review stage."
-          echo "Card: ${{ needs.plan.outputs.card_slug }}"
-          echo "View rendered artifacts before approving: hypertext-rendered"
-
-  review:
-    runs-on: ubuntu-latest
-    needs: [plan, imagegen, review-gate]
-    if: ${{ always() && needs.imagegen.result == 'success' && (needs.review-gate.result == 'success' || needs.review-gate.result == 'skipped') }}
     steps:
       - uses: actions/checkout@v4
 
@@ -161,54 +143,6 @@ jobs:
           fi
           ls -la "${CARD_DIR}"
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install deps
-        run: |
-          pip install -e package/
-
-      - name: Run review stage
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
-          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
-        run: |
-          python -m hypertext.pipeline.daily --phase review --card-dir "${{ needs.plan.outputs.card_dir }}"
-
-      - name: Upload reviewed artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: hypertext-reviewed
-          path: |
-            ${{ needs.plan.outputs.card_dir }}
-            series/2026-Q1/deck/queue.yml
-          if-no-files-found: error
-
-  pr:
-    runs-on: ubuntu-latest
-    needs: [plan, review]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download reviewed artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: hypertext-reviewed
-          path: series/2026-Q1
-
-      - name: Verify reviewed card exists
-        run: |
-          CARD_DIR="${{ needs.plan.outputs.card_dir }}"
-          echo "Card dir: ${CARD_DIR}"
-          if [[ ! -f "${CARD_DIR}/card.json" ]]; then
-            echo "ERROR: ${CARD_DIR}/card.json not found after artifact download"
-            ls -la "${CARD_DIR}" || echo "Directory does not exist"
-            exit 1
-          fi
-          ls -la "${CARD_DIR}"
-
       - name: Create PR branch, commit, open PR
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
@@ -225,9 +159,25 @@ jobs:
           git add "${CARD_DIR}" series/2026-Q1/deck/queue.yml
           git config user.name "hypertext-bot"
           git config user.email "hypertext-bot@users.noreply.github.com"
-          git commit -m "Daily Hypertext: ${DATE}" || exit 0
+          git commit -m "Daily Hypertext: ${DATE} (pending review)" || exit 0
           git push --set-upstream origin "${BRANCH}"
-          gh pr create --title "Daily Hypertext: ${DATE} (${CARD_SLUG})" --body "Staged daily card + Substack draft." --base main --head "${BRANCH}"
+          gh pr create \
+            --title "Daily Hypertext: ${DATE} (${CARD_SLUG})" \
+            --body "$(cat <<'EOF'
+## Staged daily card
+
+**Status:** Awaiting review
+
+### Commands
+- Comment `approve` or `lgtm` to run the review stage
+- Comment with revision instructions to run a targeted revise
+
+The card will be updated in this PR after review/revise completes.
+EOF
+)" \
+            --base main \
+            --head "${BRANCH}" \
+            --label "daily-hypertext"
 
       - name: Comment rendered PNG on PR
         env:
@@ -248,4 +198,4 @@ jobs:
           PNG_PATH="${CARD_DIR}/outputs/card_1024x1536.png"
           RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
 
-          gh pr comment "${PR_URL}" --body $'### Rendered card\n\n'"![${CARD_SLUG}](${RAW_URL})"
+          gh pr comment "${PR_URL}" --body $'### Rendered card (pre-review)\n\nComment `approve` to run review, or provide revision instructions.\n\n'"![${CARD_SLUG}](${RAW_URL})"
