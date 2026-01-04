@@ -49,9 +49,6 @@ class CardDescription:
     verse_label_style: str  # "centered_above", "side_boxes", "other"
     greek_text_visible: bool
     hebrew_text_visible: bool
-    # Transliteration formatting (CRITICAL for style compliance)
-    transliteration_position: str = "below"  # "below" (correct) or "beside" (wrong)
-    transliteration_has_parentheses: bool = False  # True = wrong, should not have parentheses
     trivia_bullet_count: int
     has_brackets: bool
     bracket_locations: list[str]
@@ -66,6 +63,9 @@ class CardDescription:
     style_matches_reference: bool = True  # False = automatic fail
     style_mismatch_reason: str = ""
     raw_response: str = ""
+    # Transliteration formatting (CRITICAL for style compliance)
+    transliteration_position: str = "below"  # "below" (correct) or "beside" (wrong)
+    transliteration_has_parentheses: bool = False  # True = wrong, should not have parentheses
 
 
 @dataclass
