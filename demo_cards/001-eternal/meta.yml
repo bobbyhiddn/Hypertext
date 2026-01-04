@@ -1,0 +1,73 @@
+number: '001'
+word: ETERNAL
+gloss: Lasting or existing forever; without beginning or end.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Demo
+art_prompt: A golden ouroboros symbol glowing in deep space, surrounded by faint starlight,
+  ethereal atmosphere, oil painting style
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Draw 1 card for each ADJECTIVE in your Pages.
+ot_verse:
+  ref: Deuteronomy 33:27
+  snippet: The eternal God is thy refuge, and underneath are the everlasting arms.
+nt_verse:
+  ref: 2 Corinthians 4:18
+  snippet: For the things which are seen are temporal; but the things which are not
+    seen are eternal.
+greek:
+  text: αἰώνιος
+  translit: aionios
+hebrew:
+  text: עוֹלָם
+  translit: olam
+ot_refs: Gen 21:33 • Ps 90:2 • Isa 40:28 • Jer 31:3
+nt_refs: John 3:16 • Rom 6:23 • 1 Tim 1:17 • Heb 9:12
+trivia:
+- The Hebrew 'olam' literally implies a vanishing point or horizon.
+- Greek 'aionios' refers to the quality of the age to come, not just duration.
+- Used over 40 times in the New Testament to describe the life found in Christ.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC3yPamTIkeh6XBL2rSYlVfWfVbxBWgeRGUg7n91vRA5pVgFD2Zn1KYza8ff4EIPDFi69V6yqzvxk1JdBgDbIxQhhZt3mfyZL3k0Hfk-NqiaKtUSuGJc3akrQabw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkiyKe9tyzW-SU7bIqN4Y5P6q2aW-WYrcdpvBMVUlZkDB7xWOhB6yD59T_F1uQrwYYzKRp4BwJo2i9cJE2ApN6dehJizQO34582ytw2z394Azde-BhWaD0mAqfWLmCV8qQmURHSgLYR-EojWdf83Hat_QAVHR3jtIqXiDTVwUDZD_-Z6TE1Gb94n2f
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFCVp4oVNfMX_3YdDJdJ5j_nItfrZvSCNi1PB0m9HJ6HBadK4-2ExOzXS683EiuUzn2w_oTOLGw2tJyZycw3z-Lv2-9VYoRQZ7GAjrEb4vjsg8hMIeiY9NZtZ0Fk9p3lGvu_ltxSMTpef6C0MxUJerQe6eeyPEHyc=
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4OGdjnE0xmJJiIIUUJtWoCP-hN2CVN-Y67lw36szq6q2GNDTwizPO1Ek8D8JZyE-UX_zJjpqrWqFUuCjfCe7_h-IJlitXPyVDjDDBxht85MRQ4X06oQ_6WSzvY9Rz7ZP6bkZ6srIOIKnNXwWxEA==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdMHGvDLy9SvWufE-JvdYcP14CYAAQpZOi6KJVpNvTureqr7CMQVGQRhQNEDBUHW8u_nt9szNu7tgvauRfB8H3_v_ufMfUiCITMw5tVoRGHhQ9t0NlV6qEdFkA0rNzMHV9wNgZb42fGJPPrYcF60ZSkY1Jig==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiktVe9bzuWcG56uDqHIoa8_vHRgjDa6PEFVGxlRxexDATmmkv3km4Hw9jBGM2SExhC-vCtnA1xLYGoacRU5Ib0q_oE9s5sIxBn9PkbL3TWWLSpZVlIfV7XMsmtpYke6qadx--I8dhU01nP-0pmbO1bDD1pQ4=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPk_Stoa2ctUaMblUlCFQoeW90E13iJFq2jwYdilPHxFs69_52LVlcxeBFVYvPlEJQQ2q5U3l7SZhkgtoyGgoh6_91Dp6J1qzTC7osDKo2rHkwymF_try66JeWumJwSy9A9vmLWY60jrAwWSsD
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGEwHj_2LYgfwQtkbQNT7CpxmoGuiusNszUB3eOYc00deBUatsBQzWDZZgvcBGkyFIrh5aiVf1n_6kpQoP_f1IjmYbNb0sQiyZLRpOl4R9VtWXtzH8_zskHCZVIImESQuh2Ggl_aAYg3cKA8Jn
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQb7NPE0jF0BsWfH6LrqRtKJbMQIKAGRJD4lQExBn0AtNP0jLV8mtmxH6jolZEGL5YoqwnKgTc8g4_msmohRcwZocwhCAoQ93e3cek4sV9BIrMw5huh5Sf2cRdVEnC82aibgV1
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvl89KrLlpaWeMFvMcFdtzeRfWgJDIMWCH2JKbIGvFNXZoxvgdGD-f76yt6zOjhqwYcmhy1pSLn984tfGxzbhLI348sNymaRiQNm6O940afo2t6kp1OpHyTrR342QvjHLNTy6MPJAzDDG0bB0pt812_Rw437dJJDocYJ8=
+  title: abetterfuturenow.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbJlqnRedAVC4GVD-vIGn6VA3U6ZwZ81AkdQF4PrkFAWuGceNS67vxbeLtsQNla9RkgNNnXLRGm0ubl8Hi4bXVOSfEKMug9j5YNVQK6O1DBC7TMPQLxzw0StC-JgrOBh0k8T10ZDJjKjTy466sbgVitmOnk5pl19g=
+  title: christianspiritualism.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpsbcVtZKLrGMzDH5JrDzeNefavYfG6IMm-6k5Q8h54SIkcyxW-WAqf5gug-DGqifSjSkw4qt9WiL4N7Cx1_q5oyRloIe272UX8lPqDg2Tty6yByAkXYlFJB4ykId52UTl0VyeZjLNBLG2IR_fQg==
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAcTHOfABBlTfOK1XzhCoOk9eNmbqo-NyTQmqZ_dAgDaYHQmGj7TUKnqc2g0LhUfHb-OCAFW6sZX1RICZ6_Vs3cTFeVswADnJj3t8-e_h-F4aXT7G5APRU1-BTqWIam5z52V9DZrCkdZCy
+  title: ezraproject.com
+search_queries:
+- ''
+- hebrew word for eternal olam
+- greek word for eternal aionios
+- etymology of eternal aionios
+- Deuteronomy 33:27 KJV snippet
+- 2 Corinthians 4:18 KJV snippet
+style_series_dir: series/2026-Q1

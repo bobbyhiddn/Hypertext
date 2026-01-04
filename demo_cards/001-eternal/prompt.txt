@@ -1,0 +1,44 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #001
+WORD: ETERNAL
+GLOSS: Lasting or existing forever; without beginning or end.
+TYPE: ADJECTIVE
+  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
+    - NOUN → Closed Book icon
+    - VERB → Pencil icon
+    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
+    - NAME → Feather Quill icon
+    - TITLE → Crown icon
+  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
+  Copy the exact icon style from the type-specific template reference.
+RARITY: UNCOMMON (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Draw 1 card for each ADJECTIVE in your Pages.
+
+VERSES:
+OT: Deuteronomy 33:27 — "The eternal God is thy refuge, and underneath are the everlasting arms."
+NT: 2 Corinthians 4:18 — "For the things which are seen are temporal; but the things which are not seen are eternal."
+
+LANGUAGES:
+Hebrew: עוֹלָם (olam) - Gen 21:33 • Ps 90:2 • Isa 40:28 • Jer 31:3
+Greek: αἰώνιος (aionios) - John 3:16 • Rom 6:23 • 1 Tim 1:17 • Heb 9:12
+
+TRIVIA:
+• The Hebrew 'olam' literally implies a vanishing point or horizon.
+• Greek 'aionios' refers to the quality of the age to come, not just duration.
+• Used over 40 times in the New Testament to describe the life found in Christ.
+
+ART: A golden ouroboros symbol glowing in deep space, surrounded by faint starlight, ethereal atmosphere, oil painting style
+
+FOOTER: Demo
+
+Output only the card image.
