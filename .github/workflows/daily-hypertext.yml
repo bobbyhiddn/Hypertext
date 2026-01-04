@@ -161,6 +161,7 @@ jobs:
           git config user.email "hypertext-bot@users.noreply.github.com"
           git commit -m "Daily Hypertext: ${DATE} (pending review)" || exit 0
           git push --set-upstream origin "${BRANCH}"
+          gh label create "daily-hypertext" --description "Daily Hypertext card awaiting review" --color "0E8A16" --force || true
           gh pr create \
             --title "Daily Hypertext: ${DATE} (${CARD_SLUG})" \
             --body "## Staged daily card
