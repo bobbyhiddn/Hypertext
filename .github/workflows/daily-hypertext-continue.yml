@@ -135,10 +135,10 @@ jobs:
 
           gh pr comment "${{ github.event.issue.number }}" --body "### Reviewed card :white_check_mark:
 
-Review stage complete.
-${GRADE_INFO}
+          Review stage complete.
+          ${GRADE_INFO}
 
-![${CARD_SLUG}](${RAW_URL})"
+          ![${CARD_SLUG}](${RAW_URL})"
 
   revise:
     runs-on: ubuntu-latest
@@ -218,8 +218,8 @@ ${GRADE_INFO}
 
           gh pr comment "${{ github.event.issue.number }}" --body "### Revised card :pencil2:
 
-Revision complete.${CHANGES_INFO}
+          Revision complete.${CHANGES_INFO}
 
-Comment \`approve\` to run review, or provide more revision instructions.
+          Comment \`approve\` to run review, or provide more revision instructions.
 
-![${CARD_SLUG}](${RAW_URL})"
+          ![${CARD_SLUG}](${RAW_URL})"

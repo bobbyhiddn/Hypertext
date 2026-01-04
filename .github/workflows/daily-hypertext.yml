@@ -163,18 +163,15 @@ jobs:
           git push --set-upstream origin "${BRANCH}"
           gh pr create \
             --title "Daily Hypertext: ${DATE} (${CARD_SLUG})" \
-            --body "$(cat <<'EOF'
-## Staged daily card
+            --body "## Staged daily card
 
-**Status:** Awaiting review
+          **Status:** Awaiting review
 
-### Commands
-- Comment `approve` or `lgtm` to run the review stage
-- Comment with revision instructions to run a targeted revise
+          ### Commands
+          - Comment \`approve\` or \`lgtm\` to run the review stage
+          - Comment with revision instructions to run a targeted revise
 
-The card will be updated in this PR after review/revise completes.
-EOF
-)" \
+          The card will be updated in this PR after review/revise completes." \
             --base main \
             --head "${BRANCH}" \
             --label "daily-hypertext"
