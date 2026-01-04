@@ -1,0 +1,42 @@
+number: '001'
+word: RIGHTEOUS
+gloss: Morally right or justifiable; acting in accord with divine or moral law; free
+  from guilt or sin.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Demo
+art_prompt: A glowing white plumb line hanging perfectly straight down against a dark,
+  chaotic background of twisted roots and jagged stones, oil painting style, high
+  contrast, ethereal light
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Return an ADJECTIVE from Sheol to your hand.
+ot_verse:
+  ref: Genesis 7:1
+  snippet: For thee have I seen righteous before me in this generation.
+nt_verse:
+  ref: Romans 1:17
+  snippet: The just shall live by faith.
+greek:
+  text: δίκαιος
+  translit: dikaios
+hebrew:
+  text: צַדִּיק
+  translit: tsaddiq
+ot_refs: Gen 15:6 • Ps 1:6 • Prov 10:2 • Hab 2:4
+nt_refs: Matt 5:6 • Rom 3:10 • 2 Tim 4:8 • 1 Pet 3:12
+trivia:
+- First used in the Bible to describe Noah (Gen 6:9).
+- The Hebrew root implies being straight or conforming to a standard.
+- In the NT, righteousness is often described as a gift from God rather than earned.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+style_series_dir: series/2026-Q1

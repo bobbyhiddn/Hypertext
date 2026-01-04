@@ -1,0 +1,44 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #001
+WORD: RIGHTEOUS
+GLOSS: Morally right or justifiable; acting in accord with divine or moral law; free from guilt or sin.
+TYPE: ADJECTIVE
+  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
+    - NOUN → Closed Book icon
+    - VERB → Pencil icon
+    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
+    - NAME → Feather Quill icon
+    - TITLE → Crown icon
+  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
+  Copy the exact icon style from the type-specific template reference.
+RARITY: UNCOMMON (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return an ADJECTIVE from Sheol to your hand.
+
+VERSES:
+OT: Genesis 7:1 — "For thee have I seen righteous before me in this generation."
+NT: Romans 1:17 — "The just shall live by faith."
+
+LANGUAGES:
+Hebrew: צַדִּיק (tsaddiq) - Gen 15:6 • Ps 1:6 • Prov 10:2 • Hab 2:4
+Greek: δίκαιος (dikaios) - Matt 5:6 • Rom 3:10 • 2 Tim 4:8 • 1 Pet 3:12
+
+TRIVIA:
+• First used in the Bible to describe Noah (Gen 6:9).
+• The Hebrew root implies being straight or conforming to a standard.
+• In the NT, righteousness is often described as a gift from God rather than earned.
+
+ART: A glowing white plumb line hanging perfectly straight down against a dark, chaotic background of twisted roots and jagged stones, oil painting style, high contrast, ethereal light
+
+FOOTER: Demo
+
+Output only the card image.
