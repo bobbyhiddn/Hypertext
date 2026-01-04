@@ -1,0 +1,13 @@
+=== Generation Log ===
+Timestamp: 2026-01-04 11:07:10
+Phase: imagegen
+Target Rarity: RARE
+Target Type: VERB
+Fix Mode: False
+
+Style References (3 total):
+  [1] templates/example_cards/007-sanctify/outputs/card_1024x1536.png [RARE] (TEMPLATE)
+  [2] series/2026-Q1/cards/004-scatter/outputs/card_1024x1536.png [RARE]
+  [3] templates/card/v001/rare/template_1024x1536.png
+
+Prompt File: series/2026-Q1/cards/005-create/prompt.txt

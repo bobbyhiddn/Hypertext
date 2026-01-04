@@ -1,0 +1,37 @@
+{
+  "word": "CREATE",
+  "card_type": "VERB",
+  "rarity": "COMMON",
+  "score": 95,
+  "passed": true,
+  "attempts": 2,
+  "style_mismatch_count": 0,
+  "corrections": [
+    "Increase LORE stat pips from 4 to 5",
+    "Increase CONTEXT stat pips from 4 to 5"
+  ],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 10,
+      "max": 15,
+      "issues": [
+        "Stat pip counts do not match expected values (Lore: 4 vs 5, Context: 4 vs 5)"
+      ]
+    }
+  }
+}
