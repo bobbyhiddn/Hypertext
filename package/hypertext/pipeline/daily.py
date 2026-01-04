@@ -147,6 +147,14 @@ FORMATTING_RUBRIC = """
 - WRONG: "transliteration: diatheke" or "TRANSLIT: diatheke"
 - CORRECT: "diathēkē"
 
+### Transliteration Formatting (CRITICAL)
+- Position: Transliterations must appear BELOW their respective scripts, NOT beside/next to them
+- WRONG: "λόγος (logos)" or "λόγος logos" (beside on same line)
+- CORRECT: "λόγος" on one line, then "logos" on the line below in smaller text
+- Parentheses: Transliterations must NOT be wrapped in parentheses
+- WRONG: "(logos)" or "(dabar)"
+- CORRECT: "logos" or "dabar"
+
 ### General
 - Do NOT make changes beyond what was specifically requested
 - Preserve existing correct formatting when making changes
@@ -4497,6 +4505,20 @@ def _build_revision_from_corrections(description: CardDescription, corrections: 
         instructions.append(
             f"CRITICAL: Card number format is '{description.card_number_format}'. "
             "It MUST be '#XXX' format (e.g., #003), NOT '[#XXX]'."
+        )
+
+    # Check for transliteration position issue
+    if hasattr(description, 'transliteration_position') and description.transliteration_position == "beside":
+        instructions.append(
+            "CRITICAL: Transliterations are positioned BESIDE the original script (wrong). "
+            "Place transliterations BELOW their respective Greek/Hebrew scripts in smaller text, NOT next to them on the same line."
+        )
+
+    # Check for transliteration parentheses issue
+    if hasattr(description, 'transliteration_has_parentheses') and description.transliteration_has_parentheses:
+        instructions.append(
+            "CRITICAL: Transliterations are wrapped in parentheses (wrong). "
+            "Display transliterations WITHOUT parentheses - just the transliterated word itself (e.g., 'logos' not '(logos)')."
         )
 
     # Add any other corrections from the review
