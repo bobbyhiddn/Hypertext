@@ -1747,10 +1747,28 @@ def build_prompt_text(card: dict) -> str:
     else:
         data["TRIVIA_BULLETS_FORMATTED"] = ""
 
-    # Normalize rarity (style references handle visual appearance)
+    # Normalize rarity and add color description
     rarity = str(data.get("RARITY_TEXT", "COMMON")).upper()
     data["RARITY_TEXT"] = rarity
-        
+    rarity_colors = {
+        "COMMON": "WHITE",
+        "UNCOMMON": "GREEN",
+        "RARE": "GOLD",
+        "GLORIOUS": "ORANGE",
+    }
+    data["RARITY_COLOR"] = rarity_colors.get(rarity, "WHITE")
+
+    # Add type icon description
+    card_type = str(data.get("CARD_TYPE", "NOUN")).upper()
+    type_icons = {
+        "NOUN": "closed book",
+        "VERB": "pencil",
+        "ADJECTIVE": "sparkle pencil",
+        "NAME": "feather quill",
+        "TITLE": "crown",
+    }
+    data["TYPE_ICON"] = type_icons.get(card_type, "book")
+
     # Fill template
     try:
         return template_str.format(**data)

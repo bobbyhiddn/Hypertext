@@ -5,18 +5,10 @@ Replicate the card layout from the reference images with this content:
 NUMBER: #{NUMBER}
 WORD: {WORD}
 GLOSS: {GLOSS}
-TYPE: {CARD_TYPE}
-  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
-    - NOUN → Closed Book icon
-    - VERB → Pencil icon
-    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
-    - NAME → Feather Quill icon
-    - TITLE → Crown icon
-  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
-  Copy the exact icon style from the type-specific template reference.
-RARITY: {RARITY_TEXT} (use matching rarity badge style from references)
+TYPE: {CARD_TYPE} (top-left navy circle must contain WHITE {TYPE_ICON} icon)
+RARITY: {RARITY_TEXT} (top-right navy pill with "{RARITY_TEXT}" text and {RARITY_COLOR} diamond)
 
-STATS (each has 5 pip slots total):
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
 LORE: {STAT_LORE}/5 filled
 CONTEXT: {STAT_CONTEXT}/5 filled
 COMPLEXITY: {STAT_COMPLEXITY}/5 filled
