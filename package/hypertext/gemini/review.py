@@ -49,6 +49,9 @@ class CardDescription:
     verse_label_style: str  # "centered_above", "side_boxes", "other"
     greek_text_visible: bool
     hebrew_text_visible: bool
+    # Transliteration formatting (CRITICAL for style compliance)
+    transliteration_position: str = "below"  # "below" (correct) or "beside" (wrong)
+    transliteration_has_parentheses: bool = False  # True = wrong, should not have parentheses
     trivia_bullet_count: int
     has_brackets: bool
     bracket_locations: list[str]
@@ -94,7 +97,7 @@ A correctly formatted Hypertext card should have these elements:
   - Empty pips should be outlined/hollow
 - ABILITY PANEL: One line of game ability text
 - VERSE PANELS: OT verse reference and snippet, NT verse reference and snippet
-- GREEK/HEBREW STRIP: Greek text on one side, Hebrew text on other, with transliterations below
+- GREEK/HEBREW STRIP: Greek text on one side, Hebrew text on other, with transliterations BELOW (not beside) each script, NO PARENTHESES around transliterations
 - TRIVIA SECTION: 3-5 bullet points of biblical trivia
 - FOOTER: Series identifier
 - FRAME: Navy border with gold trim, no brackets [ ] anywhere
@@ -114,6 +117,8 @@ A correctly formatted Hypertext card should have these elements:
 8. ABILITY TEXT: What does the ability text say?
 9. VERSES: Is the OT verse section visible and readable? Is the NT verse section visible and readable?
 10. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible? Are transliterations shown?
+   - TRANSLITERATION POSITION: Are transliterations positioned BELOW their respective scripts (correct) or BESIDE/NEXT TO them (wrong)?
+   - TRANSLITERATION PARENTHESES: Are transliterations wrapped in parentheses (wrong) or shown without parentheses (correct)?
 11. TRIVIA: How many trivia bullet points are visible?
 12. BRACKETS: Are there any square brackets [ ] visible ANYWHERE on the card? If yes, list exact locations.
 13. ART PANEL: Briefly describe the artwork. Is there any TEXT inside the art panel?
@@ -143,6 +148,8 @@ Return ONLY JSON in this exact format:
   "nt_verse_visible": true|false,
   "greek_text_visible": true|false,
   "hebrew_text_visible": true|false,
+  "transliteration_position": "<below|beside>",
+  "transliteration_has_parentheses": true|false,
   "trivia_bullet_count": <number>,
   "has_brackets": true|false,
   "bracket_locations": ["location1", "location2"],
@@ -226,7 +233,15 @@ Compare the TEST CARD (image [{test_idx}]) against the REFERENCE images. Look fo
 - Icons by type: NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil (pencil with stars), NAME=quill, TITLE=crown
 - WRONG: Missing icon, wrong icon for type, or icon not matching references
 
-**#5 OVERALL AESTHETIC:** Does the card look like it belongs with the references, or does it look like a DIFFERENT card game entirely?
+**#5 TRANSLITERATION FORMATTING (CRITICAL):**
+- CORRECT: Transliterations appear BELOW their respective scripts (Greek/Hebrew) in smaller text
+- WRONG: Transliterations appear BESIDE/NEXT TO the original script on the same line
+- CORRECT: Transliterations shown WITHOUT parentheses (just the word, e.g., "logos")
+- WRONG: Transliterations wrapped in parentheses (e.g., "(logos)")
+- If transliteration is beside instead of below = STYLE MISMATCH
+- If transliteration has parentheses = STYLE MISMATCH
+
+**#6 OVERALL AESTHETIC:** Does the card look like it belongs with the references, or does it look like a DIFFERENT card game entirely?
 
 ### HOW TO DECIDE:
 1. Look at the BORDER of each reference card - note how simple/plain it is
@@ -246,6 +261,8 @@ Describe the TEST CARD:
 7. ABILITY TEXT: Full text
 8. VERSE LAYOUT: Are labels CENTERED ABOVE text or IN SIDE BOXES?
 9. GREEK/HEBREW: Visible?
+   - TRANSLITERATION POSITION: below (correct) or beside (wrong)?
+   - TRANSLITERATION PARENTHESES: none (correct) or has parentheses (wrong)?
 10. TRIVIA: Bullet count
 11. BRACKETS: Any [ ] visible?
 12. ART: Brief description
@@ -275,6 +292,8 @@ Return ONLY JSON in this exact format:
   "verse_label_style": "<centered_above|side_boxes|other>",
   "greek_text_visible": true|false,
   "hebrew_text_visible": true|false,
+  "transliteration_position": "<below|beside>",
+  "transliteration_has_parentheses": true|false,
   "trivia_bullet_count": <number>,
   "has_brackets": true|false,
   "bracket_locations": ["location1", "location2"],
@@ -668,6 +687,18 @@ def describe_card(
         auto_mismatch_reasons.append(f"Frame style '{frame_corners}' doesn't match reference (expected chamfered)")
         explicit_mismatch = False
 
+    # Transliteration formatting validation
+    translit_position = data.get("transliteration_position", "below").lower()
+    translit_has_parens = data.get("transliteration_has_parentheses", False)
+
+    if translit_position == "beside":
+        auto_mismatch_reasons.append("Transliterations are beside/next to the original script - must be BELOW")
+        explicit_mismatch = False
+
+    if translit_has_parens:
+        auto_mismatch_reasons.append("Transliterations are wrapped in parentheses - must NOT have parentheses")
+        explicit_mismatch = False
+
     # Type icon validation - check if icon matches expected for card type
     type_icon = data.get("type_icon_shape", "").lower()
     card_type = data.get("card_type", "").upper()
@@ -716,6 +747,8 @@ def describe_card(
         verse_label_style=verse_style,
         greek_text_visible=data.get("greek_text_visible", False),
         hebrew_text_visible=data.get("hebrew_text_visible", False),
+        transliteration_position=translit_position,
+        transliteration_has_parentheses=translit_has_parens,
         trivia_bullet_count=data.get("trivia_bullet_count", 0),
         has_brackets=data.get("has_brackets", False),
         bracket_locations=data.get("bracket_locations", []),
@@ -880,6 +913,8 @@ def format_description_report(description: CardDescription) -> str:
         f"- NT Verse: {'✓' if description.nt_verse_visible else '✗'}",
         f"- Greek: {'✓' if description.greek_text_visible else '✗'}",
         f"- Hebrew: {'✓' if description.hebrew_text_visible else '✗'}",
+        f"- Transliteration position: {description.transliteration_position} {'✓' if description.transliteration_position == 'below' else '✗ (should be below)'}",
+        f"- Transliteration parentheses: {'✗ YES (wrong)' if description.transliteration_has_parentheses else '✓ None (correct)'}",
         f"- Trivia bullets: {description.trivia_bullet_count}",
         "",
         "### Issues Detected",
