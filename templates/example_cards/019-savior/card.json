@@ -190,8 +190,8 @@
     "GREEK_TRANSLIT": "Sōtēr",
     "HEBREW": "מוֹשִׁיעַ",
     "HEBREW_TRANSLIT": "Moshia",
-    "OT_REFS": "2 Sam 22:3 • Ps 106:21 • Isa 19:20 • Isa 45:21 • Hos 13:4",
-    "NT_REFS": "John 4:42 • Acts 5:31 • Eph 5:23 • Phil 3:20 • 1 Tim 4:10",
+    "OT_REFS": "Isa 43:11 • 2 Sam 22:3 • Ps 106:21",
+    "NT_REFS": "Luke 2:11 • Acts 5:31 • Tit 2:13",
     "TRIVIA_BULLETS": [
       "The Greek title Sōtēr was used by rulers like Ptolemy I, making the gospel a political challenge.",
       "The Hebrew root yasha implies being brought to a wide, open space, signifying freedom.",
@@ -220,89 +220,58 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). For RARE cards, the text 'RARE' and the diamond must be GOLD. Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
   "grounding": {
     "queries": [
       "",
-      "historical use of Soter title",
-      "etymology of Hebrew word yasha savior",
-      "Luke 2:11 NIV",
-      "Isaiah 43:11 NIV",
-      "Greek word for Savior transliteration",
-      "Hebrew word for Savior transliteration"
+      "Savior biblical definition and verses",
+      "Savior etymology Hebrew Greek",
+      "Savior trivia bible"
     ],
     "sources": [
       {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIUsNbepnLOmtkcjcoGuF8Aa6zfiAl4IOPmYEWuB4KfRJJ7YmdBiZcFFHenJMYZ2wg5NkvSUbjpjYA8Hy9xN0CL0LbcodcGGh_zOc_J1eGmAewdb7Q0_kycssoRQRm0Tlyjjy5vsQNml3TbaE_-88myrc8XJORGQ1R4uS6rQ==",
-        "title": "bibleportal.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmcwfZtMQiLMaGY_C_TXBjzTs_oV2VIvVHwSp6VVZs9vHaZ0rWpbFXVUEJ7ugs09_yud1ynPmBPzSmP2zQdhYKTLl3g1zvcfZ44iPxxxzfY-ZBAUFdrDtE2DjOYAVy4WcqgRQC",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECIc8A5ExQzV2VzT0oR-XzBmmJloxlqCc4cU4NY7kc746dxfXK2SFljE0WBsMQdy0nTpgh53pLPB-dP_c63Psx_uNc8gEpIfbnY6Jc5D1lPaAfPrL1WPiuItVbE7IC05ml4I0dDw==",
         "title": "biblehub.com"
       },
       {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMI9rHHLHSnLJdpypjLsu_ZZ1lC48ymyV7lFKBSPKmyBE4ha30mUohnXfGXo44ZJRATXbAdENlVSUMfDdpn6OAI0ypcef--4OHlV1h6nfKSTShZYA1Px_QmW6t-v20",
-        "title": "biblehub.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGV17t6IdR_CEbK06UxaZC7kYi6wStZcJgm71cI_Vzxq6lTP6wjlXjfpNrMYI_B-RDyQRlpuuwGG8IZGeHdHtx9lvDM6CClpcAtloOhUf5RUHRBef5K3zZEN7QG5GVsLSG0f6-ro1FbofnGaPK0nN7dLeo0hGiet_4=",
+        "title": "parade.com"
       },
       {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhuoB1jQm-RgIHU6kbyWLniy-u4mC2zyLIBBCVp-GA_qlrIaM-L27Reoo-c4bx63m9pxv7wQGlOh2-o07hazlL0bW0OuSRuBwDReMpCm_O8qRdAPTVuenvXebmaj_7eJHDQgcX3N3u8BhOyvyKfQ==",
-        "title": "christianity.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGb3iJFMXp16QsgsyRfCqKp2DBkFO2S7OA9OWRu9RM9hxCDrsQ0OZShjm2h47XW3CMDkujTKHgGMAszGj08WQ9_nwGFwaHa9j9le_RZy7CxsRCxSavgFAp34OihbV3OkigyXsUr9l2WjAP6x_2LYa5x6DBkLuem5FIc15TAQLADT0_8DRSYlC6XCoBGPsolbKrs7d1rGlel2IHAHiszphbUg66E3BKe95vbFbQ1jjoC87qRYCl4I0-eNbBINzrT_MX7jyZk0Vz_5ZhdnPz5Vlk=",
+        "title": "immortalityroad.com"
       },
       {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj3loNW5CAG8D7XyX7z8bqP5ZgaM8JyCPQQd_25h4nX2irFGLRrdWUij9BgKAESRu_cnc4zWNoeOSKqQJqkfvLDLsDA1plhNkgwToO-5bFJ5h6_EydtLQXHXFoX7VC-ZMWdiGg4nT6Hg==",
-        "title": "bible.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmUNFDWcEhsAR9UNZGqBSJGuXwhVq6LC_W4NA7TFWj-fS1XSNZcVyMQlDc3kh4mnmp7A4J-W_7mknhi3_4EKidSpgYTVtkZBOLfMqAlK020RBlsc4REezaUc7EckCPfDk6-Tz-4635nUBhcuXPWuvj",
+        "title": "gotquestions.org"
       },
       {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGTEw4USF2ios1Xkjq2bgWHpGo2rOu-WmOKP_yRrIF8INjem_-dnDIzgxkqPugDvNg9ZvHmZosGb10GDTl6R1RQFTRoDKFD_INwhulv-w3iQ0V3tibWi0G0l6wfzq6drV_jOzb545EpCo=",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj3qEcyqO4aTHyXYWq2AQUlX-c78uBtjBbgbNvZZypvyWP0Q2nGKbChKASywnMHp0VeICldae8-5hCkQA8-aVfzvQgej-snt-S2qh8j0Nj_zu_AlHZl4x-YGY-1TZ9FwzVqH4Ja8Za2SRwVA==",
+        "title": "biblicalcyclopedia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0MoiHg-IU_9okDYJemigJ9Enyz036avI_VxdLSJjYY8y8hH1dqwIcDyRlJWJTi2jNfCc03j4fZbQg0aMLaSkbaIPLU54vpF251d_MCg87dsfrDZ00ZiV0mmD_jE2x7V3mtw==",
+        "title": "etymonline.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkSAsMsT3zV7FPJaDTUV3AncxWLgACmbDJI8ibEnQVaAk6EeBaKNuv0a65gzomTyB-RNNrDUBPGRSVmUuWomtiF-JYclvdeuX-EjV1A5R5BAEi55Dr1eRoRwY0bBqm6Yiz",
+        "title": "etymonline.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHu1A_ZGE2GQ7NWcd5C9fnq_LUWOhIk3nD0p5oV2orS5QcxEB50qyp4xhjlde2-c04HHwVFuez8p2zZiwKsMfPnSOFu43q9p_nLwOX69Pow0Y6wvgYIx685egGZpkhT2DeNMe1X1zCcuP3-a4M6_fQfoYEvxyTaoL-WA==",
+        "title": "calledoutbelievers.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGh2FZNqVBheNzR_9LW2sIfwoNguh_YMh5F7tldeFNB2QxS8LN1jht2-fJ531Syhq2zko4meEAoAd1Tk5pk_xbG9lBqh3zc9wix7GsCEXqacm4Yw-rr0dWSFwlvTnxUThKf9P-kHYUgZBqeqwkbcflR3w==",
+        "title": "logos.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1_g4YlFiJGEJQYtRJgnCdRI12CPKUu_lJs6QptXrbz7rg16wg8Rd_irS0hWqAzUY6K_bbPfhMPxtj4RBW-3hVj3LC2X0cA4R9Fb4T94LEpDQB-P0tDG7WtTlrzGfn6Js49eS022vHjCyFZAEqBQ==",
         "title": "biblestudytools.com"
       },
       {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-au1Ne8SPeLIKR8gewwtpXINMmEbi2rYYV-Q5KxSqQK_gnIbdUXvPGaXrq0iZuFJJVVIbz-5XbDcQoxTZmBkCOhBpxrvkM0SV6oVrOG_iXfK9DojoxCtw8XlLuuT2Su43",
-        "title": "biblehub.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjA_f2AQ2o3hqjhPa41Fr7P5oQfjajT5u_kH54P9NU7NhjP8WW49VdbJd4-k4pmrHQkogc6pyrswf5HNfyYTffanh3yAgSOXMcqQdbTM_8ioQ5COqjgv3Fd40k8iQ00IA2PTMiRB18S0elHCg=",
-        "title": "billmounce.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzLTA8On4S4ydpgn6YT2RbYEqQ4c95FfGT6XCUk3YdxXx23ssftnDPvQeUS_waYlw-i-xw2qtSWiQ3pIvpcZwkS2xG2OvFpYstvF4JDvl3TuMgjsl4TjTjYlZGCMg1jIOc",
-        "title": "biblia.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHq_RMR0RdwuVSwrjTEoCNHN3eceuMZi_6Bzngg1jiUTnOjElnYt8Ty_dmwvOfNtrNz_wTxcs6aJTqKy_eF7YVzciOu9q0HH8qM3agqDVFMr2k4DQFa6f5gRNBy02N8RZaKyMFd12OyEVvHbw==",
-        "title": "christianity.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWwyBxf8JkXFzN1pl8FXC-I67I2nhM0k5sQYvp6ibdaJiMmqONbV6RCjMfnfVDAF9WubMVk4ylOSCbKue8xuaxBeAazVmQknJUEffz7kUEaR43eZgUrlCOB4G3jnuh9OFoKSxurW1IZw==",
-        "title": "knowing-jesus.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGESMPL_q1ra6MWT1re2RiB6ym8MhQNW3JWD_Bz5Lzl4JaWayuzj2DBQsaJFZvpb4XHeL-vkLz7L_INOvErfBU8peBYcexXYt5Z0cg18D3FEj1jj6HMHv3LCsafCnWp8nkYNC2THxpljO_eOYxxPhz3fm1ZUFz84IfS8D04Pb_fGplrwbTtQuh3P_5XFYPTqrDHn5t6qcLeGPujPuRudg==",
-        "title": "wordhippo.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV3AewbD01pZ1OBtr3NGdHXD28ntXTWPbpfzQC9GSj7F5odRGklFoeemewgklg4--1eVmWU3bm1nh1AKhDQOD0zoY6vVCyEHmsxWSTEqC36H0eupnJg9DHBnvTGaQD82qRbb7cZdYcWDqa38TE76ocrbcyYyD6WOWU2EAbJp0KtlW6Jusn-X6BRxHsfsnyhKwwta8VavrBn9rW4oY6",
-        "title": "wordhippo.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-LrEUKuYDUrapvoLXE_aEJ0WoVSE8lrUlloTinaK1ncWnZ37lJBS1Akd96XUT-T6SIeBJZLwftzH8mGxdKMTS94MLpkE-9h54cs3Cbie0Gb-bJDz1S5DugCKBnJu3HjeGKm00aLmjbW-dpWZC53cbYrSNUR15_9hY",
-        "title": "wordpress.com"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX3OXMRmxhS2Sn1vk6hMKNav6SH94I6L8Mz-SCRzWBtnuOXQ8YYdsRTF3iXOgzAzR88RtUShgrpHDTxlntklK0huZ2F2YJJ_1KaXuGZq28YeGat6d3ma6LaRjgQsp2oT2lIWHWHtZGScS311A4V9rNbKuPboqp1BZeuXhJbPnYoLKgmC58pJU_d7iD8gw=",
-        "title": "studylight.org"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkJwaZttdt2zaZwbI6wxdu3hqqVnaDAinRSBrpYNUQgBL4TcO43ZuJYN1NcHrhLrU0hGadzvtxXsm1W-PH5EOaDdzBlBG3f16ZPoN4nIhx0adm2-g2Wj_5W1Ui1FKpg_EP9ds0Yg8Y",
-        "title": "boards.net"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1d-xWQLIamVWFtfN_KEdn3fBrm-879cwzLwOEYcGpBdRICdkzJXF4qpdk_je5MCh02l4wC7dH6_odfzIpAwoxTprM9umJV7YMbfd1qDScVcQrcOScvVaPRX6CepQU",
-        "title": "wikipedia.org"
-      },
-      {
-        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIQZqTo0xGMwMMM3P7jYVkxBQ41bymj5o5rE15jgvTNri0ZvzJMvOr-hsvISu6mzGL5aCYpt6QnjzKllK3bqSx8PMq1izQ0my2Lw00md4ELHdhIlk-1POM4WP_-RvKx8J12jul0KDFCuIkvmu80MQ=",
-        "title": "churchservants.com"
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWAtur4-KOWcnmN7pdCdDZtCnomN1rxXvE17dlGPeMeNf5Sq_EqF71pF1-ct8JnUtVOsMONbxPEHA2nMnxUnJTuWyJS6Gbjeuy6jdBhU_u_sW1ajyji6eZ5y9v_qm3NNK1v80weV0=",
+        "title": "youtube.com"
       }
     ]
   }

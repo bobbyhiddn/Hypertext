@@ -1,36 +1,51 @@
 number: 019
 word: SAVIOR
-gloss: One who rescues, delivers, or preserves from danger or destruction.
+gloss: One who rescues or delivers from danger, destruction, or the consequences of
+  sin.
 card_type: TITLE
 rarity: RARE
 series: 2026-Q1
 set: Example
 art_prompt: A brilliant, warm light breaking through dark, turbulent storm clouds,
-  illuminating a single, outstretched hand reaching upward from a chaotic sea.
+  illuminating a single outstretched hand reaching upward from below.
 stats:
   lore: 5
-  context: 5
-  complexity: 2
-ability: Return up to 2 cards from Sheol to your hand.
+  context: 4
+  complexity: 3
+ability: Return a card from Sheol to your hand. If you have fewer cards in hand than
+  target player, draw 2.
 style_series_dir: series\2026-Q1
-review_score: 0
-review_attempts: 2
-last_description:
-  card_number_format: '#019'
-  stat_pip_shape: circle
-  stat_pip_fill_color: none
-  has_brackets: false
-  bracket_locations: []
-  style_matches_reference: false
-  style_mismatch_reason: 'Rarity badge styling is incorrect: Text says ''RARE'' but
-    visual styling is for ''COMMON'' (Navy pill, White diamond) - Rubric requires
-    Gold for Rare. Extraneous UI elements (+ icon and card icon) are visible in the
-    top right corner overlaying the card. Stat pips are completely empty (0 filled).'
-style_mismatch_count: 2
-style_mismatch_reason: '1. Stray UI element (a ''+'' sign and small card icon) is
-  visible floating to the right of the title ''SAVIOR'', which is not present in the
-  reference style. 2. Rarity mismatch: The card is labeled ''RARE'' but uses a White
-  diamond icon (Standard for Common); the rubric specifies RARE should be Gold.'
-review_status: red
-user_action_required: true
-user_warning: Card scored only 0/100. Rebuild required.
+revision: 1
+revision_notes: "General revision request (you may modify any content field as needed):\n\
+  Fix the RARE rarity badge - the text \"RARE\" and the diamond icon must be GOLD\
+  \ colored, not white or other colors. Match the RARE styling from the WISDOM example\
+  \ card.\n# Card_Word: SAVIOR\n# Card_Gloss: One who rescues, delivers, or preserves\
+  \ from danger or destruction.\n# Card_Type: TITLE\n# Card_Rarity: RARE\n# Card_Ability:\
+  \ Return up to 2 cards from Sheol to your hand.\n# Card_Stats: LORE 5 | CONTEXT\
+  \ 5 | COMPLEXITY 2\n# Card_Art_Prompt: A brilliant, warm light breaking through\
+  \ dark, turbulent storm clouds, illuminating a single, outstretched hand reaching\
+  \ upward from a chaotic sea.\n# Card_OT_Verse: Isaiah 43:11 — I, even I, am the\
+  \ LORD, and apart from me there is no savior.\n# Card_NT_Verse: Luke 2:11 — Today\
+  \ in the town of David a Savior has been born to you; he is the Messiah, the Lord.\n\
+  # Card_Hebrew: מוֹשִׁיעַ (Moshia)\n# Card_Greek: σωτήρ (Sōtēr)\n# Card_Trivia_1:\
+  \ The Greek title Sōtēr was used by rulers like Ptolemy I, making the gospel a political\
+  \ challenge.\n# Card_Trivia_2: The Hebrew root yasha implies being brought to a\
+  \ wide, open space, signifying freedom.\n# Card_Trivia_3: The early Christian Ichthys\
+  \ (fish) symbol is an acronym ending in Sōtēr.\n\nCard field changes (from preview):\n\
+  \  GLOSS: 'One who rescues or delivers from danger, destruction, or the consequences\
+  \ of sin.' -> 'One who rescues, delivers, or preserves from danger or destruction.'\n\
+  \  ABILITY_TEXT: 'Return a card from Sheol to your hand. If you have fewer cards\
+  \ in hand than target player, draw 2.' -> 'Return up to 2 cards from Sheol to your\
+  \ hand.'\n  ART_PROMPT: 'A brilliant, warm light breaking through dark, turbulent\
+  \ storm clouds, illuminating a single outstretched hand reaching upward from below.'\
+  \ -> 'A brilliant, warm light breaking through dark, turbulent storm clouds, illuminating\
+  \ a single, outstretched hand reaching upward from a chaotic sea.'\n  STAT_CONTEXT:\
+  \ '4' -> '5'\n  STAT_COMPLEXITY: '3' -> '2'\n  GREEK: 'Σωτήρ' -> 'σωτήρ'\n  TRIVIA_1:\
+  \ 'The Greek title 'Soter' was also used by Hellenistic rulers, making the NT usage\
+  \ a subversive political claim.' -> 'The Greek title Sōtēr was used by rulers like\
+  \ Ptolemy I, making the gospel a political challenge.'\n  TRIVIA_2: 'The name Jesus\
+  \ (Yeshua) is derived from the Hebrew verb 'yasha', meaning 'to save' or 'deliver'.'\
+  \ -> 'The Hebrew root yasha implies being brought to a wide, open space, signifying\
+  \ freedom.'\n  TRIVIA_3: 'In the Old Testament, 'savior' often referred to earthly\
+  \ leaders like the Judges who delivered Israel from enemies.' -> 'The early Christian\
+  \ Ichthys (fish) symbol is an acronym ending in Sōtēr.'"
