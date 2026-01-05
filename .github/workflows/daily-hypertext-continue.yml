@@ -240,7 +240,11 @@ jobs:
           COMMENT_BODY: ${{ github.event.comment.body }}
           CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
         run: |
-          echo "${COMMENT_BODY}" > "${CARD_DIR}/revise.txt"
+          # Wrap comment body with General_Revision_Request so the parser recognizes it
+          {
+            echo "General_Revision_Request:"
+            echo "${COMMENT_BODY}"
+          } > "${CARD_DIR}/revise.txt"
           echo "Revision instructions written to ${CARD_DIR}/revise.txt"
           cat "${CARD_DIR}/revise.txt"
 
