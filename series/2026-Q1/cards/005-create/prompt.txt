@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #005
+WORD: CREATE
+GLOSS: To bring something into existence; to originate.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+You may reveal a card with 5 Lore. If you do, gain 1 letter.
+
+VERSES:
+OT: Genesis 1:1 — “In the beginning God created the heavens and the earth.”
+NT: Colossians 1:16 — “For by him all things were created, in heaven and on earth, visible and invisible.”
+
+LANGUAGES:
+Hebrew: בָּרָא - bara - Gen 1:1 • Gen 1:27 • Isa 45:18 • Ps 51:10
+Greek: κτίζω - ktizō - Col 1:16 • Eph 2:10 • Rev 4:11 • Rom 1:20
+
+TRIVIA:
+• The Hebrew verb 'bara' is used exclusively with God as the subject.
+• 'Creatio ex nihilo' is the theological term for 'creation out of nothing'.
+• Genesis 1 depicts creation as separating and ordering chaos ('tohu wa-bohu').
+
+ART: A pair of glowing hands shaping a swirling nebula of dust and stars into a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

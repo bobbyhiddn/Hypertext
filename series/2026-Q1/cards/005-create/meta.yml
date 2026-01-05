@@ -1,0 +1,128 @@
+number: '005'
+word: CREATE
+gloss: To bring something into existence; to originate.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of glowing hands shaping a swirling nebula of dust and stars into
+  a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Reveal the top 3 cards of the Tower. Put one into your hand, one into Sheol,
+  and one on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heavens and the earth.
+nt_verse:
+  ref: Colossians 1:16
+  snippet: For by him all things were created, in heaven and on earth, visible and
+    invisible.
+greek:
+  text: κτίζω
+  translit: ktizō
+hebrew:
+  text: בָּרָא
+  translit: bara
+ot_refs: Gen 1:1 • Gen 1:27 • Isa 45:18 • Ps 51:10
+nt_refs: Col 1:16 • Eph 2:10 • Rev 4:11 • Rom 1:20
+trivia:
+- The Hebrew verb 'bara' is used exclusively with God as the subject.
+- '''Creatio ex nihilo'' is the theological term for ''creation out of nothing''.'
+- Genesis 1 depicts creation as separating and ordering chaos ('tohu wa-bohu').
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdlYiXQZJ9nIvVrjczgHOO0AvvVM84OHRR-thZwWt1wnUrU-dTEcL29AQ9v928wtbcEf8hfcxka0x27Ka2Ljv5p88DKd1DK8OmGTPhG9FZ5scUt2H8I1TFSm6Uh2EG75LE9arjmVXbNMn6NeOdk0Ot4Y6J3bTxHWrYt_hRPwGm
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQfDT3Z3beNEVFYEdLMrk3IRmWqveQrSpood-eXOdIzS6oFvqFNPmDpPlt37Fg3WM0ZPJukAHDPWoegs0N0JuJqNIvAWgYGgfjon9GD9F0WCJXS3nVpxbzcnD_7CleApbKEfnxqjNh63v7r7qaCAiegnldkOg=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYFXTC9jT7GwxnY3wpx55dt1WczM6hERGSS5GppHxcYs4sR4Mrg-Pg9p_3X5--k4X_UDM3-xY-kyeBT02cthvAaDKfF-EWGZQ_hdLnnnIoLLRQqCLVbiJjZ0nPe93Zr-6nsxg4XAqya0Tn3H3c4vqLIcqRV5s1lc41dv1LSs5XrxcYN37WCthT89Y=
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKVmEB92CnkSc1SEXDGuxDEFkZSgtJ7bjMven8k4ZEs0kR2BZEzZrcf78XkjS-dBBiWBopN9zrjYNYwy0bRpRsZHlDJTvMayLvB2EmdRQxCT7DL7ADNGdGViK9wSi3F2FHwq0=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1mUByfZzMjy8R6xmju4Agx-lY4I01N3xVa5wvaPRyal5NBlbaXpffCWuGZCs6dveiWJzTBwRwJHgK8NJTPvxgN-GKOttrm2ag0hluXTNjn5s4GLYo7YytOGayzJTwYupjGI82KifA3zBDATSFbFGWNd0hTw==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYQs5iZhxkiMMK1RvYHT2qHup5lkZ_yzz9C1SQp8qTnhR-hYfpmLbrIaNE5wbc6Y4V1En1GgZOyJaOBaHNGbaFWTrPIFfQ0rYrP1GcFA06X4VOF7ntQ6gzIKQHGshaumbmFiznJGHzY8IBsyAuTt5ZyhXzR3prStqGnnZOh_91WPGBOGENYlfazgC4S2Jkq6_yiJATvmhAJFsBVbtUbVb8x_Csj7YdRUzVJ-Qqa6ekE-9WXc9pjMjaKltd7w==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUwqoq58CZDQsSWaCTPYedmCLOT9ZaEHqq6Z35Sx0uM8kdafjJRbjX0Ha-SEHSrzLWCYQKrk_7bG09OyD6wkXFPByXhXSKQUhJ-e187Cgoc3TGzYDxB11-_q5omFQEDuOjTlY9jwRsAymOjLGI03ek37kgUlUUKTkIu-_x
+  title: medium.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGq1nxUS91XwyxBhdb7CvAJj2CTUjVfCXV6-o3Nfsgd2vk1FUdxcsUo-BGzmfsZ1aG5iZgOcgkPYBej4MbdFD1S0TxIzmZWssjSrpEQYxX6xhM4pW9D4ZJhSSUa9eKc
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc-5HX4psX8balL4sq1bZaHQv9LgzhbCYbw4i5IkUMYA2xO_AQpVJyqLq2DgH5uB5XWGWlig5kxPi9dxsvLZO-FsBPUTSLCHFFmksoyInvJeWAzFg-jQt1HR-ab0sX3h2scQ0vWSHqYK_-a4us-KyiR3c8sRug6X0ONvOmKm-8REx5ELoUVUCaW8bOAFR3bM8=
+  title: equipgodspeople.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjyGFjbECzd4a00FLwyc0eIHIf2EPof3ctpnWImMq4c1PfnX3ogLUbxX-z4W99xh9P81Xc_FM__zU8RSKu6mHEtC6sdxJfF8GO94vmcicUW4qQaDDEnQXvX2pEeSygtFiJ72pN_Pi5N7qB0ETtiMJiFK4TNQYujMk4lcgCHbJggtkbNG95OiAfixeCmDrvU1QosUEwf6XPr3DsvyWPCWdFJbJC1je5sgMpog==
+  title: winebrenner.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzT2ezpdGckPYOuFrHnefDGL88mPYRE0aq6n77eb2_80CaqiiPyeOyQe6cos_kfehv70p1QewrMUSAwmgXQcoDhRfhELtjkJCAYcPj-e0BhvLw8bP6KiVoa89_hwug_f7TByj8bw2j0DDB0cijz8HMOzvxhvOgFnKTc_1fyvwjPefAayE50HFW6LbLzuy9
+  title: answersingenesis.org
+search_queries:
+- ''
+- Greek word for create ktizo
+- Hebrew word for create bara
+- Genesis 1:1 snippet
+- Colossians 1:16 snippet
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#003'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+style_mismatch_count: 1
+style_mismatch_reason: Transliterations in the Hebrew/Greek section are wrapped in
+  parentheses (e.g., '(bara)' and '(ktizō)'), which violates the critical style check
+  requiring transliterations to be shown WITHOUT parentheses.; Transliterations are
+  wrapped in parentheses - must NOT have parentheses
+review_status: yellow
+review_notes: Increase Lore stat pips from 4 to 5 to match the expected stats
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.
+revision: 1
+revision_notes: 'Ability change request:
+
+  You may reveal a card with 5 Lore. If you do, gain 1 letter.
+
+
+  General revision request (you may modify any content field as needed):
+
+  # Card_Word: CREATE
+
+  # Card_Gloss: To bring something into existence; to originate.
+
+  # Card_Type: VERB
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Reveal the top 3 cards of the Tower. Put one into your hand, one
+  into Sheol, and one on the bottom of the Tower.
+
+  # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
+
+  # Card_Art_Prompt: A pair of glowing hands shaping a swirling nebula of dust and
+  stars into a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.
+
+  # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heavens and the
+  earth.
+
+  # Card_NT_Verse: Colossians 1:16 — For by him all things were created, in heaven
+  and on earth, visible and invisible.
+
+  # Card_Hebrew: בָּרָא (bara)
+
+  # Card_Greek: κτίζω (ktizō)
+
+  # Card_Trivia_1: The Hebrew verb ''bara'' is used exclusively with God as the subject.
+
+  # Card_Trivia_2: ''Creatio ex nihilo'' is the theological term for ''creation out
+  of nothing''.
+
+  # Card_Trivia_3: Genesis 1 depicts creation as separating and ordering chaos (''tohu
+  wa-bohu'').'
