@@ -44,8 +44,8 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Art_Prompt: <ART_PROMPT>
 # Card_OT_Verse: <OT_REF> — <OT_SNIPPET>
 # Card_NT_Verse: <NT_REF> — <NT_SNIPPET>
-# Card_Hebrew: <HEBREW> (<HEBREW_TRANSLIT>)
-# Card_Greek: <GREEK> (<GREEK_TRANSLIT>)
+# Card_Hebrew: <HEBREW> - <HEBREW_TRANSLIT>
+# Card_Greek: <GREEK> - <GREEK_TRANSLIT>
 # Card_Trivia_1: <TRIVIA_1>
 # Card_Trivia_2: <TRIVIA_2>
 # Card_Trivia_3: <TRIVIA_3>
