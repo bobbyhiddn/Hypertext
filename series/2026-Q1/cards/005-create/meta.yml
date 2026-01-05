@@ -85,3 +85,44 @@ review_status: yellow
 review_notes: Increase Lore stat pips from 4 to 5 to match the expected stats
 user_action_required: true
 user_warning: Card scored 95/100. Please review and revise manually.
+revision: 1
+revision_notes: 'Ability change request:
+
+  You may reveal a card with 5 Lore. If you do, gain 1 letter.
+
+
+  General revision request (you may modify any content field as needed):
+
+  # Card_Word: CREATE
+
+  # Card_Gloss: To bring something into existence; to originate.
+
+  # Card_Type: VERB
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Reveal the top 3 cards of the Tower. Put one into your hand, one
+  into Sheol, and one on the bottom of the Tower.
+
+  # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
+
+  # Card_Art_Prompt: A pair of glowing hands shaping a swirling nebula of dust and
+  stars into a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.
+
+  # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heavens and the
+  earth.
+
+  # Card_NT_Verse: Colossians 1:16 — For by him all things were created, in heaven
+  and on earth, visible and invisible.
+
+  # Card_Hebrew: בָּרָא (bara)
+
+  # Card_Greek: κτίζω (ktizō)
+
+  # Card_Trivia_1: The Hebrew verb ''bara'' is used exclusively with God as the subject.
+
+  # Card_Trivia_2: ''Creatio ex nihilo'' is the theological term for ''creation out
+  of nothing''.
+
+  # Card_Trivia_3: Genesis 1 depicts creation as separating and ordering chaos (''tohu
+  wa-bohu'').'

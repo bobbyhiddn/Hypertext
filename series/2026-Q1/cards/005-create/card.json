@@ -176,7 +176,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "A pair of glowing hands shaping a swirling nebula of dust and stars into a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.",
-    "ABILITY_TEXT": "Reveal the top 3 cards of the Tower. Put one into your hand, one into Sheol, and one on the bottom of the Tower.",
+    "ABILITY_TEXT": "You may reveal a card with 5 Lore. If you do, gain 1 letter.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 4,
     "STAT_COMPLEXITY": 3,
