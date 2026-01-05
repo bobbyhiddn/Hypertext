@@ -49,10 +49,13 @@ jobs:
       - name: Find card directory
         id: find-card
         run: |
-          # Find the card directory in the PR branch
-          CARD_DIR="$(find series -type f -name 'card.json' -path '*/cards/*' | head -1 | xargs dirname)"
+          # Find the card directory from PR's changed files (not just any card in repo)
+          git fetch origin main
+          CARD_DIR="$(git diff --name-only origin/main...HEAD | grep -E '^series/.*/cards/.*/card\.json$' | head -1 | xargs dirname)" || true
           if [[ -z "${CARD_DIR}" ]]; then
-            echo "ERROR: No card.json found in series/*/cards/"
+            echo "ERROR: No card.json found in PR changed files"
+            echo "Changed files:"
+            git diff --name-only origin/main...HEAD
             exit 1
           fi
           CARD_SLUG="$(basename "${CARD_DIR}")"
