@@ -1,0 +1,67 @@
+number: '005'
+word: CONFUSE
+gloss: To mix up, bewilder, or throw into disorder; to scramble understanding.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A spiraling ancient stone tower dissolving into swirling, multicolored
+  mists against a chaotic sky, abstract and disorienting.
+stats:
+  lore: 2
+  context: 5
+  complexity: 3
+ability: Target player shuffles their hand into the Tower, then draws that many cards.
+ot_verse:
+  ref: Genesis 11:7
+  snippet: Come, let Us go down and there confuse their language, that they may not
+    understand one another’s speech.
+nt_verse:
+  ref: 1 Corinthians 14:33
+  snippet: For God is not the author of confusion but of peace, as in all the churches
+    of the saints.
+greek:
+  text: ἀκαταστασία
+  translit: akatastasia
+hebrew:
+  text: בָּלַל
+  translit: balal
+ot_refs: Gen 11:7 • Gen 11:9 • Deut 28:28 • Isa 19:14
+nt_refs: 1 Cor 14:33 • Acts 19:32 • Jas 3:16 • Acts 2:6
+trivia:
+- The Hebrew word 'balal' (to confuse) sounds like the name 'Babel'.
+- In the NT, 'akatastasia' refers to disorder in worship rather than language.
+- The confusion of Babel is spiritually reversed by the unity of Pentecost.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYrVJ5l2ZwBrgkUg67A2Bz_yumpcSh4cVE1F5jViG9Y_zzv-ktSydThpq-fiVOxnNYCDrAfxOpiCzMPeSp1O6P2LWdrH2bf5ZpayyVNx35B30WDcoH2N_U8gzSDB1fPbrNzwvdK-JtnQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2gS-1XKVPusLCudSqNmvkJWHQljrSzSPRpwvjGQ9MNkb-mzGh7S9UZP7i2Aw2tL6nFNOhLwrb5IGa2px6ZQF97ImZPDafpDP8PVc1ZYkI9kOYw9Nve_fCm14PHjpfjmOp3ddfyA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlyUfLnIfpE1T4n9x0gT5DwmvJCxExSMlQFBe669sp7fTuQqZAZzi6MocbGeyx777JVubUD8acAGxCHT5RLlSNC1A8Eli4fZurmOZURwMFqx92_k7fnuX4X0DRrQBfBkH2kuQvWKdlrEUQsbwf98p1RA8ynvWwDczVYsskofmzxXlkryLfcyC3gzYo3rBdu1PUS3IigqZalCjnh1a-yV5eAvjxWCTB2YBQ
+  title: thebiblemadeplain.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjCOKHrhOh-yCVkNvH39z_3Z-oXPgi3Frq_H11_Qg9fdSIwHRiF5v9tr2iVBXFZG6JfiiW9tvLG8xRHKnPsCUHiacbjpTuyYj8kDo_3moqGw7aM0YKVi1ghfw4IPqXTt8azUAsZ6OJ3-UTWwLO8O_S-TJRHyD5Y1ud7Dwwyw0CnJf9F4tWZCV5QJ2oUDtZWwVKjkg7VJPliIF1IxKKigb0wri6D5iRkSzAVRlTXBAYsdPyfYhwKpCzwW8wD68=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPXUBz0gFrz2jxDGhnWj_S4h_3PV1QNHl6FFLNUC74Ji1HPKGQcK4Hn0zPlSu4KElJ4U8Z8pBpK_90OwSZJvVKZ6kfR8qTb6QxD8kZ2-SKBOd__2ua83inV3eqOCzYc-_LSsERfcdojbdI35zM
+  title: biblepure.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3ld5rWs9AJc7dG2XcRFxe4YCUzVPThS8ubv9nL_wLjYLCY-cR2DnSSmoqeuQ_RetEvfcD-mcommwYaGKf62MAQfGAGLm0GH9pHkaHMyAOuHssVqqho7QtdulJwk7QFQYq-vc=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf4eI_teLDtnaBBiBok8nk7vHSzn-2Bzt2mkqehKj-Dfh01uOtkGpfnUulXC2xP2TapIRJ2cSvb8BEw6x1Oz8IkKOfknUZSqy-bwCngdssdqKy_UnAia5EvT4f-2q6iMvLB8mGpoJZtQmUnlUgJzWxKEe1MqePycY0jj0tQgxHglZ6w-Eznhq4i5Y_jfT-bxegkCr59SK5gnp6yMZn
+  title: bethmelekh.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFu6701TOgO0Qw87jRFATSAYkTHge-4wtCIapXaxWgwtnkt15Gd0ERXI591EHJVAfiW-AIUbpvHz9HbnfSac59u_i2gu1COzguqkIhcAqkSRZ3kIczP77-oFT7NI-HdDACdxblwo0oS87YGsT0FSWO6YkjW73A0xTlFUY4opzRUiNfRJVBckcBCJ1o2cZKitnDrIVxWhKUQNuqscGTRE8LPB2l-N7op8pg=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxCrFQIG0CFnUoL0L4N3dBKPeR_GItKEl0RMcyjVv0am9gkjI_Z8JNUF6nA2EMeKPehGf2Btkm2U1UdDkgqz_Pu0ymwTAUmxD9VdD1ef9IeEjLVQnlzYSaKWE9Nr90IC3oxeQhzm5gYpoPhQ==
+  title: trulyrandomverse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFFz889Rv7AC5R9wVTbt-k7JXDTs9PPP3TnBw2FercFdV7cHmhLk4eafXPnKPfVezv9U9Tnxv5TGUgAL0J4lkfALQBAmLmKkQpK3eF-YO_W62BWk_LrISbLf4FAnEnb5G19XRnOhTxGNNcxCDADVMR7g==
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2EkIS3jBwDY3Lo_cqs6yN852w--RYRYHsBf94tl0gJFDVWeCLaZE_ORnVIVONUTgXfkslvlktRGbhFcq_-lzlL9nhOD70V51eMk9KvkVwmT6MdjHE5UO9ML7qSkydSpxKCul38_Bt
+  title: wikipedia.org
+search_queries:
+- ''
+- etymology of babel balal
+- greek word for confusion 1 corinthians 14:33
+- hebrew word for confuse genesis 11:7
