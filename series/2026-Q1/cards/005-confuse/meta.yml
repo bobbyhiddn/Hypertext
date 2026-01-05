@@ -70,7 +70,43 @@ search_queries:
 - greek word for confusion 1 Corinthians 14:33
 - hebrew word for confuse Genesis 11:7
 - greek word for confuse Acts 2:6
-revision: 1
+revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Remove the parenthesis from the greek transliteration'
+  place the transliterations below the greek and hebrew words, not beside.
+
+  # Card_Word: CONFUSE
+
+  # Card_Gloss: To mix up, bewilder, or make unclear; to disrupt order or understanding.
+
+  # Card_Type: VERB
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Target player shuffles their hand into the Tower, then draws that
+  many cards.
+
+  # Card_Stats: LORE 5 | CONTEXT 3 | COMPLEXITY 3
+
+  # Card_Art_Prompt: A spiraling stone tower dissolving into swirling mist and chaotic
+  geometric shapes, ancient architecture fragmenting into the sky, soft earth tones
+  and dusty blues.
+
+  # Card_OT_Verse: Genesis 11:7 — Come, let Us go down and there confuse their language,
+  that they may not understand one another’s speech.
+
+  # Card_NT_Verse: Acts 19:32 — The assembly was confused, and most of them did not
+  know why they had come together.
+
+  # Card_Hebrew: בָּלַל (balal)
+
+  # Card_Greek: συγχέω (sugcheō)
+
+  # Card_Trivia_1: The Hebrew word ''balal'' sounds like ''Babel'', creating a thematic
+  wordplay.
+
+  # Card_Trivia_2: At Pentecost (Acts 2), the confusion of languages from Babel was
+  supernaturally reversed.
+
+  # Card_Trivia_3: Paul contrasts confusion with peace in 1 Corinthians, stating God
+  is not its author.'
