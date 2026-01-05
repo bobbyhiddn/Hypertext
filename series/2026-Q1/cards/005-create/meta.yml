@@ -66,3 +66,22 @@ search_queries:
 - Hebrew word for create bara
 - Genesis 1:1 snippet
 - Colossians 1:16 snippet
+review_score: 95
+review_attempts: 2
+last_description:
+  card_number_format: '#003'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+style_mismatch_count: 1
+style_mismatch_reason: Transliterations in the Hebrew/Greek section are wrapped in
+  parentheses (e.g., '(bara)' and '(ktizō)'), which violates the critical style check
+  requiring transliterations to be shown WITHOUT parentheses.; Transliterations are
+  wrapped in parentheses - must NOT have parentheses
+review_status: yellow
+review_notes: Increase Lore stat pips from 4 to 5 to match the expected stats
+user_action_required: true
+user_warning: Card scored 95/100. Please review and revise manually.
