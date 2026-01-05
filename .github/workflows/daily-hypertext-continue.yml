@@ -62,13 +62,13 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
         run: |
-          # Find the card directory from PR's changed files using GitHub API
-          PR_NUMBER="${{ github.event.issue.number }}"
-          CARD_JSON="$(gh pr view "${PR_NUMBER}" --json files --jq '.files[].path' | grep -E '^series/.*/cards/.*/card\.json$' | head -1)" || true
-          if [[ -z "${CARD_JSON}" ]]; then
+          # Find the card directory from PR's changed files (not just any card in repo)
+          git fetch origin main
+          CARD_DIR="$(git diff --name-only origin/main...HEAD | grep -E '^series/.*/cards/.*/card\.json$' | head -1 | xargs dirname)" || true
+          if [[ -z "${CARD_DIR}" ]]; then
             echo "ERROR: No card.json found in PR changed files"
-            echo "PR files:"
-            gh pr view "${PR_NUMBER}" --json files --jq '.files[].path'
+            echo "Changed files:"
+            git diff --name-only origin/main...HEAD
             exit 1
           fi
           CARD_DIR="$(dirname "${CARD_JSON}")"
