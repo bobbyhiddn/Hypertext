@@ -1,0 +1,42 @@
+number: '005'
+word: CREATE
+gloss: To bring something into existence; to cause to be, often from nothing.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: Cosmic hands shaping a swirling nebula into a perfect sphere, light breaking
+  through darkness, ethereal style, no text
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Look at the top 5 cards of the Tower. Add 2 to your hand, then arrange the
+  rest on top in any order.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: Colossians 1:16
+  snippet: For by him were all things created, that are in heaven, and that are in
+    earth...
+greek:
+  text: κτίζω
+  translit: Ktizō
+hebrew:
+  text: בָּרָא
+  translit: Bara
+ot_refs: Gen 1:1 • Ps 51:10 • Isa 40:28
+nt_refs: Col 1:16 • Eph 2:10 • Rev 4:11
+trivia:
+- The Hebrew verb 'bara' is used in the Bible exclusively for God's creative work.
+- Creation 'ex nihilo' means creating out of nothing, a concept distinct from reshaping
+  matter.
+- The Bible begins with creation in Genesis and ends with a new creation in Revelation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

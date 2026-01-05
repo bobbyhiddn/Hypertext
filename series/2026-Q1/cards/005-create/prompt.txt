@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #005
+WORD: CREATE
+GLOSS: To bring something into existence; to cause to be, often from nothing.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Look at the top 5 cards of the Tower. Add 2 to your hand, then arrange the rest on top in any order.
+
+VERSES:
+OT: Genesis 1:1 — “In the beginning God created the heaven and the earth.”
+NT: Colossians 1:16 — “For by him were all things created, that are in heaven, and that are in earth...”
+
+LANGUAGES:
+Hebrew: בָּרָא - Bara - Gen 1:1 • Ps 51:10 • Isa 40:28
+Greek: κτίζω - Ktizō - Col 1:16 • Eph 2:10 • Rev 4:11
+
+TRIVIA:
+• The Hebrew verb 'bara' is used in the Bible exclusively for God's creative work.
+• Creation 'ex nihilo' means creating out of nothing, a concept distinct from reshaping matter.
+• The Bible begins with creation in Genesis and ends with a new creation in Revelation.
+
+ART: Cosmic hands shaping a swirling nebula into a perfect sphere, light breaking through darkness, ethereal style, no text
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
