@@ -1,0 +1,70 @@
+number: '005'
+word: CONFUSE
+gloss: To mix up, disorder, or baffle; to make indistinct or obscure.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A spiraling ancient stone tower dissolving into swirling chaotic mists
+  and fragmented geometric shapes, ethereal light beams crossing in disorder, high
+  contrast, surreal style
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Target player shuffles their hand into the Tower, then draws that many cards.
+ot_verse:
+  ref: Genesis 11:7
+  snippet: Come, let us go down and there confuse their language, so that they will
+    not understand one another's speech.
+nt_verse:
+  ref: Acts 2:6
+  snippet: The multitude came together, and were confounded, because that every man
+    heard them speak in his own language.
+greek:
+  text: συγχεώ
+  translit: sugcheō
+hebrew:
+  text: בָּלַל
+  translit: balal
+ot_refs: Gen 11:7 • Gen 11:9 • Deut 7:23 • Isa 19:3
+nt_refs: Acts 2:6 • Acts 19:32 • 1 Cor 14:33 • Jas 3:16
+trivia:
+- From Latin 'confundere' meaning 'to pour together'.
+- Hebrew 'balal' is a wordplay on 'Babel', linking the city to confusion.
+- Pentecost (Acts 2) reverses the linguistic confusion of Babel.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0tDhCZS2xteHRARBTx5Gxrw73IQG1GHAggBFVyth6aBtV2HVxoUYU8JZOMgImxyL_OW_2estPQb9W-71Zi2Mi62C_bOFkeJ9KuuFhPzNWmYV3521amvy2-Ud8sBwdr0F3P6btcsvzgg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyaHpGka_LgdgbBv3noQ_zSOpxKPWBSmLIdfbDeHodpGfOfwrunYOm-a5HWuMNyqjgfKefby6Lp5fWklzHn-aU3_xF_mte8M7dEZWaaIqGoqurMisAXHVNU5ovvDsjizyZZwZzztXTnlhdwmL3LYgaFQ==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJp-np56Ij3uKshPaaKqGBvWPlJMUX5KGRyCfFjH5V9m_D6EX8cG-JMYfjnP924ag4Hc_oLk8aA6ozjJ981kGZDuGGtHke-JouSA2EmsFEMlm84JDX9UBRob1aedmFR3-Rjw==
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdenUNyMLlnfGYDOJI43s5Jboy8ZMVU65l0pR9pn3XJnSTP7Zde54VQENhjrqMpidYqCE7yye2lB6xu5ByIdCOj7It1ZjGq9EKjZzKalE1s0AX50WI552Eor7lrTNqr_L-f-dLbw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZhvlvJqy1itiR5nw0_KJbL_ixw5SVI04wXZOCOKE6jBAwkhoqBUBpmUxGcyL_ZM9-u1Fv6CRaMFqKv4JrmIhpsIoGNrkjFwWq5_Dp6JtdYVCctfElKdpV40R6t6Th
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdolxGVuOJjEO-ajkd7fbfP99kU33Ned3yNxydmeU7p9_dm8PBZdJPLkcmLixpXGyhKETRQJ_267ptKA3CksRUlhc0wWboc43lp7QEjzZ5mDP0-U11sSPE4KBaQ_rgpK9jQyEXbxCu3A==
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKzd_RoSSTkOBmUw1nOhZtsDTcFCS4v9rpp0s_3vW88nYU1n0xXOvUJ8-foCl29kW3w3wbB-Y25yLBY9_igfhoe80gI4Q-rTwsFNiT4Z7To6pJhBs1mGrnNdE15_gJ1MMKz4qjctFfAbe8mPy_zA==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuT-OXm1SdNWQXQhPWZmtqG_t9aQKT0KN23LDg37pH-gEAp7nq52xQ9_kMKCDs14RDUFqSadxzygTjaoyNx_2WGmeb9yB1l67k9zLrz8PcLhGlHicvCvWhCMEplIJYZfEMivnF1gVQwE0wwc_x_4yOCehWbFDdyhVmJjihZ8mhDa9-jA1HwT2JG_Lb9nVxYROnMLPAic9_nsy_-V5TZSFKOldigL3dlVYP
+  title: thebiblemadeplain.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3bFUV9EbsmRZqozBzqmHV5yy-ESlY7gXj5r-tuTDT13bu2gRWQjRw20m6TxXvtHNYzv38X87QW6J0vk_XRhRTEJcxNDGA4S-vQpqeS51DIboNeNW-GLfCbMpcjmHt1a7abcmyl32U
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZArlH_iTlBqcDYm7knKOkDp6HiEkfrIt3ObXYN8G0kKfsz9gJHimhKQB8Wm9WXp8P8IXSo3EO93lACJE8-3GhjeSSl5r4USvOAKtJDx897fFeyIXzPEzF84uxQAG9GvT4fsVD85HwkTMe2IMkS_o=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd4A24dQcB32ZyInfQRTXI2Qh6iUg0xS3tC6TVZrNoDflzZPsZpi3taD91yUB36ma1sDbQjymeTpl7u1aG3AzOhVqZ6NHY9DXXLtusf2Ay5T1a2kXcr4cL7o36wwr-EUA=
+  title: biblehub.com
+search_queries:
+- ''
+- etymology of confuse latin
+- 1 corinthians 14:33 greek word confusion
+- bible verse confuse language
+- hebrew word for confuse genesis 11:7
+- greek word for confuse acts 2:6
