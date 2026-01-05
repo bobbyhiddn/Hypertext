@@ -24,7 +24,7 @@ Hebrew: {HEBREW}
 (Below Hebrew, smaller text) Transliteration: {HEBREW_TRANSLIT}
 OT Refs: {OT_REFS}
 
-(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them.)
+(Format the Greek/Hebrew strip exactly as the reference style: Greek on left, Hebrew on right. Place transliterations BELOW their respective scripts in smaller text, not next to them. Do NOT wrap transliterations in brackets or parentheses - print them directly without any enclosing punctuation.)
 
 Trivia:
 {TRIVIA_BULLETS_FORMATTED}
