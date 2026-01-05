@@ -24,6 +24,7 @@ jobs:
       action: ${{ steps.parse.outputs.action }}
       card_dir: ${{ steps.find-card.outputs.card_dir }}
       card_slug: ${{ steps.find-card.outputs.card_slug }}
+      head_ref: ${{ steps.get-pr-info.outputs.head_ref }}
     steps:
       - name: Parse comment for action
         id: parse
@@ -41,23 +42,36 @@ jobs:
             echo "Detected revision instructions - will run revise stage"
           fi
 
+      - name: Get PR info from API
+        id: get-pr-info
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+        run: |
+          PR_NUMBER="${{ github.event.issue.number }}"
+          HEAD_REF="$(gh pr view "${PR_NUMBER}" --json headRefName --jq '.headRefName')"
+          echo "head_ref=${HEAD_REF}" >> $GITHUB_OUTPUT
+          echo "PR head branch: ${HEAD_REF}"
+
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.issue.pull_request.head_ref || github.head_ref }}
+          ref: ${{ steps.get-pr-info.outputs.head_ref }}
           fetch-depth: 0
 
       - name: Find card directory
         id: find-card
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
         run: |
-          # Find the card directory from PR's changed files (not just any card in repo)
-          git fetch origin main
-          CARD_DIR="$(git diff --name-only origin/main...HEAD | grep -E '^series/.*/cards/.*/card\.json$' | head -1 | xargs dirname)" || true
-          if [[ -z "${CARD_DIR}" ]]; then
+          # Find the card directory from PR's changed files using GitHub API
+          PR_NUMBER="${{ github.event.issue.number }}"
+          CARD_JSON="$(gh pr view "${PR_NUMBER}" --json files --jq '.files[].path' | grep -E '^series/.*/cards/.*/card\.json$' | head -1)" || true
+          if [[ -z "${CARD_JSON}" ]]; then
             echo "ERROR: No card.json found in PR changed files"
-            echo "Changed files:"
-            git diff --name-only origin/main...HEAD
+            echo "PR files:"
+            gh pr view "${PR_NUMBER}" --json files --jq '.files[].path'
             exit 1
           fi
+          CARD_DIR="$(dirname "${CARD_JSON}")"
           CARD_SLUG="$(basename "${CARD_DIR}")"
           echo "card_dir=${CARD_DIR}" >> $GITHUB_OUTPUT
           echo "card_slug=${CARD_SLUG}" >> $GITHUB_OUTPUT
@@ -81,7 +95,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.issue.pull_request.head_ref || github.head_ref }}
+          ref: ${{ needs.process-comment.outputs.head_ref }}
           fetch-depth: 0
 
       - name: Setup Python
@@ -150,7 +164,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.issue.pull_request.head_ref || github.head_ref }}
+          ref: ${{ needs.process-comment.outputs.head_ref }}
           fetch-depth: 0
 
       - name: Write revision instructions
