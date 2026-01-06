@@ -72,7 +72,41 @@ search_queries:
 - Bible trivia word earth
 - Hebrew word for earth eretz transliteration
 - Matthew 5:5 KJV snippet
-revision: 1
+revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Remove parenthesis from the transliterations.'
+  remove parenthesis the greek and hebrew transliterations
+
+  # Card_Word: EARTH
+
+  # Card_Gloss: The dry land, ground, or soil; the material world distinct from the
+  heavens.
+
+  # Card_Type: NOUN
+
+  # Card_Rarity: COMMON
+
+  # Card_Ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put
+  the other on the bottom.
+
+  # Card_Stats: LORE 2 | CONTEXT 5 | COMPLEXITY 1
+
+  # Card_Art_Prompt: A pair of weathered hands holding a sphere of rich, dark soil
+  that is crumbling slightly, with a faint glow emanating from the cracks, set against
+  a void.
+
+  # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heaven and the earth.
+
+  # Card_NT_Verse: Matthew 5:5 — Blessed are the meek: for they shall inherit the
+  earth.
+
+  # Card_Hebrew: אֶרֶץ (''Eretz)
+
+  # Card_Greek: γῆ (Gē)
+
+  # Card_Trivia_1: The Hebrew word ''eretz'' appears over 2,500 times in the Old Testament.
+
+  # Card_Trivia_2: Adam''s name is derived from ''adamah'', meaning ground or earth.
+
+  # Card_Trivia_3: Ancient cosmology often depicted the earth as a foundation set
+  upon pillars.'
