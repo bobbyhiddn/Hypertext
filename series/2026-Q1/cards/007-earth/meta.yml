@@ -1,0 +1,74 @@
+number: '007'
+word: EARTH
+gloss: The dry land, ground, or soil; the material world distinct from the heavens.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of weathered hands holding a sphere of rich, dark soil that is
+  crumbling slightly, with a faint glow emanating from the cracks, set against a void.
+stats:
+  lore: 2
+  context: 5
+  complexity: 1
+ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other
+  on the bottom.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: Matthew 5:5
+  snippet: 'Blessed are the meek: for they shall inherit the earth.'
+greek:
+  text: γῆ
+  translit: Gē
+hebrew:
+  text: אֶרֶץ
+  translit: '''Eretz'
+ot_refs: Gen 1:1 • Ps 24:1 • Isa 66:1 • Job 26:7
+nt_refs: Matt 5:5 • Rev 21:1 • Acts 1:8 • 1 Cor 15:47
+trivia:
+- The Hebrew word 'eretz' appears over 2,500 times in the Old Testament.
+- Adam's name is derived from 'adamah', meaning ground or earth.
+- Ancient cosmology often depicted the earth as a foundation set upon pillars.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaxpdemeBvmu_C-GHXecZB1CxKvH1wt3bHSZoNgXXkBTAj0jECxeF3k2B9WH6u9Titvo4xezQgCxrxCDOHNbka56qJ8oukVtsbZPfXm5Frk9Zc_cxMdoLqUoQINeM_
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIZoGALmMxSx77gtLK00wzSdwECUxMDbOEiSfbUQG39xR26LsXSWUcsJX3DhNv0vB7K_vMF1yqJ0QCtUb_3KAYYLG5I7OHkWke58b2vyoWCLEByZKpkjIW1xOLuqKb2nhf3IcYyd2q
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGi8tu68P2eh6ZGTF6v3nYl7x-b9dvu3Hy3LElq68AtrWP9Wo3rMAkQclYqy3h19frQ0pibjQQrjoG1HmwTInAZfqvNxTqodPo7G1Oz4DgFb1Cc0xOvwX8O96x6CbgBSckLRSnOlBjkUnFzzmuIheg2rsNJS1yKyZlmALEd09fo
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGK9bNcSZj8HpHhsPYbbdPPgrjTuHwcz2P0cNZEBzkRnjWTU8r-1Y_EPEGEGWWX8eAJonC57w-IGaVneTEO5rXfrzG-OtmqO0ysevIwpF0q6PwirxBe9wIlNMw7OBAGA2tD4gkRPoLhx1FLNiP-H5YmrR6WPk-VWO4cPw==
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQF-6f2aX9lad9-uleA96oeJygITCmfOwsBMY2_1meoaR3OuLso-xmuTJfesVZD14mT_paeJWhwqrVKYSezfK_iRUZd7AahF9lSBkkLFksEUnNxQGC1lApViJoWoH-dzlJgw==
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFY8mX8x_YtG0FyD273AEFhGSmTCqFgOKyZpAMF69SQVrlB0xldXHwwNm7h87knBOTNC_Vo78DeOWeifCyhkTGEjVq9D2fGjqXIXmwSxRcbsgM2rDrvnJ8srTHRJkK_3U4Lr7O2FrEeB41XZZvsz1Oj4jU1pjh0T-C9MtiIOIetTbPGf2I9ELIGaRbHiQ==
+  title: rebus.community
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVQmLLUrUd5wEAI4-XP613JblbqztaCXei8YU0KVVMk8oW7VBumNsr7cPN-Qm3BCWEe03sZhbsE3ezMZQDeyytagZ8RKRYF37nxtBpV646nvvDBnj_7qYGQVtduroh3_l2NjWcXRJlEm27Qg==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJgKKsYP6TMW8rEm91G46qib3Wx_RTu6JVAfjODJ_NYZV0u4vNhc7Iy6fvjP-1JVEMhlVuPzgGIPrY39qOm8zY8nxs7cJf8pKHvk7i5t9ouIxuD9w11mmKpUR718ObQxQtGfNuR279OZPU0WDX-V_dmUI1LywIvQVuV-eLm8H0mb7TOQ==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJhP1pQZuXaulFpk1R7Q5Ghud4Jg7dfHUiGiNMdYxoWMi9Et6WT93beCajMd3d48jY0xYPX-w0R0Myzie4wO3TZZoewiwrqEP9CDzYL5ZxiOWr0nqosFrtCT8WWHQG_OcvjpfdqP6uB4XzMD5i
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7REfXwwDBO6Kwd7is71ky1b_22qtSLHsO30F2WTbiTz8waQFiLL1TwvlnQhsbFbai4pia57CtLTs5dug21-jMfGg-JX-ohPtMc0U91u756OcrdCnRUajOlfxErIosxA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHF-Mo4OSLXJYPJJtIRJMQnx1-cAk3nYI_-i1u6B1-zX3R9A-nFN3ss8JmrRSMW4R20zW8QZsRDrK5RTucrYnbXy3w8ZjydiOE3cpBPlhTKfjLCe-nP0CvvoxCyrklz_HqWrwD6AqCYf0Ny385VpA==
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMeMtOY1SpDFb4z24Xg9a492BQD3ar3VZrzzOi5DlitDMx7Xawad2ud0EL-TMN0FKDXp8DCsxvxCp8yyRidwZMT8IJZ6XTSqO69l8tqeTmt6QzhQGMIZBpZphTEUp1WoSIopSD8fFWrz8wDZM=
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-jWy_dTGbWVgX9ZI_m7UgN28S0cVG7LnKtBuyxqnyhIUD6lKWatwClORbRO6c3mmJJrFbgHC35bJiMgNAGI2CKNn3tCPdif7lGUz6Y-rRLxkPnvOvXKHcLspRKfUoRMthgnz6HrkkT59UUu0=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG6uIPSQJPa8atvC1cRfjQaZ7sXF3b7QI3x_Wmd2kR8xaTFC-6IPIXsgvFxv6d5xdh_Mq63I_7yi3paHia-orOglxnjkNLRzTWAHKAcJnWFzrfaiGWQZtRzDFGAMsZgZkOOCRXdb5GOYK4RTfhk4vLBu0JFIsOtOjO2xQ=
+  title: quora.com
+search_queries:
+- ''
+- Greek word for earth ge transliteration
+- Genesis 1:1 KJV snippet
+- Bible trivia word earth
+- Hebrew word for earth eretz transliteration
+- Matthew 5:5 KJV snippet
