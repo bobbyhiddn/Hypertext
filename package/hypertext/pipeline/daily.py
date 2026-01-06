@@ -177,6 +177,39 @@ RARITY_TARGETS = {"COMMON": 40, "UNCOMMON": 35, "RARE": 15, "GLORIOUS": 10}  # p
 TYPE_ORDER = ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"]
 TYPE_TARGETS = {"NOUN": 16, "VERB": 20, "ADJECTIVE": 20, "NAME": 16, "TITLE": 18}  # counts for 90-card set
 
+# Type-by-rarity combination targets for a 90-card deck
+# Calculated as: rarity_pct * type_pct * 90, rounded to maintain balance
+# This ensures we don't get all the rare verbs generated at once
+COMBINATION_TARGETS = {
+    # COMMON (40% of deck = 36 cards)
+    ("COMMON", "NOUN"): 6,       # 40% * 18% * 90 ≈ 6
+    ("COMMON", "VERB"): 8,       # 40% * 22% * 90 ≈ 8
+    ("COMMON", "ADJECTIVE"): 8,  # 40% * 22% * 90 ≈ 8
+    ("COMMON", "NAME"): 6,       # 40% * 18% * 90 ≈ 6
+    ("COMMON", "TITLE"): 8,      # 40% * 20% * 90 ≈ 7, rounded up
+    # UNCOMMON (35% of deck = 32 cards)
+    ("UNCOMMON", "NOUN"): 6,       # 35% * 18% * 90 ≈ 6
+    ("UNCOMMON", "VERB"): 7,       # 35% * 22% * 90 ≈ 7
+    ("UNCOMMON", "ADJECTIVE"): 7,  # 35% * 22% * 90 ≈ 7
+    ("UNCOMMON", "NAME"): 6,       # 35% * 18% * 90 ≈ 6
+    ("UNCOMMON", "TITLE"): 6,      # 35% * 20% * 90 ≈ 6
+    # RARE (15% of deck = 13 cards)
+    ("RARE", "NOUN"): 2,       # 15% * 18% * 90 ≈ 2
+    ("RARE", "VERB"): 3,       # 15% * 22% * 90 ≈ 3
+    ("RARE", "ADJECTIVE"): 3,  # 15% * 22% * 90 ≈ 3
+    ("RARE", "NAME"): 3,       # 15% * 18% * 90 ≈ 2, +1 for names
+    ("RARE", "TITLE"): 3,      # 15% * 20% * 90 ≈ 3
+    # GLORIOUS (10% of deck = 9 cards)
+    ("GLORIOUS", "NOUN"): 2,       # 10% * 18% * 90 ≈ 2
+    ("GLORIOUS", "VERB"): 2,       # 10% * 22% * 90 ≈ 2
+    ("GLORIOUS", "ADJECTIVE"): 2,  # 10% * 22% * 90 ≈ 2
+    ("GLORIOUS", "NAME"): 2,       # 10% * 18% * 90 ≈ 2
+    ("GLORIOUS", "TITLE"): 1,      # 10% * 20% * 90 ≈ 2, -1 to fit
+}
+
+# Penalty factor for generating same type+rarity sequentially
+SEQUENTIAL_PENALTY = 10.0
+
 
 def _get_subtype_template(subtype: str) -> Path | None:
     """Get the template path for a specific subtype (rarity or type).
@@ -226,6 +259,9 @@ def _load_series_stats(series_dir: Path) -> dict:
             "rarity_targets": RARITY_TARGETS,
             "type_counts": {t: 0 for t in TYPE_ORDER},
             "type_targets": TYPE_TARGETS,
+            "combination_counts": {},  # (rarity, type) -> count
+            "last_rarity": None,
+            "last_type": None,
             "total": 0,
         }
 
@@ -241,11 +277,22 @@ def _load_series_stats(series_dir: Path) -> dict:
     for t in TYPE_ORDER:
         type_counts.setdefault(t, 0)
 
+    # Load combination counts (stored as flat dict with "RARITY_TYPE" keys)
+    combo_data = data.get("combination_counts", {})
+    combination_counts = {}
+    for key, val in combo_data.items():
+        if "_" in key:
+            rarity, card_type = key.split("_", 1)
+            combination_counts[(rarity, card_type)] = val
+
     return {
         "rarity_counts": rarity_counts,
         "rarity_targets": data.get("rarity_targets", data.get("targets", RARITY_TARGETS)),
         "type_counts": type_counts,
         "type_targets": data.get("type_targets", TYPE_TARGETS),
+        "combination_counts": combination_counts,
+        "last_rarity": data.get("last_rarity"),
+        "last_type": data.get("last_type"),
         "total": data.get("total", sum(rarity_counts.values())),
     }
 
@@ -262,6 +309,13 @@ def _save_series_stats(series_dir: Path, stats: dict) -> None:
         with open(stats_path, "r", encoding="utf-8") as f:
             existing = yaml.safe_load(f) or {}
 
+    # Convert combination_counts tuple keys to flat "RARITY_TYPE" strings for YAML
+    combo_counts = stats.get("combination_counts", {})
+    combo_data = {}
+    for key, val in combo_counts.items():
+        if isinstance(key, tuple) and len(key) == 2:
+            combo_data[f"{key[0]}_{key[1]}"] = val
+
     data = {
         "series": series_dir.name,
         "theme": existing.get("theme", ""),
@@ -271,6 +325,9 @@ def _save_series_stats(series_dir: Path, stats: dict) -> None:
         "type_targets": stats.get("type_targets", TYPE_TARGETS),
         "rarity_counts": stats["rarity_counts"],
         "type_counts": stats["type_counts"],
+        "combination_counts": combo_data,
+        "last_rarity": stats.get("last_rarity"),
+        "last_type": stats.get("last_type"),
         "total": stats["total"],
     }
 
@@ -545,6 +602,93 @@ def _get_needed_type(stats: dict) -> str:
 
     # Return type with highest deficit
     return max(deficits, key=deficits.get)
+
+
+def _get_needed_combination(stats: dict) -> tuple[str, str]:
+    """Determine which rarity+type combination is most needed, avoiding sequential duplicates.
+
+    Returns (rarity, card_type) tuple representing the most needed combination.
+    Applies a penalty if the combination matches the last generated card to encourage diversity.
+    """
+    combo_counts = stats.get("combination_counts", {})
+    last_rarity = stats.get("last_rarity")
+    last_type = stats.get("last_type")
+
+    # Calculate scores for each combination
+    # Higher score = more needed
+    scores: dict[tuple[str, str], float] = {}
+
+    for rarity in RARITY_ORDER:
+        for card_type in TYPE_ORDER:
+            combo_key = (rarity, card_type)
+            target = COMBINATION_TARGETS.get(combo_key, 2)
+            current = combo_counts.get(combo_key, 0)
+
+            # Base score is the deficit (how many more we need)
+            deficit = target - current
+
+            # Skip combinations that are already at or over target
+            if deficit <= 0:
+                scores[combo_key] = -100  # Very low score for over-target combinations
+                continue
+
+            # Normalize deficit to a score (higher = more urgent)
+            # Use percentage of target remaining to weight equally across rarities
+            score = (deficit / max(target, 1)) * 100
+
+            # Apply sequential penalty if this matches the last generated card
+            if rarity == last_rarity and card_type == last_type:
+                score -= SEQUENTIAL_PENALTY
+            # Apply smaller penalty for matching just type or just rarity
+            elif rarity == last_rarity:
+                score -= SEQUENTIAL_PENALTY * 0.3
+            elif card_type == last_type:
+                score -= SEQUENTIAL_PENALTY * 0.3
+
+            scores[combo_key] = score
+
+    # Return the combination with the highest score
+    if not scores:
+        # Fallback to most basic needs
+        return (_get_needed_rarity(stats), _get_needed_type(stats))
+
+    best_combo = max(scores, key=scores.get)
+    return best_combo
+
+
+def _score_queue_entry(entry: dict, stats: dict) -> float:
+    """Score a queue entry based on how well it matches current distribution needs.
+
+    Higher score = this entry should be processed sooner.
+    Considers combination deficit and sequential diversity.
+    """
+    rarity = str(entry.get("rarity", "COMMON")).upper()
+    card_type = str(entry.get("card_type", "NOUN")).upper()
+    combo_key = (rarity, card_type)
+
+    combo_counts = stats.get("combination_counts", {})
+    last_rarity = stats.get("last_rarity")
+    last_type = stats.get("last_type")
+
+    target = COMBINATION_TARGETS.get(combo_key, 2)
+    current = combo_counts.get(combo_key, 0)
+    deficit = target - current
+
+    # Base score from deficit
+    if deficit <= 0:
+        score = -50  # Negative score for over-target combinations
+    else:
+        score = (deficit / max(target, 1)) * 100
+
+    # Apply sequential penalties
+    if rarity == last_rarity and card_type == last_type:
+        score -= SEQUENTIAL_PENALTY
+    elif rarity == last_rarity:
+        score -= SEQUENTIAL_PENALTY * 0.3
+    elif card_type == last_type:
+        score -= SEQUENTIAL_PENALTY * 0.3
+
+    return score
 
 
 def _get_card_rarity(card_img_path: Path) -> str | None:
@@ -1826,21 +1970,25 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             needed = 1
             print(f"All queue entries complete. Generating 1 new queue entry...")
 
-            # Calculate needed rarities and types from stats
+            # Calculate needed rarities and types from stats using combination logic
             stats = _load_series_stats(series_dir)
             needed_rarities = []
             needed_types = []
             for _ in range(needed):
-                nr = _get_needed_rarity(stats)
-                nt = _get_needed_type(stats)
+                # Use combination-aware function that considers sequential diversity
+                nr, nt = _get_needed_combination(stats)
                 needed_rarities.append(nr)
                 needed_types.append(nt)
+                # Update stats to simulate adding this card
                 stats["rarity_counts"][nr] = stats["rarity_counts"].get(nr, 0) + 1
                 stats["type_counts"][nt] = stats["type_counts"].get(nt, 0) + 1
+                combo_key = (nr, nt)
+                stats["combination_counts"][combo_key] = stats.get("combination_counts", {}).get(combo_key, 0) + 1
+                stats["last_rarity"] = nr
+                stats["last_type"] = nt
                 stats["total"] += 1
 
-            _log(f"[plan] needed rarities: {needed_rarities}")
-            _log(f"[plan] needed types: {needed_types}")
+            _log(f"[plan] needed combination(s): {list(zip(needed_rarities, needed_types))}")
             queue.extend(_generate_queue_entries(
                 count=needed,
                 existing_words=existing_words,
@@ -1856,12 +2004,16 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     print(f"Queue entries: {len(queue)}")
 
-    # Find first queue entry that doesn't have a completed card
-    entry = None
-    number = 0
+    # Load stats for smart entry selection
+    selection_stats = _load_series_stats(series_dir)
+
+    # Find the best incomplete queue entry using distribution-aware scoring
+    # Instead of just picking the first incomplete, score each and pick the best
+    incomplete_entries: list[tuple[int, dict, float]] = []  # (number, entry, score)
+
     for idx, q_entry in enumerate(queue):
         number = idx + 1  # 1-indexed card number from queue position
-        word = str(q_entry.get("word", "")).upper()
+        word = str(q_entry.get("word", "")).upper() if isinstance(q_entry, dict) else ""
         slug = slugify(word)
         card_dir = cards_dir / f"{number:03d}-{slug}"
 
@@ -1871,13 +2023,20 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             _log(f"[plan] skipping #{number:03d} {word} - already complete")
             continue
 
-        # Found an incomplete entry
-        entry = q_entry
-        break
+        # Score this entry based on how well it matches distribution needs
+        score = _score_queue_entry(q_entry, selection_stats)
+        incomplete_entries.append((number, q_entry, score))
+        _log(f"[plan] scored #{number:03d} {word} ({q_entry.get('rarity')}/{q_entry.get('card_type')}): {score:.1f}")
 
-    if entry is None:
+    if not incomplete_entries:
         print("All queue entries already have completed cards.")
         return 0
+
+    # Sort by score (highest first) and select the best entry
+    incomplete_entries.sort(key=lambda x: x[2], reverse=True)
+    number, entry, best_score = incomplete_entries[0]
+
+    _log(f"[plan] selected best entry #{number:03d} with score {best_score:.1f}")
 
     word = str(entry["word"]).upper()
     slug = slugify(word)
@@ -2089,13 +2248,21 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
             f.write(f"card_slug={card_dir.name}\n")
         _log(f"[phase plan] wrote card_dir={card_dir} to GITHUB_OUTPUT")
 
-    # Update series stats with both rarity and type
+    # Update series stats with rarity, type, combination, and last generated
     stats = _load_series_stats(series_dir)
     stats["rarity_counts"][rarity] = stats["rarity_counts"].get(rarity, 0) + 1
     stats["type_counts"][card_type] = stats["type_counts"].get(card_type, 0) + 1
+    # Update combination counts for distribution tracking
+    combo_key = (rarity, card_type)
+    if "combination_counts" not in stats:
+        stats["combination_counts"] = {}
+    stats["combination_counts"][combo_key] = stats["combination_counts"].get(combo_key, 0) + 1
+    # Track last generated for sequential diversity
+    stats["last_rarity"] = rarity
+    stats["last_type"] = card_type
     stats["total"] = sum(stats["rarity_counts"].values())
     _save_series_stats(series_dir, stats)
-    _log(f"[phase plan] updated stats.yml: {card_type}/{rarity}, total={stats['total']}")
+    _log(f"[phase plan] updated stats.yml: {rarity}/{card_type}, combo={stats['combination_counts'].get(combo_key)}, total={stats['total']}")
 
     # Add card to series index for tracking
     ability_text = card["content"].get("ABILITY_TEXT", "")
@@ -2537,21 +2704,26 @@ def phase_demo_batch(
     existing_words = list(set(series_words + demo_words))
     _log(f"[demo batch] found {len(series_words)} series words + {len(demo_words)} demo words = {len(existing_words)} total to avoid")
 
-    # Calculate needed rarities/types based on current stats
+    # Calculate needed rarities/types based on current stats using combination logic
     planning_stats = dict(demo_stats)  # Copy for planning
+    if "combination_counts" not in planning_stats:
+        planning_stats["combination_counts"] = {}
     needed_rarities = []
     needed_types = []
     for _ in range(cards_to_plan):
-        nr = _get_needed_rarity(planning_stats)
-        nt = _get_needed_type(planning_stats)
+        # Use combination-aware function for better distribution
+        nr, nt = _get_needed_combination(planning_stats)
         needed_rarities.append(nr)
         needed_types.append(nt)
         planning_stats["rarity_counts"][nr] = planning_stats["rarity_counts"].get(nr, 0) + 1
         planning_stats["type_counts"][nt] = planning_stats["type_counts"].get(nt, 0) + 1
+        combo_key = (nr, nt)
+        planning_stats["combination_counts"][combo_key] = planning_stats["combination_counts"].get(combo_key, 0) + 1
+        planning_stats["last_rarity"] = nr
+        planning_stats["last_type"] = nt
         planning_stats["total"] += 1
 
-    _log(f"[demo batch] planned rarities: {needed_rarities}")
-    _log(f"[demo batch] planned types: {needed_types}")
+    _log(f"[demo batch] planned combinations: {list(zip(needed_rarities, needed_types))}")
 
     try:
         queue_entries = _generate_queue_entries(
