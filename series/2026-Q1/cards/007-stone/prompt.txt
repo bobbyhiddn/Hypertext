@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #007
+WORD: STONE
+GLOSS: Hard, solid, non-metallic mineral matter; used for building, memorials, and weapons.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 2/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. Put 1 on top and the rest on the bottom.
+
+VERSES:
+OT: Psalm 118:22 — “The stone which the builders refused is become the head stone of the corner.”
+NT: 1 Peter 2:5 — “Ye also, as lively stones, are built up a spiritual house, an holy priesthood.”
+
+LANGUAGES:
+Hebrew: אֶבֶן - even - Josh 4:6 • 1 Sam 17:50 • Ezek 11:19 • Zech 3:9
+Greek: λίθος - lithos - Matt 28:2 • John 8:7 • Acts 4:11 • Rev 2:17
+
+TRIVIA:
+• The Ten Commandments were written on two tablets of stone by the finger of God.
+• "Ebenezer" translates to "Stone of Help," raised by Samuel to commemorate victory.
+• Jesus is referred to as the "Chief Cornerstone" which the builders rejected.
+
+ART: A single, weathered, rough-hewn rock standing upright in a desert landscape, casting a long shadow, with a subtle geometric quality suggesting a cornerstone, digital painting style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

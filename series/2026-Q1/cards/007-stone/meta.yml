@@ -1,0 +1,41 @@
+number: '007'
+word: STONE
+gloss: Hard, solid, non-metallic mineral matter; used for building, memorials, and
+  weapons.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single, weathered, rough-hewn rock standing upright in a desert landscape,
+  casting a long shadow, with a subtle geometric quality suggesting a cornerstone,
+  digital painting style.
+stats:
+  lore: 4
+  context: 2
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Put 1 on top and the rest on the bottom.
+ot_verse:
+  ref: Psalm 118:22
+  snippet: The stone which the builders refused is become the head stone of the corner.
+nt_verse:
+  ref: 1 Peter 2:5
+  snippet: Ye also, as lively stones, are built up a spiritual house, an holy priesthood.
+greek:
+  text: λίθος
+  translit: lithos
+hebrew:
+  text: אֶבֶן
+  translit: even
+ot_refs: Josh 4:6 • 1 Sam 17:50 • Ezek 11:19 • Zech 3:9
+nt_refs: Matt 28:2 • John 8:7 • Acts 4:11 • Rev 2:17
+trivia:
+- The Ten Commandments were written on two tablets of stone by the finger of God.
+- '"Ebenezer" translates to "Stone of Help," raised by Samuel to commemorate victory.'
+- Jesus is referred to as the "Chief Cornerstone" which the builders rejected.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

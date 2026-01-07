@@ -1,0 +1,13 @@
+=== Generation Log ===
+Timestamp: 2026-01-07 11:06:28
+Phase: imagegen
+Target Rarity: COMMON
+Target Type: NOUN
+Fix Mode: False
+
+Style References (3 total):
+  [1] templates/example_cards/001-grace/outputs/card_1024x1536.png [COMMON] (TEMPLATE)
+  [2] series/2026-Q1/cards/001-grace/outputs/card_1024x1536.png [COMMON]
+  [3] templates/card/v001/common/template_1024x1536.png
+
+Prompt File: series/2026-Q1/cards/007-stone/prompt.txt
