@@ -1,0 +1,41 @@
+number: 008
+word: STONE
+gloss: Hard, solid mineral matter used for building, memorials, or weapons; a symbol
+  of strength and permanence.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single, ancient cornerstone resting in the desert sand, illuminated
+  by a shaft of divine light, realistic texture, cinematic composition, heavy shadows,
+  no text
+stats:
+  lore: 4
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Put them back in any order.
+ot_verse:
+  ref: Psalm 118:22
+  snippet: The stone the builders rejected has become the cornerstone.
+nt_verse:
+  ref: 1 Peter 2:5
+  snippet: You also, like living stones, are being built into a spiritual house.
+greek:
+  text: λίθος
+  translit: lithos
+hebrew:
+  text: אֶבֶן
+  translit: eben
+ot_refs: Gen 28:18 • Ex 24:12 • Josh 4:3 • 1 Sam 17:49 • Ezek 36:26
+nt_refs: Matt 7:9 • Mark 16:4 • Luke 19:40 • John 8:7 • Acts 4:11
+trivia:
+- '"Ebenezer" translates from Hebrew as "Stone of Help."'
+- The Ten Commandments were inscribed on two tablets of stone.
+- David defeated Goliath with a single smooth stone.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
