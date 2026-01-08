@@ -176,7 +176,7 @@
     "RARITY_TEXT": "COMMON",
     "RARITY_ICON": "COMMON",
     "ART_PROMPT": "A pair of weathered hands holding a sphere of rich, dark soil that is crumbling slightly, with a faint glow emanating from the cracks, set against a void.",
-    "ABILITY_TEXT": "Look at the top 2 cards of the Tower. Add 1 to your hand and put the other on the bottom.",
+    "ABILITY_TEXT": "You may discard 3 cards to return a card from Sheol to your hand.",
     "STAT_LORE": 2,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 1,

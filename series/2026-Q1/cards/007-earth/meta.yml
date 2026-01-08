@@ -72,8 +72,13 @@ search_queries:
 - Bible trivia word earth
 - Hebrew word for earth eretz transliteration
 - Matthew 5:5 KJV snippet
-revision: 3
-revision_notes: 'General revision request (you may modify any content field as needed):
+revision: 4
+revision_notes: 'Ability change request:
+
+  You may discard 3 cards to return a card from Sheol to your hand.
+
+
+  General revision request (you may modify any content field as needed):
 
   Place the correct greek and hebrew words, the current ones are incorrect in both
   the original text and the transliteration, they say grace in their original languages
