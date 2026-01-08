@@ -29,7 +29,7 @@ Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say
 
 Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
 
-General_Revision_Request: Place the correct greek and hebrew words, the current ones are incorrect in both the original text and the transliteration. 
+General_Revision_Request: Place the correct greek and hebrew words, the current ones are incorrect in both the original text and the transliteration, they say grace in their original languages instead of  אֶרֶץ ('Eretz) and γῆ (Gē)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)
