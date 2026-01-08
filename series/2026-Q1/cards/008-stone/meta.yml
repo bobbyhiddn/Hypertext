@@ -1,0 +1,39 @@
+number: 008
+word: STONE
+gloss: Hard, solid, non-metallic mineral matter; rock used for building or memorial.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A rough-hewn ancient cornerstone glowing with faint golden light, resting
+  in a field of tall grass, digital painting style
+stats:
+  lore: 4
+  context: 2
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Rearrange them in any order.
+ot_verse:
+  ref: Psalm 118:22
+  snippet: The stone which the builders refused is become the head stone of the corner.
+nt_verse:
+  ref: 1 Peter 2:5
+  snippet: Ye also, as lively stones, are built up a spiritual house, an holy priesthood...
+greek:
+  text: λίθος
+  translit: lithos
+hebrew:
+  text: אֶבֶן
+  translit: eben
+ot_refs: Gen 28:18 • Josh 4:6 • 1 Sam 17:40
+nt_refs: Matt 21:42 • John 8:7 • Rev 2:17
+trivia:
+- '"Eben-Ezer" translates to "Stone of Help."'
+- The Ten Commandments were written on tablets of stone to signify permanence.
+- Stephen was the first Christian martyr, killed by stoning.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

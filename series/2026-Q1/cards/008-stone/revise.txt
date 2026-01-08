@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: STONE
+# Card_Gloss: Hard, solid, non-metallic mineral matter; rock used for building or memorial.
+# Card_Type: NOUN
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 3 cards of the Tower. Rearrange them in any order.
+# Card_Stats: LORE 4 | CONTEXT 2 | COMPLEXITY 1
+# Card_Art_Prompt: A rough-hewn ancient cornerstone glowing with faint golden light, resting in a field of tall grass, digital painting style
+# Card_OT_Verse: Psalm 118:22 — The stone which the builders refused is become the head stone of the corner.
+# Card_NT_Verse: 1 Peter 2:5 — Ye also, as lively stones, are built up a spiritual house, an holy priesthood...
+# Card_Hebrew: אֶבֶן (eben)
+# Card_Greek: λίθος (lithos)
+# Card_Trivia_1: "Eben-Ezer" translates to "Stone of Help."
+# Card_Trivia_2: The Ten Commandments were written on tablets of stone to signify permanence.
+# Card_Trivia_3: Stephen was the first Christian martyr, killed by stoning.
