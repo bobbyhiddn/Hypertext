@@ -1,0 +1,42 @@
+number: 009
+word: CITY
+gloss: A large human settlement; a center of population, commerce, and defense.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A sprawling ancient near-eastern settlement with high stone walls and
+  towers, glowing with warm light against a twilight sky, isometric view, digital
+  painting style, no text
+stats:
+  lore: 4
+  context: 5
+  complexity: 1
+ability: Look at the top 2 cards of the Tower. Put one into your hand and the other
+  into Sheol.
+ot_verse:
+  ref: Psalm 127:1
+  snippet: Unless the Lord watches over the city, the watchmen stand guard in vain.
+nt_verse:
+  ref: Hebrews 11:10
+  snippet: For he was looking forward to the city with foundations, whose architect
+    and builder is God.
+greek:
+  text: πόλις
+  translit: polis
+hebrew:
+  text: עִיר
+  translit: ir
+ot_refs: Gen 4:17 • Ps 46:4 • Ps 48:1 • Isa 26:1
+nt_refs: Matt 5:14 • Heb 11:16 • Heb 13:14 • Rev 21:2
+trivia:
+- Cain built the first city in Scripture, naming it Enoch after his son.
+- Jerusalem is mentioned over 800 times in the Bible.
+- The Bible begins in a garden (Eden) and ends in a city (New Jerusalem).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

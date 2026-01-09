@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #009
+WORD: CITY
+GLOSS: A large human settlement; a center of population, commerce, and defense.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 2 cards of the Tower. Put one into your hand and the other into Sheol.
+
+VERSES:
+OT: Psalm 127:1 — “Unless the Lord watches over the city, the watchmen stand guard in vain.”
+NT: Hebrews 11:10 — “For he was looking forward to the city with foundations, whose architect and builder is God.”
+
+LANGUAGES:
+Hebrew: עִיר - ir - Gen 4:17 • Ps 46:4 • Ps 48:1 • Isa 26:1
+Greek: πόλις - polis - Matt 5:14 • Heb 11:16 • Heb 13:14 • Rev 21:2
+
+TRIVIA:
+• Cain built the first city in Scripture, naming it Enoch after his son.
+• Jerusalem is mentioned over 800 times in the Bible.
+• The Bible begins in a garden (Eden) and ends in a city (New Jerusalem).
+
+ART: A sprawling ancient near-eastern settlement with high stone walls and towers, glowing with warm light against a twilight sky, isometric view, digital painting style, no text
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
