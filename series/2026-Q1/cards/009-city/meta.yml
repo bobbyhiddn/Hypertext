@@ -1,0 +1,43 @@
+number: 009
+word: CITY
+gloss: A permanent large settlement; a center of population, commerce, defense, and
+  worship.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A majestic ancient metropolis on a hill, high stone walls, golden light
+  spilling from within, surrounding landscape in shadow, isometric view, digital fantasy
+  style
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+ability: Draw 2 cards, then discard 1 card.
+ot_verse:
+  ref: Psalm 46:4
+  snippet: There is a river, the streams whereof shall make glad the city of God.
+nt_verse:
+  ref: Hebrews 11:10
+  snippet: For he looked for a city which hath foundations, whose builder and maker
+    is God.
+greek:
+  text: πόλις
+  translit: polis
+hebrew:
+  text: עִיר
+  translit: '''ir'
+ot_refs: Gen 4:17 • Ps 48:1 • Isa 26:1 • Zech 8:3
+nt_refs: Matt 5:14 • Heb 11:16 • Rev 21:2 • Rev 22:14
+trivia:
+- The first city in the Bible was built by Cain and named after his son, Enoch.
+- Revelation describes the New Jerusalem as a perfect cube, 12,000 stadia in length,
+  width, and height.
+- Jerusalem is often called the 'City of David' or 'Zion' in scripture.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

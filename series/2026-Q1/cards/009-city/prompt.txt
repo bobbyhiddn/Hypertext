@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #009
+WORD: CITY
+GLOSS: A permanent large settlement; a center of population, commerce, defense, and worship.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 2 cards, then discard 1 card.
+
+VERSES:
+OT: Psalm 46:4 — “There is a river, the streams whereof shall make glad the city of God.”
+NT: Hebrews 11:10 — “For he looked for a city which hath foundations, whose builder and maker is God.”
+
+LANGUAGES:
+Hebrew: עִיר - 'ir - Gen 4:17 • Ps 48:1 • Isa 26:1 • Zech 8:3
+Greek: πόλις - polis - Matt 5:14 • Heb 11:16 • Rev 21:2 • Rev 22:14
+
+TRIVIA:
+• The first city in the Bible was built by Cain and named after his son, Enoch.
+• Revelation describes the New Jerusalem as a perfect cube, 12,000 stadia in length, width, and height.
+• Jerusalem is often called the 'City of David' or 'Zion' in scripture.
+
+ART: A majestic ancient metropolis on a hill, high stone walls, golden light spilling from within, surrounding landscape in shadow, isometric view, digital fantasy style
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
