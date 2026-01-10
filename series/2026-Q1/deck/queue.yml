@@ -25,3 +25,6 @@
 - word: CITY
   card_type: NOUN
   rarity: COMMON
+- word: NAME
+  card_type: NOUN
+  rarity: COMMON

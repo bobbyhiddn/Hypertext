@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #010
+WORD: NAME
+GLOSS: A word or phrase by which a person, place, or concept is known, designated, or addressed; distinct from essence yet representing it.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 1. If you have a NAME in your Pages, draw 1 more.
+
+VERSES:
+OT: Proverbs 22:1 — “A good name is rather to be chosen than great riches, and loving favour rather than silver and gold.”
+NT: Philippians 2:9 — “Wherefore God also hath highly exalted him, and given him a name which is above every name.”
+
+LANGUAGES:
+Hebrew: שֵׁם - shem - Gen 2:19 • Ex 3:15 • Ps 20:7 • Isa 56:5
+Greek: ὄνομα - onoma - Matt 28:19 • Acts 4:12 • Eph 1:21 • Rev 2:17
+
+TRIVIA:
+• In biblical culture, a name was not just a label but represented the person's character, authority, and essential nature.
+• God's personal name, YHWH, was considered so holy that readers would substitute 'Adonai' (Lord) to avoid speaking it.
+• Receiving a new name (e.g., Jacob to Israel) often signified a divine transformation of destiny and identity.
+
+ART: A smooth, glowing white stone resting on a dark velvet cloth, illuminated by a single shaft of light; the stone has a unique, abstract seal carved into it, symbolizing identity without using letters.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
