@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: NAME
+# Card_Gloss: A word or phrase by which a person, place, or concept is known, designated, or addressed; distinct from essence yet representing it.
+# Card_Type: NOUN
+# Card_Rarity: COMMON
+# Card_Ability: Draw 1. If you have a NAME in your Pages, draw 3 more.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A smooth, glowing white stone resting on a dark velvet cloth, illuminated by a single shaft of light; the stone has a unique, abstract seal carved into it, symbolizing identity without using letters.
+# Card_OT_Verse: Proverbs 22:1 — A good name is rather to be chosen than great riches, and loving favour rather than silver and gold.
+# Card_NT_Verse: Philippians 2:9 — Wherefore God also hath highly exalted him, and given him a name which is above every name.
+# Card_Hebrew: שֵׁם (shem)
+# Card_Greek: ὄνομα (onoma)
+# Card_Trivia_1: In biblical culture, a name was not just a label but represented the person's character, authority, and essential nature.
+# Card_Trivia_2: God's personal name, YHWH, was considered so holy that readers would substitute 'Adonai' (Lord) to avoid speaking it.
+# Card_Trivia_3: Receiving a new name (e.g., Jacob to Israel) often signified a divine transformation of destiny and identity.
