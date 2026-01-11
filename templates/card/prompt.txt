@@ -28,6 +28,7 @@ REFINEMENT GOALS:
 
 CRITICAL RULES:
 - NEVER print brackets [ ] anywhere on the card
+- NEVER print parentheses ( ) around transliterations or other text
 - Rarity badge: Display only the word "Rarity" (no diamond icon, no specific rarity name like "GLORIOUS")
 - Hebrew text must render right-to-left
 - Output ONLY the card - no surrounding text or watermarks

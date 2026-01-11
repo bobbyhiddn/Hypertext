@@ -135,10 +135,11 @@ FORMATTING_RUBRIC = """
   - GLORIOUS: orange diamond
 - Format: "RARE ◆" (text then icon, not "◆ RARE")
 
-### Brackets
+### Brackets and Parentheses
 - NEVER use square brackets [ ] anywhere on the card
-- WRONG: [NOUN], [#003], [RARE]
-- CORRECT: NOUN, #003, RARE
+- NEVER use parentheses ( ) around transliterations or other text
+- WRONG: [NOUN], [#003], [RARE], (logos), (dabar)
+- CORRECT: NOUN, #003, RARE, logos, dabar
 
 ### Text Display
 - Greek text: Standard left-to-right display
@@ -608,67 +609,62 @@ def _get_needed_combination(stats: dict) -> tuple[str, str]:
     """Determine which rarity+type combination is most needed, avoiding sequential duplicates.
 
     Returns (rarity, card_type) tuple representing the most needed combination.
-    STRONGLY avoids generating the same type+rarity as the last card unless no other options exist.
+    REJECTS generating the same type+rarity as the last card unless no other options exist.
     """
     combo_counts = stats.get("combination_counts", {})
     last_rarity = stats.get("last_rarity")
     last_type = stats.get("last_type")
+    last_combo = (last_rarity, last_type) if last_rarity and last_type else None
 
-    # Calculate scores for each combination
+    _log(f"[combination] last card was: {last_rarity}/{last_type}")
+
+    # Calculate scores for each combination that still needs cards
     # Higher score = more needed
-    scores: dict[tuple[str, str], float] = {}
-    # Track combinations that are NOT the same as last (for fallback logic)
-    non_duplicate_combos: list[tuple[str, str]] = []
+    all_scores: dict[tuple[str, str], float] = {}
+    available_combos: list[tuple[str, str]] = []
 
     for rarity in RARITY_ORDER:
         for card_type in TYPE_ORDER:
             combo_key = (rarity, card_type)
             target = COMBINATION_TARGETS.get(combo_key, 2)
             current = combo_counts.get(combo_key, 0)
-
-            # Base score is the deficit (how many more we need)
             deficit = target - current
 
             # Skip combinations that are already at or over target
             if deficit <= 0:
-                scores[combo_key] = -100  # Very low score for over-target combinations
                 continue
 
-            # Track if this is NOT a duplicate of last card
-            is_same_combo = (rarity == last_rarity and card_type == last_type)
-            if not is_same_combo:
-                non_duplicate_combos.append(combo_key)
+            available_combos.append(combo_key)
 
             # Normalize deficit to a score (higher = more urgent)
-            # Use percentage of target remaining to weight equally across rarities
             score = (deficit / max(target, 1)) * 100
 
-            # Apply STRONG sequential penalty to prevent same type+rarity two days in a row
-            # Only allow same combo if no other options exist (handled below)
-            if is_same_combo:
-                # Apply massive penalty - will only be chosen if no other combos available
-                score -= 1000.0
-            # Apply smaller penalty for matching just type or just rarity
-            elif rarity == last_rarity:
-                score -= SEQUENTIAL_PENALTY * 0.5
-            elif card_type == last_type:
-                score -= SEQUENTIAL_PENALTY * 0.5
+            # Apply smaller penalty for matching just type or just rarity (but not both)
+            if combo_key != last_combo:
+                if rarity == last_rarity:
+                    score -= SEQUENTIAL_PENALTY * 0.5
+                elif card_type == last_type:
+                    score -= SEQUENTIAL_PENALTY * 0.5
 
-            scores[combo_key] = score
+            all_scores[combo_key] = score
 
-    # Return the combination with the highest score
-    if not scores:
-        # Fallback to most basic needs
+    if not available_combos:
+        # All combinations at target - fallback to basic needs
+        _log("[combination] WARNING: All combinations at target, using fallback")
         return (_get_needed_rarity(stats), _get_needed_type(stats))
 
-    best_combo = max(scores, key=scores.get)
+    # HARD REJECTION: Filter out last combo if alternatives exist
+    non_duplicate_combos = [c for c in available_combos if c != last_combo]
 
-    # Safety check: if best combo is the same as last AND we have other options, pick the next best
-    if best_combo == (last_rarity, last_type) and non_duplicate_combos:
-        # Find best non-duplicate combo
-        non_dup_scores = {k: v for k, v in scores.items() if k in non_duplicate_combos}
-        if non_dup_scores:
-            best_combo = max(non_dup_scores, key=non_dup_scores.get)
+    if non_duplicate_combos:
+        # We have alternatives - pick best from non-duplicates
+        candidates = {k: v for k, v in all_scores.items() if k in non_duplicate_combos}
+        best_combo = max(candidates, key=candidates.get)
+        _log(f"[combination] selected {best_combo[0]}/{best_combo[1]} (rejected duplicate of last)")
+    else:
+        # No alternatives - must use the duplicate (near end of set)
+        best_combo = max(all_scores, key=all_scores.get)
+        _log(f"[combination] WARNING: No alternatives, must use {best_combo[0]}/{best_combo[1]} (duplicate)")
 
     return best_combo
 
@@ -2025,10 +2021,14 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
 
     # Load stats for smart entry selection
     selection_stats = _load_series_stats(series_dir)
+    last_rarity = selection_stats.get("last_rarity")
+    last_type = selection_stats.get("last_type")
 
     # Find the best incomplete queue entry using distribution-aware scoring
     # Instead of just picking the first incomplete, score each and pick the best
     incomplete_entries: list[tuple[int, dict, float]] = []  # (number, entry, score)
+    # Track non-duplicate entries separately (don't match last type+rarity)
+    non_duplicate_entries: list[tuple[int, dict, float]] = []
 
     for idx, q_entry in enumerate(queue):
         number = idx + 1  # 1-indexed card number from queue position
@@ -2045,15 +2045,34 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         # Score this entry based on how well it matches distribution needs
         score = _score_queue_entry(q_entry, selection_stats)
         incomplete_entries.append((number, q_entry, score))
-        _log(f"[plan] scored #{number:03d} {word} ({q_entry.get('rarity')}/{q_entry.get('card_type')}): {score:.1f}")
+
+        # Check if this entry matches the last generated type+rarity
+        entry_rarity = str(q_entry.get("rarity", "COMMON")).upper()
+        entry_type = str(q_entry.get("card_type", "NOUN")).upper()
+        is_duplicate = (entry_rarity == last_rarity and entry_type == last_type)
+
+        if not is_duplicate:
+            non_duplicate_entries.append((number, q_entry, score))
+            _log(f"[plan] scored #{number:03d} {word} ({entry_rarity}/{entry_type}): {score:.1f}")
+        else:
+            _log(f"[plan] scored #{number:03d} {word} ({entry_rarity}/{entry_type}): {score:.1f} [DUPLICATE of last]")
 
     if not incomplete_entries:
         print("All queue entries already have completed cards.")
         return 0
 
+    # Prefer non-duplicate entries to avoid consecutive same type+rarity
+    # Only fall back to duplicates if no other options exist
+    if non_duplicate_entries:
+        _log(f"[plan] {len(non_duplicate_entries)} non-duplicate entries available, filtering out duplicates")
+        candidates = non_duplicate_entries
+    else:
+        _log(f"[plan] WARNING: All {len(incomplete_entries)} entries are duplicates of last card ({last_rarity}/{last_type}), no alternatives")
+        candidates = incomplete_entries
+
     # Sort by score (highest first) and select the best entry
-    incomplete_entries.sort(key=lambda x: x[2], reverse=True)
-    number, entry, best_score = incomplete_entries[0]
+    candidates.sort(key=lambda x: x[2], reverse=True)
+    number, entry, best_score = candidates[0]
 
     _log(f"[plan] selected best entry #{number:03d} with score {best_score:.1f}")
 
