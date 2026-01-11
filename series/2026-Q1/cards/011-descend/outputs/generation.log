@@ -1,0 +1,12 @@
+=== Generation Log ===
+Timestamp: 2026-01-11 15:38:58
+Phase: imagegen
+Target Rarity: UNCOMMON
+Target Type: VERB
+Fix Mode: False
+
+Style References (2 total):
+  [1] templates/example_cards/006-forgive/outputs/card_1024x1536.png [UNCOMMON] (TEMPLATE)
+  [2] templates/card/v001/uncommon/template_1024x1536.png
+
+Prompt File: series/2026-Q1/cards/011-descend/prompt.txt

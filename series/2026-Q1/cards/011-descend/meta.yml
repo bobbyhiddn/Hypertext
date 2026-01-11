@@ -1,0 +1,65 @@
+number: '011'
+word: DESCEND
+gloss: To move from a higher place to a lower one; to come down.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A brilliant white dove gliding downward through a vertical shaft of golden
+  light that pierces through dark, heavy storm clouds to touch a mountain peak.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Look at the top 3 cards of the Tower. You may put any number of them on the
+  bottom of the Tower.
+ot_verse:
+  ref: Genesis 28:12
+  snippet: And behold, the angels of God were ascending and descending on it.
+nt_verse:
+  ref: Matthew 3:16
+  snippet: He saw the Spirit of God descending like a dove and coming to rest on him.
+greek:
+  text: καταβαίνω
+  translit: katabainō
+hebrew:
+  text: יָרַד
+  translit: yarad
+ot_refs: Gen 28:12 • Ex 19:18 • Ps 133:3 • Zech 14:4
+nt_refs: Matt 3:16 • Eph 4:9 • 1 Thess 4:16 • Jas 1:17
+trivia:
+- The Hebrew root *yarad* is the origin of the name 'Jordan' (the Descender).
+- Used to describe God's presence coming down to Mount Sinai in fire.
+- Theologically linked to the Incarnation and Christ's descent to the dead.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIcFHWsHIEN0Y9z0MROpL_IqL8oF-zS3Cg8x_prIb41m_vvkXmF1SGKoxydH9BVS--kD-CbnVaVtgsScMVao66obCACDvTy3OHMneCgU9qoIAHSbnbF8GHsHnCzrka5d_6HC6H9xAh0w1u
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExrzGe6uIFcDJOUmBmFb1JQgJ5pMFeudY_IDlu4rZY6sqsXNbCUF3qEbuP1BCYwWTHY20ZZkAf7qEgugRjJ3fZR348nYV0Ymx8tVA9htuug9otuf83aHNx42_4KoXZQ4Uko-yGr-uupZqLKv3m-CDpyhzyjAVBEjIqinocMdFP5Q9m1Yu5lMAjY0iq7lc=
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfKwPph9wQhn1ceyMdaWB8ACqVPTobqCOkc8jFvPT0GY_Z3jW2CU2SeXmTW5y0cM8FLJ_0jnmgDR26WGiz_YAM2ubeRz5NNM28jRzDZnLK8vU1u557R4CUJRx2HzE7T2PuvDVoCiNj
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmy1XlNDST8jMgPC2qJgfiYOewdyGM6erJv-OVj5FjHS36rmwHZJZQOI4w0U9g3kqX4dmPao8KOCg4aMrpUjWV4jC0QbNA6WIp9iiTdFhl1HXLhUuUnBTWenY6Zo7QWFJjLt4S
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElG_vHksn3SLIRrN2jCxlFj7Ei7PMRTqSZjSwoTa7i6z-utn5_xfDbJJurRK_a1eXwcjW660Ug83ccJxjBUb9jtbFG74ow5L-Bv-QXqdK6zWJTxGSVCSMpTaJ8Hd-3GpkNWVtKZP_8remvaw==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTL_tli5njFx0yIHte7xCac06Gg3IEdLivBGRfssqu-jUoEYZGkd9smprPBSHWOCpcCce3S0qyY2XgzbsCSg9evr2X6KpyVQ_2gNHVOWx8p-iI0zv0Tkh0CcokAN-Y1W-qZhF8Ig6GtR8aABXuxtfhUanQmnIJMv2f-RoQVvurujdzBGnC8X58Jg==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCOOCEl-DJ8O8CaSbBKKxU6HYMuq6HC0wb2yQ18XCYF_Mw5ms2bSevpUvF1Qyqxr5GjtErjPnZEq1YsTwmeUvggd_ZfwCF54ZknQOAScIme_KipbgTBHLVVBhD6NGRthAd6FkUP1fP2b4ybM-i2x3t
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQuBqDscFL0H8_SnL0aohl68Ys00raanvF49r0z-mGgZj6JeHoQI2tBeV8YE2uSk5Mk1TUFQdc8lBZxZvKCOjlGF-gB_RVRb7O0aUganH93M027j3brWznrk9QlRomtOahQtM4P2iIh5bNuqKM5HHe-saZREfYW94=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-G-lI4FEMSrjs6jhuzXxQycg1ZWmxj01e9pBM8ASn-Bixp0QJt5L1YYE78Zb1UHSsyeU-MpKdLuKySw5jpSoK-mF4tYVdZ5H84kOp25AhwEUTroDeWFt1LepYsOs2jUia
+  title: topverses.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZOfQ6xrndd_5A97BpxveCJdfQs8bn8Q37BIyXTmqOiei4N2S6ZVtp6h4mTx9Oxb-rg3vVkvXfSL65rYSc08nJMulIWPv4TonPGNoW-NNeHygj0rTWMltcjxC7Rk8-XHCOBODoSzd9
+  title: knowing-jesus.com
+search_queries:
+- ''
+- hebrew word for descend yarad
+- etymology of Jordan river yarad
+- descend bible verse snippets
+- greek word for descend katabaino

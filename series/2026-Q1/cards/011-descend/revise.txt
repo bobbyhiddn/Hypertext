@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: DESCEND
+# Card_Gloss: To move from a higher place to a lower one; to come down.
+# Card_Type: VERB
+# Card_Rarity: UNCOMMON
+# Card_Ability: Look at the top 3 cards of the Tower. You may put any number of them on the bottom of the Tower.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A brilliant white dove gliding downward through a vertical shaft of golden light that pierces through dark, heavy storm clouds to touch a mountain peak.
+# Card_OT_Verse: Genesis 28:12 — And behold, the angels of God were ascending and descending on it.
+# Card_NT_Verse: Matthew 3:16 — He saw the Spirit of God descending like a dove and coming to rest on him.
+# Card_Hebrew: יָרַד (yarad)
+# Card_Greek: καταβαίνω (katabainō)
+# Card_Trivia_1: The Hebrew root *yarad* is the origin of the name 'Jordan' (the Descender).
+# Card_Trivia_2: Used to describe God's presence coming down to Mount Sinai in fire.
+# Card_Trivia_3: Theologically linked to the Incarnation and Christ's descent to the dead.
