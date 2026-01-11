@@ -1,0 +1,67 @@
+number: '011'
+word: REMEMBER
+gloss: To recall to mind; to retain in memory and act upon it.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered stone altar standing in a grassy field under a twilight sky,
+  glowing faintly with golden light.
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Return a card from Sheol to your hand that shares a type with a card in your
+  Pages.
+ot_verse:
+  ref: Exodus 20:8
+  snippet: Remember the Sabbath day, to keep it holy.
+nt_verse:
+  ref: Luke 23:42
+  snippet: Jesus, remember me when you come into your kingdom.
+greek:
+  text: μιμνῄσκομαι
+  translit: mimnēskomai
+hebrew:
+  text: זָכַר
+  translit: zakar
+ot_refs: Gen 8:1 • Gen 9:15 • Eccl 12:1 • Mal 4:4
+nt_refs: Luke 17:32 • 1 Cor 11:24 • Gal 2:10 • Heb 13:3
+trivia:
+- The Hebrew 'zakar' implies acting on a memory, not just mental recall.
+- When God 'remembers' in Scripture, it often signals the start of a divine intervention.
+- Malachi 3:16 mentions a 'book of remembrance' written for those who fear the Lord.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFx4TJvBQVUSjoduVVhYQ48iYlZzQZoXe6X7fKMZOSXIBS6W7GN91NuT6TVRojdNqM-TDYKdIdy-aDOh5a9hHCmxLAxADBiUhrJXp8xacGP8pZb2mJ4_OxOQ0i1TnCurwrfbZ47MuXYWCE-
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwNVqnROhszlVk-6jTj2cOnMVDed-d_fX8HKvpq80SFvQsnrTruMEnTTXU_aeM_GPLEIW09-Rj6_ul7SaevTAGIfjGvZtKwNxW2-dPqXKrftYkhVjw0J8t-Eo2WnTc1dVNFtwm4zUB
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQKsWSoxVLtc-5ezDEtmhvbCIc0Awr-xGa-zuZ6lknevT3iQ9SbvRG8g0pU80it91BXtD5jUiNuQmKQ10ComjyBKx81-tlU30XcmHStsOic-QmjVOwdFun5o_nP9YT_Oh42zQ=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4GB2m2ad2ayodd-1eSqildBK_J-EjxJoW5O8eYC8K4hMJWTtLPTcDMkEP_kCal1WJEbJQ8ujr9vF_Ued0iKWCDN2Qfn-Rx49ZGZvFQOPsCid7zZdQ8o3VZRxQhA24ZzTo9_yisxPHbWtGZAmWRNOTRe0yOgTQ3ufM0ldQOFAQcOC0xCxlDHO8AxC14lNQnQ==
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLoUPjVT1q3sn0vpqjm0YHH8gBu0uwOpAcFc4C-MtE9XvHWKd7f7e9oHT-DC_KPhazveJpktMK4-uj6jn3PPcqggdgJOzyBO5IYeSj44a1K5aTSP1sLgt_KPE-HFZhiEb75kNq
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg9wgowBneY42hb91iH8gxDcALS2oVTzrSm0flxY4ffScmsWKuOQIcOO_bOP1PxchwZo-472SjN8kyAx3Ici1RGhzs5mTWrOM4RjY1l203Un__z7MDnloYuPRVp7JZ7Xg=
+  title: greekbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0Cx4i8-2oUuP_woEDidrMqDu1_Css2mCnxCsu9jrto8BsWfQa6M5IkdLD8o05cB-0-sNQ9Ji_IPB8ua2L58xz24JChWdO82iKX9u9EdjpaIMB9VgyQmJCRplfuEXGkP2OoA9eRsTHAXsFZDJmz4Y=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHI6DPWVOKaLtXWVxiTjuPUcIgCh93ad0PCEzxFMPb4m1HJu7xYuT7NzOsSfdXl_um3HI0IvH5ucBcNbv-kA7m2FjDUh1Ik5LrKaGaXLWwIIWhTqjV_ceLG6T30SDbG29MPqgKvZ5wnR0ksX03sqCMMzRws__w=
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG6lWeULIttcLSGXSMTiepN321ruBa9C_Eqbh_SondRUjqtSLNVqLCU4HSDommyF0tTkY7pMA8Y-NOI3CHH2qOnuIqIH93l2QTFJbsveHT767pri3ioTjemE7bJ_-_NHYxXosoOpLWNPUtKG3PUmBv_YlsfM6PNoqUlNtQ9vwHqNS9Q19BEw==
+  title: 1517.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4kzD1OhyvCu661lDIGNV5DRgsQp4eDJhQcf1ymsQlFZQaQALdeAQ6A9Oga40ZBZcpWDoIjK3AFPXghRrYSr5cWgmMbx6Y14CMMxwUzaNKAOPZpUIhlhK1G80Qa6Br-nG-eSa8O7FzgwoeNQ==
+  title: faithweb.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFumMx9Uy2Pu-kspS855ZRuyl3JSYQhLPun_xmINKatxTiDZyEx_yH4VJsQ7IyMariQ_-oyt1wyOL0Ce-EezxTcsw7No4BXN_3Mp7cqMRowfSQVZDUOwOXyJy8k1DH67m4z8vRsnY9EDvijevNBz2kQGtGMerVjzY5iNldPiDiC
+  title: abarim-publications.com
+search_queries:
+- ''
+- hebrew word zakar meaning bible
+- Luke 23:42 Greek text
+- Exodus 20:8 Hebrew text
+- greek word for remember bible mnemoneuo vs mimneskomai

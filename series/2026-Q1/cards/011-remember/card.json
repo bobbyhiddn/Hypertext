@@ -1,0 +1,279 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "011",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "REMEMBER",
+    "GLOSS": "To recall to mind; to retain in memory and act upon it.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A weathered stone altar standing in a grassy field under a twilight sky, glowing faintly with golden light.",
+    "ABILITY_TEXT": "Return a card from Sheol to your hand that shares a type with a card in your Pages.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Exodus 20:8",
+    "OT_VERSE_SNIPPET": "Remember the Sabbath day, to keep it holy.",
+    "NT_VERSE_REF": "Luke 23:42",
+    "NT_VERSE_SNIPPET": "Jesus, remember me when you come into your kingdom.",
+    "OT_VERSE_LINE": "Exodus 20:8 — “Remember the Sabbath day, to keep it holy.”",
+    "NT_VERSE_LINE": "Luke 23:42 — “Jesus, remember me when you come into your kingdom.”",
+    "GREEK": "μιμνῄσκομαι",
+    "GREEK_TRANSLIT": "mimnēskomai",
+    "HEBREW": "זָכַר",
+    "HEBREW_TRANSLIT": "zakar",
+    "OT_REFS": "Gen 8:1 • Gen 9:15 • Eccl 12:1 • Mal 4:4",
+    "NT_REFS": "Luke 17:32 • 1 Cor 11:24 • Gal 2:10 • Heb 13:3",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'zakar' implies acting on a memory, not just mental recall.",
+      "When God 'remembers' in Scripture, it often signals the start of a divine intervention.",
+      "Malachi 3:16 mentions a 'book of remembrance' written for those who fear the Lord."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "hebrew word zakar meaning bible",
+      "Luke 23:42 Greek text",
+      "Exodus 20:8 Hebrew text",
+      "greek word for remember bible mnemoneuo vs mimneskomai"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFx4TJvBQVUSjoduVVhYQ48iYlZzQZoXe6X7fKMZOSXIBS6W7GN91NuT6TVRojdNqM-TDYKdIdy-aDOh5a9hHCmxLAxADBiUhrJXp8xacGP8pZb2mJ4_OxOQ0i1TnCurwrfbZ47MuXYWCE-",
+        "title": "biblehub.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwNVqnROhszlVk-6jTj2cOnMVDed-d_fX8HKvpq80SFvQsnrTruMEnTTXU_aeM_GPLEIW09-Rj6_ul7SaevTAGIfjGvZtKwNxW2-dPqXKrftYkhVjw0J8t-Eo2WnTc1dVNFtwm4zUB",
+        "title": "saintebible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQKsWSoxVLtc-5ezDEtmhvbCIc0Awr-xGa-zuZ6lknevT3iQ9SbvRG8g0pU80it91BXtD5jUiNuQmKQ10ComjyBKx81-tlU30XcmHStsOic-QmjVOwdFun5o_nP9YT_Oh42zQ=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4GB2m2ad2ayodd-1eSqildBK_J-EjxJoW5O8eYC8K4hMJWTtLPTcDMkEP_kCal1WJEbJQ8ujr9vF_Ued0iKWCDN2Qfn-Rx49ZGZvFQOPsCid7zZdQ8o3VZRxQhA24ZzTo9_yisxPHbWtGZAmWRNOTRe0yOgTQ3ufM0ldQOFAQcOC0xCxlDHO8AxC14lNQnQ==",
+        "title": "studylight.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLoUPjVT1q3sn0vpqjm0YHH8gBu0uwOpAcFc4C-MtE9XvHWKd7f7e9oHT-DC_KPhazveJpktMK4-uj6jn3PPcqggdgJOzyBO5IYeSj44a1K5aTSP1sLgt_KPE-HFZhiEb75kNq",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFg9wgowBneY42hb91iH8gxDcALS2oVTzrSm0flxY4ffScmsWKuOQIcOO_bOP1PxchwZo-472SjN8kyAx3Ici1RGhzs5mTWrOM4RjY1l203Un__z7MDnloYuPRVp7JZ7Xg=",
+        "title": "greekbible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0Cx4i8-2oUuP_woEDidrMqDu1_Css2mCnxCsu9jrto8BsWfQa6M5IkdLD8o05cB-0-sNQ9Ji_IPB8ua2L58xz24JChWdO82iKX9u9EdjpaIMB9VgyQmJCRplfuEXGkP2OoA9eRsTHAXsFZDJmz4Y=",
+        "title": "blueletterbible.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHI6DPWVOKaLtXWVxiTjuPUcIgCh93ad0PCEzxFMPb4m1HJu7xYuT7NzOsSfdXl_um3HI0IvH5ucBcNbv-kA7m2FjDUh1Ik5LrKaGaXLWwIIWhTqjV_ceLG6T30SDbG29MPqgKvZ5wnR0ksX03sqCMMzRws__w=",
+        "title": "quora.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG6lWeULIttcLSGXSMTiepN321ruBa9C_Eqbh_SondRUjqtSLNVqLCU4HSDommyF0tTkY7pMA8Y-NOI3CHH2qOnuIqIH93l2QTFJbsveHT767pri3ioTjemE7bJ_-_NHYxXosoOpLWNPUtKG3PUmBv_YlsfM6PNoqUlNtQ9vwHqNS9Q19BEw==",
+        "title": "1517.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4kzD1OhyvCu661lDIGNV5DRgsQp4eDJhQcf1ymsQlFZQaQALdeAQ6A9Oga40ZBZcpWDoIjK3AFPXghRrYSr5cWgmMbx6Y14CMMxwUzaNKAOPZpUIhlhK1G80Qa6Br-nG-eSa8O7FzgwoeNQ==",
+        "title": "faithweb.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFumMx9Uy2Pu-kspS855ZRuyl3JSYQhLPun_xmINKatxTiDZyEx_yH4VJsQ7IyMariQ_-oyt1wyOL0Ce-EezxTcsw7No4BXN_3Mp7cqMRowfSQVZDUOwOXyJy8k1DH67m4z8vRsnY9EDvijevNBz2kQGtGMerVjzY5iNldPiDiC",
+        "title": "abarim-publications.com"
+      }
+    ]
+  }
+}
