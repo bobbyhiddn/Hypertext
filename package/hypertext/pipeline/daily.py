@@ -608,7 +608,7 @@ def _get_needed_combination(stats: dict) -> tuple[str, str]:
     """Determine which rarity+type combination is most needed, avoiding sequential duplicates.
 
     Returns (rarity, card_type) tuple representing the most needed combination.
-    Applies a penalty if the combination matches the last generated card to encourage diversity.
+    STRONGLY avoids generating the same type+rarity as the last card unless no other options exist.
     """
     combo_counts = stats.get("combination_counts", {})
     last_rarity = stats.get("last_rarity")
@@ -617,6 +617,8 @@ def _get_needed_combination(stats: dict) -> tuple[str, str]:
     # Calculate scores for each combination
     # Higher score = more needed
     scores: dict[tuple[str, str], float] = {}
+    # Track combinations that are NOT the same as last (for fallback logic)
+    non_duplicate_combos: list[tuple[str, str]] = []
 
     for rarity in RARITY_ORDER:
         for card_type in TYPE_ORDER:
@@ -632,18 +634,25 @@ def _get_needed_combination(stats: dict) -> tuple[str, str]:
                 scores[combo_key] = -100  # Very low score for over-target combinations
                 continue
 
+            # Track if this is NOT a duplicate of last card
+            is_same_combo = (rarity == last_rarity and card_type == last_type)
+            if not is_same_combo:
+                non_duplicate_combos.append(combo_key)
+
             # Normalize deficit to a score (higher = more urgent)
             # Use percentage of target remaining to weight equally across rarities
             score = (deficit / max(target, 1)) * 100
 
-            # Apply sequential penalty if this matches the last generated card
-            if rarity == last_rarity and card_type == last_type:
-                score -= SEQUENTIAL_PENALTY
+            # Apply STRONG sequential penalty to prevent same type+rarity two days in a row
+            # Only allow same combo if no other options exist (handled below)
+            if is_same_combo:
+                # Apply massive penalty - will only be chosen if no other combos available
+                score -= 1000.0
             # Apply smaller penalty for matching just type or just rarity
             elif rarity == last_rarity:
-                score -= SEQUENTIAL_PENALTY * 0.3
+                score -= SEQUENTIAL_PENALTY * 0.5
             elif card_type == last_type:
-                score -= SEQUENTIAL_PENALTY * 0.3
+                score -= SEQUENTIAL_PENALTY * 0.5
 
             scores[combo_key] = score
 
@@ -653,6 +662,14 @@ def _get_needed_combination(stats: dict) -> tuple[str, str]:
         return (_get_needed_rarity(stats), _get_needed_type(stats))
 
     best_combo = max(scores, key=scores.get)
+
+    # Safety check: if best combo is the same as last AND we have other options, pick the next best
+    if best_combo == (last_rarity, last_type) and non_duplicate_combos:
+        # Find best non-duplicate combo
+        non_dup_scores = {k: v for k, v in scores.items() if k in non_duplicate_combos}
+        if non_dup_scores:
+            best_combo = max(non_dup_scores, key=non_dup_scores.get)
+
     return best_combo
 
 
@@ -661,6 +678,7 @@ def _score_queue_entry(entry: dict, stats: dict) -> float:
 
     Higher score = this entry should be processed sooner.
     Considers combination deficit and sequential diversity.
+    STRONGLY penalizes same type+rarity as last card to prevent consecutive duplicates.
     """
     rarity = str(entry.get("rarity", "COMMON")).upper()
     card_type = str(entry.get("card_type", "NOUN")).upper()
@@ -680,13 +698,14 @@ def _score_queue_entry(entry: dict, stats: dict) -> float:
     else:
         score = (deficit / max(target, 1)) * 100
 
-    # Apply sequential penalties
+    # Apply STRONG sequential penalty to prevent same type+rarity two days in a row
     if rarity == last_rarity and card_type == last_type:
-        score -= SEQUENTIAL_PENALTY
+        # Massive penalty - this entry should only be chosen if no other options
+        score -= 1000.0
     elif rarity == last_rarity:
-        score -= SEQUENTIAL_PENALTY * 0.3
+        score -= SEQUENTIAL_PENALTY * 0.5
     elif card_type == last_type:
-        score -= SEQUENTIAL_PENALTY * 0.3
+        score -= SEQUENTIAL_PENALTY * 0.5
 
     return score
 
