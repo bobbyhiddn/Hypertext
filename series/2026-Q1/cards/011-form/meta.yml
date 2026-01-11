@@ -1,0 +1,42 @@
+number: '011'
+word: FORM
+gloss: To give shape, structure, or existence to something; to mold or fashion.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Hands of a potter shaping a glowing vessel from swirling dust and clay
+  on a wheel; golden light emanating from the forming shape; ethereal atmosphere;
+  no text.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Return a NOUN from Sheol to your hand.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: And the LORD God formed man of the dust of the ground...
+nt_verse:
+  ref: Romans 9:20
+  snippet: Shall the thing formed say to him that formed it, Why hast thou made me
+    thus?
+greek:
+  text: πλάσσω
+  translit: Plassō
+hebrew:
+  text: יָצַר
+  translit: Yatsar
+ot_refs: Gen 2:7 • Jer 18:6 • Isa 64:8 • Ps 94:9
+nt_refs: Rom 9:20 • Gal 4:19 • 1 Tim 2:13 • Mark 10:6
+trivia:
+- The Hebrew 'yatsar' depicts a potter squeezing clay into a specific shape.
+- Genesis 2 distinguishes 'yatsar' (forming from dust) from 'bara' (creating from
+  nothing).
+- Paul uses this concept to describe Christ's character being shaped within a believer.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

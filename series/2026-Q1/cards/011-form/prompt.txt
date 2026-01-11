@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: FORM
+GLOSS: To give shape, structure, or existence to something; to mold or fashion.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a NOUN from Sheol to your hand.
+
+VERSES:
+OT: Genesis 2:7 — “And the LORD God formed man of the dust of the ground...”
+NT: Romans 9:20 — “Shall the thing formed say to him that formed it, Why hast thou made me thus?”
+
+LANGUAGES:
+Hebrew: יָצַר - Yatsar - Gen 2:7 • Jer 18:6 • Isa 64:8 • Ps 94:9
+Greek: πλάσσω - Plassō - Rom 9:20 • Gal 4:19 • 1 Tim 2:13 • Mark 10:6
+
+TRIVIA:
+• The Hebrew 'yatsar' depicts a potter squeezing clay into a specific shape.
+• Genesis 2 distinguishes 'yatsar' (forming from dust) from 'bara' (creating from nothing).
+• Paul uses this concept to describe Christ's character being shaped within a believer.
+
+ART: Hands of a potter shaping a glowing vessel from swirling dust and clay on a wheel; golden light emanating from the forming shape; ethereal atmosphere; no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
