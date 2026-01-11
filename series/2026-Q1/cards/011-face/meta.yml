@@ -1,0 +1,41 @@
+number: '011'
+word: FACE
+gloss: The front of the head; presence, surface, or favor.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing, golden reflection of a kind visage seen on the surface of a
+  dark, still pool of water; ripples distorting the image slightly, ethereal lighting,
+  cinematic style, no text.
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+ability: Look at the top 3 cards of the Tower, then return them in any order.
+ot_verse:
+  ref: Exodus 33:11
+  snippet: The Lord would speak to Moses face to face, as one speaks to a friend.
+nt_verse:
+  ref: 1 Corinthians 13:12
+  snippet: For now we see only a reflection as in a mirror; then we shall see face
+    to face.
+greek:
+  text: πρόσωπον
+  translit: prosōpon
+hebrew:
+  text: פָּנִים
+  translit: panim
+ot_refs: Gen 1:2 • Ex 33:11 • Num 6:25 • Ps 27:8
+nt_refs: Mt 18:10 • 1 Cor 13:12 • 2 Cor 4:6 • Rev 22:4
+trivia:
+- Hebrew 'panim' is plural, implying the complexity of presence.
+- To 'seek the face' meant requesting an audience or favor.
+- Moses veiled his face because it shone after meeting God.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

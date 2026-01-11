@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: FACE
+GLOSS: The front of the head; presence, surface, or favor.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower, then return them in any order.
+
+VERSES:
+OT: Exodus 33:11 — “The Lord would speak to Moses face to face, as one speaks to a friend.”
+NT: 1 Corinthians 13:12 — “For now we see only a reflection as in a mirror; then we shall see face to face.”
+
+LANGUAGES:
+Hebrew: פָּנִים - panim - Gen 1:2 • Ex 33:11 • Num 6:25 • Ps 27:8
+Greek: πρόσωπον - prosōpon - Mt 18:10 • 1 Cor 13:12 • 2 Cor 4:6 • Rev 22:4
+
+TRIVIA:
+• Hebrew 'panim' is plural, implying the complexity of presence.
+• To 'seek the face' meant requesting an audience or favor.
+• Moses veiled his face because it shone after meeting God.
+
+ART: A glowing, golden reflection of a kind visage seen on the surface of a dark, still pool of water; ripples distorting the image slightly, ethereal lighting, cinematic style, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

@@ -28,3 +28,6 @@
 - word: NAME
   card_type: NOUN
   rarity: COMMON
+- word: FACE
+  card_type: NOUN
+  rarity: COMMON
