@@ -24,17 +24,18 @@ def main() -> int:
 
     prompt = (
         "You are a copy machine. Reproduce this trading card EXACTLY, pixel-perfect, with one exception: "
-        "if you see square brackets [ ] around any text, redraw that text without the brackets.\n\n"
+        "if you see square brackets [ ] or parentheses ( ) around any text, redraw that text without the brackets or parentheses.\n\n"
         "RULES:\n"
         "1. Copy the ENTIRE card exactly - frame, artwork, all text, all icons\n"
         "2. If text says '[WORD]', write 'WORD' instead (no brackets)\n"
         "3. If text says '[RARE]', write 'RARE' instead (no brackets)\n"
-        "4. ALL words inside brackets MUST appear in the output, just without the [ ] characters\n"
-        "5. If there are no brackets, output the image completely unchanged\n\n"
+        "4. If text says '(WORD)', write 'WORD' instead (no parentheses)\n"
+        "5. ALL words inside brackets or parentheses MUST appear in the output, just without the [ ] or ( ) characters\n"
+        "6. If there are no brackets or parentheses, output the image completely unchanged\n\n"
         "The stat pips, rarity diamond, artwork, and layout must be identical to the input."
     )
 
-    print(f"Polishing card (removing brackets) -> {out_path}...")
+    print(f"Polishing card (removing brackets and parentheses) -> {out_path}...")
     try:
         clean_template(
             in_path,

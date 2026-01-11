@@ -158,11 +158,12 @@ def main() -> int:
             "The image is a trading card template. You are cleaning up formatting artifacts. "
             "Output the exact same image, but with the following corrections: "
             "1. Remove the square brackets '[ ]' around the Rarity text in the top right (e.g. '[RARITY]'). Keep the text 'RARITY' (or whatever text is inside) but delete the brackets. "
-            "2. Ensure NO other brackets exist in the image. "
+            "2. Remove any parentheses '( )' around text. Keep the text inside but delete the parentheses. "
+            "3. Ensure NO other brackets or parentheses exist in the image. "
             "CRITICAL: "
             "- Do NOT remove the Rarity icon (the diamond/shape next to the text). "
             "- Do NOT change the card frame or other text. "
-            "- The goal is just to delete the square brackets around the Rarity label."
+            "- The goal is just to delete the square brackets and parentheses around text."
         ),
     )
 
