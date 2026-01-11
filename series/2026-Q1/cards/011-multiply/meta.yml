@@ -1,0 +1,64 @@
+number: '011'
+word: MULTIPLY
+gloss: To increase in number; to reproduce or grow significantly.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single grain of wheat fracturing into a geometric explosion of golden
+  seeds against a deep violet void, creating a fractal pattern of light.
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Draw 1 card for each NAME in your Pages (max 3).
+ot_verse:
+  ref: Genesis 1:28
+  snippet: Be fruitful and multiply, and fill the earth.
+nt_verse:
+  ref: Acts 6:7
+  snippet: The number of the disciples multiplied in Jerusalem greatly.
+greek:
+  text: πληθύνω
+  translit: Plethynō
+hebrew:
+  text: רָבָה
+  translit: Rabah
+ot_refs: Gen 1:28 • Gen 9:1 • Gen 22:17 • Ex 1:7
+nt_refs: Acts 6:7 • Acts 9:31 • 2 Cor 9:10 • Heb 6:14
+trivia:
+- The very first command God gave to humanity in Genesis.
+- God promised Abraham his descendants would multiply like stars.
+- Used in Acts to describe the explosive growth of the early church.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEY6RNbYMEkDGdh7q2_GkM3q6Sua5YDuSbng77ZyZ9gxEvQlEixW-pACVoUB_MvxdXaPHlocxo1O2a5ObUqjaigjZZzTJqC111kD09hZnqO4979HtrnaMGRoisRJ7Czz4lEhg76Wx6Xk1ET3w6ewx6NNCOBevOnbAFwO7yUm8hvlIblrWs1a0Yeh0ze
+  title: dispensationalpublishing.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGenhfu0tcFXmORlu90EdSEVOHA2sm0MLkEckDf96ddk1FfWfyNI2bgU8I8KhANvrG1gtepCn3Z9pvt-Uq5nuWud30pdlVX6fIt-wgGdnebCohlh1eMT_wsU9YSE5gV
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlTci4qlXfskUvZsFsDPbEOOEGS_HduH03yJ_zizpu5RyeuKaHaRgLNP86QqpAjlUzven2SgPOctd6SYNR5yekkemHPngBQIv0WfKTDBnXFM9G1oqoLBgtlETt8quwCe72az0xyS8ci3rXf0cB0kk=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_2DjJ4L-XDLufINymQA7ZqI8ApKNluP23LxDKk9H-lw_1mEMyvEo3KjEzLMY0nyasaL0gVSoTn23JuF9gjTzin54U1RVYOAcRV0CAuSBE3KkGDjfW491-JaEjw2gnzHo1EkkQakAEhktKKStOs_JWs_T0iO_0KI1TgQ3Kx6x58uw=
+  title: rreach.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaieF517xl6d5Bq354FVvBJrIZAs9S6cfPKzSX4CZjvnEBd4b41ituZRPupnz1kFMn5kMytF4i1JDxrjWyzQxqx307UHUeCSS3JTU8JtCHivXfOp2nIHBzWpZZ56FWs3dXpJ5G
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERdS9AJHGUuS3XuTozpJOlVLQOPbW-jIFgPvIXp353dPAvVQqfaFsIK6B9mEqxI5scmOZiYFsImqKDNEZmWgYKkydLjoKnrG9dDSpv4dYIj7BzOn6QQO6-av3TxSHzezqGJNEWuDqPvg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEam7p09rVqcSeOMsuh0PlbfpmvJ15gTZ_PUKeI0Aq4VHD5-qG1P8iqJuJuXOF8fH9ZJc2DQKcdb1qZ2XMPBR7jARYNZHLL2SIDCCez60aW-DZV0Fyj1PFOqs4sI-TpyRqYpu2xGkTs10C76Tig_hrQJ3yvP0Fl1EDrGOg1vDnooZJhjb_rEVQ3XWWTo2q6o9Ufevc=
+  title: daily-bible-study-tips.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5926ZFO6_S37lqOASK0QsphUvJJmZvXm_LNdCtODZkEOcYkj1iIibDJjf6MQYn9M0J9oVIhEIRlipP0Cope-VShjuF6j9_NKyuXGpdQOait2u7pHa-yVj_1bfJGlsrss=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHxRYxEBdI7dx6sX1AEvjsymNyo3oxPkH0mLyaSVuazTP0kG_2aNVHB-iBISobWRk19PoNc3-Dn24BXUzyZ2Uo3PSuQVYVmEWmSrlN__q5PI7vr4xQu0VzKG7nwiAb60vJM0qYNsxhVRi1VA70j1EanVyS2HQVVgxL2I0=
+  title: jerusalemprayerteam.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFk-TEPFF9kcvACMEqmDBcmNO1lVvMzrqImnTN-8G6yPuXhyHOjOabuAe5kL7weAr6gwF2V3ZRPUlo0V0bfzMTrBYxI9Z64Kns6jtLtDXXdCbG3a7YpnX0Rk1l7YKV7uFaDuKKN6ixgvVZZ76J
+  title: knowing-jesus.com
+search_queries:
+- ''
+- Bible verse multiply seed stars
+- Greek word for multiply Acts 6:7
+- Hebrew word for multiply Genesis 1:28
+- Hypertext game card multiply ability ideas
