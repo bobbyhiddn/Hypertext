@@ -1,0 +1,41 @@
+number: '011'
+word: FACE
+gloss: The front part of the head; presence, countenance, or surface.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing, ethereal silhouette of a head in profile, composed of warm
+  golden light, emerging from deep shadows. The light illuminates a path forward,
+  but the features are indistinct and transcendent. No text or letters.
+stats:
+  lore: 2
+  context: 5
+  complexity: 1
+ability: Draw 1, then place 1 card from your hand on top of the Tower.
+ot_verse:
+  ref: Numbers 6:25
+  snippet: The LORD make his face shine upon thee, and be gracious unto thee...
+nt_verse:
+  ref: 1 Corinthians 13:12
+  snippet: For now we see through a glass, darkly; but then face to face...
+greek:
+  text: πρόσωπον
+  translit: prosōpon
+hebrew:
+  text: פָּנִים
+  translit: panim
+ot_refs: Gen 32:30 • Ex 33:11 • Ps 27:8 • Isa 59:2
+nt_refs: Matt 18:10 • 2 Cor 3:18 • 2 Cor 4:6 • Rev 22:4
+trivia:
+- The Hebrew word 'panim' is grammatically plural, suggesting the complexity of presence.
+- To 'hide one's face' was a cultural idiom for withdrawing favor, support, or attention.
+- The 'Bread of the Presence' in the temple is literally 'Bread of the Face' (Lechem
+  haPanim).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

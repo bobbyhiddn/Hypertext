@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: FACE
+GLOSS: The front part of the head; presence, countenance, or surface.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Draw 1, then place 1 card from your hand on top of the Tower.
+
+VERSES:
+OT: Numbers 6:25 — “The LORD make his face shine upon thee, and be gracious unto thee...”
+NT: 1 Corinthians 13:12 — “For now we see through a glass, darkly; but then face to face...”
+
+LANGUAGES:
+Hebrew: פָּנִים - panim - Gen 32:30 • Ex 33:11 • Ps 27:8 • Isa 59:2
+Greek: πρόσωπον - prosōpon - Matt 18:10 • 2 Cor 3:18 • 2 Cor 4:6 • Rev 22:4
+
+TRIVIA:
+• The Hebrew word 'panim' is grammatically plural, suggesting the complexity of presence.
+• To 'hide one's face' was a cultural idiom for withdrawing favor, support, or attention.
+• The 'Bread of the Presence' in the temple is literally 'Bread of the Face' (Lechem haPanim).
+
+ART: A glowing, ethereal silhouette of a head in profile, composed of warm golden light, emerging from deep shadows. The light illuminates a path forward, but the features are indistinct and transcendent. No text or letters.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

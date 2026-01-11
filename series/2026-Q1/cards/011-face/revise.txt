@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: FACE
+# Card_Gloss: The front part of the head; presence, countenance, or surface.
+# Card_Type: NOUN
+# Card_Rarity: COMMON
+# Card_Ability: Draw 1, then place 1 card from your hand on top of the Tower.
+# Card_Stats: LORE 2 | CONTEXT 5 | COMPLEXITY 1
+# Card_Art_Prompt: A glowing, ethereal silhouette of a head in profile, composed of warm golden light, emerging from deep shadows. The light illuminates a path forward, but the features are indistinct and transcendent. No text or letters.
+# Card_OT_Verse: Numbers 6:25 — The LORD make his face shine upon thee, and be gracious unto thee...
+# Card_NT_Verse: 1 Corinthians 13:12 — For now we see through a glass, darkly; but then face to face...
+# Card_Hebrew: פָּנִים (panim)
+# Card_Greek: πρόσωπον (prosōpon)
+# Card_Trivia_1: The Hebrew word 'panim' is grammatically plural, suggesting the complexity of presence.
+# Card_Trivia_2: To 'hide one's face' was a cultural idiom for withdrawing favor, support, or attention.
+# Card_Trivia_3: The 'Bread of the Presence' in the temple is literally 'Bread of the Face' (Lechem haPanim).
