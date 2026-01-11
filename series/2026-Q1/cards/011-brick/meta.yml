@@ -1,0 +1,68 @@
+number: '011'
+word: BRICK
+gloss: A rectangular block of baked clay used for building; a symbol of human labor
+  and construction.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A stack of rough, sun-dried mud bricks baking in the heat, with chopped
+  straw visible in the clay texture. Ancient Egyptian style, warm earth tones, no
+  text.
+stats:
+  lore: 2
+  context: 4
+  complexity: 1
+ability: Draw 2 cards, then place 1 card from your hand on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 11:3
+  snippet: Come, let us make bricks and burn them thoroughly. They used brick instead
+    of stone...
+nt_verse:
+  ref: Luke 5:19
+  snippet: They went up on the roof and let him down with his bed through the tiles
+    into the midst...
+greek:
+  text: πλίνθος
+  translit: plinthos
+hebrew:
+  text: לְבֵנָה
+  translit: l'venah
+ot_refs: Gen 11:3 • Ex 1:14 • Ex 5:7-19 • Isa 9:10
+nt_refs: Luke 5:19
+trivia:
+- At Babel, builders used kiln-fired bricks for durability instead of stone.
+- Egyptian bricks were typically sun-dried mud mixed with straw for binding.
+- Pharaoh's taskmasters demanded the same daily quota even without supplying straw.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUmBAl6YnRkSvZeHY8qDoViTZ8iYnd69IBHLt4d6L-eYmuDL_xqlooUEorAxTb7qDbWlV6_9HbsiR2zFD1ZQE08yOzP1UmtLqx71CXs2mBxFYR_jI9WSHN0lJKp3tjXIu4-CdntW_QJHDY8cyFt7kAj-FTPK7D_khq2sb1EU56B29akEB5Uejj-Xx_
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHORRXT_vkZ98iXaviPvLE9QWg489DMu2Kscxd7zU4k1ybNrqtgGQbXdNjb57ohZTfJhkYJZnwm8mHuIorNEuPjQJYmfnT6Y6KFHGFYZX-kqV7BdF9DCbwXy96xlhBtrg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERBiUIDTULWByrwiUPXJpDFBoOWOpboBjuTkEeoesMdC8YX_D1JTSvV-zO5DyeRd4bMmvWxgDjtlN2DdMtPfA9W0RacFC6QfR6yESS_8U-zlhSgtH9CLm6rUZuOlOR1tXxxQ==
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqBt5UqcZdyRj7vhk6OfhM0ATBHu3VzwPW-vXepEq3-Sl8_1Yyhm1ioLtyQL9A0_GkeZpNahGbff8D_AEhR9U9KRwt1Y5xgJeEGuMXcINVzzT7oKTj5EZ22fiDmy8G5D7umszG1E6lmM1A
+  title: biblicalcyclopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpBU6_DSTTSNZJz0e3wVFBML7d9hU5lGGOg4nQqyUdXcl48CJ3IyiqzVSKA3T8ZeDZkgFMx1em0aehVm0dCFWmMyJ8n9ClOWEJw-UDU0gpAYU4HQlWkPbHK-uMreDBsZeE5qIFDqBvxXE=
+  title: naves-topical-bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTbC0hL3frZZa_3Mo4pbPdyo4C1rklyQPBuF7gKEyzRKDd3aaaWMv7Uq8YUWj2P2o-f0RpEnt_ntmfZ-G82tZgGUzhbxeTdmlcgmukSl3C5EK3Nq5LAth24oNofBF65Ct7Bpyd5CSPh7VdJSISIwrv9UBF
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX2RQbFmuBaUAyPNMC4JLElhflwqmrMuztqehoCqQp32RjuT_pZm9fIEkO_r4KXd84cFSeCVXuIb7xp1wty4KySvdQiyKICh_FF4wcRsz2CFrZJnzh_4qMTrJx-3y0o4tDW4UHCbv3H0ikfnkqvrqDNxLlDBNCDb2IJeomfht1e8w_R85YJHmbuWItikbyNLyfRKvbhe-1T4dYjIzA
+  title: wordhippo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgin8mUV4KE8p8izgMQqi9ZLmRMR-Kf7eo7Aq2y0k5JSLwetZn1Sn78bsrfMErR_hEN5YWBGoG3tqeFZ19dhZnHrUbtz4D4J3O4XWdImgFR_A-mvGfjAZ68xO1zloMaGIIxyzLoa_sZObxl1rAPyvJSPBK
+  title: israelbiblecenter.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBvq-vKPz-hkfP4U1ltp2VUhX3LouuXQmIHWi8llluw-73dsMOgNp5849nj8EyZbufNBlsiLIfChYgEf6SsOXbD2Y2eLTd60Qe55dtCcRg_8JllXorlleOZsPlKEWd5ddCmypgq-I46q8D45Adie4ifcxnypPkB_2bgq4e1qIlur8=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZrdzkvJP9b1IFVt3dCt4TYClU8Q64Rr05wszEEiZVhIC0ygcC1eGSNyJcZOwGg9J3Mx3rdif8DIO83Bi3zpgg1ZFBCeso09coVq9Ucn1QV7prKQnZlfjBlem9d2vWKh9sjrMLNaMOYHvKAcTIuOWopGrtorFJNDSSPVgm9YjEbnypGE9gAAgEu-B96pbUn086axyI
+  title: thetorah.com
+search_queries:
+- ''
+- Genesis 11:3 Hebrew word for brick
+- Greek word for brick in Bible
+- brick in new testament greek
+- Did the Israelites make bricks in the New Testament?
