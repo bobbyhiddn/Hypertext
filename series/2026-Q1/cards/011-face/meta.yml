@@ -1,0 +1,42 @@
+number: '011'
+word: FACE
+gloss: The front part of the head; presence, surface, or appearance.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, warm light breaking through a heavy veil or parting clouds,
+  illuminating a silhouette in an abstract style with golden and white hues.
+stats:
+  lore: 2
+  context: 5
+  complexity: 1
+ability: Look at the top card of the Tower; you may put it into Sheol. Then, draw
+  1 card.
+ot_verse:
+  ref: Psalm 27:8
+  snippet: Seek ye my face; my heart said unto thee, Thy face, Lord, will I seek.
+nt_verse:
+  ref: 1 Corinthians 13:12
+  snippet: For now we see through a glass, darkly; but then face to face.
+greek:
+  text: πρόσωπον
+  translit: prosopon
+hebrew:
+  text: פָּנִים
+  translit: panim
+ot_refs: Ex 33:11 • Num 6:25 • Ps 27:8 • Isa 59:2
+nt_refs: Mt 18:10 • 1 Cor 13:12 • 2 Cor 4:6 • Rev 22:4
+trivia:
+- The Hebrew word 'panim' is grammatically plural, suggesting the many expressions
+  of a person.
+- The 'Bread of the Presence' in the tabernacle is literally the 'Bread of the Face'.
+- Seeing God's face was often feared as fatal, yet implies the ultimate intimacy of
+  the beatific vision.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
