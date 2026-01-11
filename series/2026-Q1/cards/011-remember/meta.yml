@@ -1,0 +1,64 @@
+number: '011'
+word: REMEMBER
+gloss: To recall to mind, retain in memory, or act upon a past commitment.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered stone pillar standing firm in the middle of a rushing river,
+  ancient and enduring, cinematic lighting
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Return a card from Sheol to the top of the Tower.
+ot_verse:
+  ref: Exodus 20:8
+  snippet: Remember the Sabbath day, to keep it holy.
+nt_verse:
+  ref: Luke 23:42
+  snippet: Jesus, remember me when you come into your kingdom.
+greek:
+  text: μιμνῄσκομαι
+  translit: mimnēskomai
+hebrew:
+  text: זָכַר
+  translit: zakar
+ot_refs: Gen 9:15 • Ex 20:8 • Eccl 12:1
+nt_refs: Luke 17:32 • Luke 22:19 • Luke 23:42
+trivia:
+- The Hebrew word 'zakar' implies acting on a memory, not just mental recall.
+- In the Bible, God 'remembering' someone often precedes a major act of deliverance.
+- 'The thief on the cross used ''mimnēskomai'' in his plea: ''Jesus, remember me.'''
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvqgZIjVYjyiyvkCbVZ9DqHfW70BjmHZVOnoG0M8_GJ4qU_G26-U88QD63aBv4geKZvaDbw-AQBLB7emo_hKAtrxMuJ-GghVzMeXJxWypVJRsFqNdESZ7D64HWnYFhmij16x8=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsaCu3wKNxnbBpUrsBnrGs5dXMt6x1GLSpS6qUAFDLd2RJGsA5zdHGvhbQlSEtCddSXXUDDVqR6GugoUQibtDHvaWwd9nJVoPKmEplaLW2RH9uhRhJCAKfOE_mU8K85S8sAOJlV6J-YBbfHntJfkgzsICexSpjGO6x1Zs=
+  title: hebrewwordlessons.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYSVSW-owlNjpZ0xZ0UxjAoQ_qHxdKacmkiJnaoYkC4DaD61G5HRlcXsOPDXWok0hHMoyvqe6glPxTfn9l9S7wsrUYtEeIubrx4egDRjo56uc0BiLmbAEg9i-R7fI6eT23u2SBwMQa544=
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTYN3ml2kzM1WBMblh0xx8sGX_d_QSjWxrxRFVpYvuC-ZWdJ8pAUbp56P2Ktns1CMPfzUsySkt8DqhnDooPzNQNlgfdpQs_UGQ1knNvhtwB5b_A5Tna5muLC0l5vlTgOZ-73bHd5tnX9bvoIzAFw8-2rRAwX2TiEwVq0uEYZWmrcwjgsyik3s9cRasEYN_
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIanKDKayvtVrmA5KlyuflkFawCqq6FBfgKqIZcRj8IK6CR6Xd30Xm_9sLpG9glgCD0JhnfHER27GT-9VXznHFz2JNXblm-bwGt4PkZTV6fcmBFicsIA7C3eUYLu4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXKDofJUhn07ULpxFXqySEP8fQk060v_6MxPKbt6NEoRc8KnRjGYgqW84pERTErkAjiqo8aGmQ17w3iaKyVXtm-uypMzd0QguN4Gy-9shOabGtrqfaAb4v-0FIRi8=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL1BCzqKfgz4UhkbU3U434QK9FllAHerAzTZ26CoOESbwGR-gGr6OI-KLaq_x2ZRGDw-21a-JqeQmrCGtl1pOweR21r0OdJEjg8b4A1ykiKqTLVsf0J_HuiGQY3k7tz2UbdP00dn3RN3X6xWMGHg==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFu36DPIRbgKlKTtSuQILNVROZYi_99qEqejUCJnf6l6J6Hxwl4KF0nFiHmiumBZvbEDmRO7V4WSTRf4zsUC9NiOigS7-TKV3Y-ZFK4C3nbC8kW18t6iN9jwRvdSnamLlApIlNGVgMXAhcIoUPiVRk2B4KhpIrHEK6mrTep5TFRoLd0LGio
+  title: passionfortruth.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnCmlkIzEWpUvDQ89nTOcT4PV6Wkg9NCX26aMP-N0gDvhn2Q1X75mRKPG4NJMV3T8Q1r4Sxpo-dliWXb7aSN-i3mHvmU4n2blyC9zkv5HPDl7BmWi_A02WZTEiTE7-AMkn80XwwaGB6VY2
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1ZOgdQa3cJQ0Y-uNQGcew6DR2RoTtpDDaa0R7a004Jc2cvxOyVgsB45gmW1e4FjGnaV6sFF_p61nEZkoq0Sd67AaIxTvP2FOGnm4eQeNK_JUf_7Ram007cGED862uM_rYvPAN
+  title: biblia.com
+search_queries:
+- ''
+- bible verse remember me when you come into your kingdom
+- hebrew word for remember zakar meaning
+- exodus 20:8 hebrew text
+- greek word for remember bible mimneskomai vs mnemoneuo

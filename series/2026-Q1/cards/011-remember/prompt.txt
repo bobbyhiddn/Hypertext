@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: REMEMBER
+GLOSS: To recall to mind, retain in memory, or act upon a past commitment.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to the top of the Tower.
+
+VERSES:
+OT: Exodus 20:8 — “Remember the Sabbath day, to keep it holy.”
+NT: Luke 23:42 — “Jesus, remember me when you come into your kingdom.”
+
+LANGUAGES:
+Hebrew: זָכַר - zakar - Gen 9:15 • Ex 20:8 • Eccl 12:1
+Greek: μιμνῄσκομαι - mimnēskomai - Luke 17:32 • Luke 22:19 • Luke 23:42
+
+TRIVIA:
+• The Hebrew word 'zakar' implies acting on a memory, not just mental recall.
+• In the Bible, God 'remembering' someone often precedes a major act of deliverance.
+• The thief on the cross used 'mimnēskomai' in his plea: 'Jesus, remember me.'
+
+ART: A weathered stone pillar standing firm in the middle of a rushing river, ancient and enduring, cinematic lighting
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
