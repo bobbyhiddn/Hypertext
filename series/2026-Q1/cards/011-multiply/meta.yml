@@ -1,0 +1,39 @@
+number: '011'
+word: MULTIPLY
+gloss: To increase greatly in number, quantity, or extent; to reproduce.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single golden wheat stalk splitting and branching into a complex, glowing
+  fractal pattern against a deep void, symbolizing infinite growth.
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Return up to 2 VERBs from Sheol to your hand.
+ot_verse:
+  ref: Genesis 1:22
+  snippet: Be fruitful and multiply, and fill the waters in the seas.
+nt_verse:
+  ref: Acts 6:7
+  snippet: The number of the disciples continued to multiply greatly in Jerusalem.
+greek:
+  text: πληθύνω
+  translit: plethyno
+hebrew:
+  text: רָבָה
+  translit: rabah
+ot_refs: Gen 1:28 • Gen 22:17 • Ex 1:12 • Jer 30:19
+nt_refs: Matt 14:17-21 • Acts 12:24 • 2 Cor 9:10 • Jude 1:2
+trivia:
+- The first command God gave to living creatures (Gen 1:22).
+- Jesus multiplied loaves and fish to feed thousands on two separate occasions.
+- In Acts, the 'multiplication' of disciples describes the church's explosive growth.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

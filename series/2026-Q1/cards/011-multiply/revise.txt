@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MULTIPLY
+# Card_Gloss: To increase greatly in number, quantity, or extent; to reproduce.
+# Card_Type: VERB
+# Card_Rarity: UNCOMMON
+# Card_Ability: Return up to 2 VERBs from Sheol to your hand.
+# Card_Stats: LORE 2 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A single golden wheat stalk splitting and branching into a complex, glowing fractal pattern against a deep void, symbolizing infinite growth.
+# Card_OT_Verse: Genesis 1:22 — Be fruitful and multiply, and fill the waters in the seas.
+# Card_NT_Verse: Acts 6:7 — The number of the disciples continued to multiply greatly in Jerusalem.
+# Card_Hebrew: רָבָה (rabah)
+# Card_Greek: πληθύνω (plethyno)
+# Card_Trivia_1: The first command God gave to living creatures (Gen 1:22).
+# Card_Trivia_2: Jesus multiplied loaves and fish to feed thousands on two separate occasions.
+# Card_Trivia_3: In Acts, the 'multiplication' of disciples describes the church's explosive growth.
