@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: PEOPLE
+GLOSS: A community, nation, or collective group sharing a common identity; the body of believers.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower; you may reveal a NOUN or NAME to add to your hand, then put the rest in Sheol.
+
+VERSES:
+OT: Exodus 5:1 — “Let my people go, that they may hold a feast to me in the wilderness.”
+NT: Matthew 1:21 — “She will bear a son... for he will save his people from their sins.”
+
+LANGUAGES:
+Hebrew: עַם - 'am - Ex 3:7 • Ex 6:7 • Jer 31:33 • Hos 1:9
+Greek: λαός - laos - 1 Pet 2:10 • Heb 4:9 • Rev 21:3 • Rom 9:25
+
+TRIVIA:
+• The Hebrew word 'am is related to the preposition im ('with'), implying connection.
+• Hosea named his son Lo-Ammi ('not my people') to prophesy Israel's rejection.
+• The Greek term laos is the etymological root of the English word 'laity.'
+
+ART: A vast, stylized multitude of ancient figures standing together in a desert landscape, illuminated by a pillar of light in the distance, impressionistic style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
