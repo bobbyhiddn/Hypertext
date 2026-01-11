@@ -1274,7 +1274,7 @@ def _generate_queue_entries(
     )
 
     _log(f"[plan] generating queue entries (count={count})")
-    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.7, use_google_search=False)
+    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=1.0, use_google_search=False)
     data = _parse_json_from_model(text)
     if not isinstance(data, list):
         raise RuntimeError("Queue generation did not return a JSON array.")
@@ -1341,7 +1341,7 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
     text, grounding = generate_text_with_grounding(
         prompt,
         model="gemini-3-pro-preview",
-        temperature=0.2,
+        temperature=0.6,
         use_google_search=True,
     )
     try:
