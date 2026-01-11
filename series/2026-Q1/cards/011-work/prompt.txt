@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: WORK
+GLOSS: Physical or mental effort directed toward a purpose; a task, deed, or occupation.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Discard 1 card from your hand, then draw 2 cards.
+
+VERSES:
+OT: Psalm 90:17 — “Establish the work of our hands upon us; yes, establish the work of our hands!”
+NT: Colossians 3:23 — “Whatever you do, work heartily, as for the Lord and not for men.”
+
+LANGUAGES:
+Hebrew: מְלָאכָה - melakah - Gen 2:2 • Ex 20:9 • Ps 90:17 • Prov 16:3
+Greek: ἔργον - ergon - John 6:29 • Eph 2:10 • Col 3:23 • James 2:17
+
+TRIVIA:
+• The Hebrew 'melakah' refers to creative work, distinct from 'avodah' which implies servitude or worship.
+• The Greek word 'ergon' is the etymological root of the English words 'energy' and 'ergonomics'.
+• In Genesis, work is introduced before the Fall, indicating it is originally a blessing, not a curse.
+
+ART: Close up of weathered hands using a chisel on rough stone, dust motes dancing in a sunbeam, realistic style, warm lighting
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

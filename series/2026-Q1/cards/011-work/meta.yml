@@ -1,0 +1,71 @@
+number: '011'
+word: WORK
+gloss: Physical or mental effort directed toward a purpose; a task, deed, or occupation.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Close up of weathered hands using a chisel on rough stone, dust motes
+  dancing in a sunbeam, realistic style, warm lighting
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Discard 1 card from your hand, then draw 2 cards.
+ot_verse:
+  ref: Psalm 90:17
+  snippet: Establish the work of our hands upon us; yes, establish the work of our
+    hands!
+nt_verse:
+  ref: Colossians 3:23
+  snippet: Whatever you do, work heartily, as for the Lord and not for men.
+greek:
+  text: ἔργον
+  translit: ergon
+hebrew:
+  text: מְלָאכָה
+  translit: melakah
+ot_refs: Gen 2:2 • Ex 20:9 • Ps 90:17 • Prov 16:3
+nt_refs: John 6:29 • Eph 2:10 • Col 3:23 • James 2:17
+trivia:
+- The Hebrew 'melakah' refers to creative work, distinct from 'avodah' which implies
+  servitude or worship.
+- The Greek word 'ergon' is the etymological root of the English words 'energy' and
+  'ergonomics'.
+- In Genesis, work is introduced before the Fall, indicating it is originally a blessing,
+  not a curse.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeg69BXszRCN1TonG1kHMgRGUSuUJa5G8ijTqBFJmmxz_CC3dwfrjLwe_rHSTQ0y93QjA6Ns_DPkw1hbpgyGjYTpAFfSKHCVvw5_FtCrsTj60332czxPUbS0wxl_X3rPfLdolzVh0=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZUXj3gHYdPkV0jzfzbo0UKrLekF0Yt4Jn9NhVWNe8_0y_SAaccQQ9yZxJxWJmQdoT4uY89i6BvbAkBhauobVbkeoFP0MZ5IN4cJjvCOyKO9u1pc_ZQVTcB5Fd_ap6f_i2ZaNNh3qc6SayZpIh3l8=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0nXsncu_HUeDKe4HT_GewwTS75AsQ9kugIAyWAK0L-CGDhWuznmM14hWbIWteGQkFaVfg0eiBIifHXjKOswqlEiiECZMHTKciw2SbqgR9q-vAZJUnxZ-n4djRG8Q7vLgYh-u9fkhIRidbhvsa
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLMbQ0kn5HBaAhb-H1V4k0guETY5cy9B8sg65VBjdF-QZ30x3wZ1g4vwE6MHQVFbsf0Y1nyrF-CiXsVfuBPDBnR5_FubgrTRQvvTsnRrQ=
+  title: ohr.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExBgtqeeyVKkL_l_-5Brl882oIOQGiP5oUqUx_lPcRziPzyZZGY_MW3cKATpxCDevtfDBdAmDnWJN0pz8yVPyZUmCZfaVUYqSpF7xEzP9qG-Th5W-KElKKBDvIWvLVFL5s3HUOrdu6crW7K8uM_PQAiHc=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuNr92AuUnt5kx3R-RK-hn81lde3hxS08mAFmSyr4BslR0tUPyF_BSG90d7-ll1Cs6pdfDw9SVDC-59uDi71LxY81QBAhuAIUeB-7mAovfNvA2RkVJ6yT68sn3325dCNXkfxr-jZ_Fc_4=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwVrmmXrLHh0ROzKMhYE557z-STMy8QJxU1TiKD21tc-kKpR3y-nopaEcaXvimpDyon7CaVDSh3yT63725p_uTcTI9xJJuO_urupwmI-e7WmCiyTzYVabJ5lutw7-vdy19DeOsWKQt7g==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtfVy8IMrQCvJiJfVAhZxGcO9LO8lWUqzcuoY7QkoJjC5-ai9ZNXeOFV7LquYRJa8J518NUP-G6SJ4BW-bSi7fuuqLH2QdZ23299SrP4WWH0ZRQkzgKJs2L332R_gvHyul05fglyo=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsSOL3e3ud1edTIYM20U32Q5IH0bIat8hvx3r9e7DouKRMti5vX_JkvoB3wNgRZ3mmsgis8fllPRWGi3xnSbFfzIGp2GW4pyUAlO1-JIm8_LDOuPa3Idj_TIcWKtws_HB-v-_u6X6leeA8WjgTKH3VOojvQtR4ZPMRX4u7YonUxGgI8arjXvXGJKlH3k8ckwf4-5izFk1rDB2C
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnSWnNkZxQMlXhQ6TiPP-JUeAONfi3GVH3o-uS15Uxk2B0GOh_XHOu7Jg0Bz_bZeMnF0ggpdT1bKdCR4vDQbCcgvM2OPFTr1O1fba83ZpqbqNZBWHPJQ9vX8UjMiVaTe2HyWu8VXbRlZKxU0-q
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaL0z5etcmH4s-vxrB6f7eVYEwQYlQncwoTbYlGs-BAM2UZEfXR8-QdQEQTq_tBq9yK-RJLgoJdylEpHIkQagv6Ey9ckc3jvOvU4UMGHxnEe3w-GcoyiiCVmGn
+  title: skipmoen.com
+search_queries:
+- ''
+- James 2:26 ESV
+- greek word for work ergon
+- Psalm 90:17 ESV
+- Colossians 3:23 ESV
+- hebrew word for work melakah vs avodah
