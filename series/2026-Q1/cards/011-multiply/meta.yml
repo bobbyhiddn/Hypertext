@@ -1,0 +1,69 @@
+number: '011'
+word: MULTIPLY
+gloss: To increase in number, quantity, or degree; to reproduce.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single golden seed splitting into fractals of light, forming a vast
+  field of wheat under a starry sky.
+stats:
+  lore: 2
+  context: 5
+  complexity: 2
+ability: Draw 2 cards. If you have a VERB in your Pages, draw 3 instead.
+ot_verse:
+  ref: Genesis 1:28
+  snippet: Be fruitful and multiply, and fill the earth.
+nt_verse:
+  ref: Acts 6:7
+  snippet: The number of the disciples multiplied greatly in Jerusalem.
+greek:
+  text: πληθύνω
+  translit: plēthynō
+hebrew:
+  text: רָבָה
+  translit: rabah
+ot_refs: Gen 1:22 • Gen 9:1 • Gen 22:17 • Ex 1:7
+nt_refs: Acts 6:1 • Acts 9:31 • Acts 12:24 • 2 Cor 9:10
+trivia:
+- First command given to humanity (Gen 1:28)
+- Describes the rapid growth of the early church
+- God promised to multiply Abraham's offspring like stars
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6gIJ-CwSBzCrovtdTXO_9SZDK-ZZRT3zBvqHwVhBU5x9w88u1hZQ5GaMVlFIIBX9DlwSOTRB_P7sMa9EOp9XAfmOcXJSW32j4b_CVvKAZTgekYZPAnygfJkJ1MqgMNcCxuMCYRQNb
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGWToN-7S23Q9eodgvDB6si7S3eFFe991XP2cwGA6VZm5qbL-wZRsDerh4m6jQu4kwQmMjaKGFO6TNVcxcYp43FcxtybbFVp5ErbNOygB7iJ9Pv09cFHOkjsJsnvQOTkQvtBd4KZL0dLUIgyUQjhweK0QK197rYTYUA-wEb6ERTUWiWr7vV0iXfTZjfUtANeqGTw==
+  title: daily-bible-study-tips.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNoG5_SswJLWD4gQeVjWe74pWnNf34JwtaWmLQ0N2pXi63K_qOQ8OqLqpoQFhXacEzNWyHXpg0O21UWGZESk96WhEHCMeE0sFcAjF5tsknzPfwyyJ-aSPzEo0cDwjZhVlUmi03pGDrOvqB0zE2_gE=
+  title: thebibleteachesthis.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEigv8OtkxQcjQrF2ZkwMvxyxTLn5N5revugagVHpFW68e9Gm0p9LYhNlcOzUIGpiXt6Iilujg_4RFfNusF7TtAJrlJ0q980HBY4_FNjhvtyx_Vml9CEPFf9nRPRE3_Enk0thgqzQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-9p2NoB6nSFUCF3achCc4eAy3Hbep6KF6U0lfZqoFv5Q7dPUeqNoJB9IRwqXeTNEqKDl2bJgeisGHePVoJttghK3aU2CMLYo_wdeufxfqF0GJjdnOWCYKtU1rmSsMo_KC5VBfMtk7ihUDbFhT1jvRl0rxfpNTIjBBW2VhCN-QgpDpDv0Gddqss5fzSmZcO4VXg-RzQhndlGNocASjDSdRhze3FkU7OA==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtjhCCZpj0hRVnzwoJziOrR-f1oADK284iEQEXZbZkJsq2uPJwlV2LFYIa18iMUYfwcmQwRl1e-w79GclAiE8tnlMqhoGjD8hRfKqX1L1cywXNTfrRtZj8uAocOMTslcLGQMcajXiw7SUtCICHVjV73ENKZVaait3IeqRhCGrG8dHRXY5YGeAwRHVTBCcY20MSOpo=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_PAXMRPIGAJeY2a8Zl5Yh2cibf2gti8oNMCO2aSLQPcAYhN2r3px2kFcEXIK8gz6MxBQ2uFF5phqqFLonvIP9dnTtLS87CoMYB1vRsZyhkJxpp1EW6ew0S5qJKztccm5s0sOkEkSYcUXErdoFZKGywoi_0BWjuTZAdZO4aXae_28DpvBOS7ntsrE=
+  title: dispensationalpublishing.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfYSDj_IltxxZcSij14SghxSj14ryMIs57N2-AG8pem2iFBuyj6ZRtARS2s1xeuwIC57kymbryenJSeqOA-i9sf2l-C_QqV5vRcKG4giNpnods233KeiEovoAId-4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7RiVSfTFzxKvn8iXNcm8KVhHEKFeHl1F48xWduWL4Y9RhWr23f7LOuE_c4T14i3411nqvziuBimT60ZhmAEPPbLXjV6dKgjXYHM97E6ECUaUu5Qhg7hAaj4_BjLXq73CSycLyFQ9BUuJaJgUdVQ==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5R6HpIlKfrY13FLtMnOP9CmXHLElERGnw7_dhZrOznS74Kjr3w1PVd63ErSmVeJtW4PbLaqqI0_m8uqWMt10OervZJ3RwUQBmJ_nrpJV6eDVtf6rPNBuuZDAFPhBJT-mOW4bHZ8IF2Uq--D4UoNdHn5XV90-Tsc6L0OEATZCsdQ==
+  title: rreach.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmAKzXGCWxViK5NqzvKcuGjw-Ia3CPByXtXrnYX-VSnYFQ2qg8PNwW_SPQwNfzMN9FHlXvI3WavikahWhFU7bJDOLFMainUsRol_Bhl29i8on_kiyPh3RBBgm-V6Sd3POTO_q2RWtPNYLA3pmtAty0Gcvx8IoviCK5Ew==
+  title: jerusalemprayerteam.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESUMSU5scDo6BLgw3yLpb4lHQPU0Eo_53wVV0Twdy9V_OauLnV8DlkXL41qjAk3D3L4GH9XaN_HIo-tY1bvpXyjrIEBZ4LGKPDqx_Dc_4h1YRZ3-zB0rLAQA88fdpDn1vcnHSWG3QZrRA9fTLG_isJeE1ocXFM1qFYSNDB2GRQEvWnHX2E7x4bix01dl2HlZJ_wpQWHwDEkSrST6Eohpht
+  title: wordsoflife.co.uk
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnbkQdaeKVrqHXbITARyI01sw0E3f8BFg_OrvUNA_4EOjgh8VE-z8vb9c0UChMX1uWzeB3Xmzi622Dv-HWU-UGfqwGZQRY8AP78127Y9Syz-Zj0Y7T6f5bIWcSRw7QyadfAIiQomEGaW90HI4uo67JdkM=
+  title: kingjamesbibledictionary.com
+search_queries:
+- ''
+- greek word for multiply acts 6:7
+- hebrew word for multiply genesis 1:28
+- multiply bible word study

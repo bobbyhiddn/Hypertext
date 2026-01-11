@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: MULTIPLY
+GLOSS: To increase in number, quantity, or degree; to reproduce.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 2 cards. If you have a VERB in your Pages, draw 3 instead.
+
+VERSES:
+OT: Genesis 1:28 — “Be fruitful and multiply, and fill the earth.”
+NT: Acts 6:7 — “The number of the disciples multiplied greatly in Jerusalem.”
+
+LANGUAGES:
+Hebrew: רָבָה - rabah - Gen 1:22 • Gen 9:1 • Gen 22:17 • Ex 1:7
+Greek: πληθύνω - plēthynō - Acts 6:1 • Acts 9:31 • Acts 12:24 • 2 Cor 9:10
+
+TRIVIA:
+• First command given to humanity (Gen 1:28)
+• Describes the rapid growth of the early church
+• God promised to multiply Abraham's offspring like stars
+
+ART: A single golden seed splitting into fractals of light, forming a vast field of wheat under a starry sky.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

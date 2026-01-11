@@ -28,3 +28,6 @@
 - word: NAME
   card_type: NOUN
   rarity: COMMON
+- word: MULTIPLY
+  card_type: VERB
+  rarity: UNCOMMON
