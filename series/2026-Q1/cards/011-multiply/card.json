@@ -184,8 +184,8 @@
     "OT_VERSE_SNIPPET": "Be fruitful and multiply, and fill the waters in the seas.",
     "NT_VERSE_REF": "Acts 6:7",
     "NT_VERSE_SNIPPET": "The number of the disciples continued to multiply greatly in Jerusalem.",
-    "OT_VERSE_LINE": "Genesis 1:22 — “Be fruitful and multiply, and fill the waters in the seas.”",
-    "NT_VERSE_LINE": "Acts 6:7 — “The number of the disciples continued to multiply greatly in Jerusalem.”",
+    "OT_VERSE_LINE": "Genesis 1:22 — Be fruitful and multiply, and fill the waters in the seas.",
+    "NT_VERSE_LINE": "Acts 6:7 — The number of the disciples continued to multiply greatly in Jerusalem.",
     "GREEK": "πληθύνω",
     "GREEK_TRANSLIT": "plethyno",
     "HEBREW": "רָבָה",
@@ -220,7 +220,7 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left). Ensure rounded corners and distinct text boxes matching reference.",
   "grounding": {
     "queries": [],
     "sources": []
