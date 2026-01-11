@@ -1,0 +1,69 @@
+number: '011'
+word: SEED
+gloss: The grain from which a plant grows; figuratively, offspring, descendants, or
+  the Word of God.
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single golden grain of wheat resting in a furrow of dark, rich soil,
+  with a faint golden light emanating from within the shell, cinematic lighting, macro
+  photography style.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Place a card from your hand on the bottom of the Tower to draw 2 cards.
+ot_verse:
+  ref: Genesis 3:15
+  snippet: I will put enmity between thee and the woman, and between thy seed and
+    her seed; it shall bruise thy head.
+nt_verse:
+  ref: Luke 8:11
+  snippet: 'Now the parable is this: The seed is the word of God.'
+greek:
+  text: σπέρμα
+  translit: Sperma
+hebrew:
+  text: זֶרַע
+  translit: Zera
+ot_refs: Gen 12:7 • Jer 31:27 • Ps 126:6 • Gen 8:22
+nt_refs: Gal 3:16 • 1 Pet 1:23 • Matt 13:31 • Mark 4:31
+trivia:
+- Genesis 3:15 is known as the Protoevangelium, the first promise of the Messiah as
+  the 'Seed of the woman'.
+- The Hebrew 'zera' and Greek 'sperma' are used interchangeably for agricultural grain
+  and human descendants.
+- In Galatians 3, Paul argues that the Abrahamic promise was made to one 'Seed' (singular),
+  referring to Christ.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzuyfD2BaqEEwmPFmD_WvhNrAmrPkJmqDAgTqerEITieSFugXrp33AXxMuM5dHgmTmG5KlFO_mrWuN_5HGSDFqYmKeRoGoRT3f7mrdJjhWcqx1tgFY6R7jT4ImUWmuUyhFXfzQK3SfVTEH0mYE
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPhlvNSnqLWAufwd6WIPad9hir7TJVREX8g9GnLERGbuyxbiGx91gBis1F4DeYPNsZHTzQhbs683_y8z3rA64dN5UfknO7q3Z8Jf1B8Ht-4aMxpKNDHh6CXGXwTFbzXeNBNgHBf9qBx-vzNZ2Ck7A=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVt8oLr6XBTqRfhjM-x7alK-eOqYWtPPWGO6eRfvgMi4rrBRQB_I4pgCf8WYFLyGkuQckepWlC1ov89XPDfY975XspkNATQvDwahgs94FAyOYXg-66Xgji8jwMvWRk6oLCk8bxz2YTaP1YNTBy
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM0zYgVge6yp28HB3LsGCD3g5moO77vk85a9-y2qyM4IcdS9w4WegBJ3xtCUA9WbMnJ4X4uNvIm_-gYojSc7kjNkJwKmRAmrt7ijG9yvAq4Xhi07rMtkckXiZnJM8fwVd4WT4FHaBLlnLkFzC-7ezwIHDeow==
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH6kXZyVU0xcnbyyTcQs1T9wffurJPMjGe3nWH5R2UWlxAjR5guSHnyGXHfIAuKJOgBr7-9Af25-TESvdRSIYvosvCJIDALHK9xq39F1HkHJmakqdFh_Q_BsB5oblzMcbq
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECApSEOzw_i5CNMX3bYUupJSmLfPzvyHUWwilJyAp36P6-hBLkp47zfaFUvIlnVO-3RxY-Ll77-7VdXjrjb5-Ukni9bsuR2-cI8US7pdj-0I_YJsZ9Bujrj7jgHwk=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBV4Wcr6C9RRUcYROX0injT1-hvW4c-TKFlSpDLmpVtPu-jEVZDYjslO9lXMmw8H4OWKaBpXLAipHwPrdIkUiPK5x1PZqGIqOZBs6w0INOTYfMFZOITE3XhQhdx-0kxFHbFAg=
+  title: greekbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5kjWXbUoRvYUq8ZlYGpoBcRi1anRBDwSo6AKvyYQXoKJaC7VjyL0OUpGx96SWfEUkt-9Yt918HsZUE7wuSNWF6My9VM_keg2JDgR4TsB_1CeDo2suWyQI59q41wQzQbUmk4Fa6OiZ6FbyIXw5u7ZAYQAYlMskpw==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVnJWrChGC4xvUC_-UF30sYwRUbPkhy0IR6-26N4QzeFZW-Zmf_51VxBnwRJCKD0RyCB7hXhdWC4E0eiAXAObPI5PI4ppRRi2s5G8aWUP1G9iBPvwikyv_JEmdzrPk2oYwniEH6w==
+  title: biblehub.net
+search_queries:
+- ''
+- hebrew word for seed zera
+- Genesis 3:15 KJV seed
+- Galatians 3:16 greek text
+- Luke 8:11 greek text
+- greek word for seed sperma vs sporos

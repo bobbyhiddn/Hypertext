@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #011
+WORD: SEED
+GLOSS: The grain from which a plant grows; figuratively, offspring, descendants, or the Word of God.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Place a card from your hand on the bottom of the Tower to draw 2 cards.
+
+VERSES:
+OT: Genesis 3:15 — “I will put enmity between thee and the woman, and between thy seed and her seed; it shall bruise thy head.”
+NT: Luke 8:11 — “Now the parable is this: The seed is the word of God.”
+
+LANGUAGES:
+Hebrew: זֶרַע - Zera - Gen 12:7 • Jer 31:27 • Ps 126:6 • Gen 8:22
+Greek: σπέρμα - Sperma - Gal 3:16 • 1 Pet 1:23 • Matt 13:31 • Mark 4:31
+
+TRIVIA:
+• Genesis 3:15 is known as the Protoevangelium, the first promise of the Messiah as the 'Seed of the woman'.
+• The Hebrew 'zera' and Greek 'sperma' are used interchangeably for agricultural grain and human descendants.
+• In Galatians 3, Paul argues that the Abrahamic promise was made to one 'Seed' (singular), referring to Christ.
+
+ART: A single golden grain of wheat resting in a furrow of dark, rich soil, with a faint golden light emanating from within the shell, cinematic lighting, macro photography style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
