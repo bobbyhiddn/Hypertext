@@ -1,0 +1,76 @@
+number: '012'
+word: DIVIDE
+gloss: To separate into parts; to distinguish, partition, or distribute shares.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A stark, abstract composition showing a vertical rift of pure white light
+  splitting a chaotic, dark, swirling mass into two distinct, ordered halves. High
+  contrast, geometric style.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Reveal the top 3 cards of the Tower. Put 1 into your hand, 1 into Sheol,
+  and 1 on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 1:4
+  snippet: 'And God saw the light, that it was good: and God divided the light from
+    the darkness.'
+nt_verse:
+  ref: Hebrews 4:12
+  snippet: Piercing even to the dividing asunder of soul and spirit, and of the joints
+    and marrow.
+greek:
+  text: μερισμός
+  translit: merismos
+hebrew:
+  text: בָּדַל
+  translit: badal
+ot_refs: Gen 1:7 • Ex 14:21 • Ps 78:13 • Dan 5:28
+nt_refs: Luke 12:13 • 1 Cor 1:13 • 2 Tim 2:15 • Matt 25:32
+trivia:
+- The Hebrew 'badal' appears five times in Genesis 1 to describe God separating distinct
+  elements.
+- Hebrews 4:12 claims the Word of God is sharp enough to divide the immaterial soul
+  and spirit.
+- In 2 Timothy 2:15, 'rightly dividing' translates 'orthotomeō', literally meaning
+  'to cut a straight path'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYKi6LB9hnTPLvbeJBQO-iV64J0uwQo_xl9Y_WtvhK_qjmlhAkNxjNa7vzgoInlnsrvYhM_3ZGO5C3YEj1NtikJFMisD654xi3gkEixQsfeUvYeVQVVWcrx1k5i3TIQJO-9DvhUi5J
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKXS5TySdjIyc_VdbUR2h8Antth-4M7xk4O_3HkqQOwxLrDI5BTu9ofijGjhcsHH4ei8v339SC5c3qzZALuU6vdItXpsQS1iFvd9VBA2JEy5mwhlgAx_Gmm194XoXRNdGakdObWuyBMx23I6Z78_HQ1hfqVBxXFcmEh_44YefLalw=
+  title: chabad.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYzv0uloQ4uOurQy14mPqoqgorKfwyRTVW7yOQaSp-zNWP7KQ9pA3u7HqxzXE4TKHbzi66Z9_en5H63ZRLTHnhVs8u0AwX2bNb_Cb5NsRp9PIfgu9KGlsivWurw6KRPRDddGvT0A==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmhdEaeBuRw2zGCNP1D_B6uyFEeL6I4q_1A57PflmnEQL5BvNPBP-7Ay1562pNVjXNq6rW-7pkB6DtyDe9RPZRNRDe-diTu7oCz22AG4YDSdQ9lHV15Z3Z4mmgeeNQa1vDFj9y
+  title: preceptaustin.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtL-seEYCY9Noy51D4NZ0sp4MWDz0m5TfW38jxz53Ko9xSHVyhuoUJz9K5aOzcoeQEMEpAGUEygLSovm0g8JrBFrDPpZCGBm0qgCiLhnVTWHCEBVSmTaXEKt0M1-vY4LYvGCsKSsD3jVAGCdfh8vY=
+  title: malachidaily.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQo0tJMNIAkQJIEper9QgS-P7pfisZXgE0qBDrkjFURlDK8PVvNilwP0uHLgy2HRS6ARucoNc0sPEWUgBXz4kZUcId3UVeiCRB0bMxiwF6M0Cogq9vSZKPC-E_qr80rzHKDQk_xOgFV-ZhYMrhrZwCTHY29dtKgFlSGZhK0MW5m0ga
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkuOlI3woZyU_HR7jMxusuAIDSxmpV-i_eOrJIPmFXEQclcTA8-ImvBJ-RF7AjAv5azOcJX0JGNtv12vI55rZFRel5wIfq16qHuur8VkFrdRtoKGjb9FbAulGv79rcIraCjOJnCfUPXg-0vmJYCTSfi0BZdEvU1GYuBSPR
+  title: bereanbiblechurch.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEJyFbbMqQavR8dhNsTpfWqkujQi1qK3UuB_lbuQ4kuoFwStp_NVEEjJdnXohR5M_UXSWL4Fh4qx8znNHU-c5-VYFzoniMuECWnIEWdZ2rzQqHM6xNTQZbEqitR6dqNA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMdF48wW5Bo02O3vJMWHhVmb3GxG7gv8WgWo_T-B-aIMtko1kCATp6tDGh9qTy8cy2Aqhbrwlz-aA_3CJVX4mGy6ziTR-QS2BwhEo_ceU8us1-M8Z4tyxIpxvbxxfnfL5JWM9MJJpD3F-elfMt9Ql7pKdvbA==
+  title: qbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEusURnrT89v1qNNlw8m6gf9yJpjCghESt-8L8Iaurf_wvq_TrWnqhwbk2_4gb7LBl59wihRTvBhgq4UynI2vzkTaBQ-0QJc_YLv84hAYr5sqSgEVGA0x09-ZGYtzz1pzWHutE2lGk=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD8RWeQ8OS3wG_9jo9mTEi6v2y084ulPANXKcz8b4u9cYpxQSTRg9xluy7wpVitq9kxXujN06R6FYkubGykhMo6Ns7sOG_Tt4qxY22suugCe7wnYyFghlNsiOTtPhS-XlqTe8XxuSoudGEYyzDZtUwDrbezzD1Q4NC
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPEfcmdg4aUXpDTDekQ4cJd7hPP5gJgs_y8Abtote2xb2hcZQMkLAFVsYC3oTo2ceed38evS1pCRwzBfaBpD0ncH3aUQ4zwBPecr1tXgouA9usp_GhjpRUqMoryOPLgvDQRDa4
+  title: biblehub.com
+search_queries:
+- ''
+- Hebrews 4:12 greek text
+- divide biblical meaning word study
+- Genesis 1:4 hebrew text
+- greek word for divide Hebrews 4:12
+- hebrew word for divide Genesis 1
