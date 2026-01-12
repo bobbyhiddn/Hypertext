@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #012
+WORD: FORM
+GLOSS: To shape, fashion, or mold into a specific state of being; to give external appearance or internal character.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a NOUN from Sheol to your hand.
+
+VERSES:
+OT: Genesis 2:7 — “And the Lord God formed man of the dust of the ground, and breathed into his nostrils the breath of life.”
+NT: Galatians 4:19 — “My little children, of whom I travail in birth again until Christ be formed in you...”
+
+LANGUAGES:
+Hebrew: יָצַר - yatsar - Gen 2:7 • Isa 45:7 • Jer 18:6 • Isa 64:8
+Greek: μορφόω - morphoō - Gal 4:19 • Rom 9:20 • Phil 2:6-7 • 1 Tim 2:13
+
+TRIVIA:
+• The Hebrew 'yatsar' implies the squeezing of clay into shape, depicting God as a potter.
+• Paul uses 'morphoō' to describe spiritual maturity as the internal shaping of Christ within a believer.
+• In Genesis, 'formed' (yatsar) is distinct from 'created' (bara), emphasizing the use of existing material (dust).
+
+ART: Ethereal hands of light emerging from darkness, gently molding a swirling cloud of dust and clay into a glowing geometric vessel. Abstract, mystical style, deep earth tones and bright highlights.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
