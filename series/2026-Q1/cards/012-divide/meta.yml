@@ -1,0 +1,43 @@
+number: '012'
+word: DIVIDE
+gloss: To separate into parts; to distinguish, apportion, or cleave.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A beam of intense light striking a prism or dark surface and splitting
+  cleanly into two distinct, divergent streams; abstract, geometric style, high contrast,
+  no text.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Reveal the top 3 cards of the Tower. Target player separates them into two
+  piles. Put one pile into your hand and the other into Sheol.
+ot_verse:
+  ref: Genesis 1:4
+  snippet: 'And God saw the light, that it was good: and God divided the light from
+    the darkness.'
+nt_verse:
+  ref: Hebrews 4:12
+  snippet: Piercing even to the dividing asunder of soul and spirit, and of the joints
+    and marrow...
+greek:
+  text: μερίζω
+  translit: Merizo
+hebrew:
+  text: בָּדַל
+  translit: Badal
+ot_refs: Gen 1:4 • Ex 14:21 • Ps 78:13 • Dan 5:28
+nt_refs: Heb 4:12 • Matt 12:25 • Luke 12:13 • 1 Cor 1:13
+trivia:
+- The first specific act of ordering creation involved dividing light from darkness.
+- The Greek 'merizo' often implies distributing portions or shares, not just cutting.
+- In the Kingdom, division is often a precursor to judgment or multiplication.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
