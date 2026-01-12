@@ -1,0 +1,76 @@
+number: '012'
+word: FILL
+gloss: To make full; to occupy available space; to satisfy or pervade completely.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A collection of cracked clay jars standing on a stone floor, with glowing
+  golden liquid pouring endlessly from the air into the center vessel, overflowing
+  its brim and spilling a pool of light across the stones.
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Target player draws 2 cards.
+ot_verse:
+  ref: Exodus 40:34
+  snippet: The glory of the LORD filled the tabernacle.
+nt_verse:
+  ref: Acts 2:4
+  snippet: And they were all filled with the Holy Spirit.
+greek:
+  text: πληρόω
+  translit: plēroō
+hebrew:
+  text: מָלֵא
+  translit: male
+ot_refs: Gen 1:28 • Psa 23:5 • Isa 6:1 • Jer 23:24
+nt_refs: John 2:7 • Eph 5:18 • Phil 4:19 • Col 1:9
+trivia:
+- The Greek 'plēroō' means to cram a net, level up a hollow, or fulfill a prophecy.
+- In Exodus, God's glory filled the Tabernacle so densely that Moses could not enter.
+- New Testament usage contrasts being 'drunk with wine' with being 'filled with the
+  Spirit'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEfiNd_kzmzqY5OPQYdEIzhe7Wogvq9Lev_hqtuJ2eQDhTM4u815ZvNeCIMzrMeZRUJzyXI94e7OF8OYTWu9Q-5fMFB5KWF_S4x9IXfMdVU6xbku65RkDrC9M0EVk=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTcajdH2d6BO_dF3_zdRwaWu4g0rRUSqsbFllCh2jU3joxJnHevufba-bQp7RKtmAuswcsyr_fMFh5bhGbbjkCfVHlBlTEf-T7S9UO5TsawyjyaaAfDen4EUvUbdxQIyELoIpTXlV3eThf-p-Y2nvez8_o5oS8wsEDob3WDaoYSxBn85mEd9I60w6jOb31
+  title: radical.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDjFUMaYiXCxWopz-oXBDyLinarfyGIuDcKYTIpeEFYnawl5pM6nvm3kL9oyQQb6JSvmaUg7XS4qxS1IyKS3ISMAlCe1IPbbX2Kbi35x8dXnCRTU3o4t_3BeLrhB4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF23Fijxu1bQq0tqf3r4BIltlfVp4VD0FCZ9eiMCCXfX2gS6Z9yd7nUpnhsYCr3NJ9o2Qyr4kTvOLUY45LJJR4QEq40orNmkoueViSVgixt1g73y-w5ZhMQZJdOu6wqThHDD4y-8pf-YcXdsthpSCj34aSHY25Q7_yUo5Bl8b3ysw_oC73qq2TRlRWg3mpjolnQX0UfPB2cATEyp0ccZ3zajoIQoezoxVNJ
+  title: lifebpc.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKU_3MEkInB0TPPrSzs7X_c0E30OhtAqSWHQlo8rYPPO5K6STByGlG1UFEE4NbOSFlcvdS_WbK0Pk22HANn4xkS5faqqCpeZb4cwhNa-B-O7MfDUrxA6gbjfaFeINyzY4G20RGEW5GAeg=
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd6lCzpC3ZocaMsq6ag890uQ7OVWRrDZwUV3b5U4ihUIgTmicrQ11867tZ-JcQRaBSk2hOkKAyaWwxgcofNuDfkuhx42NS4RMOzQmQE-hPPgW3SOL_AgnBu7vHIbHK
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEltD30C5VVkLpg0qP6tYUnQz-krxO-C-lLL2-LiZJ0xmfu9kF2XjCt4DL2vSMlgR6F26ZB1tNzOMRKU_DuSF-ILgiji__JhRIM7H4L7UZx-bdCPwHSfH7jOlbJ4w==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-4xGMBini3UtLQMuBIcz0M2CbYXZO8IZ8iBY_puNpmy4hE9Q54HurDnk6CcG3Zy5Tx-FkHPb8n6zZu7Q2mYpTuoX-VkuuAPprXkXJgNtsR5519p-qxRw7OKb6Nh0CYnsz
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcBQ8gjquRGkKdReeasTnfe8ophGvwG2k0fPS-0iVuPYgLuj1rIImbuduutKQuK9t6v3ogQBT0WxgHv8J5eh8ZCCogX82CU0VDLpJUIBqJLsyzwH72Vc1U_vWc-q8r
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEc7HtRsVFwEi9kfzvExyIH7ldqtd8AiKyD26mxU8FEyS5ODk-pxuMTcbyicpfpL86HKe9bd96HjUL_GUsaowehvzXzmCJz41uuTXV_KaAaGZa1FmP9Wr28XDKBhiWm
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKqQzZnjCPrNzdj9Xlz-c1j3SGaqNJiIUXPMZX_ldfae4D1PMEknsWmvVkTP-qQBSQpBD3SiZyx3tJqyGB13I9jlQ200cfuLZydl-yRcGfESwb03HWYJ_xOjoF7TCso9WWoR4LGm5U
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtB-ZWSIb2APiFBKQ71Z5eptkr5y88IngvXz6b8eUoirQyj0joDtjt0cj0fEK89QK9LhZ_eQIWKl9sF1iO-hFuDwB7QckATTbr4YCB7pxhGBDPnEe2HgucPNmQ2hglfj8L1sm9KtcQ1jcS8xradIBHN7oL2g==
+  title: redeeminggod.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7DsaBK5fOYN00yPOnMyGbc0JdZQUrGcirQxvPpwDie_zMkxJQ0kt1NggLyKwTofQiK4no33Vc8V0cyJo07B9hpPTmZ6RDxdc3CqFC7xy5Sc2tLJ9O7ul4s3yYzss74CEM6ha87K_0cfXr0DgBZXrMfvx93Ov7g07eWZ7Snmd0Wqub8a4=
+  title: bcnewton.co
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7GYvatEAP0tncBRWYsLcfLKRcrJKfnNgo6ceHF6CHs5TzpuwavooLCwrONJdSB-K7jRGaNJ1oIuBXp6FTaH5ggl38oCZ4IBDJVllZkN91dngQ5O8ciKCMbE7ghVokIhYXSqI5X-M9e57Mo6I62qoVx2AjaYLAfMkvK4IpOPFza8znzGbEni0RenPkIM4Y5cwn1xihQK-RYdtCUzmnxemS
+  title: christianstudylibrary.org
+search_queries:
+- ''
+- Acts 2:4 snippet
+- Hebrew word for fill bible strongs
+- Greek word for fill bible strongs
+- Exodus 40:34 snippet
+- Ephesians 5:18 snippet
+- Fill bible word study trivia
