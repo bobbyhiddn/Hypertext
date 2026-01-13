@@ -1,0 +1,76 @@
+number: '013'
+word: REMEMBER
+gloss: To recall to mind; to think of and observe
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pile of twelve rough river stones stacked as a monument on a grassy
+  bank near flowing water, soft sunlight breaking through clouds, realistic oil painting
+  style
+stats:
+  lore: 5
+  context: 3
+  complexity: 2
+ability: Return a card from Sheol to your hand that shares a type with a card in your
+  Pages.
+ot_verse:
+  ref: Exodus 20:8
+  snippet: Remember the Sabbath day, to keep it holy.
+nt_verse:
+  ref: Luke 22:19
+  snippet: Do this in remembrance of me.
+greek:
+  text: μνάομαι
+  translit: Mnaomai
+hebrew:
+  text: זָכַר
+  translit: Zakar
+ot_refs: Gen 9:15 • Ex 20:8 • Josh 4:7 • Ps 105:8
+nt_refs: Luke 22:19 • Acts 20:35 • Gal 2:10 • Rev 2:5
+trivia:
+- The Hebrew word 'zakar' implies acting on a memory, not just recalling it.
+- God 'remembering' Noah or Rachel signaled His immediate intervention to save them.
+- Joshua set up twelve stones from the Jordan River as a physical sign for future
+  generations.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQL8T8y3xewLgkq_PNxwJZhciNU9t4yHnU-tQgS43Hz0VCAslsoz-HOzZw25-xEX0bvTF7dJhkngnAQ9t7lhH3mRGdqqdgWW0I4E_P1QDBRisbWWgnCzdHsSyuSZDOZRN4ErF0erNUsqS_CUeBw4DcJ1x2Cg==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN8OxoKL1Gu_uaxAAcsNUZH2XAIL5koJULwRTnnnd8LxOACYVvtakUW9DdA3Zc9cXl3_ykx8BCIN8RcJuPEhlYICjZAOqnIfIWlAwz7cwTBN4Wr7gZv3hCHizP_XeOTm2lnI-dfXl7yub4FfHKeTFBfKdokPF9ClIb1682n0agzjW5kbo=
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRT0o8dBnL1GyqjHJxcH4bwH9L1Ckp-CVXJacQn-_ZIcXlj-C-eX1-Kxn2k_Tg_81WSgL6ICgGpL84cMdQfg88ODSDdy2FQ7aIaz6j3HfJ6PbxqlhDEbIdAFReLER1v_j1hIG0--SDS8OICFlshi0=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDmiy48J4uARlkq0YItl0OxaWI_oURQxRDvZUC5zb35B_IDBpgllSMAGASKbzZbWqLyz3iqsoMwX8pMKpKjXWsVoL4jqeAFBwxFiAX_V1SH3hdv_jjx5B3Bs0khiLDtj5ArwjUG_yr-wDt6V0yCcj3ApC6gVOS4wzaSGI91iGjQ5E4
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhqpsiuGezmH74q28ocougn2X-Z-gbNc4jYhu7ApDgTXybgtbquJT8cvXXJfKb1vtEO9TdoTQzKdkVot5A4bwUOo5JW2nf15LNFVcN9X9drbGK94Yqw7MhephdSXv-2xVsnobbM9A7IBztKYOqTOVoUrYqe1L7IJCWBIsrIgOq1BxfxuEQTUUYcGwIhw==
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZEFptKsSmlGhrYo5uPERhalL6VuzMYuLxBx0zGganOao7H18g5Dgr229r_kXA3YO6SX0T9I944YHJh8e_H6Cfe-vUjwVZ4BT27uug_8H8Z5aEKaXL4GfJVWhMgvea
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU1fe0OYoILsVculzTA5h_j__l8PsP-3TpzGFLjRNxqIuFEraqGeq0yHDFzm_BVd62z2ifOX5gPI824JALQ7JT7J28jj1Dgef4u2FCxQXPFFrymNUNnG951xEaSiA--6cxCYk_I_a3wQVt_KaaF-UNDXa_1Gs71jI=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHEU_cqkFHZmp8CNDELAC6x0Y4i2Q6RaZZaqa63bpKKi2mVRM_XWN-71IDMn81N6xVcR75RpS2XC_ACKePT6tp73vVNHPNNyBATuTwThklhz_emc-0EW0yW3kPxT0kzrOVgICNZMWSjF_nJuzhMeN5YdzTQw1mF4M3JmQDyaZvxbw2fLC4Veg==
+  title: passionfortruth.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2E-RpG2jp0-Pa0ZXX5Qo6DwgKTxhcXYFhxVdTw-Jjmg59ZS5pbkEfesJ99y9tvnDK77utfknY-4y5SVGh3GM5L4wGEyLDbWVIBcQwE1ehm2tIeMWzi8dfnLsjUDDu6wLVClDp5qqi9Cu4AXU=
+  title: recoveryversion.bible
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfGzWR2ViM4HsDixHtoowi4U9DLuOxPl8ZtIW6Zc9mNYyJENN2bOCkJvHhaCJ2l9Ksh3tveSgs8Hd79pNBSkRcRokW-jUHKIngdXgLlhmoteWIYBBiB8E0xkvTF4zSgs0TbD0zFwVT6A00-VdTgbeP4Qodk_p2
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu63G3boO7HgpdzkIBIQMHC7SVIyZ2WTzEM87SSABGXUdQnIXsajl50jH5QLRkU_qsUNWrFmnDWq50bi6gpFIrU0yAPVACGGcoff62nkIciB1rvzFY9j8W8uOSDcpjLmeFHTFe71Y6Sg==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFCbBvSmBp4bPKMN3W0yRcIoACA8FPfn4NxBBVE77SlvixOPywBtwSeAuhD6BBannAlJg_hPm4od8NmHj9KqcSpCEAlTbNUpJDCpz6uY3MtQZU_UeZA3q9OLYSAr6enLWp3JnNiuZqiUQ010rKTzAys9u_n5-Zty1eqfA=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhrIreSBgOqI4uoKG-Ejrpy_exmhd4OUhR--eS0kKROvRr8cRPcvf_aybuvs7uvNrp4-cz3YJ-7br7Y_9i6o_5PVrPzBzVETgnpXOV4LCSsk34eaWrMS5PXstdYri7
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAj1tLPorW6nSM5URyksD11P2W9kKttanw-nBY8QQICVKFwMl-V9vZq8YMfQ5JAo7AB5CAsO_CfhZM4d86zqD-w17CElGBDytOXvZCXJ523AvDZFvmSZCGfkpUbzbLBT1o
+  title: biblia.com
+search_queries:
+- ''
+- Luke 22:19 text
+- hebrew word for remember zakar
+- greek word for remember mnaomai
+- biblical definition of remember
+- Exodus 20:8 text

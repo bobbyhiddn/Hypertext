@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #013
+WORD: REMEMBER
+GLOSS: To recall to mind; to think of and observe
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to your hand that shares a type with a card in your Pages.
+
+VERSES:
+OT: Exodus 20:8 — “Remember the Sabbath day, to keep it holy.”
+NT: Luke 22:19 — “Do this in remembrance of me.”
+
+LANGUAGES:
+Hebrew: זָכַר - Zakar - Gen 9:15 • Ex 20:8 • Josh 4:7 • Ps 105:8
+Greek: μνάομαι - Mnaomai - Luke 22:19 • Acts 20:35 • Gal 2:10 • Rev 2:5
+
+TRIVIA:
+• The Hebrew word 'zakar' implies acting on a memory, not just recalling it.
+• God 'remembering' Noah or Rachel signaled His immediate intervention to save them.
+• Joshua set up twelve stones from the Jordan River as a physical sign for future generations.
+
+ART: A pile of twelve rough river stones stacked as a monument on a grassy bank near flowing water, soft sunlight breaking through clouds, realistic oil painting style
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
