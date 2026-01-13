@@ -1,0 +1,65 @@
+number: '013'
+word: MULTIPLY
+gloss: To increase in number, quantity, or degree; to reproduce.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single glowing seed fracturing into an expanding geometric lattice of
+  golden light against a deep indigo void.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Draw 1 card for each VERB in your Pages (max 3).
+ot_verse:
+  ref: Genesis 1:28
+  snippet: Be fruitful and multiply, and fill the earth.
+nt_verse:
+  ref: Acts 6:7
+  snippet: The number of the disciples multiplied in Jerusalem greatly.
+greek:
+  text: πληθύνω
+  translit: plethuno
+hebrew:
+  text: רָבָה
+  translit: rabah
+ot_refs: Gen 1:22 • Gen 9:1 • Gen 17:2 • Ex 1:7 • Jer 30:19
+nt_refs: Acts 6:7 • Acts 12:24 • 2 Cor 9:10 • Heb 6:14 • 1 Pet 1:2
+trivia:
+- This was the very first command God gave to humanity.
+- In Acts, the multiplication of disciples is linked to the Word increasing.
+- The Hebrew root 'rabah' is related to 'Rabbi', meaning 'great one'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpp_ieZx5xrN6C9CFLkWILa6tCzfTvF4cYJ7kq3cM22Xr5HdJXMd74sqKh8kcPtw6gGi2sNceMoDivb4xKcGqBR_AUR1Zks9IoTs35VVCaqhMywI_3IRp9xekhwYMXmjLO
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLvYHLt8cieNhBmAsuASMpmGx1mQsWl3k5DQhBQDadJv5tHayM1buLsR1hyqVmx5gL9Ws6HYnktD222JcHxlPzxJy3iQx52VCRZMW3KqvW2JmF-QzMMkQRsOkiFQnHbqgAMk-lPDEGMSk=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiRY4RxXfxUrB7k-ny_ob5jUfaTkUBjTXI0vL-7HJR2g8IWAxiQH3SoC8qGRGkxDkFuPEx5Q7T_gOtTPyXIO7jjlufOLfBdKfmqT7GeXMhPAJDCdfiXnNakIVw8U3GS-nk8OURBRcyTjRp-Q==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4yuNK6aWBfYBruOQysgYwaJcuOq0CNusKWPHT9iswXxYtqgtUXtz1lBQ9yjYPJfrZlenEf5p0m300rjZUBaQgAJRm1f-9M7pL4PEpAnZztCkSpACUQCKIuTL96XCyCPgoJsBfG6vi3GLQ
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLx6jl_QJR3txIb6BnHl1bjKvVFYpePD3_l0vBV85XRxzJ5Li_YjU-NKSs01IshGWJenVEfO6qEYNEpUEWgxCGIarn0rxuaQANWPgLawW4TiYP2WhYSR56DW5UvXLqES5GTfEcOss=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkQorpNBH-rTP6aPBODWJYwSNlPLYBGhgNng_6BQCXI3aOaiAzcjRBZ1g6gt1yZzXeXK0hpum4p_xCSwAC73Pej3yFSnf9c3n21h5Ey7jGR0u6jz-k8h4uBKOv4gxxlsgDE659HnTDVc3o3nsSEZC67w==
+  title: bibliatodo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6ZR7bxuOqSOt-_jCfaHYsN1wNEzbUx8-jwIhUIKbA2xrpGzU9lgg-Oi8D_sV7jD4ojahJw6yHVV9qkwdXyp6j4E6c2s8DxiOdFUt6ns-fKyElfY_AKJji26cXzPQDj8LzbUfvhSwQl44X2NMg_2MSUna78Q==
+  title: qbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8Y-H2B8D0NnP2wX2xOETAAibgasN-lKpj21pA9zr2Pq3RHQYRff3cyEi4h2DAFvHA--5eEXcTUO05SiWWfzU25M89tE5hADQ8y7CjTz7pRdPQZU1oVoVSuubDTCiBQ-3xvge83Xc7XacuSThOYvThZIjD
+  title: kingjamesbibledictionary.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIxrzzP2yUNWj2RmMfip2BSSW2QZ_T2G0JMHzdXIGEBvRwTu0AlTcmHo3M9BzGaCgRrI60wKUFE_tX3gg41lSbnZRkhmCep_bGyw56oY_euil6tqjV7kpL0y8KABZDyZgFWMGBUHV84s93h4MY-YpXFWlB8KsLdjHWpok=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR5aOLJxmg4wc3hnJtnKFOyXFTCM-SbBNfyj9jLr5dHnoTYS_lrDgzIjVwFkUDY4ACqmIB0oOOxS5c1xTJkvj1MHUFp0jWqZnKXgrynFbhSoRnRpNeyjWfBA7oHPe2o_kb1Q9-16MEvx4no9K-vAO9mLFpEiErPq2SrxRA9L-K6MgHMYNfKdDSd8kobVoVjHQeAIDXTyXJ2SjtS-W6wNCF6BDr-GUeibg=
+  title: biblestudytools.com
+search_queries:
+- ''
+- biblical definition of multiply
+- Acts 6:7 greek interlinear
+- Genesis 1:28 hebrew interlinear
+- multiply bible verse meaning
+- multiply biblical word study hebrew greek
