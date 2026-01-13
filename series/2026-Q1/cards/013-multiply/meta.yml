@@ -1,0 +1,60 @@
+number: '013'
+word: MULTIPLY
+gloss: To increase greatly in number; to reproduce or abound.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single golden seed bursting into a fractal geometric pattern of wheat
+  stalks, glowing against a dark void.
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Draw 2 cards, or 3 if you have a VERB in your Pages.
+ot_verse:
+  ref: Genesis 1:22
+  snippet: Be fruitful, and multiply, and fill the waters in the seas.
+nt_verse:
+  ref: Acts 6:7
+  snippet: The word of God increased; and the number of the disciples multiplied.
+greek:
+  text: πληθύνω
+  translit: plēthynō
+hebrew:
+  text: רָבָה
+  translit: rabah
+ot_refs: Gen 1:28 • Gen 9:1 • Gen 22:17 • Ex 1:7
+nt_refs: Acts 6:1 • Acts 7:17 • Acts 9:31 • 2 Cor 9:10
+trivia:
+- The first command God gave to living creatures.
+- Used to describe the Israelites' explosive growth in Egypt.
+- Jesus multiplied loaves and fish to feed thousands.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGkzaiVs_xR1mJGACoKQDhYCnKsFWOgpZhYulvMr9kUCP4_x2FzOwZfgN6Ggz4Mu1GaqZ758diLV5nkPNs2Bh_LhpILTQmzGBh7apW4I2lrj7GmRAZRA6hlvYAq166
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFk5wpFDIreZFNyF4hqh7DVyVgzAkEREnEghi5xg7RO45egq5oFyvSRJ4M62NZlM0f4cNLeU1cBWCzZDk73cjqRSIUnDBTdD8xGXCDSE5C1uA6vRyw1pihi6lOe1ni9rDBkNlWTpjm9MUePPk1RLWQvixMZcIKMytrmCnGfbxifHCNcX1quv6Gq4ZFqcdMsbiMXIxE=
+  title: daily-bible-study-tips.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoB2tGBDMUjxH2thtz4hjcBYju2nqFBUdoOnjeoK0WRvucRgbHQUbSeylMZ28XlYYxPuL9Mo9fWWIVt1Ai6b1r63-QnAakuMRwtNW-5JZCqWEXimNFswvnbFXZrswOxJEf4F-HUiriZhBF0aSiIvE=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdO9p4NhWuu85B8aWfpCalcLFyuNdshChk-sGXttm0bZ02lCFHFXP_7T55sXbC3sGSZf9RRBzTmPlSI_P5hWxsKgCdI0nue1cbtt3kEBqOMsod2BvrsNj7tdJF8pxuv2NCO-OtidhiEnwFeJdHZScDbw==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbcd5e3aJE5kn2Dt025p6ktZRmim7IyYYp8YjIYry33uoQmkicPznGsBDtiJyKUyOkwN3w-kYPkOxKJaEnwBjZ8MGA_m1kw15OdZ4zLFa1EsTqNhglNPFuz9DjGmdAQMPC
+  title: revbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbXw08KB0XrZnV-JDP0ybE6x1VfqWHMQrz91e3s_hv-ig0rIEPmppzlraQpeOO6Fnw0g_nI-6AkUIErnrlRcDHzs1lq8ABfbacl8uDVDhjWsYJwTNcH9m79_77_9Ac5TfIZLJv_Rh8Q3KsbK5jy7EUxI9rymC7h0T8cSijN9Xv5dyiaorw1S4KsuZNJ5vCvypGpGOxuf_Lgw==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5c4Yumo7LsjZhkScu7FFDxnosjZP4HFyjKWhhEFCFVhaaEcHFXJNqpIOoySpRXTSJ3Z2_7ikfp_NqR_bQJx2hjMaV80gHXZztz24smHLxwNSigCWt5nA8Vgg_uIqccYc-6zjW89PrjaiuI0QkwaZanllY0CfbXkVonaI=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhRq-o6ZjL55HLYcnRtF-rp5gWgonslvP46OUVWv3IzxNy_tq6epXaeLBCgG7ySNIG_3baZYGto6_mhH5nO2XsHGgVc5EKJMtkIkuVyz5Ui18Vswb8PMSbD4Efu4nLw42-cx7VK4g9w3xR8MkncrzKNnwQP_ZK5Yn_jpE=
+  title: jerusalemprayerteam.org
+search_queries:
+- ''
+- Greek word for multiply in Acts 6:7
+- Multiply Bible verse meaning
+- Hebrew word for multiply in Genesis 1:22
+- Biblical theology of multiplication
