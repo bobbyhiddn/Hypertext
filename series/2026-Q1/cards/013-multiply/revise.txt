@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MULTIPLY
+# Card_Gloss: To increase in number; to make many.
+# Card_Type: VERB
+# Card_Rarity: UNCOMMON
+# Card_Ability: Draw 1 card for each NAME in your Pages.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A vast night sky filled with countless bright stars, with a single glowing seed in the foreground sprouting into a constellation of light.
+# Card_OT_Verse: Genesis 22:17 — In multiplying I will multiply thy seed as the stars of the heaven.
+# Card_NT_Verse: Acts 12:24 — But the word of God grew and multiplied.
+# Card_Hebrew: רָבָה (rabah)
+# Card_Greek: πληθύνω (plēthynō)
+# Card_Trivia_1: The first command given to humanity in Genesis 1:28.
+# Card_Trivia_2: God promised Abraham his descendants would multiply like stars.
+# Card_Trivia_3: In Acts, the 'word of God' itself is described as multiplying.
