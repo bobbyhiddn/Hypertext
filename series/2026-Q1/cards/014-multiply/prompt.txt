@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #014
+WORD: MULTIPLY
+GLOSS: To increase in number or quantity; to reproduce and grow abundantly.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 2/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Discard 1 card. Draw 2 cards. If you discarded a VERB, draw 3 instead.
+
+VERSES:
+OT: Genesis 22:17 — “I will multiply your seed as the stars of the heaven, and as the sand which is upon the sea shore.”
+NT: Acts 6:7 — “And the word of God increased; and the number of the disciples multiplied in Jerusalem greatly.”
+
+LANGUAGES:
+Hebrew: רָבָה - rabah - Gen 1:22 • Gen 9:1 • Ex 1:12 • Deut 8:13
+Greek: πληθύνω - plēthynō - Matt 14:17 • Acts 9:31 • 2 Cor 9:10 • Heb 6:14
+
+TRIVIA:
+• The first command given to humanity in Genesis 1:28.
+• Used to describe the miracle of the loaves and fishes.
+• Often describes the rapid growth of the early church in Acts.
+
+ART: A simple woven basket containing five loaves and two fish, but the food is glowing and spilling over the edges, cascading into a massive mountain of bread and fish that fills the entire frame with golden abundance.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

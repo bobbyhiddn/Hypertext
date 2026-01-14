@@ -1,0 +1,73 @@
+number: '014'
+word: MULTIPLY
+gloss: To increase in number or quantity; to reproduce and grow abundantly.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A simple woven basket containing five loaves and two fish, but the food
+  is glowing and spilling over the edges, cascading into a massive mountain of bread
+  and fish that fills the entire frame with golden abundance.
+stats:
+  lore: 4
+  context: 2
+  complexity: 2
+ability: Discard 1 card. Draw 2 cards. If you discarded a VERB, draw 3 instead.
+ot_verse:
+  ref: Genesis 22:17
+  snippet: I will multiply your seed as the stars of the heaven, and as the sand which
+    is upon the sea shore.
+nt_verse:
+  ref: Acts 6:7
+  snippet: And the word of God increased; and the number of the disciples multiplied
+    in Jerusalem greatly.
+greek:
+  text: πληθύνω
+  translit: plēthynō
+hebrew:
+  text: רָבָה
+  translit: rabah
+ot_refs: Gen 1:22 • Gen 9:1 • Ex 1:12 • Deut 8:13
+nt_refs: Matt 14:17 • Acts 9:31 • 2 Cor 9:10 • Heb 6:14
+trivia:
+- The first command given to humanity in Genesis 1:28.
+- Used to describe the miracle of the loaves and fishes.
+- Often describes the rapid growth of the early church in Acts.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYOvqc3AaeY2s2u4XAeM1NnCl0CEQSqDkluTyN8tqtvlYV3VYjn6k7raBP3m0Gp4oW2o7-NWpLjNQRRrErXlOET_bxDcoD-BUBZHdXTK7L1A1G6APt907ZABVqBXCQz4q86_qDWyMDN30E
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbcNTkgS7bXemaVG1EgkXeQKQfsKa0M7D50PixuYzizsAe4jYDzmFbYilBxsqjxPlg6zHN8EV5KhG4aGuJWbzemkiRr9Z-81wvHND6ZCJVC1sP1_Xy_pYhrjz_h76oghH9p28CLKDCS2g=
+  title: trulyrandomverse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXkBUACnkcFpbVZ8jB1JIpG2kTE_hW7nXf9B6SsekDfdtQ94tPAqNPpYsD88xoar6PU78FaqIxVORbAfjikwkBMrFIaf9srFadom6H9VRCgdnTRWmmmdN7PNfzJdOuf-pvph5lo6-C6Bl4XTg8_nbyUMSic2Iw2VxjIEXD1PhoqrpzFhig9FJcJDajY-hrDg==
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIVzE1sdw_knCIeIk2LjVZxXIp7UalQ7aHKPcYVhQsYLFAhnQ5fz49LxzYKtNhuYzzMjXE_bEtkJBC57yGRjrZHlV3z3NAJ5FIvLVMy3G8PSJQlb9pOvm6VKbA_mXbSyiVzqfCww==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdfDh7zGe4k6-ExbvvadHJ_LtwL27JuDZHBoUfyoo1Ms_xWcHXGV15KyDx5Pt3cs4KITC5HIozQV5uMnJkfdsJZlDg1jXFBcHi3gcaq-GjzNUg7ZIrNoZ119b6BH0=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkOjX5w56KfkkqC85NWf3XY6NOJ8oiYe4acvX6Cw5GQdYLK7_iVnh57hz6OWuxOHGxK7OCiIK1H2q7zCrSYCgCHE0nuDXs3zabWrPj9JSkjrHZLD0qlTkXFTJ1QK_XZ7ITr31soFnttHKJsJL48tN-3e01YIXdhT1B2-8rn3o3u1rKS9lPp2fNZA==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbWZoln3Z5OkHczVbTRSd2cA_2S5IReb5ZDar4CMPSm-HD2i54NUi105qHDvq8vcbQIdezvSiLTELQ2Jxt3gbVm7qmH7M-MO2rwlGK8J6sp_v0Gz60DTq7S3XiK_PmagS5XrbO9nUck-V4TH9F6aSLSqGN
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIQTm9-bOeZP82Pt8Kd4xDvu-WtZbu4dLLHu4j62llv4eGmLOHYzML6KqZDwP9Jo-mInBudaw1cKox6zpG5AvJLIGNqcOLSbPQaJioM0Zf7ZMzmFMkPEyg4P1DLiuPfdY=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7a_0n73WXeNMOpjN8tO39u9xtYqW8tCO663xhf0lUF0O16bArQLH-Fs693LUlvn4Qvtzqjr0ugbDyS8TpLeFard2nLUcBQhNFt2Eh444SLUwFgOLc108vTN-3abUUmxBk_ovSbOAQcA==
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm_PyDDFCMLsqfQhs8OgTyibFFLVeTaJFJagjPqDpmjlYXqqY3KDVisNMhUHpiha8I8hBSSSUwavF2Iys2VlutEhlwjlSCkhe1MXj6AdcOKootwrn0sxgiqgrbbLntJA==
+  title: sefaria.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm86f24pYDJ0VsbtD2jTzCz4OBpDuW2BYHKiTuF6U0VOqR5CgxFvendT_g7_YZcF5VnSwJK2jnJ0taVaGwB51NZ2CIHknseFRKkx-HKJv2Lw14OhU0yP96sVpcylacnMuXWapwrEsvE1M4-7oxJJuPzMCUF3gMjy1_EdP7ExD4Lknh
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkP-e5WYGYPg2THEhUfuPhjkcZLbMBfn3uFvnqRxG98DYy0QaqPoCdiKI-m1-tP9XC5CYwBQSbmFv7kqqD2Rh2f5FT_25KYTG7EusI12bd2u6r76yXv5rt7harrAcezD8vMcdiEVM=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMZA-32XBvTTmB65Es-sLXGAKrSPt6COeA5SpieMsN5audy9h-wcARUPEKL9VKC9wiX1CKaCtLQY0az1NVgqMBxgnn7P66SKu85bkYG50A9jmyT_LnDuWJ1vXnXHRvjOvY9YorQ1UDPMMnhWk1SFODTou0APHVWbT28Eg8BcptDsjVofDUgKkKMv6NpUiADQ==
+  title: equipgodspeople.com
+search_queries:
+- ''
+- hebrew word for multiply rabah definition
+- greek word for multiply plethyno definition
+- Acts 6:7 greek snippet
+- Genesis 22:17 hebrew snippet
