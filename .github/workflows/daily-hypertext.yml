@@ -55,6 +55,8 @@ jobs:
           path: |
             ${{ steps.run-plan.outputs.card_dir }}
             series/2026-Q1/deck/queue.yml
+            series/2026-Q1/stats.yml
+            series/2026-Q1/cards_index.yml
           if-no-files-found: error
 
   imagegen:
@@ -114,6 +116,8 @@ jobs:
           path: |
             ${{ needs.plan.outputs.card_dir }}
             series/2026-Q1/deck/queue.yml
+            series/2026-Q1/stats.yml
+            series/2026-Q1/cards_index.yml
           if-no-files-found: error
 
   initial-pr:
@@ -156,7 +160,7 @@ jobs:
           fi
           BRANCH="daily/${DATE}-${CARD_SLUG}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git checkout -b "${BRANCH}"
-          git add "${CARD_DIR}" series/2026-Q1/deck/queue.yml
+          git add "${CARD_DIR}" series/2026-Q1/deck/queue.yml series/2026-Q1/stats.yml series/2026-Q1/cards_index.yml
           git config user.name "hypertext-bot"
           git config user.email "hypertext-bot@users.noreply.github.com"
           git commit -m "Daily Hypertext: ${DATE} (pending review)" || exit 0

@@ -1,0 +1,95 @@
+# Set Standards for 2026-Q1 (Babel)
+# Distribution targets for a 90-card series
+#
+# These values define the target composition of the card set and are used by
+# the daily pipeline to ensure balanced distribution across rarities and types.
+
+series: 2026-Q1
+theme: Babel
+cycle_days: 90
+
+# ============================================================================
+# RARITY DISTRIBUTION (percentages)
+# ============================================================================
+# Total: 100%
+# Determines how many cards of each rarity appear in the set
+
+rarity_distribution:
+  COMMON: 40       # 36 cards - Foundational vocabulary, easy access
+  UNCOMMON: 35     # 32 cards - Moderate depth, good variety
+  RARE: 15         # 13 cards - Specialized terms, thematic significance
+  GLORIOUS: 10     #  9 cards - Powerful theological concepts, chase cards
+
+# ============================================================================
+# TYPE DISTRIBUTION (counts for 90-card set)
+# ============================================================================
+# Total: 90 cards
+# Determines how many cards of each grammatical type appear in the set
+
+type_distribution:
+  NOUN: 16         # Core vocabulary - people, places, things
+  VERB: 20         # Action words - highest count due to narrative importance
+  ADJECTIVE: 20    # Descriptive words - equal to verbs for balance
+  NAME: 16         # Proper nouns - Biblical figures and places
+  TITLE: 18        # Divine titles, roles, epithets
+
+# ============================================================================
+# COMBINATION TARGETS (rarity x type)
+# ============================================================================
+# Detailed breakdown of how each rarity distributes across types
+# Ensures we don't generate all rare verbs at once, maintains variety
+
+combination_targets:
+  # COMMON (36 cards total - 40% of set)
+  COMMON_NOUN: 6
+  COMMON_VERB: 8
+  COMMON_ADJECTIVE: 8
+  COMMON_NAME: 6
+  COMMON_TITLE: 8
+
+  # UNCOMMON (32 cards total - 35% of set)
+  UNCOMMON_NOUN: 6
+  UNCOMMON_VERB: 7
+  UNCOMMON_ADJECTIVE: 7
+  UNCOMMON_NAME: 6
+  UNCOMMON_TITLE: 6
+
+  # RARE (13 cards total - 15% of set)
+  RARE_NOUN: 2
+  RARE_VERB: 3
+  RARE_ADJECTIVE: 3
+  RARE_NAME: 3
+  RARE_TITLE: 3
+
+  # GLORIOUS (9 cards total - 10% of set)
+  GLORIOUS_NOUN: 2
+  GLORIOUS_VERB: 2
+  GLORIOUS_ADJECTIVE: 2
+  GLORIOUS_NAME: 2
+  GLORIOUS_TITLE: 1
+
+# ============================================================================
+# SEQUENTIAL DIVERSITY RULES
+# ============================================================================
+# Rules to prevent repetitive card generation patterns
+
+sequential_rules:
+  # Never generate the same type+rarity combination two days in a row
+  # (unless no other combinations remain unfilled)
+  prevent_consecutive_duplicates: true
+
+  # Penalty applied to entries matching last card's type OR rarity (but not both)
+  # Helps spread variety even within non-duplicate selections
+  partial_match_penalty: 5.0
+
+  # Massive penalty for exact type+rarity match
+  # Entry will only be chosen if no alternatives exist
+  exact_match_penalty: 1000.0
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# - Distribution calculated as: rarity_pct * type_weight * 90, rounded
+# - Some rounding adjustments made to ensure totals sum correctly
+# - NAME type given +1 in RARE to accommodate important Biblical figures
+# - TITLE given -1 in GLORIOUS to balance totals

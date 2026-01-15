@@ -1,11 +1,33 @@
 words:
 - BUILD
+- CITY
+- CONFUSE
+- CREATE
+- DESCEND
+- EARTH
+- FORM
 - GRACE
 - MIGHTY
+- MULTIPLY
+- NAME
+- REMEMBER
+- SCATTER
+- SPEAK
+- STONE
 ability_patterns:
+- add_hand_discard_look_top_tower
+- add_hand_look_top_tower
+- conditional_discard_draw_type_verb
 - conditional_draw
+- conditional_draw_pages_type_name
+- conditional_draw_type_name
+- draw_tower
 - look_top_tower
+- pages_sheol
+- sheol_tower
+- sheol_type_noun
 - sheol_type_verb
+- unique
 cards:
 - number: 1
   word: GRACE
@@ -22,3 +44,63 @@ cards:
   type: ADJECTIVE
   rarity: UNCOMMON
   ability_pattern: sheol_type_verb
+- number: 4
+  word: SCATTER
+  type: VERB
+  rarity: RARE
+  ability_pattern: draw_tower
+- number: 5
+  word: CREATE
+  type: VERB
+  rarity: RARE
+  ability_pattern: sheol_tower
+- number: 6
+  word: CONFUSE
+  type: VERB
+  rarity: RARE
+  ability_pattern: unique
+- number: 7
+  word: EARTH
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 8
+  word: STONE
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: look_top_tower
+- number: 9
+  word: CITY
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: add_hand_discard_look_top_tower
+- number: 10
+  word: NAME
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: conditional_draw_pages_type_name
+- number: 11
+  word: DESCEND
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: draw_tower
+- number: 12
+  word: FORM
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_noun
+- number: 13
+  word: REMEMBER
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: pages_sheol
+- number: 14
+  word: MULTIPLY
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: conditional_discard_draw_type_verb
+- number: 15
+  word: SPEAK
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: conditional_draw_type_name
