@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: GOOD
+# Card_Gloss: Morally excellent; virtuous; satisfactory; fulfilling a designed purpose.
+# Card_Type: ADJECTIVE
+# Card_Rarity: COMMON
+# Card_Ability: Draw 2 cards, then discard 1 card to Sheol.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 1
+# Card_Art_Prompt: Rays of warm golden light piercing through chaotic dark storm clouds, illuminating a pristine and orderly landscape below. No text.
+# Card_OT_Verse: Genesis 1:31 — God saw all that he had made, and it was very good.
+# Card_NT_Verse: Luke 18:19 — No one is good—except God alone.
+# Card_Hebrew: טוֹב (tov)
+# Card_Greek: ἀγαθός (agathos)
+# Card_Trivia_1: Hebrew 'tov' implies fulfilling a designed purpose, not just moral virtue.
+# Card_Trivia_2: God pronounces creation 'good' seven times in Genesis 1.
+# Card_Trivia_3: Greek 'agathos' refers to inner character, while 'kalos' implies outward beauty.

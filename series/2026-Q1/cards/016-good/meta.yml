@@ -1,0 +1,66 @@
+number: '016'
+word: GOOD
+gloss: Morally excellent; virtuous; satisfactory; fulfilling a designed purpose.
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Rays of warm golden light piercing through chaotic dark storm clouds,
+  illuminating a pristine and orderly landscape below. No text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Draw 2 cards, then discard 1 card to Sheol.
+ot_verse:
+  ref: Genesis 1:31
+  snippet: God saw all that he had made, and it was very good.
+nt_verse:
+  ref: Luke 18:19
+  snippet: No one is good—except God alone.
+greek:
+  text: ἀγαθός
+  translit: agathos
+hebrew:
+  text: טוֹב
+  translit: tov
+ot_refs: Gen 1:4 • Gen 50:20 • Ps 23:6 • Ps 34:8
+nt_refs: Rom 8:28 • Matt 19:17 • 3 John 1:11 • Gal 6:9
+trivia:
+- Hebrew 'tov' implies fulfilling a designed purpose, not just moral virtue.
+- God pronounces creation 'good' seven times in Genesis 1.
+- Greek 'agathos' refers to inner character, while 'kalos' implies outward beauty.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX5lQ7w4b0gpeQ2SnHTabU53UItoh-IeDxHpwkl1MMHJ9nsV73ViT55LBcJDj2h9gjzmc8dURWmjCtnsE6i1Yo4Ry5ZWBATutNk55AHivddaLLIWRCvZoPbtFnIDelsNwhwg-AJDyH46bcHpGqdgNC2MoetGClZosXzQo1BedIDbbNwho=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzLNvsS5tNvadj0aUHVGyue2v0r_wlJMPvKFFBUWjcs8-aIV_bCIdGSvalY59hKaYAmaKZpQ7x-OcrUnszWsftRTy7lSGeYM_fuqG02vwMdn0IBAwOnrXOrLaFkXe-0nLj7LpmkjkZ38ds
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFktGnRzMwbsx4nObWPmgD-pd3Tan2WGXjB1U7EGBqQCviwLRktekOA_dfc5Gi2U5-MMeAwChbCv1WCdTh0hFK1xrzTkw2JUWmZk7S_AKzywquPb_GPqifa2qn6MPhGo96w5v8DNKvXcw_CVmtJchJc6Dg01zirZVVb3kJ2CdS6J6qy
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrHRl7zHtDKTWlj9qnrgRvUhodlUFnz6bXf7jMKR9Zzr_lQTJRlr6JlYhRbNEInZsRK78kFnjg3yRO8PMwQD-r6QkEnY7u0feQ_AZEZOaKxRX5TRxJHoRF5wEcaCg9Iy9X58PcosrGXl67DEIU5rae7cz7NOa3rUJ5_coFhA==
+  title: faithalone.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoGZIkVJNRIlY1Vt_45jMmJFDu-FIn-eEDzSipIceW0YK2OcknJfVXXtmoUkwpKzPGHdDcrhqldUkKhKvKvYqpsVXZzNtt6p0oq5RPukUxGvRxypVXiWnvnrLeyRvlEaJd
+  title: bible.art
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkkb_hMb3LdYsymVNnIePH2gi0oaJal1WAOSV4LBX_-KihRpn1nWx7kB8euR9xpgk06vunV5Adi3RzJAiJUHZ2zolQD-JCXtsC5ze_Iak0X8iQwq1i9MMXpDMG15AEmA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtYOfDNzxPrE7d2IvD0_SJZiqWec1-Ynv8GGsOPqzU5CVI2M4AlsQIwuGjAt1Fe1P8cS37voJzmjV5-Uulni2oP4fU4wb6zesuQKDEMhBPDpSG3aRiNuECp6RGm2M6KMsc5QdhZrD3HsbnyayzsyDue0b22g==
+  title: versebyversecommentary.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDAa37gyyPIqPsXdu2vYeFu_17BB_5gJS_xAdYltgCm1RN0jNpDWsQRmgYJBr5brwF6_FsG0GSz-G57OG2WScV5CT9k74TdlZtoy1bjoj94PLBM3K2oJ-VrdZUv0qoIEeT9ZyiJQ63eCQR8lRbvln1p7iIXJfsTY84pwbYAHy_BAV1AqLatA5l
+  title: graceinmyspace.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBCW5VX1vMZBpvO-vHGQUWF47L2O1EmpFMULNJOSecJ_NehxiTHv3imfpjf0d0zKJ3In69CwUZI8VK52kt3LzVGjWVFCiRPNy25RX7vBlZLjCYPK1nyExyu5l_Vq3QT9Y5x5Z30sjXdy3hp2_rpms=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzFZDSOYq5HNByWWyWRl6fT7seUoYEK1if3hVlvvLeusQTvQ2io2h0zk7fpfJomA__91S5GqURhjlIseaPmvyZ3_JMNdiCFKRdwoYzSBY2nUYs0M9GMUqmDcqEsp8X25o=
+  title: oremus.org
+search_queries:
+- ''
+- hebrew word for good tov
+- Romans 8:28 snippet
+- 3 John 1:11 snippet
+- Genesis 1:31 snippet
+- greek word for good agathos kalos distinction
+- Luke 18:19 snippet
