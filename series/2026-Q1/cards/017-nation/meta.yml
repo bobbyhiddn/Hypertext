@@ -1,0 +1,68 @@
+number: '017'
+word: NATION
+gloss: A large body of people united by descent, history, culture, or language.
+card_type: NOUN
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vast, stylized landscape viewed from high above, divided into distinct,
+  colorful territories by rivers and mountains, with small abstract clusters representing
+  multitudes of people.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Reveal the top 4 cards of the Tower. Choose a card type, then add all revealed
+  cards of that type to your hand and discard the rest.
+ot_verse:
+  ref: Genesis 12:2
+  snippet: And I will make of you a great nation, and I will bless you and make your
+    name great...
+nt_verse:
+  ref: 1 Peter 2:9
+  snippet: But you are a chosen race, a royal priesthood, a holy nation, a people
+    for his own possession...
+greek:
+  text: ἔθνος
+  translit: ethnos
+hebrew:
+  text: גּוֹי
+  translit: goy
+ot_refs: Gen 10:32 • Ex 19:6 • Deut 4:7 • Isa 49:6
+nt_refs: Matt 24:14 • Matt 28:19 • Acts 17:26 • Rev 7:9
+trivia:
+- Hebrew 'goy' implies a political body, while 'am' suggests kinship.
+- Genesis 10, the 'Table of Nations,' lists 70 distinct people groups.
+- In the NT, 'ethnos' usually refers to Gentiles distinct from Israel.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHflAl6TZeGkhuYSE0B2wroDqJuhbEPLchAx-lkdvfEKJ_mC7ZpJJUxQ3ogdi1yS0HueK1QBpBtQC6KEVq6nDmExC1EmWJTQImSQnh3AK9jxsa_Ta8KFaruc7C9ytoW-d-lSPZvfOm-NqNKIuqTgW-Tmj1bHl2POd7rCJCew1hTqpsSQzk=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqr23a81oQ4DbguQAHWimmytws8_hDWu1KsR7-LAsX6YejkSItUWfYcQ0yOpQzvilDJDr8UY8_k9Jue9I1zclEuEeDGL6ZmpdAh-XSXvtRVMvuczQRyNvdL4u7CbHS4fvW_0Q=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpd7Z-l70SzSXahUP-EKwlU6uTMA0Kb22RZ_DrZQ-gDFUc-nR5mQ1EoxiKBUj5wdblF7QGaUgOqZqb4DQMUdDdxGb6SmwLMmSR_TPICw3QenqfenlsNSLCGIYlacaWZRNzkVlN11X09gtDYrmu
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEauChgmL94HfSwDH_ZUoCWiAxTdzT9RYmXUxe_QIjHwq3lb5y9es4m-82TPVSpmX0qtfdzL5IEMOT3rzVRdommwfQ29g8viTtvYQvOGmn2oqDmr0V2j4xqWbqXAA-Y_vhAcjUP5HkWCPoOu5POYgk=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKX4H1ZV4UPopp95n-BvfIiwM2X2_OgNweEb7NCJ7CIa34km_eGuWlHgeamng4FXJA9ODJJEjKXHqvlOf8Mlci9s4wAP4CUD-1trXd1aOBl7pHLkM5Vn52b_dzgccC_I9lapvSig==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDBvFCVHWxMY9iNgclEAOdpLeE7yWCeQptNxU8feLObPCJbr9O50OQd3F4x_1lOpn7s_KEkU8JeG0rLtj5PxqmxsFX0S3EHgAWwjyV6POY0iCgZytDqW7lSPVU23kTXax07Wdz07xz
+  title: openbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFw503beSR12fzRrHk8WTNVa-CnDkkOzS7ktkZ2Bh70YGXFYwvJsbgFwZCkngQ8uzjAKIAhQgZZddSJUsVKac-bf37xOnj4V_IclscMqW45-hXoWF2Y8V334TCUoaiAaAgXi-RLkYY=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHm1RfpYq7i9X_bfDhD1MXVYqTz-IXoW4gBIfMx8g9FrhZ3ekY8XddK6YvCaGr1qSLXfiOye5Lz5O6BJBHKPufHR2IhZaVA5rblrCYLoFzuaZwEwQzAD2Aq8eWCHKsIo61J1ExLNRlqen6YF9_kcYp-9b78HF-WaLDuOHmQ_m59C5jsyJIAIg476fbl
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvsNRFGF9EnTss7OOk4LLJwob3F9NdLEN6TVMRX7QgBc666kobzLNyH9mfOcrYW5mhCMdV7koltL8gdpN1IyoSmlzpNGSmBmNnsxJtRmfC90QeD19p8gSztlzAXDh4Dvl8jwTn
+  title: biblehub.com
+search_queries:
+- ''
+- Greek word for nation ethnos strong's
+- 1 Peter 2:9 ESV snippet
+- biblical definition of nation dictionary
+- Revelation 7:9 ESV snippet
+- Genesis 12:2 ESV snippet
+- Hebrew word for nation goy vs am meaning
