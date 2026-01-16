@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: BLESS
+# Card_Gloss: To confer divine favor, invoke protection, or praise as holy; to speak well of.
+# Card_Type: VERB
+# Card_Rarity: UNCOMMON
+# Card_Ability: Draw 1 card. If you have a NAME in your Pages, draw 1 additional card.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A pair of weathered hands cupped together in a barren landscape, receiving a cascading stream of golden light that turns into water as it touches the palms, overflowing onto the dry ground where small sprouts are instantly blooming.
+# Card_OT_Verse: Numbers 6:24 — The LORD bless thee, and keep thee.
+# Card_NT_Verse: Romans 12:14 — Bless them which persecute you: bless, and curse not.
+# Card_Hebrew: בָּרַךְ (barak)
+# Card_Greek: εὐλογέω (eulogeō)
+# Card_Trivia_1: The Hebrew root 'barak' is related to the word for 'knee,' implying kneeling to offer or receive favor.
+# Card_Trivia_2: The 'Priestly Blessing' in Numbers 6 is one of the oldest known biblical texts, found on silver scrolls from 600 BC.
+# Card_Trivia_3: The Greek word 'eulogeo' (to speak well of) is the origin of the English word 'eulogy.'
