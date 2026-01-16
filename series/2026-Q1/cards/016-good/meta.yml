@@ -1,0 +1,59 @@
+number: '016'
+word: GOOD
+gloss: Morally excellent; virtuous; satisfactory; beneficial.
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A warm, golden light illuminating a basket of ripe, perfect figs and pomegranates
+  sitting on a rough stone table, soft shadows, oil painting style
+stats:
+  lore: 2
+  context: 5
+  complexity: 1
+ability: Draw 2, then discard 1.
+ot_verse:
+  ref: Genesis 1:31
+  snippet: God saw all that he had made, and it was very good.
+nt_verse:
+  ref: 1 Thessalonians 5:21
+  snippet: Test them all; hold on to what is good.
+greek:
+  text: ἀγαθός
+  translit: agathos
+hebrew:
+  text: טוֹב
+  translit: tov
+ot_refs: Gen 1:4 • Ps 34:8 • Mic 6:8 • Nah 1:7
+nt_refs: Matt 19:17 • Rom 8:28 • Gal 6:10 • 3 John 1:11
+trivia:
+- Hebrew 'tov' implies functional harmony, not just moral purity.
+- God pronounces creation 'good' seven times in Genesis 1.
+- Jesus declared that 'No one is good—except God alone.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVNTRiD8JcrrxeZB-oK8srw0Q56Wm1u6J60yiPfO6JGymGYrbpHmc4CHFCMoPNU0Xj2vmwgU7e8IEhdAaMBpQO7rqykYrNsu_iB1zS35gJJRAHivS1X1zebrgLxDkhl8HZtml5377PLOHDQs_dcgPo7iGn03Q=
+  title: branchliving.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELHGIEvNviVm4VPzoUxu3u9koYEUQTMX717CB8EjL6RH-QlTah_az6GNZjID113u5e8xh_BkM4rZfUVblHFuIkfBHow4AfaTvJE1ZXeb9j78V1i0nMwjcbT5ep2Ui9Cux67kJYvjYx3eCJGV6-cQkR_7FpPOeKMbFJx8ei
+  title: andsonsmagazine.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_bxZHlsjRzizI3Yo5BOtiFKmhu2Krodr9z6J9vepqSusDlmqETKa370unGB8TOHmp_NBAMqY93YLGzLwuKEA5k4L14qSVwbfEbPGzssd3EjNr95JYGUWgdEuSO_A9mw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHluTGqAjKXSZn6Xo-RYefYGakw-pCvlCT-aHyRbH5t3Q7bNH0YOFF8eb_iobq7eILvy8EpN145ztM1lkGqTELxj5fa33rT7KlA_bJEWZMR4vN8rPknVyG0mijA2xKCzQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFouKc3If5n0hrV_D53TLw1UBxZSgaqPlhCk3lcLe5DAtGN9Wendy4CSLGVLZ1BKcdJ_mKX3SkC_U4ZYgk-KOi3_GrH00ej8x8Vo-WcZp2LthIeT9_4s3OWuvLVf_d-umA5crfSTGB3Y0Hvi1RhMx81ODbLp37rLzSHfEkUH0HBvQeNqQN-ui25_zQQ8Wo28iv84FeE56neL-xvHOLEMW5zdGkbDx5u
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3x_qaaoiRnw64QmDLKWjtlhepMlYGfcAdCcmz_sLSYPgEh-jgEvXnjqDO7UslLWSfll3PCKuW1wAMS1YzrF6ktoCkFbYRXiWSJYAajLeVUSBZgdxRa7-XD9SpbA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPgDfVeu-btzKGt8OR72ACOeVSTulyJx1PSKRnVlIC-cpm4YOxrlWU84YHz8aOq6Aav86lpE6fl2vK58mUl7BPNQ59mRkNNafa9Lm-uix59niLVxEch7QJMrWMM-cedojcBmE3Nm5A5L-WfQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkI4K_aW5-BDWHMaC-z6E7In22ZxkUSlPcQwpA03KqneE2BqytiXM1eo6uC4EerLzdj61YZeKa9OwyFRvBfmQamwxLz17IxxsGHGg0c5HbY93UAZrNFvEMWMCNDlJku4KfV0qNldaXVvxC1spGbB30F3rc_ndu6trN5XDMwgTJhJp4AfZEWayR0gFpuTL4d4FJzOEbq-nMESO1QihiHxxu1WSGmgtVCJ_BkEe1xi_nDv0SWY8dwUwsOBnDqK0fmxt1hM4Jzg_BNdH1RgoF_LjiY2XnoB3w209Q
+  title: reddit.com
+search_queries:
+- ''
+- greek word for good agathos vs kalos bible
+- hebrew word for good tov occurrences
+- trivia about the word good in the bible
