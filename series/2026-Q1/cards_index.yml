@@ -6,6 +6,7 @@ words:
 - DESCEND
 - EARTH
 - FORM
+- GOOD
 - GRACE
 - MIGHTY
 - MULTIPLY
@@ -21,6 +22,7 @@ ability_patterns:
 - conditional_draw
 - conditional_draw_pages_type_name
 - conditional_draw_type_name
+- discard_draw
 - draw_tower
 - look_top_tower
 - pages_sheol
@@ -104,3 +106,8 @@ cards:
   type: VERB
   rarity: UNCOMMON
   ability_pattern: conditional_draw_type_name
+- number: 16
+  word: GOOD
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: discard_draw

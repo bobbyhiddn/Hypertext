@@ -43,3 +43,6 @@
 - word: SPEAK
   card_type: VERB
   rarity: UNCOMMON
+- word: GOOD
+  card_type: ADJECTIVE
+  rarity: COMMON

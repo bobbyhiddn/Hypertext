@@ -1,0 +1,283 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "016",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "GOOD",
+    "GLOSS": "Morally excellent; virtuous; satisfactory in quality, quantity, or degree.",
+    "CARD_TYPE": "ADJECTIVE",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A simple, perfectly formed clay bowl filled with ripe figs and pomegranates, resting on a rough wooden table in warm sunlight.",
+    "ABILITY_TEXT": "Draw 2 cards, then discard 1 card.",
+    "STAT_LORE": 4,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 1,
+    "OT_VERSE_REF": "Genesis 1:31",
+    "OT_VERSE_SNIPPET": "God saw all that he had made, and it was very good.",
+    "NT_VERSE_REF": "Romans 8:28",
+    "NT_VERSE_SNIPPET": "All things work together for good to them that love God.",
+    "OT_VERSE_LINE": "Genesis 1:31 — “God saw all that he had made, and it was very good.”",
+    "NT_VERSE_LINE": "Romans 8:28 — “All things work together for good to them that love God.”",
+    "GREEK": "ἀγαθός",
+    "GREEK_TRANSLIT": "Agathos",
+    "HEBREW": "טוֹב",
+    "HEBREW_TRANSLIT": "Tov",
+    "OT_REFS": "Gen 1:4 • Gen 1:31 • Ps 34:8 • Mic 6:8",
+    "NT_REFS": "Matt 19:17 • Rom 8:28 • 1 Thess 5:21 • Jas 1:17",
+    "TRIVIA_BULLETS": [
+      "The Hebrew word 'tov' implies functional perfection: it works as intended.",
+      "In the Creation narrative, God pronounces His work 'good' seven times.",
+      "Jesus declared that only God is truly 'good' (agathos) in essence."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Hebrew word for good Genesis 1 meaning",
+      "Greek word for good Matthew 19:17",
+      "Romans 8:28 Greek snippet",
+      "Genesis 1:31 Hebrew snippet"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT_0vO9_jWBY3ve1oI3_FXBA0y0HmsL6W-pCT4NqolQiShw8l8IiFiulhkukJMrNu8oMuqkkVBEpov2Aq7Y77xLhZsyOyYE1n_h0LFiVU9B5kuRywdGPRAVf3P1Bk5oFs01FU6r_Eg0MvmlA--8A==",
+        "title": "icr.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhK7sKcAqMYZWimUCNABPK466wgKIbpC2m41ZpHKNi75qkuoryMm_yq1O43AW3-mK2IUDZ-ujckHkM1tzTQMt9AD1-NXMGFJC26P3qsVe0QXVpPOwN-1rljkJ62dLNvDUGJiKTHsWH06xmvLxsbASL",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvrbMg6Vv97q_6mhcrp8zJdBuvE9WHyPiH4Cx5WWd4NkqdcI7wYsElVWDjOC1i9_8xqhYdc1Jy8Dq0GL6FYHqZLKfDTHJ8saFjwbCbnxwNfJ1nYMvBUgQzuP7dKXCvgmDVdzUeaFg=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElUpsFoHW55yN4e2Gqm2u6HvH-EAlq1AtmQoCNgVP7x8dBmAaZCaQbuLPFGQ-CspEGY7y43ngfzC0T793Rd0nZlzZmmtC2h96wSVUFJVnbsTzRS29Mf5H5j1bDaYsHPlksJoaFdbMTDAjwxpJebWMZHVpnbtcVvmX1M0NikbjGhvPzhfcF6DK8yVJ1NBOtFWaXNBcC7-oOAeY=",
+        "title": "stackexchange.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFttp4FkNN5KeQ0gKycX-rDaMX3h8vPz3_cMLqWc7BXyFs58trmUw4MrORXYTu2WBd_FArdYO9JGDje7lGpnWhB-RxHGZ0wYUQniMRAMmPh0xNra4eFfknAdjprbrSHWnEcnQ7OrU4zmxix3M=",
+        "title": "larryoverton.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEewwgNtGhgm3tKIx_-4IpIoRWT2wav75RWS03S06FeFWILUs_ct3VvNLPMLltf9Xiir_0Yog8zs8I9ULQoEkWCaSo-7k4itfLcw76SNohqg3RtyH9kUo1qLhPmQW9XeQ=",
+        "title": "skipmoen.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTNgbs4LA6THx2ntkb7vX5lh0GsanHcTCfc3Js7-ZfSVC2d3fvSAKzW36_ka4r6JxwN2Z-Q6HI5OxWt5YGmmS2VgHk8AzSYbIj9YIeFfFrOoXV3kQ-j26Lmv5oJpB_Oiox5Jve",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGETMfiKUGywnZNDbC_K3z_ePR4PI1iW0SPAlLGQLGtJ7wY5h_hnN9kl5B1eeZwkh2kh3_S1tPFEpF-A7MK_ZYHc3jjrAye4ibKU9P_2zmKUll9zBviKBq9eA75uIgymiQ",
+        "title": "greekbible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNHpfLukpags8JqYmFI-AYlblbCAc2EMpR6vdDCStYiSyD5-C-9StK1YXZbcWE9TO3sxIV21kPOWBTiinAcNftJQ4sIlxfwpWkkfFpyfF_GjwgoiEf6ZiLE6SUkhRwOtbph5LQNcA4nGE9lJgXYp7hnHLMn4w=",
+        "title": "malachidaily.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDrKC82ycku0_doKU7U8VDHm0Aoep4FGJk8SxbOyOgNEBs0-AjE6WxvI3a79zwrKALsdBhg77AZSWLD-MZKzlY9MuTEIzRfYjaUibfHm48o4Jb8rarDJee7NfHB7FJZ02KU509w3aiTVo=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbuJ7QMwgZE-uIF8riPCw59SdkENhzY30uSwx6gc33cIuaEepMJixquUl0KP7-reUD8BRRF80BoXtfbu6VyfFhpTLDpioyO4e94RL2wNLTopuxCzgQudoLK7VvcV0gFkptd47dmJ3-HuhHdfEbH5SDnhopPVtt3kdOJ6fp",
+        "title": "chaimbentorah.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_UxfHFpSF_ICoD6QzRYv1dGtRv_3XihBp3Hbg4zhPrYdCOHiMuu9cPydVY2FVW_KM9Au2iwS0ofMWRVCWXsT0s7pNKfzAAbJIexjGERL0na-DnqYDNVMmSOuRExHCucZDhGhOdnVYMvoRZkpTguEPZoKfI80Ok3rWg6ss52G36Cu7gAU1xUEJCl8GUB9j",
+        "title": "psephizo.com"
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+number: '016'
+word: GOOD
+gloss: Morally excellent; virtuous; satisfactory in quality, quantity, or degree.
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A simple, perfectly formed clay bowl filled with ripe figs and pomegranates,
+  resting on a rough wooden table in warm sunlight.
+stats:
+  lore: 4
+  context: 5
+  complexity: 1
+ability: Draw 2 cards, then discard 1 card.
+ot_verse:
+  ref: Genesis 1:31
+  snippet: God saw all that he had made, and it was very good.
+nt_verse:
+  ref: Romans 8:28
+  snippet: All things work together for good to them that love God.
+greek:
+  text: ἀγαθός
+  translit: Agathos
+hebrew:
+  text: טוֹב
+  translit: Tov
+ot_refs: Gen 1:4 • Gen 1:31 • Ps 34:8 • Mic 6:8
+nt_refs: Matt 19:17 • Rom 8:28 • 1 Thess 5:21 • Jas 1:17
+trivia:
+- 'The Hebrew word ''tov'' implies functional perfection: it works as intended.'
+- In the Creation narrative, God pronounces His work 'good' seven times.
+- Jesus declared that only God is truly 'good' (agathos) in essence.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFT_0vO9_jWBY3ve1oI3_FXBA0y0HmsL6W-pCT4NqolQiShw8l8IiFiulhkukJMrNu8oMuqkkVBEpov2Aq7Y77xLhZsyOyYE1n_h0LFiVU9B5kuRywdGPRAVf3P1Bk5oFs01FU6r_Eg0MvmlA--8A==
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhK7sKcAqMYZWimUCNABPK466wgKIbpC2m41ZpHKNi75qkuoryMm_yq1O43AW3-mK2IUDZ-ujckHkM1tzTQMt9AD1-NXMGFJC26P3qsVe0QXVpPOwN-1rljkJ62dLNvDUGJiKTHsWH06xmvLxsbASL
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvrbMg6Vv97q_6mhcrp8zJdBuvE9WHyPiH4Cx5WWd4NkqdcI7wYsElVWDjOC1i9_8xqhYdc1Jy8Dq0GL6FYHqZLKfDTHJ8saFjwbCbnxwNfJ1nYMvBUgQzuP7dKXCvgmDVdzUeaFg=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElUpsFoHW55yN4e2Gqm2u6HvH-EAlq1AtmQoCNgVP7x8dBmAaZCaQbuLPFGQ-CspEGY7y43ngfzC0T793Rd0nZlzZmmtC2h96wSVUFJVnbsTzRS29Mf5H5j1bDaYsHPlksJoaFdbMTDAjwxpJebWMZHVpnbtcVvmX1M0NikbjGhvPzhfcF6DK8yVJ1NBOtFWaXNBcC7-oOAeY=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFttp4FkNN5KeQ0gKycX-rDaMX3h8vPz3_cMLqWc7BXyFs58trmUw4MrORXYTu2WBd_FArdYO9JGDje7lGpnWhB-RxHGZ0wYUQniMRAMmPh0xNra4eFfknAdjprbrSHWnEcnQ7OrU4zmxix3M=
+  title: larryoverton.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEewwgNtGhgm3tKIx_-4IpIoRWT2wav75RWS03S06FeFWILUs_ct3VvNLPMLltf9Xiir_0Yog8zs8I9ULQoEkWCaSo-7k4itfLcw76SNohqg3RtyH9kUo1qLhPmQW9XeQ=
+  title: skipmoen.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTNgbs4LA6THx2ntkb7vX5lh0GsanHcTCfc3Js7-ZfSVC2d3fvSAKzW36_ka4r6JxwN2Z-Q6HI5OxWt5YGmmS2VgHk8AzSYbIj9YIeFfFrOoXV3kQ-j26Lmv5oJpB_Oiox5Jve
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGETMfiKUGywnZNDbC_K3z_ePR4PI1iW0SPAlLGQLGtJ7wY5h_hnN9kl5B1eeZwkh2kh3_S1tPFEpF-A7MK_ZYHc3jjrAye4ibKU9P_2zmKUll9zBviKBq9eA75uIgymiQ
+  title: greekbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNHpfLukpags8JqYmFI-AYlblbCAc2EMpR6vdDCStYiSyD5-C-9StK1YXZbcWE9TO3sxIV21kPOWBTiinAcNftJQ4sIlxfwpWkkfFpyfF_GjwgoiEf6ZiLE6SUkhRwOtbph5LQNcA4nGE9lJgXYp7hnHLMn4w=
+  title: malachidaily.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDrKC82ycku0_doKU7U8VDHm0Aoep4FGJk8SxbOyOgNEBs0-AjE6WxvI3a79zwrKALsdBhg77AZSWLD-MZKzlY9MuTEIzRfYjaUibfHm48o4Jb8rarDJee7NfHB7FJZ02KU509w3aiTVo=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbuJ7QMwgZE-uIF8riPCw59SdkENhzY30uSwx6gc33cIuaEepMJixquUl0KP7-reUD8BRRF80BoXtfbu6VyfFhpTLDpioyO4e94RL2wNLTopuxCzgQudoLK7VvcV0gFkptd47dmJ3-HuhHdfEbH5SDnhopPVtt3kdOJ6fp
+  title: chaimbentorah.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_UxfHFpSF_ICoD6QzRYv1dGtRv_3XihBp3Hbg4zhPrYdCOHiMuu9cPydVY2FVW_KM9Au2iwS0ofMWRVCWXsT0s7pNKfzAAbJIexjGERL0na-DnqYDNVMmSOuRExHCucZDhGhOdnVYMvoRZkpTguEPZoKfI80Ok3rWg6ss52G36Cu7gAU1xUEJCl8GUB9j
+  title: psephizo.com
+search_queries:
+- ''
+- Hebrew word for good Genesis 1 meaning
+- Greek word for good Matthew 19:17
+- Romans 8:28 Greek snippet
+- Genesis 1:31 Hebrew snippet
