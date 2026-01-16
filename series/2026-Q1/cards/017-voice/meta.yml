@@ -1,0 +1,39 @@
+number: '017'
+word: VOICE
+gloss: Sound uttered by the mouth; the power of speech; a divine call or command.
+card_type: NOUN
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A powerful shockwave of golden light rippling through a stormy grey sky,
+  parting the clouds, abstract and ethereal style, no text
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Return a VERB from Sheol to your hand.
+ot_verse:
+  ref: Psalm 29:4
+  snippet: The voice of the LORD is powerful; the voice of the LORD is full of majesty.
+nt_verse:
+  ref: John 10:27
+  snippet: My sheep hear my voice, and I know them, and they follow me.
+greek:
+  text: φωνή
+  translit: phōnē
+hebrew:
+  text: קוֹל
+  translit: qol
+ot_refs: Gen 3:8 • 1 Kgs 19:12 • Isa 40:3 • Ezek 43:2
+nt_refs: Mk 1:11 • Rev 3:20 • Acts 9:4 • Heb 3:15
+trivia:
+- Psalm 29 repeats 'the voice of the LORD' seven times, comparing it to a thunderstorm.
+- The Hebrew word 'qol' is versatile, meaning sound, thunder, rumor, or language.
+- The 'Bat Kol' (Daughter of a Voice) is a rabbinic term for a heavenly communication.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

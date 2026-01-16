@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: VOICE
+# Card_Gloss: Sound uttered by the mouth; the power of speech; a divine call or command.
+# Card_Type: NOUN
+# Card_Rarity: UNCOMMON
+# Card_Ability: Return a VERB from Sheol to your hand.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A powerful shockwave of golden light rippling through a stormy grey sky, parting the clouds, abstract and ethereal style, no text
+# Card_OT_Verse: Psalm 29:4 — The voice of the LORD is powerful; the voice of the LORD is full of majesty.
+# Card_NT_Verse: John 10:27 — My sheep hear my voice, and I know them, and they follow me.
+# Card_Hebrew: קוֹל (qol)
+# Card_Greek: φωνή (phōnē)
+# Card_Trivia_1: Psalm 29 repeats 'the voice of the LORD' seven times, comparing it to a thunderstorm.
+# Card_Trivia_2: The Hebrew word 'qol' is versatile, meaning sound, thunder, rumor, or language.
+# Card_Trivia_3: The 'Bat Kol' (Daughter of a Voice) is a rabbinic term for a heavenly communication.
