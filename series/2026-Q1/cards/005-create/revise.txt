@@ -21,7 +21,7 @@
 # - Leave a field blank to keep it unchanged.
 # - Lines starting with # are ignored (except Card_ fields below).
 
-Rebuild: false
+Rebuild: true
 
 Rarity_Change_Request: <leave blank unless changing rarity>
 
