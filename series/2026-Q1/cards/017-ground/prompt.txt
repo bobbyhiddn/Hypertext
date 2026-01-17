@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #017
+WORD: GROUND
+GLOSS: The solid surface of the earth; soil; a foundation or basis for belief.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Return a NOUN from Sheol to your hand.
+
+VERSES:
+OT: Genesis 2:7 — “And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.”
+NT: 1 Timothy 3:15 — “The church of the living God, the pillar and ground of the truth.”
+
+LANGUAGES:
+Hebrew: אֲדָמָה - adamah - Gen 2:7 • Ex 3:5 • Josh 5:15 • Jer 4:3
+Greek: ἑδραίωμα - hedraiōma - Mark 4:8 • 1 Tim 3:15 • Eph 3:17 • Col 1:23
+
+TRIVIA:
+• The Hebrew word for man (Adam) is derived from the word for ground (Adamah).
+• Both Moses and Joshua were commanded to remove their sandals on holy ground.
+• In the Parable of the Sower, the 'good ground' represents a heart that hears and understands.
+
+ART: A cross-section of rich, dark earth layers revealing glowing roots and an ancient, buried foundation stone; abstract style, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

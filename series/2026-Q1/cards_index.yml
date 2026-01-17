@@ -8,6 +8,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- GROUND
 - MIGHTY
 - MULTIPLY
 - NAME
@@ -111,3 +112,8 @@ cards:
   type: ADJECTIVE
   rarity: COMMON
   ability_pattern: discard_draw
+- number: 17
+  word: GROUND
+  type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_noun
