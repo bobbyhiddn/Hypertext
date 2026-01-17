@@ -46,3 +46,5 @@ search_queries: []
 review_score: 100
 review_attempts: 2
 review_status: green
+revision: 1
+revision_notes: Rebuild (image regenerated from scratch)

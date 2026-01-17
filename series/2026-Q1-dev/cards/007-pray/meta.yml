@@ -78,3 +78,5 @@ last_description:
   has_brackets: false
   bracket_locations: []
 review_status: green
+revision: 1
+revision_notes: Rebuild (image regenerated from scratch)

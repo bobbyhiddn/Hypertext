@@ -70,3 +70,5 @@ review_attempts: 2
 review_status: yellow
 review_notes: Change the rarity icon shape from a diamond to a hexagon to align with
   the RARE specification.
+revision: 1
+revision_notes: Rebuild (image regenerated from scratch)
