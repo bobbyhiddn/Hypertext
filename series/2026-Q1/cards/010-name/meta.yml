@@ -44,23 +44,42 @@ letter: null
 notes: null
 sources: []
 search_queries: []
-revision: 1
-revision_notes: "General revision request (you may modify any content field as needed):\n\
-  # Card_Word: NAME\n# Card_Gloss: A word or phrase by which a person, place, or concept\
-  \ is known, designated, or addressed; distinct from essence yet representing it.\n\
-  # Card_Type: NOUN\n# Card_Rarity: COMMON\n# Card_Ability: Draw 1. If you have a\
-  \ NAME in your Pages, draw 3 more.\n# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY\
-  \ 2\n# Card_Art_Prompt: A smooth, glowing white stone resting on a dark velvet cloth,\
-  \ illuminated by a single shaft of light; the stone has a unique, abstract seal\
-  \ carved into it, symbolizing identity without using letters.\n# Card_OT_Verse:\
-  \ Proverbs 22:1 — A good name is rather to be chosen than great riches, and loving\
-  \ favour rather than silver and gold.\n# Card_NT_Verse: Philippians 2:9 — Wherefore\
-  \ God also hath highly exalted him, and given him a name which is above every name.\n\
-  # Card_Hebrew: שֵׁם (shem)\n# Card_Greek: ὄνομα (onoma)\n# Card_Trivia_1: In biblical\
-  \ culture, a name was not just a label but represented the person's character, authority,\
-  \ and essential nature.\n# Card_Trivia_2: God's personal name, YHWH, was considered\
-  \ so holy that readers would substitute 'Adonai' (Lord) to avoid speaking it.\n\
-  # Card_Trivia_3: Receiving a new name (e.g., Jacob to Israel) often signified a\
-  \ divine transformation of destiny and identity.\n\nCard field changes (from preview):\n\
-  \  ABILITY_TEXT: 'Draw 1. If you have a NAME in your Pages, draw 1 more.' -> 'Draw\
-  \ 1. If you have a NAME in your Pages, draw 3 more.'"
+revision: 2
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  # Card_Word: NAME
+
+  # Card_Gloss: A word or phrase by which a person, place, or concept is known, designated,
+  or addressed; distinct from essence yet representing it.
+
+  # Card_Type: NOUN
+
+  # Card_Rarity: COMMON
+
+  # Card_Ability: Draw 1. If you have a NAME in your Pages, draw 3 more.
+
+  # Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+
+  # Card_Art_Prompt: A smooth, glowing white stone resting on a dark velvet cloth,
+  illuminated by a single shaft of light; the stone has a unique, abstract seal carved
+  into it, symbolizing identity without using letters.
+
+  # Card_OT_Verse: Proverbs 22:1 — A good name is rather to be chosen than great riches,
+  and loving favour rather than silver and gold.
+
+  # Card_NT_Verse: Philippians 2:9 — Wherefore God also hath highly exalted him, and
+  given him a name which is above every name.
+
+  # Card_Hebrew: שֵׁם (shem)
+
+  # Card_Greek: ὄνομα (onoma)
+
+  # Card_Trivia_1: In biblical culture, a name was not just a label but represented
+  the person''s character, authority, and essential nature.
+
+  # Card_Trivia_2: God''s personal name, YHWH, was considered so holy that readers
+  would substitute ''Adonai'' (Lord) to avoid speaking it.
+
+  # Card_Trivia_3: Receiving a new name (e.g., Jacob to Israel) often signified a
+  divine transformation of destiny and identity.'
+last_rebuild: true

@@ -221,7 +221,7 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print 'COMMON ◆'. Diamond color: WHITE. COST INDICATOR: None. STAT PIPS: Use NAVY (dark blue) circles only. Do not use black, gold, or diamonds for pips. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print 'COMMON ◆' in the top right corner. Diamond color: WHITE. COST INDICATOR: None. STAT PIPS: Use NAVY (dark blue) circles only. Do not use black, gold, or diamonds for pips. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
   "grounding": {
     "queries": [
       "",

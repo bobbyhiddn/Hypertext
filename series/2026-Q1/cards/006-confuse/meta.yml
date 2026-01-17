@@ -66,3 +66,39 @@ search_queries:
 - hebrew word for confuse Genesis 11:7
 - greek word for confuse Acts 2:6
 - confuse bible verse trading card
+revision: 1
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  # Card_Word: CONFUSE
+
+  # Card_Gloss: To mix up, bewilder, or throw into disorder; to make indistinct.
+
+  # Card_Type: VERB
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Swap your Lot with target player''s Lot.
+
+  # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 4
+
+  # Card_Art_Prompt: A spiraling stone tower dissolving into swirling mist and chaotic
+  geometric shapes, ancient architecture fragmenting into dust, surreal style
+
+  # Card_OT_Verse: Genesis 11:7 — Come, let us go down and there confuse their language,
+  that they may not understand one another''s speech.
+
+  # Card_NT_Verse: Acts 2:6 — And when this sound occurred, the multitude came together,
+  and were confused, because everyone heard them speak in his own language.
+
+  # Card_Hebrew: בָּלַל (balal)
+
+  # Card_Greek: συγχέω (sygcheō)
+
+  # Card_Trivia_1: The Hebrew word ''balal'' is a deliberate wordplay on the name
+  ''Babel''.
+
+  # Card_Trivia_2: The confusion of tongues at Babel is thematically reversed at Pentecost.
+
+  # Card_Trivia_3: Balal also technically describes mixing oil into flour for grain
+  offerings.'
+last_rebuild: true

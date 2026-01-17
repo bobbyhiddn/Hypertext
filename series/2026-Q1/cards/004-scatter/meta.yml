@@ -84,3 +84,43 @@ last_description:
   style_matches_reference: true
   style_mismatch_reason: ''
 review_status: green
+revision: 1
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  # Card_Word: SCATTER
+
+  # Card_Gloss: To separate and drive off in various directions; to disperse or spread
+  widely.
+
+  # Card_Type: VERB
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Target player shuffles their hand into the Tower, then draws that
+  many cards.
+
+  # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+
+  # Card_Art_Prompt: A stone tower in the distance, silhouetted against a twilight
+  sky, with many small glowing embers or seeds blowing wildly away from it in the
+  wind across a vast desert landscape.
+
+  # Card_OT_Verse: Genesis 11:9 — From thence did the Lord scatter them abroad upon
+  the face of all the earth.
+
+  # Card_NT_Verse: Matthew 26:31 — I will smite the shepherd, and the sheep of the
+  flock shall be scattered abroad.
+
+  # Card_Hebrew: פּוּץ (pûṣ)
+
+  # Card_Greek: διασκορπίζω (diaskorpizō)
+
+  # Card_Trivia_1: The Tower of Babel narrative is the primary biblical etiology for
+  the scattering of nations.
+
+  # Card_Trivia_2: The Greek term ''diaspora'' literally means ''a scattering'' or
+  ''sowing across''.
+
+  # Card_Trivia_3: Jesus quoted Zechariah 13:7 to predict the disciples fleeing upon
+  His arrest.'
+last_rebuild: true

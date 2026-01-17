@@ -72,10 +72,12 @@ search_queries:
 - Bible trivia word earth
 - Hebrew word for earth eretz transliteration
 - Matthew 5:5 KJV snippet
-revision: 2
+revision: 3
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  remove parenthesis the greek and hebrew transliterations
+  Place the correct greek and hebrew words, the current ones are incorrect in both
+  the original text and the transliteration, they say grace in their original languages
+  instead of  אֶרֶץ (''Eretz) and γῆ (Gē)
 
   # Card_Word: EARTH
 
@@ -110,3 +112,4 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_3: Ancient cosmology often depicted the earth as a foundation set
   upon pillars.'
+last_rebuild: true

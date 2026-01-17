@@ -5,10 +5,10 @@ Replicate the card layout from the reference images with this content:
 NUMBER: #001
 WORD: GRACE
 GLOSS: Unmerited favor; a free gift.
-TYPE: NOUN (use matching type icon from references)
-RARITY: COMMON (use matching rarity badge style from references)
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
 
-STATS (each has 5 pip slots total):
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
 LORE: 5/5 filled
 CONTEXT: 5/5 filled
 COMPLEXITY: 3/5 filled
@@ -21,8 +21,8 @@ OT: Genesis 6:8 — But Noah found grace in the eyes of the LORD.
 NT: Ephesians 2:8 — For by grace are ye saved through faith; and that not of yourselves...
 
 LANGUAGES:
-Hebrew: חֵן (chen) - Gen 6:8 • Ex 33:17 • Ps 84:11
-Greek: χάρις (charis) - Rom 3:24 • Eph 2:8 • 2 Cor 12:9
+Hebrew: חֵן - chen - Gen 6:8 • Ex 33:17 • Ps 84:11
+Greek: χάρις - charis - Rom 3:24 • Eph 2:8 • 2 Cor 12:9
 
 TRIVIA:
 • "Charis" (Greek) originally meant "beauty" or "charm" before the New Testament gave it deep theological weight.
