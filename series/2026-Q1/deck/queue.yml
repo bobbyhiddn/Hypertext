@@ -46,3 +46,6 @@
 - word: GOOD
   card_type: ADJECTIVE
   rarity: COMMON
+- word: NATION
+  card_type: NOUN
+  rarity: UNCOMMON

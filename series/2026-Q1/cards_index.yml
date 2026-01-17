@@ -11,11 +11,13 @@ words:
 - MIGHTY
 - MULTIPLY
 - NAME
+- NATION
 - REMEMBER
 - SCATTER
 - SPEAK
 - STONE
 ability_patterns:
+- add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
 - add_hand_look_top_tower
 - conditional_discard_draw_type_verb
@@ -111,3 +113,8 @@ cards:
   type: ADJECTIVE
   rarity: COMMON
   ability_pattern: discard_draw
+- number: 17
+  word: NATION
+  type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: add_hand_choice_discard_tower
