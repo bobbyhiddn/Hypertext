@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: WOMAN
+GLOSS: An adult female human; distinctively created as a counterpart to man.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Draw 1 card. Then look at the top card of the Tower; you may put it into Sheol.
+
+VERSES:
+OT: Genesis 2:23 — “She shall be called Woman, because she was taken out of Man.”
+NT: Galatians 4:4 — “God sent forth his Son, made of a woman, made under the law.”
+
+LANGUAGES:
+Hebrew: אִשָּׁה - ishah - Gen 2:22 • Prov 31:10 • Gen 3:20
+Greek: γυνή - gynē - Matt 28:5 • John 19:26 • Rev 12:1
+
+TRIVIA:
+• The Hebrew word 'ishah' is the feminine form of 'ish' (man).
+• Eve is the only woman in the Bible not born of a woman.
+• Women were the first witnesses to Christ's resurrection.
+
+ART: A stylized silhouette of a female figure holding a lit oil lamp, casting a warm glow against a dark purple background, abstract geometric style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

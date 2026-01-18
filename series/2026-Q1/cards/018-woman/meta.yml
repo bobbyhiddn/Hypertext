@@ -1,0 +1,40 @@
+number: 018
+word: WOMAN
+gloss: An adult female human; distinctively created as a counterpart to man.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A stylized silhouette of a female figure holding a lit oil lamp, casting
+  a warm glow against a dark purple background, abstract geometric style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Draw 1 card. Then look at the top card of the Tower; you may put it into
+  Sheol.
+ot_verse:
+  ref: Genesis 2:23
+  snippet: She shall be called Woman, because she was taken out of Man.
+nt_verse:
+  ref: Galatians 4:4
+  snippet: God sent forth his Son, made of a woman, made under the law.
+greek:
+  text: γυνή
+  translit: gynē
+hebrew:
+  text: אִשָּׁה
+  translit: ishah
+ot_refs: Gen 2:22 • Prov 31:10 • Gen 3:20
+nt_refs: Matt 28:5 • John 19:26 • Rev 12:1
+trivia:
+- The Hebrew word 'ishah' is the feminine form of 'ish' (man).
+- Eve is the only woman in the Bible not born of a woman.
+- Women were the first witnesses to Christ's resurrection.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
