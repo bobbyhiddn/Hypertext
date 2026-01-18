@@ -1,0 +1,64 @@
+number: 018
+word: MAN
+gloss: A human being; the human race; Adam.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A figure formed of red clay rising from the earth, hands open, silhouette
+  against a bright garden light.
+stats:
+  lore: 2
+  context: 5
+  complexity: 1
+ability: Draw 2 cards, then discard 1 card.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: The Lord God formed the man of dust from the ground and breathed into his
+    nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:47
+  snippet: The first man was from the earth, a man of dust; the second man is from
+    heaven.
+greek:
+  text: ἄνθρωπος
+  translit: anthropos
+hebrew:
+  text: אָדָם
+  translit: adam
+ot_refs: Gen 1:26 • Job 14:1 • Ps 8:4 • Eccl 3:20
+nt_refs: Matt 4:4 • Rom 5:12 • 1 Cor 15:45 • Phil 2:8
+trivia:
+- The Hebrew word 'adam' is a play on 'adamah', meaning "ground" or "earth."
+- Used generically for "mankind" and as the proper name for the first human.
+- In the NT, Jesus is called the "Second Man" or "Last Adam."
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCrJ7IRjz1wcbUJduS0GNTzsXv3BbxK8ugAnl_DcdwGQi8RJKmyz8c4Jo_E_q4xAV-jIGqwzIsGWBsZ5atDzZauUt5QQVm8PB8l8C7LNQT4lHALGPQxTsu0PZ6BIV6mkp5WA_fcOov
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeQ5NKg6HzUxMINl8-_64ugcARHnDRTGF5QFYkVPqARjLZvWGt9zYdy0kz13DpwoX8nE_Uyn3Ze4A4Y4k3n3dPBu_70aIrDbeeRy1dxbJtxDOtg-XaIBC0uGbGWN8=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsOY2Elx8LERBBMdNy11YiUUKBCvwfD-gUzk1W1ndHdNQPwt9Ypq-ct6Ehj0V1TDFMuxjUm8-ExMaQHODgxdtlDtmFp0qtEIG3dCHhecTKLtJAeYuiAFyv-ALGxKtd4A_1Pkz9VA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyeEWxkJGAlHRJ_HWzJGXJM8WMHRKQ6aVrcXOZvrevfHKY742feuSPJxuUT4LmLPhLFx1QTrQVeTMjtSXLl77Kyl9A7E0bD4temBskBI2Jnfzcc0rRqkeXkUqpYVdKJJ0fIoOqbuQZlfnoQ8o_QBr0fen0DHJ9u8UbgERvll0hUyj_4XvdheRYVC3Gn5qspolQNMLu3-tKGQ==
+  title: theonenessofgod.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_64YkZEl-YRHz5_i5jk7iurctJZAhGJG9BDNlgEMTz6LnnAQp4qZERrtK1ikeAlvFpGDvzLktQ6YvUUc0mdDcM3FdXHY68NsC_UT6crmTJLaDYiApXngaOPdv4wMA1cCIcK13rnam
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZGqqUtpB-6m9JcN3F5bmN_JAoT-sh_9N_FSk5yfKoXtTwgSkRM2ZpsJjmOBid5aydFihGURsVoPZFDKN5M16PhnGoSJEH_RkiGtgL4tO5A1rlahCr_abcLtVkC__s97CFOMs7U7BXxNVc9TId5Ixs
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKVV7BK0wpBubL2Ks5JXoCcCvtp7eBCsBMqw4PBQQcEJMrtNfzX407YQGAPGubpm4rC9xdw95nppNHt5JRT32W2jpr4R2WKMHcRJTnUp9cX8_oLWuNR08CNz43EzRuKO84
+  title: uiowa.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9Ihq4C1wxkdf_L4g1pR15F4VvHoNvFmb1kidPDpxKwBmN7iLLNXZwNCey0IS8M0eJLGig8wOHg_Aj5L3IdSm3jjyQhoVZJX6Asnq3g9lNOetePKHIIZHHStHvbRwxYz_3jX0ZZHiH_nRNPMv3WAjzAw==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaYuXXNcD1gG2iEm4An_9anZrqSn0fyMEYYh8QJthwrnzbpPywLDuCzjvJu5AwU2OAcfufhNLvHmOkZHWsZO7OEgPkHBX3KhBmRwTkxgmsSf7ElbxS1V_JUczFuiPqeHkokWhJ1MMJOKAR2hOrClu93NLpBg00xa8XE3krQ5400CQSx2uyDaUc2WpCh2DVUOk=
+  title: biblegateway.com
+search_queries:
+- ''
+- Greek word for Man Anthropos definition
+- Hebrew word for Man Adam definition
+- Bible verse First man Adam Second man Christ
+- Bible verse Man dust to dust

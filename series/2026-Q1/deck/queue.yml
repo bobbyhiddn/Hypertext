@@ -49,3 +49,6 @@
 - word: NATION
   card_type: NOUN
   rarity: UNCOMMON
+- word: MAN
+  card_type: NAME
+  rarity: COMMON
