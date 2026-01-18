@@ -1,0 +1,68 @@
+number: 018
+word: ENOSH
+gloss: Mortal man; frailty
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A solitary, humble figure kneeling in a vast, arid landscape under a starry
+  twilight sky, hands raised slightly in prayer; atmospheric, earthy tones, ancient
+  near east setting.
+stats:
+  lore: 3
+  context: 2
+  complexity: 2
+ability: Look at the top 2 cards of the Tower. Put one into your hand and the other
+  into Sheol.
+ot_verse:
+  ref: Genesis 4:26
+  snippet: At that time people began to call upon the name of the LORD.
+nt_verse:
+  ref: Luke 3:38
+  snippet: '...the son of Enosh, the son of Seth, the son of Adam, the son of God.'
+greek:
+  text: Ἐνώς
+  translit: Enōs
+hebrew:
+  text: אֱנוֹשׁ
+  translit: Enosh
+ot_refs: Gen 4:26 • Gen 5:6 • 1Chr 1:1 • Ps 8:4
+nt_refs: Luke 3:38
+trivia:
+- Name means 'mortal' or 'frail,' emphasizing human weakness.
+- Grandson of Adam; his generation began public worship.
+- Lived 905 years, bridging the history between Adam and Noah.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeYav8WRSKHTbc7Oq1njJlPMf9cwd02uDDG3Zqdb2XdH2t3q5S8oy25wCw4nBHUZ9EtVXfRrt_sUoXgctuo8XRepnMTPyEQ9inmkL7O86S-J0_PlNngREujdtE58iwAapakwyxt3JQ6HkY-myOO7U=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-gX5HBmq9qqoxQpC7z5xzgZ0_Y2xPju91r6aogsWmGqBcmxGaEFpFX1fA5b5MseZVSifIsgVPn7bJy9V-zGw4RgaKHKeVudTHuMsgIxzJ8hnEPa6EtkYunNaotL1D
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM_NW91ZG07zLzybPfxoN-0EjdU7eRHIKYtn22blr2w1ROvSFZMnvzirZIToDjOhopsiCzqnpZ0mctNzBhYxkJK9OmEe_pXp4cJwGISwo5NT2mbPw8qAQIOIOGhSUcWfCOIvBDKeTNghq0M7X4IVk=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELNRY2253MfbbMRbv6pjBwKs3oscJrRFndkZJlSH090GGFJio8XOmM4dn1NroVUZLSCH5JrAy3pqVkaI0Z-dsZNzhQWMwDiXbpzhd84Jx4cgoaU0zs71CyzR04Sb8CvosoNYYdC35tsgc0IlgXoek=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8Hc4eAGmtnV-lc-8urle9W0wksVCbvELbBrxenFxDKomiLQQUMPL-JzsO1dkgb7UuQQ2fTkmgiTdcm-8S4N9X9e7xsYgjPFi_AWi80Kpsm33ajAh4QYYMFz9YjHeC1DKns5S5mCdT
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8hFym0FKL3JiSMAAzAnyY3OlhCKXFEG_6YmBCLJmFbWO02qTcxDQ6YUqhb7Reaci5njMtZjJUcALv1Nr2DnUDiBYs5oh-3cnUK6XU3Dv-FRs1t-vPIWYOpbfSxo0=
+  title: cnbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFOcHlTHlwNa1Xz0aHO-X94FlmULqZKP1em0J81RWmRWTwrWpQURVBd9blRrJDDI5Tp6B66OWU8PxmiTzBLs5X07WTzgtj2vqfi62wFg9clOQG_lG7ufq8OSYY30qYGUr16iX2
+  title: bibliaparalela.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9v2A3rRF6QSG-S73kbjSBj2qcvKTlPoorkrwbTyTr08w4IWPLTB9GJQMmLHUjNGudJEA68TSm8cYcH9qkwrFb_sHZkiUyuJXszyPnbmi2Tm8fs_llHnTDp5vulvh4_gjI6cwFLIa7kFL3kX8Y
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrF1Zzn4jv_50Og9zkG3WNmoszJQ0ytTzt_Gk3KxI_AxQHYc9lb1ioAvuIkqhdapWmBTdqRuPgAmBXRMfm3GY_MR98Ov2wCzZgz2urrBfLpNgGITif9g6PCON-8CmTxHGLqUyxscS7U04Sg8Qxb0l6Sg==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLUe4f-0LKQMSK-ERlt7T4u-jHVbjkerP_Cp_Pzm52voaz5TYwxwhMkUtO0WSLV-Pj8pJiZVIwah_NwZB7U-he9Fq0SMTt6ST60Dcx8Dw7MVIeGWfowND3--BpGP5e828LF5T6RBPVJqwrfD1uhJRhLnV2G3yjpbCj6TeJlreLUiLtQ4iOA2t5h9EUjxbx3q6qy6paJ4LfhiQ3Iw==
+  title: reformedfaithinsights.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpmwGL3BOPImhWu8jFIcD-YBhzR8Q_D1AxL9pYeL8m33RBiLSEZQAXMc5edymJtod9vVjIhmXpiJG_7xANZsd7HI6DM0iR1TzCkvYPNe_l9Pdw6jjtWZqWIp8Vmu4bpXxDDHbwBpaVZ9c=
+  title: saintebible.com
+search_queries:
+- ''
+- Enosh Bible trivia
+- Enosh Hebrew meaning and etymology
+- Enosh Greek Strong's concordance
+- Genesis 4:26 Enosh meaning

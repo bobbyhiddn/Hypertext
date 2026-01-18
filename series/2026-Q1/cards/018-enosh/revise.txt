@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ENOSH
+# Card_Gloss: Mortal man; frailty
+# Card_Type: NAME
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 2 cards of the Tower. Put one into your hand and the other into Sheol.
+# Card_Stats: LORE 3 | CONTEXT 2 | COMPLEXITY 2
+# Card_Art_Prompt: A solitary, humble figure kneeling in a vast, arid landscape under a starry twilight sky, hands raised slightly in prayer; atmospheric, earthy tones, ancient near east setting.
+# Card_OT_Verse: Genesis 4:26 — At that time people began to call upon the name of the LORD.
+# Card_NT_Verse: Luke 3:38 — ...the son of Enosh, the son of Seth, the son of Adam, the son of God.
+# Card_Hebrew: אֱנוֹשׁ (Enosh)
+# Card_Greek: Ἐνώς (Enōs)
+# Card_Trivia_1: Name means 'mortal' or 'frail,' emphasizing human weakness.
+# Card_Trivia_2: Grandson of Adam; his generation began public worship.
+# Card_Trivia_3: Lived 905 years, bridging the history between Adam and Noah.

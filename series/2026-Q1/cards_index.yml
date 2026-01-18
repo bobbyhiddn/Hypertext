@@ -5,6 +5,7 @@ words:
 - CREATE
 - DESCEND
 - EARTH
+- ENOSH
 - FORM
 - GOOD
 - GRACE
@@ -26,6 +27,7 @@ ability_patterns:
 - conditional_draw_type_name
 - discard_draw
 - draw_tower
+- look_top_sheol_tower
 - look_top_tower
 - pages_sheol
 - sheol_tower
@@ -118,3 +120,8 @@ cards:
   type: NOUN
   rarity: UNCOMMON
   ability_pattern: add_hand_choice_discard_tower
+- number: 18
+  word: ENOSH
+  type: NAME
+  rarity: COMMON
+  ability_pattern: look_top_sheol_tower
