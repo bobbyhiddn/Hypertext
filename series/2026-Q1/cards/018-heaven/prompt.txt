@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: HEAVEN
+GLOSS: The abode of God, the angels, and the righteous; the sky or firmament.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 2 cards, then put 1 card from your hand on top of the Tower.
+
+VERSES:
+OT: Genesis 1:1 — “In the beginning God created the heaven and the earth.”
+NT: Matthew 6:9 — “Our Father which art in heaven, Hallowed be thy name.”
+
+LANGUAGES:
+Hebrew: שָׁמַיִם - Shamayim - Gen 1:1 • Ps 19:1 • Deut 10:14 • Isa 66:1
+Greek: Οὐρανός - Ouranos - Matt 6:9 • Rev 21:1 • John 14:2 • Acts 1:11
+
+TRIVIA:
+• Hebrew 'shamayim' is a dual noun, implying 'two heavens' or 'waters there' (sham + mayim).
+• Often used as a reverent metonym for 'God' in phrases like 'Kingdom of Heaven'.
+• Greek 'ouranos' refers to both the atmospheric sky and the spiritual abode of God.
+
+ART: Ethereal golden light breaking through white clouds, upward perspective, atmospheric and divine, abstract and majestic, no text
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

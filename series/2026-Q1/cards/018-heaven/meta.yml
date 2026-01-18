@@ -1,0 +1,67 @@
+number: 018
+word: HEAVEN
+gloss: The abode of God, the angels, and the righteous; the sky or firmament.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Ethereal golden light breaking through white clouds, upward perspective,
+  atmospheric and divine, abstract and majestic, no text
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 2 cards, then put 1 card from your hand on top of the Tower.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: Our Father which art in heaven, Hallowed be thy name.
+greek:
+  text: Οὐρανός
+  translit: Ouranos
+hebrew:
+  text: שָׁמַיִם
+  translit: Shamayim
+ot_refs: Gen 1:1 • Ps 19:1 • Deut 10:14 • Isa 66:1
+nt_refs: Matt 6:9 • Rev 21:1 • John 14:2 • Acts 1:11
+trivia:
+- Hebrew 'shamayim' is a dual noun, implying 'two heavens' or 'waters there' (sham
+  + mayim).
+- Often used as a reverent metonym for 'God' in phrases like 'Kingdom of Heaven'.
+- Greek 'ouranos' refers to both the atmospheric sky and the spiritual abode of God.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFN7uAcEEMlk3DsBBhTs62KJxJMgnDSQ94gGBlfwCjfIzhxFvRf0RTgwqh-6CvX0EHQ4JhdOvE1XQbRU3X7CR8jyoNupCVrG4M7xkVSavcWx2EmbeIBsSNtdGLOzSSJ5XuCLsjYojy5SvGRXVEMMAjbRZsd0kR48VBwmQT2ni_aWzScP7-UVJZiug==
+  title: bibletolife.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_dYRIK1SYArdz4N_jDVBLzqjFZVRdgF4JYle3I1yAio0TycGkwpNehJ-Bw2tTKzMcq6hWikx3WTcCL5H1CL-1wHqfCnL-WTqdmVkYeMVtbNh1tXeTzjM8wHmYMd6kugr_M9j2y99NRv9xteop-mFJ_R91cqzcL23CXmLBqwY80n6dGXB0ulIxsNhaKJU1gi79PXdTocIqS_kGV_CPKzocnbE=
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnfO3tsiIiVonZ9TarSj5h0GQcQO43373LNZHHyWJSkFOEKSI1-y4_faKBVBHbS7qWRPz48hLoQSrFQKXdf3jc1geuZplJEAKKbPDXNM2OZuyH3PhIB_Diy9km4alKtIA93PtNOS3etKajAicQc8FJDcxn1To=
+  title: pureflix.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKiW0XQcnmXO6qNKJN7YaQ1DBqRGYDdmV-cIC284HNL7z03bEzY1ANa7edaH3uFYspUsy5Ly_KssFH17FkXeOJyf_A9lPBcAH5N6dmKQvnS35QRQnl6gkn5e_BJpZEVXBS3U3QBPGiB2AkanclMW4IEwd20C7ToNve
+  title: openthebible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExiDekC5XhLt1djgQXS1JiCAPR2oXdamjGqRwgAbgAh1KdK9ypxeB8vBmjFuGeBHr2NiAPhralnUNI9AaoyP1kTpVkdwZ1AJCc5-uDtZz4z0SuLAhRxrteVlvzlU1br26n8QBrYtjxLiwTvuVjRynEoUpD56thasA6RlQ0dmA=
+  title: truthforlife.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ82BsCoD9oZYk5m5KmOhB1bXwIIglHHhGNueuRQvlzJJZAfrLLRpidcP_5O7w3ktqHCoot1Vb1No0t95q2ckV95Wx_OaN9FeqnTq77-HNWXW-WWaNoFLDUhD7lj7f
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpczKXx1eOGG-2rkikSqBMNZXx_gsvcR0GCkU4lkdl1QYIUBUuKpnTf5_m37aermOdlNvUFzkm6WwHB1c3YxrbqOegfQ5gl9MQnZr0DARCpj6J9nx7JAf31BMUgWjiwTTubS3aUHLA_7f4kA==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWhZPM5t-wlem-kXFX5CbjJWwDH7sJiPOPTfslFLQarzgHNd3Koggl8Jf0i2FJWoxyxoCD9eVOm1p5IJ8SYNjyyuA03KkUgQ__xwOFEnPhdJHTUttsN2osqwvA-KT65MTYs_f2edgKmBNMlzBEFDTHRQ3ZqPKfeNhtt_EQIIJJqBbB
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm41JA1tceewCE0sWUF6VklQZtCmT75T8q5BOAVDy6R0TL32GXhXNQP28Cs8Mn4v-AoGSgOiaRKJfshCm1Qk5NmJrAs8QwbDdJUhC0QBWBXu1HcIrN3vA5SrjgeeMxLpLQY4D9LTlalNYxDO1U66ZaBribVltvrbw=
+  title: pastorunlikely.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1wklFD6ITJfvRZ0jHcYhLUDRA1uucIrfIdIbU7rfaqC6D0WoIjMFqD-yuk7mGfOqopiWhb5nbKSE0p1-vC5h5JFatnuK-Lf2TaHPUwG8JvM62kmKiTuOVt4dhcaovfdyuBj76F3wUcGzUJO3DcqsiZX_nO8yIt2hX1YgIN0c=
+  title: jewishbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHw89R6qhnFb8C6XQ_gGjJgUXvnMnvQWC14hBQ_nBFQR_4J-cZzUKkdpKFIkbVGOJ4q0zr6ivn-ZLL_G2tHrjwrQ0FG4Hk_JC3304dSBXxhW0m2yR3XICyalRHOsEzF8ZkNIzE2CUKGkvOMslyJpapXUCjG7HAwKyNFKqPp4RS7lXy3Xcjxv1VKEeXAJbHrvfB5ke6ixluZ6UAXJj0DTf-Dh3EfR4qUGKJ_BCZuwW8gs-CUPHriFfrRkNd0-ScBy-gvhObV75MiALUhZPAj9k-4QpEeXMfBAHw7uS8kFyPRTv_C_2eZ6FkRZSrsqMO2ZvhxxUBriq77FIvwNg==
+  title: quora.com
+search_queries:
+- ''
+- greek ouranos meaning
+- etymology of heaven bible
+- hebrew shamayim meaning dual ending
+- short bible verses about heaven OT NT
