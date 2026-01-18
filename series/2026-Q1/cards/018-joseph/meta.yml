@@ -1,0 +1,67 @@
+number: 018
+word: JOSEPH
+gloss: To add, increase, or do again
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A richly patterned, multi-colored tunic resting on a sack of golden grain,
+  ancient Egyptian stone columns in the background, warm lighting, cinematic composition
+stats:
+  lore: 4
+  context: 4
+  complexity: 2
+ability: Draw 2 cards, then place 1 card from your hand on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 30:24
+  snippet: And she called his name Joseph; and said, The LORD shall add to me another
+    son.
+nt_verse:
+  ref: Hebrews 11:22
+  snippet: By faith Joseph, when he died, made mention of the departing of the children
+    of Israel...
+greek:
+  text: Ἰωσήφ
+  translit: Iōsēph
+hebrew:
+  text: יוֹסֵף
+  translit: Yoseph
+ot_refs: Gen 30:24 • Gen 37:3 • Gen 41:41 • Gen 50:20
+nt_refs: Matt 1:16 • Luke 2:4 • John 4:5 • Acts 7:9
+trivia:
+- Name means 'May He add' or 'Jehovah increases'.
+- Jacob’s eleventh son and the firstborn of Rachel.
+- His bones were carried from Egypt to Canaan during the Exodus.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXkZim0OJ4nQ7tQaQgaBtI2SqPTJrt8CFxxniuu1YBnDzHa1NIn19YNdJ4TqI3XFhas9KDqnysBLZzPpwV6rOuNoV2GKAEADQbtk5F-9K8AqRdiwiX2U8ejzP1YB5A
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxECEQk0Ke5tKREgP2AxrqSYkL9TRc5JdaPcDnluG0F8D5qlFJ2emNi4ITirghjYH6_He0Nm9PGSQPjFCNcJ0gSvX10hAQuRmRv8E006Yi0RMKkgBkuW0o-Dp5iMRaTJ-7podA
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRd-F7nCmmk3ZaOS83wQOSHDicu8AinWzGAjsMThzXiJe1OMnmUdodszhvdW72e9g77GpZHcBfvzAxI-7deNSfzHxf1-PJip3zse1JajkDW9M_NTnj19VhZ_c0N3yFdS2SXfPsnyygamyGS_N5WMOw
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkikjcksM4CGZ93BSorhmot2GxZtjN4eo9T8bVeKfuDFcozvf3wb0nWxDWVpDBs2GhNCIAAC2BnARbRBgyqtzkbyuOfdac_V0ebRArtT_6c_00mxS5jKxJ8PNipwnVoINMZU4=
+  title: behindthename.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKOFn8Eg7xkG1csdiRvF9DRyVyCgBwKb7n8wpQOr6U7SV6x1jvi-lkfhz-a7VxHA76HUXes_P7cRPycIPMGC1bQXU9x6pM5rncNy0TOjwf5M_fni0HrDB0SOcsxsEY
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4Z0VP0-nnhuka1eMlCTYjyOJplfmt8FVWb7gy2ls8aqc5hvkXug1GyCsRRAEnhPODddOU8KyC3AHQzDcfhw_yg9kQtCdF48VFIZxJ7y5r9k1tQrZZLVsSSB0s2qBEnP_-2bGdNao2GA==
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaLG-d9vGhezSQmWSzDbIxb5iEO8Pq_DWh0irxDfQ27CJBBSZi50Rq8JaPZFO-5BtuvQBuiixhfhtTT7yMf5JjiA6mtr46HTWC2BUsUKsId8ChsSNcYl962yCnFqwagIqwLM-cTIVK1Fn36cb512y1FaRlYWB9jVU5v6nUMA==
+  title: coffeeandabible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHhbWn0HEoC8VW1-4Rc1hUA_3SSYUiAMVP1tFA50bZafGwydmgNU1b8C2GpSgAwXQ_bjmrgJozI9kE60vsNzj9L-ldF6pZz-dRHlmwJqsBVwHd8dD7w7g9Xvt7RD3S
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES5U-pBJxeG-2yY3P7k1PCVksHOeaUYQJ1KQJ5bL62qsyKkx9mwIedRJJmaxbCUZCiNvauUekpOr03koSjXJc1d8Mgjuvrs3BrhD3Eu1LXc0etdefyP79delCePZLKJxZOafyuf2-ArT1J_gc=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5QKaFes-6ORmuVib2muWwrKejkQGHcFGPQ8AIvLrfgssO469OgTTR2Q2y8KDsT04j9dvbcipGC0MWg56gJ-z9OW7FWqhRjX80zX94DdZWqIPbVDRT5OQ5y_GarPs=
+  title: biblehub.com
+search_queries:
+- ''
+- Meaning of name Joseph Bible
+- Hebrews 11:22 KJV
+- Genesis 30:24 KJV
+- Hebrew spelling Joseph Yoseph
+- Greek spelling Joseph Ioseph

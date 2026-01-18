@@ -1,0 +1,276 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "018",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "JOSEPH",
+    "GLOSS": "To add, increase, or do again",
+    "CARD_TYPE": "NAME",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A richly patterned, multi-colored tunic resting on a sack of golden grain, ancient Egyptian stone columns in the background, warm lighting, cinematic composition",
+    "ABILITY_TEXT": "Draw 2 cards, then place 1 card from your hand on the bottom of the Tower.",
+    "STAT_LORE": 4,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Genesis 30:24",
+    "OT_VERSE_SNIPPET": "And she called his name Joseph; and said, The LORD shall add to me another son.",
+    "NT_VERSE_REF": "Hebrews 11:22",
+    "NT_VERSE_SNIPPET": "By faith Joseph, when he died, made mention of the departing of the children of Israel...",
+    "OT_VERSE_LINE": "Genesis 30:24 — “And she called his name Joseph; and said, The LORD shall add to me another son.”",
+    "NT_VERSE_LINE": "Hebrews 11:22 — “By faith Joseph, when he died, made mention of the departing of the children of Israel...”",
+    "GREEK": "Ἰωσήφ",
+    "GREEK_TRANSLIT": "Iōsēph",
+    "HEBREW": "יוֹסֵף",
+    "HEBREW_TRANSLIT": "Yoseph",
+    "OT_REFS": "Gen 30:24 • Gen 37:3 • Gen 41:41 • Gen 50:20",
+    "NT_REFS": "Matt 1:16 • Luke 2:4 • John 4:5 • Acts 7:9",
+    "TRIVIA_BULLETS": [
+      "Name means 'May He add' or 'Jehovah increases'.",
+      "Jacob’s eleventh son and the firstborn of Rachel.",
+      "His bones were carried from Egypt to Canaan during the Exodus."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Meaning of name Joseph Bible",
+      "Hebrews 11:22 KJV",
+      "Genesis 30:24 KJV",
+      "Hebrew spelling Joseph Yoseph",
+      "Greek spelling Joseph Ioseph"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXkZim0OJ4nQ7tQaQgaBtI2SqPTJrt8CFxxniuu1YBnDzHa1NIn19YNdJ4TqI3XFhas9KDqnysBLZzPpwV6rOuNoV2GKAEADQbtk5F-9K8AqRdiwiX2U8ejzP1YB5A",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxECEQk0Ke5tKREgP2AxrqSYkL9TRc5JdaPcDnluG0F8D5qlFJ2emNi4ITirghjYH6_He0Nm9PGSQPjFCNcJ0gSvX10hAQuRmRv8E006Yi0RMKkgBkuW0o-Dp5iMRaTJ-7podA",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRd-F7nCmmk3ZaOS83wQOSHDicu8AinWzGAjsMThzXiJe1OMnmUdodszhvdW72e9g77GpZHcBfvzAxI-7deNSfzHxf1-PJip3zse1JajkDW9M_NTnj19VhZ_c0N3yFdS2SXfPsnyygamyGS_N5WMOw",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkikjcksM4CGZ93BSorhmot2GxZtjN4eo9T8bVeKfuDFcozvf3wb0nWxDWVpDBs2GhNCIAAC2BnARbRBgyqtzkbyuOfdac_V0ebRArtT_6c_00mxS5jKxJ8PNipwnVoINMZU4=",
+        "title": "behindthename.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKOFn8Eg7xkG1csdiRvF9DRyVyCgBwKb7n8wpQOr6U7SV6x1jvi-lkfhz-a7VxHA76HUXes_P7cRPycIPMGC1bQXU9x6pM5rncNy0TOjwf5M_fni0HrDB0SOcsxsEY",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4Z0VP0-nnhuka1eMlCTYjyOJplfmt8FVWb7gy2ls8aqc5hvkXug1GyCsRRAEnhPODddOU8KyC3AHQzDcfhw_yg9kQtCdF48VFIZxJ7y5r9k1tQrZZLVsSSB0s2qBEnP_-2bGdNao2GA==",
+        "title": "biblia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaLG-d9vGhezSQmWSzDbIxb5iEO8Pq_DWh0irxDfQ27CJBBSZi50Rq8JaPZFO-5BtuvQBuiixhfhtTT7yMf5JjiA6mtr46HTWC2BUsUKsId8ChsSNcYl962yCnFqwagIqwLM-cTIVK1Fn36cb512y1FaRlYWB9jVU5v6nUMA==",
+        "title": "coffeeandabible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHhbWn0HEoC8VW1-4Rc1hUA_3SSYUiAMVP1tFA50bZafGwydmgNU1b8C2GpSgAwXQ_bjmrgJozI9kE60vsNzj9L-ldF6pZz-dRHlmwJqsBVwHd8dD7w7g9Xvt7RD3S",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES5U-pBJxeG-2yY3P7k1PCVksHOeaUYQJ1KQJ5bL62qsyKkx9mwIedRJJmaxbCUZCiNvauUekpOr03koSjXJc1d8Mgjuvrs3BrhD3Eu1LXc0etdefyP79delCePZLKJxZOafyuf2-ArT1J_gc=",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5QKaFes-6ORmuVib2muWwrKejkQGHcFGPQ8AIvLrfgssO469OgTTR2Q2y8KDsT04j9dvbcipGC0MWg56gJ-z9OW7FWqhRjX80zX94DdZWqIPbVDRT5OQ5y_GarPs=",
+        "title": "biblehub.com"
+      }
+    ]
+  }
+}
