@@ -4042,6 +4042,9 @@ def phase_upgrade(*, card_dir: Path) -> int:
     and generates a new ability appropriate for the new rarity and the card's word.
     Then rebuilds the card image from scratch.
 
+    Checks if there is room in the deck for the new rarity+type combination before
+    proceeding. If not, reports which combinations have room at the new rarity.
+
     Args:
         card_dir: Path to the card directory containing card.json
 
@@ -4086,6 +4089,59 @@ def phase_upgrade(*, card_dir: Path) -> int:
         return 0
 
     new_rarity = RARITY_ORDER[current_idx + 1]
+
+    # Determine series_dir from card_dir (card_dir is like series/2026-Q1/cards/001-word/)
+    # Go up to find series root (parent of 'cards' directory)
+    series_dir = None
+    if card_dir.parent.name == "cards":
+        series_dir = card_dir.parent.parent
+    elif "demo_cards" in str(card_dir):
+        # Demo cards don't have series stats - skip the check
+        series_dir = None
+    else:
+        # Try to find series root by looking for stats.yml
+        for parent in card_dir.parents:
+            if (parent / "stats.yml").exists():
+                series_dir = parent
+                break
+
+    # Check if there's room in the deck for the new rarity+type combination
+    if series_dir and (series_dir / "stats.yml").exists():
+        stats = _load_series_stats(series_dir)
+        combo_counts = stats.get("combination_counts", {})
+        new_combo_key = (new_rarity, card_type)
+        old_combo_key = (current_rarity, card_type)
+
+        target = COMBINATION_TARGETS.get(new_combo_key, 2)
+        current_count = combo_counts.get(new_combo_key, 0)
+
+        _log(f"[phase upgrade] checking room for {new_rarity}/{card_type}: {current_count}/{target}")
+
+        if current_count >= target:
+            # No room for this combination - find alternatives
+            print(f"No room in deck for {new_rarity} {card_type} (already {current_count}/{target})")
+
+            # Find which types have room at the new rarity
+            available_types = []
+            for t in TYPE_ORDER:
+                t_key = (new_rarity, t)
+                t_target = COMBINATION_TARGETS.get(t_key, 2)
+                t_current = combo_counts.get(t_key, 0)
+                if t_current < t_target:
+                    available_types.append(f"{t} ({t_current}/{t_target})")
+
+            # Write info file for workflow to report
+            info_path = card_dir / ".upgrade_info.txt"
+            with open(info_path, "w", encoding="utf-8") as f:
+                f.write(f"**Cannot upgrade** - no room for **{new_rarity} {card_type}** in deck ({current_count}/{target} slots filled).\n\n")
+                if available_types:
+                    f.write(f"Types with room at {new_rarity} rarity:\n")
+                    for at in available_types:
+                        f.write(f"- {at}\n")
+                else:
+                    f.write(f"No types have room at {new_rarity} rarity.")
+            return 0
+
     _log(f"[phase upgrade] upgrading {word} from {current_rarity} → {new_rarity}")
 
     # Generate new recipe with new rarity (will generate new ability)
@@ -4118,6 +4174,28 @@ def phase_upgrade(*, card_dir: Path) -> int:
 
     write_json(card_path, card)
     _log(f"[phase upgrade] updated card.json with new rarity and ability")
+
+    # Update series stats if available
+    if series_dir and (series_dir / "stats.yml").exists():
+        stats = _load_series_stats(series_dir)
+
+        # Decrement old combination count
+        old_combo_key = (current_rarity, card_type)
+        if old_combo_key in stats.get("combination_counts", {}):
+            stats["combination_counts"][old_combo_key] = max(0, stats["combination_counts"][old_combo_key] - 1)
+
+        # Increment new combination count
+        new_combo_key = (new_rarity, card_type)
+        if "combination_counts" not in stats:
+            stats["combination_counts"] = {}
+        stats["combination_counts"][new_combo_key] = stats["combination_counts"].get(new_combo_key, 0) + 1
+
+        # Update rarity counts
+        stats["rarity_counts"][current_rarity] = max(0, stats["rarity_counts"].get(current_rarity, 1) - 1)
+        stats["rarity_counts"][new_rarity] = stats["rarity_counts"].get(new_rarity, 0) + 1
+
+        _save_series_stats(series_dir, stats)
+        _log(f"[phase upgrade] updated stats: {old_combo_key} -> {new_combo_key}")
 
     # Write upgrade info for workflow to report
     info_path = card_dir / ".upgrade_info.txt"
