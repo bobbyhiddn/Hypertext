@@ -4035,6 +4035,115 @@ def phase_rebuild_failed(*, cards_dir: Path, parallel: int = 1) -> int:
     return still_failed
 
 
+def phase_upgrade(*, card_dir: Path) -> int:
+    """Upgrade a card's rarity and regenerate its ability.
+
+    Increases the card's rarity by one tier (COMMON → UNCOMMON → RARE → GLORIOUS)
+    and generates a new ability appropriate for the new rarity and the card's word.
+    Then rebuilds the card image from scratch.
+
+    Args:
+        card_dir: Path to the card directory containing card.json
+
+    Returns:
+        0 on success, non-zero on failure
+    """
+    card_path = card_dir / "card.json"
+    if not card_path.exists():
+        print(f"Missing {card_path}")
+        return 1
+
+    _log(f"[phase upgrade] card_dir={card_dir}")
+
+    card = read_json(card_path)
+    content = card.get("content", {})
+
+    # Get current card info
+    current_rarity = str(content.get("RARITY_TEXT", "COMMON")).upper()
+    word = str(content.get("WORD", "")).strip()
+    card_type = str(content.get("CARD_TYPE", "NOUN")).upper()
+    number_str = str(content.get("NUMBER", "001"))
+    try:
+        number = int(number_str.lstrip("#"))
+    except ValueError:
+        number = 1
+
+    if not word:
+        print("Card has no word - cannot upgrade")
+        return 1
+
+    # Determine next rarity
+    if current_rarity not in RARITY_ORDER:
+        current_rarity = "COMMON"
+
+    current_idx = RARITY_ORDER.index(current_rarity)
+    if current_idx >= len(RARITY_ORDER) - 1:
+        print(f"Card is already {current_rarity} (maximum rarity) - cannot upgrade further")
+        # Write info file for workflow to report
+        info_path = card_dir / ".upgrade_info.txt"
+        with open(info_path, "w", encoding="utf-8") as f:
+            f.write(f"Card is already **{current_rarity}** (maximum rarity) - no upgrade performed.")
+        return 0
+
+    new_rarity = RARITY_ORDER[current_idx + 1]
+    _log(f"[phase upgrade] upgrading {word} from {current_rarity} → {new_rarity}")
+
+    # Generate new recipe with new rarity (will generate new ability)
+    _log(f"[phase upgrade] generating new ability for {new_rarity} rarity...")
+    try:
+        recipe = _generate_card_recipe(
+            number=number,
+            word=word,
+            card_type=card_type,
+            rarity=new_rarity,
+            ability=None,  # Generate new ability for the new rarity
+        )
+    except Exception as e:
+        print(f"Failed to generate new recipe: {e}")
+        return 1
+
+    new_ability = recipe.get("ability_text", "")
+    if not new_ability:
+        print("Recipe generation did not return an ability")
+        return 1
+
+    old_ability = content.get("ABILITY_TEXT", "")
+    _log(f"[phase upgrade] old ability: {old_ability}")
+    _log(f"[phase upgrade] new ability: {new_ability}")
+
+    # Update card.json with new rarity and ability
+    content["RARITY_TEXT"] = new_rarity
+    content["ABILITY_TEXT"] = new_ability
+    card["content"] = content
+
+    write_json(card_path, card)
+    _log(f"[phase upgrade] updated card.json with new rarity and ability")
+
+    # Write upgrade info for workflow to report
+    info_path = card_dir / ".upgrade_info.txt"
+    with open(info_path, "w", encoding="utf-8") as f:
+        f.write(f"**{current_rarity}** → **{new_rarity}**\n\n")
+        f.write(f"**New ability:** {new_ability}")
+
+    # Rebuild prompt.txt with new content
+    prompt_txt = card_dir / "prompt.txt"
+    prompt_text = build_prompt_text(card)
+    with open(prompt_txt, "w", encoding="utf-8") as f:
+        f.write(prompt_text)
+    _log(f"[phase upgrade] wrote new prompt.txt")
+
+    # Rebuild the card image
+    _log(f"[phase upgrade] rebuilding card image...")
+    result = phase_rebuild(card_dir=card_dir, regen_prompt=False)
+    if result != 0:
+        print(f"Image rebuild failed with code {result}")
+        return result
+
+    print(f"Upgraded {word} from {current_rarity} to {new_rarity}")
+    print(f"New ability: {new_ability}")
+    return 0
+
+
 def _generate_image_only(*, card_dir: Path) -> Path:
     """Generate image without polish. Returns path to generated image."""
     out_name = "card_1024x1536.png"
@@ -4780,7 +4889,7 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "example-cards", "revise", "rebuild", "rebuild-failed", "rebuild-index", "review", "grade", "gallery", "full"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "example-cards", "revise", "rebuild", "upgrade", "rebuild-failed", "rebuild-index", "review", "grade", "gallery", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR), help="Series directory (for demo phase: output dir)")
     parser.add_argument("--style-series", default=str(DEFAULT_SERIES_DIR), help="Series to use for style references (default: series/2026-Q1)")
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
@@ -4917,6 +5026,12 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_rebuild(card_dir=Path(args.card_dir), regen_prompt=bool(args.regen_prompt))
+
+    if args.phase == "upgrade":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        return phase_upgrade(card_dir=Path(args.card_dir))
 
     if args.phase == "rebuild-failed":
         cards_dir = Path(args.demo_dir) if args.demo_dir else DEFAULT_DEMO_DIR
