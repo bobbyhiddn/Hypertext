@@ -1,0 +1,44 @@
+number: 018
+word: MAN
+gloss: A human being; the human race; the first human, Adam.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A primal figure sculpted from red clay and earth emerging from the dusty
+  ground, silhouette against a primitive landscape, warm terracotta and soil tones,
+  no text.
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+ability: Name a card type, then reveal the top card of the Tower; if it matches, add
+  it to your hand.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: And the Lord God formed man of the dust of the ground, and breathed into
+    his nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:47
+  snippet: 'The first man is of the earth, earthy: the second man is the Lord from
+    heaven.'
+greek:
+  text: ἄνθρωπος
+  translit: anthropos
+hebrew:
+  text: אָדָם
+  translit: adam
+ot_refs: Gen 1:26 • Gen 2:7 • Job 14:1 • Ps 8:4
+nt_refs: Matt 4:4 • Rom 5:12 • 1 Cor 15:45 • Phil 2:8
+trivia:
+- The Hebrew 'Adam' is a play on 'adamah', meaning 'ground' or 'red earth'.
+- Used over 500 times in the Old Testament to refer to humanity collectively.
+- Paul refers to Jesus as the 'Second Adam' who brings life where the first brought
+  death.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
