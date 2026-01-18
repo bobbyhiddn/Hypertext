@@ -1,0 +1,47 @@
+number: 018
+word: MAN
+gloss: An adult human male; a human being; the human race; a person created in the
+  image of God.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A solitary figure formed of swirling clay and dust standing in a vast,
+  ancient garden at dawn, golden light breaking through clouds above, distinct earthly
+  textures, warm earth tones, digital painting style
+stats:
+  lore: 2
+  context: 5
+  complexity: 2
+ability: Look at the top 2 cards of the Tower; put one into your hand and the other
+  into Sheol.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: The Lord God formed man of the dust of the ground, and breathed into his
+    nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:47
+  snippet: The first man was of the earth, made of dust; the second Man is the Lord
+    from heaven.
+greek:
+  text: ἄνθρωπος
+  translit: Anthropos
+hebrew:
+  text: אָדָם
+  translit: Adam
+ot_refs: Gen 1:26 • Gen 2:7 • Job 14:1 • Ps 8:4 • Eccl 12:13
+nt_refs: Matt 4:4 • Rom 5:12 • 1 Cor 15:47 • Phil 2:8 • 1 Tim 2:5
+trivia:
+- The Hebrew 'adam' is related to 'adamah' (ground), emphasizing humanity's earthly
+  origin.
+- Occurs over 2,000 times in the Old Testament, often contrasted with God to highlight
+  mortality.
+- Jesus is frequently called the 'Son of Man,' linking His divinity with the human
+  experience.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
