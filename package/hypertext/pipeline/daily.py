@@ -1956,10 +1956,20 @@ def find_next_image_target(cards_dir: Path, out_name: str) -> Path | None:
     return None
 
 
-def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
+def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: int = 1) -> int:
+    """Plan and create a new card.
+
+    Args:
+        series_dir: Path to the series directory
+        template_path: Path to the card template
+        auto: Whether to auto-generate queue entries if needed
+        variant: Variant number (1-3) for parallel generation. Each variant picks
+                 a different entry from the candidate pool for variety.
+    """
     queue_path = series_dir / "deck" / "queue.yml"
     cards_dir = series_dir / "cards"
 
+    _log(f"[phase plan] variant={variant}")
     print(f"Queue path: {queue_path}")
     queue = load_queue(queue_path)
     if auto:
@@ -2070,11 +2080,19 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         _log(f"[plan] WARNING: All {len(incomplete_entries)} entries are duplicates of last card ({last_rarity}/{last_type}), no alternatives")
         candidates = incomplete_entries
 
-    # Sort by score (highest first) and select the best entry
+    # Sort by score (highest first) and select entry based on variant
+    # Variant 1 picks best, variant 2 picks 2nd best, variant 3 picks 3rd best
     candidates.sort(key=lambda x: x[2], reverse=True)
-    number, entry, best_score = candidates[0]
 
-    _log(f"[plan] selected best entry #{number:03d} with score {best_score:.1f}")
+    # Use variant to pick different entries for parallel generation
+    # Clamp variant_index to available candidates
+    variant_index = min(variant - 1, len(candidates) - 1)
+    number, entry, best_score = candidates[variant_index]
+
+    if variant > 1:
+        _log(f"[plan] variant {variant}: selected entry #{number:03d} (rank {variant_index + 1}/{len(candidates)}) with score {best_score:.1f}")
+    else:
+        _log(f"[plan] selected best entry #{number:03d} with score {best_score:.1f}")
 
     word = str(entry["word"]).upper()
     slug = slugify(word)
@@ -4990,6 +5008,7 @@ def main() -> int:
     parser.add_argument("--ask-before-review", action="store_true", help="Pause after image generation to ask before running review phase")
     parser.add_argument("--style-ref", action="append", dest="style_refs", help="Override style references (repeatable, replaces all programmatic refs)")
     parser.add_argument("--extra-ref", action="append", dest="extra_refs", help="Additional style reference (repeatable, prepended to programmatic refs)")
+    parser.add_argument("--variant", type=int, default=1, help="Variant number (1-3) for parallel daily generation - influences card selection for variety")
     args = parser.parse_args()
 
     _log(
@@ -5057,7 +5076,8 @@ def main() -> int:
         return phase_full(series_dir=series_dir, template_path=template_path, auto=args.auto, batch=1)
 
     if args.phase == "plan":
-        return phase_plan(series_dir=series_dir, template_path=template_path, auto=args.auto)
+        variant = getattr(args, "variant", 1) or 1
+        return phase_plan(series_dir=series_dir, template_path=template_path, auto=args.auto, variant=variant)
 
     if args.phase == "imagegen":
         return phase_imagegen(series_dir=series_dir)
