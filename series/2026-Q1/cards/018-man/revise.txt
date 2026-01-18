@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MAN
+# Card_Gloss: A human being; the human race; Adam.
+# Card_Type: NAME
+# Card_Rarity: COMMON
+# Card_Ability: Return a card from Sheol to the bottom of the Tower.
+# Card_Stats: LORE 3 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A silhouette of a figure formed from swirling dust and clay, rising from the earth against a soft light, minimal and symbolic style.
+# Card_OT_Verse: Genesis 2:7 — And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.
+# Card_NT_Verse: 1 Corinthians 15:47 — The first man is of the earth, earthy: the second man is the Lord from heaven.
+# Card_Hebrew: אָדָם (Adam)
+# Card_Greek: Ἄνθρωπος (Anthropos)
+# Card_Trivia_1: Hebrew 'Adam' is related to 'adamah' meaning ground or earth.
+# Card_Trivia_2: Greek 'anthropos' refers to humanity, while 'aner' specifies a male.
+# Card_Trivia_3: Jesus is called the 'Second Adam' who brings life instead of death.

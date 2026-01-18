@@ -1,0 +1,71 @@
+number: 018
+word: MAN
+gloss: A human being; the human race; Adam.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A silhouette of a figure formed from swirling dust and clay, rising from
+  the earth against a soft light, minimal and symbolic style.
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+ability: Return a card from Sheol to the bottom of the Tower.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: And the LORD God formed man of the dust of the ground, and breathed into
+    his nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:47
+  snippet: 'The first man is of the earth, earthy: the second man is the Lord from
+    heaven.'
+greek:
+  text: Ἄνθρωπος
+  translit: Anthropos
+hebrew:
+  text: אָדָם
+  translit: Adam
+ot_refs: Gen 1:26 • Ps 8:4 • Eccl 12:13
+nt_refs: Matt 4:4 • Rom 5:12 • Phil 2:8
+trivia:
+- Hebrew 'Adam' is related to 'adamah' meaning ground or earth.
+- Greek 'anthropos' refers to humanity, while 'aner' specifies a male.
+- Jesus is called the 'Second Adam' who brings life instead of death.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOTeIQNeoHCWrdpC5mx5HZ_NfqliLSsxTfvgP0iM-CnoII3cVC-Z_UdCvR5jSJgTF3k26YO1PUgYNBvvxTMgb67mYpfm7EjIUMT3NNR0jvP_-nNzFSiaaU3Py79vzEFCv7BXxGy-5bSldKLNsV0EVMaBgtd6TNY2DrhnccRA==
+  title: desiringgod.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGB2UuV9N6dGHg8SGdxjWKb1IyJ_XeVuuUo7j0SrEJg2wm4wPUV0fk4ZefMjS1wthgMvsXTYQowsmlG9fOc4fDEyyEygVp1K7rbyUWP0sO6DxufXSU4nbGvGmsuvzPihI3WD2I=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTOpM97Pr6eJy0K8QOAoxABTVNelB-9cOF7VwcFuuu4VIB19cdAwqNy9j3Jeq5ics9vasjcJc27o4cneU7PPGp2ZSx3PxKwRWpXi4pQVwLLiAui9CWj4YIUbcOJm_ACkxTs8Ex19aoN44diA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiTtWOFuzSfxWkuMil74HUt7E_9xr5b1Bkokqj0Ee9qa5i1YUALZCmWJvK_XRJsbr_718e0r7_cwwU62zLK8aIpeV77AXCsKcCcc4Lvngxvwx_CwAn5QfAurgKs3VxdhvMaC9OisXkdjYu_TfAKYATHYnJw18zym_VnIzHPA==
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHe1lfWXuB3_h7thN_c8nxTithevzoJThS9UFNK5eXUCMSX0_XRgaKMSWVSW-igpcrrNDgAZ2ZIDZOGk6VKs-yinOLfhWVseMewwqcmOuM2JoWI54NORI5pKvkDHTIhYgqne9gcR2y3V5p98713mvEukTjpDOAf1rLt7Vkj5KKurmeAzXyUpLFTuRzmxM4=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETB1_hfMF667NTL86ITj5_GQXMSjO7B9R_X381FUNT_3jWnld6oz1WFnU51ZAa8uFWoMnjF5worG4iVmOdJByVz9PV-cDVrahQtpieOLiZ27UBoyKE8Gd7mHJneDqQxmI=
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJncu4rHaBlPeUklZdkoV3nGQVCAVE2miEOx5yxUR7kL6MHvzwvMqrpSvodFVGT_PN0kC6FKjzIfI1N40LVpft8TX1-lq2_WoD88rbDjuZ5jA2BrJG_7atMtRZxyuaEoQFsmZNsd8kLyJahMuXeLyGfXWi3Q==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkd1HDh4lv-yutdmKYyY5ICcaT44V_e0MepAdEjBT49WDOspUE0DkDjZ8jbe77Lyk2CeZOIOJkqbur3LPk_3uF6T7FC-B_-O1gaOKEmoV-6jszmCS2Pgnuobvwr1kb882gjMjLPGKrkGIKip92IQ7O1p2Iy-yD5pF3hlmp9gdpRB7DCHsc29NW
+  title: thethink.institute
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjC_9yQVtO1K9e6rDrEClGdutOF2KjcdpnaHPKtUDv3w6nGcIp7VTApCv6tRlCcNKMnm-3IZW0JDIycZAC_rodHgXFuimUWyR2415cWARIlicohm8Hiqx07HAntMSOE4od
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE43wcsh9gSRlu3PawmFTTwJnS_DbhMs3Fxc9r_WQ9l33YdE3du8savZ9r7pa0MHWFF1CK2REUgYEQ17IMO4ow8mNWtSX32DFe6CPy766YH8wTNnNNd-mi9IEHGiHzf
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELnySXKbeXzVKXVXnurR3DoOoLtifKkFVeO--bquENBs5dmuVQDWc7VLBm2r3LOku8NEYZlYH38fkpZvHre6ixFx4O2xl2B9aktBVLYpZLa8Oq8wqCgV0HygcL6z1sQeP6-bmPkq_ADBmGrwlF
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGR2I8qtq8-ZOjVKZwLFpFHl5Sm01_PKSNdtZ4OuOMlKqFOBs5kK7VcleZdEU8HoKDX49XCqnBUn0-aV0MpZ3sY43gfW2J3VJqmxRl-U1li33TflTIajewjrCiNrHHYxxHATBvrR0DvUWv_pkDDvPRSaZM=
+  title: studylight.org
+search_queries:
+- ''
+- Biblical definition of Man
+- Hebrew word for Man Adam Strong's
+- 1 Corinthians 15:47 KJV snippet
+- Genesis 2:7 KJV snippet
+- Greek word for Man Anthropos Strong's

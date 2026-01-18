@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: MAN
+GLOSS: A human being; the human race; Adam.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to the bottom of the Tower.
+
+VERSES:
+OT: Genesis 2:7 — “And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.”
+NT: 1 Corinthians 15:47 — “The first man is of the earth, earthy: the second man is the Lord from heaven.”
+
+LANGUAGES:
+Hebrew: אָדָם - Adam - Gen 1:26 • Ps 8:4 • Eccl 12:13
+Greek: Ἄνθρωπος - Anthropos - Matt 4:4 • Rom 5:12 • Phil 2:8
+
+TRIVIA:
+• Hebrew 'Adam' is related to 'adamah' meaning ground or earth.
+• Greek 'anthropos' refers to humanity, while 'aner' specifies a male.
+• Jesus is called the 'Second Adam' who brings life instead of death.
+
+ART: A silhouette of a figure formed from swirling dust and clay, rising from the earth against a soft light, minimal and symbolic style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
