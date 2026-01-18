@@ -1,0 +1,66 @@
+number: 018
+word: MAN
+gloss: A human being; mankind; the first human created by God; a husband or individual
+  male.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A figure formed of red clay earth rising from the dusty ground, silhouetted
+  against a primitive garden landscape, warm earthy tones, rough texture, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Look at the top 3 cards of the Tower; return them in any order.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: And the LORD God formed man of the dust of the ground, and breathed into
+    his nostrils the breath of life.
+nt_verse:
+  ref: John 19:5
+  snippet: Then came Jesus forth, wearing the crown of thorns... And Pilate saith
+    unto them, Behold the man!
+greek:
+  text: ἄνθρωπος
+  translit: anthrōpos
+hebrew:
+  text: אָדָם
+  translit: adam
+ot_refs: Gen 1:26 • Psa 8:4 • Ecc 12:13
+nt_refs: Rom 5:12 • 1Co 15:47 • 1Ti 2:5
+trivia:
+- The Hebrew word 'adam' is a play on 'adamah', meaning 'ground' or 'earth'.
+- Jesus uses the title 'Son of Man' over 80 times in the Gospels to refer to Himself.
+- Pilate's phrase 'Ecce Homo' (Behold the Man) presents Jesus as the archetype of
+  humanity.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO0Vte9qy7dzmShIPuKei3BhHIZWqNBdAaLCtIuTBMnrF_1y7zZqXo0FkWXAMH8LfHBS63Xn6ijge1XPziCJ-q8He_3rScZRKdGIJUIDVj7KhwkkpUMwo91EV3Eo7rpc1KpYm5C9UqoM7dalY=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF83-S0btLd7CyhMNyY9KWtAnXKUK551bkBB5xMt9jCOArj7_hSwE7e9SQfibdjA2YCECOJw0qTY_e1mpiKvQMlSDx2qmx5LUQO6GLrRWsKYPyvX9UaQ_O2pxo_27r5rLu1oIP_Vg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9W_Ysp1sBHhBg0345Fl6yNFnCS8lL3pDqtrMu9TSWR_CTTbxqkezsBHgnOwC_jeUzf-OkvWRj6ZoD4fAClaOhsGavfeV1HvfK2a2kU6mFJf-mVPgTZmW9eUD7c5mdgyyt9xewYZk-LvveqDvlyg==
+  title: thirdmill.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMb-klBjnvlVAcsVGISrrWAvuN9F6GFgCOEdRLLqWgS7BhjGt-_RVXkQETNpKtkdwHHfoA4qG_K-7oM9Uto-HJtjpOZf2Qar365eCkkPqlf3lkxEba67-8kbglro7djquVSxIKQ7_QqRF2OU22MzIvpoB2n0rDfXAEkwkTThsnDL2UxZj7rZNFfhoJ4o2tDYA=
+  title: israelbiblicalstudies.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3sRsjDqB655qzAhH6z3iWbmdl53fdkdDCmRcm6TkJky3ajULYSFxuYGzbUokaHP9puLRV_xy3xYYV7HpIVhcGRLll2ZDwPLxCEb0kaBUpB1Nl6Yu9tjiy01Pa9R4d94rqFXrzYG_X
+  title: bibletexts.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPk62jEUwQMZX_rMu4cxUZcJRUqUaYXUCc5UNBZcfENtmnxq2iKGTCFkc9mPpBXN2G0tGJjgySvgJ7vnYyKNk6syL1k_6howy_MtP320DCB7fQMTCCWiCZYO6tqpVhpPtnuJzYgQ4bw_aBlw==
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENrMuW25eviU7OFQnAvMhFQvZvFuN9Xhjr-xQ65XnnA1LMdJLzMAzWEVd_6smYZ-spdAyedUmr7i2yNq1qsn_1-A0SZwOd0eQKxWQjEvJBe0FFkVqwmP2qXCtWl_GQgxNYeSe0cDzBxFb-oZq3J9Sosw0WrlT8_OEQRqjL27GLZjOHxlN5IV9prcS-XiZDBDD7P0hQXQQ=
+  title: answersingenesis.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUwm-mXLdtqlM_o2H1FeLgpB2Vt_hbT0p6YQ7z1HXTIGP5mzpNdniuTIOzs3UufSIQ8PYK9dz5EHD7FdImiDNFhX2y6tLkaw9Dc2LZwAgpoSiC5RWv1MXcDQyQg5mFtaQDD1vCyfkBrqF422AKI-8=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt1enLwfaUSk68p0luWmhApZm5A_4J2CixiQoUVaRYBSkPHUiFw0hq_j6wYrerRzxYZxHIZzvDRszxol0wROZwO8xFEHpBYUFv2qx937MboNaoffMNaABOEH7Dg-4TWxFu7O1Fqqw7VQ==
+  title: gotquestions.org
+search_queries:
+- ''
+- Hebrew word for Man in Genesis 1:26
+- Man bible verse definition
+- Greek word for Man in 1 Corinthians 15:47
+- Greek word for Man in John 19:5

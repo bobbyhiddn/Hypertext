@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: MAN
+GLOSS: A human being; mankind; the first human created by God; a husband or individual male.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower; return them in any order.
+
+VERSES:
+OT: Genesis 2:7 — “And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.”
+NT: John 19:5 — “Then came Jesus forth, wearing the crown of thorns... And Pilate saith unto them, Behold the man!”
+
+LANGUAGES:
+Hebrew: אָדָם - adam - Gen 1:26 • Psa 8:4 • Ecc 12:13
+Greek: ἄνθρωπος - anthrōpos - Rom 5:12 • 1Co 15:47 • 1Ti 2:5
+
+TRIVIA:
+• The Hebrew word 'adam' is a play on 'adamah', meaning 'ground' or 'earth'.
+• Jesus uses the title 'Son of Man' over 80 times in the Gospels to refer to Himself.
+• Pilate's phrase 'Ecce Homo' (Behold the Man) presents Jesus as the archetype of humanity.
+
+ART: A figure formed of red clay earth rising from the dusty ground, silhouetted against a primitive garden landscape, warm earthy tones, rough texture, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
