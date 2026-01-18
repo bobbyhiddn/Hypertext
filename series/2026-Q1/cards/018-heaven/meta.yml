@@ -1,0 +1,70 @@
+number: 018
+word: HEAVEN
+gloss: The dwelling place of God and the home of the blessed; the sky or firmament.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Majestic golden gates opening in the clouds, shafts of brilliant white
+  light piercing through blue sky, ethereal atmosphere, soft blue and gold palette,
+  cinematic lighting
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Look at the top 3 cards of the Tower. Put 1 into your hand and the rest on
+  the bottom.
+ot_verse:
+  ref: Psalm 19:1
+  snippet: The heavens declare the glory of God; and the firmament sheweth his handywork.
+nt_verse:
+  ref: Matthew 6:20
+  snippet: Lay up for yourselves treasures in heaven, where neither moth nor rust
+    doth corrupt.
+greek:
+  text: οὐρανός
+  translit: ouranos
+hebrew:
+  text: שָׁמַיִם
+  translit: shamayim
+ot_refs: Gen 1:1 • Ps 19:1 • Isa 66:1 • Ps 148:4
+nt_refs: Mt 6:20 • 2Cor 12:2 • Rev 21:1 • Acts 1:11
+trivia:
+- The Hebrew word *shamayim* is a dual form, implying 'two skies' or 'waters there'.
+- Matthew uses 'Kingdom of Heaven' 32 times to respect Jewish avoidance of God's name.
+- Paul mentions a 'third heaven' in 2 Corinthians, referring to God's immediate presence.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdu5r2fxBiDUkXXfeENuoxuXhfOET6EpjxTAGyWxxcY_t8a8BDIfaN4OPVZsrTYJOGdlG_paFX6AbuxTQKV0odPynfBUGledPV0MNRpdpaigzUt6NX1xKkTj1mmWyamaJKe-tqrWYgwEr7d5Uw49qSWk3nE5KPailaD6g7lD4VUmYiC5OXAnoj
+  title: bibletolife.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZGTTo01daRa4PjnjSPGkffK6tDNyUXa0thqRxhHhLFoqZwNzIXS4DlYi43hcIdqVaa2rUTlPWZM6gX4XeIp1RlKHimjkB9vETeaKhLcz3wYo97hDCuBppWmOT1Ftisj6gWAXKnMz2lcPggDFcdw0BWFOfLWjYOvL3lmb8kg==
+  title: crossway.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPCXdanQRa3QOS5TVcmp5l9PRzScwKMqq9LypOFYniC2fpxEjCAXhYqknKCQVY9VCWn3-NLVAnRF4dElxVxaxcVLzHRBhzbs_7azQr1fAoyBm2dDFhkf5WuhekmL5IRC3ojM8q3DJB3Q4IEykLRKnKGHbcSZAPk7s=
+  title: openthebible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyGl6aWBgLLLRtWV1T98sKRFO4Ug-vgxoqy7tVkObG0vQGH2aHQrT6cHC1A_eQZGpk7WrQWsLw7OJRJRZqYNIL-7FFJVu8G_Ba5-wZamFZTQWAaRaXu_WuwI6bBCw6Z3738Tj3Gw==
+  title: youtube.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9X1mIOmc0MeyEUR8UWX7Ubdfq44ps71Bw5Loxll8UGlnaAq-EeIz07A1GSwQAIEXseG_gROyrjW3hazmayeCTvmucQczxDD4cbOwaVyMGTd0IaMFZUoMY891lT2Q=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGK-85lRcr62RP6U3Ht1LVxZkHJjx2w0cE-khcFYU7_Yw0MAMOFYqwezcKWy3YeebsG1SQsTZahTdo2Evwvi6_2nTDXqdNLvCVSpCpX5TD98TEY5FnY5IxiUTFFtKQcTMhydagKMOt4RN2_9yoT11bQVuhzJl0qnyF8PBQogVsodqj2FstYZ9tjs88jyZJZXwXjzHEArDYmEfDWRI-brNfuhjeJjW0WGdEKrG2i948enQ==
+  title: crosswalk.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZvNe4bTp601LLKMSvBoKgnNkEKm5dVQC_x6x3IV1m_2GMA2FxKG5fshneSM2SfEiPiBeyaFsWJBGSGW5WBSVyCFvWUrrm87J3L7oY7B4fxuuOTReo4R9-oKoO9CW1mCnxA2ihhDsio0-pGowUZL0k8aGYXFhWb5qUOXm89WA3VPUU
+  title: hebrewwordlessons.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeEoZCcybb3cL0Ahk2Dm5plRQauVfZjYieRzPgx7mM4VvXj_qP6DaEQKYdOkjq47Pz9frMf4jZYpfOW0IXHz532s-CAn_uOQmyq7d0h4j3jIijM5CZ2NUQ24q_NiwqItr2XYme6t8Y
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeZUvlhA5RhTiK0Iw5b4YKeknGuA2zxitymHW5aD69PFcoVZ8o_RbJRN0dHC5hTciJy4vhIxtjP1Dt-DRnf6hkqry7btkl45XBKJ93k8oAbuiVq4P9fXfqjVhP741JywXQUe-j3fo9RmlEj_y8ezbzjH7F_g==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE3qkCfyZ2jVi8G_VD54kfEP96hbQevFC_X9xIwTka5HQu9Dg5JiU5DI-8ZXpN-HJ15awsQQDlyEl5Q-uSNlWkpTUjIv5EpZ4leuJWQZHOEiJOEXg8TtW4GUeoA_z589ex2Z4oBc07FiHq8KPWTYsVOW8dzUtBYqacB85X-MBGD5UtTw==
+  title: lynndove.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2g3IK73LWXnAk1_10kr3H0WOfGR_4y3QI2irtouBAopDGjWkALS1QCms_0cTEhGxKrD24ykNYggPTmtPw-VbJan23hBrzccTZPyGAlal5Ku33Lfxm_dWOK61YdvB7vIOAtf-6JhCb
+  title: knowing-jesus.com
+search_queries:
+- ''
+- Hebrew word for Heaven shamayim meaning
+- Bible verse Heaven NT snippet
+- Greek word for Heaven ouranos meaning
+- Biblical trivia word Heaven
+- Bible verse Heaven OT snippet

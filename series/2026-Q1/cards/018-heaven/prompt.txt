@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: HEAVEN
+GLOSS: The dwelling place of God and the home of the blessed; the sky or firmament.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. Put 1 into your hand and the rest on the bottom.
+
+VERSES:
+OT: Psalm 19:1 — “The heavens declare the glory of God; and the firmament sheweth his handywork.”
+NT: Matthew 6:20 — “Lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt.”
+
+LANGUAGES:
+Hebrew: שָׁמַיִם - shamayim - Gen 1:1 • Ps 19:1 • Isa 66:1 • Ps 148:4
+Greek: οὐρανός - ouranos - Mt 6:20 • 2Cor 12:2 • Rev 21:1 • Acts 1:11
+
+TRIVIA:
+• The Hebrew word *shamayim* is a dual form, implying 'two skies' or 'waters there'.
+• Matthew uses 'Kingdom of Heaven' 32 times to respect Jewish avoidance of God's name.
+• Paul mentions a 'third heaven' in 2 Corinthians, referring to God's immediate presence.
+
+ART: Majestic golden gates opening in the clouds, shafts of brilliant white light piercing through blue sky, ethereal atmosphere, soft blue and gold palette, cinematic lighting
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
