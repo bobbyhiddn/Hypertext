@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: KEEPER
+# Card_Gloss: One who guards, watches over, maintains, or protects from loss
+# Card_Type: TITLE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Return a card from Sheol to the top of the Tower.
+# Card_Stats: LORE 4 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A weathered figure in a hooded cloak standing steadfast before a massive, ancient wooden gate at twilight, holding a glowing lantern; deep shadows and warm light, protective atmosphere, no text
+# Card_OT_Verse: Genesis 4:9 — And the Lord said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?
+# Card_NT_Verse: John 17:12 — While I was with them in the world, I kept them in thy name... and none of them is lost.
+# Card_Hebrew: שָׁמַר (shamar)
+# Card_Greek: φύλαξ (phylax)
+# Card_Trivia_1: Cain famously used this word to deflect responsibility for Abel.
+# Card_Trivia_2: The Sons of Korah preferred being doorkeepers in God's house to dwelling in wicked tents.
+# Card_Trivia_3: Psalm 121 describes God as the Keeper of Israel who neither slumbers nor sleeps.

@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #019
+WORD: KEEPER
+GLOSS: One who guards, watches over, maintains, or protects from loss
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to the top of the Tower.
+
+VERSES:
+OT: Genesis 4:9 — “And the Lord said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?”
+NT: John 17:12 — “While I was with them in the world, I kept them in thy name... and none of them is lost.”
+
+LANGUAGES:
+Hebrew: שָׁמַר - shamar - Gen 4:9 • Ps 121:5 • Ps 84:10 • Eccl 12:3
+Greek: φύλαξ - phylax - John 17:12 • Acts 16:27 • Matt 28:4 • Titus 2:5
+
+TRIVIA:
+• Cain famously used this word to deflect responsibility for Abel.
+• The Sons of Korah preferred being doorkeepers in God's house to dwelling in wicked tents.
+• Psalm 121 describes God as the Keeper of Israel who neither slumbers nor sleeps.
+
+ART: A weathered figure in a hooded cloak standing steadfast before a massive, ancient wooden gate at twilight, holding a glowing lantern; deep shadows and warm light, protective atmosphere, no text
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

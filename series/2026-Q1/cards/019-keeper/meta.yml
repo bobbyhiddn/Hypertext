@@ -1,0 +1,73 @@
+number: 019
+word: KEEPER
+gloss: One who guards, watches over, maintains, or protects from loss
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered figure in a hooded cloak standing steadfast before a massive,
+  ancient wooden gate at twilight, holding a glowing lantern; deep shadows and warm
+  light, protective atmosphere, no text
+stats:
+  lore: 4
+  context: 4
+  complexity: 2
+ability: Return a card from Sheol to the top of the Tower.
+ot_verse:
+  ref: Genesis 4:9
+  snippet: 'And the Lord said unto Cain, Where is Abel thy brother? And he said, I
+    know not: Am I my brother''s keeper?'
+nt_verse:
+  ref: John 17:12
+  snippet: While I was with them in the world, I kept them in thy name... and none
+    of them is lost.
+greek:
+  text: φύλαξ
+  translit: phylax
+hebrew:
+  text: שָׁמַר
+  translit: shamar
+ot_refs: Gen 4:9 • Ps 121:5 • Ps 84:10 • Eccl 12:3
+nt_refs: John 17:12 • Acts 16:27 • Matt 28:4 • Titus 2:5
+trivia:
+- Cain famously used this word to deflect responsibility for Abel.
+- The Sons of Korah preferred being doorkeepers in God's house to dwelling in wicked
+  tents.
+- Psalm 121 describes God as the Keeper of Israel who neither slumbers nor sleeps.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEHzlwTuBmdqqJKxKlTkO24CAhtUN4Lw4MoWDBh_Yxd1xzJiahyDBs1ytsNEhvNOQmceFWmQhF7QNt790vLlGx4lB-xI1S2V1XLNtSze1UNKM36b4jPUIbOKq9OYOqSpW110CiKiM=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWPC7ribDKsI3g7U2ib9gl8GQjERs9oFR-dmKlVe0sXZcjB6Ax5BGqfFQLWH6mpSROtMhXCbVTqVh6fWgI--5kRfsjOyDEXHq43PBueMru5hbDQ929U29-DIAxbns=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyywCWFupHU9RvEoMZClTRGK-0vyRAmsked4rtmlYIjJcZMLJftEWJ3w_YR0M-X5kWpwMl242kdtG-W7uZb1Tr4Pt1wFreGbZ-zpruAcBLNhdmbOc_iBA6U1DxzURaKJxRjtkAKcLIwE0jcu5hUPXOuo5O80HYIhfeQ86OAPg5hdMs_cSPE9fu-q5d4I4=
+  title: chaimbentorah.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1ds09hRv0yvdDMaeUurvingssvwQthnGRjdhn-Jtw9zgtl7E9UeWX3-tDfDOVm25kbTyonaI1g6bubFVTzPrtdhx2I3ojvA7hYthIvGdx_kmoBQt70Pal2D5e036IsalxyG-i8Ahn5ow8ZA5akGLMB7wMMNnDrsrG6VtrrdipyBLT-XeM1mVG3pyUwqm_CICP3tLOUt46A1NkpqkZmncY5p8-Q8grXfkxX9utSRAPGGoCk1cA3gaOf5h9nliMCA==
+  title: gdluth.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHgsTNIrRJ86NKCzeoDLk9f3XOea6yJOEpviBBZmmIOMbtZd86RlXHgFVN0VTCwMvaQ2VAE1VUItLm_TH0ncfIqo3r4ZtU2pnOh-_x02wjb4JLLR9-iCjrcp-Nx2k4oe-vVR_ChbiX7fhisDAF7_gJKGmBZcdvd6JxubSU-4rzgSnjKWxV
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFB037qydplcS0ly9p4bo5hPmCYo3UwSj0xihoBgDMX_68yuP4V9C8MnXfLxsDKoTm7HKGhcnnrhOk6HHzTcBwfticVxIOnQ0hTU1k52lVOyZzYufU2hVUHiMRj9IKd_K4=
+  title: seekfirstwisdom.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENam7AWBaIXt-TplL-xa0bdfS--pN9WLTZgQjZ0T9OdzVf5OatQzQCYnqY80xxsEkXmvOyEhy2peflEN8oo_ufWSg6N7tsQU2DB6KVSKSed9N1g5-NQUPDHXckzlWKs5PL9yAPdw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIw1ILnfFoqlCUvGZp8HOGWBQY0cK-5wyu2pDfJzxz8ZF_1vtdpqvj7AoivfZX9aVA3vi8WY0kExTjMfQBo_bYB-J9Veai8Z4f6ydphM_1X5I8xVvPR5yGL3MA3Bc=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFHm5IlgU-OdKD8hh39qeooiw3SvpY7_X_pM84f54smMx_1L404SC0OI9t1hu--YqSliQehYl6Q24KtwXZMcTWfcUM6vJUETCIEjOJ10ilQqfSi7k2CkMhctTZNg2pwqKOADDG_yMn-hFDCQanZMtdFTOGOA==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2E11uFVn83M1C0Kv6a1mc1hRoMMWID0SWFWFZbQM4pGdB0ZYrGMnP28eQMXL_pQvs8Cc4TQBDzD_6RS5_M1EqHOw7lUIUsvyFuYp4NoZq_yhhYqI1DsOXLtL1q3pP15oO0p1Y
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMZbJlKEPvAROVSGjJKE-DCPBFwnACor6HLThcAW-NQZ6_VAeDRqGmQ9AzxJKkmel_3CENd0wVm-DXNewanLU3xr9Og0SsWKwQD2dz2h1YswEm8b3Wj4vULCGAZhZwLN7zlKtpirY=
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2Lpn8hWQVfS0TzreWAdPPoQafHjnjVFaoFdNBywdN14zWDvrhZsLxvnJ4svX9YplPUmc5342IKty_wtc4nFCzCe1m5t3cdi1v4QC1PIhtyz-sXIXBG_xi2GaDN4VjFCr8IkTXp-mlqtV8rA==
+  title: sarata.com
+search_queries:
+- ''
+- keeper bible definition
+- bible verse keeper of the door psalm 84
+- hebrew word for keeper in genesis 4:9
+- greek word for keeper in acts 16:27 or matthew 28:4
+- keeper new testament verse

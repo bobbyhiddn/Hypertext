@@ -1,0 +1,284 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "019",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "KEEPER",
+    "GLOSS": "One who guards, watches over, maintains, or protects from loss",
+    "CARD_TYPE": "TITLE",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A weathered figure in a hooded cloak standing steadfast before a massive, ancient wooden gate at twilight, holding a glowing lantern; deep shadows and warm light, protective atmosphere, no text",
+    "ABILITY_TEXT": "Return a card from Sheol to the top of the Tower.",
+    "STAT_LORE": 4,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Genesis 4:9",
+    "OT_VERSE_SNIPPET": "And the Lord said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?",
+    "NT_VERSE_REF": "John 17:12",
+    "NT_VERSE_SNIPPET": "While I was with them in the world, I kept them in thy name... and none of them is lost.",
+    "OT_VERSE_LINE": "Genesis 4:9 — “And the Lord said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?”",
+    "NT_VERSE_LINE": "John 17:12 — “While I was with them in the world, I kept them in thy name... and none of them is lost.”",
+    "GREEK": "φύλαξ",
+    "GREEK_TRANSLIT": "phylax",
+    "HEBREW": "שָׁמַר",
+    "HEBREW_TRANSLIT": "shamar",
+    "OT_REFS": "Gen 4:9 • Ps 121:5 • Ps 84:10 • Eccl 12:3",
+    "NT_REFS": "John 17:12 • Acts 16:27 • Matt 28:4 • Titus 2:5",
+    "TRIVIA_BULLETS": [
+      "Cain famously used this word to deflect responsibility for Abel.",
+      "The Sons of Korah preferred being doorkeepers in God's house to dwelling in wicked tents.",
+      "Psalm 121 describes God as the Keeper of Israel who neither slumbers nor sleeps."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "keeper bible definition",
+      "bible verse keeper of the door psalm 84",
+      "hebrew word for keeper in genesis 4:9",
+      "greek word for keeper in acts 16:27 or matthew 28:4",
+      "keeper new testament verse"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEHzlwTuBmdqqJKxKlTkO24CAhtUN4Lw4MoWDBh_Yxd1xzJiahyDBs1ytsNEhvNOQmceFWmQhF7QNt790vLlGx4lB-xI1S2V1XLNtSze1UNKM36b4jPUIbOKq9OYOqSpW110CiKiM=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWPC7ribDKsI3g7U2ib9gl8GQjERs9oFR-dmKlVe0sXZcjB6Ax5BGqfFQLWH6mpSROtMhXCbVTqVh6fWgI--5kRfsjOyDEXHq43PBueMru5hbDQ929U29-DIAxbns=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyywCWFupHU9RvEoMZClTRGK-0vyRAmsked4rtmlYIjJcZMLJftEWJ3w_YR0M-X5kWpwMl242kdtG-W7uZb1Tr4Pt1wFreGbZ-zpruAcBLNhdmbOc_iBA6U1DxzURaKJxRjtkAKcLIwE0jcu5hUPXOuo5O80HYIhfeQ86OAPg5hdMs_cSPE9fu-q5d4I4=",
+        "title": "chaimbentorah.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1ds09hRv0yvdDMaeUurvingssvwQthnGRjdhn-Jtw9zgtl7E9UeWX3-tDfDOVm25kbTyonaI1g6bubFVTzPrtdhx2I3ojvA7hYthIvGdx_kmoBQt70Pal2D5e036IsalxyG-i8Ahn5ow8ZA5akGLMB7wMMNnDrsrG6VtrrdipyBLT-XeM1mVG3pyUwqm_CICP3tLOUt46A1NkpqkZmncY5p8-Q8grXfkxX9utSRAPGGoCk1cA3gaOf5h9nliMCA==",
+        "title": "gdluth.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHgsTNIrRJ86NKCzeoDLk9f3XOea6yJOEpviBBZmmIOMbtZd86RlXHgFVN0VTCwMvaQ2VAE1VUItLm_TH0ncfIqo3r4ZtU2pnOh-_x02wjb4JLLR9-iCjrcp-Nx2k4oe-vVR_ChbiX7fhisDAF7_gJKGmBZcdvd6JxubSU-4rzgSnjKWxV",
+        "title": "billmounce.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFB037qydplcS0ly9p4bo5hPmCYo3UwSj0xihoBgDMX_68yuP4V9C8MnXfLxsDKoTm7HKGhcnnrhOk6HHzTcBwfticVxIOnQ0hTU1k52lVOyZzYufU2hVUHiMRj9IKd_K4=",
+        "title": "seekfirstwisdom.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENam7AWBaIXt-TplL-xa0bdfS--pN9WLTZgQjZ0T9OdzVf5OatQzQCYnqY80xxsEkXmvOyEhy2peflEN8oo_ufWSg6N7tsQU2DB6KVSKSed9N1g5-NQUPDHXckzlWKs5PL9yAPdw==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIw1ILnfFoqlCUvGZp8HOGWBQY0cK-5wyu2pDfJzxz8ZF_1vtdpqvj7AoivfZX9aVA3vi8WY0kExTjMfQBo_bYB-J9Veai8Z4f6ydphM_1X5I8xVvPR5yGL3MA3Bc=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFHm5IlgU-OdKD8hh39qeooiw3SvpY7_X_pM84f54smMx_1L404SC0OI9t1hu--YqSliQehYl6Q24KtwXZMcTWfcUM6vJUETCIEjOJ10ilQqfSi7k2CkMhctTZNg2pwqKOADDG_yMn-hFDCQanZMtdFTOGOA==",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2E11uFVn83M1C0Kv6a1mc1hRoMMWID0SWFWFZbQM4pGdB0ZYrGMnP28eQMXL_pQvs8Cc4TQBDzD_6RS5_M1EqHOw7lUIUsvyFuYp4NoZq_yhhYqI1DsOXLtL1q3pP15oO0p1Y",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMZbJlKEPvAROVSGjJKE-DCPBFwnACor6HLThcAW-NQZ6_VAeDRqGmQ9AzxJKkmel_3CENd0wVm-DXNewanLU3xr9Og0SsWKwQD2dz2h1YswEm8b3Wj4vULCGAZhZwLN7zlKtpirY=",
+        "title": "knowing-jesus.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2Lpn8hWQVfS0TzreWAdPPoQafHjnjVFaoFdNBywdN14zWDvrhZsLxvnJ4svX9YplPUmc5342IKty_wtc4nFCzCe1m5t3cdi1v4QC1PIhtyz-sXIXBG_xi2GaDN4VjFCr8IkTXp-mlqtV8rA==",
+        "title": "sarata.com"
+      }
+    ]
+  }
+}
