@@ -1,0 +1,58 @@
+number: 018
+word: EGYPT
+gloss: The land of the Nile; a place of bondage, refuge, and provision.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Vast desert sands shifting into a fertile river delta, ancient stone monuments
+  rising in the distance under a scorching sun, golden tones and deep blues
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Draw 2, then discard 1.
+ot_verse:
+  ref: Exodus 20:2
+  snippet: I am the LORD thy God, which have brought thee out of the land of Egypt,
+    out of the house of bondage.
+nt_verse:
+  ref: Matthew 2:13
+  snippet: Arise, and take the young child and his mother, and flee into Egypt, and
+    be thou there until I bring thee word...
+greek:
+  text: Αἴγυπτος
+  translit: Aigyptos
+hebrew:
+  text: מִצְרַיִם
+  translit: Mitzrayim
+ot_refs: Gen 12:10 • Ex 1:1 • Ex 12:41 • Jer 43:7
+nt_refs: Matt 2:15 • Acts 7:9 • Heb 11:27 • Rev 11:8
+trivia:
+- Hebrew name Mitzrayim is a dual form, referring to Upper and Lower Egypt.
+- Mentioned over 600 times, symbolizing the world or the 'house of bondage'.
+- Served as a refuge for Abraham, Jacob, and Jesus during times of famine or danger.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEID6hJcp6mfQX30uj6sdwFDZ12mGIcgzJLxhezHUmzgnKXmzZBsGkiyj8u5EmSYBByinTcifZB0zOOW8PtaYigZ_yp1Y5tTUX3MDOLPlTmHIxq_mVohvUKwXR1G_ktaYqAiznJCgJF1Ibj60-M7bfm1YA=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZDh5oIH2ntqhDJowjyxqgpYohhaQrypQwCIpoMzO7MW9yhZPkXcVZt2rrnRJ2Cf_2CDtRRyrXbA9I-wxAnD01Ii4YHupJl_k1NfA4uo159ICI5Drmx6syI7hMBueaXccSgwaluWusOCueRZDeDw==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiXX5Q9rrOi7stQX1p6xvI46InMIZipujrWJPVtxLol21jeZrPGEIHgygoluH36rsJYDWXrt3Q3r6UyfkWp626RrxfmXS_9Uo3uCx2kKPnxPWQUMdmHt35NOFLTJfE-LUdq3QgsCN3wn5pvEjPJIQT-phasYkMGWvUGaSJfoyHo-Xn
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_aEffBfv0oqQ5myREjEH9D37YZaHark64lNnTnmIVpGwHnYGYaayWd4mXewYpCBqRj7cRNeP8-gptssT53FycPahO0TrW3slVhm50prs7vw6seGtD4ca04clvkp_dTw==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOoF1tZ9sdfN-FdbAitbRYApr2h5hcpYi7Bs23K5v38asshJm354ZPDd5-Fmx0afyEbVJbnlhxZj66w4WUYpnbwMc47KmBlpZSK2wEVlrvG2qD4s4cAFRgp0EwrxfPiD48wA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExpEfGaOM1Mv8aGyfGbL3nHRW4YpCi85zZswm4lHkriQaMAzaQQmYAsgnClUjFh7Wgn8SN4i2m-ThADOsuYLTSD-cVFYknezY9oBdGPsi2Ikr69UqQnGEm6oPQrOuIOZtJotNu3K77jtEMNtnQHVpg
+  title: christianity.com
+search_queries:
+- ''
+- Egypt Hebrew Mitzrayim meaning dual
+- Matthew 2:13 KJV snippet
+- Exodus 20:2 KJV snippet
+- Egypt Greek Aigyptos Strong's

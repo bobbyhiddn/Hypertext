@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: EGYPT
+GLOSS: The land of the Nile; a place of bondage, refuge, and provision.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Draw 2, then discard 1.
+
+VERSES:
+OT: Exodus 20:2 — “I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage.”
+NT: Matthew 2:13 — “Arise, and take the young child and his mother, and flee into Egypt, and be thou there until I bring thee word...”
+
+LANGUAGES:
+Hebrew: מִצְרַיִם - Mitzrayim - Gen 12:10 • Ex 1:1 • Ex 12:41 • Jer 43:7
+Greek: Αἴγυπτος - Aigyptos - Matt 2:15 • Acts 7:9 • Heb 11:27 • Rev 11:8
+
+TRIVIA:
+• Hebrew name Mitzrayim is a dual form, referring to Upper and Lower Egypt.
+• Mentioned over 600 times, symbolizing the world or the 'house of bondage'.
+• Served as a refuge for Abraham, Jacob, and Jesus during times of famine or danger.
+
+ART: Vast desert sands shifting into a fertile river delta, ancient stone monuments rising in the distance under a scorching sun, golden tones and deep blues
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
