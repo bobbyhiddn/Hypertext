@@ -6,7 +6,7 @@ NUMBER: #018
 WORD: EGYPT
 GLOSS: The land of the Nile; a place of bondage, refuge, and provision.
 TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
-RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
 
 STATS (each has 5 pip slots total, filled pips are NAVY colored):
 LORE: 5/5 filled
@@ -14,7 +14,7 @@ CONTEXT: 5/5 filled
 COMPLEXITY: 3/5 filled
 
 ABILITY:
-Swap a card from your hand with a card from Sheol.
+Target player reveals their hand. You may swap a card from your hand with a card from theirs.
 
 VERSES:
 OT: Exodus 20:2 — “I am the LORD thy God, which have brought thee out of the land of Egypt, out of the house of bondage.”
