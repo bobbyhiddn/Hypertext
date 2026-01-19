@@ -1,0 +1,54 @@
+number: 019
+word: SHEPHERD
+gloss: One who tends, feeds, and guards a flock; a spiritual guide or leader of people.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered wooden staff planted upright in a grassy hillside at sunset,
+  overlooking a green valley with a distant flock of sheep, warm golden lighting,
+  oil painting style
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Return a NAME from Sheol to your hand.
+ot_verse:
+  ref: Psalm 23:1
+  snippet: The LORD is my shepherd; I shall not want.
+nt_verse:
+  ref: John 10:11
+  snippet: I am the good shepherd. The good shepherd gives His life for the sheep.
+greek:
+  text: ποιμήν
+  translit: poimēn
+hebrew:
+  text: רֹעֶה
+  translit: ro'eh
+ot_refs: Gen 4:2 • Gen 49:24 • Ps 23:1 • Isa 40:11 • Ezek 34:12
+nt_refs: Matt 9:36 • John 10:11 • Heb 13:20 • 1 Pet 2:25 • 1 Pet 5:4
+trivia:
+- Abel was the first shepherd mentioned in the Bible.
+- King David tended sheep before he shepherded Israel.
+- The English word 'pastor' comes from the Latin for shepherd.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElurAxQkW9L9VH6EifPMY7e2rGvr5XqzpWK2Ks2vxP0AHedWqqp1MbwV_FYaAHWOnArwQ9IBTeAGg0u5g7xuBnQ146ONZR-ep78Yv-QvpNCJ1dqxgX9uT3mb3RyOaurh0kShwMyNxf8OuOLLY8JBt7YmO8_gs=
+  title: bibleinfo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfaVenjOrPQvho2ugig0x1CoGPUu3qi4ALnjesZAsvXq0qM4mCz27u2Qd4ddQPqj90giY7Jjm-47iBaDIJ5Q3QKxQ6-JVJa02l_NUkOdmvozFAmImzeHE543pA3YhQiHSFB4lRI0o9rJDvAS4sp0lAk1LuhxnFaCWGpsmcJQ==
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyDH72O5gtD2hOtOCTT_4Qz-W8vDKnT4_pzaawHA08TATEnR5rwtJbN-vHhRor2EdOi7P8wyZ3YUySEMwvBEZoOzlumtHFUgjPUdws07_jHqo6AUYwMmbfL--Dzf-9y5LpqFwyi222WWbkqV1Q9FWQTO-SwvpSGg==
+  title: parade.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ8QMjbNcSlvRGfoY3AVeCIT9T6rxQDH07cdoXdXqTtKgTnmGIoG8IOPSpkR-nIedPWWVFU5eAQWtZbgDuI9yayWZ1aagCt5DUBJ4VUuR4FNCP6y6zg1hY-KwGStpsbfUlOgrWcdwVVQ4921EMKEGkVjheGdUBUkxOF3BfFg==
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGywbfw1WG42_5eXOUJhVUsoxNyb9_koyeCXlLWtV1pjEqHYLJ4snqBEikCBnQn-L3pbu0GiJAKOq0035J86k2J9SmRj0rV1wXCwMDLfCw0ZSJWKsEprJG3oNzBFR9FS_mFe1FYMEyWDELtoJMddDPV
+  title: logos.com
+search_queries:
+- ''
+- hebrew word for shepherd ro'eh
+- greek word for shepherd poimen
+- biblical trivia shepherd
