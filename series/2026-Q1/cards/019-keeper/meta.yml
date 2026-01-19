@@ -72,22 +72,8 @@ last_description:
   style_matches_reference: true
   style_mismatch_reason: ''
 review_status: green
-revision: 2
-revision_notes: "General revision request (you may modify any content field as needed):\n\
-  Remove example from the bottom and move the set information to the left instead\
-  \ of the right.\n# Card_Word: KEEPER\n# Card_Gloss: One who guards, watches, protects,\
-  \ or preserves; a warden or caretaker.\n# Card_Type: TITLE\n# Card_Rarity: UNCOMMON\n\
-  # Card_Ability: Opponents cannot target your Pages or Redeem cards until your next\
-  \ turn.\n# Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 2\n# Card_Art_Prompt: A heavy,\
-  \ reinforced wooden door with iron bands, illuminated by a single glowing lantern\
-  \ in the twilight, symbolizing safety and vigilance.\n# Card_OT_Verse: Psalm 121:5\
-  \ — The LORD is thy keeper: the LORD is thy shade upon thy right hand.\n# Card_NT_Verse:\
-  \ Acts 5:23 — The prison truly found we shut with all safety, and the keepers standing\
-  \ without before the doors.\n# Card_Hebrew: שָׁמַר (shamar)\n# Card_Greek: φύλαξ\
-  \ (phylax)\n# Card_Trivia_1: Cain famously deflected God's question by asking, \"\
-  Am I my brother's keeper?\"\n# Card_Trivia_2: The Hebrew 'shamar' literally means\
-  \ to hedge about, guard, or protect with thorns.\n# Card_Trivia_3: Temple doorkeepers\
-  \ were Levites entrusted with guarding the sacred entrance.\n\nCard field changes\
-  \ (from preview):\n  TRIVIA_3: '' -> 'Temple doorkeepers were Levites entrusted\
-  \ with guarding the sacred entrance.'"
+revision: 3
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  Move the set info to the bottom left, not right.'
 last_rebuild: true
