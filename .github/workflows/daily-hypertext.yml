@@ -28,7 +28,7 @@ jobs:
       fail-fast: false
       max-parallel: 3
     # Only run variants up to the requested count (default 3 for scheduled runs)
-    if: ${{ matrix.variant <= (inputs.count || 3) }}
+    if: ${{ matrix.variant <= fromJSON(inputs.count || '3') }}
     steps:
       - uses: actions/checkout@v4
 
