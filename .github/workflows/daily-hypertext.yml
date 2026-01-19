@@ -27,20 +27,35 @@ jobs:
         variant: [1, 2, 3]
       fail-fast: false
       max-parallel: 3
-    # Only run variants up to the requested count (default 3 for scheduled runs)
-    if: ${{ matrix.variant <= fromJSON(inputs.count || '3') }}
     steps:
+      - name: Check if variant should run
+        id: check
+        run: |
+          COUNT="${{ inputs.count || '3' }}"
+          VARIANT="${{ matrix.variant }}"
+          if [[ "$VARIANT" -gt "$COUNT" ]]; then
+            echo "Skipping variant $VARIANT (count=$COUNT)"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Running variant $VARIANT (count=$COUNT)"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.check.outputs.skip != 'true'
 
       - name: Setup Python
+        if: steps.check.outputs.skip != 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install deps
+        if: steps.check.outputs.skip != 'true'
         run: pip install -e package/
 
       - name: Run plan phase (variant ${{ matrix.variant }})
+        if: steps.check.outputs.skip != 'true'
         id: run-plan
         run: |
           python -m hypertext.pipeline.daily --phase plan --auto --variant ${{ matrix.variant }}
@@ -48,6 +63,7 @@ jobs:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
 
       - name: Verify card was created
+        if: steps.check.outputs.skip != 'true'
         run: |
           CARD_DIR="${{ steps.run-plan.outputs.card_dir }}"
           if [[ -z "${CARD_DIR}" ]]; then
@@ -62,6 +78,7 @@ jobs:
           ls -la "${CARD_DIR}"
 
       - name: Generate image
+        if: steps.check.outputs.skip != 'true'
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
@@ -70,6 +87,7 @@ jobs:
           python -m hypertext.pipeline.daily --phase imagegen
 
       - name: Verify image was generated
+        if: steps.check.outputs.skip != 'true'
         env:
           CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
         run: |
@@ -81,6 +99,7 @@ jobs:
           echo "Image generated successfully"
 
       - name: Create PR branch, commit, open PR
+        if: steps.check.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
           CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
@@ -117,6 +136,7 @@ jobs:
             --label "daily-hypertext"
 
       - name: Comment rendered PNG on PR
+        if: steps.check.outputs.skip != 'true'
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
           CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
