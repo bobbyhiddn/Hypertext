@@ -1,0 +1,63 @@
+number: 019
+word: KEEPER
+gloss: One who guards, watches, protects, or preserves; a warden or caretaker.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A heavy, reinforced wooden door with iron bands, illuminated by a single
+  glowing lantern in the twilight, symbolizing safety and vigilance.
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Opponents cannot target your Pages or Redeem cards until your next turn.
+ot_verse:
+  ref: Psalm 121:5
+  snippet: 'The LORD is thy keeper: the LORD is thy shade upon thy right hand.'
+nt_verse:
+  ref: Acts 5:23
+  snippet: The prison truly found we shut with all safety, and the keepers standing
+    without before the doors.
+greek:
+  text: φύλαξ
+  translit: phylax
+hebrew:
+  text: שָׁמַר
+  translit: shamar
+ot_refs: Gen 4:9 • Ps 121:3-8 • Eccl 12:3 • Ps 84:10
+nt_refs: Acts 5:23 • Titus 2:5 • 1 Pet 1:5 • John 17:12
+trivia:
+- Cain famously deflected God's question by asking, "Am I my brother's keeper?"
+- The Hebrew 'shamar' literally means to hedge about, guard, or protect with thorns.
+- Temple doorkeepers were Levites entrusted with guarding the sacred entrance.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHl8L2_3Rcqbj__FvfDKXtV7H-NfKytpOpG9ehR2LG3Na4mtHQ1M8M1ZuHWw5sepniJ3KU5PTwCQQfol-JVYFPGUdCWNLibLpHEHMPosEpmEW1JeQb5B1PvIFEdjz5E
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiCylEsfLfnabopyGv5dwRs90OYBX62FbIklllUzZLVnqRU_Tj8JweM23B3-pLRRChwzDoy4yMetbQYSYTWR_7cgq0nU9KFjIaJOFl5sdK4tzneLoft_M35Jna1EGCvjphiC7s_zwa6g==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeuOMDC5j3O6sP26AlUYCpqP2tEWPpAboYd1C4vYH-9UF16eJjYe8GHQ0S1GWayDFWbVWDWMVyTYB9cnCT2ZiiindaULRvx6GFq9GPViLyI5JxyT2ssnNig4r7vKfesDVW73ojdELPzs74
+  title: trulyrandomverse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzvYrOZSpYLGtpx3Vk2IBpocxoxNIJcRZM31EV2jTYcfMdVJk85OL9VC5-9kR8INxVUA0HEXp5qaEU03yWmwbLNC4Lye0TYBF_Ij3ovOldGPKeWU4d8Pg-ag2RFP6RUyUn6FDGKpyW
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQez1BBuyOoMuY_KxV81iz-zfO4pmefZAXq7sl_Qk3CD0x-CRGmNAe1T_Q9RN7DucMYnY6Fa9E93NOFdZ1y0LdoTmk41Y5Ad_w1Dd-FpRHEE8-0pbv_BfTwL711iGahTpFTBDtIEB-5RQZCtNWBeFEXi6GQ5q3E2K_Eu7xuG6BA-KZJZ-AxC7h8W0D
+  title: thetransformedwife.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKDVZvhBO3BPX0PKAj010Rwcy3uPUW3NlYg5eESy0ifHIojo31aY00fs2E8Ttm2dc28cQFZ0ha6VYlNAKcr46EYr_AueWoood-e6mN_GJIaiJjMhAZSO1HJynH2YBp5kqRs90yBZ6cIS_cXrkmXnlYEQvirFc=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6TCn-uYqN-9UdlKNbpMwf2xpMLXoXWopAJHDOL-KhMRdINbctC8JOvdoicVXeRkWynS352S3mW13vQRwebqlapcaXJqQi0a-KOuN9_pYUcQ-a1ax9Cd3kyBM4KTTEfOnP26Bygc1o8tIpCIiBJBtXcbuU12F9bMY=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5643cykQAw0u0xvhIw4YkJyruLy5Exk1RtZ7diHPLKX1xWYMnI-Cfmbs0ww4tcObNmNq4h8BaH-3WWKFYDqgwGTY05Nsk-c1B-1-kfFRr0cTe29YqnVPfVfZdtZhLiNeg751r
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEl1gSQHCi3QDpcvmUEosm8Mk6e41qBduSC_ilY4g5ZmoA10FQjZIdDbLS7WsRiOAOUU3UIYjqSch-5LeeW5MxcdMpK7jkU8wh9pS1nCJhP6m8y__ArHe3NjyhhvuCVy6tBZxezjj47QTXQXzarh8Yf5lI6slgpWsS2tTLgEAP15qL
+  title: margmowczko.com
+search_queries:
+- ''
+- Hebrew word for keeper Psalm 121:5
+- Biblical meaning of Keeper
+- Greek word for keeper Titus 2:5
+- Greek word for keeper Acts 5:23

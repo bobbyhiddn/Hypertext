@@ -8,6 +8,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- KEEPER
 - MIGHTY
 - MULTIPLY
 - NAME
@@ -28,6 +29,7 @@ ability_patterns:
 - discard_draw
 - draw_tower
 - look_top_tower
+- opponent_pages
 - pages_sheol
 - sheol_tower
 - sheol_type_noun
@@ -124,3 +126,8 @@ cards:
   type: NAME
   rarity: COMMON
   ability_pattern: discard_draw
+- number: 19
+  word: KEEPER
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: opponent_pages
