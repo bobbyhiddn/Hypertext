@@ -14,6 +14,7 @@ words:
 - NATION
 - REMEMBER
 - SCATTER
+- SETH
 - SPEAK
 - STONE
 ability_patterns:
@@ -118,3 +119,8 @@ cards:
   type: NOUN
   rarity: UNCOMMON
   ability_pattern: add_hand_choice_discard_tower
+- number: 18
+  word: SETH
+  type: NAME
+  rarity: COMMON
+  ability_pattern: discard_draw

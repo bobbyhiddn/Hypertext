@@ -1,0 +1,41 @@
+number: 018
+word: SETH
+gloss: Appointed / Compensation
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A young sapling growing vigorously next to a fallen, withered branch in
+  a prehistoric landscape, illuminated by a shaft of warm light, symbolizing restoration
+  and a new lineage.
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Discard 1 card from your hand to draw 2 cards.
+ot_verse:
+  ref: Genesis 4:25
+  snippet: God hath appointed me another seed instead of Abel, whom Cain slew.
+nt_verse:
+  ref: Luke 3:38
+  snippet: Which was the son of Enos, which was the son of Seth, which was the son
+    of Adam.
+greek:
+  text: Σήθ
+  translit: Sēth
+hebrew:
+  text: שֵׁת
+  translit: Sheth
+ot_refs: Gen 4:25 • Gen 5:3-8 • 1 Chr 1:1
+nt_refs: Luke 3:38
+trivia:
+- Name means 'appointed' or 'compensation' for the loss of Abel.
+- Lived 912 years and became the ancestor of Noah and Jesus.
+- Born when Adam was 130, expressly in his father's likeness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
