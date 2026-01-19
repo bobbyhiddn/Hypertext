@@ -3,18 +3,32 @@ name: Daily Hypertext
 on:
   schedule:
     - cron: "0 11 * * *" # adjust
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Number of cards to generate (1-3)"
+        required: false
+        default: "3"
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
-  plan:
+  generate-card:
     runs-on: ubuntu-latest
-    outputs:
-      card_dir: ${{ steps.run-plan.outputs.card_dir }}
-      card_slug: ${{ steps.run-plan.outputs.card_slug }}
+    strategy:
+      matrix:
+        variant: [1, 2, 3]
+      fail-fast: false
+      max-parallel: 3
+    # Only run variants up to the requested count (default 3 for scheduled runs)
+    if: ${{ matrix.variant <= (inputs.count || 3) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -24,13 +38,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install deps
-        run: |
-          pip install -e package/
+        run: pip install -e package/
 
-      - name: Run plan phase
+      - name: Run plan phase (variant ${{ matrix.variant }})
         id: run-plan
         run: |
-          python -m hypertext.pipeline.daily --phase plan --auto
+          python -m hypertext.pipeline.daily --phase plan --auto --variant ${{ matrix.variant }}
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
 
@@ -48,50 +61,7 @@ jobs:
           echo "Card created: ${CARD_DIR}"
           ls -la "${CARD_DIR}"
 
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: hypertext-staged
-          path: |
-            ${{ steps.run-plan.outputs.card_dir }}
-            series/2026-Q1/deck/queue.yml
-            series/2026-Q1/stats.yml
-            series/2026-Q1/cards_index.yml
-          if-no-files-found: error
-
-  imagegen:
-    runs-on: ubuntu-latest
-    needs: [plan]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download staged artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: hypertext-staged
-          path: series/2026-Q1
-
-      - name: Verify staged card exists
-        run: |
-          CARD_DIR="${{ needs.plan.outputs.card_dir }}"
-          echo "Card dir: ${CARD_DIR}"
-          if [[ ! -f "${CARD_DIR}/card.json" ]]; then
-            echo "ERROR: ${CARD_DIR}/card.json not found after artifact download"
-            ls -la "${CARD_DIR}" || echo "Directory does not exist"
-            exit 1
-          fi
-          ls -la "${CARD_DIR}"
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install deps
-        run: |
-          pip install -e package/
-
-      - name: Generate image (Nano Banana Pro)
+      - name: Generate image
         env:
           GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
@@ -100,8 +70,9 @@ jobs:
           python -m hypertext.pipeline.daily --phase imagegen
 
       - name: Verify image was generated
+        env:
+          CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
         run: |
-          CARD_DIR="${{ needs.plan.outputs.card_dir }}"
           if [[ ! -f "${CARD_DIR}/outputs/card_1024x1536.png" ]]; then
             echo "ERROR: Image not found at ${CARD_DIR}/outputs/card_1024x1536.png"
             ls -la "${CARD_DIR}/outputs" || echo "outputs directory does not exist"
@@ -109,56 +80,19 @@ jobs:
           fi
           echo "Image generated successfully"
 
-      - name: Upload rendered artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: hypertext-rendered
-          path: |
-            ${{ needs.plan.outputs.card_dir }}
-            series/2026-Q1/deck/queue.yml
-            series/2026-Q1/stats.yml
-            series/2026-Q1/cards_index.yml
-          if-no-files-found: error
-
-  initial-pr:
-    runs-on: ubuntu-latest
-    needs: [plan, imagegen]
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Download rendered artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: hypertext-rendered
-          path: series/2026-Q1
-
-      - name: Verify rendered card exists
-        run: |
-          CARD_DIR="${{ needs.plan.outputs.card_dir }}"
-          echo "Card dir: ${CARD_DIR}"
-          if [[ ! -f "${CARD_DIR}/card.json" ]]; then
-            echo "ERROR: ${CARD_DIR}/card.json not found after artifact download"
-            ls -la "${CARD_DIR}" || echo "Directory does not exist"
-            exit 1
-          fi
-          if [[ ! -f "${CARD_DIR}/outputs/card_1024x1536.png" ]]; then
-            echo "ERROR: Image not found at ${CARD_DIR}/outputs/card_1024x1536.png"
-            exit 1
-          fi
-          ls -la "${CARD_DIR}"
-
       - name: Create PR branch, commit, open PR
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
-          CARD_DIR: ${{ needs.plan.outputs.card_dir }}
-          CARD_SLUG: ${{ needs.plan.outputs.card_slug }}
+          CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
+          CARD_SLUG: ${{ steps.run-plan.outputs.card_slug }}
+          VARIANT: ${{ matrix.variant }}
         run: |
           DATE=$(date -u +%Y-%m-%d)
           if [[ -z "${CARD_DIR}" ]]; then
             echo "No card directory from plan output."
             exit 1
           fi
-          BRANCH="daily/${DATE}-${CARD_SLUG}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          BRANCH="daily/${DATE}-${VARIANT:+${VARIANT}-}${CARD_SLUG}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git checkout -b "${BRANCH}"
           git add "${CARD_DIR}" series/2026-Q1/deck/queue.yml series/2026-Q1/stats.yml series/2026-Q1/cards_index.yml
           git config user.name "hypertext-bot"
@@ -167,13 +101,14 @@ jobs:
           git push --set-upstream origin "${BRANCH}"
           gh label create "daily-hypertext" --description "Daily Hypertext card awaiting review" --color "0E8A16" --force || true
           gh pr create \
-            --title "Daily Hypertext: ${DATE} (${CARD_SLUG})" \
-            --body "## Staged daily card
+            --title "Daily Hypertext: ${DATE} (#${VARIANT}) - ${CARD_SLUG}" \
+            --body "## Staged daily card (Option ${VARIANT} of 3)
 
           **Status:** Awaiting review
 
           ### Commands
           - Comment \`approve\` or \`lgtm\` to run the review stage
+          - Comment \`upgrade\` to increase rarity and regenerate ability
           - Comment with revision instructions to run a targeted revise
 
           The card will be updated in this PR after review/revise completes." \
@@ -184,8 +119,8 @@ jobs:
       - name: Comment rendered PNG on PR
         env:
           GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
-          CARD_DIR: ${{ needs.plan.outputs.card_dir }}
-          CARD_SLUG: ${{ needs.plan.outputs.card_slug }}
+          CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
+          CARD_SLUG: ${{ steps.run-plan.outputs.card_slug }}
         run: |
           set -euo pipefail
 

@@ -1956,10 +1956,20 @@ def find_next_image_target(cards_dir: Path, out_name: str) -> Path | None:
     return None
 
 
-def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
+def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: int = 1) -> int:
+    """Plan and create a new card.
+
+    Args:
+        series_dir: Path to the series directory
+        template_path: Path to the card template
+        auto: Whether to auto-generate queue entries if needed
+        variant: Variant number (1-3) for parallel generation. Each variant picks
+                 a different entry from the candidate pool for variety.
+    """
     queue_path = series_dir / "deck" / "queue.yml"
     cards_dir = series_dir / "cards"
 
+    _log(f"[phase plan] variant={variant}")
     print(f"Queue path: {queue_path}")
     queue = load_queue(queue_path)
     if auto:
@@ -2070,11 +2080,19 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool) -> int:
         _log(f"[plan] WARNING: All {len(incomplete_entries)} entries are duplicates of last card ({last_rarity}/{last_type}), no alternatives")
         candidates = incomplete_entries
 
-    # Sort by score (highest first) and select the best entry
+    # Sort by score (highest first) and select entry based on variant
+    # Variant 1 picks best, variant 2 picks 2nd best, variant 3 picks 3rd best
     candidates.sort(key=lambda x: x[2], reverse=True)
-    number, entry, best_score = candidates[0]
 
-    _log(f"[plan] selected best entry #{number:03d} with score {best_score:.1f}")
+    # Use variant to pick different entries for parallel generation
+    # Clamp variant_index to available candidates
+    variant_index = min(variant - 1, len(candidates) - 1)
+    number, entry, best_score = candidates[variant_index]
+
+    if variant > 1:
+        _log(f"[plan] variant {variant}: selected entry #{number:03d} (rank {variant_index + 1}/{len(candidates)}) with score {best_score:.1f}")
+    else:
+        _log(f"[plan] selected best entry #{number:03d} with score {best_score:.1f}")
 
     word = str(entry["word"]).upper()
     slug = slugify(word)
@@ -4035,6 +4053,193 @@ def phase_rebuild_failed(*, cards_dir: Path, parallel: int = 1) -> int:
     return still_failed
 
 
+def phase_upgrade(*, card_dir: Path) -> int:
+    """Upgrade a card's rarity and regenerate its ability.
+
+    Increases the card's rarity by one tier (COMMON → UNCOMMON → RARE → GLORIOUS)
+    and generates a new ability appropriate for the new rarity and the card's word.
+    Then rebuilds the card image from scratch.
+
+    Checks if there is room in the deck for the new rarity+type combination before
+    proceeding. If not, reports which combinations have room at the new rarity.
+
+    Args:
+        card_dir: Path to the card directory containing card.json
+
+    Returns:
+        0 on success, non-zero on failure
+    """
+    card_path = card_dir / "card.json"
+    if not card_path.exists():
+        print(f"Missing {card_path}")
+        return 1
+
+    _log(f"[phase upgrade] card_dir={card_dir}")
+
+    card = read_json(card_path)
+    content = card.get("content", {})
+
+    # Get current card info
+    current_rarity = str(content.get("RARITY_TEXT", "COMMON")).upper()
+    word = str(content.get("WORD", "")).strip()
+    card_type = str(content.get("CARD_TYPE", "NOUN")).upper()
+    number_str = str(content.get("NUMBER", "001"))
+    try:
+        number = int(number_str.lstrip("#"))
+    except ValueError:
+        number = 1
+
+    if not word:
+        print("Card has no word - cannot upgrade")
+        return 1
+
+    # Determine next rarity
+    if current_rarity not in RARITY_ORDER:
+        current_rarity = "COMMON"
+
+    current_idx = RARITY_ORDER.index(current_rarity)
+    if current_idx >= len(RARITY_ORDER) - 1:
+        print(f"Card is already {current_rarity} (maximum rarity) - cannot upgrade further")
+        # Write info file for workflow to report
+        info_path = card_dir / ".upgrade_info.txt"
+        with open(info_path, "w", encoding="utf-8") as f:
+            f.write(f"Card is already **{current_rarity}** (maximum rarity) - no upgrade performed.")
+        return 0
+
+    new_rarity = RARITY_ORDER[current_idx + 1]
+
+    # Determine series_dir from card_dir (card_dir is like series/2026-Q1/cards/001-word/)
+    # Go up to find series root (parent of 'cards' directory)
+    series_dir = None
+    if card_dir.parent.name == "cards":
+        series_dir = card_dir.parent.parent
+    elif "demo_cards" in str(card_dir):
+        # Demo cards don't have series stats - skip the check
+        series_dir = None
+    else:
+        # Try to find series root by looking for stats.yml
+        for parent in card_dir.parents:
+            if (parent / "stats.yml").exists():
+                series_dir = parent
+                break
+
+    # Check if there's room in the deck for the new rarity+type combination
+    if series_dir and (series_dir / "stats.yml").exists():
+        stats = _load_series_stats(series_dir)
+        combo_counts = stats.get("combination_counts", {})
+        new_combo_key = (new_rarity, card_type)
+        old_combo_key = (current_rarity, card_type)
+
+        target = COMBINATION_TARGETS.get(new_combo_key, 2)
+        current_count = combo_counts.get(new_combo_key, 0)
+
+        _log(f"[phase upgrade] checking room for {new_rarity}/{card_type}: {current_count}/{target}")
+
+        if current_count >= target:
+            # No room for this combination - find alternatives
+            print(f"No room in deck for {new_rarity} {card_type} (already {current_count}/{target})")
+
+            # Find which types have room at the new rarity
+            available_types = []
+            for t in TYPE_ORDER:
+                t_key = (new_rarity, t)
+                t_target = COMBINATION_TARGETS.get(t_key, 2)
+                t_current = combo_counts.get(t_key, 0)
+                if t_current < t_target:
+                    available_types.append(f"{t} ({t_current}/{t_target})")
+
+            # Write info file for workflow to report
+            info_path = card_dir / ".upgrade_info.txt"
+            with open(info_path, "w", encoding="utf-8") as f:
+                f.write(f"**Cannot upgrade** - no room for **{new_rarity} {card_type}** in deck ({current_count}/{target} slots filled).\n\n")
+                if available_types:
+                    f.write(f"Types with room at {new_rarity} rarity:\n")
+                    for at in available_types:
+                        f.write(f"- {at}\n")
+                else:
+                    f.write(f"No types have room at {new_rarity} rarity.")
+            return 0
+
+    _log(f"[phase upgrade] upgrading {word} from {current_rarity} → {new_rarity}")
+
+    # Generate new recipe with new rarity (will generate new ability)
+    _log(f"[phase upgrade] generating new ability for {new_rarity} rarity...")
+    try:
+        recipe = _generate_card_recipe(
+            number=number,
+            word=word,
+            card_type=card_type,
+            rarity=new_rarity,
+            ability=None,  # Generate new ability for the new rarity
+        )
+    except Exception as e:
+        print(f"Failed to generate new recipe: {e}")
+        return 1
+
+    new_ability = recipe.get("ability_text", "")
+    if not new_ability:
+        print("Recipe generation did not return an ability")
+        return 1
+
+    old_ability = content.get("ABILITY_TEXT", "")
+    _log(f"[phase upgrade] old ability: {old_ability}")
+    _log(f"[phase upgrade] new ability: {new_ability}")
+
+    # Update card.json with new rarity and ability
+    content["RARITY_TEXT"] = new_rarity
+    content["ABILITY_TEXT"] = new_ability
+    card["content"] = content
+
+    write_json(card_path, card)
+    _log(f"[phase upgrade] updated card.json with new rarity and ability")
+
+    # Update series stats if available
+    if series_dir and (series_dir / "stats.yml").exists():
+        stats = _load_series_stats(series_dir)
+
+        # Decrement old combination count
+        old_combo_key = (current_rarity, card_type)
+        if old_combo_key in stats.get("combination_counts", {}):
+            stats["combination_counts"][old_combo_key] = max(0, stats["combination_counts"][old_combo_key] - 1)
+
+        # Increment new combination count
+        new_combo_key = (new_rarity, card_type)
+        if "combination_counts" not in stats:
+            stats["combination_counts"] = {}
+        stats["combination_counts"][new_combo_key] = stats["combination_counts"].get(new_combo_key, 0) + 1
+
+        # Update rarity counts
+        stats["rarity_counts"][current_rarity] = max(0, stats["rarity_counts"].get(current_rarity, 1) - 1)
+        stats["rarity_counts"][new_rarity] = stats["rarity_counts"].get(new_rarity, 0) + 1
+
+        _save_series_stats(series_dir, stats)
+        _log(f"[phase upgrade] updated stats: {old_combo_key} -> {new_combo_key}")
+
+    # Write upgrade info for workflow to report
+    info_path = card_dir / ".upgrade_info.txt"
+    with open(info_path, "w", encoding="utf-8") as f:
+        f.write(f"**{current_rarity}** → **{new_rarity}**\n\n")
+        f.write(f"**New ability:** {new_ability}")
+
+    # Rebuild prompt.txt with new content
+    prompt_txt = card_dir / "prompt.txt"
+    prompt_text = build_prompt_text(card)
+    with open(prompt_txt, "w", encoding="utf-8") as f:
+        f.write(prompt_text)
+    _log(f"[phase upgrade] wrote new prompt.txt")
+
+    # Rebuild the card image
+    _log(f"[phase upgrade] rebuilding card image...")
+    result = phase_rebuild(card_dir=card_dir, regen_prompt=False)
+    if result != 0:
+        print(f"Image rebuild failed with code {result}")
+        return result
+
+    print(f"Upgraded {word} from {current_rarity} to {new_rarity}")
+    print(f"New ability: {new_ability}")
+    return 0
+
+
 def _generate_image_only(*, card_dir: Path) -> Path:
     """Generate image without polish. Returns path to generated image."""
     out_name = "card_1024x1536.png"
@@ -4780,7 +4985,7 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "example-cards", "revise", "rebuild", "rebuild-failed", "rebuild-index", "review", "grade", "gallery", "full"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "example-cards", "revise", "rebuild", "upgrade", "rebuild-failed", "rebuild-index", "review", "grade", "gallery", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR), help="Series directory (for demo phase: output dir)")
     parser.add_argument("--style-series", default=str(DEFAULT_SERIES_DIR), help="Series to use for style references (default: series/2026-Q1)")
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
@@ -4803,6 +5008,7 @@ def main() -> int:
     parser.add_argument("--ask-before-review", action="store_true", help="Pause after image generation to ask before running review phase")
     parser.add_argument("--style-ref", action="append", dest="style_refs", help="Override style references (repeatable, replaces all programmatic refs)")
     parser.add_argument("--extra-ref", action="append", dest="extra_refs", help="Additional style reference (repeatable, prepended to programmatic refs)")
+    parser.add_argument("--variant", type=int, default=1, help="Variant number (1-3) for parallel daily generation - influences card selection for variety")
     args = parser.parse_args()
 
     _log(
@@ -4870,7 +5076,8 @@ def main() -> int:
         return phase_full(series_dir=series_dir, template_path=template_path, auto=args.auto, batch=1)
 
     if args.phase == "plan":
-        return phase_plan(series_dir=series_dir, template_path=template_path, auto=args.auto)
+        variant = getattr(args, "variant", 1) or 1
+        return phase_plan(series_dir=series_dir, template_path=template_path, auto=args.auto, variant=variant)
 
     if args.phase == "imagegen":
         return phase_imagegen(series_dir=series_dir)
@@ -4917,6 +5124,12 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_rebuild(card_dir=Path(args.card_dir), regen_prompt=bool(args.regen_prompt))
+
+    if args.phase == "upgrade":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        return phase_upgrade(card_dir=Path(args.card_dir))
 
     if args.phase == "rebuild-failed":
         cards_dir = Path(args.demo_dir) if args.demo_dir else DEFAULT_DEMO_DIR

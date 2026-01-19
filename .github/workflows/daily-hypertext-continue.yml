@@ -40,6 +40,9 @@ jobs:
           elif [[ "${COMMENT_LOWER}" =~ ^rebuild$ ]]; then
             echo "action=rebuild" >> $GITHUB_OUTPUT
             echo "Detected rebuild command - will run rebuild stage"
+          elif [[ "${COMMENT_LOWER}" =~ ^upgrade$ ]]; then
+            echo "action=upgrade" >> $GITHUB_OUTPUT
+            echo "Detected upgrade command - will run upgrade stage"
           else
             echo "action=revise" >> $GITHUB_OUTPUT
             echo "Detected revision instructions - will run revise stage"
@@ -88,6 +91,8 @@ jobs:
             gh pr comment "${{ github.event.issue.number }}" --body "Starting **review** stage... :mag:"
           elif [[ "${ACTION}" == "rebuild" ]]; then
             gh pr comment "${{ github.event.issue.number }}" --body "Starting **rebuild** stage... :hammer_and_wrench:"
+          elif [[ "${ACTION}" == "upgrade" ]]; then
+            gh pr comment "${{ github.event.issue.number }}" --body "Starting **upgrade** stage... :arrow_up:"
           else
             gh pr comment "${{ github.event.issue.number }}" --body "Starting **revise** stage with your instructions... :pencil2:"
           fi
@@ -220,6 +225,78 @@ jobs:
           gh pr comment "${{ github.event.issue.number }}" --body "### Rebuilt card :hammer_and_wrench:
 
           Rebuild complete. Card image has been regenerated.
+
+          Comment \`approve\` to run review, or provide revision instructions.
+
+          ![${CARD_SLUG}](${RAW_URL})"
+
+  upgrade:
+    runs-on: ubuntu-latest
+    needs: [process-comment]
+    if: needs.process-comment.outputs.action == 'upgrade'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.process-comment.outputs.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -e package/
+
+      - name: Run upgrade stage
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          python -m hypertext.pipeline.daily --phase upgrade --card-dir "${CARD_DIR}"
+
+      - name: Commit and push upgraded card
+        env:
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes from upgrade."
+            exit 0
+          fi
+
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+
+          git add "${CARD_DIR}"
+          git commit -m "Upgrade: increase rarity and regenerate ability"
+          git push
+
+      - name: Comment upgraded PNG on PR
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          CARD_DIR: ${{ needs.process-comment.outputs.card_dir }}
+          CARD_SLUG: ${{ needs.process-comment.outputs.card_slug }}
+        run: |
+          set -euo pipefail
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+          PNG_PATH="${CARD_DIR}/outputs/card_1024x1536.png"
+          RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1&t=$(date +%s)"
+
+          # Read upgrade info if available
+          UPGRADE_INFO=""
+          UPGRADE_FILE="${CARD_DIR}/.upgrade_info.txt"
+          if [[ -f "${UPGRADE_FILE}" ]]; then
+            UPGRADE_INFO=$'\n\n'"$(cat "${UPGRADE_FILE}")"
+            rm -f "${UPGRADE_FILE}"
+          fi
+
+          gh pr comment "${{ github.event.issue.number }}" --body "### Upgraded card :arrow_up:
+
+          Rarity upgrade complete.${UPGRADE_INFO}
 
           Comment \`approve\` to run review, or provide revision instructions.
 
