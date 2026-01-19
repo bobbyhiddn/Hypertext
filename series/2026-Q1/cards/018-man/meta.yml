@@ -1,0 +1,66 @@
+number: 018
+word: MAN
+gloss: An adult human male; mankind; a person created in the image of God.
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A solitary figure sculpted from red clay standing in a vast, empty field
+  under a starry sky, digital painting, earthy tones, minimal lighting
+stats:
+  lore: 2
+  context: 5
+  complexity: 2
+ability: Draw 1 card, then discard 1 card.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: And the LORD God formed man of the dust of the ground, and breathed into
+    his nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:47
+  snippet: 'The first man is of the earth, earthy: the second man is the Lord from
+    heaven.'
+greek:
+  text: ἄνθρωπος
+  translit: anthropos
+hebrew:
+  text: אָדָם
+  translit: adam
+ot_refs: Gen 1:26 • Gen 2:7 • Job 14:1 • Ps 8:4
+nt_refs: Matt 4:4 • Rom 5:12 • 1 Cor 15:47 • 1 Tim 2:5
+trivia:
+- The Hebrew word 'adam' is derived from 'adamah' (ground), signifying man's origin
+  from dust.
+- Jesus is referred to as the 'Second Man' and 'Last Adam', contrasting with the first
+  man's fall.
+- Greek uses 'anthropos' for a human being and 'aner' specifically for a male.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF44ipfWlv9GvLKXq75Hr92K6DEGn97-EapwUu8ShpankffUm7cmRsXxLSzb7IPvRp1YuPFO_vN2CZh6sCG2AjM_0diut_iMi0XpebenJ6yJspHVjuybmA0yobFFEYqNqpgxPI6TJVXJt_JCXil2Vufv7av2_zV_9uRhPv99g1aFMiBcg==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEm3p9qSCfyQgnkADC0SoeeqdTv5DVKkVv75yRZR1Kw9RbDoFDvnXNjOxBm35R6CnnpY9qbNt70zGe9Qx-jzXqIOtB6adsnX_41B08JVxBvyc9YfDaru0CEW2VmSSzNlXqZvjX-U7-U
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFX2fVCC0eRE2Hc6DtGk2mIRZeeG0qi_YpuaN1Z381rfMfFuqmgk95_hx6VV6iM80DIiH77yepIqjZB2QVZA4aF3FJJLmTIhohfnFbJx8Cd3nymH4T_HyenzvybRXG1fDtBiYoP4w-2lZSZXfaDJh-mudSKO1M5DFX5ZvmGNHf6k2M46pecjY2lk35m8UgJhLBxGyRA4vQow==
+  title: theonenessofgod.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3LqCTroJ8wAFCv_X7QKVRmGSy92gp8jnZhUcpmyjxzXqjG20zoP7iEKZnzckGLIA0tTx5nhAY_h_hHe7VVfI683hoN4DRK6RwdNm-htyfAWxKaODZYq4SqNMVX2D9EsASUyEXmfkWmA==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6uGxaiTKibB5IFNvR03xYtKfP11yEXb0VLKbrICFIqyToDZQEdPezKR4cYyTUJFhz7rupI6gBYppq6lVBo6aroezOZXjqkA7sYeuwlmV6zB0qHShZ02627bu4sNQON4kltrKlzbIm
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHAx7jaFqluUhZ8y-Odn9dGfktaLxc5yeRZqtAFcsgVgSsT8x0woyWq96arFEvmA6nwbiqf5XtAA9YvuvvMfU1X-iQO2DFvr6iDQZeTR-MsSoHMsIulDCRoEaJk9ClTM-YLlDxiCGg7pzUXchmPZhX008qWlg8WSOfVQC8YSWWshXUTiVCYlIFm8KMY_RMAKciBg==
+  title: bltnotjustasandwich.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsBiWrzUGAhZcxQVxDQYQqgIscV_hT6ZKC92Qi5keZ3pMUqe8LQt86j8Rc7AsT9Iie3tEGp08KYjuh2ltDDDMhEHSYhPFYD_XXj5Hqkf93M_lJKWEmuNmWsmNDr3VJ2BN6p2xWkDUz6fYzQL-RfK0hB1hPEXK_lpPXIGZdJfE=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt4V-5q2fQE_S9IB2cLnRSbuemJaDsoQbuInPbADkwA9d_ZeZetPx1UFPWV5uaxkdrYPFWK-zx3Qt1RXIgyprbgLsRvciemxEVq--30-_9gqa6apL3lFOdHq1GOoXGfe_Cn7jZr5Wb2sEQ3Sl4cwwm6kOTzBgn6dMNKktAzmc6ANp5Lz-H8lZBx_YhJvHiFuThDV8=
+  title: gentlemantheologian.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2-IxbY0z9Xk8hP-09XfQOufewJhHvFYs00kpgy21JT_JVmuvekqQrhZkrhtAZAMYBFa2FVeHMuf3TT73U3WIv6utF8jvNnbvK6ykl5IAhaqeE2W_s30U1eagQru6TAkXos2TSVfJjP9Zd
+  title: bible-researcher.com
+search_queries:
+- ''
+- Bible verse Man dust of the ground
+- Bible verse first man Adam second man Christ
+- Greek word for Man Anthropos vs Aner
+- Hebrew word for Man Adam vs Ish

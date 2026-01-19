@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: MAN
+GLOSS: An adult human male; mankind; a person created in the image of God.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 1 card, then discard 1 card.
+
+VERSES:
+OT: Genesis 2:7 — “And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.”
+NT: 1 Corinthians 15:47 — “The first man is of the earth, earthy: the second man is the Lord from heaven.”
+
+LANGUAGES:
+Hebrew: אָדָם - adam - Gen 1:26 • Gen 2:7 • Job 14:1 • Ps 8:4
+Greek: ἄνθρωπος - anthropos - Matt 4:4 • Rom 5:12 • 1 Cor 15:47 • 1 Tim 2:5
+
+TRIVIA:
+• The Hebrew word 'adam' is derived from 'adamah' (ground), signifying man's origin from dust.
+• Jesus is referred to as the 'Second Man' and 'Last Adam', contrasting with the first man's fall.
+• Greek uses 'anthropos' for a human being and 'aner' specifically for a male.
+
+ART: A solitary figure sculpted from red clay standing in a vast, empty field under a starry sky, digital painting, earthy tones, minimal lighting
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

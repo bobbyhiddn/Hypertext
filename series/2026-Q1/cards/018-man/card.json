@@ -1,0 +1,271 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "018",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "MAN",
+    "GLOSS": "An adult human male; mankind; a person created in the image of God.",
+    "CARD_TYPE": "NAME",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A solitary figure sculpted from red clay standing in a vast, empty field under a starry sky, digital painting, earthy tones, minimal lighting",
+    "ABILITY_TEXT": "Draw 1 card, then discard 1 card.",
+    "STAT_LORE": 2,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Genesis 2:7",
+    "OT_VERSE_SNIPPET": "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.",
+    "NT_VERSE_REF": "1 Corinthians 15:47",
+    "NT_VERSE_SNIPPET": "The first man is of the earth, earthy: the second man is the Lord from heaven.",
+    "OT_VERSE_LINE": "Genesis 2:7 — “And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life.”",
+    "NT_VERSE_LINE": "1 Corinthians 15:47 — “The first man is of the earth, earthy: the second man is the Lord from heaven.”",
+    "GREEK": "ἄνθρωπος",
+    "GREEK_TRANSLIT": "anthropos",
+    "HEBREW": "אָדָם",
+    "HEBREW_TRANSLIT": "adam",
+    "OT_REFS": "Gen 1:26 • Gen 2:7 • Job 14:1 • Ps 8:4",
+    "NT_REFS": "Matt 4:4 • Rom 5:12 • 1 Cor 15:47 • 1 Tim 2:5",
+    "TRIVIA_BULLETS": [
+      "The Hebrew word 'adam' is derived from 'adamah' (ground), signifying man's origin from dust.",
+      "Jesus is referred to as the 'Second Man' and 'Last Adam', contrasting with the first man's fall.",
+      "Greek uses 'anthropos' for a human being and 'aner' specifically for a male."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Bible verse Man dust of the ground",
+      "Bible verse first man Adam second man Christ",
+      "Greek word for Man Anthropos vs Aner",
+      "Hebrew word for Man Adam vs Ish"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF44ipfWlv9GvLKXq75Hr92K6DEGn97-EapwUu8ShpankffUm7cmRsXxLSzb7IPvRp1YuPFO_vN2CZh6sCG2AjM_0diut_iMi0XpebenJ6yJspHVjuybmA0yobFFEYqNqpgxPI6TJVXJt_JCXil2Vufv7av2_zV_9uRhPv99g1aFMiBcg==",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEm3p9qSCfyQgnkADC0SoeeqdTv5DVKkVv75yRZR1Kw9RbDoFDvnXNjOxBm35R6CnnpY9qbNt70zGe9Qx-jzXqIOtB6adsnX_41B08JVxBvyc9YfDaru0CEW2VmSSzNlXqZvjX-U7-U",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFX2fVCC0eRE2Hc6DtGk2mIRZeeG0qi_YpuaN1Z381rfMfFuqmgk95_hx6VV6iM80DIiH77yepIqjZB2QVZA4aF3FJJLmTIhohfnFbJx8Cd3nymH4T_HyenzvybRXG1fDtBiYoP4w-2lZSZXfaDJh-mudSKO1M5DFX5ZvmGNHf6k2M46pecjY2lk35m8UgJhLBxGyRA4vQow==",
+        "title": "theonenessofgod.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3LqCTroJ8wAFCv_X7QKVRmGSy92gp8jnZhUcpmyjxzXqjG20zoP7iEKZnzckGLIA0tTx5nhAY_h_hHe7VVfI683hoN4DRK6RwdNm-htyfAWxKaODZYq4SqNMVX2D9EsASUyEXmfkWmA==",
+        "title": "bible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6uGxaiTKibB5IFNvR03xYtKfP11yEXb0VLKbrICFIqyToDZQEdPezKR4cYyTUJFhz7rupI6gBYppq6lVBo6aroezOZXjqkA7sYeuwlmV6zB0qHShZ02627bu4sNQON4kltrKlzbIm",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHAx7jaFqluUhZ8y-Odn9dGfktaLxc5yeRZqtAFcsgVgSsT8x0woyWq96arFEvmA6nwbiqf5XtAA9YvuvvMfU1X-iQO2DFvr6iDQZeTR-MsSoHMsIulDCRoEaJk9ClTM-YLlDxiCGg7pzUXchmPZhX008qWlg8WSOfVQC8YSWWshXUTiVCYlIFm8KMY_RMAKciBg==",
+        "title": "bltnotjustasandwich.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsBiWrzUGAhZcxQVxDQYQqgIscV_hT6ZKC92Qi5keZ3pMUqe8LQt86j8Rc7AsT9Iie3tEGp08KYjuh2ltDDDMhEHSYhPFYD_XXj5Hqkf93M_lJKWEmuNmWsmNDr3VJ2BN6p2xWkDUz6fYzQL-RfK0hB1hPEXK_lpPXIGZdJfE=",
+        "title": "wordpress.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt4V-5q2fQE_S9IB2cLnRSbuemJaDsoQbuInPbADkwA9d_ZeZetPx1UFPWV5uaxkdrYPFWK-zx3Qt1RXIgyprbgLsRvciemxEVq--30-_9gqa6apL3lFOdHq1GOoXGfe_Cn7jZr5Wb2sEQ3Sl4cwwm6kOTzBgn6dMNKktAzmc6ANp5Lz-H8lZBx_YhJvHiFuThDV8=",
+        "title": "gentlemantheologian.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2-IxbY0z9Xk8hP-09XfQOufewJhHvFYs00kpgy21JT_JVmuvekqQrhZkrhtAZAMYBFa2FVeHMuf3TT73U3WIv6utF8jvNnbvK6ykl5IAhaqeE2W_s30U1eagQru6TAkXos2TSVfJjP9Zd",
+        "title": "bible-researcher.com"
+      }
+    ]
+  }
+}
