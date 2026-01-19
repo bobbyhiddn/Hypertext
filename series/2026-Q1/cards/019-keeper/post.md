@@ -14,5 +14,4 @@
 ## Trivia
 - Cain famously deflected God's question by asking, "Am I my brother's keeper?"
 - The Hebrew 'shamar' literally means to hedge about, guard, or protect with thorns.
-- Temple doorkeepers were Levites entrusted with guarding the sacred entrance.
 
