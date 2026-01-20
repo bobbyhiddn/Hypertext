@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #019
+WORD: KEEPER
+GLOSS: One who guards, watches over, maintains, or protects from harm.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a NOUN or NAME from Sheol to your hand.
+
+VERSES:
+OT: Genesis 4:9 — “And the Lord said unto Cain, Where is Abel thy brother? And he said, I know not: Am I my brother's keeper?”
+NT: Acts 5:23 — “The prison truly found we shut with all safety, and the keepers standing without before the doors.”
+
+LANGUAGES:
+Hebrew: שֹׁמֵר - shomer - Gen 4:9 • Ps 121:5 • Eccl 12:3 • S.Sol 1:6
+Greek: φύλαξ - phylax - Acts 5:23 • Acts 16:27 • Matt 28:4 • Tit 2:5
+
+TRIVIA:
+• The Hebrew 'shomer' literally means 'to hedge about,' implying protection with thorns.
+• First used by Cain in a deflection of responsibility regarding his brother Abel.
+• Psalm 121 portrays God as the ultimate Keeper who 'shall not slumber nor sleep.'
+
+ART: A heavy iron key hanging from a rough cord, illuminated by a single candle in a dark stone alcove; deep shadows, warm light, texture of old stone.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

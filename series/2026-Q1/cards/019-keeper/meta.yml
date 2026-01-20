@@ -1,0 +1,70 @@
+number: 019
+word: KEEPER
+gloss: One who guards, watches over, maintains, or protects from harm.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A heavy iron key hanging from a rough cord, illuminated by a single candle
+  in a dark stone alcove; deep shadows, warm light, texture of old stone.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Return a NOUN or NAME from Sheol to your hand.
+ot_verse:
+  ref: Genesis 4:9
+  snippet: 'And the Lord said unto Cain, Where is Abel thy brother? And he said, I
+    know not: Am I my brother''s keeper?'
+nt_verse:
+  ref: Acts 5:23
+  snippet: The prison truly found we shut with all safety, and the keepers standing
+    without before the doors.
+greek:
+  text: φύλαξ
+  translit: phylax
+hebrew:
+  text: שֹׁמֵר
+  translit: shomer
+ot_refs: Gen 4:9 • Ps 121:5 • Eccl 12:3 • S.Sol 1:6
+nt_refs: Acts 5:23 • Acts 16:27 • Matt 28:4 • Tit 2:5
+trivia:
+- The Hebrew 'shomer' literally means 'to hedge about,' implying protection with thorns.
+- First used by Cain in a deflection of responsibility regarding his brother Abel.
+- Psalm 121 portrays God as the ultimate Keeper who 'shall not slumber nor sleep.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9_8X00G3WTjoz9Pl7MYkBIm8yha7pSaiHr_FZc4POtJkidcrdy03HCNhRWloh3Rhl6k4X3eMbFKEoyfw0-mlFunuoOxYM42TJbXsSKP1f8J2zynZbMZfDPCRDxAyjUHvU6GBqQK_9
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHapEt4s4q6FpFDHqI1QqrOLJtZw-TRlzeTHu4-Juwgp--fXRJvOhdPH9RPbdf75OHekAr9F-tgD63WAl2k8SxTPIEvmSVrj30m5w1Crg5_KpO84IMM6VilnBYH3pnOy5QGNx4v5vgG7kijMrlMkznko7ZN_Phl7OO35_XT37k=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuUu6ndz9c9uJ8qrSZ4VOak0p60HyADMRE8AYZTArn2Q8IybHE9OHr5FYf2HFnhv-a1v7droIuPOd-yimHTkeM3Ov3mCzjN14FHvT8eC7JKEkoPfdFuimic9S-87BQ
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl0UOP5nzWDXL6Bk_7L7EUPw67hXf0ZfVSYcCUFQr2V3C0NyKIPd_feBf7MH8SvA39JA07b6tPiFLfX-x0r1kqriDiMPPHyIrx0yy6WiBUgFearS2GYaAqKXaXCaoizsgfVsve
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUFDWpg2QCxIlgrO0eDE6zCoFUunxjKOWUo4mTv9a-34PiutYKZNTNljx3UCTByhipUeTnqWXf21Jvvmtu8R1XKu_Qf-tm-ooiLo_xOH81mBarZMyswdOOIdQyBKaV_COyP_n31gj3_3--l9vSm8-81RgnaaJQHf-BgxsPax069bnaNqM07JZeiB3AdWU2
+  title: chaimbentorah.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9B0B4TfJLj-QWn-Qz299CEPijKS4rdNfehgcxwN1kLx8O_c2Nc5bY6jhtinfOChzP1iVaavdLv47rWoCKluObA7VMbI5-JYm-9abrL4i0qVXo9G3jsWfzelP_-uyzi9wJUG-5X-_dKqcYO78=
+  title: cupstocrowns.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQET5YbiIFQgAqs6j7eUY8Kq0NJiHZoyJg8DV25nqI9NAX9GkH_yM6FePvFpO1mWCVyeKZ0ZTAPSrpNPNBy7ToPVmEeZIRFF8uL0GdQDW19OIPKShWFKUVvSJxWeUZkPtncGlVeUydLUgNDtvYlINv9HAhIY_YwXWOXqyQ==
+  title: jerusalemprayerteam.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES6kestOHhCowvrUQWU6HPyXlsQGtRFu9xWl0S-oJPQdGvd00-VIbFgIiLUSzbiYhOk0V4FT5rTWv9r5c1DvA2MwwnS8h-j-5uAXToFaKG5efH-XbezNaFTdza3O6G67LoppNMl2M=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHohtrvUhMIWelBktcsqodC9m1c0RyNmxJWE40AKkOFc8fd7dIauzTfXnhVtVHSh_E-8wA8cMNV7WHFSehb46xwy-Pwi2JCkBp-DrXO_WdJEIWLenRYvN5SCislH82Ohj2G2d8viLq11e34ONw=
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJw3GBmo0inNTBCpMcTgCHxwgeX5zBvX1xpO5CLFkKNnni6GSD2Fma476sek9SNvUzIjknTsm-KRAyQdOQOLCC-vEuTd6SMWKxc7pu-rNJPaivAltVj_8xSN8zyU1i
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmdYs8Ipyggui9J6QmxPoi3j4iRezAvp23UQO8rHlTrw_McsZ5KHdB_HRZPocx2wTfS5wtgLlsEfTKUZVzacQn1-blNXyi6fb1e4CnWvVvZSDWE7ltn5VjQQL0Bu9DfkHQlvff1bE36PNG0hiQePML
+  title: ccel.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjeLhepsmFOpPxr0OMelcTy9p8rzGEGzEaf3WY2SaI1szJrhcbCm1EnRzdvC8HInERNJln1R1ioYX4-aP8dvLVMM0XCf_NKxm_VgljJXioVUGWzS2f0QzDq8b4Tq3bKxwjH0hD_0a1
+  title: knowing-jesus.com
+search_queries:
+- ''
+- Bible verse The Lord is thy keeper
+- Greek word for keeper in Acts 16:27
+- Hebrew word for keeper in Genesis 4:9
+- NT verse containing the word keeper
