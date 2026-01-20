@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #019
+WORD: SHEPHERD
+GLOSS: One who tends, feeds, and guards a flock; a spiritual guide or protector.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a NAME from Sheol to your hand.
+
+VERSES:
+OT: Psalm 23:1 — “The LORD is my shepherd; I shall not want.”
+NT: John 10:11 — “I am the good shepherd: the good shepherd giveth his life for the sheep.”
+
+LANGUAGES:
+Hebrew: רֹעֶה - ro'eh - Gen 4:2 • Ps 23:1 • Ps 78:70 • Zech 11:17
+Greek: ποιμήν - poimēn - Matt 9:36 • John 10:11 • Heb 13:20 • 1 Pet 5:4
+
+TRIVIA:
+• "Pastor" is simply the Latin word for "shepherd."
+• Egyptians considered all shepherds to be an abomination.
+• David was called from the sheepfolds to shepherd Israel.
+
+ART: A weathered wooden staff resting against a mossy stone in a lush green pasture under soft morning light, oil painting style
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

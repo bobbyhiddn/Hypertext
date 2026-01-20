@@ -1,0 +1,61 @@
+number: 019
+word: SHEPHERD
+gloss: One who tends, feeds, and guards a flock; a spiritual guide or protector.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered wooden staff resting against a mossy stone in a lush green
+  pasture under soft morning light, oil painting style
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Return a NAME from Sheol to your hand.
+ot_verse:
+  ref: Psalm 23:1
+  snippet: The LORD is my shepherd; I shall not want.
+nt_verse:
+  ref: John 10:11
+  snippet: 'I am the good shepherd: the good shepherd giveth his life for the sheep.'
+greek:
+  text: ποιμήν
+  translit: poimēn
+hebrew:
+  text: רֹעֶה
+  translit: ro'eh
+ot_refs: Gen 4:2 • Ps 23:1 • Ps 78:70 • Zech 11:17
+nt_refs: Matt 9:36 • John 10:11 • Heb 13:20 • 1 Pet 5:4
+trivia:
+- '"Pastor" is simply the Latin word for "shepherd."'
+- Egyptians considered all shepherds to be an abomination.
+- David was called from the sheepfolds to shepherd Israel.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-ONUD9RUr2XjroyS4eNsPXJEAnEp2tSpXrmqincoZCDct4pk66XSMRgwfN_WgggzxUt-aiF5IdleYEfQwqo4Fpp1jR1BwNBeeaL9lwR_EYSS--U9aaa05UcyOyQ3UFw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj6PgTmkpb9hC3A4OMJMUBsPafscyL9vH8uTIB15f1p8kM99aYUajVnzLOvEJm0c8rTrqSnsBlwloe2OBTbjUlymt1D-cJH23U14NpFCDxogLasvg2GyWAiKf3PK07CpFnKzl00h0jiF2-NLCRWEkrw_08uXgjAKA72ZIfY6U2ZMcvGHDcGq-wWyyc
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7EmxnKLN2cEnE1OpyvNyn0daQRiOhO5ik9G2oqUF810hyBofyX3aV-wmA8ZYctAWnEtI9VdMukCdjRLjnd2d-WTYtBCNCYjIyCeJOCnbD-fUsZvCqSBncbmmNSrH6XIsVZP6twmc90Uzikw==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYh6iWBmEAyzWNLsKoRrODFuw0YgFEyZWZUEGSzMTsnqT0pYmubuF-iX7GD6xkBrk2gvGPQkAsbmsgXvlhO0YPtTqcj51ymf3Vk9XAYjuiJbZK-ISjSTGokvh-UoiCXw==
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxfvly951UcR5QhZdgvkmnRkQ3cgpoWDuAGUDXrC11C-MdD2OOhpKGmVrs_MCmIB5M8dsG5X_DraQXXyjD9xSdDqju4pGLGFIHtbREVGzEgQNlzDsWKT5oCB5pHX9n
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKYv21umtqnLMoKDiH88_9Ivtx4zErJwleR6reKg7fKMDGk-dKHpyWOXF0YP5ontWVMN2bAFoVDKQ3xf-MmUyvDDtMypqRSABPwMqMXWxeSyydB5a9mXplyCL58QLB
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqd3x8VDlkR-PHbEQ2KcrIvM2OpUIuOFOn8rsURBulAxvwDFWo-wgRnitdjbH-DmKNI9xaTopD5S0gQNpNuUj-P-wo9LAScIMZQkZ8R5wiCLRin9Mh3d0Mh09e9PkBnAVGI6K2y-EbIgCp
+  title: trulyrandomverse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYqDSAoOBn_hqrqzdj6d-KI1Ry2JaCRaN_zdAUOYYmVwrjctJkzV67bkuk_MSSgHt8AZs3cYunmzUqD7q4tLxzzOiBGqsvMy29l3pNMdSvSjU1L3u0uqpDswOK2OEGqDrD88iTGnZpZ4oV0uhBBrqGEAxJjX2-Ke8hehxsiFDOcS_1OcBQsSU2fb75v-10v1yq6wq_krJk-w==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS3ZVLSKjGwTk6CK9GD1Nl2g_t7yVh6n7U7Ronn9SItO5bZNtxuZ4UU5DZsUdsgO3aN96TWdsoStrD5MzCJNAL490YobGvxclmCbcvehGorx_iq16x_O9RWotOzEr_T-ZPw77lWTz_nD8r-Iflk7crPLWR1Jida7J4E2CZ1ozDxe2XG4X3BL6vhuGmV_cJP6UmcKzZOE--
+  title: quora.com
+search_queries:
+- ''
+- greek word for shepherd strong's
+- hebrew word for shepherd strong's
+- genesis 46:34 shepherd abomination trivia
