@@ -1,0 +1,39 @@
+number: 019
+word: SHEPHERD
+gloss: One who tends, feeds, and guards a flock; a spiritual overseer.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered wooden crook standing upright in a lush green valley, illuminated
+  by a beam of golden sunlight breaking through storm clouds, oil painting style
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Return a NOUN or NAME from Sheol to your hand.
+ot_verse:
+  ref: Psalm 23:1
+  snippet: The LORD is my shepherd; I shall not want.
+nt_verse:
+  ref: John 10:11
+  snippet: I am the good shepherd. The good shepherd lays down his life for the sheep.
+greek:
+  text: ποιμήν
+  translit: poimēn
+hebrew:
+  text: רֹעֶה
+  translit: ro'eh
+ot_refs: Gen 4:2 • Isa 40:11 • Ezek 34:11-16
+nt_refs: Matt 9:36 • Heb 13:20 • 1 Pet 5:4
+trivia:
+- Abel is the first person in the Bible described as a keeper of sheep.
+- Shepherds were considered an abomination to the ancient Egyptians.
+- David's skill with a sling was honed while defending his flock from predators.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

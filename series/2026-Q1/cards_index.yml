@@ -15,6 +15,7 @@ words:
 - REMEMBER
 - SCATTER
 - SETH
+- SHEPHERD
 - SPEAK
 - STONE
 ability_patterns:
@@ -124,3 +125,8 @@ cards:
   type: NAME
   rarity: COMMON
   ability_pattern: discard_draw
+- number: 19
+  word: SHEPHERD
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_noun
