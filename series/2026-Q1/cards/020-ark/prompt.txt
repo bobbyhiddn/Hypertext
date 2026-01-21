@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #020
+WORD: ARK
+GLOSS: A vessel built for safety during the Flood; a sacred chest containing the Covenant.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to your hand.
+
+VERSES:
+OT: Genesis 6:14 — “Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shall pitch it within and without with pitch.”
+NT: Hebrews 11:7 — “By faith Noah... prepared an ark to the saving of his house; by the which he condemned the world.”
+
+LANGUAGES:
+Hebrew: תֵּבָה / אֲרוֹן - Tēvah / 'Arōn - Gen 6 • Ex 25 • Josh 3 • 1 Sam 4
+Greek: κιβωτός - Kibōtos - Mt 24 • Heb 9 • Heb 11 • Rev 11
+
+TRIVIA:
+• Hebrew uses 'tevah' for Noah's vessel and 'aron' for the sacred chest.
+• The Ark of the Covenant held the stone tablets, manna, and Aaron's rod.
+• Noah's ark measured 300 cubits long, matching the proportions of modern cargo ships.
+
+ART: A monumental, rectangular wooden vessel floating on stylized, turbulent dark waters, illuminated by a single shaft of golden light from above; cinematic lighting, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

@@ -1,0 +1,42 @@
+number: '020'
+word: ARK
+gloss: A vessel built for safety during the Flood; a sacred chest containing the Covenant.
+card_type: NOUN
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A monumental, rectangular wooden vessel floating on stylized, turbulent
+  dark waters, illuminated by a single shaft of golden light from above; cinematic
+  lighting, no text.
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Return a card from Sheol to your hand.
+ot_verse:
+  ref: Genesis 6:14
+  snippet: Make thee an ark of gopher wood; rooms shalt thou make in the ark, and
+    shall pitch it within and without with pitch.
+nt_verse:
+  ref: Hebrews 11:7
+  snippet: By faith Noah... prepared an ark to the saving of his house; by the which
+    he condemned the world.
+greek:
+  text: κιβωτός
+  translit: Kibōtos
+hebrew:
+  text: תֵּבָה / אֲרוֹן
+  translit: Tēvah / 'Arōn
+ot_refs: Gen 6 • Ex 25 • Josh 3 • 1 Sam 4
+nt_refs: Mt 24 • Heb 9 • Heb 11 • Rev 11
+trivia:
+- Hebrew uses 'tevah' for Noah's vessel and 'aron' for the sacred chest.
+- The Ark of the Covenant held the stone tablets, manna, and Aaron's rod.
+- Noah's ark measured 300 cubits long, matching the proportions of modern cargo ships.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

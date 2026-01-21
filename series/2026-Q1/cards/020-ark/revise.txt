@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ARK
+# Card_Gloss: A vessel built for safety during the Flood; a sacred chest containing the Covenant.
+# Card_Type: NOUN
+# Card_Rarity: RARE
+# Card_Ability: Return a card from Sheol to your hand.
+# Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A monumental, rectangular wooden vessel floating on stylized, turbulent dark waters, illuminated by a single shaft of golden light from above; cinematic lighting, no text.
+# Card_OT_Verse: Genesis 6:14 — Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shall pitch it within and without with pitch.
+# Card_NT_Verse: Hebrews 11:7 — By faith Noah... prepared an ark to the saving of his house; by the which he condemned the world.
+# Card_Hebrew: תֵּבָה / אֲרוֹן (Tēvah / 'Arōn)
+# Card_Greek: κιβωτός (Kibōtos)
+# Card_Trivia_1: Hebrew uses 'tevah' for Noah's vessel and 'aron' for the sacred chest.
+# Card_Trivia_2: The Ark of the Covenant held the stone tablets, manna, and Aaron's rod.
+# Card_Trivia_3: Noah's ark measured 300 cubits long, matching the proportions of modern cargo ships.

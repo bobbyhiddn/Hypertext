@@ -1,4 +1,5 @@
 words:
+- ARK
 - BUILD
 - CITY
 - CONFUSE
@@ -30,6 +31,7 @@ ability_patterns:
 - draw_tower
 - look_top_tower
 - pages_sheol
+- sheol
 - sheol_tower
 - sheol_type_noun
 - sheol_type_verb
@@ -130,3 +132,8 @@ cards:
   type: TITLE
   rarity: UNCOMMON
   ability_pattern: unique
+- number: 20
+  word: ARK
+  type: NOUN
+  rarity: RARE
+  ability_pattern: sheol
