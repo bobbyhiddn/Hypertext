@@ -15,11 +15,11 @@ type_targets:
   TITLE: 18
 rarity_counts:
   GLORIOUS: 0
-  RARE: 3
+  RARE: 4
   UNCOMMON: 8
   COMMON: 8
 type_counts:
-  NOUN: 6
+  NOUN: 7
   VERB: 9
   ADJECTIVE: 2
   NAME: 1
@@ -34,6 +34,7 @@ combination_counts:
   UNCOMMON_NOUN: 1
   COMMON_NAME: 1
   UNCOMMON_TITLE: 1
-last_rarity: UNCOMMON
-last_type: TITLE
-total: 19
+  RARE_NOUN: 1
+last_rarity: RARE
+last_type: NOUN
+total: 20

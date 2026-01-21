@@ -1,4 +1,5 @@
 words:
+- ARK
 - BUILD
 - CITY
 - CONFUSE
@@ -130,3 +131,8 @@ cards:
   type: TITLE
   rarity: UNCOMMON
   ability_pattern: unique
+- number: 20
+  word: ARK
+  type: NOUN
+  rarity: RARE
+  ability_pattern: add_hand_look_top_tower
