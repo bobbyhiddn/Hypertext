@@ -1,0 +1,68 @@
+number: 019
+word: KEEPER
+gloss: One who guards, watches, or preserves
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A solitary watchman standing at a stone gateway at night, holding a lantern,
+  silhouette against a starry sky
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Choose a card from Sheol. Place it on top of the Tower.
+ot_verse:
+  ref: Psalm 121:5
+  snippet: 'The LORD is thy keeper: the LORD is thy shade upon thy right hand.'
+nt_verse:
+  ref: Matthew 28:4
+  snippet: And for fear of him the keepers did shake, and became as dead men.
+greek:
+  text: φύλαξ
+  translit: phylax
+hebrew:
+  text: שָׁמַר
+  translit: shamar
+ot_refs: Gen 4:9 • Ps 121:5 • 1 Sam 17:20
+nt_refs: Matt 28:4 • Acts 5:23 • Tit 2:5
+trivia:
+- Cain's question 'Am I my brother's keeper?' is a famous deflection of responsibility.
+- The Hebrew 'shamar' means to hedge about, guard, or protect from harm.
+- Psalm 121 declares that the Keeper of Israel neither slumbers nor sleeps.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES782WoDFH4jWTAfeqBBzrgWe2WredDAwJyYjoL9YI9BOh_TpM7R497etQdTS9KM9uU0ASuLZBCszBm0wqPD_8BMaCrigvLN9ySKQuDC4dKdvRzxv_NH3uVSHAE3WlHLEnvLdpTkiXvQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvxrsjmZ33vied0M6g9hHKyqiYZz-9Sn7NUBhKDDp6KzOsKQk4qBdW8O2qMZ8qpvO7eQdppLvgyFtZP66iildNAOo-pRFVxDxQBT6HM-4XII-O75cycAcvZG0dyvPcN6_Wj0ob
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGSO4VSS-30NiLFxJTYRe-bv0-helrX1NAueSpe36P1E124fSARyERKuYKpUXqGvlbphA29n3C2Y-Rii3ClQP4B1eDnDvn5C0ZiC6b2qFa8gZkPWw5-fViSPiStTyTafA8
+  title: seekfirstwisdom.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEngllx8mwu95FbiQm90q-NEO05erFntlAGreI8SKLspqyhGYN2BmF9f6ANWWjWLMXXPfH2IRyUt7N4QoAiyG0SBKdoptS7Qv3emLzh49s49GqY_McSu9-fKTHWOC7TkN80XDNMHqd61A==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-SgUwgtzs_8hUkb-eC7zedXRLzjhEBfhj6tV3QSsWRPEWhyZtYDnCPR36X7rycsHI10axY9LBBwuQUkBd4AJ0BQxlTahnWvkY9uUGKrO96G6sIY1GhDIz4EysfqVUXj5zAAQgrH5OGw==
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGacWFFycO9rBqhs3G7vQIv2glAKX51g-20ptoJrmiYVR6nHqrcLk0si4_NyQOVLgQ8Dw1ckrIoqwWE5f5rQY0YiX1GrZcLudtp3gk29UNpUhQRBF6yqMOCVhKGV9aG2UqiTUF4Vg==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4Hu9BNZ2KY6EuZyXcyRuSg1WGAhckuzqDkewKFvVgyE5jNA4MgVDE92yIxI_jio84fOn6E4mt0jqq9GCbPj1it2CUSDe7O19CXxSvUYnl9JyVyUcKtzLla7vVq4AHh0rFu4i__aeg6XmcOds=
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW1Blu0s0d5sfRBs2_vtW4N9k8JAQmeRWgdXkDkSXvqNX-1JfEC-NkIclkoAkBjj_Opd0zkHvjEGz-G2t5bvqHu8PwOJxY3mdRINQHF1ZO5tgzXeyf9xg1HPzV_TqR1PR9rdbrdpV8Xh9C6ztnThVZw6D9-7o=
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWHhBU8XToSFRAe-uFdiE4-OGpaZQhBHM3ykRTvGdoJsEPTqfj7jAVQME4KdaozXczrxGwgdwQbkLigVkxhpdE-kokT8NUwLKsV_O5EHZQ_UvYTgQ40zaQsW2_-32ICu8PXxIB4E-J
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBnFXa8Bvlf3tiX4Sa1PX27r-2trOvll2jO9L5UzAQwJy3IcbDdxhWwu3UU3q4PsKgDW7G5dKVfdY1eISQnU1Zg6TQDCytSu-WQ3Ozjq2n9piL2mU0vIgGS_rN3BcS3Wt4RSxCc4x-YhknfkZD0mS7PeV7IP0=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcLNFfRYqM1GW3K27kyqlfmAyL1AonfnYxI97TNYwxgnJjepKySuPYVww4htMR2HP8T3QL46HxM2orCOffebrzL8f-CpMB3b69xRcTcN9ZtQ2CLSTTr8_oJYX6nIrOyElFmhnc6WFdZBVkfC18dp4kot-Y
+  title: kingdomservants.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJt8XTOjNyawwnW_tJwVa0BEYP0RAvXhfS8x5T8D7fJ4N_tpfkbD0NyggRyHEPKZ9if0s3ouAUc65cr2dd5liYrYqcaUwPq528vswR9TiV-iTiBx_UTr4hmJkLDgmAi8CBbB9uxcJiHi2ztKyobD5l3HbpF14Owl_cpTTgvds=
+  title: studylight.org
+search_queries:
+- ''
+- Biblical meaning of Keeper
+- Hebrew word for Keeper in Psalm 121:5
+- Greek word for Keeper in Matthew 28:4
+- NT verse with word Keeper

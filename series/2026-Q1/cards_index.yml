@@ -8,6 +8,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- KEEPER
 - MIGHTY
 - MULTIPLY
 - NAME
@@ -21,6 +22,7 @@ ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
 - add_hand_look_top_tower
+- choice_sheol_tower
 - conditional_discard_draw_type_verb
 - conditional_draw
 - conditional_draw_pages_type_name
@@ -124,3 +126,8 @@ cards:
   type: NAME
   rarity: COMMON
   ability_pattern: discard_draw
+- number: 19
+  word: KEEPER
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: choice_sheol_tower

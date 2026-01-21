@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #019
+WORD: KEEPER
+GLOSS: One who guards, watches, or preserves
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Choose a card from Sheol. Place it on top of the Tower.
+
+VERSES:
+OT: Psalm 121:5 — “The LORD is thy keeper: the LORD is thy shade upon thy right hand.”
+NT: Matthew 28:4 — “And for fear of him the keepers did shake, and became as dead men.”
+
+LANGUAGES:
+Hebrew: שָׁמַר - shamar - Gen 4:9 • Ps 121:5 • 1 Sam 17:20
+Greek: φύλαξ - phylax - Matt 28:4 • Acts 5:23 • Tit 2:5
+
+TRIVIA:
+• Cain's question 'Am I my brother's keeper?' is a famous deflection of responsibility.
+• The Hebrew 'shamar' means to hedge about, guard, or protect from harm.
+• Psalm 121 declares that the Keeper of Israel neither slumbers nor sleeps.
+
+ART: A solitary watchman standing at a stone gateway at night, holding a lantern, silhouette against a starry sky
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
