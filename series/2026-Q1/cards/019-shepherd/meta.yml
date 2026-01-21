@@ -1,0 +1,66 @@
+number: 019
+word: SHEPHERD
+gloss: One who tends, herds, feeds, or guards a flock; metaphorically, a spiritual
+  leader or protector.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered wooden staff resting against a rough stone in a lush green
+  pasture, distant sheep grazing on a rolling hillside under soft golden light, no
+  text.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Return a NOUN or NAME from Sheol to your hand.
+ot_verse:
+  ref: Psalm 23:1
+  snippet: The Lord is my shepherd; I shall not want.
+nt_verse:
+  ref: John 10:11
+  snippet: I am the good shepherd. The good shepherd lays down his life for the sheep.
+greek:
+  text: ποιμήν
+  translit: poimēn
+hebrew:
+  text: רֹעֶה
+  translit: ro'eh
+ot_refs: Gen 49:24 • Ps 23:1 • Isa 40:11 • Ezek 34:12
+nt_refs: John 10:11 • Heb 13:20 • 1 Pet 5:4 • Rev 7:17
+trivia:
+- Abel was the first shepherd mentioned in the Bible.
+- David was taken from the sheepfolds to be king.
+- Shepherds were the first to receive news of Jesus' birth.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeABm9YAFCIsRAX6FSQrjOoO4fbRmmQHuSXhvI2WTvDsq1yU3R1pSjvqfe_cJRgoj-1K7XMS2GyEmosmh91nqjz3OLy6Ao3MNe8MpVLDcrYFmyfscrWjSpKKZO6cCI5g==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsrZP28IKZa7oYvGZc9OYfFQgcpiPadIXML4Vm7kC-8g3SLowKuWmjpVjLaJx_L5uAEx8H_v5A3l1hFuwd9IWOFrwCOPQrQPaRRqUEvlbMBkmwaLe9A90ldg7h-nuOdNst2g3BqORevlcV9eVAfjhYzI8=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGmkmehwny0yqZJt_aDdokkKIzYq9woueqpWJsA1An3RlQeJNH5L7miqVuh72Cx27jbAo5um-9qJnWf97j9z8Xb5fhPvVZU67xkxXRuRmHvMR4JGY8NQR1-c5vnkRU6ze6bdL1kdOTJLSSVvbZ3v4MVp2eFbIx_lC_KpJzDH4GQRlhPRIa3AHo8QYs2p-Fbw==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwnuFn3k2Qp2Hv0eNmE0SjeOOo2SykC5_2heFeSf5xxCZzNVFPgcc2TyOj99wB7vMZNzBxJ-lrQEmdxhH-kakZkTOMEJaUQySIGtIJv9W8nYtSl8ezrdzXZ1GehKKZwo_AsDz3Ge7jwvnqy2Cv2i67J75u
+  title: gods-abcs.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQIJc8NPq2Tzdh7dDaoesvKHaMZvqOpjJkXaNH2g2JLjFO02PiYcACCwprxYBszHFdpZwC4nF0tJYjmLB2AA5OCPWg8blOmQPkAYBOvqA4o7xR7fqtbgDuoHDYc-KW9aTYPgd4sa1_rqo-1w==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE87IKfnOtvTAN028OH0_MUdktfyqjEGJoODCyaWs8DKh6od2HAhjlumQpt-zrptO7eLwWY1GzBdfQxKMNZEKF66nxhDCerOTlHpyWlZOCzr2rjtqWLuPnRIrcQsxYn
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHl41_Q41KAqCyYo2D75H2K0NIYBXja-gYPlKdTkpwaJuoE8iXTlESTREsp4ep-tXZJZHZuwzQyPQ7_H9WHBbSKWb_mqjZo18URSquunbtzZjHISDqmRxbj2eKRaZ_1cwHJ9ExScjDz6PpeoN29
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJik4RTzfAYTjOzmoTy1ZSE2AggAca1X6sFYD-MjmoGtEUlv6IlnzqaeL4y2paErUzSBznYErhikh3OXg_9IirS3L1KgD284aDgilvlDZVz5bhvxZ-SB1Jq2CFY5pILAbLxXrkfH4u
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu4hx4kWrcPA9zFQwxkfeZRW1JM1VjGF7eMSyl-6PiaIrfcdx4vq_7UGR5LhHT-M57Kf_bLJ6NTTN9GcTLjGkrpFK7wcORPMuEOLmTFzJ2MjH9JmKpGt8QQczBteHchBwxsq3uOEgy
+  title: bibleplaces.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOnzdWlS3HHt-pmUcYe4jayHZhksZQmGwiumW0v3JWWMsr87mYfuYyHHd-brV4Gz9X6rm0-otWy-odInMx3cqThEwg_LrbblDolM1Cqhj7uukiTWsLN92wdm9TDlLOaqWvX3xCkxvTlG8=
+  title: verseoftheday.com
+search_queries:
+- ''
+- Shepherd biblical trivia
+- hebrew word for shepherd transliteration
+- greek word for shepherd transliteration
+- Bible verse shepherd OT NT
