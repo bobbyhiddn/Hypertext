@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #020
+WORD: ARK
+GLOSS: A chest, vessel, or sanctuary used for preservation and safety during judgment.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return 2 cards that share a type from Sheol to your hand.
+
+VERSES:
+OT: Genesis 6:14 — “Make yourself an ark of gopher wood; make rooms in the ark, and cover it inside and out with pitch.”
+NT: Hebrews 11:7 — “By faith Noah, being divinely warned of things not yet seen, moved with godly fear, prepared an ark for the saving of his household...”
+
+LANGUAGES:
+Hebrew: תֵּבָה - tebah - Gen 6-9 • Ex 25 • Josh 3 • 1 Sam 4
+Greek: κιβωτός - kibōtos - Matt 24:38 • Heb 11:7 • 1 Pet 3:20 • Rev 11:19
+
+TRIVIA:
+• The Hebrew word 'tebah' is used only for Noah's ark and the basket that carried baby Moses.
+• Noah's ark was approximately 450 feet long, with a capacity equal to 500 railroad stock cars.
+• The Ark of the Covenant contained the stone tablets, a pot of manna, and Aaron's rod.
+
+ART: A weathered, colossal wooden barge floating on endless dark waters under a single shaft of divine light, ancient shipbuilding style, realistic wood texture, stormy atmosphere
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

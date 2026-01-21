@@ -1,0 +1,45 @@
+number: '020'
+word: ARK
+gloss: A chest, vessel, or sanctuary used for preservation and safety during judgment.
+card_type: NOUN
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered, colossal wooden barge floating on endless dark waters under
+  a single shaft of divine light, ancient shipbuilding style, realistic wood texture,
+  stormy atmosphere
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Return 2 cards that share a type from Sheol to your hand.
+ot_verse:
+  ref: Genesis 6:14
+  snippet: Make yourself an ark of gopher wood; make rooms in the ark, and cover it
+    inside and out with pitch.
+nt_verse:
+  ref: Hebrews 11:7
+  snippet: By faith Noah, being divinely warned of things not yet seen, moved with
+    godly fear, prepared an ark for the saving of his household...
+greek:
+  text: κιβωτός
+  translit: kibōtos
+hebrew:
+  text: תֵּבָה
+  translit: tebah
+ot_refs: Gen 6-9 • Ex 25 • Josh 3 • 1 Sam 4
+nt_refs: Matt 24:38 • Heb 11:7 • 1 Pet 3:20 • Rev 11:19
+trivia:
+- The Hebrew word 'tebah' is used only for Noah's ark and the basket that carried
+  baby Moses.
+- Noah's ark was approximately 450 feet long, with a capacity equal to 500 railroad
+  stock cars.
+- The Ark of the Covenant contained the stone tablets, a pot of manna, and Aaron's
+  rod.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

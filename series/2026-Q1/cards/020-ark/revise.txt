@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ARK
+# Card_Gloss: A chest, vessel, or sanctuary used for preservation and safety during judgment.
+# Card_Type: NOUN
+# Card_Rarity: RARE
+# Card_Ability: Return 2 cards that share a type from Sheol to your hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A weathered, colossal wooden barge floating on endless dark waters under a single shaft of divine light, ancient shipbuilding style, realistic wood texture, stormy atmosphere
+# Card_OT_Verse: Genesis 6:14 — Make yourself an ark of gopher wood; make rooms in the ark, and cover it inside and out with pitch.
+# Card_NT_Verse: Hebrews 11:7 — By faith Noah, being divinely warned of things not yet seen, moved with godly fear, prepared an ark for the saving of his household...
+# Card_Hebrew: תֵּבָה (tebah)
+# Card_Greek: κιβωτός (kibōtos)
+# Card_Trivia_1: The Hebrew word 'tebah' is used only for Noah's ark and the basket that carried baby Moses.
+# Card_Trivia_2: Noah's ark was approximately 450 feet long, with a capacity equal to 500 railroad stock cars.
+# Card_Trivia_3: The Ark of the Covenant contained the stone tablets, a pot of manna, and Aaron's rod.
