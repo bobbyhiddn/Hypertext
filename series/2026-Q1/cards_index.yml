@@ -8,6 +8,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- KEEPER
 - MIGHTY
 - MULTIPLY
 - NAME
@@ -124,3 +125,8 @@ cards:
   type: NAME
   rarity: COMMON
   ability_pattern: discard_draw
+- number: 19
+  word: KEEPER
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: unique

@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #019
+WORD: KEEPER
+GLOSS: One who guards, watches, protects, or maintains possession
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player cannot Redeem cards until your next turn.
+
+VERSES:
+OT: Psalm 121:5 — “The LORD is thy keeper: the LORD is thy shade upon thy right hand.”
+NT: John 17:12 — “While I was with them in the world, I kept them in thy name: those that thou gavest me I have kept...”
+
+LANGUAGES:
+Hebrew: שֹׁמֵר - shomer - Gen 4:9 • Ps 121:3-5 • Eccl 12:3
+Greek: φύλαξ - phylax - Acts 16:27 • Jas 1:27 • 1 Pet 1:5
+
+TRIVIA:
+• Cain's deflective question 'Am I my brother's keeper?' is the first biblical use of the word.
+• The Psalms emphasize that the Keeper of Israel neither slumbers nor sleeps.
+• In Acts, the keeper of the prison was converted after an earthquake opened the doors.
+
+ART: A heavy, weathered iron key hanging from a hook on a rough stone wall next to a sturdy wooden door, illuminated by a single lantern
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
