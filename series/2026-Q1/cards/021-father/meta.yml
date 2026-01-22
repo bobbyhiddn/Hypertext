@@ -1,0 +1,71 @@
+number: '021'
+word: FATHER
+gloss: A male parent, ancestor, or originator; the first person of the Trinity.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A warm, glowing hearth fire in a stone room, casting protective light,
+  with an empty wooden chair at the head of a table suggesting presence and authority.
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Add 1 to your hand and discard the
+  rest.
+ot_verse:
+  ref: Psalm 68:5
+  snippet: A father to the fatherless, a defender of widows, is God in his holy dwelling.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: Our Father in heaven, hallowed be your name.
+greek:
+  text: πατήρ
+  translit: Patēr
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Psa 68:5 • Psa 103:13 • Isa 9:6 • Isa 63:16 • Jer 31:9 • Mal 1:6 • Mal 2:10
+nt_refs: Matt 6:9 • Matt 23:9 • Luke 15:20 • John 14:6 • Rom 8:15 • Gal 4:6 • Eph
+  4:6 • 1 John 3:1
+trivia:
+- The Hebrew word 'Av' is formed by the first two letters of the alphabet (Aleph-Bet).
+- God is referred to as 'Father' only about 15 times in the Old Testament, but frequently
+  in the New.
+- Jesus used the Aramaic term 'Abba' (Mark 14:36), expressing intimate respect.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3tJ9-q2Uk0DoifCAfR1LZs753WLF9Iun4mEf5dN81zivjZxCop3WzAuKCDc18rARXHPsPA9TWVO3HJmiPMGG8idxp80u0JpZL_C7OEde_PdekjwVq_E99HW9jDIHl
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFm1U1bTxJmB4NZNQWbWQDID2pdzXnioweLd8gjp0qLvs8m7-tVFM-dts-C4r8Hh_USakeroQEYWF0GaDHqgTR-GvLJSJROFKGYVw1FTvB6xbD4ILQRKZtP8paQtcu3-bHKDAVR2ggB9Os6FfLcjHUmgJEp3tKTqYbm6cC9df5r-MBb2xWrag==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG8yD9GI94e_kguXdyLQWQQJHG9RSnPMZPNpPQvfYbwjtx0lNMBepkdAVxkCyojuArf_1iROPfhNsrxus-9yWyr3WF9YyHGIfMoRAxM_EoThREFFb_SYmVSBvEXhXOhew8v-Kjy-VRDFJXv4VrNu_hTkT53A==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEr3h-Je22Ugd8F6CZKQaY_IbwWqyPjyJC4AfgKBYg1kzCZHIOiYkFMCQyohosXm3z86Cvq4FNxE_9md43wIoxqnDg9v9OuiCnVp6Zy_7OPJTEUiCFc7ktrZdUhPLhNWBbRAXrGR7_XpFQ8Y7E96_Kuw2DjTtXbYxQ=
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQES33AgEDu8BDx0AfpUaoHdFMG3h8sZ55GK1_4dULA5bEFvnnfo4szlImS0JXaLiKM7B6qAfI-XgTAoxRElUC5YevjXvSBhd9QnaefZpmg0BOPIfqofWtK4UAI21ppGqvC8gKZv5w==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwMJ7UxAAUlsN86PMNoYU5-DWU_uDFOBGEmvUJGnSZZq0m0DlAhj_0nSUeYKaTdnFq3Nd0F4t0DqKFL_ocpUPxh5OZ1mzw9ERjLvlLlXKoDg2TRB-Y0zxll-ZbDa5x
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFY62xn46PQR4DSTe8OUSXfz8E9uU0pxcMGcjqLgSMb1i8H1CQBibf1Dh3ZgL7zgfxEn8wGS2OIxnm__7cfbBWWIahDN_MPfvpLCwM2L8GrEXf62URszCQWM3-1hz33MOEDpXpx6WxG9iJNdv5rg1LYMLcrnrwaeFR6_0y_wI8clmAv-A6ZKlUoKL6VBD3Pgsgoa4SHh0vbEUvIj3Q=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjStjIWirM5wNLE-qEGZdcK5AnNGywyH3D_9S7-nezJ-iZlPzGQUD0mDeDHkibV7sbba8X4zxGyYf-MbOjcrobLCnCAoxNKdPrVTgOgcSNXVWGVh9W36N3PZJAiQeDQ4jLW5ZODdjJtso9xodApCS5wvNAAr6CjgpWu_s=
+  title: catholic.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNKl3405mGcWKgANqBVyximN16hjBXBW5NI2yRnfl2aLDltugQwknK8QRtxw3o0YAuxubO-DfJ2P5T1LiodrPPA-lqLAYs_VGzVXaiYL5Bgst4XFPvRZyjymRrS95XJdVJ0XWzXQN2VwfCJvjxzQF5MEA=
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5-SfQSJJp7ubnABkfJsWEHnOqz0uWMpi2hoO9nbO9Ncpopzen5lFrDBR5x7YsTVnhggVQGImTakvjlh4Bd3VFI9JabPIvXr7BG5JUNDIf50EzMkg5DeC1VDw3fdEFDrEgoc1QCnwQgr1p6DlJrAB8xA==
+  title: logos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGb6JbD-tQS3tbMYPvpqyUsz4ygQ84pHGxnPwBTBtl4kPnOlkEJHdxCcwGMZEZtZ3eEUIcXvUE0dhxf64YirKIaqtfB-MrLZ73a3GIDu3U4uL2PUn7gOyl89d7CU7ZYrb-RUi_Qbh8q8V6vhkL4wQ960SjgSkkmCnZc_htInCCpzP7DReH_XPtCF6De_xTOVddrOghIHDNuy0iizTfH9Dem9mOcBkal8Sp057ZxPclr2N0SOQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2yEG87UBpNcZ-h8mb0A8QjmSV8vvN-m9VtZ-5ZiH0a7zJGsLFqXcbDjtrZfBIfa3heD0BCGy5GNu8pvybNm21Qfv1UOAlha3-3t4q6N08mEh3aRVM18lriM5mHkkS2nm4zqsh91sUapWywm5bVQT99o1HcbdqwqY=
+  title: hebrew4christians.com
+search_queries:
+- ''
+- Hebrew word for Father Av
+- etymology of Abba
+- How many times is God called Father in OT vs NT
+- Greek word for Father Pater
