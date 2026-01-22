@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ARK
+# Card_Gloss: A vessel built for preservation; a sacred chest housing the presence of God.
+# Card_Type: NOUN
+# Card_Rarity: RARE
+# Card_Ability: Look at the top 5 cards of the Tower. You may reveal 2 cards that share a type and add them to your hand; put the rest on the bottom.
+# Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A colossal, ancient wooden vessel resting on a mountain peak under a rainbow, stylized geometric wood textures, golden light breaking through storm clouds, no text.
+# Card_OT_Verse: Genesis 6:14 — Make for yourself an ark of gopher wood; you shall make the ark with rooms...
+# Card_NT_Verse: Hebrews 11:7 — By faith Noah... prepared an ark for the salvation of his household.
+# Card_Hebrew: תֵּבָה (tebah)
+# Card_Greek: κιβωτός (kibōtos)
+# Card_Trivia_1: The Hebrew word 'tebah' is used only for Noah's ship and baby Moses' basket.
+# Card_Trivia_2: The Ark of the Covenant uses a different word, 'aron', meaning chest or coffin.
+# Card_Trivia_3: Noah's Ark used a 6:1 length-to-width ratio, a standard for stability in modern ships.
