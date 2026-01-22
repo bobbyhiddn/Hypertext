@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #021
+WORD: FATHER
+GLOSS: A male parent; a title of respect; the first person of the Trinity.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Draw 1 card, then look at the top card of the Tower; you may put it on the bottom.
+
+VERSES:
+OT: Psalm 68:5 — “A father to the fatherless, a defender of widows, is God in his holy dwelling.”
+NT: Matthew 6:9 — “This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...'”
+
+LANGUAGES:
+Hebrew: אָב - Av - Gen 2:24 • Ex 20:12 • Prov 3:12 • Isa 9:6
+Greek: Πατήρ - Pater - Rom 8:15 • Gal 4:6 • Eph 6:4 • Heb 12:7
+
+TRIVIA:
+• 'Abba' is an Aramaic term of intimacy used by Jesus to address God.
+• The genealogy in Matthew traces the line of fathers from Abraham to Joseph.
+• God is referred to as 'Father' over 165 times in the Gospels.
+
+ART: A massive, ancient oak tree with deep roots and spreading branches sheltering a small sapling in a sunlit meadow, warm golden lighting.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

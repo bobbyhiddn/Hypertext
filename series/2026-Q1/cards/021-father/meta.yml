@@ -1,0 +1,53 @@
+number: '021'
+word: FATHER
+gloss: A male parent; a title of respect; the first person of the Trinity.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A massive, ancient oak tree with deep roots and spreading branches sheltering
+  a small sapling in a sunlit meadow, warm golden lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Draw 1 card, then look at the top card of the Tower; you may put it on the
+  bottom.
+ot_verse:
+  ref: Psalm 68:5
+  snippet: A father to the fatherless, a defender of widows, is God in his holy dwelling.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: 'This, then, is how you should pray: ''Our Father in heaven, hallowed be
+    your name...'''
+greek:
+  text: Πατήρ
+  translit: Pater
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Gen 2:24 • Ex 20:12 • Prov 3:12 • Isa 9:6
+nt_refs: Rom 8:15 • Gal 4:6 • Eph 6:4 • Heb 12:7
+trivia:
+- '''Abba'' is an Aramaic term of intimacy used by Jesus to address God.'
+- The genealogy in Matthew traces the line of fathers from Abraham to Joseph.
+- God is referred to as 'Father' over 165 times in the Gospels.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAsh7Bg8awAa2EUuXN1Jy9hkb1pzaIXVC6IhKKB9Ic-4e-g00ohYIoLSKBERjWppCkQIw2eYy3d8lN0ZLr98xbdNlU6ps81Rn1ApJz16qMu5sF7i2X6vxrlUKvLgTuzABQBodWv2zUVUMHUZy7ed6at-dfPAcW0szTdcw6
+  title: hebrewwordlessons.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSoGmP6MAkP3Q-S0QCKoiPnazxLr60mYHIOYwidrkDCdwnea-3HpBGF3ocCH9yF-qzWiRTiyy9GkjY-FWnESX-0nSFfonJmnS1tzUEQb-fv6jytFYEesy7UJnQvCYK2AzH1b5O7YRCSxVvH0V9XUUtiiWwAP9zUpg00g==
+  title: catholic.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIKSCNT69CTeGRoPbEpYZmsop7dcFmcS5kzUZyZB5uF5ZPFCAm_qfEI3GN9QH8uxy-yR01KIFSDOLsijEqWp1hJ4f0_ogML6PynazNet4F9r0uOnEbK4n6N4F2nukn7qx-9dkiv6YuI9m0Oq51KhjlvdZAFls=
+  title: manhoodjourney.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4RkeRQWRQOI6CFIdV_7JeY32w0QLEoM7H_h8OhTZcFmyWhQfKgfr1s_q4kO3ivOTdnZUtFCWE15lnRsg6NvktjrrrLjvNNNL8Hy5LZ3JasKlJ_wyyT8yxMWCf6hOlDyPEzi84UoNOgs3uhEdUEncPjtc=
+  title: internationalstandardbible.com
+search_queries:
+- ''
+- Father Hebrew Av Greek Pater
+- Father bible dictionary definition
+- how many times is God called Father in the Gospels
