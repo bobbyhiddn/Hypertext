@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #021
+WORD: BEGINNING
+GLOSS: The point of time or space at which something starts; origin; source.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower, then return them in any order.
+
+VERSES:
+OT: Genesis 1:1 — “In the beginning God created the heaven and the earth.”
+NT: John 1:1 — “In the beginning was the Word, and the Word was with God.”
+
+LANGUAGES:
+Hebrew: רֵאשִׁית - Reshit - Gen 1:1 • Prov 8:22 • Isa 46:10
+Greek: Ἀρχή - Archē - John 1:1 • Col 1:18 • Rev 22:13
+
+TRIVIA:
+• The Hebrew word 'reshit' is derived from 'rosh', meaning 'head' or 'chief'.
+• In Greek philosophy, 'arche' denotes not just a starting point, but the underlying principle of reality.
+• The Bible opens with 'In the beginning' and closes with Christ as 'the Beginning and the End'.
+
+ART: A singular, intense point of brilliant white light bursting forth in a deep dark void, creating ripples of stardust and faint geometric forms.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

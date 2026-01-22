@@ -1,5 +1,6 @@
 words:
 - ARK
+- BEGINNING
 - BUILD
 - CITY
 - CONFUSE
@@ -136,3 +137,8 @@ cards:
   type: NOUN
   rarity: RARE
   ability_pattern: add_hand_look_top_tower
+- number: 21
+  word: BEGINNING
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: look_top_tower
