@@ -1,0 +1,62 @@
+number: '021'
+word: SON
+gloss: Male offspring; an heir who inherits nature, status, and property.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A small child's hand reaching up to grasp the finger of a larger, gentle
+  hand against a warm, golden light; soft focus, emotive style.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Look at the top 2 cards of the Tower. Add one to your hand and put the other
+  on the bottom.
+ot_verse:
+  ref: Psalm 2:7
+  snippet: You are my Son; today I have begotten you.
+nt_verse:
+  ref: Matthew 3:17
+  snippet: This is my beloved Son, with whom I am well pleased.
+greek:
+  text: υἱός
+  translit: huios
+hebrew:
+  text: בֵּן
+  translit: ben
+ot_refs: Gen 22:2 • 2 Sam 7:14 • Ps 2:7 • Isa 9:6 • Hos 11:1
+nt_refs: Matt 3:17 • Luke 15:11 • John 3:16 • Rom 8:14 • Gal 4:7
+trivia:
+- The Hebrew word 'ben' shares a root with 'banah' (to build) and 'bayit' (house).
+- Greek 'huios' implies mature status and inheritance, distinct from 'teknon' (child).
+- Jesus refers to Himself as the 'Son of Man' over 80 times in the Gospels.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV8jwfbCRURxMry0mh6FJHqqJSCqBdz76r_vCqatS8pP79QIqyAnymA8Yw3NlKif4GZeckMxcah-pWRbZ1o_axtuy-Y5P-YwLvhDXUreisXx1hUpEqrPAjoIIG7REHRyjHlMlLCY1j-OW0XMkrr4JUAHpP
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRqA9RKcPE5x8ylqJFmIaV3uiVb1HBeZlpKU9ZHzwR2Xnx35iOjL3RdjJ_YYaTH4ePO37xLKsuaZAOe4Rv-XuNybel3-vF3K-y7lHemZBAyQeDFBQlfyWsEsTKNoTZ1_fMfJloiVrM8tPYT2nYfNIMvVlSnVHa6iwEjnIll22ooM6iX5Rb7g4FAITd7yKiyHrrEdX9tCvKWCZJ7BaceWKmIj3iGEtMI9FmUWVx_9pea9IiAZ0szuZSax-TG8G8KJKmkenQNVJ4ZymqFeUI8z3NDavNkiPwxpdarNu_l0j_LXKPgV7ihQmh4uEJikzXUT72s4oL90wYkSavAeeU3hVW1w==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_GQhgYsQRtvJ2HfyHgQIcsIGiN7awK4vGhWCspN7jkHqEvCHrRQr_a0eBjUGq0BHfnrRY9FOrcPFt7Jkphg4MUoQxO-hGBgzRf3TWx-7L25mYp6euc6kLSO4iph0Cj3U=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWigOLq3SIGFph62Iih3rFbOwc199fxSOqfiYJoxWNHohAHaXQoEdeiLS2Dz-mp7LY47UL_Dq8PqyCePLU_3qHv3_XHPAzveqOe8ums_UmYrdfbo2ykAuo76PT3SkirBCzVQGn06TGkzeXQgSN2WxI7vlGP_NSQuq9ff9g0qpPNunS-t4yme4Yc5DMx2dslh9qp_e2bqo=
+  title: cachurchofchrist.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRD_5voPvBimAoLv15Gn2eLvCMLtZOWoXccD_qCWhXKhO26iZTR3lRKbSjjNcyXpxLN7pW1kbXBE0N88OjNgqrDeIdmYIrQKIlBjVfFQxXAFRpvNWjM7iWhKa35wEd8iRGEsGmTT5QWcwr0bEPD6RX0-vbq9eJ4YqcztVx
+  title: threeminutebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQhSVrs0g1_sMi2Btj5n1yLfeucvYl_zkioYbm5VHkPXRwavmZp5duKk-GffTlTgBSI28ursxX5dt7hphiEoivAC-4-pt2BlF8j1RQJqeriirrPTTILerkTHwkkvch
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4ourJ8afj1tK4mU0YzBGJA5NnXex5Yp7rM3-2nLk-44Xkp3KJepu_utczB5FJeJzjOOdx7HPjetTzcXUvDpJtnIHgpKVRJ7nIPHXiVMlvpxDJKr6v2p3lsaaNyeXuIqXN-5rDzBJ5GZTes4SNz_c=
+  title: engediresourcecenter.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0_PopQZ-NCr6Sv56-VGQYxrrRfsZA6cOqv-73_fb6dutL_4u-Qs7wVk6ulyffg7IHcOCeilVZLbx42_RUDqY7RwCgCvpaV5iPKRNXinHwDnEKDeXM7G5aZPUrAXIpVu6f6rWJOTW9rO4Yp0JuipBGDzWn5zPCZnuPOh5qtHq1hMGX
+  title: clergystuff.com
+search_queries:
+- ''
+- Psalm 2:7 snippet
+- greek word for son huios meaning
+- biblical trivia about the word son
+- Matthew 3:17 snippet
+- hebrew word for son ben meaning

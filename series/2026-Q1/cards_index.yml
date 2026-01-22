@@ -17,6 +17,7 @@ words:
 - REMEMBER
 - SCATTER
 - SETH
+- SON
 - SPEAK
 - STONE
 ability_patterns:
@@ -135,4 +136,9 @@ cards:
   word: ARK
   type: NOUN
   rarity: RARE
+  ability_pattern: add_hand_look_top_tower
+- number: 21
+  word: SON
+  type: TITLE
+  rarity: COMMON
   ability_pattern: add_hand_look_top_tower
