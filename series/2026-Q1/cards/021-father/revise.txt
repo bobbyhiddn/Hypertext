@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: FATHER
+# Card_Gloss: A male parent, ancestor, or originator; a title of authority, protection, and provision.
+# Card_Type: TITLE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 3 cards of the Tower. Add 1 to your hand and return the rest to the top in any order.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 1
+# Card_Art_Prompt: A weathered hand passing a glowing wooden staff to a younger hand, set against a backdrop of a large, ancient oak tree with protective spreading roots, warm golden lighting.
+# Card_OT_Verse: Psalm 68:5 — A father to the fatherless, a defender of widows, is God in his holy dwelling.
+# Card_NT_Verse: Matthew 6:9 — This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...'
+# Card_Hebrew: אָב (Av)
+# Card_Greek: Πατήρ (Patēr)
+# Card_Trivia_1: The Hebrew word 'Av' is built from the first two letters of the alphabet, signifying primacy.
+# Card_Trivia_2: Jesus used the Aramaic term 'Abba' (Daddy), introducing a radical intimacy with God.
+# Card_Trivia_3: In biblical culture, a father was the religious instructor and legal authority of the home.

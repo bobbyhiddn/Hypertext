@@ -1,0 +1,70 @@
+number: '021'
+word: FATHER
+gloss: A male parent, ancestor, or originator; a title of authority, protection, and
+  provision.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A weathered hand passing a glowing wooden staff to a younger hand, set
+  against a backdrop of a large, ancient oak tree with protective spreading roots,
+  warm golden lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Add 1 to your hand and return the rest
+  to the top in any order.
+ot_verse:
+  ref: Psalm 68:5
+  snippet: A father to the fatherless, a defender of widows, is God in his holy dwelling.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: 'This, then, is how you should pray: ''Our Father in heaven, hallowed be
+    your name...'''
+greek:
+  text: Πατήρ
+  translit: Patēr
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Gen 2:24 • Ex 20:12 • Deut 32:6 • Isa 9:6 • Mal 2:10
+nt_refs: Matt 7:11 • Luke 15:20 • Rom 8:15 • Gal 4:6 • Eph 4:6
+trivia:
+- The Hebrew word 'Av' is built from the first two letters of the alphabet, signifying
+  primacy.
+- Jesus used the Aramaic term 'Abba' (Daddy), introducing a radical intimacy with
+  God.
+- In biblical culture, a father was the religious instructor and legal authority of
+  the home.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDiZUy1pJS_yMhb5xdmh7MLEJJYEOceD_aY9mbhkMfXx0mIVKLHWSJOav2124n3Wtcxehd3KbBCj6yzcARx8kC3Cp1kWhblJwJNg77U3kO8_VyGj-4w2OyRlO9hheA2bLxPW7DMWKnugEi
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0SEo2uBfeln9o0ewFeyojn3ylscCNOO6g8_65xIL0M9qxxMGNqJ7TplA5j43H2lrt5m2U3HGMUeIuURquQAvm3n33-kExPgC5argzaXVbd_OQj7syDoTAMjIwwLkG2Zcuxg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIQiQ1-IrhI4VIkTKZgIJ-9yQMt9FnwQRapS1ZJc5lN8P53fRsAgAxwWIgAkkDns8Z5BqBSnhkmtYjNFu2eBGmOElfGJDwPvZ2qD7xeHQF6KEHYFcR6H9tu5cv4KWWkZ2QQBtKRJFk-OCSJA==
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWGmzvAoHvn8tyhcs_GoNboA73pk0Vs82zFEzxFfOyPX2DgwcLVVI98cjC7_Zenu6PufbU_2HTsoqIli7DX2VgOQW7AHiZInEasAAkCJ022pAot6xrCrLhS5ngCVbJBgMaEQvqhKGPrD55ESiscdw=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVzWUcBjr3xzgr20ZbwFN6IxqAvtvLMwNqqJErNMUpjmQnWpbuxdU5qDLZN5ReAp_00F8_qNe9lCh_3DuevQUVyXmii5_IZtU8aFCVV4-aznWjRb8kpQhxZ73qA0eXO_O_4uiI6vvOsDj8T-c0
+  title: christiananswers.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCK2XSktEpYFanq4JUwJPSkCMtGUq1KJyVmWHYFgg_utnCYI5EzwuIW3mCwyFvrpSRXtGk0cSQLY79AnOcWaaxB_wjJy8UoPRc_halxjv6_R4nRKOkm6mSyBte6-PJgU8rM78=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBArNU0d0kvnoKfakhGmbWqqCg-4Mv_O6HS45WwzCUGOQBDlnB9obMvTzOQX0NTXtrGZ-HFSy6hCd_tm-KU1CEp4GkoOYrsxSuD0xEq5wkVO5fuGGh5WD-bV6e-XIB7_4uCW_QgpGGUGCcdweiD75z31hafeubche4ufS_w5RNmW4zgw8cCCsC4A==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPqHs5Lnei0GwtVRU0xNqnIBNDHnqZqt66iGrN6QsHsVcC9B3cW2-ajdODO4egYB4K5y2PQ_6fv7wEV03uqwbRiBR2cBCFIZeEpjKzUCwr8x8MKVwD59vqXduo-u5xYudY4ySMbPtnpNsX_fY1Xz5X_bSy9XJrGBt8RxOektASc2ttBLZulENg
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGg0xn1aeHVKver_2SghixQ4zhMQVHFSBxUkkE1B80SfUmu9CVhuqvl5eBKrdxqH1SoGFboYueKfuswPmsfAuVQsPIfbMOmS4XyHRY_EzKvevBmzsI65MiWN8xxAsAe8Teilyp-uejXU4jjq5nh77PQocZxTMz5p_Rdy9fYC39HgA8=
+  title: logosapostolic.org
+search_queries:
+- ''
+- biblical meaning of father
+- greek word for father strongs
+- hebrew word for father strongs
+- Psalm 68:5 niv snippet
+- Matthew 6:9 niv snippet

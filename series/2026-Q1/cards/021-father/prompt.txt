@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #021
+WORD: FATHER
+GLOSS: A male parent, ancestor, or originator; a title of authority, protection, and provision.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. Add 1 to your hand and return the rest to the top in any order.
+
+VERSES:
+OT: Psalm 68:5 — “A father to the fatherless, a defender of widows, is God in his holy dwelling.”
+NT: Matthew 6:9 — “This, then, is how you should pray: 'Our Father in heaven, hallowed be your name...'”
+
+LANGUAGES:
+Hebrew: אָב - Av - Gen 2:24 • Ex 20:12 • Deut 32:6 • Isa 9:6 • Mal 2:10
+Greek: Πατήρ - Patēr - Matt 7:11 • Luke 15:20 • Rom 8:15 • Gal 4:6 • Eph 4:6
+
+TRIVIA:
+• The Hebrew word 'Av' is built from the first two letters of the alphabet, signifying primacy.
+• Jesus used the Aramaic term 'Abba' (Daddy), introducing a radical intimacy with God.
+• In biblical culture, a father was the religious instructor and legal authority of the home.
+
+ART: A weathered hand passing a glowing wooden staff to a younger hand, set against a backdrop of a large, ancient oak tree with protective spreading roots, warm golden lighting.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
