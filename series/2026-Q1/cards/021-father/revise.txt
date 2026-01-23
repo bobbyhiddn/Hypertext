@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: FATHER
+# Card_Gloss: A progenitor, protector, and head of a family; the first person of the Trinity.
+# Card_Type: TITLE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 2 cards of the Tower; put one into your hand and the other on the bottom.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A large, weathered hand gently shielding a small, fragile sapling from a storm; warm golden light emanating from the palm, contrasting with a dark, chaotic background.
+# Card_OT_Verse: Psalm 103:13 — As a father shows compassion to his children, so the Lord shows compassion to those who fear him.
+# Card_NT_Verse: Romans 8:15 — For you did not receive the spirit of slavery to fall back into fear, but... by whom we cry, 'Abba! Father!'
+# Card_Hebrew: אָב (Av)
+# Card_Greek: Πατήρ (Patēr)
+# Card_Trivia_1: "Abba" is Aramaic for "Daddy," expressing deep intimacy and trust.
+# Card_Trivia_2: Jesus referred to God as Father over 165 times, revolutionizing the concept.
+# Card_Trivia_3: The name Abraham means "father of a multitude."

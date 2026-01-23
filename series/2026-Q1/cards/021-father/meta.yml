@@ -1,0 +1,64 @@
+number: '021'
+word: FATHER
+gloss: A progenitor, protector, and head of a family; the first person of the Trinity.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A large, weathered hand gently shielding a small, fragile sapling from
+  a storm; warm golden light emanating from the palm, contrasting with a dark, chaotic
+  background.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Look at the top 2 cards of the Tower; put one into your hand and the other
+  on the bottom.
+ot_verse:
+  ref: Psalm 103:13
+  snippet: As a father shows compassion to his children, so the Lord shows compassion
+    to those who fear him.
+nt_verse:
+  ref: Romans 8:15
+  snippet: For you did not receive the spirit of slavery to fall back into fear, but...
+    by whom we cry, 'Abba! Father!'
+greek:
+  text: Πατήρ
+  translit: Patēr
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Isa 63:16 • Jer 31:9 • Ps 68:5 • Mal 2:10
+nt_refs: Matt 6:9 • Gal 4:6 • Eph 4:6 • 1 John 3:1
+trivia:
+- '"Abba" is Aramaic for "Daddy," expressing deep intimacy and trust.'
+- Jesus referred to God as Father over 165 times, revolutionizing the concept.
+- The name Abraham means "father of a multitude."
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvWoAkA71VduWjRgdU8sBahoPQw-aLq91XaMrfwo9yDMRJWOF9v8Kfu3CUUtY8HD8C-rRBtf99qVGjtbdC5HBb1WPWJQF45vD8pXnlCGGm-ZHswhU46jzxnl8vjQFlIjkWap2EPzZvXuwUfrYXkmY0y2ux53lvTwgas4gUbe3oL45lVPEC_oZtvv-bMyOsRKedIGmFlItnQ5L6Fodf7_o=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFb5QnHgaDuCQRYEtgYEyjB-cfsmizZnsGNZKT1RL3CO_0u0Ln3joDP6EJjWXAsPSxr_GVxqDWtXCQNAtAEzaU_TBhltYpgRMjKT9cDroRLYdW0MepbGgzpFVEV2HNHQokfgjNgZ4GbcEHCX7tMIzut6pKPowcw0QshF4xaHn-JIuLP
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETOyqML97GF-28dZuFk257lW2tumIT4Oag8SRmwFPR_bt76rhNei4dCnK6TNMAvdUHXorjpK2IP9WL8qsYHzfjA8r1c3RnlNXRrshvkHyWoAGlkLXtZAjw0QVLRcrEQ72KSFsr
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHupO0d_OcIV3kQTmQe7luxluvNZ_r27fN1Mlqh5iwR75uJTjAEjvlEqohLLTBu9QwLbB7GnOlAHjUYFPlyCSOuWCyaprcyNSznQScxiXggp3F2Nm1LbiClEkiOyX2pAFmazCx4mhZzHuR8c3ef
+  title: biblehealth.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHotEyB4feUWkuk_rhDpEobKcflo_fktmr_YZoG1GPjU7qO-KR5eSv-pKwTSVLp4mbFeEhbIHpdNf1D02BVbCJD9tIVV6Zt4StluHSSN7Txr52VWuyWA4r0uc0e0D4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu82CoM-SA8dkH0iiflgTb-WvkRQMSQ9TRQphs0l9EEs2iWz1xc-ERMhYBngdOmq6bd1WT8dFR9jPo2aSz5rPc97M45ocqWjuiE1oVfxxmEppWSxSSgA-phAeRN5ljnDeSeRyltP7cWmYUx5zCek6oWhSDkT_4Lw==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXS5oEDQ23RW7-_Kq1HkZJaCnYZLUEsNs4m1UNumB3pLK-ajJWLK_Qcp3GxjhnurwjAA0ARV1iM0Y7UtBV3NlL5Va6Yt_SOBoxnsMabsZQZ-pxOsPjmVw66zcq_TZHFQEjbP_bppopv4bkJoFaB_w7SIxoxKg=
+  title: manhoodjourney.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsE5iA5YY52rOUmN1unlZ3fK-RC0aNdG26aV19-B-QLKEkOa_kFN_hKaaXDgR8rM8TfI6r_h2sRpHeRzH2Kcai1KB2e_6cf1OwA47417kdRaTfRnv-NFxwVRybXO4ItEUMqnSvLB5cMWOIpfMIvqDh8VEmcqquhxmo4Qq0
+  title: manhoodjourney.org
+search_queries:
+- ''
+- significance of father in old vs new testament
+- Father bible verse snippet
+- etymology of biblical word father hebrew greek
+- trivia about the word father in the bible
