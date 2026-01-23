@@ -1,0 +1,45 @@
+number: '021'
+word: FATHER
+gloss: A male parent; a progenitor or ancestor; the first person of the Trinity; a
+  title of respect for an elder or priest.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A large, weathered hand gently cupping a small, glowing ember or sapling,
+  protecting it from a swirling dark storm; warm golden light contrasting with cool
+  blues and greys, impressionistic style
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Rearrange them in any order, then draw
+  1 card.
+ot_verse:
+  ref: Psalm 103:13
+  snippet: As a father shows compassion to his children, so the LORD shows compassion
+    to those who fear him.
+nt_verse:
+  ref: Galatians 4:6
+  snippet: And because you are sons, God has sent the Spirit of his Son into our hearts,
+    crying, 'Abba! Father!'
+greek:
+  text: Πατήρ
+  translit: Patēr
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Gen 17:5 • Ex 20:12 • Deut 32:6 • Isa 63:16
+nt_refs: Matt 6:9 • Luke 11:11 • Rom 8:15 • Eph 4:6
+trivia:
+- The Aramaic word 'Abba' expresses deep intimacy, akin to 'Daddy' or 'Papa'.
+- God is referred to as Father only 15 times in the OT, but over 165 times in the
+  NT.
+- In ancient Roman law, the 'paterfamilias' held absolute authority over the household.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
