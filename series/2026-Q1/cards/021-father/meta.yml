@@ -1,0 +1,76 @@
+number: '021'
+word: FATHER
+gloss: A male parent; a title of God indicating origin, authority, and care.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A close-up of a weathered, strong hand resting gently on a smaller shoulder,
+  warm golden lighting, cinematic style, detailed texture.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 1 card, then look at the top 3 cards of the Tower and return them in
+  any order.
+ot_verse:
+  ref: Psalm 103:13
+  snippet: As a father shows compassion to his children, so the Lord shows compassion
+    to those who fear him.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: 'Pray then like this: Our Father in heaven, hallowed be your name.'
+greek:
+  text: πατήρ
+  translit: patēr
+hebrew:
+  text: אָב
+  translit: av
+ot_refs: Psa 103:13 • Exo 20:12 • Isa 64:8 • Mal 2:10
+nt_refs: Mat 6:9 • Rom 8:15 • Gal 4:6 • Eph 4:6
+trivia:
+- The Hebrew word 'Av' is formed by the first two letters of the alphabet (Aleph-Bet).
+- Jesus used the Aramaic term 'Abba', an intimate word resembling 'Daddy'.
+- In the Old Testament, God is called 'Father' rarely; in the New, it is His primary
+  title.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG7SfzopZpbtUTIjiU4X5LrIoV0YWD4gOjPNHf7Ys2Wqak96VTFCLOrZwPbFKC_6w1DoWLJYz6Ria2_L9V9XqT8ybvVxo1H3JffTl1It5BPbjZnIyLdlX6ije-s-_ZNvRMHTe527Ns7d5CN5gjtEOHwuERPbjOdW9Y3zhOoug=
+  title: rootedandgrounded.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0MJnONUHzMJTzfYH91Vl7V3uX8XYcVhLvBirr0p5zcqhF1fpO_qeWHLnK0ZhCee2frLK8wWjNnaY2sN2RMh-Tb8AYMCCM_sv7MZKOTj00uFnKw1JZiT2lhS8a90i4f5i-Lti5sbltxeu9fBKAxT6tYhPsujZQ7eRgZ2-HQbpZK1LnCg==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ9Ze0tE9smtgEjn6J8QDTRqxyS0sC7mp7OANTcKMJ7MKH5iFszvCqGV6tuEY9CyjBdMkfroc65soiL7mc4zLWlJokbFHqTwXKCql586j6MoiqQsk43tWfKwa6Cnv79Mow-cTwNsef35I=
+  title: biblescan.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFskEtYo1oI5DLRRz_t9D5Hnqd5qGQv_E3xvIHh50PRoO1I8BdRJnhbxzNYNO6ZdwQQsaZItJChS2Y-tU_CbXj7m7UAqBMoetAaQ00g2MgOLFZm7m-ulX0NwagtKY0w
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0wd8fhOdNGUwtdNZp0wCZWxyagS6SqYXa2L_6cwyHbjCyoz9QA8alVN1U4vtMbFRdDPlWok6Ev4lStNEpZm6kOWueEDpe3zwhnyuPMvN7Hp6W3ghesSAX11r7sPONuMRpbAEOlPQvEZNH
+  title: biblescan.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeR2Iie-s9IQMbN5dqpMAUNDRndzAuRGS3u0nLGvzFQgclXbvJaXufW1z97kZVuoYe3RCYggUuOWFpwySGb4eLxbciGQnXXybncdU54p1SM_PdWEZeWetyxIbLifzLr69s2l_755EMwrDj8yCl8LkHUCqH
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdj24lOFHj43bbTv0YW9cGiWaGMbKuDOjuD5OM1GJdD_X6T3XC3X5-6RaVECeKg-ryG2MLeWeXVg4vBbEBpeqgjDgfm9PkB6RVhkrZ8ZKJ1hMoIQEpJX8IJWMbFz6mG8MX7mCPt-JLtZgRA51ygYBdMmsWPLbYfw==
+  title: compassionuk.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUz7R3IsBMebBRHydnDbiNnbOAG6OcW9a30-aQdpbwqW1pCzimPYzg2CL13S0Z1xexrTLYE5-Dew747yI6Bh90olG7m5CNuMN6116mwxp-jq3ZzTWLJ5a1QI2O6gvUAzl5nnxBU_0hXj6c1y-ssfoAI9u-HzJv1l0=
+  title: parade.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuDxDcYqaw3tUzJetyaLVtiLKEVUw-5qNKfPbHY8XOxOxICzh8LFOCIF33nFxCgQBOFgzGE07NEL6DS8-kj55ugA9CdBNpdvkOecIpXbvuGvgrhkhwvLi87CIkrEK8stJEHRf6pQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrSFfEGXMgnR5LrUrFdxiqayr54l-kkyYeQK3ITaX1GAbsrBS7hNCC61Ky2QN5t2Zn0axa6NQE0yWzBrPit7BHGwyywdiUZjMb4gVbFogAQ2WFqA-drSj-MqplyEsnrhnhG9Pl58x2Mknr6a-fYiaB
+  title: manhoodjourney.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQV2rtuXpEw6fQJEeiTIQTnMkWqiBKEs_3lz_PuDuObR6rWmYzQleCdZt-bYftfzyAtlrQu0U1Lin0kmzD3oMhH3hVm_nC22b2hld_zB-Z28AXvQgUFeNVK6gk-msy1bsiWux05Z9fnPFDWDhqmkDvDQ==
+  title: logos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ1HPTl5WXlvjCkMTubO7Vx5LTxTccaPH2J3A4KqszCRtAykY71scpbKIUmTPhpPUxZo1KgVrQNWbK5L_NPezjEVHrIdTuU_mIWB8EAl-cy_dtujg_TgvIuE2fdqJYuEVPaur1tsFJIaIaOb2zUOHnZZZ5V7KXPGA=
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAs6A85y3hTmF14Ie7262QLRnzTID85We9vckACiw5_IQcppPe_w_UW4HJON0voufSK2W4nf2lMT37RjgAPyftv5gmzPBU2q3bV3LAnQFnyF6xYU3BUKR6Hf1rrtc=
+  title: dailyverses.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhcp8_2dVI4czWtWMKIeWjtq4_GxrsJltOtrsdG0YAoaXyFWt_uAwb1KYhNKos6Xe2NxIPEOAGovAZ7cqgS3Vsl-3MFhewd_4sg_RKfsJMPKQf1uFuW2ScS0MW-X11xX8FAFRfiEz227LxzFi0yzAfFOXK7Y04dW2o64GbZArFw59OLUsFaslxwSE=
+  title: wordpress.com
+search_queries:
+- ''
+- Bible verse Father OT snippet
+- Hebrew word for Father transliteration
+- Greek word for Father transliteration
+- Bible verse Father NT snippet
+- Father biblical word study trivia
