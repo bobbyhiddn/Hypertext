@@ -1,0 +1,60 @@
+number: '021'
+word: FATHER
+gloss: A male parent; a progenitor or ancestor; the first person of the Trinity; a
+  title of respect for an elder or spiritual leader.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A large, ancient oak tree with thick, gnarled roots sheltering a single,
+  small glowing sapling beneath its branches, set against a warm golden sunrise.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Look at the top 3 cards of the Tower, then put them back in any order.
+ot_verse:
+  ref: Psalm 103:13
+  snippet: As a father pities his children, So the LORD pities those who fear Him.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: 'In this manner, therefore, pray: Our Father in heaven, Hallowed be Your
+    name.'
+greek:
+  text: πατήρ
+  translit: Patēr
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Ex 20:12 • Ps 68:5 • Prov 3:12 • Isa 64:8
+nt_refs: Rom 8:15 • Eph 4:6 • Heb 12:9 • James 1:17
+trivia:
+- '"Abba" is an intimate Aramaic term used by Jesus, equivalent to "Daddy."'
+- In ancient Israel, the father was the spiritual head and teacher of the household.
+- God is addressed as "Father" over 165 times in the Gospels alone.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFkAY8sw7a5lkHVQIe3vme7fUFpckOrRyPM29Q8_R5XCloQFDRva7bxW5iFONNk1dt4O10uud5m8PfzVB1HJikP_SKKDYO1gayKsN6_T9AdGIdnyCSXumtSzCfT5cf5CfkQLvgAhg=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt7GtgHTX1OZrMeUfiEBDaSDcwWYW6lTgXTWQ_oUoLDPy5AbOWs6NXK9AWvVA499UqeENP3v86yB3p7ul2dCQ1kL0tckcz-M18x3ByAGqESDduItAuw1lR-eHI9N4-eAoTU6efDtNzKAaYRFhk
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhxRLqb08L2yuCbTAF1f-3dL9bvX0wK49bgwFlK41UGqFpbGaise5pzAFtDiZMZ52A0mcULjBOi-E5R1LiApWL9ESvpBkrG0p6h7ggDcWLR7Ghc0uKRMCQYYeh9--E-qoRkgtNhpnOJfXVjOBPUhbJrNAW
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcp7r0fw2TTn2mXgD9yXSXD8wOjzZi-QpEneDR8evEEnq0BCwCUpldLj7dADb4rV4cJYkDFB211uAZAi1-wWd5KM2IIDJeYbt6seES0iNYWkXoixMU-RH4doifeHiR
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2A__ghkzty1NqhBrtm5AcKzkIz3cTftXZnI6MJEJ7KAsX8TtxZvK9dN6tQ1Wk2ovseZ-ebDfc2yv_yzmZa4P9kjW9cSfzGHvXg48u4SDtJD9D6X_XDXad_6i3iVL2AO0HcndLDCkeJDFBSE4npKbLU_mo9nOdANZ2yviDDxmDWw==
+  title: joemckeever.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF19T9K7LE0n1VTfuq2ci9sI0u1p0Q6x5Nafl_CLChjIjsXGW2bxDXPEvWhYA4YWAQSzWWkOqVV2gb9KyoWmXXXCywNJIcWx3t_52FDuvteayWktxQHeUpTgagPfBDNG-KRHoz0y9Gh3FQ=
+  title: biblescan.com
+search_queries:
+- ''
+- Romans 8:15 Abba Father snippet
+- Biblical definition of Father
+- Greek word for Father transliteration and spelling
+- Hebrew word for Father transliteration and spelling
+- Matthew 6:9 NKJV snippet
+- Psalm 103:13 NKJV snippet
