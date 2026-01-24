@@ -61,7 +61,7 @@ search_queries:
 review_score: 100
 review_attempts: 2
 last_description:
-  card_number_format: '#021'
+  card_number_format: '#003'
   stat_pip_shape: circle
   stat_pip_fill_color: navy
   has_brackets: false

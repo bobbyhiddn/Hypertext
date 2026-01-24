@@ -3,9 +3,9 @@
   "card_type": "TITLE",
   "rarity": "COMMON",
   "score": 100,
-  "passed": false,
+  "passed": true,
   "attempts": 2,
-  "style_mismatch_count": 1,
+  "style_mismatch_count": 0,
   "corrections": [],
   "categories": {
     "formatting": {
