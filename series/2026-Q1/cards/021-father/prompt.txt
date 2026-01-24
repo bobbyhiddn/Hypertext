@@ -6,7 +6,7 @@ NUMBER: #021
 WORD: FATHER
 GLOSS: A progenitor, protector, and head of a family; the first person of the Trinity.
 TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
-RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
 
 STATS (each has 5 pip slots total, filled pips are NAVY colored):
 LORE: 5/5 filled
@@ -14,7 +14,7 @@ CONTEXT: 5/5 filled
 COMPLEXITY: 2/5 filled
 
 ABILITY:
-Draw 1 card, or 2 if you have a NAME in your Pages.
+Return a NAME from Sheol to your hand. If you do, draw 1.
 
 VERSES:
 OT: Psalm 103:13 — “As a father shows compassion to his children, so the Lord shows compassion to those who fear him.”
