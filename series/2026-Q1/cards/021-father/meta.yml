@@ -1,0 +1,69 @@
+number: '021'
+word: FATHER
+gloss: A male parent, ancestor, or originator; specifically God as the first person
+  of the Trinity.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A large, gentle, weathered hand reaching down from warm, golden clouds
+  to shield a small, fragile seedling in rocky soil; cinematic lighting, ethereal,
+  warm colors.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 2 cards, then put 1 card from your hand on top of the Tower.
+ot_verse:
+  ref: Psalm 68:5
+  snippet: A father to the fatherless, a defender of widows, is God in his holy dwelling.
+nt_verse:
+  ref: Matthew 6:9
+  snippet: 'This, then, is how you should pray: ''Our Father in heaven, hallowed be
+    your name...'''
+greek:
+  text: Πατήρ
+  translit: Patēr
+hebrew:
+  text: אָב
+  translit: Av
+ot_refs: Isa 9:6 • Isa 63:16 • Jer 31:9 • Mal 1:6 • Mal 2:10
+nt_refs: Rom 8:15 • Gal 4:6 • Eph 4:6 • 1 John 3:1 • Jas 1:17
+trivia:
+- '"Abba" is an intimate Aramaic term, akin to "Daddy," used 3 times in the NT.'
+- God is referred to as "Father" only ~15 times in the OT, but over 165 times in the
+  Gospels.
+- The "bet av" (father's house) was the fundamental unit of ancient Israelite society.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_WDrMdY9KXVGCL5ve8Vjc00cVkICCDpmrdVAFERzgmfnEZ9XIMxQL7aWSq4-mTq43TZv-SGMIq7jlJ4eqM1cTOfXPtQ9NhaYJgCv472v7o873X8ZDNhArvPzcG8by
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2Qswbr4Hj30M8V1EWI4tqJQvwWiR1me6TD9lKV6h41Xi6DgvM-QxMTYnpvItpMHcCRVNtl14bcDP143xFjY2X3WFLkorgmVgzzyitjpWZq9pwvTYBA5YL3Y7XKT2MspwxjkXzZ6UYY-3wMgUU4A==
+  title: keytruths.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAek7cTJhZi9haJrLt5XDti_eUfHpUKuSgz6XOGf2AhGI06lTE3m5mOF_Y1lTwjXL1ycnZvYKCD4Oaibf46cl8yYWwk1ExnKmjkU-82lyPtiT6NwGkVELuJrX9wYRdN5EPcyyzpcn6qQaZ4reYV06a_rREO5jwWhmMKR_RfDwEOts0YpQDlpKeW6Bz
+  title: radical.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_klLknibp3pqD25QCS3n0_xkJ8d9SnMBBejt3N4yEsg3X0dWGtiXYX5oOEcl1F5zSsmZIfgTGOMBvgM6XlsuEY5-zl77N1BsBJBupOq1mhAaGc3_ubrr1GFJeOBVE0Q==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfYKBwtdzdu8eiUEdORw8S1cdlmd8RxibSIC65LzyCndi78qezuVYiKEASVAhaU8Uy5q50KvnuodtsRCt4GnrLQsoUZjaiqmHeogglDJsA6EeshhcWKQ0HcELn9G5sD4bma-ToyESsK2cQ3xygpVWxVnoXlHpslTJSy8s=
+  title: catholic.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqN0nT2Zl2Cs43DrK6sR2xgpi7Rv2YHzA8daeU1OhnCB2LuCzdUqkOOsZm36STA0teGyJnfAv-gqwlJ3iEylw2zbZ3-HO941yb4GveabIXP7ngfIRrHksHn6tzy7GAXGiZqjJUF0BqyV57TlVIaSlAgwV4gF-VX4fISpkCK4hRqouKL4FDtQKDLIKpMic=
+  title: crossway.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtdYVMSfmhLpGshlBK7CwRvKFq5r1-_mHfJg0z4rVTm3suZReVtyPoC2I2IU1mejP8sGELxhF_EGakeXE4k25GdC2JkFTjfFjffYtEXrzFatGFG7ctndrGfx9yJ_jqVmE-lI5glw==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXfHf-euHumuBGAlV5GLLVx4Ca0cnZisGswOUGO1KhY35Lcyqk4kVn5UvYsbc66n0jtUy4BzV6yLmiAftk2PVWY5X7sVkqdZD-onTABfxubmAZb30e0ffcYChWEuwvBA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9T9MnffdPdCpfvhu5Q1tBsYDjuHvY2lRX8YPl6E2eakAq5UFAeWWLJGhS-P4iNmbSt8wiMZe7WGaqAZFwdEfZaGGSwOxvAUPSu983XsPjNcqgLzQ-EupkLd1eghn3FK2vPnwigx2YcQXWMad0NqFnB65QbmogCEnoaulI-3yyCX_JrC9T8HtiP3Q=
+  title: thepastorsbrief.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh1l9a27SScZAPbpS7q40VwIVOjOsSXfE3NqGX01FgakSBWkX_0PLzaomOKL9afCXf-_D8n9GZr89EabCiIPnT6llijLb3v1KEPWSeAvmxizq-0RmRR7FqlqbobmTyZ91-RHeS2DJMpaXZ-yaXZ6VTHZ-n
+  title: billmounce.com
+search_queries:
+- ''
+- Hebrew word for Father transliteration
+- How many times is God called Father in the Old Testament?
+- Psalm 68:5 snippet
+- Greek word for Father transliteration
+- Matthew 6:9 snippet
