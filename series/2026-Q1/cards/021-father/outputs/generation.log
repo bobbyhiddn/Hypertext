@@ -1,12 +1,13 @@
 === Generation Log ===
-Timestamp: 2026-01-24 14:49:14
-Phase: imagegen
-Target Rarity: COMMON
+Timestamp: 2026-01-24 15:10:34
+Phase: revise
+Target Rarity: RARE
 Target Type: TITLE
-Fix Mode: False
+Fix Mode: True
 
-Style References (2 total):
-  [1] templates/example_cards/017-shepherd/outputs/card_1024x1536.png [COMMON] (TEMPLATE)
-  [2] templates/card/v001/common/template_1024x1536.png
+Style References (3 total):
+  [1] series/2026-Q1/cards/021-father/outputs/card_1024x1536.png (CURRENT CARD)
+  [2] templates/example_cards/019-savior/outputs/card_1024x1536.png [RARE] (TEMPLATE)
+  [3] templates/card/v001/rare/template_1024x1536.png
 
 Prompt File: series/2026-Q1/cards/021-father/prompt.txt
