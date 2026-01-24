@@ -58,3 +58,20 @@ search_queries:
 - Hebrew word for Father transliteration and spelling
 - Matthew 6:9 NKJV snippet
 - Psalm 103:13 NKJV snippet
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#021'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: true
+  style_mismatch_reason: ''
+style_mismatch_count: 1
+style_mismatch_reason: 'CRITICAL LAYOUT ERROR: The top-left header is malformed. The
+  navy pill contains the placeholder text ''TYPE'' instead of the actual part of speech
+  (''TITLE''), and the word ''TITLE'' appears floating to the right of the pill. Additionally,
+  the Hebrew and Greek words are incorrectly enclosed in square brackets (e.g., ''[Av]''),
+  which violates the reference style.'
+review_status: green
