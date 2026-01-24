@@ -6,6 +6,7 @@ words:
 - CREATE
 - DESCEND
 - EARTH
+- FATHER
 - FORM
 - GOOD
 - GRACE
@@ -22,6 +23,7 @@ words:
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
+- add_hand_look_top_sheol_tower
 - add_hand_look_top_tower
 - conditional_discard_draw_type_verb
 - conditional_draw
@@ -136,3 +138,8 @@ cards:
   type: NOUN
   rarity: RARE
   ability_pattern: add_hand_look_top_tower
+- number: 21
+  word: FATHER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_sheol_tower

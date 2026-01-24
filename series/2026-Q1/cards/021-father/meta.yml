@@ -1,0 +1,46 @@
+number: '021'
+word: FATHER
+gloss: A male parent; a source or originator; the first person of the Trinity; a title
+  of respect and authority within a family or spiritual community.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A warm, close-up oil painting of a weathered hand resting gently but firmly
+  on a younger person's shoulder; golden hour lighting, soft focus background suggesting
+  an ancient stone dwelling, evoking protection, guidance, and inheritance.
+stats:
+  lore: 5
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower; add 1 to your hand and put the rest
+  in Sheol.
+ot_verse:
+  ref: Psalm 103:13
+  snippet: As a father has compassion on his children, so the Lord has compassion
+    on those who fear him.
+nt_verse:
+  ref: Romans 8:15
+  snippet: For you did not receive a spirit of slavery to fall back into fear, but
+    you have received a spirit of adoption. When we cry, 'Abba! Father!'
+greek:
+  text: πατήρ
+  translit: patēr
+hebrew:
+  text: אָב
+  translit: av
+ot_refs: Gen 17:5 • Ex 20:12 • Ps 68:5 • Prov 4:1
+nt_refs: Matt 6:9 • Luke 15:20 • John 14:9 • Eph 6:4
+trivia:
+- The Hebrew 'Av' is likely mimetic of infant babbling, similar to 'Papa' in English.
+- In the ancient Near East, the 'bet av' (house of the father) was the primary social
+  and legal unit.
+- Jesus used the intimate Aramaic term 'Abba' in prayer, revolutionizing the believer's
+  access to God.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
