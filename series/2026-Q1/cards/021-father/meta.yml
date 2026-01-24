@@ -75,7 +75,7 @@ style_mismatch_reason: 'CRITICAL LAYOUT ERROR: The top-left header is malformed.
   the Hebrew and Greek words are incorrectly enclosed in square brackets (e.g., ''[Av]''),
   which violates the reference style.'
 review_status: green
-revision: 1
+revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  It needs the + card symbol below the rarity.'
+  We need the + card symbol in the top right like other rares.'
