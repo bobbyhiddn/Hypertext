@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #021
+WORD: FATHER
+GLOSS: A male parent, ancestor, or the first person of the Trinity; a source of origin or authority.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. Reveal a NAME or NOUN and add it to your hand.
+
+VERSES:
+OT: Psalm 68:5 — “Father of the fatherless and protector of widows is God in his holy habitation.”
+NT: Galatians 4:6 — “God has sent the Spirit of his Son into our hearts, crying, 'Abba! Father!'”
+
+LANGUAGES:
+Hebrew: אָב - Av - Psa 68:5 • Pro 3:12 • Isa 9:6
+Greek: πατήρ - Patēr - Mat 6:9 • Rom 8:15 • Eph 4:6
+
+TRIVIA:
+• Used of God, ancestors, and biological parents.
+• "Abba" is an Aramaic term of intimacy used by Jesus.
+• God is addressed as Father far more frequently in the NT.
+
+ART: A weathered, ancient wooden staff planted firmly in the earth, casting a long protective shadow over a small sprouting sapling, warm golden hour lighting.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

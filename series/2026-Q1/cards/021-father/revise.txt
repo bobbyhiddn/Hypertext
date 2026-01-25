@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: FATHER
+# Card_Gloss: A male parent, ancestor, or the first person of the Trinity; a source of origin or authority.
+# Card_Type: TITLE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 3 cards of the Tower. Reveal a NAME or NOUN and add it to your hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 1
+# Card_Art_Prompt: A weathered, ancient wooden staff planted firmly in the earth, casting a long protective shadow over a small sprouting sapling, warm golden hour lighting.
+# Card_OT_Verse: Psalm 68:5 — Father of the fatherless and protector of widows is God in his holy habitation.
+# Card_NT_Verse: Galatians 4:6 — God has sent the Spirit of his Son into our hearts, crying, 'Abba! Father!'
+# Card_Hebrew: אָב (Av)
+# Card_Greek: πατήρ (Patēr)
+# Card_Trivia_1: Used of God, ancestors, and biological parents.
+# Card_Trivia_2: "Abba" is an Aramaic term of intimacy used by Jesus.
+# Card_Trivia_3: God is addressed as Father far more frequently in the NT.
