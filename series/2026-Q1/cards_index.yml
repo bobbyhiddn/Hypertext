@@ -1,5 +1,6 @@
 words:
 - ARK
+- BROTHER
 - BUILD
 - CITY
 - CONFUSE
@@ -29,6 +30,7 @@ ability_patterns:
 - conditional_draw_type_name
 - discard_draw
 - draw_tower
+- look_top_sheol_tower
 - look_top_tower
 - pages_sheol
 - sheol_tower
@@ -136,3 +138,8 @@ cards:
   type: NOUN
   rarity: RARE
   ability_pattern: add_hand_look_top_tower
+- number: 21
+  word: BROTHER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: look_top_sheol_tower

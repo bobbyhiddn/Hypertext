@@ -1,0 +1,69 @@
+number: '021'
+word: BROTHER
+gloss: A male sibling, kinsman, or close associate; a fellow believer in the family
+  of God.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Two distinct olive trees growing from the same patch of soil, their branches
+  gently touching and intertwining in a balanced, symmetrical composition. Minimalist
+  style, warm earth tones.
+stats:
+  lore: 4
+  context: 5
+  complexity: 1
+ability: Look at the top 2 cards of the Tower. Put one into your hand and the other
+  into Sheol.
+ot_verse:
+  ref: Psalm 133:1
+  snippet: Behold, how good and how pleasant it is for brethren to dwell together
+    in unity!
+nt_verse:
+  ref: Hebrews 2:11
+  snippet: 'For both he that sanctifieth and they who are sanctified are all of one:
+    for which cause he is not ashamed to call them brethren.'
+greek:
+  text: ἀδελφός
+  translit: adelphos
+hebrew:
+  text: אָח
+  translit: ach
+ot_refs: Gen 4:9 • Gen 37:27 • Prov 17:17 • Ps 133:1
+nt_refs: Matt 12:50 • Rom 12:10 • Heb 2:11 • 1 Pet 2:17
+trivia:
+- Cain and Abel were the first brothers recorded in Scripture.
+- Abraham referred to his nephew Lot as his brother in Genesis 14.
+- Jesus nicknamed the brothers James and John 'Sons of Thunder'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1QDzRnkimWCWbBxLhdAiaYdRhrQoOgURLV2pqgLH0qSYzNAAOTdK85cvnCvIq5hO2buSNy2ng1JMCljAltIAf8VeuK36snzHULEjvL8CiBcUbVYlTQXHQfnQWzJdaijarAITF3dHkyxyPXQAVY6uv
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqjRPPVOTzhWKApXeHmYVDPSpfxeTe965SQIi5XGC30sy_XVw2mSJJ8iSdD2pO1bKe5goLfBHB4PsvUTU38Wh5hCn-u0CHIX0Ws5BkrRTG0_OfvDQkI21KojDFhOOARRTF2rR-
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECv64nyZwkyRl95woULOAZMbWu5DG8cWgpNoXNiET1syEUE4wXNO8W9NRYC8kbc5zaBW6vflk3m_Vq7Q23oI1PtjoQ73dkkuOVtcA_B_zexNJFTHDZVmWuqJqXGWWPT7rx2ipSICWSHw==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5Ab1KNYs4gEq9fS6HB8FrtiUHsaPdR_g5A4C2cEyYG0Xz6LF4GswTyxfRhWz97H6AtDEb-wTQBHUxNQllH_REYUDTaabWMAHFugEzdAeZ_RObQORKwELYCm26nqGL0Y1_BPibJ3o9DPamYuYuIYc=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQXPOe4aVuAEtR0xUI49K-PqhD6liTlvgU9C2YwhtX7FrbQEBVcmiYWzT9RHwnE6HMXVOqmjL9OUVjFQDLuk_0sFQqoTa5XFOS6VwZNPsbTcaNcqQAyj3jxK0uHirx_bX6wJgLtZiKxJpvYwGmQA==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpoDWSTvIztDpCnZkq9_T2RTGBqGnZ_1Au2tgIkKfrcg-I7gHVYLgYuHHATBQeUS94Pqm6d1rghrzXLaMAKjDtNCqbOvmX7C8VCIekv41GTbcuwd0fz1h-xLqhTg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfXnTolDHuHsPWSiwoovo6aLupgvaIgjruImxGvxcIsMnWUfcQFzlzJZGEx5eTKmlN0AM66-MIOn8ePt_Z5571GxNQETvvBcldyhq-FBdxl1F-pCVnBeuFnw8Wamf0wUPWRlrAXLaAQZAO5EzXfa1mgpDlgrjvkvHNSjZ37w94jOgVduu5pxklwZMBDEOylTil8jf_SYSQ3EG1yw==
+  title: funtrivia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFow2_oGcNtCXhhuNjykEK-UKyLt8K3UEpZdYuMPCyCywwu_Y23iWMlmqVl6_nNKsutFhA4SCvmev5VuFE6UHD305mcYb7ATfOq1tbHVIyqaT1aDctmh6AG2xGriTIYUaggsBAnSe-Aaww=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzOsWi9lVPCWB9CoaoqzTOfMqfCMC6Vik3tQZD2y0irszaaKPS81X9ZjHUKbOfSPVatpQw3L56ZHUovRYFFvyUB7BsX-chUvtCb9BsahZyh6sBWD6ukbYm0HxGImDKwWilXAY58Q4egKrr_X7AcfclofpkRJKAc9PIM8BqlFGDZQ==
+  title: zoo.com
+search_queries:
+- ''
+- biblical definition of brother
+- famous biblical brothers trivia
+- hebrew word for brother
+- Hebrews 2:11 KJV
+- greek word for brother
+- Psalm 133:1 KJV
