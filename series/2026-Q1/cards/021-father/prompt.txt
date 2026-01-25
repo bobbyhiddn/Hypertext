@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #021
+WORD: FATHER
+GLOSS: A male parent, ancestor, or originator; a title of respect and authority; the first person of the Trinity.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at the top 2 cards of the Tower. Add 1 to your hand and put the other on the bottom.
+
+VERSES:
+OT: Psalm 103:13 — “Like as a father pitieth his children, so the LORD pitieth them that fear him.”
+NT: Matthew 6:9 — “After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.”
+
+LANGUAGES:
+Hebrew: אָב - av - Gen 17:4 • Ex 20:12 • Isa 9:6 • Mal 2:10
+Greek: πατήρ - patēr - Rom 8:15 • Eph 4:6 • Heb 12:7 • James 1:17
+
+TRIVIA:
+• The Aramaic word 'Abba' represents an intimate, personal father.
+• In genealogies, the term can refer to a grandfather or distant ancestor.
+• Used of God over 250 times in the New Testament.
+
+ART: A large, weathered hand gently shielding a small, glowing flame against a dark, starry background; warm, protective lighting, oil painting style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
