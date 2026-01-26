@@ -1,0 +1,68 @@
+number: '021'
+word: BROTHER
+gloss: A male sibling; a kinsman; a fellow member of a covenant, faith, or shared
+  struggle.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Two rugged figures clasping forearms in a desert landscape, symbolizing
+  loyalty and strength in hard times; warm, dusty lighting, no text.
+stats:
+  lore: 4
+  context: 4
+  complexity: 2
+ability: Choose another player. You both draw 1.
+ot_verse:
+  ref: Proverbs 17:17
+  snippet: A friend loves at all times, and a brother is born for adversity.
+nt_verse:
+  ref: Hebrews 2:11
+  snippet: For which cause he is not ashamed to call them brothers.
+greek:
+  text: ἀδελφός
+  translit: adelphos
+hebrew:
+  text: אָח
+  translit: ach
+ot_refs: Gen 4:8 • Prov 17:17 • Ps 133:1 • Gen 45:4
+nt_refs: Matt 12:50 • Heb 2:11 • 1 John 3:16 • Rom 12:10
+trivia:
+- 'The first murder in history was fratricide: Cain killed Abel.'
+- Jesus redefined family, calling those who do God's will His brothers.
+- Hebrew 'ach' implies blood ties or covenant loyalty.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYdGsigHND87CYzGhJn6bDYULTeEUDeCLKyYpp1eYvzOd8m_CppNK0P3yAbWy-ELfdpjZQm8r-U7krhm_uvQql_rX3ukjcMavbja0aM6Ps2TLGKXUu1Sb_EMf75OCAEKuDHk4rVXXIiU9SrfTdSSFe8EjSUIU=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGb_6D-iw9spVA58zyye-D9bhGzEkvdLrzlzcE9iXU7r6EGgRaudvgWqVS4RvOKeT8XGdZNvRixtqoC7WvxE2MQWQG_ef2g9wau7e-gBGQ3bx34ZfWn5T_ly1VK8K4qExqvOMi2NuPUsOf9CqCQIOoRJhw=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvqBTITWXbIl_gtwCt2j3SCuOJK883Y51DwTYEQHw3LnxitSf0sdnrkzgwFnr-oHd7fBerZeWHSoOEdoZ6XF4BoCSP0ZnfnlHt0ATMmSjiBd9SkL9WUHbeJLlqZ7gA6h8gxn6U3EkvmH03lFurprH4ogr-DxZ_pSGYMx89LHeNGJpJGeHv4yVx31svn6y1jHah58tHYlGcA7P2
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2EwZq0SPiNPxS_snZqOZUtZnrMHyIx6OseXVUn7XLgN2h3oarOeefjE7u8Fuver4AAab8LgVyY-uH15rY1NvIAZ9qjcvRx1jXQkft7RVCWPYmz6QLNLYzi3xKtdQzpulO
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0dwmLIN-ExmdTIom_hjtJSPVOwKZUYV16P_3bf6jjD75ruSqEv1eK4-NSlGPLy4tTmJqkQWuxC77Qc5coHosb4kmpAqm9EEtLHzSzZ6SpRJkpJpbQk4trTb6ZTEUYI_J3BRCdHP17cngsE_sGUhyJSZXqYBoV8-xlPDuQ1ODsnp4riP2M2w==
+  title: desiringgod.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH9RRc_whBLYU2o2LdlvL8YEbL4dfnUfqh3UmqZOH0rQXg4DRUq8XRXPmZOUgyXuZnN6R04YOTVKNHiRmlcnkU4A4slU8Yoe21npkxJ6NzYjbghcDhg-aIUFqC
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTFPK6rU3C4Gd3s2G0AJ0zGqJDm0DgDUnqG3qS7Qyk7H99oAuj3DqT_KxOw-GT9A1zBD5i9EFZWqvTRYVTU3wWizqZXwOOUCemjQBtAS3cU408VrIr-oGOmCc4LqrSZyQ9qkX6bIpC6tKwjyJW95JnYOrWUTrSaFodwL5k6GtvYJZdwgAJJS79GmkyKJQWZRPty_xU_HYsu-S5
+  title: funtrivia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLeB8_UO1K6N5Vr-TgpeZo65Hqr22tp09LOyj8g-LJ2nVv-ggtUbRSUNWZppyh0HVJHRPBTlSdxXRakq6Tl95KmBcUC0XjSgelez5WN-oR9xTPaDvsnLL0eKH-KSg8MCg_kMJ7jj1MtPgvtgS8Iz9mV3Ypqzxi5xQjRE-4v0N2nClAQc16FHHwtzRzdz0pMyRIKDo=
+  title: chrisnorthcott.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW_ngL0PhYEpTOcCRk2GJPvtk4Fx5Gl0iN9TkIxUTSCkgJpDZSSV3AFEjFfcK0lampgNDX0e3w5zhl07ZhJHL1SlFhKHh0A7D44WmfkvnsURV_DNsmxgtR9aZp6109AnPt
+  title: turningtogodsword.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfsKE--tIHibidODiN8OhqSIPkP8--Qye60l8rHXL71kRbNcfpktiNy2EM8KgU9I4LSJgwX3NCewfLdpjzChzW7L6nb_CTQK7mEGLaQveeNkAW8N0zydsQ35Yn0K5_LzY-v8Dbyw89CRPpkAbcMNSsslguGhnrBA==
+  title: parade.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhrrxlOW4uLtrSAId7PIz3qNmeMVolH82Lxxbzsmh3ofZSztw0TrRe8NoTkftMk98yUfvUDZYVmdTVhVki98ai_ISGZq1B3nAIfy4lZG2N6vxvq74cbs-dLpBzs7Mnu3GzfJs2_w==
+  title: youtube.com
+search_queries:
+- ''
+- Proverbs 17:17 brother born for adversity
+- Hebrew word for Brother
+- Hebrews 2:11 not ashamed to call them brothers
+- Bible trivia first brothers
+- Greek word for Brother

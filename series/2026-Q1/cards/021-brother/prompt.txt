@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #021
+WORD: BROTHER
+GLOSS: A male sibling; a kinsman; a fellow member of a covenant, faith, or shared struggle.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Choose another player. You both draw 1.
+
+VERSES:
+OT: Proverbs 17:17 — “A friend loves at all times, and a brother is born for adversity.”
+NT: Hebrews 2:11 — “For which cause he is not ashamed to call them brothers.”
+
+LANGUAGES:
+Hebrew: אָח - ach - Gen 4:8 • Prov 17:17 • Ps 133:1 • Gen 45:4
+Greek: ἀδελφός - adelphos - Matt 12:50 • Heb 2:11 • 1 John 3:16 • Rom 12:10
+
+TRIVIA:
+• The first murder in history was fratricide: Cain killed Abel.
+• Jesus redefined family, calling those who do God's will His brothers.
+• Hebrew 'ach' implies blood ties or covenant loyalty.
+
+ART: Two rugged figures clasping forearms in a desert landscape, symbolizing loyalty and strength in hard times; warm, dusty lighting, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
