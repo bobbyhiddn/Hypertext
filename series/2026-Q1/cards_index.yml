@@ -18,11 +18,13 @@ words:
 - REMEMBER
 - SCATTER
 - SETH
+- SHEM
 - SPEAK
 - STONE
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
+- add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
 - choice_draw
 - conditional_discard_draw_type_verb
@@ -143,3 +145,8 @@ cards:
   type: TITLE
   rarity: COMMON
   ability_pattern: choice_draw
+- number: 22
+  word: SHEM
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: add_hand_discard_look_top_tower_type_name
