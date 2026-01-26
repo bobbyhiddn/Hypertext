@@ -1,0 +1,76 @@
+number: '022'
+word: CANAAN
+gloss: The Promised Land; a region of abundance and inheritance.
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A lush, golden valley viewed from a high rocky ridge, overflowing with
+  vineyards, rivers, and greenery, contrasting with a dry desert in the distance.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Return a NOUN and an ADJECTIVE from Sheol to your hand.
+ot_verse:
+  ref: Exodus 3:8
+  snippet: A good and large land, to a land flowing with milk and honey.
+nt_verse:
+  ref: Acts 13:19
+  snippet: He destroyed seven nations in the land of Canaan, and divided their land
+    to them by lot.
+greek:
+  text: Χαναάν
+  translit: Chanaan
+hebrew:
+  text: כְּנַעַן
+  translit: Kena'an
+ot_refs: Gen 9:25 • Gen 12:5 • Ex 3:8 • Lev 25:38 • Num 13:27
+nt_refs: Matt 15:22 • Acts 7:11 • Acts 13:19 • Heb 11:9
+trivia:
+- Etymology likely 'Lowland' or 'Land of Purple' (referring to dye).
+- Grandson of Noah; cursed to be a 'servant of servants'.
+- Symbolizes the believer's spiritual rest and inheritance.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW3IH83c09duEnVV7gdnchNFS-aObU2pijdev21eytJTE53rvqykJP4vixKxbJDXRaQecSzp_xsv5OeewwbniRnm4axAv67-ZEcYJbgAA5hoXpEsLmS3sMOWCJBizv7_UN6fAlDWAYrzSxdT7aFgs4ik9nzUPTSTe7N7aAh6A-SXOCZEPmXgB3WSjINg==
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAWCvtlKu7-ouSgvHLk912x3ZOCxxR0QJA9l7k8yDvA2LCvqXzTAyDXWzobclOjjyPccJ4qbK88LzGWwmD7qBPzGFHo4eivi_fKTcxesCF_qzoD5HCRZ5PmVddT9cRzP25Nf7O
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP9BrFcsTyRnI31g3p18dvj_e2D3JGWt03u4_QXQpQ69h3Sa7l31cNnUi1Tz_BK9ULCBM7MhGuChebr2dZKO18zE92nJhRRojnxTmGRJTDzhYNyoCTzMq80-lqnrik0vtJbawHvuQQKODqbZVfsWd8XknZatirVHQuOXer74Pgb7j4Ch5mFIxY1hk13SO9qcfIMkCecV-D3-93kodKx5el7SlE2z49gfrZVU5WN9rm93w7pa8Y0gHujxZa-VdrAduyYAr1DsGSf6upSs1Dj9bf3HmB
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEyHP--WcbvR1XVgpyiaVBjkDO3QusdnJbvdN8FxTdbzuPYE42z_gKVQHefQxrLYAwcIDQKfHuLXm-ePtIYm6khf_z8MNuJtAgxLeWxL9hz-i0aCdsqXN1C6N4iZ1kjZCpFEgWl4QJHC6eyO6Rhg==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd0CiCKTc0d4P8xVZx4191qifft36blYvAaVNIrJb6zxITzwHxcvQMVMG4SwOzHYp5-M57swJrV20-uUCOOSZV-k5Bf-urkONWJmtpoJdpq8KVvIuzE2_jHp-CVzOw9b_7OVo8KoaMGQ==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqBQSVnmcRJfk8xug9GrkM_JnJKea55CMNW8AREbFL-l2Xx_TEqX9hP56N0_HJwMyko_0fSjyxSTVO-IiTmyTqQj71S3KTW9ugEwkB7emR50AGE5EZNynixSzWf9hQK37rrYFsPpDbNSK5ajm4wMLbvSvJ0CE=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnTGeQUVXA1rrvwECEAkWYiFMSNIwrYbjsZRGmRxay59ms8tYjo7UkQxYTUHNxvkIpYNh8xN0T6PnAfgrKsBnJkZk9zZONvWxlVTD4jmUMTX70cOf0CVnrJ0su3SaAeQ0=
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdgUGjaQw27-whccgfObST0U-5E-9YXYmrenGggyGx8V_xagfDsKvXNxlvVBh7WUWHfu41Z0sf-_ab4qICKp2DhY0NLNWBAJZj8_WK4Er0aS-gWj_2lEcW6x81i27Izw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrzZXNhJiy8lrAx_QR-6cWCLnsFBXLllgQAsFo21HtWdN_wvfJeOnHU-Ev46ikqN-am2Ni8sh1NnJfUiX_IXILAhO-2_k3XMneLL1b84KRVLQppyCcnQyy_hYRgQNr
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVZh8jezZdsA6jv6pzEhx3CFDH7rrXksBvZjuHL1rlNKMYQDEYSNxT4EZLlsB1NS2sxEPQO0c2iwem25Qm23IEtj2YIajaKhdxOPKCfOnjpkTGArB1lWQ4tWV7WQPArirW-U8EOuEPvsk9IbPWw7rqBwXgMvpkpDUISFzBl3TpvPrP5SkYjPK3s_cpPkzxgrIL2LPJuqxfKloGjfUJJbQuzw==
+  title: jackikellum.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgGfYIGpIAtiqUqtPxkosX8Kcmupm1nee55hU7h6aeRmY3V-CQCNdNctYgQry9yTLAu218Gg7tQmW58nVhBW9_CQafaLO7CkjQR1RFNoxrUR4b2tumE61rQhATLjUh7T0kg7GXdVI8WlA=
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSS4g7AKM72D82MwgM00WRcazMjMrn5pNm3akzzm4yqS5JmtCac2nccng4QzR4yqmGnhf1S-J6Z9PP0x6eWCXC73FCJFIYgdOwwVgTTl-006FkedASZDDcfItWdki1hcIEJaTowCpXqCpgd7_4mg==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvY0bSXSTng3VnlBy0kteTyXs5bGPL4bv2VI8QZNK-aOcJgmS-lYfEoiWhPwiN3mvfIM7ZHSeSodqyffBBJUEM51f9lX_MfzwM1CtO1j4uvkXLQdwcZVNiiCKYMTXBAwWdIfJZVbctv5hq2lNh2SC-IJ4p3AXfDDwfWQUAy8hfTNK2fAhjGoE=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFkKBaC0Q9vMCf6uhJAj_7ovN9rfTwjlV-p6gEJbnuq-KfyStE8UKfOssntYTY_9bhtseq9ppACcuZ5FLHNXUtMTJWFs0RaGkIBKvvFT59uv1VXicFWRHbfNPxxAgPNhyQh6AxsGbrpnSlQDyZLICZU9VSgAE=
+  title: biblicaltraining.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEge8HDPRE6_7L5ZtZxKOUgg4eQA3rQ4FpCkkQWNFIwrJfBMqbzPAOZxhNezb0iRLSPqMn6Aqnkx9pGUwR8OpGypMw_OifekKRHXdiEtklESnZtyXH6JXoTJEG_-vBWMPVcb0AXhHOufLyr828=
+  title: wikipedia.org
+search_queries:
+- ''
+- Canaan Greek spelling and transliteration
+- Canaan Hebrew spelling and transliteration
+- New Testament verse mentioning Canaan
+- Bible verse Canaan milk and honey
+- etymology of Canaan lowland purple

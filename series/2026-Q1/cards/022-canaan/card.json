@@ -1,0 +1,296 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "022",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "CANAAN",
+    "GLOSS": "The Promised Land; a region of abundance and inheritance.",
+    "CARD_TYPE": "NAME",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A lush, golden valley viewed from a high rocky ridge, overflowing with vineyards, rivers, and greenery, contrasting with a dry desert in the distance.",
+    "ABILITY_TEXT": "Return a NOUN and an ADJECTIVE from Sheol to your hand.",
+    "STAT_LORE": 4,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Exodus 3:8",
+    "OT_VERSE_SNIPPET": "A good and large land, to a land flowing with milk and honey.",
+    "NT_VERSE_REF": "Acts 13:19",
+    "NT_VERSE_SNIPPET": "He destroyed seven nations in the land of Canaan, and divided their land to them by lot.",
+    "OT_VERSE_LINE": "Exodus 3:8 — “A good and large land, to a land flowing with milk and honey.”",
+    "NT_VERSE_LINE": "Acts 13:19 — “He destroyed seven nations in the land of Canaan, and divided their land to them by lot.”",
+    "GREEK": "Χαναάν",
+    "GREEK_TRANSLIT": "Chanaan",
+    "HEBREW": "כְּנַעַן",
+    "HEBREW_TRANSLIT": "Kena'an",
+    "OT_REFS": "Gen 9:25 • Gen 12:5 • Ex 3:8 • Lev 25:38 • Num 13:27",
+    "NT_REFS": "Matt 15:22 • Acts 7:11 • Acts 13:19 • Heb 11:9",
+    "TRIVIA_BULLETS": [
+      "Etymology likely 'Lowland' or 'Land of Purple' (referring to dye).",
+      "Grandson of Noah; cursed to be a 'servant of servants'.",
+      "Symbolizes the believer's spiritual rest and inheritance."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Canaan Greek spelling and transliteration",
+      "Canaan Hebrew spelling and transliteration",
+      "New Testament verse mentioning Canaan",
+      "Bible verse Canaan milk and honey",
+      "etymology of Canaan lowland purple"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEW3IH83c09duEnVV7gdnchNFS-aObU2pijdev21eytJTE53rvqykJP4vixKxbJDXRaQecSzp_xsv5OeewwbniRnm4axAv67-ZEcYJbgAA5hoXpEsLmS3sMOWCJBizv7_UN6fAlDWAYrzSxdT7aFgs4ik9nzUPTSTe7N7aAh6A-SXOCZEPmXgB3WSjINg==",
+        "title": "wordpress.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAWCvtlKu7-ouSgvHLk912x3ZOCxxR0QJA9l7k8yDvA2LCvqXzTAyDXWzobclOjjyPccJ4qbK88LzGWwmD7qBPzGFHo4eivi_fKTcxesCF_qzoD5HCRZ5PmVddT9cRzP25Nf7O",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP9BrFcsTyRnI31g3p18dvj_e2D3JGWt03u4_QXQpQ69h3Sa7l31cNnUi1Tz_BK9ULCBM7MhGuChebr2dZKO18zE92nJhRRojnxTmGRJTDzhYNyoCTzMq80-lqnrik0vtJbawHvuQQKODqbZVfsWd8XknZatirVHQuOXer74Pgb7j4Ch5mFIxY1hk13SO9qcfIMkCecV-D3-93kodKx5el7SlE2z49gfrZVU5WN9rm93w7pa8Y0gHujxZa-VdrAduyYAr1DsGSf6upSs1Dj9bf3HmB",
+        "title": "esv.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEyHP--WcbvR1XVgpyiaVBjkDO3QusdnJbvdN8FxTdbzuPYE42z_gKVQHefQxrLYAwcIDQKfHuLXm-ePtIYm6khf_z8MNuJtAgxLeWxL9hz-i0aCdsqXN1C6N4iZ1kjZCpFEgWl4QJHC6eyO6Rhg==",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd0CiCKTc0d4P8xVZx4191qifft36blYvAaVNIrJb6zxITzwHxcvQMVMG4SwOzHYp5-M57swJrV20-uUCOOSZV-k5Bf-urkONWJmtpoJdpq8KVvIuzE2_jHp-CVzOw9b_7OVo8KoaMGQ==",
+        "title": "biblehub.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqBQSVnmcRJfk8xug9GrkM_JnJKea55CMNW8AREbFL-l2Xx_TEqX9hP56N0_HJwMyko_0fSjyxSTVO-IiTmyTqQj71S3KTW9ugEwkB7emR50AGE5EZNynixSzWf9hQK37rrYFsPpDbNSK5ajm4wMLbvSvJ0CE=",
+        "title": "blueletterbible.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnTGeQUVXA1rrvwECEAkWYiFMSNIwrYbjsZRGmRxay59ms8tYjo7UkQxYTUHNxvkIpYNh8xN0T6PnAfgrKsBnJkZk9zZONvWxlVTD4jmUMTX70cOf0CVnrJ0su3SaAeQ0=",
+        "title": "wiktionary.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdgUGjaQw27-whccgfObST0U-5E-9YXYmrenGggyGx8V_xagfDsKvXNxlvVBh7WUWHfu41Z0sf-_ab4qICKp2DhY0NLNWBAJZj8_WK4Er0aS-gWj_2lEcW6x81i27Izw==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrzZXNhJiy8lrAx_QR-6cWCLnsFBXLllgQAsFo21HtWdN_wvfJeOnHU-Ev46ikqN-am2Ni8sh1NnJfUiX_IXILAhO-2_k3XMneLL1b84KRVLQppyCcnQyy_hYRgQNr",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVZh8jezZdsA6jv6pzEhx3CFDH7rrXksBvZjuHL1rlNKMYQDEYSNxT4EZLlsB1NS2sxEPQO0c2iwem25Qm23IEtj2YIajaKhdxOPKCfOnjpkTGArB1lWQ4tWV7WQPArirW-U8EOuEPvsk9IbPWw7rqBwXgMvpkpDUISFzBl3TpvPrP5SkYjPK3s_cpPkzxgrIL2LPJuqxfKloGjfUJJbQuzw==",
+        "title": "jackikellum.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgGfYIGpIAtiqUqtPxkosX8Kcmupm1nee55hU7h6aeRmY3V-CQCNdNctYgQry9yTLAu218Gg7tQmW58nVhBW9_CQafaLO7CkjQR1RFNoxrUR4b2tumE61rQhATLjUh7T0kg7GXdVI8WlA=",
+        "title": "biblehub.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSS4g7AKM72D82MwgM00WRcazMjMrn5pNm3akzzm4yqS5JmtCac2nccng4QzR4yqmGnhf1S-J6Z9PP0x6eWCXC73FCJFIYgdOwwVgTTl-006FkedASZDDcfItWdki1hcIEJaTowCpXqCpgd7_4mg==",
+        "title": "billmounce.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvY0bSXSTng3VnlBy0kteTyXs5bGPL4bv2VI8QZNK-aOcJgmS-lYfEoiWhPwiN3mvfIM7ZHSeSodqyffBBJUEM51f9lX_MfzwM1CtO1j4uvkXLQdwcZVNiiCKYMTXBAwWdIfJZVbctv5hq2lNh2SC-IJ4p3AXfDDwfWQUAy8hfTNK2fAhjGoE=",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFkKBaC0Q9vMCf6uhJAj_7ovN9rfTwjlV-p6gEJbnuq-KfyStE8UKfOssntYTY_9bhtseq9ppACcuZ5FLHNXUtMTJWFs0RaGkIBKvvFT59uv1VXicFWRHbfNPxxAgPNhyQh6AxsGbrpnSlQDyZLICZU9VSgAE=",
+        "title": "biblicaltraining.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEge8HDPRE6_7L5ZtZxKOUgg4eQA3rQ4FpCkkQWNFIwrJfBMqbzPAOZxhNezb0iRLSPqMn6Aqnkx9pGUwR8OpGypMw_OifekKRHXdiEtklESnZtyXH6JXoTJEG_-vBWMPVcb0AXhHOufLyr828=",
+        "title": "wikipedia.org"
+      }
+    ]
+  }
+}

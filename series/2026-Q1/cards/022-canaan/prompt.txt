@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #022
+WORD: CANAAN
+GLOSS: The Promised Land; a region of abundance and inheritance.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a NOUN and an ADJECTIVE from Sheol to your hand.
+
+VERSES:
+OT: Exodus 3:8 — “A good and large land, to a land flowing with milk and honey.”
+NT: Acts 13:19 — “He destroyed seven nations in the land of Canaan, and divided their land to them by lot.”
+
+LANGUAGES:
+Hebrew: כְּנַעַן - Kena'an - Gen 9:25 • Gen 12:5 • Ex 3:8 • Lev 25:38 • Num 13:27
+Greek: Χαναάν - Chanaan - Matt 15:22 • Acts 7:11 • Acts 13:19 • Heb 11:9
+
+TRIVIA:
+• Etymology likely 'Lowland' or 'Land of Purple' (referring to dye).
+• Grandson of Noah; cursed to be a 'servant of servants'.
+• Symbolizes the believer's spiritual rest and inheritance.
+
+ART: A lush, golden valley viewed from a high rocky ridge, overflowing with vineyards, rivers, and greenery, contrasting with a dry desert in the distance.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

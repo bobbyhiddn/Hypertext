@@ -2,6 +2,7 @@ words:
 - ARK
 - BROTHER
 - BUILD
+- CANAAN
 - CITY
 - CONFUSE
 - CREATE
@@ -143,3 +144,8 @@ cards:
   type: TITLE
   rarity: COMMON
   ability_pattern: choice_draw
+- number: 22
+  word: CANAAN
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_noun
