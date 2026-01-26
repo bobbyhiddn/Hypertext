@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: JAPHETH
+# Card_Gloss: One of Noah's three sons; ancestor of the coastland peoples and Gentiles.
+# Card_Type: NAME
+# Card_Rarity: UNCOMMON
+# Card_Ability: Draw 2 cards. If you have no NAMEs in your Pages, discard 1 card.
+# Card_Stats: LORE 2 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A wooden ship on a vast ocean, spreading white sails toward a distant horizon of many islands; style of an ancient maritime map.
+# Card_OT_Verse: Genesis 9:27 — God shall enlarge Japheth, and he shall dwell in the tents of Shem; and Canaan shall be his servant.
+# Card_NT_Verse: 1 Peter 3:20 — In the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water.
+# Card_Hebrew: יֶפֶת (Yepheth)
+# Card_Greek: Ἰάφεθ (Iapheth)
+# Card_Trivia_1: Name means 'May he extend' or 'Enlarge'.
+# Card_Trivia_2: Prophesied to 'dwell in the tents of Shem' (share in the blessing).
+# Card_Trivia_3: Ancestral father of the Indo-European nations.

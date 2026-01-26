@@ -10,6 +10,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- JAPHETH
 - KEEPER
 - MIGHTY
 - MULTIPLY
@@ -25,6 +26,7 @@ ability_patterns:
 - add_hand_discard_look_top_tower
 - add_hand_look_top_tower
 - choice_draw
+- conditional_discard_draw_pages_type_name
 - conditional_discard_draw_type_verb
 - conditional_draw
 - conditional_draw_pages_type_name
@@ -143,3 +145,8 @@ cards:
   type: TITLE
   rarity: COMMON
   ability_pattern: choice_draw
+- number: 22
+  word: JAPHETH
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: conditional_discard_draw_pages_type_name

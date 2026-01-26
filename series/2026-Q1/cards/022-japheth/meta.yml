@@ -1,0 +1,63 @@
+number: '022'
+word: JAPHETH
+gloss: One of Noah's three sons; ancestor of the coastland peoples and Gentiles.
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A wooden ship on a vast ocean, spreading white sails toward a distant
+  horizon of many islands; style of an ancient maritime map.
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Draw 2 cards. If you have no NAMEs in your Pages, discard 1 card.
+ot_verse:
+  ref: Genesis 9:27
+  snippet: God shall enlarge Japheth, and he shall dwell in the tents of Shem; and
+    Canaan shall be his servant.
+nt_verse:
+  ref: 1 Peter 3:20
+  snippet: In the days of Noah, while the ark was a preparing, wherein few, that is,
+    eight souls were saved by water.
+greek:
+  text: Ἰάφεθ
+  translit: Iapheth
+hebrew:
+  text: יֶפֶת
+  translit: Yepheth
+ot_refs: Gen 5:32 • Gen 9:18-27 • Gen 10:1-5 • 1 Chron 1:4-5
+nt_refs: Heb 11:7 • 1 Pet 3:20 • 2 Pet 2:5
+trivia:
+- Name means 'May he extend' or 'Enlarge'.
+- Prophesied to 'dwell in the tents of Shem' (share in the blessing).
+- Ancestral father of the Indo-European nations.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHurBfA2FSB2FJVFkDeZAOy9icycExHnyNReOZmqDT_liVdz4jXkW1nBvvcvk859sy8l7ZDB7ZMNeF-ZwulRVJMhazKYOAp8W7Qj4CxciZlfnUOYjArA-yVs2jgVsFooESdV6gIMrDHpvJFms3bXY_K
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQAyhLyKHlOvFKfTYDe73aJnhtv2wsqWt5mlAnugRw6aKTbWSioVYGIv0ANE-zo85quDf6N-yGfQw7MhSBXypxpLjKNVVTptprcdBH0sFTk0YuTCQVROR0aamVZw09OZsafvAEHVDFTQ6yWCAXIBKg6uFK8BQjcqOIaiJcS-jR2hjOi7APVL3Xyf38
+  title: watermarkwaves.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmG1wiI9pFsq8n2Mglr-eoTo1YZWHGnI9r9P1vNRvH8UKmty3ZjIoc_8cvgS-9TEVWW84ClkwdS7WowUhnBBbvIbCYScG80PSjIN04fvDhk5Q89SlLpuSrJulUTfUjayASK9ZhATUeW4cII6Pc
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiUUu_-MSLaPJRPWPRVyxNDRMF-VhYzf5FfgmW6pP0h-fvVhQaCTeWx78KGB0h7Oupw-m38tCvgbL4wWiB6NMgMcdCnSKRoawHN3nmf0z8-up1SwhTvBLJ50CX1_JkAG8qtJ2XlLiOEJXGpqOb3VNQwosEi-G55DrE
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEv0eHa3xDWqmsMzsl_PV8nE-CFvKzfUDBqnc6-Z6Na_s0wv_aA95xQu1xvGrhtkNQr0N_E7Mg9rUtzIUOlYuuJzDl1mq4DhiZVKlbB2nB_g-lPD43UsrY-U47DrC046slXsTAfMA==
+  title: thebump.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBXeKXNJ8UVXzf9jgHaRo28B0YvkBf96pXX6a3XHWbOBfqTqwytUp4x3p1wTcqwIS9hIlAv5-qlp2aQlRkar7CR374DRHYc01x_ya3PtSmLing8nMn7Zv1PEhrci71BpNTg4zP38LMl3X1XrVn-V_pFHlTuLWrANGL1T53M8aclgTa
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAWew15pUdtT9xFLw_kU7ItdR0nr5Zd6iL26aCVmbQPHrf_5tPjE4VzgdXydVyQWRuyNIaekXmaV-M-3WW_V-tziPyjFiosB0h3DjtghAnM6q-dp_kcLIBiga65sDPYQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWEtD1f5MdLkK8qD_kupRDOfT5FHRzSG-1XIxTvGFwoehaabSvSmTtdMJ8DYbMLj54HcmhkoEdG4rcOwCoUuXJ7XzvE_W-gt3tOsR_4vj0BHaHrxIvIQb-CB1Y7K-WhphxYKB5qg==
+  title: youtube.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHB6mv5HOTBEOzucH2k-4S6guNMJFh2X25PHvHbJ--CreA2jFuZ7NYEnHXMGqicB1_lhTtf0r2ALyQxwXVBGrmzYNJdJAI7chmTjjHqC4jSgdyi3h188-NAeJBcEqqdsJoSnV9WWwfeR12e6qclrIgbcnA=
+  title: abarim-publications.com
+search_queries:
+- ''
+- Japheth New Testament references
+- Japheth trivia bible
+- Japheth Hebrew meaning and spelling
