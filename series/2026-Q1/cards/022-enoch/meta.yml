@@ -1,0 +1,41 @@
+number: '022'
+word: ENOCH
+gloss: Dedicated; the patriarch who walked with God and was taken into heaven without
+  seeing death.
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A lone figure in ancient robes walking up a radiant, sun-drenched mountain
+  path that disappears into blinding light; footprints visible in the dust behind
+  him but none ahead, ethereal atmosphere, golden hour lighting.
+stats:
+  lore: 4
+  context: 2
+  complexity: 3
+ability: Return a NAME from Sheol to your hand.
+ot_verse:
+  ref: Genesis 5:24
+  snippet: 'And Enoch walked with God: and he was not; for God took him.'
+nt_verse:
+  ref: Hebrews 11:5
+  snippet: By faith Enoch was translated that he should not see death...
+greek:
+  text: Ἑνώχ
+  translit: Henōch
+hebrew:
+  text: חֲנוֹךְ
+  translit: Chanok
+ot_refs: Gen 4:17 • Gen 5:18-24 • 1 Chr 1:3
+nt_refs: Luke 3:37 • Heb 11:5 • Jude 1:14
+trivia:
+- He was the seventh patriarch in the line of Adam.
+- One of only two biblical figures said to have not died.
+- The Epistle of Jude quotes a prophecy attributed to him.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

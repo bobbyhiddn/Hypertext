@@ -7,6 +7,7 @@ words:
 - CREATE
 - DESCEND
 - EARTH
+- ENOCH
 - FORM
 - GOOD
 - GRACE
@@ -34,6 +35,7 @@ ability_patterns:
 - look_top_tower
 - pages_sheol
 - sheol_tower
+- sheol_type_name
 - sheol_type_noun
 - sheol_type_verb
 - unique
@@ -143,3 +145,8 @@ cards:
   type: TITLE
   rarity: COMMON
   ability_pattern: choice_draw
+- number: 22
+  word: ENOCH
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_name
