@@ -1,0 +1,68 @@
+number: '022'
+word: CANAAN
+gloss: The Promised Land; a region of inheritance, abundance, and conquest
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Aerial view of a lush river valley between dry hills, flowing with golden
+  light, clusters of grapes and wheat, realistic texture, warm tones, atmospheric
+  perspective
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Reveal the top 3 cards of the Tower. Add 1 NAME or NOUN to your hand, then
+  discard the rest.
+ot_verse:
+  ref: Numbers 13:2
+  snippet: Send men to spy out the land of Canaan, which I am giving to the people
+    of Israel.
+nt_verse:
+  ref: Acts 13:19
+  snippet: And after destroying seven nations in the land of Canaan, he gave them
+    their land as an inheritance.
+greek:
+  text: Χαναάν
+  translit: Chanaan
+hebrew:
+  text: כְּנַעַן
+  translit: Kena'an
+ot_refs: Gen 12:5 • Ex 3:8 • Num 13:2 • Josh 14:1
+nt_refs: Matt 15:22 • Acts 7:11 • Acts 13:19 • Heb 11:9
+trivia:
+- Likely means 'lowland' or 'subdued,' contrasting with the highlands of Aram.
+- The name is linguistically linked to 'merchants' due to their trade dominance.
+- May derive from Hurrian 'Kinahhu' meaning 'Land of Purple' for their dye.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7xU7YSIsrvn_gpWsvZ6Esp4Okg_ztrCD0RibQaCMiwVKFAm7YQpliUjQQyabaS6bD9_HQRwT-lAiD27qyF6jVV8RS7WBV-kQ1ZC5fOUYSWDbGohI3X4r1CNr6bhg7
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzYHyBfs4dnu4QneZ399G8hXslS_PEaQn_Zlnmzcxz5Di143MjC1aLfR2N8jhHyUNPwO_dJow2hrPOeOHzcldCfxEocHhqkIQeNrrtqjmUXbfYRq7jcjRenrfJYbiA1VoK8tkXgzWDH25lUQ==
+  title: biblicalcyclopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcOTDvdDLiLPY2pVbyrxZ7FpddWtZdatLoflf3J2zA3UJdJGrMCvg0qiTqkmwnyyEsTaArcqmsjd-vnBhPVohKe8ulV7lcArf5Bb68dCdyeEV1u7A2NMirFpbaf-JmBfDkfpaHMoUxJyOoFv7eBBX_dP0=
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwmYkTXO3QjgH8PPderr3tkFfQYgWERGVdOByq-C_nkkpuyAlpZbeTHrgFKGc7MdN0r_2IxRAgzgBT8kQVORXho2YBEb_tMfEuYJm-6SQjKUnIPVKwabUgk1f6tuAbBeCD-pN9vqHXADLXPg==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUOjL4Z8MqMx0EthTN3Id270i11I-hIDn-2ztod1KqANPHuZyrIli9JYBX83aCipsvYqqExiLhgdlHqBeqsvst774cEpszbjCzVYtl8NiP2Udc3TlA3FqAnaJFCvR7nH72BFd5_6zDGEbb0ks2LZBL
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiUS-RlxiakH507rhxLI3UJD5mfxja7Lee72ViYrwNTkj0b5SKO9awqE2-3XfgP7HjuBA7gjSLRZJgLKqVWqlNYrTkMGlxrt6NhKdPo7RdAEfz9fORD4xBDhSSAAAI1aPeKcn7ObFqCx6i4zXyC2_eaj58g-H94ahhxFoginxUIctK_Q==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-91VgIc7NM4Ta657ehLr3sARTOZ9hZhayuXzq-OSrcMbw9KQF8I-zZR3RSnP1y2IL58thdfLJcajVxuqfN5pdbO6IGTu-5kymDBIAK2weNuBB9jx-RusUu0ZttL4QnQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5lS8Wtr3RWT0dRaeU_ha5M726eQeOb3K6ME2nnvwvTFwBShYBYm9ozjC9wge1WmKkbn0Lw4UnYoASQNSqa7sw1-UStCCFXUraSuM0ClQG75jQOPHu9zXP_COgUH9GHttVwQpnWEBlxpOYoULZA-TS4tc=
+  title: jewishencyclopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6EdRkCxb3LURVvmTmtfWpDJSVHYjdZ3AWBD5RPOW6EZU0M06_CANy9GcWgbL2OuLb1jsJnM0j7Q423CiT7O5MN93iPYcqufGl52K4RpuXJuE3GsnXl-notRjG4ii1iA5HFj2ZWzH5VCbyzot4F6tG5A3730x7xJH-1sXnVBq6cchz-HUz_r1rJMf4Zx6GqP4ohRqeh_TimOm5ZapSFThF_vt7bhXvRoSjpO8t_D8w-z40Xx0=
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkuabXbawaYMs3_oSONuy3pk9NtHCmuHhJQ5-EadsIeH6nlP7zJU-AyApLwH3ipPOLMUnwHzlcvn95rL-Kvb9AKKXdC5mqjlugV-jun9TAPpWDpdXLvEoM1W8ac9GYKi3B9xSeuoemwoWavKo=
+  title: bab.la
+search_queries:
+- ''
+- Hebrew word for Canaan and meaning
+- Etymology of Canaan merchant lowland
+- Greek word for Canaan
+- Bible verses containing Canaan OT and NT

@@ -1,0 +1,275 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "022",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "CANAAN",
+    "GLOSS": "The Promised Land; a region of inheritance, abundance, and conquest",
+    "CARD_TYPE": "NAME",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "Aerial view of a lush river valley between dry hills, flowing with golden light, clusters of grapes and wheat, realistic texture, warm tones, atmospheric perspective",
+    "ABILITY_TEXT": "Reveal the top 3 cards of the Tower. Add 1 NAME or NOUN to your hand, then discard the rest.",
+    "STAT_LORE": 4,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Numbers 13:2",
+    "OT_VERSE_SNIPPET": "Send men to spy out the land of Canaan, which I am giving to the people of Israel.",
+    "NT_VERSE_REF": "Acts 13:19",
+    "NT_VERSE_SNIPPET": "And after destroying seven nations in the land of Canaan, he gave them their land as an inheritance.",
+    "OT_VERSE_LINE": "Numbers 13:2 — “Send men to spy out the land of Canaan, which I am giving to the people of Israel.”",
+    "NT_VERSE_LINE": "Acts 13:19 — “And after destroying seven nations in the land of Canaan, he gave them their land as an inheritance.”",
+    "GREEK": "Χαναάν",
+    "GREEK_TRANSLIT": "Chanaan",
+    "HEBREW": "כְּנַעַן",
+    "HEBREW_TRANSLIT": "Kena'an",
+    "OT_REFS": "Gen 12:5 • Ex 3:8 • Num 13:2 • Josh 14:1",
+    "NT_REFS": "Matt 15:22 • Acts 7:11 • Acts 13:19 • Heb 11:9",
+    "TRIVIA_BULLETS": [
+      "Likely means 'lowland' or 'subdued,' contrasting with the highlands of Aram.",
+      "The name is linguistically linked to 'merchants' due to their trade dominance.",
+      "May derive from Hurrian 'Kinahhu' meaning 'Land of Purple' for their dye."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Hebrew word for Canaan and meaning",
+      "Etymology of Canaan merchant lowland",
+      "Greek word for Canaan",
+      "Bible verses containing Canaan OT and NT"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7xU7YSIsrvn_gpWsvZ6Esp4Okg_ztrCD0RibQaCMiwVKFAm7YQpliUjQQyabaS6bD9_HQRwT-lAiD27qyF6jVV8RS7WBV-kQ1ZC5fOUYSWDbGohI3X4r1CNr6bhg7",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzYHyBfs4dnu4QneZ399G8hXslS_PEaQn_Zlnmzcxz5Di143MjC1aLfR2N8jhHyUNPwO_dJow2hrPOeOHzcldCfxEocHhqkIQeNrrtqjmUXbfYRq7jcjRenrfJYbiA1VoK8tkXgzWDH25lUQ==",
+        "title": "biblicalcyclopedia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcOTDvdDLiLPY2pVbyrxZ7FpddWtZdatLoflf3J2zA3UJdJGrMCvg0qiTqkmwnyyEsTaArcqmsjd-vnBhPVohKe8ulV7lcArf5Bb68dCdyeEV1u7A2NMirFpbaf-JmBfDkfpaHMoUxJyOoFv7eBBX_dP0=",
+        "title": "abarim-publications.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwmYkTXO3QjgH8PPderr3tkFfQYgWERGVdOByq-C_nkkpuyAlpZbeTHrgFKGc7MdN0r_2IxRAgzgBT8kQVORXho2YBEb_tMfEuYJm-6SQjKUnIPVKwabUgk1f6tuAbBeCD-pN9vqHXADLXPg==",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUOjL4Z8MqMx0EthTN3Id270i11I-hIDn-2ztod1KqANPHuZyrIli9JYBX83aCipsvYqqExiLhgdlHqBeqsvst774cEpszbjCzVYtl8NiP2Udc3TlA3FqAnaJFCvR7nH72BFd5_6zDGEbb0ks2LZBL",
+        "title": "sarata.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiUS-RlxiakH507rhxLI3UJD5mfxja7Lee72ViYrwNTkj0b5SKO9awqE2-3XfgP7HjuBA7gjSLRZJgLKqVWqlNYrTkMGlxrt6NhKdPo7RdAEfz9fORD4xBDhSSAAAI1aPeKcn7ObFqCx6i4zXyC2_eaj58g-H94ahhxFoginxUIctK_Q==",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-91VgIc7NM4Ta657ehLr3sARTOZ9hZhayuXzq-OSrcMbw9KQF8I-zZR3RSnP1y2IL58thdfLJcajVxuqfN5pdbO6IGTu-5kymDBIAK2weNuBB9jx-RusUu0ZttL4QnQ==",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5lS8Wtr3RWT0dRaeU_ha5M726eQeOb3K6ME2nnvwvTFwBShYBYm9ozjC9wge1WmKkbn0Lw4UnYoASQNSqa7sw1-UStCCFXUraSuM0ClQG75jQOPHu9zXP_COgUH9GHttVwQpnWEBlxpOYoULZA-TS4tc=",
+        "title": "jewishencyclopedia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6EdRkCxb3LURVvmTmtfWpDJSVHYjdZ3AWBD5RPOW6EZU0M06_CANy9GcWgbL2OuLb1jsJnM0j7Q423CiT7O5MN93iPYcqufGl52K4RpuXJuE3GsnXl-notRjG4ii1iA5HFj2ZWzH5VCbyzot4F6tG5A3730x7xJH-1sXnVBq6cchz-HUz_r1rJMf4Zx6GqP4ohRqeh_TimOm5ZapSFThF_vt7bhXvRoSjpO8t_D8w-z40Xx0=",
+        "title": "esv.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkuabXbawaYMs3_oSONuy3pk9NtHCmuHhJQ5-EadsIeH6nlP7zJU-AyApLwH3ipPOLMUnwHzlcvn95rL-Kvb9AKKXdC5mqjlugV-jun9TAPpWDpdXLvEoM1W8ac9GYKi3B9xSeuoemwoWavKo=",
+        "title": "bab.la"
+      }
+    ]
+  }
+}
