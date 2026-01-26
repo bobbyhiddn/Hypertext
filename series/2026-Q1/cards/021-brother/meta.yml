@@ -1,0 +1,69 @@
+number: '021'
+word: BROTHER
+gloss: A male sibling; a close friend, ally, or kinsman.
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Two weathered walking staffs leaning against each other near a campfire,
+  warm lighting, oil painting style
+stats:
+  lore: 4
+  context: 5
+  complexity: 1
+ability: Choose an opponent. You each draw 1 card.
+ot_verse:
+  ref: Proverbs 17:17
+  snippet: A friend loves at all times, and a brother is born for adversity.
+nt_verse:
+  ref: Hebrews 13:1
+  snippet: Let brotherly love continue.
+greek:
+  text: ἀδελφός
+  translit: adelphos
+hebrew:
+  text: אָח
+  translit: ach
+ot_refs: Gen 4:9 • Ps 133:1 • Prov 18:24
+nt_refs: Matt 12:50 • Rom 12:10 • 1 Pet 2:17
+trivia:
+- The Greek word 'adelphos' literally means 'from the same womb'.
+- The first murder in the Bible was fratricide, when Cain killed Abel.
+- Jesus redefined brotherhood as doing the will of the Father.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_zoMVa6GmX-RsNmxTLQv9Dk43D0Nezk5A4EtvgjSzXPHynn-eoOPB7cYNDwfG1exCLDpC3u5MXY_CKfe8iic0ZD3Z3eSsOc0hGNPelUACL6xSHoCsJKr_NP8Er5ZWPc3rw4aIrXJdnOwFRqTdFZF-T4oCeN5ji5U5FALGaZ9-F_zrr6njIpy_vg==
+  title: hawaii.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNO7aC3fb7XLhtGg5ZqBmTD3bB-3Aa8Wurl58whuVi3wgBmbDxFCHsq1p-77sCFOh0WS5I6McKDSrWZewkyHpBoYhr0KsY84Kpqif23kAyXxx3w-ZOn8pXm7ikVVrTcrxJMQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgfB28UZtTjBvPNLPQltjw3zrxD-UMc2Dzp_D0pSCwHzb0kDZylQ25O-E_NIUF3ZYuOtKlKGwmwFVs-1q9EP2CfRtdNkFOhC47NyAe7veLpLWxhKjnbRQbFWdvHGnJ9_NL5fSP18aL4Xd6pkaQ3uRWOGfV
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXbsGBLC6dbWL0vHTBG2hqTWcQBoPMUI-SYIQ3ne6D3CVP9WdIRihfwwKpOOIPzO5frqo9ocetQE32u-EZTR6mTor5_XNcZ95owoKDt4K2zfjUaCo6sLX-3VAH5IgXsXM1PM1Zbgo76_AclhCOtw==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7jATupbRgTCfVb9jgfq5bj5LRMa2KJzLbH_3H4CSKspMsfbiusz3cNPH8GjyXidSJhpzEHVjYWOcJ3kVAxx-AnIRrFG1eSrF4NWeWISXNrSBnzy4Q4gOo1x-xsz3jY8kpEUtUJBqVDOrBg_x2LUBOmwJG6jzUuCP1_4WwMKKIvaNpPRq6JeVzBskWj6pkDka-2WHORixHLeKy1yBt
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6ba2QtwDOg2i751Mys06hF6RbMbvXX60qC087r17RXfsSM2LMyEyr2JDM9padQw24iW4ixqcgc2DbwEOWXKawz0QyDUIyb0TnZJFvowynbj9GvRbIlp_tpSJU1yGF85SQ_wXnplSm
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEU5lrONpOtgbMkV3a97Ze80vPSpC6mxsCD91R2jyHp3MbJmY_woVz6_Zigy-eKOGHyEULWqxJlLptIHnXQXTjPYzPIhc2ofwp9G9K_ZrFiNnAlk8TSNJF9rsJhGsTHZ0nSo4isq-jMpTeO
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECLzDlOTk-FU2IY2Cv_YjWWwILrXxSfHSJh6Fe9p6Es2ybXVA8N-tx51NG3HW9pHggKkiQbzb2S2MWFC7DXCCrKPq29Dc5ENZdS5ypdGIbrALQo4ZGIyZ6gPa1P2NYKZtKCvBNT0M2xcb4PtUFN7bXHw==
+  title: margmowczko.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTEtmR12h59XmXvmWbY6BReS_W-HQ7svWDXIaZt9pVzjrz7WG-LMrj5ZYKeKsvZmZnSwDYcRm9irGK2B-rr9sNBMGZnOZ8qsAEfClx0ixg0UfXJFAFg3BQpBoJQlUJvgW7zw==
+  title: turningtogodsword.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4FqnockZdLeB-4eGr_nzUFlgz-2ESjVJ31lOHrZhbqMj0o24nt94s-ZvDWJJPAVSsi3NBHB_WkvsDmmXO9O3jMi8gKpOGby3Sl_fAi6R9J07vsJkSV6pUfIG7Tg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENEKo76r3Z8NilcqZf5E3OhnFNrxrFNlPveTlAdGP8WOa1zrpkS_dhcMf5AHhKHVJzWfsvlmXRTNf8LHY3r7FD8SjRReli6C_TN-dX61-pEFZlCskj84hyI1znpms9YfWKypVv1-Bx-9xMbAP0jNinqBFVgJ2S9fhkzCdJSgcWukBC
+  title: apologeticspress.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo4GV_L2P07gLVEiVZwH-xzCpaVJLIZjkykucpfLYcXUVPhEi9I0tLbvJbapFZJonv8qo_eilIiFrRaY6zYK0jM2T6ibbW7Ynm-wk-FHxAEFxiKAvHuE-aEaohoAN76Xu1sBZl1IoNeqLpJA0ya_GPentolc9YykCUUYg=
+  title: biblestudytools.com
+search_queries:
+- ''
+- Greek word for brother adelphos
+- etymology of adelphos womb
+- Bible verse brother born for adversity
+- Bible verse let brotherly love continue
+- Hebrew word for brother ach
