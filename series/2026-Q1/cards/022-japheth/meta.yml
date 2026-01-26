@@ -1,0 +1,69 @@
+number: '022'
+word: JAPHETH
+gloss: May He extend; open, fair
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vast, spreading coastline stretching into the horizon under a wide open
+  sky. In the foreground, ancient tent dwellings with flaps open to the wind. The
+  scene evokes a sense of exploration and expanding territories.
+stats:
+  lore: 2
+  context: 4
+  complexity: 2
+ability: Draw 1. If you have a NAME in your Pages, draw 2 instead.
+ot_verse:
+  ref: Genesis 9:27
+  snippet: God shall enlarge Japheth, and he shall dwell in the tents of Shem; and
+    Canaan shall be his servant.
+nt_verse:
+  ref: Acts 17:26
+  snippet: And hath made of one blood all nations of men for to dwell on all the face
+    of the earth.
+greek:
+  text: Ἰάφεθ
+  translit: Iapheth
+hebrew:
+  text: יֶפֶת
+  translit: Yepheth
+ot_refs: Gen 5:32 • Gen 9:23 • Gen 10:1-5 • 1Chr 1:4-5
+nt_refs: Acts 17:26 • Eph 2:13 • Rom 11:25
+trivia:
+- His name is a wordplay on the Hebrew 'pathah', meaning to open or enlarge.
+- Traditionally considered the ancestor of Indo-European peoples (the 'coastlands').
+- He and Shem walked backward to cover Noah's nakedness, earning a blessing.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVcznQPSZi8hDt1sIKuLb-xF0b4VSYY28J2oEbeqDwMwXRPtdE1Qz8H3JNKL_bwKhWJ00xiwjzJORZDogkZLd9xkBFPrKJN3rtJOIFv4ic1s3fwrqVyrQQd_zxBNWgAwvDkRH3z8rduD6tE5gGxtSn8EK8pps3NGOviJhrxy9PvooQ6JJlFCRYyd7nAA==
+  title: watermarkwaves.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1MQAkWoDbWFpoYbz05ct6JQFgIlvvt-zFdWYSRZbXhAbOEbRBo33HLeTJ3dTrIrIG5KU36NtGK9zOg1qmXb5vjfUPG63sXUu9tCuaqzlp2pChtFn0rhykPC-F56IgncuPNdFvkV_3Nrj0K4blw3vmjw==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1R0z5-5sNWvdW_ZygNgsdtawxH47Ukyriu9NpUUkXudcQ5s0MJZ3yycYHxNqzsWZz9YOIpGl3eP8H1yhXfOPONUGgnsYsf2QWU21DAcBpVMqDdMzandmDTsWRjeoVdaMw3vq_mBCjlUpgras3jNxwYQ06skhKNBDbmmVDGkRXhg==
+  title: studentandwriter.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG_CpeClU__AdyDfweyTVzqRdYUKFOiU1Y4elR7n0SjixU1hJxT2YLPy3ICPXbqIWp-OMrruBwyHEOdsi0jNsAOIcKMO3o-oTlZoWFAOPS5roxcsHPxxutMl8kr9rPloqBuzvIZSw8fO8ebeKqYIbYBF2-aR8ZVZQdsg==
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVmbgO2B_sRCbO6s7ZFG1tUHw3eB2P57qbSBR7MMYbsdRSgHoGze2IjnzKlzkp_ppVXFGxFeyws2N5i99LgYJ0qZkACLjrcUAZwBaDqh2jW2Fwkpfxhl7BJsI3PbC2qygd7CIiAdoaAALy44u6oY5V44R72a2h9aPJmpOlTnGdbWDlS4xN-IbqqXQ=
+  title: matttommeymentoring.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2B25ytXbsFFJLL6_GadKZWO0VnTuSlrcpE3BFnB2snxaGPXkm6NsKX8JMiRdT1FzB3YWuUXKI_DgdriCPcloP3UII1lnsT6BZW8dTKRiQUyTQOZ7skZW7DQa8e8qsJxYw3t1m9FX6bwIPqsxMuWLCJhG3gILkwZ0LGAHgb3KChsTEMzsIUEO9jrFnw7OWr40ydFD303_oytlxFje0dqTgEw4umPEomygaus0mghWEm6ievITZ
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlTl_XeQ2IDjokNy9yefGD2ooSEqjTuoXdxZOjDRI3fiBhSDvvEQ6z1jMYLxuVRN47DQ6yM75iw8TcWNkbwuKzOJD14FX4HIayDzxBPNTYmim3bC-mUnvAphGR3NioXcL1PbAgTWe98fKPtnJ3
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxVflQebz8un-yVvlMvv8mkhhnFJbk8eZgbPPLcg7ZKXxoWjFi_7WDHjKOqXWywYO_JHUSJggrZt3MJP1R7Sam6onPikIGDwTbY4zDkntU3kIqb4-iufzJhk7q3opAPpI=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHSZ1z9Bl_LsNg4nmj0XCmgwQhmGFBXLH1vGiGBZ_6qCOhmyuSODu3sOUqtCbM6q-jtQp1QUX-NK3a90KWpJovkeRUAQLH0WZfh_vrEFT_XMBdqF3cJqnIx9KZXrglIDLoww0Gnwvf0jTHaSOVPlLlXq2T
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8JTzypuWSUYOPFQBCyU3HA2aYWXWRURFqcLwL1Gi5Z88RhF37c6pK_34CVAwhatrLFCqFfZ2uuK4k8XcU4OGNKND7vyrwpD5WGFS2zwyiIBSxt56LOfDvssa4huKfQEVatXCbLh9YJFCI3FIYOA==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNdaJlkV_9iENUDiwbgKnbzUjQCJ32pw54h_piyjaGlvF5sv2BsvnE9jAoxNUflkOgB_Ypac_gj6aszTFGG7TElUBg-zIv6zV1jB4zWaSkgjLzY1XrLPmtQCBYVCA4KAmWEmCU7cNoH0boenTZRQUtDOz0xmIRkwL1EmkcmDwuNhsOXA==
+  title: biblegateway.com
+search_queries:
+- ''
+- Japheth meaning Hebrew Greek
+- Does Japheth appear in the New Testament?
+- Japheth biblical trivia
+- Japheth art prompt ideas

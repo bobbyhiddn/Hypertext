@@ -1,0 +1,12 @@
+=== Generation Log ===
+Timestamp: 2026-01-26 14:27:03
+Phase: imagegen
+Target Rarity: UNCOMMON
+Target Type: NAME
+Fix Mode: False
+
+Style References (2 total):
+  [1] templates/example_cards/014-david/outputs/card_1024x1536.png [UNCOMMON] (TEMPLATE)
+  [2] templates/card/v001/uncommon/template_1024x1536.png
+
+Prompt File: series/2026-Q1/cards/022-japheth/prompt.txt
