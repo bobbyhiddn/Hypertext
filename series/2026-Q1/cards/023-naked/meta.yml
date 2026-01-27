@@ -1,0 +1,45 @@
+number: '023'
+word: NAKED
+gloss: Exposed; without covering, defense, or disguise; striped of outer garments.
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A heavy, discarded woolen cloak lying in a crumpled heap on a dusty stone
+  floor, with a harsh, bright light shining on the empty space where the wearer once
+  stood.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player reveals their hand. Choose a card for them to discard; if they
+  have no ADJECTIVEs, choose a second card for them to discard.
+ot_verse:
+  ref: Genesis 2:25
+  snippet: And they were both naked, the man and his wife, and were not ashamed.
+nt_verse:
+  ref: Hebrews 4:13
+  snippet: And there is no creature hidden from His sight, but all things are naked
+    and open to the eyes of Him to whom we must give account.
+greek:
+  text: γυμνός
+  translit: gymnos
+hebrew:
+  text: עָרוֹם
+  translit: arom
+ot_refs: Gen 2:25 • Gen 3:7 • Job 1:21 • Isa 20:2
+nt_refs: Matt 25:36 • 2 Cor 5:3 • Heb 4:13 • Rev 3:17
+trivia:
+- The Greek word 'gymnos' is the root of 'gymnasium,' as ancient athletes trained
+  and competed without clothing.
+- In biblical context, being 'naked' often meant wearing only a tunic without an outer
+  cloak, rather than total nudity.
+- The prophet Isaiah walked 'naked and barefoot' for three years as a dramatic sign
+  of Egypt's impending captivity.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
