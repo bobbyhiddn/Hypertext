@@ -13,6 +13,7 @@ words:
 - KEEPER
 - MIGHTY
 - MULTIPLY
+- NAKED
 - NAME
 - NATION
 - REMEMBER
@@ -26,6 +27,7 @@ ability_patterns:
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
+- choice_conditional_discard_draw_type_title
 - choice_draw
 - conditional_discard_draw_type_verb
 - conditional_draw
@@ -150,3 +152,8 @@ cards:
   type: NAME
   rarity: UNCOMMON
   ability_pattern: add_hand_discard_look_top_tower_type_name
+- number: 23
+  word: NAKED
+  type: ADJECTIVE
+  rarity: RARE
+  ability_pattern: choice_conditional_discard_draw_type_title

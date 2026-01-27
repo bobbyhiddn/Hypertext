@@ -1,0 +1,67 @@
+number: '023'
+word: NAKED
+gloss: Exposed; having no covering; vulnerable to sight or judgment.
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A discarded, heavy royal robe lying in a heap on a cold stone floor, with
+  a single withered fig leaf resting nearby. Stark lighting, deep shadows, sense of
+  absence.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Target player reveals their hand. Choose a card for them to discard. If they
+  have no TITLEs, draw 2 cards.
+ot_verse:
+  ref: Job 1:21
+  snippet: Naked I came from my mother’s womb, and naked shall I return.
+nt_verse:
+  ref: Hebrews 4:13
+  snippet: All things are naked and open to the eyes of Him to whom we must give account.
+greek:
+  text: γυμνός
+  translit: gymnos
+hebrew:
+  text: עָרוֹם
+  translit: '''arowm'
+ot_refs: Gen 2:25 • Gen 3:7 • Ex 20:26 • Isa 47:3
+nt_refs: Matt 25:36 • 2 Cor 5:3 • Rev 3:17 • Rev 16:15
+trivia:
+- Hebrew 'arowm derives from a root meaning 'to be exposed' or 'bare'.
+- Biblical nakedness often symbolizes vulnerability, guilt, or a lack of spiritual
+  covering.
+- In John 21, Peter was 'naked' (gymnos) meaning he had stripped for work, not fully
+  nude.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwn-tCjDhIpUMMlCgagNCMOSopzgmoc1OZAM_ZepnFNTmefJQ_vV_5ROepaG-DJ1vGtI-40gl0odRaWhHNZUq3hEZ8tRaYSvUboH7kSFWBXgL6Uo65NdXeLNCwLfmyUCUDKJNkJW73edNHXcA=
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu7igwH6yP8gEpQYpO1Z2nNmU5YZasIfGMUioivpBmGVUHkpbtc-C_beJReMy6ejewNb3TepoMnBlEmUekTlCzrF9pQWSUd3ZCBM1wgjHmCuOvG2GBq2gTrnlIioWkS0U9fqa8LB53wqhQsLKHaITFTSBaxnmH4v9vjS1hYItYJoQ98Dbp4mQhIhA=
+  title: bhlpmedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXL0W-P9XJu0UsbskIFXmw6ctGZDCF0KP530V5VlUecVD7JQM0kM6658i8P_kyTMtb2TInLtGjvUvYAGsR3ihoWH1kmihafYt-hfbUaewQv0VP45z6fFNYtPPSirY3FxfUV-8MryRd
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOpg2HcXBfg6xZcnSIgNioQnIEg9rGOEHkrAM-CVc-dG4ioqg4XcM8d3Pcqa4mvmpTVGS-QkyruXkAL2u8sMcJjmA5rKe5J3UcAWig2YqfYkzOpYhExcmAUeZYzI8-_ju_1NGfibfRV63hzr7CPZbbMPmsw3gBMQ==
+  title: journeythrough.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWYPfUWjbR5wVryMjMbo_JugnRPdjCvFOCJuupIAsBAbMI-ZP1EF90Z5RQqqidoPUakg3HKEm1t05P8BuUp3-SX08lQooLjtcKOWPdN5_2uxh_-88tCxKQp047f6_3ZZmKDr8Qqhgc
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXAvqmzc1JZl2zYpuDyel-_krWN7h38dtZj3PcBcSsW-KFGQnH3E9X0WWtdwTQH82YjdhBavBN7lZ5o0P5Xd1JpYmeDcywtHMQH9SE1MeBJAe5o0-PuWxaF5izVUPMjNFoqIB--klFNRA7wLeo9qBlQ9ehwJ6Kg2ByynssGkCrGyia8HYFS1VNhP6RSesdYGblHX027uwt--_M1Zsk
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlDnaY2IHblXCwOQ02Mto9Dc2YiISTEg_2YJwsH-DzpiIPGLejlIqUmsvVeVIvBNbYSUfktxf35g89K1UGQzi7PHw_imvwaAZu_uLBoZ48IrMFVlvfDYN8Nh9z_VThKj_-DJ_KCxB9A6c8rg0kFMU-uF62AwU=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdQMsPGfeov-jHSzbqveU76SWdnmO-d1gO3HGdDLd6KvKE4ugysEm9PAC2NJSSU52OA4psRDC55hgISLAvbsUL3Rbh8_HfM3f-lPXAl1sMB7EcBx7XZcb47Wnsx89s4kOEBUj2enFBLsdrvIkp5UTWalQ4LFvX-1npRuav5srPaoW7V4v0n05lGiMSqxIzr4ZZ9dzxHPV5y1bnwgZAM30mfkdsZrV8RWwPNZZroZVAkiL9JxKOiPJwV-ufRCri08Z55mQwmMzeYR6j1oEe4iObPmzw11Igbe8LNVac6ma7IEc3Ow-A05_bqXFRBuoV0MT2XeA=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkl79Dz5wIYjKZOAChYwZAECeRufaRhm8Xb8z1R2Ct68jhZ5jXbz6LYQKRhAwtiRnqCwzRODpdARdsnL4q11n3xv6A56MlD7I_nJfhG_tA92XkfmEOLBG53-s5bik=
+  title: biblehub.com
+search_queries:
+- ''
+- hebrew word for naked genesis 2:25
+- job 1:21 naked i came verse
+- biblical meaning of nakedness
+- greek word for naked hebrews 4:13
+- matthew 25:36 naked verse
