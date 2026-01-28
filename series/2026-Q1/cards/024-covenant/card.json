@@ -1,0 +1,292 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "024",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "COVENANT",
+    "GLOSS": "A solemn, binding agreement; a divine pledge of relationship and faithfulness.",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "GLORIOUS",
+    "RARITY_ICON": "GLORIOUS",
+    "ART_PROMPT": "Two weathered hands clasping firmly over a rough stone altar, surrounded by a glowing, ethereal ribbon of light that weaves between them, set against a backdrop of a parted storm cloud revealing a starry sky.",
+    "ABILITY_TEXT": "Shuffle Sheol into the Tower, then draw cards until you have 7 in hand.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Jeremiah 31:31",
+    "OT_VERSE_SNIPPET": "Behold, the days are coming... when I will make a new covenant with the house of Israel.",
+    "NT_VERSE_REF": "Luke 22:20",
+    "NT_VERSE_SNIPPET": "This cup is the new covenant in my blood, which is poured out for you.",
+    "OT_VERSE_LINE": "Jeremiah 31:31 — “Behold, the days are coming... when I will make a new covenant with the house of Israel.”",
+    "NT_VERSE_LINE": "Luke 22:20 — “This cup is the new covenant in my blood, which is poured out for you.”",
+    "GREEK": "διαθήκη",
+    "GREEK_TRANSLIT": "diathēkē",
+    "HEBREW": "בְּרִית",
+    "HEBREW_TRANSLIT": "berit",
+    "OT_REFS": "Gen 9 • Gen 15 • Ex 24 • 2 Sam 7 • Jer 31",
+    "NT_REFS": "Matt 26 • Luke 22 • Gal 3 • Heb 8 • Heb 9",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'berit' implies 'cutting,' referencing the ancient ritual of walking between halved animals.",
+      "Greek 'diathēkē' was chosen over 'synthēkē' to imply a divine ordinance rather than a mutual contract.",
+      "The Bible outlines five major covenants: Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Hebrew word for covenant berith meaning",
+      "etymology of covenant berith cutting",
+      "Bible verse Jeremiah 31:31 snippet",
+      "Greek word for covenant diatheke meaning",
+      "Bible verse Luke 22:20 snippet"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIpSRhr_QhFPVonj3WGAuObLLx-MKUVOlmR01k0z2L44khV6M410Il2vhHL0fgyEfpTzF8xXcs6SIMjuysn6FMkAXmfrWgV28uWK8kAGcN9g7COV8BHQKmbjMQnxvr0ZH-b_HtJPXzJe4aMzrcGa5DSvs3be6im4LyLgbvVioz_JfNSa9EwMO_PA==",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8EJDIHjUPajnvGNZ9Qwalj9HfrienTzswOyimrVw7TM7uh0BTf-1uuvYbU24Mo72DC5ripoJlEjAG_jHEZQPPt7oWQi_ydVh1mpM4UBPIjq5x3y7fVG25ov0uVxZXDEbADg==",
+        "title": "biblia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhG0iZy4T1OC8ZT7Byu6rLic9v27iDT-YQOHe-O76iWFIhm0Yh5PgRo9LhmDiP4CqLIlMkPxGWK55NPJ8QGlOUy8BynsxR0zPfBDiEBjUGOkKTLRd0jlGEJZ-5_kPeTx4K-UlSnyJEHU1iolUWHjl68hpYNhGYX1Z2PsB4c2HyYBZtPGLPgsJvnOev4W-Rzh10DpCYs0Gvuf1c7YQLWjRgMx54dXsqq8_OZQwT5Ih7RDs-HZKNINmjlPVasbCmNBnpkZ_U",
+        "title": "tyndale.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5XK9AAxdR4WRdnH57JB1Lg1zXYIKgLmbGIHUVn9xbzLng_yb5pkrxccRk_807Alxba_Su40UK5___3WgFMcA2ow7wpxo0PA1e4xQhnrG1uBa8njjI-Th3F_BRFyY4CJCe5CklxPgjA-iUtw==",
+        "title": "bibleref.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxNkJH0jbukfrPQ_zaKIkMKufGXE9cxMOFZTj-zexbfK9cYR8WJZ_U55G5oWPC8YBZsGgLatJFLbVMxRxGspaAzk1030AEevjCPWhatMSHhZsPD1ym3ro2P023zv_FKWOCDaP1JTfvbqvljvF8mwvvgukcNi_4yLjcAjTnMpeuQfVzQbAeBlrJ6S-Qcw3dV8phTdPXfCOb",
+        "title": "thesacredfaith.co.uk"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHCI3zQjQ7AYZytiMvWcMfoMmdQX0-eBKYY8qOOWw8WVdhhulPMkipxsGvJC3KzCxurTcM3k51JfONestf9oWpKJIgtp9Ua19YQ0gz-0gG9d3gx32mcFWOttvXDeFNbGMOKLcMiBwqMNTd",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqfg7T6uq1JRtklFLBMmXLtPR9F8kpYg2fqrdnM0iAlx1jZYI_Fu5FUKrr-FV6Ez6wHQX6esZ1_YAhJoH91bNL3-UVU8lw1ktSZzzt1tBJQfKHZOvSayz2hwiFkJrWN-anlEF9yh0S7SOSREhJmZ9xMSMHiV06CKwemi2gFA3MOFU7YoUq_6NQqf7bLXApZg4=",
+        "title": "wordpress.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETVNnrSIyMvgVcmxlZuWcwtNgMpQAbEvyK_ccBVIHdrKn7uL9x_ENreuRdftYDeCWwZ88_1gLzPKlrVcooWEnHvvoyCV5Oj5PASC_V10TplZlhv8JqEoM4Kzhk_w2M",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4zk0bYo1S_2S83MUQtMj1qvPQH6JUFJHI13Vm5nzklRYYTJD_OqnL_m7HpmULoyXLtRMxyKvG833poWDZI2XMukd53RtvZ81outKDiz6nIlnOupCKy8SOdvvzd8pA1624WwnGtQh2gCE0hqc=",
+        "title": "preceptaustin.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVJfjefxVd0QplwES4bAhTLRe7CGMP4x5GbUdb-T0a-RZJXM-RWK-zGqLb09LN6GQbGSLHlcsGd7V4uVeosDwmT73QuUljqplWoCl1RCd0R_TQh7XeN1hy7V-v8Pb9W9xvNa-W9Ttp-sbpRcbt1fQ0",
+        "title": "christiananswers.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7pWs-6sQnuXcM_60ifNjCanjxVjkQPhH3iD65_5qVI5U5qfIu7msWiEyMYgG480RsG982aVq0zJR5FnHeqTom4Or2KkrnyNtGEm7lbTiMePLuYJqGL5npPTTMas6RgFN-pK_gMygW0q1TnnnmMfR_NNFRHb0Tx3-K_BJbu6V9bQwR9NVhmiNATB4RvhfNMbHgHneiT2NVZk7aH4ToC-BuAO5Xsg==",
+        "title": "ldsliving.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8bqaPomoh29EQdLIjJ_9nO_EG8eDcEJ7TaXkeZ4gYFnMDHXoKe74ma0jnRVoQxTgELSpiixx3V1sKQOwMd-qQohV_rlCTHHucf2wPubJurZE7PU0FhGf7t2eGzBxF--UBjKxx8JtpiGNuFRnJPuiGfclHYMrefAqdoMVbznheNhfnGJnFTyL5vLJY51RlTmMM1fQIPUttUdPa",
+        "title": "vojisrael.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGx0yS9sFu9UuW9nCP17dNQQu5ep3Qc0qCTqUvsi6qndOlO2eXf33oLY1P18OmTfRdDggG7oMgM9PrE3h166MCNxRf_EAxPicFIgPV09TUOQy7M_D56bXAwQSO97YqN4187ChxkurKEg5sz2T2CYixbnsPI1mE=",
+        "title": "ezraproject.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzUSM7CvRU6TePBtYLbAZLkKOYBE7UZDd-SL4sg5OTuziC9uk7sQD5NTchM58fJ6F2PJVrEEMeqkhGzbTfrNK1gccvilg9T2DzwT6sAenjgqvacmn25l2NySDp7-pcalN7yuHqLv5FnALN",
+        "title": "bible.com"
+      }
+    ]
+  }
+}
