@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #024
+WORD: COVENANT
+GLOSS: A solemn, binding agreement or promise, often sealed by blood or oath.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 4/5 filled
+
+ABILITY:
+Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+
+VERSES:
+OT: Jeremiah 31:31 — “Behold, the days are coming... when I will make a new covenant with the house of Israel.”
+NT: Luke 22:20 — “This cup is the new covenant in my blood, which is poured out for you.”
+
+LANGUAGES:
+Hebrew: בְּרִית - berit - Gen 9 • Gen 15 • Ex 24 • Jer 31
+Greek: διαθήκη - diathēkē - Matt 26 • Luke 22 • Heb 8 • Heb 9
+
+TRIVIA:
+• The Hebrew idiom 'karat berit' literally means 'to cut a covenant,' referring to the dividing of sacrificial animals.
+• Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant.
+• Greek uses 'diathēkē' (testament/will) rather than 'synthēkē' (contract) to emphasize God's initiative.
+
+ART: A beam of brilliant light striking a stone altar and splitting it, with a spectrum of colors emerging from the fissure; abstract, ethereal style, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
