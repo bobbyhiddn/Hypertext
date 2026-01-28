@@ -4,6 +4,7 @@ words:
 - BUILD
 - CITY
 - CONFUSE
+- COVENANT
 - CREATE
 - DESCEND
 - EARTH
@@ -40,6 +41,7 @@ ability_patterns:
 - sheol_tower
 - sheol_type_noun
 - sheol_type_verb
+- type_name
 - unique
 cards:
 - number: 1
@@ -157,3 +159,8 @@ cards:
   type: ADJECTIVE
   rarity: RARE
   ability_pattern: choice_discard_draw_stat_lore
+- number: 24
+  word: COVENANT
+  type: NOUN
+  rarity: GLORIOUS
+  ability_pattern: type_name

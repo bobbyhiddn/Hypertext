@@ -1,0 +1,71 @@
+number: '024'
+word: COVENANT
+gloss: A binding agreement, compact, or treaty; in Scripture, a relationship established
+  by God with His people, often sealed by oath or blood.
+card_type: NOUN
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A surreal, glowing scene of a smoking fire pot and a flaming torch floating
+  between divided halves of a sacrifice under a vast, starry night sky.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Name a card type. Target player reveals their hand; take all cards of that
+  type from their hand into yours.
+ot_verse:
+  ref: Jeremiah 31:31
+  snippet: Behold, the days are coming... when I will make a new covenant with the
+    house of Israel.
+nt_verse:
+  ref: Luke 22:20
+  snippet: This cup that is poured out for you is the new covenant in my blood.
+greek:
+  text: διαθήκη
+  translit: diathēkē
+hebrew:
+  text: בְּרִית
+  translit: berit
+ot_refs: Gen 9:13 • Gen 15:18 • Ex 24:8 • Jer 31:31
+nt_refs: Luke 22:20 • Heb 8:6 • Gal 3:17 • Heb 9:16
+trivia:
+- Hebrew 'berit' implies 'cutting,' referring to the ancient ritual of walking between
+  severed animals.
+- Greek 'diatheke' means 'testament,' emphasizing God's unilateral promise rather
+  than a negotiated contract.
+- 'The Bible is structured around five major covenants: Noahic, Abrahamic, Mosaic,
+  Davidic, and the New Covenant.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7nY4yecQoazXlwpiFni1U45UCALY--t2KplRERQalsEdDwdtIC0EiJH0pvlmxUHQQ1R5fiN-7kyRKyPprJg2JEmUv6h0qNy4YhFcGvrOW4HFI1KHVni4FAAzw4QOq
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCEnFKmtFUJ5cenUXrvv3rfbyVxsDXk45UQZ8Ts1AZesFEi8A41VyO9oFSC9J-sHGsCqRdgUgyM5Cl1bLdgsu0djusCXKhdATZaPsE56uJz7KPPWlhaxS5XaI8a4wBmya6xKKfIWIMB-y4anHBcwl-Id7X48o=
+  title: ezraproject.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNaEFWoAk7xuU_5Kx7tBNmcLCQFe6eCyrAx-46XH0GYISVX1LCcw69ISf_zKmgenWSRMHzcsOfBuICmmQxsPLGC_hXuS-n9wTdgnv8PX-mtnvczCzVxL5TmWXiABZ3FG3VcSSQN63Jdqlm2B9jfQBZpYS7ZO-8-8PnmA7pV9pgb4sLL7Vwm-nW58TmDcBGi8Y=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKaoQCkPJvzWa8hbK26rdfRmaeK0WQtryOqFIkPrk0_hR4G9yVjrhqB7nWEy5-sEuxYcUb_dGbtkwX4fcDv1_XUscIVBUJsDleDn9bhHHlJc09IJ8kqHSamCi-XaashhkhozEfp3CiCmjkpe-xSW0=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjwcDGSQHn5eHfitZsPKb7LHulikWz-gxvbXzjlZhB_Db2xIckAodUFwq9-KdU9_aOTEYXokeTcQ6ZorC7Crc0UjePH3MDqyjDsnU9h_gz7qguwGscF7FaODv9aMbj69_64cwtJ_ESI_r4WouIRiKdSxf6WiYo7ighPH1SXoxfvU1T34UshHmNjgOIKSbeGor8ieW7cH2_eQ7Q-Q9pf6Mny60ZTpBvhNYEkYRUjAHy8sTKWJVq2vT2ziWDhZ0fc-4diUWA
+  title: tyndale.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt7zjKPZM0uyAk5qMDwmdSBmg69DX5VwLxHDXec12VUx0XZNGU8wT4SRtL8-pTXveaEDKX17XD5T1mJRyjNd1jX7myHR3SEuyTDP2VnfHlcKg_uRcxQEzZ8NaefPpd2Qm9VwkZHYUDR-4sqlIk-oLzgNsQdhFneOGNutY5u7VttOtcNdaggTWwKWm0KqK0s_KtFA==
+  title: crossway.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7AK19NHs4SPMTVUTdG494tYbm_UW-FJkD9s9_0Na3aTbghJieP8iJuAoW48jzqxCvmQEXVvNtAFg4OJfDzyAoDHzloYNrsPXlBYcr0PBJGX-f1grsWDXLLcdKm8tYUzrIBDLpzTq0KjfYXsdmkWBfweYr2QrMXYLwqE-LU9lQvbDJsBEXjfjaAE6x7MyojSp5sjqpziu_4bT9
+  title: vojisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbGfHQAq0aT5x8t39DuMA--iQWg_ldAfzYiZ_IItSGcy9OjnOk5zrc-tssXO_HnKd7z9rpvtnsG9WYiMLX5la6HSsDO2KYpO1FT8k1fM8KDS1Hd5sWbLUe1ozVfMhKn52KJWJhM0tHI2S1QCePKck=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwf0AfD4tqLqpup_8dWK6ZRT3ygDy864EFSdqq2eUap8r49OVJ50_ds5qxfV4o4omXRwUw22mS0isbLzsk1aPKZ7odFLTG4f0EyKkM9Ow9JYQfuKWHUKg5PYrACZzUI4QG5fqZDKsdSrb9Wl4=
+  title: ligonier.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcuyV6DEbvOivipspSicm5qJutoUsoZv7_pxcwlRS_sZcaWvXCPZqa_7Zj7q-Ffe13J7sqK42SYWC7ZVAZUshh9FFmQ2SWeaybQEfK2SCE7qg6nXO9yCfdkcQfkJe7PzUjmdnk69m1-3Iauws=
+  title: preceptaustin.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBWjrWNR-dtnxKNka0vVsJOePBUv08d-j85ZBQAoi5SnjjNI7ZhddpeJaPXB434RuskzidN_pKKFVIZzQN8_wx-2D3Jfyex_3keKSS6fba62TAAyf3MBta6kBwcIOyz6b-9lsINuDg2Uc=
+  title: bible-researcher.com
+search_queries:
+- ''
+- etymology of hebrew word berit covenant
+- biblical definition of covenant
+- greek word for covenant diatheke meaning
