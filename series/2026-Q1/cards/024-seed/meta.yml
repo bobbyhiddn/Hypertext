@@ -1,0 +1,45 @@
+number: '024'
+word: SEED
+gloss: The reproductive unit of a plant; offspring, descendants, or progeny; figuratively,
+  the Word of God.
+card_type: NOUN
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A single, glowing golden grain resting in dark, furrowed earth, with luminescent
+  roots beginning to spread downward like veins of light, illuminating the soil.
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Discard your hand. Return up to 5 cards from Sheol to your hand.
+ot_verse:
+  ref: Genesis 22:18
+  snippet: In your seed all the nations of the earth shall be blessed, because you
+    have obeyed My voice.
+nt_verse:
+  ref: Galatians 3:16
+  snippet: He does not say, 'And to seeds,' as of many, but as of one, 'And to your
+    Seed,' who is Christ.
+greek:
+  text: σπέρμα
+  translit: sperma
+hebrew:
+  text: זֶרַע
+  translit: zera
+ot_refs: Gen 3:15 • Gen 12:7 • 2 Sam 7:12 • Jer 31:27 • Joel 1:17
+nt_refs: Matt 13:31 • Luke 8:11 • Rom 1:3 • 1 Cor 15:38 • 1 Pet 1:23
+trivia:
+- The Hebrew 'zera' is a collective noun, used for both a single descendant and a
+  whole nation.
+- Genesis 3:15 contains the first biblical prophecy, promising the 'Seed of the woman'
+  would crush the serpent.
+- In the Parable of the Sower, the seed specifically represents the Word of God planted
+  in human hearts.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
