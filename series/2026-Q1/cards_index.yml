@@ -10,6 +10,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- IMAGE
 - KEEPER
 - MIGHTY
 - MULTIPLY
@@ -24,6 +25,7 @@ words:
 - STONE
 ability_patterns:
 - add_hand_choice_discard_tower
+- add_hand_choice_sheol
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
@@ -157,3 +159,8 @@ cards:
   type: ADJECTIVE
   rarity: RARE
   ability_pattern: choice_discard_draw_stat_lore
+- number: 24
+  word: IMAGE
+  type: NOUN
+  rarity: GLORIOUS
+  ability_pattern: add_hand_choice_sheol

@@ -1,0 +1,12 @@
+=== Generation Log ===
+Timestamp: 2026-01-28 11:12:04
+Phase: imagegen
+Target Rarity: GLORIOUS
+Target Type: NOUN
+Fix Mode: False
+
+Style References (2 total):
+  [1] templates/example_cards/004-glory/outputs/card_1024x1536.png [GLORIOUS] (TEMPLATE)
+  [2] templates/card/v001/glorious/template_1024x1536.png
+
+Prompt File: series/2026-Q1/cards/024-image/prompt.txt

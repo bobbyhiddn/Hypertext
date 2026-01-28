@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #024
+WORD: IMAGE
+GLOSS: A representation or likeness; a visible form of something invisible.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 4/5 filled
+
+ABILITY:
+Choose a card in Sheol. Activate its ability without paying its cost, then add that card to your hand.
+
+VERSES:
+OT: Genesis 1:27 — “So God created man in his own image, in the image of God created he him.”
+NT: Colossians 1:15 — “He is the image of the invisible God, the firstborn of every creature.”
+
+LANGUAGES:
+Hebrew: צֶלֶם - tselem - Gen 1:26 • Gen 5:3 • Gen 9:6 • Num 33:52 • Dan 2:31
+Greek: εἰκών - eikōn - Rom 8:29 • 1 Cor 11:7 • 1 Cor 15:49 • 2 Cor 3:18 • 2 Cor 4:4 • Col 3:10
+
+TRIVIA:
+• Hebrew 'tselem' relates to 'tsel' (shadow), implying a representative figure.
+• Greek 'eikon' is the source of the English word 'icon'.
+• Ancient kings placed statues to claim territory; humans are God's living statues.
+
+ART: A pristine pool of water in a dark cavern reflecting a brilliant, starry galaxy that is not visible in the cave ceiling above
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

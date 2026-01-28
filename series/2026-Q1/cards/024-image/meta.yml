@@ -1,0 +1,72 @@
+number: '024'
+word: IMAGE
+gloss: A representation or likeness; a visible form of something invisible.
+card_type: NOUN
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine pool of water in a dark cavern reflecting a brilliant, starry
+  galaxy that is not visible in the cave ceiling above
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Choose a card in Sheol. Activate its ability without paying its cost, then
+  add that card to your hand.
+ot_verse:
+  ref: Genesis 1:27
+  snippet: So God created man in his own image, in the image of God created he him.
+nt_verse:
+  ref: Colossians 1:15
+  snippet: He is the image of the invisible God, the firstborn of every creature.
+greek:
+  text: εἰκών
+  translit: eikōn
+hebrew:
+  text: צֶלֶם
+  translit: tselem
+ot_refs: Gen 1:26 • Gen 5:3 • Gen 9:6 • Num 33:52 • Dan 2:31
+nt_refs: Rom 8:29 • 1 Cor 11:7 • 1 Cor 15:49 • 2 Cor 3:18 • 2 Cor 4:4 • Col 3:10
+trivia:
+- Hebrew 'tselem' relates to 'tsel' (shadow), implying a representative figure.
+- Greek 'eikon' is the source of the English word 'icon'.
+- Ancient kings placed statues to claim territory; humans are God's living statues.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL0__VIh2fEmVUtdAEgeeRB1dR1nofV0r4GWrwKSkUzze763SjJHrGPoD2qgLLCRlGfmyog-AmZw1WvZq-t5eGLNCtS2-Z9PaVLZ3xVR6AiJ3QnOHGguFaeIC5ZmbtrA==
+  title: skipmoen.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEysxebFfzW2RrUhPjJDfpX0Zk8Ak36D-Aq_A0c8pLI5CPoXJK6Wt8b5CV9pOdum1lElLUBAU0-lG2mQn9mNukL6hFuRKSKn08jdcHHffcJkM-b91NsRQEdV-3fwMG2zIWrwNKR
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG36wYm07E_cxFticqr1vRTh2SOyhOEeiBB51Fnw3WglUkjn0t-PmztitSuVO8AXrOKtrWoooWgwbR1m3t1g_9oxVsjrErDizLKWdS3u8GCKv4U40baZPXmw-uEJebsXZ0X9O277IuTQnXQNqEHwQDSQsqj
+  title: qbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuYY42OjGxeIP-FScMvmIGlt9pL1ppDe2HwG8BalV__hmf7EFPGtoOKsUjCghOoagUvbzX5i19hyS_WUw4I-x_ILGxzKA-c53GPhU5TCOmjp_EBpVNoslIn-Le8iGebj5VjDKLQlbrz1dyUvB7hhQF_COoXXsKGGzGnoaZZ3uyMSjrDoZjPlnRyKzJArKfDz5I-CmLEA_xwCC0KWa5o0vjO3dl
+  title: focusonthefamily.ca
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDQcwyYJqZo8poNAwKhVncHORHWgpK-U9AjLZcJ3t6Hl_JsKR4QWSnLo6Jz6eeKKryn0pU7HivexJCdJIxiDh7NNK8A6ErRzNQvFc19DrMUs-5NjrxBPuUHbT8O0jcpDnlfmcwreu-FmfKXQ==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHm5BtA0n5Yj3emgSL-e_-lBS7DfWlna7HZkz7UMYB0icPDabpWs6VrK0-XJHb3nOdsGykASKYpKq_sb697nvP2pu8ze_AY8i93p_kSXDpzDSkbqhxXX_AjRHDnF_vn7j8u7Vmq9ZqzKjbL7mv_RUkmGxpG_Qv_w4nVa5fm2PJ-Uwn7gwoSPDvmTYA11Hc7UNMpjx4BLGt_bnzTy93l9GhDUFh3Kad2a8kSKSiVIsrIjkycRxAVcyI3QHSDHjkevE-TO18_Jn4ETeCYaIpss2XIXs-gjx4ykBSOANLvMgolKNOfVR1VUbQwNDxgyzXMI4ErAC_6PeY2kjXH3zvWJfoLpX_atiKXHBbfsTW9P9yIoRY9Q4W3
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoB9hMR80FMcLBNRsI0eOPy0Vc4yIYb9UsPNqYyi9F2HFly8ySHLq3zY-l0riGf8zR_IfDZ5q8fgLIAnyVNBfgS6-ViIriiX_LD9OPdy27uTK-BiQQcvjXeBw7c3qWAODAOsPCC6ojxYZvFxPLOH_P3lWMRkmblPVdEwJkDY4TUAa6iLbdyms=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4wY-uNWn4JFJ9vrSvu96cRUAAhZx-Mc2Dh-oFzdMdeBEm88h-mvTOQmdXazX-RQWxqLk2Xn2bRgl1QjccHdMMLdIa8a95zk-AttcEBqT6heMh-vrMHWNhvsULEbWWJHdS6tBmOBaldoXhFkHeS06hFbZdee6iStI=
+  title: kulikovskyonline.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzRCZQcQtV7wJOVdCD7lDRGpxAEHiF3_IIzxLUiJb6Rxg2WSxYhcY3GBYSPvcCMhHG6zSTH7N4KdKywG-Rr7Xacodi94kuFyhGlFefy7TvaKxBwrT_1YxJET_nG-c=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlHeEw4ToIV3x7wRUDowy9DLGlGKqNUKsdsqMfhaRHdnq9Ya5YGxXMMRFEKoRNs0OGw-fP121WKsYJcD8UWkTVCo3DBp1ciT0PgQi-kpakDosjT5JoVtRD7vIKciU3kZUtIF5_OttOWA==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZDUFy8aEksMtKdSOoEvDK1eT4sJej_bKzMADy2R6UfXTbZYVKLbmA4t-FAIkrJpgreWf5gy1NJCl7wfg5zzNJUWkgBnN_sOF9WCEV8Q3IeE1YgQhOtpIh5JJBh42lT_t4sENchj0MlCEvXS5QWjgP2JbRoa01TpOK9HhI6-30arN94SBaxB6HbQ==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8t0NmLpp8-mvbPw2CAXGRF88D8Gewc1cLChuhBUaOrfhXGRxS5hZBCxn5fV7a9Rk7U3TvJwyW1jBvSAME-uA-T0QK0U4drpOXxvfBM1mOs-iu1K2gbjvLgFOU6w6ppzx0PaI_4ev1ApqtcSXkwG1bZcYAU8d5ii_JHe5CgkM1JkQC7rXLUw==
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzq5cGGVVmwj-rXo5APG5caCIfimLdVhpl__z_F-UGG-6W345tFlW_JCA_aczTrPYBrVUvKORpkm7nvZPepP9MV93dfdi10ewwuCHjjkuPbRv5Hi4o6uHYCShHUst_fD7pzYR0iYbw750zRfihZMcX8Hgo473iyUqVoB_HtbaEow==
+  title: chabad.org
+search_queries:
+- ''
+- biblical definition of image of god
+- Hebrew word tselem meaning and etymology
+- Greek word eikon meaning biblical usage
+- Colossians 1:15 greek text
+- Genesis 1:27 hebrew text
