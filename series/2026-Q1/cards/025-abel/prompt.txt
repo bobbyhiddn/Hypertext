@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #025
+WORD: ABEL
+GLOSS: Breath; the second son
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 2/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card. If a card of that type is already in Sheol, return a card from Sheol to your hand.
+
+VERSES:
+OT: Genesis 4:10 — “The voice of your brother's blood cries out to Me from the ground.”
+NT: Hebrews 11:4 — “And through his faith, though he died, he still speaks.”
+
+LANGUAGES:
+Hebrew: הֶבֶל - Hevel - Gen 4:2-8 • Gen 4:25
+Greek: Ἄβελ - Habel - Matt 23:35 • Luke 11:51 • Heb 12:24
+
+TRIVIA:
+• Name means "vapor" or "breath," symbolizing his fleeting life.
+• The Bible's first martyr and the first shepherd mentioned in scripture.
+• Jesus described him as "righteous Abel" in Matthew 23:35.
+
+ART: A rough stone altar in a grassy field with smoke rising straight up into a clear sky, a shepherd's crook lying on the ground nearby, faint red wildflowers growing at the base of the stones
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

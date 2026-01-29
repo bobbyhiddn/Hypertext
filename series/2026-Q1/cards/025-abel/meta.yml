@@ -1,0 +1,68 @@
+number: '025'
+word: ABEL
+gloss: Breath; the second son
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A rough stone altar in a grassy field with smoke rising straight up into
+  a clear sky, a shepherd's crook lying on the ground nearby, faint red wildflowers
+  growing at the base of the stones
+stats:
+  lore: 3
+  context: 2
+  complexity: 2
+ability: Target player discards 1 card. If a card of that type is already in Sheol,
+  return a card from Sheol to your hand.
+ot_verse:
+  ref: Genesis 4:10
+  snippet: The voice of your brother's blood cries out to Me from the ground.
+nt_verse:
+  ref: Hebrews 11:4
+  snippet: And through his faith, though he died, he still speaks.
+greek:
+  text: Ἄβελ
+  translit: Habel
+hebrew:
+  text: הֶבֶל
+  translit: Hevel
+ot_refs: Gen 4:2-8 • Gen 4:25
+nt_refs: Matt 23:35 • Luke 11:51 • Heb 12:24
+trivia:
+- Name means "vapor" or "breath," symbolizing his fleeting life.
+- The Bible's first martyr and the first shepherd mentioned in scripture.
+- Jesus described him as "righteous Abel" in Matthew 23:35.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpIqbzvBdAI-TLpN_oKgBj9ldusbkRcsVjJY5AtoVBbXx1IsdWIAhxNGiQxaOo0XBZUYjnIc8DpEDb_OYRvP1F3cdKIi0WwaeRQp7UE2nLQP9f-JLECeEa2XHFhoBIxgm9gM69xcX4W6LoXhBWgiI=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy790hjUD4jWT3wZsnqoQM1jtR4WxSM25kQaZBEV6gFX4isT-cZ5Ps9bGC0HXSd52F71YsqKXVNpPn0HH3Q1wVlroZvgXFp-kiHLiAM-WXgDbRJ3JOMDNIoKiR1yu_iAqQVSbzbz_QJezp715nfCi3afyNii5y_6UTGl5X-LIo
+  title: harvestpca.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4u1JBgPgDQ6C0ekHOhm-qOlCqWx27HUakeq97azBx1qLjeHe7DN0GV4n8OWws5IiUexNMC_kdpkA3Al4kHfJyPFTvbJ4TFuxHBWo2rncAQBW6B3JsZsixJAhj3DyAiMSYspN-BTVDxiUjXTMnYTotWB45E1Eh9elyBs5C
+  title: jesusfamous.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFii6Ljut4S5_IZUNtbPHi6__egCuS8bhkWk35Up_D5xxfwALheCu-TllZkFmHiqRATSMrP7x_nxOFwJafdovpEwSEYT3_5kOuCPACEOzkNHbQrCxvDr3_3dCLVphC0Lw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF65CFcJHTs789GUqPWpnCfejk7rcldBw-sf53WnMepb-QwxqQcJ7inuA4Z4_03bV94NTB2sJm_P7S5QhSBWupNQeTVWfT_xbzQtqDCdz4NVUrJdiqmb3rANGbpx72fmUmv2AkOZnjSa_6v7g==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP5EUAjuyqn0LXojTs7FAElSmt9us6auz2rwHMl_snAycveAoyf539JfR3Qu8Sxqck-noXqlbUjTB9afHuppthHf-HcGGbT_KQKHYeWNCTXlH-KOUErN_Z-iSlNfw-UXDueh3JnxE=
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhlV1dC0gqdvsS-TdgS4fqfJUVL02vjRMijWALNNg0jKm3D0YFZXXhFtZ4DoGg9PtzR8kxaQsLoT7qy4Exx_JWhUpwywU0Hpn796uXpQ3_1MDjv8IKGKTRm7dq9m3cgcjR9zTIV6f7t8WV1SKVXRTyDYfsJThB9Oj_na42wfxJP_i72m_X_w==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGbJoRFJldpwH0itHytyG8hWlyIpT2Ayuq7FOsEp2vwvaYptmuX-9OP2o9k6bJbV6FkL71OrGWooY3tdKGBse7X0t9cEmO4BZmXEW0Lb0E6_IDF2TetL_c6OeknXzHn-PMiQT0j_PyA04TzOr66ym60A==
+  title: israelbiblecenter.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFhQuoiaJMLVaXbVgJyjQVVsm5ZXTxLyoADUPkwrvH2BjshQs3959RkXQ0A3B5E-zGIpP5wzfeWPKauq7w4qJaPyLyguUbe3nZl1l2OYcnyalST613XZd9Qcs=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgEI_oElKebmdyFPpKbMP4Cg5i_kwaJSlW244ClCf_rH2ERwgi6YaqzwZekLNhOztyB1a0UmmjIymGMQvYyjK4OT6v0P39HuQOcE29mT3ue5yhvKgG8zwd1wKzAcXTUIYNkwx4ZwMBbFowv4adHO9t
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVRBG66apBC8K3wFNVCb-JLb1z4MDAQL8WT38aKFJzioIUHP-a8aBbiDJ8P9oWauRV-hW7OYMHTiK9fqAQXRc0OzKxDVSWmYSHezGjUj51NMSLiBNFbmM2gwQ0ZAAgYgcMFtqFiH4M7sySZ94XrJy60vXoJiM=
+  title: ificouldteachthebible.com
+search_queries:
+- ''
+- Abel Hebrew meaning Hevel
+- Abel Hebrews 11:4 verse
+- Abel Greek Strong's
+- Abel Bible verse blood cries out
