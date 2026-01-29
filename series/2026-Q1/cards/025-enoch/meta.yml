@@ -1,0 +1,44 @@
+number: '025'
+word: ENOCH
+gloss: Dedicated; the patriarch who walked with God and was taken up without dying
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A lone figure in ancient robes walking away from the viewer up a steep
+  mountain path that dissolves into brilliant, blinding light; the footprints on the
+  dusty path end abruptly in the middle of a step, implying a sudden disappearance
+  into the heavens
+stats:
+  lore: 5
+  context: 3
+  complexity: 3
+ability: Target player reveals their hand. Choose a card; that player shuffles it
+  into the Tower.
+ot_verse:
+  ref: Genesis 5:24
+  snippet: Enoch walked faithfully with God; then he was no more, because God took
+    him.
+nt_verse:
+  ref: Hebrews 11:5
+  snippet: By faith Enoch was taken from this life, so that he did not experience
+    death.
+greek:
+  text: Ἑνώχ
+  translit: Henōch
+hebrew:
+  text: חֲנוֹךְ
+  translit: Chanokh
+ot_refs: Gen 5:21-24 • 1 Chr 1:3
+nt_refs: Luke 3:37 • Heb 11:5 • Jude 1:14
+trivia:
+- One of only two biblical figures taken to heaven without dying
+- The Epistle of Jude quotes a prophecy directly from the Book of Enoch
+- Father of Methuselah, the longest-lived man in the Bible
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
