@@ -1,0 +1,62 @@
+number: '025'
+word: ENOCH
+gloss: Dedicated; the patriarch who walked with God and was taken without dying
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A solitary set of footprints in ancient sand that suddenly end, dissolving
+  into ascending particles of golden light against a twilight sky; ethereal, mystical
+  style
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Target player reveals their hand. Choose a card; they must shuffle it into
+  the Tower.
+ot_verse:
+  ref: Genesis 5:24
+  snippet: 'And Enoch walked with God: and he was not; for God took him.'
+nt_verse:
+  ref: Hebrews 11:5
+  snippet: By faith Enoch was translated that he should not see death...
+greek:
+  text: Ἑνώχ
+  translit: Henōch
+hebrew:
+  text: חֲנוֹךְ
+  translit: Chanokh
+ot_refs: Gen 5:18-24 • 1 Chr 1:3
+nt_refs: Luke 3:37 • Heb 11:5 • Jude 1:14
+trivia:
+- Lived 365 years, reflecting the solar year
+- One of only two biblical figures to escape death
+- Quoted in Jude prophesying judgment
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgsRRdv6RFTpZ6LRwI3HfuqDukie2utyvZ7obLkSyRMrX5KTsIHC9Lj7OlC6n5ahL-_KHIgnMUPzE5JZSrSiLJ8-I92acP9STq41d4ZtbyxE2Q-OeLlN-z6kuGpkkN
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqRfEltbtdzX0kSV8eD20Ji58UcQxgOneqn2MsLyuwGsW2Klmd6kjuuMFT2GcgmIW--VwbWkBXQrHXpf4fedYU--RqLttlhRUev4WZB90KBGjHo6BlY8_NMn5SGJAR2QiM_w==
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdXrzKNuwKulvn5k-ffWVTYIQN3EXfH3PiWw2U4IlQefXt2IohY6nks9aost7ywNYDdYJf5B4J2NfU8cBor4GAEOM4O-1wnrAH5NX0uHzzk6n3bm_tzGsWpCwH2_95IdJ7aDwVpF74SC6_NXXcg1rrsjsj18wj0DVUBXwE5f3wXX_pgXt6VTxXISNwm-qV9csd2lgqHg2lmkIyK2JARn2oqjPICAsVmy5Q1Q==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsueQYharWFIjUdO0rD0UdoTZ5vDoPuRCA-q_vK0b8TjzmfN_9P_bBV0WfaDavV-2wZdz63tVwBwD16nku2HXLKxQZfU1--JTXPVxYhnmgxCfqyUi4I16_j_UoqvWT0s4IlyxqMTyIJTWGxDZ7JQqk5PpkqzciBg==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1V-DdHnSOFG9NmNnGI7oC99Zlu00BRCOghHunpqxIb6KmM7oXaQnGoqpMhkyyUpI_bI4_8auUmZMnpydNGWl4Lh1seRsuYDTnGUaFQCsgz-xuh2EQTzjKYM28EeVeLR6HKrUHPGDcgYAzaneKfqM=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3c4YDV6If9xmkHRTvoS77Keo6_6hKUsso94TQfQz5PFDzI8Q3dGhoAIOoKUfrtXFYhZU3fQcYY_LAzbdfI-W8XAspCzd69r_ncemMeRk7T0fEmdMQiS8RFmFMSMFOrjk8EbzFu0jHAldP5lio2Bk=
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcYfiK2Y2nrePGpW7AkI5pvY4vMJek2sQzhv43o7aTsgi_V-vumtOznI5F09_tD4KxL3kT23Z-6EHFO4dKxr42ocwuVzieCrub5rtgJ18jd5a-Stmj9YHZy2nwnAEO
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF5BiOhbLjtu0YYcFW2FMXAsxaUHwpbXnCoLRupT5uWNsNORT2kXidgUxA2PJU1o_yRMJEgt_JUKlkncMRSdjFYR4r_evzPdBf3xi3NQt0_xywU7gzz1sGSSQ8ADmdIhst9jrFpV9i-TJH7fjBK4E4SLhSEA3SSZd6iA3exMtMFA==
+  title: cgg.org
+search_queries:
+- ''
+- Enoch Hebrew meaning and spelling
+- Enoch Greek spelling
+- Did Enoch write a book referenced in the Bible
+- Bible verses about Enoch
