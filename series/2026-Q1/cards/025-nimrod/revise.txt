@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: NIMROD
+# Card_Gloss: A mighty hunter and king; the first potentate on earth
+# Card_Type: NAME
+# Card_Rarity: RARE
+# Card_Ability: Target player reveals their hand. Choose a card for them to discard. If it is a NAME, you draw 1.
+# Card_Stats: LORE 2 | CONTEXT 3 | COMPLEXITY 3
+# Card_Art_Prompt: An ancient Mesopotamian king with a muscular build, holding a hunting bow, standing before a partially built ziggurat tower in a desert plain. No text.
+# Card_OT_Verse: Genesis 10:9 — He was a mighty hunter before the Lord: wherefore it is said, Even as Nimrod the mighty hunter before the Lord.
+# Card_NT_Verse: Luke 1:52 — He hath put down the mighty from their seats, and exalted them of low degree.
+# Card_Hebrew: נִמְרוֹד (Nimrod)
+# Card_Greek: Νεβρώδ (Nebrod)
+# Card_Trivia_1: Name derives from the Hebrew verb 'marad', meaning 'to rebel'.
+# Card_Trivia_2: Founded the cities of Babel, Erech, Accad, and Calneh.
+# Card_Trivia_3: Described as the first 'mighty one' (gibbor) on the earth.

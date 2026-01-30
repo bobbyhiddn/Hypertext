@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #025
+WORD: NIMROD
+GLOSS: A mighty hunter and king; the first potentate on earth
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player reveals their hand. Choose a card for them to discard. If it is a NAME, you draw 1.
+
+VERSES:
+OT: Genesis 10:9 — “He was a mighty hunter before the Lord: wherefore it is said, Even as Nimrod the mighty hunter before the Lord.”
+NT: Luke 1:52 — “He hath put down the mighty from their seats, and exalted them of low degree.”
+
+LANGUAGES:
+Hebrew: נִמְרוֹד - Nimrod - Gen 10:8-10 • 1Ch 1:10 • Mic 5:6
+Greek: Νεβρώδ - Nebrod - Rev 17:5 • Rev 18:2 • Rev 18:10
+
+TRIVIA:
+• Name derives from the Hebrew verb 'marad', meaning 'to rebel'.
+• Founded the cities of Babel, Erech, Accad, and Calneh.
+• Described as the first 'mighty one' (gibbor) on the earth.
+
+ART: An ancient Mesopotamian king with a muscular build, holding a hunting bow, standing before a partially built ziggurat tower in a desert plain. No text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

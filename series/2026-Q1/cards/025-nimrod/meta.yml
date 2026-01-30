@@ -1,0 +1,63 @@
+number: '025'
+word: NIMROD
+gloss: A mighty hunter and king; the first potentate on earth
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient Mesopotamian king with a muscular build, holding a hunting
+  bow, standing before a partially built ziggurat tower in a desert plain. No text.
+stats:
+  lore: 2
+  context: 3
+  complexity: 3
+ability: Target player reveals their hand. Choose a card for them to discard. If it
+  is a NAME, you draw 1.
+ot_verse:
+  ref: Genesis 10:9
+  snippet: 'He was a mighty hunter before the Lord: wherefore it is said, Even as
+    Nimrod the mighty hunter before the Lord.'
+nt_verse:
+  ref: Luke 1:52
+  snippet: He hath put down the mighty from their seats, and exalted them of low degree.
+greek:
+  text: Νεβρώδ
+  translit: Nebrod
+hebrew:
+  text: נִמְרוֹד
+  translit: Nimrod
+ot_refs: Gen 10:8-10 • 1Ch 1:10 • Mic 5:6
+nt_refs: Rev 17:5 • Rev 18:2 • Rev 18:10
+trivia:
+- Name derives from the Hebrew verb 'marad', meaning 'to rebel'.
+- Founded the cities of Babel, Erech, Accad, and Calneh.
+- Described as the first 'mighty one' (gibbor) on the earth.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2sakNPaVklOuPKcP9TwW9e4DUQV84Es8JBncDEALGhqllNSy3oAJSwEBJhq5Byo5PEYk4wrDLfuf1EMUt5xJTz6l-WvR7MWav69b3q8x7PmbnVEOWSOKc_go3zQfMyjKTIQ==
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFU5mGFhfcHAQlC64CJVezYWcwpIhXJudelGuG8iA9AffqEOfSpFq4CrJrWnONOV3DaP9lb46AkGdcQZSePfohaR9XvErQHSbaNWP6YHJLABinWFsf7c0Bs_EAhXqyt9Q==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsmmvERN17BQNhaIWblzx5SUTHFlMzULVuRfSAbAMg78RpzxwThfc3sjlJAwsfJczOoddYV9JCITErJY3Mtg9psq4qFoljTFRUkTKSJpXnSblHWEyAW_JWtXOaRz1ImBX1uitYBg==
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIcplj58YhHf4INGVVZcjakx1E8jlPDuCFh6SxHy40pgTDvDyk8WQMJrk-9OqjTAaB3rxx628bAgt-5urN3dBkSG4mBYwztPvAl4hn2YMU3mGRmOyFMs3KucbuajcrNipJVsk3j2VLimADJ3uSPmUTvucgZJkd
+  title: colombiaone.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE46JbzwrVSsP1npQVwlWvFkFvB2QAYcp6ehC5kR2BSop8x4cw7KOC8s1sAPuVSfwMVEDVRuWTirEqrCbstr7lHks7EN2pUiLD5hjH6HBIcmF5YYsk1jYqDMLChcIyU06VbtCbUt-GYhTz1lKOTLg==
+  title: ancient-hebrew.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTvG5-CGoX0yZNj1nz0cs7C6YtyyWhwQgB0I4D1B5OMW1wJredFwM8D-MV1ZlA3BxeHJeFyc3V_OepJ7vSwCHjxWi0YT6sCe1YNsiPHEOkhXiiS8yhHK2wf20NIV0B9oz3Upg4pjgCqEvZsAq2_nmOvarHkKUO8PbBxj-o8-o85HEO4g==
+  title: thetorah.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUyGDXO8XmTe-rSsdECMOddbPAu-tNVIFZlWErYiODiweqMTq6E_LaHsk85e2PefiN_HqTcU0JEkmTgbeVkEi6kRdN7FGjEhvRcTV2Db6HK9MZ4gT0AgHxhq7lVlq1
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW-TBJNe88YpXzw0fmzVusTk1oNFvPptrQhDNqk6rlkpNCOEZ8r53UkluXsEI4JdC3dhB4qpLyEs1eS3VokmgJNLh4wBOIrXXYgAGgZoXhv-OWkssiq7XV7QCD9cG6kqrA_iEmoe8OhPCYbxL42_38_ZIzQXKW_6RGG63xYDxPuGcceHrhsko9KGUWaXhS356GWmVFvNOzmpCL
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHX76HohlICewq48NjaLTlNIkWoeNvA7Iz5Tyob-jDV4WnM-sPcAgUWkqT6PdYAxjeLtQwkcWJ6SA5aecYqcS9gRhAimh3-1EYcVzBqOfJ5mFn1Ey8JMezThL51YruVR2Tf9GhcjgEqKvJeRM1YuuLq9k9idFWJfJ_HgLx1Ne7-kOFSPAGqcPFal_C5WAAR6vmCYjOQy6SGLAg8OL6QCuFDcEjIBw==
+  title: bibletools.org
+search_queries:
+- Nimrod cities founded Genesis
+- Nimrod New Testament reference
+- Nimrod etymology and meaning
+- Nimrod mighty hunter before the Lord verse
