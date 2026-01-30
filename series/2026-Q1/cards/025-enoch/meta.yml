@@ -1,0 +1,41 @@
+number: '025'
+word: ENOCH
+gloss: Dedicated; initiated. A patriarch who walked closely with God and was taken
+  into heaven without dying.
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A lone figure walking up a radiant, dissolving path into the clouds, leaving
+  earthly sandals behind. Ethereal light, ancient robes, ascending perspective, no
+  text.
+stats:
+  lore: 4
+  context: 2
+  complexity: 3
+ability: Draw 3 cards. Place this card on the bottom of the Tower instead of Sheol.
+ot_verse:
+  ref: Genesis 5:24
+  snippet: 'And Enoch walked with God: and he was not; for God took him.'
+nt_verse:
+  ref: Hebrews 11:5
+  snippet: By faith Enoch was translated that he should not see death...
+greek:
+  text: Ἑνώχ
+  translit: Henōch
+hebrew:
+  text: חֲנוֹךְ
+  translit: Chanok
+ot_refs: Gen 5:21-24 • 1 Chr 1:3
+nt_refs: Heb 11:5 • Jude 1:14 • Luke 3:37
+trivia:
+- Enoch is the 'seventh from Adam' and father of Methuselah, the longest-lived man.
+- He lived 365 years—matching the days of the solar year—before God took him.
+- Along with Elijah, he is one of only two biblical figures who did not die.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

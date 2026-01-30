@@ -8,6 +8,7 @@ words:
 - CREATE
 - DESCEND
 - EARTH
+- ENOCH
 - FORM
 - GOOD
 - GRACE
@@ -163,4 +164,9 @@ cards:
   word: COVENANT
   type: NOUN
   rarity: GLORIOUS
+  ability_pattern: draw_sheol_tower
+- number: 25
+  word: ENOCH
+  type: NAME
+  rarity: RARE
   ability_pattern: draw_sheol_tower
