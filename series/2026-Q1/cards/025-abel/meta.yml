@@ -1,0 +1,42 @@
+number: '025'
+word: ABEL
+gloss: The second son of Adam and a shepherd, whose acceptable sacrifice incited his
+  brother's envy and led to the first martyrdom.
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A rustic stone altar in a grassy field with smoke rising straight up into
+  a sunbeam; a wooden shepherd's crook lies abandoned in the foreground near patches
+  of red wildflowers.
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+ability: Target player reveals their hand; choose one card to swap with the top card
+  of Sheol.
+ot_verse:
+  ref: Genesis 4:10
+  snippet: The voice of your brother’s blood cries out to Me from the ground.
+nt_verse:
+  ref: Hebrews 11:4
+  snippet: By faith Abel offered to God a more excellent sacrifice than Cain.
+greek:
+  text: Ἅβελ
+  translit: Habel
+hebrew:
+  text: הֶבֶל
+  translit: Hevel
+ot_refs: Gen 4
+nt_refs: Matt 23 • Luke 11 • Heb 11 • Heb 12 • 1 John 3
+trivia:
+- His name means 'breath' or 'vapor,' symbolizing the brevity of his life.
+- Jesus identified him as the first martyr in the history of the faithful.
+- The description of his blood 'crying out' is the first mention of blood in the Bible.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

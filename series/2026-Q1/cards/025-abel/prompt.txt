@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #025
+WORD: ABEL
+GLOSS: The second son of Adam and a shepherd, whose acceptable sacrifice incited his brother's envy and led to the first martyrdom.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player reveals their hand; choose one card to swap with the top card of Sheol.
+
+VERSES:
+OT: Genesis 4:10 — “The voice of your brother’s blood cries out to Me from the ground.”
+NT: Hebrews 11:4 — “By faith Abel offered to God a more excellent sacrifice than Cain.”
+
+LANGUAGES:
+Hebrew: הֶבֶל - Hevel - Gen 4
+Greek: Ἅβελ - Habel - Matt 23 • Luke 11 • Heb 11 • Heb 12 • 1 John 3
+
+TRIVIA:
+• His name means 'breath' or 'vapor,' symbolizing the brevity of his life.
+• Jesus identified him as the first martyr in the history of the faithful.
+• The description of his blood 'crying out' is the first mention of blood in the Bible.
+
+ART: A rustic stone altar in a grassy field with smoke rising straight up into a sunbeam; a wooden shepherd's crook lies abandoned in the foreground near patches of red wildflowers.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
