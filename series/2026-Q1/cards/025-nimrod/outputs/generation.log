@@ -1,0 +1,12 @@
+=== Generation Log ===
+Timestamp: 2026-01-31 11:10:12
+Phase: imagegen
+Target Rarity: RARE
+Target Type: NAME
+Fix Mode: False
+
+Style References (2 total):
+  [1] templates/example_cards/015-elijah/outputs/card_1024x1536.png [RARE] (TEMPLATE)
+  [2] templates/card/v001/rare/template_1024x1536.png
+
+Prompt File: series/2026-Q1/cards/025-nimrod/prompt.txt

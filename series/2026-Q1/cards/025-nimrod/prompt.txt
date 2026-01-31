@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #025
+WORD: NIMROD
+GLOSS: A mighty hunter and rebellious king who founded the first empire at Babel.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player reveals their hand. You may take a NAME from their hand and add it to your own.
+
+VERSES:
+OT: Genesis 10:9 — “He was a mighty hunter before the Lord; therefore it is said, 'Like Nimrod the mighty hunter before the Lord.'”
+NT: Revelation 17:5 — “And on her forehead a name was written: MYSTERY, BABYLON THE GREAT, THE MOTHER OF HARLOTS...”
+
+LANGUAGES:
+Hebrew: נִמְרוֹד - Nimrod - Gen 10:8-10 • 1 Chr 1:10 • Mic 5:6
+Greek: Νεβρώδ - Nebrod - Rev 17:5 • Rev 18:2
+
+TRIVIA:
+• Name derives from the Hebrew verb 'marad' meaning 'to rebel'.
+• Traditionally identified as the builder of the Tower of Babel.
+• Founded the cities of Babel, Erech, Accad, and Calneh.
+
+ART: A powerful ancient Mesopotamian king in royal armor holding a bow, standing on a balcony overlooking a massive ziggurat under construction in a desert city. Golden hour lighting, lion motifs on the armor.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
