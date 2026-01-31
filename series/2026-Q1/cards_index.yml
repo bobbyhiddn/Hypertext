@@ -17,6 +17,7 @@ words:
 - NAKED
 - NAME
 - NATION
+- NOAH
 - REMEMBER
 - SCATTER
 - SETH
@@ -39,6 +40,7 @@ ability_patterns:
 - draw_tower
 - look_top_tower
 - pages_sheol
+- sheol
 - sheol_tower
 - sheol_type_noun
 - sheol_type_verb
@@ -164,3 +166,8 @@ cards:
   type: NOUN
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 25
+  word: NOAH
+  type: NAME
+  rarity: RARE
+  ability_pattern: sheol
