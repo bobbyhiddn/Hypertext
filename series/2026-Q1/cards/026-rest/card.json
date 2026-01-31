@@ -1,0 +1,279 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "026",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "REST",
+    "GLOSS": "To cease from work or movement; to be at peace.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "GLORIOUS",
+    "RARITY_ICON": "GLORIOUS",
+    "ART_PROMPT": "A tranquil, sunlit meadow with a single large stone in the center, overgrown with soft moss and wildflowers, symbolizing ancient stillness. A discarded sword lies rusting in the tall grass nearby. Warm golden lighting, ethereal atmosphere, oil painting style.",
+    "ABILITY_TEXT": "Target player cannot Play or Record during their next turn.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Genesis 2:2",
+    "OT_VERSE_SNIPPET": "And on the seventh day God ended his work which he had made; and he rested on the seventh day.",
+    "NT_VERSE_REF": "Matthew 11:28",
+    "NT_VERSE_SNIPPET": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    "OT_VERSE_LINE": "Genesis 2:2 — “And on the seventh day God ended his work which he had made; and he rested on the seventh day.”",
+    "NT_VERSE_LINE": "Matthew 11:28 — “Come unto me, all ye that labour and are heavy laden, and I will give you rest.”",
+    "GREEK": "ἀναπαύω",
+    "GREEK_TRANSLIT": "anapauō",
+    "HEBREW": "שָׁבַת",
+    "HEBREW_TRANSLIT": "shabat",
+    "OT_REFS": "Gen 2:2 • Ex 20:8 • Ps 23:2 • Isa 14:7",
+    "NT_REFS": "Matt 11:28 • Heb 4:9 • Mark 6:31 • Rev 14:13",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'shabat' means 'to cease' or 'stop,' emphasizing that creation was complete, not that God was tired.",
+      "In music, a 'rest' is a specific interval of silence, essential for the rhythm and meaning of the composition.",
+      "Hebrews 4 describes a 'Sabbath rest' that remains for God's people, linking the weekly Sabbath to eternal salvation."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "greek verb for rest matthew 11:28",
+      "hebrews 4:9 greek word for rest",
+      "nuach vs shabbat",
+      "hebrew verb for rest genesis 2:2"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFy1sc56K8S1UqkBr9YCQV9HtWxcZourMHWoUUIWGPYZh66jJAJbo_1NDgcaG7OBOxexyj2uA7u4UviR7-F6VlB7rmTIpw0U5cASUDahMM4x1a-rTBSzmzOc5KJ_ADpwwr-73TnVRwpgpoW_5CLeRsTQ==",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUtpFdmfSNVsrZ9Lo7X7Dn-777NQy1TJm-RCE6qjFlmaoMStAgWyhAx-W8RO1pR1-6BQ_8NIr6lx_5rLZMrV7QXSOUPEe9Dai2BfLmPXJ7XA3Mv42aPiKLYJWhjXZuJE24MvolzoNzi6Q=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMMLcAX1qUQDL_rcW2mxVj7jsoR-GJH4KTcsyNgSOft2zVXtgKKpmFWTrl0AlFmDipIMI0-k5sSo5hTMNJyhf5U36LeJCBiRHNg1RaujrBpM7aog8GwyxRtLOoNzCmbYiNe9Tq82R4VA1qzdKW1X_TrofPG9SjmXn_LaBx5g2Je6j7uJOzWLMSVOENesFwqP6ZlSdWcAwZdkE=",
+        "title": "aliveinjesus.info"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs8ruDCX0ecvhCTWwPdgJEpdSefQRaDH6LwlPWll69YLilKbutUa41NaDXOpXxBAZZMsmLOpHc2f-R6H1qQ1gDCvhpjrMQhrZefEcinO7iXlSECVpoBALQlvDulddnBR7BG7oNOaQH6j9-W5eElb46xBZqDBZ-2KUmyQ==",
+        "title": "christswords.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbgQ6Dqe3qMWlADn6qZheXc73d3qv7dIQ2kblS-dOMKy5-DsvBYqKJshD0IqScxWsZXiDJml9gYLNKELGcftXLh5lvzrLN_bPfZjygeo9_5pBDGnlV4tANRbFnd75JDmbwBgB9HaEjVEa_Ok0Km-biOpdYtP-yJfKXaphJOA1iLXZAj_4aw4bpcYpc3sbuEwyO2ImUl0_tbw==",
+        "title": "reddit.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOho_Bn0dm6OFMBnYUDFDNN8ofmCYmgMFg1SMCS8nogeWX88R8w8ORlss7R1JZoq_ezD1BbbfoK9pIgCZMTZzP8mUnk3zD6BW5Pt7u2Jj0qjYEX7eBbX6Q2jdh8UjF-9BSVF5byY7KBH2kjPisVvjSDgR1b3FkB-FvE_N7XtyI",
+        "title": "hebrewwordlessons.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ooPv2PdtJwf5fMb8rpxCc4JUJLmbzJH36lRm3Tz-e_qILLXyBJINp6KIYS2uy51jLPEtkwmd0nLARx3Icp1fI15Nofk9DUzfjpwwc-96YNmg2WmoKn-7MogxBmef5WNsZnIamGyHq5FPAkra9OcVhngyjs1PgesbKA==",
+        "title": "cgg.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgTBBPGE9_TBD_fOVFCVyvASm0sMU4qTe7kz5DvsrD1Zwm6RYS2m6-bUR1aF28OCf_pS5JX_vlYHOQYO_6pt1cqNn5qPSqf6ObNKjAMNxqVOScfrz9prwnqQDB3po8JI1H0UIt",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENjPgLU9Z3x3qcCj2QVXhhLAfp-MTjBLIYMcvH3XISIWQb7opBgYPI3NY90aKjnsYTR3qs-icOeFSA846xdGOn_3BVnBFOsJ1TZkr3UYjo9mmYS7fmCZ3ErQtV8Eebj_Rz3us6buf0pvCWNHEgfRp_U3jE3AmZUZ_7hL8i3fviQN832yI4mNHhsKvWYfKT",
+        "title": "sabbath.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvjYp840PZiPWij5cf1LR9Mm1cK5oKCM2QVqIeXvQMAYxNHyIFxGoAR4AjK4lFSzH-7xKrOA73QPh5jLxjeqELodRiAGPl1_GqzD1w9hyEy-fOHAchIoda2glZyohBnlm4kNuNWEIC0cJLcsKqpS9-ihQ_bK-ZuLzalIcqGTX5i1f8",
+        "title": "lifehopeandtruth.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfR6azy-h0tYdoVsTlNrzhiILiJ90f0EGPgvsSy-3u5nJo0GW89u2MTwo_77VnnfpiFezDeBMYi1f7iwGN1dODQyuQcrs0zkKmDbb8Zy2Lz_ZHNUs-eQceNGmVU93rOevN0Z1qpPc5VlS_SsD-LIwlXVn9IXxqmFaBBo1sq6Yug2SZ1vprYD5i8l5e48-NetnfzlFkTqndFQCUzOUxZXRLbInt8rSTbqOpH8CTGioX",
+        "title": "zondervanacademic.com"
+      }
+    ]
+  }
+}
