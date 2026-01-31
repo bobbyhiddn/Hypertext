@@ -1,0 +1,45 @@
+number: '026'
+word: REST
+gloss: To cease from work or movement in order to relax, refresh oneself, or recover
+  strength.
+card_type: VERB
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A peaceful landscape featuring a wooden staff leaning against a large
+  mossy rock in a sun-drenched green meadow, with still waters in the background.
+  Soft, golden-hour lighting, serene atmosphere, oil painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Target player skips their next turn.
+ot_verse:
+  ref: Genesis 2:2
+  snippet: And on the seventh day God ended his work which he had made; and he rested
+    on the seventh day from all his work.
+nt_verse:
+  ref: Matthew 11:28
+  snippet: Come unto me, all ye that labour and are heavy laden, and I will give you
+    rest.
+greek:
+  text: ἀναπαύω
+  translit: anapauō
+hebrew:
+  text: שָׁבַת
+  translit: shabat
+ot_refs: Ex 33:14 • Ps 23:2 • Isa 30:15 • Josh 21:44
+nt_refs: Heb 4:9 • Mark 6:31 • Rev 14:13 • 2 Thess 1:7
+trivia:
+- The Hebrew 'shabat' primarily means 'to cease' or 'desist,' rather than just recovering
+  from fatigue.
+- God's rest on the seventh day was not due to exhaustion, but marked the completion
+  of creation.
+- Hebrews 4 links the creation Sabbath to the eternal spiritual rest found in salvation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
