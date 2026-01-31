@@ -1,0 +1,43 @@
+number: '026'
+word: CURSE
+gloss: To invoke harm or punishment; a solemn utterance intended to bring about evil
+  or destruction.
+card_type: VERB
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A withered fig tree standing alone in a barren, cracked landscape under
+  a darkened, violet sky, with thorns twisting around the roots.
+stats:
+  lore: 4
+  context: 5
+  complexity: 3
+ability: Name a card type; target player reveals their hand and discards all cards
+  of that type.
+ot_verse:
+  ref: Genesis 3:17
+  snippet: Cursed is the ground because of you; through painful toil you will eat
+    food from it all the days of your life.
+nt_verse:
+  ref: Galatians 3:13
+  snippet: Christ redeemed us from the curse of the law by becoming a curse for us.
+greek:
+  text: καταράομαι
+  translit: kataraomai
+hebrew:
+  text: אָרַר
+  translit: arar
+ot_refs: Gen 3:14 • Gen 12:3 • Deut 28:15 • Prov 26:2
+nt_refs: Matt 25:41 • Mark 11:21 • Rom 12:14 • James 3:10
+trivia:
+- The first biblical curse was spoken against the serpent, then the ground, but never
+  Adam or Eve directly.
+- In the New Testament, the Greek word 'anathema' refers to something devoted to destruction.
+- Jesus cursed a fig tree in Mark 11 as a symbolic act of judgment against unfruitfulness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

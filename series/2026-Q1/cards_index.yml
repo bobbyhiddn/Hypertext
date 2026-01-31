@@ -6,6 +6,7 @@ words:
 - CONFUSE
 - COVENANT
 - CREATE
+- CURSE
 - DESCEND
 - EARTH
 - FORM
@@ -36,6 +37,7 @@ ability_patterns:
 - conditional_draw_pages_type_name
 - conditional_draw_type_name
 - discard_draw
+- discard_type_name
 - draw_sheol_tower
 - draw_tower
 - look_top_tower
@@ -171,3 +173,8 @@ cards:
   type: NAME
   rarity: RARE
   ability_pattern: sheol
+- number: 26
+  word: CURSE
+  type: VERB
+  rarity: GLORIOUS
+  ability_pattern: discard_type_name
