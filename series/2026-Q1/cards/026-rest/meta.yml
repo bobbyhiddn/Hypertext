@@ -1,0 +1,70 @@
+number: '026'
+word: REST
+gloss: To cease work or movement in order to relax, refresh oneself, or recover strength.
+card_type: VERB
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A peaceful, glowing garden at twilight with a discarded tool lying in
+  the grass, symbolizing the end of work.
+stats:
+  lore: 5
+  context: 4
+  complexity: 2
+ability: Draw 3 cards. Until your next turn, no player may Record.
+ot_verse:
+  ref: Genesis 2:2
+  snippet: And on the seventh day God ended his work which he had made; and he rested...
+nt_verse:
+  ref: Matthew 11:28
+  snippet: Come unto me, all ye that labour and are heavy laden, and I will give you
+    rest.
+greek:
+  text: ἀνάπαυσις
+  translit: anapausis
+hebrew:
+  text: שָׁבַת
+  translit: shabat
+ot_refs: Gen 2:2 • Ex 20:8 • Ps 23:2
+nt_refs: Matt 11:28 • Heb 4:9 • Rev 14:13
+trivia:
+- The Hebrew 'shabat' primarily means 'to cease' or 'stop working,' not just to relax.
+- In music, a 'rest' is an interval of silence that is essential for the rhythm of
+  the composition.
+- Hebrews 4 uses the unique word 'sabbatismos' to describe the eternal rest remaining
+  for God's people.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdacQwoyPkAW59tM2GYtCmrOXOqWjkIGudulg-e_mQ9phbrzK33g9YGi-rK8PC7c-c1pEUA77HBoUB5Pw2jgXub0do4zVMVtVZO443TWD3qg8Rrrl4XmhlNeRETIOhDSyrseotQyx6Uklopc9wdq1lSwAMFEBFP2uWFjZBZeYY1yhZJIwn7adaD7F4qIA=
+  title: lynndove.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6bRltibVnFI7gIv0WkcaLvD-gvKleqoa87sxmqXF0sXqBsyjwbV62VC7DPHesJKtOMuuVD2RgDKW8apFKlDsDclvYTcNlgq-vvrSCU-ow5IWxeGaqqo4v39nVbEjnXhtinl5dm6Chfc2fs2ZHWS29WZcoEGhzwTV-hnCuwWOSKGzUjc0A4DHUnXQoglEG8_J4Yw==
+  title: bustedhalo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhMhIqNoFmswMpJG-Axr3PhFsq-a5rOmYphuVgKN0YqI-o8LBA2SszN8QReEty1e0Ds2yS0A_jvcv7cROX-Cqk24r5rh1qmsG_Ais7owuQaop5aetowd9QO2i-oZM-vbwFJUh-1oEhN4sWd5tVD2Bnyv7IZ_Tn4hep4fyQ
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRsAnKnetscsUI6pOZhuExoBoY7hrBF2L8v_EchjwQt_ZH9B9m8w85CWKSPho0a4W95RHrv8Btd9OPDxb_cnS0I2SfHjSy9urPkNK8_cTn4oIbUVGWsx1bRO69xXkvFUIy1O1ukkXWZ2yERvbo4EeI
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyybv4Zi5_3rWenhZ3YW-ChtDQUgTKYsEVLXdF4dZjL-Ee5RIYLpFNjFt_TgvxqkHsrkNxUv1QZ0POmb5ld5wMXUbPHQ2yZIeoUGOuJ5WHYyzKZLW4NJPQCTqy7WEJo_7kp9OmuOEaeYXe8LS87DkTY4g1ymIWBxC2
+  title: chaimbentorah.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWwQ0kQrg98SrjhQ025lfMYvjn-0__CY3Yg4EZYe3ww_VdFulLYPBJTXkbdy55IcJjtQ4x5wx0d0UlnVzkn6kkTWvkV0fMSEThP7UZZOhaAddvS9Ha7Fy4A6LdRfSa1QENYAvHzKcYnsyGevubXTecvg==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNJ-EMMLH5n3ZQzjLuXPTGtTGLia_9qXuvNO6GrwArR4yeMMyaSDsGbV4m6amjD_OoDIg5_jYY80WC3qUexqSp6pz4ncGWUi1HJcUuzH2LFHCBktoux7IPcgw_hGJTSwUKN4ZAbRrMq3wBqaQ=
+  title: jesusfilm.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZU63YcNf0AQUHJT975T5gWmvc3xSgkZYFyXsn8K7dcV0iHiXFySykYzCAbFJQbD1gRFsN8GLvxOQMQRW-L1uh-OoAeLznlEfTcpGpPLhKzjbjjHoJxeQSL6UR4-CXIWTiSusvWtFwzyQ1XAiZbf8=
+  title: citieschurch.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYiHSNfowIIoZYRMekSF1XEX_kQTo2B5Aw8ltDPCc5eDuiEhVSxDU93jYqe4lkgfMJq8a6BOeV7llvs75nojnRvmOPPcHguSUBH8z-3rufQDycwSErV4xn_wda28EvfUGYWxb0YQ==
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTzQoiYsiqh7kLJbfloHMe5gt3kGSGGmrZlqNVLjB-kuKYBaXwDAyleFDIB3rWdsb2gGWNTgAHYQ-o_lmDDE6bUV9g7Kw0ufW-5PxsQDLtDPrAmHFY2brL18KaHRlgl42cN46J
+  title: biblehub.com
+- uri: https://www.google.com/search?q=time+in+%CE%A0%CE%B5%CF%81%CE%B9%CF%86%CE%AD%CF%81%CE%B5%CE%B9%CE%B1+%CE%A3%CF%84%CE%B5%CF%81%CE%B5%CE%AC%CF%82+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82,+GR
+  title: ''
+search_queries:
+- ''
+- Genesis 2:2 hebrew word for rested
+- Greek word for rest anapausis meaning
+- Hebrews 4:9 rest greek word
+- Hebrew word for rest shabat meaning
+- Bible verse snippets for REST

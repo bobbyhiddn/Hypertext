@@ -19,6 +19,7 @@ words:
 - NATION
 - NOAH
 - REMEMBER
+- REST
 - SCATTER
 - SETH
 - SHEM
@@ -36,6 +37,7 @@ ability_patterns:
 - conditional_draw_pages_type_name
 - conditional_draw_type_name
 - discard_draw
+- draw
 - draw_sheol_tower
 - draw_tower
 - look_top_tower
@@ -171,3 +173,8 @@ cards:
   type: NAME
   rarity: RARE
   ability_pattern: sheol
+- number: 26
+  word: REST
+  type: VERB
+  rarity: GLORIOUS
+  ability_pattern: draw

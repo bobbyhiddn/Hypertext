@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #026
+WORD: REST
+GLOSS: To cease work or movement in order to relax, refresh oneself, or recover strength.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 3 cards. Until your next turn, no player may Record.
+
+VERSES:
+OT: Genesis 2:2 — “And on the seventh day God ended his work which he had made; and he rested...”
+NT: Matthew 11:28 — “Come unto me, all ye that labour and are heavy laden, and I will give you rest.”
+
+LANGUAGES:
+Hebrew: שָׁבַת - shabat - Gen 2:2 • Ex 20:8 • Ps 23:2
+Greek: ἀνάπαυσις - anapausis - Matt 11:28 • Heb 4:9 • Rev 14:13
+
+TRIVIA:
+• The Hebrew 'shabat' primarily means 'to cease' or 'stop working,' not just to relax.
+• In music, a 'rest' is an interval of silence that is essential for the rhythm of the composition.
+• Hebrews 4 uses the unique word 'sabbatismos' to describe the eternal rest remaining for God's people.
+
+ART: A peaceful, glowing garden at twilight with a discarded tool lying in the grass, symbolizing the end of work.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
