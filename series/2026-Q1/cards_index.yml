@@ -19,6 +19,7 @@ words:
 - NATION
 - NOAH
 - REMEMBER
+- REST
 - SCATTER
 - SETH
 - SHEM
@@ -171,3 +172,8 @@ cards:
   type: NAME
   rarity: RARE
   ability_pattern: sheol
+- number: 26
+  word: REST
+  type: VERB
+  rarity: GLORIOUS
+  ability_pattern: unique

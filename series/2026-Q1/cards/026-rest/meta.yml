@@ -1,0 +1,42 @@
+number: '026'
+word: REST
+gloss: To cease work or movement in order to relax, refresh, or recover strength;
+  to be at peace.
+card_type: VERB
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A peaceful meadow at twilight with a single large tree, a shepherd's staff
+  leaning against the trunk, and sheep sleeping in the tall grass, warm golden lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Prevent all other players from Activating abilities or Redeeming cards until
+  your next turn.
+ot_verse:
+  ref: Exodus 33:14
+  snippet: My presence shall go with thee, and I will give thee rest.
+nt_verse:
+  ref: Matthew 11:28
+  snippet: Come unto me, all ye that labour and are heavy laden, and I will give you
+    rest.
+greek:
+  text: ἀναπαύω
+  translit: anapauō
+hebrew:
+  text: נוּחַ
+  translit: nuach
+ot_refs: Gen 2:2 • Ex 20:11 • Josh 1:13 • Ps 23:2
+nt_refs: Heb 4:9 • Rev 14:13 • Mark 6:31 • Matt 12:8
+trivia:
+- God's rest on the seventh day signified completion, not exhaustion.
+- The Hebrew 'Shabbat' literally means to cease or stop working.
+- Hebrews 4 describes a 'Sabbath rest' that remains for God's people.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
