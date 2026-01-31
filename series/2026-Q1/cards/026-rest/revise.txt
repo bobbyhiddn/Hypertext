@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: REST
+# Card_Gloss: To cease work or movement in order to relax, refresh, or recover strength.
+# Card_Type: VERB
+# Card_Rarity: GLORIOUS
+# Card_Ability: Target player skips their next turn.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A weathered iron plow abandoned in a grassy field at twilight, golden hour lighting, peaceful and still, oil painting style, no text
+# Card_OT_Verse: Genesis 2:2 — And on the seventh day God ended his work which he had made; and he rested.
+# Card_NT_Verse: Matthew 11:28 — Come unto me, all ye that labour and are heavy laden, and I will give you rest.
+# Card_Hebrew: שָׁבַת (Shabat)
+# Card_Greek: ἀναπαύω (Anapauō)
+# Card_Trivia_1: The Hebrew *shabat* literally means 'to cease' or 'stop,' not just to relax.
+# Card_Trivia_2: God's rest on the seventh day was not from exhaustion, but completion.
+# Card_Trivia_3: Jesus offers 'rest for the soul,' fulfilling the Sabbath's ultimate promise.
