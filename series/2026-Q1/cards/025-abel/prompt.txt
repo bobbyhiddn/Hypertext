@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #025
+WORD: ABEL
+GLOSS: Breath, vapor; the second son of Adam, a shepherd and first martyr.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player reveals their hand. Choose a card for them to shuffle into the Tower. If it is a NAME, draw 2.
+
+VERSES:
+OT: Genesis 4:10 — “The voice of thy brother's blood crieth unto me from the ground.”
+NT: Hebrews 11:4 — “By faith Abel offered unto God a more excellent sacrifice than Cain.”
+
+LANGUAGES:
+Hebrew: הֶבֶל - Hevel - Gen 4:1-10 • Gen 4:25
+Greek: Ἅβελ - Habel - Matt 23:35 • Heb 11:4 • Heb 12:24 • 1 John 3:12
+
+TRIVIA:
+• Name means 'breath' or 'vapor', symbolizing the brevity of life.
+• The first martyr in the Bible; Jesus calls him 'righteous Abel'.
+• His blood is described as 'crying out' from the ground for justice.
+
+ART: A rustic stone altar in a grassy field at twilight, smoke rising straight up into a clear sky, a shepherd's crook resting against the stones, soft lighting, realistic style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

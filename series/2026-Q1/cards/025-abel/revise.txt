@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ABEL
+# Card_Gloss: Breath, vapor; the second son of Adam, a shepherd and first martyr.
+# Card_Type: NAME
+# Card_Rarity: RARE
+# Card_Ability: Target player reveals their hand. Choose a card for them to shuffle into the Tower. If it is a NAME, draw 2.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A rustic stone altar in a grassy field at twilight, smoke rising straight up into a clear sky, a shepherd's crook resting against the stones, soft lighting, realistic style.
+# Card_OT_Verse: Genesis 4:10 — The voice of thy brother's blood crieth unto me from the ground.
+# Card_NT_Verse: Hebrews 11:4 — By faith Abel offered unto God a more excellent sacrifice than Cain.
+# Card_Hebrew: הֶבֶל (Hevel)
+# Card_Greek: Ἅβελ (Habel)
+# Card_Trivia_1: Name means 'breath' or 'vapor', symbolizing the brevity of life.
+# Card_Trivia_2: The first martyr in the Bible; Jesus calls him 'righteous Abel'.
+# Card_Trivia_3: His blood is described as 'crying out' from the ground for justice.

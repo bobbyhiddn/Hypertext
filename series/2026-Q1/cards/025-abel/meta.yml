@@ -1,0 +1,67 @@
+number: '025'
+word: ABEL
+gloss: Breath, vapor; the second son of Adam, a shepherd and first martyr.
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A rustic stone altar in a grassy field at twilight, smoke rising straight
+  up into a clear sky, a shepherd's crook resting against the stones, soft lighting,
+  realistic style.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player reveals their hand. Choose a card for them to shuffle into
+  the Tower. If it is a NAME, draw 2.
+ot_verse:
+  ref: Genesis 4:10
+  snippet: The voice of thy brother's blood crieth unto me from the ground.
+nt_verse:
+  ref: Hebrews 11:4
+  snippet: By faith Abel offered unto God a more excellent sacrifice than Cain.
+greek:
+  text: Ἅβελ
+  translit: Habel
+hebrew:
+  text: הֶבֶל
+  translit: Hevel
+ot_refs: Gen 4:1-10 • Gen 4:25
+nt_refs: Matt 23:35 • Heb 11:4 • Heb 12:24 • 1 John 3:12
+trivia:
+- Name means 'breath' or 'vapor', symbolizing the brevity of life.
+- The first martyr in the Bible; Jesus calls him 'righteous Abel'.
+- His blood is described as 'crying out' from the ground for justice.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErM-Yssm9PPit5j28fwdaB4cDMzhjVugBQRZn8LvQ_NgnvOqe2VwVwgDUOv2UZeO2DD4v0h1SEpA1GmU9anuSyA_btQQ7EkrQoZArrq8UI5A8-UJIggPNUPRDMjQmTnN9I2u4N
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0fYyMd8FnRAXxb3Fzy1IYl5A3GAjktpOkSMddR8tq3P22njLUAmMeu7omNoah3XQmnnltkhPbL740uwRrKI1QT4KyTWeExRna7O01uVOvDfU1EgrTlPDNEEhcD9gY2H_BWmccBsYTNqXBn-dkYWI=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3_asJYB7deUdxDNUBpfk8OVhcBaUfm5AolxS07tlYXXLPfXt2w-6qT5xA44EtxqbMlCJOG8HB7vjvuaneUVoqNDH-EW9O2g-Qlfmrwberu9yAxj2NUVmnQneu-BvD_E144CAS0lHY
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCQxIRX-2XuzZj1s8SDbokBntsJ9KuoshIWU2u6g2FPvStzI8LffTCrLrXXzUfXcyluSH5FrtjtWwl1CXUYNAu_NmxbUxF04rkFXOEV9sLxTuLC6oWDA92ExJa0eDlVSPozk0lyeiDuYVm4wN08ZI=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFy7D6qdUqoZMInfM-shHiQxKUOA8655DfrhR8Xfi7AFUxjQRac07sYTpTX9EXG4HQdjaXwZiYTpI7-zW0_VJwlIZtVLTGSRUMFEepEI4wyGgCyNKlqJPR-Qfcasv-phtGZCeAsPuqz
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsT2ve1BggduJhmv_QJEVB5gEVpZjKbFRNL0azz5UeYY4TiiULaYyxM4qNZuk0oq-_tvGniFRxyQcGQfSE8tRqqcdh8NX6O1WAmXUVwe9En9CoMq1S6i1JA_g=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuI_s-EY6N35iuJhAWQphdIxHyXfLz4Jh0cObnO5Ja-gG0bczNL4DRiyjNMtWLEdQhgl3odSO71UbDPzvm3wy8HNJG1er2gKMWjyFXinyJRV73rt2B69vG3aAyS0jaNW3qWdxxrno08BvA3gbuZrHukws9GBoK49Lj8AC4SwUxPF2q
+  title: funtrivia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd-z4hlVEvqmjT6yvzGaeFfxkX7y-2CAdhAoF0F38gySOl8oxSxxqeVkFj6uQPPLI8cDfGR66TjtjqNH5etJfudxU9JiJhHa7cuBeq15loywCYX_cbpVQF3xQTS7p7hkpAXxrySgMgN_D09B31QiM=
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETElbEh6P8oo1jvfkOdI_NGopxAZ0EaruH1Fi6rAoqY84oRiTipQeNNMq6bt_pyWarx8K8vdLIKELz97lLJFPoc6oUsLKXJ7vWlOQ5dtpHuq6o_JoUJ1ausgIDGoxlg_UYMg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1fpDPVP7tylY3fSqggRCTs0GioK42S5b9km0-_pJ5kl8z0IHvRGIp-vUkZZmMToDPPQia0YefZw8IdMYnqgeWO-UXcIU_1E3GrM64BWrDUKIWYGeAwPOkIyNoXw==
+  title: wikipedia.org
+search_queries:
+- ''
+- Abel Hebrew meaning
+- Abel Greek spelling
+- Hebrews 11:4 KJV snippet
+- Genesis 4:4 KJV snippet
+- Abel trivia bible
