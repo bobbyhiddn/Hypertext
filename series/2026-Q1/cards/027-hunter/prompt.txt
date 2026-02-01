@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #027
+WORD: HUNTER
+GLOSS: One who chases game or seeks to capture; a pursuer of targets.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player reveals their hand; choose a card for them to discard, then draw 1.
+
+VERSES:
+OT: Jeremiah 16:16 — “I will send for many hunters, and they shall hunt them from every mountain...”
+NT: Luke 11:54 — “...laying wait for him, and seeking to catch something out of his mouth...”
+
+LANGUAGES:
+Hebrew: צַיָּד - tsayad - Gen 10:9 • Gen 25:27 • Lam 3:52 • Prov 6:5
+Greek: θηρεύω - thēreuō - Luke 21:35 • 1 Tim 3:7 • 2 Tim 2:26
+
+TRIVIA:
+• Nimrod is the first person described as a 'mighty hunter' in the Bible.
+• In Jeremiah, hunters represent agents of judgment tracking down idolaters.
+• The Greek word for hunter (kynegos) literally means 'dog-leader'.
+
+ART: An ancient archer standing on a rocky outcrop scanning a vast valley at twilight, bow in hand, realistic style, cinematic lighting, no text
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: HUNTER
+# Card_Gloss: One who chases game or seeks to capture; a pursuer of targets.
+# Card_Type: TITLE
+# Card_Rarity: RARE
+# Card_Ability: Target player reveals their hand; choose a card for them to discard, then draw 1.
+# Card_Stats: LORE 2 | CONTEXT 4 | COMPLEXITY 3
+# Card_Art_Prompt: An ancient archer standing on a rocky outcrop scanning a vast valley at twilight, bow in hand, realistic style, cinematic lighting, no text
+# Card_OT_Verse: Jeremiah 16:16 — I will send for many hunters, and they shall hunt them from every mountain...
+# Card_NT_Verse: Luke 11:54 — ...laying wait for him, and seeking to catch something out of his mouth...
+# Card_Hebrew: צַיָּד (tsayad)
+# Card_Greek: θηρεύω (thēreuō)
+# Card_Trivia_1: Nimrod is the first person described as a 'mighty hunter' in the Bible.
+# Card_Trivia_2: In Jeremiah, hunters represent agents of judgment tracking down idolaters.
+# Card_Trivia_3: The Greek word for hunter (kynegos) literally means 'dog-leader'.

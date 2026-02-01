@@ -1,0 +1,65 @@
+number: '027'
+word: HUNTER
+gloss: One who chases game or seeks to capture; a pursuer of targets.
+card_type: TITLE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient archer standing on a rocky outcrop scanning a vast valley at
+  twilight, bow in hand, realistic style, cinematic lighting, no text
+stats:
+  lore: 2
+  context: 4
+  complexity: 3
+ability: Target player reveals their hand; choose a card for them to discard, then
+  draw 1.
+ot_verse:
+  ref: Jeremiah 16:16
+  snippet: I will send for many hunters, and they shall hunt them from every mountain...
+nt_verse:
+  ref: Luke 11:54
+  snippet: '...laying wait for him, and seeking to catch something out of his mouth...'
+greek:
+  text: θηρεύω
+  translit: thēreuō
+hebrew:
+  text: צַיָּד
+  translit: tsayad
+ot_refs: Gen 10:9 • Gen 25:27 • Lam 3:52 • Prov 6:5
+nt_refs: Luke 21:35 • 1 Tim 3:7 • 2 Tim 2:26
+trivia:
+- Nimrod is the first person described as a 'mighty hunter' in the Bible.
+- In Jeremiah, hunters represent agents of judgment tracking down idolaters.
+- The Greek word for hunter (kynegos) literally means 'dog-leader'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHjaYRpPRCteuwA02gA6DnxH3502uMGNmfHNByNl7w_6RimbEi1QXH2wwmx4sFB_8Ow7VhR9z3nEs6Si9qQ1SdpfVd7G6jAZTs6hzUl8muA-Nw3nULHzaqjIOKlhJX8Ff2Er9WAgLDYmztuI8bBoAmi9q0AAPv_DODkr9nEtzOjNAoz1v-yvuZ4nlT47sFfzb0db9VPZMwAQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmov_qqgke9Bg8gEKnnfKxz1wdRJqhsWWS7UBF2YtKQA59PGwrJCwnio9URCm8cG-sRM7DnMTTXHwlyGUhXXOh3QHgC1nDMw71nGPgQhcotPGLk5b9q9KptjEeNHoW8sCzU0CIfASw5dP6uUqEPEw71oowIu2AvdI=
+  title: theologyofwork.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGvE-J221TC3bmYGRg0xUgZtJa_MLz5_H2b6VxSBUb7JJ1c-Nff3ZXLULDqwMhf_6ABB7XaCMA7majCAh51_Kdn-Bcyy89NB-IvD7eOapR2ICYU7OeWpWZGKibtuN8h0y8JAcJFB6T2feYqOWZjQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGqjgzkhSj6nQ-44dlWGIXGiT2jWQ3eNaovKz4RvqNfOWOA9iKtlY40VpW4mNvOhhPg73UADkkkTVNsS35hKVajMHbVhkyUeEVCK9mpNEjBHz-y9zppZre6T9se-fW5
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNg_rEjZt0TES-vekjxku4VX9t-EkJXF8F-zsECqHDrmIBn06drjVs1zEPqtyq-OiX1ERgg8dYxMCAUud0wjNdnQoNWjubU8iJC2kG_mZoIl3Hjh8m-6hA6W9iRTi6tezozBYJDVxd3zzNhTwmn2DKkxZxTbj2KdsL
+  title: quotescosmos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyzSEojElN-rnRrAMfgT0GSBDOMqXRJQMSwZ0kUozMMdY25X4w8W4_EYNXRUvqqslbo5QVXhZ2JBVC-LbcOfsalC4Uzo9mp-xQTRzTdG0BIzkgavVB78p3sKR0KnOq8zg3wY-5EwIYoNK2s_HMh3F-
+  title: enduringword.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo18y69a-c2BD6FqZOrS1QUUxpKYx962sjq7FJ7Xjk-AydfhSdBJKXjObw4xr92-CMDzMGl129af9eygXHC1lJ74d_Y4mJs3mybOCiPdGWbGqirYIvxk1RoRSXVmbFFpHME5X3ZD86Itqp2SGFqCGLJIHqqg==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzUc7q9rjMNK-KB28KEbdxyqVqVz3HoHNhlT7A1tPjuxadkAAJ0vo5egjvYEz4cYEikxe7CHslapVs2MKlbU1NZLTOC1m6rYgNJYvNk-8oPDboHCbcRYqF6W4p2ZlOpUm-vk4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_z2u4_0FhMH8QhEIiqk00KYGB8AI42aquLl5xbc3kEoW0PJauKOhwmpC_sCW-VQX8EwAHLmc-Ur8t8xITns0CxiA_cGJG0V2_EWPgbhfro4LY9rl7qI6-ypYaIXjNm_U4tuHbwQNvWO9gOQrMwR5C3oIPi17x7GMPzNjyI6dZJk5C6Rj6aWUyUtEyG8-hWlDlxIImpjhXlQLqzPkQ9J02-gRIgoQmToJ8WjKLRg2r9GoXZ2Fi6EhTNzmk5qEGsxys306bCl6n_kWK75a5XHPdZZRrHUS9SJ1VQS7aNNrXkwRo3C6BCenLfnuWo_2I6Rluyh5jq6ovlEbjrsgJpqaZpYKW
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX5Sd_C17YeAXzq2mI49OMnF1C2Qk2JQZ79Pq8yYecjqHYyTUkwyUhDxjoXFngMyYBJB2dKrobtwMskhss7K2w02Inx6T_G7hcZuS-TcsnMrYfVR1Odkrgia0Oxiuuy9wQisqX
+  title: jerusalemperspective.com
+search_queries:
+- ''
+- hebrew word for hunter in bible
+- greek word for hunter in new testament
+- Jeremiah 16:16 hunter meaning
+- biblical meaning of hunter
