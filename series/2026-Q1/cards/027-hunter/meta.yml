@@ -1,0 +1,69 @@
+number: '027'
+word: HUNTER
+gloss: One who pursues game for food, sport, or capture; metaphorically, an agent
+  of judgment or persecution.
+card_type: TITLE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A worn wooden bow and a quiver of arrows resting in tall, dry grass near
+  a forest edge. A single arrow is embedded in a nearby tree trunk, casting a long
+  shadow. No text or letters.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Name a card type. Target player must discard one card of that type or reveal
+  their hand.
+ot_verse:
+  ref: Genesis 10:9
+  snippet: 'He was a mighty hunter before the LORD: wherefore it is said, Even as
+    Nimrod the mighty hunter before the LORD.'
+nt_verse:
+  ref: Romans 11:9
+  snippet: 'And David says: ''Let their table become a snare and a trap, a stumbling
+    block and a retribution for them.'''
+greek:
+  text: θήρα
+  translit: thēra
+hebrew:
+  text: צַיָּד
+  translit: tsayad
+ot_refs: Gen 10:9 • Gen 25:27 • Jer 16:16 • Lam 3:52
+nt_refs: Rom 11:9 • 1 Pet 5:8 • 2 Tim 2:26
+trivia:
+- Nimrod is the first individual described as a 'mighty hunter' in the Bible.
+- Jeremiah 16:16 contrasts 'fishers' who gather with 'hunters' sent for judgment.
+- Esau, a skillful hunter, famously traded his birthright for stew after a hunt.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPZQYdluPXUkMH6knNKp1f3Ohxug0Po7z4OUZOwc5WInwJWh8PYVIvRG_KNDluG8mMXrHg8pgNIpYAfKRz-KE3UOyP94o3dk8-p29fD5bf77Xd3GL022xeseWqbJXG_RxsJU2FWcQs_g==
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY4ifDb584yqjCOE6DrFAnw8t3aX2R31hwoD2H2xouVvubW8DWl-TvwZRHXt_ZuSXHT6tfyvPjMpeZfJ5LzAzr3t-jrwj0nQIYr-VVUoli_3l2aI6NgxdgizJ0ejzYHHMabGeiIA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSlIflcsBP53eidKPTTiZ6VrYHG456BzAyzxY__bBggfo0h4Cs7jDKra832EQ1fa0d94Cn-vaaumGIxchJIBYIKgTBm32Cfcj2_-7DxL5386SMk6d66HP-J1E5OA_x1YODFKoCHBUDuBoe06yEnxQoyB8WVag-YBD2HfhOJq_FaJw=
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyyRZNjibaQjqoWhgJUwWn9EU8r9whTuGtVceLmiZyZE0RMWoTqqp7QHP13d2kr8Gxvkknfw9K6Pfjbe13hIp5Ut60HnU8zxTWHcBLagvjwRHiujrEKl-nL3l7PS74cJWPC1uKYC5P0Q70HevBWwnl
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1bcEYGzNZMUgIHsDEIddcTWCWfMbFjko0XK6qaIq9HE9OK1_i9fKdjiu-dYItAl5-i0V34qy13DHtzFctXRITVQqTBHMs9kH5KCkfw2qnrRv4hSfyTFE4SDThtgCgA6I8FUJrQ3s9WgIfz7PLlE3aRSPBolv6JaaRVjugCyuOuiPMP9hd
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSd39ZYFuJsjblTeMgLavu_bqXrodjFOIZbwPupd5x1wL_6hAxqUh4gvqkf0GCKYPq6mxTm3YBeY5kP_f7WIhezOZxNTP2v0UdGWgKt_Pxd-UnYMMNtUutT1dn669-jKulci85SZN6GcmhIWBOxdVrVaTZj4g=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_4OFSoYFVrWjiWnCvHvNNNWeVtuoqYtdF-lkQkS4jXt8ZsF_L-Yke6SgaWinonujHqlAr4ouazluEMHnNmcdmlq0otuTGhS38sbvDvw2BWkMaCeshhzOKqkOvdW08Ww==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1AnxhB6OxMk4YRumrbq6247uVs16Xr7DwmV8GD7STdoiC4fhIwYmMXtCBFfj4JvJTPs_xrhsN8nsxtYsVAZ0qv_itM1aH6akl6tm25ryG7GjOJuMtvY6tjo0fZRvE
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEzqHEx0Nsk9UKkTZOlWES8ZIH96NR2l9nSoFJEGJelo1P6w02tIBKXRP09uPdWxuIi5siqUHHYVZMmfRxZ7OwbTm9_KyUgr_TmBQjqMphVFPkZnIaQXbc0pYMvmF65XvTABkyNX-ni59SxHhGhvq2GyuTyohiDNSdla6zpnZ_6wy_7sWn-m1oqLmrRvWkzBIoL_eOwGfoKbReDP_CEtIQbpfe7e3aA_OXzejA2HY1L7P-OCVuXUuvhiyaXIYHV6yOmNfsT78PZvy5qoaOeQd3a0g3J-h4xI1V2XcIW5YjJDPLdbQXKETJPJLw2vf8XEcjQJ58Fjy2zCXhSESZLlRlSbW6Wrw==
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0nq6y_ZFKdD3rKOrZ6Svfdd9F279WYKW-KcknOvF37AE0kqs3rdlQul2afo63_qZVVSwAU7Gr8iaaTdJ2KZupDsIeqcNGrGtYX1gNE8qbWOUZoAeq8IKdAbtRBeUc-Os5Kv0tcmrnU3c=
+  title: knowing-jesus.com
+search_queries:
+- ''
+- greek word for hunter bible
+- hebrew word for hunter
+- Genesis 10:9 hebrew analysis
+- hunter in the new testament bible verse

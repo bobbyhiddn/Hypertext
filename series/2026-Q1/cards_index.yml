@@ -12,6 +12,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- HUNTER
 - KEEPER
 - MIGHTY
 - MULTIPLY
@@ -177,4 +178,9 @@ cards:
   word: CURSE
   type: VERB
   rarity: GLORIOUS
+  ability_pattern: discard_type_name
+- number: 27
+  word: HUNTER
+  type: TITLE
+  rarity: RARE
   ability_pattern: discard_type_name

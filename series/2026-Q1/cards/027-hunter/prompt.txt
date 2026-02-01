@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #027
+WORD: HUNTER
+GLOSS: One who pursues game for food, sport, or capture; metaphorically, an agent of judgment or persecution.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: RARE (top-right navy pill with "RARE" text and GOLD diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Name a card type. Target player must discard one card of that type or reveal their hand.
+
+VERSES:
+OT: Genesis 10:9 — “He was a mighty hunter before the LORD: wherefore it is said, Even as Nimrod the mighty hunter before the LORD.”
+NT: Romans 11:9 — “And David says: 'Let their table become a snare and a trap, a stumbling block and a retribution for them.'”
+
+LANGUAGES:
+Hebrew: צַיָּד - tsayad - Gen 10:9 • Gen 25:27 • Jer 16:16 • Lam 3:52
+Greek: θήρα - thēra - Rom 11:9 • 1 Pet 5:8 • 2 Tim 2:26
+
+TRIVIA:
+• Nimrod is the first individual described as a 'mighty hunter' in the Bible.
+• Jeremiah 16:16 contrasts 'fishers' who gather with 'hunters' sent for judgment.
+• Esau, a skillful hunter, famously traded his birthright for stew after a hunt.
+
+ART: A worn wooden bow and a quiver of arrows resting in tall, dry grass near a forest edge. A single arrow is embedded in a nearby tree trunk, casting a long shadow. No text or letters.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
