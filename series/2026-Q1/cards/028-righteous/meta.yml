@@ -1,0 +1,76 @@
+number: 028
+word: RIGHTEOUS
+gloss: Acting in accord with divine or moral law; virtuous; free from guilt or sin.
+card_type: ADJECTIVE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A brilliant, vertical beam of white light descending into a dark, chaotic
+  ocean, separating the waters perfectly. Geometric, golden, abstract, strictly vertical
+  lines.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Return up to 3 cards from Sheol to your hand.
+ot_verse:
+  ref: Proverbs 11:8
+  snippet: The righteous is delivered from trouble, and the wicked walks into it instead.
+nt_verse:
+  ref: 2 Corinthians 5:21
+  snippet: For our sake he made him to be sin who knew no sin, so that in him we might
+    become the righteousness of God.
+greek:
+  text: δίκαιος
+  translit: dikaios
+hebrew:
+  text: צַדִּיק
+  translit: tsaddiq
+ot_refs: Gen 6:9 • Gen 15:6 • Prov 10:2 • Ps 1:6 • Hab 2:4
+nt_refs: Mt 5:6 • Rom 1:17 • Rom 3:22 • Phil 3:9 • 1 Jn 2:29
+trivia:
+- The Hebrew 'tsaddiq' implies adherence to a strict standard or plumb line.
+- First used in the Bible to describe Noah, who was 'perfect in his generations.'
+- In the NT, righteousness is often described as a gift (imputed) rather than earned.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnttX73uo5H8JIe0cPyC4SCNKgiuBlIy0spwpv3LG0rszqFbdGyKxYF6UPJZjjDYwbUpqBNoxzldSh3keZEY-Lab9VReH_kUar3z6ONKUTB7qZWWmAwZmdD14dN2VT4kSnkjmAbu5Otam9uNxPvyHOeg==
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvrebBfqM4p5-1oNHtzhrN4XyJxEhmyqUMzSzLvwusDWfNdtWSfcflM5gs7EKXlS4c9NGX27fk4fw-qxJkwgaXC6w0wv-CyVOPI_hAacp_nOZVbGToFeJYilvJqI15jCYNduU=
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAEZr8pX0DuVFNigoVtwnX9AF47lK7s6xQ6RuQOXd9VlZoEa3oSiR5dJqoV9XavfuvbrrMLYD6iWoH00DgxwtberPlYl-2ClKfF53wiA-2PR_ypg396psI4s6Ue_y9GjyEQ_XyK50ulpHI8RTwKco8Jymri_I=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoU9e0ctdSTeO_sfccjb9wuG-qhBmIwXinnJER2YE6u8Bo4hSRAXhCfkQTIiVDV7FngYH9OpDGitXH8aN6ZMmivMle9fzsINv3Lax3MYJTPH8jZUOYLqh4uCD0bDj-bQ9FTbkmSJjT91kbOYt7L7rhfn56UBYIOkFsfA==
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjTWUfAJcglTTQWp3zZhU3YLMl5nljqWkIZme3JDS5X33Y4wLAmbhjKh_kvzMIB47KH-NyQrEHT3dRv11p3clbFqHkRkD1XdADTxMXTLAeRDySxhPG03atDzY-n46wT27w0gfnj9-e4cQ=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8Ua1onaF-9NZR8_74oKX4KPsTQXr1GE9wy_SfrCvPzC9AETsZ0rtdo8XOCL-i7AHiUOWe8XrqC7gc7Ouo3LiQr6-yasaSVAqsR3nYbLRCyGU9XThzysE4aUtXGzEo-seJGe7lOg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKuGyRCk_FkmAS4XH9KOsFsJf9Ya5qHOSqDamqZHb8m9F80AFANZksVaCUbJ6MPusiABzTIV2YPycZkYoI4kNkyiWFsqCOzEpPq5I0uVCkIqELk6KhTVYYu-JnVo2RTPj35f1wQlkPyOEVLrM8cl0=
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGc6XZemSItsOwA3Vkz3EAjIY2RuElgso74r8U20EbOlVdpsGaZpK2imbvl6jaOJii4fi72CdqRmjFkLfME_ShlRP7YhP8Cv_W1UtPLKU44RLKtO4Qj_Tn9YAqI48I=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEevCchufVaKIofOefw3uh5jgWaVZ8JRsrqZgEUSEPxEYT4vlC0532rGoTRY-bSyaLE7bU0VfGRCO7nfRMUczdOGlIqBWF1x295eeZy3k9I8AQzx3eN8CFqbdBG6jPLC8uTcFJ-SWD3BMfHKFwhrqHch3sEGg==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGodFFdeCyEkttdp6plcIdD1Oz9XgTJerylwKTlP0qV3gy7kn4Wu3aGRKYsBY3m9NB70cQSZS-4Fl8GdJgXQQaJYI7Rscu3MkkdQXszkAJmBDJF5rxKHJurS9B4hMTv5PCGiBHxk_loHx0r2DpVAtvptqKNaFPsvoFkskbJ0GWK
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgdeVPyolwwR2EGtbRO1v270hxG1qNcRjgD089qzF1G1XVaPjb6Z2uopRYluSTRC_8ttQ-yWgJ5mh11n40kcgFYsps0zYYcLjBGR9CaYrldbyE8YoZmpSxrDZdvg9YdQLs8e_5XYVkzRZLo5DZ1nASdCaWIRkwnpAa3TBm6yFw_CNMOB40
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqPyiGLpnSlNeKNky9k7yqRJnYBL780268eng1DCFG3GVUu63_51cOp8jSmpwaKGkObCCFWdDZDs--lNqeQDa7n-ypdhGCcSSj1RJYX8aLM6ZR2N4gX7lSUkSPjWf6tF1QmKMh
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIcObB_0-R_tyEmx9DPJhVtmKkbR84jShDEYAznwPFPR17WB0XlE-CCTl9oB5dRVPQMds1QLRF8XkEbsteiAezUd4UUo30JZF9zo_bwiRXul1JRQNA4X948OrnjR-0IXDEzD1tPWmhSPuB4PNWPOR0GeFMmEJc2MZvbAjdkQ==
+  title: amiyisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9uwIAaw66ibI8XiNh3YHUVmNiAt0xDo3kEWVSpRWzeKIYGM2gSmcYjVFreSCqh-QWqnmKg5Qbw6N0S0k1omKG0xRlexgLDHXPFDx2lkDKw9Tzq0EEcIuQxFbOJHNu1ZDDDp8sLK8T0NTSBm1oJb9vp_kUjaSs3OFb_rd2Q6SzSr7NOUJGwsGuW5o_P_zBMzsWVLHX0cE=
+  title: doitinhebrew.com
+search_queries:
+- ''
+- Greek word for Righteous adjective
+- Hebrew word for Righteous adjective
+- Righteousness exalts a nation verse
+- Genesis 15:6 ESV
+- 2 Corinthians 5:21 ESV
+- Proverbs 11:8 ESV
