@@ -1,0 +1,63 @@
+number: 028
+word: RIGHTEOUS
+gloss: Morally right or justifiable; acting in accord with divine or moral law.
+card_type: ADJECTIVE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing vertical plumb line of fire descending from above, illuminating
+  a chaotic, crooked stone wall that is crumbling away from the straight beam.
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Name a card type. Each player reveals their hand and discards all cards of
+  that type. Draw 1 card for each card discarded by opponents.
+ot_verse:
+  ref: Genesis 15:6
+  snippet: Abram believed the LORD, and he credited it to him as righteousness.
+nt_verse:
+  ref: Romans 1:17
+  snippet: For in the gospel the righteousness of God is revealed... The righteous
+    will live by faith.
+greek:
+  text: δίκαιος
+  translit: dikaios
+hebrew:
+  text: צַדִּיק
+  translit: tsaddiq
+ot_refs: Gen 6:9 • Psa 1:6 • Hab 2:4 • Isa 64:6
+nt_refs: Mt 5:6 • Rom 3:10 • 2 Cor 5:21 • 1 Jn 2:1
+trivia:
+- First used in the Bible to describe Noah (Genesis 6:9).
+- The Hebrew 'tsaddiq' implies adherence to a standard or covenant.
+- In the NT, righteousness is often 'imputed' (credited) by faith rather than earned.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_Vhh-IP3tAdFZj9i9SMZuCVOnWoGwz7xg9xVXujUslJaDsjVzvmoDfRfwDcwpNoCVyE5PFGSgONA9uouCaCxaDNJjtB9C_rmDPH2jnIPLimylLOIsLmkzQEHGeqcySw==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBAiTyQlHB7WDmCAFypW-OdUCWLMKqSoKkaY-3CWXUlroKHFtBZh1qUX8m1HtvyGG8y7mTr8yPzNN9VVJ63u_zgOWGb_zMkVdy5-O5Z3K1578oTVv8P6eXQFFRo0csNSKSUEY3gzd7VjzWHaqdAiNI6iSlhKvrCPa_-z2HCA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyFd0umJUc7OHGKCfqi_NZEvUCQNXBDcMgkDjZtdb3kFCon0Ay9KF2z1X_OlL3cW8peC8y2-wPCQ4fLjZnzgM2QC2K0W7kwQt5AqwZi7vVk6oZfZ85oa9tFiIxWIdnxD6hV34pI-VHMreRvLpLBbIr4IFI4UfLGTQG-_ulCV8YakSMLueIYVnNoPxM
+  title: jeanejones.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPJjxVKuPubdr-KRTxntx7YRp9wrvUF3cy7GmxmeQTt8UgXycwp8zta4AIZUHv-6W0g2JMAGIcS219GVMBwtKaopk984_KZQmZipX9gGpAz2tNYNWoi48QPOytk4F_jtoRRtTF22iq3LG4l7yqSlKeumghzZqeZtbAxLtSRkix1DVfX0bhU0UeROsDaWf4TUVVdA==
+  title: southgatebaptist.ca
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHen3co2HW8uQ2TPQQd7O54a840PfC2HjlTtFGM-pXZvgkPD0O1fHyuX4ihvalCRbJQfheMtJfper_gKYXj7DUXN4R0qYowfjfxgw8um1--ClVU8_NfkLUZrRrBK69vRxdGApxyFT3YT5r0JfovEynEMzag2aZXNA==
+  title: bibliatodo.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJNmEJekArCWTUg07Vz6Pths5zN5UyQSCgwmSGxMIQdNc4wCkbuN3HRr6Bm5yFOy0IcKs6l0oOhGwxrwlY3X9yA0bpvO3HI8F-17QP1x-89WszM-ShfXDO5C9GY8Rv3PZ_Zdjv1nRXi4I737K2Yv6EANPesoPgNPHmTJuMDQcLOwK1abNPH2usW3urYCkGmat5ZZnuthzn
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKD-xwI89_Q0EsX4l56r4l47W0jjRghmvDy2Ho60W5_vYRc698s5gNW_BgXwldj5DX6BVC94sdr1YGXGRMIMlM9ZJLcorFkRCxDx-0xroczEjxpOFxVVDfKkiq-lLajhXoGiPYNS9RNK79CoLuGNXeAmo1SAX3JW-LZWicGGmYlCdF
+  title: bibleproject.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaRZl-iqNDdtfVLzGwsYqC0JZ_0uhqkKq7oj54wlMh3wMDB8txhOa9NHQaanYSJWjgL5Rz92jQA5ltd5nCL5RMR5dokCCGsPbmaFQj3TxlLdwxMBApvv4qd23PGadM
+  title: biblehub.com
+search_queries:
+- ''
+- first mention of righteous in bible
+- righteous etymology bible
+- greek word for righteous dikaios
+- hebrew word for righteous tsaddiq
+- trivia about the word righteous in the bible

@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: RIGHTEOUS
+# Card_Gloss: Morally right or justifiable; acting in accord with divine or moral law.
+# Card_Type: ADJECTIVE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Name a card type. Each player reveals their hand and discards all cards of that type. Draw 1 card for each card discarded by opponents.
+# Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
+# Card_Art_Prompt: A glowing vertical plumb line of fire descending from above, illuminating a chaotic, crooked stone wall that is crumbling away from the straight beam.
+# Card_OT_Verse: Genesis 15:6 — Abram believed the LORD, and he credited it to him as righteousness.
+# Card_NT_Verse: Romans 1:17 — For in the gospel the righteousness of God is revealed... The righteous will live by faith.
+# Card_Hebrew: צַדִּיק (tsaddiq)
+# Card_Greek: δίκαιος (dikaios)
+# Card_Trivia_1: First used in the Bible to describe Noah (Genesis 6:9).
+# Card_Trivia_2: The Hebrew 'tsaddiq' implies adherence to a standard or covenant.
+# Card_Trivia_3: In the NT, righteousness is often 'imputed' (credited) by faith rather than earned.
