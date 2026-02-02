@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: RIGHTEOUS
+# Card_Gloss: Acting in accord with divine or moral law; free from guilt or sin; justifiable.
+# Card_Type: ADJECTIVE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Return up to 3 cards from Sheol to your hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A perfect, glowing vertical plumb line hanging in a dark void, radiating golden light that pushes back swirling shadows.
+# Card_OT_Verse: Proverbs 10:2 — Treasures of wickedness profit nothing: but righteousness delivereth from death.
+# Card_NT_Verse: 2 Corinthians 5:21 — For he hath made him to be sin for us... that we might be made the righteousness of God in him.
+# Card_Hebrew: צַדִּיק (tsaddiq)
+# Card_Greek: δίκαιος (dikaios)
+# Card_Trivia_1: Hebrew 'tsaddiq' implies adhering to a standard or walking a straight path.
+# Card_Trivia_2: Paul reveals righteousness as a gift received by faith, not a wage earned by works.
+# Card_Trivia_3: Jehovah Tsidkenu is a messianic title meaning 'The LORD Our Righteousness'.

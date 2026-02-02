@@ -1,0 +1,74 @@
+number: 028
+word: RIGHTEOUS
+gloss: Acting in accord with divine or moral law; free from guilt or sin; justifiable.
+card_type: ADJECTIVE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A perfect, glowing vertical plumb line hanging in a dark void, radiating
+  golden light that pushes back swirling shadows.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return up to 3 cards from Sheol to your hand.
+ot_verse:
+  ref: Proverbs 10:2
+  snippet: 'Treasures of wickedness profit nothing: but righteousness delivereth from
+    death.'
+nt_verse:
+  ref: 2 Corinthians 5:21
+  snippet: For he hath made him to be sin for us... that we might be made the righteousness
+    of God in him.
+greek:
+  text: δίκαιος
+  translit: dikaios
+hebrew:
+  text: צַדִּיק
+  translit: tsaddiq
+ot_refs: Gen 15:6 • Ps 23:3 • Prov 10:2 • Jer 23:6 • Hab 2:4
+nt_refs: Mt 5:6 • Rom 1:17 • Rom 3:21 • 2 Cor 5:21 • Phil 3:9
+trivia:
+- Hebrew 'tsaddiq' implies adhering to a standard or walking a straight path.
+- Paul reveals righteousness as a gift received by faith, not a wage earned by works.
+- Jehovah Tsidkenu is a messianic title meaning 'The LORD Our Righteousness'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYsBBbn55jUbb1cExqaqvUzTQWDDDakaFr9O4axbF3adA7qikx9dsTHidEMnKDfKkdia8VJ0rSp2-Q5Di4OpuHNoexc-mchiWNWxClPBVXEDeeHylFhZ1pQ73WAhs4tOjMbL-cK6kxsud1AfOEnkcDswuMLU0w4dpbmLtktTXCt1a66gq21JlgMA==
+  title: andy-brown.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBsVLpScs-YE-hsk-6VNXCPb6lKMGLA3-8H9f9XhtzwdoM_3dQFaVlQGGK5BobsTrwsZlT6FhZRXCEKTSYu8r-qI_rN-NhTs9ZEdChcmLRbkIGf9Opcmuv70IBjQZtCtaEyfQn-7ZWIerPejSWPY1Hboc=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkNwaRZQl1aRkT9cClaZyClBGCztofNUrqBDTyUNVYanUDuu90A5fUt7QCqces1dpCrgdoGesVdfCAXZgNm-4g6AUBpqeKSyBsgWzh2N-7cWzFYzzRhdNHFjLJyUxknfvA
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFocIqHyrKjd1Gmp0oLS3WqYJPmG-RVknNvc7L31zy7w8KSrevKfuKIiHDYApJw6zwWn1avoJH45iTxajpQM0FTRhUtWzFkxpVDG5KtAQWlGl_tskzcCkg0WB_bjbNirFWKhwcoQIFzZuGTj3JT
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqTykjOKXn_CCU48cOB_JnuQkNiX_7GfDBlaz69hyFKEacViNMmdu5SPb7Oo04l7dq1j0nn9M5V4by6rIwYuibYGqM7A8jl6cG7ka5KAaFnwHAcinfi3JqQ9w4TjG1983arnIw13KyEZzj
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP8Oj5s_cSGzYMMCY0WGwFMmEp0ZjVllKIDxXZTeDvyB9Ml-mMPlmZ2rlHHYB_DUDGJhtb2FP0Pgfy9BCipFkGCSW5XvHBkETTdvKQE5wthGawwaXn0WgQNHZOZayqE8TqsnuV56rp1UCo4ZV-vMmZHjRfj5Px
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHarzGsOd_cIJgBdOEF4FzR5EEniPu_xp4xU--joi_WRBu0LCdvuyUSAPazkKJmH_0pwQbtX1SHdXS-Gm6B2JfeILr6vK_um7vOSA7zHApTNKGB95-IL_9RZV-yxCJUOxgwzVHzNORRgLwym94YDxsMRZFY714FnnGxdEQ=
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVgcMmdeApgxu1B8wVmILLa99YMezq9wVcD-xGCJzN6TCJG0KDyz0628p36906Es47kcBndvAy8aAGe0O9J5Sbdo2Dotdv8JNU-b9PpyD_yOK5j84SdK4XqqhVGjYo
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvs9ve0ftcy3Ds0zl2QFCqf3jsfkU-Co9OPjqs3A_EBLw3SF_Y-l-6NLcs4rBlgs-1ri3ZndhkvEcXzoEXGRdCN3SZuwYUsJ_uX33i1wGxJX2wbQ7oJCBM3SaEJMX6fOEW_8pcjrb1I71Why66s5gQ
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0hchDth-dkhVjuWgAdGOjo4ua9x8U8ZmlzlgxocElejE5Y8xUS8J-gbnTlbOUttn1mOo-wpxO-RaUSpV4QQ53Ow28eOodRdQQFADxgvfVcjsRIflWSQqdQ0KbMbSBjbls_zigi7k32u8IWZVEqGD_A2EbVJY=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE22RFao7dQV-LfGJm8pX5yweQgwGnnkzkYJEFlDIASqar479r9pgBLI4_SHuyySeJ7IdhIMI5-HBXM0GTyDt1DH_dpmMCj7sQQC-1IdNxovhz54-HffkrTgYR8LiVFEQ==
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbz6555uEwrAcxtssXXYnoG0Q7pr3xf4fyudFgiEhPPVSqc7ipEpwLcoQY2ioDKQrxY8eMSGR7kM4GhnSeKz36kAHBN0nwN6gr4ChDx3lsfYWabkPny51Ur5s36Z1uSALlpLSFjTUtWAFEqajFv7jVxxVTGm7AasTITBbgNNAfVL2qZfJjVxdvscVuXRIT5uktW3JbVgkU
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFAqmAe_Rrjm8l-Gw11I8LeOevzs9F_V8-zwHEjFfpwM5eEYcyAV-tyBnKfDpZ9WGoawY8YCd6rP7wRdoJZwsDeJxCYz96JQDT4ESTUJSCD1xUFBXCihNyrdRS8pobylADlleyDTesgxNH8zSx3Hml
+  title: biblestudytools.com
+search_queries:
+- ''
+- Greek word for righteous adjective
+- Hebrew word for righteous adjective
+- Hypertext card game mechanics sheol return
+- Proverbs 10:2 righteousness delivers from death
+- Genesis 15:6 KJV snippet
+- 2 Corinthians 5:21 KJV snippet
