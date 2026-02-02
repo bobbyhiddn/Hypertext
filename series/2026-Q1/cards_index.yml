@@ -21,6 +21,7 @@ words:
 - NATION
 - NOAH
 - REMEMBER
+- RIGHTEOUS
 - SCATTER
 - SETH
 - SHEM
@@ -184,3 +185,8 @@ cards:
   type: TITLE
   rarity: RARE
   ability_pattern: discard_type_name
+- number: 28
+  word: RIGHTEOUS
+  type: ADJECTIVE
+  rarity: GLORIOUS
+  ability_pattern: sheol
