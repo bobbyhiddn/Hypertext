@@ -1,0 +1,63 @@
+number: 029
+word: ADAM
+gloss: The first human; mankind; earth-born.
+card_type: NAME
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A primordial figure formed of red clay rising from the earth, dust swirling
+  in divine light against a lush garden background, organic and raw style
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Discard your hand. Return up to 5 cards from Sheol to your hand.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: The Lord God formed the man of dust from the ground and breathed into his
+    nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:45
+  snippet: The first man Adam became a living being; the last Adam became a life-giving
+    spirit.
+greek:
+  text: Ἀδάμ
+  translit: Adam
+hebrew:
+  text: אָדָם
+  translit: Adam
+ot_refs: Gen 1–5 • Deut 32:8 • 1 Chron 1 • Job 31:33 • Hos 6:7
+nt_refs: Luke 3:38 • Rom 5:14 • 1 Cor 15:22 • 1 Tim 2:13 • Jude 1:14
+trivia:
+- Name is a play on Hebrew 'adamah' (ground) and 'adom' (red)
+- Tasked by God to name every living creature in the Garden
+- Lived 930 years; the only human created without a childhood
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRGPoguE2H2lyIz16UwQ25Ug8LMcATh4qB3QA8vvtbuuvURTcaGtLYv0YSu4NuwsMJVRw4jw77jXE7F4kgcoxEqALHIO9s3P1mZkzcfXSR_NFoXJj0d2hV25uGuvOaoX5RZ374p4x_n4E_A9tUamAFAV1soXAc7KLjUctV9e8SBqF2lZh7HFx_CeZ5UqrX9dN1ovjLGCb20y_oz46Y1ZI=
+  title: tiu.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWkR_IS_ILEERbAsAB7cKFL2bXCF1Q_5V5vHMZk3sueG7E-ZDNhTfE1ocQ-049cKBQcWPz01ghO4aI91BOwXcmkYvt1BLehbDX4m5eCo8OyWxPmDqJkclQgWrEPmmISjs1UOEzBDWfb_Q0hjELGidcQ0jFuIlvQjp0DUX10V1PowA=
+  title: churchofjesuschrist.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEVn-x59Ms7VCx2JIT15wSjH740Ig01KKn1Uu7_m866K7Fx1s48dNMyBZJiLa8uBy-OCBjfX2C8LCbKV_cbEmilyJJYGn8a9pBCEi-6Wl11Cu7TSVDpUIS8j-9AsP4k4TO-NbqwwlxTV8W6IOv3TH3jADNO-OFVBZHhjCNUQ==
+  title: bibleref.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfJFZAdr2WGQKuCFqPjHhRMeQsdUkSCET63SkG2inR_EqAyZk6oNrMEe1vZJrv42ZWFqF_rSWlZZDM9YEYmkN1S5RFByTDwY7iitgUW0fZo_zT39QLV1dOoLaKp0iXMmQSKJ-ZeKRjxdM5lRJHXp-YkKir9T2YEExtfcNJX-CuN-DVGNFE63HgD3xD-5Y=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjPchS5Dc645Zz4TfXNKcd4iSmWduGjsp_rGHjEue7KlbtQaI4N7QFK_vY6IuP7QW48djO_9LL2PxMamuxLPnGZCUvuPs9MSis76kpb_XWXITBx-YPrqvXyIRIZIhREoan6ofymRbJPT_xUuMs
+  title: bibleodyssey.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfOo97nz1Xd1ruhbhhM5TiLSTBITR85580p5IQdIoqih2NiTgB8e8SjLz8F2v6jYLTFpuDAiytGi5SWwRik5g2Cr4JUGM8bj7GAXVemPHWDz8nCMnI15obQdmxneDMu_k_9FEV6kdxN0a4xRn25HqmSi4iwP-kouso8j6a4N9k3YA1KRVHck4A1oQUFPgrsAIPRZU4ue4AgAkJvPlaHy3JkgHtgWY=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHn740fGKmAFLp2jfSaUi7fGGza7PpOY_nQRUFETZMKMt9b9WQ4ntJP53RQlS-LhrZs4A5WU3tpy-RE8EHeyPHe9BnbSEiGpx34J3fb_1h6xPtoTatt6wysMt2NsQUotKQvkDEJeBkKE6CReHyWTkxT
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyAKyqs-yRq4RDY6v9fOIEeCS1ErAoICsZHJrY14JQI5iGEcPBP6kvLYttqlJn5gt1m9CJRusH5OJqb2t5gZE_yPwd7D7LdL_hsPLKkEq9kdrDYmvxpY5z6gHOfH-DDKWiDcUn4Fw8Xyacp0gXYOTuKNibgC7VkWZJxIs_sPTa5giGlVkmC4UfQi-uxzs=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5BkboPBcwNM0x--PwipU1Mm8mNvfH8eNnhfO5tnv8FntSmosziznfl6FygFmc1pNBdZik7QUDi6eFpjRQfSwFcHiqJCuVSbqfxd-X0xUtQaeKbobnfE6AR5T_0xH5M2Yi10dEfCU=
+  title: youtube.com
+search_queries:
+- Adam etymology Hebrew adamah adom
+- Adam Bible verse 1 Corinthians 15:45 snippet
+- Adam card ability game design inspiration
+- Adam Bible verse Genesis 2:7 snippet

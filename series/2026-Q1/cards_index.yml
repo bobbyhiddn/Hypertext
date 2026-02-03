@@ -1,4 +1,5 @@
 words:
+- ADAM
 - ARK
 - BROTHER
 - BUILD
@@ -39,6 +40,7 @@ ability_patterns:
 - conditional_draw_pages_type_name
 - conditional_draw_type_name
 - discard_draw
+- discard_sheol
 - discard_type_name
 - draw_sheol_tower
 - draw_tower
@@ -190,3 +192,8 @@ cards:
   type: ADJECTIVE
   rarity: GLORIOUS
   ability_pattern: sheol
+- number: 29
+  word: ADAM
+  type: NAME
+  rarity: GLORIOUS
+  ability_pattern: discard_sheol
