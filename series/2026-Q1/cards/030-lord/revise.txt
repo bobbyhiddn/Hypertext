@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: LORD
+# Card_Gloss: One having power and authority over others; the Supreme Being.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Name a card type. Target player reveals their hand and gives you all cards of that type.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A radiant, empty throne surrounded by blinding golden light and swirling clouds, a scepter resting on the seat, ethereal atmosphere, oil painting style
+# Card_OT_Verse: Deuteronomy 6:4 — Hear, O Israel: The LORD our God, the LORD is one.
+# Card_NT_Verse: Philippians 2:11 — And that every tongue should confess that Jesus Christ is Lord.
+# Card_Hebrew: יהוה (Yahweh)
+# Card_Greek: Κύριος (Kyrios)
+# Card_Trivia_1: In English Bibles, 'LORD' (all caps) represents the Hebrew Tetragrammaton, YHWH.
+# Card_Trivia_2: The Greek title 'Kyrios' was used for YHWH in the Septuagint and for Jesus in the NT.
+# Card_Trivia_3: The phrase 'Lord of hosts' appears over 200 times, emphasizing God's sovereignty.
