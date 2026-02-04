@@ -1,0 +1,64 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, Creator, and Ruler of all things; the one eternal and infinite
+  Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding singularity of pure white and gold light shattering chaotic
+  darkness; abstract, geometric, cosmic, non-figurative, ethereal majesty without
+  human form.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word... and the Word was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Ps 19:1
+nt_refs: John 1:1 • Acts 17:24 • Rom 1:20 • 1 John 4:8
+trivia:
+- The Hebrew 'Elohim' is a plural noun used with singular verbs to denote majesty.
+- The Bible never argues for God's existence; it assumes it from the very first verse.
+- Capitalized 'God' usually translates Elohim/Theos, while 'LORD' translates YHWH.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9uI6b_R0aTMmVcYSyIERI1Sore41fFs213PfYF-fubhtB7OfKuRuNfSWPoJXX4fJKauHBWL3Jabcece9mKMh1TkIsalg52k8JxkaL2-XZKWoRK2QeGGL184eh51J-DylZpA==
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGspBhAt1umUELdjLv3z2SdODjycIdf8oEk5fes__KhOBBKIxrT6Tp6la0vUGABaH1PcciQRpWK6KLDujq99t6qLscFcFkR5zIE5s6vS7nXBeQnlYg4P9w0z_pnEv3WdGT6l6FE17j_fEmGc9Pm868R-qhCrIzid2Rokgd4aCOp7T6DiNLpHtaRLw==
+  title: vojisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUgHoHXvmv43Ea68OLZV5-gauq6YoO4gIRKwYq2MkRgVHy9rMFKWCMXhsXAdg-KrljS4eiF5FXrblHQHwNvn46KTBWUQ-lCntA299PjM-n2l0Z-mM8zmOkbk194Dn_1wUhwA6sMHi9C6JxjMjXSQ==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKTxNJ6Pd1jf0bQ6tq0j360P3dPaMApGoFWaMIPr1qXHDTOmUclH9hqTeiZB15NzsvBDOShm15n6meIgq7rSoz4lR8gbUfuBTPX-ph1I82O7M8mYCq2NRyKfiC1DABD50nCssGfZqoxuicpmMON2iZcKaPtK2uKetyL5utv5ygO4xCGuKaUzzul0TBlg8DN2RyfMsCMyedZoU=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzjBDQhZk_vPI20YoFmiVmaXkPZjl52ItQulmEDd08rmUCWufalLEd4mMn__hwXJD-ptd16gYMvsmNns5jd78hvwP-zYG429Ch9q89xM7Q7fkN1p-vSR9yxcmA3sfHuA==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGukBY3sUgrCjGML7z-RTYGyIC6TreTEabGoA9fkrI1ls3VHOX1ydqiOTsQ-ftQnnxvM1PcGi4i2SiThSO11FBJlAChD8Mk7-FkswCoWXAJuoaWes3Qc3X4k-SXSHr_vYvCpg6qHAzjpqlfVDw=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcSPQHxHQldlR8_5OtdfW3YvmzkbnPpxNEL4KFlNZkt6khPuu9KgxXWxfPBSWocBhkg3FzTU5Pq8vnhFMRydd0kKhQjeV_hSwDohScFxCZ2tFn2YgsM9WIfhv5BUo4ykDzn0aGrSpWG6k9PuRua20YeMS8tcWTlsnMx2qzrQNJdg==
+  title: biblicalmissiology.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2egOEVyOo7YzUsA8cWNaluY2NLlHVJKBrqY6RM041HUtuvs9l6uJv86lpxQZo0AsHzY0nlcJqVcWg0xnMRDIuNRVXEpQc4D6Ab4Qx9ml9JC26r4n4QYTPLhUYJJE0L7Zy0zV5zkHIAIoalzmmmsT0deJ7JOQcZ2LuRLpWCGnDjx4-W5Q5xpGwnvMso66sbfFIMtU-b8HplBb4knUBnNM=
+  title: reddit.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNjbDxFwEy_nZF13jFbkhoTl1TDr2f50r211n5tYE6PMYZGg9uHXris2aSkVh6Kr3bSc6Pp4-Qpvc-G4g4wDHUELNM89m93Aj8rfmtjRbsMMx0Lyhdts5PiHhbHSV1nf8QUz1DE7COi_yYmrckr0BsZ_GVf_ur-H03nKSR6X5u
+  title: faeria.com
+search_queries:
+- ''
+- Bible trivia God Elohim plural singular
+- Hebrew word for God Elohim definition
+- God title card game ability ideas
+- Greek word for God Theos definition
