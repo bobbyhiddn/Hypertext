@@ -1,0 +1,41 @@
+number: 029
+word: ADAM
+gloss: The first human; mankind; earth-born.
+card_type: NAME
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A figure formed of red clay emerging from the soil, glowing with an inner
+  golden light, set against a lush primordial garden, realistic style, cinematic lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 2:7
+  snippet: The LORD God formed the man of dust from the ground and breathed into his
+    nostrils the breath of life.
+nt_verse:
+  ref: 1 Corinthians 15:45
+  snippet: The first man Adam became a living being; the last Adam became a life-giving
+    spirit.
+greek:
+  text: Ἀδάμ
+  translit: Adam
+hebrew:
+  text: אָדָם
+  translit: Adam
+ot_refs: Gen 1–5 • 1 Chr 1 • Hos 6:7
+nt_refs: Rom 5 • 1 Cor 15 • 1 Tim 2 • Jude 1
+trivia:
+- Derived from the Hebrew 'adamah' (ground) and 'adom' (red).
+- Used as both a proper name and a generic term for 'mankind'.
+- Luke's genealogy traces Jesus' lineage back to 'Adam, the son of God'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
