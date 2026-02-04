@@ -1,0 +1,42 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, Creator, and Ruler of the universe; the eternal and infinite
+  Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant singularity of pure white light erupting from deep
+  cosmic darkness, forming nebulae and stars; ethereal, abstract, majestic, oil painting
+  style, no human form
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1 • Ex 3 • Deut 6 • Ps 19 • Isa 40
+nt_refs: John 1 • Acts 17 • Rom 1 • 1 Tim 1 • 1 Jn 4
+trivia:
+- The Hebrew 'Elohim' is plural but takes singular verbs, hinting at the Trinity.
+- Scripture defines God as Spirit, Light, and Love, possessing no physical form.
+- This title appears in the first verse of Genesis and throughout Revelation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
