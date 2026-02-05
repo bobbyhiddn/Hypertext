@@ -1,0 +1,40 @@
+number: '030'
+word: LORD
+gloss: The personal name of God (YHWH); supreme master, owner, or sovereign ruler.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly radiant light breaking through storm clouds above a rugged
+  mountain peak, illuminating the landscape with golden glory.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Target player draws cards until they have 7 in their hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Revelation 19:16
+  snippet: 'On his robe and on his thigh he has this name written: KING OF KINGS AND
+    LORD OF LORDS.'
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31
+nt_refs: Rom 10:9 • Phil 2:11 • 1 Cor 8:6 • Acts 2:36
+trivia:
+- The Tetragrammaton (YHWH) appears over 6,800 times in the OT.
+- English Bibles use 'LORD' (small caps) for YHWH and 'Lord' for Adonai.
+- 'The name implies eternal self-existence: ''I AM WHO I AM''.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
