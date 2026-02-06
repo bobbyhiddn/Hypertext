@@ -1,0 +1,70 @@
+number: '030'
+word: CREATOR
+gloss: One who brings into existence; God as the originator and sustainer of all things.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Cosmic hands shaping a sphere of swirling light and water from dark dust,
+  geometric structures emerging from chaos, ethereal golden glow, nebula background,
+  grand scale.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Shuffle Sheol into the Tower. Draw cards until you have 7 in your hand.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The Creator of the ends of the earth, fainteth not, neither is weary.
+nt_verse:
+  ref: Romans 1:25
+  snippet: Who changed the truth of God into a lie, and worshipped and served the
+    creature more than the Creator.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Ps 33:6 • Eccl 12:1 • Isa 43:15
+nt_refs: Col 1:16 • Eph 3:9 • 1 Pet 4:19 • Rev 4:11
+trivia:
+- The Hebrew verb 'bara' is used in scripture exclusively for God's creative activity.
+- Colossians 1 identifies Jesus as the agent through whom all things were created.
+- Creation 'ex nihilo' is the doctrine that God created the universe out of nothing.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnNKgh1T-u2Rnp0zDM8wOMshtuL1KagBaPlRv4K_qQ9w9sP2LOetB17UJ7RqHllnZzC0b2fqH7u-gqLN8X0M9VM_lKK_nQC8JzivSxKQtD3R55ZkFiP7GXtrjhkFCVWxZf
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwfsGFNUGgN1y2CTedBOfxc5GUwqAb-TqKwRj5FzYweQxlwtKInjQ3NLmbrOCGcKQbxs1skMeTkAaT4v543PE5u6g0KWH9ehO5D6HBKVfaBlQsXIt6pn802CMG4w99
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGstuop0nnyXROVuAkXRqRsIMV7dkqJh3ITRXZGZmN0jx4LDp2RJbXLvl2RF-8z8Nbzid8i0HdDR5FrtmrVjEqZVBLPA2tBofrm8FIaCxGwa9uBCsG95kY3l15SwYoxcnpfn5zk5vGzxvwDQXccj9JhIzwOvnm4666Z2GlCZexIU5eHuMaeBjINkQ==
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1jc5scMpPVGlWps_zWkn8uYNvxyiF7cV2qlbRBn7kiYVXlZ-pzDbNBVc2L1vpMND5PqcDsE7j2FGOjM_80l6mkEojlBXP9S7wqROVLQW5zt2jJPG2tWigi9C5eE0zKw==
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF57L5HI5XyurUFinHlNd_AxRQUVWmgpA4vHw3l0AkvpXfUcoW48tueaLMTGjQkqLP0PfkgurlFrAnZa8VuDZzpTSvVbx0f8pAF0rEyMrmDQQ0gu0l8Ny3WpZYV0GXkT1w1lINCq25eBbdMcQ==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFPaVtkkh6Adf2Z870fcKD8zHe-ZHtH06uUHVgYjRCYCAm-2dLkMng6U-JSucRfMJmkpWYOnVdaM4uPZpRKfjaf4bPpBnMAoqHVCVZ-CcjEDaqUF-IGXVKI48bhMxoX
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEz21pz4XsWBKVBR8vv52JcTqD8vclWw6bnveNLWcC_HtoU_0H3QHaZKmuHz7vLjSHO0PlEH9SgMzbWDYd32c9faJQ_IEBSdJADmVUFZ57CgUtePa5NYBfnAmcprQgQxg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsZlxhdEdkORBttDyzrzahe6P2jHYMbAs3ethEDTuRmOg-zbe2J2H0dogvYy7_ZtmEgKfyN8LbbGu-REx9OxSfBjrSM_q-5eDfWi9xG6T067tGeIXG4u5iWCKDLLJNr-Y=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrEKBrxuKwMI15ybJAzrPEJhGsXRqmGSKFBEiHHDDo7ffJgiCtNFteuNMlwGCjaIz35LDvyxb5QhcsjoMsB25E0J6S2ZVm-txMx6PPUxIB_lrjFKwbjTOJxYp3b5qL_k1xLP_cBK0U44hBuHypqdmiz1_yxrNT1Qp8K8ZMa6JGIg==
+  title: bibletruths.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBktft8Fd5ebj0pj42S3nFjXSfdXVgaAeVCE5JxF0KZ84siGnnJktF-5d5bCVgCcEc5PLF5n6zmOsyerjz8K5NZfRo6D9me_9RXtaGnd2Ct4dRyjeUfenashRvjE1sIJiNtkmBbExqzuiSbs66YStgPbppsVcEYff4paJfyQ==
+  title: katiemreid.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHitZVW-sfdusN5lqJLINdtoPg9PU-mmrT5S00Ie6SS6ik3TLat7loMUCTEMk4HcHcDCTcGanOXZGKxNZBaVKybvO3KiqgyIQCCgBkYcv0oD45Ry2lPNFTrKw1f2laKRkY-Iru1y5wtfMOwtzJEYIOUvRUSNA-TK-YzL50JkQ==
+  title: crossway.org
+- uri: https://www.google.com/search?q=time+in+%CE%A0%CE%B5%CF%81%CE%B9%CF%86%CE%AD%CF%81%CE%B5%CE%B9%CE%B1+%CE%A3%CF%84%CE%B5%CF%81%CE%B5%CE%AC%CF%82+%CE%95%CE%BB%CE%BB%CE%AC%CE%B4%CE%B1%CF%82,+GR
+  title: ''
+search_queries:
+- ''
+- Hebrew word for Creator Strong's
+- Greek word for Creator Strong's
+- Creator Bible verse NT
+- Creator Bible verse OT
