@@ -1,0 +1,44 @@
+number: '030'
+word: GOD
+gloss: The eternal, infinite Creator and Sustainer of the universe; the Supreme Being.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, blinding singularity of pure white and gold light in deep space,
+  bursting outward to form swirling galaxies, nebulae, and stars; ethereal, majestic,
+  and cosmic style with no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Ps 90:2 • Isa 40:28
+nt_refs: John 1:1 • Acts 17:24 • Rom 11:36 • 1 Tim 1:17
+trivia:
+- The Hebrew 'Elohim' is grammatically plural but takes singular verbs, emphasizing
+  majesty and unity.
+- Scripture does not argue for God's existence but assumes it as the foundational
+  truth of reality.
+- The number 7 in the ability reflects the biblical number of completion and the days
+  of creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
