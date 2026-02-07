@@ -1,0 +1,44 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, creator and ruler of the universe; the eternal and infinite
+  One.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly bright, ethereal light emanating from a central point, surrounded
+  by swirling cosmic clouds and golden geometric structures, abstract representation
+  of divinity, majestic, awe-inspiring, oil painting style
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle Sheol into the Tower. Then, draw 3 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Deut 6:4 • Isa 45:5 • Ps 46:10
+nt_refs: John 1:1 • 1 John 4:8 • Heb 11:6 • Rev 22:13
+trivia:
+- The Hebrew 'Elohim' is a plural noun used with singular verbs to denote supreme
+  majesty.
+- Derived from a Proto-Germanic root meaning 'that which is invoked' or 'poured out'.
+- In the Greek New Testament, 'Theos' appears over 1,300 times, mostly referring to
+  the Father.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
