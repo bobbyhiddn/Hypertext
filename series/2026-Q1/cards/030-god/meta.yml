@@ -1,0 +1,59 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator and ruler of all; the one true object of worship.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Abstract radiant light emerging from a central singularity, geometric
+  order forming out of chaotic darkness, ethereal gold and white glowing structures,
+  cosmic scale, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 5 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Ps 46:1
+nt_refs: John 1:1 • Rom 8:31 • 1 Cor 8:6 • Rev 21:3
+trivia:
+- The Hebrew 'Elohim' is grammatically plural but takes a singular verb when referring
+  to the Creator.
+- The Greek 'Theos' was used by the Septuagint to translate both 'Elohim' and the
+  divine name 'Yahweh'.
+- This word appears in the first verse of the Bible as the subject of the act of creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEboRilt7EPsGxbWxJ_dTx_sSYzHc6TBrAiZyurpXGfRyuUQoF-4PgxN0AAeFh0lo685YjHHG9f327MlZuLd6Rsyzhg9EBEqAJJi40e0_4nd9cIVAANJVFHP3aY2v0D9JRZEJZ2UsPd52CnfPFaw2eChlBD6oiiVGGNH9LSdNnuMJtNT3RKk87cDXYZYn0w4eGvFWq0qMnG28I=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHo6QAZTMjmUxjf_DZtLCIjTeSg4riby65wy3wDgiHS2Djc3zkTOq8BJlqJ_zuYQCk0JpoNbW7ewQKTvHARR9lXuY9QCXh3pxxf3kb4yk_E6b_IAxsx2wFwakxLnIgswPs_KQctJs6B2Qid224kT7y6rg==
+  title: logos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpIVxGbekJm32qBIYdfF_sWTwhE6f2lDaYzOBohXa4kurdH4Qgei8Vfwdht-lQknAFOCOMBTUL-xudCs5Kt8BG9Gpj-aT-UtnArok94tTaDg3HnTa6_SVa9oU_vifWp8R7sN9QzroBs39GvnJCYL9x8gNw5TJnDTjpyLPiSvXy1JItyOpxkaHdf1tVR2wzzli9s2hobijgl4oloBYS33ePCOb-PycD
+  title: anthonydelgado.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHN_G6j8o_FPA2jDLZxEqLXoRJXly_kDhSNE7G_1SIk10t-25fhLGezFtwQABY2cmJDvqBhdFGIbTfNih1lRLkrmUH4EXyyHXwWoPIcXlVeTbtADzt81BL80XOFelU0Dk1Zv9aUwrUrqqMNX17jB6iGXxO9Qj4ictrKQzZPN-FWJ5Rn
+  title: thenarrowgate.online
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj8sjFN4SNrlmUKxZbtafCWkjr3kKphb0zmS-Op--p9dSsVsMzZMLzlWxkIuUpIEv_vDxaBg-irp04IHBhs1YXW-ymLyfJZKzRHGQs0h60LpT5mAplHhIyPWn2rju4KtBZfenezCiIR-APJGcvs-WaQ_DD71wKLPYYPVePxT8eWAbsv0gYHPM8JBq374f0FH37yHJADNBogaCG1zNsQ8DbSeWAtkK4pK-k2USTDZ-RnZjknjRlQ7l2yd34WGvcC1XQefW7OLS8IHwXLbIfcZkUaH8u
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqGksfdqZ8Moi7aEVFMvvDmx6Y--PrPkUja0k-PVD5TNxRgXZOZYFFCu2_dW7awe4B1kiAE29pfOSQtjJtRNR37z9mbXm36WT0xyA4K68w5IY_ZIgTUgdblD8ZnkFrYThV9cxbxIg=
+  title: youtube.com
+search_queries:
+- ''
+- biblical definition of God Elohim Theos
+- etymology of word God Hebrew Greek
+- trivia about the word God in the Bible
