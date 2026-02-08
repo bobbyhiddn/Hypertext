@@ -39,7 +39,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Gloss: The eternal, infinite Creator and Sustainer of the universe; the Supreme Being.
 # Card_Type: TITLE
 # Card_Rarity: GLORIOUS
-# Card_Ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+# Card_Ability: Declare a card type. Reveal cards from thd tower until you reveal that type and place all revealed cards in hand.
 # Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 5
 # Card_Art_Prompt: A radiant, blinding singularity of pure white and gold light in deep space, bursting outward to form swirling galaxies, nebulae, and stars; ethereal, majestic, and cosmic style with no text.
 # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heaven and the earth.
