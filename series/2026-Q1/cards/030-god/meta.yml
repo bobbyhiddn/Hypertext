@@ -1,0 +1,67 @@
+number: '030'
+word: GOD
+gloss: The supreme being, Creator, and ruler of the universe; the eternal and infinite
+  Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding singularity of pure white light fracturing into a spectrum
+  of colors against a deep void, nebulas forming in the distance, abstract and majestic
+  style
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heavens and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Ps 19:1 • Isa 40:28
+nt_refs: John 1:1 • Acts 17:24 • Rom 5:8 • 1 John 4:8 • Rev 21:3
+trivia:
+- The Hebrew 'Elohim' is plural but takes singular verbs to indicate majesty.
+- Appears in the first verse of the Bible as the subject of creation.
+- Used over 4,000 times in the Bible to refer to the one true Deity.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEK6-sNO3DkQU39l7SYeDiM6KSk3oTcqggxeUz-7GSGLNxrMcXXGSlM942NFAptsn5jbQkPNDXENzlYHXP7OQJ2_WMVdJXTyRnRhocLKMKoARyRPDOz1vPRT6YxKIKGPfIqEFKpoHHQfA6JfTLv
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwbouDX-9yXvHFGqBBaOq7FqlMhCD_nhbQujigTZgpc96fMwwG9jcP8Q8gZzNhllz6sQzI2-fp17iK37MD8QQhF0PPQsHUSq3knj-avza-W5MzOn5Y-JtCvJnlHswF1-tDkPQ6bjz1J6Tws5bkOme8akY=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYH6gzfXhH0Vn8Z17YHyKr-cnLCM3tl6cKh9nA4Z5iyHeUsUPw8RLNPvka4E5SJIupMtZheARNGiI6h9YXX-9zOkkbzFj9O7DEgCn_Il96hq25n5gdPvNKBJADQhgwB5-E8Xiq2RPsMI2eFQ==
+  title: logos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN0a9ddTYl4nIdVcfx3EX1i0-Gf8u97s9kGhur7oJFaTmlbBxWSpixFAsQ3S2MpVoreqy463POBAlVFFQIxU5DP60NhWRqpvW3xzI3LPr1RhJSvL3ckf1aDolDYIC2DZdL05tWXhh7GN7dXVisv51yuIW-LQ1MWKxwELacZyn-txQItsfZ5Sgc
+  title: vojisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8eiJZI6cvDjSKFGEdKY-Aqd1uz4BGbCPK_WSD7nfeymrbCfZdmilqI26bPII_XLylm17jd6Qpv0ijrq7i8ZmyOFqIpccL45DlOHCoAUdG-S3KgFtwkwb9EH9gZW61-57WfDZNhkH72RTnd3BHf4KdyxJdMLgDzQ==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFx21fyUUIZzfGdeaVR_PHR9jFGgAdDYcVBYw1ijTzcnWugRBlBCApJ7kbSr1IgjpD7RJMaEfLV0LDgLYeGqZKybVMV5X2jrX9bYq3eE6bPWsZVJRozFWKdvLpQ7_-c6s8Nss3a5Ihw_WTvm3m1TgMWy5kbOzdH1A6_FOeFedUlOA==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQTvIJSA9s3CBTLQhb5gA_H56UfSPMWOBjpbz0B3jQuX0nomXrU0RfRMMopXegpZ9e4xpTnhbbc5tOORtm-l12dnKZxu1zbH3ZoqfS9r_C6_pxfeYeTFkaRo3HZg==
+  title: bibleiq.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxhGAtFOwUikPnEaWu94J-Zx8_CWi3dGf5sc31lxLDP2N4ohFK8OmJErLmf73ZxbIGkHlbvTS50CkuXGhU9s4SyqNTRPy8ZtuGu4NH6Yow-klBmrZXNOtG8q39ytxoVZminAEuXoBc6otX2WEg27aTq87FatM4FqBw2g3OT2yvNmkVQqCRyeryEecJ9_U40_CHp4wQ_w==
+  title: williamstricklandblog.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXLE7wSMsJLY39mBzdvylZcs_CQ5HIb_Jbe3TWl694O9jxFcE9hgUJPUwLn8lUG9sO2m78g5xOnq5S0-sXx0M_VT5fFjLBxNpHPY09OKW19FyJ2lHrSgEuwv2X7v7H9ahnqEPR7xoAtO9IeIVzXDIVUeHAo8rUG7CBqvr_clrN_AUAGjQ=
+  title: crossway.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ6eYLWj086Hca6OZ9fXqnnsoXZAOAqD0t5XqcKtP8FLKcJL3qqyj8Kpm0GwBKwZRtKs7YDvyjh4zkg3s6-UnsFYRSO3nAMUjqi410NitNmfAs4Vbh78Mic7gFXqzpS9KJDFrpku0=
+  title: lisaappelo.com
+search_queries:
+- ''
+- hebrew word for God Elohim meaning and transliteration
+- greek word for God Theos meaning and transliteration
+- biblical trivia about the word God
+- short bible verses about God OT NT
