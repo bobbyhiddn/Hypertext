@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #030
+WORD: LORD
+GLOSS: A master, ruler, or person of authority; in scripture, the proper name of God (YHWH) or title for Jesus.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw 3 cards, then target player discards 2 cards from their hand.
+
+VERSES:
+OT: Job 1:21 — “The LORD gave, and the LORD has taken away; blessed be the name of the LORD.”
+NT: Revelation 19:16 — “And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS.”
+
+LANGUAGES:
+Hebrew: יְהוָה - YHWH - Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 42:8
+Greek: Κύριος - Kurios - Rom 10:9 • Phil 2:11 • 1 Cor 8:6 • Acts 2:36
+
+TRIVIA:
+• In English Bibles, 'LORD' (all caps) usually substitutes for the Hebrew name YHWH.
+• The Greek 'Kurios' is used in the NT for both God the Father and Jesus.
+• The phrase 'Lord of hosts' appears over 200 times, referring to armies of angels.
+
+ART: A radiant, empty throne surrounded by blinding golden light and bowing silhouettes, emphasizing sovereignty without physical form
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

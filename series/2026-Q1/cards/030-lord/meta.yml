@@ -1,0 +1,42 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or person of authority; in scripture, the proper name of God
+  (YHWH) or title for Jesus.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, empty throne surrounded by blinding golden light and bowing
+  silhouettes, emphasizing sovereignty without physical form
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 3 cards, then target player discards 2 cards from their hand.
+ot_verse:
+  ref: Job 1:21
+  snippet: The LORD gave, and the LORD has taken away; blessed be the name of the
+    LORD.
+nt_verse:
+  ref: Revelation 19:16
+  snippet: And he hath on his vesture and on his thigh a name written, KING OF KINGS,
+    AND LORD OF LORDS.
+greek:
+  text: Κύριος
+  translit: Kurios
+hebrew:
+  text: יְהוָה
+  translit: YHWH
+ot_refs: Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 42:8
+nt_refs: Rom 10:9 • Phil 2:11 • 1 Cor 8:6 • Acts 2:36
+trivia:
+- In English Bibles, 'LORD' (all caps) usually substitutes for the Hebrew name YHWH.
+- The Greek 'Kurios' is used in the NT for both God the Father and Jesus.
+- The phrase 'Lord of hosts' appears over 200 times, referring to armies of angels.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

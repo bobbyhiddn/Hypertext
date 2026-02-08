@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: LORD
+# Card_Gloss: A master, ruler, or person of authority; in scripture, the proper name of God (YHWH) or title for Jesus.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Draw 3 cards, then target player discards 2 cards from their hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A radiant, empty throne surrounded by blinding golden light and bowing silhouettes, emphasizing sovereignty without physical form
+# Card_OT_Verse: Job 1:21 — The LORD gave, and the LORD has taken away; blessed be the name of the LORD.
+# Card_NT_Verse: Revelation 19:16 — And he hath on his vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS.
+# Card_Hebrew: יְהוָה (YHWH)
+# Card_Greek: Κύριος (Kurios)
+# Card_Trivia_1: In English Bibles, 'LORD' (all caps) usually substitutes for the Hebrew name YHWH.
+# Card_Trivia_2: The Greek 'Kurios' is used in the NT for both God the Father and Jesus.
+# Card_Trivia_3: The phrase 'Lord of hosts' appears over 200 times, referring to armies of angels.
