@@ -1,0 +1,63 @@
+number: '030'
+word: LORD
+gloss: One possessing supreme authority and ownership; the personal covenant name
+  of God (YHWH).
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly bright throne room, a golden scepter resting on a sea of
+  glass, storm clouds and lightning below, ethereal majesty, no text
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return up to 3 cards from Sheol to your hand.
+ot_verse:
+  ref: 1 Samuel 2:6
+  snippet: The LORD kills and brings to life; he brings down to Sheol and raises up.
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 6:3
+nt_refs: Acts 2:36 • Rom 10:9 • 1 Cor 8:6 • Rev 19:16
+trivia:
+- In English Bibles, 'LORD' (all caps) represents the Tetragrammaton YHWH.
+- Jewish tradition substitutes 'Adonai' when reading YHWH to honor its sanctity.
+- The Greek 'Kyrios' was used for YHWH in the Septuagint and later applied to Jesus.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9o-ChsLJvVqIvh0kAeiLCEFdoA54pDuu6DuuNG4pU56yNnUuMvtzEDPSpMXuChxaOEkBt7-kJp0cbLqP9rna4DZv7qrH9j_SnIrHBlLD6tdDi1kp55BqveGXk_dECg5wHQzcM
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVzkhoA1S6IZcIjq3dsjU5QUEBIwHe26mnf_k38chmD0j8JCXCJt3TO54czVzLmdBLYfwMcgiVQGze5Sl3cZAfPVFHgdnTdE9XrkY5TTcokltWx1hqZ4b5K8eHFN7wJ5E6LbB0E8Uu6c5DDRs=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5-lu_69vS0TZIS9KQ2sR5wJbVTmQt9FXWnJfgt9nM1pl2dfCL8AR8JhgKXhLFVzb3v1nc6kHMjuco1yQkl5UuqNP9jI_KiD6W7jV7waFCLBuAsYZHEB-mltTOw5ueTDKcENlzS74m98pMsCml
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ7O7EPNMLiJAJ6LPZrSHJRds4JPViTG7GpBDYAxYMnDCnDhkk-wErJEqkj0Gn5CESOX1LcgtLbqzquuzt56I6rMfl-5jY0wOnUb9iGH2zYIAoUDcX2WWT8P9yfMMdHB2tLpgRjquoIJ74Unu7hLMs29NEkg==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFL4twNSimokmjmb_sZ3OdvX1ByJjMw8GD9njQ0q5dtKIH2fqEbfrGT7oKITcBbe5LcAUfiqvnKO8qXtbJqVNPBVA83Qyl4y8Qi3-7bZKEwFmcTNLqNXkC77nC_4OP4UGcjPPWhcCZqWup97G0=
+  title: christiananswers.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK4UKXEhIaa51oZTgme1BM-T_OsadM5jIg-YTPvgiOdDs4cl1FXWCazoknjHjbSNPOQdaOlwfajk33Z443Soz8GbaDWMkENs5XKi3OO7FK0lHITg3St4jTX5qXOCCSYoiUDOcKHIK4h82VnK9QG6U=
+  title: christiananswers.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpy3gkXmqfUwh142MZvGxKIQqn4_31n3RX1CkGt9s7o4HR2DnR2tKJowLYoxYIisNq0tPSB2uKYji7C0JK0q2x9tiRquDnCfbGUD-XNgoZ9LNEhfLjBhLbp9UFGMdLJudXOh60fIBvgPJZLPH5IfIiSZS4zvNADbdnOLF6HCVInNM1DIVG9HuoXNGSrwPEMkLnEMVzzmJwbI40Hgg=
+  title: messianicbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ1ECTFgPB991ZI2nqj3x6sdPMLLerE2ONZCe7guUNBAT2UB_sSgGOt1LS1wqVHMvEPDmdL52lqIypk39QAJehRBJ-815nurjvMSLYpmluvxWTBsk27LWiOc106GVpz1egGHmSSyuSCHf2XvrC3rPKmWonp55yrnsanNJMGIxxbhbOEDlBtVWToTsWGylBQRBi09mkB91O1hfFqD7El7g-WzgGZg==
+  title: reddit.com
+search_queries:
+- ''
+- Bible verse 1 Samuel 2:6 snippet
+- Philippians 2:11 snippet
+- definition of Lord Bible dictionary
+- Greek word for Lord Kyrios transliteration
+- Hebrew word for Lord YHWH transliteration
