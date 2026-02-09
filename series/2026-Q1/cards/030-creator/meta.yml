@@ -1,0 +1,75 @@
+number: '030'
+word: CREATOR
+gloss: One who brings something into existence; specifically, God as the originator
+  of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of translucent, glowing hands shaping a swirling galaxy from cosmic
+  dust; vibrant nebulas and golden light against deep space.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Shuffle Sheol into the Tower, then draw until you have 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The everlasting God, the LORD, the Creator of the ends of the earth, fainteth
+    not...
+nt_verse:
+  ref: Romans 1:25
+  snippet: '...worshipped and served the creature more than the Creator, who is blessed
+    for ever.'
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 40:28 • Isa 43:15
+nt_refs: Rom 1:25 • Col 1:16 • 1 Pet 4:19 • Rev 4:11
+trivia:
+- The Hebrew verb 'bara' is used exclusively of God's creative activity.
+- Creatio ex nihilo (creation out of nothing) is a core biblical doctrine.
+- The New Testament identifies Jesus as the agent of creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEedRvcfgiU4dSPUy-gR7kKFLGAhcNO6sfdqyeMiMc6CSmT2aD2Gbo2vqPHCaQthhhMVa5j2rbYaZmZ0AzoMwplnNzgBBXbTwJFeNR6r2lvfsTd8F7qmr7D7xDZXY-5UqpFXVF_wl-3qFJKiZ4ouKY=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5RUW2sgAuhmQ_FemCHedY0dlhDwxyCZmcPM0m_yHZ-3x9djz0OLYeE5xi_CINWl9w72KRZ6xtvi4XFJQ7JSbFchuYjaeJLOY6obSjX7NcKnWUDfKXg_aHyaKnctrY98wpxa07vCWK
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSOQ4kCn5vhLMTz-TMig_j17y3glEFtAmGgwylf6G-SvCOGkZmtgi80-6wJTR-hJNdXGdo8lqRVRHfBOqGUKsOKtDKKddMkFZByqFahXsfIhg0n70ct30e4SOh3LCN7ohTRZXTjhC-zUA-f7tWjiD5_JuABG8armyFrf5rrXehXPFT2FJd7EelpqzbdzPXI8eq0oQLJMIxWlx2SHyBLEF-zMcfiU5r
+  title: logos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqQeNYsTBg6PjqvVxP5di5ntFAq5XixRE98hjVPU27P-Rek1FRTZ9N4Wq6XZY1aFiP6zoaymIJXnI25j-xjIuE0H9OH4F5wGC2GZw3NDaXbkUfwJcFaWaSMuSEFp7UR9GjrjdRiWuocUqzcbjH
+  title: translation.bible
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG2JfPT4bF3jEI6cVUU6K8q3VtNj-UgrMMa5rp6CzAUcidCYH5r1Y4xPMFo1A_sSSwAs5OEjGyySk9JeFFxzmdLBB2Stb4ZYAHXjlLWTgS_Jou25VG7-dxLqyni_93zNe9ULN2Gc8BVraVqUHvk-_8pCaefHRtOHqZHjisGDxQUnXY8bNAGd7Fh4xgNqBe_zVnlqZht9FU1w==
+  title: thebibleuncut.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyPlhlbdMwB4QjiBfshVwT3RkztRMxE2BRyVo4lZMcTAoaQtnDdAlYudLy1aNnNZrL7-IWP90Qsh04vdEOV8A61yMEk6McjGpYdi2OVt9I5oHIPls9mC8AnI7H_mikPGsM1pw=
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMtEKeau3C1IjLmgG7CWboyMy68mx5_Faf3nH6DBVDW5cUhyIZqgn6MSNxjfQF6p25R_fJTdTJ9_UyKNACSd1aJDTEAnoSr1Nlr_kqwotbz-QUMDeJOyWvEeCv77yotZ3W81LJiRzjdl5pv70bPJJcWbi1a_ykNwZo7Egy8B1Wwmp5LHPKjX2it6jYcV4L1sz80XDQxhs=
+  title: ab-renens.ch
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4clQlR1T2wLR0OAcf1GvFvnjrGkCrYk7FczCElamvI3EbUE8b8ZIwSraE4sVLvilNLZod2PGsEFqy0MdEgGfYPNyqwfllHLqeMRYhlRBhH50WvOB1W4m-Ewe3_VY9rN4L
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwOBRdHF92GFabH_PQbwEwgs9vY5pRDu6QkEyjjj00b1maetzkeZFqxCnhc0LV_NWLaw6JB-kaJ41zvp6W9_V9AGvhNPa2D-wv6BDsGlqMn10DgqQDCYuIcqXsBe0S
+  title: pastors.ai
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3VoAxuPuXUE7hdCkGgh5jGtDgf8YsWTnL1Qj_C4jAD6DqaYy91iCNHlszAkWQBRqNUuKKsGR45lqY8caZISzlATup4peeIhOwqk2HMoPD9mRnoUyFQi042FcR6lEpfDL79sY43isD3OZw9s-ffpn4dSrLoMZgodqYFg==
+  title: quotescosmos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKIFTDWVDcruuoZeBBS52cmOWLjP2G6x5zhtf4l1kE8oOUwPyIj6AT2s2S22856tHA4TLKoG-EBhxBgNh7ZLENdWHTuKBz3S2x3p6BQnNe-jnQZE35U2-rAxInMOBxJNpmcmff
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrsc8bOjch94zSbIk6H-BObDM13umBGNkB2nyzINQjnFYRfq5iOl_1FKIbdPPiqdouRAumrIbKS1iDZZeLcIk-jj7N9hEdMYFWR3rKHZJnz-m2vbZDKsm9CPAfS18BPemJGWd46NsoV-p4GSXMNvoU74O0gAKWNFcvHt6jCz7ft-mGQrc4PujSR1D6QPXtU_Sync1WqYeHBtX-75IZAvcoCgY=
+  title: biblicalhebrew.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExJP8mm7aiy-Hx91vZmnkbJ8lUiOQQInaO-Mrqp41q5o6yOw5JLdtecyGrkcp190McBjaoHQedKYGt3kBx8AIZL4V5yPPW9nPTsnPPnLkvNKdX_4kCKvZTTvBsSNTNkh1Ki3ZKGgUyevdK
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGafyI7xeEu-fK9xerv_m5X1OWamwRK23lsRuFmAcF7sAyd-masAozilt-kCekr0kxD-62HifokvHmNW2HtB2Iq-Myvr4Xbz3W-OCHYZiS39QQ2GckUjjS9hQPZvTF-YM319GvldhZrhBJ8fLcY
+  title: bibleref.com
+search_queries:
+- ''
+- greek word for creator 1 peter 4:19
+- hebrew word for creator ecclesiastes 12:1
+- isaiah 40:28 kjv
+- romans 1:25 kjv
