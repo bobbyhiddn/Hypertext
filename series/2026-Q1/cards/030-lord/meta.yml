@@ -1,0 +1,60 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or person in authority; specifically, the proper name of the
+  God of Israel (YHWH).
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, golden crown hovering above a simple stone altar, illuminated
+  by a single, vertical beam of light breaking through dark storm clouds.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Look at the top 7 cards of the Tower. Add 2 to your hand and put the rest
+  on the bottom.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: '...and every tongue acknowledge that Jesus Christ is Lord...'
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יְהוָה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Acts 2:36
+trivia:
+- '"LORD" in small caps represents the Hebrew Tetragrammaton (YHWH), God''s personal
+  name.'
+- The Greek *Kyrios* translates both *Adonai* (Master) and *YHWH* in the Septuagint.
+- Applying *Kyrios* to Jesus in the NT was a radical claim of His divinity.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEC-J949TP7SL0EocS-KfUo5_cbV7WC4sVJdWIlx-6RqqDfLtLGVJfe9R6u_M0NWMms2XdCJNxXcthnVTLlEIP78PE8TWG_5j_mg_K_wQR0og9-8tTQGdviz5OOBdWPderKRRXp8aNe0WNog2SWEeSPt9cNnnsAAemiy5MU3lU51J7BMi6WPys=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdUlLYy02IjoWAuLYXu2fnUZ9qLT6hdVYFBTXRxsRQaYaMJaDs1Cfnb5583DhToJGLur5g11RNEqL1Wq7yDDqhcCeqeyHLGOhOawrt1Zuza3mggWDDdRNIy7FzP7qWmRrHVOs=
+  title: netbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVwydM2p_5vTGpELc-SAZps1NLAQWIcduDr-A0g4KCPjPh-sEVjFtMS3aMqLglV_Q0kUiH_xwSKSX-CBED0KYkun6ZjNNu1HnxyPf4NZ111uzCF-eRgvkg_jAJY6CnN7Qwx5sHUh90yI_klvMEUJA=
+  title: christiananswers.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFl9ZoVedz_CeznIW6XuABmKcywglugs45kZJXv9T_zqYL0NZC6LsdyIer-6dlzVa8nikIoRso3e1eroSct9AhKWozLeSGxJtc3dqvtRgzO_ujzCBdcEYj65R1GG2yfYFL2YKRep-tEV1jooREuaTpvSIeQ0DQJNITuMXl-99ve1CZgbgI6yXjBeg6xwjsmNDfCLx7FEbHIDqg5AV6j344MOn4N6w==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQzkW21zl0YvMvb3J8n7KNRZ7J-q2FkN_7MciuBarxFSxCd2OSms4dkgADX-QSmenOB5tikj_Q7fec713gvFCGg53frWYZ_FCP09XsGJxRu_C0hn3CANGAeltiQd-A-2wAeQK5
+  title: deannamunger.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjNoUyXJKOOI8xI1tcwIOMVGoyM4TcoKszPt6Zfm4XDO_UEpDBUuIfdYM8gD-CHxtK7yxYpmLsDEh6qMPtk0xxWCe-IZnvOx5BL7C7ETfWgQjt6jd9QZWdubg3vRoyTJNQ7-i-DoZGnCBJfWOPuCcH
+  title: gotquestions.org
+search_queries:
+- ''
+- Kyrios Greek meaning Bible
+- YHWH Hebrew transliteration
+- LORD small caps Bible meaning
+- Philippians 2:11 snippet
+- Deuteronomy 6:4 snippet
