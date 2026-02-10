@@ -1,0 +1,82 @@
+number: '030'
+word: SPIRIT
+gloss: The animating force of life; the third person of the Trinity; the breath of
+  God.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Abstract and ethereal composition; swirling currents of golden wind and
+  tongues of fire coalescing into a dove-like luminance against deep azure shadows;
+  dynamic, radiant, and non-figurative.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Draw 1 card for each different card type currently in your Pages.
+ot_verse:
+  ref: Zechariah 4:6
+  snippet: Not by might, nor by power, but by my spirit, saith the LORD of hosts.
+nt_verse:
+  ref: 2 Corinthians 3:17
+  snippet: 'Now the Lord is that Spirit: and where the Spirit of the Lord is, there
+    is liberty.'
+greek:
+  text: πνεῦμα
+  translit: Pneuma
+hebrew:
+  text: רוּחַ
+  translit: Ruach
+ot_refs: Gen 1:2 • Num 11:25 • Isa 11:2 • Ezek 37:14 • Joel 2:28
+nt_refs: Matt 3:16 • John 3:5 • Acts 2:4 • Rom 8:14 • Gal 5:22
+trivia:
+- The Hebrew 'ruach' and Greek 'pneuma' both translate to 'wind,' 'breath,' and 'spirit.'
+- Scripture uses symbols like a dove, fire, oil, and wind to describe the Spirit's
+  invisible work.
+- The Spirit is the agent of creation in Genesis and the agent of new creation in
+  the Gospels.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWX8cfsW8QscmUPEvL1Ezv5mHBxW6AvpdSWX88b7dBze2lNhVqEOdM2qCGIClJCbbcm9YQnz_PQL2k5x9OMb3MHERceKAIozCerhNM4ukUR0M1UQ3TYw30TKZD-mMzghxd7kFjVJyN6wKcAnE2feF-2V-IWpgXOCve_mXHnQ9HpvEp7W00
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqDmrBIaUZXJVTsgA_2yMO-JvU1LSFDBxxVcL85D_j-jMjEzXHqzhPEV2SoULbkgrRet-eabaTkIaSECkJzzdcm2w7DRmuvFcLllt8T0Moijxn57ZvDVol1PLKBUe0Ezgb4YmcjUdQmjqGKHKQsaaZaQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpifds6EWNR02XkPn4FUb3DNPZQ3vGfcLSCaBeQh5evK0fFtf3BONM6P7RCxKskDI96wXNS94iYjaYHeqQT2UrW3Fe1w5CrWB4aFEYH0Md7MK-JSkksC8FSZNFLLmoIaCg4VM7
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUYwJJ2KRrhgO_jfZT3lIz277lXZyPT1E_Ghul9LfuetHt_QOvdHEyPE1RQ8FzX9Urek1jXwp8_I5Pp9tHvV1HeI-VW5uW8teeUcAtBB5uu-K2AsRFLYPJ0ezcou33uxsGgDcYFiAqchA=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV8_x2i6uAage2pHFOF5twOhzO9uKcBE6Z9MeIU1fUPzO0mkvzUjGuSvVNkkp5qpvIE7cSd6GCuVUm5hOQ3oDdz7vH5WlEkV_piXoxCeNc8cNQkHYK77OCKwafYtbenFQffPH-IDPmSgqO8ctgYe5uSX5Pr7cdCXok1K8JlvkJKh5KjDhPSNp7ZkwxAso=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUI1MOFnjEhZYVTLB_kPYW_RMlBsxeVhK03cI0P9XSO44RsKFRzqkgTAVDazxuTQ65sclitPb7rL22cQT9VDTdTSDGN2TyJgjg5vAbVQVND7KfTxCaNVDQWMSUeLP_oU0zRh9kjlFexYsL
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWA4HnQSMwbK-Xfk9JD37zdXzvK-8spjqDa8Z7qrP2zdi24K2qDQ6dpYKlvXAN5fwAuOaOtO1lLCQsbLjrTeHXdQtOt6AP8LBnRGaFw5_3GHlRr_TFyv0w1jEpRkgDBNrG6LfobCW37y1XegFv6Q==
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGv7DnxdigGwHpalHmVdYQAB8c_YJcmUCF2f2dV120yJSnnAKhnqIyxovDSClul364yTIaBrV2g4GCO1mTD6Wf3hYhZs73JnZ_eHsA0VtfbLpOtBm3NFClZGFy6N6CIUZQdTJKchnonDGJLVfun0g==
+  title: christiananswers.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHzfXtaZE7oZbza4G7i9dq-kH60-OTa3vg-dUORArkXJaDIdAJ4IZOt2oijaorlesReOGZoanVrnT9wB6Dwww2QH5qu2V7uvlMdn33Wlo88Rgn5Ux9-S9nftZfE5oLnyOmnaZU5Q1AlQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1E0hwcrueUN9sblpeoy5ixeL02od5vZl7HL5Sb3JmJ1AGgW1LFYbKbq1bYBxDV-YVwLU8dWjXCK8-z9JLcL1pckFsq8orRuALM_9EFbTIrewmTylqnMvzhaKrusDygU-QkZSTvCkGlk0tVjlI
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH__1OHQpWVL-p64xfDWDgY3REFmByYuDrwIqCxbmf_wUKyALvOO0s2GegTITrPBvgBz8UxSVn7unVtmQszF8ibiX9oDgeT0PE9G5rD9EYtuDuxehMQuTx9kW3CRhqFvUOWJ2atNDfs-qsv7I0mnQjZt1JbaAhLLHQghK8uAyOa_lzyPBkJmL73-DVDcA==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWy99Pt7-YB9Avk8zLB6lvwUL-OX2r0dyVsjQMOf4aQNmJqOptUSdKjpOWknVf5GkkCgZB8eZYMwC1LLQhEdDnUCNFSlRe2SXxbH789UQNnT1q-s7e7-dhsFciyEeEsfIupyJjV60bCoYHO6XADe5tHSOdtdxC3VXBUFJKmO87ppZvZkNCkD-ZbD-qu8eB
+  title: adventistbiblicalresearch.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFS1y-SMIHo-9ys4_PwoqvDc3SB9T9zPhVV-QNqg9qvrKh9pP6HJZK_aPN42HI8JgyDYwdHY-sLLZB796RwEqbYUVLD5Vi9j7TX-HwNOfUjozzJdH_oToLXIG3QwGuuQkagdor7Ju0S34HBsBzZXw-cxGyI07jyiYV7_gBgTWW5
+  title: drjimsebt.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhajphk7g3WbHtAvCJKihuvpeYKoZ-ysr74ildX5vTvIKWcZankgG6qn6aoNNk82f3SHE4L3OZUc2Sw-CswTho7SMS8OXjNIcxuExQplsHQmBjlpGNYK60TNjg7HCJ1xW8OCgrjg4mUTNSNRr4p_ferscaouhfCWVzO378V1qWLlFYCbvBZWZC
+  title: biblestudy.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBKDjZhziPJR4BYQGGt9wTYZpoAlZJnuL3EcAKgLu-TGtZ5Hw3Jyncpsmjma-3WmfAOjKmPJ3As25RNNRrUPNClNG0_aGXAviP1mmVXfytROtOVuWaX_a2YH-gDFIDJ4OoSQt_AOUyucY=
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoGy_qDKF7XQRg3LdWeVpFRRV_OyyjACBJbjvdMNxGflNma4_AUUd3dLzqt7UA1qyPSXhitV8Ee004OSV5phBuYzJLuZn09FEF6G8cyEDoyhA9E7x7pBz1fSjn2rUoOyjBHEEuDig2_O3NcRsIC2zDIfC33ez087DvwinUOBYl6vNecg==
+  title: biblegateway.com
+search_queries:
+- ''
+- Spirit bible word study meaning
+- Zechariah 4:6 KJV snippet
+- 2 Corinthians 3:17 KJV snippet
+- Greek word for Spirit transliteration
+- Hebrew word for Spirit transliteration

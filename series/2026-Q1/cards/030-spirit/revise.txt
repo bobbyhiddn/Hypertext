@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: SPIRIT
+# Card_Gloss: The animating force of life; the third person of the Trinity; the breath of God.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Draw 1 card for each different card type currently in your Pages.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 4
+# Card_Art_Prompt: Abstract and ethereal composition; swirling currents of golden wind and tongues of fire coalescing into a dove-like luminance against deep azure shadows; dynamic, radiant, and non-figurative.
+# Card_OT_Verse: Zechariah 4:6 — Not by might, nor by power, but by my spirit, saith the LORD of hosts.
+# Card_NT_Verse: 2 Corinthians 3:17 — Now the Lord is that Spirit: and where the Spirit of the Lord is, there is liberty.
+# Card_Hebrew: רוּחַ (Ruach)
+# Card_Greek: πνεῦμα (Pneuma)
+# Card_Trivia_1: The Hebrew 'ruach' and Greek 'pneuma' both translate to 'wind,' 'breath,' and 'spirit.'
+# Card_Trivia_2: Scripture uses symbols like a dove, fire, oil, and wind to describe the Spirit's invisible work.
+# Card_Trivia_3: The Spirit is the agent of creation in Genesis and the agent of new creation in the Gospels.
