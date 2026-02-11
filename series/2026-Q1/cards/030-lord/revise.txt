@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: LORD
+# Card_Gloss: A master, ruler, or owner; in scripture, the personal covenant name of God (Yahweh) or a title of Jesus' divine authority.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Shuffle Sheol into the Tower. Then, draw cards until you have 7 in hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A radiant, golden crown hovering in a blindingly white void, casting rays of light onto an open scroll below, ethereal and majestic style.
+# Card_OT_Verse: Deuteronomy 6:4 — Hear, O Israel: The LORD our God, the LORD is one.
+# Card_NT_Verse: Philippians 2:11 — And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.
+# Card_Hebrew: יהוה (YHWH)
+# Card_Greek: Κύριος (Kyrios)
+# Card_Trivia_1: The Tetragrammaton (YHWH) appears over 6,800 times in the Hebrew Bible.
+# Card_Trivia_2: English Bibles use 'LORD' (small caps) for YHWH and 'Lord' for Adonai.
+# Card_Trivia_3: The Greek 'Kyrios' was used for YHWH in the Septuagint and later applied to Jesus.

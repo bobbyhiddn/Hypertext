@@ -1,0 +1,41 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or owner; in scripture, the personal covenant name of God
+  (Yahweh) or a title of Jesus' divine authority.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, golden crown hovering in a blindingly white void, casting rays
+  of light onto an open scroll below, ethereal and majestic style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Shuffle Sheol into the Tower. Then, draw cards until you have 7 in hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:15 • Ps 23:1 • Isa 42:8
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16
+trivia:
+- The Tetragrammaton (YHWH) appears over 6,800 times in the Hebrew Bible.
+- English Bibles use 'LORD' (small caps) for YHWH and 'Lord' for Adonai.
+- The Greek 'Kyrios' was used for YHWH in the Septuagint and later applied to Jesus.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

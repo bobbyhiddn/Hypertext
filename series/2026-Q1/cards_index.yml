@@ -15,6 +15,7 @@ words:
 - GRACE
 - HUNTER
 - KEEPER
+- LORD
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -194,5 +195,10 @@ cards:
 - number: 29
   word: ADAM
   type: NAME
+  rarity: GLORIOUS
+  ability_pattern: draw_sheol_tower
+- number: 30
+  word: LORD
+  type: TITLE
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
