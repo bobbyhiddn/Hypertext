@@ -1,0 +1,43 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or person in authority; specifically, the proper name of God
+  (YHWH), denoting His self-existence and sovereignty.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant light breaking through dark storm clouds above a rugged
+  mountain peak; atmospheric, majestic, ethereal, golden rays piercing shadows, no
+  text or figures.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Shuffle your hand and Sheol into the Tower, then draw 5 cards.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kurios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 40:28 • Mic 4:13
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Acts 2:36
+trivia:
+- Written as 'LORD' in all caps to represent the Hebrew Tetragrammaton (YHWH).
+- Appears over 6,800 times in the Old Testament, more than any other name.
+- Often read aloud as 'Adonai' in Jewish tradition to preserve the holiness of the
+  name.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

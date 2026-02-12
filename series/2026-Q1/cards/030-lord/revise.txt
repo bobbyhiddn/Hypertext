@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: LORD
+# Card_Gloss: A master, ruler, or person in authority; specifically, the proper name of God (YHWH), denoting His self-existence and sovereignty.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Shuffle your hand and Sheol into the Tower, then draw 5 cards.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A blinding, radiant light breaking through dark storm clouds above a rugged mountain peak; atmospheric, majestic, ethereal, golden rays piercing shadows, no text or figures.
+# Card_OT_Verse: Deuteronomy 6:4 — Hear, O Israel: The LORD our God, the LORD is one.
+# Card_NT_Verse: Philippians 2:11 — And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.
+# Card_Hebrew: יהוה (YHWH)
+# Card_Greek: Κύριος (Kurios)
+# Card_Trivia_1: Written as 'LORD' in all caps to represent the Hebrew Tetragrammaton (YHWH).
+# Card_Trivia_2: Appears over 6,800 times in the Old Testament, more than any other name.
+# Card_Trivia_3: Often read aloud as 'Adonai' in Jewish tradition to preserve the holiness of the name.
