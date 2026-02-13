@@ -1,0 +1,73 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator, and ruler of the universe; the eternal, infinite,
+  and unchangeable Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant singularity of pure white and gold light exploding
+  outward into a deep void, forming geometric constellations and nebulae. Ethereal,
+  abstract, majestic, non-figurative, cinematic lighting, divine atmosphere.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle Sheol into the Tower. Then, draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Ps 46:1 • Isa 40:28
+nt_refs: John 1:1 • Rom 1:20 • 1 Cor 8:6 • Heb 11:6 • Rev 21:3
+trivia:
+- Hebrew 'Elohim' is grammatically plural but takes singular verbs, implying majesty
+  or tri-unity.
+- Greek 'Theos' was a common term for pagan deities before being redefined by NT writers.
+- In the KJV, 'GOD' (all caps) translates YHWH only when preceded by 'Lord' (Adonai).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnQhnIRFqDk72QsygNX2JGlTwGjowr7ldeW6xU16dER1EYSsaetDMLXxyvM2-zOzabmiXmEfK1n0jw2Lb-ApcmnNd3JwQKRrFp8SZKtk9q6MAtQV6crrCIwNx4XPtm5-N1WkbEdl6z-0_EnmDtVg==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvvnm0EEYMu0G_Ddehy34qkDnt-00aPEIrS7A-ob15JlWmZ3nxkHi9Afe9drjLL45gsemJ_lszS29nF0ckzK6GlfUKzjMazaoexCcwGVRXwG8qfVFy_y9j56yUe5vpQtaPqARCcc65JKqoE-S5qA1b9MWkhdh5Ygoxd629wS36BmhGyqzBFtxVfw==
+  title: vojisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdxb_oOklOHRf8RAjpbRZmGtRf5CmOFXgh53Uy9yFRSmJkBrFdXCu0E1ehjp8P7bPokO5YjVz9Y0cXUJ-4VMU88jQZ2pOFaN1nf2pgeO_Y8Lkcz7cJQmd0GAgarhZOInIFLIztjfG2M64IuZiTnOSlUVUxvi2YbnL6yWbpnmgMRBntyTP6dmnGjndq5w==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVz459GCR2I5TZQ6oeQ1daVQk83dN4VmB6OWwjOwqfW7VQCrjspduO_Remra5Kf3v0MgXh8MZ-XrAynQfNImZwW1KDrNfS0S0PyhJzY044cPjYjo8aPA_iW01Q2CDD6KL3pZRjZDFXSlZYef3C_jrGevPhtzEWYAm_RhxOIqA8jt6TnOt8tNkWL6LrUgb2KkI=
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGffsGpWoqgtEp1Az6-bxEFSfNv4lQ27ccmKxGYvDhZPLeNtJ9T7cF-Nuow4Iqj73hFKjhvBrLO50DKszRtlocaDe50s0FHlac9pUpy0_eodFnZrR_E3P6U5DolCM5fzg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHHjqONBzfT1lEIZAWkjKmb3RNoR7pUmXV5__z-nf_bH_bb2Iez-Bcx5RQ9mjoW1EMWPBlQPbcTqLjEeOC0LEnuHTCiHq56lN1zKYsG7oIJ0lsaKwdgzYmVNzNWwsseBowZL_QbK8-8oGa3r1VWOMgbH_Q6XK2q9zcDpqg227t
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGBANRyFubjqinlik4l4hOq9WG2czX7U13ICOhsL1U4qnrhKFPV4GTW1GY18V6p-GYX8r7LlrN6jxNoLS2kBvuGIkZOz3UVgGYrY4wIQbFcW5humCvuMKJ-pIGREr1
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECVH8tV9eR2wKTOi0WHoOn9ngbe-w1z5lWl_zVWRgAioMB-5ZlYpjleT_IDICCB59m1kPnqw6Iyh1nxLZSWQFHlmfPhXR7-wy9gCeM874WY6EPxOaraYDSSGDy81rSLLmk
+  title: gospel-john.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoS6m-EJDyI50Hl8rwoSTTPvFpFZkDkS3B7gGfh-tZWHQClznaZZFLMZCRy3DmlqFTOcTuDiz_BcNPqVeHWipPjxHMFwOYIsBYsyyUHtiRm0gzFOjRlHCq5ifVZevbN-nAXsySItOnRpHSuvQ=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJzzh1f_owCDwWOc7rB4_5YI31sicksuN-4DpEarkuPDnfKJviLcYe34C7MDPmSmWCqegmEkagccylh1T062NvvKNwqVuWTxZKNQC8juJegVqC_29a1wDGtHcrD0SztBfc0Q==
+  title: britannica.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0uxKNkoTB6fBFzN8H2sjujqWhfoYPEKQhSXSCGySbxPZkMcxYbiXWR2JZ580ViIv2EM0fbfVNVDi6vymvHpKqKXNKG1p1Gp0HGTdn3HTXO-m47X2b5oKWR3g5_6GkJh5axB6VLBL52KwPiGcMLoAMJH83DfqYHBn1DVX24v-pT7UCgC6fUG_1G7mLL16gymj60xe9tjJrx-9RfDc79VJPHpUvz7jHJEqYJBbUzwakpzhp5GitsB9D0utGWou-VaBNwkEcmakZDMGVPeJMMQ==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElktAcE_CtJYO1DCqMvVQrdxLG3Hy5ngRY-WHnrMT054t0l29cYTjP_dvNIzqnpx7BmlhMZAM_btYHgPNIZKwwTb1TaNt5mbDPNYiN8opeBx_yTEV-KgBIUZH9EsK3wqw8zCrC-SPrpvwfxezIB2jlCrwgSr3Q7Bg=
+  title: biblestudytools.com
+search_queries:
+- ''
+- Greek word for God Theos definition
+- Bible verse In the beginning God created heaven earth
+- Hebrew word for God Elohim definition
+- John 1:1 Greek text and translation
+- When is GOD capitalized in KJV
