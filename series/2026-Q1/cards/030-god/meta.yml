@@ -1,0 +1,44 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being; the Creator, Ruler, and Sustainer of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, blinding singularity of golden-white light exploding outward
+  into a dark void, forming vague geometric constellations and nebulae; ethereal,
+  majestic, and abstract.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle Sheol into the Tower, then draw cards until you have 7 in hand.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Isa 40:28
+nt_refs: John 3:16 • Rom 1:20 • 1 John 4:8 • Rev 21:6
+trivia:
+- The Hebrew 'Elohim' is grammatically plural, often interpreted as denoting absolute
+  majesty or the Trinity.
+- The personal name YHWH was considered too holy to pronounce, so readers substituted
+  'Adonai' (Lord).
+- Jesus introduced the intimate Aramaic term 'Abba' (Father) for God, marking a shift
+  in relational theology.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
