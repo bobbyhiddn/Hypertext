@@ -1,0 +1,40 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator, and ruler of all; the object of faith and worship.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant light breaking through deep geometric darkness, creating
+  a spectrum of iridescent colors; ethereal, abstract, majestic, with no human form.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Return up to one card of each type from Sheol to your hand.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heavens and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word... and the Word was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Isa 45:5
+nt_refs: John 1:1 • Rom 1:20 • 1 John 4:8 • Rev 21:3
+trivia:
+- The Hebrew 'Elohim' is grammatically plural but takes singular verbs, emphasizing
+  majesty.
+- NT writers used the Greek 'Theos' to bridge Jewish monotheism with Gentile thought.
+- In English Bibles, 'God' usually translates Elohim, while 'LORD' translates YHWH.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
