@@ -1,0 +1,44 @@
+number: '030'
+word: CREATOR
+gloss: One who brings into existence; God as the originator and architect of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of giant, translucent hands shaping a swirling galaxy into a perfect
+  sphere; cosmic dust, vibrant nebulas, starlight, ethereal atmosphere, digital painting
+  style, cinematic lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The Lord is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: 1 Peter 4:19
+  snippet: Commit the keeping of their souls to him in well doing, as unto a faithful
+    Creator.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 40:28 • Isa 43:15
+nt_refs: Rom 1:25 • Eph 3:9 • Col 1:16 • Rev 4:11
+trivia:
+- The Hebrew verb 'bara' is used exclusively of God's creative activity, never of
+  humans.
+- The concept of 'creatio ex nihilo' (creation out of nothing) is unique to biblical
+  cosmology.
+- New Testament theology identifies Jesus as the agent through whom all things were
+  made.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
