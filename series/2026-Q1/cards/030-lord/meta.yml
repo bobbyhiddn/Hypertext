@@ -1,0 +1,78 @@
+number: '030'
+word: LORD
+gloss: One having power and authority; a master, ruler, or sovereign.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly radiant throne room with a crown of pure light descending
+  onto an empty seat; atmosphere of overwhelming majesty and sovereignty, high contrast,
+  golden and white hues.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Target player reveals their hand; choose 1 card for them to discard and 1
+  card to add to your own hand.
+ot_verse:
+  ref: Job 1:21
+  snippet: The LORD gave, and the LORD has taken away; blessed be the name of the
+    LORD.
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 42:8
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 17:14 • Rev 19:16
+trivia:
+- '"LORD" (all caps) represents the sacred name YHWH, while "Lord" translates the
+  title Adonai.'
+- The Tetragrammaton (YHWH) appears over 6,800 times in the Hebrew Scriptures.
+- The Greek Kyrios was used for YHWH in the Septuagint and later applied to Jesus.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpbCymSed-dy0WK24FKLWXX9KLWCOXKDgn28VFDoKPudjZLFBsemMRDBfoacfky1P8Pyi3MG48QukebXoSlmV-vSw7nJOnoZVi0oJSiEbx1TF1owXAdEGRqHoXBlQPHerUKKvkFd1uFUSMaXp-rnFyVilhxaPTcj1YGLTYvkRwwJJUiPFUbHiuCa4BNpmZgIbVoVtfmURvqMafbQz3-AEwfk9_IuJFYEvr7OWNEzNGqvqp4ZB3RW8W
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1kKIQHWqeRYfrAj-VlZMpFfGB_JgAyhdugShvVJp-Ckb__skyl3fdRXHWK8ZElHAYgHtx-6IF5zbFRiVLomZExoihMMwjNp1DiX1WGBQ4RD9l6iBoFlwZqla_UvVqA3eQQqZXeTGAUv4FcrrQFOoksjghPyaM
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUxjJc_6j8ClJyNS0HalAqFI8LfSHnNeGJOnsmEta2cKzZkSrFxiLctQZbwByvZyK_6O9FSU_k1wkJndknOonaFwEOt5UNopSE0-w3Ty_C4phEOmVtXn_ozwR2obIdMwKIHLvARXV5vTWcgjRPe1whRMv_Zf4eHtIL9NA49VPazJSN0A==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHikUVpWsFM3tQyDPow74stWSL31YKrZ3VYrj6ndNFVK5Dpe0Tt_WijY9UHeFsIX108QPfq2BIHuqLMPdW_yW8dstwCd-QslyuV-Zcw1KX9wkR30OgcxEJIasl8Xg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEblLQ43C729i-iFSXxOJQ1kawdd83ehEvsLd283UIR0KveI5fSBI7tCvFGJNEssfguBQVLzEs7oGKX7fzd_d5Lkn45LynMdXpvAZ4oDSUHZiOZEyFJwa6qXY95z_sRpbVJ-bxOSPY1cfgBq9AR79M=
+  title: christiananswers.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb5Idl3hcVD_kaY5-dSRmSXCySWK-CSViSmPugTf0Z4SCnJ3t98xkBKNDidZRVSJgSciYqLB5sHC8NKyUVujsktWEMMeNU_pz5BDljdKIu7_F_O3iu58eRTb9LdB74vp6abMQXZy-IK81cn5GswP1P22_0gHwdVOSVinV-v5GflnwoRQH4D4sP
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKNnC4fztJsxM5VBFUvwEYX6tUE9F9BA57fITl_D4sKRsY6rFfMcWfV0PdSaylnCHqZ6o1isBZbTfHtExb1LXB5wWPbM9VU2kJvdNQ0MM7WayI6KpHEewjrictv_LmBxyVXd1LSjJNJno=
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_ycdYSAxJWESMAAg1ap9yMH_xM9woOIq5Lf8zZdZYNs_UG6wMjuj7xa5RyCbIeKPjmmZWtwHD5zI6DUKgwGVt4LNVGYpkuMqTzD_3Xv-WxnByBXYUvDXOL7D9ibN7BkkdYAB-cx9jQ9EeUoyzCiPiKrig0guxnDXDERDf1pQKtiYZYHW-OQUxuvRyEA-28kZzc7FP1CFk
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-GDCkzHnSE0yezlBJ04ivYxQRDKXk0fYbhTPfrV3V5RlG2p83SB_wD5SKtLwK0oLrArSvXgZ2Injha7Pna21rQ_ijRWfXvPv5vY7NMDeuwfP4Xjb_zZj4EiQqCeLRnWWNubqdVcPbsmBReIKWAzvxVxZylg==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHziVIlpmU-Egs7SoyRfjCjpya1XxY243ph4l8C1NeNFI5yUc76mfuHW5udtpIOvHJgDTIYQp0Q_yoDKvXGiuTIZttNWHP_eFoV94HP88-awUflTNg9FQijEzl9Bc6O2gjcYVdOgXvd_bzCSlje0M13hwsGFbyuABL4BwulySJ10MTVt1ydQyJRW9q7KX3pjEVoxbCmPUEm4FpBWd0=
+  title: messianicbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFy9b7TydXWMC1P41ErB8RabJqzpj2JMe_F_bHtjMH8mESc_97EaBgNlMsHfPL4vmGAB0L-lCqESWB2wZ7VVsQxfd71Azbl2dDaShsEJEiejrw6L8rj8EnFSkwrRB2Z0EUljf6oyPtBNMxvcr1pwe5RI8jEw3a705mOtTwLegkBAiB3Q==
+  title: christiancourier.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1ZnzA-Zu2kydb-3ZFxtk2WCFyhr32iouJYlGzXNqqMWl4eWbGsDF7vTAjWqAFYrzrh4DXdGj_fW6kr7maH842pjwRcPXgKevfJYhxTLMJUYXddn5HmJqUsl4GzuQwa2oLUKdnoT1-GEliFIztQ76T
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_yZDLs5i3ndd659B3Sis7kgYHpM7O7tRs_Kc13oudTTm4EcSEDfdkxGvM8PnSZdq1qpVy7uyuzJUjSw-1isQhO430IVgdur1C9oNb-Hz0ankM-8k9w_pisTedE7wg2ozLnq2mXPNnQa2efhd2XIFXPs9Igfc=
+  title: jimmyakin.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6Bk7zODQJOTFx0LfGRv_3VKMTzN1QdBKMRWmc0LN9R6KxTu1RMcvX1QVZcQsRdCrHYqv4hujeKmbT8kA4WjzP_Zpq6ZqLs17BLyx9oP-UiONxj7fuhenbWjVY1D2yyA==
+  title: wikipedia.org
+search_queries:
+- ''
+- difference between LORD and Lord in Bible
+- Bible verse Jesus is Lord Philippians 2:11
+- Greek word for Lord Kyrios transliteration
+- Hebrew word for LORD YHWH transliteration
+- Bible verse The LORD gave and the LORD has taken away
