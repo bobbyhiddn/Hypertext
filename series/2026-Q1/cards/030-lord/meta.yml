@@ -1,0 +1,77 @@
+number: '030'
+word: LORD
+gloss: One possessing absolute authority, ownership, and power; a master or ruler.
+  The personal covenant name of God.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant crown of white fire hovering suspended above a humble,
+  cracked clay vessel in a dark void; extreme contrast, majesty meeting humility
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Swap your hand with target player.
+ot_verse:
+  ref: 1 Samuel 2:7
+  snippet: The LORD makes poor and makes rich; he brings low and he exalts.
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: Yahweh
+ot_refs: Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 42:8
+nt_refs: Rom 10:9 • Acts 2:36 • 1 Cor 8:6 • Rev 19:16
+trivia:
+- The Tetragrammaton (YHWH) appears over 6,800 times in the OT, usually translated
+  as LORD.
+- Jewish tradition substitutes 'Adonai' (Master) when reading YHWH to avoid pronouncing
+  the divine name.
+- The Greek 'Kyrios' is used in the NT for both YHWH and Jesus, affirming Christ's
+  deity.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGECht_ZWVN5VgOAJCLs6sc2ktv37GhP1pKfjPGLahJVfBtwYOjzl1UuOaCluJgVunI_XpFnEFLbauCuRIgQ07gfobZKxQicMSAuzr6hB6oRmj-7GKV-iQNEVP37ARB
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1h0vwJcTDwBVTSd0bid3AMCRBs2ph6nMZFapuZtFp3MUBrDhyjx4AXIXO0sKbnVTgXk-sKjgDavLhxuu5dgBn-Kmt0RbSaEfKW6-sr3Se0wxmr43D9HAKIZxpYY1BAi92AT7eWZXOkulIzMeTghPG8hZpaFsHQ6dRp4ErED53bDxcAJWw
+  title: biblicalunitarian.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYrhptBbwyv_-e4kUv7Ytkvv6JfXZBv7vK9hBPrs8ZQ_7Rel4fj8wrxTIjcJSapPhk0DT3LYDE9cXzUDRo61z-jGCsHGBDeK17C_1d2fA4b8e11PoAwnxcczbah-_JZcsbOGfCScAdTX-p91PPBvZy
+  title: ligonier.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQcXlsHV2jcIqcugOhQWz-bs-L7xRLQ7IPQo8kqPTzrgdlxqSbPh0VVzInVBBR-lpAL0QD9gwyyD1ux79jG9tf4LOO0dt4wOC5Xkhc5Ls9MsOdHT_0a8hmNZYReRggYSdAdQKsXGuPF46cElS5324HYiMvW_Trw58IUXla5PW4kr4H2Q4W1z3TXhX2hX8Fzq-Kj0a4j4VBuPoJ8yhn8kcMSMlAI4wZWaxIzQ5eIAmedOQ0n_n13wPjEq0VY-Y=
+  title: oreateai.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf88t9mGULnLGAPK1Px1Q7pY6Vvz2xHgdJePF8UTS5zT-Te3bOWTitk38kcvgeZMxjcJqLRoggANy56DGQmmQwJDgzgUBZDc739SVCaWlstER6xQjBvYhmVdiG8LgJI7EqEsVbzD8oprmBwPIdHYcZuCpHO72KDT38
+  title: preciousseed.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGt2-cP2mNqDLTtpfbBTEJTgcFPuppsXH0UbvKmOLfsNRrhvWXp8ilqputDcy09unGgiDC8fQ2ooDKGcZGIhr3dQT_Vjk5DwpopBdA3NCJDr0LsIp8y4exLVZjU8ZqvJaRZZ0CMDJU88fsTc2pJ1w==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcMmzAhKhLGb5LXMksItammThHftITby52O0WexReqGVeKhU0_ALFQfGgPN27NCqS4tTTagYSJfMPx8w-LMSLzRdppawF9wxdNVYXZjwVUt4MXMivAJ8ChcTHE_NBpmtz6l9tkZquoUv8uqecTm2lmIfvAVuHC0U0=
+  title: firmisrael.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa4nB3oYXHTexAizQoJAd_Qq7BD32TRmwKk5mDXW7YHSfcQYaGafheZLv0gbAvogP26gBpj1RIQvntjUUeJpC2Bp4WqDqaTUeW1qHJSqFkYs7Xyo59jxafEbdwYKuqHWh2j6kTxF7-x4ZBrx2s78M5Py9GhArU6076PhjrR_jVTxgcXUpsgHIDpvx0Ay91GksVvundeN8jNVlRIgBYsR2esn0dLb7v9Wvuwo_SLMA_Wgqr377ndHy40HMp_L6yArgU1kAd_k8heHkWlb8tGGTCZwVWUi_rFj74OgP9Xcohw4wE7FwOJog=
+  title: medium.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUgHtBDbjQW2_XESRFgoCCf6cYPZTg-YG0kLJh_s9K9jTvGu2ZZDPbufBvBKyeydsgoXHSZrtujFPALkcJQ06KrY5epvnaQ1GPSkBiaH3N2ZvICjKU0RvZRm0H9V0Oq_lkLXU7y5elqOUgqfDTnHHJeRuKmkBKaGJNC0VXsoIO2Hg2zw==
+  title: christiancourier.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHalsom1sKPex88euhBu_2mNcXRd4chdyVOdr9DD096WxnS9-BNgcuoGTo9nvYUhJkZ2hMchAVRb2epZenGIhAd7APPUIXJ67EN_I_8JJhhwrDE8FZWRiUMXEDWFRH-HgM71SGGUw=
+  title: youtube.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGmjp6lPLnbxB1eZXzPEpYzmHt0SY1cBdvOuZUwdhsbRxe77RIFltMAEPqUL8QtuI4cZZyQMObLuVOXvVeIa0Kxh6hOXv0vjPH9hivNqjhI8FDlp3pEcl1DlbU3VSJODfZ4Ac-lA6SRfAIOgnXIVUQMM-L03Y2wnVRQPPGi5p6kfGuqO-Sr2ed7XQh8jPViOFw67x2J2W62ZgMs-8LTlU328DIKzWLkBMzdppedRnjbgv2AXOPZwfO6uDgr2SoLxaJZpWJ65NaD_Q==
+  title: biblicalmissiology.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9jdrQLLGxMKSmBE4TfXwNTDfN95q_bhvw473ZS3vxJ0ql6BnsdFR6Z0P5cy879WhHv352XaIpkNcvIiDkJH1lduf2GbXXudVyFT3Tc5szIyU4eA2GHxP_657K1p3oOwlOK_LO9JvTzoXYCqunN89EYUpREWOQgBPZyj4ww8XEbu2kBqj4KQ==
+  title: funtrivia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMDDHwjm3qFbXqxqqE8BZWv8AEBJojm60RhogubESplvuc-8TPmmGAmp30M6VAqIxCDU6Hdn0WgIgj2iU7EjMo9zp5TVZU7pUcI_iULNgh2zyx-nCEFt0C67PEP4RjUth8vLp0Ci7DcrpHKZhIzixKQmHcHElhKzeHS4teLkEPEip9jYsFRkrmX9rsz41626A1Q9WvgWMhK8S6TYJeuMm7vw==
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgInSIkex5v4krGhhHD_m1NTD55pX9vVAUSeooQAJPILLIAHYaXWYU2MR6OV12DtJu4JF8dJHAhbGHCcZqEXgwkszcC8TbQhmFqhuYdcF5TZks4WRcZZp_z-wwkKmCQi6GvGR8Mp33nMUqAD9HIG2whGJQyCnz-KcKbvKFfEo7mZuKKocJFnGr7vrtvjdOKTYYkt6kst2BGMCJVg==
+  title: historicalbiblesociety.org
+search_queries:
+- ''
+- biblical definition of LORD title
+- trivia about the word LORD in the bible
+- meaning of LORD YHWH Adonai Kyrios bible study
+- Greek Hebrew words for LORD
