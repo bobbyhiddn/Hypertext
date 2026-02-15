@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #030
+WORD: LORD
+GLOSS: One having power and authority over others; the supreme Sovereign; the Tetragrammaton (YHWH).
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return a card from Sheol to your hand. You may immediately activate it without paying its cost.
+
+VERSES:
+OT: 1 Samuel 2:6 — “The LORD kills and brings to life; he brings down to Sheol and raises up.”
+NT: Philippians 2:11 — “...and every tongue confess that Jesus Christ is Lord, to the glory of God the Father.”
+
+LANGUAGES:
+Hebrew: יהוה - YHWH - Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 42:8
+Greek: Κύριος - Kyrios - Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Acts 2:36
+
+TRIVIA:
+• In English Bibles, 'LORD' (small caps) denotes the Hebrew name YHWH, while 'Lord' translates Adonai.
+• The Greek Kyrios was used in the Septuagint for YHWH and later applied to Jesus in the New Testament.
+• The Tetragrammaton appears over 6,800 times in the Hebrew Bible, often substituted vocally with Adonai.
+
+ART: A radiant, golden crown hovering over a rough stone altar in a dark void, illuminated by a single vertical beam of blinding white light, abstract and majestic style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

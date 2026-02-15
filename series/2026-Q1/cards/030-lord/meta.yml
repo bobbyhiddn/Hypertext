@@ -1,0 +1,74 @@
+number: '030'
+word: LORD
+gloss: One having power and authority over others; the supreme Sovereign; the Tetragrammaton
+  (YHWH).
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, golden crown hovering over a rough stone altar in a dark void,
+  illuminated by a single vertical beam of blinding white light, abstract and majestic
+  style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Return a card from Sheol to your hand. You may immediately activate it without
+  paying its cost.
+ot_verse:
+  ref: 1 Samuel 2:6
+  snippet: The LORD kills and brings to life; he brings down to Sheol and raises up.
+nt_verse:
+  ref: Philippians 2:11
+  snippet: '...and every tongue confess that Jesus Christ is Lord, to the glory of
+    God the Father.'
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Deut 6:4 • Ps 23:1 • Isa 42:8
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Acts 2:36
+trivia:
+- In English Bibles, 'LORD' (small caps) denotes the Hebrew name YHWH, while 'Lord'
+  translates Adonai.
+- The Greek Kyrios was used in the Septuagint for YHWH and later applied to Jesus
+  in the New Testament.
+- The Tetragrammaton appears over 6,800 times in the Hebrew Bible, often substituted
+  vocally with Adonai.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwQFU0vQl2yRJS90THMQivMn2zpEgYGOpsDcMUxQVItDD7hHrVxaSbXGY9R5UHC2lPv9PoCuXx7VfTDOUWBAmmx8fiTBmC5fuKQrgwjhQSxtY3BF8bPA5p3yevXsSfUQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkhng2TOdTRwgIyuwMQMBTq91gZ2cQBL7d_2GBBXdh-oF5pRnDO6dgUnBG4o9ZQwcaI-nuUtHP04Imh6BAA7xo6E2kzAlrpEAXdjoI_t8U4UeFtUljg9_CAw_rbmalAfqDVN2quLcM1A==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4FYBfXN6tjvjKORtIXcbkfYiykyN467XmNLmFuapkUW0FtjMPq1VA-ySb0y6HnTvPq6OsaXS9G4inbYqXcYn7CJrcrZWIJNkj5aEesrhEopmH23PDo3CbMGPlHmUWXmlxYJuw5MDOb1_XASbn49JCgA==
+  title: greekdoc.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIkNNAbYDsM6mEs1-9U90k1uqgVJC6qOwTc0BHuR9tDXUS7WkhO-g5Ibva6kKSOMpzkcNlK5LnFCtNajXlT3Vbm_wnmMrY9GUHDg1y-nm1FKNrqNXHnKnGpaDgVjnhyblYN8R3Hh9DgcfiOsrwWoJb6WBlHQ==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa8BFu1ONLytSxsO6p216HjSiT9oiTexQg9Ei8ni69k3PuR_LmoN13sVU3ALtXRiRDJYm8FPfUxSuNtES9EGV21AVTWvFdU6MeFIM-wt0Cy6Xoof6UmqnICAuBcRmSYr9kcZw1MSgJ
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErgZAGTal32a2fv0LxABAg9olnrprIyWdL3ZpzlQYlnK93EJfeN5sCjTzRppFn0jTaIbNik95wsDS4Lqb2LvtAFVFYOCGyImHuk1Ky1tFTJtEH4OjcJAn0NmS44HCaKHjrcREW3NMa_K6O0v6hXmKT17Xvzz-kng-y
+  title: forgottenpillar.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJkWEDndHQO9HXx89NqZ_jjL1j_JkgtjUMrdq9W-zr_VD9dz9bytAw-LAZbi8H0JvAyl9zWf2NUoCR-BXwXUQUlk-DRW8fe_CWf2tdRlkWF56WVKu0D-2lgdB0jHgXa7CVE0f30y3F-41FrDWxSI1vAefp3ynWKSA690LUxcDEgKjlH2CnLcVi3xX_TlrB7Pw6UD0HJ3EW9rhH3OIjw1w=
+  title: uasvbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHO1wy1QzsCvYEERBVVkFrRhRXYZ3dJsmZT6VJWuLL0YxvY5EBg-lYR61jrzrfW3L6VDFubLEqQ9FinI-KA2SJXk0ZwdArPhwTcJ7SyhiY6GCWi3FyVwnQOUkMN_dGSzV11SAJzGDxx4FEnvl0JcLdryQpujkw=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_uPsxQZnTJh2x-09ITB5oRZCoRWeAURu3sPfHb1MDMtJr9acJLlQ-LLx3RpCkYUYpVUP_4hLUwtAySk4l_oBqonpQ3tpe9bDalK7gndEAHAIijZB0eU3LlS2mcdCQjQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuaFkrLQdSnWdHcrjWYh3k8wXcQbpk0pSKxsfo7ZK9bJUb-olE8qSM7Dp7_utLHpyVm5WXMdh7_8bIzBJf1bJldmluJ13-aTQ6W8GlL-AYCgsQcKUDOAwVsoBVFk5rn-xiXP8xcvTOJW7bx2CFq2TgQ6QvCH5suNNnpYMJlCMk-HIp
+  title: biblicalhebrew.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfwL4lxmOG10agbRwBnvgqryuoRrO1cuvZl5jU19g6GVxOE0mBHF0ToNTXmsA7SW_XIxnxcqJO5wg4iGMF_axh7lzyA0JUFJMg5PkfPlHyWetXsqA1tqHkTbEvZOmon5-_UIp1JXB2Z2RMyRC1bb_VaMPjocIKpYe6xiCfXQ==
+  title: blueletterbible.org
+search_queries:
+- ''
+- Bible verse LORD 1 Samuel 2:6
+- Philippians 2:11 Greek text
+- Greek word for LORD Kyrios transliteration
+- Hebrew word for LORD YHWH transliteration
+- Deuteronomy 6:4 Hebrew text
