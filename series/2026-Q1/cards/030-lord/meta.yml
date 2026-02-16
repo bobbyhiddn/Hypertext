@@ -1,0 +1,80 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or sovereign; the self-existent One (YHWH) who establishes
+  the covenant.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly bright throne room, golden light radiating from a central
+  point, silhouettes of seraphim wings, ethereal majesty, abstract and overwhelming
+  glory, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Name a card type. Target player reveals their hand and gives you all cards
+  of that type.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Revelation 19:16
+  snippet: 'On his robe and on his thigh he has this name written: KING OF KINGS AND
+    LORD OF LORDS.'
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Deut 6:4 • Ps 23:1 • Ps 110:1 • Isa 42:8
+nt_refs: Matt 22:44 • Acts 2:36 • Rom 10:9 • Phil 2:11 • Rev 19:16
+trivia:
+- '"LORD" (all caps) represents the divine name YHWH, while "Lord" translates Adonai
+  (Master).'
+- The Greek Kyrios was used for YHWH in the Septuagint and applied to Jesus in the
+  New Testament.
+- Appears over 6,000 times in the Old Testament, revealing God as the personal, covenant-keeping
+  Sovereign.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEycsKJjFfgscmuEm1NVktGuQEJQrb32i-W46ZpF9BsfNApuEIu17wtdfQN06EChtB3HQQeNn1y1ttTOzbV_SkExMs3QNYY5K4SVfi7XuAMoxY2g2vgxiA427Wl9qJ1NEvzh0GpAnZRyujbjBJeyQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkF2ZDXenp8TAx_fFHM8FtNS9K-YHXhvopLQs6cr2Cx7in3fzKKYsrpJY82BaU2oaU-Wf5Ths05S9wkU3qYWjcYhrs1_b6w4ullnabNbx4agXyj0Rt7u7ZkxNSNRjDRIRbiBvv-jLUnJgEFIIjJILqCytngr1H0Vlj3VhwGIQpsmmQ2dKLZjf7
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFD-_NsPF3Hj6bPsAPDMH93Eu-7YiNHUc9Cj5WwskdM4tPYuf_yIBAtNdYtenYLAyOdGg_TsLlRhRPeVdqY35vrQKuZ0-1BaBxAKkOzoPKMROr2E-IASOCXMyGoged9lNJoMEcSxqdC3uIeb3FLzQBsv7D13VMLzax3OmPi9qQnwRGQyrC5OaE=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9gkPRUyzNfQM2LdoO02o9KwwTydw7jfLZozPG5QFQmSITFmeHGCTEdojhM4uMtXMfxZIZCyZF4tUIybwkQqQycCRA840dK26jfvCwP0fbL53lIgxFHOrktcPFt7tuRM-ZK63mdudX
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRFKHhlmItXDlLaRnKD9unbGj63t50S0jG9SlwiAozzi1Ly__eGm5-HZQatjCzwzEAaYjDDzVWa0so80XkSIWwupQOmULktizoWo0MOzHxZGXsN4B0FrHJm-LVHJ01XEWGDtDajs0ciSpka8FhQ0E=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGywRZdNOjxo2rRTvLS98BBEyLaDU7M4DDIEwwZBK2KunMPVZC2K1K6d4fnlqxSnMQBaZ_CB7SI547soU1SVo6-ffCnb_gNwDBXlKB4fcMhuq63YdzAyWf09MoL_qjkED5otvprpR04
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvBUVMFQt8cIPwQcMJLYXTmUN2L8gj4UfdYX6YVQH35YhEQ5imNErRSSel4EMZ5RMgORz9EfrO5rO7N6w-h1y4dgr16b97faDbVn-hAQzbdWrWcPc82oe1HXWUj6S8EevcmVB3ag8FWgIyS0HRnHFvSw==
+  title: christianity.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwqZFZRIW8efagBZlxcucpuyov14kHO5eWcOFWSR5BuyT0ThfOjGfW7ZvK6J5T2pwQ-pcCEV-Q_2VqulsY49VVxBvQyJRgBck6nWrMgfG4EEnkc-vhr1aeHObFHQRKoWlYsPT0maT9zw==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESrDan0PikV91i80FHB2qt56SqRlYmgzzSkImoc1BOOQE9WOONg7MhDM2_CjIyNTYCbaphD7xq5hlEEMichpSOUPXBtPiuOC64z9wRarE9Y1A_R63tJISrcWD-oQsbXI128ngODiApHnXBhdNfO557PBmVHQcCFg1WXi33w9dGeRAPFsbYtzM95HS36QkkQMc8YrdSdkCVA0nCfW8KplkUA_lNYr0Z8awcXpRmqh4NDBtlippNnaXcP1rhD620oz5Bhy58EVyzuz1BxA==
+  title: breakfastwithjesu.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKR2MM75wXHe9auKleVLtPwRRblWcs-R3XnakCU5OMKs8z7GEsnj0Wr5C5sI50A-yjPSKKjrh9TJuhS18vvFDRNll-Z-GQ9JBWhrJjR3uS4RNGxYGJ1zt1K5RjSjeBu8y4fjFEvZVauZv4VDrNQ7vz-MuqHeoqMRlMUxr7F_oGuCyZ
+  title: gbcgranite.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTv4DLGpw4SMAF6x2ld6Hz-x1whTvuJUsWHwzJOte-mr-biHv9S5uZFLuxWIFS1tJME_5YCg4RUT1hTNJncwjmJhiy1c0yHrzkdKPDBBTj_G9_qXQ4m_s6kMHTRfZwIXVZHXTIfvBhpDcXZLL_Uw4IAeCrGdy9
+  title: todaydevotional.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHR4KAE7OXmRgN8bR82Mn-zUzOyyXFDxXmamRnwWPps_BbyExa6o8lbqFG89g9qBJqxbf7atN8mFkv3PNJIKn2OIYhHpSipc7NXhGxU5hfIDcW--g0O-fPrACm281xbvpupLSKcJYq7KF91MJZtA_5FwrNaOfRQcyCRqZ0YZklev4ebs_Jxak9aDEXdyQMo8F9VVgM2KC8=
+  title: buttondown.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVrNnuJpHxJN77QOUirWXDvFckekiXlAuk_3UaQg1XH-I8zntCJ9h0iX-Kdv0-aEFvkzsNrXtvBmj6N1F9tQUw_oOQDhD3Hg9hSGnbVrPAV941Lq4xzf3gmQsFu4aSEUstD38VA6CGlvvTAXUwnq3bGXg5ZPh375mJCR0aiqG4xSjVdgvv0A==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGSMDIYZcY7otLqRCgUVEvgDpHaUn3_R7zSAe8XsbNIuyBidPM4Wc_nUze1trD4YQzXy20JitngPuWJh_C1evrwqpdFYOpOCjW-H2a_Pb-kYmzc_NoWy1_-jjH3vM0uIZAleKzXw==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfocQi4dsW66Lo3oWC47Fny1adp0xRfzwwvhzpl1KrSh5BRFvxSQKhT7N2aeUlfELE6cOSy4kdyq8weVezNfZOD7CZidfz3Vs84gu3JkyTaNzgALz7JA0QxnTdt7fE
+  title: wikipedia.org
+search_queries:
+- meaning of YHWH and Adonai
+- Revelation 19:16 NIV
+- Deuteronomy 6:4 NIV
+- etymology and usage of LORD in Bible YHWH Kyrios
