@@ -1,0 +1,44 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or person of authority; in capital letters, the personal name
+  of God (YHWH).
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly bright, ethereal throne room filled with golden light and
+  swirling clouds, a silhouette of a scepter or crown resting on a seat of pure white
+  fire, majestic and awe-inspiring, digital painting style
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return 2 cards from Sheol to your hand. Then, target player reveals their
+  hand and discards 1 card of your choice.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: Yahweh
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Luke 6:46
+trivia:
+- In most English Bibles, 'LORD' (small caps) represents the Hebrew name YHWH.
+- The Greek 'Kyrios' was used by the Septuagint for YHWH and applied to Jesus in the
+  NT.
+- The personal name of God appears over 6,800 times in the Old Testament.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
