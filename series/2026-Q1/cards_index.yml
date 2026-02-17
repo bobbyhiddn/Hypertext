@@ -7,6 +7,7 @@ words:
 - CONFUSE
 - COVENANT
 - CREATE
+- CREATOR
 - CURSE
 - DESCEND
 - EARTH
@@ -33,6 +34,7 @@ ability_patterns:
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
+- add_hand_tower
 - choice_discard_draw_stat_lore
 - choice_draw
 - conditional_discard_draw_type_verb
@@ -196,3 +198,8 @@ cards:
   type: NAME
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 30
+  word: CREATOR
+  type: TITLE
+  rarity: GLORIOUS
+  ability_pattern: add_hand_tower
