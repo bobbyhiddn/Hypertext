@@ -1,0 +1,77 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, Creator, and Ruler of the universe; the eternal and infinite
+  One who is the source of all existence.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant singularity of white and gold light amidst deep cosmic
+  darkness, forming a vague geometric order or burning bush motif, ethereal and formless,
+  creating a sense of infinite scale and power.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle Sheol into the Tower, then reveal the top 3 cards of the Tower and
+  add them to your hand.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: Revelation 22:13
+  snippet: I am Alpha and Omega, the beginning and the end, the first and the last.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Isa 45:5
+nt_refs: John 1:1 • Acts 17:24 • Rom 1:20 • Rev 21:6
+trivia:
+- Hebrew 'Elohim' uses a plural ending with singular verbs, often called the 'plural
+  of majesty'.
+- The Tetragrammaton YHWH appears over 6,800 times in the OT but was considered too
+  holy to pronounce.
+- Greek 'Theos' was repurposed from polytheistic vocabulary to exclusively denote
+  the one true Creator.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRxCkd8g2F4J4Mev2TZ3xZ8pN-C4j2FasHevlDSnWixKTdMmR5MqW8ku9Jc06ILwDvTlzXMZwog7ciiOcbb24mV245be_WES-yHLTZ7poD1UhwjA7Fdto=
+  title: theopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEg_to0N-QtM66w2Ifn4Y4-42nCjYCgfpZ0rlDGaHG7j7H0-yPdi85p2_KhRizBPyQsAVNrAhXBYeTJlFb-qNc-1TzKB1FEsc0trYX9JBgbO9bi7O317MCpwlX8n7saM0F8Oz4u0iZtRSpf9wAcF1rGffn_
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPqpvjwTooQ7gP6tQB3jo36Bk2NaC5lA5LBE5S-ojvNEeWYqJHlqEuH-IWpRfPKaiBcuo7XKfGxNBr54rXDseVR0-TVEEv7r_dUbcPshPnmlfr33oN-EUK-ma_cJjc7BxkAa8w
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUESiDCL9Qa2UrkW5N3dUKesfqXFO8fMoPlfa1pB4M0v5uf9ZmfzpGm4WHrPbxPHXYBGRI-wUc8hI3UgUVcHOnq1L0GyJBt1vKcgsvi_Rhmn6GGuKP1kZQicsad_-uWGjh8286Zy7EhWZ2waXwSlaRkicvBxYTk2Lsb3A2d-Dz5g0_zzArChYver_WHDU-rZxwHPq_Vts-Bv180RlCjZBWWMU-iY5SR26uj4wVZc8k
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRvVFxDzDuECvz3LJUnKY2Bz7U5ZIbfaIngNKLcBtTrVPYZ2UnsVmjgkGXGTCU0i-G29HRgD8mg3yFC5I5LQv7Q0Du5f0Du2vt11lEmVZkVVrKacS-RFbCRDH0_kZiWrpgljy_5baV65WMpQ8wZdTDP3VNVg==
+  title: desiringgod.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEP4cl8fOW05tIW437udnczYUHqOHFrXIDNkwRndr72jTO1ESGR84-Og15GRpE5IjYBIlS35Gu0UBnzWYX4JtfP2B8m2f-vk-WeHurxgv3-v8Cs3dw2_enk-qVB8Ikt6HitfB7TVT8d_qIHix_KU-ecAo20XJgjlQ==
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvrQUHZz_yOxRP0bvgNniot22NXJx9POJl3yohk6DOmndHuJp--xe77zNO3Fs2lyFzra35JDdYsKPRkYQq3Fh1UjoPtDvn2ZPsoxCcX35dQjhAfhjT5WL5fdtzSZ6cgc53FLcnduw1R_f71O7UrSSisHC0bt1U84k8NtxcMjhScxS40fohg2QOVg7Eq5_K0wLU3VEK2fOR3LvjcHhkGV5RMzQGzn_pU3KapSzm7FPxEGczqxFcXyrAesGbzcE=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5wb3PhKLAJDZObBJZFPZD80PhfXwUiPnsrQ2sQ0zv2Uv04HcQ1xltKEmzJIcj3Ful2PWPqCHeAm7bidFByiS6kDaboyvDnOTXwtKUhhWYzOtlmWnO6eH_RMX-_uMuW1uGcJa4vpWusmZfO4rliuAot30=
+  title: byu.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFRqs8QA-pgov_UyB7axGcrvosREuyQEK7_MYSU1NnU610ftrYAcp1Cyf2LjKORMJfRTGdy_gn9UxIY13HzjKCynxZ3cTlFKaBEZtfpL7ZwJvkJc8uHhaOokwNg9eLwmiz3fHmAZSeSBTgdKgNdic_8mEtsjgr
+  title: pcministry.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQrNex8a-sxpmLcw-Wg7U63mjA7UU_Vs-mXakpy6gn9YrbezzlSlDHXdzVzk0D4lpYwoRZPE7sDQTV6wN1GqDyHL8zfeu5yxDaRJ347Ey8CsaiFHYkbG5UZSfMqDx8mQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERLkrXT7O-uRf-gDQg1UFFMnROppm47Ex2hRDpKosYGXDHpU2K7kc0Zn3EQR16LBVfeBnSg4UrjXOUwHjCjOXgpYleWHU9CVm_mzICXUIp1vlsQBWWz6qpEwSRwPTLib156zLPI0gsSSSd8FbsNdtZInieUVZJmHzQu0EaCNYBIYI8LfDMJ25ovcg=
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE19OXt_gzRIDJyHYuF6gWKnkcWSN0FmSyxRfSQBYgQ7OK8ZFaS5Gl6V5EmN3xluI3Ygfpc9j3GyhO2Ik6BLHx-pOaRruhjmngt9LqbJ87cVLGijEdUoRtGlELvN-xU0fhbhIuYPw==
+  title: outreachjudaism.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPX1qi_nVdQ-M3jhiHDx2yEvjjcQ3gD4CVg-13TfkTdRoj_DfDqYbFa5WQPSHoH2slFwW5f1IIreaAmDR5LyLos-Jko75mfudUiC6_Gga4C-45PCLJqGloFFnCSjesMafr3kWQ_J94AgtXaTxIUQ_efCl7Wy5hZMR-KLcnfaCoX8de4-43WIWKiaork332RCxDbJsrrJr_8jMvs924VrIhYGDCDHkstVJjHTU8aGuaRuSLjU6_58FOhNP8vztBM0_vYKB8LgQPNaZ3GCcI64jII0b4
+  title: quora.com
+search_queries:
+- ''
+- Bible verse In the beginning God
+- etymology of Elohim plural singular verb
+- Greek word for God Theos usage
+- Bible verse God Alpha Omega
+- Hypertext card game God card ability ideas
