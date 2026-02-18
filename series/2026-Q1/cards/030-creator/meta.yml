@@ -1,0 +1,70 @@
+number: '030'
+word: CREATOR
+gloss: One who brings into existence; God as the originator of all things.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of glowing, translucent hands shaping a swirling galaxy out of
+  dark cosmic dust, with seven distinct stars shining brightly in the center.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Shuffle your hand into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The LORD is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: 1 Peter 4:19
+  snippet: Entrust their souls to a faithful Creator in doing what is right.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 43:15 • Ps 148:5
+nt_refs: Rom 1:25 • Col 1:16 • Eph 3:9 • Rev 4:11
+trivia:
+- The Hebrew verb 'bara' is used exclusively of God's creative activity, never of
+  humans.
+- The Greek noun 'Ktistes' appears only once in the New Testament (1 Peter 4:19).
+- Biblical creation is 'ex nihilo' (out of nothing), distinguishing it from shaping
+  pre-existing matter.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJss4xMItAtXlMDuUQsy_0nTCOlQLXko9dHUNlIK4ohG1pkunLjgP_M6LfMjU0h-rK_jBK9X28XhFY6ugP7pI491nsy5i2OrEVAcd5MfrqytJO4tHhrxwAMemqp8tUTd_DTd3Esdw53kI=
+  title: hebrewoldtestament.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-E-K-WYH-7yENxugf9IkVQRcSMzATWJimnpAqWANnS9DHvlhev6Id-HOC3947q7EmaXX3V-WRQALRUIB9cB1Qv8CwdiStI46YzUnjtkoLvUfv1fgAYB3NOuK1PnqB
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9kCXs3JLK7EvPeunSG2aHRXd54NeoPRpIZ6K7LbvkHEi0-8NxqtqacaciWX7UeLC9286sF-mAdHz2bMDQiWZ5KeRvA9_GuVzotc8d-_4VfkyJ_bN6qtU7uCAtIKRgUPxZePjb_aDgDw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElW_QpNx3YtpnsBegirLspi2sgn3APIFMVUEnvlL7l1OGSEcaC5wFOfyGDTXVevSOl0av8lZlGpoDZ_b95CXmEcAF3mle4S6LS0K4j2EgX1UdGf6W-IybVlnry81_p9MGdAaOfp0tsPqrnBL3VnirelSr-CEci-Twsb7PX1nwoJdTYIA==
+  title: chabad.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECg50Z9lhv_bTQ497-6fPrDqB__ZR4bl-s4XwxdJ1r5DRbiFuzByRpkQkIFwinmA8tVULUnNaJ15VkBYFcr0bkPJWl09mpz-NwxeBm3WerJCRF1eZ0X9MbRDdzrB-Xny8zxAn_WA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEz8SS9PVIEZ-BsPzUs564rhsOZaXnSJMetAiX26DmB__QCV9FCJSrD3Cnkx8L6UBhOxrA_5rT62WfdXCdWvtADRGour2KAPuOcNFMR2Eweqs7NEeiaXRRDXMXLWM15ozN5
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFovr3NGAn6SzajQIN6n3DwTLMk-MHqpCy9hIsnzS0e9hDKpowrk1LQxPEktycoewL23GtsloNjG8K8EaAuhmNWhld0MvLQhyEwIWC9_gB0wpblnY0q4-jYD-rtWVlNBooplMWFhCuymA==
+  title: openbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPr3K5ODMls0YvVxEYrIdM9YrQI6JQf5wSZczZG_mDH-U8wOCZW8jJ4is0DkE5nttpMjB7HUFiwknitW5qMBFxpUui3sUJ7f8QxXVfdpMbBqQHxFNW2YdcCQxuqseG4szPEX5TIVDYfwKsT1wpfs5dCsw1YKIisfy1Ro6fD_PX_hIH_hGj5Gp5Mw==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx0d6vHUwJRE0E-tVocnKp-G20cqeJARJdiV9BxYccPGFByWlfz7ji5PUE-49GzckvSUJ_PmHNYUl7zBOAjWc5rghm5xarDu0N2D7vppUxuRqCi2oq-ICTzojGXdc4Zg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcCn-JIREgYZ0AYBWicFArqRRGmrK3lRje2FWsa3XtplqPm-VKBDFDwi4ExtA8Z2IURd_J2f2Ncft4qyofTZbBH3OpAbXOFV2wZ9mjM4cHdKpIPqxSM-Bc1l8X3VNU
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGl7mI791BHSnuJHVBD35hlqoj5S8JjcwufZDFZ6VTuCm9kbnvjXFedr6_G8PmpS3Q4WE9flyLoQ0lxl2uoOgLzMpEY2v2PJqBH2Cq2M2WyTg45DYGKt7e5IOXW8q3e2-MX3ovisRQJILYqPIQKIe6hBsKB6S65AFnNFQ==
+  title: quotescosmos.com
+search_queries:
+- ''
+- Greek word for Creator strongs
+- Hebrew word for Creator strongs
+- Romans 1:25 Greek snippet
+- 1 Peter 4:19 Greek snippet
+- Ecclesiastes 12:1 Hebrew snippet
+- Isaiah 40:28 Hebrew snippet
