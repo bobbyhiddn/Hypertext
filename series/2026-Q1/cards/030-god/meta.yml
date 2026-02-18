@@ -1,0 +1,46 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator and ruler of the universe; the eternal and infinite
+  One.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, ethereal light breaking through chaotic dark storm clouds
+  to illuminate a calm, glassy ocean surface. A sense of immense power, serenity,
+  and origin. Abstract and majestic, no human figures.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Name a card type. Reveal the top 7 cards of the Tower. Add all cards of that
+  type to your hand; discard the rest.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Isa 45:5
+nt_refs: John 1:1 • 1 John 4:8 • Heb 11:6 • Rev 22:13
+trivia:
+- The Hebrew 'Elohim' is a plural noun used with singular verbs, denoting supreme
+  majesty and sovereignty.
+- The number 7 in the ability reflects the biblical number of divine perfection and
+  completion.
+- The English word derives from Proto-Germanic 'guthan', meaning 'that which is invoked'
+  or 'poured out'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
