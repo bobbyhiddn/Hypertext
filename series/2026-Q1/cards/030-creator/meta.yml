@@ -1,0 +1,74 @@
+number: '030'
+word: CREATOR
+gloss: One who brings something into existence; specifically God as the originator
+  of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Cosmic hands molding a swirling galaxy into a solid sphere, light exploding
+  from the center into the darkness of space, ethereal and grand style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle Sheol into the Tower, then draw cards until you have 7 in hand.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning, God created the heavens and the earth.
+nt_verse:
+  ref: Revelation 4:11
+  snippet: You created all things, and by your will they existed and were created.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Isa 40:28 • Eccl 12:1
+nt_refs: Col 1:16 • Rev 4:11 • 1 Pet 4:19
+trivia:
+- The Hebrew verb 'bara' is used exclusively for God's creative acts, never for human
+  crafting.
+- Creation 'ex nihilo' (out of nothing) distinguishes biblical cosmology from ancient
+  myths.
+- The New Testament identifies Jesus as the agent of creation, through whom all things
+  were made.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0LsFqZpP65xhyGAAWKYQa06wp12LnB_ChYS0KUZc0S5CRBvbfROgydAkJvAI0cbZoUdwUqriaPZIVt4ecBEgtfLUKFEMtLxmXogLrA5ZFLbOIfJblHsx7txmdjnMIx5CpoJlDv9fqpIZKZOqXGo4=
+  title: prophetictelegraph.co.uk
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2L3KiS4p6SmeZv5xHS_dfQp46yA0HNvKoVGC-eI1sx8TUaIgQZ7oeW1c3rMCaM01xFepjfzzqrhPuWkRJcdKhE_Qun7ztbFPsA2Pnfi9EtCGspji-gRp1YbThim1MtUHeJOuxES5qig==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELBhkAhPVBqIuubvhsHwmldocV0-if_G7daWyeWM0ni_7bYytueyXDqOjk0N6ZZTkkv8H8vULDps1kgtltW5XnuE2mGFePii2ZBdX9ZWfCWu6Ak5wRBzTYGoyAABhdcUKHwxRZ5cgJOtJeBMX81xiZNq1ahuInhEdsi6u4pwYDYPp3EIPFGGrwYFPXcLRnDq4p
+  title: blogspot.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5-J6hjdosIBxuUs25K5W2Y7VbsFm89ArPcqRJCPP-oAu3tGmslhNl85sEI_BNtMtRu4EbARwwC7Q7npKcclzyOh8qVZQfLrkf3ZV_uzH3hfGR7qyGNusbukpKOCvGzkLPs2qFBoGTWfHnLKkJ
+  title: translation.bible
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7z0H1k29debhohn3lNF5Sxl69Wa2bUvwv3CR3e9AIEBIbxyV38DnLxA5ftNKBzfzeZ0JLZZROqzQ9hv9gZQKkicJZkIWvrssIndo8ZAyQFSLxFFhYtTp8mqkcTi3ZoNXNzXaFyoqGG3sImfFxQQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkR8tZ5Unn4QNB0uhXRaP15GTIEmvfGjrSmGgHTREggEJvWLAwUos2hYGwz2GX8gki6HJ9xxZcX4nl06u26cH9kboWJ_j2SGkh2sipZPGlFnMtZJkgPycnsf2XEmf8iQajzJdEll6GyHQ2Jbht1UbG9XPaHw==
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqiT_VFkadfxqviv0OoL3EpPaczsGgfFho5_RU0LcNqKPh8oAOu6LWG4i3B43FMBUoBZG6Sj9a9ogZpN0zP-mOZmbjWJ3emm4YlKz30MtHKmzbHxJoSbwoIjjy7vobVhed7VDneQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGor_LOgYqXBYdjYRtzbUK2Nn0LbP5jC7WSmSHoFmt2WVdFnJuYB5kwft1uw9rQhcgitITdhYqwXVbqqv4tZk3OBQHaJfK-hE-lVn6PYqUPoz_18PzMbxlW-Qn9vrLHFuGJSLwVqWnCow==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOBfVPwB9N2QOXHWOplL40IpVQdwKUFdI8VkSynysJtvVncrs1UmQqZC2968AJOLhTyyE_eXmH-krlnlnbsMP27x1zkPuQQf7xRiWqfZpXCwTqv0oGWUMpQD1VhCAG5fluBA==
+  title: churchofgod.wiki
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFknWT4q3HcgfARPyrKmyQJiksKkuwaqjxizBJDCF16G0gZlosG_jopRSv0M3YdjboUd3XsVWvu0CjjLtDChJRVQz8uFjbPUIX_44gmyra82xE8pZ_6k9_nuVpiwT6w9Md-VjQ=
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjtj35hNY36bJ2spA7WTG8YojMhd0abay_cu__9_0JuiSAahlCOoq-Z-uPYXl94Nc-ZTWPC7OGwpa8nt0AeBUOvhfs_qEvWmlC54JP1QQLxM1KLiVOckDv_GFrGqBpkrxa889qvBjAhAq_GPlhQ2CQ2IvQfuTrhxcz_Nv3SCnRSD32hVcO5BzWY-b3dPFguWY4A_nMgjq10BSpFgm7d6bnlRQ=
+  title: biblicalhebrew.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELzM_0lIT1fispjmlPp9yPG2Vn1g97ux1GdnQ6xt5YdV2Ndz_5KyAubpT0n2hRBWX70CgTzuoc4CaGFdHNPOdpeYaBRN_XagZz3qlfBtPM5f4xyY4-9v6bCUtlm5wfpInw
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGk-9wBPBTssfDnk9B1EQuOVo8XDWOKmdl6AIYaFMmdlzb2qSqReSgRcQu0tlMrrWj2akW58iLhxeAfWyn0xCgsE0aeKq1Wbxwpd2fTWMjzIWu7NZG2evmGl63mCtIWW7SjVA9N3S_rweT2J7Cl
+  title: biblehub.com
+search_queries:
+- ''
+- biblical definition of Creator
+- Greek word for Creator 1 Peter 4:19
+- Hebrew word for Creator Ecclesiastes 12:1
+- Creator card game ability ideas

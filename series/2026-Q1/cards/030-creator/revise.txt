@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: CREATOR
+# Card_Gloss: One who brings something into existence; specifically God as the originator of the universe.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Shuffle Sheol into the Tower, then draw cards until you have 7 in hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 5
+# Card_Art_Prompt: Cosmic hands molding a swirling galaxy into a solid sphere, light exploding from the center into the darkness of space, ethereal and grand style.
+# Card_OT_Verse: Genesis 1:1 — In the beginning, God created the heavens and the earth.
+# Card_NT_Verse: Revelation 4:11 — You created all things, and by your will they existed and were created.
+# Card_Hebrew: בּוֹרֵא (Bore)
+# Card_Greek: Κτίστης (Ktistēs)
+# Card_Trivia_1: The Hebrew verb 'bara' is used exclusively for God's creative acts, never for human crafting.
+# Card_Trivia_2: Creation 'ex nihilo' (out of nothing) distinguishes biblical cosmology from ancient myths.
+# Card_Trivia_3: The New Testament identifies Jesus as the agent of creation, through whom all things were made.
