@@ -1,0 +1,78 @@
+number: '030'
+word: SPIRIT
+gloss: The non-physical part of a person; the Holy Spirit of God; wind; breath; life-force.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Abstract ethereal wind made of swirling golden light and fire descending
+  over dark waters, forming a vague dove-like shape in the mist, divine breath, glowing
+  atmosphere, dynamic motion, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Target player shuffles their hand into the Tower, then draws 7 cards.
+ot_verse:
+  ref: Zechariah 4:6
+  snippet: Not by might, nor by power, but by my Spirit, says the LORD of hosts.
+nt_verse:
+  ref: 2 Corinthians 3:17
+  snippet: Now the Lord is the Spirit, and where the Spirit of the Lord is, there
+    is freedom.
+greek:
+  text: πνεῦμα
+  translit: pneuma
+hebrew:
+  text: רוּחַ
+  translit: ruach
+ot_refs: Gen 1:2 • Ex 31:3 • Num 11:25 • Ez 37:14
+nt_refs: Mt 3:16 • Jn 3:8 • Acts 2:4 • Rom 8:26
+trivia:
+- Hebrew 'ruach' is feminine and Greek 'pneuma' is neuter; both also mean 'wind' or
+  'breath'.
+- In the OT, the Spirit empowered leaders temporarily; in the NT, He indwells believers
+  permanently.
+- Jesus compared the Spirit to the wind, which blows where it wishes and cannot be
+  predicted.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxoXItt5nUrcmZeZq4cIfrAHBf3_1jrX8b7mjuRtm79IfiV5vU99Mpz4gONhogMFudfqdn7wdGgrJ-52E2_0uhAn6WBSNFmPZrzUE0etzLAmtpNM3kpTyV_DG6
+  title: revbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTs2KGwxfW53ZzDpo6ilcXieO7tXyRMCUC0uF70xA3Wcdv3QIjJRyhBZvCRG6GohPhHPMl0Qc12pyIIdPlT122ui9pxdSihzmeGSrcKwWUR-swL1agW89jlLOuLLUczDrqRhlvpOLDgXist7qZ
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7QPgNQKy2LSfKtdpMZQPakK5Ki3WgfZ-ZKOzSrFxADYlAXAeqlcoknr2YWaA85BzfHIAwZwTclRiTHKGpipbv1JiYH-AitaAFKH3gZu7LeaGV4YplkanbVAJHpOwYNaOxNj10s8OYd9sspBKDBbuUumkCc6GLAPlMcGkI4eVBZGWbp2eK2etc8AC3Qitc1LoG9w==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyTh_YNJdeL2j0yZq9BE0_5fiiceSXw1BZ-nFydgJZcXSPfS29rypL4eFX7rLnKilAo_pI3ykoZ_Rw9_byOeQ9S-D4ONgsti8H232mOaIdUxxN4ezdZM4XVtOxHgTEydk3ZsHU
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP8o0UtzPy5Mek9_EjRhhpVOin3cKmo77eM2FXQ1Ign6AMNaBxEOOBSdcjNu2_hHFcIczh8PbONH4uqIrtiw_aSf1-I6riqrQ3w_glQQtPR500j3mc6y_BY_x5MKn5Y0uX_K_T0oIe9sOTfcPhvDMwajw2TzTpuOJIFYVmRe8s8Skq
+  title: malachidaily.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3V567co0_bo-AueuLJqPfFhHVkeLEJnW-LgupceoeWe26Y1SE5FBKZoJtjqhBAtxTjKC-f9qnpRptjKfaonAMbor4yQIjX4HwPcRh9QyDfJOQLWsEkCKqr0nwrBrqWg==
+  title: fact-s.me
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi322-Iox5Xrd3wixKxJrHOGKYIxLhD5vjY9C8tBsY5skOqqvgxt24BAd2-YT1FKpYqe3p1aLQe7RW3BPAljVXT2QGiWBYcdk4I0W0jVTUPpBjQnCpGm3K43355v2-m1DQSQFTl6UiWX3Yo6L1XCy-mOoLr5UaIE62_kfBm67_Cx_AYOSt
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELTjw2_fh56vaOJazd3RpvMFuM393pDhH3ptq9rDTEspe2SKGY0st-DFAJGyA6ZmIF15Vz7aOyEmdP_KfHi2C1f4lUSZtKDenrR0YCnOxjb2NvLoS1Aj9fSk145PVuPnXOPILD6wjAVIKJvc-whKqrq6gpeavnKg==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTcV6LOE5AeKXfsl4cTGS1KNIe4Oc6LlIw3IG8I14NQSEoll1TVPpu4NoDg_98K2LxKrzfOZJQG0HSPs3gNN1DiANiiRkNS8yS3RB3kBv8Zi9-jHD8z3dlqclM9p9slsVr8r6G4uOd
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVXnW_6fbRDwQlqovbp6LzODtmTpDOXoPWfJiaoGPjVEPa7IcW9eEDIqzmctkGe4OWVAI9lbkHLqnRMykXAMdHzIwIdv7O1dVcKgK-XWlB4DYCkabOgbV9gmckIp0Z6_u0JhJm6LQ=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw_GyZ7gLrJII1xWGCY_Zu1TQsoeEjh0B5NBSVkedezHSpWC8uC6YIOSb8ArcqDG-XtaTvJy85TJ8fH_4VVbuw68ScT9ZWImj7siNJrO-9KF3PYxghe66jWOFJSppbI1rjT1nCccokToB3EAjzSQRECX0=
+  title: margmowczko.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFrDuAepO2JvggHin7q6qAvVdy-2NHTo-iIxHPCChGB_yZYeqWfX2cKrs0hudrhcj8KR-obfU-uN_OjfnfYIig8pojMHu3hAu09T51cx7_pwMCld1XfSI6CNObx3kbtH-YB_vKUw_FXnSAeZSgVGpR8eJ6hCFmxl10KbMkoPL0cLBaiP3R-PFKfmtJ2G6j
+  title: churchsociety.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeBsdg7rgIg8DnoKv66PO2dMWYsU0T6ps-bHH2aanxuxKRdHQmo72aLVmG4MzHkGjs1ZRjbT_yfl8t3XUGLMtWF463nS3_vDoplbtNEg4PYLDHeR1yWLm4EacU-Mh-GQaBr4G3uAD5karmpWsENvV-n5flJ2ChOymuYhiFKmYCwoDGZ91FJN-zgzzQZqeIOl5Y
+  title: deidrehavrelock.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiQT4keqv79Pwh5jIkLK7mrp6ApHL23z2GzGyJpIAi_Lt8tvTZUYfENijagmlXKrsl9Ud14p58tteEAGTgHyyDOyC-49zMFlr45QkCia8QAk8Zk8N7UR0uPku8mnWFjYRN1M2m_aXlKGZfvBLQWQuhw5pA2-Amo4cqSEswY3oS2YahAhd0QSkqdsGYmsu286Cs9is85UD8TmvSfjl8UldWN0W3H4shS3PuPUD2ea5N1Co6dRmA1Lqxnx3OPzApj7jbsJymAQ==
+  title: blueletterbible.org
+search_queries:
+- ''
+- hebrew word for spirit ruach gender
+- greek word for spirit pneuma gender
+- etymology of spirit ruach pneuma
+- Zechariah 4:6 snippet
+- 2 Corinthians 3:17 snippet
