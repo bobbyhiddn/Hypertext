@@ -1,0 +1,76 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, Creator and Ruler of the universe; the source of all life
+  and authority.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, unapproachable light breaking through deep darkness, abstract
+  and celestial, radiating power and majesty with no human form, cosmic scale, cinematic
+  lighting.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: 1 John 1:5
+  snippet: God is light, and in him is no darkness at all.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1 • Ex 20 • Ps 46
+nt_refs: John 1 • Rom 1 • 1 John 4
+trivia:
+- The Hebrew 'Elohim' is plural but takes singular verbs, hinting at the Trinity.
+- The Greek 'Theos' appears over 1,300 times in the New Testament.
+- This is a title of supreme power, distinct from the personal name YHWH.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrDhGHs0ZuCEG0jlx8dD85CA9esU5f0bZqppOei2HpMOYxbJ2JHY7G6xBTMhhr-BbtMNLhCI6JjU4cQxwfLRTqb5Z2Hv3S4tkd1yYoS6SjHvxDpgUwmS3dDOHNJwhaEQoyRNH6EJwt2dOKu-6MB0E=
+  title: biblicalunitarian.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECkbG2yPe7uCpmbe40ws6EMAfIjiT7X60BIbflfUvCbNqm7NnOkFdsB0a-AWMeg6Zzd3-kvGuAUyJ2bnxTSaMi6pH7BBRLmWl9Byz6SELPROR_kwo02LZCHUCYlJ3XbPi_U6U4itAvbrScgZC-a6wzN4nGht4=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtRcNlao0mGLwVHrM63hm2YJKLqBEHcWQvRIy0bQmWZyedh6LtGkJQJTFRpiPUYAgGUT3VGl9un3rVlQY3IN24IRwIyHjzHwT02XVWW6A2d4MsMGDAzls2aB_4c9UdHOo6dMTB
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEitkjggfykEWnZO1J0I0LCORXrEm7BXhFiP1Uh6-2UekjxruajjbuYJDeLAOE2MzIlrIHl73TiM2m6Rz9rQvtCuUs1wwsoHbnOnDSEIHhzL33HS5dTQxwlkBwthMSJrxcBh8lHwcN8iiQy_tTYYYjARA==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECHQ3Ka3BIec8QJRjq53direfW6Sbdv6unJsL70Dz19AeHpuN1A2f3T-zD9EupfyjOqnSMCV5V_Fv022AzgYEVLmcbIJQOVSVnFO-PUU9CJoT3t_dNuQHLj9cVmHvd
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIVSabNIJu1_2diG0RL16_EbiqWEqgcu_yuoDmxxTlsJBQkDX-05cXkPhGdAY93M0S5JxVZ2KS39ihHRAXPqoQZjGjQr4bvFvFbmo3Na2fN3BXH_-xSQUvBQJJAxEgxQWYItzw4-W6dC0WGrj_K9ZlEIj9WihPC2jdMlfdT6XMuONmv2ZMBZQ=
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkxk14hVXlUCWNkPlyiLM0b64YKTLvXcJnMGe-vSfecuKsgxVY26XmPUqTGDfY5lxtx0Tke7ZFBmUhopNoLzNiIUIZyNFKHAO3kUI1Qd_Y9IfqEYdfoFs6MG_LzJLDuEEp_YIq86ajxYZhWeU2sA==
+  title: in-due-time.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRUQebtisbQv1giFkpWH09CnjyUt-Q55Ejzdyw6h-EJPzwR0Hw2zZ9Za0ojSMyp63TxvXnaFWb269e-0fqYpgPGX53xs0UCCH-r7M-PdrPGIVws_pqrEfBCybKeO1wUkZRBjTZ0kxp87uZ
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHl2SD3pmaHMsblZKZwWF2e-78J8IopkIXlphN2XlUKbIN2feyvMHy-K_sBFzusS--MO22LYzDby18d1IIXbZDrchyQFLAVB71-d1yWh2XC8tH9kF3mD7Iy1K09Sed6oGe_RW_EE2cO_CeA8h9tS29JI4-FsOVdCturVR4mRzgCi0MsScEyvz9WNQecWEL798pjR5wXZf_3L5gwNbfjphvgPmHYhS0O5Lg0XQBt_9Oftvz4LkKZGl_jHk7VlfLgapE=
+  title: edgeinducedcohesion.blog
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwsYjqUKLnx99mv73Q8hKabRxn-PA9Xhv1H1_xKbN9UrLCcRydrdXNu0TZ216njKL5KvvGsQ4pNmdJed9NtiNsuORZplQ_QkvQvUlTnANkOYcUXvLFT5iFfwW4oakLObTz0WZM-SIxwIyd0YUYz66L3LNp
+  title: streetlightsbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCWiksiQF7fNu6e9X4UyPM_U2dU_VAKxLBBFfK70-hJPWwG9v-3mR6rrpwhKXf8EMJgvvPVFeeAji7cI6VWIouWyqjOYKkLPmdeulLaev0dWGNburpgkHp4BTSO8onDM0UleF_mUlchSfDDQDb5P_qJ-oziiHCO2Wl0LfI-_Q=
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_DtKeCGJ_4tZ_H8SFm7Zcpzxfb5jkMPEyeUGtaIeiHF3ByiMZ8igqyz5PsRBDg82GLIKl0esuBCLcrFN2v1X3UzedxmYkzM0ZcsBWzLCZkrYqQg-VKjhs60PdSeJjXEruPYSASFHA8A967aNwJH4=
+  title: lessonsfromhome.co
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-jTi1qFPt1zOZgP3i7ykQoketO_Fi7CvD8dxMNuMrDK7bQpDmGg-PYd8cc8HZe9nyMG1juChPC9RLfp88unomr6HHGFWZBRMryrtnd1Wi7SLgnIhMRD4xrS3J2J0vOLAQIYorD72egHdO8VDOA3shEQhgeRKuzgrwi4hjK2DpKRNkIRkxkIyA
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZCh9mAO8OD1drAFpWyTfBe4dUFJ3QWVCfV1pswZAoJ7yhfwPk3vsL7zKeRm7ocujQREwNGnXrsg0Kbnn0EPxUma8BdnszSWSJmj6ClWcfKHO8MI6tmO3NIZdMP2lcWiQNMso2VN2cetpdpXJrfUgzdUbjfYXUXT8C7Yd-Nu6YV3bApccfyL6E_3xGIICiS3dkkqNr2mCwu5DBP-IsdiHi6uG6NivDwhDaNcrIF1QPUFtR3kuuxITm9cWzGbM6E8eJERFfFOkDTuny6FesJass16ZrxSYxGsCLaRo7VjfvWJBj7ctwMvL5gnHsbog5pHO7QNSlBWO1au9mvwANp-ebg77hY1TCvIfwphe9Rvg1_-gTQe3-nA==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbS8v0prnaluQei2Vy9pEn1VsT4kggJkF0oLE2G27D5yxW-gaMpxPhaiyd3FEpm0H1mYIWLJHi-wIKmeKUY7Kwz79xlTiAPPlSTMxiy9bwMr7itgdwM8_nQA4FF2zYfSS-lu624-ZD2lDy0f3OVCyov6mHbuca_9z4WL9wd1A6o3eCCKJT
+  title: yolasite.com
+search_queries:
+- ''
+- greek for God New Testament
+- hebrew for God Genesis 1:1
+- bible verse God is light
+- bible verse God is spirit

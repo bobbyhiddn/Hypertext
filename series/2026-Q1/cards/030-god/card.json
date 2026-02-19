@@ -1,0 +1,295 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "030",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "GOD",
+    "GLOSS": "The Supreme Being, Creator and Ruler of the universe; the source of all life and authority.",
+    "CARD_TYPE": "TITLE",
+    "RARITY_TEXT": "GLORIOUS",
+    "RARITY_ICON": "GLORIOUS",
+    "ART_PROMPT": "A blinding, unapproachable light breaking through deep darkness, abstract and celestial, radiating power and majesty with no human form, cosmic scale, cinematic lighting.",
+    "ABILITY_TEXT": "Shuffle your hand and Sheol into the Tower, then draw 7 cards.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 5,
+    "OT_VERSE_REF": "Genesis 1:1",
+    "OT_VERSE_SNIPPET": "In the beginning God created the heaven and the earth.",
+    "NT_VERSE_REF": "1 John 1:5",
+    "NT_VERSE_SNIPPET": "God is light, and in him is no darkness at all.",
+    "OT_VERSE_LINE": "Genesis 1:1 — “In the beginning God created the heaven and the earth.”",
+    "NT_VERSE_LINE": "1 John 1:5 — “God is light, and in him is no darkness at all.”",
+    "GREEK": "Θεός",
+    "GREEK_TRANSLIT": "Theos",
+    "HEBREW": "אֱלֹהִים",
+    "HEBREW_TRANSLIT": "Elohim",
+    "OT_REFS": "Gen 1 • Ex 20 • Ps 46",
+    "NT_REFS": "John 1 • Rom 1 • 1 John 4",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'Elohim' is plural but takes singular verbs, hinting at the Trinity.",
+      "The Greek 'Theos' appears over 1,300 times in the New Testament.",
+      "This is a title of supreme power, distinct from the personal name YHWH."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "greek for God New Testament",
+      "hebrew for God Genesis 1:1",
+      "bible verse God is light",
+      "bible verse God is spirit"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrDhGHs0ZuCEG0jlx8dD85CA9esU5f0bZqppOei2HpMOYxbJ2JHY7G6xBTMhhr-BbtMNLhCI6JjU4cQxwfLRTqb5Z2Hv3S4tkd1yYoS6SjHvxDpgUwmS3dDOHNJwhaEQoyRNH6EJwt2dOKu-6MB0E=",
+        "title": "biblicalunitarian.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECkbG2yPe7uCpmbe40ws6EMAfIjiT7X60BIbflfUvCbNqm7NnOkFdsB0a-AWMeg6Zzd3-kvGuAUyJ2bnxTSaMi6pH7BBRLmWl9Byz6SELPROR_kwo02LZCHUCYlJ3XbPi_U6U4itAvbrScgZC-a6wzN4nGht4=",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtRcNlao0mGLwVHrM63hm2YJKLqBEHcWQvRIy0bQmWZyedh6LtGkJQJTFRpiPUYAgGUT3VGl9un3rVlQY3IN24IRwIyHjzHwT02XVWW6A2d4MsMGDAzls2aB_4c9UdHOo6dMTB",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEitkjggfykEWnZO1J0I0LCORXrEm7BXhFiP1Uh6-2UekjxruajjbuYJDeLAOE2MzIlrIHl73TiM2m6Rz9rQvtCuUs1wwsoHbnOnDSEIHhzL33HS5dTQxwlkBwthMSJrxcBh8lHwcN8iiQy_tTYYYjARA==",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECHQ3Ka3BIec8QJRjq53direfW6Sbdv6unJsL70Dz19AeHpuN1A2f3T-zD9EupfyjOqnSMCV5V_Fv022AzgYEVLmcbIJQOVSVnFO-PUU9CJoT3t_dNuQHLj9cVmHvd",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIVSabNIJu1_2diG0RL16_EbiqWEqgcu_yuoDmxxTlsJBQkDX-05cXkPhGdAY93M0S5JxVZ2KS39ihHRAXPqoQZjGjQr4bvFvFbmo3Na2fN3BXH_-xSQUvBQJJAxEgxQWYItzw4-W6dC0WGrj_K9ZlEIj9WihPC2jdMlfdT6XMuONmv2ZMBZQ=",
+        "title": "cgg.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkxk14hVXlUCWNkPlyiLM0b64YKTLvXcJnMGe-vSfecuKsgxVY26XmPUqTGDfY5lxtx0Tke7ZFBmUhopNoLzNiIUIZyNFKHAO3kUI1Qd_Y9IfqEYdfoFs6MG_LzJLDuEEp_YIq86ajxYZhWeU2sA==",
+        "title": "in-due-time.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRUQebtisbQv1giFkpWH09CnjyUt-Q55Ejzdyw6h-EJPzwR0Hw2zZ9Za0ojSMyp63TxvXnaFWb269e-0fqYpgPGX53xs0UCCH-r7M-PdrPGIVws_pqrEfBCybKeO1wUkZRBjTZ0kxp87uZ",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHl2SD3pmaHMsblZKZwWF2e-78J8IopkIXlphN2XlUKbIN2feyvMHy-K_sBFzusS--MO22LYzDby18d1IIXbZDrchyQFLAVB71-d1yWh2XC8tH9kF3mD7Iy1K09Sed6oGe_RW_EE2cO_CeA8h9tS29JI4-FsOVdCturVR4mRzgCi0MsScEyvz9WNQecWEL798pjR5wXZf_3L5gwNbfjphvgPmHYhS0O5Lg0XQBt_9Oftvz4LkKZGl_jHk7VlfLgapE=",
+        "title": "edgeinducedcohesion.blog"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHwsYjqUKLnx99mv73Q8hKabRxn-PA9Xhv1H1_xKbN9UrLCcRydrdXNu0TZ216njKL5KvvGsQ4pNmdJed9NtiNsuORZplQ_QkvQvUlTnANkOYcUXvLFT5iFfwW4oakLObTz0WZM-SIxwIyd0YUYz66L3LNp",
+        "title": "streetlightsbible.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCWiksiQF7fNu6e9X4UyPM_U2dU_VAKxLBBFfK70-hJPWwG9v-3mR6rrpwhKXf8EMJgvvPVFeeAji7cI6VWIouWyqjOYKkLPmdeulLaev0dWGNburpgkHp4BTSO8onDM0UleF_mUlchSfDDQDb5P_qJ-oziiHCO2Wl0LfI-_Q=",
+        "title": "quora.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_DtKeCGJ_4tZ_H8SFm7Zcpzxfb5jkMPEyeUGtaIeiHF3ByiMZ8igqyz5PsRBDg82GLIKl0esuBCLcrFN2v1X3UzedxmYkzM0ZcsBWzLCZkrYqQg-VKjhs60PdSeJjXEruPYSASFHA8A967aNwJH4=",
+        "title": "lessonsfromhome.co"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-jTi1qFPt1zOZgP3i7ykQoketO_Fi7CvD8dxMNuMrDK7bQpDmGg-PYd8cc8HZe9nyMG1juChPC9RLfp88unomr6HHGFWZBRMryrtnd1Wi7SLgnIhMRD4xrS3J2J0vOLAQIYorD72egHdO8VDOA3shEQhgeRKuzgrwi4hjK2DpKRNkIRkxkIyA",
+        "title": "cgg.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZCh9mAO8OD1drAFpWyTfBe4dUFJ3QWVCfV1pswZAoJ7yhfwPk3vsL7zKeRm7ocujQREwNGnXrsg0Kbnn0EPxUma8BdnszSWSJmj6ClWcfKHO8MI6tmO3NIZdMP2lcWiQNMso2VN2cetpdpXJrfUgzdUbjfYXUXT8C7Yd-Nu6YV3bApccfyL6E_3xGIICiS3dkkqNr2mCwu5DBP-IsdiHi6uG6NivDwhDaNcrIF1QPUFtR3kuuxITm9cWzGbM6E8eJERFfFOkDTuny6FesJass16ZrxSYxGsCLaRo7VjfvWJBj7ctwMvL5gnHsbog5pHO7QNSlBWO1au9mvwANp-ebg77hY1TCvIfwphe9Rvg1_-gTQe3-nA==",
+        "title": "quora.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbS8v0prnaluQei2Vy9pEn1VsT4kggJkF0oLE2G27D5yxW-gaMpxPhaiyd3FEpm0H1mYIWLJHi-wIKmeKUY7Kwz79xlTiAPPlSTMxiy9bwMr7itgdwM8_nQA4FF2zYfSS-lu624-ZD2lDy0f3OVCyov6mHbuca_9z4WL9wd1A6o3eCCKJT",
+        "title": "yolasite.com"
+      }
+    ]
+  }
+}
