@@ -1,0 +1,47 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, Creator, and Ruler of all; the eternal, infinite, and unchangeable
+  Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding singularity of pure white light exploding outward into a void,
+  birthing swirling nebulae, stars, and abstract geometric forms; ethereal golden
+  rays piercing through deep cosmic darkness, conveying infinite scale and majesty
+  without human form.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Declare a card type (e.g., VERB). Until the end of this turn, all cards in
+  your hand are treated as that type.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Exod 3:14 • Deut 6:4 • Isa 40:28 • Ps 90:2
+nt_refs: Rom 1:20 • 1 Tim 1:17 • Heb 11:6 • 1 John 4:8
+trivia:
+- The Hebrew 'Elohim' is plural in form but takes singular verbs, emphasizing majesty
+  and unity.
+- The Greek 'Theos' was repurposed by New Testament writers to distinguish the One
+  True God from pagan deities.
+- This title implies the attributes of omniscience (all-knowing), omnipotence (all-powerful),
+  and omnipresence (everywhere).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
