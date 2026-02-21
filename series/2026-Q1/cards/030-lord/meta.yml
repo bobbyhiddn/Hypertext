@@ -1,0 +1,69 @@
+number: '030'
+word: LORD
+gloss: One having power and authority over others; a master or ruler.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, empty throne room with a blinding light emanating from the
+  seat, casting long shadows across polished marble floors, ethereal and majestic,
+  no figures
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Swap your hand with target player's hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And every tongue confess that Jesus Christ is Lord, to the glory of God
+    the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יְהוָה
+  translit: Yahweh
+ot_refs: Ex 3:14 • 1 Sam 2:7 • Ps 23:1 • Isa 6:1 • Job 1:21
+nt_refs: Matt 22:44 • Luke 6:46 • Acts 2:36 • Rom 10:9 • Rev 19:16
+trivia:
+- In English Bibles, 'LORD' (small caps) represents the Hebrew name Yahweh.
+- The Greek 'Kyrios' was used by the Septuagint to translate the divine name.
+- This title appears over 6,800 times in the Old Testament, more than any other.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHZIWeNhrCn4KGiHmPnKF1IBL209ws7ErXaLb5FZLjQ8nHzrJKZhCCBRH5s58giNBaGfKDIn6wlzDYziG9OxrbzwYSauNUYxmSm8L_LPGcQ-iCzr_LfPOWxnXFaj0=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbZ44mUbGyhh7IsmMBGWP_XsCPB7nPLD6P87hUh-YiQ8uz6Lj_VXPfoT-Ib8q84C7yFmu7kKnxtLSjy2qgx91zA-tDFfgJymyB4BQ2TbbCkj-5LgXEIhNy1HqW4SCf7iMOPpsg
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2QpB1YllSPQRm2hpKmR1_-q_xJEB8BQoVhG_jYDDgX3QjBuzbULnqqKlvh2tCgcs2um9y629gCLHJ8sifncv6gpvApjSPDu3wcWOPJ2V2jvaLEfDm4HkH8vnLGyDs8GFHJrr-kvNUm78WcKaMOxhXz6ynXVbx0aykqdFoVSPFbSol35l0tzNB4HuiQgErW9MGSHxv3cSLy6ZB4MUQSyTCelKxy3gaP56L9GGA8yuqfz_zcL8JtP-DCHKAy1lbTKx824rAN4G8_g==
+  title: biblicalmissiology.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEo09JpMy1aB8nNhHKosVeQ1ocgMULxFgq5FrOiXCk-w_ISnRwjnvUnBE9gEBCqtAOO6XPGiNyYpvA--bt9MYPAkzJjZhstbCH80OHOWvBOLbehlOgmya3YxFI3_dZsVCq7hiut9w_KZOHjPDDw2PFGRNewig_Ekw==
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEj7ly6eUFV4W7eiApX_CBbVFUVKdTlbKn7KisdzgLsuBxxfNmVKCU27Tw-f8xh_q_z9T5DWiH_-vBuCGJeLnwP-XnlqTg2np3HzQx6FNLXqrT0BL6Fp3mEoHV3ZQXlvP1bDI4MwkvAdpR1UqhGIn1f-Hpj7V9fle7143x5cWIWhwFmgTDWDjB08zqlyVS0ZfBVZZnS1YorbUsCsP-zhLi1iniaciP0QZBMf0cjljA_pV5C1v6Ouoom3VbELpFjo4s-
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMRyoVWFHIppKP3KpK_v8XcPMy6jKPAh12ZqnngXcbMAKUkpdoa1WWmeiexAdi2xbmYcOB-H9VW4AaeSgnVzu3_z8ZUtmjnFxeozt7DslaCy9YEukOr9sYcW3flmYSuI7_7qxUdd-2lHZSpIADpLOZJ1rUpdngZSHh9wmYs4ko-nMF9cVH_kFstg==
+  title: finestofthewheat.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2soXp8XtfUjxij7JnI36Fos2U2rCByH9okz7gmpiMVtTV1ycuAHxvC99lkQQosRIxkVVMYZWOqaLbTnx8remjT2BRaArLKxCtHrecenm3HRTXAXLPDoJgBB0HQPrm
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHx4OJmDRupIFVhOAJgJW9-Ys-_LXwhyva1DmgOEI3KOQ1TOEF5lHssBwfvNTrw6f_vvOp37l8cMCuSEa_Uht4knOYDTy2d9K9N_BwN-IJiDMcaZbJZnhDRgcNX8cNI5e2UrT79XgpkyCYKh8Ywy9ZDMaX_cGyEBNnNeHWU6oU-bmah2JMW3TsmlkkMwCdeWXK3uMzV5_98DgefKUlABUg-lig2Bnp0LUc=
+  title: scripturecentral.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGokIdXRxQ1ojRw-0FDxnNtAj1zaQhQqlNqrfqsbzojAIyBT2DUFJwFPd8WhR3wgIpdJkD--EPGXAaApVt10sbHMl-LyMAUoG0TYHkkQuMdxm4SRpzBtFgs2-FMIL5gpuYpzInvtHs=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrSR5UJTrEr1KND48rIyLAFQ2GmmOmybhAO4GF8ZY06AiZiqAQBYuMebGPS-3rmIhIxrxqR9j-X6KwHblC-Ua-AbgGDf2TfK8GpR-yZA2mKLFI2KaJIgouPqWYbQgZ
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGB8VF-JuK5EjSFP0Gv6HrOgtDdohtoiNyiEEsYOKSKYvykD9akr7EP0kpChaUQOiI1nq5n7v26sZGnxCFFrwTgGE95ILxje7KH7g7DOSO3BQaK4T6QhiKcNYYLETGieiwmwFTcFXjzgaUqqmMv4i6-MQPv19x5tV3RBRKHPOTLRZe8XXw
+  title: quora.com
+search_queries:
+- ''
+- Deuteronomy 6:4 ESV snippet
+- Hebrew word for LORD YHWH transliteration
+- How many times does LORD appear in the Old Testament
+- Greek word for Lord Kurios transliteration
+- Philippians 2:11 ESV snippet
