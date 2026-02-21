@@ -1,0 +1,46 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or sovereign; the one possessing supreme authority and power.
+  Used for YHWH and Jesus.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A majestic, blindingly bright throne set atop a high mountain peak above
+  the clouds, a golden scepter resting on the seat, rays of light illuminating the
+  surrounding storm, ethereal and commanding style
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Return any 2 cards from Sheol to your hand. Then, look at the top 3 cards
+  of the Tower and rearrange them.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kurios
+hebrew:
+  text: יְהוָה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 33:2
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Acts 2:36
+trivia:
+- In English Bibles, 'LORD' (all caps) represents the Hebrew name YHWH, while 'Lord'
+  represents Adonai.
+- The Greek title 'Kurios' was politically charged, as Caesar claimed to be the supreme
+  'Lord' of the empire.
+- The phrase 'Lord of hosts' (Yahweh Sabaoth) depicts God as the commander of heaven's
+  angelic armies.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

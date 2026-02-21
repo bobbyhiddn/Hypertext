@@ -15,6 +15,7 @@ words:
 - GRACE
 - HUNTER
 - KEEPER
+- LORD
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -43,6 +44,7 @@ ability_patterns:
 - discard_type_name
 - draw_sheol_tower
 - draw_tower
+- look_top_sheol_tower
 - look_top_tower
 - pages_sheol
 - sheol
@@ -196,3 +198,8 @@ cards:
   type: NAME
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 30
+  word: LORD
+  type: TITLE
+  rarity: GLORIOUS
+  ability_pattern: look_top_sheol_tower
