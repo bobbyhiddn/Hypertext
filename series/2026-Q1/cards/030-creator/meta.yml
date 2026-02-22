@@ -1,0 +1,70 @@
+number: '030'
+word: CREATOR
+gloss: One who brings into existence
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of translucent, cosmic hands shaping a swirling galaxy from a void
+  of deep indigo and gold dust, surrounded by geometric starlight
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The LORD is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: 1 Peter 4:19
+  snippet: Entrust their souls to a faithful Creator in doing what is right.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Isa 40:28 • Eccl 12:1
+nt_refs: Rom 1:25 • 1 Pet 4:19 • Rev 4:11
+trivia:
+- Hebrew *bara* is used exclusively for God's acts, never for human making
+- The theological term *creatio ex nihilo* means 'creation out of nothing'
+- Romans 1 contrasts the Creator (*ktistes*) with the creation (*ktisis*)
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsIHoZJF9v3UzpbKZr8qBItOl9_OjiUWER5Tdh5BjU3Jk-2skLLVCPcGK8vnQvcGbuCRlDNwa4pgboTcvrX0pcLyjS5oMf78yWtW8h-ko-9_3iO-jxlxXGzpjRY47O1zv6xIzuzNjUKA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6abSPJJZUV_H3Pk-SPuhzDt7YCTL4sFcHKZ7oDdE-lenfBeJY0hMJAzYODpcwKVZOtHcWmeCUhr3mjMPNlvSazD5jaPtQ59XB3R8xcsyLU4b0oi0oAKfcbhudhf7b
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtLrmC9VP_A1AKifG9DjqaTby_3hUJxsUJBv26eNxfTcvcMUBVZLtM5NGpireGOBBWGa17jdHIqhlWL5n-taR0B4dsYopFS0JvSpmqfJnTaodARA_cQfAf6v5ctu3505saOoKKGg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2XTQ0jRyLKDOqHyVv1HHSMZDvXnrfmcuecZfESpCF-TfpV5m_oh_e3UmvhyiwSlg58BUPRQpnkTdcfQQTycQDXXL74kfWd4aFfUaDJLPS-l8V2G7B5_d8GsGPwws=
+  title: soakbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtRj66O0PRDjmt081gV3JzzwkErCWw8z7g8TsSlMzn1CjBc96Y57ikxLfpRvxSwU167-iJ_I7NK09MrZoYzLsQ0XfKwuB0Yb62UuPztIihVdrL0t8mXKaczl2_1ksAivpAzTf-CLYvjihKsxbxvIvcRYPV4AVLsWpvppCJqNvyUhbtY6e4
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElFvR7Yn67DfcMGjF0QrpUUT_pFV59uD5NEqqfxeRvpNUZuHzdlx7ELsC_RXdb5tZQ6MnwD7L--iu8uDWYCyKoN2dmwMNjislhf7lYTXvj43aUJnrDzG1gE6QaM_vSJg==
+  title: sefaria.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHORLJn4oFTf8CK6TX11oiuzX1r0Kh4szKPwL1C8Fvs5LGgg7xua3NQqftAqy1QgBqbRyC-4isMlmqRZsME7yvJYZMvVQvaggbloI3A7yfHL8X6ASNRNOnzR1gZumSH
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2OaflSPNMTYsKeKnnZ4-H__BQ-Kj2r9DkKdQk_xTFWoHBhW3ucgThHf2lSIyUa7_Ll3R1nhqAYFXA6J9YohrOjicHM1R5-fN_PCkodJmI3brHMBjaZu5ynCyzkclOpyiZmIrX8sUCAc_O
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDa-RG2k4EnXIomAepBaOiXa_cpgY5jdr8j1eXRsuwt28PxS8IjLK8kTvnLlYD8zAAeuaMKyw3m4WhOgQvxON7N89gzH3TClvWkm0CGbV4h7znZrc8VGgg6hfiKo6-ys7ipgM9VGU8YbbIp8t6mF4R0S5Izw==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4QWPQCEEThQ5i7qup94aMZmp4bS-bqyVt67A0LhsKd-xXemnHsQmE9lOjbPK-spHCdnu6vJwaFc5xdCIZcjVNPDhuvH74jcpbpxAHYxg906EsJnfFhG7fX9E70DfGY702cLoK_h4UdSE=
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjhjQAVTMqAjaYmok0gg9Nwhu3_qPdYmgrY-xyuS_3U9qmSMZNoxlJGfFRZ-V9svzVnNgJuMBbaag0zJFrq7Ol2w4KoKCuPuhiGK8zXRnjhhsIarqN9TgqubDbmFwj
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2NLviy6nZg6kg22yue1doxUb4qt7uI60HKjz6qYm1hGL2kRt8e3cgiuVg2VUzfrJMad9axyUkFnqkpUFgM3vwwzfhiagO7C_MBAxRL9oCseodHI8PRD0GtE1rbuEuTg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHuvD5mQbx2GhSuMphTL_RCRgYPNxCf0eq1Q6j34cLgrmSOBgjiHFyXaLKmvC-dqRY4xwpGw2XETZlM1cvBoGWHU4iGMNoCSNTNAd8Slz2Zj84BC-H4-xeGyne2oaiIbaBsepksaMNV8c2eeBDYg8KTigaJDGeiUfkJzWZlMGfZS4tFGsv5yiX1l8_zON-8zya8oIm_P__7JQ_l2af0oQ9ULwN2_LGjXBgkukLF3k6
+  title: fbtangerine.org
+search_queries:
+- ''
+- Greek word for Creator Bible strong's
+- 1 Peter 4:19 Greek Creator
+- Hebrew word for Creator Bible strong's
+- Isaiah 40:28 Hebrew Creator
