@@ -1,0 +1,43 @@
+number: '030'
+word: LORD
+gloss: One having power and authority; a master, owner, or ruler. The personal covenant
+  name of God.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, empty golden throne set atop a high mountain peak above the
+  clouds, bathed in blinding white light, with a scepter resting on the seat, ethereal
+  style
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Return 2 cards from Sheol to your hand, then target player discards 1.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: Yahweh
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31 • Joel 2:32
+nt_refs: Acts 2:36 • Rom 10:9 • 1 Cor 8:6 • 2 Cor 3:17 • Rev 19:16
+trivia:
+- Translates the Tetragrammaton (YHWH), the holy covenant name of God revealed to
+  Moses.
+- The Greek 'Kyrios' is used for YHWH in the Septuagint and for Jesus in the New Testament.
+- Occurs over 6,800 times in the Old Testament, more than any other name or title.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
