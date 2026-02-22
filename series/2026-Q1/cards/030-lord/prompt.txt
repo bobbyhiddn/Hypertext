@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #030
+WORD: LORD
+GLOSS: A master, ruler, or sovereign having authority; in Scripture, the personal covenant name of God (YHWH), signifying self-existence and dominion.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Swap your Lot with the Board Phase. Then, draw 2 cards.
+
+VERSES:
+OT: Deuteronomy 6:4 — “Hear, O Israel: The LORD our God, the LORD is one.”
+NT: Revelation 19:16 — “On his robe and on his thigh he has a name written, King of kings and Lord of lords.”
+
+LANGUAGES:
+Hebrew: יהוה - Yahweh - Ex 3:14 • Ps 23:1 • Isa 6:1 • Prov 16:33
+Greek: Κύριος - Kyrios - Rom 10:9 • Phil 2:11 • Acts 2:36 • 1 Cor 8:6
+
+TRIVIA:
+• In English Bibles, 'LORD' (all caps) denotes the Hebrew name YHWH, while 'Lord' translates 'Adonai'.
+• The Greek 'Kyrios' is used in the Septuagint for YHWH and in the NT for Jesus, asserting His divinity.
+• YHWH appears over 6,800 times in the OT, derived from the verb 'to be', implying eternal self-existence.
+
+ART: A radiant, golden crown hovering above an ancient stone altar, surrounded by unconsumed fire and smoke, set against a backdrop of deep storm clouds and lightning.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

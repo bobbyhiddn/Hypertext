@@ -1,0 +1,44 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or sovereign having authority; in Scripture, the personal
+  covenant name of God (YHWH), signifying self-existence and dominion.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, golden crown hovering above an ancient stone altar, surrounded
+  by unconsumed fire and smoke, set against a backdrop of deep storm clouds and lightning.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Swap your Lot with the Board Phase. Then, draw 2 cards.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Revelation 19:16
+  snippet: On his robe and on his thigh he has a name written, King of kings and Lord
+    of lords.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: Yahweh
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Prov 16:33
+nt_refs: Rom 10:9 • Phil 2:11 • Acts 2:36 • 1 Cor 8:6
+trivia:
+- In English Bibles, 'LORD' (all caps) denotes the Hebrew name YHWH, while 'Lord'
+  translates 'Adonai'.
+- The Greek 'Kyrios' is used in the Septuagint for YHWH and in the NT for Jesus, asserting
+  His divinity.
+- YHWH appears over 6,800 times in the OT, derived from the verb 'to be', implying
+  eternal self-existence.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
