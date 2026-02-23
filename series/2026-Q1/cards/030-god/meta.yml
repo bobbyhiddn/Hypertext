@@ -1,0 +1,80 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator and ruler of the universe; the eternal and infinite
+  Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant light breaking through chaotic darkness, forming a
+  vague circular shape of absolute order; abstract, ethereal, no human form, distinct
+  separation of light and dark.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 4:24
+  snippet: 'God is a Spirit: and they that worship him must worship him in spirit
+    and in truth.'
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Deut 6:4 • Isa 45:5
+nt_refs: John 1:1 • 1 Tim 1:17 • Heb 11:6
+trivia:
+- '"Elohim" is grammatically plural but takes singular verbs, emphasizing majesty
+  over multiplicity.'
+- The Bible gives no physical description of God, only describing His glory, light,
+  and throne.
+- NT writers repurposed the Greek "Theos"—used for pagan deities—to describe the One
+  True God.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOxY2D6Gd7IRGX0FLZ1lQ6mFNrHGR28MnhAmnDLKdfil3gVgkFLhgB0PYcEv7S9SnXA7ExkcyDo3LLhwSSbXysneEhtisqYADhe_hc7D88tDBGM4giC6n5rl1tGhLkB7ZNb1znjcwLTYIv9YHnTf1RAqt8YEo=
+  title: thelivingword.org.au
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlHHiG6J1c7EpC5f9PDod7s7i2ngc-dY-8N7HGMixOKY-TGbHYjhzIxXSuj_6d4jGqmfhrYHyOqkSjedmpC0tXY-7UpEoKQsfUmqJb-89F7V12hSBnzlCvDZA7DdoF0797Zuiy
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdeAJFpWEXu6EEbUdG-DtYuyzGtt5vMJTQmhQq2bRxnppHwyT4s9IRdjhNFeasW5uAfjQaHxiX-e0GwxsapIjidfMhigL98DtvaeQF2M5m-QMJQKc7trNVPFc8UvG8VZE-TksvhlCEAiN_0jk0rpFMtW82PB8l6QrX3MaEQacVmjRtgsJUP3pxPCRL22ydELn4A_LnVhWa-k1xbcgz
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7bv0htOUXtB16ZSp1VfcLyQ8PvfZChms6Lbaxb5dw0qZS_CMQy3IvfI_gOXHCDqHnatDSVpAnT4RJZRNVr1sSjnVvtCQa9PfReU-gsN1EdRImBQnKadXBK81qWFyhtcLBvsAJafpVHtE_LiaU83xDt3Q=
+  title: wiktionary.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTxMUQOFyqXyo0OYiJRbBsM51JRlAeR_FRn_dhBG3gGdX4vgkr7S5rUoXn799SkDyk-aInp70H02SRifky7nKu0tp3Af3Ix4fVQCzGWg_aCM3YEXo-XGoDAZxsGkQ=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG4r8y2PGhP-oLjE0RRlNkUHDk8gsG2-Gwr4-aTxe_KhVUdftU3cNbIx8i4Oqufoxy_BKwSYCBdd94Fnnw8UEZ_g43k-yuYJhs9eybK-jYNFD0ZU0EAVvX1ubLLdrMCtHGBqfpGRyp_Znvce3fP3cee9L8ax--HIsD0PmnDOuSApc=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6YrbNAht5HPzBTaDIJ6ox7sAh-Xfm6akhkVJ75Zh9lS6m5glCVjL2qrdcIRO5GqqqGfiHSt5M6K4N5_T_avqhEBRS_cnAhrl_1TiBKViaxD9hdaLyFBqOeFACcCXJPkRb6L4KfPScFO8xEQDXdH6NRy1Db8tt13DBrB26_b9LZB4=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGQwCCkVI0bVEes_JB7LGQUfmHMvwL0VZoBjI851iQ6qL-Wc5-LjShLP1QNdDzQnIREiqkIHzKL0NorlDOBNyaEkbmcZaC4iH93rlfjtWlpZVrSP_vPEBeqQIwc4ZIS4ExSi_dWhFXSvRl4AeJ
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE37VaqIEhrXzD1BrAw_z_DjYNfVR7EQ1g37PMAFp481YnbmcPL2Yt0jbcxze0jak-oLBxGtm6mgEkmKlAg4ydjozf1JXdvSZd-oCGdIO8MizA6LBPAQYhnn57z8yBuaeDlpgR25tx0wvlWJU2FEeR_rXiLbkk-Kfq3KJdFwUUlxNDDp7yLDCLkTyVayCDekWENWFqk4DfQ6LbgOppsdQ==
+  title: lifehopeandtruth.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0iXTtaNPTGoG0rkYy8_cE7JDR8gjoTkZLqgTY6VET71mrxO9p8PVuuBb1zgdOUaqkhgu0SITjEVcA5CJ6lUqa36NI_89T1vLPPYX7vO7xnvIvT-qqgkapx55yUOMk
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuG3_IDCWy9LmNJEDmyggVv4xpwjjBpgU5lHVvTzUzRH9V1i0MVw64IZDmZMDCAGVh9v0_UtOfahyN3wZQpHHnh8LJv2CPAnK2v0npAyZ1t0wj5gfBurnLfzVh-k17VfvAEU_vyyE6luUGSh0qkH6-HX-0PQ==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbHjbWHxMs_B7lTIGtToltBm9eKHK8yOxXO5u30632jw1HF8tZKo87VZoEbfuk7_mrvWrTML9SNQbUv-kQr7vFx4yPdS05gnO_swZcXkZvArisq_q-hmpP3x29kIHY6DlpQRAAtAKo0TAzAUtFPd7G-uuQvxOeznE=
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHK-PhmD5zm2grikiVsQAIdicCIo4ntes20_MNkcc-tr5HY7DYGLBeYpjnYmMRkifz5L0sY0lIp5XBXI7N8dIqlkrtt7gSnXWNqO2UljNR5FAM4V9cL5pnlYgcw4WD3bqgppLGvDtVjUu_YYp5ye-XLfA47yA==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpch7X0tLu-Xh8kAyt9KQYN6rijOXAyGv6j84TdvYNqz7_FLoTcE_XVrEB8cgchFyzIn1lhw-A_bliY079xagYKAFbvzuWvd4y7DptuQxa3HEn4UsX88g6tFyrEwv7ffkXf6HIBFibEwfcPj8xKcM98AHZuyQ2Q2ELnuxiUwnFNTs_3u9xkXjwIXiDyMH4iimmORgD9mUZZo5zkUkigmuFLUudry-lXOdLuNuks7lH
+  title: winebrenner.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGF6obq0dq8C80A-4CqrQxRB6LiyLYWYSJA1pIafv5fW0NaKStPH6Sqy09F5Izz5PY8RfEuD3crf1vGtnsywruUQ8Zq0lLzzlFPbzs0ZPo4mrCxXXDBGZkler49g==
+  title: sefaria.org
+search_queries:
+- ''
+- hebrew word for God Elohim transliteration
+- Bible verse God is Spirit John 4:24
+- Genesis 1:1 Hebrew text
+- greek word for God Theos transliteration
