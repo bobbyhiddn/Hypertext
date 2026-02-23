@@ -15,6 +15,7 @@ words:
 - GRACE
 - HUNTER
 - KEEPER
+- LORD
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -29,6 +30,7 @@ words:
 - SPEAK
 - STONE
 ability_patterns:
+- add_hand_choice_discard
 - add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
@@ -196,3 +198,8 @@ cards:
   type: NAME
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 30
+  word: LORD
+  type: TITLE
+  rarity: GLORIOUS
+  ability_pattern: add_hand_choice_discard

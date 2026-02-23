@@ -1,0 +1,69 @@
+number: '030'
+word: LORD
+gloss: One having power and authority; a master or ruler. In Scripture, the personal
+  name of God (YHWH).
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, empty throne set above the clouds, illuminated by a pillar
+  of fire and a pillar of cloud, evoking absolute sovereignty and blinding light.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Target player reveals their hand; choose one card to add to your hand, then
+  choose another card for them to discard.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And every tongue confess that Jesus Christ is Lord, to the glory of God
+    the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יְהוָה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Eph 4:5 • Rev 19:16
+trivia:
+- '"LORD" (all caps) represents the Tetragrammaton (YHWH), God''s personal name.'
+- '"Lord" (mixed case) translates Adonai (Master) or Kyrios (Ruler).'
+- The confession "Jesus is Lord" was a subversive challenge to the claim "Caesar is
+  Lord."
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrifvJcmqhkUu85DblvtIfG1XSZeBag-pxnay18GsnZ3Wg1f6pLQwlcwWydOoeHHKXUntP0csFeJOk5GYzNBAbKW6jsjDjoNjSAOKoIEJFHcVTzNCYPAhfMJ6vgx3qpte1bg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0IB8vDUCEbHVtwjOmyeE9cvtQ4pwtSLcBNMRasgVuBSr4AEl9TfXshyQqKJ5TWFbpeqWeLJbZM_nKeqL0-Cc8cJCdgfOXgufU6Z99iN2Yf1piwohO2j_OnHcGWhSml-lm520KoFiesIeaRJrslprn8F4zy8_5XQ==
+  title: todaydevotional.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6hi8He1Qte4_pwunZORoiCUO4xSxRGJg6_DRucm3bA9AyJ8tUeCUzI6TTvzM6J7jecGmEX4heCjc53dYxbZBjoeohtSrvNtEOQm38lesuSAY8YMc6rpAUtN31sy4KgGVVvJnj5z7ssS3jiZQEyz6smQP52fiTskwCHoVmdfrGoVmMT7STz9JiLWi-fw==
+  title: ancient-hebrew.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHybAQDPbtFazdlnO-oaK0sHLdcxTfVlkd9N1EkhRKqn-DseHdF7vwa36Q-5wNLvo9M16RIkg00iPV-WXDTfkdSclT-yuy5y2fBcIhTPu23m6OfDW6gTeFwBB5Wvo49cRfvO70H42AmddebpemXQUulRCUx
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEJIC4IV5MDLIEzw3PeL0EE_q5cIFIz_z1iRzgMn68L9oYkRWoMSLQaXmptPwTUTPWkgUWsijzUN7f4Lx6t6RtTy1HL7zvNmaSfnccP_aloypMZ1RrRv-cyk-K1NZUGIaHqPN-ruVR5RGfKIg32sdSmapH_Y83Kqh4Vr3ITYnJ0UjxpQOyV2Ue0g==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2uNKLPU6KqAqRXLrlgHG1XG9aK3G-Eligk6Of077FBwV88b0brlwWDmluB_3Rd9EHv_elp5tCCpeLMLBKsr5VSUWwcdefu4_CwVMIh_4Exu-MSD7mBz6N-nuhhMIOLBwKuI19UDbktEk3tJk=
+  title: pursuegod.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgnVUVUoynBn5-1Bc5v3I_O5MYFeX7IvdqFAjaFDI7_VHNyVZa-372Vb073yxlWcQyHVKownssTPMd-0ZzbIDazpGuzSlRT126iuaQ8ezUrn-J7gC-bXEqyn-KEav6DjbWgUm3lo_O-4x7XDj2mA9V15fl7iwG_x9Vu8dPtz4wWBBufvlLQDxTvyI7KLlF0oC11JyeSJjC-h0CdKKOD73_aeKntLVU4QVoSllqLGgV65Bk_DzhvCf-OxbuEA2O8nWQbI2mJk-aEv8=
+  title: biblicalmissiology.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKewjGOSfuYX9g-hCShiruaH-bEWx4tEMI8nh1rztl3UchEFHuSoXotXNoyss4XnM5oS8N4tI8XKNKhNCLtZqWHDg6weOt9kvIvzhiJVHPV6Bjam7tv-6qmCMxQ8VAGkA1GK8XvvtENM_hbH4qvz3mU4UBhDDxyHFmp82VV7YPS091g7jPm1kgEzIS-iM=
+  title: newchurch.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG40ZUQiduJuAs0hV6T9OpJy6GzElckCEb99K0YS_6E9KdWYf8dqLhgHpJmP_ToXgBqOfADk6NNVl-TLAoeKPRP4t1V517og7gTvnkqXYL8cmVC_uqNq4HFrs-BZQi3oA==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGnsSF6ID4B0RuzUEvnpRsSh6ipLqnHsZiGsJLSkxNHNza3ClgKt55eb3Jg2G0cSAazAL2X2MzS9-l-YWNq-pcCWDXlS9ZlFzmuZR7AQwehKIedFIx8F_taehmGGpsuc24Uo4kURBt1iCetrmboXWTPvEpjY3BxFbe7qurxDI7hU_Q3LWl1K2X
+  title: biblestudytools.com
+search_queries:
+- ''
+- Deuteronomy 6:4 ESV
+- Greek word for Lord in New Testament
+- meaning of LORD biblical word study
+- Hebrew word for LORD in Old Testament
+- Philippians 2:11 ESV
