@@ -1,0 +1,43 @@
+number: '030'
+word: CREATOR
+gloss: One who brings something into existence; specifically, God as the originator
+  of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of luminous, translucent hands emerging from deep space, shaping
+  a swirling nebula of colorful stardust into a perfect sphere of light, cosmic scale,
+  ethereal style
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heavens and the earth.
+nt_verse:
+  ref: Revelation 4:11
+  snippet: For you created all things, and by your will they existed and were created.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Isa 40:28 • Ps 33:6 • Eccl 12:1
+nt_refs: Col 1:16 • Rev 4:11 • Rom 1:25 • Eph 3:9
+trivia:
+- The Hebrew verb 'bara' is used exclusively for God's activity, never for human making.
+- Creation 'ex nihilo' (out of nothing) distinguishes biblical cosmology from ancient
+  myths.
+- New Testament theology identifies Jesus as the agent through whom all things were
+  made.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
