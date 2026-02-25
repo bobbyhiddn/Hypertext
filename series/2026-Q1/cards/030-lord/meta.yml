@@ -1,0 +1,43 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or sovereign having authority; often denotes the personal
+  name of God (YHWH).
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, empty throne set atop a high mountain peak, surrounded by swirling
+  storm clouds and lightning, glowing with intense golden light, digital fantasy style
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Target player reveals their hand; choose a card for them to discard. Then,
+  draw 1.
+ot_verse:
+  ref: Job 1:21
+  snippet: The LORD gave, and the LORD has taken away; blessed be the name of the
+    LORD.
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Gen 2:4 • Ex 3:15 • Deut 6:4 • Ps 23:1 • Isa 6:1
+nt_refs: Matt 22:44 • Acts 2:36 • Rom 10:9 • 1 Cor 8:6 • Rev 19:16
+trivia:
+- In the KJV, 'LORD' (all caps) represents the divine name YHWH.
+- The Greek 'Kyrios' is used for both God the Father and Jesus.
+- Appears over 6,000 times in the Old Testament alone.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
