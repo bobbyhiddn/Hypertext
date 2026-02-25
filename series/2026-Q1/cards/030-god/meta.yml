@@ -1,0 +1,68 @@
+number: '030'
+word: GOD
+gloss: The Supreme Being, Creator, and Ruler of all things; the eternal and infinite
+  Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Abstract representation of divinity; a blinding singularity of pure white
+  light fracturing into a spectrum of colors against a deep void, nebulae forming,
+  ethereal and overwhelming, cinematic lighting, no human figures.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and all cards from Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: 1 John 4:8
+  snippet: He that loveth not knoweth not God; for God is love.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Deut 6:4 • Isa 45:5
+nt_refs: John 1:1 • Rom 1:20 • Rev 21:3
+trivia:
+- The Hebrew 'Elohim' is grammatically plural but takes a singular verb, emphasizing
+  majesty.
+- The Greek 'Theos' bridges Jewish monotheism with the language of the New Testament.
+- 'Scripture defines God by His essence: Spirit (John 4:24), Light (1 John 1:5), and
+  Love (1 John 4:8).'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVEk8n8j53YH1K_FRmC1yfrsOYS6juy84WKXk2aadvMFHGIJJiv8VbZquypCw7E6Zg6pcDJgRase60PW0goWzBRUyD33FF04Wz1ez4LEWP7HkfrwgnHowtZNJbnd22bwyRFci47OG2u-NAbRUiaQ==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTg5mr_kIXuKSWxSi1uX9EFxZWrobnkIMh6GXQe53I1iPEdgUTGVeOsMYeJ6SToS5BAPVgRDsDJARXPxATKdaMgzqNTZbbGuxnFdhL90OygulUV80GALmZhiCarb12j0M=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpObdPyDeZti2ORgkKCyIjduFe-z4_X_4ku27Ss1mkB0IncIvAQGVBaLgz7ZQWbIgNLrxpXgl_qLJu2-CX-0cIDUCAPHguUjb6uV6w4RN7qanyP_vopkM4oiLXig4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4A9Os9i_F8HkKSoX17wDCJjrr74hwyH6RTeR-UTcGfZ7MIJklANYZj6CPOdg_DkdM4xmyp9QFSsVu1pNiCNXJ0MugPCh8AcrpaUs8wCdjjdBtFXxXZPGKw__MLsUfewua6ssDPA==
+  title: youtube.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFsN1FiRiPWdVFOCtgkXwdBdVflqkqu4xgsT_mhTFrj9dVqXRVZdrQ_S-Gf7NZxpyMqI1uP0ArjKcDJplmdegr8Xygr61RpJvCXq_3f4-k1afJ64tbCKxJaszdN35v4HL1793gbyoULEg=
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZi5Y7i4-u-j-SqdW0V7Uuqu50FqEnjYSZ2DbLlrHxBcPmqcYPWlvGpgcZMvggUcSDkASpbxhSXTPke3WlJYqiQP5wbKFdnWWr0l_BsK1OP6DrPIK7d1bZ7gzjpz0=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTwvKJC2HKd8XtGLHfjhNbtF24uU1wengjWXEerzwrzw_9r2sRezzDWax-gPlGqk04YSEzrmNnQaD9AMcM21KE3-exbl645bClP1LolYRZmzBJXZc1WUvA1rDT0zCjZZAJDhhD8GesoAmxuQxd63OBL1-P
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUeU93wJ7VUWoS-_EpdVW4R5lNT7Wc7CcpmYqcP43y7wsHSyfZjUh7TL6J85n3m7X9q20MC47Zb6nqjSpLYh95_HwqijXT9lyOD6-8-9ZPRwGBoLvoH2GTYao5TVQZPTF2l7_wGeo_cS4Cg_wjMV_LdlQpz6a_ewnhrGxn3-VLKbecTxTHgbDX7m9xkAnBxuWeYc1jx1BDYhkpA2WcQvTwmQBEMTDCT7YIf2YFCVM=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFphKPTBELhI9sR-7H2fFJynzaDM6INtfTekA64tk8JDisEOhCXnFz3sombMcJJK0BTnW_ifnI2fYzngxREbuG33bDRayMIbAuV9aY9EpzNuMeyqeIOpb2BNQ2bT9hm7c_4wrpKj4EoE5-IYsYxQ-NKzOZ4105uPkU=
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbTgDIzxvjI0UIZPEs6-jfaDObGGoFVUoa8IRvPbxsN_49L3AgK6Kn_JRczr8ie966mHklwgsuogCrgQqnStHOJsnvrdBvUeIwecW8v0MDchUnaKiYynfKk5mCuMvjMyNRV3NpJcg97CfAQBpXiYJDM9m16WPqDFQ6jmYj2yTFKBiotsG5IS5emgrg7GXm8-YSFGDT1JyFrk93a9RDenc=
+  title: adventistreview.org
+search_queries:
+- ''
+- Greek word for God Theos usage
+- Hebrew word for God Elohim grammar
+- Genesis 1:1 KJV snippet
+- Bible verse God is love 1 John 4:8 snippet
