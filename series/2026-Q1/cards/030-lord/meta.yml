@@ -1,0 +1,46 @@
+number: '030'
+word: LORD
+gloss: The personal name of God (YHWH); a master, ruler, or sovereign with supreme
+  authority.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly bright, ethereal light breaking through dark, swirling storm
+  clouds over a rugged mountain peak. The light emanates from a central point, suggesting
+  a crown or throne in the abstract radiance without distinct form. Majestic, awe-inspiring,
+  dramatic lighting, oil painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Return up to 3 cards from Sheol to your hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kurios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • 1 Sam 2:6
+nt_refs: Rom 10:9 • 1 Cor 8:6 • Rev 19:16 • Acts 2:36
+trivia:
+- In English Bibles, 'LORD' (all caps) represents the divine name YHWH, which appears
+  over 6,800 times.
+- The Septuagint translated YHWH as 'Kyrios', a title the New Testament writers applied
+  directly to Jesus.
+- Jewish tradition substitutes 'Adonai' (my Lord) when reading to avoid pronouncing
+  the sacred name.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
