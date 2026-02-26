@@ -1,0 +1,75 @@
+number: '030'
+word: CREATOR
+gloss: One who brings something into existence; God as the originator of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of translucent, starlit hands shaping a swirling galaxy from a
+  void of deep indigo and violet; cosmic dust, vibrant nebulas, ethereal light, cinematic
+  composition.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The LORD is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: 1 Peter 4:19
+  snippet: Entrust their souls to a faithful Creator while doing good.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 43:15 • Amos 4:13
+nt_refs: Rom 1:25 • Col 1:16 • Rev 4:11 • Rev 10:6
+trivia:
+- The Hebrew verb 'bara' is used exclusively for God's creative acts.
+- Creation 'ex nihilo' means creating out of nothing, not just shaping matter.
+- New Testament theology identifies Jesus as the active agent of creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw7jnMhsBwvHSBYbAR96M_LaFhS2ALQr_oR1h1QBf6nFBxcCeLZO6v3yBzQlvZY3FariPHjS-3Y8Zh8I3zws35lNthpT9EgoCqcN64eaAwCPTfgPmL7DJs3B49Fv4X-K910WgAvKjKVo4Go03kaa_3
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtQIl-lTr3tSP1_w4lkKjV7l66rpQcKnly4PmJy0VsH_FkQskt43N-jKn-9rn1HnLlF0eD852RRMX9pCrquydi78ytifAlaSakCOLvX3Zbh7gId0qqKO2Jq5H4A5ZgEFgGK7OMWhivmOXNeW_9sYhKODRz2uxV625iH0uhaZ5I2TCs8I903pKPS6U=
+  title: hebrewwordlessons.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuFubTqFQkwvTQRDIviZGVY4iorzBNNpYR2S2cF58W7cI38pF5uzNliUbTBrABG2U_Butnqq5DKt-iwW-lrofjYt15Sq429t-WRS4bNqt9ZXXvwr8L4Q-ZvHrNGfCB
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGwqBDgzrdQuP_0aCPadiwzbj67ju0TqbNHkiz6Kffx4nT-Bs8IwL7Nizs27w8-hrNctj0wKvHz7bUa98V3c5UKygMn2ip8A4sHOCDGaLKOJ9H7feyw9rIxXIl9dzWICPROjar
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEx3RQp5_ZHfJqGRXlu2Uwqf039IWkKSxxxX4PaxmcJmue75PjQR8VI8EIOUTwV0w9dvncDIpPs0fucINhQKC8r7tYu-08TfZuqYlOwLuLbinQEiDOURm2SNUWx9rA4t6p9t4BS
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEC6JSb7yTtVfvKNbuKCayEhmG23jONqTc5st8afMwH6hckCFw_0CZoxQrolqMQMv6DVJ0GfTm-PeJ_QZVLt5FQ8Gp8VrSNWYtvXcz8uo3xg7HrpS9PuvrfIRWKZrSpye0n
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWDtfjqeswVQYSVwnsCYeQanUiZ7LSA7YLb6BnGckqWRgwqT1iW-owTyzSUWMWg3zfT_n3qVKkm6Q5AjE5X9OL2nQtcxs5ikq2xeUgEJUTlsv2HaUIFEAzx40Rz5DuCpcvR-ar
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyOZv0X9KJAgDhc8oU7RVWZhXFLVxJGZ4ypMt_2JFv84jqMQquWz_ip6h09WUwbzWYj-2LkRm38BWDf_o5c0J4BPyRbOJxjxjS0T7WtO1GtTFxaJTTdM4RERTVEcaItOYjbn0=
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEr_MRDY9UWA5PSuqz-cG17n156wQDPhmC27UNsMhgm7fCAVJVRlP0mhYrXB3GFtP7VQrOwG7PO75cbz4de-t_qcW8fyTJW-oGEQX1zkVmUJgL0cHWDtLCOSlbXFoG8ldsJAQ6E
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEahdiUHhsWEBFT_iztYP4-1LNCyUMLjPnlV_lSwV3jkem99F5JvqFUMwAQYNY_XqbfoXPdBC9wAJ1gpc2Av47CXF2mgRCTrRdhG43ahWyMGjtwjtlGhzo5oZQxuqAxbQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLoVQcY5D8FDWoo4mHbW98ZprhXA1DTSIKvbf8hyENdFNNYtwDlsEKN1anc2htTy-WOT9byb7b9GfQBQP4OhJKsEwC1YAjb98_kM696TgWMLEQ-Krnn5pRwfGG32QyzKtqVPArKLoyN0aeN3Hv8NU7zwoYd7Q7N0qI1yTaLomD63LCesIxi15WGdFcJg==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkV_gk3lmPLxoqC6-O2kpX2vgrVuwCp9p2X0hxAqGS0aoWNo3kdCt8sEFtLzUxX1DXyQw434lIl1ElbdZcFKDSIbiIDDsPqIWXDqklfJmxNpVpT5O6tOOcb-aTA74USz_-Cqjsrm6fbHvBXnpDuY6v41tDvko=
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOjgyvKpQmJIKcMPxKdxz-YawOnOZyIsoet3aApNk5ZPhanF4SPomPFVlaAUMFIo8V4s8uIiguYFqT4X1sCpP2Juo3n_cRTm57DEYcs5vU5RyIUCvuaG55fL1Uo-ogn_pk28-tT1Dbk2dXNYxjMEhHio3N9v6qVM-OuJ7-q8VUFtFAd6Y62uIm8R_fYz1DS5k=
+  title: equipgodspeople.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_5slgXI4b9Cc6OmOy_bUW2lJs5Aj8nMbDuyxI4EAN-SkHghKi-8jz7mikrp1tE8gTqzKhbegU2AbmaF0YEdcsDA4XqrcLkyXfTAK6p1U3wGZICrji1oQMOe0TEmOjH_D98hwyXvIw
+  title: biblia.com
+search_queries:
+- ''
+- Ecclesiastes 12:1 ESV
+- Isaiah 40:28 ESV
+- Hebrew word for Creator Bore
+- 1 Peter 4:19 ESV
+- Colossians 1:16 ESV
+- Greek word for Creator Ktistes
