@@ -1,0 +1,75 @@
+number: '030'
+word: SPIRIT
+gloss: The animating force of God; breath, wind, or the Holy Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, translucent dove form made of swirling wind and fire, descending
+  from a break in dark storm clouds, illuminating the waters below.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Return a card from Sheol to your hand, then draw 2 cards.
+ot_verse:
+  ref: Zechariah 4:6
+  snippet: Not by might, nor by power, but by my spirit, saith the LORD of hosts.
+nt_verse:
+  ref: John 3:8
+  snippet: The wind bloweth where it listeth... so is every one that is born of the
+    Spirit.
+greek:
+  text: Πνεῦμα
+  translit: Pneuma
+hebrew:
+  text: רוּחַ
+  translit: Ruach
+ot_refs: Gen 1:2 • Zech 4:6 • Isa 61:1 • Joel 2:28
+nt_refs: Matt 3:16 • John 3:8 • Acts 2:4 • Gal 5:22
+trivia:
+- The Hebrew word 'ruach' and Greek 'pneuma' both mean 'wind,' 'breath,' or 'spirit.'
+- In Genesis 1:2, the Spirit 'hovers' over the waters, a verb used for a mother bird.
+- The 'fruit of the Spirit' (Galatians 5) lists nine attributes including love and
+  peace.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHR4q3QaoKs9ne2avn1E2l0ShYuiDE3VzM8wmlzQrby39dL6IAGpYv1UthhVz_CprwGjW1oMIKzKX5I1wHrRYq57Ho9DvyBa4wgIWiggQzm9ZXfuWfLp9YNvxstr6rLxTT4kfX7
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTGeiZuIlVvb6ZZD639kshpEejWxQkZ8_mc6VGdb9Plu7mWfRAYCdzl--ujj9OOwawtUeauSIC9NV2B1DxjjDJxfg7dC8k_jXZYt6r1AyLLsUMAjuV2EieKuV7NjfvPJRFsvM7O3B9HVFG2if3UNUyOnzFAmkFeYGP79ylUGdrOYeBaEo=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGW08GFfIHmmvP2sV7lpCyPWKtuyfGD11vSSIAJpwifA3I1EG5ZsyvOPBqOkrN4W90wX0DIVv4N362L-DcCuL_stUMkSR2KWr1MgGm0FVY649SYu4Q1oP1LABIrlIZVoLxfsITf4QTvIld4GiXeCytO
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEydSrSo5-53gfUV04ICz58jCmspmP_xOGp-sBfOiSnpJKfsYbkILg6TlLqJtxejpZyo87IX7YeCU9vTkQvG2J-sBG-wfYM9lrb1eXi-KnFfvgBgoy6L5Sr2MhKplxp1NSDaGrqP-cCUQ==
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9ooC56lsMqKzN9CDQNfp7Yyskv9U5rlpTeTlZelYPI0EY6DNk1fJuYtQnvjnqfChgDoPfUUAFztNPe3sclWO92gb7VtvSfXGQCy4Kd_Lk30pmAne9_jyL2fWmpUaEImLspPgUCazh46nMBrWmg5Wb0Ti9bEhtZV0So0dM9MElHKkFrao6F8IIm6OopPso-XcbCQbV3FxVRmmdZqNWj6A=
+  title: kingdomway.ca
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU5yVPOjorcHMM_HZ0SZW5Szr0rzsjJoC6w0DuU_EJLiwIHn7fd4w8oHKC7q_oiWSKnGnUA3jFHxJfwKcs4Dx8-Rr6EWP-INAJu7FxgrKWEIaW_PHPnfFlHDFR2zlS
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmE17qv9lmKcZh0nkB8NZBfGMuvM8k5uSYM-ysyN8ijfCaXgKNPIgMaGsn1wXvoHzpRxlalTQ76T3wrXp5zWb12ZdnDGUjgbJSWluzOmL1g4lIFMjfuvb3f1xEqpQc
+  title: fact-s.me
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqIKUAYwN2Z1zf0e2FW5g_M7cPOZKsfnSiYd1C3ikWterlMs5G0xgBiwtFEtCq6yNieYvcUbJ8Zq107SJR4VY1WIsqMZUgX9JbMaYnpuI7EzjLJyMdJx_Uudmgt4G78jh7Xk2dQ1N0YSM4YdYk-4T6ORWggNlwhntyEGaxSqsK
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9s2OB-LXrMGk34tmVmkK5_-e5V_n0OMKqjpvZYob9M_LtsSmQAF55UxpCLxNyF7zdHX04kIXl7VcyCPDHkTlqzEv6LFXlu_xHuaiZxoZRdejGF0ykWczUcKBaFTNwYI6ZjQVUgNaX7WQhF1_O9jYgR8Zj80WDGsOWtEX03uDK2nP3
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnFj1JVsYJsfmxwhTgnZKdV9nHAA9JFen_jWi_thnLqBxF3jqL2r5KpOsRh85LR_9cXFFc-CTLWbxb0gwopB-izwDgYkelDTkwIPdlT4L5KWzdRZ285rsiDDk4x9tuGGRsOUfLCg==
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN1ouzoZ0nHzWaXcrd0mTMg30xN745QDIPA-CDk-TdX0SE-WVzDLoi87tDV-DHSRkzlw7fCHeTqSO0MjvuHcCm1cy9FwuqeATI97_lI-HUr41ynY6l8zh522pMDo2GZg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbTdJL9-c0Rp6EuOGZ9i14VInRFrAWHHY7BbIFT09tniHsiy-vMPFdVy5ri0O5rhXBFqKpjb3U7BXLs6LKaVtnu45lWSRg7oTd-pbqo7J4Dya6CnD3AoxIPQs=
+  title: revbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0fRLLTGQxDTwlhxwI4Ny6-JB2S9NwrnJDAzN59tNNqoQRbrl4bQDzyOjV_oakN4UM6cW9YUQLCL0imitrGdzdOiiAjehEL38hq0ylRRZ9mVMBO-SfMNJjKymikgURorJcHk4lqIeMknAWvEBo4y_KAbGpgRH52nwlBHBwBl3gGkPcG5YJZc0atw3TmV5K11o1
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEfyUx5LPlgwLgu15jmdLSNqRRAVZKI5541EL3gYxlL0Au_x8fGsFrvC8nLt-mQTC-EgboYZvpOLXt5hd6ckvcrq8qNaQcfshgEn4yxWMEabIS-hA5sT6Ta33s31bQsZuht_K5VZgU9iJzwCA==
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtQhYm_QUpEVyxqoHNbuABy9G-e7RWS0MWo0189NsxWHfHfUB3XLFWoHHUmkxEKJP0DGIOOLIwoIVHtUcndjZ2UHM6NMC5xRrsjRaGTZ7s0Vo_TgewfflHv_6bsVZxBbjtFog9O8d0KBKar1F9761ZdIfCGAH8_i4GxbNBY9oOgKDG
+  title: biblestudytools.com
+search_queries:
+- John 3:8 KJV
+- Bible verses about Spirit
+- Zechariah 4:6 KJV
+- etymology of biblical word spirit ruach pneuma
