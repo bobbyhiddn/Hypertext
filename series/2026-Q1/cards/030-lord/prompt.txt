@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #030
+WORD: LORD
+GLOSS: A master, ruler, or sovereign; one having power and authority over others.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Draw cards until you have 7 in your hand.
+
+VERSES:
+OT: Deuteronomy 6:4 — “Hear, O Israel: The LORD our God, the LORD is one.”
+NT: Revelation 19:16 — “On his robe and on his thigh he has this name written: KING OF KINGS AND LORD OF LORDS.”
+
+LANGUAGES:
+Hebrew: יהוה - YHWH - Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:3
+Greek: Κύριος - Kyrios - Rom 10:9 • Phil 2:11 • 1 Cor 8:6 • Acts 2:36
+
+TRIVIA:
+• Often printed in small caps (LORD) to distinguish the name YHWH from the title Adonai.
+• Derived from Old English 'hlaf-weard' meaning 'loaf-guardian' or provider of bread.
+• The Septuagint translated YHWH as Kyrios, a title later applied to Jesus in the New Testament.
+
+ART: A majestic, empty golden throne sitting atop a high mountain peak, illuminated by a single vertical beam of blinding white light breaking through dark storm clouds; ethereal, commanding, and divine style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

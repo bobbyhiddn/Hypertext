@@ -1,0 +1,42 @@
+number: '030'
+word: LORD
+gloss: A master, ruler, or sovereign; one having power and authority over others.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A majestic, empty golden throne sitting atop a high mountain peak, illuminated
+  by a single vertical beam of blinding white light breaking through dark storm clouds;
+  ethereal, commanding, and divine style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw cards until you have 7 in your hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Revelation 19:16
+  snippet: 'On his robe and on his thigh he has this name written: KING OF KINGS AND
+    LORD OF LORDS.'
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:3
+nt_refs: Rom 10:9 • Phil 2:11 • 1 Cor 8:6 • Acts 2:36
+trivia:
+- Often printed in small caps (LORD) to distinguish the name YHWH from the title Adonai.
+- Derived from Old English 'hlaf-weard' meaning 'loaf-guardian' or provider of bread.
+- The Septuagint translated YHWH as Kyrios, a title later applied to Jesus in the
+  New Testament.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

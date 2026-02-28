@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: LORD
+# Card_Gloss: A master, ruler, or sovereign; one having power and authority over others.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Draw cards until you have 7 in your hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2
+# Card_Art_Prompt: A majestic, empty golden throne sitting atop a high mountain peak, illuminated by a single vertical beam of blinding white light breaking through dark storm clouds; ethereal, commanding, and divine style.
+# Card_OT_Verse: Deuteronomy 6:4 — Hear, O Israel: The LORD our God, the LORD is one.
+# Card_NT_Verse: Revelation 19:16 — On his robe and on his thigh he has this name written: KING OF KINGS AND LORD OF LORDS.
+# Card_Hebrew: יהוה (YHWH)
+# Card_Greek: Κύριος (Kyrios)
+# Card_Trivia_1: Often printed in small caps (LORD) to distinguish the name YHWH from the title Adonai.
+# Card_Trivia_2: Derived from Old English 'hlaf-weard' meaning 'loaf-guardian' or provider of bread.
+# Card_Trivia_3: The Septuagint translated YHWH as Kyrios, a title later applied to Jesus in the New Testament.
