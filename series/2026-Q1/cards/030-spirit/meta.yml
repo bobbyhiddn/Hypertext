@@ -1,0 +1,63 @@
+number: '030'
+word: SPIRIT
+gloss: The non-physical part of a person; the Holy Spirit; breath, wind, or vital
+  principle.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: An abstract, ethereal representation of wind and light interacting. A
+  dynamic, invisible force rippling through a veil or mist. Soft blues, whites, and
+  golds. No text or writing.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Return 3 cards from Sheol to your hand.
+ot_verse:
+  ref: Ezekiel 37:14
+  snippet: I will put my Spirit in you and you will live.
+nt_verse:
+  ref: John 6:63
+  snippet: The Spirit gives life; the flesh counts for nothing.
+greek:
+  text: πνεῦμα
+  translit: pneuma
+hebrew:
+  text: רוּחַ
+  translit: ruach
+ot_refs: Gen 1:2 • Num 11:25 • Isa 11:2 • Joel 2:28
+nt_refs: Matt 3:16 • John 3:8 • Acts 2:4 • Gal 5:22
+trivia:
+- Hebrew 'ruach' and Greek 'pneuma' both mean wind, breath, and spirit.
+- The Spirit is the agent of creation, hovering over the waters in Genesis 1.
+- Often symbolized by elements like fire, wind, water, oil, and a dove.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHA86e4tM0-QTjNJwZ24ZlhnwPAsDqEE68e9VmjnmD56Mlz5cFIjHXnEjZInc3jeq8rk0_ML_75Gn46DhpneiDraM7OSWaPRQ-N2GxlV-KtoGNyx9XJrwX7mVWC3uf_a-Tosgwb4S--EYIk7SamnXDPC9MtwOjJyNZIC_bj3UP3w8t48hApyaPy14vtV45zRVlLQLAA_D1tw6f4C9fJW9kTNVsm
+  title: jewsforjudaism.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQRHOj2-c_XEKLmyFAskJPZQLsmb7fJMxQyua22Dpgw4HMhXH52-qeE2DuE6GNTt5VSK6vWe-gzInKtr0vxx6Fi4iib3FVHOVlrupFzFA4bzXXvQObBb95KFB73BWo6w==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrcV6lbdgOTQKJCGaMhKbmecpvF1poD6m8A1eM3slQ-z6ShTzqqZCMUSK38cqGHKczeCXS9Sc59JGk5XBC5vpBfYk09cNkkxVmO9h4kh7MN85tmsPndzODAc_p2tjtAxpiLGflPXu4pIm7q05eYZy9a-KAGCygTUu1emEaInoQBYJ9nHawkoPC0SILSjNd-FBrxA==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2V6ST05YcV4fXRW1Zk1qqMi-TyEBiGlHDanXZsmq1eVCv8_l8675I51VG4-MXHrGMIM5RfI9ttyJHUNgyuC4aU9F2QU_SktgUdSyAiaAPFepnCFCuMCb9y0PVngDclQ==
+  title: fact-s.me
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSiVgIw8o-gNP0jvK7WJVFrg7XoxdpcRl5M8JjSX_vMvkBRZC-ZnZjhjxr0hDmbbjFmWZDfy3s8a14ymunMC77leYn2ElzVtyScgsqzJ9pHCrWAlSvHY69rui9k8I558TrLBgBt3v8D6Ms
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1kj0SNJucJBK4YOP9XizQ7c4dwvG37F6YeiCdK3J52zUdSiG1BBJfHHC_7sg51C-aOvBxkD18zlAYaaUibwcRxwyIUueVhBk9heToX6YfPV2OSeWs_oxmpXYjQBZcHbQWz_7lyB0SQ0i0E5DR3660HfsvBm47nF1G9TpESFv0b1Wl_EwArEKT
+  title: thomasnelsonbibles.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX3VsZp23M939UE7xSzP7vDD6c-IXcycoxKwe5deMRSeEYdrGihyRCvQpETp0VJzrKgqiPj78IGetKuijTByKt-FmA6VlqemRoKwwobzZBYA2C4PVKYkkIJVXnMIyk0yWQwHvv3AIXe3LV0BxzXX4EYPK3XKWXtWn7_CzfPavAyjtD
+  title: mesuandrews.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGelN9GThjJYx7oDl6UjWpuXT2xV1ObhlsNXXzVVzkSOTVrG5in0ismDOt_FEcPwxbrjUeAzPr-0uRBfTCyE5mjf4VreZC1GWBKiBb84r_nUlwHpgQ9StGogXS7ROG7oQljlnL43JLbxXU8f74=
+  title: biblehub.com
+search_queries:
+- ''
+- greek word for spirit pneuma definition
+- hebrew word for spirit ruach definition
+- etymology of spirit ruach pneuma
+- bible verses about spirit OT and NT
+- Spirit trading card ability ideas
