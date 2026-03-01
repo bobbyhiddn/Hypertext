@@ -1,0 +1,40 @@
+number: '030'
+word: LORD
+gloss: One having power and authority over others; the Supreme Being; Yahweh.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blindingly radiant crown of pure white light hovering over an ancient,
+  empty stone throne, surrounded by six-winged seraphim in shadow, dramatic chiaroscuro,
+  golden rays, ethereal atmosphere, oil painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return up to 3 cards from Sheol to your hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יְהוָה
+  translit: YHWH
+ot_refs: Gen 2:4 • Ex 3:14 • Ex 20:2 • Ps 23:1 • Isa 6:3
+nt_refs: Matt 22:44 • Luke 2:11 • Rom 10:9 • 1 Cor 8:6 • Rev 19:16
+trivia:
+- In English Bibles, 'LORD' (small caps) represents the Hebrew name Yahweh.
+- The Greek title 'Kurios' was used by the Septuagint to translate the divine name.
+- Jewish tradition substitutes 'Adonai' (Master) when reading YHWH aloud.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
