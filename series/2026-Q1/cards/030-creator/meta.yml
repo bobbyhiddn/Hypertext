@@ -1,0 +1,70 @@
+number: '030'
+word: CREATOR
+gloss: One who brings something into existence; specifically God as the maker of the
+  universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Ethereal hands molding a swirling galaxy from void and dust, cosmic light
+  bursting from fingertips, dark background with nebulae, oil painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The Lord is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: Romans 1:25
+  snippet: Worshipped and served the creature rather than the Creator, who is blessed
+    forever.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 43:15 • Ps 148:5
+nt_refs: Col 1:16 • 1 Pet 4:19 • Rev 4:11 • Heb 11:3
+trivia:
+- The Hebrew verb 'bara' is used exclusively for God's creative activity.
+- Creation 'ex nihilo' (out of nothing) distinguishes biblical theology from ancient
+  myths.
+- The New Testament identifies Jesus as the agent through whom all things were made.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH64O9NmJy0QxhNc6KoUPOCgO2VsNjuGjC9M6dafJ9fX8W3CWbyKBeJtb7wqGpRDuSDZ-MeEx8qNnsac4QcoIhYxR2x-ip0FCdSTyL_ZSBqdEd820cFq7biM_HPMTzD1qaaMuenjkAbjOY2SDVik1sTVMMMkzdtLa7w9hKZhJt7CR94TA==
+  title: chabad.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6H9AyXLRd9sBmydO2nTdPLB1BG3fx_whkAow0Mx9kUa_rSL1ZuI7gGbKJ7CUcGkfXg-4gCQOuOvTG0tMNyryIDWl_GIG78CPiZ1sk0qC6nmmFY5ckXslXqudq5Qcil2sqsn1Yi6mu7w==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV4DL-PsqE1Y8S6lKm3R19aeVwd32XUonpgwRTCiuWTdFS9rBOlXctpi8amN4eWgqzgvEdktOwyBmhxNEDdRHD8RGEQQCECF6L_0Y29qucHN2AZB37Hif_5n0G9XGk
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFK-qPIDTezmZYiiM1waDDnkebCfuN2p1PLX7XHq1CDogZskWQclNEnIMCx2VFO2y4PI3lIcC9lo1tEHI2MZe7rJ6eSLbaNbEO30ApyG_9XVWB5n6XcPk5wJhVQZyZlbcoCUG1-tcU=
+  title: preceptaustin.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFv-xu_s0smlv_cF5kXIquS2hQQgZbyBYtOP3DQqlFL1iro9vjXFFWOfT20d2BsD_oY_DxRwAN8qniI8cLkcb1jydAOuYrKqtlThJkq6OSjoVwq6Na7psChtc-vVnDN-wE-jR-uRGsfsR5DRc9TCq6swL8SL0ovrQvpueiJqE7r-J_qvVmyv379QDNTTFgS
+  title: answersingenesis.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHC-6T1CzpGyG9XfpvSrCtzz2-YeqcjXlAAU4dYLX0-hsDeSZ_WigoaNyD0pt_Mze8JzKbVYuLPiLlsNrbRC-FdHfEf5l4zt5SeUF0zOa6jnOpWwP0Qtw5Xse2SO94eH6wN-9em3-KVXshWec55jg==
+  title: balashon.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHT1HsvsdZbdmE0mvOQdwk5Vy3PNVzmhBzr8GJkE_v7e7_tr0LVdfP7McqZp2AD025HJ10fOP4Q4EzIO86XKtwSaDR-Xs5Axcx_gTLpJADRPHOx7Bg8ewh1gqYWhizsrMen
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjfirvHEXYaJwMMiTbW2VPNCbuVIrNkSkvqGTYLASskPCPbw_1UpV6r57Mcu8jebSFC_E1le2PrlZiPD--fffgWgYIJpq-ScD6jedg6w_EEldB8N_KMMTyHbz4hkqv4FuZkDvq5yujz2D_QZOxLi8MiYohB1b-HtQSPXpPnwrZSUh_m0_samyWOI9S8aiRpt6zCVey8kXx7UI1WowjTUYzRNbtS6zcn1_t8g==
+  title: winebrenner.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdKi2L9wPLjMu0mlNrzz52gID3cOL3KjTUyoXyNp0jYolyEtXxCf7fVOb1D1HGEXPACK18dT1gc_Y9OLDAWkZ-bbgPT1Aj4omf4b52k23KfMwTQ4qlWY_sisTn-mA2P7SOHb5tcBKZUo_QWo77
+  title: translation.bible
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMMeoJd65WeV0WNXBJoDORNwhvEGhe7dZ57hebDm2bBA9_Gwl1oUKlkZTje_CIDRi4tjoFFHyhCVEu0IMkU23pvo7yuHrarki4FeWySX_anqbqvJmD5LxS3TFTwYGUvzyPKucY7Glmw8rfYTq1L3ovzRrqG4BqqTu0WZEfYR4FZtnhID199_p0lRSWfmsedsmxu7NiFipMyw==
+  title: thebibleuncut.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9xr3nUkMKK3z6mootIdHj6TCpED0k5-WllIScAr1bYgNAKpcO3kDnHc8J-FaN3cCJ1A2xJQ66YQI1SwgHZOzwQu2xBvpCcSkyKc7fOnM2-2DCaRCzmy8aAWw_rl-ozXQOyK3Ga0uYfrwjrI4mMmWbV4RLSrRb7e8t4-7LntrL4zNCxywQJjiuK6Y2zbO8V9x-
+  title: blogspot.com
+search_queries:
+- ''
+- greek word for creator ktistes
+- Ecclesiastes 12:1 hebrew creator
+- Romans 1:25 greek creator
+- Isaiah 40:28 hebrew creator
+- hebrew word for creator bore vs bara
