@@ -1,0 +1,69 @@
+number: '030'
+word: LORD
+gloss: The self-existent eternal One; a master, owner, or sovereign ruler.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A burning bush on a dark mountain side that is not consumed, radiating
+  an intense, blinding golden light that forms the vague shape of a crown or throne,
+  symbolizing an eternal, uncreated presence.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Discard your hand. Draw 7 cards.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: And that every tongue should confess that Jesus Christ is Lord, to the
+    glory of God the Father.
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: Yahweh
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 42:8 • Prov 18:10
+nt_refs: Rom 10:9 • Acts 2:36 • Rev 19:16 • 1 Cor 8:6
+trivia:
+- The Tetragrammaton (YHWH) appears over 6,800 times in the Old Testament.
+- Jewish tradition often substitutes 'Adonai' (Lord) or 'HaShem' (The Name) when reading
+  YHWH.
+- The Greek 'Kurios' is used in the NT for both Yahweh and Jesus, affirming Christ's
+  divinity.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxcuUmEDEY9B8_dL2_k-zsp65dgQ0xcg0NdIyW9D_wBjnMrp6lh-C5KPZfUYEz9Vko20iY8no5YDwyaDvwgVuqpFmgS7MVzYVMu6woCURrDZJ2pACyKyIim9WB_tro-vQhzZIAXSM=
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFEtldESp78K5kNBv80MYE_64gBm_FAEMQVPHqkai3Oyaizcw4rmoRgTSecc_gVXScJMNOJbAkuEJIi7sUEh-vXx_3b_vnLbvsh_mY0CZ74B822q-wobugD4JM3YvrFjn1ytPlZo4wN3jQpMrs11WI9LiekeXs8r9USNuU0xIOw2Tw_1mXXiCQ=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9OebNK35fcOjHSGQd5jVv2q2ZZPB_n9hiJROnHvIwkpWFOi1InpY1Sb9gHNFRge958Pf6kaXw2CH2IIhF8XNJdiWV61-DJh2Zbha73PuI2pZA-W2g0wTywal3yY_IhOSyNgc8ygeJ7VEilLZaWjNnMyA=
+  title: ministrymagazine.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7_KkAUo-bLZOVZFsgHifdTWU6_zK5Z8niH86vtROdo1KSfc6znKFDY_eBl4ABooGPcgrFROIfEz2UKxw4PA7VnSTYKwkpoOoUa1SDTGUlJ-_UqHDQzfgLzgHDHWYuci0QmkIquXLf54XedyhK7VCtWkEP_SM=
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1_qoQh3DZbHbSIpEQjL4yuVB7jVoPjY6MqrwZph36RMb7yg3ocC86C0KVIRVa0ih-pUghvC9UBWmzfl0Fw1xngbHY6mL6O-JbIQuD_iIPCOukwK6fo6PfQJkKvUaWqEiOmmxvoC1_1tQrDUPhkVvX33yJjlAmBNrk5cBbRfOIwI5VbZfuQg1QLawk2IgZzL4p9L5o36loMd9ALZwTy8ATEdLspA==
+  title: reddit.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHO7AMKMuGD2CPXaC3jUXKM8-oTUmQvEVnSKp0XTMBZfCzFJBhpOrMNkNiSQCzEFMmzjDIqoz4-XxXT8aTHJcyIJaq-5T1Xt--edg8c8MVvtjYdxbIH4JxxIm4F_A8BwjS4Nv0w7QWWOibtXS2pCmVmIWsdlOHETto=
+  title: hebrew4christians.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8z3k2_JUM0QGUXIZQx6RwsGi0BTh_B--8jGf7MofKKHt1LS10Z1jVK79L3mtOUDfA9Jb5nH-CVwL0V5ILp35wuDbjfBPrWXbPCXOCvMDX2bkoxdjtEh6tYrr_MCX44gVpmsGfluk=
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-EJNDNhpxGdvJ-xlFIDK9rqhvJJopLLKnl02ScQoowMfEXeNdaEaNf-UaEcW9ur7G0A-90LWPKp_S5yE4RcQplpmp00suHtWF0WIjYh4jZz-RMqer3aNntd3QYLlgw3oph6CyBQ==
+  title: superiorword.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRpEOn_u47ANd66yobGyarUFjmjwR-0w-4WupEjo_vxRZIUGMkVeFYNBQ9yJ8qDKGCGTnR0v1wdDSFgLEshvmE6M7eg_z6vtbuQKuQb_JC_Mcy0qvqREFF5Mgh168Iyw==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwsXuLARs01ALF0L3o9Pu_FfdpxaK14Q670c-_TNlp02Y5wiTmEt_YyNtteRBF4DPj6jICXD9MrVPPSo9gStPwgCta7ix4K9IV_Ak5fRoWsmIu02Wr5Oe-5A71EWApM_EOgnx-iPhVbz68r6nmIjY_d_vQHO5Lh33a6OJdwNu9GZCyzNqeoA==
+  title: quora.com
+search_queries:
+- ''
+- Greek word for Lord Kurios meaning
+- trivia about the word LORD in the Bible
+- Hebrew word for LORD YHWH meaning
+- Philippians 2:11 snippet
+- Deuteronomy 6:4 snippet
