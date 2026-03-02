@@ -1,0 +1,84 @@
+number: '030'
+word: CREATOR
+gloss: One who brings into existence; the originator of the universe and life.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of glowing, translucent hands shaping a swirling nebula or galaxy
+  from void and darkness. The hands are forming a sphere of starlight. No text or
+  letters.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Shuffle your hand into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The LORD is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: 1 Peter 4:19
+  snippet: Let them that suffer according to the will of God commit the keeping of
+    their souls to him... as unto a faithful Creator.
+greek:
+  text: Κτίστης
+  translit: Ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 43:15 • Amos 4:13
+nt_refs: Rom 1:25 • Col 1:16 • Rev 4:11 • Eph 3:9
+trivia:
+- The Hebrew verb 'bara' is used in the Bible exclusively with God as the subject.
+- Creation 'ex nihilo' (out of nothing) distinguishes biblical cosmology from shaping
+  existing matter.
+- The New Testament identifies Jesus Christ as the agent of creation (Colossians 1:16).
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTI-yoLBhyBadB3IWGoTTRhyqaNdFfek8yBQpc-MRm01N1EljGjBVEm4lMlWYU5WtJgHxqZI_Qtri7DaaLIRnWPiBsQIz79u605TiQrCTi-9WedI-mj53JrtGqHd1sVfa_1oq18MWKWI-88YxlzBYYJA==
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQBPpVD3pqgJSBrbR4mCY4S5_iZAggtoAkMvB5bFiMrUcQsy_Dla198wLvLLjTZCgB2TTzDUf0ji_mdvlEtYMagEd6T7lixl5zOLDOkMXvvwCYLl3eG9eNtmcp2cVmtxk0e6qAB4FX
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEN6fkoBd-rHOTavBbdbowLcZCeakZesAvZcSCPtF7ffhqzZQHh1J5Ujk-MnE2OZkFK1cWJIJdNoHq_pCc_B_65WPvkzXzImd8v6vwH2zyxbp5E8f0rzKL_HlHqU0qW6sSYY0i2t-YNzzk_WbzEqk37iVqIIleuQ_ec9gRL5YvLQTX9aws5d7GNMHgVahs=
+  title: answersingenesis.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBeFjNAUhTB7m6nRG-P_w_bBtVNw2YdmwNgQVjAsRA3uJiHQwmEKzu1eIzromWhLXiD0PdUyDt3J1s9unRbSZYKCBEcSN5aarRwYgZ0uvBNz8D_R8uhmWP8uZiyNO6BIUUu0Ky
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaNL5nrfs9hBoM12kxXVkvQYpQ6r7MF2h54GfvSh_O4xfb4ROt_l1MxRFNwGhLkkG3_g7_hJQhvlS5hL6ohMSzrBCRlnH1QgCs_92Rkz_tNeZH5HlAetxw8hbW-ba9QQzs
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQxv2yiF6eptRMpWv_WliEzQKbuFksAc-aC5uHEDYhBG3J9z8Vb80bbcb7RZwyPfAA70tdxc8Y7mFdBNonc0wWUMsstKBuVMy2u6NjIggYJfWMAYH4k1ELmFRBF9_0o6OJqGN4ixC9
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUOByOqrGYBJP3zvE1r0Lqd-Z54UpYUcdDDoPwJtsGWil_Cz_OB_CXmu0XTqX8pFYHH-LNx-BCvn6tr3qABWa5y6yVmGa1o1R3GVldU_Tg7LnFumRodDfC5ZiEVESjCk6VDCTQAGF8MK5tkYS1dz213AyJ2RU_hJMf3uey2a0Q0jXqywKKnhkAKwL0y_zEyfLBcOMmK51Y5rldzymq5fLuwUYDi86wgn6A
+  title: winebrenner.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETrPcXmAU5MshSSVatFzOyHJrnBXxl4lzT2Hd9IpupgvsAkRrk_JqIOK3-CG7yBgf-vdONC8a5f7mzZ54_mKKKjuED2q7BtzOjnaKEPQsXFhEFYJOEZWMdjI1UCTYSNeiKZQKcNiKnamRn9tnwyxOnEzGnNl-LW5aM1Us-FgrU1L3q
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAPX3G3zOKYZqZNJsOR6rO8O77V6byNsHIUKWx-dTGOEurYu0QxnFOaC3AdEPoIkyxVDhRK7LKtJX0YrcQ3fpVeNHPoZVhxI85bjd5B3Ah9o3uTy_HRxFUxH1E2kuNMgCEDA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiHEDvkhnUvdFC9v0WB6ioSJxvvhE0k61VTzWW69exY-wLa5F5vAF5VXFTKhFxX_ayg2gtqtP1RVhNWNuC_Yn8aS63ItTRfvKABjNAUnZBWD-2WCX0MIEZKntVz6ERSuwn31q6XM5eMZFcm5o4
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeWuOzAN0YsEWqPb7E2S7Fsl9KJNXPJFACydwAJuMoyolmCVrKSRpWn3v6jZibjQgqq-wXi7HeGlVLUQ8pjdjG5fyfVTxKgZBXOm4vA6au55i_MY1M3ES88-KR9eNiBqpoYCakumkBLbEWnLJQGZD-owQ=
+  title: ourdailyverse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGCp9qBo4orD1yv3Rz46f78VTeK_XjBvexZ1jSqojGOBK8wRE2Q_VKlbd1NiMY6xn3eP1bT_8XFjIoG9n2BVWabPAuALOUbBZQLz24z_sMEZ_dlYT4E2b1wkPVGZd12NORs3Q==
+  title: icr.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnDHSq4qUdbZ4yjyG8n4IvutOvELaEx67hJrNhpl88vyUDsx11jpRxfJhWVTlclgiIUXgJtia2_AavUZnqZ9VZycHcnlFTZgXfemgaBIFYZM9pcMZmjYwHNywNt1AjnpXV51tSQZHnufuR0hg3izYK7DiiZycriA_4JmB747PlQTgXpI_A4m9U7HRcupZ2-yoNaTQbEQBSkpRWMpAQDy4=
+  title: adventistreview.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFBaEg7Zs0wOy6iWcIPWk2NVuuNj3Ifaq9TVjx64NN0_SHgVSFL8C_PXV1b9lWeGdp7qkmmYxZiL1j2w4yyFIY223M0fvRAQ2w-meP-zbsTK3X3SHeVg3_Fj3TipGGF9gATia6cfYFq67NK7s=
+  title: bible.ca
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMjHrvWmpGSHQnhzvVmd89xw2iQPQeozyUt_TZiSyICCNlmHISH-XoAWW9ZDKbt_m-ZEpPO-r8ngEvDtKcN33GXQyM8ej-X2A-Y0lZVk8neBmaYk5IB7ebiPXvZAVFwyayGJ8a-jxdTwW-f4lQKpIKXACqSPe-w0PV
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1bubddUKEPT8ENLuCnnfB4V1tZ4mBo4OMMuPopAW2PDJQ3cK8chVIm3vGHwhw77NTIYkT98d4aaEC0aUpF9jGwiK4KUnlHaLFI55w27oXiDJ9GYBnDK7YkylgtY-jXNBFGUW4sTngJsJ3m9FA8efl
+  title: wisdomlib.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2g6io3V-QqQTUl0knWW0-Ho1zB_OvQX6BEcNT9X3avami0ZqnDSQpDFOHrYRkqBqAcZ4zvgmdFxKXndJuXdt7oXRDTebjcTRpNfyYOgGLExlrxs0VX0pnbUVQWfZw6MjgkyG1D7j6Vy7nW80pYCAxLMgzdvtCG8VuFgjaqpPRtLC8tg==
+  title: godswordforyou.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5CQVvt7v0fp-gn4EGF2czJ_atFoiGXEmXTA1tP8RcZyVolxpiyqzBU347pKrq-3o94tjAIsBw28HyqSeqjNRVDDcGrKXeZlY29QJaxl8QJzf5K2d_a7_GKNQbQF7jQstCjhx5tAu_4NRfb1dWnp3An5DJ0__Me6wKbinKKWabcIMi6KYReGc9MR5MbKXu_1lk0qfnby5OvW1YYnKePVK9Lbmw8ViaLbk4ygQMlKzrfHSmd-CoeQieI7u1COoIzbJ5GCXFZMvsZcKelWXXfHz6Okfo9zwFeUZBPto_RuccYAatpZ8f1dTuxJ9Q14NtQsHZs6_fng==
+  title: quora.com
+search_queries:
+- ''
+- Greek word for Creator 1 Peter 4:19
+- Creator biblical definition word study
+- Hebrew word for Creator Genesis 1:1
+- Colossians 1:16 snippet
+- Genesis 1:1 snippet
