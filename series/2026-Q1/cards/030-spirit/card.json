@@ -1,0 +1,280 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "030",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "SPIRIT",
+    "GLOSS": "The animating force of God; wind, breath, or life-essence.",
+    "CARD_TYPE": "TITLE",
+    "RARITY_TEXT": "GLORIOUS",
+    "RARITY_ICON": "GLORIOUS",
+    "ART_PROMPT": "Abstract swirling vortex of golden light and wind moving over dark waters, ethereal energy, dynamic motion, cinematic lighting, distinct separation of light and dark",
+    "ABILITY_TEXT": "Draw 1 card. Then, draw 1 additional card for each different card type currently in your Pages.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Genesis 1:2",
+    "OT_VERSE_SNIPPET": "The Spirit of God was hovering over the face of the waters.",
+    "NT_VERSE_REF": "2 Corinthians 3:6",
+    "NT_VERSE_SNIPPET": "For the letter kills, but the Spirit gives life.",
+    "OT_VERSE_LINE": "Genesis 1:2 — “The Spirit of God was hovering over the face of the waters.”",
+    "NT_VERSE_LINE": "2 Corinthians 3:6 — “For the letter kills, but the Spirit gives life.”",
+    "GREEK": "πνεῦμα",
+    "GREEK_TRANSLIT": "pneuma",
+    "HEBREW": "רוּחַ",
+    "HEBREW_TRANSLIT": "ruach",
+    "OT_REFS": "Gen 1:2 • Ex 31:3 • Num 11:25 • Isa 11:2 • Ezek 37:14",
+    "NT_REFS": "Matt 3:16 • John 3:8 • Acts 2:4 • Rom 8:26 • Gal 5:22",
+    "TRIVIA_BULLETS": [
+      "Hebrew 'ruach' (feminine) and Greek 'pneuma' (neuter) both mean 'wind', 'breath', or 'spirit'.",
+      "The Spirit appears in the second verse of the Bible (Gen 1:2) and the final invitation (Rev 22:17).",
+      "In the OT, the Spirit often 'rushed upon' leaders for specific tasks; in the NT, the Spirit indwells believers."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Greek word for Spirit gender",
+      "Hebrew word for Spirit gender",
+      "2 Corinthians 3:6 ESV",
+      "Genesis 1:2 ESV",
+      "strongs definition ruach pneuma"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSvoGZg20afeYL2xtVHsKl1JMEfWHcVSjaNt3IxDC90gPTEGmhxWeSRq1xS2Zk6Jy2QDcbuvgI8--petVcm3HS48ODVemIyUpS21lVmyKLVuEOr85e341G4sERbWM0aQQ=",
+        "title": "studybible.info"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG44-m85Szwlc8PIMP603_MmtGZJ5PKmcscp9epDV9cYLVHGi55G444TqihIDj2i-EfkYn9SHM0EXEOmIY0AQBVVA408gQWU3Tmuo0F6oCGZfStBi54dJiV0-KQmrSR8nhdW-1Z8L19-DVNl-LGWTjpVAzQUcSQkl4-hv0J6lG5D6pbdjydGhmTOouLAt-u",
+        "title": "churchsociety.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrvIE0qL_5wX_VYrP1Zkwp6wqPzra8Qz9mhlC7RTbuHBzOnOX7xJiZylBwiIugraKNztwdFfuEaGN-eRhTzVMktgLfT1h2Cb755hrbDsRXOeaenb6fvDnxPq4I5Xn1JdRI7iixV3VSfBw=",
+        "title": "biblia.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7UuazUc8vOAbCla5TzaU6TrhsnUhn8qqPzR5j-iP886Q-F0L3kZ-TwPeSn10_xzh8xMluAqu4tqpssW4Fz0xsvST_TtLf75vk3QYzBU7LRgbuo0SvPbfK2dwWs6BNQimqspcM5AREv4zChY6hXggS6QSXLBw=",
+        "title": "biblestudytools.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV12fh6ummss_kyLHI9pQZsdc85QyKr1-mjkvES9060aONmL96RD-tfW3zoj1E0P8m4d5PLQIYHjlTo1RobTunKvFgSpdBagKxQMgvrX5zv6LBadKlAwcy-5oTYF824zQ347uE53ZrjOKl2GCIeZ561Q6Nuplh9qxkxzrxDGWqkl7pyodBwrhBcPuRDFeE15RsqA==",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyoa1v9_LBYgb__5mPZVx9N8Fl1K6Bdaib3JvoEu7Pt9co7982mF46wkvJjtTXmQRi6ZAA4OthchXAHfmc5Q7kkImrDF9GxEKZ0-FAjV_R5u2kN-6vCzs9bxnvnvrLNiYw_B6Zm_zlRGcAspuaav3VW64LAWeWRBLvTsJSEVU33nNDJ8ccRgonlh-8_sNHDtbYw8o=",
+        "title": "studylight.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa_EkslfVz_7hl4ZFX6HSfW6cBkQNrsqKrQZbCSxAIl5_PWdy2MbS_U0shDGGfQsLY6fcubS3t7bMU3p1WP9-WgAPACBFG93t--lXWOSvcXfLV7YSywAsfrDypG2R_J01Gi2MuffRVpBpOqjKT1XLjmdk=",
+        "title": "margmowczko.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPiN8W5FiP84XdeKSmSweZFho19OWlx5PiUoSgp9PLKxxhMIXQTAZ7L1o1V68_RgDE4Bx9MSKgDZQg7YL7Ib2N6chaCmOlLOyfPoMvVjudglN3SfJnCCCfV-YJj_M0itfDBuzTdMje6sky3e6l436VBJcaPf63w-1voEcyJJwTxBuFME7yl9zE1N1f_aYw9In",
+        "title": "deidrehavrelock.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrt99oyubhGxUVN65dALvXXX3An3sTQ9mo4MrpTxcgp4hn383DSdaHxE7X4hysoPFeYf9_PfsHSKBqd29T5nJ3pp3Qta5GdHilWq0gn6Vh7CAOSDiBAC-YQ3pfYtMXRZZ7sadbsdBVwErbidQA9AI=",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOkoJvinypkG6JSmiTqujOLppiGx_XZ_8BigFZ-GlvglKmrPgoxLs5fgKV15Cjzzco4MzeiZwFz89REBHc57M1a-Aojhw_WhuaOrs_piD0pnRPEmPww5lS4CjPwPVQD0F2kdK0p0zg2q1oig_bGNT3qQj1DJ0A",
+        "title": "quora.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBBzHC3YHbR0nZrk37_dkX5WEuP5fYB0UySHhukLYlG3rRs37E3XrjkVp04qPxJNdsuqAouWLH-0FdNkPhIkv_tyiN7Egk7HOjU3ibwjo8TAxAZ-YhnssX3yzu-NXofbjMvuuAY58lwQDzZaXh7FR-70g=",
+        "title": "wikipedia.org"
+      }
+    ]
+  }
+}

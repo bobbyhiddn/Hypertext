@@ -1,0 +1,72 @@
+number: '030'
+word: SPIRIT
+gloss: The animating force of God; wind, breath, or life-essence.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Abstract swirling vortex of golden light and wind moving over dark waters,
+  ethereal energy, dynamic motion, cinematic lighting, distinct separation of light
+  and dark
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Draw 1 card. Then, draw 1 additional card for each different card type currently
+  in your Pages.
+ot_verse:
+  ref: Genesis 1:2
+  snippet: The Spirit of God was hovering over the face of the waters.
+nt_verse:
+  ref: 2 Corinthians 3:6
+  snippet: For the letter kills, but the Spirit gives life.
+greek:
+  text: πνεῦμα
+  translit: pneuma
+hebrew:
+  text: רוּחַ
+  translit: ruach
+ot_refs: Gen 1:2 • Ex 31:3 • Num 11:25 • Isa 11:2 • Ezek 37:14
+nt_refs: Matt 3:16 • John 3:8 • Acts 2:4 • Rom 8:26 • Gal 5:22
+trivia:
+- Hebrew 'ruach' (feminine) and Greek 'pneuma' (neuter) both mean 'wind', 'breath',
+  or 'spirit'.
+- The Spirit appears in the second verse of the Bible (Gen 1:2) and the final invitation
+  (Rev 22:17).
+- In the OT, the Spirit often 'rushed upon' leaders for specific tasks; in the NT,
+  the Spirit indwells believers.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSvoGZg20afeYL2xtVHsKl1JMEfWHcVSjaNt3IxDC90gPTEGmhxWeSRq1xS2Zk6Jy2QDcbuvgI8--petVcm3HS48ODVemIyUpS21lVmyKLVuEOr85e341G4sERbWM0aQQ=
+  title: studybible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG44-m85Szwlc8PIMP603_MmtGZJ5PKmcscp9epDV9cYLVHGi55G444TqihIDj2i-EfkYn9SHM0EXEOmIY0AQBVVA408gQWU3Tmuo0F6oCGZfStBi54dJiV0-KQmrSR8nhdW-1Z8L19-DVNl-LGWTjpVAzQUcSQkl4-hv0J6lG5D6pbdjydGhmTOouLAt-u
+  title: churchsociety.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrvIE0qL_5wX_VYrP1Zkwp6wqPzra8Qz9mhlC7RTbuHBzOnOX7xJiZylBwiIugraKNztwdFfuEaGN-eRhTzVMktgLfT1h2Cb755hrbDsRXOeaenb6fvDnxPq4I5Xn1JdRI7iixV3VSfBw=
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7UuazUc8vOAbCla5TzaU6TrhsnUhn8qqPzR5j-iP886Q-F0L3kZ-TwPeSn10_xzh8xMluAqu4tqpssW4Fz0xsvST_TtLf75vk3QYzBU7LRgbuo0SvPbfK2dwWs6BNQimqspcM5AREv4zChY6hXggS6QSXLBw=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV12fh6ummss_kyLHI9pQZsdc85QyKr1-mjkvES9060aONmL96RD-tfW3zoj1E0P8m4d5PLQIYHjlTo1RobTunKvFgSpdBagKxQMgvrX5zv6LBadKlAwcy-5oTYF824zQ347uE53ZrjOKl2GCIeZ561Q6Nuplh9qxkxzrxDGWqkl7pyodBwrhBcPuRDFeE15RsqA==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyoa1v9_LBYgb__5mPZVx9N8Fl1K6Bdaib3JvoEu7Pt9co7982mF46wkvJjtTXmQRi6ZAA4OthchXAHfmc5Q7kkImrDF9GxEKZ0-FAjV_R5u2kN-6vCzs9bxnvnvrLNiYw_B6Zm_zlRGcAspuaav3VW64LAWeWRBLvTsJSEVU33nNDJ8ccRgonlh-8_sNHDtbYw8o=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa_EkslfVz_7hl4ZFX6HSfW6cBkQNrsqKrQZbCSxAIl5_PWdy2MbS_U0shDGGfQsLY6fcubS3t7bMU3p1WP9-WgAPACBFG93t--lXWOSvcXfLV7YSywAsfrDypG2R_J01Gi2MuffRVpBpOqjKT1XLjmdk=
+  title: margmowczko.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhPiN8W5FiP84XdeKSmSweZFho19OWlx5PiUoSgp9PLKxxhMIXQTAZ7L1o1V68_RgDE4Bx9MSKgDZQg7YL7Ib2N6chaCmOlLOyfPoMvVjudglN3SfJnCCCfV-YJj_M0itfDBuzTdMje6sky3e6l436VBJcaPf63w-1voEcyJJwTxBuFME7yl9zE1N1f_aYw9In
+  title: deidrehavrelock.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrt99oyubhGxUVN65dALvXXX3An3sTQ9mo4MrpTxcgp4hn383DSdaHxE7X4hysoPFeYf9_PfsHSKBqd29T5nJ3pp3Qta5GdHilWq0gn6Vh7CAOSDiBAC-YQ3pfYtMXRZZ7sadbsdBVwErbidQA9AI=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOkoJvinypkG6JSmiTqujOLppiGx_XZ_8BigFZ-GlvglKmrPgoxLs5fgKV15Cjzzco4MzeiZwFz89REBHc57M1a-Aojhw_WhuaOrs_piD0pnRPEmPww5lS4CjPwPVQD0F2kdK0p0zg2q1oig_bGNT3qQj1DJ0A
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBBzHC3YHbR0nZrk37_dkX5WEuP5fYB0UySHhukLYlG3rRs37E3XrjkVp04qPxJNdsuqAouWLH-0FdNkPhIkv_tyiN7Egk7HOjU3ibwjo8TAxAZ-YhnssX3yzu-NXofbjMvuuAY58lwQDzZaXh7FR-70g=
+  title: wikipedia.org
+search_queries:
+- ''
+- Greek word for Spirit gender
+- Hebrew word for Spirit gender
+- 2 Corinthians 3:6 ESV
+- Genesis 1:2 ESV
+- strongs definition ruach pneuma
