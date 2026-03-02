@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #030
+WORD: LORD
+GLOSS: A master, ruler, or owner; the one possessing supreme authority and power; the personal name of God (Yahweh).
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Name a card type. Each player discards all cards of that type from their hand. You draw 1 card for each card discarded this way.
+
+VERSES:
+OT: Exodus 20:2 — “I am the LORD your God, who brought you out of the land of Egypt, out of the house of slavery.”
+NT: Philippians 2:11 — “And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.”
+
+LANGUAGES:
+Hebrew: יְהוָה - Yahweh - Gen 2:4 • Deut 6:4 • Psalm 23:1 • Isa 6:1 • Jer 31:31
+Greek: Κύριος - Kyrios - Matt 22:44 • Luke 2:11 • Rom 10:9 • 1 Cor 8:6 • Rev 19:16
+
+TRIVIA:
+• In English Bibles, 'LORD' (small caps) represents the Tetragrammaton (YHWH), God's personal name.
+• The Greek 'Kyrios' is used for both Yahweh and Jesus in the NT, affirming Christ's divinity.
+• The word implies absolute ownership, sovereignty, and the right to command obedience.
+
+ART: A magnificent, blindingly bright throne room, an empty golden throne shrouded in radiant white light that obscures the seat, the train of a royal robe filling the stone floor, atmospheric, ethereal, majestic, cinematic lighting, 8k resolution
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
