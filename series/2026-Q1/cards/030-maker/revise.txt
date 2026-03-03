@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MAKER
+# Card_Gloss: One who forms, fashions, or brings into existence; the Creator.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Draw 1 card for each different card type currently in your Pages.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: Cosmic hands emerging from nebulae, gently shaping a sphere of raw clay or starlight into a structured world; focus on the act of molding form from chaos.
+# Card_OT_Verse: Psalm 95:6 — Let us kneel before the LORD our Maker.
+# Card_NT_Verse: Hebrews 11:10 — The city... whose architect and builder is God.
+# Card_Hebrew: עֹשֵׂה (oseh)
+# Card_Greek: δημιουργός (dēmiourgos)
+# Card_Trivia_1: Hebrew 'yatsar' implies the hands-on work of a potter, distinct from creation ex nihilo.
+# Card_Trivia_2: The Greek 'dēmiourgos' refers to a craftsman or public worker who builds for the people.
+# Card_Trivia_3: God is called Maker to emphasize His sovereign ownership over what He has formed.

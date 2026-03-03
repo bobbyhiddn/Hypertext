@@ -15,6 +15,7 @@ words:
 - GRACE
 - HUNTER
 - KEEPER
+- MAKER
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -37,6 +38,7 @@ ability_patterns:
 - choice_draw
 - conditional_discard_draw_type_verb
 - conditional_draw
+- conditional_draw_pages
 - conditional_draw_pages_type_name
 - conditional_draw_type_name
 - discard_draw
@@ -196,3 +198,8 @@ cards:
   type: NAME
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 30
+  word: MAKER
+  type: TITLE
+  rarity: GLORIOUS
+  ability_pattern: conditional_draw_pages
