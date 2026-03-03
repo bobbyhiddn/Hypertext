@@ -1,0 +1,72 @@
+number: '030'
+word: CREATOR
+gloss: One who brings something into existence; God as the originator of the universe.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Cosmic scene of ethereal, glowing hands shaping a swirling spiral galaxy
+  from void and dust; vibrant nebulas, geometric structures forming out of chaos,
+  golden light piercing deep darkness, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Return 2 cards from Sheol to your hand, then look at the top 3 cards of the
+  Tower and rearrange them.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The Lord is the everlasting God, the Creator of the ends of the earth.
+nt_verse:
+  ref: Colossians 1:16
+  snippet: For by him all things were created, in heaven and on earth, visible and
+    invisible.
+greek:
+  text: Κτίστης
+  translit: Ktistes
+hebrew:
+  text: בּוֹרֵא
+  translit: Bore
+ot_refs: Gen 1:1 • Ps 33:6 • Isa 40:28 • Eccl 12:1
+nt_refs: John 1:3 • Rom 1:25 • Col 1:16 • Rev 4:11 • 1 Pet 4:19
+trivia:
+- The Hebrew verb 'bara' is used exclusively for God's creative acts, never for humans.
+- New Testament scripture identifies Jesus as the agent through whom all things were
+  created.
+- '''Creatio ex nihilo'' affirms God shaped the universe from no pre-existing matter.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSXYIVX7_AoKLRccZoFPGTKP0vq1UElAA34ZhIwZCO3J-MmIA4406W80hm0vr57_gI3G1qoHUyaZHXMdKW1dTzsYvtxGZlbWxAhDN2gErLO_XdVh3Eu5EGnlUuLZGxCdTnKulvtIg1BQ==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnweoqUf4LOqzXFD4SwI8trwdmydepR05nqVxzKn6NmRbPRe94XS_yI724hBhj1i7YEoPZlv-8WTfwr4gg6SduQNk2DsKN2HKRz9z77iG5I4jSDeIeGLeSuv8b-Tw5boIJcE4KfTXKdHqysH2tpbhnbUqAKQ==
+  title: thegospelcoalition.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlc0hxx4fd-rmgEpS9lLHLRr6OpjAnW2Z1GlEXy59hZAQsjzN9LC2EK9UPaTnhy-XtTYmj01pIoZXS0OOHjUlqVLwBt2n0KxkiyWVNTd9A7wwa-5Gky-1Esu0PiKhBEKR7lzuQow==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwnfeUB45cvKydLo5RrFRzI5CBY5AxbTJ3ict_gLEFzA-vvMG8uEjHrPz9_AwM3umydmcPsjAJA_TtMgjIZwUO6LV4nda8FzeBHq5cVPeihaveV5268Ne_r3kgpdQmRUBlecbFXqqXa62gEwXehg==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGugFcSa9mQgb1iMO5OG4apJ2lYLLggzSXOk3ienD11eU-RvGwzNoV-HAvSOnfUlaPI08Mu7hcu4ShjMq1BMGCf4rrYIZkAodADAeVxI-MXtsx93X8dbfdXbY-RdF_y37woLLqGfQy3Pf84LjRDxklH18kf
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG8oOq2pbMxeq4gk1GVs39wy68efCI81nNEREfBzIPIOauKBnyRTxUhas-S0whZwiDT3awSl_2EfOUHVLerfy-2dU7aOq1NMis5dCHFrw1Js7_Iq-Pn6wpxI3X18wlP70FvkNFEKHEljb3GXlBjA20Mah7
+  title: gpront.blog
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKljDBFxRpQFdmUOoBUl_XQvBMorxPMEEDM5TJMjKGLD8cpWTnkKWBg3rXgI88Y5GFcBvM5XrDD-oq7tlpraA-qB_g7shpBn3W9ac45sgdW7gJiBgl8R9KY-luC_vb4bbzN2yrvbZD5HnvS68fgpNQaY4xvF6dFMcfED1ZWhFg9DBaegIBlwPk3kG4XZE5
+  title: answersingenesis.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEA5zBqooiJX-t4BCP7djX37OrkkS6GDomTkRzaz3QsUHeMcLWsab_T5g8E2_rZQ_FkvsKGxQbsm23RK9G3hGGmjE7jPe2xomRmaedJ1gw08NiXgTjHz-1mOzMQxnHInwJsAhTQ350V3ptcvtFLyxG1fijfGtpd4s8F2RHrJEZh7ECuCdU69Qv0J552d907k1ioM_LVcZoz61g1v6tBxn_jpkRL3G-GEveextkw1Nyz
+  title: winebrenner.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUx8apJ1TTkVkdB7ExeVNLITlKcdMVoVfXxvBtGPHSZw59cnD90bGSwGLCM5TPciegM8UFxLWLXqI7hiO_lmbJuAsHAZnuqdILfNBbN_BBo8gGmEc0p5n82IPAZ3ySvX-jGk6fEHHMiKyVXwLSdvn6Q-tHAJoHijmTr2NG-7uQiPoTkuM-UHtTZYctJ6U=
+  title: epm.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1VGLUBHKQ8t6KLpScDtk9Ki94BD6pA_rmwb1TGyRVXSGLm8qoLaCR9xNWKDa7gtmtlPruEsF6dhQ2QLsOLshuvz7oeVUnEQ0vzeUo7pmYGi-Ay1NY5GGWtwAT6YxttcBhrvPQVZMidUf5klSAYwEKsAqvh4mjzkRqsy9jruyKE9RUgIcMCMLFZAc6qbExTwBvfJ4=
+  title: apologeticspress.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwcf6S0WZtkdBBEoZHRsD9lja5zhFhGvHLQ4_IFdXnb2y8F-fyRbW8Sf-Y7N5dUQwO-TgT78McBNnWEjPOw0ueNUljNTA6FS205uFh5n8nn7KwKUg6cW-qzb6xsgLX9jrks3z-wc8Cm2yyFgGiWNd1UJ8k9PrxyLTDq62j6WWvMjxhel0ej57v98g-r80TVqZR2zTQQTdny-PovtUlFWOlCcBm7rCpKErZKpMl36DBMowfJzUzxJJm3HKU_pNXjUq8bL_eKC54H4MZLQk8mhfZXcp-gDpaL_JsgFECASRunR08aJkuC6RlLLBXDoCCtpYCvqD3oY=
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw4BOjCt5h-Y_eGlI-IlGo2-HvC4Hc6F69DJFKW3gHPgk6xY3-RCD4HBMLh3zSy_V-5_jCG3eifAMvQNC5hzhm-xljP0_mJu8Edq5aHjBj2llWU5fo9001QYERjBLX9IWjbrhJXbAYBb-IsT8MhQbHM7da9887oxzM-5qKtwuicYhPwFAYkFJhyg==
+  title: vojisrael.org
+search_queries:
+- ''
+- Bara vs Asah meaning
+- Creator biblical definition trivia
+- Hebrew word for Creator Bible
+- Greek word for Creator Bible
