@@ -1,0 +1,78 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator and ruler of the universe; the eternal One.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A blinding, radiant light breaking through chaotic darkness, forming a
+  geometric order of nebulae and stars, ethereal and overwhelming.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Discard your hand. Shuffle Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heaven and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Ex 3:14 • Deut 6:4 • Ps 46:1 • Isa 40:28
+nt_refs: John 1:1 • Rom 1:20 • 1 Cor 8:6 • Heb 11:6 • Rev 21:3
+trivia:
+- Hebrew *Elohim* is grammatically plural but takes singular verbs.
+- John 1:1 explicitly identifies Jesus (the Word) as *Theos*.
+- Distinct from *Yahweh*, the personal covenant name of the Lord.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlopZBhmIXxDJlWM4MFjyxMp2jksfx55_c5GdyAcCxOe6ICOvdFkYiDiA1LF1omrjhY1SyVwznvbHaqugY8rLtIYHe5g5k7Yx6eruQgL_SJNpNU57FfVXdl7Sq9NQnRg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoCPSqsqSNy4L4E9VisDCqXPICvynzc9rMZGdUdm6yQV3qX4UQscb0O7XEYLozmhndFJe3hxAB-Im1rzTvc8VFSTHwb1B7qErH352fFbgJ2JAO8eBdzbc_PJVu5GRdX74-rOa3neqd
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6ML6EoI8hIy6NsX0F2a3jxZkFCMbFXxrM58R4hccCJkSqijfD-XFbmGyhNLu41YphJSNDCPOfDQn6y9q5hvA02rYpCDPL7flCQQ88MSIHIvqv4DX8evK0e97K8w==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMkU266Q_PAiG9OcjaxBpo7lYkULzHbEC21PFFQlBwT3amEfPP4xY7NgF4SCi4I9KwYkacFWqROFWVjFblpd3J76qKUYt1vXxa47dak8Zz0VOLkYA6GZfiGDXSSC1kUVu2_G64ljwYlAQXgUMJFvmNR9eRMnBVjbTyrk3INqU=
+  title: textkit.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXbGEZqxe04qXOMT6p-hvSZOORPvMGKwF2ILIjxAEr9ltEH-D0o5-xYaeukO8awHH7lMvcz7crqtkwFP90LgCY-AWx1S-GLmB6VkciJtdXkzrxRPu7oYiqQ-8ztwLL2Ih9Zcfa
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj22eaUNxduUBykRtFuhZfOhCekijWUZTApRkUCQ-PfD1FmDCdlzwc1uwiGErcrvCJqCYGx0fhAg6gRFUKM1kVGMnBsyPIr4alts1IOfVnPEAimQculoRqAE696oUyP-umQfvMUBldDMVeuwEEq9Z2pIiUceoenTvGz1JFN0sr
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1ymOkaGfdkRHAHpfhiuCfgNUwk_gX_UFEEVemR8Q_J1nq9E-Q82RbOFR7N_MSmYLUBXb8g4nwijCh8Op1cvdKQqTmTOF6v3M-GOgXVaBT1eR012PxPTXM3Rk_30P3lXvrCiOBiOzl
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWHQaaUF9HGqoiwjSdE7o9MZxwUd0fiJv3hQukava2HNCuzDvOsiYPjteaVXnqazrxyl-7cRBrrbWP8dISQqOG7zUZ8XbIHDFeehwGiX406wtT-LknXSFTrEenZgI1w-zw2udxwDVgGm-jCmA=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkt7kb9Elpaw4pyN2txY9CMaVTnxhM5u4VOxVv-g3biJm5M-azHwATAb_XVBIt2H_jJVfEiMhwuf16m5opHROoayZTwdKANxQ77dfEZI4wbtCs9goq2Sq0-nlHLTut
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhU4B3R6858SBO-LLdOdYe2eKZPWHLkGRg-17r8nZup7I9tPb_IDfIsKBMgUoUVOceSpKz8Cz1YUarqTyzTWEsg0upo_rBp3KDqc0rVPW0qTdDeb8xL0D7P4dql217TPOVwy2yKHUwjyjFsL0qPLF4ks84
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1laXWglDoEwvLNGWjxNp_NYddlB11zRt8zYY0ehaqQxv00BYVP2M8At0yCmZwCdbT52OTee-koD0bXZfjKKkIX4ZREg7GH4YnzsB72c84OtdCOdHN1k1KDZloDrsN8nK0U3q1Uj-P2G4IgWcDOtYTQQWhiBIBvJw9GpGJIlUAxSLNxGQsrb8Tz35Xaak=
+  title: brainscape.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnv43ZNcGu_vwlNDEDdl8CNCdzB4EiW1dkHX3FaCMrAHO-VktdbFrR28jh3pmRytrodMeg3MWYFVIqQCDx8RCo1yKslo_P9HwO0KMGMVkGa11OSmTr8mpAfjmM0eKP3EJU
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfrVbngJpf0QF0FGaxpqEbD2a4WW_X5E0toZbCTbYWmOZ4I_mL3wEi1TAY003L_2t776-0MuHvYCAafoXVooDDmpa-ZRujfMrUakJaGYasKz77v2s4tgYzue9iWzoqjG50LF0VDGkZQ_zKxfF_gGqmYF6BBfbRf4OWhoxibGnrQxH5EhsE-R-gnrmeRxNCaZ4OCDjs
+  title: medium.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUqAmra3P3PuBt49-M5TPC-j5e0h1JTuhzZ0y2WkJLGWz0aZDAquYesdL2HCsqciTaWCRJVL7H8jLxbBZFZ6X49vIAPcMgitQ_QiCWzRggyGg_JJvnbRgVKTwR0VsjbzVwNDIOoGbM5YkD4LbnScJeapeZjqS9Up7CAVUz
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHECzBnNP3MzvMcFZMjiiA_pvvhQqtn6x2mUnKJ3lWzk6AsgJ6g6r5hDkEYVUVKvWTGSDa8hzdxm2l-FUEKQwaCUxuctqTetSW2fgSkGdySxxGA9sICHHzgNiYYtwUFnWgwPz7v
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIrBrh0L6_mgXdlqiHxwp0OTqMVvVBjnRb72wB7boe5vPLriuf8TVjZGLcjZYcK6rKRAtfIWObk1uS6U8tLAS32mjE9ZXTvfQJQpu9Wxl_ALWKVG_phfsMqCaZF2zPycVPZaInmta9MnzJKD5CB7vOZa5dB2t7QCIe7lRTaWXTGw==
+  title: biblicalmissiology.org
+search_queries:
+- ''
+- Hebrew word for God Elohim transliteration
+- Genesis 1:1 KJV snippet
+- Greek word for God Theos transliteration
+- Hebrew word Elohim trivia plural singular
+- John 1:1 KJV snippet
