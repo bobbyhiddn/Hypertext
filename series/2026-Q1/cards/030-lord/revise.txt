@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: LORD
+# Card_Gloss: The self-existent One; the master, owner, and ruler of all things.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Draw cards until you have 7 in your hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 5
+# Card_Art_Prompt: A majestic temple interior filled with swirling golden smoke and blinding white light, the train of a royal robe flooding the floor, silhouettes of six-winged seraphim hovering above, no text.
+# Card_OT_Verse: Deuteronomy 6:4 — Hear, O Israel: The LORD our God, the LORD is one.
+# Card_NT_Verse: Philippians 2:11 — ...and that every tongue should confess that Jesus Christ is Lord...
+# Card_Hebrew: יהוה (YHWH)
+# Card_Greek: Κύριος (Kyrios)
+# Card_Trivia_1: "LORD" (all caps) represents the Tetragrammaton YHWH, God's covenant name.
+# Card_Trivia_2: The Greek Kyrios is applied to both Yahweh and Jesus, affirming Christ's divinity.
+# Card_Trivia_3: Traditionally read as "Adonai" (Master) to avoid pronouncing the sacred name.

@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #030
+WORD: LORD
+GLOSS: The self-existent One; the master, owner, and ruler of all things.
+TYPE: TITLE (top-left navy circle must contain WHITE crown icon)
+RARITY: GLORIOUS (top-right navy pill with "GLORIOUS" text and ORANGE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 5/5 filled
+
+ABILITY:
+Draw cards until you have 7 in your hand.
+
+VERSES:
+OT: Deuteronomy 6:4 — “Hear, O Israel: The LORD our God, the LORD is one.”
+NT: Philippians 2:11 — “...and that every tongue should confess that Jesus Christ is Lord...”
+
+LANGUAGES:
+Hebrew: יהוה - YHWH - Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31
+Greek: Κύριος - Kyrios - Rom 10:9 • 1 Cor 8:6 • 2 Pet 3:9 • Rev 19:16
+
+TRIVIA:
+• "LORD" (all caps) represents the Tetragrammaton YHWH, God's covenant name.
+• The Greek Kyrios is applied to both Yahweh and Jesus, affirming Christ's divinity.
+• Traditionally read as "Adonai" (Master) to avoid pronouncing the sacred name.
+
+ART: A majestic temple interior filled with swirling golden smoke and blinding white light, the train of a royal robe flooding the floor, silhouettes of six-winged seraphim hovering above, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

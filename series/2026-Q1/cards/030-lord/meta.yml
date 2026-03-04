@@ -1,0 +1,40 @@
+number: '030'
+word: LORD
+gloss: The self-existent One; the master, owner, and ruler of all things.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A majestic temple interior filled with swirling golden smoke and blinding
+  white light, the train of a royal robe flooding the floor, silhouettes of six-winged
+  seraphim hovering above, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Draw cards until you have 7 in your hand.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Philippians 2:11
+  snippet: '...and that every tongue should confess that Jesus Christ is Lord...'
+greek:
+  text: Κύριος
+  translit: Kyrios
+hebrew:
+  text: יהוה
+  translit: YHWH
+ot_refs: Ex 3:14 • Ps 23:1 • Isa 6:1 • Jer 31:31
+nt_refs: Rom 10:9 • 1 Cor 8:6 • 2 Pet 3:9 • Rev 19:16
+trivia:
+- '"LORD" (all caps) represents the Tetragrammaton YHWH, God''s covenant name.'
+- The Greek Kyrios is applied to both Yahweh and Jesus, affirming Christ's divinity.
+- Traditionally read as "Adonai" (Master) to avoid pronouncing the sacred name.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
