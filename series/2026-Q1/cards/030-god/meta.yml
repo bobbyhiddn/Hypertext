@@ -1,0 +1,62 @@
+number: '030'
+word: GOD
+gloss: The supreme being, creator, and ruler of all; the object of faith and worship.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Ethereal blinding light emanating from a central point, surrounded by
+  swirling nebulas and geometric order, golden and white hues, divine atmosphere,
+  cosmic scale, digital fantasy art
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ot_verse:
+  ref: Genesis 1:1
+  snippet: In the beginning God created the heavens and the earth.
+nt_verse:
+  ref: John 1:1
+  snippet: In the beginning was the Word, and the Word was with God, and the Word
+    was God.
+greek:
+  text: Θεός
+  translit: Theos
+hebrew:
+  text: אֱלֹהִים
+  translit: Elohim
+ot_refs: Gen 1:1 • Deut 6:4 • Isa 45:5
+nt_refs: John 1:1 • 1 John 4:8 • Rev 21:3
+trivia:
+- Hebrew 'Elohim' is grammatically plural but takes singular verbs.
+- Greek 'Theos' was standard for deities but redefined by the apostles.
+- God is the first subject of the Bible, appearing in the very first verse.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDZ2SKxhp8tp1p0RltCkQ93tzMX68hz3yVvDga9DYDoYfRmGJir6mFB4HcE61kYqsZseKnmXTaj9sMHgGrdS7f5b5yRiEC9a0I_E4sVGozBxnmq7KXnvu1t1P60GLrZwbyvgcAFnoMAbqrJ0O9TFfaxOYtHKwYW3jyZLTEFLR9RBktNRZuPmny1jj-f15qB6eOWxY=
+  title: medium.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGND8ivuHHGocbgjjONlAG54OMO3mftQdkVQeV5IQy0sqoa7aQ42zxMgginU55lSgDklHhusLCkdppZnT8th0iZUj2AAHqAOPuykjLcSWTrJfHeWWxzAkxTMXWjETHtoEwG-Rday6OI1uRu2Q==
+  title: logos.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9Y-DSyBTw3HJqi3-yx10cKokk-zll8pRCoHKDCs_3TSV3TnHQqiUEhxQ8LMOkPtgwx2wxxkmO1_jZikB28WMsRSzbq2atIfoSedsj_A1HAV8a0j96wfR_dLyCFBLpvHiAwNcSlB_BGvcBWfpP2LGVu2rHWg==
+  title: openbible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGs29qGZcT9oO6O9Aq69ucXq2nLevilkb0z3u5AmNiPkPYiCOXehn_O6PXJokUFYENf0pbfsECxMD1jTnYCbuJ-ZHfwpWEZw-sIHiUB-C8szNIIuAL2kc8nM6LA7bs=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKpnOVBvYILsFjAPrKxh4QxAbNcxCxRsdkEyq7GQ-gV_Nyz7wXK3JipB2nx1gXuyGOUwz0GphiHWGKFvsyf4UHhNEqrV_C-wVzgPkBo8OGEiBBwotevTJ64VyIfd36O_77MqTWDw==
+  title: newadvent.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU9kfTv8abUa9TPsiaz1xstaYQzvV3erufLiUZPONhQADFe39LP1_4o_vTrLCwd9vVhTnQL89kQZOXue_o4shT1KkWc7hVxRcgAc_1GoJbMPwhzuvPtH46jMxlAEtpczXlCJBUIVn723SE380haykn8EE4fVNstbVr2jceMFj7XclM-Yuoms4c
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlezowtmavvRctKF60L_9m3BgR_wXi-p0JWqiapstxFS5Za8-4UX7X99X11v8UjlrNCGG-AVDolRkBCEA--MPG4GZXS-COiLFNLSUBHjoKJzT0MXu2asyC5awkp5yOr75MNIyln4pzcHQ7v-tTW9j3qG_tzck=
+  title: pcministry.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHruI6NGQ1baefaF7U8q4pm31_1R62Y3njb9IP2nKEA3xlrPpJuJYxV9sooV5Fge2s1U8ItbiuOlZ0LhbrATyIvaNcg8JydgvMUpRrRpQ21-i2Ywh9r6Qx1Ywvy3eU=
+  title: etymonline.com
+search_queries:
+- ''
+- greek theos usage new testament
+- etymology of word God bible
+- hebrew elohim plural singular verb
+- bible verses containing word God OT NT
