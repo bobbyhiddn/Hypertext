@@ -318,7 +318,7 @@ def main() -> int:
     parser.add_argument("--prompt-file", help="Path to text file containing the prompt")
     parser.add_argument("--style", required=True, action="append", help="Path to reference style image (repeatable)")
     parser.add_argument("--out", required=True, help="Output PNG path")
-    parser.add_argument("--model", default="gemini-3-pro-image-preview", help="Gemini model ID")
+    parser.add_argument("--model", default="gemini-3.1-flash-image-preview", help="Gemini model ID")
     parser.add_argument("--rarity-label", action="append", help="Rarity label for style image at position (format: POS:RARITY e.g. 2:COMMON)")
     parser.add_argument("--target-rarity", help="Target rarity for this card (highlights matching reference)")
     parser.add_argument("--fix-mode", action="store_true", help="Fix mode: [1]=card to fix, [2]=template, [3+]=examples")

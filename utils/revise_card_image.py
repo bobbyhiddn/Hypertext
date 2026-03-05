@@ -65,7 +65,7 @@ def revise_card(
     style_ref_paths: list[str],
     out_path: str,
     *,
-    model: str = "gemini-3-pro-image-preview",
+    model: str = "gemini-3.1-flash-image-preview",
 ) -> None:
     if genai is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
@@ -174,7 +174,7 @@ def main() -> int:
     parser.add_argument("--instructions", required=True, help="Revision instructions text")
     parser.add_argument("--style", action="append", default=[], help="Style reference image (repeatable)")
     parser.add_argument("--out", required=True, help="Output PNG path")
-    parser.add_argument("--model", default="gemini-3-pro-image-preview", help="Gemini model ID")
+    parser.add_argument("--model", default="gemini-3.1-flash-image-preview", help="Gemini model ID")
 
     args = parser.parse_args()
 

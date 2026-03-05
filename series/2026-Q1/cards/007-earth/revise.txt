@@ -21,15 +21,15 @@
 # - Leave a field blank to keep it unchanged.
 # - Lines starting with # are ignored (except Card_ fields below).
 
-Rebuild: false
+Rebuild: true
 
-Rarity_Change_Request: <leave blank unless changing rarity>
+Rarity_Change_Request:
 
-Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+Ability_Change_Request:
 
-Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+Stats_Change_Request:
 
-General_Revision_Request: Place the correct greek and hebrew words, the current ones are incorrect in both the original text and the transliteration, they say grace in their original languages instead of  אֶרֶץ ('Eretz) and γῆ (Gē)
+General_Revision_Request: CRITICAL — The Greek/Hebrew section displays the wrong words entirely. Currently shows χάρις (charis) and חֵן (chen), which are GRACE's words. Must display the correct EARTH words: Hebrew אֶרֶץ ('Eretz) and Greek γῆ (Gē). The OT/NT reference lines at the bottom also appear to show GRACE references instead of EARTH references. Also remove parentheses from transliterations — should be bare text below the script. Full rebuild recommended.
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)

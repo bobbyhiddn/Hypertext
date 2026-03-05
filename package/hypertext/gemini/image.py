@@ -15,7 +15,7 @@ import time
 import urllib.error
 import urllib.request
 
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-image-preview:generateContent"
+GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent"
 
 
 def _parse_retry_after_seconds(headers) -> int | None:

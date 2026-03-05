@@ -41,7 +41,7 @@ def main() -> int:
             in_path,
             out_path,
             prompt=prompt,
-            model=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image-preview"),
+            model=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image-preview"),
             image_size="2K",
             max_attempts=3,
             base_delay_s=2.0,

@@ -233,7 +233,7 @@ python -m hypertext.gemini.style \
 **Environment Variables:**
 ```bash
 GEMINI_API_KEY=your_api_key
-GEMINI_IMAGE_MODEL=gemini-3-pro-image-preview  # optional
+GEMINI_IMAGE_MODEL=gemini-3.1-flash-image-preview  # optional
 GEMINI_TEXT_MODEL=gemini-3-pro-preview          # optional
 ```
 

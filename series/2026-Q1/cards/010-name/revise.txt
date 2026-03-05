@@ -23,13 +23,13 @@
 
 Rebuild: false
 
-Rarity_Change_Request: <leave blank unless changing rarity>
+Rarity_Change_Request:
 
-Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+Ability_Change_Request:
 
-Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+Stats_Change_Request:
 
-General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+General_Revision_Request: Remove parentheses from transliterations. Currently shows (shem) and (onoma) — should be bare text shem and onoma positioned below the Hebrew/Greek script respectively, matching the style of production cards like 005-create, 006-confuse, etc.
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)

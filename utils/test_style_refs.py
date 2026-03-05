@@ -52,7 +52,7 @@ def main() -> int:
 
     parser.add_argument(
         "--model",
-        default="gemini-3-pro-image-preview",
+        default="gemini-3.1-flash-image-preview",
         help="Gemini model ID (passed through to gemini_style.py)",
     )
     parser.add_argument(

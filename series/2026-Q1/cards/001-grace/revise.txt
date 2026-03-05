@@ -21,15 +21,15 @@
 # - Leave a field blank to keep it unchanged.
 # - Lines starting with # are ignored (except Card_ fields below).
 
-Rebuild: false
+Rebuild: true
 
-Rarity_Change_Request: <leave blank unless changing rarity>
+Rarity_Change_Request:
 
-Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+Ability_Change_Request:
 
-Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+Stats_Change_Request:
 
-General_Revision_Request: Make the rarity diamond white in the top right corner, no other changes. 
+General_Revision_Request: Full rebuild needed. This card uses an older/smaller rendering style that is visibly different from the production standard (cards 005+). The proportions, typography, art panel size, and overall aesthetic do not match the refined template. Also, transliterations currently show parentheses — (chen) — should be bare text below the Hebrew/Greek script. Rebuild with the current production template to match the rest of the set.
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)
