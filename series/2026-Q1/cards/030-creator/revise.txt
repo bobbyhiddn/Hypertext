@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: CREATOR
+# Card_Gloss: One who brings existence from nothing; the originator of all things.
+# Card_Type: TITLE
+# Card_Rarity: GLORIOUS
+# Card_Ability: Shuffle Sheol into the Tower, then draw cards until you have 7 in your hand.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 4
+# Card_Art_Prompt: A pair of glowing, translucent hands cupping a swirling galaxy of light and dust amidst a void. The hands are shaping the chaos into a sphere. High contrast, ethereal style.
+# Card_OT_Verse: Isaiah 40:28 — The everlasting God, the LORD, the Creator of the ends of the earth, fainteth not, neither is weary.
+# Card_NT_Verse: 1 Peter 4:19 — Let them that suffer according to the will of God commit the keeping of their souls to him in well doing, as unto a faithful Creator.
+# Card_Hebrew: בּוֹרֵא (bore)
+# Card_Greek: κτίστης (ktistēs)
+# Card_Trivia_1: The Hebrew verb 'bara' is used exclusively of God's activity, never of humans.
+# Card_Trivia_2: Implies 'creatio ex nihilo'—creation out of nothing, without pre-existing material.
+# Card_Trivia_3: New Testament theology identifies Jesus as the agent through whom all things were made.

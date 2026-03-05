@@ -1,0 +1,76 @@
+number: '030'
+word: CREATOR
+gloss: One who brings existence from nothing; the originator of all things.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of glowing, translucent hands cupping a swirling galaxy of light
+  and dust amidst a void. The hands are shaping the chaos into a sphere. High contrast,
+  ethereal style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Shuffle Sheol into the Tower, then draw cards until you have 7 in your hand.
+ot_verse:
+  ref: Isaiah 40:28
+  snippet: The everlasting God, the LORD, the Creator of the ends of the earth, fainteth
+    not, neither is weary.
+nt_verse:
+  ref: 1 Peter 4:19
+  snippet: Let them that suffer according to the will of God commit the keeping of
+    their souls to him in well doing, as unto a faithful Creator.
+greek:
+  text: κτίστης
+  translit: ktistēs
+hebrew:
+  text: בּוֹרֵא
+  translit: bore
+ot_refs: Gen 1:1 • Eccl 12:1 • Isa 43:15
+nt_refs: Rom 1:25 • Col 1:16 • Rev 4:11
+trivia:
+- The Hebrew verb 'bara' is used exclusively of God's activity, never of humans.
+- Implies 'creatio ex nihilo'—creation out of nothing, without pre-existing material.
+- New Testament theology identifies Jesus as the agent through whom all things were
+  made.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKIcLmp1QLja9pCpygjludOBTEmm4YLlqgcdZGQDkaxHbtiS2yU6i9DaRAv_SXQKB5hPtx_jP8wonZnw5eMtlbMwSZBHO_HzzlYw80r2BlCfeBG3j16GTL44gy70RPhkQ_mq6fh6j6eCPb6k8CJTb8
+  title: sarata.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEshxjUxytIoqrh8LkXT-lHyafMNYiw5qEP7dw7Tg8JveZvLVUFtN26mmYwLaQrV1QRGMlj8KGE0I40kZqhCxp-ON4c-2gMYLWw7_PRpyGaS3Y73rF2qbRif8s9Ic4=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWbnoytcJKofllgqMTh8g-8QId8hA98uuJpjsuNWJ00dFhuyPrhQkwFDtyV1vp_y-CsjoIhcKJU2qsOwOmEV3AZWSxwm91u1Bt3aGH1uZAmMKxY7AIg2soa3xQx7htUyY=
+  title: saintebible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ncHXT4lNRpswYVIlYgzh4fEulfP431xV4I5AuA6YE1vNauFv0m1Tutql-Sql2cqolkrjnZA7mZ0vzfQrPgvPIX4rtLEKCXsUJ0hnkzW6yjzCuZJNOmNXE6ZP3OHktBqFlHE16Zo4
+  title: openbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXcSDX5JHF0v5A2_YRlDV1NjVLDxwvzEPjdcySwJYHUhPvIZdX6cN3ip_VyKoWinaKQN9wrBwdj7yqJGdjBz0VPfQ0UAvQ3yctIYeKEeUU1p2j17v1Ll_Ers_gDzH2sIkrYYJRQhpJUA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXjgaOrgHSBPmH_7QyzLma1QVVG36SOuF0km_oB-3_6QQHY61U_135EibAro1X5wnHV2AxjFoeH2FM0Qd7INmK5UDLwnScDkRsAUpCz7nq9rapgBBLtNCXLWghMaYIR7AMasxopsD1J6li
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn-sepHPHHU2jhe9zjm_fOhmuklIaLhsC2jbMdlaoT8RRL6HqXf6FgC2f7JL3i0JidiJs0HGheFQq62g1wuG-fOc4-lxFcLZ-rLbj3ACEAUgYJr-8nOrzWrhnt4GbfawAYMlTefjE4RgX64UzYQ52Zz6y7DPXMhiNZzf9_C78YP9zXr8iuwYei5YzR
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQdK0HsvhPSPr6OkAdMTf0VALKeGnWpHfCyPdHXvqZyD5PbOMQYOhA6STnDXpenH97cTb7zWTTRwhr9OlrJcoSQmZLrPxtKA0C1xudALhv02xEPyPY3l10Lnvqjh5VOm-LBfRPcbzzMQ==
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCi967xmksFRtGpeYdDWssLp2tbbUV0YfLbYrhFWmRjW-NW0020uwaQMQ5RdhfPqKO6rky84jRvOMG7sans8geKDnVON54nz6rRpnPzJqxrxaONpq7X8J8WfaUyTCTNFXeSHou90wz6waP0mUMxa4MmFtnHp0rhuSld0J2fo-pZ9IkzGQ8Ao1rZEi-Q-w=
+  title: answersingenesis.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExBz5-U8IvgB0efLVK7bVD_6AidtHm_Ocp1NxNTTAzrTD1j6bprBMzW_wNgA8jBtoAUtrOGSqX5UwvcocUZzAnujHJMH6TuDNM55OqMmq1IHlJ1qbxGtoLANqSjxPsW0lTND6fNjnEgisxJ0d2mMZsuVatRT7_EZdWLVYW
+  title: crossway.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7juYMpB3JOTuwawsQKdYqamprSk9_B2tek0AJENWIlg5BbzLM7q70CyFr2b_noeieisGXJUriil6eqDOnH92QHmvFh7kSn4KeaoIWj24V3xl4pu0G8ksM4xQ2sftrC3y1-QNMcfp3om4flkEV9Cy17mZp-GDO_vI=
+  title: ourancientpaths.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvzbABaig5XudSMkQK90KebRFbLnpfwilYrR0Dp6VtwYbGG56ItWDxOK_t0hkSUNgSWO-IXBChdCjyBOrMIIHFXSD0E8KE0Xl1_PeVHJAFjlWF8lXtnfxx03VZoWlXM0zFxPx1Gc68XA4LAkzNLCDdNnmMbInoh8f6aLPYMkEdrnbC8OYPJZ-7YCOp
+  title: truthforlife.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYd4oOIBzdyXmNhend-FALM-488zguULNjUzRSAQYVsz0AYmBKLNJwsQPSvK3KU2qqFjX7IgkV-MO4zZZuY7ITsylNojvgxYbQNesbHOBy9rFpzliIGjYPHPyNXrFToI-oIveDlL5n-nZPNg16JNIaLTDO8DbS
+  title: kingjamesbibledictionary.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1qYweOIrxEyp7fnfiOFvoUH5l1Ecvq3-rPVKY4UDiQNsgA765IeaUKQxbq4lUpOrtCRHGyO1He4hVTrNuXrsVELovyGLUC-XBkgsLrY4IHv7msCXJkB59YsXF79FkUtZgPtU0rWis8jPr0QYY2PTnZyiUVFu9uhFOXo_MduHsg2U=
+  title: hebrewwordlessons.com
+search_queries:
+- ''
+- greek word for creator strong's
+- bara hebrew meaning only god
+- Creator bible verses OT NT
+- hebrew word for creator strong's
