@@ -176,7 +176,7 @@
     "RARITY_TEXT": "GLORIOUS",
     "RARITY_ICON": "GLORIOUS",
     "ART_PROMPT": "Ethereal swirling wind and golden light forming a vague dove shape amidst chaotic waves, glowing atmosphere, divine presence, digital painting style",
-    "ABILITY_TEXT": "Shuffle Sheol into the Tower, then draw 5 cards.",
+    "ABILITY_TEXT": "Choose between Tower, Sheol, or Opponent's Hand. Reveal up 5 cards from the chosen location and take any number of them.",
     "STAT_LORE": 5,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 4,
