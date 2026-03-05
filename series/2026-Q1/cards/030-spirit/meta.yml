@@ -1,0 +1,74 @@
+number: '030'
+word: SPIRIT
+gloss: The immaterial part of a person; the animating force of life; the Holy Spirit.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Ethereal swirling wind and golden light forming a vague dove shape amidst
+  chaotic waves, glowing atmosphere, divine presence, digital painting style
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+ability: Shuffle Sheol into the Tower, then draw 5 cards.
+ot_verse:
+  ref: Job 33:4
+  snippet: The Spirit of God has made me; the breath of the Almighty gives me life.
+nt_verse:
+  ref: 2 Corinthians 3:6
+  snippet: '...for the letter kills, but the Spirit gives life.'
+greek:
+  text: πνεῦμα
+  translit: pneuma
+hebrew:
+  text: רוּחַ
+  translit: ruach
+ot_refs: Gen 1:2 • Num 11:25 • Ezek 37:14 • Joel 2:28
+nt_refs: Matt 3:16 • John 3:8 • Acts 2:4 • Gal 5:22
+trivia:
+- Hebrew 'ruach' and Greek 'pneuma' both mean wind, breath, and spirit.
+- The Spirit is often symbolized by a dove, fire, wind, or water.
+- In the Old Testament, the Spirit empowered individuals for specific tasks; in the
+  New, He indwells believers.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYLyXYT99PZV-usse5T4byNU7e9yfi8Tu7dWNM-aG24mI3y1jZjt5vIW8wjhcDk3CgNMuavKKyQV0EccS01pxOPwBu-IzO3QhOIAH0Ps9RN5Q1XFeRTHZMeG_G
+  title: revbible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHa2DzYfQvRMUcTPsehCZ2qtLTo8DaP04nOkrUv83X2iCdoBDvvKSvV3ZUr0mQLGHFY81za7EbzKtEwcX9rHB-anREK7R-Ri6pl-lrhcqq2YeZp1ypkEdJ1v_pVx7HX08QFvp566SNOoA==
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW3CTrUu6nG5El1vDJYCxfXQXUbWI5PZ45LewXUYEtpM5XX8SPRnjbfQeksVaJ2VIhp3aUntHiejLQxzbJYwLE6IAm6TrxTWNVg_hGXH5Cmk68n0Z1JcrjYqKgr2lF1xO3u3x2GDTTT3Q=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH795dXyvB_SOZpYwSBQsZMIEw8u_XLqctQxUdryK3GI1XX21H1d6galVD-aQHEvy2n5Tf8RagGcKE6L3iU-Fo3NyeOXl493MOGH1gdJLrBgycF2O4kYiQ_QcJeJpU5-g==
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnD-EpvCxclY-D7eK51KfrlnOp_LDdrxAJRnIX-f5Smt7nXNmVUVD9bWNaqXuj6O4a8s1odMTtpY2U5wjURKN3OZgHsRo8LvGZgsDmIoMlyEDq9LXi5o3GNGAKo6iraAXCJRe5QDGfrULTb8iiHZpUa9bYE_sMGUCUe3djRZpfx-aZE23_Mz-G
+  title: completeinchrist.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpKp2PR2Lf97xCXbtR_7ckKn2v9cMWonBNXDDICkljvkd7ef3Q02we4_JgZeSYfboLLvsSlSj3-ze6g8uy-ucS_n-Jum2IrXzF7vQJCux54XZmTu0TUh05WDpnOmyPk6KBImCBHL0Ed7y5
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5QUUxJHLcra04-SwcCKa2kTIjHwVAE7dw4ogjVPAw5qRya3LmooIV2uQLZc1SRheAWN_1beu5cqK93egVr-L929LH31zmPlOp5S4ZFba1DoMpLgKD-VPtsKvfmE1D38Ot8rOFP_zK0Cnd
+  title: biblicaltraining.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMs821J0wbT8krrlrm9UtsPdPOc8ipUsixb11alDToQHwkoTiLpE9OoPKTPxDGxu62qKhaguORI5hCRV1KE1VWhjJxM2WEI35JpD15n2cyhRJeUs0wA2QPwMZk2P_YxrF6SrYxZyZV0rMtj3t8iqdCX69RwnPjJrPsdfwTq4kAl3aN14OtO_GjWmjl_CtH
+  title: adventistbiblicalresearch.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE77uWuxdaWeKz-KpnfmssR237XODCb2ZxlOfIUOoO-7bIGpqjL9GnJQSuc5SKi75rbR62Gs32A_S59S4O3X5dgvVQsG37wefO9PeWUnLh5sHDvKc9QFhst62FKBFevlQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdoCd1wGtwSfs4M5Acxz_n_nnYJypYs5YuXGZbNPx88NlCmM-6ReY4t7eR46nEvMhK0g-gE8ZEPAUkAY6NbJSmFTj9b2NANIt9DpD8eB9Vm0EMBkZpx2wu1-mjUj6IvOViwJqTdRCQQOuLfJCB6kx5u-EIlXXKj-iQFWO83lzfy--Y-hDrhA==
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENE8uS9fS4LHuD6A-uM8YimmfSyueCS8Y1Q1S8fGy_lMEFMBSpPYm5mCXsLywCaUrLwUKJ6F0PD07U9-B-2mppvUxJWAu3qg4i7Bh6UbIt1BDUDmSdFY0YpLJT2vajOY_yfji38hrpaCX_ll8AwyPlCFUHZqSitcVPtisI_ua4TzjjTon0DREwz8zDwvoY-KRKIQ==
+  title: bibletools.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYP6WKKMYN18irAbGWCWpvwhFGqp5iyg7bcXu6apj973mdD4I0Bq1iv6VKoHlofzJEZ8Sy1SsaStupwGx__AoKqPDPUJsRY02JEy4GWDE5wAjhV82HVAsDWTGFDfea-7W13sfcBei8OuPejgCykBd4JZQdVYA=
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxZgzRjbuyw6RCejCu7Npph6QyjyvWouGuF-DyrRaa9tlznRrSXMKeNM7prBrHW7oPtFVuTwYDNpytvPOnyWbZ8nf_uYRKf7BeCegq_1RHdYeBDY9IoztWhMG2D-fsxH_DNDDcltLFwZxdNPmWLYI_683vYg==
+  title: ligonier.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHh1XOryDHhLpKpb56SKOiqOPPCzDx5oUsiq_hBpxKN965CURqOBcphOdJ6Zl04PNK1YGaDX3xOmUm7GKXcV8yuhLcSylrHskJFrPvLbh7Z3o06FP2kQ7x9aWaa64LpEr8pGkmvxlc=
+  title: ruahtoronto.org
+search_queries:
+- ''
+- Hebrew and Greek words for Spirit
+- bible verses about spirit giving life
+- Job 33:4 snippet
+- 2 Corinthians 3:6 snippet
+- etymology of ruach and pneuma
