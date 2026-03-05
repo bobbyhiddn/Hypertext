@@ -1,0 +1,47 @@
+number: '030'
+word: SPIRIT
+gloss: The vital principle or animating force within living beings; the third person
+  of the Trinity; wind or breath.
+card_type: TITLE
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant, translucent dove descending in a shaft of golden light, surrounded
+  by swirling abstract wind and tongues of fire, dynamic and ethereal composition,
+  digital painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 5
+ability: Look at the top 5 cards of the Tower; add 2 to your hand and put the rest
+  on the bottom.
+ot_verse:
+  ref: Genesis 1:2
+  snippet: And the Spirit of God moved upon the face of the waters.
+nt_verse:
+  ref: 1 Corinthians 2:10
+  snippet: The Spirit searcheth all things, yea, the deep things of God.
+greek:
+  text: πνεῦμα
+  translit: pneuma
+hebrew:
+  text: רוּחַ
+  translit: ruach
+ot_refs: Ex 31:3 • Num 11:25 • Judg 3:10 • Ps 51:11 • Isa 11:2 • Ezek 37:14 • Joel
+  2:28 • Zech 4:6
+nt_refs: Matt 3:16 • John 3:5-8 • Acts 2:4 • Rom 8:26 • 2 Cor 3:17 • Gal 5:22 • Eph
+  4:30 • Rev 22:17
+trivia:
+- Both Hebrew 'ruach' and Greek 'pneuma' can mean 'wind,' 'breath,' or 'spirit' depending
+  on context.
+- In the Old Testament, the Spirit often empowered individuals for specific tasks;
+  in the New, He indwells believers.
+- The Spirit is described as a 'deposit' or 'seal' guaranteeing the believer's future
+  inheritance.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
