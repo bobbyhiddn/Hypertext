@@ -1,0 +1,72 @@
+number: '031'
+word: EAT
+gloss: To consume food; to take in fully
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A rustic wooden table with a broken loaf of bread that glows with a warm,
+  golden inner light, crumbs scattered on the wood, simple and symbolic style
+stats:
+  lore: 4
+  context: 5
+  complexity: 1
+ability: Look at the top 2 cards of the Tower; put 1 into your hand and 1 into Sheol.
+ot_verse:
+  ref: Jeremiah 15:16
+  snippet: Your words were found, and I ate them; and your words were to me a joy.
+nt_verse:
+  ref: Matthew 26:26
+  snippet: Jesus took bread... and gave it to the disciples, saying, 'Take, eat; this
+    is my body.'
+greek:
+  text: ἐσθίω
+  translit: esthiō
+hebrew:
+  text: אָכַל
+  translit: akal
+ot_refs: Gen 2:16 • Ex 12:8 • Lev 11:2 • Ezek 3:1
+nt_refs: John 6:54 • Acts 10:13 • 1 Cor 11:24 • Rev 10:9
+trivia:
+- The first command given to humans in the Bible concerned eating.
+- The Hebrew word 'akal' is also used to describe fire or swords 'devouring'.
+- Jesus ate fish after the resurrection to prove He was not a ghost.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE66M8rCw6XKSZ2yt9eHwi2sNL0N5yP20N8vj5kEruJpcw_dm1NSoWpfJztFH8W2x4H2pHuSdCycBScuh3516EPX_eOq5g4BKyUkWslJfN8lf_M9rfEBprdR5pCSPt8gO-Aw2XIj4eUpQ==
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIdY7S3Vkw0tXcweZVHRiXKmwHkxwlt-Re9efty460U0v6mpqRe0MofdfegjUXVvQxTwRzWekmIfSgkKeEo3a_nT4NfeAevnd3HnXKI8OB0BDkEHDVycwM6g9bbXzQbpQ3EwrMDNGOhQqlb0Q-
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGveXvgWn-PDl-6VprJhAuYs2oS02WK8vzMPshECI9cO4XkpqATaFDVnbkIbrRZ_C8uL9PJ6otox-0KrSDQiIRSG9bFC0rmJwQfMIatnfMaqI-KWXu9yX2-xevK_h1NRwsZX3dowQ9FsIsesaRBOPtIrT2XHDZF2pNyI9LmWhfj52gNiZDY
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFV_xQb8WDwzsUIkgJal2cUcfd3c7-Tluturn7i4W8ucrn5txRP_45JkaeZNt4SfF6lhzIUuYTuuB_a1CHNBPeLmic_uoTVSlyB8l6Qs2bIpi2w17Sv2zHy-GBP6GoLjbRnPy9-
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrLUG4L-jDLs_q7gjXl7VEbGnlIANg90efD8IZnR8HbRTHC7Oo46HTkNVhtr0G1XMBVk8-St67PFycdvvC1Ki8SchgIYcGfg54IkdJns6_8iZUwecGyChodgQpSxl-ZLdvLuujyPo0RiE_EL72TIoJhDjsMIxt
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHyNmK8VqAFhUnQXueJFqZ-GJOyyrpnCMSaPR5kg4jQN4jZL1CvrUR0mDmGbvWXWZH0GdzAl9lPGHNFxyIE7U9yyQ1B5Rql3wjlWRhVZ_g0y8GlmU8Gt_xgEpR7zGe
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDdewLDNF6mmAWUb74p6IgTkr0LpPX8NKE_GiqLUjdiBjPfIeLGdMapHt572jIEVhHPR2NAonG5sVUfGoPL7ahzllMGlOgSO8zeWgNgwdyjIo6lCMHUKj_ecmJnXbpgnd9lw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxgyuC_kZsaK_l-PTAjpiLPwiHarqVSWvE3CG53awsDqDuyCQy-CPiSGIZKmmtuhekwbe-UNWujN72hvFKBZxAFEsxrtPc3_EexfPWDBtTqd1BKSoZ-k0ucoeynMMy26ZJE_3dmLbWB0WeMdGgYksPQ2UoDl6aaiGY8eK3brsgw9WTrd2TIw==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbLLsXy22hBmxxvFlcmBNUjcUXCwDAzJJtoh60FcnYim3AqrKRXCUjuH4fb7RX2TcwkQwh0vryr1Y0o7h0c1ANhIdryvPV-KrTxJQziODg4_fYa7E2IlGg7ISsD3RLklManbKdrxYAtwKMAZ2UOg==
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjFBifM7c_1E_PfnGyq9gR7rj9h7fOemU2rmPwuX-8OijXLLF_9_vfs1VM6dd9ahH3bAJmOM5JGiKxadvNLB3l4w5yvZoLIdmcy97POGSJGCxrjjbPJhRzR7wkyYrwjxfU6_FzBYFs-aUKSWzYALu1Vh4kuw==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_a3VLOg-rxXg42MDy2y6Y4WQmEfWHFhKnS4rTMgMuHR7EMp9Jtz_cg9km-Ffb_rQtBKEnGbyqxeU3nAMbCBX3pHGkzVwnzAXfSoB_GRSxWu16rOUXKjq1XZ_Dt5ja317Y2eq9M9oXbQUB9I44OHz0txyY_qABBvDqFjWjNpLydAJOT1dm
+  title: gracebc.ca
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEUpQIe6PhMez6incStQMZuBvbB6CGmAjuAgFpm49mUPmIerY0l81xT9cSM682E5s_urYNv4eSCZuYuC6GigsL_0bmyQRjSUBsV1XsdAC6rT2V6MSNDB6TRGHl3Rp1s7yq8lzaqn3Mugtcm0L_oe--Ha3vmbtYrmApYNa0AOuCQmuxu4mAqpA==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMK-bK5Qj_uWjSZZsOfcVZhGFb8bUwQDH8hy5RjcPpXoMCmYoC3JrrQhf-TloJ9G6jMdQFeOo75tUJxgAO7PwuSmr6KPdc1DyAa0PMjltE4M-6IhAyASyMWSalGmMwUFJqMwO6PQ==
+  title: esv.org
+search_queries:
+- ''
+- hebrew word for eat akal meaning
+- biblical significance of eating
+- Jeremiah 15:16 verse snippet
+- Matthew 26:26 verse snippet
+- greek word for eat esthio phagomai
