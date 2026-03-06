@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #031
+WORD: SEE
+GLOSS: To perceive with the eyes; to understand, witness, or have insight.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. Add 1 to your hand and return the rest to the top in any order.
+
+VERSES:
+OT: Psalm 34:8 — “Oh, taste and see that the LORD is good! Blessed is the man who takes refuge in him!”
+NT: John 9:25 — “One thing I do know, that though I was blind, now I see.”
+
+LANGUAGES:
+Hebrew: רָאָה - ra'ah - Gen 1:4 • Gen 16:13 • Ex 3:3 • Isa 6:1
+Greek: βλέπω - blepō - Matt 5:8 • John 1:39 • Heb 12:14 • Rev 1:7
+
+TRIVIA:
+• The Hebrew verb ra'ah (to see) is the root of Jehovah Jireh, literally meaning 'The LORD will see to it.'
+• Jesus healing the blind is the most frequently recorded category of miracle in the Gospels.
+• Hagar named God El Roi ('The God Who Sees') after He sustained her in the wilderness.
+
+ART: A giant, stylized eye formed by the negative space of parting storm clouds, with golden rays of sunlight beaming down onto a green valley.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

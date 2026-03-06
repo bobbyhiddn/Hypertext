@@ -1,0 +1,71 @@
+number: '031'
+word: SEE
+gloss: To perceive with the eyes; to understand, witness, or have insight.
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A giant, stylized eye formed by the negative space of parting storm clouds,
+  with golden rays of sunlight beaming down onto a green valley.
+stats:
+  lore: 4
+  context: 3
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Add 1 to your hand and return the rest
+  to the top in any order.
+ot_verse:
+  ref: Psalm 34:8
+  snippet: Oh, taste and see that the LORD is good! Blessed is the man who takes refuge
+    in him!
+nt_verse:
+  ref: John 9:25
+  snippet: One thing I do know, that though I was blind, now I see.
+greek:
+  text: βλέπω
+  translit: blepō
+hebrew:
+  text: רָאָה
+  translit: ra'ah
+ot_refs: Gen 1:4 • Gen 16:13 • Ex 3:3 • Isa 6:1
+nt_refs: Matt 5:8 • John 1:39 • Heb 12:14 • Rev 1:7
+trivia:
+- The Hebrew verb ra'ah (to see) is the root of Jehovah Jireh, literally meaning 'The
+  LORD will see to it.'
+- Jesus healing the blind is the most frequently recorded category of miracle in the
+  Gospels.
+- Hagar named God El Roi ('The God Who Sees') after He sustained her in the wilderness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDODcyegzFL46p2BAKuOTpDo135XNTo9Tktb6eKnR9o1izvSvhkiIH0V19YD1Xcp6m7cHJUV9PWhQIFDVAbQO5RiqNxNTVrpkcVHIQHg9vp1DIgsX0GtnErI_vH1Bv3VlEgWrXKPcAfRus2RPmuDGQmZrlkiBc29Q=
+  title: pioneernt.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0rUxh4gTNnzYwmAXtCv2-u8bSfVs10zBNuM0p15UCx3pgA8XA7EjXsT-Swzfp7MHlV7gmgFYfbpXMot1pere89GQwqIgjIvG4BN8cl55XETjWHMX1_6mhs08xxl-Aq1YFnPzx8V8=
+  title: studybible.info
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHO1VK3sBsxPyD97gXI00nTdposuBxIHGE8OKrtshFi8lpLS6Ax5T9z67SePAJJvw7xa068fhmNUuVefOQ8qFzRRa8fEdfTU0wAaN9a1__zlLIwF7dLhi3uF5yqXfOnaA==
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEClEaKgmVjLdlxbl8tEaqCb_yYjInjGoP_KlRXKaRqTIMx3TNelsJQXIgmgZ4ILcP0l7N9YIfH0qnlzQChrypCasXkWYrDrnpGRHRPBgFr6CYnMy5Z0yNuOtoMOKw7tgXcbNZp
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBamu1HX8d-EMLnvg5G1RU64E4QtIGvIC0vB4LubO6tlfed91hGjVpZ28hRsbMcCDw-jV_B-r7xxnqI5rBiXeJE8yJNIw-JJIoRWCXULrwheXBNPqaLzF2XpughAWLNcgH
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHfFaufflkIwjKCNIpHrqcU_EXbJJKhHwou5h9e-tRmdq3IBX1CXlRhwYP3hQJiqZO7vt_q9QhqIg0rI9m_D3fKYoXvZnyEB9hFvD6CWqiVTmzAU_tKhSBmyrKGmzUL99D9PddT1Y=
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF148n-bs_8fOe1mJT1kc0s43EhlMRHNlxE7u_iMvXjIkY-5UMNd4HflqDnVT-6A_c9K3V9YNJ7qZIr5vrWOo06rhl3HqRdGxvSjvJKP84ySGdzMg-Xo1Z_8TR57XzxAXx23xjeDUrKJ_HVy2bg5Mb75mqIM2U6BC0yH-D7S-CenuOV_wbIRns6JO-Hd0n74X8SRibnCLfB9dH5nUymcyJWVogcE0vJyF1ycLf1JmvmKiFljqReHfgJGUo5-B_tNR2Gkl5_5GXYnY3_FqeX
+  title: servantofyeshua7.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3P-SZivuA4y5iUgYWU-ExlNgeLD9e44NwBl51y-qCCuKrAeSBYrnOm6gBRcCcWbgtbWH7JAY-K4ldFvpOTNTYoxzASDg6mLlP5Y_QHKUW1RoWs8kh5EvuRrcGoNCc8cv0vqwNjqdZVW4rp_DKWQlIDwFxUAhIWy9SetkCu3FE1Hkf7X13LzF0Iw==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8i4FCPMZ554HwKc9UeG8OljANqGkxR-wLgmgfZpcAcIGt1zgH5KxxEPzKsfH63cfvNWn8qDohKCP_FkF4gWAKM7ZHBKjmNZ4WjjoXtEiAPNXc7GElda6rxGXigcL9qXTo
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEexLTDg9mgMCJbSLbYAAxiSCrIPMBkgXHf4hY_jhwhkQLoh_1PNP9qXlUMJA99ycjDrEvcxofoI-vkwWZBcYxuS3sxbaI0f14bBFjKuVAf8yiwHCbCRAVSfgiq_17w7Qh4k4zc3Dv412tJILC8FYEW43zPWsnhotrlijoBEapOllJUu3lCquwUv1YD-zVP0wXnNlH72ENHwaKGjWSlOPjoiUNMm0vK9nNgZ3nuDQ==
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRFXvk-qcy3wVrJgD7vzR9UxRnk9xoTQaxLk7faCueGNS7H-omgdTlG34fTKrxAoByZ52H3s_ZPPw76VY1LRQCdDpD_74dI_TJFc3dOUMW6ZRyb84nl2X5cLDg8b-uyDhN2X9F3MtcIwUDB4y9A0U=
+  title: biblestudytools.com
+search_queries:
+- ''
+- biblical meaning of see
+- Hebrew word for see ra'ah meaning
+- Psalm 34:8 text ESV
+- John 9:25 text ESV
+- Greek word for see horao vs blepo
