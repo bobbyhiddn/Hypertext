@@ -1,0 +1,75 @@
+number: '031'
+word: WALK
+gloss: To advance on foot; metaphorically, to conduct one's life, behave, or follow
+  a specific course of action.
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of worn leather sandals resting on a dusty dirt path that winds
+  through a grassy valley toward a distant, glowing horizon. Golden hour lighting,
+  realistic style.
+stats:
+  lore: 3
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower. Put them back in any order.
+ot_verse:
+  ref: Micah 6:8
+  snippet: What does the LORD require of you but to do justice, and to love kindness,
+    and to walk humbly with your God?
+nt_verse:
+  ref: 2 Corinthians 5:7
+  snippet: For we walk by faith, not by sight.
+greek:
+  text: περιπατέω
+  translit: peripateo
+hebrew:
+  text: הָלַךְ
+  translit: halakh
+ot_refs: Gen 5:24 • Gen 6:9 • Ps 23:4 • Isa 40:31
+nt_refs: Eph 4:1 • Eph 5:2 • 1 John 1:7 • 3 John 1:4
+trivia:
+- The Hebrew root *halakh* forms *Halakhah*, the body of Jewish law, literally meaning
+  "the way to walk."
+- Enoch and Noah are the only two individuals in the Bible explicitly described as
+  having "walked with God."
+- The Greek *peripateo* (literally "walk around") is used dozens of times to describe
+  one's daily conduct or lifestyle.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGB_oHEQrCLMagwjSN7GDz67kgrcx4lXdygd8ewSuh8yFYQ9khqLRwKOyrjPWOkdYgmesmEVHX-SsUd-6CYSXiT4zPLjeDRkB9Crsr-NFNV7lQuWel4omWS7p-ASjw7GRgYCYaZrw==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZVRo2Jp4LFsQ4UJxM7sCrsg0X8cGRRLZCX5E8v-soAkAGKdsJCdPG2gPOaTBTou8Yzbffnoxs6e-AjyspK28tynBBZvXOs02-80ChQIcPrypgWLzoquGUJ0QeWa05mgqlkABE8kkfRMDI10oMljH9rVlOFQ==
+  title: dbts.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHalomJhC1iK3h8Yz7ddtXmIS1aefUAUFmfjAjC6vcPjj5CMAnjlC-RmORaTv3v7tlzkKmbE0JHk14-jYYKD2ZUdcP2Zju8bm-nRtnWdR2QN7UFOp8kYTG4fxVSSLrzUweb6vpY88JgEkrVfGB-nncrJ6lxHdZUsQ==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhRl05dA6dbhWcect4ClIchUrTwPsD7941AszE8K8ioG9k-ZjxUJyQfYQ8FnWSz8hpwhiK0rloDzmOZlfmIDvYBQU0ATaT5T-hwZ-LfM48qDrS8iZR0aZKsZ45Xz-3ow1Jn53T17iSuhkBQr179lrJb0r3R5h-JR68SzWEh6Lw2zmLMIIswvxW0CvCK92b4g==
+  title: proclamationcoalition.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqYt6CddHXv7d6QlGXeC_jGjKZLjw7K8dSILw_qPHBOZUDL-4KxAQSSXOvcACxIu72xTgBOwPqrt0TSbvsFobfTpAsB8MpZxi6F_FHm6G54qogX-xK2fdyFBehYrGZgkSr58LtZ9Vax3vg0sU_H7ejErxTbzhTm1N1J30pFg7S3_-dKeT1
+  title: thepreachersword.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3Bmrk0it7ayd9CHzAb2rymF90KwzeVBYpUjZw4GfCOUzy-5g2fyirvAlJ8Z_nGDXcs7el-d4JzjJyEAu1AYnzlofJMSlRSlarxlLJ_-kmJXiJpxhnOwq1EEZMZpm1NU4A0wzowZ4FyMFTkEos1swZlRcK0g==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnxNmSRI_a75wm5DJTBnChH65otpqLZlwxaj7VoBs-9HwkFyOs_pkPOEiG1K7tdDJCmX02dgwVYfJTKY3_lshBLidazNsoSzC9tzH9GR0f6T-A9-u3UIR1wj038TY=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkCXxLwiAKhaATug64dW6ZCK1nDkutHzfHpMWVoWqiakKuvPZwOMi6naHdvjMujC6CBxmUgRouhjzMTQhekQHn_xpqtg_uwlp5-p3wZ5xS-TppJyg2lwGPN4xM_kGT0iQ=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEL2Z0W8lFaIG_ygWvAkaX0IV_cda2tHCXNeEmp6eYmLeMeaUFYfnBthYzyuj7d7eQzbl2GSWuTMyrmH2MbKjNWH_Zgbjjpz3e5oR3Bs0OMZNviGhDf8gEuRlTvwFhbDQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBOi7qD8Yhpxjz-BEdf7JCojjHHIYai7OOz4Qbl5atDXy6aXPgWsaz4R0KSP6zmMDi5Bc-gKiI3Yh4B8BwOo4mVU8lw1P7bKz-LI-QquNRTnRCgbYvyYgR0gQ6GFpMOximQaidauRWQB-tf4pfqYmc131oRz5qrs0=
+  title: jw.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGC_EKPcXaU2wnOYkutzkEGCUU8EblVGhW3LkEKvFmMJawQFHbiX_0DLY-ABMh_JNQu59i8KxoImSJnmQQpIWcWAtkZwWcjpSl2TEGc14TjVOwtQv-vLWsduNfxtUbqKpDAmQA7jRhtEEc=
+  title: biblicalcyclopedia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHd_B4NDQQ3m-bNr6QliGXsSx82TYsEzRkVcdxjU2ZlGLUVuIODMNVy2xk-GazF_3I0iTB72WUIqKKQ15UBkaCyhvuL3SlBPkiEZ8ibl0JnW597TWy6rojZQiUyQcNvmLyCeMcQFmIw_kHwMfr43lRNb04UyeiREdoGJYWDPIe8oo-SpgFiOA==
+  title: preciousseed.org
+search_queries:
+- ''
+- hebrew word for walk halakh
+- greek word for walk peripateo
+- biblical meaning of walk trivia
+- Micah 6:8 snippet
+- 2 Corinthians 5:7 snippet

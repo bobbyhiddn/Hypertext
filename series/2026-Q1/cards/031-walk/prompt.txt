@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #031
+WORD: WALK
+GLOSS: To advance on foot; metaphorically, to conduct one's life, behave, or follow a specific course of action.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. Put them back in any order.
+
+VERSES:
+OT: Micah 6:8 — “What does the LORD require of you but to do justice, and to love kindness, and to walk humbly with your God?”
+NT: 2 Corinthians 5:7 — “For we walk by faith, not by sight.”
+
+LANGUAGES:
+Hebrew: הָלַךְ - halakh - Gen 5:24 • Gen 6:9 • Ps 23:4 • Isa 40:31
+Greek: περιπατέω - peripateo - Eph 4:1 • Eph 5:2 • 1 John 1:7 • 3 John 1:4
+
+TRIVIA:
+• The Hebrew root *halakh* forms *Halakhah*, the body of Jewish law, literally meaning "the way to walk."
+• Enoch and Noah are the only two individuals in the Bible explicitly described as having "walked with God."
+• The Greek *peripateo* (literally "walk around") is used dozens of times to describe one's daily conduct or lifestyle.
+
+ART: A pair of worn leather sandals resting on a dusty dirt path that winds through a grassy valley toward a distant, glowing horizon. Golden hour lighting, realistic style.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

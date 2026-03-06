@@ -29,6 +29,7 @@ words:
 - SPEAK
 - SPIRIT
 - STONE
+- WALK
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
@@ -202,3 +203,8 @@ cards:
   type: TITLE
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 31
+  word: WALK
+  type: VERB
+  rarity: COMMON
+  ability_pattern: look_top_tower
