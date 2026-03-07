@@ -10,6 +10,7 @@ words:
 - CURSE
 - DESCEND
 - EARTH
+- EAT
 - FORM
 - GOOD
 - GRACE
@@ -202,3 +203,8 @@ cards:
   type: TITLE
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 31
+  word: EAT
+  type: VERB
+  rarity: COMMON
+  ability_pattern: discard_draw

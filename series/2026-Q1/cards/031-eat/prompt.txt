@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #031
+WORD: EAT
+GLOSS: To consume, devour, or take in; often used metaphorically for learning, destruction, or spiritual participation.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Draw 2 cards, then discard 1 card.
+
+VERSES:
+OT: Ezekiel 3:1 — “Son of man, eat what is before you, eat this scroll; then go and speak to the people of Israel.”
+NT: Matthew 26:26 — “Jesus took bread... and gave it to the disciples, saying, 'Take, eat; this is my body.'”
+
+LANGUAGES:
+Hebrew: אָכַל - akal - Gen 2:16 • Ex 12:8 • Lev 11:2 • Isa 55:1 • Jer 15:16
+Greek: ἐσθίω - esthiō - Matt 6:25 • Mark 14:22 • Luke 15:23 • John 6:53 • Acts 10:13
+
+TRIVIA:
+• The first command given to humanity was a permission to eat freely from the garden's trees.
+• In Hebrew idiom, fire and swords are often described as 'eating' (consuming) their targets.
+• John the Apostle was commanded to eat a scroll in Revelation, mirroring Ezekiel's prophetic act.
+
+ART: A close-up of a rustic wooden table featuring a broken loaf of bread and a honeycomb, warm ambient lighting, oil painting style, high texture detail, no text
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

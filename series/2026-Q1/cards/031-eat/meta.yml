@@ -1,0 +1,46 @@
+number: '031'
+word: EAT
+gloss: To consume, devour, or take in; often used metaphorically for learning, destruction,
+  or spiritual participation.
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A close-up of a rustic wooden table featuring a broken loaf of bread and
+  a honeycomb, warm ambient lighting, oil painting style, high texture detail, no
+  text
+stats:
+  lore: 3
+  context: 5
+  complexity: 1
+ability: Draw 2 cards, then discard 1 card.
+ot_verse:
+  ref: Ezekiel 3:1
+  snippet: Son of man, eat what is before you, eat this scroll; then go and speak
+    to the people of Israel.
+nt_verse:
+  ref: Matthew 26:26
+  snippet: Jesus took bread... and gave it to the disciples, saying, 'Take, eat; this
+    is my body.'
+greek:
+  text: ἐσθίω
+  translit: esthiō
+hebrew:
+  text: אָכַל
+  translit: akal
+ot_refs: Gen 2:16 • Ex 12:8 • Lev 11:2 • Isa 55:1 • Jer 15:16
+nt_refs: Matt 6:25 • Mark 14:22 • Luke 15:23 • John 6:53 • Acts 10:13
+trivia:
+- The first command given to humanity was a permission to eat freely from the garden's
+  trees.
+- In Hebrew idiom, fire and swords are often described as 'eating' (consuming) their
+  targets.
+- John the Apostle was commanded to eat a scroll in Revelation, mirroring Ezekiel's
+  prophetic act.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
