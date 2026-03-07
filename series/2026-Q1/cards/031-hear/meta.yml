@@ -1,0 +1,40 @@
+number: '031'
+word: HEAR
+gloss: To perceive sound; to listen with attention, interest, and obedience.
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vast, quiet desert landscape at twilight; a single shepherd stands still,
+  head tilted, listening to a distant, glowing wind swirling down from a mountain
+  peak.
+stats:
+  lore: 5
+  context: 3
+  complexity: 1
+ability: Look at the top card of the Tower; you may put it into Sheol, then draw 1.
+ot_verse:
+  ref: Deuteronomy 6:4
+  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+nt_verse:
+  ref: Romans 10:17
+  snippet: So faith comes from hearing, and hearing through the word of Christ.
+greek:
+  text: ἀκούω
+  translit: akouō
+hebrew:
+  text: שָׁמַע
+  translit: shama
+ot_refs: Deut 6:4 • 1 Sam 3:10 • Isa 55:3
+nt_refs: Rom 10:17 • Matt 11:15 • Jas 1:19
+trivia:
+- The Hebrew word 'shama' implies both listening and obeying.
+- The 'Shema' is the central confession of faith in Judaism.
+- Priests were consecrated by applying blood to the right ear lobe.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

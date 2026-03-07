@@ -13,6 +13,7 @@ words:
 - FORM
 - GOOD
 - GRACE
+- HEAR
 - HUNTER
 - KEEPER
 - MIGHTY
@@ -42,6 +43,7 @@ ability_patterns:
 - conditional_draw_type_name
 - discard_draw
 - discard_type_name
+- draw_look_top_sheol_tower
 - draw_sheol_tower
 - draw_tower
 - look_top_tower
@@ -202,3 +204,8 @@ cards:
   type: TITLE
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 31
+  word: HEAR
+  type: VERB
+  rarity: COMMON
+  ability_pattern: draw_look_top_sheol_tower
