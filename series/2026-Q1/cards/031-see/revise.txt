@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: SEE
+# Card_Gloss: To perceive with the eyes; to inspect, experience, or understand spiritually.
+# Card_Type: VERB
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 3 cards of the Tower; put 1 into your hand and the rest into Sheol.
+# Card_Stats: LORE 2 | CONTEXT 5 | COMPLEXITY 1
+# Card_Art_Prompt: A stylized, radiant eye formed by the break in heavy storm clouds, casting a single beam of light onto a calm ocean surface. No text or letters.
+# Card_OT_Verse: Genesis 16:13 — She gave this name to the Lord who spoke to her: 'You are the God who sees me.'
+# Card_NT_Verse: John 9:25 — One thing I do know. I was blind but now I see!
+# Card_Hebrew: רָאָה (ra'ah)
+# Card_Greek: ὁράω (horao)
+# Card_Trivia_1: The Hebrew word 'ra'ah' implies not just physical sight but perceiving, understanding, and providing.
+# Card_Trivia_2: Hagar is the only person in Scripture to name God, calling Him 'El Roi' (The God Who Sees).
+# Card_Trivia_3: In the Gospels, physical blindness is frequently used to illustrate a lack of spiritual insight.

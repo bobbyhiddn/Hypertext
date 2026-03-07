@@ -1,0 +1,44 @@
+number: '031'
+word: SEE
+gloss: To perceive with the eyes; to inspect, experience, or understand spiritually.
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A stylized, radiant eye formed by the break in heavy storm clouds, casting
+  a single beam of light onto a calm ocean surface. No text or letters.
+stats:
+  lore: 2
+  context: 5
+  complexity: 1
+ability: Look at the top 3 cards of the Tower; put 1 into your hand and the rest into
+  Sheol.
+ot_verse:
+  ref: Genesis 16:13
+  snippet: 'She gave this name to the Lord who spoke to her: ''You are the God who
+    sees me.'''
+nt_verse:
+  ref: John 9:25
+  snippet: One thing I do know. I was blind but now I see!
+greek:
+  text: ὁράω
+  translit: horao
+hebrew:
+  text: רָאָה
+  translit: ra'ah
+ot_refs: Gen 1:4 • Ex 3:7 • Ps 34:8 • Isa 6:1
+nt_refs: Matt 5:8 • John 1:39 • 1 Cor 13:12 • Rev 1:7
+trivia:
+- The Hebrew word 'ra'ah' implies not just physical sight but perceiving, understanding,
+  and providing.
+- Hagar is the only person in Scripture to name God, calling Him 'El Roi' (The God
+  Who Sees).
+- In the Gospels, physical blindness is frequently used to illustrate a lack of spiritual
+  insight.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

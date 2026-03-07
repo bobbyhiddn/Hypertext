@@ -24,6 +24,7 @@ words:
 - REMEMBER
 - RIGHTEOUS
 - SCATTER
+- SEE
 - SETH
 - SHEM
 - SPEAK
@@ -44,6 +45,7 @@ ability_patterns:
 - discard_type_name
 - draw_sheol_tower
 - draw_tower
+- look_top_sheol_tower
 - look_top_tower
 - pages_sheol
 - sheol
@@ -202,3 +204,8 @@ cards:
   type: TITLE
   rarity: GLORIOUS
   ability_pattern: draw_sheol_tower
+- number: 31
+  word: SEE
+  type: VERB
+  rarity: COMMON
+  ability_pattern: look_top_sheol_tower
