@@ -1,0 +1,40 @@
+number: '032'
+word: CLEAN
+gloss: Free from dirt, marks, or stains; morally uncontaminated; ritually pure.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A rough stone basin filled with crystal clear water, a branch of hyssop
+  resting on the edge, a bright white linen cloth folded nearby, soft morning light,
+  high contrast, photorealistic style
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Shuffle up to 3 cards from Sheol into the Tower.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God; and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Now ye are clean through the word which I have spoken unto you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 13:13 • Ps 51:7 • Ezek 36:25
+nt_refs: Matt 23:25 • John 13:10 • Acts 10:15
+trivia:
+- The Hebrew 'tahor' describes a state of ritual purity required for temple worship.
+- Jesus declared all foods clean in Mark 7, shifting the focus to the heart.
+- The phrase 'cleanliness is next to godliness' is from John Wesley, not the Bible.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
