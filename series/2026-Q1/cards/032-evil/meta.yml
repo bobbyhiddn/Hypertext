@@ -1,0 +1,61 @@
+number: '032'
+word: EVIL
+gloss: Profoundly immoral, harmful, or wicked; the absence or opposite of good.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An abstract, high-contrast composition showing a dark, jagged fracture
+  spreading across a pristine, light-colored surface. The darkness should look like
+  corrupting smoke or ink, not text.
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Target player discards 1 card from their hand. If they have 6 or more cards,
+  they discard 2 instead.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every imagination of the thoughts of his heart was only evil continually.
+nt_verse:
+  ref: Matthew 6:13
+  snippet: And lead us not into temptation, but deliver us from evil.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 2:9 • Isa 45:7 • Psa 23:4 • Prov 8:13
+nt_refs: Rom 12:9 • 1 Thess 5:22 • 3 John 1:11 • Eph 6:16
+trivia:
+- From Old English 'yfel', originally meaning 'exceeding proper limits' or 'vicious'.
+- Greek 'poneros' implies active, harmful wickedness, while 'kakos' refers to bad
+  nature.
+- Theodicy is the theological study attempting to reconcile God's goodness with the
+  existence of evil.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-cUx_q59NyqjHQyhsv2XzwWMsfr0f7A3mvmaw95VCJ-C6mfFfVKMBFsQlddrxgH6Pd-o07Kx4GdGn-xeK_4NdP5a_wga5F838MeaAbJjWLPdai4-p8Pc38PlTOlyrJUwOpHxfABsYKXwr3VAKn8uHT5kv81YqYlTU73OS4cF2b-OzvhT6ZkdRrPnGnzmppQ6eablWA061LY92qEVIlunHgQMx_rn77TmViQsGPzPRFWpXKfmFGXxdtdeVMcaLoJy4XADl0bQDZRY=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHackxY095mQJtRnCvMh_8gotSzMzj6vsS5onQ6zmZeDFALEH_2W3_2h7z851CR3rDwdi-RpUv6Ub_DAhc1FGe8wwgadNM6eTzO3r57mPGDIH0L0mZXmbIC4TuS4X6YOSNKja6eXjR8OcO9Dwj76tIbCqyKnQ==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYTiost10eukiGsBmqPS-ZCypF_0GmQpAmA01RgftiRs7wUmROmAeUjFCMWdEmgzOG9549kORIA-UmYd5Ka80_k9aePSRwvwCm1xTONvNL1301AnMcKMcKyYycFWpHwyxwrqQD3bBS3Pab7knY5UIMIaxelOvWUQ==
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXAybii-VgObgwzqmH6hVajILA5FNPnq3AH-iHZ5ksiZRaoHFlE-q9nN-N93fPizb1-zn9SHq0oNgyI2fh9wmIkxDzvm-6sq48edbmPsCquTp7z0U5KtFuVwOMCCE-
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEv9u0JmH0mIQCo2PulGz_Ik0m6pQVDGobOctRRNA5CZKa6AqbgvpG42oPJrDPwdNm_5k7tDXycoEQnZrs8GIIVAHOwEcTAj3LlaSBCyAufbltpJ6orb7qFN-PEIF39HrCGhe5B6VqgeepDgs7ldgPZttYPeR9Qyd6kYHNH73VzwUtm6OXalrU5UpOH-VdFBpHi3NdA9zg_AKyvailNpK7y1cHjYeluZY8MMxqHlUPzMpAiALD0s0TCCop81Q==
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz9BPgQamuqT_IiacHnIm8CI9pyWVNzBHeEP0ZGz6zlWnYUsLrm9ZSeHYd_hcJ1K-ipG6lmzJaeadvkFwhPPjEOSKOC-byI2M3JgnEiRmEcGn3VESquh0=
+  title: dailyverses.net
+search_queries:
+- ''
+- etymology of evil old english
+- bible verse evil NT famous
+- greek word for evil poneros vs kakos
+- bible verse evil OT famous
+- hebrew word for evil ra vs rasha

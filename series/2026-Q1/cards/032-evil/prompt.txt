@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Profoundly immoral, harmful, or wicked; the absence or opposite of good.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card from their hand. If they have 6 or more cards, they discard 2 instead.
+
+VERSES:
+OT: Genesis 6:5 — “Every imagination of the thoughts of his heart was only evil continually.”
+NT: Matthew 6:13 — “And lead us not into temptation, but deliver us from evil.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 2:9 • Isa 45:7 • Psa 23:4 • Prov 8:13
+Greek: πονηρός - ponēros - Rom 12:9 • 1 Thess 5:22 • 3 John 1:11 • Eph 6:16
+
+TRIVIA:
+• From Old English 'yfel', originally meaning 'exceeding proper limits' or 'vicious'.
+• Greek 'poneros' implies active, harmful wickedness, while 'kakos' refers to bad nature.
+• Theodicy is the theological study attempting to reconcile God's goodness with the existence of evil.
+
+ART: An abstract, high-contrast composition showing a dark, jagged fracture spreading across a pristine, light-colored surface. The darkness should look like corrupting smoke or ink, not text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
