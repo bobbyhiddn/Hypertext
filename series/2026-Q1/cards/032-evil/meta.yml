@@ -1,0 +1,70 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, harmful; or, disaster, calamity, and misfortune.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine white marble surface marred by a dark, jagged, spreading fissure
+  that looks like a vein of corruption. Abstract and ominous, high contrast.
+stats:
+  lore: 4
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card. If they have more cards in hand than you,
+  they discard 2 instead.
+ot_verse:
+  ref: Isaiah 45:7 (KJV)
+  snippet: 'I form the light, and create darkness: I make peace, and create evil:
+    I the LORD do all these things.'
+nt_verse:
+  ref: Matthew 6:13
+  snippet: 'And lead us not into temptation, but deliver us from evil: For thine is
+    the kingdom...'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 45:7
+nt_refs: Matt 6:13 • Rom 12:21 • 1 Thess 5:22 • 3 John 1:11
+trivia:
+- The Hebrew 'ra' encompasses both moral wickedness and physical calamity or disaster.
+- Greek 'poneros' implies active, harmful evil, often personified as 'The Evil One'
+  (Satan).
+- In Isaiah 45:7, God 'creating evil' refers to His sovereignty over disaster and
+  judgment, not sin.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0nDQB2WxjrfYGR1-oBlqir65SvpJCt9ikH-N_9ZSjnCBolisJDXbFwaWBF9poMpvK_mgoOw2X6sZzmTSJfeJaqGSYdsvkjgbazXqaj3CNPKuItRuulxyv_Gb0z4hO8uz1pVQllnacRA==
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVkbRazxYorWzy_MujtPhNEHJUfHSwIZqZQjmGFiKGsPL9Y3W3qe1lGvdYv-5iKJw5-uSju1Ujz1jP7h0P2CxBXmVFAno5Jg6FVZb9Q1AIRK2wYF8X6tmsozmWjE-LQwogWIIoBqJ_M43b0GMIjUK5qobhYNgjvH-rAjZPBe8CKZcT
+  title: timberlandchurch.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKeghJ5fSTJR6mQuUgb-ad8jMRG5HNRy56n-PnYljXBMAYEQKpq_21eW5bW0u19nBLLgMz13l_3ltM-dEXpjQ3amFNy2derO2rznEKl65m0Sr4BFg4A_i2QUEF6Q9cxEcD7U9kqf7vjpsYsESbfsxVKwSUpFm1n_sNHMJ6gFb97dLD6_eVvQHos7zIcIj3
+  title: christswords.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNgexwQDNTnbYnduaNxVC0CQjQ0qEM4nLYUjKojXgYpGa_qsJ6EQP756V58_nBWO2V6xAuNnqSx1Nao6Ffji3mYcSGE1jwxQF0cH6WPbQnX5zcohZGyE2z9rMPj8SX7yf4RSMqpGZCASIbD0rYDBqsAEugj_NOk1fAIyVZBw963Q==
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHq8wRdrRTT2ITiUNQ5ptbxU6R1T-BhEse-_PaPxXX9H6RV3StSTN-p8LQQMzPpKgbh4tUozpGb9K0v0vfbqmJX7_qRQufJo-Lia1cP4pSjFAB998LjPeS4xvWbkDgYj_r-EW5wGiWDR4e94qlM9Hh1xAhe3rAcFu-UnyeYumEyhAqE-JZPMfX6LmPKv_pnVuVy
+  title: christiancomment.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiA2055XPozVlLNMtTyT_GPlHyehjgR-62iyNF36bL41aXOAXHVijWhjpdjyFdPiMXZBUlw10RVC0Hsk3-SUQ_OV6ziw9kBlo1pSKTBRFC0PEHwzQfGOoCHHdeMGbdDzpO00LLuqTu2WZVnGRMtwl3nOx8MuxbYoI44EfNDmNkGhS4xZ1nwqtffxVKuhw8x8TxbymokLA75sngZYh29Otqci767jagd3HlmhnRqt3g_3Q-fgU5lbxMyIcfYg==
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeNx98azL29euFDFK-ofCFbsTsJlvI8rMjrX9eR7yz5Ttq0Ejs4pqSSR7nGwQZFIou1KlcBovnzquE0yNELtwf3a4nxM8YHdqdDReuChL8YA0qYcKrZcjQB0ysqwRlNA==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH39QjSd_wiXLvuTZSbF3IfgZiDsVoKWuoudBacfBfdij1TSk3z1TPcKfs0lA3rzjGzGzMdjYbwuhrfuQff0aOPUrlC3DNcasQ1OmSeFIUX_iwBdTpwIzNma1H8SyN5Rz1ZnUCe8M__tTBpJOkN50CvsZs1QE8aGJl4Qk0TqJV0b-VS6VY5ksHVxq0zUEflo-_7zE8tGIS70TqkIvrDRU=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5bY314LARfXgss3kIVeErM5TH6gzwsL1-2gkOXfEj8k8BQV8FuGlYZI7V_ms-DSnmHo64L2X3SkoJZNisDNBJ7nNylYLqmzL0ZcMcU4ZT0S7sZKNj8UyucjyCCdGMfNznZD4vrlQgSj6ePNFFg7QqGwI=
+  title: quora.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmurl9kycwFd6OL5S97Ah54wNFor-XG3j4Ys-8eeywFj0NzVmIDYQn5IPOh4E8oBfg-RUYJCzdOI0iWv__o4hViRVJQs-6HtTOA2EURfxDc6o8OwHRoGgUfOVDZFiU
+  title: biblehub.com
+search_queries:
+- ''
+- Matthew 6:13 evil or evil one greek
+- Isaiah 45:7 meaning evil or calamity
+- hebrew word for evil ra definition
+- Bible trivia about the word evil
+- greek word for evil poneros vs kakos
