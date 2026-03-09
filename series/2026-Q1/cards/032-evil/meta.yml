@@ -1,0 +1,46 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, or causing harm and ruin.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisting thornbush choking out a vibrant green sapling, casting
+  long, menacing shadows over cracked, barren earth.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Look at target player's hand. You may choose a NOUN or NAME from it; they
+  discard that card.
+ot_verse:
+  ref: Psalm 34:14
+  snippet: Turn from evil and do good; seek peace and pursue it.
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22 • 3 John 1:11
+trivia:
+- The Hebrew word 'ra' encompasses not only moral wickedness but also physical harm,
+  calamity, and distress.
+- In Greek, 'ponēros' emphasizes the active, destructive, and pain-causing nature
+  of evil.
+- Scripture presents evil not as an equal opposite to good, but as a corruption or
+  absence of God's good design.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" greek adjective poneros kakos'
+- bible verses with the adjective evil
+- '"evil" hebrew adjective ra'''

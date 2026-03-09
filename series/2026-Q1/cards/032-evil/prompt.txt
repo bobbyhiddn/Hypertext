@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally wrong, wicked, or causing harm and ruin.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at target player's hand. You may choose a NOUN or NAME from it; they discard that card.
+
+VERSES:
+OT: Psalm 34:14 — “Turn from evil and do good; seek peace and pursue it.”
+NT: Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:9 • 1 Thess 5:22 • 3 John 1:11
+
+TRIVIA:
+• The Hebrew word 'ra' encompasses not only moral wickedness but also physical harm, calamity, and distress.
+• In Greek, 'ponēros' emphasizes the active, destructive, and pain-causing nature of evil.
+• Scripture presents evil not as an equal opposite to good, but as a corruption or absence of God's good design.
+
+ART: A dark, twisting thornbush choking out a vibrant green sapling, casting long, menacing shadows over cracked, barren earth.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
