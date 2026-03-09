@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: WICKED
+# Card_Gloss: Morally bad in principle or practice; evil; sinful
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Target player discards 1 card at random. If that card is a NOUN or NAME, they must discard 1 more.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A desolate, shadowy landscape where withered, thorny vines choke out the life of surrounding vegetation, while dark, stormy clouds gather ominously overhead.
+# Card_OT_Verse: Psalm 1:4 — The wicked are not so, but are like chaff that the wind drives away.
+# Card_NT_Verse: Matthew 13:49 — This is how it will be at the end of the age. The angels will come and separate the wicked from the righteous.
+# Card_Hebrew: רָשָׁע (rasha)
+# Card_Greek: πονηρός (ponēros)
+# Card_Trivia_1: The Hebrew word 'rasha' conveys the idea of being guilty or morally wrong, and is frequently contrasted with the righteous.
+# Card_Trivia_2: In Psalm 1, the wicked are vividly compared to chaff, the useless husk of grain that is easily blown away by the wind.
+# Card_Trivia_3: The Greek word 'poneros' describes an active, malignant form of evil that causes labor, pain, and sorrow, rather than just general badness.
