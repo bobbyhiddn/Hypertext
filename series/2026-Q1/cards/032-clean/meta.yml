@@ -1,0 +1,43 @@
+number: '032'
+word: CLEAN
+gloss: Free from impurity; ritually or morally pure.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine clay vessel overflowing with clear, sparkling water, resting
+  on a sunlit stone pedestal surrounded by folded white linen.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Reveal the top 3 cards of the Tower. Add any ADJECTIVEs to your hand, and
+  put the rest into Sheol.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 10:10 • Ps 24:4 • Ezek 36:25
+nt_refs: Matt 23:26 • John 13:10 • Jas 1:27
+trivia:
+- In Levitical law, physical and ritual cleanness was a strict prerequisite for entering
+  the tabernacle.
+- The Greek word 'katharos' is the root of the English word 'catharsis', meaning an
+  emotional purification.
+- Jesus radically taught that true cleanness originates from the heart, rather than
+  from external washing rituals.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
