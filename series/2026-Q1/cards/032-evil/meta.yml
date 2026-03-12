@@ -1,0 +1,43 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, or causing ruin; that which actively opposes God's goodness.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisting storm cloud casting a deep shadow over a barren, cracked
+  landscape, with a single withered thorny vine creeping in the foreground.
+stats:
+  lore: 4
+  context: 5
+  complexity: 3
+ability: Target player must discard a NOUN or NAME; if they cannot, they reveal their
+  hand.
+ot_verse:
+  ref: Psalm 23:4
+  snippet: I will fear no evil, for you are with me...
+nt_verse:
+  ref: Romans 12:9
+  snippet: Hate what is evil; cling to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:9 • Eph 6:16 • 1 John 5:19
+trivia:
+- In Hebrew, 'ra' can refer to moral wickedness, but is also used to describe natural
+  disasters, calamity, or physical harm.
+- The Greek word 'ponēros' implies an active, malignant corruption that seeks to drag
+  others down, rather than just passive badness.
+- Biblically, evil is often depicted not as an equal opposite to God, but as a parasitic
+  corruption of His originally good creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
