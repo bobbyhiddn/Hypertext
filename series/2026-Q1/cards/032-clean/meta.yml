@@ -1,0 +1,43 @@
+number: '032'
+word: CLEAN
+gloss: Free from dirt, pollution, or ritual impurity; morally pure.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A radiant waterfall cascading over smooth white stones, washing away dark
+  mud into a crystal clear pool, surrounded by bright, pure light.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Name a card type. Target player discards all cards of that type from their
+  hand, then draws an equal number of cards.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Ps 51:10 • Lev 10:10 • Ezek 36:25
+nt_refs: John 15:3 • Matt 5:8 • 1 John 1:9
+trivia:
+- Under the Levitical law, being ceremonially 'clean' (tahor) was required to enter
+  the presence of God in the tabernacle.
+- Jesus radically shifted the focus of cleanliness from external rituals to internal
+  purity of the heart.
+- The Greek word 'katharos' is the origin of the English word 'catharsis', meaning
+  a profound emotional or spiritual cleansing.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
