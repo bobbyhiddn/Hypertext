@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Actively wicked, morally corrupt, or causing harm and destruction.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player reveals their hand and discards a NOUN or NAME of your choice.
+
+VERSES:
+OT: Genesis 6:5 — “Every intent of the thoughts of their hearts was only evil continually.”
+NT: Romans 12:9 — “Abhor what is evil; hold fast to what is good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 2:9 • Ps 23:4 • Prov 8:13
+Greek: πονηρός - ponēros - Matt 6:13 • 1 Thess 5:22 • 1 John 5:19
+
+TRIVIA:
+• The Hebrew word 'ra' is first used in Genesis to describe the Tree of the Knowledge of Good and Evil.
+• In Greek, 'ponēros' implies an active, malignant, and corrupting evil, distinct from 'kakos' which is a more general badness.
+• The phrase 'the evil one' in the New Testament is derived from 'ho ponēros', personifying active rebellion against God.
+
+ART: A creeping dark shadow slowly overtaking a vibrant, blooming garden, with thorny vines wrapping around and choking the life from a withered fruit tree under gathering storm clouds.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

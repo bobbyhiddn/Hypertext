@@ -1,0 +1,45 @@
+number: '032'
+word: EVIL
+gloss: Actively wicked, morally corrupt, or causing harm and destruction.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping dark shadow slowly overtaking a vibrant, blooming garden, with
+  thorny vines wrapping around and choking the life from a withered fruit tree under
+  gathering storm clouds.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player reveals their hand and discards a NOUN or NAME of your choice.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every intent of the thoughts of their hearts was only evil continually.
+nt_verse:
+  ref: Romans 12:9
+  snippet: Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 2:9 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 6:13 • 1 Thess 5:22 • 1 John 5:19
+trivia:
+- The Hebrew word 'ra' is first used in Genesis to describe the Tree of the Knowledge
+  of Good and Evil.
+- In Greek, 'ponēros' implies an active, malignant, and corrupting evil, distinct
+  from 'kakos' which is a more general badness.
+- The phrase 'the evil one' in the New Testament is derived from 'ho ponēros', personifying
+  active rebellion against God.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" hebrew bible word ra'''
+- '"evil" greek bible word poneros kakos'
