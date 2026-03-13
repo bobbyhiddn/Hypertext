@@ -1,0 +1,47 @@
+number: '032'
+word: CLEAN
+gloss: Pure, unblemished, free from defilement
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A shining basin of pure, clear water reflecting a bright light, with a
+  fresh sprig of hyssop resting on the edge, symbolizing spiritual washing and purification.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player may discard any number of cards of a single type, then draw
+  that many cards.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God; and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Now ye are clean through the word which I have spoken unto you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Gen 7:2 • Lev 11:47 • Ps 51:10 • Prov 20:9
+nt_refs: Matt 5:8 • John 13:10 • John 15:3 • Jas 1:27
+trivia:
+- In the Old Testament, 'tahor' describes both ritual purity (like clean animals)
+  and moral purity (a clean heart).
+- The Greek 'katharos' literally means 'without admixture' or unmixed, like pure gold
+  or a vine pruned of dead branches.
+- Jesus declared His disciples 'clean' not through ritual washing, but through the
+  words He had spoken to them.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"clean" hebrew bible tahor'
+- '"clean" greek bible katharos'
+- '"Create in me a clean heart" psalm 51:10 kjv'
+- '"Now ye are clean through the word" john 15:3 kjv'
