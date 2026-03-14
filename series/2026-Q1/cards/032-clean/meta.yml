@@ -1,0 +1,44 @@
+number: '032'
+word: CLEAN
+gloss: Free from dirt, impurity, or sin; ritually or morally pure.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine waterfall cascading into a crystal-clear pool, surrounded by
+  white lilies and radiant beams of sunlight, with glowing motes of light rising from
+  the water.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player shuffles up to 3 cards from Sheol into the Tower. If a NOUN
+  was shuffled this way, they draw 1.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God; and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Now ye are clean through the word which I have spoken unto you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 10:10 • Ps 24:4 • Ps 51:10 • Ezek 36:25
+nt_refs: Matt 8:3 • John 13:10 • John 15:3 • Acts 10:15
+trivia:
+- In the Levitical law, being 'clean' was a prerequisite for entering the tabernacle
+  and participating in worship.
+- Jesus radically shifted the focus of cleanness from external ritual washing to internal
+  purity of the heart.
+- The Greek word 'katharos' is the root for the English word 'catharsis', meaning
+  a purging or cleansing.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
