@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally bad in principle or practice; guilty; hostile to God.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, stormy wasteland where withered, thorny vines choke out a patch
+  of barren soil, with shadows stretching long and sharp across the cracked earth.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards a card at random. If it is a NAME or TITLE, you draw
+  1.
+ot_verse:
+  ref: Psalm 37:21
+  snippet: 'The wicked borroweth, and payeth not again: but the righteous sheweth
+    mercy, and giveth.'
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels shall come forth, and sever the wicked from among the just.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 28:1 • Eccl 3:16 • Isa 5:23 • Ezek 18:23
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19 • 2 Thess 3:2
+trivia:
+- In Hebrew, 'rasha' is often used in legal contexts to describe the guilty party
+  in a dispute.
+- The Greek 'ponēros' emphasizes active, malignant evil that causes labor, pain, and
+  sorrow.
+- Psalm 1 contrasts the wicked, who are blown away like chaff, with the righteous,
+  who are like deeply rooted trees.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" greek word poneros bible'
+- '"wicked" kjv bible verses'
+- '"wicked" hebrew word rasha'

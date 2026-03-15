@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WICKED
+GLOSS: Morally bad in principle or practice; guilty; hostile to God.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards a card at random. If it is a NAME or TITLE, you draw 1.
+
+VERSES:
+OT: Psalm 37:21 — “The wicked borroweth, and payeth not again: but the righteous sheweth mercy, and giveth.”
+NT: Matthew 13:49 — “The angels shall come forth, and sever the wicked from among the just.”
+
+LANGUAGES:
+Hebrew: רָשָׁע - rasha - Ps 1:4 • Prov 28:1 • Eccl 3:16 • Isa 5:23 • Ezek 18:23
+Greek: πονηρός - ponēros - Matt 13:49 • Eph 6:16 • 1 John 5:19 • 2 Thess 3:2
+
+TRIVIA:
+• In Hebrew, 'rasha' is often used in legal contexts to describe the guilty party in a dispute.
+• The Greek 'ponēros' emphasizes active, malignant evil that causes labor, pain, and sorrow.
+• Psalm 1 contrasts the wicked, who are blown away like chaff, with the righteous, who are like deeply rooted trees.
+
+ART: A dark, stormy wasteland where withered, thorny vines choke out a patch of barren soil, with shadows stretching long and sharp across the cracked earth.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
