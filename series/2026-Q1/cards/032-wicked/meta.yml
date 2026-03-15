@@ -1,0 +1,46 @@
+number: '032'
+word: WICKED
+gloss: Morally corrupt, evil, or guilty before God
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, stormy sky over a withered, barren tree on a desolate hill, with
+  dry chaff blowing violently in the wind.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If they discard a NAME or TITLE,
+  steal 1 Letter from them.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come out and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: poneros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:9 • Isa 57:20
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19
+trivia:
+- In Psalm 1, the wicked are compared to 'chaff'—the weightless, useless husk of grain
+  blown away during winnowing.
+- The Hebrew word 'rasha' often carries a legal sense of being guilty or in the wrong
+  before a judge.
+- In the New Testament, the Greek 'poneros' describes not just passive badness, but
+  active, harmful, and corrupting evil.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"the wicked are like chaff" psalm'
+- '"wicked" hebrew greek bible study'
+- '"flaming darts of the wicked" ephesians'
