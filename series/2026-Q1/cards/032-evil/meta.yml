@@ -1,0 +1,56 @@
+number: '032'
+word: EVIL
+gloss: Morally bad, wicked, or harmful; causing ruin, sorrow, or destruction.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping dark shadow and noxious thorned vines slowly wrapping around
+  a vibrant, healthy fruit, symbolizing corruption, harm, and malice.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player discards 1 card at random. If that card is a NOUN or NAME,
+  they must discard an additional card at random.
+ot_verse:
+  ref: Isaiah 5:20
+  snippet: Woe to those who call evil good and good evil, who put darkness for light
+    and light for darkness...
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:9 • Rom 12:21 • 1 Thess 5:22
+trivia:
+- TheHebrewword'ra'canrefertomoralwickedness, butalsophysicalcalamity, adversity,
+  ordistress[1.6].
+- In the New Testament, 'ponēros' emphasizes an active, malignant evil that seeks
+  to corrupt and cause harm.
+- Another common Greek word for evil, 'kakos', serves as the direct opposite of 'agathos'
+  (good) and denotes intrinsic badness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2qHxHhYhKOiHaBIeBbnwQNp6pilSYjJTXuxwXz8gVEh2mAZxjtc_q1slsae_EVbt5CdmAMmnz4rNibLNA3jgb9Y-8U6NnFgnKsy4lBZXvmMLTPDIrW57hluUuUXmbHGj9Od36Tt7xF6RuOzeT05Nkwib5iFrymg==
+  title: renaissancewoman.blog
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1jUse4he9fS64oL5u4oHt8zbWfFlprYQ6YAJwbODRy-HCapnYZlsqum1vB-fbFFnWG6kUFXazihNV4SGU-rLsF_6EJdeO6X06e0FfHd_aJGLdUHRsImXmh0h5WHqVIMpLQXySGQMhmrpCEeUAcy5zpNez6FVs8dopsxkNeVSRG-eF_9C-T8-_
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIriGVZXsVGqNqoygbnEPVhpMtd2-SnW1A8yKRkQzbsWHQ-1Zpz1sJfZBh6zSRd1Gc-zB9LxCKsx8-rFS1iFcZI9uUvm5UOgSYhkykuKvwlqU0YDXnoRJ6UzKW0DoCoDEzDQ==
+  title: renaissancewoman.blog
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdmzMcg4DZJJQhApXwVd571Oi57e8fIkhZV89VIymKtue36G4nPqx4xyycOP1-zJGgOHshx8VEGMdVjStZ35rWXlZ85M_pivdmsTZbLTdmJTkEqPeCPV5xt3LeJrt17T10w4sXsJlhassHNhEGqcYxU6jdRtHmVjAapUhQ2d0fE1X1hyFjvIweba4=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbpNZT6KpDrYDJwPo6HOUzSCGJYCpXaEbp20iRdvGbb7rs8t0YTsFkdCJWAgKV7-3OmwlKdrXwlQDwPqbxZ9yxu3jMywe9qCLsyxAYBUmzugDpPqNntV1ceZ--gu5f3DNyd69u0M3wZFUabIWXZ98E1b5i-FccbwSlHgFOQhOvCw==
+  title: studylight.org
+search_queries:
+- '"evil" in greek bible poneros kakos'
+- '"evil" hebrew bible word study ra poneros kakos'
