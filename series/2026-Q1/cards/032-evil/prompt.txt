@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally bad, wicked, or harmful
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card. If it is a NOUN or NAME, steal 1 Letter from them.
+
+VERSES:
+OT: Genesis 6:5 — “...every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 8:21 • Ps 23:4 • Prov 8:13
+Greek: κακός - kakos - Matt 6:13 • 1 Thess 5:22 • 3 John 1:11
+
+TRIVIA:
+• In Hebrew, the word 'ra' encompasses moral wickedness as well as disaster, distress, or calamity.
+• The Greek word 'kakos' denotes something that is intrinsically base, depraved, or injurious.
+• Scripture frames evil not as an equal opposite to good, but as a corruption that is ultimately conquered by God's goodness.
+
+ART: A dark, creeping shadow extending like thorny vines over a vibrant, sunlit garden, slowly choking the blooming flowers and draining their color.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
