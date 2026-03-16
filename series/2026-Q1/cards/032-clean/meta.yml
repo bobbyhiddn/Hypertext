@@ -1,0 +1,46 @@
+number: '032'
+word: CLEAN
+gloss: free from dirt or impurity; morally pure
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing, pure white heart submerged in crystal clear, rippling water.
+  The water washes away dark, shadowy impurities that dissolve into the radiant light.
+  Serene, divine, and purifying atmosphere, digital painting style.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Name a card type. Shuffle all cards of that type from Sheol into the Tower,
+  then draw 1.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word which I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Prov 20:9
+nt_refs: Matt 5:8 • Luke 11:41 • Rev 19:14
+trivia:
+- In the Old Testament, the Hebrew word 'tahor' was often used for ritual purity,
+  describing animals, vessels, and people fit for worship.
+- Jesus uses the Greek 'katharos' in John 15:3, creating a wordplay with 'kathairo'
+  (to prune or cleanse) in the previous verse.
+- David's plea for a 'clean heart' in Psalm 51:10 shifts the concept of cleanliness
+  from external ritual to internal, spiritual transformation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"clean heart" Psalm 51:10 hebrew interlinear'
+- '"already clean" John 15:3 greek interlinear'
