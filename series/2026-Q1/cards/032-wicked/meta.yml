@@ -1,0 +1,52 @@
+number: '032'
+word: WICKED
+gloss: Morally bad, guilty, or actively hostile to God's ways.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisting thornbush growing over a broken stone pathway, casting
+  long, sinister shadows under a blood-red twilight sky, symbolizing corruption and
+  malice.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player must discard a NOUN or NAME from their hand. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Proverbs 15:9
+  snippet: The way of the wicked is an abomination to the Lord, but he loves him who
+    pursues righteousness.
+nt_verse:
+  ref: Matthew 18:32
+  snippet: Then his master summoned him and said to him, 'You wicked servant! I forgave
+    you all that debt because you pleaded with me.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Ps 10:4 • Prov 15:9 • Ezek 18:20
+nt_refs: Matt 13:49 • Matt 18:32 • Eph 6:16 • 1 John 5:19
+trivia:
+- The Hebrew word 'rasha' describes someone who is guilty, morally wrong, or actively
+  hostile to God.
+- In Matthew 18, the unforgiving servant is called 'ponēros' (wicked) for refusing
+  to show the mercy he had received.
+- The Psalms frequently contrast the wicked with the righteous, depicting them as
+  chaff driven away by the wind.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- ephesians 6:16 esv
+- '"poneros" greek wicked bible'
+- proverbs 15:9 esv
+- '"rasha" hebrew wicked bible'
+- '"wicked" esv new testament'
+- '"wicked servant" esv matthew 18:32'
