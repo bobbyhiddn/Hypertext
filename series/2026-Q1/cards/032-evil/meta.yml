@@ -1,0 +1,50 @@
+number: '032'
+word: EVIL
+gloss: Profound immorality, wickedness, or destructive corruption
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow slowly overtaking a vibrant, fruitful garden.
+  Thorny vines wrapping around a healthy olive branch, draining its color. A stark
+  contrast between radiant, golden light and a deep, consuming abyss. Ominous, dramatic
+  lighting, symbolic of corruption and decay.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player must discard 1 card. If they discard a NOUN or NAME, you draw
+  1.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: The Lord saw that the wickedness of man was great in the earth, and that
+    every intention of the thoughts of his heart was only evil continually.
+nt_verse:
+  ref: Romans 12:9
+  snippet: Let love be genuine. Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22
+trivia:
+- In Hebrew, 'ra' (evil) encompasses not only moral wickedness but also physical calamity,
+  distress, and dysfunction.
+- The Greek 'ponēros' emphasizes an active, malignant evil that causes pain and destruction,
+  distinct from passive badness.
+- Scripture often contrasts evil with good, commanding believers to 'abhor' or shudder
+  away from wickedness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" hebrew transliteration bible'
+- '"evil" greek transliteration bible'
+- Genesis 6:5 bible
+- Romans 12:9 bible
