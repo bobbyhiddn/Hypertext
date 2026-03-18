@@ -1,0 +1,45 @@
+number: '032'
+word: WICKED
+gloss: Morally bad, guilty, or actively hostile to God.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A shadowy figure setting a snare along a dusty path, with dark storm clouds
+  gathering overhead, symbolizing malice and impending ruin.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Steal 1 Letter from target player, then they must discard a NOUN or NAME;
+  if they cannot, they reveal their hand.
+ot_verse:
+  ref: Proverbs 15:29
+  snippet: The LORD is far from the wicked, but he hears the prayer of the righteous.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come forth, and sever the wicked from among the just.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Pr 15:29 • Is 57:20
+nt_refs: Mt 13:49 • Eph 6:16 • 1Jn 5:19
+trivia:
+- The Hebrew word 'rasha' often carries a legal sense of being guilty or condemned
+  before a judge.
+- In Greek, 'ponēros' emphasizes the active, destructive nature of evil, whereas 'kakos'
+  often refers to intrinsic worthlessness.
+- Wisdom literature frequently contrasts the wicked with the righteous to highlight
+  their fundamentally different paths and ends.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" greek bible word study'
+- '"wicked" hebrew bible word study'

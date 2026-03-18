@@ -30,6 +30,7 @@ words:
 - SPEAK
 - SPIRIT
 - STONE
+- WICKED
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_discard_look_top_tower
@@ -38,6 +39,7 @@ ability_patterns:
 - choice_discard_draw_stat_lore
 - choice_draw
 - conditional_discard_draw_type_verb
+- conditional_discard_type_noun
 - conditional_draw
 - conditional_draw_pages_type_name
 - conditional_draw_type_name
@@ -209,3 +211,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_sheol_tower
+- number: 32
+  word: WICKED
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: conditional_discard_type_noun
