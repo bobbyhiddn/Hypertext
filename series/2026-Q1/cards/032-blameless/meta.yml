@@ -1,0 +1,48 @@
+number: '032'
+word: BLAMELESS
+gloss: Without fault, innocent, free from accusation.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pure white lamb standing peacefully in a sunlit green pasture, bathed
+  in a warm, heavenly glow, untouched by the shadows surrounding it.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player's hand and Pages cannot be targeted by opponents' abilities
+  until your next turn.
+ot_verse:
+  ref: Job 1:1
+  snippet: That man was blameless and upright, one who feared God and turned away
+    from evil.
+nt_verse:
+  ref: Philippians 2:15
+  snippet: '...that you may be blameless and innocent, children of God without blemish...'
+greek:
+  text: ἄμεμπτος
+  translit: amemptos
+hebrew:
+  text: תָּם
+  translit: tam
+ot_refs: Gen 17:1 • Job 1:1 • Ps 15:2 • Prov 29:10
+nt_refs: Luke 1:6 • Phil 2:15 • 1 Thess 3:13 • Heb 8:7
+trivia:
+- In Hebrew, 'tam' implies completeness, moral integrity, or being upright, famously
+  used to describe Job.
+- The Greek 'amemptos' describes a life free from legitimate accusation before God
+  or humanity.
+- The concept does not imply sinless perfection, but rather a character that is above
+  reproach.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"blameless" greek bible strongs'
+- '"blameless" hebrew bible strongs'
+- '"tam" hebrew verses strongs 8535'
+- '"Genesis 17:1" hebrew interlinear'

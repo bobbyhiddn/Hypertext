@@ -1,6 +1,7 @@
 words:
 - ADAM
 - ARK
+- BLAMELESS
 - BROTHER
 - BUILD
 - CITY
@@ -47,6 +48,7 @@ ability_patterns:
 - draw_sheol_tower
 - draw_tower
 - look_top_tower
+- opponent_pages
 - pages_sheol
 - sheol
 - sheol_tower
@@ -209,3 +211,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_sheol_tower
+- number: 32
+  word: BLAMELESS
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: opponent_pages
