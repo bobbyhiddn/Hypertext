@@ -1,0 +1,43 @@
+number: '032'
+word: CLEAN
+gloss: Pure, unblemished, washed, or ritually acceptable.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing white linen cloth draped over a bronze basin of crystal clear
+  water, radiating a soft, pure light in a stone courtyard.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Exile up to 3 cards from Sheol, then draw 1. Draw an additional card if you
+  exiled an ADJECTIVE this way.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 10:10 • Ps 51:10 • Ezek 36:25
+nt_refs: Matt 5:8 • John 15:3 • 1 John 1:9
+trivia:
+- In the Old Testament, ritual cleanness (tahor) was required to enter the tabernacle
+  or participate in worship.
+- The Greek word 'katharos' is the root of the English word 'catharsis', meaning a
+  purging or cleansing.
+- Jesus redefined cleanness for His followers, teaching that moral purity of the heart
+  supersedes external ritual washing.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
