@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally corrupt, wicked, or bringing harm and ruin.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player must discard a NOUN or NAME from their hand; if they cannot, they reveal their hand.
+
+VERSES:
+OT: Genesis 6:5 — “...every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Matthew 6:13 — “...but deliver us from the evil one.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 8:21 • Ps 23:4 • Prov 8:13
+Greek: πονηρός - ponēros - Rom 12:9 • Eph 6:16 • 1 Thess 5:22
+
+TRIVIA:
+• In the Old Testament, the Hebrew word 'ra' can denote moral wickedness, but it is also frequently translated as physical calamity or disaster.
+• Jesus frequently personified evil as 'the evil one' (ho ponēros), pointing to a conscious, spiritual adversary rather than just an abstract concept.
+• Biblical authors continually contrast evil with light, truth, and the inherent goodness of God's original creation.
+
+ART: A dark, creeping shadow overtaking a vibrant garden, with thorny vines choking out blooming flowers and a subtle serpent coiled in the underbrush.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
