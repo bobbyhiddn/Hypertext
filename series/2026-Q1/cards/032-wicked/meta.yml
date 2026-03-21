@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally bad, guilty, actively evil
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, thorny snare hidden among withered weeds and cracked earth, casting
+  a long, jagged shadow under a fading moon.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Steal 1 Letter from target player. If they have none, they discard 1 card
+  at random.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 18:32
+  snippet: Then his master summoned him and said to him, 'You wicked servant! I forgave
+    you all that debt because you pleaded with me.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 12:5 • Ezek 18:20 • Mal 3:18
+nt_refs: Matt 13:49 • Matt 18:32 • Eph 6:16 • 1 John 5:19
+trivia:
+- The Hebrew 'rasha' implies being guilty of a crime, hostile to God, or living in
+  defiance of His character.
+- The Greek 'poneros' emphasizes an active, malignant form of evil that causes pain,
+  sorrow, and destruction.
+- In the New Testament, 'poneros' is often translated as 'evil,' including the specific
+  title 'the evil one' for Satan.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" hebrew bible word'
+- '"wicked" greek bible word poneros'
+- '"wicked" bible verse esv'
