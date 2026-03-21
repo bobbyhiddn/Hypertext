@@ -1,0 +1,253 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "032",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "EVIL",
+    "GLOSS": "morally bad, wicked, harmful; opposed to God's character and design",
+    "CARD_TYPE": "ADJECTIVE",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A withered, blackened fig tree casting a long, dark shadow over barren, cracked soil, with a distant, brooding storm gathering in a bruised sky.",
+    "ABILITY_TEXT": "Target player must discard a NOUN or NAME from their hand; if they cannot, they must reveal their hand.",
+    "STAT_LORE": 3,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Genesis 50:20",
+    "OT_VERSE_SNIPPET": "As for you, you meant evil against me, but God meant it for good...",
+    "NT_VERSE_REF": "Romans 12:21",
+    "NT_VERSE_SNIPPET": "Do not be overcome by evil, but overcome evil with good.",
+    "OT_VERSE_LINE": "Genesis 50:20 — “As for you, you meant evil against me, but God meant it for good...”",
+    "NT_VERSE_LINE": "Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”",
+    "GREEK": "κακός",
+    "GREEK_TRANSLIT": "kakos",
+    "HEBREW": "רַע",
+    "HEBREW_TRANSLIT": "ra'",
+    "OT_REFS": "Gen 6:5 • Gen 50:20 • Ps 23:4",
+    "NT_REFS": "Matt 6:13 • Rom 12:21 • 1 Thess 5:22",
+    "TRIVIA_BULLETS": [
+      "TheHebrewword'ra'encompassesawidespectrum, referringnotonlytomoralwickednessbutalsotonaturalcalamity, distress, orphysicalharm[1.11].",
+      "In Genesis 50:20, Joseph acknowledges his brothers' evil intent, but declares that God wove their actions into a plan for ultimate good.",
+      "The Greek word 'kakos' describes something that is inherently base, wrong, or destructive, standing in direct opposition to God's good creation."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "\"evil\" hebrew ra",
+      "\"Romans 12:21\" greek interlinear",
+      "\"Genesis 50:20\" hebrew interlinear"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWTlzhHagRBI3TKGehilooB_W64-8bYrYm8K232M42Brp0rmN6fLGjd0sq7hZdTqhOJCf1hPXA6AhmhCspm79eAS_d-6lCqE2ahb4Y6cyA9rgAjFl8YBsFmFbtI2GRQQ==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmrLKeJFVqmsKjIIq5TF_woMxOtSZSspnG4HMr9GSE_83wqW78WCySUYkjjbMwDhsq0E9A4NAlcCokGcXD8CJ6oxjX_uM2VyFnLDI2A7Ov2wnsJaOhEwJSqR6YYyT5fP4GRuLYeLwMd8lrPNk3GS5S0CCl6EgIXUNdzQzLiXgYCPCGl1XTI60=",
+        "title": "studylight.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPo_40E87Cu2QBHKcscU04s8S01ONm9JAPhx0JMSNEOSMv9u2ZrGJ1mJOPNECyyFicSGNC4L9bOmQTFphNKAhgUkAsgFCyHPyu7BzG48mDpdSKVX9YzphpxSyRIjOujS4DQYlgQsyiENwH61cj9jQHZtXpEywW013aoA==",
+        "title": "chaimbentorah.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY6OFyrRI1ybDv44psTt7lCKNdMt9Cf3SvG6Kfhq7DzumZHb2KBYOJgYv25TlCEhbXSDMde6MoHB-Ydjy7n93ztIz2VgekpKuzuoryRTEpzzunIL6NTDk9SO9j-15b74O8iGsNv2dl_muvt1AJ1Y2XuGkLMnjDR9eV_4gE",
+        "title": "blueletterbible.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXpGrkcwa2hoZ6Lv32XYXfTNXJsTh0euUBEMsyjtnx29Z0oRxiuqbvlpy5Tb7dlVdQmgD5W3nGpJaJvQr4XVT2Hr9xUSLeghqKCMLI1_aQau6Qc6oFmINRQR8CNUQCR_21DxOFPtK2z8v2PpJ03sU=",
+        "title": "qbible.com"
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+number: '032'
+word: EVIL
+gloss: morally bad, wicked, harmful; opposed to God's character and design
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A withered, blackened fig tree casting a long, dark shadow over barren,
+  cracked soil, with a distant, brooding storm gathering in a bruised sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player must discard a NOUN or NAME from their hand; if they cannot,
+  they must reveal their hand.
+ot_verse:
+  ref: Genesis 50:20
+  snippet: As for you, you meant evil against me, but God meant it for good...
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: κακός
+  translit: kakos
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Gen 50:20 • Ps 23:4
+nt_refs: Matt 6:13 • Rom 12:21 • 1 Thess 5:22
+trivia:
+- TheHebrewword'ra'encompassesawidespectrum, referringnotonlytomoralwickednessbutalsotonaturalcalamity,
+  distress, orphysicalharm[1.11].
+- In Genesis 50:20, Joseph acknowledges his brothers' evil intent, but declares that
+  God wove their actions into a plan for ultimate good.
+- The Greek word 'kakos' describes something that is inherently base, wrong, or destructive,
+  standing in direct opposition to God's good creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWTlzhHagRBI3TKGehilooB_W64-8bYrYm8K232M42Brp0rmN6fLGjd0sq7hZdTqhOJCf1hPXA6AhmhCspm79eAS_d-6lCqE2ahb4Y6cyA9rgAjFl8YBsFmFbtI2GRQQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmrLKeJFVqmsKjIIq5TF_woMxOtSZSspnG4HMr9GSE_83wqW78WCySUYkjjbMwDhsq0E9A4NAlcCokGcXD8CJ6oxjX_uM2VyFnLDI2A7Ov2wnsJaOhEwJSqR6YYyT5fP4GRuLYeLwMd8lrPNk3GS5S0CCl6EgIXUNdzQzLiXgYCPCGl1XTI60=
+  title: studylight.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPo_40E87Cu2QBHKcscU04s8S01ONm9JAPhx0JMSNEOSMv9u2ZrGJ1mJOPNECyyFicSGNC4L9bOmQTFphNKAhgUkAsgFCyHPyu7BzG48mDpdSKVX9YzphpxSyRIjOujS4DQYlgQsyiENwH61cj9jQHZtXpEywW013aoA==
+  title: chaimbentorah.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY6OFyrRI1ybDv44psTt7lCKNdMt9Cf3SvG6Kfhq7DzumZHb2KBYOJgYv25TlCEhbXSDMde6MoHB-Ydjy7n93ztIz2VgekpKuzuoryRTEpzzunIL6NTDk9SO9j-15b74O8iGsNv2dl_muvt1AJ1Y2XuGkLMnjDR9eV_4gE
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXpGrkcwa2hoZ6Lv32XYXfTNXJsTh0euUBEMsyjtnx29Z0oRxiuqbvlpy5Tb7dlVdQmgD5W3nGpJaJvQr4XVT2Hr9xUSLeghqKCMLI1_aQau6Qc6oFmINRQR8CNUQCR_21DxOFPtK2z8v2PpJ03sU=
+  title: qbible.com
+search_queries:
+- '"evil" hebrew ra'
+- '"Romans 12:21" greek interlinear'
+- '"Genesis 50:20" hebrew interlinear'
