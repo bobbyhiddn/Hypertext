@@ -1,0 +1,48 @@
+number: '032'
+word: WICKED
+gloss: Actively evil or morally wrong; guilty of hostility toward God; injurious and
+  destructive.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisting thornbush growing over a ruined, desolate path, with
+  a harsh wind scattering dry chaff into a stormy, overcast sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Steal 1 Letter from target player. If they have no Letters, they discard
+  1 card at random instead.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 18:32
+  snippet: Then his master summoned him and said to him, 'You wicked servant! I forgave
+    you all that debt because you pleaded with me.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Genesis 6:5 • Psalm 1:4 • Proverbs 6:12 • Proverbs 28:1 • Ezekiel 33:11
+nt_refs: Matthew 18:32 • Matthew 25:26 • 2 Thessalonians 3:2 • 1 John 5:19
+trivia:
+- The Hebrew 'rasha' describes someone who is actively guilty of a crime or hostility
+  toward God.
+- The Greek 'ponēros' emphasizes a malignant, spreading evil that causes pain and
+  destruction.
+- Throughout biblical wisdom literature, the wicked are frequently contrasted with
+  the righteous.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"poneros" greek meaning bible'
+- '"wicked" bible verse esv'
+- '"rasha" hebrew meaning bible'
