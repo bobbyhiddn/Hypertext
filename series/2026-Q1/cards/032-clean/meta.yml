@@ -1,0 +1,47 @@
+number: '032'
+word: CLEAN
+gloss: pure, unblemished, washed
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A gleaming white linen garment being washed in a clear, flowing river,
+  sunlight reflecting off the pure, sparkling water.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player may discard up to 3 cards, then draw that many. If at least
+  one ADJECTIVE was discarded this way, they draw 1 additional card.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Ps 51:10 • Lev 11:47 • Ezek 36:25
+nt_refs: Matt 5:8 • John 15:3 • 1 John 1:9
+trivia:
+- In the Old Testament, the Hebrew word 'tahor' often referred to the ritual purity
+  required to enter God's presence in the tabernacle.
+- Jesus expanded the concept of cleanliness, telling His disciples they were 'already
+  clean' because of His teachings.
+- The Greek word 'katharos' (clean or pure) is the root of the English word 'catharsis',
+  meaning a purging or purification.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Hebrew word for clean tahor
+- Greek word for clean katharos catharsis
+- '"Psalm 51:10" "clean heart"'
+- '"John 15:3" "clean"'
