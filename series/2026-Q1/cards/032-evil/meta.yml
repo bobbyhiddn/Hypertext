@@ -1,0 +1,47 @@
+number: '032'
+word: EVIL
+gloss: bad, wicked, harmful
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, stormy landscape where withered, thorny vines choke out a dying
+  tree. Shadows stretch aggressively across the barren, cracked ground.
+stats:
+  lore: 3
+  context: 3
+  complexity: 2
+ability: Target player must discard a NOUN or NAME, or reveal their hand if they cannot.
+ot_verse:
+  ref: Genesis 50:20
+  snippet: As for you, you meant evil against me, but God meant it for good...
+nt_verse:
+  ref: Romans 12:9
+  snippet: Let love be genuine. Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Jdg 2:11 • 1 Ki 16:30
+nt_refs: Mt 6:13 • Lk 6:45 • 1 Jn 5:19
+trivia:
+- In Hebrew, 'ra' encompasses not just moral wickedness, but also physical calamity,
+  distress, and disaster.
+- The Greek word 'ponēros' emphasizes active, harmful malice, often personified in
+  the New Testament as 'the evil one'.
+- The biblical narrative begins with the tree of the knowledge of good and evil, framing
+  the moral universe of human choice.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" biblical greek word'
+- '"evil" biblical hebrew word'
+- '"Romans 12:9" esv'
+- '"Genesis 50:20" esv'
+- '"Romans 12:9" greek interlinear'
