@@ -1,0 +1,46 @@
+number: '032'
+word: CLEAN
+gloss: Pure, undefiled, free from contamination or ritual impurity.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A gleaming golden vessel overflowing with crystal clear water, illuminated
+  by a bright, pure ray of light from above, set against a stark, dark background
+  to emphasize absolute purity.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Discard up to 3 cards, then draw that many. If you discarded an ADJECTIVE
+  this way, draw 1 additional card.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Gen 7:2 • Lev 11:47 • Ps 51:10 • Prov 20:9
+nt_refs: Matt 5:8 • John 13:10 • John 15:3 • Titus 1:15
+trivia:
+- The Hebrew word 'tahor' applies to both physical cleanliness, like pure gold, and
+  ritual purity.
+- The Greek word 'katharos' is the root of the English word 'catharsis,' meaning a
+  purging or cleansing.
+- In the biblical worldview, being 'clean' was closely associated with life and holiness,
+  while 'unclean' was tied to death and decay.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"clean" hebrew bible tahor'
+- '"clean" greek bible katharos'
