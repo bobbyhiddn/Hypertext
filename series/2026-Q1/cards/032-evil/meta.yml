@@ -1,0 +1,44 @@
+number: '032'
+word: EVIL
+gloss: Morally bad, wicked, or causing harm and destruction
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow slowly overtaking and withering a vibrant, fruitful
+  vine, symbolizing corruption, decay, and the loss of life.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player must discard a NOUN or NAME from their hand; if they cannot,
+  they must reveal their hand.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every inclination of the thoughts of the human heart was only evil all
+    the time.
+nt_verse:
+  ref: Romans 12:9
+  snippet: Love must be sincere. Hate what is evil; cling to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22
+trivia:
+- The Hebrew word 'ra' is used for moral wickedness, but is also frequently translated
+  as physical harm, disaster, or calamity.
+- In the Lord's Prayer, the Greek 'ponēros' can be translated as the abstract concept
+  of 'evil' or personified as 'the evil one.'
+- Christian theology historically defines evil not as an independent substance, but
+  as a privation or corruption of God's originally good creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
