@@ -1,0 +1,49 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, or harmful; destructive calamity or active rebellion
+  against God.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A withered, thorny vine aggressively choking a healthy, fruit-bearing
+  olive branch in deep, ominous shadows.
+stats:
+  lore: 3
+  context: 5
+  complexity: 4
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, they must
+  discard a second card at random.
+ot_verse:
+  ref: Isaiah 5:20
+  snippet: Woe to those who call evil good and good evil, who put darkness for light
+    and light for darkness...
+nt_verse:
+  ref: Romans 12:9
+  snippet: Let love be genuine. Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:9 • 1 John 5:19
+trivia:
+- The Hebrew word 'ra' can describe moral wickedness, but also physical calamity,
+  disaster, or dysfunction.
+- In Greek, 'ponēros' emphasizes an active, malignant form of evil that causes pain
+  and destruction.
+- Biblically, evil is not an equal opposite force to God, but a corruption and distortion
+  of His good creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Isaiah 5:20 esv
+- Romans 12:9 esv
+- '"poneros" greek meaning'
+- '"ra" hebrew evil'
