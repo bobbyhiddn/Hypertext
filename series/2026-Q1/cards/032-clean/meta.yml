@@ -1,0 +1,47 @@
+number: '032'
+word: CLEAN
+gloss: Ritually pure, unmixed, free from impurity
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing waterfall pouring over smooth white stones, washing away dark
+  silt into a crystal-clear pool, surrounded by vibrant green hyssop plants.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player may discard any number of cards from their hand, then draw
+  that many.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Ps 51:10 • Prov 22:11 • Ezek 36:25
+nt_refs: Matt 5:8 • John 13:10 • John 15:3 • Titus 1:15 • Jas 4:8
+trivia:
+- The Hebrew 'tahor' describes ritual purity, indicating a state of readiness to enter
+  God's presence.
+- The Greek 'katharos' means unmixed or unalloyed, like pure gold entirely free of
+  impurities.
+- In John 15, Jesus uses 'katharos' to describe branches that have been pruned by
+  the Vinedresser to bear more fruit.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Psalm 51:10 ESV
+- John 15:3 ESV
+- '"tahor" hebrew clean'
+- '"katharos" greek clean'
