@@ -1,0 +1,44 @@
+number: '032'
+word: CLEAN
+gloss: Free from dirt, impurity, or sin; ritually or morally pure.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine, overflowing stone basin filled with crystal-clear water, reflecting
+  bright sunlight, surrounded by smooth white river stones and fresh hyssop branches.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Shuffle up to 3 cards from Sheol into the Tower, then draw 2 cards.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a steadfast spirit within
+    me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 10:10 • Ps 24:4 • Prov 20:9
+nt_refs: Matt 5:8 • Luke 11:41 • 1 John 1:9
+trivia:
+- The Hebrew 'tahor' applies to both ceremonial ritual purity and internal moral innocence.
+- In the ancient Near East, being ritually 'clean' was a strict prerequisite to entering
+  the temple presence.
+- Jesus expanded the concept of cleanliness from external washing rituals to internal
+  heart attitudes.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"Psalm 51:10" hebrew clean tahor'
+- '"John 15:3" greek clean katharos'
