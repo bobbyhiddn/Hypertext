@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WICKED
+GLOSS: Morally bad in principle or practice; guilty of sin or crime.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player reveals their hand; choose a NOUN or NAME for them to discard.
+
+VERSES:
+OT: Psalm 1:4 — “The wicked are not so, but are like chaff that the wind drives away.”
+NT: Matthew 13:49 — “The angels will come out and separate the wicked from the righteous.”
+
+LANGUAGES:
+Hebrew: רָשָׁע - rasha - Ps 1:4 • Prov 4:19 • Isa 57:20 • Ezek 33:11
+Greek: πονηρός - ponēros - Matt 13:49 • 1 Cor 5:13 • Eph 6:16 • 2 Thess 3:2
+
+TRIVIA:
+• In Hebrew, 'rasha' often carries a legal sense of being guilty or in the wrong before a judge.
+• The Greek 'ponēros' emphasizes active, harmful evil that intentionally corrupts others, rather than just a lack of goodness.
+• Biblical poetry frequently contrasts the wicked with the righteous, comparing their paths to darkness and light.
+
+ART: A dark, stormy landscape with withered trees and thorny briars choking out the light, casting long, menacing shadows over a desolate, rocky path.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
