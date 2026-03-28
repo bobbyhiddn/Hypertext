@@ -1,0 +1,42 @@
+number: '032'
+word: EVIL
+gloss: Wicked, morally wrong, or harmful
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow overtaking a vibrant, fruitful vine, turning its
+  leaves withered and black.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player reveals their hand. You may discard a NOUN or NAME from it.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: '...every inclination of the thoughts of the human heart was only evil
+    all the time.'
+nt_verse:
+  ref: Romans 12:9
+  snippet: Love must be sincere. Hate what is evil; cling to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:9 • Eph 6:16 • 1 Thess 5:22
+trivia:
+- In Hebrew, 'ra' can refer to moral wickedness, physical injury, or bringing calamity.
+- The Greek word 'ponēros' emphasizes an active, harmful evil that seeks to corrupt
+  others.
+- Isaiah 5:20 pronounces a severe woe on those who invert morality by calling evil
+  good.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
