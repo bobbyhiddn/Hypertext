@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: morally wrong, wicked, harmful, or calamitous
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 4/5 filled
+
+ABILITY:
+Target player discards 1 card at random. If it is a NOUN, they must discard another card.
+
+VERSES:
+OT: Psalm 23:4 — “I will fear no evil, for you are with me...”
+NT: Romans 12:9 — “Hate what is evil; cling to what is good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 6:5 • Ps 23:4 • Prov 8:13
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:9 • 1 Thess 5:22
+
+TRIVIA:
+• The Hebrew word 'ra' describes moral wickedness, but is also frequently used to describe natural disasters or physical harm.
+• In the Lord's Prayer, 'deliver us from evil' uses a form of 'ponēros' that can be translated personally as 'the evil one'.
+• Biblically, evil is not an eternal opposing force equal to God, but rather a corruption or absence of God's good creation.
+
+ART: A creeping, dark shadow slowly engulfing a vibrant, fruit-bearing fig tree in a desolate wasteland, with dark storm clouds gathering ominously above.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
