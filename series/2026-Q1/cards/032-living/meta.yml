@@ -1,0 +1,47 @@
+number: '032'
+word: LIVING
+gloss: Alive; active; enduring; flowing
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vibrant, rushing stream of crystal-clear water flowing from a weathered
+  stone basin, surrounded by lush, blooming flora in an otherwise arid desert landscape.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Draw 2 cards, then discard 1. If the discarded card is a VERB, gain 1 Letter.
+ot_verse:
+  ref: Jeremiah 2:13
+  snippet: They have forsaken me, the fountain of living waters...
+nt_verse:
+  ref: Mark 12:27
+  snippet: He is not God of the dead, but of the living.
+greek:
+  text: ζῶν
+  translit: zōn
+hebrew:
+  text: חַי
+  translit: chay
+ot_refs: Gen 2:7 • Jer 2:13 • Jer 17:13
+nt_refs: Mark 12:27 • John 4:10 • Heb 4:12
+trivia:
+- In Hebrew, 'chay' is often plural ('chayim'), reflecting the fullness and multifaceted
+  nature of life.
+- Jesus refers to Himself as the source of 'living water', a phrase that meant fresh,
+  flowing water.
+- The 'God of the living' argument by Jesus affirmed the resurrection against the
+  Sadducees' denial.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Hebrews 4:12 living and active esv
+- Jeremiah 2:13 living water esv
+- '"living" hebrew transliteration bible'
+- '"living" greek transliteration bible'
+- Mark 12:27 esv

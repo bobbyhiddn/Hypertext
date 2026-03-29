@@ -16,6 +16,7 @@ words:
 - HEAR
 - HUNTER
 - KEEPER
+- LIVING
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -209,3 +210,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_sheol_tower
+- number: 32
+  word: LIVING
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: conditional_discard_draw_type_verb
