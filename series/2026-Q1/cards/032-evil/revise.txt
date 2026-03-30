@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: EVIL
+# Card_Gloss: Morally wrong, wicked, or inherently harmful and destructive.
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Target player must discard a NOUN or NAME from their hand. If they cannot, they must reveal their hand.
+# Card_Stats: LORE 4 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A creeping, dark shadow slowly overtaking a vibrant, fruit-bearing olive tree, leaving withered, thorny branches in its wake.
+# Card_OT_Verse: Genesis 6:5 — Every inclination of the thoughts of the human heart was only evil all the time.
+# Card_NT_Verse: Matthew 6:13 — And lead us not into temptation, but deliver us from the evil one.
+# Card_Hebrew: רַע (ra')
+# Card_Greek: πονηρός (ponēros)
+# Card_Trivia_1: In biblical Hebrew, 'ra' can refer to moral wickedness, but it is also frequently used to describe physical calamity or disaster.
+# Card_Trivia_2: The Greek word 'ponēros' emphasizes the active, corrupting nature of evil, rather than just the passive absence of good.
+# Card_Trivia_3: When Isaiah 45:7 states that God creates 'evil' (ra), context shows it refers to bringing judgment or disaster, not moral sin.

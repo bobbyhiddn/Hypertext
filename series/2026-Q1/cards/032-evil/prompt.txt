@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally wrong, wicked, or inherently harmful and destructive.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player must discard a NOUN or NAME from their hand. If they cannot, they must reveal their hand.
+
+VERSES:
+OT: Genesis 6:5 — “Every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Matthew 6:13 — “And lead us not into temptation, but deliver us from the evil one.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:9 • Eph 6:16 • 1 Thess 5:22
+
+TRIVIA:
+• In biblical Hebrew, 'ra' can refer to moral wickedness, but it is also frequently used to describe physical calamity or disaster.
+• The Greek word 'ponēros' emphasizes the active, corrupting nature of evil, rather than just the passive absence of good.
+• When Isaiah 45:7 states that God creates 'evil' (ra), context shows it refers to bringing judgment or disaster, not moral sin.
+
+ART: A creeping, dark shadow slowly overtaking a vibrant, fruit-bearing olive tree, leaving withered, thorny branches in its wake.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
