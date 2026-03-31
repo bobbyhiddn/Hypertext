@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WICKED
+GLOSS: Morally bad, evil, guilty, acting contrary to God's law.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card at random. If it is a NOUN or NAME, steal 1 Letter from them.
+
+VERSES:
+OT: Psalm 37:21 — “The wicked borrows but does not pay back, but the righteous is generous and gives.”
+NT: Matthew 13:49 — “The angels will come out and separate the evil from the righteous...”
+
+LANGUAGES:
+Hebrew: רָשָׁע - rasha - Ps 1:4 • Ps 37:21 • Prov 15:9
+Greek: πονηρός - ponēros - Matt 13:49 • Eph 6:16 • 1 John 5:19
+
+TRIVIA:
+• The Hebrew 'rasha' denotes someone guilty of sin or injustice, often contrasted with the righteous.
+• The Greek 'ponēros' describes active, malicious evil that seeks to corrupt and harm others.
+• In the Old Testament, wickedness is frequently described as a snare or a trap that ultimately catches the wicked themselves.
+
+ART: A dark, thorny snare hidden among withered grass and shadows, with a single silver coin resting ominously as bait.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
