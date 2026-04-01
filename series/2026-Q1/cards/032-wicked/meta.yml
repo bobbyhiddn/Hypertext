@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally bad or guilty; acting contrary to God's law
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A withered, thorny tree bearing rotten fruit in a desolate, shadowy wasteland,
+  with cracked and broken scales of justice resting at its roots.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If they discard a NAME or TITLE,
+  steal 1 Letter from them.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Gen 18:23 • Ex 23:1 • Ps 1:4 • Prov 15:9 • Isa 5:23
+nt_refs: Matt 13:49 • 1 Cor 5:13 • Eph 6:16 • 2 Thess 3:2 • 1 John 5:19
+trivia:
+- In Hebrew, rasha fundamentally describes someone guilty of a crime or actively hostile
+  to God, directly opposing the righteous (tzaddik).
+- The Greek ponēros emphasizes an active, malignant form of evil that causes pain,
+  labor, and destruction, unlike mere badness.
+- In both Testaments, the wicked are frequently contrasted with the righteous using
+  agricultural metaphors, such as chaff blown by the wind or weeds among wheat.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"The wicked are not so" Psalm 1'
+- '"wicked" greek new testament poneros'
+- '"rasha" hebrew strongs'
+- '"rasha" hebrew wicked'
