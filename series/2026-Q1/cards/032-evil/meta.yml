@@ -1,0 +1,44 @@
+number: '032'
+word: EVIL
+gloss: wicked, bad, harmful, or malicious
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping, dark shadow stretching across a sunlit stone path, with withered
+  vines and sharp thorns springing up at its edges.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard a NOUN or NAME from their hand. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Isaiah 5:20
+  snippet: Woe to those who call evil good and good evil, who put darkness for light
+    and light for darkness...
+nt_verse:
+  ref: Romans 12:9
+  snippet: Let love be genuine. Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22 • 3 John 1:11
+trivia:
+- In Hebrew, 'ra' can refer to moral wickedness, but it is also frequently used to
+  describe natural disasters, calamity, or physical harm.
+- The Greek 'ponēros' emphasizes an active, malignant evil that seeks to corrupt others,
+  often contrasting with 'kakos' (which can mean base or worthless).
+- Biblical authors frequently describe evil not as an independent force, but as a
+  corruption or privation of the inherent goodness of God's creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
