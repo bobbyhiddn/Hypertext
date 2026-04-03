@@ -1,0 +1,43 @@
+number: '032'
+word: WICKED
+gloss: Morally corrupt; characterized by evil intent or guilty of harming others.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A twisted, thorny vine creeping tightly around a pristine marble pillar,
+  its sharp black thorns dripping with a dark, oily sap under a blood-red moon.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard a NOUN or NAME from their hand. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come out and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 10:11 • Isa 57:20 • Ezek 18:23
+nt_refs: Matt 13:49 • Eph 6:16 • 2 Thess 3:2 • 1 John 5:19
+trivia:
+- In biblical poetry, the 'wicked' (rasha) are consistently contrasted with the 'righteous'
+  (tsaddiq).
+- The Greek word 'ponēros' emphasizes an active, malignant evil that seeks to corrupt
+  others.
+- In ancient Hebrew courts, the term carried a legal sense of being guilty or in the
+  wrong.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
