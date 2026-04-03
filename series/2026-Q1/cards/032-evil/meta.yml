@@ -1,0 +1,56 @@
+number: '032'
+word: EVIL
+gloss: Profoundly immoral and wicked; causing harm, destruction, or misfortune.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow slowly overtaking a vibrant, fruitful garden,
+  with withered leaves and cracked earth trailing behind it in a sinister path.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player must discard a NOUN from their hand. If they cannot, they reveal
+  their hand and discard 1 card of your choice.
+ot_verse:
+  ref: Genesis 50:20
+  snippet: As for you, you meant evil against me, but God meant it for good...
+nt_verse:
+  ref: Matthew 6:13
+  snippet: And lead us not into temptation, but deliver us from the evil one.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Gen 50:20 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:21 • 1 Thess 5:22 • 1 John 5:19
+trivia:
+- TheHebrewword'ra'encompassesmoralwickedness, physicalharm, andcalamity[1.16].
+- In Genesis 50:20, Joseph acknowledges that God's sovereign plan uses human evil
+  to bring about ultimate good.
+- The petition 'deliver us from evil' in Matthew 6:13 is often translated as 'deliver
+  us from the evil one,' personifying the threat.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgZL6S7uLelIIUQ9hURN82Z9K7z-Gpi2qfOaBv9ttYikCqk_94fbfwvYjhtzTJsBNN_cN3cl9WiJ4J68lwQOtlstaKX0M6PKlVV9nXoGdTCLqdLWj-5qZ5c_CIv0KWYflYRC3x2J5-czD6TUhd1URSRl_ztdgVfVd9gH46zjeHopljwysgLmHgjURQGtYFSK6AgEk=
+  title: focusonthefamily.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgiN0TtrWlUJ0t_YE0ghopqoqXy1uSRQPBd8AYrfz2TUP9QbRsnBWxzv_3KToLgJ3prbvJwZ6oHfgc8MpCNgS8GYRH6x7tOu8EHVwiAPcnYc-J700aopcWGz1s4fJ7cTtdIXrytKAkk-s3weczAPpDdF4RIQeOZ-M_GxLfCmzVDOoS2ss8
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjWMYuTqVJFTZ9-IXw3zOa6YxE6GpHBYac0FYtCIznhwjeKwe4HKVZGe7SYcxDsvWIoKGPwBVV1gfeHIUSiiW08VSkgekZS9OeabCUjrbGJqVfxDrkNPjqbFzFRQDS1-bMfyRXmvH9rTXM62q0eIYHotM=
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM57HwL31-zrp3zAUVnkJKfeiyXy9_dzhV8y5CO_-cNljVOsMBJP9CEKq8OlLrhoSgPc8Z2XZynEEZr72mWzBJIUcRLKZP-v_s0SPExjYfHeLYT3bpDz3Kv0x05TAoscY=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGL_EfauqI75scszjJqkirrMBea01g7cvjhkQx-q2xDNnYQR6BQDXVd5AilFZCEZLNpyEZHViobYpIrjxgMciMrWiEga6zD9tzinAJqZn9zxr5SfDn3-slkmFFz4kPa
+  title: biblehub.com
+search_queries:
+- Genesis 50:20 bible verse evil
+- Matthew 6:13 bible verse evil
+- '"evil" greek transliteration bible'
+- '"evil" hebrew transliteration bible'
