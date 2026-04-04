@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: evil, morally corrupt, malicious
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisted thorn bush creeping over a pristine marble path, casting
+  long, jagged shadows under a blood-red sky. Ominous, foreboding atmosphere, sharp
+  thorns, corrupted nature.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player reveals their hand; choose one card from it for them to discard.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:29 • Isa 57:20
+nt_refs: Matt 13:49 • Eph 6:16 • 2 Thess 3:2
+trivia:
+- The Hebrew word 'rasha' implies active rebellion and hostility toward God, not just
+  passive wrongdoing.
+- In Psalm 1, the wicked are compared to chaff, weightless and easily blown away by
+  the wind.
+- The Greek 'ponēros' emphasizes evil that causes labor, pain, and sorrow, often linked
+  to Satan.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" greek bible strongs'
+- '"wicked" hebrew bible strongs'
+- '"Matthew 13:49" wicked'
+- '"Ephesians 6:16" wicked'
