@@ -1,0 +1,43 @@
+number: '032'
+word: WICKED
+gloss: Morally corrupt; guilty of hostility toward God and others.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A desolate, stormy wasteland with withered, twisted thorn bushes being
+  blown violently by a harsh wind under a dark, bruised sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, you gain
+  1 Letter.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come out and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:9 • Isa 57:20 • Ezek 33:11
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19 • 2 Thess 2:8
+trivia:
+- In Hebrew, 'rasha' describes someone guilty of a crime or actively causing harm
+  to others in the community.
+- Psalm 1 contrasts the wicked, who are blown away like chaff, with the righteous,
+  who are like deeply rooted trees.
+- The Greek word 'ponēros' is used in the Lord's Prayer when asking for deliverance
+  from 'the evil one'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
