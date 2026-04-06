@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WICKED
+GLOSS: Evil, morally wrong, unrighteous, guilty
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player may discard an ADJECTIVE. If they do not, reveal their hand and choose a card for them to discard.
+
+VERSES:
+OT: Proverbs 28:1 — “The wicked flee when no one pursues, but the righteous are bold as a lion.”
+NT: Matthew 13:49 — “So it will be at the end of the age. The angels will come out and separate the evil from the righteous.”
+
+LANGUAGES:
+Hebrew: רָשָׁע - rasha - Gen 18:23 • Ps 1:4 • Prov 28:1
+Greek: πονηρός - ponēros - Matt 13:49 • Eph 6:16 • 1 John 5:19
+
+TRIVIA:
+• The Hebrew root 'rasha' is a legal term often meaning 'guilty' or 'in the wrong.'
+• In Greek, 'ponēros' describes an active, malignant form of evil that seeks to corrupt others.
+• The phrase 'the wicked one' (ho ponēros) is frequently used by the Apostle John to describe Satan.
+
+ART: A dark, stormy sky with tempestuous clouds blowing away dry chaff from a barren field, conveying a sense of judgment and dispersion.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

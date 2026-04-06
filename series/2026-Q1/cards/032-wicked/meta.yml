@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Evil, morally wrong, unrighteous, guilty
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, stormy sky with tempestuous clouds blowing away dry chaff from
+  a barren field, conveying a sense of judgment and dispersion.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player may discard an ADJECTIVE. If they do not, reveal their hand
+  and choose a card for them to discard.
+ot_verse:
+  ref: Proverbs 28:1
+  snippet: The wicked flee when no one pursues, but the righteous are bold as a lion.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: So it will be at the end of the age. The angels will come out and separate
+    the evil from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Gen 18:23 • Ps 1:4 • Prov 28:1
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19
+trivia:
+- The Hebrew root 'rasha' is a legal term often meaning 'guilty' or 'in the wrong.'
+- In Greek, 'ponēros' describes an active, malignant form of evil that seeks to corrupt
+  others.
+- The phrase 'the wicked one' (ho ponēros) is frequently used by the Apostle John
+  to describe Satan.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Matthew 13:49 esv
+- Proverbs 28:1 esv
+- '"wicked" greek strongs'
+- '"wicked" hebrew strongs'
