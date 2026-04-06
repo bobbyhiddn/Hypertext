@@ -1,0 +1,47 @@
+number: '032'
+word: EVIL
+gloss: wickedness, harm, malice
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping, dark shadow slowly overtaking a vibrant, sunlit olive grove,
+  with withered leaves falling where the darkness touches, dramatic lighting, ominous
+  atmosphere, digital fantasy painting.
+stats:
+  lore: 4
+  context: 5
+  complexity: 3
+ability: Choose a card in target player's Pages. That player must discard a card of
+  the same type, or reveal their hand if they cannot.
+ot_verse:
+  ref: Isaiah 5:20
+  snippet: Woe to those who call evil good and good evil, who put darkness for light
+    and light for darkness...
+nt_verse:
+  ref: Romans 12:9
+  snippet: Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20 • Jer 17:9
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22 • 2 Thess 3:3 • 1 John 5:19
+trivia:
+- In Hebrew, 'ra' (רַע) encompasses not just moral wickedness, but also physical calamity,
+  distress, and harm.
+- The Greek word 'ponēros' (πονηρός) emphasizes active, malignant evil that spreads
+  like a disease, distinguishing it from general badness.
+- In the Lord's Prayer, the phrase 'deliver us from evil' uses 'ponēros', which can
+  also be translated personally as 'the evil one'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" greek strongs'
+- '"evil" hebrew strongs'
