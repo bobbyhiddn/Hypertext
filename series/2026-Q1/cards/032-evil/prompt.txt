@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: morally wrong, wicked, causing ruin or harm
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player discards 1 card at random. If it is a NOUN or NAME, steal 1 Letter from them.
+
+VERSES:
+OT: Psalm 23:4 — “I will fear no evil, for you are with me.”
+NT: Matthew 6:13 — “And lead us not into temptation, but deliver us from evil.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Genesis 50:20 • Psalm 23:4 • Proverbs 8:13
+Greek: πονηρός - ponēros - Matthew 6:13 • Romans 12:21 • 1 John 5:19
+
+TRIVIA:
+• In Hebrew, 'ra' can describe moral wickedness or refer to physical calamity and distress.
+• The Greek 'ponēros' emphasizes an active, malignant corruption that seeks to drag others down.
+• In the Lord's Prayer, 'deliver us from evil' can be translated as an abstract concept or 'the evil one'.
+
+ART: A dark, withered, thorny vine tightly coiling around a cracked, ancient stone vessel, casting a long, ominous shadow.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

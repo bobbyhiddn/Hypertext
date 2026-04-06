@@ -1,0 +1,43 @@
+number: '032'
+word: EVIL
+gloss: morally wrong, wicked, causing ruin or harm
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, withered, thorny vine tightly coiling around a cracked, ancient
+  stone vessel, casting a long, ominous shadow.
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, steal 1
+  Letter from them.
+ot_verse:
+  ref: Psalm 23:4
+  snippet: I will fear no evil, for you are with me.
+nt_verse:
+  ref: Matthew 6:13
+  snippet: And lead us not into temptation, but deliver us from evil.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Genesis 50:20 • Psalm 23:4 • Proverbs 8:13
+nt_refs: Matthew 6:13 • Romans 12:21 • 1 John 5:19
+trivia:
+- In Hebrew, 'ra' can describe moral wickedness or refer to physical calamity and
+  distress.
+- The Greek 'ponēros' emphasizes an active, malignant corruption that seeks to drag
+  others down.
+- In the Lord's Prayer, 'deliver us from evil' can be translated as an abstract concept
+  or 'the evil one'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
