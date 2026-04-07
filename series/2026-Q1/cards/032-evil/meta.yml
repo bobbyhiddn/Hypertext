@@ -1,0 +1,44 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, or causing sorrow, distress, and calamity.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A twisted, thorny vine creeping over a cracked stone wall, casting deep,
+  ominous shadows across a desolate landscape.
+stats:
+  lore: 3
+  context: 4
+  complexity: 4
+ability: Target player must discard a card matching the type of the card you discarded
+  to activate this, or reveal their hand.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every inclination of the thoughts of the human heart was only evil all
+    the time.
+nt_verse:
+  ref: Romans 12:9
+  snippet: Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 45:7
+nt_refs: Matt 6:13 • Rom 12:9 • Eph 6:16 • 1 Thess 5:22
+trivia:
+- In Hebrew, 'ra' can refer to moral wickedness, but also natural disaster, calamity,
+  or distress.
+- The Greek 'ponēros' emphasizes active, harmful evil, distinguishing it from 'kakos'
+  (general badness).
+- In the original Greek of the Lord's Prayer, 'deliver us from evil' can also be translated
+  as 'the evil one'.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
