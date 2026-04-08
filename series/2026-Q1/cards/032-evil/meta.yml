@@ -1,0 +1,44 @@
+number: '032'
+word: EVIL
+gloss: Morally bad, wicked, or harmful
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping, dark shadow stretching across a sunlit stone path, subtly
+  distorting the shapes of the olive trees nearby, conveying a sense of encroaching
+  corruption and malice.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Look at target player's hand and choose a NOUN or ADJECTIVE for them to discard.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: '...every inclination of the thoughts of the human heart was only evil
+    all the time.'
+nt_verse:
+  ref: Matthew 6:13
+  snippet: And lead us not into temptation, but deliver us from the evil one.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20 • Amos 5:14
+nt_refs: Matt 6:13 • Rom 12:9 • Eph 6:16 • 1 Thess 5:22 • 3 John 1:11
+trivia:
+- In the Old Testament, the Hebrew word 'ra' can denote moral wickedness, but also
+  physical harm, disaster, or calamity.
+- The Greek word 'ponēros' often emphasizes an active, corrupting nature of evil,
+  rather than just a passive badness.
+- In the Lord's Prayer, the phrase 'the evil one' uses the substantive form of this
+  adjective to personify wickedness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

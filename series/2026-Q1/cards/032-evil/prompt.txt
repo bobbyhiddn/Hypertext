@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally bad, wicked, or harmful
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Look at target player's hand and choose a NOUN or ADJECTIVE for them to discard.
+
+VERSES:
+OT: Genesis 6:5 — “...every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Matthew 6:13 — “And lead us not into temptation, but deliver us from the evil one.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20 • Amos 5:14
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:9 • Eph 6:16 • 1 Thess 5:22 • 3 John 1:11
+
+TRIVIA:
+• In the Old Testament, the Hebrew word 'ra' can denote moral wickedness, but also physical harm, disaster, or calamity.
+• The Greek word 'ponēros' often emphasizes an active, corrupting nature of evil, rather than just a passive badness.
+• In the Lord's Prayer, the phrase 'the evil one' uses the substantive form of this adjective to personify wickedness.
+
+ART: A creeping, dark shadow stretching across a sunlit stone path, subtly distorting the shapes of the olive trees nearby, conveying a sense of encroaching corruption and malice.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
