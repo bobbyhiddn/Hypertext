@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally wrong, hostile to God, guilty
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A shadowy figure setting a hidden snare along a dusty path, with dark
+  storm clouds gathering above, symbolizing impending destruction.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, you may
+  draw 1 card.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: 2 Thessalonians 3:2
+  snippet: '...and that we may be delivered from wicked and evil men. For not all
+    have faith.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Gen 18:23 • Ps 1:4 • Prov 10:7
+nt_refs: Matt 13:49 • Eph 6:16 • 2 Thess 3:2
+trivia:
+- In Hebrew, 'rasha' describes someone who is morally guilty and actively hostile
+  to God's standards.
+- The Greek 'ponēros' implies a malicious, aggressive evil that actively seeks to
+  corrupt others.
+- Scripture frequently contrasts the fleeting, temporary success of the wicked with
+  the eternal security of the righteous.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- strongs greek wicked
+- strongs hebrew wicked
+- '"wicked" bible verse KJV OR ESV'
