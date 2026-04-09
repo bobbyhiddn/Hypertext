@@ -1,0 +1,52 @@
+number: '032'
+word: EVIL
+gloss: morally corrupt, actively harmful, or wicked
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping, venomous shadow overtaking a fruitful, vibrant vine, withering
+  its green leaves and darkening the soil beneath.
+stats:
+  lore: 4
+  context: 5
+  complexity: 4
+ability: Target player must discard a NOUN or NAME from their hand. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Genesis 50:20
+  snippet: As for you, you meant evil against me, but God meant it for good...
+nt_verse:
+  ref: Matthew 6:13
+  snippet: And lead us not into temptation, but deliver us from evil.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Gen 50:20 • Ps 23:4
+nt_refs: Matt 6:13 • Rom 12:21 • 1 John 5:19
+trivia:
+- InHebrew, 'ra'candescribemoralwickedness, butalsophysicalcalamity, distress, ordisaster[1.4].
+- The Greek 'ponēros' emphasizes active, harmful malice and destruction, rather than
+  just passive badness.
+- Biblical writers often contrast evil directly with good, showing it as a corruption
+  of God's design rather than an equal opposing force.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEu4MD8F0RqQGi0P1hEP_ywtRIU3BggKsMN8wr06CuORmD06OikBFCB3AdKb3Q_whsgNxDY5oB5dy9O3-pW-OnjxzqkCO6YWRJgAQWeueopxq5FonLhQSLoun7msBFba_y_JN5yjOZVbB6G1tEQNF8=
+  title: israelmyglory.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp7jFedIBMRuRD8Z60pQKXz12UADqNkc2KlP1KrUGMWEiEZjNduoKke04SZPyWlmrEzIhbQByO_45JrHoXg8KQdEg7rvNIxQfZLqxCDH3qa-GxJgAHHNYZYe_3gponnLAsN5qOS3Qkdorg75nt3VaMuZ2JCRGUTg==
+  title: abarim-publications.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHO41l-Snwo5BORDr99d0p5F00MQJqux7TZG7W8R1wP4wo9wZaRHyCVR5i6tXdxy7mp-rq95FiINsokjrlQa8AuGXHpzZU9qX2a_A7LNbw-pTst28iOrq6E0-rPbGs=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKe-vJ7d78-4TNuEoREgKMltttI6B1XtdaCFq8_VmicUjNuaee1dTMktk-m3_hT9I9i00zNziRB70eums-BNq7y7i9YEXM6ucnuOkhobexcASVJpKhPIAEN3tsefqTcP0sZ-joi9-1_zNGwNYMmH-fEFaLzw9_PA7F1wL2i6k8dmWTx6JQziefdYluSZcgvy4O2Q==
+  title: bibletools.org
+search_queries:
+- '"poneros" greek meaning bible'
+- '"ra" hebrew meaning bible evil'
