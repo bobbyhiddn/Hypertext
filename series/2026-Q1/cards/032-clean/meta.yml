@@ -1,0 +1,57 @@
+number: '032'
+word: CLEAN
+gloss: Free from dirt, impurities, or moral blemish; purified and acceptable.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing, pure drop of water falling into a still basin, creating perfect
+  concentric ripples, surrounded by pristine white lilies and a bright, ethereal light.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player reveals their hand. You may place up to 2 of those cards on
+  the bottom of the Tower. If you do, that player draws that many cards.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Ezek 36:25
+nt_refs: Matt 5:8 • John 13:10 • Titus 1:15
+trivia:
+- In the Old Testament, 'tahor' often referred to the ritual purity required to enter
+  the Tabernacle or consume certain foods [1.8].
+- In the New Testament, Jesus emphasized that true cleanness comes from within the
+  heart, rather than just outward ceremonial washing.
+- The Greek word 'katharos' is related to the English words 'chaste' and 'chasten,'
+  reflecting a state free from corrupt desire or guilt.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7Bj8YGkRUEx8BHQaKwmMbLchas0dGEySEtqzLJZztS-ynkXMRfOZdL1gGTkPpW5SQCoXk2jXH6vitVXOCacRAH6bSPlzwPYe5t97BJN25ErZemNZkTPik0YbBLR29
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWnA6nbRQEuxB-j6eboMhnYp7eXZIJpFQ-Rnp7FF5PNStzhL3CWOhYpI0w4AKXO2bnab7ix5WSGktiwQDHfdOXRkyle9cgxb-BOD_W9IgF_-rr4ditCe1RLtIMyt8FeLhRuqHtTicbokvvFf-T7DjL4JkZ3Gk=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGn8uWpez3ILPfVaLQt9rLLOdDZzBA6neUQuEEIkmB6UGhQN-glbeY3b8BNsUMD3kAlOmApwy0FNPiJqtmpnqyqbtqzkecnjFm8_adXhL10NffH_5m6X0O9MraEzT93h5A=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG6QTRUTxvC8Cojp55LNXxLlFlY50lC5s_2VzJ421YGSSD76mdSUd5msougLIgYT0mbOx960A0yDjqiSkFxtg3aQuotEykJXdWDVMSjA9mcqGlm3eRWz92mIYv83s=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXZKjD5YdmOzK5VRr7nC2ZI0s89-V6agkWKaqK7006RvREauCFugg18Va8Su5CvJReKZimjMluhU3ADW6LWJd4sFY1_9jrtb6UHPmCa_JYQP6BZRc22HAct4YA0dyeSUyqE26hvSQy3GKGiIcpkgHuHSTBQw==
+  title: blueletterbible.org
+search_queries:
+- Psalm 51:10 clean heart
+- John 15:3 clean word
+- '"clean" greek bible katharos'
+- '"clean" hebrew bible tahor'
