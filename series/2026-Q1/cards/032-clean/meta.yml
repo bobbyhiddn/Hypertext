@@ -1,0 +1,44 @@
+number: '032'
+word: CLEAN
+gloss: Pure, unblemished, free from defilement
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pure, crystalline drop of water falling into a perfectly still, reflective
+  pool, surrounded by white linen and a sprig of hyssop.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player may discard any number of cards, then draw that many.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Ezek 36:25
+nt_refs: Matt 5:8 • John 13:10 • 1 John 1:9
+trivia:
+- In the Mosaic Law, 'clean' (tahor) designated animals acceptable for food and sacrifice.
+- Ritual cleansing often involved washing with water or sprinkling with a hyssop branch.
+- Jesus expanded the concept of cleanness from outward ritual purity to inward moral
+  purity of the heart.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Psalm 51:10 esv
+- John 15:3 esv
+- '"clean" hebrew bible tahor'
+- '"clean" greek bible katharos'
