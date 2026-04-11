@@ -1,0 +1,49 @@
+number: '032'
+word: CLEAN
+gloss: Pure, free from defilement, purged of impurities.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine, glowing white linen cloth draped over a polished golden basin
+  filled with crystal clear water. Soft, radiant light shines down from above, illuminating
+  the gentle ripples in the basin and creating an atmosphere of absolute purity and
+  peace.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Place up to 3 cards of the same type from Sheol on the bottom of the Tower,
+  then draw 1.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 51:10 • Prov 20:9
+nt_refs: Matt 5:8 • John 13:10 • John 15:3
+trivia:
+- The Hebrew word 'tahor' refers to ritual purity, describing both clean animals and
+  a pure heart.
+- The Greek 'katharos' means unmixed or purged, describing both pure gold and a life
+  free from guilt.
+- In John 15, Jesus uses the imagery of pruning a vine to describe how His word makes
+  the disciples clean.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"Create in me a clean heart" psalm 51:10'
+- '"tahor" hebrew clean'
+- '"You are already clean because of the word" john 15:3'
+- '"katharos" greek clean'
