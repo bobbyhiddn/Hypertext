@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: CLEAN
+# Card_Gloss: pure, free from defilement, unblemished
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Shuffle any number of cards from your hand into the Tower, then draw that many.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: Crystal clear water pouring from a rustic clay pitcher into a polished bronze basin, sparkling droplets catching the warm golden sunlight, conveying a sense of absolute purity and washing, classical realistic oil painting style.
+# Card_OT_Verse: Psalm 51:10 — Create in me a clean heart, O God, and renew a right spirit within me.
+# Card_NT_Verse: John 15:3 — Already you are clean because of the word that I have spoken to you.
+# Card_Hebrew: טָהוֹר (tahor)
+# Card_Greek: καθαρός (katharos)
+# Card_Trivia_1: The Hebrew word 'tahor' is used extensively in Leviticus to describe the ritual purity required to enter God's presence.
+# Card_Trivia_2: In the New Testament, Jesus redefines 'clean' (katharos) as an inward state of the heart rather than mere external ritual.
+# Card_Trivia_3: The biblical concept of becoming clean is closely tied to physical water rituals, prefiguring the Christian practice of baptism.

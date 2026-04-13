@@ -1,0 +1,44 @@
+number: '032'
+word: CLEAN
+gloss: pure, free from defilement, unblemished
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Crystal clear water pouring from a rustic clay pitcher into a polished
+  bronze basin, sparkling droplets catching the warm golden sunlight, conveying a
+  sense of absolute purity and washing, classical realistic oil painting style.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Shuffle any number of cards from your hand into the Tower, then draw that
+  many.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Ezek 36:25
+nt_refs: Matt 5:8 • Luke 11:41 • Rev 19:14
+trivia:
+- The Hebrew word 'tahor' is used extensively in Leviticus to describe the ritual
+  purity required to enter God's presence.
+- In the New Testament, Jesus redefines 'clean' (katharos) as an inward state of the
+  heart rather than mere external ritual.
+- The biblical concept of becoming clean is closely tied to physical water rituals,
+  prefiguring the Christian practice of baptism.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
