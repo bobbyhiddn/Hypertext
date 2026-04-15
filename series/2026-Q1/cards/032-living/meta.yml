@@ -1,0 +1,50 @@
+number: '032'
+word: LIVING
+gloss: Alive, active, enduring; possessing or imparting life.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vibrant, flourishing spring of crystal-clear water bursting forth from
+  a cleft in an ancient, weathered rock, surrounded by lush, vibrant green vines and
+  blooming desert flowers.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Reveal the top 3 cards of the Tower. Add any VERBs to your hand and discard
+  the rest.
+ot_verse:
+  ref: Jeremiah 2:13
+  snippet: They have forsaken me, the fountain of living waters, and hewed them out
+    cisterns...
+nt_verse:
+  ref: Hebrews 4:12
+  snippet: For the word of God is living and active, sharper than any double-edged
+    sword...
+greek:
+  text: ζῶν
+  translit: zōn
+hebrew:
+  text: חַי
+  translit: chai
+ot_refs: Gen 2:7 • Jer 2:13 • Ps 36:9
+nt_refs: John 4:10 • Rom 12:1 • Heb 4:12 • 1 Pet 2:4
+trivia:
+- In Hebrew, 'living water' (mayim chayim) refers to flowing, fresh water from a spring
+  or river, as opposed to stagnant cistern water.
+- The Greek participle 'zōn' emphasizes a continuous, active state of vitality rather
+  than just biological existence.
+- New Testament writers frequently use 'living' to describe spiritual realities, such
+  as stones, sacrifices, and hope.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"Hebrews 4:12" living and active'
+- '"Jeremiah 2:13" living water'
+- '"living" greek transliteration bible zao zon'
+- '"living" hebrew transliteration bible chai chayah'
