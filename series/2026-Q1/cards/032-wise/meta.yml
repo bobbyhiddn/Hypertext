@@ -1,0 +1,53 @@
+number: '032'
+word: WISE
+gloss: Having deep understanding, skill, and good judgment rooted in reverence for
+  God.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient oil lamp resting on a sturdy wooden table, illuminating a dark
+  room with a warm, golden glow. A starry night sky is visible through an arched window,
+  symbolizing divine insight and prudence. Rich shadows, glowing light, classical
+  painting style.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Name a card type, then reveal the top 3 cards of the Tower. Add all cards
+  of the named type to your hand and put the rest in Sheol.
+ot_verse:
+  ref: Proverbs 9:9
+  snippet: Give instruction to a wise man, and he will be still wiser; teach a righteous
+    man, and he will increase in learning.
+nt_verse:
+  ref: Ephesians 5:15
+  snippet: Look carefully then how you walk, not as unwise but as wise,
+greek:
+  text: σοφός
+  translit: sophos
+hebrew:
+  text: חָכָם
+  translit: chakam
+ot_refs: Prov 1:5 • Prov 3:7 • Prov 9:9 • Ecc 8:1 • Isa 5:21
+nt_refs: Matt 7:24 • Rom 1:22 • 1 Cor 3:18 • Eph 5:15 • Jas 3:13
+trivia:
+- The Hebrew word 'chakam' encompasses not just intellectual knowledge, but practical
+  skill, artistry, and craftsmanship [1.2].
+- In biblical literature, true wisdom is consistently rooted in 'the fear of the Lord'
+  rather than human ingenuity.
+- While the Greeks highly prized 'sophos', Paul contrasted worldly wisdom with the
+  seemingly foolish wisdom of the cross.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxaJfEW8HlD6ihckuyOcJ7611_GtB_XZsPHsvaNrjTHyrxFeMVtJq0pCE9ya1n-lpDOBiawi8ouTyP8Vq8xMK8MFruYmPpBT2tfgWE6FsWC7Gt41BHMmdoQYKEiL_8Eg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2keaJgMfFyCDVbyCUMEEU-LFckDR5OSi_VIHc5mkc2hpANxnB-XJGJATI8--I3Gj14QBoWaabfFnJ6Li3qhR8NgLPIdBpryBMEqYy2dl2RzlvVsnxrwo56BZ8PZhN
+  title: biblehub.com
+search_queries:
+- '"wise" hebrew bible chakam'
+- '"wise" greek bible sophos'
