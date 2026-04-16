@@ -1,0 +1,46 @@
+number: '032'
+word: WICKED
+gloss: Morally bad, evil, or guilty
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, thorny snare hidden in the shadows of a desolate dirt path, with
+  ominous stormy clouds gathering above, symbolizing a trap set for the unwary.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, you draw
+  1.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Colossians 1:21
+  snippet: '...alienated and hostile in mind, doing wicked deeds.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 4:19 • Isa 5:23
+nt_refs: Matt 13:49 • Col 1:21 • Eph 6:16
+trivia:
+- In Hebrew, 'rasha' implies being guilty of an offense or living in defiance of God's
+  character.
+- The Greek word 'ponēros' emphasizes the inevitable agonies and misery that always
+  accompany evil.
+- The biblical concept of wickedness is often contrasted directly with righteousness,
+  describing a heart condition rather than just actions.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" hebrew word rasha'
+- '"wicked" greek word poneros'
+- colossians 1:21 wicked deeds greek
