@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: EVIL
+# Card_Gloss: morally bad, wicked, harmful
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Target player must discard 1 card. If it is a NAME or TITLE, you gain 1 Letter.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A dark, ominous shadow creeping across a rugged valley floor, swallowing the light as a solitary shepherd's staff rests against a sunlit rock just out of the shadow's reach.
+# Card_OT_Verse: Psalm 23:4 — Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me...
+# Card_NT_Verse: Romans 12:9 — Let love be genuine. Abhor what is evil; hold fast to what is good.
+# Card_Hebrew: רַע (ra')
+# Card_Greek: πονηρός (ponēros)
+# Card_Trivia_1: The Greek word 'ponēros' emphasizes evil that actively causes labor, pain, or sorrow.
+# Card_Trivia_2: In Hebrew, 'ra' can describe moral wickedness as well as natural calamities and distress.
+# Card_Trivia_3: New Testament writers frequently use 'ponēros' to personify malice as 'the evil one'.
