@@ -1,0 +1,43 @@
+number: '032'
+word: GREAT
+gloss: Large in magnitude, importance, or extent
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A towering, majestic mountain peak breaking through a sea of clouds, bathed
+  in brilliant golden sunlight, symbolizing immense scale and awe-inspiring magnitude.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Reveal the top 4 cards of the Tower. Add one with the highest LORE to your
+  hand, and put the rest into Sheol.
+ot_verse:
+  ref: Psalm 145:3
+  snippet: Great is the Lord, and greatly to be praised, and his greatness is unsearchable.
+nt_verse:
+  ref: Matthew 20:26
+  snippet: Whoever would be great among you must be your servant.
+greek:
+  text: μέγας
+  translit: megas
+hebrew:
+  text: גָּדוֹל
+  translit: gadol
+ot_refs: Gen 12:2 • Ex 3:3 • Ps 145:3
+nt_refs: Matt 5:19 • Matt 20:26 • Heb 4:14
+trivia:
+- In Greek, 'megas' is the root for English prefixes like 'mega-', denoting something
+  of vast proportion.
+- The Hebrew 'gadol' is used over 500 times in the Old Testament, often describing
+  God's power or acts.
+- Biblical greatness is frequently inverted by Jesus, who taught that the greatest
+  must become a servant.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

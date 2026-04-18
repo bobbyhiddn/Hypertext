@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: GREAT
+# Card_Gloss: Large in magnitude, importance, or extent
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Reveal the top 4 cards of the Tower. Add one with the highest LORE to your hand, and put the rest into Sheol.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A towering, majestic mountain peak breaking through a sea of clouds, bathed in brilliant golden sunlight, symbolizing immense scale and awe-inspiring magnitude.
+# Card_OT_Verse: Psalm 145:3 — Great is the Lord, and greatly to be praised, and his greatness is unsearchable.
+# Card_NT_Verse: Matthew 20:26 — Whoever would be great among you must be your servant.
+# Card_Hebrew: גָּדוֹל (gadol)
+# Card_Greek: μέγας (megas)
+# Card_Trivia_1: In Greek, 'megas' is the root for English prefixes like 'mega-', denoting something of vast proportion.
+# Card_Trivia_2: The Hebrew 'gadol' is used over 500 times in the Old Testament, often describing God's power or acts.
+# Card_Trivia_3: Biblical greatness is frequently inverted by Jesus, who taught that the greatest must become a servant.
