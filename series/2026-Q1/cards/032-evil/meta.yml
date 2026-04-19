@@ -1,0 +1,48 @@
+number: '032'
+word: EVIL
+gloss: Wickedness, malice, or harmful corruption.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow slowly overtaking a vibrant, fruitful garden,
+  with twisted black thorns wrapping around a healthy olive branch, eerie and atmospheric,
+  digital fantasy illustration.
+stats:
+  lore: 4
+  context: 4
+  complexity: 4
+ability: Target player discards 1 card at random; if it is a NOUN or NAME, you may
+  put it into your hand instead of Sheol.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: '...every inclination of the thoughts of the human heart was only evil
+    all the time.'
+nt_verse:
+  ref: Romans 12:9
+  snippet: Hate what is evil; cling to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20 • Amos 5:14
+nt_refs: Matt 6:13 • Mark 7:21 • Rom 12:9 • Eph 6:16 • 1 John 5:19
+trivia:
+- The Hebrew word 'ra' encompasses moral wickedness as well as physical calamity,
+  distress, and injury.
+- The Greek 'ponēros' emphasizes active, malignant evil that spreads pain and corruption,
+  rather than just bad character.
+- In the Lord's Prayer, the phrase 'deliver us from evil' uses 'ho ponēros', which
+  can also be translated as 'the evil one.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" hebrew bible strongs'
+- '"evil" greek bible strongs poneros kakos'
+- '"Romans 12:9" greek interlinear'
