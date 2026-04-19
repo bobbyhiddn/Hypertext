@@ -1,0 +1,46 @@
+number: '032'
+word: WICKED
+gloss: Morally bad, evil, guilty, or hostile to God
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Dry, lifeless chaff being violently blown away by a dark, swirling storm
+  wind, contrasting with a deeply rooted, lush green tree in the background, dramatic
+  lighting, symbolic.
+stats:
+  lore: 2
+  context: 3
+  complexity: 3
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, you may
+  put it into your hand instead of Sheol.
+ot_verse:
+  ref: Psalm 1:6
+  snippet: But the way of the wicked will perish.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Gen 13:13 • Ps 1:6 • Prov 15:9 • Isa 57:20 • Ezek 33:11
+nt_refs: Matt 13:49 • Eph 6:16 • 2 Thess 3:2 • 1 John 5:19
+trivia:
+- In Hebrew, 'rasha' implies being guilty of a crime or morally wrong, often contrasted
+  with the righteous ('tzaddik').
+- Psalm 1 compares the wicked to unstable, lifeless chaff driven away by the wind.
+- The Greek 'ponēros' describes active, harmful evil, and is frequently used as a
+  title for Satan ('the evil one').
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"way of the wicked will perish" bible'
+- '"separate the wicked from the righteous" bible'
+- '"flaming darts of the evil one" bible greek poneros'

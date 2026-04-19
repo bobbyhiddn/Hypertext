@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WICKED
+GLOSS: Morally bad, evil, guilty, or hostile to God
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player discards 1 card at random. If it is a NOUN or NAME, you may put it into your hand instead of Sheol.
+
+VERSES:
+OT: Psalm 1:6 — “But the way of the wicked will perish.”
+NT: Matthew 13:49 — “The angels will come and separate the wicked from the righteous.”
+
+LANGUAGES:
+Hebrew: רָשָׁע - rasha - Gen 13:13 • Ps 1:6 • Prov 15:9 • Isa 57:20 • Ezek 33:11
+Greek: πονηρός - ponēros - Matt 13:49 • Eph 6:16 • 2 Thess 3:2 • 1 John 5:19
+
+TRIVIA:
+• In Hebrew, 'rasha' implies being guilty of a crime or morally wrong, often contrasted with the righteous ('tzaddik').
+• Psalm 1 compares the wicked to unstable, lifeless chaff driven away by the wind.
+• The Greek 'ponēros' describes active, harmful evil, and is frequently used as a title for Satan ('the evil one').
+
+ART: Dry, lifeless chaff being violently blown away by a dark, swirling storm wind, contrasting with a deeply rooted, lush green tree in the background, dramatic lighting, symbolic.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
