@@ -1,0 +1,53 @@
+number: '032'
+word: WISE
+gloss: possessing discernment, good judgment, and practical skill in living
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A serene figure standing at a crossroads, holding a glowing lantern that
+  illuminates the rocky, stable path ahead while the other path fades into dark mist.
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Look at the top 3 cards of the Tower. Add 1 to your hand, put 1 on top of
+  the Tower, and put 1 in Sheol.
+ot_verse:
+  ref: Proverbs 13:20
+  snippet: Whoever walks with the wise becomes wise, but the companion of fools will
+    suffer harm.
+nt_verse:
+  ref: Matthew 7:24
+  snippet: Everyone then who hears these words of mine and does them will be like
+    a wise man who built his house on the rock.
+greek:
+  text: σοφός
+  translit: sophos
+hebrew:
+  text: חָכָם
+  translit: chakam
+ot_refs: Prov 9:9 • Prov 13:20 • Eccl 8:1
+nt_refs: Matt 7:24 • Rom 16:27 • Jas 3:13
+trivia:
+- The Hebrew word 'chakam' refers not just to intellectual knowledge, but to practical
+  skill and moral discernment [1.16].
+- In Matthew 7, Jesus compares those who hear and act on His teachings to a wise builder
+  on solid rock.
+- Wisdom literature, such as Proverbs and Ecclesiastes, repeatedly contrasts the wise
+  person with the fool.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOIajI3NkZ7S2RYjzMCuAs0XBnkHQIDgXBR1reJzf0uHFtbQeXvNU4q5YuDRXPsmsuhvGxiCChGDmL_wG9JtkrDGiubRqoR-aVK6zZnlfRN9hBQoWKYxmxBHUSFANBNQ==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6831FLOAnhclAfgwpNfgtxc_vzUFbC0qg9Yw_cVneVIrO9lHHou8uqJLQHLxK1Eu63r5igvXaB0RjT4CPVuSwjRLpfDAYS7RUcVpTpJMXqxHcViwFZZGtAghKKlHtuTBt
+  title: biblehub.com
+search_queries:
+- Matthew 7:24 bible
+- Proverbs 13:20 bible
+- '"wise" greek bible transliteration'
+- '"wise" hebrew bible transliteration'
