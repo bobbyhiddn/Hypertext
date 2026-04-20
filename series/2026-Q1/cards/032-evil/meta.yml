@@ -1,0 +1,47 @@
+number: '032'
+word: EVIL
+gloss: morally wrong or bad; wicked; harmful
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Creeping black thorns wrapping tightly around a vibrant, ripe piece of
+  fruit, draining its color. Dark, moody lighting with deep shadows and a sinister,
+  corrupted atmosphere.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard a card from their hand. If they discard a NOUN
+  or NAME, you draw 1 card.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: '...every intent of the thoughts of their hearts was only evil continually.'
+nt_verse:
+  ref: Romans 12:9
+  snippet: Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22
+trivia:
+- The Hebrew word 'ra' can denote moral wickedness, but is also used for dysfunction,
+  disaster, or physical harm.
+- In Greek, 'ponēros' describes active, malignant evil that causes harm, contrasting
+  with 'kakos' (inherent badness).
+- In the Lord's Prayer, 'deliver us from evil' uses 'ponēros,' which many scholars
+  translate personally as 'the evil one.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"kakos" vs "poneros"'
+- '"poneros" greek evil'
+- '"ra" hebrew evil'

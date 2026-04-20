@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: EVIL
+# Card_Gloss: morally wrong or bad; wicked; harmful
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Target player must discard a card from their hand. If they discard a NOUN or NAME, you draw 1 card.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: Creeping black thorns wrapping tightly around a vibrant, ripe piece of fruit, draining its color. Dark, moody lighting with deep shadows and a sinister, corrupted atmosphere.
+# Card_OT_Verse: Genesis 6:5 — ...every intent of the thoughts of their hearts was only evil continually.
+# Card_NT_Verse: Romans 12:9 — Abhor what is evil; hold fast to what is good.
+# Card_Hebrew: רַע (ra)
+# Card_Greek: πονηρός (ponēros)
+# Card_Trivia_1: The Hebrew word 'ra' can denote moral wickedness, but is also used for dysfunction, disaster, or physical harm.
+# Card_Trivia_2: In Greek, 'ponēros' describes active, malignant evil that causes harm, contrasting with 'kakos' (inherent badness).
+# Card_Trivia_3: In the Lord's Prayer, 'deliver us from evil' uses 'ponēros,' which many scholars translate personally as 'the evil one.'
