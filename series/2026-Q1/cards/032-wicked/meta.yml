@@ -1,0 +1,44 @@
+number: '032'
+word: WICKED
+gloss: Morally wrong, guilty, or actively harmful.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A twisted, gnarled thorn bush growing over a ruined stone path, casting
+  long, dark, jagged shadows under a blood-red twilight sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Give 1 card from your hand to target player. If they have any Letters, steal
+  1 from them.
+ot_verse:
+  ref: Proverbs 28:1
+  snippet: The wicked flee when no one pursues, but the righteous are bold as a lion.
+nt_verse:
+  ref: Matthew 18:32
+  snippet: You wicked servant! I forgave you all that debt because you pleaded with
+    me.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:9 • Isa 57:20
+nt_refs: Matt 13:49 • Eph 6:16 • 1 Cor 5:13
+trivia:
+- The Hebrew root 'rasha' conveys the idea of being disjointed, guilty, or causing
+  trouble.
+- In Biblical poetry, the 'wicked' are frequently contrasted directly with the 'righteous'
+  (tsaddiq).
+- The Greek 'ponēros' emphasizes active, harmful, and corrupting evil, rather than
+  just abstract badness.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

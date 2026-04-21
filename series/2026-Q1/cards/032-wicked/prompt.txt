@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WICKED
+GLOSS: Morally wrong, guilty, or actively harmful.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Give 1 card from your hand to target player. If they have any Letters, steal 1 from them.
+
+VERSES:
+OT: Proverbs 28:1 — “The wicked flee when no one pursues, but the righteous are bold as a lion.”
+NT: Matthew 18:32 — “You wicked servant! I forgave you all that debt because you pleaded with me.”
+
+LANGUAGES:
+Hebrew: רָשָׁע - rasha - Ps 1:4 • Prov 15:9 • Isa 57:20
+Greek: πονηρός - ponēros - Matt 13:49 • Eph 6:16 • 1 Cor 5:13
+
+TRIVIA:
+• The Hebrew root 'rasha' conveys the idea of being disjointed, guilty, or causing trouble.
+• In Biblical poetry, the 'wicked' are frequently contrasted directly with the 'righteous' (tsaddiq).
+• The Greek 'ponēros' emphasizes active, harmful, and corrupting evil, rather than just abstract badness.
+
+ART: A twisted, gnarled thorn bush growing over a ruined stone path, casting long, dark, jagged shadows under a blood-red twilight sky.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
