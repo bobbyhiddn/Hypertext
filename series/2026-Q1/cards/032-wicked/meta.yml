@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally bad in principle or practice; evil, sinful
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, swirling gust of wind blowing dry chaff away from a barren stone
+  threshing floor under a stormy, ominous sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, you draw
+  1.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 28:1 • Isa 57:20
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19
+trivia:
+- In Hebrew, 'rasha' implies a guilty person who lives in active defiance of God's
+  character.
+- The Greek 'ponēros' emphasizes the active, destructive, and pain-causing nature
+  of evil.
+- Psalm 1 contrasts the wicked, who are like blown chaff, with the righteous, who
+  are like deeply rooted trees.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"The wicked are not so" bible verse'
+- '"wicked" greek transliteration bible'
+- '"wicked" hebrew transliteration bible'
+- '"wicked" new testament verse poneros'
