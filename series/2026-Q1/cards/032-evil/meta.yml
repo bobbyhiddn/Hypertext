@@ -1,0 +1,43 @@
+number: '032'
+word: EVIL
+gloss: morally wrong, wicked, or harmful
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow extending over a sunlit wheat field, wilting the
+  golden stalks it touches, ominous and foreboding atmosphere, high contrast.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard 1 card. If they discard a NOUN or NAME, steal
+  1 Letter from them.
+ot_verse:
+  ref: Psalm 23:4
+  snippet: I will fear no evil, for you are with me...
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 6:13 • Rom 12:21 • 1 Thess 5:22
+trivia:
+- The Hebrew word 'ra' encompasses moral wickedness as well as calamity, distress,
+  and injury.
+- In the Lord's Prayer, the Greek phrase for 'deliver us from evil' can also be translated
+  as 'the evil one'.
+- The Greek 'ponēros' describes an active, malignant evil that seeks to corrupt and
+  drag others down.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
