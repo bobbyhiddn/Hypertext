@@ -1,0 +1,48 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked; causing ruin, harm, or distress.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow slowly overtaking a vibrant, fruitful garden,
+  leaving withered vines and cracked earth in its wake.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard a NOUN or NAME from their hand. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Psalm 23:4
+  snippet: I will fear no evil, for you are with me; your rod and your staff, they
+    comfort me.
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Isa 5:20
+nt_refs: Matt 6:13 • Rom 12:21 • 1 John 5:19
+trivia:
+- The Hebrew word 'ra' can refer to moral wickedness, but is also frequently used
+  to describe physical calamity, distress, or injury.
+- In the New Testament, 'ponēros' emphasizes the active, harmful, and aggressively
+  corrupting nature of evil.
+- The phrase 'the evil one' (ho ponēros) is frequently used as a specific title for
+  Satan throughout the Gospels and Epistles.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"poneros" greek evil transliteration'
+- '"ra" hebrew evil transliteration'
+- Romans 12:21 evil snippet
+- Psalm 23:4 evil snippet
