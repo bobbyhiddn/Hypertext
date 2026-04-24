@@ -1,0 +1,45 @@
+number: '032'
+word: WISE
+gloss: Possessing discernment, deep understanding, and sound judgment.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient bronze oil lamp glowing brightly on a solid stone foundation,
+  illuminating a winding path through a dark landscape.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Name a card type. Reveal the top 3 cards of the Tower. You may add one of
+  the named type to your hand; put the rest on the bottom.
+ot_verse:
+  ref: Proverbs 13:20
+  snippet: Whoever walks with the wise becomes wise, but the companion of fools will
+    suffer harm.
+nt_verse:
+  ref: Matthew 7:24
+  snippet: Everyone then who hears these words of mine and does them will be like
+    a wise man who built his house on the rock.
+greek:
+  text: σοφός
+  translit: sophos
+hebrew:
+  text: חָכָם
+  translit: chakam
+ot_refs: Prov 1:5 • Prov 3:7 • Eccl 8:1
+nt_refs: Matt 10:16 • Rom 16:19 • 1 Cor 3:18
+trivia:
+- In Hebrew thought, being 'wise' (chakam) was often associated with practical skill
+  and craftsmanship, not just intellect.
+- Proverbs frequently contrasts the 'wise' person with the 'fool,' emphasizing moral
+  choices and teachability over raw intelligence.
+- Jesus advised His disciples to be 'wise as serpents and innocent as doves' when
+  navigating a hostile world.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
