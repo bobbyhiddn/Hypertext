@@ -1,0 +1,49 @@
+number: '032'
+word: WICKED
+gloss: Evil or morally wrong in principle or practice; sinful.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisted thorny vine creeping over a cracked stone path, casting
+  ominous shadows in a barren, desolate landscape.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, you may
+  add it to your hand.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 18:32
+  snippet: Then his master summoned him and said to him, 'You wicked servant! I forgave
+    you all that debt because you pleaded with me.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:9 • Isa 57:20
+nt_refs: Matt 13:49 • Matt 18:32 • Eph 6:16
+trivia:
+- The Hebrew word 'rasha' implies being guilty of a crime or morally wrong, and is
+  frequently contrasted with the righteous.
+- In Greek, 'ponēros' denotes active, harmful evil and malice, not just passive badness
+  or poor quality.
+- The Psalms frequently use the imagery of chaff driven by the wind to describe the
+  ultimate, fleeting fate of the wicked.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Ephesians 6:16 ESV
+- Psalm 1:4 ESV
+- '"wicked" hebrew bible'
+- '"wicked" greek new testament poneros'
+- '"Matthew 18:32" ESV'
