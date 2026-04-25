@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: profoundly immoral or wicked; harmful and destructive
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards a card. If they discard a NOUN or NAME, they must discard a second card.
+
+VERSES:
+OT: Proverbs 8:13 — “To fear the Lord is to hate evil...”
+NT: Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”
+
+LANGUAGES:
+Hebrew: רַע - ra - Gen 6:5 • Ps 23:4 • Isa 5:20
+Greek: πονηρός - ponēros - Matt 6:13 • 1 Thess 5:22 • 3 John 1:11
+
+TRIVIA:
+• In Hebrew, 'ra' can denote moral wickedness, but is also frequently used to describe natural disaster, injury, or calamity.
+• The Greek 'ponēros' specifically implies an active, corrupting kind of wickedness that seeks to drag others down.
+• Biblical authors frequently contrast evil not just with good, but with life, light, and wisdom.
+
+ART: A dark, creeping shadow overtaking a vibrant, fruitful vine, symbolizing corruption and decay spreading through something once pure.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
