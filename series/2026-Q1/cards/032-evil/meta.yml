@@ -1,0 +1,54 @@
+number: '032'
+word: EVIL
+gloss: wicked, harmful, bad
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow slowly overtaking a vibrant, fruitful olive tree,
+  with withered leaves and decaying fruit contrasting against the remaining healthy
+  branches, dramatic chiaroscuro lighting, symbolic of corruption and decay.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard a NOUN or NAME from their hand. If they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: '...every inclination of the thoughts of the human heart was only evil
+    all the time.'
+nt_verse:
+  ref: Romans 12:9
+  snippet: Let love be genuine. Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20 • Jer 17:9
+nt_refs: Matt 6:13 • Matt 12:35 • Rom 12:9 • 1 Thess 5:22 • 1 John 5:19
+trivia:
+- The Hebrew word 'ra' [1.5] encompasses not only moral wickedness, but also natural
+  calamity, distress, and injury.
+- In the Greek New Testament, 'ponēros' emphasizes an active, malignant evil that
+  causes pain and destruction.
+- The Lord's Prayer petition to 'deliver us from the evil one' uses 'ponēros', highlighting
+  an active spiritual adversary.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWMlWUIOXyNOGz4HhD7wsgnBIEjWcS4iXHLzA4SI6iTOR3ipSmnf2dKbhhuvf4AUIjZ-Ym4PPJSaST1KPrICT57GWX2e_K6VL3UNBtrzSCpoVcByFR7QFMJ57AStfcdlhEEHND5gXyzIqpmZzg8t0H0vFP4L0=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6vOnSrZTreC4E6wejx-kkwwmLFZUN8aPrCaVtjXdntxr8XdOr8VGZXulQrLgVUdoQgwc3ndqY5k-RxYU9lAcZi-Z_TseaFxFupHiyvOEmQfIkcBYIomWkYYoFDHdEHOsnSb8HB98pEjMgq0DukoWteLg7JPJrvmHTiA==
+  title: cgg.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgJIcMAK_Q1Xk_bQzP556MT1K8es_dDp9VLCHcY5ucO3T3wZr-u4MZilhVAmTI-1QgDtJzyT9BmPnVe4_2N4n7_wGY0Ujmzs1M0wHTg-Pr46izfPi79YXSv-jGtcLSoGHQ2AGFycVet9uii4wc3_44bZo-6Oz0zQ==
+  title: christswords.com
+search_queries:
+- '"evil" hebrew adjective ra'
+- '"evil" greek adjective poneros kakos'
+- '"abhor what is evil" greek interlinear'
