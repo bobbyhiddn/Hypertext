@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally bad, wicked, harmful, or malicious.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card. If they discard a NOUN or NAME, you draw 1.
+
+VERSES:
+OT: Genesis 6:5 — “...every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Romans 12:9 — “Love must be sincere. Hate what is evil; cling to what is good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 6:5 • Prov 15:3 • Isa 5:20 • Amos 5:14
+Greek: πονηρός - ponēros - Matt 5:45 • Matt 6:13 • Rom 12:9 • 3 John 1:11
+
+TRIVIA:
+• In Hebrew, 'ra' can refer to moral wickedness, but also to physical calamity, injury, or distress.
+• The Greek 'ponēros' emphasizes an active, corrupting evil that seeks to drag others down with it.
+• Isaiah 5:20 pronounces a severe woe on those who distort reality by calling evil good and good evil.
+
+ART: A dark, creeping shadow stretching across a barren, cracked wasteland, contrasting with a distant, faint sliver of pure light breaking through heavy storm clouds.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
