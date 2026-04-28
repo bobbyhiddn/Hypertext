@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: EVIL
+# Card_Gloss: Morally wrong; wicked; causing harm or destruction
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Target player draws 2 cards unless they lose 1 Letter.
+# Card_Stats: LORE 5 | CONTEXT 3 | COMPLEXITY 2
+# Card_Art_Prompt: A shadowy, creeping darkness overtaking a vibrant garden, with twisted thorns and withered leaves spreading across the ground.
+# Card_OT_Verse: Genesis 6:5 — The LORD saw that the wickedness of man was great in the earth, and that every intention of the thoughts of his heart was only evil continually.
+# Card_NT_Verse: Romans 12:21 — Do not be overcome by evil, but overcome evil with good.
+# Card_Hebrew: רָע (ra)
+# Card_Greek: πονηρός (poneros)
+# Card_Trivia_1: The Hebrew word 'ra' is used to describe both moral wickedness and physical calamity or distress.
+# Card_Trivia_2: In the New Testament, 'poneros' often denotes active, malignant evil, sometimes personified as the 'evil one'.
+# Card_Trivia_3: The first mention of evil in the Bible is the 'tree of the knowledge of good and evil' in the Garden of Eden.
