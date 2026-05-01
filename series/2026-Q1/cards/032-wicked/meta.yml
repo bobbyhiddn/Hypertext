@@ -1,0 +1,42 @@
+number: '032'
+word: WICKED
+gloss: Morally corrupt, evil in principle or practice, guilty of sin.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisted thorny vine creeping over a cracked stone path, casting
+  long, sinister shadows under a blood-red twilight sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards a card at random. If it is a NOUN or NAME, you draw
+  1.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come out and separate the evil from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:9 • Isa 57:20
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19
+trivia:
+- The Hebrew 'rasha' often carries a legal sense of being guilty or in the wrong.
+- In Psalms, 'the wicked' frequently appear as the primary antagonists of the righteous.
+- The Greek 'ponēros' implies an active, harmful, and corrupting kind of evil.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"separate the evil from the righteous" matthew 13:49'
+- '"The wicked are not so" psalm 1:4'
