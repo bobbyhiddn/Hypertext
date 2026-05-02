@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally wrong, evil, guilty, or hostile to God.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, stormy sky over a barren wasteland where dry chaff is violently
+  scattered by a harsh wind, contrasting with a single green leaf.
+stats:
+  lore: 3
+  context: 3
+  complexity: 2
+ability: Target player reveals their hand. You may choose a NOUN or NAME for them
+  to discard; if you do, they draw 1.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Gen 18:23 • Ps 1:4 • Prov 15:9
+nt_refs: Matt 13:49 • 1 Cor 5:13 • 2 Thess 3:2
+trivia:
+- The Hebrew word 'rasha' implies being guilty of a crime or living in defiance of
+  God's character.
+- In Psalm 1, the wicked are contrasted with the righteous and compared to chaff blown
+  away by the wind.
+- The Greek word 'poneros' emphasizes the painful, toilsome, and destructive nature
+  of evil.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Psalm 1:4 ESV
+- Matthew 13:49 ESV
+- '"wicked" greek transliteration bible'
+- '"wicked" hebrew transliteration bible'
