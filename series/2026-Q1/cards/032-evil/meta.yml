@@ -1,0 +1,52 @@
+number: '032'
+word: EVIL
+gloss: morally wrong or bad; wicked; causing harm
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, thorny vine slowly wrapping around a vibrant, ripe pomegranate,
+  its sharp thorns piercing the fruit's skin and leaking dark juice, set against a
+  shadowy, ominous background.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player draws 2 cards unless they discard a NOUN.
+ot_verse:
+  ref: Genesis 50:20
+  snippet: As for you, you meant evil against me, but God meant it for good...
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Gen 50:20 • Ps 23:4
+nt_refs: Matt 6:13 • Rom 12:21 • 1 Thess 5:22
+trivia:
+- TheHebrewword'ra'canrefertomoralwickedness, butalsotophysicalharm, calamity, ordistress[1.2].
+- The Greek 'ponēros' describes active, malignant evil that seeks to corrupt others,
+  contrasting with 'kakos' which is passive badness.
+- 'In the Lord''s Prayer, ''deliver us from evil'' uses ''tou ponērou'', which is
+  widely translated as a personification: ''the evil one''.'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOPD33L6ffC6ZlUI9vVtbWrnUvXD-cOm2j0e3ORsA5V8NDOUZRqdk3VH2AtRAs89CLvIwfIkxIHpwccyFkVUdxY6wuW-AU3npels0TmrTdZv_68zh_JHg-7b9lknU8BD16Nz7RDmnDEn7yBzohZ7VSht86noqTsPxHIg67
+  title: renaissancewoman.blog
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHp3fgAaJB3QiEuJBEOiyBRiS8N-aqhCsjFE6qUzU80B1WYjQ-cCSI6FlF9HUTrQgMIGYPltpmeNe39wIL7Q_S_OOu88D6YbqBSUef_tEt0y-SVsodcV32h5ja4roCh7V_G46_iqmYbW82WhA==
+  title: sermonindex.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPRCAnKO9zFx8wXCSqrCWk_Owhte5qrK1BMGeq3RNiIw2cJ4fw34eDNHcDPoOhiGVO5D-ZHMYRXjEXvzoDUBaqsRK5nTZUtEWOqQAxc8k8kwQoC1-aElty_c_io2b14ICyhRCyg7gFCfMfz1X_IoiHxV3IyQMMdK1Z0a3KMZMofL-uBpT-0WZ_830=
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIy2rD5jC5s3i4gVYtmlA5l_rkBZgIeOGMPLRpf_lIq5UO1FmJllACn55qpjUwoQKCK4nYUibMism7FT1ouC-FnMCVzjY83pYcCgd5zrzE6G3PKnBYBgOIQPAid7Ys_BaqHtaq2corCSd_k5mWbmnaTcOu4SDJJLI_bhyRomDDJnRojGhrUFIuXM_U4Q==
+  title: sabbath.org
+search_queries:
+- '"evil" biblical hebrew ra'
+- '"evil" biblical greek poneros kakos'

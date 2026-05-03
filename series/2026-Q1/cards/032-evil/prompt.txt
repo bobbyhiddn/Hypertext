@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: morally wrong or bad; wicked; causing harm
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player draws 2 cards unless they discard a NOUN.
+
+VERSES:
+OT: Genesis 50:20 — “As for you, you meant evil against me, but God meant it for good...”
+NT: Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 6:5 • Gen 50:20 • Ps 23:4
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:21 • 1 Thess 5:22
+
+TRIVIA:
+• TheHebrewword'ra'canrefertomoralwickedness, butalsotophysicalharm, calamity, ordistress[1.2].
+• The Greek 'ponēros' describes active, malignant evil that seeks to corrupt others, contrasting with 'kakos' which is passive badness.
+• In the Lord's Prayer, 'deliver us from evil' uses 'tou ponērou', which is widely translated as a personification: 'the evil one'.
+
+ART: A dark, thorny vine slowly wrapping around a vibrant, ripe pomegranate, its sharp thorns piercing the fruit's skin and leaking dark juice, set against a shadowy, ominous background.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
