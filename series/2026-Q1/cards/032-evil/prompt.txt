@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Profoundly immoral and malevolent; causing harm, sorrow, or destruction.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player must discard a NOUN or NAME from their hand; if they cannot, they reveal their hand.
+
+VERSES:
+OT: Genesis 6:5 — “Every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Matthew 12:35 — “The evil person out of his evil treasure brings forth evil.”
+
+LANGUAGES:
+Hebrew: רַע - ra - Gen 6:5 • Gen 37:20 • Prov 8:13
+Greek: πονηρός - ponēros - Matt 6:13 • Matt 12:35 • Eph 6:16
+
+TRIVIA:
+• The Greek ponēros denotes active, harmful wickedness, emphasizing the misery and agony that accompanies it.
+• In Matthew 6:13, the phrase 'deliver us from evil' uses a substantive adjective, often translated as 'the evil one.'
+• The Hebrew ra encompasses a wide spectrum, from moral depravity to the physical calamities and distress it causes.
+
+ART: A shadowy, corrupting miasma creeping over a decaying olive tree, its branches twisted and withered, set against a dark, stormy sky, evoking a sense of malice and ruin.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

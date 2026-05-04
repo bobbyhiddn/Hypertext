@@ -1,0 +1,48 @@
+number: '032'
+word: EVIL
+gloss: Profoundly immoral and malevolent; causing harm, sorrow, or destruction.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A shadowy, corrupting miasma creeping over a decaying olive tree, its
+  branches twisted and withered, set against a dark, stormy sky, evoking a sense of
+  malice and ruin.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player must discard a NOUN or NAME from their hand; if they cannot,
+  they reveal their hand.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every inclination of the thoughts of the human heart was only evil all
+    the time.
+nt_verse:
+  ref: Matthew 12:35
+  snippet: The evil person out of his evil treasure brings forth evil.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Gen 37:20 • Prov 8:13
+nt_refs: Matt 6:13 • Matt 12:35 • Eph 6:16
+trivia:
+- The Greek ponēros denotes active, harmful wickedness, emphasizing the misery and
+  agony that accompanies it.
+- In Matthew 6:13, the phrase 'deliver us from evil' uses a substantive adjective,
+  often translated as 'the evil one.'
+- The Hebrew ra encompasses a wide spectrum, from moral depravity to the physical
+  calamities and distress it causes.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" hebrew bible word ra transliteration'
+- '"evil" greek bible word poneros kakos transliteration'
+- bible verse with adjective evil "evil"
