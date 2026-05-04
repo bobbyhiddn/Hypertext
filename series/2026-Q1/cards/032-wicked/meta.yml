@@ -1,0 +1,47 @@
+number: '032'
+word: WICKED
+gloss: Morally bad or evil; guilty and unrighteous
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, thorny path leading toward a shadowy abyss, with twisted roots
+  and jagged rocks, contrasting with a faint light in the distance.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Look at the top 3 cards of the Tower. Add 1 to your hand, give 1 to target
+  player, and put 1 into Sheol.
+ot_verse:
+  ref: Psalm 1:6
+  snippet: But the way of the wicked will perish.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: Sever the wicked from among the just,
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:6 • Prov 10:11 • Isa 57:20
+nt_refs: Matt 13:49 • Eph 6:16 • 1 John 5:19
+trivia:
+- The Hebrew word 'rasha' emphasizes someone who is guilty in a legal or moral sense,
+  often contrasted with the righteous.
+- In Greek, 'ponēros' describes an active, aggressive evil that opposes what is good,
+  not merely a passive badness.
+- Wisdom literature, particularly Psalms and Proverbs, frequently contrasts the path
+  of the wicked with the way of the righteous.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" hebrew rasha'
+- '"wicked" greek poneros'
+- '"but the way of the wicked will perish" bible verse'
+- '"sever the wicked from among the just" bible verse'
