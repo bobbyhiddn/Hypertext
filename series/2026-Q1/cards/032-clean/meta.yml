@@ -1,0 +1,47 @@
+number: '032'
+word: CLEAN
+gloss: pure, unblemished, washed
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A brilliant, glowing waterfall cascading over smooth white stones, washing
+  away dark silt into a crystal-clear pool, illuminated by a warm, radiant light from
+  above.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Name a card type. Target player reveals their hand, discards all cards of
+  that type, then draws that many.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 10:10 • Ps 51:10 • Ezek 36:25
+nt_refs: Matt 5:8 • John 15:3 • 1 John 1:9
+trivia:
+- In the Old Testament, 'clean' (tahor) often referred to ritual purity required to
+  enter the tabernacle or temple.
+- Jesus expanded the concept of cleanliness from outward ritual to inward purity of
+  the heart.
+- The Greek word 'katharos' is the root of the English word 'catharsis', meaning a
+  purifying or cleansing of emotions.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"create in me a clean heart" bible verse'
+- '"already clean because of the word" bible verse'
+- '"cleanse us from all unrighteousness" bible verse'
