@@ -22,6 +22,7 @@ words:
 - NAME
 - NATION
 - NOAH
+- PERFECT
 - REMEMBER
 - RIGHTEOUS
 - SCATTER
@@ -209,3 +210,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_sheol_tower
+- number: 32
+  word: PERFECT
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: draw_tower

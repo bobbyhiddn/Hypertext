@@ -1,0 +1,42 @@
+number: '032'
+word: PERFECT
+gloss: Complete, mature, whole, or without blemish
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A flawless, unblemished white lamb standing on a pristine stone altar,
+  bathed in a pure, unbroken beam of radiant light descending from above.
+stats:
+  lore: 4
+  context: 5
+  complexity: 3
+ability: Return any number of cards from your hand to the top of the Tower in any
+  order, then draw that many.
+ot_verse:
+  ref: Psalm 19:7
+  snippet: The law of the Lord is perfect, refreshing the soul.
+nt_verse:
+  ref: Matthew 5:48
+  snippet: Be perfect, therefore, as your heavenly Father is perfect.
+greek:
+  text: τέλειος
+  translit: teleios
+hebrew:
+  text: תָּמִים
+  translit: tamim
+ot_refs: Gen 6:9 • Deut 18:13 • 2 Sam 22:31 • Ps 19:7
+nt_refs: Matt 5:48 • Rom 12:2 • 1 Cor 13:10 • Jas 1:4
+trivia:
+- In Hebrew, 'tamim' often refers to an animal without physical blemish, fit for sacrifice.
+- The Greek 'teleios' carries the idea of reaching an intended goal, full maturity,
+  or completeness.
+- Biblical perfection is less about flawlessness and more about wholeness, integrity,
+  and undivided loyalty to God.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
