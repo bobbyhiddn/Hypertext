@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: bad, harmful, wicked, adversity
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Target player discards 1 card. If they discard a NOUN, they must discard an additional card.
+
+VERSES:
+OT: Genesis 6:5 — “Every intent of the thoughts of his heart was only evil continually.”
+NT: Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 2:9 • Ps 23:4 • Isa 45:7
+Greek: κακός - kakos - Matt 6:13 • Rom 12:21 • 1 Thess 5:22
+
+TRIVIA:
+• In Hebrew, 'ra' can refer to moral wickedness, but also to physical calamity, dysfunction, or distress.
+• The Greek 'kakos' describes something inherently bad or harmful, while 'ponēros' emphasizes active, spreading malice.
+• Ancient Hebrew thought often contrasted 'ra' (dysfunctional) with 'tov' (functional) rather than strictly as spiritual opposites.
+
+ART: A sprawling, thorny briar patch overtaking a fruitful garden, casting dark, jagged shadows across the soil.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

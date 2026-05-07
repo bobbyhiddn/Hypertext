@@ -1,0 +1,46 @@
+number: '032'
+word: EVIL
+gloss: bad, harmful, wicked, adversity
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A sprawling, thorny briar patch overtaking a fruitful garden, casting
+  dark, jagged shadows across the soil.
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Target player discards 1 card. If they discard a NOUN, they must discard
+  an additional card.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every intent of the thoughts of his heart was only evil continually.
+nt_verse:
+  ref: Romans 12:21
+  snippet: Do not be overcome by evil, but overcome evil with good.
+greek:
+  text: κακός
+  translit: kakos
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 2:9 • Ps 23:4 • Isa 45:7
+nt_refs: Matt 6:13 • Rom 12:21 • 1 Thess 5:22
+trivia:
+- In Hebrew, 'ra' can refer to moral wickedness, but also to physical calamity, dysfunction,
+  or distress.
+- The Greek 'kakos' describes something inherently bad or harmful, while 'ponēros'
+  emphasizes active, spreading malice.
+- Ancient Hebrew thought often contrasted 'ra' (dysfunctional) with 'tov' (functional)
+  rather than strictly as spiritual opposites.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"evil" greek strongs'
+- Romans 12:21 greek interlinear
+- '"evil" hebrew strongs'
