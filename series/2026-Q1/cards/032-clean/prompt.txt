@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: CLEAN
+GLOSS: Free from impurity; ritually or morally pure
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return an ADJECTIVE from Sheol to your hand, then exile up to 2 cards from Sheol.
+
+VERSES:
+OT: Psalm 51:10 — “Create in me a clean heart, O God, and renew a right spirit within me.”
+NT: John 15:3 — “Already you are clean because of the word that I have spoken to you.”
+
+LANGUAGES:
+Hebrew: טָהוֹר - tahor - Lev 10:10 • Ps 24:4 • Ezek 36:25
+Greek: καθαρός - katharos - Matt 23:26 • Luke 11:41 • Jas 4:8
+
+TRIVIA:
+• In Hebrew, 'tahor' refers to ritual purity, which was required to enter the tabernacle.
+• Jesus shifted the focus of cleanliness from external washing to internal moral purity.
+• The Greek word 'katharos' is the origin of the English word 'catharsis', meaning a purging or cleansing.
+
+ART: A pristine, flowing waterfall cascading into a crystal-clear pool, surrounded by vibrant, untainted white lilies in a serene, sunlit grove.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
