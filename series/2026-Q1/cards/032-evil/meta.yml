@@ -1,0 +1,43 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, or causing harm and destruction.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A creeping, dark shadow extending like gnarled roots over a vibrant, blooming
+  garden, withering the petals it touches.
+stats:
+  lore: 4
+  context: 3
+  complexity: 3
+ability: Target player must discard a NOUN or NAME from their hand, or reveal a hand
+  containing neither.
+ot_verse:
+  ref: Psalm 140:1
+  snippet: Deliver me, O Lord, from evil men; preserve me from violent men.
+nt_verse:
+  ref: Ephesians 5:16
+  snippet: '...making the best use of the time, because the days are evil.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 5:20
+nt_refs: Matt 6:13 • Luke 6:45 • Eph 5:16 • 1 John 5:19
+trivia:
+- In Hebrew, 'ra' can describe moral wickedness, but also physical calamity, misery,
+  or distress.
+- The Greek word 'ponēros' emphasizes the active, corrupting, and malignant nature
+  of evil.
+- Biblical authors frequently contrast evil with light, life, and the inherent goodness
+  of God's creation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
