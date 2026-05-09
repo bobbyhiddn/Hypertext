@@ -1,0 +1,46 @@
+number: '032'
+word: WICKED
+gloss: Morally wrong, evil, or actively malicious.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisted thorny vine creeping over a cracked stone path, casting
+  long, sinister shadows under a blood-red twilight sky.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player must discard a NOUN or NAME from their hand, or reveal their
+  hand and allow you to choose 1 card for them to discard.
+ot_verse:
+  ref: Proverbs 4:19
+  snippet: The way of the wicked is like deep darkness; they do not know over what
+    they stumble.
+nt_verse:
+  ref: Matthew 13:49
+  snippet: The angels will come out and separate the wicked from the righteous.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Psa 1:4 • Psa 11:5 • Pro 4:19
+nt_refs: Mat 13:49 • Eph 6:16 • 1Jo 5:19
+trivia:
+- The Greek word 'ponēros' originally meant 'oppressed by toils' before evolving to
+  mean 'worthless' or 'wicked.'
+- In Hebrew, 'rasha' often describes not just an evil person, but one who is actively
+  hostile to God and His people.
+- The Book of Proverbs frequently contrasts the 'wicked' (rasha) with the 'righteous'
+  (tsaddiq) to illustrate the two paths of life.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" greek transliteration bible'
+- '"wicked" hebrew transliteration bible'
