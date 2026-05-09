@@ -1,0 +1,43 @@
+number: '032'
+word: WISE
+gloss: Possessing spiritual insight and moral skill
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient bearded figure holding a glowing oil lamp, peering into a starry
+  night sky from a high stone balcony, observing the celestial movements.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Name a card type. Reveal the top 3 cards of the Tower; add all matching cards
+  to your hand and put the rest on the bottom.
+ot_verse:
+  ref: Proverbs 9:9
+  snippet: Give instruction to a wise man, and he will be still wiser...
+nt_verse:
+  ref: Matthew 7:24
+  snippet: '...will be like a wise man who built his house on the rock.'
+greek:
+  text: σοφός
+  translit: sophos
+hebrew:
+  text: חָכָם
+  translit: chakam
+ot_refs: Prov 1:5 • Prov 3:7 • Eccl 8:1
+nt_refs: Matt 10:16 • Rom 16:19 • Jas 3:13
+trivia:
+- The Hebrew 'chakam' originally referred to practical skill or craftsmanship, such
+  as the artisans who built the Tabernacle.
+- In the book of Proverbs, wisdom is frequently personified as a woman calling out
+  in the public squares.
+- Jesus contrasted the wise man who builds his foundation on solid rock with the foolish
+  man who builds on sand.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

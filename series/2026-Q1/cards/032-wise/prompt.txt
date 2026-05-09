@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: WISE
+GLOSS: Possessing spiritual insight and moral skill
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Name a card type. Reveal the top 3 cards of the Tower; add all matching cards to your hand and put the rest on the bottom.
+
+VERSES:
+OT: Proverbs 9:9 — “Give instruction to a wise man, and he will be still wiser...”
+NT: Matthew 7:24 — “...will be like a wise man who built his house on the rock.”
+
+LANGUAGES:
+Hebrew: חָכָם - chakam - Prov 1:5 • Prov 3:7 • Eccl 8:1
+Greek: σοφός - sophos - Matt 10:16 • Rom 16:19 • Jas 3:13
+
+TRIVIA:
+• The Hebrew 'chakam' originally referred to practical skill or craftsmanship, such as the artisans who built the Tabernacle.
+• In the book of Proverbs, wisdom is frequently personified as a woman calling out in the public squares.
+• Jesus contrasted the wise man who builds his foundation on solid rock with the foolish man who builds on sand.
+
+ART: An ancient bearded figure holding a glowing oil lamp, peering into a starry night sky from a high stone balcony, observing the celestial movements.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
