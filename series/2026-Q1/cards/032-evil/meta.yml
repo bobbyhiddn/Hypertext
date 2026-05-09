@@ -1,0 +1,49 @@
+number: '032'
+word: EVIL
+gloss: Profoundly immoral and wicked; causing ruin, harm, or injury.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, creeping shadow overtaking a vibrant, fruitful vineyard, with
+  thorny vines choking the healthy branches, ominous storm clouds gathering above,
+  dramatic lighting, symbolic of corruption and malice.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player discards 1 card at random. If it is a NOUN or NAME, they must
+  discard 1 more card of their choice.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: The LORD saw that the wickedness of man was great in the earth, and that
+    every intention of the thoughts of his heart was only evil continually.
+nt_verse:
+  ref: Romans 12:9
+  snippet: Let love be genuine. Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13 • Isa 45:7
+nt_refs: Matt 6:13 • Rom 12:9 • 1 Thess 5:22 • 1 John 5:19
+trivia:
+- The Greek word 'ponēros' refers to active, malignant evil that causes pain and sorrow,
+  rather than just general badness.
+- In Hebrew, 'ra' can refer to moral wickedness, but also to physical calamity, disaster,
+  or distress.
+- The phrase 'the evil one' in the New Testament specifically uses 'ponēros' to describe
+  Satan's active rebellion.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- Romans 12:9 ESV
+- Genesis 6:5 ESV
+- '"evil" hebrew transliteration ra'''
+- '"evil" greek transliteration poneros kakos'
