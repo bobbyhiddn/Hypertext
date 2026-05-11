@@ -1,0 +1,49 @@
+number: '032'
+word: WICKED
+gloss: Evil, malicious, guilty, or morally wrong.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, swirling storm of wind blowing away dry chaff and withered leaves
+  over a barren landscape, with a twisted, thorny vine creeping in the foreground,
+  evoking a sense of malice and destruction.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player discards 1 card at random. You may add it to your hand.
+ot_verse:
+  ref: Psalm 1:4
+  snippet: The wicked are not so, but are like chaff that the wind drives away.
+nt_verse:
+  ref: Matthew 18:32
+  snippet: Then his master summoned him and said to him, 'You wicked servant! I forgave
+    you all that debt because you pleaded with me.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:4 • Prov 15:29 • Ezek 18:20
+nt_refs: Matt 13:49 • Matt 18:32 • Eph 6:16
+trivia:
+- In Hebrew, 'rasha' describes someone who is guilty, criminal, or morally wrong,
+  acting in defiance of God.
+- The Greek 'ponēros' implies active, malicious evil that seeks to cause harm or corruption
+  to others.
+- Psalm 1 vividly contrasts the wicked, who are blown away like chaff, with the righteous,
+  who are like deeply rooted trees.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" hebrew word bible'
+- Psalm 1:4 esv
+- Matthew 13:49 esv
+- '"wicked" greek word bible'
+- '"wicked" esv new testament'
