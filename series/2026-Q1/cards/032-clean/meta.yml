@@ -1,0 +1,50 @@
+number: '032'
+word: CLEAN
+gloss: Pure, unblemished, free from impurity
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of hands being washed in a simple clay basin with clear, sparkling
+  water pouring from a pitcher, illuminated by bright morning light.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Return an ADJECTIVE from Sheol to your hand, then exile a card from Sheol.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Prov 20:9 • Ezek 36:25
+nt_refs: Matt 5:8 • Matt 23:26 • John 13:10 • Jas 4:8
+trivia:
+- The Hebrew 'tahor' conveyed both ritual purity for Temple worship and moral purity
+  of the heart [1.8].
+- Jesus expanded the Levitical concept of cleanness, teaching that true purity comes
+  from within rather than external rituals.
+- The Greek 'katharos' (clean, pure) is the root of the English word 'catharsis',
+  meaning a purification or purging of emotions.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQh7sHeAncerLMV5eW0GNjEarUwEngcLkP1V8_Piepnxwkt8A5UStSZNXs3PRUp6NWOT--FIVomKkRk41GO4Pet9xavGnxbxfK8sgWRJwMlOgP8HUpHFXj1JNSf8ZiQPd59JOCMjXO4aXgCD0vvd5XGjWe0r0P4I8JKzo9imgwmInbWxPJCGE=
+  title: wordpress.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5mr-q2-yWZNZovE207LEH7aiKAyMEg3fA4kPBtD8emgd8sa_w30EhrLs-eZ4YfFgo4j-Xbs-OQ1xIdnOG-5Ug-0dtnbW_RNRx1ApsyikCFccPecDBuClngAhkbILnQ2u8gwEMGH98dFnIA8HEvQC574ro6izurDEVqqE=
+  title: preciousseed.org
+search_queries:
+- Psalm 51:10 create in me a clean heart
+- '"tahor" hebrew pure clean'
+- John 15:3 already you are clean
+- '"katharos" greek pure clean'
