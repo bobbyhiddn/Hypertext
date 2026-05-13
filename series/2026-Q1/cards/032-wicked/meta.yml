@@ -1,0 +1,48 @@
+number: '032'
+word: WICKED
+gloss: Morally wrong, evil, or actively hostile toward God and His righteous design.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, twisted thorny vine tightly choking a vibrant, healthy olive branch,
+  shadowy and ominous atmosphere, dramatic lighting.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player reveals their hand. You may choose a NOUN or NAME from it and
+  discard it.
+ot_verse:
+  ref: Proverbs 28:1
+  snippet: The wicked flee when no one pursues, but the righteous are bold as a lion.
+nt_verse:
+  ref: Ephesians 6:16
+  snippet: '...taking the shield of faith with which you will be able to quench all
+    the fiery darts of the wicked one.'
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:1 • Prov 11:10 • Isa 5:23
+nt_refs: Matt 13:19 • Eph 6:12 • 1 John 5:19
+trivia:
+- The Hebrew 'rasha' describes one who is guilty of a crime or actively hostile toward
+  God's order.
+- In Greek, 'ponēros' denotes a malignant kind of evil that is actively injurious
+  and destructive.
+- Proverbs frequently contrasts the wicked with the righteous, highlighting their
+  instability and ultimate downfall.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries:
+- '"wicked" greek poneros bible'
+- '"wicked" hebrew rasha bible'
+- proverbs wicked verse snippet
+- ephesians wicked verse snippet
