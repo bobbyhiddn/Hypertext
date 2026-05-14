@@ -1,0 +1,43 @@
+number: '032'
+word: CLEAN
+gloss: pure, without blemish
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of hands being washed with pure, flowing water from a clay pitcher,
+  sunlight catching the sparkling drops as they fall into a copper basin.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player reveals their hand; you may choose a card for them to discard,
+  then you draw 1.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God; and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 11:47 • Ps 24:4 • Prov 20:9 • Isa 1:16 • Ezek 36:25
+nt_refs: Matt 5:8 • Matt 23:26 • Luke 11:41 • John 13:10 • 1 Tim 1:5
+trivia:
+- In Hebrew, 'tahor' refers not just to physical cleanliness, but to a state of ritual
+  and moral purity.
+- The Greek 'katharos' is the root of the English word 'catharsis', meaning a purification
+  or cleansing.
+- Under the Levitical law, being 'clean' was required to approach the presence of
+  God in the Tabernacle.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
