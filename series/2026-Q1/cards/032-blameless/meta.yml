@@ -1,0 +1,43 @@
+number: '032'
+word: BLAMELESS
+gloss: Without fault, innocent, pure
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine white dove soaring upward through a beam of golden light, leaving
+  behind a dark, stormy landscape. The dove's feathers are immaculate and glowing,
+  symbolizing absolute purity and freedom from the shadows below.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Draw 2. Then, discard 1 for each TITLE in your Pages.
+ot_verse:
+  ref: Genesis 17:1
+  snippet: I am God Almighty; walk before me, and be blameless.
+nt_verse:
+  ref: Philippians 2:15
+  snippet: That you may be blameless and innocent, children of God without blemish...
+greek:
+  text: ἄμεμπτος
+  translit: amemptos
+hebrew:
+  text: תָּמִים
+  translit: tamim
+ot_refs: Gen 6:9 • Job 1:1 • Ps 15:2 • Ps 18:23
+nt_refs: Luke 1:6 • Phil 2:15 • Phil 3:6 • 1 Thess 5:23
+trivia:
+- In the Old Testament, 'tamim' is frequently used to describe the strict requirement
+  that sacrificial animals be entirely without physical blemish.
+- Job is introduced as a 'blameless and upright' man, demonstrating that biblical
+  blamelessness refers to relational integrity, not sinless perfection.
+- The Greek word 'amemptos' was used in civic contexts to describe a citizen whose
+  life left no room for legitimate public accusation.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

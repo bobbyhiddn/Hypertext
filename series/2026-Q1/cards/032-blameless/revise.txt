@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: BLAMELESS
+# Card_Gloss: Without fault, innocent, pure
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Draw 2. Then, discard 1 for each TITLE in your Pages.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A pristine white dove soaring upward through a beam of golden light, leaving behind a dark, stormy landscape. The dove's feathers are immaculate and glowing, symbolizing absolute purity and freedom from the shadows below.
+# Card_OT_Verse: Genesis 17:1 — I am God Almighty; walk before me, and be blameless.
+# Card_NT_Verse: Philippians 2:15 — That you may be blameless and innocent, children of God without blemish...
+# Card_Hebrew: תָּמִים (tamim)
+# Card_Greek: ἄμεμπτος (amemptos)
+# Card_Trivia_1: In the Old Testament, 'tamim' is frequently used to describe the strict requirement that sacrificial animals be entirely without physical blemish.
+# Card_Trivia_2: Job is introduced as a 'blameless and upright' man, demonstrating that biblical blamelessness refers to relational integrity, not sinless perfection.
+# Card_Trivia_3: The Greek word 'amemptos' was used in civic contexts to describe a citizen whose life left no room for legitimate public accusation.
