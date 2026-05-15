@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally wrong, wicked, harmful, or calamitous.
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 3/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card. If they have more cards in hand than you, they discard another.
+
+VERSES:
+OT: Isaiah 5:20 — “Woe to those who call evil good and good evil, who put darkness for light and light for darkness...”
+NT: Romans 12:9 — “Love must be sincere. Hate what is evil; cling to what is good.”
+
+LANGUAGES:
+Hebrew: רַע - ra - Gen 6:5 • Ps 23:4 • Isa 5:20
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:9 • 1 Thess 5:22
+
+TRIVIA:
+• The Hebrew word 'ra' is used for both moral wickedness and the calamitous consequences or disasters brought as judgment [1.1.8].
+• Greek distinguishes between 'kakos' (a passive lack of goodness) and 'ponēros' (an active, malicious, and corrupting evil).
+• Isaiah 5:20 warns against moral inversion, pronouncing a strict 'woe' on those who celebrate evil as good.
+
+ART: A dark, creeping shadow slowly overtaking a vibrant, sunlit field of wheat, with twisted thorns choking the healthy stalks.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
