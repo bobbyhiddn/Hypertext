@@ -1,0 +1,43 @@
+number: '032'
+word: CLEAN
+gloss: pure, unblemished, washed
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pair of cupped hands holding crystal clear water, glowing with a soft,
+  purifying light, set against a backdrop of pristine white marble.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player may shuffle any number of cards from their hand into the Tower,
+  then draw that many.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: Already you are clean because of the word that I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Ps 51:10 • Lev 11:47 • Ezek 36:25
+nt_refs: John 15:3 • Matt 5:8 • Titus 1:15
+trivia:
+- In the Levitical system, being 'clean' (tahor) was a strict prerequisite to enter
+  the tabernacle and participate in worship.
+- Jesus famously shifted the theological focus of cleanliness from external ritual
+  washing to internal moral purity.
+- The Greek word 'katharos' is the origin of the English word 'catharsis', meaning
+  a profound emotional or spiritual cleansing.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
