@@ -1,0 +1,49 @@
+number: '032'
+word: EVIL
+gloss: Morally bad, wicked, or harmful.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, foreboding storm cloud casting a deep shadow over a barren, desolate
+  landscape, with a single withered tree standing in the gloom.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player cannot activate abilities during their next turn.
+ot_verse:
+  ref: Psalm 23:4
+  snippet: Even though I walk through the valley of the shadow of death, I will fear
+    no evil, for you are with me...
+nt_verse:
+  ref: Matthew 6:13
+  snippet: And lead us not into temptation, but deliver us from evil.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra
+ot_refs: Gen 6:5 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 6:13 • Rom 12:9 • Eph 6:12
+trivia:
+- The Hebrew word 'ra' can mean moral wickedness, as well as physical harm, disaster,
+  or calamity [1.1.2].
+- In the Lord's Prayer, the Greek 'ponēros' can be translated as either 'evil' or
+  'the evil one'.
+- The biblical narrative consistently contrasts evil with good, culminating in God
+  overcoming evil with good.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeWKhwlCjn9txYU8LGft1qg-1_EDb1ahVNtxmiEzxqSd2tgGcJ-VKLjyd0usUkTvZxGLHh_Nd6e6rLksJQU4YatY1lmN3UGBwOSxvSfAvZqWB3K_s73XBu2TUnLBjOucPd60stRxxwodA=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaTWKsa81goAoVCRT3CXW54ZEN9cRnHou9bjDNakzIRc0BqyVbDs8ioB2bXD0xfqnTHC1RJclWh0oH6ciAA244069wPDzIWgzFLmCFKeBqSkjJ9pSltQ7c6s7gVfNwm8WeQH-LQ-3ReEz4afFoXQLkuFurIk9X7AN5Xogv-n-a90yJ8YjydH0404eklWFa8RvsNT2Dh1_UfPATcWV8Ne8eF9PoGAjRdHe0RioOQRPWoaLtb0OQksxizP46a26CPfywOBIymQ==
+  title: cambridge.org
+search_queries:
+- '"evil" hebrew bible word study'
+- '"evil" greek bible word study transliteration'
