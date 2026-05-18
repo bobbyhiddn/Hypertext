@@ -1,0 +1,45 @@
+number: '032'
+word: CLEAN
+gloss: Pure, unblemished, free from dirt or guilt
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A glowing, pure drop of water falling into a perfectly still, crystalline
+  pool, sending gentle ripples outward. Radiant light filtering through the water,
+  conveying a sense of absolute purity, renewal, and spotless perfection.
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Target player reveals their hand. Choose up to 2 cards for them to shuffle
+  into the Tower, then they draw that many.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God, and renew a steadfast spirit within
+    me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word which I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Gen 7:2 • Lev 11:47 • Ps 51:10 • Prov 20:9 • Ezek 36:25
+nt_refs: Matt 5:8 • Matt 23:26 • John 13:10 • John 15:3 • Jas 1:27
+trivia:
+- The Hebrew 'tahor' was used for physical cleanliness, ritual purity, and unalloyed
+  metals like 'pure gold'.
+- In Greek, 'katharos' means unsoiled or free from admixture, giving us the English
+  word 'catharsis'.
+- Jesus expanded the concept of cleanliness from outward ritual traditions to inward
+  moral purity of the heart.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
