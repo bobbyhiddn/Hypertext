@@ -10,6 +10,7 @@ words:
 - CURSE
 - DESCEND
 - EARTH
+- EVIL
 - FORM
 - GOOD
 - GRACE
@@ -36,6 +37,7 @@ ability_patterns:
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
 - choice_discard_draw_stat_lore
+- choice_discard_sheol
 - choice_draw
 - conditional_discard_draw_type_verb
 - conditional_draw
@@ -209,3 +211,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_sheol_tower
+- number: 32
+  word: EVIL
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: choice_discard_sheol
