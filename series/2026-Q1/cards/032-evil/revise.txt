@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: EVIL
+# Card_Gloss: morally bad, wicked, or harmful
+# Card_Type: ADJECTIVE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Target player discards 1 card. If they discard a NOUN or NAME, you draw 1.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 4
+# Card_Art_Prompt: A dark, creeping shadow slowly overtaking a vibrant, fruitful olive tree, with withered leaves and barren branches left in its wake, dramatic lighting, ominous and foreboding atmosphere, digital fantasy illustration style.
+# Card_OT_Verse: Genesis 6:5 — ...every inclination of the thoughts of the human heart was only evil all the time.
+# Card_NT_Verse: Romans 12:9 — Hate what is evil; cling to what is good.
+# Card_Hebrew: רַע (ra')
+# Card_Greek: πονηρός (ponēros)
+# Card_Trivia_1: In Hebrew, 'ra' can refer to moral wickedness, but is also frequently used to describe physical calamity, disaster, or distress.
+# Card_Trivia_2: The Greek word 'ponēros' emphasizes an active, corrupting, and malignant kind of evil, rather than mere passive badness.
+# Card_Trivia_3: Throughout Scripture, evil is consistently depicted not as a created substance, but as the perversion or absence of God's good order.
