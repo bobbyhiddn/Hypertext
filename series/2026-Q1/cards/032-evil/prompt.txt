@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #032
+WORD: EVIL
+GLOSS: Morally wrong, wicked, or bringing sorrow and distress
+TYPE: ADJECTIVE (top-left navy circle must contain WHITE sparkle pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Target player discards 1 card. If they discard a NOUN or NAME, they must discard 1 additional card.
+
+VERSES:
+OT: Genesis 6:5 — “...every inclination of the thoughts of the human heart was only evil all the time.”
+NT: Romans 12:21 — “Do not be overcome by evil, but overcome evil with good.”
+
+LANGUAGES:
+Hebrew: רַע - ra' - Gen 2:9 • Gen 6:5 • Ps 23:4 • Prov 8:13
+Greek: πονηρός - ponēros - Matt 6:13 • Rom 12:21 • 1 Thess 5:22 • 3 John 1:11
+
+TRIVIA:
+• The Hebrew word 'ra' (רַע) encompasses both moral wickedness and physical calamity or disaster.
+• In the Lord's Prayer, the Greek 'ponēros' includes a definite article, leading many to translate it as 'the evil one'.
+• The Tree of the Knowledge of Good and Evil represents the temptation to define morality apart from God's wisdom.
+
+ART: A dark, creeping shadow slowly overtaking a vibrant, fruitful garden. The edges of the plants wither and turn ash-grey where the shadow touches them, contrasting with the bright life just beyond its reach.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.
