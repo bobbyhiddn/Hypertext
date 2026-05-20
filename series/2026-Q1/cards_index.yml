@@ -4,6 +4,7 @@ words:
 - BROTHER
 - BUILD
 - CITY
+- CLEAN
 - CONFUSE
 - COVENANT
 - CREATE
@@ -46,6 +47,7 @@ ability_patterns:
 - draw_look_top_sheol_tower
 - draw_sheol_tower
 - draw_tower
+- draw_tower_type_name
 - look_top_tower
 - pages_sheol
 - sheol
@@ -209,3 +211,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_sheol_tower
+- number: 32
+  word: CLEAN
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: draw_tower_type_name
