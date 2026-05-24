@@ -1,0 +1,42 @@
+number: '032'
+word: CLEAN
+gloss: Pure, free from defilement or impurity.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A pristine, clear stream of water flowing over smooth white stones, illuminated
+  by bright, purifying sunlight.
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Target player exiles up to 3 cards from Sheol, then draws 1.
+ot_verse:
+  ref: Psalm 51:10
+  snippet: Create in me a clean heart, O God; and renew a right spirit within me.
+nt_verse:
+  ref: John 15:3
+  snippet: You are already clean because of the word I have spoken to you.
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Lev 10:10 • Ps 51:10 • Ezek 36:25
+nt_refs: Matt 5:8 • John 13:10 • John 15:3
+trivia:
+- The Hebrew word 'tahor' describes both physical cleanliness and the ritual purity
+  required to enter God's presence.
+- The Greek word 'katharos' is the root of the English word 'catharsis', meaning a
+  purification or cleansing.
+- In John 15, Jesus tells His disciples they are 'already clean' because of the word
+  He has spoken to them.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
