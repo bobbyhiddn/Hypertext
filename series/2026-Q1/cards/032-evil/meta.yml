@@ -1,0 +1,44 @@
+number: '032'
+word: EVIL
+gloss: Morally wrong, wicked, or harmful; that which causes ruin or opposes God's
+  good.
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark, withered fig tree casting a long, twisted shadow over a barren,
+  cracked landscape under a sky heavy with brooding, storm-filled clouds.
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: Target player reveals their hand. You may choose a NOUN or NAME for them
+  to discard.
+ot_verse:
+  ref: Genesis 6:5
+  snippet: Every intent of the thoughts of his heart was only evil continually.
+nt_verse:
+  ref: Romans 12:9
+  snippet: Abhor what is evil; hold fast to what is good.
+greek:
+  text: πονηρός
+  translit: ponēros
+hebrew:
+  text: רַע
+  translit: ra'
+ot_refs: Gen 2:9 • Gen 6:5 • Ps 23:4 • Prov 8:13
+nt_refs: Matt 5:45 • Matt 6:13 • Rom 12:9 • 1 Thess 5:22
+trivia:
+- The Hebrew 'ra' encompasses not just moral wickedness, but also physical calamity,
+  distress, and harm.
+- In Greek, 'ponēros' describes an active, spreading malice that seeks to drag others
+  down with it.
+- The biblical concept of evil is not an equal opposite force to good, but a corruption
+  of God's good design.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
