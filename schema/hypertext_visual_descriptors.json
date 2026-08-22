@@ -26,10 +26,10 @@
     "TITLE": {"scope": "type_only", "icon": "crown", "prompt": "TYPE is exactly TITLE; the white header icon is a crown."}
   },
   "rarities": {
-    "COMMON": {"scope": "rarity_only", "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."},
-    "UNCOMMON": {"scope": "rarity_only", "prompt": "RARITY is exactly UNCOMMON followed by one green diamond; no activation cost."},
-    "RARE": {"scope": "rarity_only", "prompt": "RARITY is exactly RARE followed by one gold diamond; show +🂠 below it."},
-    "GLORIOUS": {"scope": "rarity_only", "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."}
+    "COMMON": {"scope": "rarity_only", "diamond_fill": "white", "card_bonus": 0, "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."},
+    "UNCOMMON": {"scope": "rarity_only", "diamond_fill": "green", "card_bonus": 0, "prompt": "RARITY is exactly UNCOMMON followed by one green diamond; no activation cost."},
+    "RARE": {"scope": "rarity_only", "diamond_fill": "gold", "card_bonus": 1, "prompt": "RARITY is exactly RARE followed by one gold diamond; show +🂠 below it."},
+    "GLORIOUS": {"scope": "rarity_only", "diamond_fill": "orange", "card_bonus": 2, "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."}
   },
   "sizes": {
     "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 5, "chapter_points": 8, "page_letters": 2, "composition": ["NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE"]},

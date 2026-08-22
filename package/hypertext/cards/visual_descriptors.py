@@ -12,7 +12,7 @@ SCHEMA_PATH = ROOT / "schema" / "visual_descriptor.schema.json"
 TYPE_VALUES = ("NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE")
 RARITY_VALUES = ("COMMON", "UNCOMMON", "RARE", "GLORIOUS")
 COMPOSITION_VALUES = ("EXPLICIT", "PATTERN")
-CONTENT_FIELDS = ("NUMBER", "CARD_TYPE", "RARITY_TEXT", "WORD", "GLOSS", "ART_PROMPT",
+CONTENT_FIELDS = ("NUMBER", "CARD_TYPE", "RARITY_TEXT", "RARITY_ICON", "WORD", "GLOSS", "ART_PROMPT",
     "STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY", "ABILITY_TEXT", "OT_VERSE_LINE",
     "NT_VERSE_LINE", "HEBREW", "HEBREW_TRANSLIT", "OT_REFS", "GREEK",
     "GREEK_TRANSLIT", "NT_REFS", "TRIVIA_BULLETS", "SERIES")
@@ -64,8 +64,9 @@ def _validate_request(card_type: str, rarity: str, mode: str, content: dict) -> 
         raise DescriptorError("missing exact-content fields: " + ", ".join(sorted(missing)))
     if unexpected:
         raise DescriptorError("unexpected exact-content fields: " + ", ".join(sorted(unexpected)))
-    if content["CARD_TYPE"] != card_type or content["RARITY_TEXT"] != rarity:
-        raise DescriptorError("content CARD_TYPE/RARITY_TEXT must match isolated treatments")
+    if (content["CARD_TYPE"] != card_type or content["RARITY_TEXT"] != rarity
+            or content["RARITY_ICON"] != rarity):
+        raise DescriptorError("content CARD_TYPE and canonical RARITY_TEXT/RARITY_ICON must match isolated treatments")
     for key in TEXT_FIELDS:
         if not isinstance(content[key], str):
             raise DescriptorError(f"content field {key} must be a string")
@@ -79,8 +80,49 @@ def _validate_request(card_type: str, rarity: str, mode: str, content: dict) -> 
         raise DescriptorError("TRIVIA_BULLETS must be a non-empty array of canonical strings")
 
 def canonical_prompt_content(content: dict) -> dict:
-    """Adapt repository fields without relabeling RARITY_TEXT or copying metadata."""
-    return {key: deepcopy(content[key]) for key in CONTENT_FIELDS if key in content}
+    """Copy the repository's canonical render fields and validate its rarity pair."""
+    data = {key: deepcopy(content[key]) for key in CONTENT_FIELDS if key in content}
+    if "RARITY_TEXT" in data or "RARITY_ICON" in data:
+        text = data.get("RARITY_TEXT")
+        icon = data.get("RARITY_ICON")
+        if not isinstance(text, str) or not isinstance(icon, str):
+            raise DescriptorError("RARITY_TEXT and RARITY_ICON must both be strings")
+        text, icon = text.upper(), icon.upper()
+        if text != icon or text not in RARITY_VALUES:
+            raise DescriptorError("canonical RARITY_TEXT and RARITY_ICON must match a declared rarity")
+        data["RARITY_TEXT"] = data["RARITY_ICON"] = text
+    return data
+
+def serialize_lot_prompt(*, content: dict, mode: str = "EXPLICIT",
+                         descriptor: dict | None = None) -> str:
+    """Serialize inherited global/LOT/size constraints ahead of exact Lot content."""
+    descriptor = descriptor or load_descriptors()
+    validate_descriptors(descriptor)
+    if mode not in COMPOSITION_VALUES:
+        raise DescriptorError(f"invalid composition {mode!r}; expected one of {COMPOSITION_VALUES}")
+    cards = content.get("cards")
+    size_name = f"LOT_{cards}"
+    if size_name not in descriptor["sizes"]:
+        raise DescriptorError(f"invalid Lot size {cards!r}; expected 5, 6, or 7")
+    size = descriptor["sizes"][size_name]
+    if (content.get("points") != size["chapter_points"]
+            or content.get("opponent_letters") != size["page_letters"]):
+        raise DescriptorError("Lot reward values must match the selected Lot size")
+    dump = lambda value: json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    rule = ("materialize GLOBAL, LOT, and selected SIZE in full" if mode == "EXPLICIT" else
+            "inherit GLOBAL -> LOT -> selected SIZE; serialized values below are authoritative")
+    return "\n".join((
+        "HYPERTEXT VISUAL DESCRIPTOR v1", f"COMPOSITION={mode}: {rule}.",
+        f"INHERITANCE=HYPERTEXT_GLOBAL -> structures.LOT -> sizes.{size_name}",
+        "GLOBAL=" + dump(descriptor["HYPERTEXT_GLOBAL"]),
+        "STRUCTURE=" + dump(descriptor["structures"]["LOT"]), "SIZE=" + dump(size),
+        "CONTENT_ORDER=" + dump(descriptor["structures"]["LOT"]["content_order"]),
+        "EXACT_CANONICAL_CONTENT_JSON=" + dump(content),
+        "Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.",
+        "NEGATIVE GRAMMAR: " + "; ".join(descriptor["HYPERTEXT_GLOBAL"]["negative"]) + ".",
+        "The Lot Reward descriptor is intentionally bounded at the supplied word 'trim'; infer no missing tail.",
+        "Output only one vertical 1024x1536 Lot Card.",
+    ))
 
 def serialize_word_card_prompt(*, card_type: str, rarity: str, content: dict,
                                mode: str = "EXPLICIT", descriptor: dict | None = None) -> str:

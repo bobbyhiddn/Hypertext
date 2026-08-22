@@ -39,6 +39,7 @@ from pathlib import Path
 from typing import Any, Optional
 from hypertext.lots.rules import (IMAGE_DIMENSIONS, IMAGE_MIME, composition_label,
                                   subtype_reference, validate_phase)
+from hypertext.cards.visual_descriptors import serialize_lot_prompt
 
 # Package paths
 PACKAGE_DIR = Path(__file__).resolve().parent.parent
@@ -207,7 +208,7 @@ def _build_lot_prompt(card_data: dict[str, Any], style_refs: list[str] | None = 
 
     roles_text = "\n".join(image_roles) if image_roles else "Reference images provided for style matching"
 
-    prompt = f"""IMAGE ROLES:
+    legacy_prompt = f"""IMAGE ROLES:
 {roles_text}
 
 TASK:
@@ -252,7 +253,14 @@ AVOID:
 - Wrong card count or points values
 """
 
-    return prompt
+    descriptor_content = {
+        "id": pid, "name": name, "cards": cards, "points": points,
+        "opponent_letters": letters, "display": display,
+        "composition": composition, "flavor": flavor, "context": context,
+        "series": series, "verse": verse,
+    }
+    mode = str(card_data.get("visual_descriptor_mode", "EXPLICIT")).upper()
+    return serialize_lot_prompt(content=descriptor_content, mode=mode) + "\n\n" + legacy_prompt
 
 
 def render_lot_card(card_data: dict[str, Any], out_path: Path, style_refs: list[str] | None = None) -> None:

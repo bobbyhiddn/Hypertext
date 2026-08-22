@@ -32,6 +32,12 @@ def test_source_subtype_prompt_and_reference_agree(tmp_path, cards, points, lett
     assert refs[0] == str(subtype_reference(cards))
     assert all(Path(p).name.lower() != "lot_back.png" for p in refs)
     prompt = _build_lot_prompt(phase, refs)
+    payload = json.loads(prompt.split("EXACT_CANONICAL_CONTENT_JSON=", 1)[1].split("\n", 1)[0])
+    assert payload["composition"] == phase["composition"]
+    assert f"sizes.LOT_{cards}" in prompt
+    assert "GLOBAL=" in prompt and "STRUCTURE=" in prompt and "SIZE=" in prompt
+    assert "no generated watermark" in prompt
+    assert "infer no missing tail" in prompt
     assert f"Chapter Value: {points} Points" in prompt
     assert f"Page Value: {letters} Letters" in prompt
     assert f'"{cards}-CARD"' in prompt

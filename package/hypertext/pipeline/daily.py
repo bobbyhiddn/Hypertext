@@ -1915,7 +1915,7 @@ def build_prompt_text(card: dict) -> str:
     data = canonical_prompt_content(content)
     card_type = str(content.get("CARD_TYPE", "")).upper()
     rarity = str(content.get("RARITY_TEXT", "")).upper()
-    data["CARD_TYPE"], data["RARITY_TEXT"] = card_type, rarity
+    data["CARD_TYPE"] = card_type
     mode = str(card.get("visual_descriptor_mode", "EXPLICIT")).upper()
     return serialize_word_card_prompt(
         card_type=card_type, rarity=rarity, content=data, mode=mode)

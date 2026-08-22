@@ -6,15 +6,16 @@ from jsonschema import ValidationError, validate
 
 from hypertext.cards.visual_descriptors import (
     DescriptorError, SCHEMA_PATH, load_descriptors, logical_word_card_descriptors,
-    serialize_word_card_prompt,
+    canonical_prompt_content, serialize_word_card_prompt,
 )
 from hypertext.pipeline.daily import build_prompt_text
+from hypertext.watermark.crypto import build_svg, canonical_payload, compute_signature_hex, load_card_identity
 
 
 @pytest.fixture
 def content():
     return {
-        "NUMBER": 7, "CARD_TYPE": "NOUN", "RARITY_TEXT": "RARE", "WORD": "חֶסֶד — χάρις",
+        "NUMBER": 7, "CARD_TYPE": "NOUN", "RARITY_TEXT": "RARE", "RARITY_ICON": "RARE", "WORD": "חֶסֶד — χάρις",
         "GLOSS": "steadfast love & grace", "ART_PROMPT": "A lamp beside an ancient scroll.",
         "STAT_LORE": 3, "STAT_CONTEXT": 4, "STAT_COMPLEXITY": 2,
         "ABILITY_TEXT": "Keep “this” exact; don't normalize it.",
@@ -38,7 +39,7 @@ def test_inheritance_produces_twenty_logical_cards_from_ten_authored_descriptors
 
 @pytest.mark.parametrize("card_type,rarity,mode", [("OTHER", "RARE", "EXPLICIT"), ("NOUN", "MYTHIC", "PATTERN"), ("NOUN", "RARE", "IMPLICIT")])
 def test_invalid_enums_are_rejected(content, card_type, rarity, mode):
-    content.update(CARD_TYPE=card_type, RARITY_TEXT=rarity)
+    content.update(CARD_TYPE=card_type, RARITY_TEXT=rarity, RARITY_ICON=rarity)
     with pytest.raises(DescriptorError, match="invalid"):
         serialize_word_card_prompt(card_type=card_type, rarity=rarity, mode=mode, content=content)
 
@@ -72,7 +73,7 @@ def test_prompt_preserves_exact_canonical_unicode_and_redundant_language_sides(c
 def test_generated_watermark_is_always_forbidden(content):
     for card_type in ("NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"):
         for rarity in ("COMMON", "UNCOMMON", "RARE", "GLORIOUS"):
-            item = dict(content, CARD_TYPE=card_type, RARITY_TEXT=rarity)
+            item = dict(content, CARD_TYPE=card_type, RARITY_TEXT=rarity, RARITY_ICON=rarity)
             prompt = serialize_word_card_prompt(card_type=card_type, rarity=rarity, content=item)
             assert "no generated watermark" in prompt
             assert "add watermark" not in prompt
@@ -102,11 +103,26 @@ def test_real_generation_path_serializes_real_canonical_card(mode):
     prompt = build_prompt_text(card)
     payload = json.loads(prompt.split("EXACT_CANONICAL_CONTENT_JSON=", 1)[1].split("\n", 1)[0])
     assert payload["RARITY_TEXT"] == card["content"]["RARITY_TEXT"]
+    assert payload["RARITY_ICON"] == card["content"]["RARITY_ICON"]
     assert payload["TRIVIA_BULLETS"] == card["content"]["TRIVIA_BULLETS"]
     assert "GLOBAL=" in prompt and "STRUCTURE=" in prompt and "CONTENT_ORDER=" in prompt
     assert "closed book" not in prompt  # real card is VERB
     assert '"icon":"pencil"' in prompt
     assert "no generated watermark" in prompt
+
+
+def test_real_generation_keeps_deterministic_watermark_as_post_processing(monkeypatch):
+    root = SCHEMA_PATH.parents[1]
+    card_dir = root / "series/2026-Q1-dev/cards/006-redeem"
+    card = json.loads((card_dir / "card.json").read_text())
+    prompt = build_prompt_text(card)
+    assert "hypertext_sig" not in prompt and "<svg" not in prompt
+    monkeypatch.setenv("HYPERTEXT_SIGNING_KEY", "descriptor-regression-key")
+    payload = canonical_payload(load_card_identity(card_dir))
+    first = build_svg(sig_hex=compute_signature_hex(payload), payload=payload)
+    second = build_svg(sig_hex=compute_signature_hex(payload), payload=payload)
+    assert first == second
+    assert "hypertext_sig" in first
 
 
 @pytest.mark.parametrize("mutation", [
@@ -115,6 +131,9 @@ def test_real_generation_path_serializes_real_canonical_card(mode):
     lambda d: d["types"]["NOUN"].update(scope="rarity_only"),
     lambda d: d["rarities"]["RARE"].update(scope="type_only"),
     lambda d: d["types"]["NOUN"].update(unexpected=True),
+    lambda d: d["types"]["NOUN"].update(icon="pencil"),
+    lambda d: d["rarities"]["COMMON"].update(diamond_fill="gold"),
+    lambda d: d["rarities"]["RARE"].update(card_bonus=2),
     lambda d: d["HYPERTEXT_GLOBAL"].update(unexpected=True),
     lambda d: d["structures"]["WORD_CARD"]["geometry"].update(unexpected=True),
     lambda d: d["sizes"]["LOT_5"].update(card_count="5"),
@@ -141,6 +160,14 @@ def test_canonical_content_rejects_unexpected_property(content):
     content["RARITY"] = content["RARITY_TEXT"]
     with pytest.raises(DescriptorError, match="unexpected"):
         serialize_word_card_prompt(card_type="NOUN", rarity="RARE", content=content)
+
+
+def test_repository_rarity_pair_is_normalized_but_mismatch_is_rejected(content):
+    content.update(RARITY_TEXT="rare", RARITY_ICON="Rare")
+    assert canonical_prompt_content(content)["RARITY_ICON"] == "RARE"
+    content["RARITY_ICON"] = "COMMON"
+    with pytest.raises(DescriptorError, match="must match"):
+        canonical_prompt_content(content)
 
 
 def test_lot_sizes_have_distinct_canonical_compositions_and_values():

@@ -17,17 +17,21 @@
       "type": "object", "additionalProperties": false,
       "required": ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"],
       "properties": {
-        "NOUN": {"$ref": "#/$defs/typeTreatment"}, "VERB": {"$ref": "#/$defs/typeTreatment"},
-        "ADJECTIVE": {"$ref": "#/$defs/typeTreatment"}, "NAME": {"$ref": "#/$defs/typeTreatment"},
-        "TITLE": {"$ref": "#/$defs/typeTreatment"}
+        "NOUN": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "closed book"}}}]},
+        "VERB": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "pencil"}}}]},
+        "ADJECTIVE": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "sparkle pencil"}}}]},
+        "NAME": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "feather quill"}}}]},
+        "TITLE": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "crown"}}}]}
       }
     },
     "rarities": {
       "type": "object", "additionalProperties": false,
       "required": ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"],
       "properties": {
-        "COMMON": {"$ref": "#/$defs/rarityTreatment"}, "UNCOMMON": {"$ref": "#/$defs/rarityTreatment"},
-        "RARE": {"$ref": "#/$defs/rarityTreatment"}, "GLORIOUS": {"$ref": "#/$defs/rarityTreatment"}
+        "COMMON": {"allOf": [{"$ref": "#/$defs/rarityTreatment"}, {"properties": {"diamond_fill": {"const": "white"}, "card_bonus": {"const": 0}}}]},
+        "UNCOMMON": {"allOf": [{"$ref": "#/$defs/rarityTreatment"}, {"properties": {"diamond_fill": {"const": "green"}, "card_bonus": {"const": 0}}}]},
+        "RARE": {"allOf": [{"$ref": "#/$defs/rarityTreatment"}, {"properties": {"diamond_fill": {"const": "gold"}, "card_bonus": {"const": 1}}}]},
+        "GLORIOUS": {"allOf": [{"$ref": "#/$defs/rarityTreatment"}, {"properties": {"diamond_fill": {"const": "orange"}, "card_bonus": {"const": 2}}}]}
       }
     },
     "sizes": {
@@ -50,7 +54,7 @@
     "wordCard": {"type": "object", "additionalProperties": false, "required": ["kind", "geometry", "content_order"], "properties": {"kind": {"const": "WORD_CARD"}, "geometry": {"type": "object", "additionalProperties": false, "required": ["orientation", "frame", "art_panel_height_fraction", "original_language_split"], "properties": {"orientation": {"const": "vertical"}, "frame": {"type": "string"}, "art_panel_height_fraction": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1}, "original_language_split": {"$ref": "#/$defs/split"}}}, "content_order": {"type": "array", "const": ["HEADER", "ART", "STATS", "ABILITY", "OT_VERSE", "NT_VERSE", "ORIGINAL_LANGUAGES", "TRIVIA", "FOOTER"]}}},
     "lot": {"type": "object", "additionalProperties": false, "required": ["kind", "geometry", "content_order", "spec_boundary"], "properties": {"kind": {"const": "LOT"}, "geometry": {"type": "object", "additionalProperties": false, "required": ["orientation", "frame"], "properties": {"orientation": {"const": "vertical"}, "frame": {"type": "object", "additionalProperties": false, "required": ["navy_border", "gold_trim"], "properties": {"navy_border": {"type": "string"}, "gold_trim": {"type": "string"}}}}}, "content_order": {"const": ["TITLE", "ART", "REWARD"]}, "spec_boundary": {"type": "string", "minLength": 1}}},
     "typeTreatment": {"type": "object", "additionalProperties": false, "required": ["scope", "icon", "prompt"], "properties": {"scope": {"const": "type_only"}, "icon": {"type": "string", "minLength": 1}, "prompt": {"type": "string", "minLength": 1}}},
-    "rarityTreatment": {"type": "object", "additionalProperties": false, "required": ["scope", "prompt"], "properties": {"scope": {"const": "rarity_only"}, "prompt": {"type": "string", "minLength": 1}}},
+    "rarityTreatment": {"type": "object", "additionalProperties": false, "required": ["scope", "diamond_fill", "card_bonus", "prompt"], "properties": {"scope": {"const": "rarity_only"}, "diamond_fill": {"enum": ["white", "green", "gold", "orange"]}, "card_bonus": {"type": "integer", "minimum": 0, "maximum": 2}, "prompt": {"type": "string", "minLength": 1}}},
     "lotSize": {"type": "object", "additionalProperties": false, "required": ["width", "height", "aspect_ratio", "card_count", "chapter_points", "page_letters", "composition"], "properties": {"width": {"const": 1024}, "height": {"const": 1536}, "aspect_ratio": {"const": "2:3"}, "card_count": {"type": "integer"}, "chapter_points": {"type": "integer"}, "page_letters": {"type": "integer"}, "composition": {"type": "array", "items": {"enum": ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"]}}}},
     "lot5": {"allOf": [{"$ref": "#/$defs/lotSize"}, {"properties": {"card_count": {"const": 5}, "chapter_points": {"const": 8}, "page_letters": {"const": 2}, "composition": {"const": ["NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE"]}}}]},
     "lot6": {"allOf": [{"$ref": "#/$defs/lotSize"}, {"properties": {"card_count": {"const": 6}, "chapter_points": {"const": 10}, "page_letters": {"const": 2}, "composition": {"const": ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "VERB"]}}}]},
