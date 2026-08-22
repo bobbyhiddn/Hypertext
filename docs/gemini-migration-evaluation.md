@@ -257,3 +257,29 @@ Gemini's rendered numeric pips reliable. Rollout remains blocked on deterministi
 stat rendering (or another generator-side solution), a complete five-plus-two
 100/100 rerun, currency-cost acceptance, and operator approval. Cron remains
 disabled and manual dispatch remains available.
+
+## Deterministic-pip gate rerun (2026-08-21)
+
+Commit work following `edd1d9b` replaces Gemini's numeric pip drawing with a
+renderer-owned 15-circle binary layer sourced from `card.json`. Review reads the
+same exact center-pixel contract (including a three-channel tolerance of 5 for
+the existing polish pass), rejects unknown colors or non-left-to-right fills,
+and only then supplies counts to scoring. The unchanged perfect-score gate still
+applies. Review SDK calls now have a positive, explicit 120-second default
+deadline (`GEMINI_REVIEW_TIMEOUT_S`) on every attempt; exhausted timeouts remain
+errors, never passes. Offline regression and contract tests pass 21/21.
+
+Evidence is retained at
+`/home/cap/hypertext-gemini-comparison-2026-08-21-stat-pips`. Its per-case
+`generation.json` records preserve model/provenance, original generation latency,
+attempt count, MIME/dimensions, and available token usage; the API still provides
+no currency charge. The complete gate result was: fresh `001-water` explicit
+deterministic-pixel verification failure after polish (no new score; prior 95),
+`002-bless` 95 (card-number observation conflict), `003-great` 100,
+`004-altar` 95 (card-number formatting observation), `005-eat` 100;
+edit `template-clean` 0/unscored (valid style mismatch and no rebuild prompt),
+and edit `revise-fix` 100. Thus only 3/7 reached 100 and the seven-case gate
+failed. No blinded reviewer packet was generated. Remaining blockers are the
+non-pip content/style failures, a clean
+seven-of-seven rerun, available-cost acceptance, and operator rollout approval.
+Cron remains disabled.

@@ -491,6 +491,7 @@ def _call_gemini(
     model: str | None = None,
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
+    timeout_s: float | None = None,
 ) -> str:
     """Make a Gemini API call using the SDK, optionally with image(s).
 
@@ -511,7 +512,16 @@ def _call_gemini(
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
 
-    client = genai.Client(api_key=api_key)
+    timeout_s = timeout_s or float(os.environ.get("GEMINI_REVIEW_TIMEOUT_S", "120"))
+    if timeout_s <= 0:
+        raise ValueError("review timeout must be greater than zero")
+    http_options_cls = getattr(types, "HttpOptions", None)
+    http_options = (http_options_cls(timeout=round(timeout_s * 1000))
+                    if http_options_cls else {"timeout": round(timeout_s * 1000)})
+    client = genai.Client(
+        api_key=api_key,
+        http_options=http_options,
+    )
 
     contents = []
     # Handle multiple images first (for reference comparison)

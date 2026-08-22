@@ -13,6 +13,8 @@ from unittest import mock
 from PIL import Image
 
 from hypertext.cards import clean
+from hypertext.cards.stat_pips import (GOLD, NAVY, PARCHMENT, read_stat_pips,
+                                       render_stat_pips)
 from hypertext.gemini import image, review, style
 from hypertext.gemini.config import (DEFAULT_IMAGE_MODEL, DEFAULT_REVIEW_MODEL,
                                      DEFAULT_TEXT_MODEL, image_endpoint, image_model,
@@ -40,6 +42,39 @@ class HttpResponse:
     def __enter__(self): return self
     def __exit__(self, *_): return False
     def read(self): return json.dumps(self.payload).encode()
+
+
+class StatPipRenderingTests(unittest.TestCase):
+    def test_stat_pips_are_rendered_from_card_json(self):
+        with tempfile.TemporaryDirectory() as td:
+            image_path = os.path.join(td, "card.png")
+            json_path = os.path.join(td, "card.json")
+            Image.new("RGB", (1024, 1536), "magenta").save(image_path)
+            with open(json_path, "w", encoding="utf-8") as stream:
+                json.dump({"content": {"STAT_LORE": 1, "STAT_CONTEXT": 3,
+                                        "STAT_COMPLEXITY": 5}}, stream)
+            render_stat_pips(image_path, json_path)
+            with Image.open(image_path) as rendered:
+                self.assertEqual(rendered.getpixel((108, 601)),
+                                 Image.new("RGB", (1, 1), NAVY).getpixel((0, 0)))
+                self.assertEqual(rendered.getpixel((160, 601)),
+                                 Image.new("RGB", (1, 1), PARCHMENT).getpixel((0, 0)))
+                self.assertEqual(rendered.getpixel((518, 601)),
+                                 Image.new("RGB", (1, 1), NAVY).getpixel((0, 0)))
+                self.assertEqual(rendered.getpixel((929, 601)),
+                                 Image.new("RGB", (1, 1), NAVY).getpixel((0, 0)))
+            self.assertEqual(read_stat_pips(image_path), (1, 3, 5))
+
+    def test_stat_pips_reject_out_of_range_values(self):
+        with tempfile.TemporaryDirectory() as td:
+            image_path = os.path.join(td, "card.png")
+            json_path = os.path.join(td, "card.json")
+            Image.new("RGB", (1024, 1536)).save(image_path)
+            with open(json_path, "w", encoding="utf-8") as stream:
+                json.dump({"content": {"STAT_LORE": 6, "STAT_CONTEXT": 3,
+                                        "STAT_COMPLEXITY": 5}}, stream)
+            with self.assertRaisesRegex(ValueError, "between 0 and 5"):
+                render_stat_pips(image_path, json_path)
 
 
 class RestContractTests(unittest.TestCase):
@@ -326,7 +361,7 @@ class ConfigurationTests(unittest.TestCase):
             content=ns.SimpleNamespace(parts=[ns.SimpleNamespace(text="{}")]))])
         fake_client = ns.SimpleNamespace(models=ns.SimpleNamespace(
             generate_content=lambda **kwargs: calls.append(kwargs) or response))
-        fake_genai = ns.SimpleNamespace(Client=lambda api_key: fake_client)
+        fake_genai = ns.SimpleNamespace(Client=lambda **kwargs: fake_client)
         fake_types = ns.SimpleNamespace(
             Part=ns.SimpleNamespace(from_text=lambda text: ("text", text)),
             GenerateContentConfig=lambda **kwargs: kwargs)
@@ -343,6 +378,24 @@ class ConfigurationTests(unittest.TestCase):
             ("text", "IMAGE [2]"), ("image", paths[1]),
             ("text", "compare [1] with test [2]"),
         ])
+
+    def test_review_timeout_is_bounded_and_passed_to_sdk(self):
+        client_calls = []
+        response = ns.SimpleNamespace(candidates=[ns.SimpleNamespace(
+            content=ns.SimpleNamespace(parts=[ns.SimpleNamespace(text="ok")]))])
+        fake_client = ns.SimpleNamespace(models=ns.SimpleNamespace(
+            generate_content=lambda **kwargs: response))
+        fake_genai = ns.SimpleNamespace(Client=lambda **kwargs:
+            client_calls.append(kwargs) or fake_client)
+        fake_types = ns.SimpleNamespace(
+            Part=ns.SimpleNamespace(from_text=lambda text: ("text", text)),
+            GenerateContentConfig=lambda **kwargs: kwargs,
+            HttpOptions=lambda **kwargs: kwargs)
+        with mock.patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}, clear=True), \
+             mock.patch.object(review, "genai", fake_genai), \
+             mock.patch.object(review, "types", fake_types):
+            self.assertEqual(review._call_gemini("prompt", timeout_s=7), "ok")
+        self.assertEqual(client_calls[0]["http_options"], {"timeout": 7000})
 
     def test_no_preview_image_defaults_and_daily_is_manual_only(self):
         root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))

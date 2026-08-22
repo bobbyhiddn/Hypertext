@@ -3228,6 +3228,9 @@ def phase_imagegen(*, series_dir: Path) -> int:
         
     subprocess.check_call(cmd)
 
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, target_dir / "card.json")
+
     # Write generation log with style reference info
     _write_generation_log(
         target_dir,
@@ -3323,6 +3326,9 @@ def _generate_image_for_card_dir(
         ]
 
     subprocess.check_call(cmd)
+
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
 
     # Write generation log with style reference info
     _write_generation_log(
@@ -3781,6 +3787,9 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         ]
 
     subprocess.check_call(cmd)
+
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
 
     # Write generation log with style reference info
     _write_generation_log(
@@ -4316,6 +4325,9 @@ def _generate_image_only(*, card_dir: Path) -> Path:
         phase="imagegen",
     )
 
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
+
     return out_png
 
 
@@ -4660,6 +4672,11 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         _log(f"[phase review] Stage 1: Describing card with {len(style_refs)} style refs + rubric...")
         try:
             description = describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
+            # Counts are renderer-owned binary pixels. Use the deterministic
+            # pixel contract rather than a vision model's unreliable counting.
+            from hypertext.cards.stat_pips import read_stat_pips
+            (description.stat_lore, description.stat_context,
+             description.stat_complexity) = read_stat_pips(out_png)
             all_descriptions.append(description)
         except Exception as e:
             _log(f"[phase review] Description failed: {e}")
