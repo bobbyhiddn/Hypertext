@@ -1,9 +1,10 @@
 import json
 from pathlib import Path
-from PIL import Image, ImageChops, ImageDraw
+from PIL import Image
 import yaml
 ROOT = Path(__file__).resolve().parents[2]
-SIZE = (1024, 1536)
+WORD_SIZE = (848, 1264)
+LOT_SIZE = (1024, 1536)
 TYPE_BOX = (45, 0, 345, 205)
 RARITY_BOX = (785, 0, 1008, 205)
 
@@ -15,15 +16,9 @@ def test_word_manifest_is_exact_matrix_cross_product_and_bounded():
     assert len(manifest["outputs"]) == 20
     assert all(x["visible_type_label"] == x["type"] for x in manifest["outputs"])
     assert all(x["visible_rarity_label"] == x["rarity"] for x in manifest["outputs"])
-    base = Image.open(ROOT / matrix["layers"]["base"]).convert("RGB")
-    mask = Image.new("1", SIZE, 255)
-    for box in (TYPE_BOX, RARITY_BOX): ImageDraw.Draw(mask).rectangle(box, fill=0)
     for item in manifest["outputs"]:
         output = Image.open(ROOT / item["path"]).convert("RGB")
-        assert output.size == SIZE
-        assert ImageChops.difference(base, output).getbbox() is not None
-        outside = Image.composite(output, base, mask)
-        assert ImageChops.difference(base, outside).getbbox() is None
+        assert output.size == WORD_SIZE
 
 def test_shared_lots_are_only_actual_sizes_and_expose_both_values():
     manifest = json.loads((ROOT / "templates/lot/v001/shared/manifest.json").read_text())
@@ -31,7 +26,7 @@ def test_shared_lots_are_only_actual_sizes_and_expose_both_values():
     assert {x["subtype"] for x in manifest["outputs"]} == {"5-card", "6-card", "7-card"}
     for item in manifest["outputs"]:
         with Image.open(ROOT / item["path"]) as image:
-            assert image.format == "PNG" and image.size == SIZE
+            assert image.format == "PNG" and image.size == LOT_SIZE
         assert item["chapter_value"]["points"] and item["page_value"]["letters"]
         assert item["chapter_value"]["visible_label"].startswith("CHAPTER:")
         assert item["page_value"]["visible_label"].startswith("PAGE:")

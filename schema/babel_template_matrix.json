@@ -50,6 +50,7 @@
     {"type": "TITLE", "rarity": "GLORIOUS", "card_count": 1}
   ],
   "invalid_combinations": [],
+  "invalid_combination_rule": "Any type outside word_types or rarity outside rarity_tiers is invalid. The 5 x 4 in-vocabulary Cartesian product is fully occupied.",
   "totals": {
     "word_types": 5,
     "rarity_tiers": 4,

@@ -1,4 +1,6 @@
 import copy
+import hashlib
+import pytest
 
 from hypertext.cards import template_matrix
 
@@ -30,3 +32,22 @@ def test_missing_mapping_is_reported_with_canonical_card_identity():
     ]
     errors = template_matrix.validate_canonical_mappings(matrix)
     assert any("canonical card 1 GRACE lacks template mapping NOUN+COMMON" in error for error in errors)
+
+
+def test_all_valid_combinations_resolve_to_byte_identical_accepted_assets():
+    manifest = template_matrix.load_template_manifest()
+    matrix = template_matrix.load_matrix()
+    expected = {(item["type"], item["rarity"]) for item in matrix["valid_combinations"]}
+    assert expected == {(item["type"], item["rarity"]) for item in manifest["outputs"]}
+    assert len(manifest["outputs"]) == 20
+    for item in manifest["outputs"]:
+        canonical = template_matrix.resolve_template(item["type"], item["rarity"])
+        candidate = template_matrix.ROOT / item["accepted_candidate"]
+        assert canonical.read_bytes() == candidate.read_bytes()
+        assert hashlib.sha256(canonical.read_bytes()).hexdigest() == item["sha256"]
+
+
+@pytest.mark.parametrize("card_type,rarity", [("OTHER", "COMMON"), ("NOUN", "MYTHIC"), ("", "")])
+def test_out_of_vocabulary_combinations_are_explicitly_rejected(card_type, rarity):
+    with pytest.raises(ValueError, match="unsupported card template combination"):
+        template_matrix.resolve_template(card_type, rarity)
