@@ -7,6 +7,7 @@ import os
 import sys
 
 from hypertext.cards.clean import clean_template
+from hypertext.gemini.config import image_model
 
 
 def main() -> int:
@@ -41,7 +42,7 @@ def main() -> int:
             in_path,
             out_path,
             prompt=prompt,
-            model=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image-preview"),
+            model=image_model(),
             image_size="2K",
             max_attempts=3,
             base_delay_s=2.0,

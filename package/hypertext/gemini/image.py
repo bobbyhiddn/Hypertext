@@ -15,7 +15,7 @@ import time
 import urllib.error
 import urllib.request
 
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent"
+from hypertext.gemini.config import image_endpoint
 
 
 def _parse_retry_after_seconds(headers) -> int | None:
@@ -47,6 +47,7 @@ def generate_image(
     *,
     aspect_ratio: str = "2:3",
     image_size: str = "2K",
+    model: str | None = None,
 ) -> None:
     """Generate an image from a text prompt using Gemini.
 
@@ -86,7 +87,7 @@ def generate_image(
     }
 
     req = urllib.request.Request(
-        GEMINI_ENDPOINT,
+        image_endpoint(model),
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
         method="POST",
@@ -159,7 +160,10 @@ def generate_image(
     if not image_b64:
         raise RuntimeError(f"No image inlineData found. Raw: {raw[:800]}")
 
-    img_bytes = base64.b64decode(image_b64)
+    try:
+        img_bytes = base64.b64decode(image_b64, validate=True)
+    except (ValueError, TypeError, base64.binascii.Error) as e:
+        raise RuntimeError("Gemini returned malformed base64 image data.") from e
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     with open(out_path, "wb") as f:
         f.write(img_bytes)

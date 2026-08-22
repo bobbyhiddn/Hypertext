@@ -9,7 +9,10 @@ import argparse
 import base64
 import os
 import sys
+import time
 from pathlib import Path
+
+from hypertext.gemini.config import image_model
 
 try:
     from google import genai
@@ -64,7 +67,7 @@ def generate_with_styles(
     style_image_paths: list[str],
     out_path: str,
     *,
-    model: str = "gemini-3-pro-preview",
+    model: str | None = None,
     aspect_ratio: str = "2:3",
     guidance_scale: float | None = None,
     num_inference_steps: int | None = None,
@@ -104,6 +107,7 @@ def generate_with_styles(
         raise RuntimeError("GEMINI_API_KEY (or GEMINI_TEXT_API_KEY) env var is not set.")
 
     client = genai.Client(api_key=api_key)
+    model = model or image_model()
 
     orientation = "portrait (2:3 aspect ratio, taller than wide)" if aspect_ratio == "2:3" else f"aspect ratio {aspect_ratio}"
 
@@ -255,14 +259,20 @@ AVOID:
         response_modalities=["IMAGE"],
     )
 
-    try:
-        response = client.models.generate_content(
-            model=model,
-            contents=contents,
-            config=config,
-        )
-    except Exception as e:
-        raise RuntimeError(f"Gemini API request failed: {e}")
+    max_attempts = int(os.environ.get("GEMINI_MAX_ATTEMPTS", "4"))
+    base_delay_s = float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2"))
+    for attempt in range(1, max_attempts + 1):
+        try:
+            response = client.models.generate_content(
+                model=model, contents=contents, config=config,
+            )
+            break
+        except Exception as e:
+            status = getattr(e, "status_code", getattr(e, "code", None))
+            retriable = status in (429, 500, 502, 503, 504)
+            if not retriable or attempt == max_attempts:
+                raise RuntimeError(f"Gemini API request failed: {e}") from e
+            time.sleep(base_delay_s * (2 ** (attempt - 1)))
 
     if not response.candidates:
         raise RuntimeError("No candidates returned from Gemini.")
@@ -272,7 +282,8 @@ AVOID:
 
     image_bytes = None
     for part in parts:
-        if part.inline_data and part.inline_data.mime_type.startswith("image/"):
+        if (part.inline_data and
+                getattr(part.inline_data, "mime_type", "").startswith("image/")):
             image_bytes = part.inline_data.data
             break
 
@@ -280,7 +291,10 @@ AVOID:
         raise RuntimeError(f"No image data found in response. Content: {candidate.content}")
 
     if isinstance(image_bytes, str):
-        image_bytes = base64.b64decode(image_bytes)
+        try:
+            image_bytes = base64.b64decode(image_bytes, validate=True)
+        except (ValueError, TypeError, base64.binascii.Error) as e:
+            raise RuntimeError("Gemini returned malformed base64 image data.") from e
 
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     with open(out_path, "wb") as f:
@@ -294,7 +308,7 @@ def generate_with_style(
     style_image_path: str,
     out_path: str,
     *,
-    model: str = "gemini-3-pro-preview",
+    model: str | None = None,
     aspect_ratio: str = "2:3",
     guidance_scale: float | None = None,
     num_inference_steps: int | None = None,
@@ -318,7 +332,7 @@ def main() -> int:
     parser.add_argument("--prompt-file", help="Path to text file containing the prompt")
     parser.add_argument("--style", required=True, action="append", help="Path to reference style image (repeatable)")
     parser.add_argument("--out", required=True, help="Output PNG path")
-    parser.add_argument("--model", default="gemini-3.1-flash-image-preview", help="Gemini model ID")
+    parser.add_argument("--model", default=image_model(), help="Gemini model ID")
     parser.add_argument("--rarity-label", action="append", help="Rarity label for style image at position (format: POS:RARITY e.g. 2:COMMON)")
     parser.add_argument("--target-rarity", help="Target rarity for this card (highlights matching reference)")
     parser.add_argument("--fix-mode", action="store_true", help="Fix mode: [1]=card to fix, [2]=template, [3+]=examples")

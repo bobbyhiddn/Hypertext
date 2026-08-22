@@ -7,6 +7,8 @@ import os
 import sys
 import time
 
+from hypertext.gemini.config import image_model
+
 try:
     from google import genai
     from google.genai import types
@@ -147,7 +149,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--in", dest="in_path", default=str(os.path.join("tools", "raw_template.png")))
     parser.add_argument("--out", dest="out_path", default=str(os.path.join("templates", "blank_template.png")))
-    parser.add_argument("--model", default=os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image-preview"))
+    parser.add_argument("--model", default=image_model())
     parser.add_argument("--image-size", default=os.environ.get("GEMINI_IMAGE_SIZE", "2K"))
     parser.add_argument("--max-attempts", type=int, default=int(os.environ.get("GEMINI_MAX_ATTEMPTS", "6")))
     parser.add_argument("--retry-base-delay-s", type=float, default=float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2")))
