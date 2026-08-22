@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "HYPERTEXT_GLOBAL": {
+    "canvas": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
+    "aesthetic": ["premium trading card layout", "antique parchment background with subtle grain", "navy and gold collector frame", "high legibility, crisp print-like typography", "clean TCG UI language with a large art window", "print-ready color grading, restrained contrast, no neon saturation"],
+    "negative": ["no surrounding text", "no generated watermark", "no captions outside the card", "no text outside the card border", "no brackets", "no warped text", "no garbled text", "no faux handwriting", "no duplicate headings", "no extra panels", "no text inside artwork", "no modern objects", "no neon colors", "no heavy HDR", "no washed-out grayscale", "no over-sharpen halos", "no partial stat-pip fills", "no stat-pip gradients or highlights", "no diamonds for stat pips", "do not render hidden metadata"]
+  },
+  "structures": {
+    "WORD_CARD": {
+      "kind": "WORD_CARD",
+      "geometry": {"orientation": "vertical", "frame": "identical across all type and rarity combinations", "art_panel_height_fraction": 0.44, "original_language_split": {"left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}},
+      "content_order": ["HEADER", "ART", "STATS", "ABILITY", "OT_VERSE", "NT_VERSE", "ORIGINAL_LANGUAGES", "TRIVIA", "FOOTER"]
+    },
+    "LOT": {
+      "kind": "LOT",
+      "geometry": {"orientation": "vertical", "frame": {"navy_border": "thick", "gold_trim": "thin"}},
+      "content_order": ["TITLE", "ART", "REWARD"],
+      "spec_boundary": "The received Lot Reward section ended after 'trim'. Only the declared reward field and frame geometry are represented; no omitted reward content or geometry is inferred."
+    }
+  },
+  "types": {
+    "NOUN": {"scope": "type_only", "prompt": "TYPE is exactly NOUN; apply only the NOUN label/icon treatment."},
+    "VERB": {"scope": "type_only", "prompt": "TYPE is exactly VERB; apply only the VERB label/icon treatment."},
+    "ADJECTIVE": {"scope": "type_only", "prompt": "TYPE is exactly ADJECTIVE; apply only the ADJECTIVE label/icon treatment."},
+    "NAME": {"scope": "type_only", "prompt": "TYPE is exactly NAME; apply only the NAME label/icon treatment."},
+    "TITLE": {"scope": "type_only", "prompt": "TYPE is exactly TITLE; apply only the TITLE label/icon treatment."}
+  },
+  "rarities": {
+    "COMMON": {"scope": "rarity_only", "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."},
+    "UNCOMMON": {"scope": "rarity_only", "prompt": "RARITY is exactly UNCOMMON followed by one green diamond; no activation cost."},
+    "RARE": {"scope": "rarity_only", "prompt": "RARITY is exactly RARE followed by one gold diamond; show +🂠 below it."},
+    "GLORIOUS": {"scope": "rarity_only", "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."}
+  },
+  "sizes": {
+    "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
+    "LOT_6": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
+    "LOT_7": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"}
+  },
+  "composition": {"modes": ["EXPLICIT", "PATTERN"], "default": "EXPLICIT"}
+}
