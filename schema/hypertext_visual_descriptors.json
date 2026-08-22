@@ -19,11 +19,11 @@
     }
   },
   "types": {
-    "NOUN": {"scope": "type_only", "prompt": "TYPE is exactly NOUN; apply only the NOUN label/icon treatment."},
-    "VERB": {"scope": "type_only", "prompt": "TYPE is exactly VERB; apply only the VERB label/icon treatment."},
-    "ADJECTIVE": {"scope": "type_only", "prompt": "TYPE is exactly ADJECTIVE; apply only the ADJECTIVE label/icon treatment."},
-    "NAME": {"scope": "type_only", "prompt": "TYPE is exactly NAME; apply only the NAME label/icon treatment."},
-    "TITLE": {"scope": "type_only", "prompt": "TYPE is exactly TITLE; apply only the TITLE label/icon treatment."}
+    "NOUN": {"scope": "type_only", "icon": "closed book", "prompt": "TYPE is exactly NOUN; the white header icon is a closed book."},
+    "VERB": {"scope": "type_only", "icon": "pencil", "prompt": "TYPE is exactly VERB; the white header icon is a pencil."},
+    "ADJECTIVE": {"scope": "type_only", "icon": "sparkle pencil", "prompt": "TYPE is exactly ADJECTIVE; the white header icon is a sparkle pencil."},
+    "NAME": {"scope": "type_only", "icon": "feather quill", "prompt": "TYPE is exactly NAME; the white header icon is a feather quill."},
+    "TITLE": {"scope": "type_only", "icon": "crown", "prompt": "TYPE is exactly TITLE; the white header icon is a crown."}
   },
   "rarities": {
     "COMMON": {"scope": "rarity_only", "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."},
@@ -32,9 +32,9 @@
     "GLORIOUS": {"scope": "rarity_only", "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."}
   },
   "sizes": {
-    "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
-    "LOT_6": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
-    "LOT_7": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"}
+    "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 5, "chapter_points": 8, "page_letters": 2, "composition": ["NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE"]},
+    "LOT_6": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 6, "chapter_points": 10, "page_letters": 2, "composition": ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "VERB"]},
+    "LOT_7": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 7, "chapter_points": 14, "page_letters": 3, "composition": ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE", "TITLE"]}
   },
   "composition": {"modes": ["EXPLICIT", "PATTERN"], "default": "EXPLICIT"}
 }

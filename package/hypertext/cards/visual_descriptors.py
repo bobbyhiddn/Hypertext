@@ -1,11 +1,9 @@
-"""Machine-readable Hypertext visual grammar and deterministic prompt serialization."""
+"""Deterministic serialization of the machine-readable Hypertext visual grammar."""
 from __future__ import annotations
-
 import json
 from copy import deepcopy
 from itertools import product
 from pathlib import Path
-
 from jsonschema import Draft202012Validator
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -14,44 +12,45 @@ SCHEMA_PATH = ROOT / "schema" / "visual_descriptor.schema.json"
 TYPE_VALUES = ("NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE")
 RARITY_VALUES = ("COMMON", "UNCOMMON", "RARE", "GLORIOUS")
 COMPOSITION_VALUES = ("EXPLICIT", "PATTERN")
-
-CONTENT_FIELDS = (
-    "NUMBER", "CARD_TYPE", "RARITY", "WORD", "GLOSS", "ART_PROMPT",
-    "STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY", "ABILITY_TEXT",
-    "OT_VERSE_LINE", "NT_VERSE_LINE", "HEBREW", "HEBREW_TRANSLIT",
-    "OT_REFS", "GREEK", "GREEK_TRANSLIT", "NT_REFS", "TRIVIA_BULLETS", "SERIES",
-)
-
+CONTENT_FIELDS = ("NUMBER", "CARD_TYPE", "RARITY_TEXT", "WORD", "GLOSS", "ART_PROMPT",
+    "STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY", "ABILITY_TEXT", "OT_VERSE_LINE",
+    "NT_VERSE_LINE", "HEBREW", "HEBREW_TRANSLIT", "OT_REFS", "GREEK",
+    "GREEK_TRANSLIT", "NT_REFS", "TRIVIA_BULLETS", "SERIES")
+TEXT_FIELDS = set(CONTENT_FIELDS) - {"NUMBER", "STAT_LORE", "STAT_CONTEXT",
+                                    "STAT_COMPLEXITY", "TRIVIA_BULLETS"}
 
 class DescriptorError(ValueError):
-    """The descriptor or requested composition violates the visual grammar."""
+    """A descriptor or composition violates the visual grammar."""
 
-
-def load_descriptors(path: Path = DESCRIPTORS_PATH) -> dict:
-    descriptor = json.loads(path.read_text(encoding="utf-8"))
+def validate_descriptors(descriptor: dict) -> None:
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     errors = sorted(Draft202012Validator(schema).iter_errors(descriptor), key=lambda e: list(e.path))
     if errors:
         error = errors[0]
         location = ".".join(str(part) for part in error.path) or "root"
         raise DescriptorError(f"invalid visual descriptor at {location}: {error.message}")
+    for family in ("WORD_CARD", "LOT"):
+        if descriptor["structures"][family]["kind"] != family:
+            raise DescriptorError(f"structure {family} kind must be {family}")
+    if any(v["scope"] != "type_only" for v in descriptor["types"].values()):
+        raise DescriptorError("type descriptors must have type_only scope")
+    if any(v["scope"] != "rarity_only" for v in descriptor["rarities"].values()):
+        raise DescriptorError("rarity descriptors must have rarity_only scope")
+
+def load_descriptors(path: Path = DESCRIPTORS_PATH) -> dict:
+    descriptor = json.loads(path.read_text(encoding="utf-8"))
+    validate_descriptors(descriptor)
     return descriptor
 
-
 def logical_word_card_descriptors(descriptor: dict | None = None) -> list[dict]:
-    """Inherit one structure + one type + one rarity into the 5x4 logical matrix."""
     descriptor = descriptor or load_descriptors()
-    result = []
-    for card_type, rarity in product(TYPE_VALUES, RARITY_VALUES):
-        result.append({
-            "global": descriptor["HYPERTEXT_GLOBAL"],
-            "structure": descriptor["structures"]["WORD_CARD"],
-            "type": {"name": card_type, **descriptor["types"][card_type]},
-            "rarity": {"name": rarity, **descriptor["rarities"][rarity]},
-            "size": descriptor["HYPERTEXT_GLOBAL"]["canvas"],
-        })
-    return result
-
+    validate_descriptors(descriptor)
+    return [{"global": descriptor["HYPERTEXT_GLOBAL"],
+             "structure": descriptor["structures"]["WORD_CARD"],
+             "type": {"name": card_type, **descriptor["types"][card_type]},
+             "rarity": {"name": rarity, **descriptor["rarities"][rarity]},
+             "size": descriptor["HYPERTEXT_GLOBAL"]["canvas"]}
+            for card_type, rarity in product(TYPE_VALUES, RARITY_VALUES)]
 
 def _validate_request(card_type: str, rarity: str, mode: str, content: dict) -> None:
     if card_type not in TYPE_VALUES:
@@ -60,42 +59,54 @@ def _validate_request(card_type: str, rarity: str, mode: str, content: dict) -> 
         raise DescriptorError(f"invalid RARITY {rarity!r}; expected one of {RARITY_VALUES}")
     if mode not in COMPOSITION_VALUES:
         raise DescriptorError(f"invalid composition {mode!r}; expected one of {COMPOSITION_VALUES}")
-    missing = [key for key in CONTENT_FIELDS if key not in content]
+    missing, unexpected = set(CONTENT_FIELDS) - set(content), set(content) - set(CONTENT_FIELDS)
     if missing:
-        raise DescriptorError(f"missing exact-content fields: {', '.join(missing)}")
-    if content["CARD_TYPE"] != card_type or content["RARITY"] != rarity:
-        raise DescriptorError("content TYPE/RARITY must match the isolated descriptor treatments")
-    for key in CONTENT_FIELDS:
-        if not isinstance(content[key], (str, int, list)):
-            raise DescriptorError(f"content field {key} must be exact serializable text")
-    if not isinstance(content["TRIVIA_BULLETS"], list) or len(content["TRIVIA_BULLETS"]) != 3:
-        raise DescriptorError("TRIVIA_BULLETS must contain exactly three canonical strings")
+        raise DescriptorError("missing exact-content fields: " + ", ".join(sorted(missing)))
+    if unexpected:
+        raise DescriptorError("unexpected exact-content fields: " + ", ".join(sorted(unexpected)))
+    if content["CARD_TYPE"] != card_type or content["RARITY_TEXT"] != rarity:
+        raise DescriptorError("content CARD_TYPE/RARITY_TEXT must match isolated treatments")
+    for key in TEXT_FIELDS:
+        if not isinstance(content[key], str):
+            raise DescriptorError(f"content field {key} must be a string")
+    if not isinstance(content["NUMBER"], (str, int)) or isinstance(content["NUMBER"], bool):
+        raise DescriptorError("content field NUMBER must be a string or integer")
+    for key in ("STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY"):
+        if not isinstance(content[key], int) or isinstance(content[key], bool) or not 0 <= content[key] <= 5:
+            raise DescriptorError(f"content field {key} must be an integer from 0 through 5")
+    trivia = content["TRIVIA_BULLETS"]
+    if not isinstance(trivia, list) or not trivia or not all(isinstance(x, str) for x in trivia):
+        raise DescriptorError("TRIVIA_BULLETS must be a non-empty array of canonical strings")
 
+def canonical_prompt_content(content: dict) -> dict:
+    """Adapt repository fields without relabeling RARITY_TEXT or copying metadata."""
+    return {key: deepcopy(content[key]) for key in CONTENT_FIELDS if key in content}
 
 def serialize_word_card_prompt(*, card_type: str, rarity: str, content: dict,
                                mode: str = "EXPLICIT", descriptor: dict | None = None) -> str:
-    """Serialize a stable prompt; content is JSON-quoted to preserve exact Unicode text."""
     descriptor = descriptor or load_descriptors()
-    _validate_request(card_type, rarity, mode, content)
     structure = descriptor["structures"]["WORD_CARD"]
-    split = structure["geometry"]["original_language_split"]
-    if split != {"left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}:
+    if structure["geometry"]["original_language_split"] != {
+            "left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}:
         raise DescriptorError("original-language sides may not be swapped")
-
-    exact = json.dumps({key: deepcopy(content[key]) for key in CONTENT_FIELDS}, ensure_ascii=False,
-                       separators=(",", ":"))
-    negatives = "; ".join(descriptor["HYPERTEXT_GLOBAL"]["negative"])
-    pattern = "inherit GLOBAL + WORD_CARD + TYPE + RARITY" if mode == "PATTERN" else "apply every declared field explicitly"
+    validate_descriptors(descriptor)
+    _validate_request(card_type, rarity, mode, content)
+    global_descriptor = descriptor["HYPERTEXT_GLOBAL"]
+    dump = lambda value: json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+    rule = ("materialize GLOBAL, WORD_CARD, selected TYPE, and selected RARITY in full"
+            if mode == "EXPLICIT" else
+            "inherit GLOBAL -> WORD_CARD -> selected TYPE + selected RARITY; serialized values below are authoritative")
     return "\n".join((
-        "HYPERTEXT VISUAL DESCRIPTOR v1",
-        f"COMPOSITION={mode}: {pattern}.",
-        "CANVAS=1024x1536 (2:3). Output only one vertical Word Card.",
-        descriptor["types"][card_type]["prompt"],
-        descriptor["rarities"][rarity]["prompt"],
-        "INVARIANT GEOMETRY=" + json.dumps(structure["geometry"], ensure_ascii=False, sort_keys=True),
+        "HYPERTEXT VISUAL DESCRIPTOR v1", f"COMPOSITION={mode}: {rule}.",
+        f"INHERITANCE=HYPERTEXT_GLOBAL -> structures.WORD_CARD -> types.{card_type} + rarities.{rarity}",
+        "GLOBAL=" + dump(global_descriptor), "STRUCTURE=" + dump(structure),
+        "TYPE=" + dump({"name": card_type, **descriptor["types"][card_type]}),
+        "RARITY=" + dump({"name": rarity, **descriptor["rarities"][rarity]}),
+        "CONTENT_ORDER=" + dump(structure["content_order"]),
         "ORIGINAL LANGUAGE PLACEMENT: LEFT is Old Testament HEB/ARAM with HEBREW, HEBREW_TRANSLIT, OT_REFS. RIGHT is New Testament GREEK with GREEK, GREEK_TRANSLIT, NT_REFS.",
         "REPEAT PLACEMENT: never swap languages; Old Testament is LEFT; New Testament is RIGHT.",
-        "EXACT_CANONICAL_CONTENT_JSON=" + exact,
-        "Copy every JSON string exactly; do not translate, normalize, paraphrase, add, omit, or correct text.",
-        "NEGATIVE GRAMMAR: " + negatives + ".",
+        "EXACT_CANONICAL_CONTENT_JSON=" + dump(content),
+        "Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.",
+        "NEGATIVE GRAMMAR: " + "; ".join(global_descriptor["negative"]) + ".",
+        "Output only one vertical 1024x1536 Word Card.",
     ))

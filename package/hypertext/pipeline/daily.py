@@ -38,6 +38,7 @@ from hypertext.gemini.review import (
 )
 from hypertext.cards.render import render_post
 from hypertext.cards.template_matrix import resolve_template
+from hypertext.cards.visual_descriptors import canonical_prompt_content, serialize_word_card_prompt
 from hypertext.gemini.config import image_model
 from hypertext.quality import QUALITY_GATE, provenance, quality_score, write_provenance
 
@@ -1911,59 +1912,13 @@ def build_prompt_text(card: dict) -> str:
         payload = json.dumps(card, ensure_ascii=False, indent=2)
         return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
 
-    # Load the text template
-    template_path = Path(__file__).parent.parent / "templates" / "card_style_prompt_template.txt"
-    if not template_path.exists():
-        # Fallback if template missing
-        print(f"Warning: Template {template_path} not found. Using legacy JSON prompt.")
-        recipe = card.get("model_prompt", "").strip()
-        payload = json.dumps(card, ensure_ascii=False, indent=2)
-        return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
-        
-    with open(template_path, "r", encoding="utf-8") as f:
-        template_str = f.read()
-    
-    # Prepare data for formatting
-    data = dict(content)
-    
-    # Format trivia bullets
-    trivia = data.get("TRIVIA_BULLETS", [])
-    if isinstance(trivia, list):
-        formatted_trivia = "\n".join([f"• {item}" for item in trivia])
-        data["TRIVIA_BULLETS_FORMATTED"] = formatted_trivia
-    else:
-        data["TRIVIA_BULLETS_FORMATTED"] = ""
-
-    # Normalize rarity and add color description
-    rarity = str(data.get("RARITY_TEXT", "COMMON")).upper()
-    data["RARITY_TEXT"] = rarity
-    rarity_colors = {
-        "COMMON": "WHITE",
-        "UNCOMMON": "GREEN",
-        "RARE": "GOLD",
-        "GLORIOUS": "ORANGE",
-    }
-    data["RARITY_COLOR"] = rarity_colors.get(rarity, "WHITE")
-
-    # Add type icon description
-    card_type = str(data.get("CARD_TYPE", "NOUN")).upper()
-    type_icons = {
-        "NOUN": "closed book",
-        "VERB": "pencil",
-        "ADJECTIVE": "sparkle pencil",
-        "NAME": "feather quill",
-        "TITLE": "crown",
-    }
-    data["TYPE_ICON"] = type_icons.get(card_type, "book")
-
-    # Fill template
-    try:
-        return template_str.format(**data)
-    except KeyError as e:
-        print(f"Warning: Missing key {e} for prompt template. Falling back to legacy.")
-        recipe = card.get("model_prompt", "").strip()
-        payload = json.dumps(card, ensure_ascii=False, indent=2)
-        return f"{recipe}\n\nCARD_JSON:\n{payload}\n"
+    data = canonical_prompt_content(content)
+    card_type = str(content.get("CARD_TYPE", "")).upper()
+    rarity = str(content.get("RARITY_TEXT", "")).upper()
+    data["CARD_TYPE"], data["RARITY_TEXT"] = card_type, rarity
+    mode = str(card.get("visual_descriptor_mode", "EXPLICIT")).upper()
+    return serialize_word_card_prompt(
+        card_type=card_type, rarity=rarity, content=data, mode=mode)
 
 
 def find_latest_card_dir(cards_dir: Path) -> Path | None:

@@ -2,7 +2,7 @@
 
 This offline foundation traces REQ-PPAUG-016 through REQ-PPAUG-022. The machine-readable hierarchy is `schema/hypertext_visual_descriptors.json`; its schema is `schema/visual_descriptor.schema.json`. One global descriptor and one Word Card structure inherit five isolated type treatments and four isolated rarity treatments to form 20 logical combinations without authoring 20 whole-card prompt templates. Three LOT size descriptors cover the existing five-, six-, and seven-card families; all inherit the canonical global canvas.
 
-`serialize_word_card_prompt` supports the declared `EXPLICIT` and `PATTERN` composition modes. Both serialize canonical content as Unicode JSON, enforce the canonical 1024×1536 canvas and invariant geometry, repeat Old Testament/Hebrew-Aramaic-left and New Testament/Greek-right placement, and append the complete checked-in negative grammar including the prohibition on a generated watermark. The module is deliberately not wired to an automated generation command; existing generation remains manual-only.
+`serialize_word_card_prompt` supports the declared `EXPLICIT` and `PATTERN` composition modes. Both serialize the complete inherited global, structure, type, and rarity descriptors plus canonical content as Unicode JSON. They enforce the canonical 1024×1536 canvas and invariant geometry, repeat Old Testament/Hebrew-Aramaic-left and New Testament/Greek-right placement, and append the complete checked-in negative grammar including the prohibition on a generated watermark. The manual production prompt builder calls this serializer; no workflow, scheduled generation, or asset-generation automation is enabled.
 
 ## Supplied-specification boundary
 
