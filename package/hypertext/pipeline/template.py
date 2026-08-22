@@ -626,6 +626,11 @@ def phase_refine(
     # Reset revision fields after successful refinement (ephemeral changes)
     _reset_revision_fields(revise_path)
 
+    # Durable flags clear only after a replacement passes the offline contract.
+    from hypertext.pipeline.template_audit import clear_resolved_flag
+    if clear_resolved_flag(template_type, subtype):
+        _log(f"Cleared resolved regeneration flag for {template_type}/{subtype}")
+
     # Copy clean revise.txt to new version folder for future refinements
     new_version_dir = _get_version_dir(template_dir, new_version)
     new_version_revise = new_version_dir / "revise.txt"
@@ -1070,7 +1075,7 @@ def main() -> int:
     parser.add_argument(
         "--phase",
         required=True,
-        choices=["refine", "revert", "list", "compile", "describe", "rebuild"],
+        choices=["refine", "revert", "list", "compile", "describe", "rebuild", "audit"],
         help="Pipeline phase to run"
     )
     parser.add_argument(
@@ -1175,6 +1180,13 @@ def main() -> int:
             style_refs=args.style_refs,
             extra_refs=args.extra_refs,
         )
+    elif args.phase == "audit":
+        from hypertext.pipeline.template_audit import audit
+        results = audit(args.type)
+        for entry, failures in results:
+            status = "FLAGGED " + ", ".join(failures) if failures else "PASS"
+            _log(f"{entry['family']}/{entry['subtype']}: {status}")
+        return 1 if any(failures for _, failures in results) else 0
 
     return 0
 

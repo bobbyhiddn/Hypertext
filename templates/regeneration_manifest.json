@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "queued-not-generated",
+  "contract": {"role":"face","mime_type":"image/png","extension":".png","width":1024,"height":1536,"aspect_ratio":"2:3","generated_format":"normalized PNG"},
+  "templates": [
+    {"family":"card","subtype":"base","asset":"templates/card/v001/base/template_1024x1536.png","prompt":"templates/card/v001/base/prompt.txt","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension"]},
+    {"family":"card","subtype":"common","asset":"templates/card/v001/common/template_1024x1536.png","prompt":"templates/card/v001/common/prompt.txt","reasons":["848x1264 violates 1024x1536/2:3 contract"]},
+    {"family":"card","subtype":"uncommon","asset":"templates/card/v001/uncommon/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension"]},
+    {"family":"card","subtype":"rare","asset":"templates/card/v001/rare/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract"]},
+    {"family":"card","subtype":"glorious","asset":"templates/card/v001/glorious/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract"]},
+    {"family":"card","subtype":"noun","asset":"templates/card/v001/noun/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension"]},
+    {"family":"card","subtype":"verb","asset":"templates/card/v001/verb/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension"]},
+    {"family":"card","subtype":"adjective","asset":"templates/card/v001/adjective/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension"]},
+    {"family":"card","subtype":"name","asset":"templates/card/v001/name/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension"]},
+    {"family":"card","subtype":"title","asset":"templates/card/v001/title/template_1024x1536.png","reasons":["848x1264 violates 1024x1536/2:3 contract"]},
+    {"family":"lot","subtype":"base","asset":"templates/lot/v001/base/template_1024x1536.png","prompt":"templates/lot/v001/base/prompt.txt","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension","definition uses plural X-CARDS and bracketed composition labels contrary to canonical visible labels"]},
+    {"family":"lot","subtype":"5-card","asset":"templates/lot/v001/5-card/template_1024x1536.png","prompt":"templates/lot/v001/5-card/prompt.txt","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension","definition requires bracketed composition labels contrary to canonical visible labels"]},
+    {"family":"lot","subtype":"6-card","asset":"templates/lot/v001/6-card/template_1024x1536.png","prompt":"templates/lot/v001/6-card/prompt.txt","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension","definition requires bracketed composition labels contrary to canonical visible labels"]},
+    {"family":"lot","subtype":"7-card","asset":"templates/lot/v001/7-card/template_1024x1536.png","prompt":"templates/lot/v001/7-card/prompt.txt","reasons":["848x1264 violates 1024x1536/2:3 contract","JPEG bytes use a .png extension","definition requires bracketed composition labels contrary to canonical visible labels"]}
+  ],
+  "definition_issues": ["templates/card/meta.yml selects v004 although curated subtype assets exist only in v001","Lot prompts describe bracketed labels while canonical composition_label emits unbracketed labels"],
+  "pipeline_command": "PYTHONPATH=package python -m hypertext.pipeline.template --type FAMILY --phase refine --subtype SUBTYPE --target-version 1",
+  "cron": "disabled",
+  "api_calls_performed": false
+}
