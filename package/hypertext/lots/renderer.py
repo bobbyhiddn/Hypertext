@@ -37,6 +37,8 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import Any, Optional
+from hypertext.lots.rules import (IMAGE_DIMENSIONS, IMAGE_MIME, composition_label,
+                                  subtype_reference, validate_phase)
 
 # Package paths
 PACKAGE_DIR = Path(__file__).resolve().parent.parent
@@ -65,7 +67,7 @@ def _log(msg: str) -> None:
     print(msg, file=sys.stderr)
 
 
-def _build_lot_style_refs(series_dir: Path) -> list[str]:
+def _build_lot_style_refs(series_dir: Path, cards: int = 5) -> list[str]:
     """
     Build list of style reference paths for LOT cards.
 
@@ -79,13 +81,13 @@ def _build_lot_style_refs(series_dir: Path) -> list[str]:
     4. Existing LOT card images in the series
     5. Falls back to main card template if no LOT-specific refs exist
     """
-    templates: list[str] = []
+    templates: list[str] = [str(subtype_reference(cards))]
     examples: list[str] = []
     seen_names: set[str] = set()  # Track filenames to avoid duplicates
 
     def add_ref(png_path: Path, source: str) -> bool:
         """Add a ref, categorizing as template or example. Returns True if added."""
-        if png_path.name in seen_names:
+        if png_path.name.lower() == "lot_back.png" or png_path.name in seen_names:
             return False
         seen_names.add(png_path.name)
         path_str = str(png_path)
@@ -162,7 +164,7 @@ def _build_lot_prompt(card_data: dict[str, Any], style_refs: list[str] | None = 
       - id: int
       - name: str
       - cards: int (5, 6, or 7)
-      - points: int (8, 10, or 12)
+      - points: int (8, 10, or 14)
       - display: str
       - composition: list[str]
       - flavor: str
@@ -175,27 +177,23 @@ def _build_lot_prompt(card_data: dict[str, Any], style_refs: list[str] | None = 
     pid = card_data.get("id", 0)
     name = card_data.get("name", "UNKNOWN")
     cards = card_data.get("cards", 5)
-    points = card_data.get("points", 8)
+    canonical = validate_phase(card_data)
+    points = canonical["points"]
     display = card_data.get("display", "")
-    composition = card_data.get("composition", [])
+    composition = canonical["composition"]
     flavor = card_data.get("flavor", "")
     context = card_data.get("context", "")
     series = card_data.get("series", "2026-Q1")
     verse = card_data.get("verse", "")  # e.g., "(Genesis 11:4)"
 
-    # Letter rewards: 5-6 card lots give 1 Letter, 7-card lots give 2 Letters
-    letters = 2 if cards >= 7 else 1
+    letters = canonical["opponent_letters"]
     letters_display = f"{letters} Letter" if letters == 1 else f"{letters} Letters"
 
     # Verse display for title (if provided)
     verse_display = f" {verse}" if verse else ""
 
     # Build composition WITHOUT brackets (brackets are wrong)
-    comp_parts = []
-    if composition:
-        for card_type in composition:
-            comp_parts.append(card_type)  # No brackets!
-    comp_display = " + ".join(comp_parts) if comp_parts else display
+    comp_display = composition_label(composition) if composition else display
 
     # Build image role labels (refs are ordered: template first, then examples)
     image_roles = []
@@ -245,7 +243,7 @@ STYLE MATCHING:
 - Match icon style for card types (book, pen, quill, frame icons)
 - Composition type labels WITHOUT square brackets (e.g., "NOUN + VERB", NOT "[NOUN] + [VERB]")
 
-OUTPUT: 2:3 portrait, 1024x1536px
+OUTPUT: {IMAGE_MIME} encoded PNG, {IMAGE_DIMENSIONS[0]}x{IMAGE_DIMENSIONS[1]}px
 
 AVOID:
 - Text rendering errors or garbled characters
@@ -265,7 +263,7 @@ def render_lot_card(card_data: dict[str, Any], out_path: Path, style_refs: list[
       - id: int
       - name: str
       - cards: int (5, 6, or 7)
-      - points: int (8, 10, or 12)
+      - points: int (8, 10, or 14)
       - display: str
       - composition: list[str]
       - flavor: str
@@ -336,7 +334,7 @@ def render_lot_card_with_series(
 
     This is the preferred method when calling from lot_generation.py.
     """
-    style_refs = _build_lot_style_refs(series_dir)
+    style_refs = _build_lot_style_refs(series_dir, card_data["cards"])
     render_lot_card(card_data, out_path, style_refs=style_refs)
 
 

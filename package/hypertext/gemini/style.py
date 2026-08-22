@@ -37,17 +37,24 @@ def _image_part_from_bytes(img_bytes: bytes):
     if types is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
 
+    import io
+    from PIL import Image
+    with Image.open(io.BytesIO(img_bytes)) as image:
+        image.load()
+        mime_type = Image.MIME.get(image.format)
+    if mime_type not in {"image/png", "image/jpeg"}:
+        raise RuntimeError(f"Unsupported style reference format: {mime_type}")
     image_part = None
 
     if hasattr(types.Part, "from_bytes"):
         try:
-            image_part = types.Part.from_bytes(data=img_bytes, mime_type="image/png")
+            image_part = types.Part.from_bytes(data=img_bytes, mime_type=mime_type)
         except Exception:
             pass
 
     if image_part is None and hasattr(types.Part, "from_image"):
         try:
-            image_part = types.Part.from_image(image=img_bytes, mime_type="image/png")
+            image_part = types.Part.from_image(image=img_bytes, mime_type=mime_type)
         except Exception:
             pass
 
@@ -55,10 +62,10 @@ def _image_part_from_bytes(img_bytes: bytes):
         try:
             blob_cls = getattr(types, "Blob", None)
             if blob_cls:
-                image_part = types.Part(inline_data=blob_cls(data=img_bytes, mime_type="image/png"))
+                image_part = types.Part(inline_data=blob_cls(data=img_bytes, mime_type=mime_type))
             else:
                 image_part = types.Part(
-                    inline_data={"mime_type": "image/png", "data": img_bytes}
+                    inline_data={"mime_type": mime_type, "data": img_bytes}
                 )
         except Exception as e:
             raise RuntimeError(f"Failed to construct image part. SDK version might be incompatible. Error: {e}")

@@ -97,6 +97,12 @@ def _atomic_json(path: Path, payload: dict) -> None:
 def record_success(out_path: str, *, model: str, mime_type: str,
                    dimensions: tuple[int, int], attempts: int, reference_count: int,
                    latency_ms: int | None = None, usage_metadata: dict | None = None) -> None:
+    path = Path(out_path)
+    if path.exists():
+        with Image.open(path) as image:
+            image.load()
+            mime_type = Image.MIME.get(image.format, mime_type)
+            dimensions = image.size
     payload = {
         "status": "success", "model": model, "mime_type": mime_type,
         "width": dimensions[0], "height": dimensions[1], "attempts": attempts,

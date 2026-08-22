@@ -155,7 +155,7 @@ Appoint one player as Judge for the game. The Judge:
 
 | Phase Type | Location | Reward | Cards Go... |
 |------------|----------|--------|-------------|
-| **Board Phase** | Center of table | Points (8–12) + Record Wreath | Your Pages (open) |
+| **Board Phase** | Center of table | Points (8–14) + Record Wreath | Your Pages (open) |
 | **Lot** | In front of you | Letters (see below) | Sheol |
 
 - **Board Phase:** Score points. Cards stay on table in your Pages.
@@ -165,9 +165,15 @@ Appoint one player as Judge for the game. The Judge:
 
 | Lot Size | Own Lot | Opponent's Lot |
 |----------|---------|----------------|
-| 5-card | 2 Letters | 1 Letter |
-| 6-card | 2 Letters | 1 Letter |
-| 7-card | 3 Letters | 2 Letters |
+| 5-card | 2 Letters | 2 Letters |
+| 6-card | 2 Letters | 2 Letters |
+| 7-card | 3 Letters | 3 Letters |
+
+Canonical Lot rewards are defined in `templates/phases.yml` and validated by
+`hypertext.lots.rules`. As a Board Phase, five-, six-, and seven-card Lots score
+8, 10, and 14 points. When an opponent records your personal Lot, they earn 2,
+2, or 3 Letters respectively. Visible composition labels are unbracketed and
+the count badge uses the singular form `5-CARD`, `6-CARD`, or `7-CARD`.
 
 ---
 

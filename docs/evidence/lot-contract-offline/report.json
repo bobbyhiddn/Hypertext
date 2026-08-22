@@ -1,0 +1,58 @@
+{
+  "mode": "offline-deterministic",
+  "gemini_calls": 0,
+  "definitions": 30,
+  "cases": [
+    {
+      "cards": 5,
+      "phase": "REMNANT",
+      "score": 100,
+      "passed": true,
+      "output": "docs/evidence/lot-contract-offline/5-card.png",
+      "reference": {
+        "role": "face",
+        "subtype": "5-card",
+        "path": "templates/lot/v001/5-card/template_1024x1536.png",
+        "mime_type": "image/jpeg",
+        "width": 848,
+        "height": 1264,
+        "legacy_suffix": ".png",
+        "immutable": true
+      }
+    },
+    {
+      "cards": 6,
+      "phase": "CONGREGATION",
+      "score": 100,
+      "passed": true,
+      "output": "docs/evidence/lot-contract-offline/6-card.png",
+      "reference": {
+        "role": "face",
+        "subtype": "6-card",
+        "path": "templates/lot/v001/6-card/template_1024x1536.png",
+        "mime_type": "image/jpeg",
+        "width": 848,
+        "height": 1264,
+        "legacy_suffix": ".png",
+        "immutable": true
+      }
+    },
+    {
+      "cards": 7,
+      "phase": "CREATION",
+      "score": 100,
+      "passed": true,
+      "output": "docs/evidence/lot-contract-offline/7-card.png",
+      "reference": {
+        "role": "face",
+        "subtype": "7-card",
+        "path": "templates/lot/v001/7-card/template_1024x1536.png",
+        "mime_type": "image/jpeg",
+        "width": 848,
+        "height": 1264,
+        "legacy_suffix": ".png",
+        "immutable": true
+      }
+    }
+  ]
+}
