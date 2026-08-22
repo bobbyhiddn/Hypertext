@@ -12,6 +12,7 @@ from PIL import Image, ImageFont
 from hypertext.cards.composite import CLEANUP_REGIONS, REGIONS, _get_fonts, composite_card
 from hypertext.cards.polish import finalize_card
 from hypertext.pipeline import daily
+from hypertext.pipeline.template import _get_style_refs_for_template
 
 
 class FinalizationTests(unittest.TestCase):
@@ -42,6 +43,17 @@ class FinalizationTests(unittest.TestCase):
 
 
 class StableReferenceTests(unittest.TestCase):
+    def test_template_refinement_never_self_references_rejected_subtype(self):
+        refs = _get_style_refs_for_template("card", [1], "noun")
+        self.assertTrue(any("/base/template_1024x1536.png" in ref for ref in refs))
+        self.assertFalse(any("/noun/template_1024x1536.png" in ref for ref in refs))
+
+    def test_shared_visual_contract_is_versioned_prompt_input(self):
+        contract = Path(__file__).parents[2] / "templates/visual-contract.md"
+        text = contract.read_text(encoding="utf-8")
+        self.assertIn("Size changes only title/count", text)
+        self.assertIn("Never rename, reorder, omit, or duplicate", text)
+
     def test_default_references_do_not_depend_on_prior_series_cards(self):
         with tempfile.TemporaryDirectory() as td, mock.patch.object(
             daily, "_find_matching_cards", side_effect=AssertionError("series drift")

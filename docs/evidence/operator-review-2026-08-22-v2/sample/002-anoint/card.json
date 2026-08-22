@@ -1,0 +1,287 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 3
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "002",
+    "SERIES": "Demo",
+    "WORD": "ANOINT",
+    "GLOSS": "To ceremonially apply oil to someone or something as a sign of consecration or divine selection.",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A single drop of golden, viscous oil falls from the mouth of an ornate ceramic horn, about to land on the head of a humble figure kneeling below. Beams of light pierce through a dusty room, illuminating the moment. The scene is solemn and significant, rendered in a chiaroscuro style.",
+    "ABILITY_TEXT": "Choose a NAME in your Pages. It is also considered a TITLE until your next turn.",
+    "STAT_LORE": 4,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "1 Samuel 16:13",
+    "OT_VERSE_SNIPPET": "Then Samuel took the horn of oil and anointed him in the midst of his brothers. And the Spirit of the LORD rushed upon David from that day forward.",
+    "NT_VERSE_REF": "Acts 10:38",
+    "NT_VERSE_SNIPPET": "how God anointed Jesus of Nazareth with the Holy Spirit and with power. He went about doing good and healing all who were oppressed by the devil, for God was with him.",
+    "OT_VERSE_LINE": "1 Samuel 16:13 — \"Then Samuel took the horn of oil and anointed him in the midst of his brothers. And the Spirit of the LORD rushed upon David from that day forward.\"",
+    "NT_VERSE_LINE": "Acts 10:38 — \"how God anointed Jesus of Nazareth with the Holy Spirit and with power. He went about doing good and healing all who were oppressed by the devil, for God was with him.\"",
+    "GREEK": "χρίω",
+    "GREEK_TRANSLIT": "chrió",
+    "HEBREW": "מָשַׁח",
+    "HEBREW_TRANSLIT": "mashach",
+    "OT_REFS": "Exod 30:30 • Lev 8:12 • 1 Kgs 1:39 • Ps 23:5 • Ps 45:7 • Isa 61:1",
+    "NT_REFS": "Luke 4:18 • 2 Cor 1:21 • Heb 1:9 • Jas 5:14 • 1 John 2:20 • 1 John 2:27",
+    "TRIVIA_BULLETS": [
+      "The Hebrew word 'Mashiach' (Messiah) and the Greek 'Christos' (Christ) both mean 'Anointed One'.",
+      "The sacred anointing oil described in Exodus 30 was a specific blend of myrrh, cinnamon, calamus, cassia, and olive oil.",
+      "Anointing was used to consecrate not only people like priests and kings, but also objects such as the Tabernacle and its furnishings."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "hebrew word for anoint transliteration",
+      "greek word for anoint transliteration",
+      "old testament verse about anointing david",
+      "new testament verse about jesus being anointed",
+      "old testament references to anointing",
+      "new testament references to anointing",
+      "etymology of messiah and christ",
+      "ingredients of holy anointing oil exodus",
+      "what was anointing used for in the bible"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj-iUXxmeBe7NTWbzf0-7bRje6Z6H6d34NzjZVA_QgsHjIkLgsL0le2TL3VL0D9r43sVX2RAtKBa2pT94hXWmIXNTqyPaXYyVSwEGYsa6RCPi2XKL9E8_XM65YPHHeRQ==",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxONlraXXExq7vwt8JenkEL2FcNl21ibsz0AlmM_m4lrLoE8cTpbiLy-M4JlIzSeoYDFnGYdxirp8LnwlosDQdUV3_QGmEo6nX6wc9Rsb-0fLa79oUMet5uFOLhEnvg2MDx0MPfgBT6vHE3C80u1si",
+        "title": "byu.edu"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHMCf7NZRAPdvtpMeZCTzK4yAtDhsa2If8IIEJlWtZbpucKIhtT4PEmTFxz-l-3mbeC6pXHlp_Cd3hbxawtRSPi91qgbcgWjo5LB0NeKW25yis-xUCJ5Vpk0PYmYSnFJvtM0nQJfdEdALN85YzpUt_4xfx_io=",
+        "title": "facebook.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcGsb1uy040xqjA3YPKpeO9Z3LuXrYt82uEgSVCTk9uMlHNNoG88Bd53rdRneakIigjYb5CzpEUfi9DYwU1Jp8CaEYGosyK3guP22FjNGhsH2Bsdxgvf9R1ar_QvVCmH0wi6qA3bjbONuUV3zZjBIwcckWkNkPsJ7CHSg0LPdEaX8=",
+        "title": "ebsco.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAMMopKdgeXhdT7Rf1IRTTKDhg_bWsfj1p_D_6B_4_0WrkDVcAH6GZt5AgRYK0d3wnu5gDyzUAH9bkIW3b-oUqjKkWyZqC4_-d3Tr6L4g1e_qVlVwVBoU9duTu4C6KoviJU8OeRhkz2dyIbqen7p5Ss0KAmnjKjemoAoPHDSI3i9fuQ7TzwWqeRmF4SEcM-koTSgFQ6YyXsHR2prkADc_EE2grOZrm-R7gCeqcSuI2q15Kyb-qVzlVcpQeD4VQdJJNGt7kEjEoWnfKRw==",
+        "title": "facebook.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEbB4-rXFlTtC0DnUAfC4dL4IqL_evImK52YyOiJgiE0LIqQ0Uc1lg0nswrULCeVJ0-IIaC1e5q5mu9s9uy865sHFvKHL98SYAWjCWJ-q-fwHA155ns2KfsOatRQeQaC1unaS-WSZi5PF-ovT6dWWQoWQkadOxEHhsNbPYBKs=",
+        "title": "bhooc.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG_S_AMl5SO1qzkb_DBFeD3l6Q2Ws9M32VkF8f_WtbbpUyDNbzxEojq0a1-rcNVE9W_dBFaBkPlPbHhGg3n08D7qka09ll3mT7Ul-bctOTaCoowDjICGJeWVsNaCz9WsRGJlnebyhiw9Hw",
+        "title": "wikipedia.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6SV3YF0aK13Zu_XvWUWBead-eZ0qkbGBIKJwATPK3woEL8aASAh8nrHQbskCYeeQXnFtBu9zezEKtZmEu6dUGhfugCwfkqAeRBvpMrdWORXixUEGwJVywP2quJAGlJotYfVtjcmTJpogA1m0BkjGCmaPftnT4rCt5dHf7MNxtANtNGN_LlQ==",
+        "title": "biblegateway.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAsjJQL2hwGuDFmVcCFL0y5_SzZUKHzjraf31vn23JtwRb7LKnNOQMRb5atQht_JbJdsNj6GqjFS7V255iGygAxDDkq_XZZOB9OmKKcodP7-WXZtp4ObpllQzZX2Wxo0gxhHB5SBSTXd_F4hhXekpKLnBBlKemIbGAZQi1LrP-uD-9UnbQTw==",
+        "title": "jentezenfranklin.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV8q9kmi1wZO86nJUecUOKmBmgcNdN4-Plrp9FelYqf-p4eK8Ol1i-SKCfXyyWe0FAeCgrmoVndnTOEwYRUdpjmTRn6mw_-G4mTHNCRheSDQsfPZ9vTCfaJrn8XzwE3c_gGPFn",
+        "title": "gotquestions.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8GVlXOp2tfYQQoT3KN8oK1m89x737I2v4fN7dR1Wh8SdWdkGuKYL6LMvX9ItPy2UkuYmJ-3oZVKuORzAYN-xXc5AVsbMyUFWbX7P_t6OqfpEmYUKfs0zGq4OJQefc79rHrJBa3XD8h0P_8BP9n0OcLOKOLSzNNcGl4mCxOF3K6c2ONvqpf7aCRLSZeeNzX6ROrQ==",
+        "title": "swansoninc.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-QWedunt3-m1h3dE7u2rZJRdUSh0XDFmO6APOZbRTbnMhA6YeFrKO5rHvaST2WaoxJW5KK8eIaEAgrQ_TcFFp2wW1IsoMhTgMFkS5Ql09Su0Qpd0-vrAMTa2-7BAPdA0BkXWwIOL3fhEQ02c=",
+        "title": "naves-topical-bible.com"
+      }
+    ]
+  }
+}

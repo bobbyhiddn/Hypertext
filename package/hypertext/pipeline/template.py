@@ -164,15 +164,9 @@ def _get_style_refs_for_template(
             versions_to_check = [current_version]
 
     for v in versions_to_check:
-        # 1. First, add the SUBTYPE-SPECIFIC template if it exists (and subtype != base)
-        #    This allows the model to see what the existing subtype looks like
-        if subtype != "base":
-            subtype_png = _get_subtype_dir(template_dir, v, subtype) / "template_1024x1536.png"
-            if subtype_png.exists():
-                style_refs.append(str(subtype_png))
-                _log(f"  Including existing {subtype} template as reference")
-
-        # 2. Then add the base template
+        # Every subtype is anchored to the same family base.  A rejected subtype
+        # must never become its own style reference: doing so compounds geometry,
+        # typography, and palette drift on each refinement.
         base_png = _get_subtype_dir(template_dir, v, "base") / "template_1024x1536.png"
         if base_png.exists():
             style_refs.append(str(base_png))
@@ -506,6 +500,11 @@ def phase_refine(
     with open(prompt_path, "r", encoding="utf-8") as f:
         base_prompt = f.read().strip()
 
+    contract_path = template_dir.parent / "visual-contract.md"
+    if contract_path.exists():
+        contract = contract_path.read_text(encoding="utf-8").strip()
+        base_prompt = f"{base_prompt}\n\nGOVERNING SHARED VISUAL CONTRACT:\n{contract}"
+
     # Parse revisions
     revisions = _parse_revise_form(revise_path)
     if revisions["rebuild"]:
@@ -600,6 +599,22 @@ def phase_refine(
     if not out_png.exists():
         _log(f"ERROR: Output not created: {out_png}")
         return 1
+
+    # Gemini owns only bounded visual exceptions for Card subtypes.  Keep the
+    # shared deterministic content grid from the accepted base so a candidate
+    # cannot hallucinate art, verses, labels, or alternate panel geometry.
+    if template_type == "card" and subtype != "base":
+        from PIL import Image
+        base_png = _get_subtype_dir(template_dir, new_version, "base") / "template_1024x1536.png"
+        if base_png.exists():
+            with Image.open(base_png) as source:
+                normalized = source.convert("RGB")
+            with Image.open(out_png) as source:
+                candidate = source.convert("RGB")
+            normalized.paste(candidate.crop((0, 0, 1024, 82)), (0, 0))
+            normalized.paste(candidate.crop((18, 62, 190, 198)), (18, 62))
+            normalized.save(out_png, "PNG")
+            _log("Constrained candidate to subtype header exception regions")
 
     _log(f"Template generated: {out_png}")
 

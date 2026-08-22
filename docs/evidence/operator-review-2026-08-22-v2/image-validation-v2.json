@@ -1,0 +1,157 @@
+{
+  "visual_acceptance": "manual; file validity alone is insufficient",
+  "templates": [
+    {
+      "path": "templates/card/v001/adjective/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/base/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/common/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/glorious/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/name/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/noun/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/rare/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/title/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/uncommon/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/card/v001/verb/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/lot/v001/5-card/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/lot/v001/6-card/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/lot/v001/7-card/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    },
+    {
+      "path": "templates/lot/v001/base/template_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    }
+  ],
+  "sample": [
+    {
+      "path": "docs/evidence/operator-review-2026-08-22-v2/sample/002-anoint/outputs/card_1024x1536.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "size": [
+        1024,
+        1536
+      ],
+      "accepted_file_contract": true
+    }
+  ]
+}

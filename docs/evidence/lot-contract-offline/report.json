@@ -13,9 +13,9 @@
         "role": "face",
         "subtype": "5-card",
         "path": "templates/lot/v001/5-card/template_1024x1536.png",
-        "mime_type": "image/jpeg",
-        "width": 848,
-        "height": 1264,
+        "mime_type": "image/png",
+        "width": 1024,
+        "height": 1536,
         "legacy_suffix": ".png",
         "immutable": true
       }
@@ -30,9 +30,9 @@
         "role": "face",
         "subtype": "6-card",
         "path": "templates/lot/v001/6-card/template_1024x1536.png",
-        "mime_type": "image/jpeg",
-        "width": 848,
-        "height": 1264,
+        "mime_type": "image/png",
+        "width": 1024,
+        "height": 1536,
         "legacy_suffix": ".png",
         "immutable": true
       }
@@ -47,9 +47,9 @@
         "role": "face",
         "subtype": "7-card",
         "path": "templates/lot/v001/7-card/template_1024x1536.png",
-        "mime_type": "image/jpeg",
-        "width": 848,
-        "height": 1264,
+        "mime_type": "image/png",
+        "width": 1024,
+        "height": 1536,
         "legacy_suffix": ".png",
         "immutable": true
       }

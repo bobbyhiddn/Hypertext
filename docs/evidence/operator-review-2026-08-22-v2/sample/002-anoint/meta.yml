@@ -1,0 +1,83 @@
+number: '002'
+word: ANOINT
+gloss: To ceremonially apply oil to someone or something as a sign of consecration
+  or divine selection.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Demo
+art_prompt: A single drop of golden, viscous oil falls from the mouth of an ornate
+  ceramic horn, about to land on the head of a humble figure kneeling below. Beams
+  of light pierce through a dusty room, illuminating the moment. The scene is solemn
+  and significant, rendered in a chiaroscuro style.
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Choose a NAME in your Pages. It is also considered a TITLE until your next
+  turn.
+ot_verse:
+  ref: 1 Samuel 16:13
+  snippet: Then Samuel took the horn of oil and anointed him in the midst of his brothers.
+    And the Spirit of the LORD rushed upon David from that day forward.
+nt_verse:
+  ref: Acts 10:38
+  snippet: how God anointed Jesus of Nazareth with the Holy Spirit and with power.
+    He went about doing good and healing all who were oppressed by the devil, for
+    God was with him.
+greek:
+  text: χρίω
+  translit: chrió
+hebrew:
+  text: מָשַׁח
+  translit: mashach
+ot_refs: Exod 30:30 • Lev 8:12 • 1 Kgs 1:39 • Ps 23:5 • Ps 45:7 • Isa 61:1
+nt_refs: Luke 4:18 • 2 Cor 1:21 • Heb 1:9 • Jas 5:14 • 1 John 2:20 • 1 John 2:27
+trivia:
+- The Hebrew word 'Mashiach' (Messiah) and the Greek 'Christos' (Christ) both mean
+  'Anointed One'.
+- The sacred anointing oil described in Exodus 30 was a specific blend of myrrh, cinnamon,
+  calamus, cassia, and olive oil.
+- Anointing was used to consecrate not only people like priests and kings, but also
+  objects such as the Tabernacle and its furnishings.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj-iUXxmeBe7NTWbzf0-7bRje6Z6H6d34NzjZVA_QgsHjIkLgsL0le2TL3VL0D9r43sVX2RAtKBa2pT94hXWmIXNTqyPaXYyVSwEGYsa6RCPi2XKL9E8_XM65YPHHeRQ==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxONlraXXExq7vwt8JenkEL2FcNl21ibsz0AlmM_m4lrLoE8cTpbiLy-M4JlIzSeoYDFnGYdxirp8LnwlosDQdUV3_QGmEo6nX6wc9Rsb-0fLa79oUMet5uFOLhEnvg2MDx0MPfgBT6vHE3C80u1si
+  title: byu.edu
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHMCf7NZRAPdvtpMeZCTzK4yAtDhsa2If8IIEJlWtZbpucKIhtT4PEmTFxz-l-3mbeC6pXHlp_Cd3hbxawtRSPi91qgbcgWjo5LB0NeKW25yis-xUCJ5Vpk0PYmYSnFJvtM0nQJfdEdALN85YzpUt_4xfx_io=
+  title: facebook.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcGsb1uy040xqjA3YPKpeO9Z3LuXrYt82uEgSVCTk9uMlHNNoG88Bd53rdRneakIigjYb5CzpEUfi9DYwU1Jp8CaEYGosyK3guP22FjNGhsH2Bsdxgvf9R1ar_QvVCmH0wi6qA3bjbONuUV3zZjBIwcckWkNkPsJ7CHSg0LPdEaX8=
+  title: ebsco.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAMMopKdgeXhdT7Rf1IRTTKDhg_bWsfj1p_D_6B_4_0WrkDVcAH6GZt5AgRYK0d3wnu5gDyzUAH9bkIW3b-oUqjKkWyZqC4_-d3Tr6L4g1e_qVlVwVBoU9duTu4C6KoviJU8OeRhkz2dyIbqen7p5Ss0KAmnjKjemoAoPHDSI3i9fuQ7TzwWqeRmF4SEcM-koTSgFQ6YyXsHR2prkADc_EE2grOZrm-R7gCeqcSuI2q15Kyb-qVzlVcpQeD4VQdJJNGt7kEjEoWnfKRw==
+  title: facebook.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEbB4-rXFlTtC0DnUAfC4dL4IqL_evImK52YyOiJgiE0LIqQ0Uc1lg0nswrULCeVJ0-IIaC1e5q5mu9s9uy865sHFvKHL98SYAWjCWJ-q-fwHA155ns2KfsOatRQeQaC1unaS-WSZi5PF-ovT6dWWQoWQkadOxEHhsNbPYBKs=
+  title: bhooc.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG_S_AMl5SO1qzkb_DBFeD3l6Q2Ws9M32VkF8f_WtbbpUyDNbzxEojq0a1-rcNVE9W_dBFaBkPlPbHhGg3n08D7qka09ll3mT7Ul-bctOTaCoowDjICGJeWVsNaCz9WsRGJlnebyhiw9Hw
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6SV3YF0aK13Zu_XvWUWBead-eZ0qkbGBIKJwATPK3woEL8aASAh8nrHQbskCYeeQXnFtBu9zezEKtZmEu6dUGhfugCwfkqAeRBvpMrdWORXixUEGwJVywP2quJAGlJotYfVtjcmTJpogA1m0BkjGCmaPftnT4rCt5dHf7MNxtANtNGN_LlQ==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAsjJQL2hwGuDFmVcCFL0y5_SzZUKHzjraf31vn23JtwRb7LKnNOQMRb5atQht_JbJdsNj6GqjFS7V255iGygAxDDkq_XZZOB9OmKKcodP7-WXZtp4ObpllQzZX2Wxo0gxhHB5SBSTXd_F4hhXekpKLnBBlKemIbGAZQi1LrP-uD-9UnbQTw==
+  title: jentezenfranklin.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV8q9kmi1wZO86nJUecUOKmBmgcNdN4-Plrp9FelYqf-p4eK8Ol1i-SKCfXyyWe0FAeCgrmoVndnTOEwYRUdpjmTRn6mw_-G4mTHNCRheSDQsfPZ9vTCfaJrn8XzwE3c_gGPFn
+  title: gotquestions.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8GVlXOp2tfYQQoT3KN8oK1m89x737I2v4fN7dR1Wh8SdWdkGuKYL6LMvX9ItPy2UkuYmJ-3oZVKuORzAYN-xXc5AVsbMyUFWbX7P_t6OqfpEmYUKfs0zGq4OJQefc79rHrJBa3XD8h0P_8BP9n0OcLOKOLSzNNcGl4mCxOF3K6c2ONvqpf7aCRLSZeeNzX6ROrQ==
+  title: swansoninc.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-QWedunt3-m1h3dE7u2rZJRdUSh0XDFmO6APOZbRTbnMhA6YeFrKO5rHvaST2WaoxJW5KK8eIaEAgrQ_TcFFp2wW1IsoMhTgMFkS5Ql09Su0Qpd0-vrAMTa2-7BAPdA0BkXWwIOL3fhEQ02c=
+  title: naves-topical-bible.com
+search_queries:
+- hebrew word for anoint transliteration
+- greek word for anoint transliteration
+- old testament verse about anointing david
+- new testament verse about jesus being anointed
+- old testament references to anointing
+- new testament references to anointing
+- etymology of messiah and christ
+- ingredients of holy anointing oil exodus
+- what was anointing used for in the bible
+style_series_dir: series/2026-Q1
