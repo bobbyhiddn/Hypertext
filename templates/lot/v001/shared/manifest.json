@@ -16,36 +16,42 @@
       "path": "templates/lot/v001/shared/5-card/template_1024x1536.png",
       "source": "templates/lot/v001/5-card/template_1024x1536.png",
       "chapter_value": {
-        "points": 8
+        "points": 8,
+        "visible_label": "CHAPTER: 8 POINTS"
       },
       "page_value": {
-        "letters": 2
+        "letters": 2,
+        "visible_label": "PAGE: 2 LETTERS"
       },
-      "sha256": "94c22993f805c30013e6f1817fd903ce85812b80ef8ed133364d926b542d4c2b"
+      "sha256": "d7e6456fcc09071e4e8085ea7c60ee33ef8f3a7fd053464c5de6f13e15dcabc5"
     },
     {
       "subtype": "6-card",
       "path": "templates/lot/v001/shared/6-card/template_1024x1536.png",
       "source": "templates/lot/v001/6-card/template_1024x1536.png",
       "chapter_value": {
-        "points": 10
+        "points": 10,
+        "visible_label": "CHAPTER: 10 POINTS"
       },
       "page_value": {
-        "letters": 2
+        "letters": 2,
+        "visible_label": "PAGE: 2 LETTERS"
       },
-      "sha256": "be8c62528a233aef6ba59bf20b3aee53118bdd5b07d464b526d7d6a2ad8f53b0"
+      "sha256": "4f9b7849870807068928811cd3f0171412e0bea1c4029c5a2504dc359a508717"
     },
     {
       "subtype": "7-card",
       "path": "templates/lot/v001/shared/7-card/template_1024x1536.png",
       "source": "templates/lot/v001/7-card/template_1024x1536.png",
       "chapter_value": {
-        "points": 14
+        "points": 14,
+        "visible_label": "CHAPTER: 14 POINTS"
       },
       "page_value": {
-        "letters": 3
+        "letters": 3,
+        "visible_label": "PAGE: 3 LETTERS"
       },
-      "sha256": "fb79eb09074d2845d1750f2dcbfcbb54375b7c0f5b295911030af38b8744fd1c"
+      "sha256": "6e563681121bc8946a897d7a9636a0bf458b10f9c528180a8062bbf4aa6f9eff"
     }
   ]
 }

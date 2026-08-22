@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "canonical_source": "series/2026-Q1/cards_index.yml",
+  "grouping": [
+    "type",
+    "rarity",
+    "number"
+  ],
+  "count": 31,
+  "outputs": [
+    {
+      "number": 16,
+      "word": "GOOD",
+      "type": "ADJECTIVE",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/016-good.png",
+      "sha256": "ddbe17408300c80908c6c976ac8b093fa8c4c7c2329148920d31aa0390ed70ea"
+    },
+    {
+      "number": 28,
+      "word": "RIGHTEOUS",
+      "type": "ADJECTIVE",
+      "rarity": "GLORIOUS",
+      "template": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/028-righteous.png",
+      "sha256": "22df5b5dec8cf353dfebd1b9450b1f8baee1ec04d00a5f95df0e7b4cf10cff33"
+    },
+    {
+      "number": 23,
+      "word": "NAKED",
+      "type": "ADJECTIVE",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/023-naked.png",
+      "sha256": "a734e703b464ffd1cfca878f7365c5c85a916372b108c1e008675930d9e8b5d2"
+    },
+    {
+      "number": 3,
+      "word": "MIGHTY",
+      "type": "ADJECTIVE",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/003-mighty.png",
+      "sha256": "57fd276971b24291bb668f4851ad077b542dda97c21810feb7212655a49f8ee0"
+    },
+    {
+      "number": 18,
+      "word": "SETH",
+      "type": "NAME",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/name/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/018-seth.png",
+      "sha256": "30adfc36f022d19a2a23bcb78d39b895457fe9631d1b628dc0aae3933f59a035"
+    },
+    {
+      "number": 29,
+      "word": "ADAM",
+      "type": "NAME",
+      "rarity": "GLORIOUS",
+      "template": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/029-adam.png",
+      "sha256": "c487afccc0fdd02a80bc9cc4095ebab641990956cfa0c189bbcf83df6b0583e0"
+    },
+    {
+      "number": 25,
+      "word": "NOAH",
+      "type": "NAME",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/025-noah.png",
+      "sha256": "5792efdae3c58d9dac98673e84e16e8e7cffeca8376a91958fb1a48fd61010ba"
+    },
+    {
+      "number": 22,
+      "word": "SHEM",
+      "type": "NAME",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/022-shem.png",
+      "sha256": "93464423bcfd86c8e5c28406802866d06590000e8a43d07137e8777034a01bd9"
+    },
+    {
+      "number": 1,
+      "word": "GRACE",
+      "type": "NOUN",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/001-grace.png",
+      "sha256": "d7597907ee8235353d246073cf59969bfcece47d79be40163f82aa65768008c3"
+    },
+    {
+      "number": 7,
+      "word": "EARTH",
+      "type": "NOUN",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/007-earth.png",
+      "sha256": "b696cb2b1dc340872a21a7b917b8f4fa578ee115d8dc90aff5caab8263bc1954"
+    },
+    {
+      "number": 8,
+      "word": "STONE",
+      "type": "NOUN",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/008-stone.png",
+      "sha256": "f5c11b65c555d4efead38c8a0a48ff35bcdedbbacd5a0b61028d5f980c9f491a"
+    },
+    {
+      "number": 9,
+      "word": "CITY",
+      "type": "NOUN",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/009-city.png",
+      "sha256": "046e267599050ef707f91bbe06ad3dbb75fe18b90b50b6e29b2eec063f086997"
+    },
+    {
+      "number": 10,
+      "word": "NAME",
+      "type": "NOUN",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/010-name.png",
+      "sha256": "4ebba7fea4f921b9022a20ab6f21733e706a9f745e96bb4e94463935bd7780e4"
+    },
+    {
+      "number": 24,
+      "word": "COVENANT",
+      "type": "NOUN",
+      "rarity": "GLORIOUS",
+      "template": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/024-covenant.png",
+      "sha256": "8c1b39c8e3e36bc72136e8282930083571308473ef75d71131e55007613c4879"
+    },
+    {
+      "number": 20,
+      "word": "ARK",
+      "type": "NOUN",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/020-ark.png",
+      "sha256": "7bfa68464893e8ce999eb2d62e18aac5bcf2b0fbb927749759cc2bd4b0f5143b"
+    },
+    {
+      "number": 17,
+      "word": "NATION",
+      "type": "NOUN",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/017-nation.png",
+      "sha256": "f228f9a6fcb733774b35aa3affd1807931fe917265521e3bd7e64f52ddbcd1fc"
+    },
+    {
+      "number": 21,
+      "word": "BROTHER",
+      "type": "TITLE",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/title/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/021-brother.png",
+      "sha256": "20155ad83c055e1e579a7ce8172b5bce6d1053878216ef8555ddbf1e52e14372"
+    },
+    {
+      "number": 30,
+      "word": "SPIRIT",
+      "type": "TITLE",
+      "rarity": "GLORIOUS",
+      "template": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/030-spirit.png",
+      "sha256": "d8dde41cfea3a2eeb32c7d33451e3edc2b593b1e6cbafb4c1369155a0abdaa05"
+    },
+    {
+      "number": 27,
+      "word": "HUNTER",
+      "type": "TITLE",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/027-hunter.png",
+      "sha256": "8b40a57e9fc7596ce7154463b5766a7bbb947959b7110e3b6cabe1f7f0bc7fbf"
+    },
+    {
+      "number": 19,
+      "word": "KEEPER",
+      "type": "TITLE",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/019-keeper.png",
+      "sha256": "254c80609a25c40e38588850e8d337a0d7c990fb58728be20c35d7c900770a18"
+    },
+    {
+      "number": 2,
+      "word": "BUILD",
+      "type": "VERB",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/002-build.png",
+      "sha256": "96c4a2015fc1a2e32dcbb39b463b19fbcc7e71191d2ad04813fa31f55f12d0e6"
+    },
+    {
+      "number": 31,
+      "word": "HEAR",
+      "type": "VERB",
+      "rarity": "COMMON",
+      "template": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/031-hear.png",
+      "sha256": "a18ddbdf7551d83a79804dafd485ad21d281df63079cab0d7621fe0b8f4b5666"
+    },
+    {
+      "number": 26,
+      "word": "CURSE",
+      "type": "VERB",
+      "rarity": "GLORIOUS",
+      "template": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/026-curse.png",
+      "sha256": "d3204bcbc4fdfe50b9950cbe83d1b65dff66ff3a52a84319fe744077215d32ce"
+    },
+    {
+      "number": 4,
+      "word": "SCATTER",
+      "type": "VERB",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/004-scatter.png",
+      "sha256": "a208e8b64dd6190a751d7d02ff68efac1082f97c376eca3c3f8eabeaeb12e707"
+    },
+    {
+      "number": 5,
+      "word": "CREATE",
+      "type": "VERB",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/005-create.png",
+      "sha256": "888ac6821a8b0cf9740e8eac4b8802d023b95961d378a9c13ad49194b54ed4e4"
+    },
+    {
+      "number": 6,
+      "word": "CONFUSE",
+      "type": "VERB",
+      "rarity": "RARE",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/006-confuse.png",
+      "sha256": "671414034d186fffcb9ad4222641def5b70be56fda675b3098d8b0b3f879e18f"
+    },
+    {
+      "number": 11,
+      "word": "DESCEND",
+      "type": "VERB",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/011-descend.png",
+      "sha256": "e9d609494c0c85c6b5cbac021756eb2cee8a4355c50f03975cb109c8445c5ca0"
+    },
+    {
+      "number": 12,
+      "word": "FORM",
+      "type": "VERB",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/012-form.png",
+      "sha256": "c844e6fbb59cf806d40f20dffa8055acc2ea2169531529bee8289847f7224e30"
+    },
+    {
+      "number": 13,
+      "word": "REMEMBER",
+      "type": "VERB",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/013-remember.png",
+      "sha256": "6040e230ee1b46a419f68e35dd18f4d8c58e159d5972afa55b1172b5e6a078a7"
+    },
+    {
+      "number": 14,
+      "word": "MULTIPLY",
+      "type": "VERB",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/014-multiply.png",
+      "sha256": "411c7fc344b5f92a41f9b3b778f418adecc3d5fae6fcd66b1d464ca4c126df41"
+    },
+    {
+      "number": 15,
+      "word": "SPEAK",
+      "type": "VERB",
+      "rarity": "UNCOMMON",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "path": "docs/evidence/deterministic-reconstruction/canonical-card-renders/015-speak.png",
+      "sha256": "45bbf0d8cc6382e667870c3e2de8741856062df297436950d960c251ede26939"
+    }
+  ]
+}
