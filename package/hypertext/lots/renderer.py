@@ -180,7 +180,7 @@ def _build_lot_prompt(card_data: dict[str, Any], style_refs: list[str] | None = 
     cards = card_data.get("cards", 5)
     canonical = validate_phase(card_data)
     points = canonical["points"]
-    display = card_data.get("display", "")
+    display = canonical["display"]
     composition = canonical["composition"]
     flavor = card_data.get("flavor", "")
     context = card_data.get("context", "")
@@ -257,7 +257,7 @@ AVOID:
         "id": pid, "name": name, "cards": cards, "points": points,
         "opponent_letters": letters, "display": display,
         "composition": composition, "flavor": flavor, "context": context,
-        "series": series, "verse": verse,
+        "series": series, "verse": verse, "constraint": canonical.get("constraint"),
     }
     mode = str(card_data.get("visual_descriptor_mode", "EXPLICIT")).upper()
     return serialize_lot_prompt(content=descriptor_content, mode=mode) + "\n\n" + legacy_prompt

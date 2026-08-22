@@ -105,9 +105,20 @@ def serialize_lot_prompt(*, content: dict, mode: str = "EXPLICIT",
     if size_name not in descriptor["sizes"]:
         raise DescriptorError(f"invalid Lot size {cards!r}; expected 5, 6, or 7")
     size = descriptor["sizes"][size_name]
+    from hypertext.lots.rules import load_lot_rules
+    canonical_phases = {phase["id"]: phase for phase in load_lot_rules()}
+    phase_id = content.get("id")
+    if phase_id not in size["phase_ids"]:
+        raise DescriptorError(f"Lot {phase_id!r} is not mapped to {size_name}")
+    canonical = canonical_phases[phase_id]
     if (content.get("points") != size["chapter_points"]
             or content.get("opponent_letters") != size["page_letters"]):
         raise DescriptorError("Lot reward values must match the selected Lot size")
+    for key in ("name", "cards", "points", "composition", "display"):
+        if content.get(key) != canonical[key]:
+            raise DescriptorError(f"Lot {phase_id} {key} conflicts with canonical phase data")
+    if content.get("constraint") != canonical.get("constraint"):
+        raise DescriptorError(f"Lot {phase_id} constraint conflicts with canonical phase data")
     dump = lambda value: json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     rule = ("materialize GLOBAL, LOT, and selected SIZE in full" if mode == "EXPLICIT" else
             "inherit GLOBAL -> LOT -> selected SIZE; serialized values below are authoritative")

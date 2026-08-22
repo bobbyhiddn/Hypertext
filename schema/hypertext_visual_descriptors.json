@@ -32,9 +32,9 @@
     "GLORIOUS": {"scope": "rarity_only", "diamond_fill": "orange", "card_bonus": 2, "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."}
   },
   "sizes": {
-    "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 5, "chapter_points": 8, "page_letters": 2, "composition": ["NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE"]},
-    "LOT_6": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 6, "chapter_points": 10, "page_letters": 2, "composition": ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "VERB"]},
-    "LOT_7": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 7, "chapter_points": 14, "page_letters": 3, "composition": ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE", "TITLE"]}
+    "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 5, "chapter_points": 8, "page_letters": 2, "phase_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
+    "LOT_6": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 6, "chapter_points": 10, "page_letters": 2, "phase_ids": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]},
+    "LOT_7": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 7, "chapter_points": 14, "page_letters": 3, "phase_ids": [27, 28, 29, 30]}
   },
   "composition": {"modes": ["EXPLICIT", "PATTERN"], "default": "EXPLICIT"}
 }

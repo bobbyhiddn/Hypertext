@@ -7,8 +7,11 @@ from jsonschema import ValidationError, validate
 from hypertext.cards.visual_descriptors import (
     DescriptorError, SCHEMA_PATH, load_descriptors, logical_word_card_descriptors,
     canonical_prompt_content, serialize_word_card_prompt,
+    serialize_lot_prompt,
 )
 from hypertext.pipeline.daily import build_prompt_text
+from hypertext.lots.renderer import _build_lot_prompt
+from hypertext.lots.rules import load_lot_rules
 from hypertext.watermark.crypto import build_svg, canonical_payload, compute_signature_hex, load_card_identity
 
 
@@ -137,6 +140,7 @@ def test_real_generation_keeps_deterministic_watermark_as_post_processing(monkey
     lambda d: d["HYPERTEXT_GLOBAL"].update(unexpected=True),
     lambda d: d["structures"]["WORD_CARD"]["geometry"].update(unexpected=True),
     lambda d: d["sizes"]["LOT_5"].update(card_count="5"),
+    lambda d: d["types"]["TITLE"].update(icon="ornate empty frame"),
 ])
 def test_schema_rejects_audited_inheritance_and_isolation_violations(mutation):
     descriptor = copy.deepcopy(load_descriptors())
@@ -170,9 +174,47 @@ def test_repository_rarity_pair_is_normalized_but_mismatch_is_rejected(content):
         canonical_prompt_content(content)
 
 
-def test_lot_sizes_have_distinct_canonical_compositions_and_values():
+def test_lot_sizes_map_every_canonical_phase_exactly_once():
     sizes = load_descriptors()["sizes"]
-    assert sizes["LOT_5"]["composition"] == ["NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE"]
-    assert sizes["LOT_6"]["composition"] == ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "VERB"]
-    assert sizes["LOT_7"]["composition"] == ["NOUN", "NOUN", "NOUN", "VERB", "VERB", "ADJECTIVE", "TITLE"]
+    phases = load_lot_rules()
+    mapped = [phase_id for size in sizes.values() for phase_id in size["phase_ids"]]
+    assert mapped == [phase["id"] for phase in phases]
+    assert len(mapped) == len(set(mapped)) == 30
+    for name, size in sizes.items():
+        assert all(next(p for p in phases if p["id"] == phase_id)["cards"] == size["card_count"]
+                   for phase_id in size["phase_ids"]), name
     assert [(sizes[k]["chapter_points"], sizes[k]["page_letters"]) for k in sizes] == [(8, 2), (10, 2), (14, 3)]
+
+
+@pytest.mark.parametrize("mode,phase_id", [("EXPLICIT", 2), ("PATTERN", 16)])
+def test_real_lot_production_path_serializes_canonical_phase(mode, phase_id):
+    phase = next(p for p in load_lot_rules() if p["id"] == phase_id)
+    phase.update(flavor="canonical flavor", context="canonical context", series="2026-Q1",
+                 verse="", visual_descriptor_mode=mode)
+    prompt = _build_lot_prompt(phase)
+    payload = json.loads(prompt.split("EXACT_CANONICAL_CONTENT_JSON=", 1)[1].split("\n", 1)[0])
+    assert payload["composition"] == phase["composition"]
+    assert payload["constraint"] == phase.get("constraint")
+    assert f'COMPOSITION={mode}' in prompt
+    assert "no generated watermark" in prompt
+
+
+def test_lot_serializer_rejects_unmapped_or_noncanonical_composition():
+    phase = next(p for p in load_lot_rules() if p["id"] == 2)
+    content = {key: phase.get(key) for key in ("id", "name", "cards", "points", "display",
+                                                "composition", "constraint")}
+    content.update(opponent_letters=phase["opponent_letters"], flavor="f", context="c",
+                   series="s", verse="")
+    bad_id = dict(content, id=15)
+    with pytest.raises(DescriptorError, match="not mapped"):
+        serialize_lot_prompt(content=bad_id)
+    bad_composition = dict(content, composition=["NOUN"] * 5)
+    with pytest.raises(DescriptorError, match="composition conflicts"):
+        serialize_lot_prompt(content=bad_composition)
+
+
+def test_title_icon_identity_is_canonical_crown():
+    title = load_descriptors()["types"]["TITLE"]
+    assert title["icon"] == "crown"
+    assert "crown" in title["prompt"]
+    assert "frame" not in title["prompt"].lower()
