@@ -5,8 +5,8 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 WORD_SIZE = (848, 1264)
 LOT_SIZE = (1024, 1536)
-TYPE_BOX = (45, 0, 345, 205)
-RARITY_BOX = (785, 0, 1008, 205)
+TYPE_BOX = (51, 77, 134, 162)
+RARITY_BOX = (650, 10, 838, 162)
 
 def test_word_manifest_is_exact_matrix_cross_product_and_bounded():
     matrix = json.loads((ROOT / "schema/babel_template_matrix.json").read_text())
@@ -16,6 +16,21 @@ def test_word_manifest_is_exact_matrix_cross_product_and_bounded():
     assert len(manifest["outputs"]) == 20
     assert all(x["visible_type_label"] == x["type"] for x in manifest["outputs"])
     assert all(x["visible_rarity_label"] == x["rarity"] for x in manifest["outputs"])
+    assert manifest["construction_evidence"] == "operator_review/constrained/e50961ad0f4d/manifest.json"
+    assert manifest["bounded_regions"] == {"type": list(TYPE_BOX), "rarity": list(RARITY_BOX)}
+    width, height = manifest["canvas"]
+    for left, top, right, bottom in manifest["bounded_regions"].values():
+        assert 0 <= left < right <= width
+        assert 0 <= top < bottom <= height
+    evidence = json.loads((ROOT / manifest["construction_evidence"]).read_text())
+    for kind, envelope in manifest["bounded_regions"].items():
+        edits = [edit for edit in evidence["edits"] if edit["kind"] == kind]
+        assert edits and {tuple(edit["box"]) for edit in edits} == {tuple(envelope)}
+        with Image.open(ROOT / Path(manifest["construction_evidence"]).parent / edits[0]["mask"]) as mask:
+            left, top, right, bottom = mask.getbbox()
+        outer_left, outer_top, outer_right, outer_bottom = envelope
+        assert outer_left <= left < right <= outer_right
+        assert outer_top <= top < bottom <= outer_bottom
     for item in manifest["outputs"]:
         output = Image.open(ROOT / item["path"]).convert("RGB")
         assert output.size == WORD_SIZE

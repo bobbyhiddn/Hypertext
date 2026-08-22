@@ -5,6 +5,8 @@
   "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
   "promotion_base_commit": "b22f3d3",
   "integrity": "Each canonical PNG is a byte-for-byte copy of the named accepted candidate; sha256 is authoritative.",
+  "construction_evidence": "operator_review/constrained/e50961ad0f4d/manifest.json",
+  "construction_method": "The accepted candidates retain the frozen base outside two non-overlapping masks and project pixels from the named historical witnesses through those masks; Gemini raw outputs are review provenance, not geometry authority.",
   "matrix": "schema/babel_template_matrix.json",
   "canvas": [
     848,
@@ -14,22 +16,23 @@
   "base_sha256": "56b97a694009ae82f05cd231ff3a99fbc9231665fe8d141b2667cd918f4ebcf0",
   "bounded_regions": {
     "type": [
-      45,
-      0,
-      345,
-      205
+      51,
+      77,
+      134,
+      162
     ],
     "rarity": [
-      785,
-      0,
-      1008,
-      205
+      650,
+      10,
+      838,
+      162
     ]
   },
+  "bounded_region_semantics": "Canvas-coordinate edit envelopes from the construction evidence; each referenced mask's nonzero pixels are wholly contained by its envelope.",
   "composition_order": [
     "frozen_base",
-    "bounded_type",
-    "bounded_rarity"
+    "historical_type_witness_through_type_mask",
+    "historical_rarity_witness_through_rarity_mask"
   ],
   "outputs": [
     {

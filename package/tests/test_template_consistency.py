@@ -57,12 +57,12 @@ class StableReferenceTests(unittest.TestCase):
     def test_default_references_do_not_depend_on_prior_series_cards(self):
         with tempfile.TemporaryDirectory() as td, mock.patch.object(
             daily, "_find_matching_cards", side_effect=AssertionError("series drift")
-        ), mock.patch.object(daily, "_get_subtype_template", return_value=None), \
+        ), mock.patch.object(daily, "resolve_template", return_value=Path("canonical-treatment.png")), \
              mock.patch.object(daily.Path, "exists", return_value=False):
             refs, labels, fix = daily._build_style_refs(
                 Path(td), target_rarity="COMMON", target_type="NOUN"
             )
-        self.assertEqual((refs, labels, fix), ([], {}, False))
+        self.assertEqual((refs, labels, fix), (["canonical-treatment.png"], {}, False))
 
 
 class CompositeRendererTests(unittest.TestCase):

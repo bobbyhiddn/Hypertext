@@ -37,6 +37,7 @@ from hypertext.gemini.review import (
     CardDescription,
 )
 from hypertext.cards.render import render_post
+from hypertext.cards.template_matrix import resolve_template
 from hypertext.gemini.config import image_model
 from hypertext.quality import QUALITY_GATE, provenance, quality_score, write_provenance
 
@@ -893,10 +894,11 @@ def _build_style_refs(
     if fix_mode and current_card_path and current_card_path.exists():
         refs.append(str(current_card_path))
 
-    # Only use rarity template (type templates show type icons, not rarity badges)
-    rarity_template_path: Path | None = None
-    if target_rarity:
-        rarity_template_path = _get_subtype_template(target_rarity)
+    # The canonical face treatment is selected by the complete type/rarity pair.
+    # resolve_template also rejects unknown or incomplete combinations explicitly.
+    treatment_template_path: Path | None = None
+    if target_type is not None or target_rarity is not None:
+        treatment_template_path = resolve_template(target_type or "", target_rarity or "")
 
     # Always collect matching example cards (premium references)
     example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]
@@ -956,9 +958,9 @@ def _build_style_refs(
             refs.append(str(card_path))
             rarity_labels[len(refs)] = target_rarity
 
-    # Rarity template added LAST (weakest - just for badge reference)
-    if rarity_template_path:
-        refs.append(str(rarity_template_path))
+    # Canonical treatment added LAST (weakest reference, but authoritative geometry).
+    if treatment_template_path:
+        refs.append(str(treatment_template_path))
 
     return refs, rarity_labels, fix_mode
 

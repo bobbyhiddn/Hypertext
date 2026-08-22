@@ -1,8 +1,10 @@
 import copy
 import hashlib
+from pathlib import Path
 import pytest
 
 from hypertext.cards import template_matrix
+from hypertext.pipeline import daily
 
 
 def test_every_canonical_babel_card_has_supported_type_rarity_mapping():
@@ -51,3 +53,19 @@ def test_all_valid_combinations_resolve_to_byte_identical_accepted_assets():
 def test_out_of_vocabulary_combinations_are_explicitly_rejected(card_type, rarity):
     with pytest.raises(ValueError, match="unsupported card template combination"):
         template_matrix.resolve_template(card_type, rarity)
+
+
+def test_runtime_style_reference_consumes_promoted_type_rarity_treatment(tmp_path, monkeypatch):
+    monkeypatch.chdir(template_matrix.ROOT)
+    refs, labels, fix_mode = daily._build_style_refs(
+        tmp_path, target_type="VERB", target_rarity="GLORIOUS"
+    )
+    assert Path(refs[-1]) == template_matrix.resolve_template("VERB", "GLORIOUS")
+    assert set(labels.values()) <= {"GLORIOUS"}
+    assert fix_mode is False
+
+
+@pytest.mark.parametrize("card_type,rarity", [("OTHER", "COMMON"), ("NOUN", "MYTHIC"), (None, "COMMON")])
+def test_runtime_style_reference_rejects_invalid_treatments(tmp_path, card_type, rarity):
+    with pytest.raises(ValueError, match="unsupported card template combination"):
+        daily._build_style_refs(tmp_path, target_type=card_type, target_rarity=rarity)
