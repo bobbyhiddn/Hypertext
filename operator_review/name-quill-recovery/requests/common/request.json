@@ -1,0 +1,12 @@
+{
+  "aspect_ratio": "2:3",
+  "fix_mode": true,
+  "image_size": "2K",
+  "input_roles": {
+    "1_edit_target": "operator_review/name-quill-recovery/inputs/name__common.png",
+    "2_geometry_lock": "operator_review/name-quill-recovery/inputs/name__common.png",
+    "3_canonical_white_quill": "operator_review/name-quill-recovery/reference/canonical_white_quill_reference.png"
+  },
+  "model": "gemini-3.1-flash-image",
+  "workflow": "generate_with_styles/fix_mode"
+}

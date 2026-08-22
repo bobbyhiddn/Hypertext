@@ -1,0 +1,61 @@
+{
+  "records": [
+    {
+      "final": "operator_review/constrained/e50961ad0f4d/name__common.png",
+      "final_sha256": "6a587654d34231de765525111e56acdc1ad1295625e1d69d57195a38b09078e6",
+      "mask_pixels": 982,
+      "neutral_white_pixels_in_quill": 982,
+      "outside_mask_changed_pixels": 0,
+      "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
+      "rarity": "common",
+      "raw_output": "operator_review/name-quill-recovery/raw/name__common.png",
+      "raw_sha256": "4f09dc10b3074c900ada73949c96fb6ad706ebf4f83fc04826b8850b821d55d2",
+      "tan_pixels_in_quill": 0,
+      "target": "operator_review/name-quill-recovery/inputs/name__common.png"
+    },
+    {
+      "final": "operator_review/constrained/e50961ad0f4d/name__uncommon.png",
+      "final_sha256": "767426d33e1ac0391ab512637caeddb461efc16d7804539dd967d50d556d3a7c",
+      "mask_pixels": 982,
+      "neutral_white_pixels_in_quill": 982,
+      "outside_mask_changed_pixels": 0,
+      "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
+      "rarity": "uncommon",
+      "raw_output": "operator_review/name-quill-recovery/raw/name__uncommon.png",
+      "raw_sha256": "dbf0e3de555e24acbfe89b10c8977b6639ad7fceae719b9a8c93dcb04dc02dfb",
+      "tan_pixels_in_quill": 0,
+      "target": "operator_review/name-quill-recovery/inputs/name__uncommon.png"
+    },
+    {
+      "final": "operator_review/constrained/e50961ad0f4d/name__rare.png",
+      "final_sha256": "d62eecbaccd216f86f82d316c17def0227bfa185cbcd305e62fa630f737ba35a",
+      "mask_pixels": 982,
+      "neutral_white_pixels_in_quill": 982,
+      "outside_mask_changed_pixels": 0,
+      "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
+      "rarity": "rare",
+      "raw_output": "operator_review/name-quill-recovery/raw/name__rare.png",
+      "raw_sha256": "481acf498297a7741a553847edb6183a6881b0ae0e3831137dd3ff6e18cae9ea",
+      "tan_pixels_in_quill": 0,
+      "target": "operator_review/name-quill-recovery/inputs/name__rare.png"
+    },
+    {
+      "final": "operator_review/constrained/e50961ad0f4d/name__glorious.png",
+      "final_sha256": "d940257b325b71ce5bc444969717f2bc984400acdb5a31c8f1fa60cde480d14d",
+      "mask_pixels": 982,
+      "neutral_white_pixels_in_quill": 982,
+      "outside_mask_changed_pixels": 0,
+      "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
+      "rarity": "glorious",
+      "raw_output": "operator_review/name-quill-recovery/raw/name__glorious.png",
+      "raw_sha256": "dec3b254403621692e563cd057780cb0fac9229eb7a02d0710d575da65f6a374",
+      "tan_pixels_in_quill": 0,
+      "target": "operator_review/name-quill-recovery/inputs/name__glorious.png"
+    }
+  ],
+  "reference_provenance": {
+    "commit": "4b26d8e",
+    "face_sha256": "ef312089dbebd60d7397f4b2fc1aaf7e68ed029fcc714419b93cf09ff36b6646",
+    "path": "templates/card/v001/name/template_1024x1536.png"
+  }
+}
