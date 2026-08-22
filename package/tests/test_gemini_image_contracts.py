@@ -12,6 +12,7 @@ from unittest import mock
 
 from PIL import Image
 
+from hypertext.cards import clean
 from hypertext.gemini import image, review, style
 from hypertext.gemini.config import (DEFAULT_IMAGE_MODEL, DEFAULT_REVIEW_MODEL,
                                      DEFAULT_TEXT_MODEL, image_endpoint, image_model,
@@ -180,6 +181,59 @@ class SdkContractTests(unittest.TestCase):
         permanent = RuntimeError("denied"); permanent.status_code = 401
         with self.assertRaisesRegex(RuntimeError, "API request failed"):
             self.run_generate([permanent])
+
+
+class CleanEditContractTests(unittest.TestCase):
+    def test_clean_edit_uses_shared_request_output_and_metadata_contract(self):
+        calls = []
+        inline = ns.SimpleNamespace(mime_type="image/jpeg", data=jpeg(1696, 2528))
+        usage = ns.SimpleNamespace(model_dump=lambda exclude_none: {"total_token_count": 321})
+        response = ns.SimpleNamespace(parts=[ns.SimpleNamespace(inline_data=inline)],
+                                      usage_metadata=usage)
+        client = ns.SimpleNamespace(models=ns.SimpleNamespace(
+            generate_content=lambda **kwargs: calls.append(kwargs) or response))
+        fake_types = ns.SimpleNamespace(
+            Part=FakePart, GenerateContentConfig=lambda **kwargs: kwargs,
+            ImageConfig=lambda **kwargs: kwargs)
+        with tempfile.TemporaryDirectory() as td, \
+             mock.patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}, clear=True), \
+             mock.patch.object(clean, "genai", ns.SimpleNamespace(Client=lambda api_key: client)), \
+             mock.patch.object(clean, "types", fake_types):
+            source = os.path.join(td, "source.png")
+            output = os.path.join(td, "outputs", "clean.png")
+            with open(source, "wb") as handle: handle.write(PNG)
+            clean.clean_template(source, output, prompt="remove brackets", model="stable",
+                                 image_size="2K", max_attempts=9, base_delay_s=0,
+                                 timeout_s=1)
+            with Image.open(output) as result:
+                self.assertEqual((result.format, result.size), ("PNG", (1024, 1536)))
+            with open(os.path.join(td, "outputs", "generation.json")) as handle:
+                metadata = json.load(handle)
+        self.assertEqual(calls[0]["config"]["response_modalities"], ["IMAGE"])
+        self.assertEqual(calls[0]["config"]["image_config"],
+                         {"aspect_ratio": "2:3", "image_size": "2K"})
+        self.assertEqual(metadata["model"], "stable")
+        self.assertEqual(metadata["reference_count"], 1)
+        self.assertEqual(metadata["usage_metadata"], {"total_token_count": 321})
+
+    def test_clean_edit_does_not_retry_permanent_api_error(self):
+        error = RuntimeError("denied"); error.status_code = 403
+        generate = mock.Mock(side_effect=error)
+        fake_types = ns.SimpleNamespace(
+            Part=FakePart, GenerateContentConfig=lambda **kwargs: kwargs,
+            ImageConfig=lambda **kwargs: kwargs)
+        with tempfile.TemporaryDirectory() as td, \
+             mock.patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}, clear=True), \
+             mock.patch.object(clean, "genai", ns.SimpleNamespace(Client=lambda api_key: ns.SimpleNamespace(
+                 models=ns.SimpleNamespace(generate_content=generate)))), \
+             mock.patch.object(clean, "types", fake_types), \
+             self.assertRaisesRegex(RuntimeError, "API request failed"):
+            source = os.path.join(td, "source.png")
+            with open(source, "wb") as handle: handle.write(PNG)
+            clean.clean_template(source, os.path.join(td, "out.png"), prompt="clean",
+                                 model="stable", image_size="2K", max_attempts=4,
+                                 base_delay_s=0, timeout_s=1)
+        generate.assert_called_once()
 
 
 class ConfigurationTests(unittest.TestCase):

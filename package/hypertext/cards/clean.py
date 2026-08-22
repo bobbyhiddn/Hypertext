@@ -2,12 +2,16 @@
 """Clean card template using Gemini image editing."""
 
 import argparse
-import base64
 import os
+import random
 import sys
 import time
 
 from hypertext.gemini.config import image_model
+from hypertext.gemini.image_contract import (
+    MAX_ATTEMPTS, ImageContractError, atomic_write_image, classify_error,
+    decode_and_validate, record_failure, record_success, validate_request,
+)
 
 try:
     from google import genai
@@ -21,39 +25,19 @@ except Exception as e:  # pragma: no cover
 def _text_part(text: str):
     fn = getattr(types.Part, "from_text", None)
     if callable(fn):
-        return fn(text)
+        return fn(text=text)
     return types.Part(text=text)
 
 
-def _generate_edit_response(*, client, model: str, prompt: str, image_part):
-    attempts = []
-
-    try:
-        attempts.append([_text_part(prompt), image_part])
-    except Exception:
-        pass
-
-    try:
-        content_cls = getattr(types, "Content", None)
-        if content_cls is not None:
-            attempts.append([content_cls(role="user", parts=[_text_part(prompt), image_part])])
-    except Exception:
-        pass
-
-    attempts.append([prompt, image_part])
-
-    last_error: Exception | None = None
-    for contents in attempts:
-        try:
-            return client.models.generate_content(
-                model=model,
-                contents=contents,
-            )
-        except Exception as e:
-            last_error = e
-            continue
-
-    raise RuntimeError(f"All Gemini request encodings failed. Last error: {last_error}") from last_error
+def _generate_edit_response(*, client, model: str, prompt: str, image_part,
+                            image_size: str):
+    config = types.GenerateContentConfig(
+        response_modalities=["IMAGE"],
+        image_config=types.ImageConfig(aspect_ratio="2:3", image_size=image_size),
+    )
+    return client.models.generate_content(
+        model=model, contents=[_text_part(prompt), image_part], config=config,
+    )
 
 def clean_template(
     in_path: str,
@@ -79,33 +63,26 @@ def clean_template(
     with open(in_path, "rb") as f:
         img_bytes = f.read()
 
+    validate_request("2:3", image_size)
     client = genai.Client(api_key=api_key)
 
     image_part = types.Part.from_bytes(data=img_bytes, mime_type="image/png")
 
-    last_error: Exception | None = None
-    resp = None
-
+    max_attempts = min(MAX_ATTEMPTS, max(1, max_attempts))
     for attempt in range(1, max_attempts + 1):
         try:
-            resp = _generate_edit_response(client=client, model=model, prompt=prompt, image_part=image_part)
-            last_error = None
+            request_started = time.monotonic()
+            resp = _generate_edit_response(client=client, model=model, prompt=prompt,
+                                           image_part=image_part, image_size=image_size)
+            latency_ms = round((time.monotonic() - request_started) * 1000)
             break
         except Exception as e:
-            msg = str(e)
-            if attempt < max_attempts:
-                delay = base_delay_s * (2 ** (attempt - 1)) + (0.1 * attempt)
-                print(
-                    f"Gemini request failed. Retrying in {delay:.1f}s (attempt {attempt}/{max_attempts}).\n{e}",
-                    file=sys.stderr,
-                )
-                time.sleep(delay)
-                last_error = e
-                continue
-            raise
-
-    if last_error is not None or resp is None:
-        raise RuntimeError("Gemini request failed after retries.") from last_error
+            category, status, retriable = classify_error(e)
+            if not retriable or attempt == max_attempts:
+                record_failure(out_path, model=model, category=category, attempts=attempt,
+                               reference_count=1, status_code=status)
+                raise RuntimeError(f"Gemini API request failed: {e}") from e
+            time.sleep(base_delay_s * (2 ** (attempt - 1)) + random.random())
 
     out_bytes: bytes | None = None
     parts = getattr(resp, "parts", None)
@@ -116,7 +93,9 @@ def clean_template(
             parts = None
 
     if not parts:
-        raise RuntimeError(f"No parts returned. Response: {resp}")
+        record_failure(out_path, model=model, category="no_candidate", attempts=attempt,
+                       reference_count=1)
+        raise RuntimeError("No image parts returned from Gemini")
 
     for part in parts:
         inline = getattr(part, "inline_data", None)
@@ -126,23 +105,29 @@ def clean_template(
             continue
 
         data = getattr(inline, "data", None)
+        mime_type = getattr(inline, "mime_type", getattr(inline, "mimeType", ""))
         if data is None:
             continue
-        if isinstance(data, bytes):
-            out_bytes = data
-            break
-        if isinstance(data, str):
-            out_bytes = base64.b64decode(data)
-            break
+        out_bytes = data
+        break
 
     if not out_bytes:
-        raise RuntimeError(f"No image inline_data found. Response: {resp}")
-
-    out_dir = os.path.dirname(out_path)
-    if out_dir:
-        os.makedirs(out_dir, exist_ok=True)
-    with open(out_path, "wb") as f:
-        f.write(out_bytes)
+        record_failure(out_path, model=model, category="missing_image", attempts=attempt,
+                       reference_count=1)
+        raise RuntimeError("No image inline_data found in Gemini response")
+    try:
+        out_bytes, dimensions = decode_and_validate(out_bytes, mime_type)
+    except ImageContractError:
+        record_failure(out_path, model=model, category="image_contract", attempts=attempt,
+                       reference_count=1)
+        raise
+    atomic_write_image(out_path, out_bytes)
+    usage = getattr(resp, "usage_metadata", None)
+    if usage is not None and hasattr(usage, "model_dump"):
+        usage = usage.model_dump(exclude_none=True)
+    record_success(out_path, model=model, mime_type=mime_type, dimensions=dimensions,
+                   attempts=attempt, reference_count=1, latency_ms=latency_ms,
+                   usage_metadata=usage if isinstance(usage, dict) else None)
 
 
 def main() -> int:
@@ -151,7 +136,7 @@ def main() -> int:
     parser.add_argument("--out", dest="out_path", default=str(os.path.join("templates", "blank_template.png")))
     parser.add_argument("--model", default=image_model())
     parser.add_argument("--image-size", default=os.environ.get("GEMINI_IMAGE_SIZE", "2K"))
-    parser.add_argument("--max-attempts", type=int, default=int(os.environ.get("GEMINI_MAX_ATTEMPTS", "6")))
+    parser.add_argument("--max-attempts", type=int, default=int(os.environ.get("GEMINI_MAX_ATTEMPTS", str(MAX_ATTEMPTS))))
     parser.add_argument("--retry-base-delay-s", type=float, default=float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2")))
     parser.add_argument("--timeout-s", type=float, default=float(os.environ.get("GEMINI_HTTP_TIMEOUT_S", "180")))
     parser.add_argument(

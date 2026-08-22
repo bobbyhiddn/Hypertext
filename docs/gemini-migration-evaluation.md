@@ -177,3 +177,50 @@ cases, baseline/candidate comparison, two completed blind reviews, style
 consistency, currency-cost acceptance, and explicit operator rollout approval do
 not pass or remain incomplete. Therefore the project does **not** pass the rollout
 gate; automation must remain disabled.
+
+## Complete five-plus-two automated run (2026-08-21)
+
+The requested full set is isolated at
+`/home/cap/hypertext-gemini-comparison-2026-08-21`: five newly randomized cards,
+one template-clean edit, and one targeted revise/fix edit. Nothing was published,
+queued, indexed, or added to a gallery. Every image request used
+`gemini-3.1-flash-image`, `2:3`, `2K`, at most four attempts, and completed in one
+attempt. Source JPEG responses were validated and normalized to 1024x1536 PNG.
+
+| Case | Kind | Latency | API tokens | Automated quality |
+| --- | --- | ---: | ---: | --- |
+| `001-day` | fresh | 16.607 s | 4,514 | 0/100; style override plus wrong CONTEXT and COMPLEXITY pips |
+| `002-bless` | fresh | 19.081 s | 4,630 | 0/100; style override plus wrong CONTEXT pips |
+| `003-living` | fresh | 17.024 s | 4,337 | 95/100; wrong LORE pips |
+| `004-offering` | fresh | 17.318 s | 3,927 | 95/100; wrong LORE pips |
+| `005-eat` | fresh | 17.430 s | 4,366 | 0/100; style override plus wrong CONTEXT and COMPLEXITY pips |
+| `template-clean` | edit of `001-day` | 16.306 s | 2,553 | 0/100; style mismatch and unintended content/stat changes |
+| `revise-fix` | edit of `003-living` | 14.593 s | 3,725 | 95/100; requested LORE correction was not applied |
+
+Total image latency was 118.359 seconds and available usage was 28,052 tokens.
+The API returned no currency charge, so actual cost remains unavailable and needs
+operator acceptance or billing-console reconciliation. `PROVENANCE.md` records
+prompt/input and output hashes plus the blind mapping; per-case `generation.json`,
+`generation.log`, `grade.json`, source inputs, prompts, and card data provide the
+auditable records. The API metadata, output validation, provenance, latency, and
+token-capture criteria pass 7/7. The unchanged automated 100/100 quality criterion
+passes 0/7, so the quality and rollout gates fail without a waiver (waivers are not
+permitted by this plan).
+
+This run exposed a reproducible template-clean integration defect: that path did
+not request the shared image response contract, validate or atomically normalize
+the result, apply bounded retry classification, or write provenance metadata. The
+fix routes it through the same request/output contract and records latency and
+available usage; regression tests cover successful normalization/metadata and
+immediate stop on a permanent API error. A first live attempt also proved the old
+positional `Part.from_text` call is incompatible with the installed SDK; the fix
+uses the supported keyword call.
+
+The complete blinded packet is
+`/home/cap/hypertext-gemini-blinded-review-2026-08-21-complete`. Two reviewers must
+independently score all seven images before unblinding; disagreement requires a
+third reviewer. Even unanimous visual passes do not repair the failed automated
+quality gate. An operator must separately decide whether unavailable currency cost
+is acceptable, whether to authorize another improvement/rerun cycle, and—only
+after every gate passes—whether to approve a supervised rollout. Cron restoration
+remains a distinct later decision and is not authorized.
