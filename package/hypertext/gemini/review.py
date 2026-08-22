@@ -208,6 +208,10 @@ DESCRIBE_WITH_REFS_PROMPT = """You are a STRICT quality control inspector. Your 
 ## STYLE RUBRIC (the AUTHORITATIVE reference for what cards MUST look like):
 {style_rubric}
 
+The written rubric and critical checks below override incidental differences in
+reference images. A reference containing parenthesized transliterations does not
+make parentheses correct and must never cause a card without parentheses to fail.
+
 ## IMAGES PROVIDED
 {image_labels}
 
@@ -354,7 +358,7 @@ SCORE_PROMPT_TEMPLATE = """You are scoring a trading card based on a description
 
 ### 4. CONTENT ALIGNMENT (15 points max)
 - Stat pip counts match expected (5 pts)
-- Trivia bullets present (5 pts) - should have 3-5
+- Exactly 3 trivia bullets present (5 pts) - deduct all unless the count is 3
 - No brackets [ ] anywhere (5 pts) - deduct ALL if any brackets visible
 
 ## YOUR TASK:

@@ -224,3 +224,36 @@ quality gate. An operator must separately decide whether unavailable currency co
 is acceptable, whether to authorize another improvement/rerun cycle, and—only
 after every gate passes—whether to approve a supervised rollout. Cron restoration
 remains a distinct later decision and is not authorized.
+
+## Consistency remediation rerun (2026-08-21)
+
+The prior evidence separates generator defects from a review-contract defect.
+All seven generated images had incorrect stat-pip counts; three fresh cases also
+received style overrides, and both edit cases failed to preserve or apply the
+requested pixels. Separately, the style reviewer treated legacy reference images
+with parenthesized transliterations as authoritative even though its written
+rubric explicitly forbids parentheses.
+
+The smallest remediation adds adjacent role labels to generation references,
+repeats exact authoritative pip counts, gives edits an explicit preserve-everything-
+else contract, and states that the written review rubric overrides incidental
+legacy-reference differences. The automated trivia contract is tightened from
+the review model's former `3-5` interpretation to exactly three; no gate was
+weakened. Offline regression and import tests pass 18/18.
+
+The isolated rerun is at
+`/home/cap/hypertext-gemini-comparison-2026-08-21-rerun`. Four fresh cases
+completed review: `001-water`, `002-bless`, `003-great`, and `004-altar` each
+scored 95/100 with zero style mismatches and incorrect stat-pip counts. The
+`005-eat` image and transport metadata completed, but automated review did not
+finish within the execution window. Because the required automated gate was
+already 0/4 at 100/100, the two edit calls were not used to construct a passing
+comparison and no blinded reviewer packet was generated. Per-case
+`generation.json` files retain model, MIME, dimensions, attempts, latency, and
+available token usage; the API still exposes no currency charge.
+
+The remediation therefore improves style-review consistency but does not make
+Gemini's rendered numeric pips reliable. Rollout remains blocked on deterministic
+stat rendering (or another generator-side solution), a complete five-plus-two
+100/100 rerun, currency-cost acceptance, and operator approval. Cron remains
+disabled and manual dispatch remains available.

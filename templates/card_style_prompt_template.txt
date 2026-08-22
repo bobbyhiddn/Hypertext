@@ -8,6 +8,9 @@ Gloss: {GLOSS}
 Type: {CARD_TYPE}
 DRAW Rarity (Top Right): {RARITY_TEXT}
 Stats: Lore {STAT_LORE}, Context {STAT_CONTEXT}, Complexity {STAT_COMPLEXITY}
+Draw exactly five circular pips per stat. Fill exactly {STAT_LORE} Lore,
+{STAT_CONTEXT} Context, and {STAT_COMPLEXITY} Complexity pips from left to right.
+These values are authoritative; never copy pip counts from a reference image.
 
 Art Description: {ART_PROMPT}. Art style must match the premium antique parchment aesthetic of the reference.
 

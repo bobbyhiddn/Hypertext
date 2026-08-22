@@ -250,10 +250,11 @@ AVOID:
         img_bytes = _read_image_bytes(p)
         image_parts.append(_image_part_from_bytes(img_bytes))
 
-    contents = [
-        *image_parts,
-        types.Part.from_text(text=full_prompt),
-    ]
+    contents = []
+    for index, image_part in enumerate(image_parts, 1):
+        label = ref_labels[index - 1] if index <= len(ref_labels) else f"[{index}] = reference image"
+        contents.extend((types.Part.from_text(text=f"IMAGE {label}"), image_part))
+    contents.append(types.Part.from_text(text=full_prompt))
 
     print("Generating with style references:")
     for p in style_image_paths:

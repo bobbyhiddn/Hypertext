@@ -35,8 +35,17 @@ def _generate_edit_response(*, client, model: str, prompt: str, image_part,
         response_modalities=["IMAGE"],
         image_config=types.ImageConfig(aspect_ratio="2:3", image_size=image_size),
     )
+    preservation = (
+        "EDIT CONTRACT (AUTHORITATIVE): Image [1] is the source. Change only the "
+        "explicitly requested pixels. Preserve every other word, number, stat-pip "
+        "count, icon, artwork detail, position, frame, and color exactly. Do not add "
+        "labels such as 'WORD:' or 'Definition Text:'. Transliterations must remain "
+        "below their scripts without parentheses.\n\nREQUESTED CHANGE:\n"
+    )
     return client.models.generate_content(
-        model=model, contents=[_text_part(prompt), image_part], config=config,
+        model=model, contents=[_text_part(preservation + prompt),
+                               _text_part("IMAGE [1] = source image to edit"), image_part],
+        config=config,
     )
 
 def clean_template(

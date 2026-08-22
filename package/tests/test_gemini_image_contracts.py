@@ -148,6 +148,9 @@ class SdkContractTests(unittest.TestCase):
         self.assertEqual(calls[0]["config"]["response_modalities"], ["IMAGE"])
         self.assertEqual(calls[0]["config"]["image_config"],
                          {"aspect_ratio": "2:3", "image_size": "2K"})
+        self.assertEqual(calls[0]["contents"][0].text,
+                         "IMAGE [1] = Clean template (layout/frame reference)")
+        self.assertEqual(calls[0]["contents"][1].data, PNG)
 
     def test_missing_and_malformed_image_data(self):
         cases = [
@@ -215,6 +218,11 @@ class CleanEditContractTests(unittest.TestCase):
         self.assertEqual(metadata["model"], "stable")
         self.assertEqual(metadata["reference_count"], 1)
         self.assertEqual(metadata["usage_metadata"], {"total_token_count": 321})
+        edit_contents = calls[0]["contents"]
+        self.assertIn("Change only the explicitly requested pixels", edit_contents[0].text)
+        self.assertIn("stat-pip count", edit_contents[0].text)
+        self.assertEqual(edit_contents[1].text, "IMAGE [1] = source image to edit")
+        self.assertEqual(edit_contents[2].data, PNG)
 
     def test_clean_edit_does_not_retry_permanent_api_error(self):
         error = RuntimeError("denied"); error.status_code = 403
@@ -298,6 +306,19 @@ class ConfigurationTests(unittest.TestCase):
             trivia = next(panel for panel in template["layout"]["panels"]
                           if panel.get("label") == "TRIVIA")
             self.assertEqual(trivia["bullets_count"], 3)
+        prompt_path = os.path.join(root, "package/hypertext/templates/card_style_prompt_template.txt")
+        with open(prompt_path, encoding="utf-8") as f:
+            prompt = f.read()
+        self.assertIn("Do not infer or copy stat counts from", prompt)
+        self.assertIn("any reference image; these numeric values override", prompt)
+
+    def test_review_contract_precedence_and_exact_trivia_gate(self):
+        self.assertIn("written rubric and critical checks below override",
+                      review.DESCRIBE_WITH_REFS_PROMPT)
+        self.assertIn("reference containing parenthesized",
+                      review.DESCRIBE_WITH_REFS_PROMPT)
+        self.assertIn("Exactly 3 trivia bullets", review.SCORE_PROMPT_TEMPLATE)
+        self.assertNotIn("should have 3-5", review.SCORE_PROMPT_TEMPLATE)
 
     def test_multi_image_review_labels_are_adjacent_to_images(self):
         calls = []
