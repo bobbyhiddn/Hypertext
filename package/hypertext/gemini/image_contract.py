@@ -95,12 +95,19 @@ def _atomic_json(path: Path, payload: dict) -> None:
 
 
 def record_success(out_path: str, *, model: str, mime_type: str,
-                   dimensions: tuple[int, int], attempts: int, reference_count: int) -> None:
-    _atomic_json(Path(out_path).parent / "generation.json", {
+                   dimensions: tuple[int, int], attempts: int, reference_count: int,
+                   latency_ms: int | None = None, usage_metadata: dict | None = None) -> None:
+    payload = {
         "status": "success", "model": model, "mime_type": mime_type,
         "width": dimensions[0], "height": dimensions[1], "attempts": attempts,
         "reference_count": reference_count,
-    })
+    }
+    if latency_ms is not None:
+        payload["latency_ms"] = latency_ms
+    # Gemini image responses do not always report tokens. Preserve only numeric
+    # counters when present, and record explicit absence for auditability.
+    payload["usage_metadata"] = usage_metadata or None
+    _atomic_json(Path(out_path).parent / "generation.json", payload)
 
 
 def record_failure(out_path: str, *, model: str, category: str,

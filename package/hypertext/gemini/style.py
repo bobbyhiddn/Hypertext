@@ -269,9 +269,11 @@ AVOID:
     base_delay_s = float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2"))
     for attempt in range(1, max_attempts + 1):
         try:
+            request_started = time.monotonic()
             response = client.models.generate_content(
                 model=model, contents=contents, config=config,
             )
+            latency_ms = round((time.monotonic() - request_started) * 1000)
             break
         except Exception as e:
             category, status, retriable = classify_error(e)
@@ -308,8 +310,18 @@ AVOID:
                        reference_count=len(style_image_paths))
         raise
     atomic_write_image(out_path, image_bytes)
+    usage = getattr(response, "usage_metadata", None)
+    if usage is not None:
+        if hasattr(usage, "model_dump"):
+            usage = usage.model_dump(exclude_none=True)
+        elif not isinstance(usage, dict):
+            usage = {name: value for name in (
+                "prompt_token_count", "candidates_token_count", "total_token_count",
+                "thoughts_token_count",
+            ) if (value := getattr(usage, name, None)) is not None}
     record_success(out_path, model=model, mime_type=mime_type, dimensions=dimensions,
-                   attempts=attempt, reference_count=len(style_image_paths))
+                   attempts=attempt, reference_count=len(style_image_paths),
+                   latency_ms=latency_ms, usage_metadata=usage)
 
     print(f"Saved generated image to: {out_path}")
 

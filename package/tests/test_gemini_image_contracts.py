@@ -183,6 +183,28 @@ class SdkContractTests(unittest.TestCase):
 
 
 class ConfigurationTests(unittest.TestCase):
+    def test_success_metadata_records_latency_and_available_usage(self):
+        from hypertext.gemini.image_contract import record_success
+        with tempfile.TemporaryDirectory() as td:
+            out = os.path.join(td, "card.png")
+            record_success(out, model="model", mime_type="image/jpeg",
+                           dimensions=(1024, 1536), attempts=1, reference_count=3,
+                           latency_ms=1234, usage_metadata={"totalTokenCount": 99})
+            with open(os.path.join(td, "generation.json"), encoding="utf-8") as f:
+                metadata = json.load(f)
+        self.assertEqual(metadata["latency_ms"], 1234)
+        self.assertEqual(metadata["usage_metadata"], {"totalTokenCount": 99})
+
+    def test_success_metadata_records_usage_absence_explicitly(self):
+        from hypertext.gemini.image_contract import record_success
+        with tempfile.TemporaryDirectory() as td:
+            out = os.path.join(td, "card.png")
+            record_success(out, model="model", mime_type="image/png",
+                           dimensions=(1024, 1536), attempts=1, reference_count=0)
+            with open(os.path.join(td, "generation.json"), encoding="utf-8") as f:
+                metadata = json.load(f)
+        self.assertIsNone(metadata["usage_metadata"])
+
     def test_environment_override(self):
         with mock.patch.dict(os.environ, {"GEMINI_IMAGE_MODEL": "custom"}):
             self.assertEqual(image_model(), "custom")

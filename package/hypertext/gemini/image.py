@@ -108,9 +108,11 @@ def generate_image(
 
     for attempt in range(1, max_attempts + 1):
         try:
+            request_started = time.monotonic()
             with urllib.request.urlopen(req, timeout=timeout_s) as resp:
                 raw = resp.read().decode("utf-8")
                 data = json.loads(raw)
+            latency_ms = round((time.monotonic() - request_started) * 1000)
             last_error = None
             break
         except urllib.error.HTTPError as e:
@@ -186,7 +188,8 @@ def generate_image(
         raise
     atomic_write_image(out_path, img_bytes)
     record_success(out_path, model=model, mime_type=mime_type, dimensions=dimensions,
-                   attempts=attempt, reference_count=0)
+                   attempts=attempt, reference_count=0, latency_ms=latency_ms,
+                   usage_metadata=data.get("usageMetadata"))
 
 
 def main() -> int:

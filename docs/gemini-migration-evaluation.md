@@ -134,3 +134,46 @@ Reviewer packet: inspect the four `outputs/card_1024x1536.png` files beside thei
 structural drift and independently score FRUIT without seeing its invalid automated
 verdict. The project is ready for engineering review of the fixes, but it is **not
 ready for rollout or cron restoration** and no blinded-human pass is claimed.
+
+## Post-fix review-gate run (2026-08-21)
+
+Commits `d1ca0fd` and `1f78a49` were reviewed together after the latter's rarity,
+trivia-count, and adjacent-image-label fixes. The non-image import suite passed,
+and the migration/static suite passed all 15 tests. Static inspection and tests
+confirm every workflow is manual `workflow_dispatch` only, with no `schedule`,
+push, pull-request, comment, or workflow-run trigger. The stable image default is
+centralized as `gemini-3.1-flash-image` in `hypertext.gemini.config`, consumed by
+both adapters and declared by every image workflow. Cron remains disabled.
+
+The approved bounded repeatability rerun is isolated at
+`/home/cap/random-card-run-2026-08-21-v4`. It generated four cards through live
+planning, referenced image generation, and review, without publishing or changing
+production series, queues, galleries, or indexes:
+
+| Card | Image provenance | Latency | API usage | Automated quality |
+| --- | --- | ---: | ---: | --- |
+| `001-father` | stable model, JPEG, 1024x1536 PNG, 5 refs, 1 attempt | 17.006 s | 4,700 tokens | 0/100; two style mismatches |
+| `002-judge` | stable model, JPEG, 1024x1536 PNG, 5 refs, 1 attempt | 18.517 s | 4,610 tokens | 0/100; style mismatch and incorrect stat pips |
+| `003-great` | stable model, JPEG, 1024x1536 PNG, 3 refs, 1 attempt | 17.362 s | 4,267 tokens | 95/100; incorrect stat pips |
+| `004-seed` | stable model, JPEG, 1024x1536 PNG, 3 refs, 1 attempt | 20.127 s | 4,281 tokens | 95/100; incorrect CONTEXT pips |
+
+The API supplied prompt, candidate, modality, and total-token counts for every
+image response (17,858 total tokens). It supplied no currency charge, so actual
+API cost is unavailable and cost acceptance remains open. The image adapters now
+record request latency plus available response usage metadata in each atomic
+`outputs/generation.json`; offline tests cover both present and absent usage.
+
+The adjacent-label fix eliminated the earlier wrong-card verdict: all four new
+grades identify their actual card and rarity. Repeatable perfect quality is still
+**FAIL** (0/4 reached the required 100/100), and style consistency remains open.
+The compact two-reviewer blind packet is
+`/home/cap/hypertext-gemini-blinded-review-2026-08-21`; candidate A-D image hashes
+match the source outputs, and its form conceals automated scores and source names.
+
+Acceptance status: implementation, workflow safety, centralized stable image
+configuration, offline regression, live transport, provenance, latency capture,
+and available-token capture pass. The five representative cards plus two edit
+cases, baseline/candidate comparison, two completed blind reviews, style
+consistency, currency-cost acceptance, and explicit operator rollout approval do
+not pass or remain incomplete. Therefore the project does **not** pass the rollout
+gate; automation must remain disabled.
