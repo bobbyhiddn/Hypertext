@@ -1,0 +1,21 @@
+{
+  "aspect_ratio": "2:3",
+  "edit_region": [
+    650,
+    10,
+    838,
+    162
+  ],
+  "image_size": "2K",
+  "input_roles": {
+    "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/historical_example_face.png",
+    "historical_treatment_witness": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/historical_witness.png",
+    "symbol_palette": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/symbol_palette.png",
+    "target": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/target.png"
+  },
+  "model": "gemini-3.1-flash-image",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "workflow": "generate_with_styles/fix_mode"
+}

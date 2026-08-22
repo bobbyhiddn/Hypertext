@@ -1,0 +1,71 @@
+{
+  "01_input_identity": {
+    "canonical_inputs": 12,
+    "historical_witness_files": 40,
+    "pass": true,
+    "verified": 52
+  },
+  "02_cardinality": {
+    "count": 20,
+    "pass": true
+  },
+  "03_raster_contract": {
+    "pass": true
+  },
+  "04_determinism": {
+    "matched_second_build": 20,
+    "method": "second lossless projection of immutable Git blobs through immutable masks",
+    "pass": true
+  },
+  "05_shared_pixel_invariance": {
+    "max_outside": 0,
+    "pass": true
+  },
+  "06_type_isolation": {
+    "max_changed_outside_type_mask": 0,
+    "pass": true
+  },
+  "07_rarity_isolation": {
+    "max_changed_outside_rarity_mask": 0,
+    "pass": true
+  },
+  "08_icon_correctness": {
+    "method": "pixels projected from named historical type witnesses",
+    "pass": true
+  },
+  "09_rarity_correctness": {
+    "method": "pixels projected from named historical rarity witnesses; glorious witness preserves two costs",
+    "pass": true
+  },
+  "10_border_registration": {
+    "edge_displacement_px": 0,
+    "pass": true
+  },
+  "11_geometry_registration": {
+    "method": "base retained outside masks",
+    "pass": true,
+    "size_delta_px": 0,
+    "translation_px": 0
+  },
+  "12_witness_sanity": {
+    "pass": true,
+    "verified_cells": 20
+  },
+  "13_canonical_immutability": {
+    "git_diff_templates_empty": true,
+    "pass": true
+  },
+  "extra_border_pixels": {
+    "controlled_mask_border_intersection": 0,
+    "pass": true
+  },
+  "extra_mask_overlap": {
+    "overlap_pixels": 0,
+    "pass": true
+  },
+  "extra_raw_gemini_edit_evidence": {
+    "expected": 9,
+    "pass": true,
+    "present": 9
+  }
+}

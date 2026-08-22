@@ -1,0 +1,15 @@
+number: '011'
+word: ETERNAL
+gloss: Lasting or existing forever; without beginning or end.
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Example
+art_prompt: A seamless golden ring floating in a star-filled void, glowing with an
+  inner light that has no beginning or end.
+stats:
+  lore: 5
+  context: 3
+  complexity: 4
+ability: Return a card from Sheol to your hand.
+style_series_dir: series\2026-Q1

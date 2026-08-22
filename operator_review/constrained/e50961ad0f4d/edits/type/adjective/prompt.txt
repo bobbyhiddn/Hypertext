@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset type: Hypertext card type treatment
+Primary request: edit only the isolated type region to show the canonical white sparkle-pencil icon with two four-pointed stars.
+Input images: [1] isolated edit target; [2] historical full-card treatment witness; [3] historical symbol palette; [4] authoritative historical example-card face.
+Edit-region coordinates on the approved 848x1264 face: [51, 77, 134, 162].
+Constraints: preserve every target pixel except the named symbol treatment; match the historical witness; do not invent text, glow, ornaments, borders, panels, or geometry. The output is a proposal for this crop only.

@@ -1,0 +1,16 @@
+number: 008
+word: BLESS
+gloss: To confer prosperity, happiness, or well-being; to consecrate; to praise.
+card_type: VERB
+rarity: GLORIOUS
+series: 2026-Q1
+set: Example
+art_prompt: A weathered stone cup overflowing with golden liquid that spills onto
+  dry, cracked earth, causing small green shoots to sprout instantly where it touches.
+  Warm, radiant lighting. No text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 2 cards, then return a card from Sheol to your hand.
+style_series_dir: series\2026-Q1

@@ -1,0 +1,17 @@
+number: '006'
+word: FORGIVE
+gloss: To cease feeling resentment against an offender; to pardon a fault or cancel
+  a debt.
+card_type: VERB
+rarity: UNCOMMON
+series: 2026-Q1
+set: Example
+art_prompt: A pair of weathered hands gently releasing a glowing, white dove into
+  a dark, stormy sky; the light from the bird illuminates the hands, breaking shadowy
+  chains around the wrists.
+stats:
+  lore: 4
+  context: 5
+  complexity: 3
+ability: Return a card from Sheol to the top of the Tower.
+style_series_dir: series\2026-Q1

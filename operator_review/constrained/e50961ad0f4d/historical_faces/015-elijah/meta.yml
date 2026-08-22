@@ -1,0 +1,17 @@
+number: '015'
+word: ELIJAH
+gloss: My God is Yahweh; the prophet who called down fire and ascended in a whirlwind.
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Example
+art_prompt: A rugged prophet in a hairy mantle standing on a mountain peak, calling
+  down a massive pillar of fire from a dark stormy sky onto a stone altar, dramatic
+  lighting, no text.
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Name a card type. Target player reveals their hand and discards all cards
+  of that type.
+style_series_dir: series\2026-Q1
