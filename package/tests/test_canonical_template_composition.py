@@ -41,24 +41,30 @@ def test_word_manifest_is_exact_matrix_cross_product_and_bounded():
         assert output.size == WORD_SIZE
 
 
-def _name_quill_mask(witness):
+def _name_quill_mask(witness, stage):
     mask = Image.new("L", witness.size, 0)
     source, selected = witness.load(), mask.load()
-    for y in range(68, 174):
-        for x in range(38, 151):
+    left, top, right, bottom = stage["scan_box"]
+    threshold = stage["pixel_selection"]
+    for y in range(top, bottom):
+        for x in range(left, right):
             pixel = source[x, y]
-            if min(pixel) >= 185 and max(pixel) - min(pixel) < 45:
+            if (min(pixel) >= threshold["minimum_channel_at_least"] and
+                    max(pixel) - min(pixel) < threshold["channel_range_less_than"]):
                 selected[x, y] = 255
     return mask
 
 
-def _project_neutral_treatment(raw, mask):
+def _project_neutral_treatment(raw, mask, stage):
     source = raw.load()
     neutral = []
-    for y in range(70, 165):
-        for x in range(45, 140):
+    left, top, right, bottom = stage["neutral_source_scan_box"]
+    threshold = stage["pixel_selection"]
+    for y in range(top, bottom):
+        for x in range(left, right):
             pixel = source[x, y]
-            if min(pixel) >= 205 and max(pixel) - min(pixel) < 18:
+            if (min(pixel) >= threshold["minimum_channel_at_least"] and
+                    max(pixel) - min(pixel) < threshold["neutral_source_channel_range_less_than"]):
                 neutral.append((x, y, pixel))
     projected = raw.copy()
     output = projected.load()
@@ -66,7 +72,8 @@ def _project_neutral_treatment(raw, mask):
         for x in range(mask.width):
             if mask.getpixel((x, y)):
                 pixel = source[x, y]
-                if min(pixel) < 205 or max(pixel) - min(pixel) > 18:
+                if (min(pixel) < threshold["minimum_channel_at_least"] or
+                        max(pixel) - min(pixel) > threshold["replace_channel_range_greater_than"]):
                     output[x, y] = min(neutral, key=lambda p: (p[0] - x) ** 2 + (p[1] - y) ** 2)[2]
     return projected
 
@@ -76,6 +83,8 @@ def test_manifest_evidence_reconstructs_every_promoted_face_exactly():
     evidence_root = ROOT / Path(manifest["construction_evidence"][0]).parent
     recovery = json.loads((ROOT / manifest["construction_evidence"][1]).read_text())
     recovery_by_rarity = {record["rarity"]: record for record in recovery["records"]}
+    stages = manifest["construction_stages"]
+    assert list(stages) == manifest["composition_order"]
     with Image.open(ROOT / manifest["base"]) as image:
         base = image.convert("RGB")
     assert base.size == tuple(manifest["canvas"])
@@ -94,26 +103,44 @@ def test_manifest_evidence_reconstructs_every_promoted_face_exactly():
             type_witness = image.convert("RGB")
         with Image.open(ROOT / edits[("rarity", rarity)]["witness"]) as image:
             rarity_witness = image.convert("RGB")
-        reconstructed = base.copy()
-        reconstructed.paste(type_witness, mask=type_mask)
-        if card_type == "name":
-            reconstructed.paste(Image.new("RGB", reconstructed.size, "white"), mask=_name_quill_mask(type_witness))
-        reconstructed.paste(rarity_witness, mask=rarity_mask)
         evidence_output = evidence_outputs[(card_type, rarity)]
         evidence_candidate = ROOT / evidence_output["candidate"]
         assert hashlib.sha256(evidence_candidate.read_bytes()).hexdigest() == evidence_output["sha256"]
-        with Image.open(evidence_candidate) as candidate:
-            assert ImageChops.difference(reconstructed, candidate.convert("RGB")).getbbox() is None
-
-        if card_type == "name":
-            record = recovery_by_rarity[rarity]
-            with Image.open(ROOT / record["target"]) as target:
-                assert ImageChops.difference(reconstructed, target.convert("RGB")).getbbox() is None
-            with Image.open(ROOT / record["raw_output"]) as raw_image:
-                raw = raw_image.convert("RGB").resize(base.size, Image.Resampling.LANCZOS)
-            with Image.open(ROOT / "operator_review/name-quill-recovery/mask/complete_current_quill_mask.png") as image:
-                recovery_mask = image.convert("L")
-            reconstructed.paste(_project_neutral_treatment(raw, recovery_mask), mask=recovery_mask)
+        reconstructed = None
+        for stage_name in manifest["composition_order"]:
+            stage = stages[stage_name]
+            if stage.get("applies_to_type", "").lower() not in ("", card_type):
+                continue
+            operation = stage["operation"]
+            if operation == "copy_rgb":
+                reconstructed = base.copy()
+            elif operation == "paste_witness_through_mask":
+                witness, mask = ((type_witness, type_mask) if stage["witness_edit_kind"] == "type"
+                                 else (rarity_witness, rarity_mask))
+                reconstructed.paste(witness, mask=mask)
+            elif operation == "fill_white_through_mask_derived_from_type_witness":
+                before = reconstructed.copy()
+                reconstructed.paste(Image.new("RGB", reconstructed.size, tuple(stage["fill_rgb"])),
+                                    mask=_name_quill_mask(type_witness, stage))
+                changed = sum(1 for pixel in ImageChops.difference(before, reconstructed).get_flattened_data()
+                              if pixel != (0, 0, 0))
+                assert changed == stage["expected_changed_pixels_per_output"]
+            elif operation == "nearest_neutral_pixel_projection":
+                record = recovery_by_rarity[rarity]
+                with Image.open(ROOT / record["target"]) as target:
+                    assert ImageChops.difference(reconstructed, target.convert("RGB")).getbbox() is None
+                with Image.open(evidence_candidate) as candidate:
+                    assert ImageChops.difference(reconstructed, candidate.convert("RGB")).getbbox() is None
+                with Image.open(ROOT / record["raw_output"]) as raw_image:
+                    raw = raw_image.convert("RGB").resize(tuple(stage["raw_resize"]), Image.Resampling.LANCZOS)
+                with Image.open(ROOT / stage["mask"]) as image:
+                    recovery_mask = image.convert("L")
+                reconstructed.paste(_project_neutral_treatment(raw, recovery_mask, stage), mask=recovery_mask)
+            else:
+                raise AssertionError(f"undeclared construction operation: {operation}")
+        if card_type != "name":
+            with Image.open(evidence_candidate) as candidate:
+                assert ImageChops.difference(reconstructed, candidate.convert("RGB")).getbbox() is None
 
         with Image.open(ROOT / item["path"]) as promoted:
             assert ImageChops.difference(reconstructed, promoted.convert("RGB")).getbbox() is None

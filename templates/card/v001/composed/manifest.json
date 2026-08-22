@@ -9,7 +9,7 @@
     "operator_review/constrained/e50961ad0f4d/manifest.json",
     "operator_review/name-quill-recovery/manifest.json"
   ],
-  "construction_method": "All cells start from the frozen 848x1264 evidence snapshot and project the named historical witnesses through the two declared masks. NAME cells then apply the documented complete-quill recovery from its preserved target, raw output, and mask.",
+  "construction_method": "Execute composition_order exactly. All cells start from the frozen 848x1264 evidence snapshot and project the named historical witnesses through the declared masks. NAME cells derive a neutral quill mask from their type witness and fill it white before rarity projection, then apply the documented complete-quill recovery from its preserved raw output and mask.",
   "matrix": "schema/babel_template_matrix.json",
   "canvas": [
     848,
@@ -36,9 +36,51 @@
   "composition_order": [
     "frozen_base",
     "historical_type_witness_through_type_mask",
+    "name_only_derived_quill_white_fill",
     "historical_rarity_witness_through_rarity_mask",
     "name_only_complete_quill_recovery"
   ],
+  "construction_stages": {
+    "frozen_base": {
+      "operation": "copy_rgb",
+      "source": "base"
+    },
+    "historical_type_witness_through_type_mask": {
+      "operation": "paste_witness_through_mask",
+      "witness_edit_kind": "type",
+      "mask": "operator_review/constrained/e50961ad0f4d/masks/type.png"
+    },
+    "name_only_derived_quill_white_fill": {
+      "applies_to_type": "NAME",
+      "operation": "fill_white_through_mask_derived_from_type_witness",
+      "scan_box": [38, 68, 151, 174],
+      "pixel_selection": {
+        "minimum_channel_at_least": 185,
+        "channel_range_less_than": 45
+      },
+      "fill_rgb": [255, 255, 255],
+      "expected_changed_pixels_per_output": 24
+    },
+    "historical_rarity_witness_through_rarity_mask": {
+      "operation": "paste_witness_through_mask",
+      "witness_edit_kind": "rarity",
+      "mask": "operator_review/constrained/e50961ad0f4d/masks/rarity.png"
+    },
+    "name_only_complete_quill_recovery": {
+      "applies_to_type": "NAME",
+      "operation": "nearest_neutral_pixel_projection",
+      "records": "operator_review/name-quill-recovery/manifest.json",
+      "mask": "operator_review/name-quill-recovery/mask/complete_current_quill_mask.png",
+      "raw_resize": [848, 1264],
+      "raw_resampling": "LANCZOS",
+      "neutral_source_scan_box": [45, 70, 140, 165],
+      "pixel_selection": {
+        "minimum_channel_at_least": 205,
+        "neutral_source_channel_range_less_than": 18,
+        "replace_channel_range_greater_than": 18
+      }
+    }
+  },
   "outputs": [
     {
       "type": "NOUN",

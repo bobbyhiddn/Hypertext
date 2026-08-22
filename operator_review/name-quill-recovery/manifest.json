@@ -1,4 +1,5 @@
 {
+  "target_construction": "Before complete-quill recovery, construct each preserved target by projecting the historical NAME witness through the type mask, deriving its neutral quill mask with scan box [38,68,151,174], minimum channel 185 and channel range less than 45, filling that mask RGB white, then projecting the rarity witness through the rarity mask. The derived white-fill changes exactly 24 pixels in every target and is a material required stage.",
   "records": [
     {
       "final": "operator_review/constrained/e50961ad0f4d/name__common.png",
@@ -6,6 +7,7 @@
       "mask_pixels": 982,
       "neutral_white_pixels_in_quill": 982,
       "outside_mask_changed_pixels": 0,
+      "derived_white_fill_changed_pixels": 24,
       "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
       "rarity": "common",
       "raw_output": "operator_review/name-quill-recovery/raw/name__common.png",
@@ -19,6 +21,7 @@
       "mask_pixels": 982,
       "neutral_white_pixels_in_quill": 982,
       "outside_mask_changed_pixels": 0,
+      "derived_white_fill_changed_pixels": 24,
       "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
       "rarity": "uncommon",
       "raw_output": "operator_review/name-quill-recovery/raw/name__uncommon.png",
@@ -32,6 +35,7 @@
       "mask_pixels": 982,
       "neutral_white_pixels_in_quill": 982,
       "outside_mask_changed_pixels": 0,
+      "derived_white_fill_changed_pixels": 24,
       "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
       "rarity": "rare",
       "raw_output": "operator_review/name-quill-recovery/raw/name__rare.png",
@@ -45,6 +49,7 @@
       "mask_pixels": 982,
       "neutral_white_pixels_in_quill": 982,
       "outside_mask_changed_pixels": 0,
+      "derived_white_fill_changed_pixels": 24,
       "projection": "nearest spatial neutral-white pixel from this Gemini raw output through frozen complete-quill mask",
       "rarity": "glorious",
       "raw_output": "operator_review/name-quill-recovery/raw/name__glorious.png",
