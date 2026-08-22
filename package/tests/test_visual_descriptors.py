@@ -140,7 +140,7 @@ def test_real_generation_keeps_deterministic_watermark_as_post_processing(monkey
     lambda d: d["HYPERTEXT_GLOBAL"].update(unexpected=True),
     lambda d: d["structures"]["WORD_CARD"]["geometry"].update(unexpected=True),
     lambda d: d["sizes"]["LOT_5"].update(card_count="5"),
-    lambda d: d["types"]["TITLE"].update(icon="ornate empty frame"),
+    lambda d: d["types"]["TITLE"].update(icon="crown"),
 ])
 def test_schema_rejects_audited_inheritance_and_isolation_violations(mutation):
     descriptor = copy.deepcopy(load_descriptors())
@@ -186,7 +186,8 @@ def test_lot_sizes_map_every_canonical_phase_exactly_once():
     assert [(sizes[k]["chapter_points"], sizes[k]["page_letters"]) for k in sizes] == [(8, 2), (10, 2), (14, 3)]
 
 
-@pytest.mark.parametrize("mode,phase_id", [("EXPLICIT", 2), ("PATTERN", 16)])
+@pytest.mark.parametrize("mode", ["EXPLICIT", "PATTERN"])
+@pytest.mark.parametrize("phase_id", range(1, 31))
 def test_real_lot_production_path_serializes_canonical_phase(mode, phase_id):
     phase = next(p for p in load_lot_rules() if p["id"] == phase_id)
     phase.update(flavor="canonical flavor", context="canonical context", series="2026-Q1",
@@ -213,8 +214,36 @@ def test_lot_serializer_rejects_unmapped_or_noncanonical_composition():
         serialize_lot_prompt(content=bad_composition)
 
 
-def test_title_icon_identity_is_canonical_crown():
+def test_real_lot_production_path_rejects_phase_composition_drift():
+    phase = next(p for p in load_lot_rules() if p["id"] == 2)
+    phase.update(flavor="canonical flavor", context="canonical context", series="2026-Q1", verse="")
+    phase["composition"] = ["NOUN"] * phase["cards"]
+    with pytest.raises(ValueError, match="composition conflicts"):
+        _build_lot_prompt(phase)
+
+
+def test_real_word_generation_path_serializes_exact_title_treatment():
+    root = SCHEMA_PATH.parents[1]
+    card = json.loads((root / "series/2026-Q1-dev/cards/001-magi/card.json").read_text())
+    assert card["content"]["CARD_TYPE"] == "TITLE"
+    prompt = build_prompt_text(card)
     title = load_descriptors()["types"]["TITLE"]
-    assert title["icon"] == "crown"
-    assert "crown" in title["prompt"]
-    assert "frame" not in title["prompt"].lower()
+    assert title == {
+        "scope": "type_only",
+        "icon": "ornate empty rectangular frame",
+        "prompt": ("TYPE label is exactly TITLE; icon concept is an ornate empty rectangular frame; "
+                   "style is a simple white silhouette."),
+    }
+    serialized = json.loads(prompt.split("TYPE=", 1)[1].split("\n", 1)[0])
+    assert serialized == {"name": "TITLE", **title}
+    assert "crown" not in prompt.lower()
+
+
+def test_real_word_generation_path_rejects_title_crown(monkeypatch):
+    root = SCHEMA_PATH.parents[1]
+    card = json.loads((root / "series/2026-Q1-dev/cards/001-magi/card.json").read_text())
+    descriptor = copy.deepcopy(load_descriptors())
+    descriptor["types"]["TITLE"].update(icon="crown", prompt="TYPE is exactly TITLE; crown.")
+    monkeypatch.setattr("hypertext.cards.visual_descriptors.load_descriptors", lambda: descriptor)
+    with pytest.raises(DescriptorError, match="invalid visual descriptor"):
+        build_prompt_text(card)

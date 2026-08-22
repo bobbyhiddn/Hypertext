@@ -37,7 +37,7 @@ class CardDescription:
     word: str
     gloss: str
     card_type: str
-    type_icon_shape: str  # "book", "pencil", "sparkle_pencil", "quill", "crown", "none", etc.
+    type_icon_shape: str  # "book", "pencil", "sparkle_pencil", "quill", "ornate_empty_rectangular_frame", etc.
     rarity_text: str
     rarity_icon_shape: str  # "diamond", "circle", "square", etc.
     rarity_icon_color: str  # "orange", "gold", "green", etc.
@@ -92,7 +92,7 @@ Do NOT judge quality or correctness. Just report what is actually visible on the
 
 A correctly formatted Hypertext card should have these elements:
 - HEADER AREA: Card number (format: #XXX), card type label, main word/title, gloss/subtitle
-- TYPE ICON: WHITE icon in navy circle (top-left): NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil, NAME=quill, TITLE=crown
+- TYPE ICON: WHITE icon in navy circle (top-left): NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil, NAME=quill, TITLE=ornate empty rectangular frame
 - TOP RIGHT: Rarity text followed by a diamond-shaped icon
 - ART PANEL: Large illustration in the middle, no text inside the art
 - STATS ROW: Three stats (LORE, CONTEXT, COMPLEXITY) each with 5 small circle-shaped pips
@@ -111,7 +111,7 @@ A correctly formatted Hypertext card should have these elements:
 2. WORD/TITLE: What is the main word/title at the top?
 3. GLOSS: What is the subtitle/definition text?
 4. CARD TYPE: What type label is shown (NOUN, VERB, etc.)?
-5. TYPE ICON: What icon is in the top-left navy circle? (book/pencil/sparkle_pencil/quill/crown/none/other)
+5. TYPE ICON: What icon is in the top-left navy circle? (book/pencil/sparkle_pencil/quill/ornate_empty_rectangular_frame/none/other)
 6. RARITY: What rarity text is shown? What SHAPE is the rarity icon (circle/square/diamond/hexagon)? What COLOR is it?
 7. STAT PIPS:
    - What SHAPE are the stat pips? (circles/diamonds/squares/stars)
@@ -137,7 +137,7 @@ Return ONLY JSON in this exact format:
   "word": "<main word>",
   "gloss": "<subtitle text>",
   "card_type": "<type shown>",
-  "type_icon_shape": "<book|pencil|sparkle_pencil|quill|crown|none|other>",
+  "type_icon_shape": "<book|pencil|sparkle_pencil|quill|ornate_empty_rectangular_frame|none|other>",
   "rarity_text": "<rarity word>",
   "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
   "rarity_icon_color": "<color name>",
@@ -237,7 +237,7 @@ Compare the TEST CARD (image [{test_idx}]) against the REFERENCE images. Look fo
 
 **#4 TYPE ICON (TOP-LEFT CIRCLE):**
 - CORRECT: WHITE icon inside navy circle in top-left corner
-- Icons by type: NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil (pencil with stars), NAME=quill, TITLE=crown
+- Icons by type: NOUN=book, VERB=pencil, ADJECTIVE=sparkle pencil (pencil with stars), NAME=quill, TITLE=ornate empty rectangular frame rendered as a simple white silhouette
 - WRONG: Missing icon, wrong icon for type, or icon not matching references
 
 **#5 TRANSLITERATION FORMATTING (CRITICAL):**
@@ -284,7 +284,7 @@ Return ONLY JSON in this exact format:
   "word": "<main word>",
   "gloss": "<subtitle text>",
   "card_type": "<type shown>",
-  "type_icon_shape": "<book|pencil|sparkle_pencil|quill|crown|none|other>",
+  "type_icon_shape": "<book|pencil|sparkle_pencil|quill|ornate_empty_rectangular_frame|none|other>",
   "rarity_text": "<rarity word>",
   "rarity_icon_shape": "<circle|square|diamond|hexagon|other>",
   "rarity_icon_color": "<color name>",
@@ -730,7 +730,7 @@ def describe_card(
         "VERB": ["pencil"],
         "ADJECTIVE": ["sparkle_pencil", "sparkle pencil", "pencil_stars", "pencil with stars"],
         "NAME": ["quill", "feather", "feather_quill", "feather quill"],
-        "TITLE": ["crown"],
+        "TITLE": ["ornate_empty_rectangular_frame", "ornate empty rectangular frame"],
     }
     if card_type in expected_icons:
         valid_icons = expected_icons[card_type]

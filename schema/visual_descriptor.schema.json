@@ -21,7 +21,7 @@
         "VERB": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "pencil"}}}]},
         "ADJECTIVE": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "sparkle pencil"}}}]},
         "NAME": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "feather quill"}}}]},
-        "TITLE": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "crown"}}}]}
+        "TITLE": {"allOf": [{"$ref": "#/$defs/typeTreatment"}, {"properties": {"icon": {"const": "ornate empty rectangular frame"}}}]}
       }
     },
     "rarities": {

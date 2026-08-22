@@ -51,7 +51,7 @@ This contract is prompt input. It governs every generated Card and Lot face.
 
 ## Card exceptions
 
-- Type changes only the white header icon and type word: NOUN closed book; VERB pencil; ADJECTIVE sparkle pencil; NAME quill; TITLE crown. Geometry does not change.
+- Type changes only the white header icon and type word: NOUN closed book; VERB pencil; ADJECTIVE sparkle pencil; NAME quill; TITLE ornate empty rectangular frame in a simple white silhouette. Geometry does not change.
 - Rarity changes only the rarity word, diamond count/fill, and bounded gold ornament: COMMON one white diamond; UNCOMMON two white diamonds; RARE three white diamonds; GLORIOUS three gold diamonds plus restrained gold corner filigree. Geometry and panel fills do not change.
 
 ## Lot geometry and exceptions

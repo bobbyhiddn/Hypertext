@@ -23,7 +23,7 @@
     "VERB": {"scope": "type_only", "icon": "pencil", "prompt": "TYPE is exactly VERB; the white header icon is a pencil."},
     "ADJECTIVE": {"scope": "type_only", "icon": "sparkle pencil", "prompt": "TYPE is exactly ADJECTIVE; the white header icon is a sparkle pencil."},
     "NAME": {"scope": "type_only", "icon": "feather quill", "prompt": "TYPE is exactly NAME; the white header icon is a feather quill."},
-    "TITLE": {"scope": "type_only", "icon": "crown", "prompt": "TYPE is exactly TITLE; the white header icon is a crown."}
+    "TITLE": {"scope": "type_only", "icon": "ornate empty rectangular frame", "prompt": "TYPE label is exactly TITLE; icon concept is an ornate empty rectangular frame; style is a simple white silhouette."}
   },
   "rarities": {
     "COMMON": {"scope": "rarity_only", "diamond_fill": "white", "card_bonus": 0, "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."},
