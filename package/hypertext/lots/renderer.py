@@ -220,8 +220,8 @@ CARD CONTENT:
 - Top left badge: "LOT"
 - Top right: "CARD COUNT" label (small) above "{cards}-CARD" value (larger)
 - Reward section (two lines):
-  - "As Board Phase: {points} Points"
-  - "As Personal Lot: {letters_display}"
+  - "Chapter Value: {points} Points"
+  - "Page Value: {letters_display}"
 - Wreath bonus: "Wreath Bonus: +2 Points (First to record)"
 - Composition: {comp_display}
 - Context header: "CONTEXT"

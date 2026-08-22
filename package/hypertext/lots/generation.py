@@ -167,8 +167,8 @@ LOT_SCORE_TEMPLATE = """Score this LOT card based on what was observed vs expect
 - Phase Name: {phase_name}
 - Card Count: "{cards}-CARD" with "CARD COUNT" label above it
 - Reward section (two lines):
-  - "As Board Phase: {points} Points"
-  - "As Personal Lot: {letters} Letter(s)"
+  - "Chapter Value: {points} Points"
+  - "Page Value: {letters} Letter(s)"
 - Wreath Bonus: "Wreath Bonus: +2 Points (First to record)" - note lowercase "record"
 - Composition: Icons with type labels like NOUN + VERB (NO square brackets around type names)
 - Context: Navy "CONTEXT" header bar with text below
@@ -194,8 +194,8 @@ LOT_SCORE_TEMPLATE = """Score this LOT card based on what was observed vs expect
 - Italic flavor/subtitle present (5 pts)
 
 ### REWARD BANNER (20 pts)
-- Shows Board Phase reward ({points} Points) (7 pts)
-- Shows Personal Lot reward ({letters} Letter) (6 pts)
+- Shows Chapter value ({points} Points) (7 pts)
+- Shows Page value ({letters} Letter) (6 pts)
 - Wreath bonus includes "(First to record)" (7 pts) - CRITICAL
 
 ### COMPOSITION (15 pts)

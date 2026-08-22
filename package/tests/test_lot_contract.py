@@ -32,8 +32,8 @@ def test_source_subtype_prompt_and_reference_agree(tmp_path, cards, points, lett
     assert refs[0] == str(subtype_reference(cards))
     assert all(Path(p).name.lower() != "lot_back.png" for p in refs)
     prompt = _build_lot_prompt(phase, refs)
-    assert f"As Board Phase: {points} Points" in prompt
-    assert f"As Personal Lot: {letters} Letters" in prompt
+    assert f"Chapter Value: {points} Points" in prompt
+    assert f"Page Value: {letters} Letters" in prompt
     assert f'"{cards}-CARD"' in prompt
     subtype_prompt = (subtype_reference(cards).parent / "prompt.txt").read_text()
     assert f"{points} Points / {letters} Letters" in subtype_prompt

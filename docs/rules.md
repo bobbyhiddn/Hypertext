@@ -155,10 +155,10 @@ Appoint one player as Judge for the game. The Judge:
 
 | Phase Type | Location | Reward | Cards Go... |
 |------------|----------|--------|-------------|
-| **Board Phase** | Center of table | Points (8–14) + Record Wreath | Your Pages (open) |
+| **Chapter Lot** | Center of table | Points (8–14) + Record Wreath | Your Pages (open) |
 | **Lot** | In front of you | Letters (see below) | Sheol |
 
-- **Board Phase:** Score points. Cards stay on table in your Pages.
+- **Chapter Lot:** Score points. Cards stay on table in your Pages.
 - **Lot:** Earn Letters. Cards leave your hand to Sheol.
 
 ### Lot Letter Rewards
@@ -170,7 +170,7 @@ Appoint one player as Judge for the game. The Judge:
 | 7-card | 3 Letters | 3 Letters |
 
 Canonical Lot rewards are defined in `templates/phases.yml` and validated by
-`hypertext.lots.rules`. As a Board Phase, five-, six-, and seven-card Lots score
+`hypertext.lots.rules`. As a Chapter Lot, five-, six-, and seven-card Lots score
 8, 10, and 14 points. When an opponent records your personal Lot, they earn 2,
 2, or 3 Letters respectively. Visible composition labels are unbracketed and
 the count badge uses the singular form `5-CARD`, `6-CARD`, or `7-CARD`.
@@ -203,11 +203,11 @@ Reveal the top card of the Tower. Choose one:
 
 You may record as many times as you are able:
 
-**Record Board Phase:**
-- Play cards from hand matching the Board Phase composition exactly.
+**Record Chapter Lot:**
+- Play cards from hand matching the Chapter Lot composition exactly.
 - Place cards face-up in your Pages.
 - Score the phase's point value.
-- **First player** to record the Board Phase takes the **Record Wreath (+2 points)**.
+- **First player** to record the Chapter Lot takes the **Record Wreath (+2 points)**.
 
 **Record Lot:**
 - Play cards from hand matching your Lot composition exactly.
@@ -231,7 +231,7 @@ If your hand is empty, the chapter ends immediately (skip to Chapter End). The f
 
 Two Wreath tokens are awarded each chapter:
 
-- **Record Wreath:** First player to record the Board Phase (+2 points)
+- **Record Wreath:** First player to record the Chapter Lot (+2 points)
 - **Empty Wreath:** First player to empty their hand (+2 points)
 
 A player may earn both Wreaths in the same chapter.
@@ -255,8 +255,8 @@ When a player discards at End, any other player may call **"Redeem!"** to take t
 When a player empties their hand:
 
 1. **Award Empty Wreath**: Give the empty wreath to the accomplishing player.
-2. **Grace period:** All other players may play to any open phases (Board Phase or Lots) if they have exact matches.
-3. **Score the chapter:** The Judge tallies all points earned this chapter (Board Phase records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
+2. **Grace period:** All other players may play to any open Lots (Chapter or Page) if they have exact matches.
+3. **Score the chapter:** The Judge tallies all points earned this chapter (Chapter Lot records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
 4. **Reset Letters:** After scoring letters (3 points each), reset all letters.
 5. **Hand penalty:** -1 point per card remaining in hand.
 6. **Reset:**
@@ -285,9 +285,9 @@ If two or more players are tied for highest score after the final chapter:
 
 1. Only tied players participate in a tiebreaker chapter.
 2. Deal 7 cards to each tied player.
-3. Flip a new Board Phase (chapter lot only—no player Lots are dealt).
+3. Flip a new Chapter Lot (no player Page Lots are dealt).
 4. Play proceeds normally (draw, play, record, end).
-5. **First to record the Board Phase wins the game.**
+5. **First to record the Chapter Lot wins the game.**
 6. No points scored—just victory.
 
 ---
@@ -316,9 +316,9 @@ If two or more players are tied for highest score after the final chapter:
 
 | Source | Points |
 |--------|--------|
-| 5-card Board Phase | 8 |
-| 6-card Board Phase | 10 |
-| 7-card Board Phase | 14 |
+| 5-card Chapter Lot | 8 |
+| 6-card Chapter Lot | 10 |
+| 7-card Chapter Lot | 14 |
 | Record Wreath | +2 |
 | Empty Wreath | +2 |
 | Letter conversion | 3 per Letter |
@@ -343,7 +343,7 @@ If two or more players are tied for highest score after the final chapter:
 | Pages | Open (all see your records) |
 | Sheol | Open |
 | Tower | Hidden |
-| Board Phase | Open |
+| Chapter Lot | Open |
 | Lots | Open (each player's Lot visible) |
 | Letters | Open |
 
@@ -358,7 +358,7 @@ TITLE cards are wild. They may substitute for NOUN or NAME in any record. A TITL
 Shuffle Sheol to form a new Tower. Continue play.
 
 ### Phase Deck Cycling
-When all phases have been used as Board Phases, reshuffle the phase deck. The Board Phase may not repeat consecutively—redraw if duplicate.
+When all Lots have been used as Chapter Lots, reshuffle the Lot deck. The Chapter Lot may not repeat consecutively—redraw if duplicate.
 
 ---
 
@@ -367,8 +367,8 @@ When all phases have been used as Board Phases, reshuffle the phase deck. The Bo
 The tension in Hypertext:
 
 - **Play vs. Record:** Abilities give tempo, but activated cards can't record. Burn for advantage or hold for points?
-- **Board vs. Lot:** Board Phases score big but don't shrink your hand. Lots dump cards fast but score less.
-- **Racing:** First to record the Board Phase earns the Record Wreath (+2). First to empty their hand earns the Empty Wreath (+2). But overcommitting leaves you vulnerable if you can't score.
+- **Chapter vs. Page:** Chapter Lots score big but don't shrink your hand. Page Lots dump cards fast but score less.
+- **Racing:** First to record the Chapter Lot earns the Record Wreath (+2). First to empty their hand earns the Empty Wreath (+2). But overcommitting leaves you vulnerable if you can't score.
 - **Letter Economy:** Letters fuel extra activations and convert to points. Spend for tempo or bank for score?
 - **Redeem:** Watch the discard—snatch what you need, but you'll owe an extra card next turn.
 
@@ -382,19 +382,19 @@ The tension in Hypertext:
 | **Phase** | The required type composition for a valid set (5–7 cards) |
 | **Record** | Play cards from hand to complete a set |
 | **Chapter** | One round of play; game length varies by player count (3–12 chapters) |
-| **Pages** | Your face-up area of scored Board Phase records |
+| **Pages** | Your face-up area of scored Chapter Lot records |
 | **Lot** | Your personal phase; what falls to you |
 | **Tower** | The draw pile—language dispersed from Babel |
 | **Sheol** | The discard pile—the grave |
 | **Judge** | Appointed player who tracks score and arbitrates timing disputes |
 | **Wreath** | Token awarded for being first (+2 points each) |
-| **Record Wreath** | +2 points for first player to record the Board Phase |
+| **Record Wreath** | +2 points for first player to record the Chapter Lot |
 | **Empty Wreath** | +2 points for first player to empty their hand |
 | **Letter** | Token earned from Lot records (own: 2 per Lot, 3 for 7-card; opponent's: 1 per Lot, 2 for 7-card; worth 3 pts each) |
 | **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
 | **Redeemer** | The player who called Redeem and took the card |
 | **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |
-| **Matthias Rule** | Tiebreaker chapter (no player Lots); first to record the Board Phase wins |
+| **Matthias Rule** | Tiebreaker chapter (no Page Lots); first to record the Chapter Lot wins |
 
 ---
 

@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "matrix": "schema/babel_template_matrix.json",
+  "canvas": [
+    1024,
+    1536
+  ],
+  "base": "templates/card/v001/base/template_1024x1536.png",
+  "base_sha256": "56b97a694009ae82f05cd231ff3a99fbc9231665fe8d141b2667cd918f4ebcf0",
+  "bounded_regions": {
+    "type": [
+      45,
+      0,
+      345,
+      205
+    ],
+    "rarity": [
+      785,
+      0,
+      1008,
+      205
+    ]
+  },
+  "composition_order": [
+    "frozen_base",
+    "bounded_type",
+    "bounded_rarity"
+  ],
+  "outputs": [
+    {
+      "type": "NOUN",
+      "rarity": "COMMON",
+      "path": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "sha256": "6c1c9c20bee6b744c2c61a858a9dc3a1d1380189a54f3888f96f4d309ac0a1cc"
+    },
+    {
+      "type": "NOUN",
+      "rarity": "UNCOMMON",
+      "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "sha256": "2cbfde0718ea5b3ec2dddd0576bb64b61cbf69ab818f8b3ac71b9904ad2b0cfd"
+    },
+    {
+      "type": "NOUN",
+      "rarity": "RARE",
+      "path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "sha256": "993257480afedb2f786e9328daa57f867cbc7b28cc617d652da8ad5661000a1f"
+    },
+    {
+      "type": "NOUN",
+      "rarity": "GLORIOUS",
+      "path": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "sha256": "5eaa4b64df08ce7bc5eb887dc36764f24a670d65162bb6a5ab3bdf3e7bff0fc9"
+    },
+    {
+      "type": "VERB",
+      "rarity": "COMMON",
+      "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "sha256": "fc3a42485cd97d3c4379aa0ab04d4401e5ba17bc9c71e4f2798bbc96bb984ebf"
+    },
+    {
+      "type": "VERB",
+      "rarity": "UNCOMMON",
+      "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "sha256": "a57779ec9c6f3fb97f562ff7c7b92eea56e8c80d80ebc75fa3afa2eaa6af8b1d"
+    },
+    {
+      "type": "VERB",
+      "rarity": "RARE",
+      "path": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "sha256": "eabef091b2b3155c15bb57e538b33333a949272f4c6c37fef8c1f374898a5acf"
+    },
+    {
+      "type": "VERB",
+      "rarity": "GLORIOUS",
+      "path": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+      "sha256": "45326c93438a5119730c5466a3d87ffb67b3cc3994c59ee74dca4e7ede6bfc53"
+    },
+    {
+      "type": "ADJECTIVE",
+      "rarity": "COMMON",
+      "path": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+      "sha256": "5969229129b38c391eec9039ea4940de401812101cc0ff113a1fc3180f768587"
+    },
+    {
+      "type": "ADJECTIVE",
+      "rarity": "UNCOMMON",
+      "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+      "sha256": "b74eb9bfb4bc52979a9a92263279c8615aa1b744fab6e467786f1417d7e2f06f"
+    },
+    {
+      "type": "ADJECTIVE",
+      "rarity": "RARE",
+      "path": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
+      "sha256": "2e4f480d9045a10399a1bbcd60dcaf8ee3c70d7ea1c2519c8777e7d876469533"
+    },
+    {
+      "type": "ADJECTIVE",
+      "rarity": "GLORIOUS",
+      "path": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
+      "sha256": "b62a430510f0348e86a7f834465867b465b3f9d56117794e94050c3c0ac7789b"
+    },
+    {
+      "type": "NAME",
+      "rarity": "COMMON",
+      "path": "templates/card/v001/composed/name/common/template_1024x1536.png",
+      "sha256": "6a41dcb3c7aa717199392a52bf5b0acd17a3fdb18f05ccab6b93ee5ce0f24c46"
+    },
+    {
+      "type": "NAME",
+      "rarity": "UNCOMMON",
+      "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+      "sha256": "6dabd2d951009a9cb0c5bbc0df36259c80e58176a6c26381e2b1f2bc739be816"
+    },
+    {
+      "type": "NAME",
+      "rarity": "RARE",
+      "path": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "sha256": "9691901249dcddbebf55942ad6c2e79c6234c5088630143ea6565e2e8c473ece"
+    },
+    {
+      "type": "NAME",
+      "rarity": "GLORIOUS",
+      "path": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
+      "sha256": "8316220a3dd99f74d0b31b0e1041eafc8bc37318fcda28f1ed481b84be474bb9"
+    },
+    {
+      "type": "TITLE",
+      "rarity": "COMMON",
+      "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
+      "sha256": "893e2d8066f54d8c6a512babd2e68412f70ffacd520003e40c65521cc453440b"
+    },
+    {
+      "type": "TITLE",
+      "rarity": "UNCOMMON",
+      "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+      "sha256": "91bbec7e18991f9b11135a7106552b9de2b44e6de57230a4ba6a0f67c0a5d150"
+    },
+    {
+      "type": "TITLE",
+      "rarity": "RARE",
+      "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "sha256": "85f88ec245bb055b4d62e6d027f42513caaf05b453b9e5f9d8b6926e1e38cb27"
+    },
+    {
+      "type": "TITLE",
+      "rarity": "GLORIOUS",
+      "path": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+      "sha256": "19ec5db13c35f74bc3d62a55f0ad248b305e9ba9de6d20e7de862a0f30ab931a"
+    }
+  ]
+}
