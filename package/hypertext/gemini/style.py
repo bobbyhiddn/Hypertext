@@ -184,7 +184,7 @@ def generate_with_styles(
         "   - VERB = pencil\n"
         "   - ADJECTIVE = sparkle pencil (pencil with small stars)\n"
         "   - NAME = feather quill\n"
-        "   - TITLE = crown\n"
+        "   - TITLE = ornate empty frame\n"
         "   Match the icon style from the type-specific template reference.\n"
     )
 

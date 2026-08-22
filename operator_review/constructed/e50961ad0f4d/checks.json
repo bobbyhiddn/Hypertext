@@ -1,0 +1,26 @@
+{
+  "authority_input_identity": {
+    "pass": true,
+    "verified_blobs": 12
+  },
+  "cardinality": {
+    "pass": true,
+    "count": 20
+  },
+  "raster_contract": {
+    "pass": true
+  },
+  "provenance": {
+    "pass": true
+  },
+  "canonical_immutability": {
+    "pass": true,
+    "git_diff_templates_empty": true
+  },
+  "contact_sheet": {
+    "pass": true,
+    "path": "operator_review/constructed/e50961ad0f4d/contact_sheet.png",
+    "sha256": "889fe60a826120b23ed0d45e111b944360502b2fe794c9dd01f88e062db2a84c"
+  },
+  "human_visual_review_required": true
+}
