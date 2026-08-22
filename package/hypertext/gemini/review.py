@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 from hypertext.gemini.config import review_model
+from hypertext.quality import QUALITY_GATE
 
 try:
     from google import genai
@@ -875,10 +876,10 @@ def score_against_rubric(
 
     return ReviewResult(
         score=total_score,
-        passed=total_score >= 90,
+        passed=total_score >= QUALITY_GATE,
         categories=categories,
         corrections=corrections,
-        needs_rebuild=total_score < 90,
+        needs_rebuild=total_score < QUALITY_GATE,
         description=description,
         raw_response=response_text,
     )
@@ -889,7 +890,7 @@ def review_card(
     card_json: dict,
     *,
     model: str | None = None,
-    pass_threshold: int = 90,
+    pass_threshold: int = QUALITY_GATE,
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
 ) -> ReviewResult:

@@ -305,3 +305,33 @@ are no longer implicit references. Focused regressions hash the complete PNG
 (including high-contrast subtitle-edge pixels) and assert that default reference
 selection cannot consult prior series renders. This does not claim a new live
 seven-case pass and does not weaken any scoring gate. Scheduling remains disabled.
+
+## End-to-end quality contract (2026-08-22)
+
+The pipeline now defines `hypertext-quality/v1` across plan, prompt, references,
+image request, candidate, composite, revision, and review. Each stage can record
+input/output SHA-256 digests, status, a bounded attempt number (maximum four),
+repair state, and timestamp in `outputs/quality-provenance.json`. A timeout or
+missing image is a failure, never an output. The centralized image model remains
+`gemini-3.1-flash-image`; this work produced no evidence supporting a model change.
+
+Planning rejects missing identity, art, rarity/type, or stat fields and rejects
+pips outside 0–5. Art prompt assembly asks Gemini for the illustration only and
+forbids model-rendered typography, card numbers, metadata, badges, pips, frame,
+UI, logos, and watermarks. Reference selection is deterministic and accepts only
+prior 100/100 artifacts. Candidate selection considers only successful images and
+uses stable original order to resolve equal contract scores.
+
+Automated quality reports composition, typography, template fidelity, metadata
+(including card number), stat pips, and artifact cleanliness. The weakest
+dimension is the total score, so averaging cannot conceal a defect. Every
+dimension must reach 100/100. Pipeline return codes that previously accepted
+90/100 now fail below 100; the lower threshold remains useful only to choose
+rebuild versus targeted repair. Repairs are limited to deterministic dimension
+normalization, PNG conversion, pip redraw, and metadata rerender.
+
+The representative zero-spend before/after packet is
+[`docs/evidence/end-to-end-quality-before-after.md`](evidence/end-to-end-quality-before-after.md).
+It reuses the four-card 2026-08-21 v4 run and pairs its historical artifacts with
+offline regression evidence. This contract does not substitute for the five-card/
+two-edit blinded study or operator rollout approval. Cron remains disabled.
