@@ -896,9 +896,7 @@ def _build_style_refs(
 
     # The canonical face treatment is selected by the complete type/rarity pair.
     # resolve_template also rejects unknown or incomplete combinations explicitly.
-    treatment_template_path: Path | None = None
-    if target_type is not None or target_rarity is not None:
-        treatment_template_path = resolve_template(target_type or "", target_rarity or "")
+    treatment_template_path = resolve_template(target_type or "", target_rarity or "")
 
     # Always collect matching example cards (premium references)
     example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]

@@ -65,7 +65,10 @@ def test_runtime_style_reference_consumes_promoted_type_rarity_treatment(tmp_pat
     assert fix_mode is False
 
 
-@pytest.mark.parametrize("card_type,rarity", [("OTHER", "COMMON"), ("NOUN", "MYTHIC"), (None, "COMMON")])
+@pytest.mark.parametrize(
+    "card_type,rarity",
+    [("OTHER", "COMMON"), ("NOUN", "MYTHIC"), (None, "COMMON"), ("NOUN", None), (None, None)],
+)
 def test_runtime_style_reference_rejects_invalid_treatments(tmp_path, card_type, rarity):
     with pytest.raises(ValueError, match="unsupported card template combination"):
         daily._build_style_refs(tmp_path, target_type=card_type, target_rarity=rarity)

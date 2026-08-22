@@ -1,19 +1,23 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "status": "operator-accepted-canonical",
   "promoted_from": "operator_review/constrained/e50961ad0f4d",
   "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
   "promotion_base_commit": "b22f3d3",
   "integrity": "Each canonical PNG is a byte-for-byte copy of the named accepted candidate; sha256 is authoritative.",
-  "construction_evidence": "operator_review/constrained/e50961ad0f4d/manifest.json",
-  "construction_method": "The accepted candidates retain the frozen base outside two non-overlapping masks and project pixels from the named historical witnesses through those masks; Gemini raw outputs are review provenance, not geometry authority.",
+  "construction_evidence": [
+    "operator_review/constrained/e50961ad0f4d/manifest.json",
+    "operator_review/name-quill-recovery/manifest.json"
+  ],
+  "construction_method": "All cells start from the frozen 848x1264 evidence snapshot and project the named historical witnesses through the two declared masks. NAME cells then apply the documented complete-quill recovery from its preserved target, raw output, and mask.",
   "matrix": "schema/babel_template_matrix.json",
   "canvas": [
     848,
     1264
   ],
-  "base": "templates/card/v001/base/template_1024x1536.png",
-  "base_sha256": "56b97a694009ae82f05cd231ff3a99fbc9231665fe8d141b2667cd918f4ebcf0",
+  "base": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/base/template_1024x1536.png",
+  "base_sha256": "16eac7e1472afdf78fb6b788c7abe65eea5ba45143fcec0407f270a4dc5eff5a",
+  "base_source": "templates/card/v001/base/template_1024x1536.png at authority_commit; the evidence snapshot decodes to 848x1264 despite its legacy source filename",
   "bounded_regions": {
     "type": [
       51,
@@ -32,7 +36,8 @@
   "composition_order": [
     "frozen_base",
     "historical_type_witness_through_type_mask",
-    "historical_rarity_witness_through_rarity_mask"
+    "historical_rarity_witness_through_rarity_mask",
+    "name_only_complete_quill_recovery"
   ],
   "outputs": [
     {
