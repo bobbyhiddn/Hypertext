@@ -7,23 +7,24 @@ TEMPLATE OVERRIDES (replace base template values):
 
 COMPOSITION SECTION (7 icons total):
 - Icons & Text Sequence (left to right, exactly 7 items):
-  * Closed Book icon + "[NOUN]"
+  * Closed Book icon + "NOUN"
   * Plus sign
-  * Closed Book icon + "[NOUN]"
+  * Closed Book icon + "NOUN"
   * Plus sign
-  * Closed Book icon + "[NOUN]"
+  * Closed Book icon + "NOUN"
   * Plus sign
-  * Pencil icon + "[VERB]"
+  * Pencil icon + "VERB"
   * Plus sign
-  * Pencil icon + "[VERB]"
+  * Pencil icon + "VERB"
   * Plus sign
-  * Pen with sparkles icon + "[ADJECTIVE]"
+  * Pen with sparkles icon + "ADJECTIVE"
   * Plus sign
-  * Framed Picture icon + "[TITLE]"
+  * Framed Picture icon + "TITLE"
 
 CRITICAL RULES:
 - Card count badge MUST say "7-CARD"
 - Reward MUST show "REWARD: 14 Points / 3 Letters" on same line
 - Composition MUST show exactly 7 card type icons (3 books, 2 pencils, 1 sparkle pen, 1 frame)
-- Word types MUST be in square brackets: [NOUN], [VERB], [ADJECTIVE], [TITLE]
+- Word types MUST be unbracketed: NOUN, VERB, ADJECTIVE, TITLE
+- This 3-Letter value is the canonical opponent reward
 - All other layout, styling, and elements should match the base template exactly

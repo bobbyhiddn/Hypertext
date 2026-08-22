@@ -1,7 +1,8 @@
-# Verb Template Revision Form
+# 5-CARD Template Revision Form
 #
-# This revise.txt applies only to the VERB subtype template.
-# Edit fields below, then run: python -m hypertext.pipeline.template --type card --phase refine --subtype verb
+# This revise.txt applies only to the 5-CARD subtype template.
+# Edit fields below, then run:
+#   python -m hypertext.pipeline.template --type card --phase refine --subtype 5-card
 #
 # Revision Categories:
 # - Frame_Revision: Changes to borders, corners, filigree
@@ -10,6 +11,20 @@
 # - Color_Revision: Changes to palette, gradients, fills
 # - Stats_Revision: Changes to stat pips, icons, indicators
 # - General_Revision: Any other changes
+#
+# Notes:
+# - Leave a field blank to keep it unchanged
+# - Lines starting with # are ignored
 
 Rebuild: false
 Frame_Revision:
+
+Layout_Revision:
+
+Typography_Revision:
+
+Color_Revision:
+
+Stats_Revision:
+
+General_Revision:

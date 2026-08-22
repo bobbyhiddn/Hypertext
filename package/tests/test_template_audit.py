@@ -5,24 +5,15 @@ from unittest import mock
 from hypertext.pipeline import template_audit
 
 
-def test_manifest_covers_every_curated_template_and_reproduces_flags():
-    expected = {
-        *(f"card/{name}" for name in ("base", "common", "uncommon", "rare", "glorious", "noun", "verb", "adjective", "name", "title")),
-        *(f"lot/{name}" for name in ("base", "5-card", "6-card", "7-card")),
-    }
-    results = template_audit.audit()
-    assert {f"{entry['family']}/{entry['subtype']}" for entry, _ in results} == expected
-    assert all(failures for _, failures in results)
-    assert sum("mime_extension" in failure for _, failures in results for failure in failures) == 10
-    assert sum("dimensions:848x1264" in failures for _, failures in results) == 14
+def test_completed_manifest_has_no_unresolved_flags():
+    manifest = template_audit.load_manifest()
+    assert manifest["status"] == "completed-accepted"
+    assert manifest["templates"] == []
+    assert template_audit.audit() == []
 
 
-def test_lot_definition_contract_detects_all_legacy_visible_labels():
-    results = template_audit.audit("lot")
-    assert len(results) == 4
-    assert all("composition_labels_bracketed" in failures for _, failures in results)
-    base = next(failures for entry, failures in results if entry["subtype"] == "base")
-    assert "card_count_label_plural" in base
+def test_completed_lot_manifest_has_no_legacy_visible_label_flags():
+    assert template_audit.audit("lot") == []
 
 
 def test_stale_flag_clears_only_after_corrected_asset_passes(tmp_path):

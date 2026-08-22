@@ -7,21 +7,23 @@ TEMPLATE OVERRIDES (replace base template values):
 
 COMPOSITION SECTION (6 icons total):
 - Icons & Text Sequence (left to right, exactly 6 items):
-  * Closed Book icon + "[NOUN]"
+  * Closed Book icon + "NOUN"
   * Plus sign
-  * Closed Book icon + "[NOUN]"
+  * Closed Book icon + "NOUN"
   * Plus sign
-  * Closed Book icon + "[NOUN]"
+  * Closed Book icon + "NOUN"
   * Plus sign
-  * Pencil icon + "[VERB]"
+  * Pencil icon + "VERB"
   * Plus sign
-  * Pencil icon + "[VERB]"
+  * Pencil icon + "VERB"
   * Plus sign
-  * Pencil icon + "[VERB]"
+  * Pencil icon + "VERB"
 
 CRITICAL RULES:
 - Card count badge MUST say "6-CARD"
 - Reward MUST show "REWARD: 10 Points / 2 Letters" on same line
 - Composition MUST show exactly 6 card type icons (3 books, 3 pencils)
-- Word types MUST be in square brackets: [NOUN], [VERB]
+- Word types MUST be unbracketed: NOUN, VERB
+- This 2-Letter value is the canonical opponent reward
+- Use CONGREGATION as the template title and "6 any mix" as its composition so the canonical six-card contract is represented
 - All other layout, styling, and elements should match the base template exactly

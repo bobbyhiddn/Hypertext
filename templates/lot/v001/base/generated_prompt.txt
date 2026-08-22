@@ -17,7 +17,7 @@ EXACT LAYOUT (top to bottom):
 
 1. HEADER AREA
    - Top-Left Badge: Dark navy blue trapezoid/tab pointing downward with "LOT" in white serif all-caps
-   - Top-Right Badge: Dark navy rectangle with gold inner border, "CARD COUNT" (small white sans-serif) above, "X-CARDS" (larger white serif) below
+   - Top-Right Badge: Dark navy rectangle with gold inner border, "CARD COUNT" (small white sans-serif) above, "X-CARD" (larger white serif) below
 
 2. TITLE SECTION
    - Main Title: "TEMPLATE LOT" centered, large bold black serif font
@@ -31,15 +31,15 @@ EXACT LAYOUT (top to bottom):
 4. COMPOSITION SECTION
    - Format: Horizontal equation string inside rectangular box with decorative corner borders
    - Icons & Text Sequence (left to right):
-     * Closed Book icon + "[NOUN]"
+     * Closed Book icon + "NOUN"
      * Plus sign
-     * Pencil icon + "[VERB]"
+     * Pencil icon + "VERB"
      * Plus sign
-     * Pen with sparkles icon + "[ADJECTIVE]"
+     * Pen with sparkles icon + "ADJECTIVE"
      * Plus sign
-     * Feather Quill icon + "[NAME]"
+     * Feather Quill icon + "NAME"
      * Plus sign
-     * Framed Picture icon + "[TITLE]"
+     * Framed Picture icon + "TITLE"
 
 5. CONTEXT SECTION
    - Header: Dark navy blue bar with gold ornate corner flourishes, "CONTEXT" in white bold serif
@@ -70,7 +70,13 @@ REFINEMENT GOALS:
 
 CRITICAL RULES:
 - Reward text MUST show points and letters on the SAME LINE: "REWARD: X Points / X Letters"
-- Word types in composition MUST be in square brackets: [NOUN], [VERB], [ADJECTIVE], [NAME], [TITLE]
+- Word types in composition MUST be unbracketed: NOUN, VERB, ADJECTIVE, NAME, TITLE
+- Production variants use the canonical 5/6/7-card rewards: 8/10/14 points and opponent rewards of 2/2/3 Letters
+- The canonical six-card family includes CONGREGATION
 - Maintain double border style throughout
 - Icons should be simple, elegant, and consistent in style
 - Output ONLY the card - no surrounding text or watermarks
+
+
+REQUESTED REFINEMENTS:
+ADDITIONAL CHANGES: The CARD COUNT value must be exactly X-CARD, singular, never X-CARDS. Keep all five composition labels unbracketed.

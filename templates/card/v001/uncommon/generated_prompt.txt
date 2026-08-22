@@ -1,69 +1,44 @@
-Reproduce and refine the provided card TEMPLATE reference image for UNCOMMON rarity.
+Reproduce and refine the provided card template reference image.
 
 INSTRUCTIONS:
-Use the reference template [1] as your primary source. Generate a refined TEMPLATE version that:
+Use the reference template [1] as your primary source. Generate a refined version that:
 - Preserves the EXACT layout, frame, and geometry
 - Maintains the navy/gold color scheme
 - Keeps all panel positions and text zones in place
-- Uses PLACEHOLDER text throughout (not actual card content)
 - Ensures clean, crisp rendering of all elements
-
-THIS IS A TEMPLATE - use placeholder text like "Title", "Subtitle", "Ability text here", etc.
 
 TARGET TEMPLATE SPECIFICATIONS:
 - Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
 - Style: Premium trading card layout with antique parchment background
 - Frame: Navy and gold collector frame with rounded corners
-- Rarity: UNCOMMON (indicated by GREEN diamond)
 
-EXACT LAYOUT (top to bottom):
+LAYOUT TO PRESERVE:
+- Header: Collector ID (left), Rarity label (right), Title/Subtitle (center)
+- Art Panel: ~44% height with gold inner frame
+- Stats Row: LORE, CONTEXT, COMPLEXITY with navy circle pips
+- Text Panels: Ability, OT Verse, NT Verse, Greek/Hebrew strip, Trivia
+- Footer: Navy strip with "Series: 20XX QX - Set" format (e.g., "Series: 2026 Q1 - Babel")
 
-1. HEADER AREA
-   - Top-Left: Card number "#XXX" followed by TYPE PILL (navy rounded rectangle with white "TYPE" text)
-   - Type Circle: Navy circle with gold border inside the pill (empty - no icon for rarity templates)
-   - Top-Right: RARITY AREA with two elements:
-     * "Uncommon" text in WHITE serif on navy background
-     * FILLED GREEN diamond (◆) next to text - solid green fill (#2E8B57) with navy outline
-   - Center: Placeholder "Title" in large bold black serif, "Subtitle" below in italics
-
-2. ART PANEL
-   - ~44% of card height
-   - Gold inner frame border
-   - Art placeholder area (empty or subtle pattern)
-
-3. STATS ROW
-   - Three stat categories: LORE, CONTEXT, COMPLEXITY
-   - Each shows 5 circular pips
-   - ALL pips must be EMPTY/HOLLOW navy circle outlines (this is a template)
-   - Pattern: ○ ○ ○ ○ ○ (all empty outlines, not filled)
-   - Navy blue circle outlines on parchment background
-
-4. TEXT PANELS
-   - Ability panel with navy header bar and placeholder text
-   - OT Verse panel with centered header
-   - NT Verse panel with centered header
-   - Greek/Hebrew reference strip
-   - Trivia panel at bottom
-
-5. FOOTER
-   - Navy blue strip at very bottom
-   - Left Text: "Series: 20XX QX - Set" in grey/faded white text
-
-COLOR PALETTE:
-- Navy Blue: approximately #102030
-- Gold/Tan: approximately #C0A060
-- Parchment background: Beige/Tan textured
-- Text: Near-black for body, white/cream for headers
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges
+- Consistent typography throughout
+- Proper stat pip rendering (empty navy circles)
+- Clear panel separation
 
 CRITICAL RULES:
-- RARITY AREA: "Uncommon" text in WHITE + FILLED GREEN diamond (◆) next to it
-  The diamond must be FILLED with solid green (#2E8B57), navy outline
-- TYPE AREA: Type pill with white "TYPE" text, type circle empty (no icon)
-- Stat pips: ALL must be EMPTY/HOLLOW navy circle outlines (not filled) - this is a template
-- Use placeholder text throughout - do NOT generate actual card content
-- Corners should be rounded (not chamfered)
-- Output ONLY the card template - no surrounding text or watermarks
+- NEVER print brackets [ ] anywhere on the card
+- NEVER print parentheses ( ) around transliterations or other text
+- Rarity badge: Display only the word "Rarity" (no diamond icon, no specific rarity name like "GLORIOUS")
+- Hebrew text must render right-to-left
+- Output ONLY the card - no surrounding text or watermarks
+
+IMPORTANT CHANGES FROM REFERENCE (do NOT copy these from reference image):
+- Stat pips: The reference may show FILLED pips - IGNORE THIS.
+  Instead, render ALL stat pips as EMPTY/HOLLOW navy-blue circle OUTLINES ONLY.
+  Each stat row should show 5 unfilled circular outlines (like ○ ○ ○ ○ ○, not ● ● ● ○ ○).
+  The pips should have a navy stroke/border but NO fill - the parchment background should show through.
 
 
 REQUESTED REFINEMENTS:
-STATS CHANGES: Ensure all stat pips are empty (navy outlines).
+ADDITIONAL CHANGES: This is the uncommon canonical template. Top identity must be TYPE with empty icon and Uncommon with exactly two white diamonds. Use generic template placeholder content only. Never use square brackets anywhere; render placeholder copy as plain unbracketed text. Preserve the same clean empty art and card-face layout.
