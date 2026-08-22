@@ -489,6 +489,20 @@
       "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/palettes/type_symbols_palette.png"
     }
   },
+  "isolated_corrections": {
+    "name_quill_white": {
+      "pixels_per_cell": 24,
+      "reason": "independent audit found tan quill; frozen specification requires white",
+      "replacement_rgb": [
+        255,
+        255,
+        255
+      ],
+      "scope": "four name-treatment cells only",
+      "selection": "RGB minimum >= 185 and channel spread <= 45 within type-circle bounds [38,68,151,174]",
+      "source": "historical name witness light-stroke silhouette"
+    }
+  },
   "landmarks": {
     "canvas": [
       0,
@@ -675,7 +689,7 @@
       "height": 1264,
       "mode": "RGB",
       "rarity": "common",
-      "sha256": "e705266b9d84420eadbb41f82a0046f0343f7b4704a6ee33384a0fa1ecfb3e19",
+      "sha256": "fa8514eeb36cc8cb0c4f07d2aacc45697d01a74dcf6d809b3100aedc87c64bce",
       "type": "name",
       "width": 848
     },
@@ -687,7 +701,7 @@
       "height": 1264,
       "mode": "RGB",
       "rarity": "uncommon",
-      "sha256": "dd3f2b4f5141644e96dc5d7cce37397c52c330d3003d95ef65346c0747c9a353",
+      "sha256": "67781e8ad11207ce459fc62499b347fe2fc73622de8e2f19862af2c2ff80b982",
       "type": "name",
       "width": 848
     },
@@ -699,7 +713,7 @@
       "height": 1264,
       "mode": "RGB",
       "rarity": "rare",
-      "sha256": "e1412efcb07d5ca4a7c95210ee714df8cc50e126cde417d351926741122da3d5",
+      "sha256": "d4432005296cb7ab6f6bcec7d0b412f7ed2422c95152081755d241d076a5dde5",
       "type": "name",
       "width": 848
     },
@@ -711,7 +725,7 @@
       "height": 1264,
       "mode": "RGB",
       "rarity": "glorious",
-      "sha256": "d96cb02574301af2f49398b2caa15c91a3da7af2d1e57df25cc4f8812fad637c",
+      "sha256": "0034794216655defa1d9585cdc1761e7d77a7573ba6fd3f1d565c9de6edbe3ca",
       "type": "name",
       "width": 848
     },

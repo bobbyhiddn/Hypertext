@@ -30,7 +30,13 @@
     "pass": true
   },
   "08_icon_correctness": {
-    "method": "pixels projected from named historical type witnesses",
+    "method": "historical silhouettes projected from named type witnesses; name quill light-stroke mask normalized to specification white",
+    "name_quill_pixels": 24,
+    "name_quill_white_rgb": [
+      255,
+      255,
+      255
+    ],
     "pass": true
   },
   "09_rarity_correctness": {

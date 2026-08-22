@@ -119,6 +119,18 @@ def controlled_masks(base: Image.Image, witnesses: dict[str, Image.Image]) -> di
     return {"type": type_mask, "rarity": rarity_mask}
 
 
+def name_quill_mask(witness: Image.Image) -> Image.Image:
+    """Select only the light quill strokes; exclude the surrounding navy circle."""
+    mask = Image.new("L", witness.size, 0)
+    pixels = witness.load(); out = mask.load()
+    for y in range(68, 174):
+        for x in range(38, 151):
+            r, g, b = pixels[x, y]
+            if min(r, g, b) >= 185 and max(r, g, b) - min(r, g, b) <= 45:
+                out[x, y] = 255
+    return mask
+
+
 def padded_box(mask: Image.Image, padding: int = 8) -> tuple[int, int, int, int]:
     box = mask.getbbox()
     if box is None:
@@ -213,6 +225,7 @@ def build(root: Path, inputs: dict, generate: bool) -> tuple[dict, dict]:
     witnesses["title"] = title
     masks = controlled_masks(base, witnesses)
     type_mask, rarity_mask = masks["type"], masks["rarity"]
+    quill_mask = name_quill_mask(witnesses["name"])
     (root / "masks").mkdir(parents=True, exist_ok=True)
     for key, mask in masks.items(): mask.save(root / "masks" / f"{key}.png")
     edits = prepare_edits(root, base, witnesses, masks, generate)
@@ -223,6 +236,10 @@ def build(root: Path, inputs: dict, generate: bool) -> tuple[dict, dict]:
         for column, rarity in enumerate(RARITIES):
             candidate = base.copy()
             candidate.paste(witnesses[word_type], mask=type_mask)
+            # The historical name witness has a tan cast.  The frozen contract is
+            # explicit: retain its exact quill silhouette, but render those strokes white.
+            if word_type == "name":
+                candidate.paste(Image.new("RGB", candidate.size, "white"), mask=quill_mask)
             candidate.paste(witnesses[rarity], mask=rarity_mask)
             path = root / f"{word_type}__{rarity}.png"
             candidate.save(path, "PNG", compress_level=9)
@@ -263,7 +280,12 @@ def build(root: Path, inputs: dict, generate: bool) -> tuple[dict, dict]:
         "05_shared_pixel_invariance": {"pass": all(r["changed_pixels_outside_declared_masks"] == 0 for r in records), "max_outside": max(r["changed_pixels_outside_declared_masks"] for r in records)},
         "06_type_isolation": {"pass": type_pair_max == 0, "max_changed_outside_type_mask": type_pair_max},
         "07_rarity_isolation": {"pass": rarity_pair_max == 0, "max_changed_outside_rarity_mask": rarity_pair_max},
-        "08_icon_correctness": {"pass": True, "method": "pixels projected from named historical type witnesses"},
+        "08_icon_correctness": {"pass": all(Image.open(ROOT/r["candidate"]).convert("RGB").getpixel((x, y)) == (255, 255, 255)
+                                                       for r in records if r["type"] == "name"
+                                                       for y in range(quill_mask.height) for x in range(quill_mask.width)
+                                                       if quill_mask.getpixel((x, y))),
+                                "method": "historical silhouettes projected from named type witnesses; name quill light-stroke mask normalized to specification white",
+                                "name_quill_white_rgb": [255, 255, 255], "name_quill_pixels": pixel_count(quill_mask)},
         "09_rarity_correctness": {"pass": True, "method": "pixels projected from named historical rarity witnesses; glorious witness preserves two costs"},
         "10_border_registration": {"pass": all(diff_outside(base, Image.open(ROOT/r["candidate"]), union) == 0 for r in records), "edge_displacement_px": 0},
         "11_geometry_registration": {"pass": True, "translation_px": 0, "size_delta_px": 0, "method": "base retained outside masks"},
@@ -277,6 +299,11 @@ def build(root: Path, inputs: dict, generate: bool) -> tuple[dict, dict]:
                 "rejected_build": "f334220", "branch": "revival/gemini-migration-eval", "inputs": inputs,
                 "assembly": {"method": "historical-witness pixel projection constrained by declared masks",
                              "base_geometry": [848,1264], "model_proposals_are_review_evidence_not_geometry_authority": True},
+                "isolated_corrections": {"name_quill_white": {"scope": "four name-treatment cells only",
+                                         "source": "historical name witness light-stroke silhouette",
+                                         "selection": "RGB minimum >= 185 and channel spread <= 45 within type-circle bounds [38,68,151,174]",
+                                         "replacement_rgb": [255,255,255], "pixels_per_cell": pixel_count(quill_mask),
+                                         "reason": "independent audit found tan quill; frozen specification requires white"}},
                 "masks": {k: {"path": f"operator_review/constrained/e50961ad0f4d/masks/{k}.png",
                               "sha256": digest(root/"masks"/f"{k}.png"), "bbox": list(v.getbbox()), "pixels": pixel_count(v)} for k,v in masks.items()},
                 "landmarks": {"canvas": [0,0,848,1264], "registration": "all base landmarks retained at 0 px translation and size delta"},
