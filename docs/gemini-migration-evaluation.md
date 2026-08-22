@@ -1,6 +1,6 @@
 # Gemini image migration and consistency evaluation
 
-Status: proposed, 2026-08-21. Scheduled generation is disabled and **must stay disabled until every exit gate in this document passes**. Evaluation runs are manual only.
+Status: pre-evaluation implementation complete, 2026-08-21. Scheduled generation is disabled and **must stay disabled until every exit gate in this document passes**. Evaluation runs are manual only.
 
 ## Decision and official basis
 
@@ -49,6 +49,14 @@ Existing automated coverage is only `package/test_package.py`, an import smoke t
 4. Add unit tests with fake SDK/HTTP responses for image-only, interleaved text/image, no candidates, safety/finish-only responses, invalid base64, wrong MIME type, corrupt bytes, wrong dimensions, transient errors, and permanent errors. Add a static test that rejects `-preview` image defaults and rejects a `schedule:` key in `daily-hypertext.yml`.
 5. Update templates, utilities, metadata defaults, README, and workflow-provided model configuration in one consistency commit. Preserve per-card historical model metadata rather than rewriting generated history.
 6. Run the evaluation below by manual dispatch in a non-production output directory. Keep generated evaluation artifacts out of the production queue/index and require a human to record the verdict.
+
+Steps 1-5 are implemented on the revival branch. `google-genai>=1.40.0` is the
+declared compatibility floor for `Part.from_bytes`, `GenerateContentConfig`,
+`ImageConfig`, and response parts. Offline tests exercise those shapes without
+API access. The shared contract treats `2:3` `2K` as exactly 1024x1536 PNG,
+caps attempts at four, validates output before atomic publication, and writes
+atomic non-secret success/failure metadata. Step 6 and all rollout gates remain
+manual; no live diagnostic or generation run was performed during implementation.
 
 ## Consistency evaluation
 

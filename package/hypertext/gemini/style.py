@@ -6,13 +6,17 @@ images that follow the visual style of provided reference images.
 """
 
 import argparse
-import base64
 import os
+import random
 import sys
 import time
 from pathlib import Path
 
 from hypertext.gemini.config import image_model
+from hypertext.gemini.image_contract import (
+    MAX_ATTEMPTS, ImageContractError, atomic_write_image, classify_error,
+    decode_and_validate, record_failure, record_success, validate_request,
+)
 
 try:
     from google import genai
@@ -97,6 +101,7 @@ def generate_with_styles(
     if genai is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
 
+    validate_request(aspect_ratio, "2K")
     if not style_image_paths:
         raise RuntimeError("At least one style image is required.")
     if len(style_image_paths) > 16:
@@ -257,9 +262,10 @@ AVOID:
 
     config = types.GenerateContentConfig(
         response_modalities=["IMAGE"],
+        image_config=types.ImageConfig(aspect_ratio=aspect_ratio, image_size="2K"),
     )
 
-    max_attempts = int(os.environ.get("GEMINI_MAX_ATTEMPTS", "4"))
+    max_attempts = min(MAX_ATTEMPTS, max(1, int(os.environ.get("GEMINI_MAX_ATTEMPTS", str(MAX_ATTEMPTS)))))
     base_delay_s = float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2"))
     for attempt in range(1, max_attempts + 1):
         try:
@@ -268,37 +274,42 @@ AVOID:
             )
             break
         except Exception as e:
-            status = getattr(e, "status_code", getattr(e, "code", None))
-            retriable = status in (429, 500, 502, 503, 504)
+            category, status, retriable = classify_error(e)
             if not retriable or attempt == max_attempts:
+                record_failure(out_path, model=model, category=category, attempts=attempt,
+                               reference_count=len(style_image_paths), status_code=status)
                 raise RuntimeError(f"Gemini API request failed: {e}") from e
-            time.sleep(base_delay_s * (2 ** (attempt - 1)))
+            time.sleep(base_delay_s * (2 ** (attempt - 1)) + random.random())
 
     if not response.candidates:
-        raise RuntimeError("No candidates returned from Gemini.")
+        record_failure(out_path, model=model, category="no_candidate", attempts=attempt,
+                       reference_count=len(style_image_paths))
+        raise RuntimeError("No candidates returned from Gemini (possibly safety-blocked).")
 
     candidate = response.candidates[0]
     parts = (candidate.content.parts if candidate.content and candidate.content.parts else [])
 
     image_bytes = None
+    mime_type = ""
     for part in parts:
-        if (part.inline_data and
-                getattr(part.inline_data, "mime_type", "").startswith("image/")):
+        if part.inline_data:
+            mime_type = getattr(part.inline_data, "mime_type", "")
             image_bytes = part.inline_data.data
             break
 
     if not image_bytes:
-        raise RuntimeError(f"No image data found in response. Content: {candidate.content}")
-
-    if isinstance(image_bytes, str):
-        try:
-            image_bytes = base64.b64decode(image_bytes, validate=True)
-        except (ValueError, TypeError, base64.binascii.Error) as e:
-            raise RuntimeError("Gemini returned malformed base64 image data.") from e
-
-    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
-    with open(out_path, "wb") as f:
-        f.write(image_bytes)
+        record_failure(out_path, model=model, category="missing_image", attempts=attempt,
+                       reference_count=len(style_image_paths))
+        raise RuntimeError("No image data found in response")
+    try:
+        image_bytes, dimensions = decode_and_validate(image_bytes, mime_type)
+    except ImageContractError:
+        record_failure(out_path, model=model, category="image_contract", attempts=attempt,
+                       reference_count=len(style_image_paths))
+        raise
+    atomic_write_image(out_path, image_bytes)
+    record_success(out_path, model=model, mime_type=mime_type, dimensions=dimensions,
+                   attempts=attempt, reference_count=len(style_image_paths))
 
     print(f"Saved generated image to: {out_path}")
 

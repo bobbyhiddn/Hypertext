@@ -17,7 +17,7 @@ setup(
         "click>=8.0.0",
         "Pillow>=10.0.0",
         "PyYAML>=6.0",
-        "google-genai>=0.3.0",
+        "google-genai>=1.40.0",
         "requests>=2.28.0",
         "python-dotenv>=1.0.0",
     ],

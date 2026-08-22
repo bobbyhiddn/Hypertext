@@ -10,11 +10,19 @@ import unittest
 import urllib.error
 from unittest import mock
 
+from PIL import Image
+
 from hypertext.gemini import image, style
 from hypertext.gemini.config import DEFAULT_IMAGE_MODEL, image_endpoint, image_model
 
 
-PNG = b"\x89PNG\r\n\x1a\ncontract"
+def png(width=1024, height=1536):
+    stream = io.BytesIO()
+    Image.new("RGB", (width, height), "white").save(stream, "PNG")
+    return stream.getvalue()
+
+
+PNG = png()
 
 
 class HttpResponse:
@@ -59,6 +67,12 @@ class RestContractTests(unittest.TestCase):
             ({"candidates": [{"content": {"parts": [{"text": "only"}]}}]}, "No image"),
             ({"candidates": [{"content": {"parts": [{"inlineData": {
                 "mimeType": "image/png", "data": "%%%"}}]}}]}, "malformed base64"),
+            ({"candidates": [{"content": {"parts": [{"inlineData": {
+                "mimeType": "image/jpeg", "data": base64.b64encode(PNG).decode()}}]}}]}, "MIME"),
+            ({"candidates": [{"content": {"parts": [{"inlineData": {
+                "mimeType": "image/png", "data": base64.b64encode(b"broken").decode()}}]}}]}, "corrupt"),
+            ({"candidates": [{"content": {"parts": [{"inlineData": {
+                "mimeType": "image/png", "data": base64.b64encode(png(100, 150)).decode()}}]}}]}, "dimensions"),
         ]
         for payload, message in cases:
             with self.subTest(message=message), self.assertRaisesRegex(RuntimeError, message):
@@ -74,10 +88,10 @@ class RestContractTests(unittest.TestCase):
 
     def test_permanent_http_error_is_not_retried(self):
         err = urllib.error.HTTPError("url", 400, "bad", {}, io.BytesIO(b"bad request"))
-        with self.assertRaisesRegex(RuntimeError, "HTTP 400"), mock.patch.dict(os.environ, {
-            "GEMINI_API_KEY": "fake"}, clear=True), mock.patch.object(
-                image.urllib.request, "urlopen", side_effect=err) as opened:
-            image.generate_image("prompt", "unused.png")
+        with tempfile.TemporaryDirectory() as td, self.assertRaisesRegex(RuntimeError, "HTTP 400"), \
+             mock.patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}, clear=True), \
+             mock.patch.object(image.urllib.request, "urlopen", side_effect=err) as opened:
+            image.generate_image("prompt", os.path.join(td, "unused.png"))
         opened.assert_called_once()
 
 
@@ -99,7 +113,8 @@ class SdkContractTests(unittest.TestCase):
         client = ns.SimpleNamespace(models=ns.SimpleNamespace(generate_content=generate_content))
         fake_genai = ns.SimpleNamespace(Client=lambda api_key: client)
         fake_types = ns.SimpleNamespace(Part=FakePart,
-            GenerateContentConfig=lambda **kwargs: kwargs)
+            GenerateContentConfig=lambda **kwargs: kwargs,
+            ImageConfig=lambda **kwargs: kwargs)
         with tempfile.TemporaryDirectory() as td, mock.patch.dict(os.environ, {
             "GEMINI_API_KEY": "fake", "GEMINI_MAX_ATTEMPTS": "3",
             "GEMINI_RETRY_BASE_DELAY_S": "0"}, clear=True), \
@@ -121,6 +136,8 @@ class SdkContractTests(unittest.TestCase):
         self.assertEqual(result, PNG)
         self.assertEqual(calls[0]["model"], DEFAULT_IMAGE_MODEL)
         self.assertEqual(calls[0]["config"]["response_modalities"], ["IMAGE"])
+        self.assertEqual(calls[0]["config"]["image_config"],
+                         {"aspect_ratio": "2:3", "image_size": "2K"})
 
     def test_missing_and_malformed_image_data(self):
         cases = [
@@ -130,6 +147,15 @@ class SdkContractTests(unittest.TestCase):
             (ns.SimpleNamespace(candidates=[ns.SimpleNamespace(content=ns.SimpleNamespace(
                 parts=[ns.SimpleNamespace(inline_data=ns.SimpleNamespace(
                     mime_type="image/png", data="%%%"))]))]), "malformed base64"),
+            (ns.SimpleNamespace(candidates=[ns.SimpleNamespace(content=ns.SimpleNamespace(
+                parts=[ns.SimpleNamespace(inline_data=ns.SimpleNamespace(
+                    mime_type="text/plain", data=PNG))]))]), "MIME"),
+            (ns.SimpleNamespace(candidates=[ns.SimpleNamespace(content=ns.SimpleNamespace(
+                parts=[ns.SimpleNamespace(inline_data=ns.SimpleNamespace(
+                    mime_type="image/png", data=b"broken"))]))]), "corrupt"),
+            (ns.SimpleNamespace(candidates=[ns.SimpleNamespace(content=ns.SimpleNamespace(
+                parts=[ns.SimpleNamespace(inline_data=ns.SimpleNamespace(
+                    mime_type="image/png", data=png(100, 150)))]))]), "dimensions"),
         ]
         for response, message in cases:
             with self.subTest(message=message), self.assertRaisesRegex(RuntimeError, message):
@@ -169,6 +195,14 @@ class ConfigurationTests(unittest.TestCase):
         workflow = os.path.join(root, ".github/workflows/daily-hypertext.yml")
         with open(workflow, encoding="utf-8") as f:
             self.assertNotRegex(f.read(), r"(?m)^\s*schedule\s*:")
+        workflow_dir = os.path.join(root, ".github/workflows")
+        automatic = r"(?m)^  (schedule|push|pull_request|issue_comment|workflow_run):"
+        for name in os.listdir(workflow_dir):
+            if name.endswith((".yml", ".yaml")):
+                with open(os.path.join(workflow_dir, name), encoding="utf-8") as f:
+                    content = f.read()
+                self.assertIn("  workflow_dispatch:", content, name)
+                self.assertNotRegex(content, automatic, name)
 
 
 if __name__ == "__main__":

@@ -234,6 +234,13 @@ python -m hypertext.gemini.style \
 ```bash
 GEMINI_API_KEY=your_api_key
 GEMINI_IMAGE_MODEL=gemini-3.1-flash-image  # optional; this is the default
+
+Generated card images must be PNG files at exactly 1024x1536 pixels (the
+documented Hypertext interpretation of Gemini `2:3` `2K`). The generator
+validates MIME type, decoding, format, and dimensions before atomically
+publishing the image. It also writes `outputs/generation.json` with the model,
+MIME type, dimensions, attempts, and reference count; failures replace that
+file atomically with a non-secret category and optional HTTP status.
 GEMINI_TEXT_MODEL=gemini-3-pro-preview          # optional
 ```
 
@@ -362,7 +369,7 @@ Cards are graded on a 100-point scale:
 ## Dependencies
 
 ```
-google-genai      # Gemini API
+google-genai>=1.40.0  # Gemini API compatibility floor
 Pillow            # Image processing
 pyyaml            # YAML parsing
 requests          # HTTP (TGC)
