@@ -33,10 +33,14 @@ import os
 import signal
 import sys
 import threading
+import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Optional
+from hypertext.lots.rules import (IMAGE_DIMENSIONS, IMAGE_MIME, SCHEMA_REVISION,
+                                  load_lot_rules, validate_phase)
 
 try:
     from google import genai
@@ -163,8 +167,8 @@ LOT_SCORE_TEMPLATE = """Score this LOT card based on what was observed vs expect
 - Phase Name: {phase_name}
 - Card Count: "{cards}-CARD" with "CARD COUNT" label above it
 - Reward section (two lines):
-  - "As Board Phase: {points} Points"
-  - "As Personal Lot: {letters} Letter(s)"
+  - "Chapter Value: {points} Points"
+  - "Page Value: {letters} Letter(s)"
 - Wreath Bonus: "Wreath Bonus: +2 Points (First to record)" - note lowercase "record"
 - Composition: Icons with type labels like NOUN + VERB (NO square brackets around type names)
 - Context: Navy "CONTEXT" header bar with text below
@@ -190,8 +194,8 @@ LOT_SCORE_TEMPLATE = """Score this LOT card based on what was observed vs expect
 - Italic flavor/subtitle present (5 pts)
 
 ### REWARD BANNER (20 pts)
-- Shows Board Phase reward ({points} Points) (7 pts)
-- Shows Personal Lot reward ({letters} Letter) (6 pts)
+- Shows Chapter value ({points} Points) (7 pts)
+- Shows Page value ({letters} Letter) (6 pts)
 - Wreath bonus includes "(First to record)" (7 pts) - CRITICAL
 
 ### COMPOSITION (15 pts)
@@ -584,8 +588,8 @@ def score_lot_card(
         "style_mismatch_reason": description.style_mismatch_reason,
     }
 
-    # Letter rewards: 5-6 card lots give 1 Letter, 7-card lots give 2 Letters
-    letters = 2 if cards >= 7 else 1
+    # Canonical personal/opponent reward comes from the Lot schema.
+    letters = validate_phase(phase_data)["opponent_letters"]
 
     prompt = LOT_SCORE_TEMPLATE.format(
         phase_name=phase_name,
@@ -896,13 +900,7 @@ def _log(msg: str) -> None:
 
 def load_universal_phases() -> list[dict[str, Any]]:
     """Load universal phase definitions from templates/phases.yml."""
-    if yaml is None:
-        raise RuntimeError("pyyaml required: pip install pyyaml")
-    if not UNIVERSAL_PHASES_PATH.exists():
-        raise RuntimeError(f"Universal phases file not found: {UNIVERSAL_PHASES_PATH}")
-    with open(UNIVERSAL_PHASES_PATH, "r", encoding="utf-8") as f:
-        data = yaml.safe_load(f)
-    return data.get("phases", [])
+    return load_lot_rules()
 
 
 def load_series_content(series_dir: Path) -> dict[int, dict[str, str]]:
@@ -927,6 +925,51 @@ def get_series_theme(series_dir: Path) -> str:
     with open(stats_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f) or {}
     return data.get("theme", "")
+
+
+def _staged_render(render_func, card_data: dict[str, Any], out_path: Path,
+                   series_dir: Path) -> int:
+    """Render beside the destination and replace it only after validation."""
+    from PIL import Image
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    fd, temp_name = tempfile.mkstemp(prefix=f".{out_path.stem}-", suffix=".png",
+                                     dir=out_path.parent)
+    os.close(fd)
+    staged = Path(temp_name)
+    staged.unlink()  # generators require a nonexistent destination
+    try:
+        render_func(card_data, staged, series_dir)
+        with Image.open(staged) as image:
+            image.load()
+            if image.format != "PNG" or image.size != IMAGE_DIMENSIONS:
+                raise RuntimeError(f"invalid Lot output: {image.format} {image.size}")
+        revisions_path = out_path.parent.parent / "revisions.json"
+        prior = json.loads(revisions_path.read_text()) if revisions_path.exists() else []
+        revision = (prior[-1]["revision"] + 1) if prior else 1
+        os.replace(staged, out_path)
+        prior.append({"revision": revision, "schema_revision": SCHEMA_REVISION,
+                      "model": os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image"),
+                      "mime_type": IMAGE_MIME, "width": IMAGE_DIMENSIONS[0],
+                      "height": IMAGE_DIMENSIONS[1], "replaced_prior": revision > 1,
+                      "recorded_at": int(time.time())})
+        revisions_path.write_text(json.dumps(prior, indent=2) + "\n", encoding="utf-8")
+        return revision
+    finally:
+        if staged.exists():
+            staged.unlink()
+
+
+def _provenance(phase: dict[str, Any], card_data: dict[str, Any], series_dir: Path,
+                card_dir: Path) -> dict[str, Any]:
+    canonical = validate_phase(phase)
+    revisions_path = card_dir / "revisions.json"
+    revisions = json.loads(revisions_path.read_text()) if revisions_path.exists() else []
+    return {"composition": canonical["composition"], "series": series_dir.name,
+            "verse": card_data.get("verse", ""),
+            "model": os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3.1-flash-image"),
+            "mime_type": IMAGE_MIME, "width": IMAGE_DIMENSIONS[0],
+            "height": IMAGE_DIMENSIONS[1], "schema_revision": SCHEMA_REVISION,
+            "revision": revisions[-1]["revision"] if revisions else 0}
 
 
 def phase_init(series_dir: Path) -> int:
@@ -1212,7 +1255,7 @@ def _render_single_lot(
     # Use semaphore to limit concurrent API calls
     with semaphore:
         try:
-            render_func(card_data, out_path, series_dir)
+            _staged_render(render_func, card_data, out_path, series_dir)
         except Exception as e:
             _log(f"[{pid:02d}] Error rendering: {e}")
             return (pid, str(e))
@@ -1227,6 +1270,7 @@ def _render_single_lot(
         "flavor": card_data["flavor"],
         "context": card_data["context"],
     }
+    meta.update(_provenance(phase, card_data, series_dir, card_dir))
     with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True, default_flow_style=False)
 
@@ -1283,16 +1327,10 @@ def _render_single_lot_with_review(
         attempt += 1
         _log(f"[{pid:02d}] Rendering {name} (attempt {attempt}/{REVIEW_MAX_ATTEMPTS})...")
 
-        # Delete old output if exists (for re-renders)
-        if out_path.exists():
-            out_path.unlink()
-        if prompt_path.exists():
-            prompt_path.unlink()
-
         # Render with semaphore
         with semaphore:
             try:
-                render_func(card_data, out_path, series_dir)
+                _staged_render(render_func, card_data, out_path, series_dir)
             except Exception as e:
                 _log(f"[{pid:02d}] Error rendering: {e}")
                 return (pid, str(e), 0, attempt)
@@ -1369,6 +1407,7 @@ def _render_single_lot_with_review(
         "render_attempts": attempt,
         "final_score": final_score,
     }
+    meta.update(_provenance(phase, card_data, series_dir, card_dir))
     with open(card_dir / "meta.yml", "w", encoding="utf-8") as f:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True, default_flow_style=False)
 
@@ -1529,7 +1568,7 @@ def phase_render(series_dir: Path, parallel: int = 1, batch_size: str = "full", 
 def phase_rebuild(series_dir: Path, batch_size: str = "full", parallel: int = 1) -> int:
     """Force rebuild all lot cards with grading and retry loop.
 
-    Unlike render, this deletes existing outputs and regenerates everything.
+    Existing outputs remain in place until a validated replacement is ready.
     Each card is graded after rendering and re-rendered if score < 90%.
 
     Args:
@@ -1577,24 +1616,6 @@ def phase_rebuild(series_dir: Path, batch_size: str = "full", parallel: int = 1)
 
     _log(f"REBUILD: Force re-rendering {len(phases_to_rebuild)} lot cards with grading...")
     _log(f"  Threshold: {REVIEW_PASS_THRESHOLD}%, Max attempts: {REVIEW_MAX_ATTEMPTS}, Workers: {parallel}")
-
-    # Delete existing outputs for selected phases
-    for phase in phases_to_rebuild:
-        pid = phase["id"]
-        name = phase["name"]
-        slug = name.lower().replace(" ", "-")
-        card_dir = lots_dir / f"{pid:02d}-{slug}"
-        out_path = card_dir / "outputs" / "lot_1024x1536.png"
-        prompt_path = card_dir / "prompt.txt"
-        grade_json = card_dir / "grade.json"
-        grade_txt = card_dir / "grade.txt"
-
-        # Delete existing files
-        for f in [out_path, prompt_path, grade_json, grade_txt]:
-            if f.exists():
-                f.unlink()
-
-    _log(f"Deleted existing outputs for {len(phases_to_rebuild)} cards")
 
     # Semaphore for API rate limiting
     semaphore = threading.Semaphore(parallel)

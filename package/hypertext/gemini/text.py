@@ -13,6 +13,8 @@ import time
 import urllib.error
 import urllib.request
 
+from hypertext.gemini.config import text_model
+
 
 def _parse_retry_after_seconds(headers) -> int | None:
     if not headers:
@@ -87,7 +89,7 @@ def generate_text_with_grounding(
     if not api_key:
         raise RuntimeError("GEMINI_TEXT_API_KEY (or GEMINI_API_KEY) env var is not set.")
 
-    model_id = model or os.environ.get("GEMINI_TEXT_MODEL", "gemini-3-pro-preview")
+    model_id = model or text_model()
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent"
 
     payload: dict = {

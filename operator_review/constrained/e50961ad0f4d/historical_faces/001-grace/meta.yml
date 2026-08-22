@@ -1,0 +1,16 @@
+number: '001'
+word: GRACE
+gloss: Unmerited favor; a free gift given to the undeserving
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Example
+art_prompt: A single, brilliant drop of golden light falling from above into a pair
+  of weathered, open hands emerging from shadow. The light illuminates the hands warmly,
+  contrasting with a dark, muted background. Ethereal, soft, oil painting style.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Draw 1 card. If you have 3 or fewer cards in hand, draw 2 instead.
+style_series_dir: series\2026-Q1

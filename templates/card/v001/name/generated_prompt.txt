@@ -1,4 +1,4 @@
-Reproduce and refine the provided card template reference image for a NAME type card.
+Reproduce and refine the provided card template reference image.
 
 INSTRUCTIONS:
 Use the reference template [1] as your primary source. Generate a refined version that:
@@ -11,53 +11,62 @@ TARGET TEMPLATE SPECIFICATIONS:
 - Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
 - Style: Premium trading card layout with antique parchment background
 - Frame: Navy and gold collector frame with rounded corners
-- Card Type: NAME (represented by Feather Quill icon)
 
-EXACT LAYOUT (top to bottom):
+LAYOUT TO PRESERVE:
+- Header: Collector ID (left), Rarity label (right), Title/Subtitle (center)
+- Art Panel: ~44% height with gold inner frame
+- Stats Row: LORE, CONTEXT, COMPLEXITY with navy circle pips
+- Text Panels: Ability, OT Verse, NT Verse, Greek/Hebrew strip, Trivia
+- Footer: Navy strip with "Series: 20XX QX - Set" format (e.g., "Series: 2026 Q1 - Babel")
 
-1. HEADER AREA
-   - Top-Left: Card number "#XXX" followed by TYPE PILL (navy rounded rectangle with "NAME" in WHITE text)
-   - Type Circle: Navy circle with gold border INSIDE the pill, containing a WHITE FEATHER QUILL icon
-     (single elegant feather/quill pen shape)
-   - Top-Right: RARITY AREA - navy pill with "Rarity" placeholder text in WHITE serif
-     * NO diamond shape - diamonds only appear on rarity-specific templates
-   - Center: Card title in large bold black serif, subtitle below in italics
-
-2. ART PANEL
-   - ~44% of card height
-   - Gold inner frame border
-   - Art placeholder area
-
-3. STATS ROW
-   - Three stat categories: LORE, CONTEXT, COMPLEXITY
-   - Each shows 5 circular pips (empty/hollow navy outlines as placeholder)
-   - Navy blue circle outlines on parchment background
-
-4. TEXT PANELS
-   - Ability panel with navy header bar
-   - OT Verse panel with centered header
-   - NT Verse panel with centered header
-   - Greek/Hebrew reference strip
-   - Trivia panel at bottom
-
-5. FOOTER
-   - Navy blue strip at very bottom
-   - Left Text: "Series: 20XX QX - Set" in grey/faded white text
-
-COLOR PALETTE:
-- Navy Blue: approximately #102030
-- Gold/Tan: approximately #C0A060
-- Parchment background: Beige/Tan textured
-- Text: Near-black for body, white/cream for headers
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges
+- Consistent typography throughout
+- Proper stat pip rendering (empty navy circles)
+- Clear panel separation
 
 CRITICAL RULES:
-- TYPE AREA: Type pill shows "NAME" in WHITE text, type circle contains WHITE Feather Quill icon
-  The icon must be WHITE/light colored against the navy circle background
-- RARITY AREA: Show ONLY "Rarity" text in WHITE - NO diamond shape (diamonds are for rarity templates only)
-- Stat pips MUST be empty/hollow navy circle outlines (not filled)
-- Corners should be rounded (not chamfered)
+- NEVER print brackets [ ] anywhere on the card
+- NEVER print parentheses ( ) around transliterations or other text
+- Rarity badge: Display only the word "Rarity" (no diamond icon, no specific rarity name like "GLORIOUS")
+- Hebrew text must render right-to-left
 - Output ONLY the card - no surrounding text or watermarks
 
+IMPORTANT CHANGES FROM REFERENCE (do NOT copy these from reference image):
+- Stat pips: The reference may show FILLED pips - IGNORE THIS.
+  Instead, render ALL stat pips as EMPTY/HOLLOW navy-blue circle OUTLINES ONLY.
+  Each stat row should show 5 unfilled circular outlines (like ○ ○ ○ ○ ○, not ● ● ● ○ ○).
+  The pips should have a navy stroke/border but NO fill - the parchment background should show through.
 
-REQUESTED REFINEMENTS:
-ADDITIONAL CHANGES: Match the stylized corners and border style exactly to the base template reference.
+GOVERNING SHARED VISUAL CONTRACT:
+# Hypertext face visual contract (v1)
+
+This contract is prompt input. It governs every generated Card and Lot face.
+
+## Shared invariants
+
+- Output only a sharp, flat, front-facing 1024×1536 portrait card. No crop, margin, mockup, shadow, glow, blur, halo, watermark, or duplicated element.
+- Use one continuous rounded double frame: near-black navy `#102030`, restrained antique gold `#C0A060`, and warm low-contrast parchment. Keep identical outer margins and corner radii.
+- Use high-contrast classical serif typography. Navy bars use centered cream small caps; parchment uses near-black. Keep all text inside its zone and render required labels verbatim.
+- Use the same thin gold rule weight, navy header height, parchment texture scale, footer height, and flat two-color icon language across both families.
+- Generated illustration may occupy only the designated art panel. It may not alter the frame, header, labels, facts, stats, or footer.
+
+## Card geometry
+
+- Fixed vertical order: 8% header, 9% title/gloss, 23% art, 7% three-stat row, 42% facts grid, 7% trivia, 4% footer.
+- Header: number and compact navy type pill at left; rarity word and diamonds at right. Title is centered below it and never collides with badges.
+- Facts grid is invariant: ABILITY, OT VERSE, NT VERSE, paired HEBREW/ARAMAIC and GREEK, then TRIVIA. Never rename, reorder, omit, or duplicate these labels.
+- Templates use `#XXX`, `TYPE`, `CARD TITLE`, `DEFINITION TEXT`, empty stat pips, and restrained placeholder copy only. Never use square brackets.
+
+## Card exceptions
+
+- Type changes only the white header icon and type word: NOUN closed book; VERB pencil; ADJECTIVE sparkle pencil; NAME quill; TITLE crown. Geometry does not change.
+- Rarity changes only the rarity word, diamond count/fill, and bounded gold ornament: COMMON one white diamond; UNCOMMON two white diamonds; RARE three white diamonds; GLORIOUS three gold diamonds plus restrained gold corner filigree. Geometry and panel fills do not change.
+
+## Lot geometry and exceptions
+
+- Lots share the frame language and typography but use a phase layout: 9% header/title, 16% reward ribbon, 31% composition, 35% context, 4% footer, with remaining space as fixed gutters.
+- Header is always `LOT` left and `CARD COUNT` plus the exact `5-CARD`, `6-CARD`, `7-CARD`, or `X-CARD` right. Composition icons use the Card type icon language and unbracketed labels.
+- 5-card: `REWARD: 8 Points / 2 Letters`, exactly five slots. 6-card: `REWARD: 10 Points / 2 Letters`, exactly six slots and title `CONGREGATION`. 7-card: `REWARD: 14 Points / 3 Letters`, exactly seven slots. Base uses X placeholders.
+- Every Lot shows exactly once: `Wreath Bonus: +2 Points (First to record)`. Size changes only title/count, reward values, slot count/composition, and a bounded increase in gold ornament; all panel coordinates remain fixed.

@@ -1,0 +1,201 @@
+{
+  "expected_dimensions": [
+    1024,
+    1536
+  ],
+  "template_count": 14,
+  "sample_count": 7,
+  "templates": [
+    {
+      "path": "templates/card/v001/adjective/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/base/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/common/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/glorious/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/name/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/noun/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/rare/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/title/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/uncommon/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/card/v001/verb/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/lot/v001/5-card/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/lot/v001/6-card/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/lot/v001/7-card/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "templates/lot/v001/base/template_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    }
+  ],
+  "sample": [
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/cards/001-grace/outputs/card_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/cards/006-forgive/outputs/card_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/cards/011-eternal/outputs/card_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/cards/018-redeemer/outputs/card_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/lots/03-scroll/outputs/lot_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/lots/16-assembly/outputs/lot_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    },
+    {
+      "path": "docs/evidence/operator-review-2026-08-22/lots/28-revelation/outputs/lot_1024x1536.png",
+      "format": "PNG",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGB",
+      "valid_png": true,
+      "valid_dimensions": true
+    }
+  ]
+}

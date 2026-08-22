@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "status": "completed-accepted",
+  "contract": {
+    "role": "face",
+    "mime_type": "image/png",
+    "extension": ".png",
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3",
+    "generated_format": "normalized PNG"
+  },
+  "templates": [],
+  "definition_issues": [],
+  "pipeline_command": "PYTHONPATH=package python -m hypertext.pipeline.template --type FAMILY --phase refine --subtype SUBTYPE --target-version 1",
+  "cron": "disabled",
+  "api_calls_performed": true,
+  "model": "gemini-3.1-flash-image",
+  "completed": "2026-08-22",
+  "evidence": "docs/evidence/template-regeneration-2026-08-22.md"
+}

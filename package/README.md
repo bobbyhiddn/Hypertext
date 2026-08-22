@@ -233,8 +233,15 @@ python -m hypertext.gemini.style \
 **Environment Variables:**
 ```bash
 GEMINI_API_KEY=your_api_key
-GEMINI_IMAGE_MODEL=gemini-3.1-flash-image-preview  # optional
-GEMINI_TEXT_MODEL=gemini-3-pro-preview          # optional
+GEMINI_IMAGE_MODEL=gemini-3.1-flash-image  # optional; this is the default
+
+Generated card images must be PNG files at exactly 1024x1536 pixels (the
+documented Hypertext interpretation of Gemini `2:3` `2K`). The generator
+validates MIME type, decoding, format, and dimensions before atomically
+publishing the image. It also writes `outputs/generation.json` with the model,
+MIME type, dimensions, attempts, and reference count; failures replace that
+file atomically with a non-secret category and optional HTTP status.
+GEMINI_TEXT_MODEL=gemini-2.5-pro                # optional stable override
 ```
 
 ---
@@ -282,6 +289,8 @@ python -m hypertext.gallery.builder --series series/2026-Q1 --out-dir docs/galle
 ---
 
 ## Card Specifications
+
+Word-face template selection uses `hypertext.cards.template_matrix.resolve_template(type, rarity)`. It resolves the closed five-type by four-rarity vocabulary to `templates/card/v001/composed/<type>/<rarity>/template_1024x1536.png` and verifies the accepted SHA-256 before returning the path. All 20 in-vocabulary pairs are occupied; unknown types and rarities are invalid and raise `ValueError`. The composed manifest records the byte-identical accepted candidate under `operator_review/constrained/e50961ad0f4d/` for every face.
 
 ### Dimensions
 - **Card size:** 1024 x 1536 pixels
@@ -362,7 +371,7 @@ Cards are graded on a 100-point scale:
 ## Dependencies
 
 ```
-google-genai      # Gemini API
+google-genai>=1.40.0  # Gemini API compatibility floor
 Pillow            # Image processing
 pyyaml            # YAML parsing
 requests          # HTTP (TGC)

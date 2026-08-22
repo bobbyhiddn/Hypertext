@@ -11,7 +11,7 @@ dependencies = [
     "click>=8.0.0",
     "Pillow>=10.0.0",
     "PyYAML>=6.0",
-    "google-genai>=0.3.0",
+    "google-genai>=1.40.0",
     "jsonschema>=4.0.0",
     "markdown>=3.0.0",
 ]

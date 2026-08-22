@@ -189,11 +189,11 @@ phases:
     composition: [NOUN, NOUN, NOUN, NOUN, NOUN, NOUN]
     display: "6 same type"
 
-  # 7-Card Phases (12 points each)
+  # 7-Card Phases (14 points each)
   - id: 27
     name: CREATION
     cards: 7
-    points: 12
+    points: 14
     composition: [MATCH, MATCH, MATCH, MATCH, MATCH, MATCH, MATCH]
     display: "3 + 2 + 2 (three types)"
     constraint: "three_types_322"
@@ -201,7 +201,7 @@ phases:
   - id: 28
     name: REVELATION
     cards: 7
-    points: 12
+    points: 14
     composition: [NOUN, VERB, ADJECTIVE, NAME, TITLE, MATCH, MATCH]
     display: "All 5 types + 2 same"
     constraint: "all_five_plus_pair"
@@ -209,13 +209,13 @@ phases:
   - id: 29
     name: EXODUS
     cards: 7
-    points: 12
+    points: 14
     composition: [VERB, VERB, VERB, NAME, NAME, NOUN, NOUN]
     display: "VERB x3 + NAME x2 + NOUN x2"
 
   - id: 30
     name: APOCALYPSE
     cards: 7
-    points: 12
+    points: 14
     composition: [NOUN, NOUN, NOUN, NOUN, NOUN, NOUN, NOUN]
     display: "7 same type"

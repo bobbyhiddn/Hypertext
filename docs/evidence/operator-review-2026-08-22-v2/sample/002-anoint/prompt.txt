@@ -1,0 +1,45 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #002
+WORD: ANOINT
+GLOSS: To ceremonially apply oil to someone or something as a sign of consecration or divine selection.
+TYPE: VERB (top-left navy circle must contain WHITE pencil icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+STAT COUNT CHECK (AUTHORITATIVE): Draw five circles in each row. Reading left to right,
+fill exactly 4 LORE circles, exactly 4 CONTEXT circles, and
+exactly 3 COMPLEXITY circles. Do not infer or copy stat counts from
+any reference image; these numeric values override the references.
+
+ABILITY:
+Choose a NAME in your Pages. It is also considered a TITLE until your next turn.
+
+VERSES:
+OT: 1 Samuel 16:13 — "Then Samuel took the horn of oil and anointed him in the midst of his brothers. And the Spirit of the LORD rushed upon David from that day forward."
+NT: Acts 10:38 — "how God anointed Jesus of Nazareth with the Holy Spirit and with power. He went about doing good and healing all who were oppressed by the devil, for God was with him."
+
+LANGUAGES:
+Hebrew: מָשַׁח - mashach - Exod 30:30 • Lev 8:12 • 1 Kgs 1:39 • Ps 23:5 • Ps 45:7 • Isa 61:1
+Greek: χρίω - chrió - Luke 4:18 • 2 Cor 1:21 • Heb 1:9 • Jas 5:14 • 1 John 2:20 • 1 John 2:27
+
+TRIVIA:
+• The Hebrew word 'Mashiach' (Messiah) and the Greek 'Christos' (Christ) both mean 'Anointed One'.
+• The sacred anointing oil described in Exodus 30 was a specific blend of myrrh, cinnamon, calamus, cassia, and olive oil.
+• Anointing was used to consecrate not only people like priests and kings, but also objects such as the Tabernacle and its furnishings.
+
+ART: A single drop of golden, viscous oil falls from the mouth of an ornate ceramic horn, about to land on the head of a humble figure kneeling below. Beams of light pierce through a dusty room, illuminating the moment. The scene is solemn and significant, rendered in a chiaroscuro style.
+
+FOOTER: Demo
+
+Output only the card image.
+
+
+REVISION INSTRUCTIONS:
+Change only the top-right rarity badge: render UNCOMMON in cream white with exactly two solid white diamonds outlined in navy. Preserve every other pixel, all text, art, geometry, stats, and panels.

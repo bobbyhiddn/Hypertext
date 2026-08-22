@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "gate": "visual_acceptance",
+  "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+  "build_commit": "f334220",
+  "decision": "reject",
+  "operator_visual_approval_required": true,
+  "summary": {
+    "expected_cells": 20,
+    "present_cells": 20,
+    "accepted": 0,
+    "rejected": 20
+  },
+  "matrix_order": {
+    "rows": [
+      "noun",
+      "verb",
+      "adjective",
+      "name",
+      "title"
+    ],
+    "columns": [
+      "common",
+      "uncommon",
+      "rare",
+      "glorious"
+    ]
+  },
+  "global_findings": [
+    "All 20 candidates are complete raster files with recorded source blobs, but all are full-frame Gemini redraws rather than controlled BASE + TYPE + RARITY compositions.",
+    "Manifest omits required type/rarity masks, mask hashes, base landmarks, witness declarations, and determinism evidence.",
+    "checks.json covers only input blobs, cardinality, raster decode, canonical immutability, and contact-sheet presence; it does not satisfy the 13-check acceptance contract.",
+    "Visible border, typography, header, panel, and footer changes occur across the matrix; these are prohibited outside controlled masks."
+  ],
+  "cells": [
+    {
+      "cell": 1,
+      "row": 1,
+      "column": 1,
+      "type": "noun",
+      "rarity": "common",
+      "candidate": "noun__common.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 2,
+      "row": 1,
+      "column": 2,
+      "type": "noun",
+      "rarity": "uncommon",
+      "candidate": "noun__uncommon.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 3,
+      "row": 1,
+      "column": 3,
+      "type": "noun",
+      "rarity": "rare",
+      "candidate": "noun__rare.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "Rare top-right cost is generative rather than exact controlled-region composition"
+      ]
+    },
+    {
+      "cell": 4,
+      "row": 1,
+      "column": 4,
+      "type": "noun",
+      "rarity": "glorious",
+      "candidate": "noun__glorious.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "incorrect Glorious top-right cost: exactly two card icons are not legibly preserved"
+      ]
+    },
+    {
+      "cell": 5,
+      "row": 2,
+      "column": 1,
+      "type": "verb",
+      "rarity": "common",
+      "candidate": "verb__common.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 6,
+      "row": 2,
+      "column": 2,
+      "type": "verb",
+      "rarity": "uncommon",
+      "candidate": "verb__uncommon.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 7,
+      "row": 2,
+      "column": 3,
+      "type": "verb",
+      "rarity": "rare",
+      "candidate": "verb__rare.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "type label/icon identity drifts to NOUN",
+        "Rare top-right cost is generative rather than exact controlled-region composition"
+      ]
+    },
+    {
+      "cell": 8,
+      "row": 2,
+      "column": 4,
+      "type": "verb",
+      "rarity": "glorious",
+      "candidate": "verb__glorious.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "type label/icon identity drifts to NOUN",
+        "incorrect Glorious top-right cost: exactly two card icons are not legibly preserved"
+      ]
+    },
+    {
+      "cell": 9,
+      "row": 3,
+      "column": 1,
+      "type": "adjective",
+      "rarity": "common",
+      "candidate": "adjective__common.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 10,
+      "row": 3,
+      "column": 2,
+      "type": "adjective",
+      "rarity": "uncommon",
+      "candidate": "adjective__uncommon.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "type label identity drifts to NOUN"
+      ]
+    },
+    {
+      "cell": 11,
+      "row": 3,
+      "column": 3,
+      "type": "adjective",
+      "rarity": "rare",
+      "candidate": "adjective__rare.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "type label identity drifts to NOUN",
+        "Rare top-right cost is generative rather than exact controlled-region composition"
+      ]
+    },
+    {
+      "cell": 12,
+      "row": 3,
+      "column": 4,
+      "type": "adjective",
+      "rarity": "glorious",
+      "candidate": "adjective__glorious.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "incorrect Glorious top-right cost: exactly two card icons are not legibly preserved"
+      ]
+    },
+    {
+      "cell": 13,
+      "row": 4,
+      "column": 1,
+      "type": "name",
+      "rarity": "common",
+      "candidate": "name__common.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "wrong type icon: pencil substituted for feather quill"
+      ]
+    },
+    {
+      "cell": 14,
+      "row": 4,
+      "column": 2,
+      "type": "name",
+      "rarity": "uncommon",
+      "candidate": "name__uncommon.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "wrong type icon: pencil substituted for feather quill"
+      ]
+    },
+    {
+      "cell": 15,
+      "row": 4,
+      "column": 3,
+      "type": "name",
+      "rarity": "rare",
+      "candidate": "name__rare.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "wrong type icon: pencil substituted for feather quill",
+        "Rare top-right cost is generative rather than exact controlled-region composition"
+      ]
+    },
+    {
+      "cell": 16,
+      "row": 4,
+      "column": 4,
+      "type": "name",
+      "rarity": "glorious",
+      "candidate": "name__glorious.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "wrong type icon: pencil substituted for feather quill",
+        "incorrect Glorious top-right cost: exactly two card icons are not legibly preserved"
+      ]
+    },
+    {
+      "cell": 17,
+      "row": 5,
+      "column": 1,
+      "type": "title",
+      "rarity": "common",
+      "candidate": "title__common.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 18,
+      "row": 5,
+      "column": 2,
+      "type": "title",
+      "rarity": "uncommon",
+      "candidate": "title__uncommon.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing"
+      ]
+    },
+    {
+      "cell": 19,
+      "row": 5,
+      "column": 3,
+      "type": "title",
+      "rarity": "rare",
+      "candidate": "title__rare.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "Rare top-right cost is generative rather than exact controlled-region composition"
+      ]
+    },
+    {
+      "cell": 20,
+      "row": 5,
+      "column": 4,
+      "type": "title",
+      "rarity": "glorious",
+      "candidate": "title__glorious.png",
+      "decision": "reject",
+      "reasons": [
+        "border and geometry drift outside controlled type/rarity regions",
+        "shared-pixel invariance, type isolation, rarity isolation, border registration, and geometry registration evidence missing",
+        "incorrect Glorious top-right cost: exactly two card icons are not legibly preserved"
+      ]
+    }
+  ]
+}

@@ -17,6 +17,8 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT / "package"))
 
+from hypertext.gemini.config import image_model
+
 try:
     from google import genai
     from google.genai import types
@@ -29,7 +31,7 @@ LOT_TEMPLATE = REPO_ROOT / "templates" / "lot" / "v001" / "base" / "template_102
 OUTPUT_DIR = REPO_ROOT / "templates" / "palettes"
 
 # Model (same as package/hypertext/gemini/style.py)
-MODEL = "gemini-3.1-flash-image-preview"
+MODEL = image_model()
 
 
 def _read_image_bytes(path: Path) -> bytes:

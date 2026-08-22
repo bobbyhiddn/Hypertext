@@ -13,6 +13,11 @@ LORE: {STAT_LORE}/5 filled
 CONTEXT: {STAT_CONTEXT}/5 filled
 COMPLEXITY: {STAT_COMPLEXITY}/5 filled
 
+STAT COUNT CHECK (AUTHORITATIVE): Draw five circles in each row. Reading left to right,
+fill exactly {STAT_LORE} LORE circles, exactly {STAT_CONTEXT} CONTEXT circles, and
+exactly {STAT_COMPLEXITY} COMPLEXITY circles. Do not infer or copy stat counts from
+any reference image; these numeric values override the references.
+
 ABILITY:
 {ABILITY_TEXT}
 

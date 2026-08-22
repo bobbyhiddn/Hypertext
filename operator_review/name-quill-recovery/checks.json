@@ -1,0 +1,47 @@
+{
+  "authoritative_reference": {
+    "commit": "4b26d8e",
+    "pass": true,
+    "path": "templates/card/v001/name/template_1024x1536.png",
+    "zones": {
+      "feather_body": 1387,
+      "lower_barbs": 879,
+      "shaft": 391,
+      "upper_barbs": 707
+    }
+  },
+  "complete_mask_anatomy": {
+    "bbox": [
+      70,
+      86,
+      118,
+      147
+    ],
+    "pass": true,
+    "pixels": 982,
+    "zones": {
+      "feather_body": 758,
+      "lower_barbs": 722,
+      "shaft": 279,
+      "upper_barbs": 285
+    }
+  },
+  "four_full_resolution_targets": {
+    "pass": true
+  },
+  "no_off_region_drift": {
+    "maximum": 0,
+    "pass": true
+  },
+  "no_tan_in_quill": {
+    "maximum": 0,
+    "pass": true
+  },
+  "production_templates_untouched": {
+    "pass": true
+  },
+  "quill_core_neutral_white": {
+    "note": "remaining selected pixels are antialiased white/navy boundaries; visible warm tan is checked separately",
+    "pass": true
+  }
+}

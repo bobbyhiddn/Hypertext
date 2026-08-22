@@ -1,0 +1,516 @@
+{
+  "schema_version": 1,
+  "status": "review-candidates-only",
+  "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+  "branch": "revival/gemini-migration-eval",
+  "model": "gemini-3.1-flash-image",
+  "request": {
+    "workflow": "hypertext.gemini.style.generate_with_styles",
+    "aspect_ratio": "2:3",
+    "image_size": "2K",
+    "response_modalities": [
+      "IMAGE"
+    ],
+    "reference_count": 5
+  },
+  "normalization": {
+    "source": "raw Gemini response",
+    "format": "PNG",
+    "mode": "RGB",
+    "width": 848,
+    "height": 1264,
+    "resampling": "Pillow LANCZOS"
+  },
+  "inputs": {
+    "templates/card/v001/base/template_1024x1536.png": {
+      "blob": "298d816b4b2fba1a249ae725a3cf26f7df75ced2",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/base/template_1024x1536.png"
+    },
+    "templates/card/v001/noun/template_1024x1536.png": {
+      "blob": "a2f073a4915e9de3b7e11a73edbfc8c0b3f0b22f",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/noun/template_1024x1536.png"
+    },
+    "templates/card/v001/verb/template_1024x1536.png": {
+      "blob": "860093ebd217df992c188f310f6adaf9a9c91f82",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/verb/template_1024x1536.png"
+    },
+    "templates/card/v001/adjective/template_1024x1536.png": {
+      "blob": "51337d323ab8a678099315fc10bc9f33522b0bdb",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/adjective/template_1024x1536.png"
+    },
+    "templates/card/v001/name/template_1024x1536.png": {
+      "blob": "9ef51b1290cc1fa4de96e42f5d8115419523b813",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/name/template_1024x1536.png"
+    },
+    "templates/card/v001/title/template_1024x1536.png": {
+      "blob": "eb90f0d4a240c2569cae71d3cb4fe6dd3ef84cc5",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/title/template_1024x1536.png"
+    },
+    "templates/card/v001/common/template_1024x1536.png": {
+      "blob": "7b189da0ad8187dae72399615f9e032f028c5f19",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/common/template_1024x1536.png"
+    },
+    "templates/card/v001/uncommon/template_1024x1536.png": {
+      "blob": "bc170f216df5e45d4875b2f5170097ba32d807a2",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/uncommon/template_1024x1536.png"
+    },
+    "templates/card/v001/rare/template_1024x1536.png": {
+      "blob": "c57f280e34ff016e3e579e15b364689a8c010041",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/rare/template_1024x1536.png"
+    },
+    "templates/card/v001/glorious/template_1024x1536.png": {
+      "blob": "5adef84efec7fa5ac3855869e6f9f08062cf15c6",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/card/v001/glorious/template_1024x1536.png"
+    },
+    "templates/palettes/type_symbols_palette.png": {
+      "blob": "078be48cf5de2da4460494ee1a1a61a45f4ae04f",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/palettes/type_symbols_palette.png"
+    },
+    "templates/palettes/rarity_diamonds_palette.png": {
+      "blob": "77b370eec358476894a9fe5ec73a4c92e1c901c4",
+      "snapshot": "operator_review/constructed/e50961ad0f4d/references/templates/palettes/rarity_diamonds_palette.png"
+    }
+  },
+  "outputs": [
+    {
+      "cell": 1,
+      "type": "noun",
+      "rarity": "common",
+      "candidate": "operator_review/constructed/e50961ad0f4d/noun__common.png",
+      "candidate_sha256": "ced356d8c8a147c66de971dd8806ee4de1ff1119a61ee2ae78670f17f97bb320",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/noun__common/gemini.png",
+      "raw_sha256": "8f00a37e5955ce49d7150153ff8cbd81cf23a8e9c9a8af7c99651650d30b226f",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/noun__common/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/noun__common/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/noun/template_1024x1536.png",
+        "templates/card/v001/common/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 2,
+      "type": "noun",
+      "rarity": "uncommon",
+      "candidate": "operator_review/constructed/e50961ad0f4d/noun__uncommon.png",
+      "candidate_sha256": "7f76e788f4d016410dda423deb287ca112c9cd7c47ab83efa28a4faa18e5281a",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/noun__uncommon/gemini.png",
+      "raw_sha256": "0c9326982c65774d5265a868936e398f8939ef0a0c239ba889eca94854060cc9",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/noun__uncommon/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/noun__uncommon/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/noun/template_1024x1536.png",
+        "templates/card/v001/uncommon/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 3,
+      "type": "noun",
+      "rarity": "rare",
+      "candidate": "operator_review/constructed/e50961ad0f4d/noun__rare.png",
+      "candidate_sha256": "382369c78ec90fb8db129be7874b3bcde48e96bd7d5c6bbee41438ee4a58f5d5",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/noun__rare/gemini.png",
+      "raw_sha256": "fe92eade322221c5fd37423676041935ee579c8ae8e9e4b6eecb2e8326014d89",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/noun__rare/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/noun__rare/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/noun/template_1024x1536.png",
+        "templates/card/v001/rare/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 4,
+      "type": "noun",
+      "rarity": "glorious",
+      "candidate": "operator_review/constructed/e50961ad0f4d/noun__glorious.png",
+      "candidate_sha256": "c835eb4cbc8c600d57343759ba0187258a9f7316b64b0f95edd614563b26467d",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/noun__glorious/gemini.png",
+      "raw_sha256": "5085dd6622cd58543657616c37271a5d30f23e76f899661417484d009663955b",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/noun__glorious/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/noun__glorious/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/noun/template_1024x1536.png",
+        "templates/card/v001/glorious/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 5,
+      "type": "verb",
+      "rarity": "common",
+      "candidate": "operator_review/constructed/e50961ad0f4d/verb__common.png",
+      "candidate_sha256": "19b096844ba5d0ee5dee623856660fdea7700c417b21517cd7f6256945c87a7b",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/verb__common/gemini.png",
+      "raw_sha256": "d1e440249fdb5ad68d7d9b90648113096ca3a8c06d2c7b80ef65e54812593fda",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/verb__common/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/verb__common/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/verb/template_1024x1536.png",
+        "templates/card/v001/common/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 6,
+      "type": "verb",
+      "rarity": "uncommon",
+      "candidate": "operator_review/constructed/e50961ad0f4d/verb__uncommon.png",
+      "candidate_sha256": "4bbb389a957ff52a0b26d5aaf9098dcec0b4ebf981f1912d4a6363d9df8c667d",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/verb__uncommon/gemini.png",
+      "raw_sha256": "afbbf5852086c902a5f75d279f4013bfbb9111d2836476ffc940e8fa0d59fa07",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/verb__uncommon/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/verb__uncommon/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/verb/template_1024x1536.png",
+        "templates/card/v001/uncommon/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 7,
+      "type": "verb",
+      "rarity": "rare",
+      "candidate": "operator_review/constructed/e50961ad0f4d/verb__rare.png",
+      "candidate_sha256": "c35fea50136f88ac92564549ff7e2f89a51e1978a4681cc91945a8370970a52b",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/verb__rare/gemini.png",
+      "raw_sha256": "b06941d4c8f43378155aab927de75d1dd0deea7779b2f7aa93c27929444ef104",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/verb__rare/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/verb__rare/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/verb/template_1024x1536.png",
+        "templates/card/v001/rare/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 8,
+      "type": "verb",
+      "rarity": "glorious",
+      "candidate": "operator_review/constructed/e50961ad0f4d/verb__glorious.png",
+      "candidate_sha256": "60dd93787cb0dc5c5e44c844467e5cc0513b74b705eec509470c58c30c050a09",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/verb__glorious/gemini.png",
+      "raw_sha256": "8b8e1d93cca172396dd246ae3492df567d5cf9f07f2c25ebc890406b538db463",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/verb__glorious/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/verb__glorious/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/verb/template_1024x1536.png",
+        "templates/card/v001/glorious/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 9,
+      "type": "adjective",
+      "rarity": "common",
+      "candidate": "operator_review/constructed/e50961ad0f4d/adjective__common.png",
+      "candidate_sha256": "9a0b4bcd96c3c06c4d548209b4c1cfbf8f9ca2b4052b62d0274b1454d8ed6238",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/adjective__common/gemini.png",
+      "raw_sha256": "64c7c8bc50c458d1c6e658297d5ae3d55d5f9f7d8dd024b7508f36fa83fd1359",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/adjective__common/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/adjective__common/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/adjective/template_1024x1536.png",
+        "templates/card/v001/common/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 10,
+      "type": "adjective",
+      "rarity": "uncommon",
+      "candidate": "operator_review/constructed/e50961ad0f4d/adjective__uncommon.png",
+      "candidate_sha256": "efc7d2b5848fefdebff3895f34ff48bf51ee6b9b3ccf6b1af9cac6d70f611fe3",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/adjective__uncommon/gemini.png",
+      "raw_sha256": "53b0b342739709ca596ad1851d143a59f5f872e8f905ff2b01de217a1d32b08a",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/adjective__uncommon/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/adjective__uncommon/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/adjective/template_1024x1536.png",
+        "templates/card/v001/uncommon/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 11,
+      "type": "adjective",
+      "rarity": "rare",
+      "candidate": "operator_review/constructed/e50961ad0f4d/adjective__rare.png",
+      "candidate_sha256": "f240ffe03661f8b291767de0d4414ba13c97f158770c421067b8d068b9be6152",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/adjective__rare/gemini.png",
+      "raw_sha256": "79fff2491c617e4d527917ed0718e25368238d7c8b77cb69b29b74d287e61d88",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/adjective__rare/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/adjective__rare/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/adjective/template_1024x1536.png",
+        "templates/card/v001/rare/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 12,
+      "type": "adjective",
+      "rarity": "glorious",
+      "candidate": "operator_review/constructed/e50961ad0f4d/adjective__glorious.png",
+      "candidate_sha256": "35a0db06d54f148ba4e8c1f155efc299542f6edddd6c83059e71555362390545",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/adjective__glorious/gemini.png",
+      "raw_sha256": "8e8f6978369393fc904f38597d0109052acdbb31987aedf10ef4c44c398a388a",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/adjective__glorious/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/adjective__glorious/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/adjective/template_1024x1536.png",
+        "templates/card/v001/glorious/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 13,
+      "type": "name",
+      "rarity": "common",
+      "candidate": "operator_review/constructed/e50961ad0f4d/name__common.png",
+      "candidate_sha256": "2fcd8d487b20de60d4aaf8d804ffe2747a7c52d1fa8b3ba3dbe9480582967929",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/name__common/gemini.png",
+      "raw_sha256": "bd633532522475672719df61ffe65a57f9e301eafa2d2979953a4db20f6f8d95",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/name__common/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/name__common/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/name/template_1024x1536.png",
+        "templates/card/v001/common/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 14,
+      "type": "name",
+      "rarity": "uncommon",
+      "candidate": "operator_review/constructed/e50961ad0f4d/name__uncommon.png",
+      "candidate_sha256": "eec627e8ada03b4061aa814c25d6a386757b15379f4831d501d768e995f93173",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/name__uncommon/gemini.png",
+      "raw_sha256": "407b9205e277f7c0afdfb709fce29e1015cddeca7ebda5a45766b0459c5bf5fd",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/name__uncommon/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/name__uncommon/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/name/template_1024x1536.png",
+        "templates/card/v001/uncommon/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 15,
+      "type": "name",
+      "rarity": "rare",
+      "candidate": "operator_review/constructed/e50961ad0f4d/name__rare.png",
+      "candidate_sha256": "b0c554773c3fcd43aebcda01c87801b916bef25d5d30e5c8c65bf00c9092ad3c",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/name__rare/gemini.png",
+      "raw_sha256": "3874e1e4fc1cd93ff880c30c7aaa06ded605d3549d68e13d5b90b7dbb9babb8c",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/name__rare/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/name__rare/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/name/template_1024x1536.png",
+        "templates/card/v001/rare/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 16,
+      "type": "name",
+      "rarity": "glorious",
+      "candidate": "operator_review/constructed/e50961ad0f4d/name__glorious.png",
+      "candidate_sha256": "6bd24542409817f758a95daf11bdb8babab1d9cf0b22dfbff0f0a264285a9c40",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/name__glorious/gemini.png",
+      "raw_sha256": "642ec903abeea74efbb1ecf24fcc15e52c2ee564747e790d7429f881a7fe7a23",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/name__glorious/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/name__glorious/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/name/template_1024x1536.png",
+        "templates/card/v001/glorious/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 17,
+      "type": "title",
+      "rarity": "common",
+      "candidate": "operator_review/constructed/e50961ad0f4d/title__common.png",
+      "candidate_sha256": "f9438996671091dd51314a91f65cbacd17280691e382f0bdd9b16dc47f498d0b",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/title__common/gemini.png",
+      "raw_sha256": "24c442a1e72a173525e3324ecbf509b15163a0721766a5573de01b1b49811cb0",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/title__common/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/title__common/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/title/template_1024x1536.png",
+        "templates/card/v001/common/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 18,
+      "type": "title",
+      "rarity": "uncommon",
+      "candidate": "operator_review/constructed/e50961ad0f4d/title__uncommon.png",
+      "candidate_sha256": "267e570c886c777c0f3295955dff5a174704aef6a1d3ea78e38daca56ade718b",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/title__uncommon/gemini.png",
+      "raw_sha256": "c28696b8bc6caa240dd670be3c396f7836733e635bfd9dd5dc67e68a2992be1c",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/title__uncommon/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/title__uncommon/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/title/template_1024x1536.png",
+        "templates/card/v001/uncommon/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 19,
+      "type": "title",
+      "rarity": "rare",
+      "candidate": "operator_review/constructed/e50961ad0f4d/title__rare.png",
+      "candidate_sha256": "de9e77d01e3e673496d6178c68fea91942a91d6ffe11fd588a09006b21860ad9",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/title__rare/gemini.png",
+      "raw_sha256": "a96f6e7c0d559f7647f1b50abb7842e8f7b72e6a11deebc5e41f523d2ec61bc6",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/title__rare/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/title__rare/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/title/template_1024x1536.png",
+        "templates/card/v001/rare/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    },
+    {
+      "cell": 20,
+      "type": "title",
+      "rarity": "glorious",
+      "candidate": "operator_review/constructed/e50961ad0f4d/title__glorious.png",
+      "candidate_sha256": "395cde80f690b2ec01ca6c7993683e6064418cb132c00d4f3d562a4a71fe9f82",
+      "raw": "operator_review/constructed/e50961ad0f4d/raw/title__glorious/gemini.png",
+      "raw_sha256": "9ebccb2e778c93e2d14cb8c3c49c69fc6a081171f5b56c5b9f206b014458e77c",
+      "generation": "operator_review/constructed/e50961ad0f4d/raw/title__glorious/generation.json",
+      "prompt": "operator_review/constructed/e50961ad0f4d/raw/title__glorious/prompt.txt",
+      "references": [
+        "templates/card/v001/base/template_1024x1536.png",
+        "templates/card/v001/title/template_1024x1536.png",
+        "templates/card/v001/glorious/template_1024x1536.png",
+        "templates/palettes/type_symbols_palette.png",
+        "templates/palettes/rarity_diamonds_palette.png"
+      ],
+      "width": 848,
+      "height": 1264,
+      "mode": "RGB",
+      "format": "PNG"
+    }
+  ]
+}

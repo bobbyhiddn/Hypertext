@@ -164,15 +164,9 @@ def _get_style_refs_for_template(
             versions_to_check = [current_version]
 
     for v in versions_to_check:
-        # 1. First, add the SUBTYPE-SPECIFIC template if it exists (and subtype != base)
-        #    This allows the model to see what the existing subtype looks like
-        if subtype != "base":
-            subtype_png = _get_subtype_dir(template_dir, v, subtype) / "template_1024x1536.png"
-            if subtype_png.exists():
-                style_refs.append(str(subtype_png))
-                _log(f"  Including existing {subtype} template as reference")
-
-        # 2. Then add the base template
+        # Every subtype is anchored to the same family base.  A rejected subtype
+        # must never become its own style reference: doing so compounds geometry,
+        # typography, and palette drift on each refinement.
         base_png = _get_subtype_dir(template_dir, v, "base") / "template_1024x1536.png"
         if base_png.exists():
             style_refs.append(str(base_png))
@@ -506,6 +500,11 @@ def phase_refine(
     with open(prompt_path, "r", encoding="utf-8") as f:
         base_prompt = f.read().strip()
 
+    contract_path = template_dir.parent / "visual-contract.md"
+    if contract_path.exists():
+        contract = contract_path.read_text(encoding="utf-8").strip()
+        base_prompt = f"{base_prompt}\n\nGOVERNING SHARED VISUAL CONTRACT:\n{contract}"
+
     # Parse revisions
     revisions = _parse_revise_form(revise_path)
     if revisions["rebuild"]:
@@ -601,6 +600,22 @@ def phase_refine(
         _log(f"ERROR: Output not created: {out_png}")
         return 1
 
+    # Gemini owns only bounded visual exceptions for Card subtypes.  Keep the
+    # shared deterministic content grid from the accepted base so a candidate
+    # cannot hallucinate art, verses, labels, or alternate panel geometry.
+    if template_type == "card" and subtype != "base":
+        from PIL import Image
+        base_png = _get_subtype_dir(template_dir, new_version, "base") / "template_1024x1536.png"
+        if base_png.exists():
+            with Image.open(base_png) as source:
+                normalized = source.convert("RGB")
+            with Image.open(out_png) as source:
+                candidate = source.convert("RGB")
+            normalized.paste(candidate.crop((0, 0, 1024, 82)), (0, 0))
+            normalized.paste(candidate.crop((18, 62, 190, 198)), (18, 62))
+            normalized.save(out_png, "PNG")
+            _log("Constrained candidate to subtype header exception regions")
+
     _log(f"Template generated: {out_png}")
 
     # Update meta with new version (only if version actually changed)
@@ -625,6 +640,11 @@ def phase_refine(
 
     # Reset revision fields after successful refinement (ephemeral changes)
     _reset_revision_fields(revise_path)
+
+    # Durable flags clear only after a replacement passes the offline contract.
+    from hypertext.pipeline.template_audit import clear_resolved_flag
+    if clear_resolved_flag(template_type, subtype):
+        _log(f"Cleared resolved regeneration flag for {template_type}/{subtype}")
 
     # Copy clean revise.txt to new version folder for future refinements
     new_version_dir = _get_version_dir(template_dir, new_version)
@@ -1070,7 +1090,7 @@ def main() -> int:
     parser.add_argument(
         "--phase",
         required=True,
-        choices=["refine", "revert", "list", "compile", "describe", "rebuild"],
+        choices=["refine", "revert", "list", "compile", "describe", "rebuild", "audit"],
         help="Pipeline phase to run"
     )
     parser.add_argument(
@@ -1175,6 +1195,13 @@ def main() -> int:
             style_refs=args.style_refs,
             extra_refs=args.extra_refs,
         )
+    elif args.phase == "audit":
+        from hypertext.pipeline.template_audit import audit
+        results = audit(args.type)
+        for entry, failures in results:
+            status = "FLAGGED " + ", ".join(failures) if failures else "PASS"
+            _log(f"{entry['family']}/{entry['subtype']}: {status}")
+        return 1 if any(failures for _, failures in results) else 0
 
     return 0
 

@@ -1,0 +1,784 @@
+{
+  "assembly": {
+    "base_geometry": [
+      848,
+      1264
+    ],
+    "method": "historical-witness pixel projection constrained by declared masks",
+    "model_proposals_are_review_evidence_not_geometry_authority": true
+  },
+  "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+  "before_after_evidence": {
+    "comparison": "operator_review/constrained/e50961ad0f4d/before_after_contact_sheet.png",
+    "rejected_commit": "f334220",
+    "rejected_contact_sheet": "operator_review/constructed/e50961ad0f4d/contact_sheet.png"
+  },
+  "branch": "revival/gemini-migration-eval",
+  "edits": [
+    {
+      "box": [
+        51,
+        77,
+        134,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/type/noun/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_example_face.png",
+      "key": "noun",
+      "kind": "type",
+      "mask": "masks/type.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/type/noun/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/type/noun/gemini_raw.png",
+      "raw_output_sha256": "7f10a68d19253ff51b6ee14438e6d0092756ca7a950584eed09d571f33a44a5e",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/type/noun/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/type/noun/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_witness.png"
+    },
+    {
+      "box": [
+        51,
+        77,
+        134,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/type/verb/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_example_face.png",
+      "key": "verb",
+      "kind": "type",
+      "mask": "masks/type.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/type/verb/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/type/verb/gemini_raw.png",
+      "raw_output_sha256": "cd143f00eb4d82c2e28a9a3f008bc61b76a15eafbde5e19ac98b43096c6ddd11",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/type/verb/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/type/verb/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_witness.png"
+    },
+    {
+      "box": [
+        51,
+        77,
+        134,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_example_face.png",
+      "key": "adjective",
+      "kind": "type",
+      "mask": "masks/type.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/gemini_raw.png",
+      "raw_output_sha256": "d81a66ff8ab689129eddceaa0dc848dd497fc17ca949cb311bec9146cab244d8",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_witness.png"
+    },
+    {
+      "box": [
+        51,
+        77,
+        134,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/type/name/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_example_face.png",
+      "key": "name",
+      "kind": "type",
+      "mask": "masks/type.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/type/name/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/type/name/gemini_raw.png",
+      "raw_output_sha256": "0c6bb08e537d7d2a4ec90c05160aedc6aaf84a65f6e74479a1b083f45390b9d7",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/type/name/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/type/name/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_witness.png"
+    },
+    {
+      "box": [
+        51,
+        77,
+        134,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/type/title/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_example_face.png",
+      "key": "title",
+      "kind": "type",
+      "mask": "masks/type.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/type/title/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/type/title/gemini_raw.png",
+      "raw_output_sha256": "8d915431c40e7d9cdcf41e4ba4405fd4cac6df5000950240796d6731e5d9e47e",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/type/title/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/type/title/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
+    },
+    {
+      "box": [
+        650,
+        10,
+        838,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/historical_example_face.png",
+      "key": "common",
+      "kind": "rarity",
+      "mask": "masks/rarity.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/gemini_raw.png",
+      "raw_output_sha256": "54409242cf1f2bf7696f763e881d685d999916294d377f3f050b8b611afd1926",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/rarity/common/historical_witness.png"
+    },
+    {
+      "box": [
+        650,
+        10,
+        838,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/historical_example_face.png",
+      "key": "uncommon",
+      "kind": "rarity",
+      "mask": "masks/rarity.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/gemini_raw.png",
+      "raw_output_sha256": "e5788a96da053723f81e299a33e5876d8f0f0d5836c90f1b44b07b9830b3ab4d",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/rarity/uncommon/historical_witness.png"
+    },
+    {
+      "box": [
+        650,
+        10,
+        838,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/historical_example_face.png",
+      "key": "rare",
+      "kind": "rarity",
+      "mask": "masks/rarity.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/gemini_raw.png",
+      "raw_output_sha256": "fb3829d0b9b6ddc9978b17b18184feaecb587548c4b3b35f83682cd7339ace6d",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/rarity/rare/historical_witness.png"
+    },
+    {
+      "box": [
+        650,
+        10,
+        838,
+        162
+      ],
+      "generation_metadata": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/generation.json",
+      "historical_example_face": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/historical_example_face.png",
+      "key": "glorious",
+      "kind": "rarity",
+      "mask": "masks/rarity.png",
+      "prompt": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/prompt.txt",
+      "raw_output": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/gemini_raw.png",
+      "raw_output_sha256": "1164d2cc9105811fcac7306afa60acf3a674d910c8714cb4bc0b15451d73cec0",
+      "request": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/request.json",
+      "target": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/target.png",
+      "witness": "operator_review/constrained/e50961ad0f4d/edits/rarity/glorious/historical_witness.png"
+    }
+  ],
+  "inputs": {
+    "templates/card/v001/adjective/template_1024x1536.png": {
+      "blob": "51337d323ab8a678099315fc10bc9f33522b0bdb",
+      "sha256": "c644e87cf0492c8c1b2c355534ff1fb30dd0f676a386497facef28d130fda10e",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/adjective/template_1024x1536.png"
+    },
+    "templates/card/v001/base/template_1024x1536.png": {
+      "blob": "298d816b4b2fba1a249ae725a3cf26f7df75ced2",
+      "sha256": "16eac7e1472afdf78fb6b788c7abe65eea5ba45143fcec0407f270a4dc5eff5a",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/base/template_1024x1536.png"
+    },
+    "templates/card/v001/common/template_1024x1536.png": {
+      "blob": "7b189da0ad8187dae72399615f9e032f028c5f19",
+      "sha256": "6faf6802ba9028dc28c10ec0874c0b79678a2ee8956b52df15557539cfc73da2",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/common/template_1024x1536.png"
+    },
+    "templates/card/v001/glorious/template_1024x1536.png": {
+      "blob": "5adef84efec7fa5ac3855869e6f9f08062cf15c6",
+      "sha256": "b5a5bb101862210086a81fc88b6e4ff13e73d3beb89946da207c837e8373f0d0",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/glorious/template_1024x1536.png"
+    },
+    "templates/card/v001/name/template_1024x1536.png": {
+      "blob": "9ef51b1290cc1fa4de96e42f5d8115419523b813",
+      "sha256": "045fde4c2a7d4e32760f092665d146b19e84e9d8cddcf2e3af79b0cce9dc0b46",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/name/template_1024x1536.png"
+    },
+    "templates/card/v001/noun/template_1024x1536.png": {
+      "blob": "a2f073a4915e9de3b7e11a73edbfc8c0b3f0b22f",
+      "sha256": "01a07e9ee54f89f08491fddd9e85cd00979e0ce551f16336d6a0f6a5addfbad0",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/noun/template_1024x1536.png"
+    },
+    "templates/card/v001/rare/template_1024x1536.png": {
+      "blob": "c57f280e34ff016e3e579e15b364689a8c010041",
+      "sha256": "034b6e18e7b535e2c1b0d1fa1164b8004b113ea645473077e86ad62783229a3f",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/rare/template_1024x1536.png"
+    },
+    "templates/card/v001/title/template_1024x1536.png": {
+      "blob": "eb90f0d4a240c2569cae71d3cb4fe6dd3ef84cc5",
+      "sha256": "f9d6069746eeb3dece95469fe3e604b4d022492213eb7060586401f3a36ce6fb",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/title/template_1024x1536.png"
+    },
+    "templates/card/v001/uncommon/template_1024x1536.png": {
+      "blob": "bc170f216df5e45d4875b2f5170097ba32d807a2",
+      "sha256": "d993dd8ea76da0e4c1141a8479f32d301923b1cb522fdadb2ede842b355ca000",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/uncommon/template_1024x1536.png"
+    },
+    "templates/card/v001/verb/template_1024x1536.png": {
+      "blob": "860093ebd217df992c188f310f6adaf9a9c91f82",
+      "sha256": "f2c797fbf8b5b84530aeeb7177af61f40844beebb8fa0fcab21dd6a559383339",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/card/v001/verb/template_1024x1536.png"
+    },
+    "templates/example_cards/001-grace/meta.yml": {
+      "blob": "9908b40ed83d9e6b01d609396d7fbd6099aa5c25",
+      "role": "matrix semantic/visual witness",
+      "sha256": "c946b3c0b682826f693b961df36f893a2c1f0308ee299a0b1ca8fed7ddf0d197",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/001-grace/meta.yml"
+    },
+    "templates/example_cards/001-grace/outputs/card_1024x1536.png": {
+      "blob": "6e0799ecfb272915757dd421eec1340c9217c33b",
+      "role": "matrix semantic/visual witness",
+      "sha256": "e4af9c36ac164b960c088ce0f4ec1b90947e585045279cd7006f867a9a105518",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/001-grace/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/002-covenant/meta.yml": {
+      "blob": "5b7da12a22f38e5ea5af0575e6e583e4a922f7c3",
+      "role": "matrix semantic/visual witness",
+      "sha256": "a3be0ec918c6b80745650ed56829950dfc020c0b6e6d3c599bc70e3ce6c5205d",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/002-covenant/meta.yml"
+    },
+    "templates/example_cards/002-covenant/outputs/card_1024x1536.png": {
+      "blob": "64ce0912d1e8be999b9461cee68d5702735af516",
+      "role": "matrix semantic/visual witness",
+      "sha256": "9a3d0b7cc53a6028f890befe4358e8d7966505353aa61fbf4f3ab99523db9e30",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/002-covenant/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/003-wisdom/meta.yml": {
+      "blob": "cb6e70c368234f3d611478a60bf7c3e30f19ba16",
+      "role": "matrix semantic/visual witness",
+      "sha256": "4966de90ba9f36919c14f217e3f0d866909162e233cdab60a46b13d0df55204e",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/003-wisdom/meta.yml"
+    },
+    "templates/example_cards/003-wisdom/outputs/card_1024x1536.png": {
+      "blob": "102a8c303b27b30a2f7f7d2b900ac28f8ed5e6f2",
+      "role": "matrix semantic/visual witness",
+      "sha256": "93d9009bcef4f41d9bef66af2b9be2dad92b2a28d14cbdcc7704b319f8211a2d",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/003-wisdom/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/004-glory/meta.yml": {
+      "blob": "ce9f877b7b2e323446c1518deef612e1c9ea287e",
+      "role": "matrix semantic/visual witness",
+      "sha256": "2b0487e8d8dc52c21e7811649dc5b548cd616c1d52a5c04bf8d23e214bdd0bc0",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/004-glory/meta.yml"
+    },
+    "templates/example_cards/004-glory/outputs/card_1024x1536.png": {
+      "blob": "48cc4e29f0140bad8cfb2546f2bfd8e4e27e0d39",
+      "role": "matrix semantic/visual witness",
+      "sha256": "9642a0eb2f3b2f17a3dcb3781caaf8bd13a72e97dae84e432b8a132834e5fc59",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/004-glory/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/005-redeem/meta.yml": {
+      "blob": "1a2dd5815536f28be0f94b18682593d622a1cf6d",
+      "role": "matrix semantic/visual witness",
+      "sha256": "76f4188718f78cf86ed27b708161dd5bb95089b05aa99ca4ae74818e5db32603",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/005-redeem/meta.yml"
+    },
+    "templates/example_cards/005-redeem/outputs/card_1024x1536.png": {
+      "blob": "636823d0b3e401d5e631b6997379759f2e0d8c94",
+      "role": "matrix semantic/visual witness",
+      "sha256": "cde07a9c28dca684fa3bac1b961d2cccde3b15172c1a3759fd3133cdbeb668a0",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/005-redeem/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/006-forgive/meta.yml": {
+      "blob": "08cb780fbca021aac606a6ea802ba0f34388e3c9",
+      "role": "matrix semantic/visual witness",
+      "sha256": "8cef6231416bc1d567e4b8219649c82ec98d2ba38f8f1a14326f1248949d8ce0",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/006-forgive/meta.yml"
+    },
+    "templates/example_cards/006-forgive/outputs/card_1024x1536.png": {
+      "blob": "55afc3f438c63dd9ea5f4bd4c3aab51bcc73d505",
+      "role": "matrix semantic/visual witness",
+      "sha256": "920fb4060cd36619630f8e845b4a17ee0203fd0f9781fe435eb1a00722c014d2",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/006-forgive/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/007-sanctify/meta.yml": {
+      "blob": "ca0e22bebfe331c6188e663b5931e983a945811f",
+      "role": "matrix semantic/visual witness",
+      "sha256": "73ae4ad30148f35817235a9c16b8763db7a192d3ecb844c7443c235ca86a5c3e",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/007-sanctify/meta.yml"
+    },
+    "templates/example_cards/007-sanctify/outputs/card_1024x1536.png": {
+      "blob": "d861d4759cd561fa603bc8b14d00e409517c1c95",
+      "role": "matrix semantic/visual witness",
+      "sha256": "fd596550837bd9818954b4fce5cf5485f601f3ee9d08a042986aa5d7e0a71c14",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/007-sanctify/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/008-bless/meta.yml": {
+      "blob": "93d87602d0d5429912ce00eaa6cdd6f3d7a1d28c",
+      "role": "matrix semantic/visual witness",
+      "sha256": "ce8fa7c091a925d4887c8e3af9e8a6b46a1a2516eeda701080004718ea03cba7",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/008-bless/meta.yml"
+    },
+    "templates/example_cards/008-bless/outputs/card_1024x1536.png": {
+      "blob": "9fb6be8767d8c7bc3dbf98930cedb085fa16f8f3",
+      "role": "matrix semantic/visual witness",
+      "sha256": "2bdc9170cd2754cb0a9ea7557d49b0931aa64a749e7785b6b53a6fd42423e837",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/008-bless/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/009-holy/meta.yml": {
+      "blob": "5e829ad118e28c02cf87df10a81f011e00f41fa6",
+      "role": "matrix semantic/visual witness",
+      "sha256": "53b501aa3cc680c3853e138db45a21f9aadf79b53ddebf5d2233bb94f520d61c",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/009-holy/meta.yml"
+    },
+    "templates/example_cards/009-holy/outputs/card_1024x1536.png": {
+      "blob": "ed50eebbf1ba9f7a28a1cbceabe0709b3582c1a9",
+      "role": "matrix semantic/visual witness",
+      "sha256": "9ed42430982eec65bd8eec9b8bb1d0756a3407e81e653f8ee4dd2a9bf3eeb614",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/009-holy/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/010-righteous/meta.yml": {
+      "blob": "25d56ac72b69b3dd7e9f158591d085d97db6faf9",
+      "role": "matrix semantic/visual witness",
+      "sha256": "a9be96f70d13875002a1fc5be4d9866c4e40c2b39adf9b76845bb732e376a394",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/010-righteous/meta.yml"
+    },
+    "templates/example_cards/010-righteous/outputs/card_1024x1536.png": {
+      "blob": "b7f2321106fe7e51593179e5ec6012ac417357d7",
+      "role": "matrix semantic/visual witness",
+      "sha256": "4c45feb5192455ba42209342e4b26b4ac6b332d6b542068a9b12fafd70226483",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/010-righteous/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/011-eternal/meta.yml": {
+      "blob": "9bb11d476186cd4d02b7db42e342631e16b354f4",
+      "role": "matrix semantic/visual witness",
+      "sha256": "f8acd3a4ec58a21305781c3df3f55deb0e9ebd6103c6a26493e053d6bba13ae3",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/011-eternal/meta.yml"
+    },
+    "templates/example_cards/011-eternal/outputs/card_1024x1536.png": {
+      "blob": "413b468d05ec9a4cda9b8740e4e43c28f4cf8cea",
+      "role": "matrix semantic/visual witness",
+      "sha256": "0897f2913084725571816bab65c3b7e0687d0d4a82bead3d76203e2548b9a952",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/011-eternal/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/012-sacred/meta.yml": {
+      "blob": "56a8199407cb5b06465563b8701eea32acfc4263",
+      "role": "matrix semantic/visual witness",
+      "sha256": "2e9f4f3690cfd2ae560db9d631b4e2819dc847c0801cefe44286c108a52f6210",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/012-sacred/meta.yml"
+    },
+    "templates/example_cards/012-sacred/outputs/card_1024x1536.png": {
+      "blob": "6db508bb42655b19ba415c57e944f99e25dcbf42",
+      "role": "matrix semantic/visual witness",
+      "sha256": "08c550ad1cb2eb159c97b80d595210915f51196b9ecaef8ab4d6c08459206346",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/012-sacred/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/013-moses/meta.yml": {
+      "blob": "9973d3f6426788fb56734bde257a009264329b8e",
+      "role": "matrix semantic/visual witness",
+      "sha256": "b7c271b57eb61036934ca9e5be692948cf5f44082a18068ac7c3e05e8f4d5fb6",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/013-moses/meta.yml"
+    },
+    "templates/example_cards/013-moses/outputs/card_1024x1536.png": {
+      "blob": "86bfb4250f11ef69be0a621685e35c5d891e0642",
+      "role": "matrix semantic/visual witness",
+      "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/013-moses/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/014-david/meta.yml": {
+      "blob": "41b48a3e08d983606a186738495c2f4a440958ef",
+      "role": "matrix semantic/visual witness",
+      "sha256": "d4b60734f49a6f3cedf08c7d85bb2902970fab88bc607fb2726aaa9f71f2c82d",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/014-david/meta.yml"
+    },
+    "templates/example_cards/014-david/outputs/card_1024x1536.png": {
+      "blob": "5cc5fb6bd136b1cf30c807bad155463ac6bada96",
+      "role": "matrix semantic/visual witness",
+      "sha256": "78753d89fd8179853960cfca30490c69cfc18d27e52439ceb84e41f8838d4e43",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/014-david/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/015-elijah/meta.yml": {
+      "blob": "d83ee38469f7a7325b1d7f4571f7c9464290397c",
+      "role": "matrix semantic/visual witness",
+      "sha256": "bd2ecad227346a957a0299142d477103054f7f577460c4984810664fe1350f3b",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/015-elijah/meta.yml"
+    },
+    "templates/example_cards/015-elijah/outputs/card_1024x1536.png": {
+      "blob": "6836c5dadb89c586e1e3036184b698c936077dc1",
+      "role": "matrix semantic/visual witness",
+      "sha256": "c88762c9d83f7641850c8de65e981e7e2a474270cb33c0885d31b86a7a3693e7",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/015-elijah/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/016-abraham/meta.yml": {
+      "blob": "10ed5b0402d4d4fd16872bb6f882b521aa26821f",
+      "role": "matrix semantic/visual witness",
+      "sha256": "291f800aeb18f9a5607255030cdb5a0609e77347c6d7bd34182c349ee647b543",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/016-abraham/meta.yml"
+    },
+    "templates/example_cards/016-abraham/outputs/card_1024x1536.png": {
+      "blob": "7cc3c1071579e1ca9c870b0ff72d5a8503569060",
+      "role": "matrix semantic/visual witness",
+      "sha256": "96d8b98ff65da6ba8fbafbcfeb6f6743133dc7ed45ef908288f374a23ea6804e",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/016-abraham/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/017-shepherd/meta.yml": {
+      "blob": "5d9365f5ad2bb944af119ad2b76d457c45c4004f",
+      "role": "matrix semantic/visual witness",
+      "sha256": "5c586a10ea889f76ba5bd405296a416a689e6aacb9a68ca45f8018b271ed7e12",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/017-shepherd/meta.yml"
+    },
+    "templates/example_cards/017-shepherd/outputs/card_1024x1536.png": {
+      "blob": "f46af028886834b13f13af8689a85d6b7648464e",
+      "role": "matrix semantic/visual witness",
+      "sha256": "d88f6b3e982a075b041515b970182aa137c7dba52adbc28b2bc7a8f0bb3ca3ce",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/017-shepherd/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/018-redeemer/meta.yml": {
+      "blob": "bda3271a728fbefff62ff10eaa0c36768147e06f",
+      "role": "matrix semantic/visual witness",
+      "sha256": "cca2290be2cbcb239fb10a6f5b1b5823c12ee726b96fe2e52f114d0e6394b452",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/018-redeemer/meta.yml"
+    },
+    "templates/example_cards/018-redeemer/outputs/card_1024x1536.png": {
+      "blob": "ecb50fc3f711926db0ad027cabd61a7d3594e6f3",
+      "role": "matrix semantic/visual witness",
+      "sha256": "624c235a5e283d4211de8bf1cffa9a4b7385ea7f875e41fa8acb2e3623d433de",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/018-redeemer/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/019-savior/meta.yml": {
+      "blob": "15f17e2e617ceb9e2a31ae7d4befb7f3d3cf82c9",
+      "role": "matrix semantic/visual witness",
+      "sha256": "3cfc7e9a9a20136bddb69e69137561b633537f39683f70b3d6f52897a30215c8",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/019-savior/meta.yml"
+    },
+    "templates/example_cards/019-savior/outputs/card_1024x1536.png": {
+      "blob": "03f4231e4d13f05bf07be2927417099c00a57f2d",
+      "role": "matrix semantic/visual witness",
+      "sha256": "4c8d778346719c5f27b9f031192419bbd570c8e4e0947e2b0ff3b200d8d20550",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/019-savior/outputs/card_1024x1536.png"
+    },
+    "templates/example_cards/020-messiah/meta.yml": {
+      "blob": "ea3624d83d6ab5b10bfd54ee83f0964941828e45",
+      "role": "matrix semantic/visual witness",
+      "sha256": "66ed872dd9fccaf80cede3d8e70932f12f6f6b32b88d9b5c3f9f6d315a93e3db",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/020-messiah/meta.yml"
+    },
+    "templates/example_cards/020-messiah/outputs/card_1024x1536.png": {
+      "blob": "2d34b03afcaf2dbea1611d3d3257b0e12ee59f31",
+      "role": "matrix semantic/visual witness",
+      "sha256": "fa6e07b4f25d3e2aad2eb2a5295887a0661e0255dabfcf88f42c73f98a7c09ab",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/historical_faces/020-messiah/outputs/card_1024x1536.png"
+    },
+    "templates/palettes/rarity_diamonds_palette.png": {
+      "blob": "77b370eec358476894a9fe5ec73a4c92e1c901c4",
+      "sha256": "f17ce0e4a3dae9ed453d1092c44a9f595e799f928c64cad273a545257a9ef890",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/palettes/rarity_diamonds_palette.png"
+    },
+    "templates/palettes/type_symbols_palette.png": {
+      "blob": "078be48cf5de2da4460494ee1a1a61a45f4ae04f",
+      "sha256": "34b34d6482892d98f3be2d7afb75824146d9984a92def5c382f650f20971e238",
+      "snapshot": "operator_review/constrained/e50961ad0f4d/references/templates/palettes/type_symbols_palette.png"
+    }
+  },
+  "isolated_corrections": {
+    "name_quill_white": {
+      "pixels_per_cell": 24,
+      "reason": "independent audit found tan quill; frozen specification requires white",
+      "replacement_rgb": [
+        255,
+        255,
+        255
+      ],
+      "scope": "four name-treatment cells only",
+      "selection": "RGB minimum >= 185 and channel spread <= 45 within type-circle bounds [38,68,151,174]",
+      "source": "historical name witness light-stroke silhouette"
+    }
+  },
+  "landmarks": {
+    "canvas": [
+      0,
+      0,
+      848,
+      1264
+    ],
+    "registration": "all base landmarks retained at 0 px translation and size delta"
+  },
+  "masks": {
+    "rarity": {
+      "bbox": [
+        658,
+        18,
+        830,
+        154
+      ],
+      "path": "operator_review/constrained/e50961ad0f4d/masks/rarity.png",
+      "pixels": 19814,
+      "sha256": "369c3595cccdc77f4a8211247f8520f40d4a9e2da997c782d9ac3155fc1417e3"
+    },
+    "type": {
+      "bbox": [
+        59,
+        85,
+        126,
+        154
+      ],
+      "path": "operator_review/constrained/e50961ad0f4d/masks/type.png",
+      "pixels": 3136,
+      "sha256": "f587d191efbeea165929acede2cceca7d0cdaebd8590ff42f91a0080ff9a4a20"
+    }
+  },
+  "outputs": [
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/noun__common.png",
+      "cell": 1,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "common",
+      "sha256": "47e19a03ede6ef65e724d8cf53267de6789fcfd7f74f2f35f9ad72f4ee6cb946",
+      "type": "noun",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/noun__uncommon.png",
+      "cell": 2,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "uncommon",
+      "sha256": "98c12eb50bb0ca44ce8dcdfb06745829d2ebec9898b6775390201f497083d977",
+      "type": "noun",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/noun__rare.png",
+      "cell": 3,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "rare",
+      "sha256": "84af23c8f5c782c1f89d649982ac7023f5ab1f456759156f1e501cb5319a8c10",
+      "type": "noun",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/noun__glorious.png",
+      "cell": 4,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "glorious",
+      "sha256": "418d915567e6c591891f7b5f5540be69edc871e1c812ae1328ac511e3dcf265a",
+      "type": "noun",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/verb__common.png",
+      "cell": 5,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "common",
+      "sha256": "c539263571476a880b37f7dc7eb40a7a7688481a2cf8775c616ec090a4241f94",
+      "type": "verb",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/verb__uncommon.png",
+      "cell": 6,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "uncommon",
+      "sha256": "a0c3657adbf57acad01a4a01b5f8c06aaa1effb39c4db5598d37aaee372e3dbd",
+      "type": "verb",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/verb__rare.png",
+      "cell": 7,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "rare",
+      "sha256": "17c57326712e3d88e2f4286da08722497a74e7c613dea238c8f548ea52c405c6",
+      "type": "verb",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/verb__glorious.png",
+      "cell": 8,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "glorious",
+      "sha256": "a9fff5a92b705b1b8addc14dac76801b064efc5e053ae7b32e53cb86d567c48a",
+      "type": "verb",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/adjective__common.png",
+      "cell": 9,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "common",
+      "sha256": "505455bb133b785d0ffc5d59f778a497692099d51d30956c40ce39a3b10211b7",
+      "type": "adjective",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/adjective__uncommon.png",
+      "cell": 10,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "uncommon",
+      "sha256": "f8c962cfaad3c8829e40b218aaf82fcc721cdee7dace261e5e3ff73bad1fef45",
+      "type": "adjective",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/adjective__rare.png",
+      "cell": 11,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "rare",
+      "sha256": "a847c9d7cfb8f1b6943e2e908af6bca06069a58b4baabcb80b1e8cecec9d8f77",
+      "type": "adjective",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/adjective__glorious.png",
+      "cell": 12,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "glorious",
+      "sha256": "5edb89b457cb9dfbff37af74e78b693c6fee4581c1696e6d1e33eb3ac2b70218",
+      "type": "adjective",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/name-quill-recovery/inputs/name__common.png",
+      "cell": 13,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "common",
+      "sha256": "fa8514eeb36cc8cb0c4f07d2aacc45697d01a74dcf6d809b3100aedc87c64bce",
+      "type": "name",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/name-quill-recovery/inputs/name__uncommon.png",
+      "cell": 14,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "uncommon",
+      "sha256": "67781e8ad11207ce459fc62499b347fe2fc73622de8e2f19862af2c2ff80b982",
+      "type": "name",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/name-quill-recovery/inputs/name__rare.png",
+      "cell": 15,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "rare",
+      "sha256": "d4432005296cb7ab6f6bcec7d0b412f7ed2422c95152081755d241d076a5dde5",
+      "type": "name",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/name-quill-recovery/inputs/name__glorious.png",
+      "cell": 16,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "glorious",
+      "sha256": "0034794216655defa1d9585cdc1761e7d77a7573ba6fd3f1d565c9de6edbe3ca",
+      "type": "name",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/title__common.png",
+      "cell": 17,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "common",
+      "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+      "type": "title",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/title__uncommon.png",
+      "cell": 18,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "uncommon",
+      "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+      "type": "title",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/title__rare.png",
+      "cell": 19,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "rare",
+      "sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+      "type": "title",
+      "width": 848
+    },
+    {
+      "candidate": "operator_review/constrained/e50961ad0f4d/title__glorious.png",
+      "cell": 20,
+      "changed_pixels_outside_declared_masks": 0,
+      "format": "PNG",
+      "height": 1264,
+      "mode": "RGB",
+      "rarity": "glorious",
+      "sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+      "type": "title",
+      "width": 848
+    }
+  ],
+  "rejected_build": "f334220",
+  "schema_version": 2,
+  "status": "review-candidates-only"
+}

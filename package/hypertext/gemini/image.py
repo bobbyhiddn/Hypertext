@@ -6,7 +6,6 @@ without style references. For style-referenced generation,
 use hypertext.gemini.style instead.
 """
 
-import base64
 import json
 import os
 import random
@@ -15,7 +14,11 @@ import time
 import urllib.error
 import urllib.request
 
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent"
+from hypertext.gemini.config import image_endpoint, image_model
+from hypertext.gemini.image_contract import (
+    MAX_ATTEMPTS, ImageContractError, atomic_write_image, classify_error,
+    decode_and_validate, record_failure, record_success, validate_request,
+)
 
 
 def _parse_retry_after_seconds(headers) -> int | None:
@@ -47,6 +50,7 @@ def generate_image(
     *,
     aspect_ratio: str = "2:3",
     image_size: str = "2K",
+    model: str | None = None,
 ) -> None:
     """Generate an image from a text prompt using Gemini.
 
@@ -59,6 +63,8 @@ def generate_image(
     Raises:
         RuntimeError: If the API call fails or no image is returned.
     """
+    validate_request(aspect_ratio, image_size)
+    model = model or image_model()
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GEMINI_TEXT_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY (or GEMINI_TEXT_API_KEY) env var is not set.")
@@ -86,13 +92,13 @@ def generate_image(
     }
 
     req = urllib.request.Request(
-        GEMINI_ENDPOINT,
+        image_endpoint(model),
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json", "x-goog-api-key": api_key},
         method="POST",
     )
 
-    max_attempts = int(os.environ.get("GEMINI_MAX_ATTEMPTS", "6"))
+    max_attempts = min(MAX_ATTEMPTS, max(1, int(os.environ.get("GEMINI_MAX_ATTEMPTS", str(MAX_ATTEMPTS)))))
     base_delay_s = float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2"))
     timeout_s = float(os.environ.get("GEMINI_HTTP_TIMEOUT_S", "120"))
 
@@ -102,15 +108,17 @@ def generate_image(
 
     for attempt in range(1, max_attempts + 1):
         try:
+            request_started = time.monotonic()
             with urllib.request.urlopen(req, timeout=timeout_s) as resp:
                 raw = resp.read().decode("utf-8")
                 data = json.loads(raw)
+            latency_ms = round((time.monotonic() - request_started) * 1000)
             last_error = None
             break
         except urllib.error.HTTPError as e:
             body = _read_http_error_body(e)
             retry_after = _parse_retry_after_seconds(getattr(e, "headers", None))
-            retriable = e.code in (429, 500, 502, 503, 504)
+            category, status, retriable = classify_error(e)
 
             if retriable and attempt < max_attempts:
                 delay = retry_after if retry_after is not None else (base_delay_s * (2 ** (attempt - 1)))
@@ -128,9 +136,12 @@ def generate_image(
             msg = f"Gemini request failed with HTTP {e.code}: {e.reason}"
             if body:
                 msg += f"\nBody (truncated): {body[:2000]}"
+            record_failure(out_path, model=model, category=category, attempts=attempt,
+                           reference_count=0, status_code=status)
             raise RuntimeError(msg) from e
         except urllib.error.URLError as e:
-            if attempt < max_attempts:
+            category, status, retriable = classify_error(e)
+            if retriable and attempt < max_attempts:
                 delay = base_delay_s * (2 ** (attempt - 1)) + random.random()
                 print(
                     f"Gemini request failed with URLError: {e}. Retrying in {delay:.1f}s (attempt {attempt}/{max_attempts}).",
@@ -139,30 +150,46 @@ def generate_image(
                 time.sleep(delay)
                 last_error = e
                 continue
-            raise
+            record_failure(out_path, model=model, category=category, attempts=attempt,
+                           reference_count=0, status_code=status)
+            raise RuntimeError("Gemini network request failed") from e
 
     if last_error is not None or data is None:
+        category, status, _ = classify_error(last_error or RuntimeError())
+        record_failure(out_path, model=model, category=category, attempts=max_attempts,
+                       reference_count=0, status_code=status)
         raise RuntimeError("Gemini request failed after retries.") from last_error
 
     candidates = data.get("candidates", [])
     if not candidates:
-        raise RuntimeError(f"No candidates returned. Raw: {raw[:500]}")
+        record_failure(out_path, model=model, category="no_candidate", attempts=attempt,
+                       reference_count=0)
+        raise RuntimeError("No candidates returned (possibly safety-blocked)")
 
     parts = candidates[0].get("content", {}).get("parts", [])
     image_b64 = None
+    mime_type = ""
     for p in parts:
         inline = p.get("inlineData")
-        if inline and inline.get("mimeType", "").startswith("image/"):
+        if inline:
+            mime_type = inline.get("mimeType", "")
             image_b64 = inline.get("data")
             break
 
     if not image_b64:
-        raise RuntimeError(f"No image inlineData found. Raw: {raw[:800]}")
-
-    img_bytes = base64.b64decode(image_b64)
-    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
-    with open(out_path, "wb") as f:
-        f.write(img_bytes)
+        record_failure(out_path, model=model, category="missing_image", attempts=attempt,
+                       reference_count=0)
+        raise RuntimeError("No image inlineData found")
+    try:
+        img_bytes, dimensions = decode_and_validate(image_b64, mime_type)
+    except ImageContractError:
+        record_failure(out_path, model=model, category="image_contract", attempts=attempt,
+                       reference_count=0)
+        raise
+    atomic_write_image(out_path, img_bytes)
+    record_success(out_path, model=model, mime_type=mime_type, dimensions=dimensions,
+                   attempts=attempt, reference_count=0, latency_ms=latency_ms,
+                   usage_metadata=data.get("usageMetadata"))
 
 
 def main() -> int:

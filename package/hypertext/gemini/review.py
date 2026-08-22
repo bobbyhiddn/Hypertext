@@ -18,6 +18,9 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from hypertext.gemini.config import review_model
+from hypertext.quality import QUALITY_GATE
+
 try:
     from google import genai
     from google.genai import types
@@ -206,6 +209,10 @@ DESCRIBE_WITH_REFS_PROMPT = """You are a STRICT quality control inspector. Your 
 ## STYLE RUBRIC (the AUTHORITATIVE reference for what cards MUST look like):
 {style_rubric}
 
+The written rubric and critical checks below override incidental differences in
+reference images. A reference containing parenthesized transliterations does not
+make parentheses correct and must never cause a card without parentheses to fail.
+
 ## IMAGES PROVIDED
 {image_labels}
 
@@ -352,7 +359,7 @@ SCORE_PROMPT_TEMPLATE = """You are scoring a trading card based on a description
 
 ### 4. CONTENT ALIGNMENT (15 points max)
 - Stat pip counts match expected (5 pts)
-- Trivia bullets present (5 pts) - should have 3-5
+- Exactly 3 trivia bullets present (5 pts) - deduct all unless the count is 3
 - No brackets [ ] anywhere (5 pts) - deduct ALL if any brackets visible
 
 ## YOUR TASK:
@@ -482,9 +489,10 @@ def _call_gemini(
     *,
     image_path: Path | None = None,
     image_paths: list[Path] | None = None,
-    model: str = "gemini-3-pro-preview",
+    model: str | None = None,
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
+    timeout_s: float | None = None,
 ) -> str:
     """Make a Gemini API call using the SDK, optionally with image(s).
 
@@ -499,16 +507,31 @@ def _call_gemini(
     if genai is None:
         raise RuntimeError("google-genai package required. Install with: pip install google-genai")
 
+    model = model or review_model()
+
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
 
-    client = genai.Client(api_key=api_key)
+    timeout_s = timeout_s or float(os.environ.get("GEMINI_REVIEW_TIMEOUT_S", "120"))
+    if timeout_s <= 0:
+        raise ValueError("review timeout must be greater than zero")
+    http_options_cls = getattr(types, "HttpOptions", None)
+    http_options = (http_options_cls(timeout=round(timeout_s * 1000))
+                    if http_options_cls else {"timeout": round(timeout_s * 1000)})
+    client = genai.Client(
+        api_key=api_key,
+        http_options=http_options,
+    )
 
     contents = []
     # Handle multiple images first (for reference comparison)
     if image_paths:
-        for img_path in image_paths:
+        for index, img_path in enumerate(image_paths, 1):
+            # Keep an explicit marker adjacent to each image. A label list only in
+            # the trailing prompt allowed Gemini to score a reference as the test
+            # card in live multi-image reviews.
+            contents.append(types.Part.from_text(text=f"IMAGE [{index}]"))
             contents.append(_image_part_from_path(img_path))
     elif image_path:
         contents.append(_image_part_from_path(image_path))
@@ -568,7 +591,7 @@ def describe_card_style_references(
     Returns:
         Text description of what a correct Hypertext card looks like
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     if not style_refs:
         return "No style references provided."
@@ -622,7 +645,7 @@ def describe_card(
         style_rubric: Optional pre-generated description of correct style (from describe_card_style_references)
         model: Gemini model to use
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     if style_refs:
         # Build image list: refs first, then test card
@@ -775,7 +798,7 @@ def score_against_rubric(
 
     This is a pure judgment step - comparing observations to expectations.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     # Extract expected content
     content = card_json.get("content", {})
@@ -853,10 +876,10 @@ def score_against_rubric(
 
     return ReviewResult(
         score=total_score,
-        passed=total_score >= 90,
+        passed=total_score >= QUALITY_GATE,
         categories=categories,
         corrections=corrections,
-        needs_rebuild=total_score < 90,
+        needs_rebuild=total_score < QUALITY_GATE,
         description=description,
         raw_response=response_text,
     )
@@ -867,7 +890,7 @@ def review_card(
     card_json: dict,
     *,
     model: str | None = None,
-    pass_threshold: int = 90,
+    pass_threshold: int = QUALITY_GATE,
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
 ) -> ReviewResult:
@@ -878,7 +901,7 @@ def review_card(
 
     This separation ensures more accurate evaluation.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     # Stage 1: Describe
     description = describe_card(image_path, model=model)

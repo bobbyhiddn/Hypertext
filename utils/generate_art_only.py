@@ -14,7 +14,7 @@ import time
 import urllib.error
 import urllib.request
 
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent"
+from hypertext.gemini.config import image_endpoint
 
 # Art panel dimensions (slightly larger for quality, will be resized)
 ART_WIDTH = 1024
@@ -55,7 +55,7 @@ def generate_art_only(
     )
 
     # Use the Gemini 3 image generation endpoint
-    endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent"
+    endpoint = image_endpoint()
     
     payload = {
         "contents": [{"parts": [{"text": full_prompt}]}],

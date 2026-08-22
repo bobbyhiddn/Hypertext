@@ -1,0 +1,36 @@
+number: 019
+word: SAVIOR
+gloss: One who rescues, delivers, or preserves from danger or destruction.
+card_type: TITLE
+rarity: RARE
+series: 2026-Q1
+set: Example
+art_prompt: A brilliant, warm light breaking through dark, turbulent storm clouds,
+  illuminating a single, outstretched hand reaching upward from a chaotic sea.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Return up to 2 cards from Sheol to your hand.
+style_series_dir: series\2026-Q1
+review_score: 0
+review_attempts: 2
+last_description:
+  card_number_format: '#019'
+  stat_pip_shape: circle
+  stat_pip_fill_color: none
+  has_brackets: false
+  bracket_locations: []
+  style_matches_reference: false
+  style_mismatch_reason: 'Rarity badge styling is incorrect: Text says ''RARE'' but
+    visual styling is for ''COMMON'' (Navy pill, White diamond) - Rubric requires
+    Gold for Rare. Extraneous UI elements (+ icon and card icon) are visible in the
+    top right corner overlaying the card. Stat pips are completely empty (0 filled).'
+style_mismatch_count: 2
+style_mismatch_reason: '1. Stray UI element (a ''+'' sign and small card icon) is
+  visible floating to the right of the title ''SAVIOR'', which is not present in the
+  reference style. 2. Rarity mismatch: The card is labeled ''RARE'' but uses a White
+  diamond icon (Standard for Common); the rubric specifies RARE should be Gold.'
+review_status: red
+user_action_required: true
+user_warning: Card scored only 0/100. Rebuild required.

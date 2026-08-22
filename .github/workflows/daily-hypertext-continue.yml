@@ -1,8 +1,10 @@
 name: Daily Hypertext (continue)
 
+env:
+  GEMINI_IMAGE_MODEL: gemini-3.1-flash-image
+
 on:
-  issue_comment:
-    types: [created]
+  workflow_dispatch: {}
 
 permissions:
   contents: write

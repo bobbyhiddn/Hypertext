@@ -1,5 +1,8 @@
 name: Demo Hypertext (random card PR)
 
+env:
+  GEMINI_IMAGE_MODEL: gemini-3.1-flash-image
+
 on:
   workflow_dispatch: {}
 

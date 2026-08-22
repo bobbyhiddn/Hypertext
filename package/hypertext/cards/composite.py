@@ -33,63 +33,36 @@ COLORS = {
     "white": "#FFFFFF",
 }
 
-# Layout regions - measured from raw_template.png (1024x1536)
-# Format varies: (x, y, w, h) for boxes, (center_x, y) for centered text
+# Coordinates are calibrated to the checked-in 1024x1536 style reference.
 REGIONS = {
-    # Header elements (top bar)
-    "number_badge": (28, 22),               # x, y for "#001"
-    "type_badge": (118, 22),                # x, y for "NOUN" (centered in badge)
-    "rarity_icon": (895, 22),               # x, y for rarity icon center
-    "rarity_text": (918, 18),               # x, y for rarity text
+    "number_badge": (58, 39), "type_badge": (190, 37),
+    "rarity_icon": (946, 45), "rarity_text": (820, 34),
+    "word_title": (512, 74), "gloss_subtitle": (512, 150),
+    "art_panel": (66, 264, 910, 247),
+    "stat_lore_label": (196, 537), "stat_context_label": (512, 537),
+    "stat_complexity_label": (828, 537), "pip_row_y": 601,
+    "pip_lore_x": 108, "pip_context_x": 414, "pip_complexity_x": 721,
+    "pip_spacing": 52, "pip_radius": 22,
+    "ability_header": (512, 650), "ability_text": (72, 696, 880, 58),
+    "ot_header": (512, 786), "ot_verse_text": (72, 830, 880, 48),
+    "nt_header": (512, 918), "nt_verse_text": (72, 961, 880, 48),
+    "greek_header": (756, 1040), "greek_word": (756, 1085),
+    "greek_translit": (756, 1130), "nt_refs": (756, 1173),
+    "hebrew_header": (268, 1040), "hebrew_word": (268, 1085),
+    "hebrew_translit": (268, 1130), "ot_refs": (268, 1173),
+    "trivia_header": (512, 1234), "trivia_area": (75, 1272, 874, 142),
+    "series_text": (62, 1474),
+}
 
-    # Title area (centered)
-    "word_title": (512, 52),                # center_x, y for WORD
-    "gloss_subtitle": (512, 105),           # center_x, y for gloss
-
-    # Art panel (inner area where art goes)
-    "art_panel": (58, 140, 908, 330),       # x, y, width, height
-
-    # Stats row - labels and pips
-    "stat_lore_label": (165, 488),          # center_x, y for "LORE"
-    "stat_context_label": (512, 488),       # center_x, y for "CONTEXT"
-    "stat_complexity_label": (858, 488),    # center_x, y for "COMPLEXITY"
-    "pip_row_y": 522,                       # Y center for pip circles
-    "pip_lore_x": 82,                       # Starting X for LORE pips (leftmost pip center)
-    "pip_context_x": 428,                   # Starting X for CONTEXT pips
-    "pip_complexity_x": 775,                # Starting X for COMPLEXITY pips
-    "pip_spacing": 34,                      # Space between pip centers
-    "pip_radius": 13,                       # Pip circle radius
-
-    # Content panels - section headers and text areas
-    # ABILITY box
-    "ability_header": (512, 565),           # center_x, y for "ABILITY" label
-    "ability_text": (65, 590, 894, 45),     # x, y, width, height for text
-
-    # OT VERSE box
-    "ot_header": (512, 648),                # center_x, y for "OT VERSE" label
-    "ot_verse_text": (65, 673, 894, 38),    # x, y, width, height
-
-    # NT VERSE box
-    "nt_header": (512, 725),                # center_x, y for "NT VERSE" label
-    "nt_verse_text": (65, 750, 894, 38),    # x, y, width, height
-
-    # Greek/Hebrew split panel
-    "greek_header": (270, 805),             # center_x, y for "GREEK" label
-    "greek_word": (270, 835),               # center_x, y for Greek text
-    "greek_translit": (270, 865),           # center_x, y for transliteration
-    "nt_refs": (270, 892),                  # center_x, y for NT refs
-
-    "hebrew_header": (754, 805),            # center_x, y for "HEB/ARAM" label
-    "hebrew_word": (754, 835),              # center_x, y for Hebrew text
-    "hebrew_translit": (754, 865),          # center_x, y for transliteration
-    "ot_refs": (754, 892),                  # center_x, y for OT refs
-
-    # Trivia box
-    "trivia_header": (512, 935),            # center_x, y for "TRIVIA" label
-    "trivia_area": (65, 960, 894, 110),     # x, y, width, height for bullets
-
-    # Footer
-    "series_text": (28, 1498),              # x, y for "SERIES: 2026-Q1"
+# These bounds stay inside the reference's decorative borders.
+CLEANUP_REGIONS = {
+    "header": (48, 27, 774, 225), "rarity": (804, 25, 984, 68),
+    "stats": (72, 526, 952, 635), "ability": (72, 642, 952, 754),
+    "ot": (72, 777, 952, 878), "nt": (72, 909, 952, 1009),
+    "languages_left": (72, 1031, 507, 1218),
+    "languages_right": (519, 1031, 952, 1218),
+    "trivia": (72, 1225, 952, 1415),
+    "footer": (48, 1465, 350, 1510),
 }
 
 # Rarity icon shapes and colors
@@ -103,7 +76,12 @@ RARITY_ICONS = {
 
 def _load_font(name: str, size: int):
     """Try to load a font, falling back to default if not found."""
+    aliases = {
+        "times": "DejaVuSerif.ttf", "timesi": "DejaVuSerif-Italic.ttf",
+        "timesbd": "DejaVuSerif-Bold.ttf",
+    }
     font_paths = [
+        f"/usr/share/fonts/truetype/dejavu/{aliases.get(name, name)}",
         # Windows
         f"C:/Windows/Fonts/{name}.ttf",
         f"C:/Windows/Fonts/{name}.otf",
@@ -143,7 +121,7 @@ def _get_fonts():
         "body": _load_font("times", 18) or _load_font("Georgia", 18),
         "small": _load_font("times", 14) or _load_font("Georgia", 14),
         "greek": _load_font("times", 22) or _load_font("Georgia", 22),
-        "hebrew": _load_font("times", 22) or _load_font("Georgia", 22),
+        "hebrew": _load_font("DejaVuSans", 22),
         "badge": _load_font("timesbd", 14) or _load_font("Georgia-Bold", 14),
     }
 
@@ -277,15 +255,18 @@ def composite_card(
         card.save(out_path, "PNG")
         return
 
+    # Replace placeholder typography with a deterministic parchment texture
+    # sampled from the blank art well; preserve every panel/frame border.
+    parchment_patch = card.crop((320, 315, 704, 455))
+    for box in CLEANUP_REGIONS.values():
+        size = (box[2] - box[0], box[3] - box[1])
+        card.paste(parchment_patch.resize(size, Image.Resampling.BILINEAR), box[:2])
+    draw = ImageDraw.Draw(card)
+
     # Helper to clear a region with parchment color before writing
     def clear_region(r_name: str, margin: int = 0):
-        if r_name not in REGIONS:
-            return
-        r = REGIONS[r_name]
-        if len(r) == 4:
-            x, y, w, h = r
-            draw.rectangle((x - margin, y - margin, x + w + margin, y + h + margin), fill=COLORS["parchment"])
-        # For point regions (2 coords), we can't easily clear without dimensions
+        # Placeholder cleanup is performed once above with textured patches.
+        return
 
     # Paste art into art panel if provided
     if art_path and os.path.exists(art_path):
@@ -299,37 +280,34 @@ def composite_card(
     number = content.get("NUMBER", "001")
     nx, ny = REGIONS["number_badge"]
     # Manually clear number area
-    draw.rectangle((nx - 5, ny - 5, nx + 50, ny + 25), fill=COLORS["parchment"])
     draw.text((nx, ny), f"#{number}", font=fonts["badge"], fill=COLORS["ink"])
 
     # Type badge
     card_type = content.get("CARD_TYPE", "NOUN")
     tx, ty = REGIONS["type_badge"]
-    draw_centered_text(draw, card_type, tx, ty, fonts["badge"], COLORS["ink"])
+    draw.rounded_rectangle((145, 28, 235, 62), radius=15, fill=COLORS["navy"], outline=COLORS["gold"], width=2)
+    draw_centered_text(draw, card_type, tx, ty, fonts["badge"], COLORS["white"])
 
     # Rarity icon + text
     rarity = content.get("RARITY_TEXT", "COMMON")
     rix, riy = REGIONS["rarity_icon"]
     # Clear rarity area
-    draw.rectangle((rix - 20, riy - 20, rix + 120, riy + 20), fill=COLORS["parchment"])
+    draw.rectangle(CLEANUP_REGIONS["rarity"], fill=COLORS["navy"])
     draw_rarity_icon(draw, rix, riy, rarity, size=16)
     rtx, rty = REGIONS["rarity_text"]
-    draw.text((rtx, rty), rarity, font=fonts["badge"], fill=COLORS["ink"])
+    draw.text((rtx, rty), rarity, font=fonts["badge"], fill=COLORS["white"])
 
     # Title (WORD) - clear wide area
     word = content.get("WORD", "WORD")
     wcx, wy = REGIONS["word_title"]
-    draw.rectangle((wcx - 300, wy - 10, wcx + 300, wy + 55), fill=COLORS["parchment"])
     draw_centered_text(draw, word, wcx, wy, fonts["title"], COLORS["ink"])
 
     # Subtitle (GLOSS)
     gloss = content.get("GLOSS", "")
     gcx, gy = REGIONS["gloss_subtitle"]
-    draw.rectangle((gcx - 300, gy - 5, gcx + 300, gy + 35), fill=COLORS["parchment"])
     draw_centered_text(draw, gloss, gcx, gy, fonts["subtitle"], COLORS["ink"])
 
     # Clear Stat labels area
-    draw.rectangle((50, 480, 950, 510), fill=COLORS["parchment"])
 
     # Stat labels
     lcx, ly = REGIONS["stat_lore_label"]
@@ -342,7 +320,6 @@ def composite_card(
     # Stats pips
     pip_y = REGIONS["pip_row_y"]
     # Clear pips area
-    draw.rectangle((50, pip_y - 20, 950, pip_y + 20), fill=COLORS["parchment"])
     draw_stat_pips(draw, REGIONS["pip_lore_x"], pip_y, int(content.get("STAT_LORE", 3)))
     draw_stat_pips(draw, REGIONS["pip_context_x"], pip_y, int(content.get("STAT_CONTEXT", 3)))
     draw_stat_pips(draw, REGIONS["pip_complexity_x"], pip_y, int(content.get("STAT_COMPLEXITY", 3)))
@@ -359,7 +336,6 @@ def composite_card(
 
     for key, text in headers:
         hx, hy = REGIONS[key]
-        draw.rectangle((hx - 60, hy - 10, hx + 60, hy + 25), fill=COLORS["parchment"])
         draw_centered_text(draw, text, hx, hy, fonts["label"], COLORS["ink"])
 
     # Content areas - clear and draw
@@ -385,33 +361,27 @@ def composite_card(
     # Greek
     greek = content.get("GREEK", "")
     gx, gy = REGIONS["greek_word"]
-    draw.rectangle((gx - 100, gy - 10, gx + 100, gy + 30), fill=COLORS["parchment"])
     draw_centered_text(draw, greek, gx, gy, fonts["greek"], COLORS["ink"])
 
     greek_translit = content.get("GREEK_TRANSLIT", "")
     gtx, gty = REGIONS["greek_translit"]
-    draw.rectangle((gtx - 100, gty - 10, gtx + 100, gty + 20), fill=COLORS["parchment"])
     draw_centered_text(draw, greek_translit, gtx, gty, fonts["small"], COLORS["ink"])
 
     nt_refs = content.get("NT_REFS", "")
     nrx, nry = REGIONS["nt_refs"]
-    draw.rectangle((nrx - 100, nry - 10, nrx + 100, nry + 20), fill=COLORS["parchment"])
     draw_centered_text(draw, nt_refs, nrx, nry, fonts["small"], COLORS["ink"])
 
     # Hebrew (note: proper RTL would need more work)
     hebrew = content.get("HEBREW", "")
     hx, hy = REGIONS["hebrew_word"]
-    draw.rectangle((hx - 100, hy - 10, hx + 100, hy + 30), fill=COLORS["parchment"])
     draw_centered_text(draw, hebrew, hx, hy, fonts["hebrew"], COLORS["ink"])
 
     hebrew_translit = content.get("HEBREW_TRANSLIT", "")
     htx, hty = REGIONS["hebrew_translit"]
-    draw.rectangle((htx - 100, hty - 10, htx + 100, hty + 20), fill=COLORS["parchment"])
     draw_centered_text(draw, hebrew_translit, htx, hty, fonts["small"], COLORS["ink"])
 
     ot_refs = content.get("OT_REFS", "")
     orx, ory = REGIONS["ot_refs"]
-    draw.rectangle((orx - 100, ory - 10, orx + 100, ory + 20), fill=COLORS["parchment"])
     draw_centered_text(draw, ot_refs, orx, ory, fonts["small"], COLORS["ink"])
 
     # Trivia bullets
@@ -427,8 +397,8 @@ def composite_card(
     series = content.get("SERIES", "2026-Q1")
     sx, sy = REGIONS["series_text"]
     # Clear footer area
-    draw.rectangle((sx, sy, sx + 200, sy + 30), fill=COLORS["parchment"])
-    draw.text((sx, sy), f"SERIES: {series}", font=fonts["badge"], fill=COLORS["parchment"])
+    draw.rectangle(CLEANUP_REGIONS["footer"], fill=COLORS["navy"])
+    draw.text((sx, sy), f"SERIES: {series}", font=fonts["badge"], fill=COLORS["white"])
 
     # Save output
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)

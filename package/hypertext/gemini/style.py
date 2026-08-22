@@ -6,10 +6,17 @@ images that follow the visual style of provided reference images.
 """
 
 import argparse
-import base64
 import os
+import random
 import sys
+import time
 from pathlib import Path
+
+from hypertext.gemini.config import image_model
+from hypertext.gemini.image_contract import (
+    MAX_ATTEMPTS, ImageContractError, atomic_write_image, classify_error,
+    decode_and_validate, record_failure, record_success, validate_request,
+)
 
 try:
     from google import genai
@@ -30,17 +37,24 @@ def _image_part_from_bytes(img_bytes: bytes):
     if types is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
 
+    import io
+    from PIL import Image
+    with Image.open(io.BytesIO(img_bytes)) as image:
+        image.load()
+        mime_type = Image.MIME.get(image.format)
+    if mime_type not in {"image/png", "image/jpeg"}:
+        raise RuntimeError(f"Unsupported style reference format: {mime_type}")
     image_part = None
 
     if hasattr(types.Part, "from_bytes"):
         try:
-            image_part = types.Part.from_bytes(data=img_bytes, mime_type="image/png")
+            image_part = types.Part.from_bytes(data=img_bytes, mime_type=mime_type)
         except Exception:
             pass
 
     if image_part is None and hasattr(types.Part, "from_image"):
         try:
-            image_part = types.Part.from_image(image=img_bytes, mime_type="image/png")
+            image_part = types.Part.from_image(image=img_bytes, mime_type=mime_type)
         except Exception:
             pass
 
@@ -48,10 +62,10 @@ def _image_part_from_bytes(img_bytes: bytes):
         try:
             blob_cls = getattr(types, "Blob", None)
             if blob_cls:
-                image_part = types.Part(inline_data=blob_cls(data=img_bytes, mime_type="image/png"))
+                image_part = types.Part(inline_data=blob_cls(data=img_bytes, mime_type=mime_type))
             else:
                 image_part = types.Part(
-                    inline_data={"mime_type": "image/png", "data": img_bytes}
+                    inline_data={"mime_type": mime_type, "data": img_bytes}
                 )
         except Exception as e:
             raise RuntimeError(f"Failed to construct image part. SDK version might be incompatible. Error: {e}")
@@ -64,7 +78,7 @@ def generate_with_styles(
     style_image_paths: list[str],
     out_path: str,
     *,
-    model: str = "gemini-3-pro-preview",
+    model: str | None = None,
     aspect_ratio: str = "2:3",
     guidance_scale: float | None = None,
     num_inference_steps: int | None = None,
@@ -94,6 +108,7 @@ def generate_with_styles(
     if genai is None:
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
 
+    validate_request(aspect_ratio, "2K")
     if not style_image_paths:
         raise RuntimeError("At least one style image is required.")
     if len(style_image_paths) > 16:
@@ -104,6 +119,7 @@ def generate_with_styles(
         raise RuntimeError("GEMINI_API_KEY (or GEMINI_TEXT_API_KEY) env var is not set.")
 
     client = genai.Client(api_key=api_key)
+    model = model or image_model()
 
     orientation = "portrait (2:3 aspect ratio, taller than wide)" if aspect_ratio == "2:3" else f"aspect ratio {aspect_ratio}"
 
@@ -168,7 +184,7 @@ def generate_with_styles(
         "   - VERB = pencil\n"
         "   - ADJECTIVE = sparkle pencil (pencil with small stars)\n"
         "   - NAME = feather quill\n"
-        "   - TITLE = crown\n"
+        "   - TITLE = ornate empty frame\n"
         "   Match the icon style from the type-specific template reference.\n"
     )
 
@@ -241,10 +257,11 @@ AVOID:
         img_bytes = _read_image_bytes(p)
         image_parts.append(_image_part_from_bytes(img_bytes))
 
-    contents = [
-        *image_parts,
-        types.Part.from_text(text=full_prompt),
-    ]
+    contents = []
+    for index, image_part in enumerate(image_parts, 1):
+        label = ref_labels[index - 1] if index <= len(ref_labels) else f"[{index}] = reference image"
+        contents.extend((types.Part.from_text(text=f"IMAGE {label}"), image_part))
+    contents.append(types.Part.from_text(text=full_prompt))
 
     print("Generating with style references:")
     for p in style_image_paths:
@@ -253,38 +270,66 @@ AVOID:
 
     config = types.GenerateContentConfig(
         response_modalities=["IMAGE"],
+        image_config=types.ImageConfig(aspect_ratio=aspect_ratio, image_size="2K"),
     )
 
-    try:
-        response = client.models.generate_content(
-            model=model,
-            contents=contents,
-            config=config,
-        )
-    except Exception as e:
-        raise RuntimeError(f"Gemini API request failed: {e}")
+    max_attempts = min(MAX_ATTEMPTS, max(1, int(os.environ.get("GEMINI_MAX_ATTEMPTS", str(MAX_ATTEMPTS)))))
+    base_delay_s = float(os.environ.get("GEMINI_RETRY_BASE_DELAY_S", "2"))
+    for attempt in range(1, max_attempts + 1):
+        try:
+            request_started = time.monotonic()
+            response = client.models.generate_content(
+                model=model, contents=contents, config=config,
+            )
+            latency_ms = round((time.monotonic() - request_started) * 1000)
+            break
+        except Exception as e:
+            category, status, retriable = classify_error(e)
+            if not retriable or attempt == max_attempts:
+                record_failure(out_path, model=model, category=category, attempts=attempt,
+                               reference_count=len(style_image_paths), status_code=status)
+                raise RuntimeError(f"Gemini API request failed: {e}") from e
+            time.sleep(base_delay_s * (2 ** (attempt - 1)) + random.random())
 
     if not response.candidates:
-        raise RuntimeError("No candidates returned from Gemini.")
+        record_failure(out_path, model=model, category="no_candidate", attempts=attempt,
+                       reference_count=len(style_image_paths))
+        raise RuntimeError("No candidates returned from Gemini (possibly safety-blocked).")
 
     candidate = response.candidates[0]
     parts = (candidate.content.parts if candidate.content and candidate.content.parts else [])
 
     image_bytes = None
+    mime_type = ""
     for part in parts:
-        if part.inline_data and part.inline_data.mime_type.startswith("image/"):
+        if part.inline_data:
+            mime_type = getattr(part.inline_data, "mime_type", "")
             image_bytes = part.inline_data.data
             break
 
     if not image_bytes:
-        raise RuntimeError(f"No image data found in response. Content: {candidate.content}")
-
-    if isinstance(image_bytes, str):
-        image_bytes = base64.b64decode(image_bytes)
-
-    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
-    with open(out_path, "wb") as f:
-        f.write(image_bytes)
+        record_failure(out_path, model=model, category="missing_image", attempts=attempt,
+                       reference_count=len(style_image_paths))
+        raise RuntimeError("No image data found in response")
+    try:
+        image_bytes, dimensions = decode_and_validate(image_bytes, mime_type)
+    except ImageContractError:
+        record_failure(out_path, model=model, category="image_contract", attempts=attempt,
+                       reference_count=len(style_image_paths))
+        raise
+    atomic_write_image(out_path, image_bytes)
+    usage = getattr(response, "usage_metadata", None)
+    if usage is not None:
+        if hasattr(usage, "model_dump"):
+            usage = usage.model_dump(exclude_none=True)
+        elif not isinstance(usage, dict):
+            usage = {name: value for name in (
+                "prompt_token_count", "candidates_token_count", "total_token_count",
+                "thoughts_token_count",
+            ) if (value := getattr(usage, name, None)) is not None}
+    record_success(out_path, model=model, mime_type=mime_type, dimensions=dimensions,
+                   attempts=attempt, reference_count=len(style_image_paths),
+                   latency_ms=latency_ms, usage_metadata=usage)
 
     print(f"Saved generated image to: {out_path}")
 
@@ -294,7 +339,7 @@ def generate_with_style(
     style_image_path: str,
     out_path: str,
     *,
-    model: str = "gemini-3-pro-preview",
+    model: str | None = None,
     aspect_ratio: str = "2:3",
     guidance_scale: float | None = None,
     num_inference_steps: int | None = None,
@@ -318,7 +363,7 @@ def main() -> int:
     parser.add_argument("--prompt-file", help="Path to text file containing the prompt")
     parser.add_argument("--style", required=True, action="append", help="Path to reference style image (repeatable)")
     parser.add_argument("--out", required=True, help="Output PNG path")
-    parser.add_argument("--model", default="gemini-3.1-flash-image-preview", help="Gemini model ID")
+    parser.add_argument("--model", default=image_model(), help="Gemini model ID")
     parser.add_argument("--rarity-label", action="append", help="Rarity label for style image at position (format: POS:RARITY e.g. 2:COMMON)")
     parser.add_argument("--target-rarity", help="Target rarity for this card (highlights matching reference)")
     parser.add_argument("--fix-mode", action="store_true", help="Fix mode: [1]=card to fix, [2]=template, [3+]=examples")

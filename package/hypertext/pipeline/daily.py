@@ -37,6 +37,9 @@ from hypertext.gemini.review import (
     CardDescription,
 )
 from hypertext.cards.render import render_post
+from hypertext.cards.template_matrix import resolve_template
+from hypertext.gemini.config import image_model
+from hypertext.quality import QUALITY_GATE, provenance, quality_score, write_provenance
 
 try:
     import yaml
@@ -858,11 +861,13 @@ def _build_style_refs(
     target_rarity: str | None = None,
     target_type: str | None = None,
     fix_mode: bool = False,
-    templates_only: bool = False,
+    templates_only: bool = True,
 ) -> tuple[list[str], dict[int, str], bool]:
     """Build list of style reference paths for image generation.
 
-    Uses ONLY cards matching BOTH type AND rarity for cleanest references.
+    Uses stable checked-in examples and templates by default. Series cards are
+    opt-in because their inclusion makes a card's geometry depend on generation
+    order and lets small generated defects propagate to later cards.
     Example cards are always included as premium references.
 
     Reference priority order:
@@ -889,10 +894,9 @@ def _build_style_refs(
     if fix_mode and current_card_path and current_card_path.exists():
         refs.append(str(current_card_path))
 
-    # Only use rarity template (type templates show type icons, not rarity badges)
-    rarity_template_path: Path | None = None
-    if target_rarity:
-        rarity_template_path = _get_subtype_template(target_rarity)
+    # The canonical face treatment is selected by the complete type/rarity pair.
+    # resolve_template also rejects unknown or incomplete combinations explicitly.
+    treatment_template_path = resolve_template(target_type or "", target_rarity or "")
 
     # Always collect matching example cards (premium references)
     example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]
@@ -952,9 +956,9 @@ def _build_style_refs(
             refs.append(str(card_path))
             rarity_labels[len(refs)] = target_rarity
 
-    # Rarity template added LAST (weakest - just for badge reference)
-    if rarity_template_path:
-        refs.append(str(rarity_template_path))
+    # Canonical treatment added LAST (weakest reference, but authoritative geometry).
+    if treatment_template_path:
+        refs.append(str(treatment_template_path))
 
     return refs, rarity_labels, fix_mode
 
@@ -1052,6 +1056,32 @@ def _write_generation_log(
 
     with open(log_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
+
+    # Machine-readable, content-addressed lineage. Record only stages completed
+    # at this point; review appends its own evidence after grading.
+    card_path = card_dir / "card.json"
+    image_path = card_dir / "outputs" / "card_1024x1536.png"
+    card_payload = read_json(card_path) if card_path.exists() else {}
+    prompt_payload = _read_text(prompt_file) if prompt_file and prompt_file.exists() else ""
+    records = [
+        provenance("plan", card_payload, card_payload),
+        provenance("prompt", card_payload, prompt_payload),
+        provenance("references", {"type": target_type, "rarity": target_rarity},
+                   {"ordered_refs": style_refs, "rarity_labels": rarity_labels}),
+        provenance("image_request", prompt_payload,
+                   {"model": image_model(), "aspect_ratio": "2:3", "image_size": "2K"}),
+    ]
+    if image_path.exists():
+        image_bytes = image_path.read_bytes()
+        records.extend([
+            provenance("candidate", {"references": style_refs}, image_bytes),
+            provenance("composite", image_bytes, image_bytes,
+                       repaired=phase in {"revise", "rebuild"}),
+        ])
+    if phase in {"revise", "rebuild"}:
+        records.append(provenance("revision", card_payload, image_path.name,
+                                  repaired=True))
+    write_provenance(card_dir, records)
 
     _log(f"[{phase}] wrote generation.log to {log_path}")
 
@@ -1274,7 +1304,7 @@ def _generate_queue_entries(
     )
 
     _log(f"[plan] generating queue entries (count={count})")
-    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=1.0, use_google_search=False)
+    text = generate_text(prompt, temperature=1.0, use_google_search=False)
     data = _parse_json_from_model(text)
     if not isinstance(data, list):
         raise RuntimeError("Queue generation did not return a JSON array.")
@@ -1340,7 +1370,6 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
     _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
     text, grounding = generate_text_with_grounding(
         prompt,
-        model="gemini-3-pro-preview",
         temperature=0.6,
         use_google_search=True,
     )
@@ -1350,7 +1379,6 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         retry_prompt = prompt + "\n\nIMPORTANT: Return ONLY raw JSON (no markdown, no backticks, no commentary)."
         text, grounding = generate_text_with_grounding(
             retry_prompt,
-            model="gemini-3-pro-preview",
             temperature=0.2,
             use_google_search=True,
         )
@@ -2931,7 +2959,7 @@ def phase_demo_batch(
     # Summary
     if review_scores:
         avg_score = sum(review_scores) / len(review_scores)
-        passing = len([s for s in review_scores if s >= 90])
+        passing = len([s for s in review_scores if s >= QUALITY_GATE])
         _log(f"[demo batch] review summary: avg={avg_score:.1f}, passing={passing}/{len(review_scores)}")
 
     total_success = len(successful_cards)
@@ -3230,6 +3258,9 @@ def phase_imagegen(*, series_dir: Path) -> int:
         
     subprocess.check_call(cmd)
 
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, target_dir / "card.json")
+
     # Write generation log with style reference info
     _write_generation_log(
         target_dir,
@@ -3258,7 +3289,7 @@ def _generate_image_for_card_dir(
     skip_polish: bool = False,
     skip_watermark: bool = False,
     style_series_dir: Path | None = None,
-    templates_only: bool = False,
+    templates_only: bool = True,
     override_style_refs: list[str] | None = None,
 ) -> int:
     out_name = "card_1024x1536.png"
@@ -3325,6 +3356,9 @@ def _generate_image_for_card_dir(
         ]
 
     subprocess.check_call(cmd)
+
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
 
     # Write generation log with style reference info
     _write_generation_log(
@@ -3481,7 +3515,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
                 target_rarity=target_rarity,
                 target_type=target_type,
                 fix_mode=out_png.exists(),
-                templates_only=is_example_card,
+                templates_only=True,
             )
             if extra_style_refs:
                 extra_resolved = [str(Path(r).resolve()) for r in extra_style_refs]
@@ -3575,7 +3609,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
                 target_rarity=target_rarity,
                 target_type=target_type,
                 fix_mode=False,
-                templates_only=is_example_card,
+                templates_only=True,
             )
             # Add extra style refs at start (highest priority), deduped
             if extra_style_refs:
@@ -3678,7 +3712,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
     )
 
     _log("[phase revise] requesting JSON Patch from Gemini")
-    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.2, use_google_search=False)
+    text = generate_text(prompt, temperature=0.2, use_google_search=False)
     patch_ops = _parse_json_from_model(text)
     if not isinstance(patch_ops, list):
         raise RuntimeError("Revise step did not return a JSON Patch array.")
@@ -3753,7 +3787,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
             target_rarity=target_rarity,
             target_type=target_type,
             fix_mode=use_fix_mode,
-            templates_only=is_example_card,
+            templates_only=True,
         )
         # Add extra style refs after current card (for fix_mode) or at start
         if extra_style_refs:
@@ -3783,6 +3817,9 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         ]
 
     subprocess.check_call(cmd)
+
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
 
     # Write generation log with style reference info
     _write_generation_log(
@@ -4288,7 +4325,7 @@ def _generate_image_only(*, card_dir: Path) -> Path:
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
-        templates_only=is_example_card,
+        templates_only=True,
     )
     if style_refs:
         cmd = [
@@ -4317,6 +4354,9 @@ def _generate_image_only(*, card_dir: Path) -> Path:
         prompt_file=prompt_file,
         phase="imagegen",
     )
+
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
 
     return out_png
 
@@ -4403,7 +4443,7 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     card_json = read_json(card_path)
     content = card_json.get("content", {})
     word = content.get("WORD", "UNKNOWN")
-    target_rarity = content.get("RARITY", "COMMON")
+    target_rarity = content.get("RARITY_TEXT", "COMMON")
     target_type = content.get("CARD_TYPE", "NOUN")
 
     _log(f"[phase grade] Grading {word} ({target_type}, {target_rarity})")
@@ -4509,6 +4549,25 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
 
     passed = style_match and result.passed
 
+    def normalized(category: str) -> int:
+        item = result.categories.get(category, {})
+        maximum = int(item.get("max", 0) or 0)
+        return round(100 * int(item.get("score", 0) or 0) / maximum) if maximum else 0
+
+    expected_pips = (content.get("STAT_LORE", 0), content.get("STAT_CONTEXT", 0),
+                     content.get("STAT_COMPLEXITY", 0))
+    observed_pips = (description.stat_lore, description.stat_context,
+                     description.stat_complexity)
+    quality = quality_score({
+        "composition": normalized("formatting"),
+        "typography": normalized("text_clarity"),
+        "template_fidelity": 100 if style_match else 0,
+        "metadata": normalized("content_alignment"),
+        "stat_pips": 100 if expected_pips == observed_pips else 0,
+        "artifact_cleanliness": normalized("art_quality"),
+    })
+    passed = passed and quality["passed"]
+
     _log(f"[phase grade] Content Score: {content_score}/100")
     _log(f"[phase grade] Final Score: {final_score}/100 {'(style mismatch override)' if not style_match else ''}")
     _log(f"[phase grade] Passed: {passed}")
@@ -4531,11 +4590,15 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         "style_mismatch_reason": style_reason,
         "corrections": result.corrections,
         "categories": result.categories,
+        "quality_contract": quality,
         "style_refs_count": len(style_refs),
         "style_refs": [Path(r).name for r in style_refs],
     }
     with open(grade_json_path, "w", encoding="utf-8") as f:
         json.dump(grade_data, f, indent=2)
+    write_provenance(card_dir, [provenance(
+        "review", {"card": card_json, "image_sha256": provenance("review", {}, out_png.read_bytes()).output_sha256},
+        quality, status="success" if quality["passed"] else "failure")])
     _log(f"[phase grade] Saved {grade_json_path}")
 
     # Save grade.txt - match terminal output format
@@ -4604,7 +4667,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     card_json = read_json(card_path)
     content = card_json.get("content", {})
     word = content.get("WORD", "UNKNOWN")
-    target_rarity = content.get("RARITY", "COMMON")
+    target_rarity = content.get("RARITY_TEXT", "COMMON")
     target_type = content.get("CARD_TYPE", "NOUN")
 
     # Get stored style_series_dir from meta.yml (set during initial generation)
@@ -4654,6 +4717,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     best_result: ReviewResult | None = None
     all_descriptions: list[CardDescription] = []
     style_mismatch_count = 0
+    regenerated_during_review = False
 
     for attempt in range(1, max_attempts + 1):
         _log(f"[phase review] === ATTEMPT {attempt}/{max_attempts} for {word} ===")
@@ -4662,6 +4726,11 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         _log(f"[phase review] Stage 1: Describing card with {len(style_refs)} style refs + rubric...")
         try:
             description = describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
+            # Counts are renderer-owned binary pixels. Use the deterministic
+            # pixel contract rather than a vision model's unreliable counting.
+            from hypertext.cards.stat_pips import read_stat_pips
+            (description.stat_lore, description.stat_context,
+             description.stat_complexity) = read_stat_pips(out_png)
             all_descriptions.append(description)
         except Exception as e:
             _log(f"[phase review] Description failed: {e}")
@@ -4687,6 +4756,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
             _log(f"[phase review] Rebuilding card due to style mismatch...")
             try:
                 _generate_image_only(card_dir=card_dir)
+                regenerated_during_review = True
             except Exception as e:
                 _log(f"[phase review] Rebuild failed: {e}")
                 return 1
@@ -4701,7 +4771,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         _log(f"[phase review] Stage 2: Scoring against rubric...")
         try:
             result = score_against_rubric(description, card_json)
-            result.passed = result.score >= 90
+            result.passed = result.score >= QUALITY_GATE
         except Exception as e:
             _log(f"[phase review] Scoring failed: {e}")
             return 1
@@ -4746,6 +4816,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
             _log(f"[phase review] Score {result.score} < 90, REBUILDING image...")
             try:
                 _generate_image_only(card_dir=card_dir)
+                regenerated_during_review = True
             except Exception as e:
                 _log(f"[phase review] Image regeneration failed: {e}")
                 return 1
@@ -4773,6 +4844,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
                 # Run the image regeneration (not full revise, just image)
                 try:
                     _generate_image_only(card_dir=card_dir)
+                    regenerated_during_review = True
                 except Exception as e:
                     _log(f"[phase review] Revision image regeneration failed: {e}")
 
@@ -4788,9 +4860,12 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     _log(f"[phase review] Running final polish pass...")
     _run_polish(out_png)
 
-    # Reapply watermark after polish (since polish modifies the image)
-    _log(f"[phase review] Reapplying watermark after polish...")
-    _run_watermark(card_dir=card_dir, image_path=out_png)
+    # A review regeneration replaces the input PNG and therefore needs its
+    # watermark restored. Pixel-preserving finalization does not: applying the
+    # translucent sigil twice would itself create a visual inconsistency.
+    if regenerated_during_review:
+        _log(f"[phase review] Applying watermark after regenerated image...")
+        _run_watermark(card_dir=card_dir, image_path=out_png)
 
     # Update meta.yml with review status
     meta_path = card_dir / "meta.yml"
@@ -4831,7 +4906,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     if best_score >= 100:
         meta["review_status"] = "green"
         status_msg = "PASS (100%)"
-    elif best_score >= 90:
+    elif best_score >= QUALITY_GATE:
         meta["review_status"] = "yellow"
         status_msg = f"NEEDS MANUAL REVISION ({best_score}%) - review failed to reach 100 after {max_attempts} attempts"
         if best_result and best_result.corrections:
@@ -4851,9 +4926,9 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         yaml.safe_dump(meta, f, sort_keys=False, allow_unicode=True)
 
     # Write grade.json with detailed results
-    # Card passes if score >= 90 AND no style mismatches
+    # Rollout gate is intentionally exact: every category must produce 100/100.
     grade_json_path = card_dir / "grade.json"
-    passed = best_score >= 90 and style_mismatch_count == 0
+    passed = best_score >= QUALITY_GATE and style_mismatch_count == 0
     grade_data = {
         "word": word,
         "card_type": target_type,
@@ -4899,8 +4974,8 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         print(f"⚠️  WARNING: Card did not reach 100/100. Manual revision recommended.")
     print(f"{'='*60}\n")
 
-    # Return success if score >= 90 (yellow or green)
-    return 0 if best_score >= 90 else 1
+    # Never turn a partial score or a timed-out review into pipeline success.
+    return 0 if best_score >= QUALITY_GATE and style_mismatch_count == 0 else 1
 
 
 def _build_revision_from_corrections(description: CardDescription, corrections: list[str]) -> str:

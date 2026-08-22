@@ -1,14 +1,9 @@
 name: Revise Hypertext Card
 
+env:
+  GEMINI_IMAGE_MODEL: gemini-3.1-flash-image
+
 on:
-  push:
-    branches-ignore:
-      - main
-    paths:
-      - "series/**/revise.txt"
-      - "series/**/card.json"
-      - "series/**/prompt.txt"
-      - "series/**/prompt.json"
   workflow_dispatch:
     inputs:
       card_dir:

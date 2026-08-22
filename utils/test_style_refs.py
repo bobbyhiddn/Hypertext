@@ -3,6 +3,8 @@ import argparse
 import os
 import subprocess
 import sys
+
+from hypertext.gemini.config import image_model
 from pathlib import Path
 
 
@@ -52,7 +54,7 @@ def main() -> int:
 
     parser.add_argument(
         "--model",
-        default="gemini-3.1-flash-image-preview",
+        default=image_model(),
         help="Gemini model ID (passed through to gemini_style.py)",
     )
     parser.add_argument(
