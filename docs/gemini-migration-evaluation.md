@@ -283,3 +283,25 @@ failed. No blinded reviewer packet was generated. Remaining blockers are the
 non-pip content/style failures, a clean
 seven-of-seven rerun, available-cost acceptance, and operator rollout approval.
 Cron remains disabled.
+
+## Deterministic template-cleanliness remediation (2026-08-22)
+
+Inspection of the stat-pip comparison payloads and retained card renders found
+two renderer-side causes of the remaining subtle inconsistency. The final
+`hypertext.cards.polish` step was not a pixel operation: it submitted the entire
+accepted card to Gemini again to remove hypothetical brackets. That second
+generation could resample text masks and textured edges, producing pale subtitle
+halos and small typography or spacing shifts. In addition, normal generation
+could use up to three previously generated series cards as references, so the
+reference set—and therefore geometry—changed with card order; revision paths
+could also put the current, already-drifted card first.
+
+Finalization is now byte-preserving and makes no API request. Brackets remain an
+authoritative prompt and unchanged 100/100 review failure, rather than being
+repaired by a destructive whole-image pass. Fresh, batch, rebuild, and revision
+generation now default to checked-in matching examples plus the rarity template;
+operator-supplied reference overrides still work, while generated series cards
+are no longer implicit references. Focused regressions hash the complete PNG
+(including high-contrast subtitle-edge pixels) and assert that default reference
+selection cannot consult prior series renders. This does not claim a new live
+seven-case pass and does not weaken any scoring gate. Scheduling remains disabled.

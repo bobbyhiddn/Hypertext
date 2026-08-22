@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
-"""
-Polish tool to remove lingering brackets from generated cards.
+"""Deterministic finalization for generated cards.
+
+Historically this command sent the complete, already-rendered card through a
+second image-generation request to remove possible brackets.  That request
+could resample clean text and introduce halos or small layout changes.  The
+generator/reviewer contracts already reject brackets, so finalization must be
+pixel preserving.
 """
 import argparse
 import os
+import shutil
 import sys
 
-from hypertext.cards.clean import clean_template
-from hypertext.gemini.config import image_model
+
+def finalize_card(in_path: str, out_path: str) -> None:
+    """Publish *in_path* without decoding, resampling, or recompositing it."""
+    if os.path.abspath(in_path) == os.path.abspath(out_path):
+        return
+    os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
+    shutil.copyfile(in_path, out_path)
 
 
 def main() -> int:
@@ -23,32 +34,10 @@ def main() -> int:
         print(f"Error: {in_path} not found.")
         return 1
 
-    prompt = (
-        "You are a copy machine. Reproduce this trading card EXACTLY, pixel-perfect, with one exception: "
-        "if you see square brackets [ ] or parentheses ( ) around any text, redraw that text without the brackets or parentheses.\n\n"
-        "RULES:\n"
-        "1. Copy the ENTIRE card exactly - frame, artwork, all text, all icons\n"
-        "2. If text says '[WORD]', write 'WORD' instead (no brackets)\n"
-        "3. If text says '[RARE]', write 'RARE' instead (no brackets)\n"
-        "4. If text says '(WORD)', write 'WORD' instead (no parentheses)\n"
-        "5. ALL words inside brackets or parentheses MUST appear in the output, just without the [ ] or ( ) characters\n"
-        "6. If there are no brackets or parentheses, output the image completely unchanged\n\n"
-        "The stat pips, rarity diamond, artwork, and layout must be identical to the input."
-    )
-
-    print(f"Polishing card (removing brackets and parentheses) -> {out_path}...")
+    print(f"Finalizing card without pixel changes -> {out_path}...")
     try:
-        clean_template(
-            in_path,
-            out_path,
-            prompt=prompt,
-            model=image_model(),
-            image_size="2K",
-            max_attempts=3,
-            base_delay_s=2.0,
-            timeout_s=180.0
-        )
-        print("Polish complete.")
+        finalize_card(in_path, out_path)
+        print("Finalization complete.")
     except Exception as e:
         print(f"Error polishing card: {e}")
         return 1

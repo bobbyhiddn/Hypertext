@@ -858,11 +858,13 @@ def _build_style_refs(
     target_rarity: str | None = None,
     target_type: str | None = None,
     fix_mode: bool = False,
-    templates_only: bool = False,
+    templates_only: bool = True,
 ) -> tuple[list[str], dict[int, str], bool]:
     """Build list of style reference paths for image generation.
 
-    Uses ONLY cards matching BOTH type AND rarity for cleanest references.
+    Uses stable checked-in examples and templates by default. Series cards are
+    opt-in because their inclusion makes a card's geometry depend on generation
+    order and lets small generated defects propagate to later cards.
     Example cards are always included as premium references.
 
     Reference priority order:
@@ -3259,7 +3261,7 @@ def _generate_image_for_card_dir(
     skip_polish: bool = False,
     skip_watermark: bool = False,
     style_series_dir: Path | None = None,
-    templates_only: bool = False,
+    templates_only: bool = True,
     override_style_refs: list[str] | None = None,
 ) -> int:
     out_name = "card_1024x1536.png"
@@ -3485,7 +3487,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
                 target_rarity=target_rarity,
                 target_type=target_type,
                 fix_mode=out_png.exists(),
-                templates_only=is_example_card,
+                templates_only=True,
             )
             if extra_style_refs:
                 extra_resolved = [str(Path(r).resolve()) for r in extra_style_refs]
@@ -3579,7 +3581,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
                 target_rarity=target_rarity,
                 target_type=target_type,
                 fix_mode=False,
-                templates_only=is_example_card,
+                templates_only=True,
             )
             # Add extra style refs at start (highest priority), deduped
             if extra_style_refs:
@@ -3757,7 +3759,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
             target_rarity=target_rarity,
             target_type=target_type,
             fix_mode=use_fix_mode,
-            templates_only=is_example_card,
+            templates_only=True,
         )
         # Add extra style refs after current card (for fix_mode) or at start
         if extra_style_refs:
@@ -4295,7 +4297,7 @@ def _generate_image_only(*, card_dir: Path) -> Path:
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
-        templates_only=is_example_card,
+        templates_only=True,
     )
     if style_refs:
         cmd = [
@@ -4664,6 +4666,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     best_result: ReviewResult | None = None
     all_descriptions: list[CardDescription] = []
     style_mismatch_count = 0
+    regenerated_during_review = False
 
     for attempt in range(1, max_attempts + 1):
         _log(f"[phase review] === ATTEMPT {attempt}/{max_attempts} for {word} ===")
@@ -4702,6 +4705,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
             _log(f"[phase review] Rebuilding card due to style mismatch...")
             try:
                 _generate_image_only(card_dir=card_dir)
+                regenerated_during_review = True
             except Exception as e:
                 _log(f"[phase review] Rebuild failed: {e}")
                 return 1
@@ -4761,6 +4765,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
             _log(f"[phase review] Score {result.score} < 90, REBUILDING image...")
             try:
                 _generate_image_only(card_dir=card_dir)
+                regenerated_during_review = True
             except Exception as e:
                 _log(f"[phase review] Image regeneration failed: {e}")
                 return 1
@@ -4788,6 +4793,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
                 # Run the image regeneration (not full revise, just image)
                 try:
                     _generate_image_only(card_dir=card_dir)
+                    regenerated_during_review = True
                 except Exception as e:
                     _log(f"[phase review] Revision image regeneration failed: {e}")
 
@@ -4803,9 +4809,12 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     _log(f"[phase review] Running final polish pass...")
     _run_polish(out_png)
 
-    # Reapply watermark after polish (since polish modifies the image)
-    _log(f"[phase review] Reapplying watermark after polish...")
-    _run_watermark(card_dir=card_dir, image_path=out_png)
+    # A review regeneration replaces the input PNG and therefore needs its
+    # watermark restored. Pixel-preserving finalization does not: applying the
+    # translucent sigil twice would itself create a visual inconsistency.
+    if regenerated_during_review:
+        _log(f"[phase review] Applying watermark after regenerated image...")
+        _run_watermark(card_dir=card_dir, image_path=out_png)
 
     # Update meta.yml with review status
     meta_path = card_dir / "meta.yml"
