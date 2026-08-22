@@ -1274,7 +1274,7 @@ def _generate_queue_entries(
     )
 
     _log(f"[plan] generating queue entries (count={count})")
-    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=1.0, use_google_search=False)
+    text = generate_text(prompt, temperature=1.0, use_google_search=False)
     data = _parse_json_from_model(text)
     if not isinstance(data, list):
         raise RuntimeError("Queue generation did not return a JSON array.")
@@ -1340,7 +1340,6 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
     _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
     text, grounding = generate_text_with_grounding(
         prompt,
-        model="gemini-3-pro-preview",
         temperature=0.6,
         use_google_search=True,
     )
@@ -1350,7 +1349,6 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         retry_prompt = prompt + "\n\nIMPORTANT: Return ONLY raw JSON (no markdown, no backticks, no commentary)."
         text, grounding = generate_text_with_grounding(
             retry_prompt,
-            model="gemini-3-pro-preview",
             temperature=0.2,
             use_google_search=True,
         )
@@ -3678,7 +3676,7 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
     )
 
     _log("[phase revise] requesting JSON Patch from Gemini")
-    text = generate_text(prompt, model="gemini-3-pro-preview", temperature=0.2, use_google_search=False)
+    text = generate_text(prompt, temperature=0.2, use_google_search=False)
     patch_ops = _parse_json_from_model(text)
     if not isinstance(patch_ops, list):
         raise RuntimeError("Revise step did not return a JSON Patch array.")
@@ -4403,7 +4401,7 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     card_json = read_json(card_path)
     content = card_json.get("content", {})
     word = content.get("WORD", "UNKNOWN")
-    target_rarity = content.get("RARITY", "COMMON")
+    target_rarity = content.get("RARITY_TEXT", "COMMON")
     target_type = content.get("CARD_TYPE", "NOUN")
 
     _log(f"[phase grade] Grading {word} ({target_type}, {target_rarity})")
@@ -4604,7 +4602,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     card_json = read_json(card_path)
     content = card_json.get("content", {})
     word = content.get("WORD", "UNKNOWN")
-    target_rarity = content.get("RARITY", "COMMON")
+    target_rarity = content.get("RARITY_TEXT", "COMMON")
     target_type = content.get("CARD_TYPE", "NOUN")
 
     # Get stored style_series_dir from meta.yml (set during initial generation)

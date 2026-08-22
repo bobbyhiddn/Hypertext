@@ -89,3 +89,48 @@ Qualitative review is blind and uses two reviewers. Each candidate must receive 
 Use capped exponential backoff with jitter, honor numeric `Retry-After`, cap attempts at 4 for evaluation, and write an atomic failure record containing status/category/attempt count. Never retry authentication, invalid request/model, safety refusal, missing image, corrupt image, or dimension mismatch. Never fall back to another model automatically because that makes evaluation and provenance ambiguous. A failed card stops that case and leaves production state untouched.
 
 Exit gates are: all unit/static tests pass; all deterministic checks pass; every representative and editing case clears qualitative review; costs and latency are recorded and accepted; model/provenance logging is verified; and an operator explicitly approves rollout. Until then, `.github/workflows/daily-hypertext.yml` must contain `workflow_dispatch` only and **scheduled generation must remain disabled**. After approval, first change production defaults and perform one supervised manual generation. Re-enabling cron is a separate, later operator decision and is not implied by migration approval.
+
+## Bounded live random-pipeline evaluation (2026-08-21)
+
+The approved live run produced four independent random cards through the actual
+planning, referenced-image generation, and automated-review path under
+`/home/cap/random-card-run-2026-08-21-v3`. This is a development repeatability
+sample, not the larger blinded baseline-versus-candidate study specified above.
+
+| Artifact | Requested contract | Generation | Automated review | Adjudication |
+| --- | --- | --- | --- | --- |
+| `001-water` | COMMON NOUN, 5 refs | JPEG 1696x2528 accepted and normalized to PNG 1024x1536; 1 API attempt | 0/100, 2/2 style mismatches | Valid quality failure: both reviews found structural drift (ornate/rounded frame treatment, side verse labels, or transliterations beside/in parentheses). |
+| `002-bless` | UNCOMMON VERB, 5 refs | JPEG normalized to PNG 1024x1536; 1 attempt | 100/100 | Pass. Correct word/type/rarity, three trivia bullets, legible scripts, relevant art, and coherent template geometry. |
+| `003-great` | COMMON ADJECTIVE, 3 refs | JPEG normalized to PNG 1024x1536; 1 attempt | 100/100 | Pass. Correct icon, word/type/rarity, three trivia bullets, legible scripts, relevant art, and coherent geometry. |
+| `004-fruit` | UNCOMMON NOUN, 3 refs | JPEG normalized to PNG 1024x1536; 1 attempt | 0/100, 2/2 style mismatches | Invalid automated verdict: both records describe a different reference (`#001`, COMMON, *chen/charis*) rather than the visible `#004` UNCOMMON FRUIT card. Visual inspection finds the requested identity and three trivia bullets, but this is not promoted to a machine pass. |
+
+Quantitatively, image transport and normalization passed 4/4, provenance records
+passed 4/4, and the original automated review passed 2/4. All four generation
+records identify `gemini-3.1-flash-image`, the source JPEG MIME type, one attempt,
+the reference count, and the normalized 1024x1536 dimensions. The run did not
+capture request latency or token/currency cost, so those rollout gates remain open.
+
+The run exposed three reproducible review/planning inconsistencies. Review read
+the absent `content.RARITY` key and silently graded UNCOMMON cards as COMMON;
+future prompt JSON declared four trivia bullets while planning and the style rubric
+require exactly three; and multi-image review supplied all images before a trailing
+label map, allowing the model to mistake a reference for the test card. The fixes
+use `RARITY_TEXT`, declare three trivia bullets, and place an explicit numbered text
+marker adjacent to every review image. Offline regression coverage also proves the
+stable configurable `gemini-2.5-pro` text/review defaults, JPEG-to-PNG conversion,
+exclusive acceptance of 1024x1536 or Gemini's observed 1696x2528 portrait response,
+and continued manual-only workflows.
+
+### Development acceptance and reviewer packet
+
+- Machine-verifiable implementation and static/unit gates: **pass** (13 tests).
+- Four-card live image response/provenance boundary: **pass** (4/4).
+- Repeatable automated review correctness: **not yet demonstrated after the image-label fix**; the completed run is 2 valid passes, 1 valid failure, and 1 invalid verdict.
+- Required representative five-card plus two-edit study, latency/cost acceptance, two-reviewer blinded qualitative gate, and operator rollout approval: **not complete**.
+- Scheduling safety: **pass**; workflows remain `workflow_dispatch`-only.
+
+Reviewer packet: inspect the four `outputs/card_1024x1536.png` files beside their
+`card.json`, `outputs/generation.json`, `grade.json`, and `meta.yml`. Review WATER's
+structural drift and independently score FRUIT without seeing its invalid automated
+verdict. The project is ready for engineering review of the fixes, but it is **not
+ready for rollout or cron restoration** and no blinded-human pass is claimed.

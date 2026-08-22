@@ -12,13 +12,22 @@ from unittest import mock
 
 from PIL import Image
 
-from hypertext.gemini import image, style
-from hypertext.gemini.config import DEFAULT_IMAGE_MODEL, image_endpoint, image_model
+from hypertext.gemini import image, review, style
+from hypertext.gemini.config import (DEFAULT_IMAGE_MODEL, DEFAULT_REVIEW_MODEL,
+                                     DEFAULT_TEXT_MODEL, image_endpoint, image_model,
+                                     review_model, text_model)
+from hypertext.gemini.image_contract import decode_and_validate
 
 
 def png(width=1024, height=1536):
     stream = io.BytesIO()
     Image.new("RGB", (width, height), "white").save(stream, "PNG")
+    return stream.getvalue()
+
+
+def jpeg(width=1024, height=1536):
+    stream = io.BytesIO()
+    Image.new("RGB", (width, height), "white").save(stream, "JPEG")
     return stream.getvalue()
 
 
@@ -177,6 +186,66 @@ class ConfigurationTests(unittest.TestCase):
     def test_environment_override(self):
         with mock.patch.dict(os.environ, {"GEMINI_IMAGE_MODEL": "custom"}):
             self.assertEqual(image_model(), "custom")
+        with mock.patch.dict(os.environ, {"GEMINI_TEXT_MODEL": "custom-text"}):
+            self.assertEqual(text_model(), "custom-text")
+        self.assertEqual(DEFAULT_TEXT_MODEL, "gemini-2.5-pro")
+        with mock.patch.dict(os.environ, {"GEMINI_REVIEW_MODEL": "custom-review"}):
+            self.assertEqual(review_model(), "custom-review")
+        self.assertEqual(DEFAULT_REVIEW_MODEL, "gemini-2.5-pro")
+
+    def test_jpeg_and_known_gemini_2k_are_normalized_to_png(self):
+        for data, mime in ((jpeg(), "image/jpeg"),
+                           (jpeg(1696, 2528), "image/jpeg"),
+                           (png(1696, 2528), "image/png")):
+            with self.subTest(mime=mime, size=len(data)):
+                normalized, dimensions = decode_and_validate(data, mime)
+                self.assertEqual(dimensions, (1024, 1536))
+                with Image.open(io.BytesIO(normalized)) as result:
+                    self.assertEqual(result.format, "PNG")
+                    self.assertEqual(result.size, (1024, 1536))
+
+    def test_unknown_portrait_dimensions_are_rejected_before_normalization(self):
+        for data, mime in ((jpeg(2048, 3072), "image/jpeg"),
+                           (png(848, 1264), "image/png")):
+            with self.subTest(mime=mime), self.assertRaisesRegex(RuntimeError, "dimensions"):
+                decode_and_validate(data, mime)
+
+    def test_random_card_contract_uses_rarity_text_and_three_trivia_items(self):
+        root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+        daily_path = os.path.join(root, "package/hypertext/pipeline/daily.py")
+        with open(daily_path, encoding="utf-8") as f:
+            daily_source = f.read()
+        self.assertNotIn('content.get("RARITY", "COMMON")', daily_source)
+        for name in ("card_prompt_template.json", "card_prompt_template_explicit.json"):
+            with open(os.path.join(root, "templates", name), encoding="utf-8") as f:
+                template = json.load(f)
+            trivia = next(panel for panel in template["layout"]["panels"]
+                          if panel.get("label") == "TRIVIA")
+            self.assertEqual(trivia["bullets_count"], 3)
+
+    def test_multi_image_review_labels_are_adjacent_to_images(self):
+        calls = []
+        response = ns.SimpleNamespace(candidates=[ns.SimpleNamespace(
+            content=ns.SimpleNamespace(parts=[ns.SimpleNamespace(text="{}")]))])
+        fake_client = ns.SimpleNamespace(models=ns.SimpleNamespace(
+            generate_content=lambda **kwargs: calls.append(kwargs) or response))
+        fake_genai = ns.SimpleNamespace(Client=lambda api_key: fake_client)
+        fake_types = ns.SimpleNamespace(
+            Part=ns.SimpleNamespace(from_text=lambda text: ("text", text)),
+            GenerateContentConfig=lambda **kwargs: kwargs)
+        with tempfile.TemporaryDirectory() as td, \
+             mock.patch.dict(os.environ, {"GEMINI_API_KEY": "fake"}, clear=True), \
+             mock.patch.object(review, "genai", fake_genai), \
+             mock.patch.object(review, "types", fake_types), \
+             mock.patch.object(review, "_image_part_from_path",
+                               side_effect=lambda path: ("image", str(path))):
+            paths = [os.path.join(td, "reference.png"), os.path.join(td, "test.png")]
+            review._call_gemini("compare [1] with test [2]", image_paths=paths)
+        self.assertEqual(calls[0]["contents"], [
+            ("text", "IMAGE [1]"), ("image", paths[0]),
+            ("text", "IMAGE [2]"), ("image", paths[1]),
+            ("text", "compare [1] with test [2]"),
+        ])
 
     def test_no_preview_image_defaults_and_daily_is_manual_only(self):
         root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))

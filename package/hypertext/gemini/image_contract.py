@@ -12,7 +12,8 @@ from pathlib import Path
 from PIL import Image
 
 EXPECTED_DIMENSIONS = (1024, 1536)
-ALLOWED_MIME_TYPES = {"image/png"}
+GEMINI_2K_DIMENSIONS = (1696, 2528)
+ALLOWED_MIME_TYPES = {"image/png", "image/jpeg"}
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 MAX_ATTEMPTS = 4
 
@@ -44,12 +45,21 @@ def decode_and_validate(data: bytes | str, mime_type: str) -> tuple[bytes, tuple
             image_format = image.format
     except Exception as exc:
         raise ImageContractError("Gemini returned corrupt image bytes") from exc
-    if image_format != "PNG":
+    expected_format = {"image/png": "PNG", "image/jpeg": "JPEG"}[mime_type]
+    if image_format != expected_format:
         raise ImageContractError(f"Image bytes do not match declared MIME type: {image_format}")
-    if dimensions != EXPECTED_DIMENSIONS:
+    if dimensions not in {EXPECTED_DIMENSIONS, GEMINI_2K_DIMENSIONS}:
         raise ImageContractError(
             f"Wrong image dimensions: {dimensions[0]}x{dimensions[1]}; expected 1024x1536"
         )
+    if image_format == "JPEG" or dimensions != EXPECTED_DIMENSIONS:
+        converted = io.BytesIO()
+        with Image.open(io.BytesIO(data)) as image:
+            if image.size != EXPECTED_DIMENSIONS:
+                image = image.resize(EXPECTED_DIMENSIONS, Image.Resampling.LANCZOS)
+            image.save(converted, format="PNG")
+        data = converted.getvalue()
+        dimensions = EXPECTED_DIMENSIONS
     return data, dimensions
 
 

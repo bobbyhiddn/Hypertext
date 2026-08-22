@@ -18,6 +18,8 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from hypertext.gemini.config import review_model
+
 try:
     from google import genai
     from google.genai import types
@@ -482,7 +484,7 @@ def _call_gemini(
     *,
     image_path: Path | None = None,
     image_paths: list[Path] | None = None,
-    model: str = "gemini-3-pro-preview",
+    model: str | None = None,
     max_attempts: int = 3,
     base_delay_s: float = 2.0,
 ) -> str:
@@ -499,6 +501,8 @@ def _call_gemini(
     if genai is None:
         raise RuntimeError("google-genai package required. Install with: pip install google-genai")
 
+    model = model or review_model()
+
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY or GOOGLE_API_KEY environment variable required")
@@ -508,7 +512,11 @@ def _call_gemini(
     contents = []
     # Handle multiple images first (for reference comparison)
     if image_paths:
-        for img_path in image_paths:
+        for index, img_path in enumerate(image_paths, 1):
+            # Keep an explicit marker adjacent to each image. A label list only in
+            # the trailing prompt allowed Gemini to score a reference as the test
+            # card in live multi-image reviews.
+            contents.append(types.Part.from_text(text=f"IMAGE [{index}]"))
             contents.append(_image_part_from_path(img_path))
     elif image_path:
         contents.append(_image_part_from_path(image_path))
@@ -568,7 +576,7 @@ def describe_card_style_references(
     Returns:
         Text description of what a correct Hypertext card looks like
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     if not style_refs:
         return "No style references provided."
@@ -622,7 +630,7 @@ def describe_card(
         style_rubric: Optional pre-generated description of correct style (from describe_card_style_references)
         model: Gemini model to use
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     if style_refs:
         # Build image list: refs first, then test card
@@ -775,7 +783,7 @@ def score_against_rubric(
 
     This is a pure judgment step - comparing observations to expectations.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     # Extract expected content
     content = card_json.get("content", {})
@@ -878,7 +886,7 @@ def review_card(
 
     This separation ensures more accurate evaluation.
     """
-    model = model or os.environ.get("GEMINI_REVIEW_MODEL", "gemini-3-pro-preview")
+    model = model or review_model()
 
     # Stage 1: Describe
     description = describe_card(image_path, model=model)
