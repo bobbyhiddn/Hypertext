@@ -158,6 +158,38 @@ def test_shared_lots_are_only_actual_sizes_and_expose_both_values():
         assert hashlib.sha256((ROOT / item["source"]).read_bytes()).hexdigest() == item["source_sha256"]
 
 
+def test_all_shared_lot_paths_and_manifests_reject_source_placeholder_copy():
+    manifests = [
+        json.loads((ROOT / "templates/lot/v001/shared/manifest.json").read_text()),
+        json.loads((ROOT / "operator_review/lot-template-family-d2429168/manifest.json").read_text()),
+    ]
+    forbidden = [
+        "Example verse text - " + "Book 1:1",
+        "This is a template. Replace this text with specific context, rules, and details for the " + "card.",
+        "SERIES: " + "20XX-QX Lots",
+    ]
+    assert len(forbidden) == 3
+    expected_copy = {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE",
+    }
+    for manifest in manifests:
+        serialized = json.dumps(manifest)
+        assert all(stale not in serialized for stale in forbidden)
+        cells = manifest.get("outputs", manifest.get("cells"))
+        assert len(cells) == 6
+        for item in cells:
+            assert item["visible_copy"] == expected_copy
+            for stale in forbidden:
+                assert stale not in json.dumps(item)
+            with Image.open(ROOT / item["path"]) as image:
+                assert image.format == "PNG" and image.size == LOT_SIZE
+                for name, box in item["clean_regions"].items():
+                    digest = hashlib.sha256(image.convert("RGB").crop(box).tobytes()).hexdigest()
+                    assert digest == item["clean_region_sha256"][name]
+
+
 def test_lot_representatives_are_exact_authoritative_phase_recipes():
     phases = {x["id"]: x for x in yaml.safe_load((ROOT / "templates/phases.yml").read_text())["phases"]}
     schema = json.loads((ROOT / "schema/lot_template_family.json").read_text())

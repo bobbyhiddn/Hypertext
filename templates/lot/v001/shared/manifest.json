@@ -32,7 +32,37 @@
         "name": "REMNANT",
         "display": "5 SAME TYPE"
       },
-      "sha256": "f28eee21afd29d58f3af8d779485bdc3ce515e4903172072009edf00f283f76d"
+      "visible_copy": {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE"
+      },
+      "clean_regions": {
+        "verse": [
+          150,
+          554,
+          874,
+          682
+        ],
+        "context": [
+          98,
+          1204,
+          956,
+          1410
+        ],
+        "series": [
+          37,
+          1475,
+          997,
+          1535
+        ]
+      },
+      "clean_region_sha256": {
+        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
+        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
+        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
+      },
+      "sha256": "1c739f737e2458ae9b83d43fab4d7ac657fdba1d3fc9c686745b312fbf870c8a"
     },
     {
       "subtype": "5-card",
@@ -49,7 +79,37 @@
         "name": "REMNANT",
         "display": "5 SAME TYPE"
       },
-      "sha256": "9819035410b88261dae4ff9e5bafe8ae73ead3b4a44ba51dd3eac6fbbdacc456"
+      "visible_copy": {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE"
+      },
+      "clean_regions": {
+        "verse": [
+          150,
+          554,
+          874,
+          682
+        ],
+        "context": [
+          98,
+          1204,
+          956,
+          1410
+        ],
+        "series": [
+          37,
+          1475,
+          997,
+          1535
+        ]
+      },
+      "clean_region_sha256": {
+        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
+        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
+        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
+      },
+      "sha256": "78227b6a0c383eca4049c8bfa9ba6a81b744932a48871ff143603174a38307e5"
     },
     {
       "subtype": "6-card",
@@ -66,7 +126,37 @@
         "name": "CONGREGATION",
         "display": "6 ANY MIX"
       },
-      "sha256": "2c0a046123cd7bd1fca916321815040ed4511427a8ecdf8a98cc21ac1baf9024"
+      "visible_copy": {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE"
+      },
+      "clean_regions": {
+        "verse": [
+          150,
+          554,
+          874,
+          682
+        ],
+        "context": [
+          98,
+          1204,
+          956,
+          1410
+        ],
+        "series": [
+          37,
+          1475,
+          997,
+          1535
+        ]
+      },
+      "clean_region_sha256": {
+        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
+        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
+        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
+      },
+      "sha256": "781808f3c1ebcf36c0412235e2bdeca82f3b1632d5a111a5ef17daaf04d2b4de"
     },
     {
       "subtype": "6-card",
@@ -83,7 +173,37 @@
         "name": "CONGREGATION",
         "display": "6 ANY MIX"
       },
-      "sha256": "8155b4df82a6751e270c33252f8bb72b9cc2cbcad2045f608cc04176efb6b8e2"
+      "visible_copy": {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE"
+      },
+      "clean_regions": {
+        "verse": [
+          150,
+          554,
+          874,
+          682
+        ],
+        "context": [
+          98,
+          1204,
+          956,
+          1410
+        ],
+        "series": [
+          37,
+          1475,
+          997,
+          1535
+        ]
+      },
+      "clean_region_sha256": {
+        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
+        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
+        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
+      },
+      "sha256": "e221f22bd2c4195993b425d43735beb1a41b984b9631a2edd43759a8c58a01af"
     },
     {
       "subtype": "7-card",
@@ -100,7 +220,37 @@
         "name": "CREATION",
         "display": "3 + 2 + 2 (THREE TYPES)"
       },
-      "sha256": "54ea8d3b01b8008c67e3b233baf389aadd4b7038bd454e5a9311b8f6d0becb36"
+      "visible_copy": {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE"
+      },
+      "clean_regions": {
+        "verse": [
+          150,
+          554,
+          874,
+          682
+        ],
+        "context": [
+          98,
+          1204,
+          956,
+          1410
+        ],
+        "series": [
+          37,
+          1475,
+          997,
+          1535
+        ]
+      },
+      "clean_region_sha256": {
+        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
+        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
+        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
+      },
+      "sha256": "796b29dbb65d654fbfb71cdf12d90bba9b82c4306fab0566de01e434b37be239"
     },
     {
       "subtype": "7-card",
@@ -117,24 +267,54 @@
         "name": "CREATION",
         "display": "3 + 2 + 2 (THREE TYPES)"
       },
-      "sha256": "fc56c97fbc13097e95d76e39d7a58c7b475ec5301853d3d0831a5e76a9e38eb8"
+      "visible_copy": {
+        "verse": "RECORD THIS LOT",
+        "context": "Match the composition exactly. Record the word cards in your Pages.",
+        "series": "SHARED LOT TEMPLATE"
+      },
+      "clean_regions": {
+        "verse": [
+          150,
+          554,
+          874,
+          682
+        ],
+        "context": [
+          98,
+          1204,
+          956,
+          1410
+        ],
+        "series": [
+          37,
+          1475,
+          997,
+          1535
+        ]
+      },
+      "clean_region_sha256": {
+        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
+        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
+        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
+      },
+      "sha256": "77dee86de04923097e7007ec5a9b33c88534da5470d3c036f940c9b343bdcea4"
     }
   ],
   "compatibility_aliases": [
     {
       "path": "templates/lot/v001/shared/5-card/template_1024x1536.png",
       "canonical": "templates/lot/v001/shared/5-card/chapter_template_1024x1536.png",
-      "sha256": "f28eee21afd29d58f3af8d779485bdc3ce515e4903172072009edf00f283f76d"
+      "sha256": "1c739f737e2458ae9b83d43fab4d7ac657fdba1d3fc9c686745b312fbf870c8a"
     },
     {
       "path": "templates/lot/v001/shared/6-card/template_1024x1536.png",
       "canonical": "templates/lot/v001/shared/6-card/chapter_template_1024x1536.png",
-      "sha256": "2c0a046123cd7bd1fca916321815040ed4511427a8ecdf8a98cc21ac1baf9024"
+      "sha256": "781808f3c1ebcf36c0412235e2bdeca82f3b1632d5a111a5ef17daaf04d2b4de"
     },
     {
       "path": "templates/lot/v001/shared/7-card/template_1024x1536.png",
       "canonical": "templates/lot/v001/shared/7-card/chapter_template_1024x1536.png",
-      "sha256": "54ea8d3b01b8008c67e3b233baf389aadd4b7038bd454e5a9311b8f6d0becb36"
+      "sha256": "796b29dbb65d654fbfb71cdf12d90bba9b82c4306fab0566de01e434b37be239"
     }
   ]
 }

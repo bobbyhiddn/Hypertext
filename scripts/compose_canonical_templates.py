@@ -24,6 +24,21 @@ TYPE_BOX = (45, 0, 345, 205)
 RARITY_BOX = (785, 0, 1008, 205)
 NAVY = "#171838"
 PARCHMENT = "#f0bd79"
+LOT_CLEAN_COPY = {
+    "verse": "RECORD THIS LOT",
+    "context": "Match the composition exactly. Record the word cards in your Pages.",
+    "series": "SHARED LOT TEMPLATE",
+}
+LOT_CLEAN_REGIONS = {
+    "verse": (150, 554, 874, 682),
+    "context": (98, 1204, 956, 1410),
+    "series": (37, 1475, 997, 1535),
+}
+LOT_FORBIDDEN_COPY = (
+    "Example verse text - Book 1:1",
+    "This is a template. Replace this text with specific context, rules, and details for the card.",
+    "SERIES: 20XX-QX Lots",
+)
 
 
 def font(size: int):
@@ -80,10 +95,25 @@ def apply_lot_contract(image: Image.Image, cards: int, role: str, value: int,
     lot_centered(draw, (120, 726, 934, 798), "COMPOSITION", 27, bold=True, fill=NAVY)
     lot_centered(draw, (120, 808, 934, 886), recipe, 32, bold=True, fill="#111111")
     lot_centered(draw, (120, 888, 934, 946), f"EXACTLY {cards} WORD CARDS", 22, fill=NAVY)
+    # Remove generated sample copy while retaining the established panels and layout.
+    draw.rectangle(LOT_CLEAN_REGIONS["verse"], fill="#efbd7e")
+    lot_centered(draw, LOT_CLEAN_REGIONS["verse"], LOT_CLEAN_COPY["verse"], 26,
+                 bold=True, fill=NAVY)
+    draw.rectangle(LOT_CLEAN_REGIONS["context"], fill="#efbd7e")
+    lot_centered(draw, (125, 1230, 929, 1300), "RECORDING INSTRUCTION", 24,
+                 bold=True, fill=NAVY)
+    lot_centered(draw, (125, 1300, 929, 1378), LOT_CLEAN_COPY["context"], 19,
+                 fill="#111111")
+    draw.rectangle(LOT_CLEAN_REGIONS["series"], fill=NAVY)
+    draw.text((60, 1490), LOT_CLEAN_COPY["series"], font=lot_font(21), fill=PARCHMENT)
 
 
 def sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def image_region_sha(image: Image.Image, box) -> str:
+    return hashlib.sha256(image.crop(box).tobytes()).hexdigest()
 
 
 def png(path: Path) -> Image.Image:
@@ -157,11 +187,15 @@ def compose_lots() -> dict:
             image = png(source)
             apply_lot_contract(image, cards, role, value, subtype["representative"]["name"],
                                subtype["representative"]["display"])
+            clean_region_sha256 = {name: image_region_sha(image, box)
+                                   for name, box in LOT_CLEAN_REGIONS.items()}
             save(image, output)
             outputs.append({"subtype": f"{cards}-card", "role": role, "path": str(relative),
                             "source": str(source.relative_to(ROOT)), "source_sha256": sha(source),
                             "value": {value_key: value}, "visible_label": f"{role.upper()} LOT — {value} {value_key.upper()}",
-                            "representative": subtype["representative"], "sha256": sha(output)})
+                            "representative": subtype["representative"], "visible_copy": LOT_CLEAN_COPY,
+                            "clean_regions": LOT_CLEAN_REGIONS,
+                            "clean_region_sha256": clean_region_sha256, "sha256": sha(output)})
         legacy = ROOT / f"templates/lot/v001/shared/{cards}-card/template_1024x1536.png"
         legacy.write_bytes((ROOT / outputs[-2]["path"]).read_bytes())
         aliases.append({"path": str(legacy.relative_to(ROOT)), "canonical": outputs[-2]["path"], "sha256": sha(legacy)})
@@ -170,6 +204,9 @@ def compose_lots() -> dict:
               "roles": {"table": "Chapter Lot", "player": "Page Lot"}, "canvas": [1024, 1536],
               "composition_order": ["checked_in_subtype_source", "opaque_typography_cleanup", "canonical_role_and_recipe"],
               "outputs": outputs, "compatibility_aliases": aliases}
+    serialized = json.dumps(result)
+    if any(stale in serialized for stale in LOT_FORBIDDEN_COPY):
+        raise RuntimeError("placeholder Lot copy escaped into the shared manifest")
     LOT_MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     LOT_MANIFEST.write_text(json.dumps(result, indent=2) + "\n")
     entries = [(f'{x["subtype"]} / {x["role"].title()} Lot', ROOT / x["path"]) for x in outputs]
@@ -185,6 +222,8 @@ def compose_lots() -> dict:
                   {"path": "templates/phases.yml", "sha256": sha(ROOT / "templates/phases.yml")}],
               "matrix": str(matrix_path.relative_to(ROOT)), "matrix_sha256": sha(matrix_path),
               "cells": outputs}
+    if any(stale in json.dumps(review) for stale in LOT_FORBIDDEN_COPY):
+        raise RuntimeError("placeholder Lot copy escaped into the review manifest")
     (LOT_REVIEW / "manifest.json").write_text(json.dumps(review, indent=2) + "\n")
     (LOT_REVIEW / "README.md").write_text(
         "# Canonical Lot template family review\n\n"
@@ -192,7 +231,10 @@ def compose_lots() -> dict:
         "source templates. Each cell identifies its source and digest in `manifest.json`; recipes and "
         "rewards resolve through `schema/lot_template_family.json` to `templates/phases.yml`.\n\n"
         "Review scope: `REQ-PPAUG-017` and `REQ-PPAUG-004`. No model call is part of this composition "
-        "path, and scheduled generation remains disabled.\n")
+        "path, and scheduled generation remains disabled.\n\n"
+        "The compositor currently resolves DejaVu Serif through Pillow by font name. The repository "
+        "contains no approved font binary, so pinning a new file would create an unapproved visual "
+        "baseline; deterministic runs require the supported environment to provide that font.\n")
     return result
 
 
