@@ -11,5 +11,5 @@
     {"cards": 7, "chapter_value": {"points": 14}, "page_value": {"letters": 3},
      "representative": {"id": 27, "name": "CREATION", "display": "3 + 2 + 2 (THREE TYPES)"}}
   ],
-  "output_pattern": "templates/lot/v001/shared/{cards}-card/{role}_template_1024x1536.png"
+  "output_pattern": "templates/lot/v001/shared/{cards}-card/template_1024x1536.png"
 }

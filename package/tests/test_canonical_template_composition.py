@@ -148,13 +148,13 @@ def test_manifest_evidence_reconstructs_every_promoted_face_exactly():
 def test_shared_lots_are_only_actual_sizes_and_expose_both_values():
     manifest = json.loads((ROOT / "templates/lot/v001/shared/manifest.json").read_text())
     assert manifest["scope"] == "shared-across-all-sets"
-    assert {(f'{x["cards"]}-card', x["role"]) for x in manifest["cells"]} == {
-        (f"{cards}-card", role) for cards in (5, 6, 7) for role in ("chapter", "page")}
+    assert {f'{x["cards"]}-card' for x in manifest["cells"]} == {"5-card", "6-card", "7-card"}
+    assert len(manifest["cells"]) == 3
     assert len(manifest["references"]) == 3
     for item in manifest["cells"]:
         with Image.open(ROOT / item["path"]) as image:
             assert image.format == "PNG" and image.size == LOT_SIZE
-        assert item["reward"] and item["recipe"]
+        assert item["chapter_value"] and item["page_value"] and item["recipe"]
         assert hashlib.sha256((ROOT / item["path"]).read_bytes()).hexdigest() == item["sha256"]
 
 

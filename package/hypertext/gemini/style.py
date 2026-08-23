@@ -85,6 +85,7 @@ def generate_with_styles(
     rarity_labels: dict[int, str] | None = None,
     target_rarity: str | None = None,
     fix_mode: bool = False,
+    include_type_icon: bool = True,
 ) -> None:
     """Generate an image with style references.
 
@@ -186,7 +187,7 @@ def generate_with_styles(
         "   - NAME = feather quill\n"
         "   - TITLE = ornate empty frame\n"
         "   Match the icon style from the type-specific template reference.\n"
-    )
+    ) if include_type_icon else ""
 
     # Add extra warning when using legacy references that may be missing icons
     legacy_instruction = ""
