@@ -290,7 +290,7 @@ python -m hypertext.gallery.builder --series series/2026-Q1 --out-dir docs/galle
 
 ## Card Specifications
 
-Word-face template selection uses `hypertext.cards.template_matrix.resolve_template(type, rarity)`. It resolves the closed five-type by four-rarity vocabulary to `templates/card/v001/composed/<type>/<rarity>/template_1024x1536.png` and verifies the accepted SHA-256 before returning the path. All 20 in-vocabulary pairs are occupied; unknown types and rarities are invalid and raise `ValueError`. The composed manifest records the byte-identical accepted candidate under `operator_review/constrained/e50961ad0f4d/` for every face.
+Word-face template selection uses `hypertext.cards.template_matrix.resolve_template(type, rarity)`. It resolves the closed five-type by four-rarity vocabulary to `templates/card/v001/composed/<type>/<rarity>/template_1024x1536.png` and verifies the canonical SHA-256 before returning the path. All 20 in-vocabulary pairs are occupied; unknown types and rarities are invalid and raise `ValueError`. The composed manifest records the accepted candidate under `operator_review/constrained/e50961ad0f4d/` plus the checked-in historical type-label witness used for the bounded label correction.
 
 ### Dimensions
 - **Card size:** 1024 x 1536 pixels

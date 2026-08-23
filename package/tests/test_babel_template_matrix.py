@@ -2,6 +2,7 @@ import copy
 import hashlib
 from pathlib import Path
 import pytest
+from PIL import Image, ImageChops
 
 from hypertext.cards import template_matrix
 from hypertext.pipeline import daily
@@ -36,16 +37,22 @@ def test_missing_mapping_is_reported_with_canonical_card_identity():
     assert any("canonical card 1 GRACE lacks template mapping NOUN+COMMON" in error for error in errors)
 
 
-def test_all_valid_combinations_resolve_to_byte_identical_accepted_assets():
+def test_all_valid_combinations_resolve_to_label_only_corrections_of_accepted_assets():
     manifest = template_matrix.load_template_manifest()
     matrix = template_matrix.load_matrix()
     expected = {(item["type"], item["rarity"]) for item in matrix["valid_combinations"]}
     assert expected == {(item["type"], item["rarity"]) for item in manifest["outputs"]}
     assert len(manifest["outputs"]) == 20
+    label_box = tuple(manifest["type_label_box"])
     for item in manifest["outputs"]:
         canonical = template_matrix.resolve_template(item["type"], item["rarity"])
         candidate = template_matrix.ROOT / item["accepted_candidate"]
-        assert canonical.read_bytes() == candidate.read_bytes()
+        with Image.open(canonical) as current, Image.open(candidate) as accepted:
+            difference = ImageChops.difference(current.convert("RGB"), accepted.convert("RGB"))
+            changed = difference.getbbox()
+            if changed is not None:
+                assert label_box[0] <= changed[0] < changed[2] <= label_box[2]
+                assert label_box[1] <= changed[1] < changed[3] <= label_box[3]
         assert hashlib.sha256(canonical.read_bytes()).hexdigest() == item["sha256"]
 
 
