@@ -1,0 +1,17 @@
+{
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "template_role": "reference [1], authoritative complete geometry",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+    },
+    {
+      "path": "templates/example_cards/003-wisdom/outputs/card_1024x1536.png",
+      "sha256": "93d9009bcef4f41d9bef66af2b9be2dad92b2a28d14cbdcc7704b319f8211a2d"
+    }
+  ],
+  "target_type": "noun",
+  "target_rarity": "rare"
+}

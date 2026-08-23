@@ -1,0 +1,17 @@
+{
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "template_role": "reference [1], authoritative complete geometry",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a"
+    },
+    {
+      "path": "templates/example_cards/005-redeem/outputs/card_1024x1536.png",
+      "sha256": "cde07a9c28dca684fa3bac1b961d2cccde3b15172c1a3759fd3133cdbeb668a0"
+    }
+  ],
+  "target_type": "verb",
+  "target_rarity": "common"
+}

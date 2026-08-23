@@ -1,0 +1,17 @@
+{
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "template_role": "reference [1], authoritative complete geometry",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d"
+    },
+    {
+      "path": "templates/example_cards/004-glory/outputs/card_1024x1536.png",
+      "sha256": "9642a0eb2f3b2f17a3dcb3781caaf8bd13a72e97dae84e432b8a132834e5fc59"
+    }
+  ],
+  "target_type": "noun",
+  "target_rarity": "glorious"
+}

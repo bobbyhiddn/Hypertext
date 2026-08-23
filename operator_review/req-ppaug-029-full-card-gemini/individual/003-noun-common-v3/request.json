@@ -1,0 +1,17 @@
+{
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "template_role": "reference [1], authoritative complete geometry",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c"
+    },
+    {
+      "path": "templates/example_cards/001-grace/outputs/card_1024x1536.png",
+      "sha256": "e4af9c36ac164b960c088ce0f4ec1b90947e585045279cd7006f867a9a105518"
+    }
+  ],
+  "target_type": "noun",
+  "target_rarity": "common"
+}
