@@ -4,9 +4,12 @@
   "family": "Lot",
   "roles": {"table": "Chapter Lot", "player": "Page Lot"},
   "subtypes": [
-    {"cards": 5, "chapter_value": {"points": 8}, "page_value": {"letters": 2}},
-    {"cards": 6, "chapter_value": {"points": 10}, "page_value": {"letters": 2}},
-    {"cards": 7, "chapter_value": {"points": 14}, "page_value": {"letters": 3}}
+    {"cards": 5, "chapter_value": {"points": 8}, "page_value": {"letters": 2},
+     "representative": {"id": 1, "name": "REMNANT", "display": "5 SAME TYPE"}},
+    {"cards": 6, "chapter_value": {"points": 10}, "page_value": {"letters": 2},
+     "representative": {"id": 15, "name": "CONGREGATION", "display": "6 ANY MIX"}},
+    {"cards": 7, "chapter_value": {"points": 14}, "page_value": {"letters": 3},
+     "representative": {"id": 27, "name": "CREATION", "display": "3 + 2 + 2 (THREE TYPES)"}}
   ],
-  "output_pattern": "templates/lot/v001/shared/{cards}-card/template_1024x1536.png"
+  "output_pattern": "templates/lot/v001/shared/{cards}-card/{role}_template_1024x1536.png"
 }

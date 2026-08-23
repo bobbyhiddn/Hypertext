@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MATRIX = ROOT / "schema/babel_template_matrix.json"
 WORD_MANIFEST = ROOT / "templates/card/v001/composed/manifest.json"
 LOT_MANIFEST = ROOT / "templates/lot/v001/shared/manifest.json"
+LOT_SCHEMA = ROOT / "schema/lot_template_family.json"
+LOT_REVIEW = ROOT / "operator_review/lot-template-family-d2429168"
 EVIDENCE = ROOT / "docs/evidence/deterministic-reconstruction"
 CARD_INDEX = ROOT / "series/2026-Q1/cards_index.yml"
 CARD_RENDER_MANIFEST = EVIDENCE / "canonical-card-renders/manifest.json"
@@ -47,13 +49,37 @@ def apply_word_identity(image: Image.Image, word_type: str, rarity: str) -> None
     centered(draw, rarity_pill, rarity, 25)
 
 
-def apply_lot_values(image: Image.Image, chapter: int, page: int) -> None:
-    """Spell out the two rule roles inside the existing reward ribbon."""
+def lot_font(size: int, bold: bool = False):
+    name = "DejaVuSerif-Bold.ttf" if bold else "DejaVuSerif.ttf"
+    return ImageFont.truetype(name, size)
+
+
+def lot_centered(draw: ImageDraw.ImageDraw, box, value: str, size: int, *, bold=False, fill=PARCHMENT) -> None:
+    face = lot_font(size, bold)
+    bounds = draw.textbbox((0, 0), value, font=face)
+    x = box[0] + (box[2] - box[0] - (bounds[2] - bounds[0])) // 2
+    y = box[1] + (box[3] - box[1] - (bounds[3] - bounds[1])) // 2 - bounds[1]
+    draw.text((x, y), value, font=face, fill=fill)
+
+
+def apply_lot_contract(image: Image.Image, cards: int, role: str, value: int,
+                       title: str, recipe: str) -> None:
+    """Apply crisp canonical copy within the source template's established panels."""
     draw = ImageDraw.Draw(image)
-    box = (130, 302, 900, 480)
-    draw.rectangle(box, fill=NAVY)
-    centered(draw, (box[0], 312, box[2], 382), f"CHAPTER: {chapter} POINTS", 32)
-    centered(draw, (box[0], 382, box[2], 452), f"PAGE: {page} LETTERS", 32)
+    # Opaque fills prevent resampling halos around the replaced generated lettering.
+    draw.rounded_rectangle((196, 61, 808, 207), radius=14, fill="#efbd7e")
+    lot_centered(draw, (196, 72, 808, 137), title, 45, bold=True, fill="#111111")
+    lot_centered(draw, (196, 137, 808, 194), f"CANONICAL {cards}-CARD LOT", 23, fill="#111111")
+    banner = (130, 302, 900, 484)
+    draw.rectangle(banner, fill=NAVY, outline="#d49b72", width=5)
+    unit = "POINTS" if role == "chapter" else "LETTERS"
+    lot_centered(draw, (145, 322, 885, 397), f"{role.upper()} LOT", 28, bold=True)
+    lot_centered(draw, (145, 395, 885, 467), f"{value} {unit}", 39, bold=True)
+    panel = (91, 696, 963, 972)
+    draw.rounded_rectangle(panel, radius=22, fill="#efbd7e", outline=NAVY, width=8)
+    lot_centered(draw, (120, 726, 934, 798), "COMPOSITION", 27, bold=True, fill=NAVY)
+    lot_centered(draw, (120, 808, 934, 886), recipe, 32, bold=True, fill="#111111")
+    lot_centered(draw, (120, 888, 934, 946), f"EXACTLY {cards} WORD CARDS", 22, fill=NAVY)
 
 
 def sha(path: Path) -> str:
@@ -117,23 +143,56 @@ def compose_words() -> dict:
 
 
 def compose_lots() -> dict:
-    rewards = {5: (8, 2), 6: (10, 2), 7: (14, 3)}
+    schema = json.loads(LOT_SCHEMA.read_text())
     outputs = []
-    for cards, (chapter, page) in rewards.items():
+    aliases = []
+    for subtype in schema["subtypes"]:
+        cards = subtype["cards"]
         source = ROOT / f"templates/lot/v001/{cards}-card/template_1024x1536.png"
-        relative = Path(f"templates/lot/v001/shared/{cards}-card/template_1024x1536.png")
-        output = ROOT / relative
-        image = png(source)
-        apply_lot_values(image, chapter, page)
-        save(image, output)
-        outputs.append({"subtype": f"{cards}-card", "path": str(relative), "source": str(source.relative_to(ROOT)),
-                        "chapter_value": {"points": chapter, "visible_label": f"CHAPTER: {chapter} POINTS"},
-                        "page_value": {"letters": page, "visible_label": f"PAGE: {page} LETTERS"}, "sha256": sha(output)})
+        for role in ("chapter", "page"):
+            value_key = "points" if role == "chapter" else "letters"
+            value = subtype[f"{role}_value"][value_key]
+            relative = Path(f"templates/lot/v001/shared/{cards}-card/{role}_template_1024x1536.png")
+            output = ROOT / relative
+            image = png(source)
+            apply_lot_contract(image, cards, role, value, subtype["representative"]["name"],
+                               subtype["representative"]["display"])
+            save(image, output)
+            outputs.append({"subtype": f"{cards}-card", "role": role, "path": str(relative),
+                            "source": str(source.relative_to(ROOT)), "source_sha256": sha(source),
+                            "value": {value_key: value}, "visible_label": f"{role.upper()} LOT — {value} {value_key.upper()}",
+                            "representative": subtype["representative"], "sha256": sha(output)})
+        legacy = ROOT / f"templates/lot/v001/shared/{cards}-card/template_1024x1536.png"
+        legacy.write_bytes((ROOT / outputs[-2]["path"]).read_bytes())
+        aliases.append({"path": str(legacy.relative_to(ROOT)), "canonical": outputs[-2]["path"], "sha256": sha(legacy)})
     result = {"schema_version": 1, "scope": "shared-across-all-sets", "family": "Lot",
-              "roles": {"table": "Chapter Lot", "player": "Page Lot"}, "canvas": [1024, 1536], "outputs": outputs}
+              "authoritative_data": str(LOT_SCHEMA.relative_to(ROOT)),
+              "roles": {"table": "Chapter Lot", "player": "Page Lot"}, "canvas": [1024, 1536],
+              "composition_order": ["checked_in_subtype_source", "opaque_typography_cleanup", "canonical_role_and_recipe"],
+              "outputs": outputs, "compatibility_aliases": aliases}
     LOT_MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     LOT_MANIFEST.write_text(json.dumps(result, indent=2) + "\n")
-    contact_sheet([(x["subtype"], ROOT / x["path"]) for x in outputs], EVIDENCE / "shared-lots-contact-sheet.png", 3)
+    entries = [(f'{x["subtype"]} / {x["role"].title()} Lot', ROOT / x["path"]) for x in outputs]
+    contact_sheet(entries, EVIDENCE / "shared-lots-contact-sheet.png", 3)
+    matrix_path = LOT_REVIEW / "lot-template-family-matrix.png"
+    contact_sheet(entries, matrix_path, 3)
+    review = {"schema_version": 1, "requirements": ["REQ-PPAUG-017", "REQ-PPAUG-004"],
+              "label": "Chapter Lot / Page Lot × 5 / 6 / 7 cards",
+              "generation_policy": "offline deterministic composition only; scheduled generation disabled",
+              "generator": str(Path(__file__).relative_to(ROOT)), "generator_sha256": sha(Path(__file__)),
+              "authoritative_data": [
+                  {"path": str(LOT_SCHEMA.relative_to(ROOT)), "sha256": sha(LOT_SCHEMA)},
+                  {"path": "templates/phases.yml", "sha256": sha(ROOT / "templates/phases.yml")}],
+              "matrix": str(matrix_path.relative_to(ROOT)), "matrix_sha256": sha(matrix_path),
+              "cells": outputs}
+    (LOT_REVIEW / "manifest.json").write_text(json.dumps(review, indent=2) + "\n")
+    (LOT_REVIEW / "README.md").write_text(
+        "# Canonical Lot template family review\n\n"
+        "This labeled matrix is composed deterministically from the checked-in 5-, 6-, and 7-card "
+        "source templates. Each cell identifies its source and digest in `manifest.json`; recipes and "
+        "rewards resolve through `schema/lot_template_family.json` to `templates/phases.yml`.\n\n"
+        "Review scope: `REQ-PPAUG-017` and `REQ-PPAUG-004`. No model call is part of this composition "
+        "path, and scheduled generation remains disabled.\n")
     return result
 
 
@@ -164,20 +223,32 @@ def render_canonical_cards(words: dict) -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(); parser.add_argument("--check", action="store_true"); args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--family", choices=("all", "words", "lots"), default="all")
+    args = parser.parse_args()
     before = {}
     if args.check:
         for root in (WORD_MANIFEST.parent, LOT_MANIFEST.parent, EVIDENCE):
             if root.exists():
                 before.update({p: sha(p) for p in root.rglob("*") if p.is_file()})
-    words, lots = compose_words(), compose_lots()
-    cards = render_canonical_cards(words)
-    if len(words["outputs"]) != 20 or len(lots["outputs"]) != 3 or cards["count"] != 31:
-        raise RuntimeError("canonical coverage mismatch")
+    words = lots = cards = None
+    if args.family in ("all", "words"):
+        words = compose_words()
+        cards = render_canonical_cards(words)
+        if len(words["outputs"]) != 20 or cards["count"] != 31:
+            raise RuntimeError("canonical word coverage mismatch")
+    if args.family in ("all", "lots"):
+        lots = compose_lots()
+        if len(lots["outputs"]) != 6:
+            raise RuntimeError("canonical Lot coverage mismatch")
     if args.check:
         after = {p: sha(p) for p in before}
         if before != after: raise RuntimeError("composition is not deterministic")
-    print(f'validated {len(words["outputs"])} word templates, {cards["count"]} canonical cards, and {len(lots["outputs"])} shared Lot subtypes')
+    counts = []
+    if words: counts.append(f'{len(words["outputs"])} word templates and {cards["count"]} canonical cards')
+    if lots: counts.append(f'{len(lots["outputs"])} shared Lot role/size variants')
+    print("validated " + " plus ".join(counts))
 
 
 if __name__ == "__main__": main()

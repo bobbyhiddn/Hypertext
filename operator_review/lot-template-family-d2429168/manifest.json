@@ -1,22 +1,26 @@
 {
   "schema_version": 1,
-  "scope": "shared-across-all-sets",
-  "family": "Lot",
-  "authoritative_data": "schema/lot_template_family.json",
-  "roles": {
-    "table": "Chapter Lot",
-    "player": "Page Lot"
-  },
-  "canvas": [
-    1024,
-    1536
+  "requirements": [
+    "REQ-PPAUG-017",
+    "REQ-PPAUG-004"
   ],
-  "composition_order": [
-    "checked_in_subtype_source",
-    "opaque_typography_cleanup",
-    "canonical_role_and_recipe"
+  "label": "Chapter Lot / Page Lot \u00d7 5 / 6 / 7 cards",
+  "generation_policy": "offline deterministic composition only; scheduled generation disabled",
+  "generator": "scripts/compose_canonical_templates.py",
+  "generator_sha256": "e50c10773070b2833eaa9d850b33ec180c2e04cdb529ea2cb3c4bcf1168e340a",
+  "authoritative_data": [
+    {
+      "path": "schema/lot_template_family.json",
+      "sha256": "8c5836f65c6d0bc9e6dd12e004f761d4bd6c6ede3f2c117a2759e962a3a16739"
+    },
+    {
+      "path": "templates/phases.yml",
+      "sha256": "1c1fc4161ef8eb4dc125ac983f07685ba2911e51136155227c5353d093f2c770"
+    }
   ],
-  "outputs": [
+  "matrix": "operator_review/lot-template-family-d2429168/lot-template-family-matrix.png",
+  "matrix_sha256": "e8d1ffb67b2134febc93c4947d9c903785a6e0f7b1ab3e1c6fc68c32109f9086",
+  "cells": [
     {
       "subtype": "5-card",
       "role": "chapter",
@@ -118,23 +122,6 @@
         "display": "3 + 2 + 2 (THREE TYPES)"
       },
       "sha256": "fc56c97fbc13097e95d76e39d7a58c7b475ec5301853d3d0831a5e76a9e38eb8"
-    }
-  ],
-  "compatibility_aliases": [
-    {
-      "path": "templates/lot/v001/shared/5-card/template_1024x1536.png",
-      "canonical": "templates/lot/v001/shared/5-card/chapter_template_1024x1536.png",
-      "sha256": "f28eee21afd29d58f3af8d779485bdc3ce515e4903172072009edf00f283f76d"
-    },
-    {
-      "path": "templates/lot/v001/shared/6-card/template_1024x1536.png",
-      "canonical": "templates/lot/v001/shared/6-card/chapter_template_1024x1536.png",
-      "sha256": "2c0a046123cd7bd1fca916321815040ed4511427a8ecdf8a98cc21ac1baf9024"
-    },
-    {
-      "path": "templates/lot/v001/shared/7-card/template_1024x1536.png",
-      "canonical": "templates/lot/v001/shared/7-card/chapter_template_1024x1536.png",
-      "sha256": "54ea8d3b01b8008c67e3b233baf389aadd4b7038bd454e5a9311b8f6d0becb36"
     }
   ]
 }
