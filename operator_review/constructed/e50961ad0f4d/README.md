@@ -1,7 +1,9 @@
-# Gemini 20-cell template candidates
+# REQ-PPAUG-024 Word Card source collage
 
-These are review candidates only. They were generated from the frozen `e50961ad0f4d66f398f81706f092a7d0ea9cb0f4` sources with `gemini-3.1-flash-image`, portrait `2:3`, Gemini `2K`, and image-only response modality. The raw API images and adjacent `generation.json` records are under `raw/`; the top-level 848×1264 RGB PNGs are normalized review copies.
+`visual_acceptance_review_5x4.png` replaces the rejected generated matrix review. It is a read-only source-reference collage containing only the 11 native Word Card template faces and 20 completed example-card faces visible in the operator authority sheet `hypertext_templates_e50961ad0f4d_review.png`.
 
-`manifest.json` records the source blobs, prompts, settings, references, dimensions, and hashes. `checks.json` records objective build checks, and `contact_sheet.png` presents noun, verb, adjective, name, and title as rows with common, uncommon, rare, and glorious as columns.
+The two sections distinguish native templates from completed samples. Each face is shown whole and has its exact repository-relative path and role directly beneath it. No generated/reconstructed matrix candidate, Lot card, back, palette, or other raster appears in the replacement review artifact.
 
-No file in `templates/` was modified. These candidates have not been approved, published, or promoted. The contact sheet shows visible generative drift in some cells, including header-label and frame-accent inconsistencies, so human visual review is required before any selective follow-up.
+`visual_acceptance_review_5x4.provenance.json` records the authority commit and Git blob, source-byte SHA-256, source dimensions, full-face scaling operation, rendered-pixel SHA-256, and exact collage bounding box for every face. Run `python3 tools/verify_word_card_source_collage.py` to reconstruct every cell from the listed authority blob and compare all face pixels with the committed collage.
+
+The builder uses Pillow only for deterministic full-face downscaling, placement, and out-of-face labels. It does not use an image model and does not crop, paint over, reinterpret, or approximate a face. The rejected generated candidate files remain historical inputs only and are not part of this review artifact.
