@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/023-naked/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
+      "sha256": "b4775d0b0fb015a6fb2c9d80135660cfb2904ebb283e43a8a7bf9c733752648a"
+    },
+    {
+      "path": "templates/example_cards/012-sacred/outputs/card_1024x1536.png",
+      "sha256": "08c550ad1cb2eb159c97b80d595210915f51196b9ecaef8ab4d6c08459206346"
+    }
+  ],
+  "target_type": "adjective",
+  "target_rarity": "glorious"
+}

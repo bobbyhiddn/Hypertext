@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/025-noah/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
+      "sha256": "717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb"
+    },
+    {
+      "path": "templates/example_cards/016-abraham/outputs/card_1024x1536.png",
+      "sha256": "96d8b98ff65da6ba8fbafbcfeb6f6743133dc7ed45ef908288f374a23ea6804e"
+    }
+  ],
+  "target_type": "name",
+  "target_rarity": "glorious"
+}

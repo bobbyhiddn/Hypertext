@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/022-shem/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1"
+    },
+    {
+      "path": "templates/example_cards/015-elijah/outputs/card_1024x1536.png",
+      "sha256": "c88762c9d83f7641850c8de65e981e7e2a474270cb33c0885d31b86a7a3693e7"
+    }
+  ],
+  "target_type": "name",
+  "target_rarity": "rare"
+}

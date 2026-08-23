@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/030-spirit/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+      "sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1"
+    },
+    {
+      "path": "templates/example_cards/020-messiah/outputs/card_1024x1536.png",
+      "sha256": "fa6e07b4f25d3e2aad2eb2a5295887a0661e0255dabfcf88f42c73f98a7c09ab"
+    }
+  ],
+  "target_type": "title",
+  "target_rarity": "glorious"
+}

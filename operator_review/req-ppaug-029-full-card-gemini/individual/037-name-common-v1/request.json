@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/018-seth/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/name/common/template_1024x1536.png",
+      "sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151"
+    },
+    {
+      "path": "templates/example_cards/013-moses/outputs/card_1024x1536.png",
+      "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7"
+    }
+  ],
+  "target_type": "name",
+  "target_rarity": "common"
+}

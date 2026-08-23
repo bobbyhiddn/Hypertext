@@ -1,18 +1,11 @@
 {
   "review": "direct human visual inspection at full card resolution",
-  "generated_candidates": 18,
-  "accepted": [1, 2, 3, 6, 7, 8, 10, 11, 14, 15, 16, 17],
-  "rejected": {
-    "4": ["placeholder title CARD TITLE and DEFINITION TEXT remained"],
-    "5": ["placeholder title CARD TITLE remained", "canonical verse/language content drifted", "extra footer text"],
-    "9": ["malformed placeholder title HARD TITLE and DEFINITION TEXT remained"],
-    "12": ["Glorious cost drift: first of two cost-card icons contains an orange diamond"],
-    "13": ["duplicated word in ability: this this word"],
-    "18": ["malformed NT text: is be peaceable", "generated writing inside artwork panel"]
-  },
-  "missing": "cards 019-060 plus replacement attempts for six rejected candidates",
+  "generated_candidates": 59,
+  "regenerated_after_first_pass": [4, 5, 9, 12, 13, 18],
+  "archived_rejected_versions": 6,
+  "missing": [11],
   "accepted_complete_set": false,
-  "montage": null,
-  "blocker": "GEMINI_API_KEY/GEMINI_TEXT_API_KEY is not injected into stateless worker shells",
+  "montage": "operator_review/req-ppaug-029-full-card-gemini/review-montage-by-type-rarity.png",
+  "blocker": "Candidate 011 requires a contract-v1 full-face Gemini request; no Gemini API credential is available in the current shell.",
   "quota_failure_observed": false
 }

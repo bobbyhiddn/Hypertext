@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/003-mighty/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+      "sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c"
+    },
+    {
+      "path": "templates/example_cards/009-holy/outputs/card_1024x1536.png",
+      "sha256": "9ed42430982eec65bd8eec9b8bb1d0756a3407e81e653f8ee4dd2a9bf3eeb614"
+    }
+  ],
+  "target_type": "adjective",
+  "target_rarity": "common"
+}

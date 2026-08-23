@@ -1,0 +1,24 @@
+{
+  "input_contract_version": 1,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/030-spirit/card.json",
+  "references": [
+    {
+      "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa"
+    },
+    {
+      "path": "templates/example_cards/019-savior/outputs/card_1024x1536.png",
+      "sha256": "980f4ea9e530033a500530910b6104ebdb71502ca6e3772d9ab9164963608d3f"
+    }
+  ],
+  "target_type": "title",
+  "target_rarity": "rare"
+}

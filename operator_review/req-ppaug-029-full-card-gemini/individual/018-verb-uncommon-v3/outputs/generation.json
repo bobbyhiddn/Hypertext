@@ -1,13 +1,13 @@
 {
   "attempts": 1,
   "height": 1536,
-  "latency_ms": 19036,
+  "latency_ms": 15511,
   "mime_type": "image/png",
   "model": "gemini-3.1-flash-image",
   "reference_count": 2,
   "status": "success",
   "usage_metadata": {
-    "candidates_token_count": 2565,
+    "candidates_token_count": 2563,
     "candidates_tokens_details": [
       {
         "modality": "IMAGE",
@@ -25,7 +25,7 @@
         "token_count": 516
       }
     ],
-    "total_token_count": 4380
+    "total_token_count": 4378
   },
   "width": 1024
 }

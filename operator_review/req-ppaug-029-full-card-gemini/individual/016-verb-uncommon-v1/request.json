@@ -1,7 +1,14 @@
 {
+  "input_contract_version": 1,
   "model": "gemini-3.1-flash-image",
   "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
   "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/002-build/card.json",
   "references": [
     {
       "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
