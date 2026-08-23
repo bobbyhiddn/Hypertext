@@ -1,7 +1,7 @@
-# Canonical Lot template family review
+# Complete-face Lot style-reference review
 
-This labeled matrix is composed deterministically from the checked-in 5-, 6-, and 7-card source templates. Each cell identifies its source and digest in `manifest.json`; recipes and rewards resolve through `schema/lot_template_family.json` to `templates/phases.yml`.
+The six cells are independent, complete Gemini outputs for Chapter Lot and Page Lot at 5, 6, and 7 cards. The native checked-in Lot faces were supplied only as style and geometry references; no output face was assembled, painted, overlaid, or composited from them.
 
-Review scope: `REQ-PPAUG-017` and `REQ-PPAUG-004`. No model call is part of this composition path, and scheduled generation remains disabled.
+`manifest.json` records the model workflow, exact per-cell prompts, native-reference and output SHA-256 digests, and the normalization contract. The labeled matrix is review-only; its labels sit outside the complete faces.
 
-The compositor currently resolves DejaVu Serif through Pillow by font name. The repository contains no approved font binary, so pinning a new file would create an unapproved visual baseline; deterministic runs require the supported environment to provide that font.
+Review scope: `REQ-PPAUG-020` and `REQ-PPAUG-025`. This was a manual correction run, and scheduled generation remains disabled.

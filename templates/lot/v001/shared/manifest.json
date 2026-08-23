@@ -1,320 +1,112 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "scope": "shared-across-all-sets",
   "family": "Lot",
-  "authoritative_data": "schema/lot_template_family.json",
-  "roles": {
-    "table": "Chapter Lot",
-    "player": "Page Lot"
-  },
-  "canvas": [
-    1024,
-    1536
+  "requirements": [
+    "REQ-PPAUG-020",
+    "REQ-PPAUG-025"
   ],
-  "composition_order": [
-    "checked_in_subtype_source",
-    "opaque_typography_cleanup",
-    "canonical_role_and_recipe"
+  "label": "Chapter Lot / Page Lot \u00d7 5 / 6 / 7 cards",
+  "generation_policy": "manual complete-face Gemini style-reference generation; scheduled automation disabled",
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles generate mode",
+  "generated_at": "2026-08-23T01:34:09.896136+00:00",
+  "prohibited_operations": [
+    "text overlay on faces",
+    "face compositing",
+    "programmatic face construction"
   ],
-  "outputs": [
+  "reference_role": "authoritative native Lot faces used only as generation references",
+  "references": [
     {
-      "subtype": "5-card",
-      "role": "chapter",
-      "path": "templates/lot/v001/shared/5-card/chapter_template_1024x1536.png",
-      "source": "templates/lot/v001/5-card/template_1024x1536.png",
-      "source_sha256": "ca275a255b4d01c960b4888d8960e5db9beb4f17a3b66414d9462540eb6cc37e",
-      "value": {
-        "points": 8
-      },
-      "visible_label": "CHAPTER LOT \u2014 8 POINTS",
-      "representative": {
-        "id": 1,
-        "name": "REMNANT",
-        "display": "5 SAME TYPE"
-      },
-      "visible_copy": {
-        "verse": "RECORD THIS LOT",
-        "context": "Match the composition exactly. Record the word cards in your Pages.",
-        "series": "SHARED LOT TEMPLATE"
-      },
-      "clean_regions": {
-        "verse": [
-          150,
-          554,
-          874,
-          682
-        ],
-        "context": [
-          98,
-          1204,
-          956,
-          1410
-        ],
-        "series": [
-          37,
-          1475,
-          997,
-          1535
-        ]
-      },
-      "clean_region_sha256": {
-        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
-        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
-        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
-      },
-      "sha256": "1c739f737e2458ae9b83d43fab4d7ac657fdba1d3fc9c686745b312fbf870c8a"
+      "path": "templates/lot/v001/5-card/template_1024x1536.png",
+      "sha256": "ca275a255b4d01c960b4888d8960e5db9beb4f17a3b66414d9462540eb6cc37e"
     },
     {
-      "subtype": "5-card",
-      "role": "page",
-      "path": "templates/lot/v001/shared/5-card/page_template_1024x1536.png",
-      "source": "templates/lot/v001/5-card/template_1024x1536.png",
-      "source_sha256": "ca275a255b4d01c960b4888d8960e5db9beb4f17a3b66414d9462540eb6cc37e",
-      "value": {
-        "letters": 2
-      },
-      "visible_label": "PAGE LOT \u2014 2 LETTERS",
-      "representative": {
-        "id": 1,
-        "name": "REMNANT",
-        "display": "5 SAME TYPE"
-      },
-      "visible_copy": {
-        "verse": "RECORD THIS LOT",
-        "context": "Match the composition exactly. Record the word cards in your Pages.",
-        "series": "SHARED LOT TEMPLATE"
-      },
-      "clean_regions": {
-        "verse": [
-          150,
-          554,
-          874,
-          682
-        ],
-        "context": [
-          98,
-          1204,
-          956,
-          1410
-        ],
-        "series": [
-          37,
-          1475,
-          997,
-          1535
-        ]
-      },
-      "clean_region_sha256": {
-        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
-        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
-        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
-      },
-      "sha256": "78227b6a0c383eca4049c8bfa9ba6a81b744932a48871ff143603174a38307e5"
+      "path": "templates/lot/v001/6-card/template_1024x1536.png",
+      "sha256": "9eb447c83823b271959fbf17670ed1bc669883240ee8a642ce199dd1a512e814"
     },
     {
-      "subtype": "6-card",
-      "role": "chapter",
-      "path": "templates/lot/v001/shared/6-card/chapter_template_1024x1536.png",
-      "source": "templates/lot/v001/6-card/template_1024x1536.png",
-      "source_sha256": "9eb447c83823b271959fbf17670ed1bc669883240ee8a642ce199dd1a512e814",
-      "value": {
-        "points": 10
-      },
-      "visible_label": "CHAPTER LOT \u2014 10 POINTS",
-      "representative": {
-        "id": 15,
-        "name": "CONGREGATION",
-        "display": "6 ANY MIX"
-      },
-      "visible_copy": {
-        "verse": "RECORD THIS LOT",
-        "context": "Match the composition exactly. Record the word cards in your Pages.",
-        "series": "SHARED LOT TEMPLATE"
-      },
-      "clean_regions": {
-        "verse": [
-          150,
-          554,
-          874,
-          682
-        ],
-        "context": [
-          98,
-          1204,
-          956,
-          1410
-        ],
-        "series": [
-          37,
-          1475,
-          997,
-          1535
-        ]
-      },
-      "clean_region_sha256": {
-        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
-        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
-        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
-      },
-      "sha256": "781808f3c1ebcf36c0412235e2bdeca82f3b1632d5a111a5ef17daaf04d2b4de"
-    },
-    {
-      "subtype": "6-card",
-      "role": "page",
-      "path": "templates/lot/v001/shared/6-card/page_template_1024x1536.png",
-      "source": "templates/lot/v001/6-card/template_1024x1536.png",
-      "source_sha256": "9eb447c83823b271959fbf17670ed1bc669883240ee8a642ce199dd1a512e814",
-      "value": {
-        "letters": 2
-      },
-      "visible_label": "PAGE LOT \u2014 2 LETTERS",
-      "representative": {
-        "id": 15,
-        "name": "CONGREGATION",
-        "display": "6 ANY MIX"
-      },
-      "visible_copy": {
-        "verse": "RECORD THIS LOT",
-        "context": "Match the composition exactly. Record the word cards in your Pages.",
-        "series": "SHARED LOT TEMPLATE"
-      },
-      "clean_regions": {
-        "verse": [
-          150,
-          554,
-          874,
-          682
-        ],
-        "context": [
-          98,
-          1204,
-          956,
-          1410
-        ],
-        "series": [
-          37,
-          1475,
-          997,
-          1535
-        ]
-      },
-      "clean_region_sha256": {
-        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
-        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
-        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
-      },
-      "sha256": "e221f22bd2c4195993b425d43735beb1a41b984b9631a2edd43759a8c58a01af"
-    },
-    {
-      "subtype": "7-card",
-      "role": "chapter",
-      "path": "templates/lot/v001/shared/7-card/chapter_template_1024x1536.png",
-      "source": "templates/lot/v001/7-card/template_1024x1536.png",
-      "source_sha256": "27aca6362ad5473fca2afcbe96931bc5bf11216e30e0987342d6e1b9e7a9cedb",
-      "value": {
-        "points": 14
-      },
-      "visible_label": "CHAPTER LOT \u2014 14 POINTS",
-      "representative": {
-        "id": 27,
-        "name": "CREATION",
-        "display": "3 + 2 + 2 (THREE TYPES)"
-      },
-      "visible_copy": {
-        "verse": "RECORD THIS LOT",
-        "context": "Match the composition exactly. Record the word cards in your Pages.",
-        "series": "SHARED LOT TEMPLATE"
-      },
-      "clean_regions": {
-        "verse": [
-          150,
-          554,
-          874,
-          682
-        ],
-        "context": [
-          98,
-          1204,
-          956,
-          1410
-        ],
-        "series": [
-          37,
-          1475,
-          997,
-          1535
-        ]
-      },
-      "clean_region_sha256": {
-        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
-        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
-        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
-      },
-      "sha256": "796b29dbb65d654fbfb71cdf12d90bba9b82c4306fab0566de01e434b37be239"
-    },
-    {
-      "subtype": "7-card",
-      "role": "page",
-      "path": "templates/lot/v001/shared/7-card/page_template_1024x1536.png",
-      "source": "templates/lot/v001/7-card/template_1024x1536.png",
-      "source_sha256": "27aca6362ad5473fca2afcbe96931bc5bf11216e30e0987342d6e1b9e7a9cedb",
-      "value": {
-        "letters": 3
-      },
-      "visible_label": "PAGE LOT \u2014 3 LETTERS",
-      "representative": {
-        "id": 27,
-        "name": "CREATION",
-        "display": "3 + 2 + 2 (THREE TYPES)"
-      },
-      "visible_copy": {
-        "verse": "RECORD THIS LOT",
-        "context": "Match the composition exactly. Record the word cards in your Pages.",
-        "series": "SHARED LOT TEMPLATE"
-      },
-      "clean_regions": {
-        "verse": [
-          150,
-          554,
-          874,
-          682
-        ],
-        "context": [
-          98,
-          1204,
-          956,
-          1410
-        ],
-        "series": [
-          37,
-          1475,
-          997,
-          1535
-        ]
-      },
-      "clean_region_sha256": {
-        "verse": "b93ec43289e6b2299df6305d7c0eb276ee09b45e8c12b5d5dfb74ec7d0af957f",
-        "context": "8dfc74a4858301736042368da0f1009965fc600c68aa7beaa818b1653b9cf5b8",
-        "series": "2b98e8b5514338bf275b9315290ba8eae28127c434588f8e403eb9070a2fc702"
-      },
-      "sha256": "77dee86de04923097e7007ec5a9b33c88534da5470d3c036f940c9b343bdcea4"
+      "path": "templates/lot/v001/7-card/template_1024x1536.png",
+      "sha256": "27aca6362ad5473fca2afcbe96931bc5bf11216e30e0987342d6e1b9e7a9cedb"
     }
   ],
-  "compatibility_aliases": [
+  "matrix": "operator_review/lot-template-family-d2429168/lot-template-family-matrix.png",
+  "matrix_sha256": "ca59e05f7196bc16c4fa4be6d498e969f95f2c820668a31b351d955cd69288fb",
+  "matrix_note": "Review-only labeled contact sheet; labels are outside the complete generated faces.",
+  "normalization": "repository Gemini image contract: decoded model response to RGB PNG 1024x1536",
+  "cells": [
     {
-      "path": "templates/lot/v001/shared/5-card/template_1024x1536.png",
-      "canonical": "templates/lot/v001/shared/5-card/chapter_template_1024x1536.png",
-      "sha256": "1c739f737e2458ae9b83d43fab4d7ac657fdba1d3fc9c686745b312fbf870c8a"
+      "cards": 5,
+      "role": "chapter",
+      "title": "REMNANT",
+      "recipe": "5 SAME TYPE",
+      "reward": "8 POINTS",
+      "path": "templates/lot/v001/shared/5-card/chapter_template_1024x1536.png",
+      "sha256": "e72063c28a5670f0583173ba368cd0f566ee2f3a9964c3b7b7991bc0f6ef4f68",
+      "generation_record": "templates/lot/v001/shared/5-card/generation.json",
+      "generation_record_sha256": "542f919ac6d0d175e061ac3809dcfd38a4355b4e553c32dbddbbc6d7afb72eeb",
+      "prompt": "Use case: stylized-concept\nAsset type: canonical Hypertext Lot style-reference face\nPrimary request: Generate an entirely new, complete, flat front-facing card face. The supplied images are references only; do not edit, paint onto, trace, paste, composite, or retain pixels from them.\n\nRender this exact canonical content, each string exactly once:\n- Header left: \"LOT\"\n- Header right: \"5-CARD\"\n- Role label: \"CHAPTER LOT\"\n- Title: \"REMNANT\"\n- Composition recipe: \"5 SAME TYPE\"\n- Reward: \"8 POINTS\"\n- Rule: \"WREATH BONUS: +2 POINTS (FIRST TO RECORD)\"\n\nThe composition panel must visually express exactly 5 card slots consistent with \"5 SAME TYPE\". Show five identical abstract card-slot emblems, with the single centered caption 5 SAME TYPE. Do not choose or name a specific word type. Preserve the native Lot design language: one continuous rounded double frame, near-black navy #102030, restrained antique gold #C0A060, warm parchment, classical high-contrast serif typography, cream small caps on navy, thin gold rules, flat two-color Card-type icon language, balanced biblical-manuscript ornament. Use the native 5-card Lot reference as the authority for geometry, palette, typography, ornament, title, recipe, and slot count; use the other native Lot references only to understand the coherent family.\n\nOutput requirements: a sharp complete portrait card, 2:3, no exterior margin, mockup, hand, shadow, glow, blur, watermark, duplicated element, bracketed label, placeholder, explanatory caption, or invented rule. Do not render CONTEXT, SERIES, CARD COUNT, ROLE LABEL, COMPOSITION RECIPE, EXAMPLE VERSE, REWARD:, template instructions, replacement instructions, or any text besides the seven exact strings listed above. The reward must be exactly \"8 POINTS\" without the word REWARD. Ensure every required word and number is fully legible and spelled verbatim. The face must be generated as one unified model output; no blank zones intended for later text or graphics."
     },
     {
-      "path": "templates/lot/v001/shared/6-card/template_1024x1536.png",
-      "canonical": "templates/lot/v001/shared/6-card/chapter_template_1024x1536.png",
-      "sha256": "781808f3c1ebcf36c0412235e2bdeca82f3b1632d5a111a5ef17daaf04d2b4de"
+      "cards": 5,
+      "role": "page",
+      "title": "REMNANT",
+      "recipe": "5 SAME TYPE",
+      "reward": "2 LETTERS",
+      "path": "templates/lot/v001/shared/5-card/page_template_1024x1536.png",
+      "sha256": "9a694bb782a4b3637c57ae0f95ff1333951ae506af5fa45a701152f3e6ae5f4a",
+      "generation_record": "templates/lot/v001/shared/5-card/generation.json",
+      "generation_record_sha256": "542f919ac6d0d175e061ac3809dcfd38a4355b4e553c32dbddbbc6d7afb72eeb",
+      "prompt": "Use case: stylized-concept\nAsset type: canonical Hypertext Lot style-reference face\nPrimary request: Generate an entirely new, complete, flat front-facing card face. The supplied images are references only; do not edit, paint onto, trace, paste, composite, or retain pixels from them.\n\nRender this exact canonical content, each string exactly once:\n- Header left: \"LOT\"\n- Header right: \"5-CARD\"\n- Role label: \"PAGE LOT\"\n- Title: \"REMNANT\"\n- Composition recipe: \"5 SAME TYPE\"\n- Reward: \"2 LETTERS\"\n- Rule: \"WREATH BONUS: +2 POINTS (FIRST TO RECORD)\"\n\nThe composition panel must visually express exactly 5 card slots consistent with \"5 SAME TYPE\". Show five identical abstract card-slot emblems, with the single centered caption 5 SAME TYPE. Do not choose or name a specific word type. Preserve the native Lot design language: one continuous rounded double frame, near-black navy #102030, restrained antique gold #C0A060, warm parchment, classical high-contrast serif typography, cream small caps on navy, thin gold rules, flat two-color Card-type icon language, balanced biblical-manuscript ornament. Use the native 5-card Lot reference as the authority for geometry, palette, typography, ornament, title, recipe, and slot count; use the other native Lot references only to understand the coherent family.\n\nOutput requirements: a sharp complete portrait card, 2:3, no exterior margin, mockup, hand, shadow, glow, blur, watermark, duplicated element, bracketed label, placeholder, explanatory caption, or invented rule. Do not render CONTEXT, SERIES, CARD COUNT, ROLE LABEL, COMPOSITION RECIPE, EXAMPLE VERSE, REWARD:, template instructions, replacement instructions, or any text besides the seven exact strings listed above. The reward must be exactly \"2 LETTERS\" without the word REWARD. Ensure every required word and number is fully legible and spelled verbatim. The face must be generated as one unified model output; no blank zones intended for later text or graphics."
     },
     {
-      "path": "templates/lot/v001/shared/7-card/template_1024x1536.png",
-      "canonical": "templates/lot/v001/shared/7-card/chapter_template_1024x1536.png",
-      "sha256": "796b29dbb65d654fbfb71cdf12d90bba9b82c4306fab0566de01e434b37be239"
+      "cards": 6,
+      "role": "chapter",
+      "title": "CONGREGATION",
+      "recipe": "6 ANY MIX",
+      "reward": "10 POINTS",
+      "path": "templates/lot/v001/shared/6-card/chapter_template_1024x1536.png",
+      "sha256": "55eaa8e3b0e13bd18950fabd94cef8ed56154075d1b9a3d633b8f9e41624538a",
+      "generation_record": "templates/lot/v001/shared/6-card/generation.json",
+      "generation_record_sha256": "e38a20d82d0614bf2cdc2abce178f8e1ee187a7b928762f00248d636ac4adf38",
+      "prompt": "Use case: stylized-concept\nAsset type: canonical Hypertext Lot style-reference face\nPrimary request: Generate an entirely new, complete, flat front-facing card face. The supplied images are references only; do not edit, paint onto, trace, paste, composite, or retain pixels from them.\n\nRender this exact canonical content, each string exactly once:\n- Header left: \"LOT\"\n- Header right: \"6-CARD\"\n- Role label: \"CHAPTER LOT\"\n- Title: \"CONGREGATION\"\n- Composition recipe: \"6 ANY MIX\"\n- Reward: \"10 POINTS\"\n- Rule: \"WREATH BONUS: +2 POINTS (FIRST TO RECORD)\"\n\nThe composition panel must visually express exactly 6 card slots consistent with \"6 ANY MIX\". Show six abstract varied card-slot emblems, with the single centered caption 6 ANY MIX. Do not prescribe a particular mix of word types. Preserve the native Lot design language: one continuous rounded double frame, near-black navy #102030, restrained antique gold #C0A060, warm parchment, classical high-contrast serif typography, cream small caps on navy, thin gold rules, flat two-color Card-type icon language, balanced biblical-manuscript ornament. Use the native 6-card Lot reference as the authority for geometry, palette, typography, ornament, title, recipe, and slot count; use the other native Lot references only to understand the coherent family.\n\nOutput requirements: a sharp complete portrait card, 2:3, no exterior margin, mockup, hand, shadow, glow, blur, watermark, duplicated element, bracketed label, placeholder, explanatory caption, or invented rule. Do not render CONTEXT, SERIES, CARD COUNT, ROLE LABEL, COMPOSITION RECIPE, EXAMPLE VERSE, REWARD:, template instructions, replacement instructions, or any text besides the seven exact strings listed above. The reward must be exactly \"10 POINTS\" without the word REWARD. Ensure every required word and number is fully legible and spelled verbatim. The face must be generated as one unified model output; no blank zones intended for later text or graphics."
+    },
+    {
+      "cards": 6,
+      "role": "page",
+      "title": "CONGREGATION",
+      "recipe": "6 ANY MIX",
+      "reward": "2 LETTERS",
+      "path": "templates/lot/v001/shared/6-card/page_template_1024x1536.png",
+      "sha256": "623a0b36adba39a1f1f9856eb6e20cf00d5751f2cdd9e92ddc00b0dbfe827741",
+      "generation_record": "templates/lot/v001/shared/6-card/generation.json",
+      "generation_record_sha256": "e38a20d82d0614bf2cdc2abce178f8e1ee187a7b928762f00248d636ac4adf38",
+      "prompt": "Use case: stylized-concept\nAsset type: canonical Hypertext Lot style-reference face\nPrimary request: Generate an entirely new, complete, flat front-facing card face. The supplied images are references only; do not edit, paint onto, trace, paste, composite, or retain pixels from them.\n\nRender this exact canonical content, each string exactly once:\n- Header left: \"LOT\"\n- Header right: \"6-CARD\"\n- Role label: \"PAGE LOT\"\n- Title: \"CONGREGATION\"\n- Composition recipe: \"6 ANY MIX\"\n- Reward: \"2 LETTERS\"\n- Rule: \"WREATH BONUS: +2 POINTS (FIRST TO RECORD)\"\n\nThe composition panel must visually express exactly 6 card slots consistent with \"6 ANY MIX\". Show six abstract varied card-slot emblems, with the single centered caption 6 ANY MIX. Do not prescribe a particular mix of word types. Preserve the native Lot design language: one continuous rounded double frame, near-black navy #102030, restrained antique gold #C0A060, warm parchment, classical high-contrast serif typography, cream small caps on navy, thin gold rules, flat two-color Card-type icon language, balanced biblical-manuscript ornament. Use the native 6-card Lot reference as the authority for geometry, palette, typography, ornament, title, recipe, and slot count; use the other native Lot references only to understand the coherent family.\n\nOutput requirements: a sharp complete portrait card, 2:3, no exterior margin, mockup, hand, shadow, glow, blur, watermark, duplicated element, bracketed label, placeholder, explanatory caption, or invented rule. Do not render CONTEXT, SERIES, CARD COUNT, ROLE LABEL, COMPOSITION RECIPE, EXAMPLE VERSE, REWARD:, template instructions, replacement instructions, or any text besides the seven exact strings listed above. The reward must be exactly \"2 LETTERS\" without the word REWARD. Ensure every required word and number is fully legible and spelled verbatim. The face must be generated as one unified model output; no blank zones intended for later text or graphics."
+    },
+    {
+      "cards": 7,
+      "role": "chapter",
+      "title": "CREATION",
+      "recipe": "3 + 2 + 2 (THREE TYPES)",
+      "reward": "14 POINTS",
+      "path": "templates/lot/v001/shared/7-card/chapter_template_1024x1536.png",
+      "sha256": "176283a204cf5a8f3c4f04d406b853faf5fcb560dd9902c798ba70ebbe337b29",
+      "generation_record": "templates/lot/v001/shared/7-card/generation.json",
+      "generation_record_sha256": "27d6c932653a6d3c6147c52349d8c38154d785ce4d597ef4980572193f9cbc3a",
+      "prompt": "Use case: stylized-concept\nAsset type: canonical Hypertext Lot style-reference face\nPrimary request: Generate an entirely new, complete, flat front-facing card face. The supplied images are references only; do not edit, paint onto, trace, paste, composite, or retain pixels from them.\n\nRender this exact canonical content, each string exactly once:\n- Header left: \"LOT\"\n- Header right: \"7-CARD\"\n- Role label: \"CHAPTER LOT\"\n- Title: \"CREATION\"\n- Composition recipe: \"3 + 2 + 2 (THREE TYPES)\"\n- Reward: \"14 POINTS\"\n- Rule: \"WREATH BONUS: +2 POINTS (FIRST TO RECORD)\"\n\nThe composition panel must visually express exactly 7 card slots consistent with \"3 + 2 + 2 (THREE TYPES)\". Show exactly seven separate card-slot emblems in one row: slots 1, 2, 3 use one identical symbol; slots 4, 5 use a second identical symbol; slots 6, 7 use a third identical symbol. Count them explicitly as ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN before rendering. The only visible caption is 3 + 2 + 2 (THREE TYPES); do not print the count words. Preserve the native Lot design language: one continuous rounded double frame, near-black navy #102030, restrained antique gold #C0A060, warm parchment, classical high-contrast serif typography, cream small caps on navy, thin gold rules, flat two-color Card-type icon language, balanced biblical-manuscript ornament. Use the native 7-card Lot reference as the authority for geometry, palette, typography, ornament, title, recipe, and slot count; use the other native Lot references only to understand the coherent family.\n\nOutput requirements: a sharp complete portrait card, 2:3, no exterior margin, mockup, hand, shadow, glow, blur, watermark, duplicated element, bracketed label, placeholder, explanatory caption, or invented rule. Do not render CONTEXT, SERIES, CARD COUNT, ROLE LABEL, COMPOSITION RECIPE, EXAMPLE VERSE, REWARD:, template instructions, replacement instructions, or any text besides the seven exact strings listed above. The reward must be exactly \"14 POINTS\" without the word REWARD. Ensure every required word and number is fully legible and spelled verbatim. The face must be generated as one unified model output; no blank zones intended for later text or graphics."
+    },
+    {
+      "cards": 7,
+      "role": "page",
+      "title": "CREATION",
+      "recipe": "3 + 2 + 2 (THREE TYPES)",
+      "reward": "3 LETTERS",
+      "path": "templates/lot/v001/shared/7-card/page_template_1024x1536.png",
+      "sha256": "f337badcc1d63a33ff1ea884814eefea2958b3efcebfacb0f865869ba69ab2b0",
+      "generation_record": "templates/lot/v001/shared/7-card/generation.json",
+      "generation_record_sha256": "27d6c932653a6d3c6147c52349d8c38154d785ce4d597ef4980572193f9cbc3a",
+      "prompt": "Use case: stylized-concept\nAsset type: canonical Hypertext Lot style-reference face\nPrimary request: Generate an entirely new, complete, flat front-facing card face. The supplied images are references only; do not edit, paint onto, trace, paste, composite, or retain pixels from them.\n\nRender this exact canonical content, each string exactly once:\n- Header left: \"LOT\"\n- Header right: \"7-CARD\"\n- Role label: \"PAGE LOT\"\n- Title: \"CREATION\"\n- Composition recipe: \"3 + 2 + 2 (THREE TYPES)\"\n- Reward: \"3 LETTERS\"\n- Rule: \"WREATH BONUS: +2 POINTS (FIRST TO RECORD)\"\n\nThe composition panel must visually express exactly 7 card slots consistent with \"3 + 2 + 2 (THREE TYPES)\". Show exactly seven separate card-slot emblems in one row: slots 1, 2, 3 use one identical symbol; slots 4, 5 use a second identical symbol; slots 6, 7 use a third identical symbol. Count them explicitly as ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN before rendering. The only visible caption is 3 + 2 + 2 (THREE TYPES); do not print the count words. Preserve the native Lot design language: one continuous rounded double frame, near-black navy #102030, restrained antique gold #C0A060, warm parchment, classical high-contrast serif typography, cream small caps on navy, thin gold rules, flat two-color Card-type icon language, balanced biblical-manuscript ornament. Use the native 7-card Lot reference as the authority for geometry, palette, typography, ornament, title, recipe, and slot count; use the other native Lot references only to understand the coherent family.\n\nOutput requirements: a sharp complete portrait card, 2:3, no exterior margin, mockup, hand, shadow, glow, blur, watermark, duplicated element, bracketed label, placeholder, explanatory caption, or invented rule. Do not render CONTEXT, SERIES, CARD COUNT, ROLE LABEL, COMPOSITION RECIPE, EXAMPLE VERSE, REWARD:, template instructions, replacement instructions, or any text besides the seven exact strings listed above. The reward must be exactly \"3 LETTERS\" without the word REWARD. Ensure every required word and number is fully legible and spelled verbatim. The face must be generated as one unified model output; no blank zones intended for later text or graphics."
     }
   ]
 }
