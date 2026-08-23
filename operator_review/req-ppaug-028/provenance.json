@@ -1,0 +1,2286 @@
+{
+  "requirement": "REQ-PPAUG-028",
+  "schedule_enabled": false,
+  "records": [
+    {
+      "id": 1,
+      "type": "noun",
+      "rarity": "common",
+      "variant": 1,
+      "word": "Lamp",
+      "definition": "A vessel that bears light",
+      "theme": "Light makes hidden paths visible",
+      "ability": "Light makes hidden paths visible. At common rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/001-noun-common-v1.png",
+      "output_sha256": "3292418c5a5266d46d73c920332ecad445d2903faa4b8a2c3728f254bc54a71f",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "template_sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c",
+      "art_source": "series/2026-Q1/cards/001-grace/outputs/card_1024x1536.png",
+      "art_source_sha256": "2cc37de3701a55d000310f1738a13f8ece9a5f3e8996703dbf2fd6241cbf8d3d",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common noun Word Card for 'Lamp' from the approved noun/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 2,
+      "type": "noun",
+      "rarity": "common",
+      "variant": 2,
+      "word": "Vine",
+      "definition": "A climbing plant that bears fruit",
+      "theme": "Life flourishes through abiding",
+      "ability": "Life flourishes through abiding. At common rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/002-noun-common-v2.png",
+      "output_sha256": "4291ca7e26c169625ae80bfa246b83e3f4527cc4f994ff66cd2b181997eee2ad",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "template_sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c",
+      "art_source": "series/2026-Q1/cards/002-build/outputs/card_1024x1536.png",
+      "art_source_sha256": "83670e08287e23dd031152c7cb23b2d7b5dc65515f6c00191e8b4c91e1773917",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common noun Word Card for 'Vine' from the approved noun/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 3,
+      "type": "noun",
+      "rarity": "common",
+      "variant": 3,
+      "word": "Harbor",
+      "definition": "A sheltered place of refuge",
+      "theme": "Mercy receives the storm-worn",
+      "ability": "Mercy receives the storm-worn. At common rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/003-noun-common-v3.png",
+      "output_sha256": "5b4214fc0e7496298d65827b278eff866a8864cf17696a1cbf0904081fb1b804",
+      "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "template_sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c",
+      "art_source": "series/2026-Q1/cards/003-mighty/outputs/card_1024x1536.png",
+      "art_source_sha256": "c03030451084df1a4b8ef5a731c74a1681aefc6c230a43de35a449504674a4d0",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common noun Word Card for 'Harbor' from the approved noun/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 4,
+      "type": "noun",
+      "rarity": "uncommon",
+      "variant": 1,
+      "word": "Lamp",
+      "definition": "A vessel that bears light",
+      "theme": "Light makes hidden paths visible",
+      "ability": "Light makes hidden paths visible. At uncommon rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/004-noun-uncommon-v1.png",
+      "output_sha256": "09373a5fbfdc7e617c24fe7d25b33ec1870fb4d832edaf2890017d49faee3ccb",
+      "template": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "template_sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+      "art_source": "series/2026-Q1/cards/004-scatter/outputs/card_1024x1536.png",
+      "art_source_sha256": "4cab553cccc08900449b96bb293fcbc610af4ecbecb32d9e0993a61a12de9cc9",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon noun Word Card for 'Lamp' from the approved noun/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 5,
+      "type": "noun",
+      "rarity": "uncommon",
+      "variant": 2,
+      "word": "Vine",
+      "definition": "A climbing plant that bears fruit",
+      "theme": "Life flourishes through abiding",
+      "ability": "Life flourishes through abiding. At uncommon rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/005-noun-uncommon-v2.png",
+      "output_sha256": "b4a04ce6694a83dff58b82abe3353bbb49fb16baf86b36098f268fc8c2fa9aaa",
+      "template": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "template_sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+      "art_source": "series/2026-Q1/cards/005-create/outputs/card_1024x1536.png",
+      "art_source_sha256": "4d9aa957e09ea26c1b9e35dbb3f26d973841e91d09b3ec1800bdc7454a595f05",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon noun Word Card for 'Vine' from the approved noun/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 6,
+      "type": "noun",
+      "rarity": "uncommon",
+      "variant": 3,
+      "word": "Harbor",
+      "definition": "A sheltered place of refuge",
+      "theme": "Mercy receives the storm-worn",
+      "ability": "Mercy receives the storm-worn. At uncommon rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/006-noun-uncommon-v3.png",
+      "output_sha256": "38062eb63f552847a24b2f8aa3bc2f12f8d10381fe304fdd085c7463425b814d",
+      "template": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "template_sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+      "art_source": "series/2026-Q1/cards/006-confuse/outputs/card_1024x1536.png",
+      "art_source_sha256": "9fe361b9c86b38b39bf3cfa8f6c21f82d435fed4958a265e582f49eb6186c494",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon noun Word Card for 'Harbor' from the approved noun/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 7,
+      "type": "noun",
+      "rarity": "rare",
+      "variant": 1,
+      "word": "Lamp",
+      "definition": "A vessel that bears light",
+      "theme": "Light makes hidden paths visible",
+      "ability": "Light makes hidden paths visible. At rare rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/007-noun-rare-v1.png",
+      "output_sha256": "c0ebcad99b7b1ffa30902a0d9eaa119a8527442a0f8af7481b93191b3051eba5",
+      "template": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "template_sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+      "art_source": "series/2026-Q1/cards/007-earth/outputs/card_1024x1536.png",
+      "art_source_sha256": "738dbc06dd885efaee98ea2b91fb1445a12c9334cfca0d4f820f7962ea8157b0",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare noun Word Card for 'Lamp' from the approved noun/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 8,
+      "type": "noun",
+      "rarity": "rare",
+      "variant": 2,
+      "word": "Vine",
+      "definition": "A climbing plant that bears fruit",
+      "theme": "Life flourishes through abiding",
+      "ability": "Life flourishes through abiding. At rare rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/008-noun-rare-v2.png",
+      "output_sha256": "3db0dc4f95c30f55cf0b25df576a12a795a69e65c7cd47a40e431006662cb06b",
+      "template": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "template_sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+      "art_source": "series/2026-Q1/cards/008-stone/outputs/card_1024x1536.png",
+      "art_source_sha256": "ea94b023849bc60b0193d9e1e81210c36e6013ce07156438c75fa6eed2d05f7e",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare noun Word Card for 'Vine' from the approved noun/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 9,
+      "type": "noun",
+      "rarity": "rare",
+      "variant": 3,
+      "word": "Harbor",
+      "definition": "A sheltered place of refuge",
+      "theme": "Mercy receives the storm-worn",
+      "ability": "Mercy receives the storm-worn. At rare rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/009-noun-rare-v3.png",
+      "output_sha256": "f38729aebe693a349108d8074635b505d518dd30345616ba7a6a4cdddb25e3d1",
+      "template": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "template_sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+      "art_source": "series/2026-Q1/cards/009-city/outputs/card_1024x1536.png",
+      "art_source_sha256": "4e42c15ef4ea35cba53d6a41cf7e75a5948bf633e8efa2c812fb228f3205c5a1",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare noun Word Card for 'Harbor' from the approved noun/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 10,
+      "type": "noun",
+      "rarity": "glorious",
+      "variant": 1,
+      "word": "Lamp",
+      "definition": "A vessel that bears light",
+      "theme": "Light makes hidden paths visible",
+      "ability": "Light makes hidden paths visible. At glorious rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/010-noun-glorious-v1.png",
+      "output_sha256": "3b327340c58333c83dd95bb3289a8f65e9d56ece99564755081a33cf5d564f6f",
+      "template": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "template_sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d",
+      "art_source": "series/2026-Q1/cards/010-name/outputs/card_1024x1536.png",
+      "art_source_sha256": "10232fb6c3579590b8865eb238becc28e0bf8996e4d1611b08ac7cc8a7e5f450",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious noun Word Card for 'Lamp' from the approved noun/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 11,
+      "type": "noun",
+      "rarity": "glorious",
+      "variant": 2,
+      "word": "Vine",
+      "definition": "A climbing plant that bears fruit",
+      "theme": "Life flourishes through abiding",
+      "ability": "Life flourishes through abiding. At glorious rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/011-noun-glorious-v2.png",
+      "output_sha256": "0039338a3ad6b51afc5cd685cb5ecd64d556569482a508a82f4a31dc1dbc74d3",
+      "template": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "template_sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d",
+      "art_source": "series/2026-Q1/cards/011-descend/outputs/card_1024x1536.png",
+      "art_source_sha256": "6fbba912d2ec2c17dc2916d0ed23704904a3d7f30a25f72e6b866ca6fb282ab5",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious noun Word Card for 'Vine' from the approved noun/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 12,
+      "type": "noun",
+      "rarity": "glorious",
+      "variant": 3,
+      "word": "Harbor",
+      "definition": "A sheltered place of refuge",
+      "theme": "Mercy receives the storm-worn",
+      "ability": "Mercy receives the storm-worn. At glorious rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/012-noun-glorious-v3.png",
+      "output_sha256": "9eb9e2b01110de5a914e34b8ed6957c260bc3e88ae541004a8ef94db13180037",
+      "template": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "template_sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d",
+      "art_source": "series/2026-Q1/cards/012-form/outputs/card_1024x1536.png",
+      "art_source_sha256": "c3b18e633b42f9173dd86835412a32d4c4646ad760b333e717ceac8d280c05aa",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious noun Word Card for 'Harbor' from the approved noun/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 13,
+      "type": "verb",
+      "rarity": "common",
+      "variant": 1,
+      "word": "Gather",
+      "definition": "Bring the scattered into one",
+      "theme": "Faithful love restores community",
+      "ability": "Faithful love restores community. At common rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/013-verb-common-v1.png",
+      "output_sha256": "d3ff8947c0a6ff53a8f98717e2a9833afa6ad704ade15431bf1f4180e92579f8",
+      "template": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "template_sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a",
+      "art_source": "series/2026-Q1/cards/013-remember/outputs/card_1024x1536.png",
+      "art_source_sha256": "29fb80df0aea226a270a6d638d22bcbe77ab1221107038466fffc06389cd0657",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common verb Word Card for 'Gather' from the approved verb/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 14,
+      "type": "verb",
+      "rarity": "common",
+      "variant": 2,
+      "word": "Discern",
+      "definition": "Perceive with wise attention",
+      "theme": "Wisdom tests what appears true",
+      "ability": "Wisdom tests what appears true. At common rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/014-verb-common-v2.png",
+      "output_sha256": "c32edfa397365d15a2b364053c6c2fb155d5db2f5bcabea87705bc41ced97ee6",
+      "template": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "template_sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a",
+      "art_source": "series/2026-Q1/cards/014-multiply/outputs/card_1024x1536.png",
+      "art_source_sha256": "1ed131b874dc649109d9e95003d8d64d6aff67f046d19549c35cf857e9fcb247",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common verb Word Card for 'Discern' from the approved verb/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 15,
+      "type": "verb",
+      "rarity": "common",
+      "variant": 3,
+      "word": "Uphold",
+      "definition": "Sustain with steadfast strength",
+      "theme": "Covenant faithfulness does not fail",
+      "ability": "Covenant faithfulness does not fail. At common rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/015-verb-common-v3.png",
+      "output_sha256": "848300c6f10ea029ec071fa1b6e57a51ac44c78c6cddb3c47520b9bc61c757b5",
+      "template": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "template_sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a",
+      "art_source": "series/2026-Q1/cards/015-speak/outputs/card_1024x1536.png",
+      "art_source_sha256": "b40b12c7555cc257e973c025aab2c806a26125a67149704d4b387d5783643eca",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common verb Word Card for 'Uphold' from the approved verb/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 16,
+      "type": "verb",
+      "rarity": "uncommon",
+      "variant": 1,
+      "word": "Gather",
+      "definition": "Bring the scattered into one",
+      "theme": "Faithful love restores community",
+      "ability": "Faithful love restores community. At uncommon rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/016-verb-uncommon-v1.png",
+      "output_sha256": "7dac1c485ad151bf8a867ad98685815db58c119bde9d2ab4e62598a52797dd77",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "template_sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+      "art_source": "series/2026-Q1/cards/016-good/outputs/card_1024x1536.png",
+      "art_source_sha256": "db3f4c8771fb2386a829a0576d174302e4ed4730769c6e1f608a146cf397b745",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon verb Word Card for 'Gather' from the approved verb/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 17,
+      "type": "verb",
+      "rarity": "uncommon",
+      "variant": 2,
+      "word": "Discern",
+      "definition": "Perceive with wise attention",
+      "theme": "Wisdom tests what appears true",
+      "ability": "Wisdom tests what appears true. At uncommon rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/017-verb-uncommon-v2.png",
+      "output_sha256": "f20ad6f3843736dc153391d9171f29e113bb423d520d163602ffa73485f8794b",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "template_sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+      "art_source": "series/2026-Q1/cards/017-nation/outputs/card_1024x1536.png",
+      "art_source_sha256": "3325595d2ae1d77dc386c3b17cbe347c69ade31ff158250d3dc6457fbb967127",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon verb Word Card for 'Discern' from the approved verb/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 18,
+      "type": "verb",
+      "rarity": "uncommon",
+      "variant": 3,
+      "word": "Uphold",
+      "definition": "Sustain with steadfast strength",
+      "theme": "Covenant faithfulness does not fail",
+      "ability": "Covenant faithfulness does not fail. At uncommon rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/018-verb-uncommon-v3.png",
+      "output_sha256": "b4a839009cc513ecccb1afe7f3986d6148d14ae9ed42fafbbc4a54f2d7633452",
+      "template": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "template_sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+      "art_source": "series/2026-Q1/cards/018-seth/outputs/card_1024x1536.png",
+      "art_source_sha256": "f69142c978c81ac5157d74546e5c56f17557e273ffe5ea9ada6f1345bb0a4d3c",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon verb Word Card for 'Uphold' from the approved verb/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 19,
+      "type": "verb",
+      "rarity": "rare",
+      "variant": 1,
+      "word": "Gather",
+      "definition": "Bring the scattered into one",
+      "theme": "Faithful love restores community",
+      "ability": "Faithful love restores community. At rare rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/019-verb-rare-v1.png",
+      "output_sha256": "a7fe0b04cd72a8554fb402adb5ea75dfc8215179b40d3902a42d52bca0f5e7b7",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "template_sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
+      "art_source": "series/2026-Q1/cards/019-keeper/outputs/card_1024x1536.png",
+      "art_source_sha256": "2c83317c4fb7139d8f1e12c43952bf9497a2e5982d5bbc6c77d06cbc36b8cdb7",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare verb Word Card for 'Gather' from the approved verb/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 20,
+      "type": "verb",
+      "rarity": "rare",
+      "variant": 2,
+      "word": "Discern",
+      "definition": "Perceive with wise attention",
+      "theme": "Wisdom tests what appears true",
+      "ability": "Wisdom tests what appears true. At rare rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/020-verb-rare-v2.png",
+      "output_sha256": "23c9e0bbb2fdf9e9baa1e4178c4823d4ff2b4a9177b7c5b51b20fe720f5aa065",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "template_sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
+      "art_source": "series/2026-Q1/cards/020-ark/outputs/card_1024x1536.png",
+      "art_source_sha256": "d2550055aeb5d397ad6c714d58bda047a1b1f0493acd60d0ee8cdd923693c440",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare verb Word Card for 'Discern' from the approved verb/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 21,
+      "type": "verb",
+      "rarity": "rare",
+      "variant": 3,
+      "word": "Uphold",
+      "definition": "Sustain with steadfast strength",
+      "theme": "Covenant faithfulness does not fail",
+      "ability": "Covenant faithfulness does not fail. At rare rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/021-verb-rare-v3.png",
+      "output_sha256": "1e11779823c0ae30f439fc41503105a011175eba370a46d7e0db2555c0e7fea1",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "template_sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
+      "art_source": "series/2026-Q1/cards/021-brother/outputs/card_1024x1536.png",
+      "art_source_sha256": "5dd200157a327cac796e3e06865efa3ec85c60dc7695bde4f48d901e464e55da",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare verb Word Card for 'Uphold' from the approved verb/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 22,
+      "type": "verb",
+      "rarity": "glorious",
+      "variant": 1,
+      "word": "Gather",
+      "definition": "Bring the scattered into one",
+      "theme": "Faithful love restores community",
+      "ability": "Faithful love restores community. At glorious rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/022-verb-glorious-v1.png",
+      "output_sha256": "f458973a84dd4bcb25eb1159546f57ec7c8dbf00e7cac8a94003e6302e8b9c11",
+      "template": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+      "template_sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
+      "art_source": "series/2026-Q1/cards/022-shem/outputs/card_1024x1536.png",
+      "art_source_sha256": "ca1500587e55480256a8ef9a36b169fd26cafdee365e00343247e9d87c3b219f",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious verb Word Card for 'Gather' from the approved verb/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 23,
+      "type": "verb",
+      "rarity": "glorious",
+      "variant": 2,
+      "word": "Discern",
+      "definition": "Perceive with wise attention",
+      "theme": "Wisdom tests what appears true",
+      "ability": "Wisdom tests what appears true. At glorious rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/023-verb-glorious-v2.png",
+      "output_sha256": "cbafd09840fbf0a2f9bb0b79396e8c27858b5cba39386ff9ae1dfb2e458de35f",
+      "template": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+      "template_sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
+      "art_source": "series/2026-Q1/cards/023-naked/outputs/card_1024x1536.png",
+      "art_source_sha256": "5dd4bba615b2b6470e6c520cd91277a85ab8e9ccd7843c651ee320a1570160be",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious verb Word Card for 'Discern' from the approved verb/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 24,
+      "type": "verb",
+      "rarity": "glorious",
+      "variant": 3,
+      "word": "Uphold",
+      "definition": "Sustain with steadfast strength",
+      "theme": "Covenant faithfulness does not fail",
+      "ability": "Covenant faithfulness does not fail. At glorious rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/024-verb-glorious-v3.png",
+      "output_sha256": "3749dd0ff17508c7daf98f50ea1f8a97b1c16dd4cbfd047968498cba2d58d403",
+      "template": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+      "template_sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
+      "art_source": "series/2026-Q1/cards/024-covenant/outputs/card_1024x1536.png",
+      "art_source_sha256": "48b4b5c1c7896ac6fab130ae08b75e5792a9f1cb06758d2c80294926e0a34bfb",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious verb Word Card for 'Uphold' from the approved verb/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 25,
+      "type": "adjective",
+      "rarity": "common",
+      "variant": 1,
+      "word": "Steadfast",
+      "definition": "Firm and unwavering in purpose",
+      "theme": "Endurance grows from rooted hope",
+      "ability": "Endurance grows from rooted hope. At common rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/025-adjective-common-v1.png",
+      "output_sha256": "78135927be456e4d099fab9d6a9bf6523b8931f244ce36fd57ec87c4ed2c47b4",
+      "template": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+      "template_sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c",
+      "art_source": "series/2026-Q1/cards/025-noah/outputs/card_1024x1536.png",
+      "art_source_sha256": "5ee3c99406e95edeaa2f8d306369bf2bfd48d81680703b992149d82ced2a518a",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common adjective Word Card for 'Steadfast' from the approved adjective/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 26,
+      "type": "adjective",
+      "rarity": "common",
+      "variant": 2,
+      "word": "Radiant",
+      "definition": "Shining with reflected glory",
+      "theme": "Grace makes goodness visible",
+      "ability": "Grace makes goodness visible. At common rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/026-adjective-common-v2.png",
+      "output_sha256": "10c56a8666c2d829269c0ed6d9b37fefeb72c3ebfeb8b9adceb37e3bd20118b8",
+      "template": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+      "template_sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c",
+      "art_source": "series/2026-Q1/cards/026-curse/outputs/card_1024x1536.png",
+      "art_source_sha256": "0cce06e3eb3fbae9ab00aed116142b5b118fe0a898c4283f456d83367e4e9de8",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common adjective Word Card for 'Radiant' from the approved adjective/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 27,
+      "type": "adjective",
+      "rarity": "common",
+      "variant": 3,
+      "word": "Merciful",
+      "definition": "Ready to forgive and restore",
+      "theme": "Compassion interrupts judgment",
+      "ability": "Compassion interrupts judgment. At common rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/027-adjective-common-v3.png",
+      "output_sha256": "644a96b339ee30e1297b085c482076f4f11e6a6787200a52f1e0475b96121128",
+      "template": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+      "template_sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c",
+      "art_source": "series/2026-Q1/cards/027-hunter/outputs/card_1024x1536.png",
+      "art_source_sha256": "c48bf0114ad02967a6c64f52049faac957f52bb395b3aab0788cc7381e5530d3",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common adjective Word Card for 'Merciful' from the approved adjective/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 28,
+      "type": "adjective",
+      "rarity": "uncommon",
+      "variant": 1,
+      "word": "Steadfast",
+      "definition": "Firm and unwavering in purpose",
+      "theme": "Endurance grows from rooted hope",
+      "ability": "Endurance grows from rooted hope. At uncommon rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/028-adjective-uncommon-v1.png",
+      "output_sha256": "26765329dd42ff36d64a9a0ef51f9690bcbdca07ba2b8ac5f770b03eb37a5d8b",
+      "template": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+      "template_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+      "art_source": "series/2026-Q1/cards/028-righteous/outputs/card_1024x1536.png",
+      "art_source_sha256": "0e87b9cbccd0958fb2b08a400c9eb9ca062dd4957265b1aa68078d75304bdcde",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon adjective Word Card for 'Steadfast' from the approved adjective/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 29,
+      "type": "adjective",
+      "rarity": "uncommon",
+      "variant": 2,
+      "word": "Radiant",
+      "definition": "Shining with reflected glory",
+      "theme": "Grace makes goodness visible",
+      "ability": "Grace makes goodness visible. At uncommon rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/029-adjective-uncommon-v2.png",
+      "output_sha256": "c274e48f5a8c3e58385570879972c9711df5366e79c7ac5049ac1bf540f319c8",
+      "template": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+      "template_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+      "art_source": "series/2026-Q1/cards/029-adam/outputs/card_1024x1536.png",
+      "art_source_sha256": "1398515834688281aa2db54d5f9015db3eb0b99cfa18d10370c2a54a0c2f6d38",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon adjective Word Card for 'Radiant' from the approved adjective/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 30,
+      "type": "adjective",
+      "rarity": "uncommon",
+      "variant": 3,
+      "word": "Merciful",
+      "definition": "Ready to forgive and restore",
+      "theme": "Compassion interrupts judgment",
+      "ability": "Compassion interrupts judgment. At uncommon rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/030-adjective-uncommon-v3.png",
+      "output_sha256": "e7be656d50e4926b5f78cc9f55f9d8cc0a49dfed30f9000ab5cf395e1f38e784",
+      "template": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+      "template_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+      "art_source": "series/2026-Q1/cards/030-spirit/outputs/card_1024x1536.png",
+      "art_source_sha256": "e727a2e3efc82fe9c0fbec1600b1c406652d5990a24264640a3dc215ef70de5d",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon adjective Word Card for 'Merciful' from the approved adjective/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 31,
+      "type": "adjective",
+      "rarity": "rare",
+      "variant": 1,
+      "word": "Steadfast",
+      "definition": "Firm and unwavering in purpose",
+      "theme": "Endurance grows from rooted hope",
+      "ability": "Endurance grows from rooted hope. At rare rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/031-adjective-rare-v1.png",
+      "output_sha256": "9228f3dc75629668bc4e58213e3e2e9c8a9cd53e0820318df3be686963b3fea4",
+      "template": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
+      "template_sha256": "f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e",
+      "art_source": "series/2026-Q1/cards/031-hear/outputs/card_1024x1536.png",
+      "art_source_sha256": "32e789ac23908fd9ab82b70c452bf6c346f4cd128463c3dca209da961e7c5efc",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare adjective Word Card for 'Steadfast' from the approved adjective/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 32,
+      "type": "adjective",
+      "rarity": "rare",
+      "variant": 2,
+      "word": "Radiant",
+      "definition": "Shining with reflected glory",
+      "theme": "Grace makes goodness visible",
+      "ability": "Grace makes goodness visible. At rare rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/032-adjective-rare-v2.png",
+      "output_sha256": "79619d1b1f4bb55ea23652cc7426fe7e782fdbb74fc2a46793fd05554c89e1c1",
+      "template": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
+      "template_sha256": "f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e",
+      "art_source": "series/2026-Q1-dev/cards/001-magi/outputs/card_1024x1536.png",
+      "art_source_sha256": "14fed217055e1c4fe51d35108454a7dd5595d17dd858355450e62bc24979bceb",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare adjective Word Card for 'Radiant' from the approved adjective/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 33,
+      "type": "adjective",
+      "rarity": "rare",
+      "variant": 3,
+      "word": "Merciful",
+      "definition": "Ready to forgive and restore",
+      "theme": "Compassion interrupts judgment",
+      "ability": "Compassion interrupts judgment. At rare rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/033-adjective-rare-v3.png",
+      "output_sha256": "ec06db8774b0691ab94da57c500c3654cab7884e8ed3ff9b5d8490043809f470",
+      "template": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
+      "template_sha256": "f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e",
+      "art_source": "series/2026-Q1-dev/cards/002-gospel/outputs/card_1024x1536.png",
+      "art_source_sha256": "c8ef7a985d547de974854f82b630cccd7c0a23bc062e8567f01ded6714d53fc7",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare adjective Word Card for 'Merciful' from the approved adjective/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 34,
+      "type": "adjective",
+      "rarity": "glorious",
+      "variant": 1,
+      "word": "Steadfast",
+      "definition": "Firm and unwavering in purpose",
+      "theme": "Endurance grows from rooted hope",
+      "ability": "Endurance grows from rooted hope. At glorious rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/034-adjective-glorious-v1.png",
+      "output_sha256": "3e19750e5f431d7c2cd6aac372a714b5062337277b5a50e5c1d142ba91994240",
+      "template": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
+      "template_sha256": "b4775d0b0fb015a6fb2c9d80135660cfb2904ebb283e43a8a7bf9c733752648a",
+      "art_source": "series/2026-Q1-dev/cards/003-covenant/outputs/card_1024x1536.png",
+      "art_source_sha256": "7f4a1de49ff65d3697dc6dde2314a32fc64c1a3f1d99f341035e396d485c58c7",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious adjective Word Card for 'Steadfast' from the approved adjective/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 35,
+      "type": "adjective",
+      "rarity": "glorious",
+      "variant": 2,
+      "word": "Radiant",
+      "definition": "Shining with reflected glory",
+      "theme": "Grace makes goodness visible",
+      "ability": "Grace makes goodness visible. At glorious rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/035-adjective-glorious-v2.png",
+      "output_sha256": "1ebe66d759712354d1aab6a78b79599df77037a470859f118d4ae908fbbf2c3b",
+      "template": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
+      "template_sha256": "b4775d0b0fb015a6fb2c9d80135660cfb2904ebb283e43a8a7bf9c733752648a",
+      "art_source": "series/2026-Q1-dev/cards/004-grace/outputs/card_1024x1536.png",
+      "art_source_sha256": "e426edccbcaa77110a5660f4ccfa90537eb6968349470ae51d451f46696c3ddb",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious adjective Word Card for 'Radiant' from the approved adjective/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 36,
+      "type": "adjective",
+      "rarity": "glorious",
+      "variant": 3,
+      "word": "Merciful",
+      "definition": "Ready to forgive and restore",
+      "theme": "Compassion interrupts judgment",
+      "ability": "Compassion interrupts judgment. At glorious rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/036-adjective-glorious-v3.png",
+      "output_sha256": "cc88a1ad377bd9f4c4262a48787378925746e1ca616d274272fcd09e56a348d8",
+      "template": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
+      "template_sha256": "b4775d0b0fb015a6fb2c9d80135660cfb2904ebb283e43a8a7bf9c733752648a",
+      "art_source": "series/2026-Q1-dev/cards/005-walk/outputs/card_1024x1536.png",
+      "art_source_sha256": "44bb09805ce52de7adb12e29cde5e16dee1c7d1feea3c4aca73d9c28ff335b00",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious adjective Word Card for 'Merciful' from the approved adjective/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 37,
+      "type": "name",
+      "rarity": "common",
+      "variant": 1,
+      "word": "Miriam",
+      "definition": "Prophet and keeper of song",
+      "theme": "Courage gives a people voice",
+      "ability": "Courage gives a people voice. At common rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/037-name-common-v1.png",
+      "output_sha256": "82bbfe9ea699360cdf93e1ed2f06591dbdd449c595528add3a9341b23f0bee58",
+      "template": "templates/card/v001/composed/name/common/template_1024x1536.png",
+      "template_sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
+      "art_source": "series/2026-Q1-dev/cards/006-redeem/outputs/card_1024x1536.png",
+      "art_source_sha256": "e602451f38c78c58f19ca796746ecc55fc443e4b5e864481f0e044d4c1f8e292",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common name Word Card for 'Miriam' from the approved name/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 38,
+      "type": "name",
+      "rarity": "common",
+      "variant": 2,
+      "word": "Barnabas",
+      "definition": "Son of encouragement",
+      "theme": "Generosity strengthens the called",
+      "ability": "Generosity strengthens the called. At common rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/038-name-common-v2.png",
+      "output_sha256": "a7a02e479d2ee3f879b2f93ad6729c9f66cfe25ece56b7635fa5b8fbb62b41c3",
+      "template": "templates/card/v001/composed/name/common/template_1024x1536.png",
+      "template_sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
+      "art_source": "series/2026-Q1-dev/cards/007-pray/outputs/card_1024x1536.png",
+      "art_source_sha256": "747a0757a840292206c7beebeca3711637766af8e940beeb9e8ec9885e4c840d",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common name Word Card for 'Barnabas' from the approved name/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 39,
+      "type": "name",
+      "rarity": "common",
+      "variant": 3,
+      "word": "Lydia",
+      "definition": "Listener with an open household",
+      "theme": "Hospitality turns hearing into action",
+      "ability": "Hospitality turns hearing into action. At common rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/039-name-common-v3.png",
+      "output_sha256": "0b105646e0a96f6d1291981d5eb9bce770d5cbbcc268b9517c3043491a123baf",
+      "template": "templates/card/v001/composed/name/common/template_1024x1536.png",
+      "template_sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
+      "art_source": "series/2026-Q1-dev/cards/008-beautiful/outputs/card_1024x1536.png",
+      "art_source_sha256": "56e35f15205dca33532a252d52f0a7e4d109e68bfb11727e034a2ad6b9f5a52e",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common name Word Card for 'Lydia' from the approved name/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 40,
+      "type": "name",
+      "rarity": "uncommon",
+      "variant": 1,
+      "word": "Miriam",
+      "definition": "Prophet and keeper of song",
+      "theme": "Courage gives a people voice",
+      "ability": "Courage gives a people voice. At uncommon rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/040-name-uncommon-v1.png",
+      "output_sha256": "2f179cd62516cfc3b7f31ac8754f623bb8161161d0104b7eba3eeb85148653f8",
+      "template": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+      "template_sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+      "art_source": "series/2026-Q1-dev/cards/009-see/outputs/card_1024x1536.png",
+      "art_source_sha256": "32025bbe9ca509cda9d54f0147fe8df90000834ada934380f1fd64744cf466bb",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon name Word Card for 'Miriam' from the approved name/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 41,
+      "type": "name",
+      "rarity": "uncommon",
+      "variant": 2,
+      "word": "Barnabas",
+      "definition": "Son of encouragement",
+      "theme": "Generosity strengthens the called",
+      "ability": "Generosity strengthens the called. At uncommon rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/041-name-uncommon-v2.png",
+      "output_sha256": "16db0fb6c7fd7dc09c5660f38dbb8f1eaed520847ab66a33837ce513451dc0b1",
+      "template": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+      "template_sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+      "art_source": "series/2026-Q1-dev/cards/010-build/outputs/card_1024x1536.png",
+      "art_source_sha256": "4561130efb07883f6709f5f3bbcf65806e1caa9385536a62bfae0192819fe0ba",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon name Word Card for 'Barnabas' from the approved name/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 42,
+      "type": "name",
+      "rarity": "uncommon",
+      "variant": 3,
+      "word": "Lydia",
+      "definition": "Listener with an open household",
+      "theme": "Hospitality turns hearing into action",
+      "ability": "Hospitality turns hearing into action. At uncommon rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/042-name-uncommon-v3.png",
+      "output_sha256": "8ca91808085d7e92c6c4cb42ac9ed4e5c29f476d755f2896c3fe2b712210ab6e",
+      "template": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+      "template_sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/001-grace/outputs/card_1024x1536.png",
+      "art_source_sha256": "e4af9c36ac164b960c088ce0f4ec1b90947e585045279cd7006f867a9a105518",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon name Word Card for 'Lydia' from the approved name/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 43,
+      "type": "name",
+      "rarity": "rare",
+      "variant": 1,
+      "word": "Miriam",
+      "definition": "Prophet and keeper of song",
+      "theme": "Courage gives a people voice",
+      "ability": "Courage gives a people voice. At rare rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/043-name-rare-v1.png",
+      "output_sha256": "3e7908796d0981dade819167e5ad1e951fe44aae8b70e8dc20d3b4fb85c131aa",
+      "template": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "template_sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/002-covenant/outputs/card_1024x1536.png",
+      "art_source_sha256": "9a3d0b7cc53a6028f890befe4358e8d7966505353aa61fbf4f3ab99523db9e30",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare name Word Card for 'Miriam' from the approved name/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 44,
+      "type": "name",
+      "rarity": "rare",
+      "variant": 2,
+      "word": "Barnabas",
+      "definition": "Son of encouragement",
+      "theme": "Generosity strengthens the called",
+      "ability": "Generosity strengthens the called. At rare rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/044-name-rare-v2.png",
+      "output_sha256": "ceb6eb8046d44e5f68ddc00c29a568e1b16f69b135cc16c32ea88686687dd088",
+      "template": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "template_sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/003-wisdom/outputs/card_1024x1536.png",
+      "art_source_sha256": "93d9009bcef4f41d9bef66af2b9be2dad92b2a28d14cbdcc7704b319f8211a2d",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare name Word Card for 'Barnabas' from the approved name/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 45,
+      "type": "name",
+      "rarity": "rare",
+      "variant": 3,
+      "word": "Lydia",
+      "definition": "Listener with an open household",
+      "theme": "Hospitality turns hearing into action",
+      "ability": "Hospitality turns hearing into action. At rare rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/045-name-rare-v3.png",
+      "output_sha256": "610e67c9cbe6739400e10b11e9e462bf0591181622f34741a77096c8748e1fc0",
+      "template": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "template_sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/004-glory/outputs/card_1024x1536.png",
+      "art_source_sha256": "9642a0eb2f3b2f17a3dcb3781caaf8bd13a72e97dae84e432b8a132834e5fc59",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare name Word Card for 'Lydia' from the approved name/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 46,
+      "type": "name",
+      "rarity": "glorious",
+      "variant": 1,
+      "word": "Miriam",
+      "definition": "Prophet and keeper of song",
+      "theme": "Courage gives a people voice",
+      "ability": "Courage gives a people voice. At glorious rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/046-name-glorious-v1.png",
+      "output_sha256": "a4e10a3c2c8ff1b71299b4a05eb5c4bf2ac18f42a5f0978447321dd2dbdce540",
+      "template": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
+      "template_sha256": "717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/005-redeem/outputs/card_1024x1536.png",
+      "art_source_sha256": "cde07a9c28dca684fa3bac1b961d2cccde3b15172c1a3759fd3133cdbeb668a0",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious name Word Card for 'Miriam' from the approved name/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 47,
+      "type": "name",
+      "rarity": "glorious",
+      "variant": 2,
+      "word": "Barnabas",
+      "definition": "Son of encouragement",
+      "theme": "Generosity strengthens the called",
+      "ability": "Generosity strengthens the called. At glorious rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/047-name-glorious-v2.png",
+      "output_sha256": "557e0e55127c673940e28aa20ca5f97ce4d0989d9f8262c39e8984ae993aeb3c",
+      "template": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
+      "template_sha256": "717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/006-forgive/outputs/card_1024x1536.png",
+      "art_source_sha256": "920fb4060cd36619630f8e845b4a17ee0203fd0f9781fe435eb1a00722c014d2",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious name Word Card for 'Barnabas' from the approved name/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 48,
+      "type": "name",
+      "rarity": "glorious",
+      "variant": 3,
+      "word": "Lydia",
+      "definition": "Listener with an open household",
+      "theme": "Hospitality turns hearing into action",
+      "ability": "Hospitality turns hearing into action. At glorious rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/048-name-glorious-v3.png",
+      "output_sha256": "7aec545b294df54da88d5f6c3fff5debaa60a5017f4c3e62d0658dbf3689c16f",
+      "template": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
+      "template_sha256": "717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/007-sanctify/outputs/card_1024x1536.png",
+      "art_source_sha256": "fd596550837bd9818954b4fce5cf5485f601f3ee9d08a042986aa5d7e0a71c14",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious name Word Card for 'Lydia' from the approved name/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 49,
+      "type": "title",
+      "rarity": "common",
+      "variant": 1,
+      "word": "The Watchman",
+      "definition": "Guardian who keeps faithful vigil",
+      "theme": "Attention serves the vulnerable",
+      "ability": "Attention serves the vulnerable. At common rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/049-title-common-v1.png",
+      "output_sha256": "391bd018d0e8272e882e5eeffd2183395c6e45f6fadc6eec31f6d2d0efe872c6",
+      "template": "templates/card/v001/composed/title/common/template_1024x1536.png",
+      "template_sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/008-bless/outputs/card_1024x1536.png",
+      "art_source_sha256": "2bdc9170cd2754cb0a9ea7557d49b0931aa64a749e7785b6b53a6fd42423e837",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common title Word Card for 'The Watchman' from the approved title/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 50,
+      "type": "title",
+      "rarity": "common",
+      "variant": 2,
+      "word": "The Peacemaker",
+      "definition": "One who repairs divided ground",
+      "theme": "Reconciliation requires courageous truth",
+      "ability": "Reconciliation requires courageous truth. At common rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/050-title-common-v2.png",
+      "output_sha256": "b663d763a7903373dfd1cafb3455954778bf62ae6d82a97983339e6744ff9d3c",
+      "template": "templates/card/v001/composed/title/common/template_1024x1536.png",
+      "template_sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/009-holy/outputs/card_1024x1536.png",
+      "art_source_sha256": "9ed42430982eec65bd8eec9b8bb1d0756a3407e81e653f8ee4dd2a9bf3eeb614",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common title Word Card for 'The Peacemaker' from the approved title/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 51,
+      "type": "title",
+      "rarity": "common",
+      "variant": 3,
+      "word": "The Wayfinder",
+      "definition": "Guide through uncertain country",
+      "theme": "Wisdom joins direction with patience",
+      "ability": "Wisdom joins direction with patience. At common rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/051-title-common-v3.png",
+      "output_sha256": "01112fae866d9d4696c4a091e84051184856cc3c20000b5ded3c0767d66fa6f2",
+      "template": "templates/card/v001/composed/title/common/template_1024x1536.png",
+      "template_sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/010-righteous/outputs/card_1024x1536.png",
+      "art_source_sha256": "4c45feb5192455ba42209342e4b26b4ac6b332d6b542068a9b12fafd70226483",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished common title Word Card for 'The Wayfinder' from the approved title/common blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 52,
+      "type": "title",
+      "rarity": "uncommon",
+      "variant": 1,
+      "word": "The Watchman",
+      "definition": "Guardian who keeps faithful vigil",
+      "theme": "Attention serves the vulnerable",
+      "ability": "Attention serves the vulnerable. At uncommon rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/052-title-uncommon-v1.png",
+      "output_sha256": "41a7cad08c32201b25f33b5807718748371d22abf438fd9bed52fea6fb24bc8d",
+      "template": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+      "template_sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/011-eternal/outputs/card_1024x1536.png",
+      "art_source_sha256": "0897f2913084725571816bab65c3b7e0687d0d4a82bead3d76203e2548b9a952",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon title Word Card for 'The Watchman' from the approved title/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 53,
+      "type": "title",
+      "rarity": "uncommon",
+      "variant": 2,
+      "word": "The Peacemaker",
+      "definition": "One who repairs divided ground",
+      "theme": "Reconciliation requires courageous truth",
+      "ability": "Reconciliation requires courageous truth. At uncommon rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/053-title-uncommon-v2.png",
+      "output_sha256": "78ef4e595d85a624b6e042f0080b3cbd08a8b9e6e4965739d27e223529c0f797",
+      "template": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+      "template_sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/012-sacred/outputs/card_1024x1536.png",
+      "art_source_sha256": "08c550ad1cb2eb159c97b80d595210915f51196b9ecaef8ab4d6c08459206346",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon title Word Card for 'The Peacemaker' from the approved title/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 54,
+      "type": "title",
+      "rarity": "uncommon",
+      "variant": 3,
+      "word": "The Wayfinder",
+      "definition": "Guide through uncertain country",
+      "theme": "Wisdom joins direction with patience",
+      "ability": "Wisdom joins direction with patience. At uncommon rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/054-title-uncommon-v3.png",
+      "output_sha256": "babcecd6d042612b60fa9c94f920ceac70d91ec9aa6e53be8c54f581d0bf9014",
+      "template": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+      "template_sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/013-moses/outputs/card_1024x1536.png",
+      "art_source_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished uncommon title Word Card for 'The Wayfinder' from the approved title/uncommon blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": false
+    },
+    {
+      "id": 55,
+      "type": "title",
+      "rarity": "rare",
+      "variant": 1,
+      "word": "The Watchman",
+      "definition": "Guardian who keeps faithful vigil",
+      "theme": "Attention serves the vulnerable",
+      "ability": "Attention serves the vulnerable. At rare rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/055-title-rare-v1.png",
+      "output_sha256": "7fd0e54da6b6251054e4e910f8f3186fde5b55e34a2dcd30b6269fed9fafcdd0",
+      "template": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "template_sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/014-david/outputs/card_1024x1536.png",
+      "art_source_sha256": "78753d89fd8179853960cfca30490c69cfc18d27e52439ceb84e41f8838d4e43",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare title Word Card for 'The Watchman' from the approved title/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 56,
+      "type": "title",
+      "rarity": "rare",
+      "variant": 2,
+      "word": "The Peacemaker",
+      "definition": "One who repairs divided ground",
+      "theme": "Reconciliation requires courageous truth",
+      "ability": "Reconciliation requires courageous truth. At rare rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 3,
+        "context": 4,
+        "complexity": 5
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/056-title-rare-v2.png",
+      "output_sha256": "531535080285292be0ac6be1117616d95081a14655a059a6367ba05b067b6753",
+      "template": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "template_sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/015-elijah/outputs/card_1024x1536.png",
+      "art_source_sha256": "c88762c9d83f7641850c8de65e981e7e2a474270cb33c0885d31b86a7a3693e7",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare title Word Card for 'The Peacemaker' from the approved title/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 57,
+      "type": "title",
+      "rarity": "rare",
+      "variant": 3,
+      "word": "The Wayfinder",
+      "definition": "Guide through uncertain country",
+      "theme": "Wisdom joins direction with patience",
+      "ability": "Wisdom joins direction with patience. At rare rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 4,
+        "context": 5,
+        "complexity": 1
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/057-title-rare-v3.png",
+      "output_sha256": "603d4ad7bc3a4f38fc9b5d6732308108df2eccda9038ee2b2d179e646a758cd8",
+      "template": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "template_sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/016-abraham/outputs/card_1024x1536.png",
+      "art_source_sha256": "96d8b98ff65da6ba8fbafbcfeb6f6743133dc7ed45ef908288f374a23ea6804e",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished rare title Word Card for 'The Wayfinder' from the approved title/rare blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 58,
+      "type": "title",
+      "rarity": "glorious",
+      "variant": 1,
+      "word": "The Watchman",
+      "definition": "Guardian who keeps faithful vigil",
+      "theme": "Attention serves the vulnerable",
+      "ability": "Attention serves the vulnerable. At glorious rank, this word rewards variant 1 play.",
+      "stats": {
+        "lore": 5,
+        "context": 1,
+        "complexity": 2
+      },
+      "ot": "Psalm 119:105 \u2014 Your word is a lamp to my feet.",
+      "nt": "John 8:12 \u2014 Whoever follows me will have the light of life.",
+      "hebrew": [
+        "\u05d0\u05d5\u05b9\u05e8",
+        "or \u2014 light"
+      ],
+      "greek": [
+        "\u03c6\u1ff6\u03c2",
+        "phos \u2014 light"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/058-title-glorious-v1.png",
+      "output_sha256": "6ad34240f90d01684f2fe05266d27fb41dcab7d3466e01394bc2fdf89beb4c88",
+      "template": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+      "template_sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/017-shepherd/outputs/card_1024x1536.png",
+      "art_source_sha256": "d88f6b3e982a075b041515b970182aa137c7dba52adbc28b2bc7a8f0bb3ca3ce",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious title Word Card for 'The Watchman' from the approved title/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 59,
+      "type": "title",
+      "rarity": "glorious",
+      "variant": 2,
+      "word": "The Peacemaker",
+      "definition": "One who repairs divided ground",
+      "theme": "Reconciliation requires courageous truth",
+      "ability": "Reconciliation requires courageous truth. At glorious rank, this word rewards variant 2 play.",
+      "stats": {
+        "lore": 1,
+        "context": 2,
+        "complexity": 3
+      },
+      "ot": "Isaiah 58:11 \u2014 You shall be like a watered garden.",
+      "nt": "Romans 12:2 \u2014 Be transformed by the renewing of your mind.",
+      "hebrew": [
+        "\u05d7\u05b6\u05e1\u05b6\u05d3",
+        "hesed \u2014 steadfast love"
+      ],
+      "greek": [
+        "\u03c7\u03ac\u03c1\u03b9\u03c2",
+        "charis \u2014 grace"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/059-title-glorious-v2.png",
+      "output_sha256": "6aabb81275ff7ae6d148adf2600a3038cbb0cf3f5a5ab59f079a12311494a632",
+      "template": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+      "template_sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/018-redeemer/outputs/card_1024x1536.png",
+      "art_source_sha256": "624c235a5e283d4211de8bf1cffa9a4b7385ea7f875e41fa8acb2e3623d433de",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious title Word Card for 'The Peacemaker' from the approved title/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    },
+    {
+      "id": 60,
+      "type": "title",
+      "rarity": "glorious",
+      "variant": 3,
+      "word": "The Wayfinder",
+      "definition": "Guide through uncertain country",
+      "theme": "Wisdom joins direction with patience",
+      "ability": "Wisdom joins direction with patience. At glorious rank, this word rewards variant 3 play.",
+      "stats": {
+        "lore": 2,
+        "context": 3,
+        "complexity": 4
+      },
+      "ot": "Micah 6:8 \u2014 Walk humbly with your God.",
+      "nt": "James 3:17 \u2014 Wisdom from above is peaceable and full of mercy.",
+      "hebrew": [
+        "\u05e9\u05b8\u05c1\u05dc\u05d5\u05b9\u05dd",
+        "shalom \u2014 wholeness"
+      ],
+      "greek": [
+        "\u03c3\u03bf\u03c6\u03af\u03b1",
+        "sophia \u2014 wisdom"
+      ],
+      "output": "operator_review/req-ppaug-028/cards/060-title-glorious-v3.png",
+      "output_sha256": "dc0a3a62b00789a5fecfd27b73a6b7223ef878443dfb937ec2bd00f89d53ff55",
+      "template": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+      "template_sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+      "art_source": "operator_review/constrained/e50961ad0f4d/historical_faces/019-savior/outputs/card_1024x1536.png",
+      "art_source_sha256": "4c8d778346719c5f27b9f031192419bbd570c8e4e0947e2b0ff3b200d8d20550",
+      "model": "repository-generated source artwork; deterministic Pillow composition",
+      "prompt": "Compose a finished glorious title Word Card for 'The Wayfinder' from the approved title/glorious blank; preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.",
+      "dimensions": [
+        848,
+        1264
+      ],
+      "native_cost_required": true
+    }
+  ]
+}
