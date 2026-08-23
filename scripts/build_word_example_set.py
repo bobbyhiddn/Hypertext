@@ -1,140 +1,92 @@
 #!/usr/bin/env python3
-"""Build the deterministic REQ-PPAUG-028 review set from approved templates."""
+"""Generate REQ-PPAUG-029 through Hypertext's native full-card Gemini path."""
 from __future__ import annotations
-
-import hashlib
-import json
+import argparse, hashlib, json, sys
+from datetime import datetime, timezone
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFont
 
-ROOT = Path(__file__).resolve().parents[1]
-TEMPLATES = ROOT / "templates/card/v001/composed"
-OUT = ROOT / "operator_review/req-ppaug-028"
-FONT = ROOT / "operator_review/assets/KaTeX_Main-Regular.ttf"
-FONT_BOLD = ROOT / "operator_review/assets/KaTeX_Main-Bold.ttf"
-TYPES = ["noun", "verb", "adjective", "name", "title"]
-RARITIES = ["common", "uncommon", "rare", "glorious"]
+ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT/"package"))
+from hypertext.gemini.config import image_model
+from hypertext.gemini.style import generate_with_styles
+from hypertext.pipeline.daily import build_prompt_text
 
-WORDS = {
- "noun": [("Lamp", "A vessel that bears light", "Light makes hidden paths visible"), ("Vine", "A climbing plant that bears fruit", "Life flourishes through abiding"), ("Harbor", "A sheltered place of refuge", "Mercy receives the storm-worn")],
- "verb": [("Gather", "Bring the scattered into one", "Faithful love restores community"), ("Discern", "Perceive with wise attention", "Wisdom tests what appears true"), ("Uphold", "Sustain with steadfast strength", "Covenant faithfulness does not fail")],
- "adjective": [("Steadfast", "Firm and unwavering in purpose", "Endurance grows from rooted hope"), ("Radiant", "Shining with reflected glory", "Grace makes goodness visible"), ("Merciful", "Ready to forgive and restore", "Compassion interrupts judgment")],
- "name": [("Miriam", "Prophet and keeper of song", "Courage gives a people voice"), ("Barnabas", "Son of encouragement", "Generosity strengthens the called"), ("Lydia", "Listener with an open household", "Hospitality turns hearing into action")],
- "title": [("The Watchman", "Guardian who keeps faithful vigil", "Attention serves the vulnerable"), ("The Peacemaker", "One who repairs divided ground", "Reconciliation requires courageous truth"), ("The Wayfinder", "Guide through uncertain country", "Wisdom joins direction with patience")],
-}
+SOURCE=ROOT/"operator_review/req-ppaug-028/provenance.json"
+OUT=ROOT/"operator_review/req-ppaug-029-full-card-gemini"
+TEMPLATES=ROOT/"templates/card/v001/composed"; EXAMPLES=ROOT/"templates/example_cards"
+BASE=ROOT/"templates/card_prompt_template.json"
+TYPES=("noun","verb","adjective","name","title"); RARITIES=("common","uncommon","rare","glorious")
 
-OT = ["Psalm 119:105 — Your word is a lamp to my feet.", "Isaiah 58:11 — You shall be like a watered garden.", "Micah 6:8 — Walk humbly with your God."]
-NT = ["John 8:12 — Whoever follows me will have the light of life.", "Romans 12:2 — Be transformed by the renewing of your mind.", "James 3:17 — Wisdom from above is peaceable and full of mercy."]
-HEBREW = [("אוֹר", "or — light"), ("חֶסֶד", "hesed — steadfast love"), ("שָׁלוֹם", "shalom — wholeness")]
-GREEK = [("φῶς", "phos — light"), ("χάρις", "charis — grace"), ("σοφία", "sophia — wisdom")]
+def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
-SCALE = 1
-def s(value): return round(value * SCALE)
-def sb(box): return tuple(s(v) for v in box)
-def font(size: int, bold: bool = False):
-    return ImageFont.truetype(str(FONT_BOLD if bold else FONT), s(size))
+def examples(typ,rarity):
+    found=[]
+    for meta in sorted(EXAMPLES.glob("*/meta.yml")):
+        text=meta.read_text().lower(); image=meta.parent/"outputs/card_1024x1536.png"
+        if (f"card_type: {typ}" in text or f"type: {typ}" in text) and f"rarity: {rarity}" in text and image.is_file(): found.append(image)
+        if len(found)==3: break
+    return found
 
-def centered(draw, box, text, fnt, fill=(20, 20, 24), spacing=4):
-    x0,y0,x1,y1=box
-    lines=[]
-    for para in text.split("\n"):
-        words=para.split(); line=""
-        for word in words:
-            trial=(line+" "+word).strip()
-            if draw.textbbox((0,0),trial,font=fnt)[2] <= x1-x0-20: line=trial
-            else: lines.append(line); line=word
-        if line: lines.append(line)
-    heights=[draw.textbbox((0,0),s,font=fnt)[3] for s in lines]
-    total=sum(heights)+spacing*max(0,len(lines)-1); y=y0+(y1-y0-total)//2
-    for line,h in zip(lines,heights):
-        w=draw.textbbox((0,0),line,font=fnt)[2]
-        draw.text((x0+(x1-x0-w)//2,y),line,font=fnt,fill=fill)
-        y += h+spacing
+def card_data(r):
+    card=json.loads(BASE.read_text()); rarity=r["rarity"].upper()
+    heb,hebt=r["hebrew"]; greek,greekt=r["greek"]
+    card["content"]={"NUMBER":f"{r['id']:03d}","SERIES":"2026 Q3 — REQ-PPAUG-029 EXAMPLE SET","WORD":r["word"].upper(),
+      "GLOSS":r["definition"],"CARD_TYPE":r["type"].upper(),"TYPE":r["type"].upper(),"RARITY_TEXT":rarity,"RARITY_ICON":rarity,
+      "ART_PROMPT":f"One coherent biblical-era symbolic scene expressing {r['word']}: {r['theme'].lower()}, painterly illuminated-manuscript realism, no text",
+      "ABILITY_TEXT":r["ability"],"STAT_LORE":r["stats"]["lore"],"STAT_CONTEXT":r["stats"]["context"],"STAT_COMPLEXITY":r["stats"]["complexity"],
+      "OT_VERSE_LINE":r["ot"],"NT_VERSE_LINE":r["nt"],"HEBREW":heb,"HEBREW_TRANSLIT":hebt,"GREEK":greek,"GREEK_TRANSLIT":greekt,
+      "OT_REFS":r["ot"].split(" — ",1)[0],"NT_REFS":r["nt"].split(" — ",1)[0],
+      "TRIVIA_BULLETS":[f"{r['word']} joins image and meaning.",r["theme"],f"Variant {r['variant']} of the {rarity.lower()} example."]}
+    cost={"RARE":"plus one printed card icon","GLORIOUS":"plus two printed card icons"}.get(rarity,"no cost")
+    card["model_prompt"] += (f" EXACT CARD TYPE: {r['type'].upper()}. The internal top-left badge must print that exact type label and its matching white icon."
+      f" EXACT RARITY: {rarity}. REQUIRED COST: {cost}. Copy complete geometry from reference [1]. Render every supplied field once only.")
+    return card
 
-def clean_box(im, box):
-    """Replace placeholder ink with a nearby parchment sample."""
-    x0,y0,x1,y1=box
-    color=im.getpixel((400,520))
-    ImageDraw.Draw(im).rectangle(box,fill=color)
+def source_records():
+    records=json.loads(SOURCE.read_text())["records"]
+    counts={(t,q):0 for t in TYPES for q in RARITIES}
+    for r in records: counts[(r["type"],r["rarity"])]+=1
+    if len(records)!=60 or set(counts.values())!={3}: raise RuntimeError(f"source is not 5 x 4 x 3: {len(records)}, {counts}")
+    return records
 
-def art_sources():
-    paths=sorted(ROOT.glob("series/**/outputs/card_1024x1536.png"))
-    paths += sorted(ROOT.glob("operator_review/constrained/*/historical_faces/*/outputs/card_1024x1536.png"))
-    unique=[]; seen=set()
-    for p in paths:
-        digest=hashlib.sha256(p.read_bytes()).hexdigest()
-        if digest not in seen: seen.add(digest); unique.append(p)
-    if len(unique)<60: raise RuntimeError(f"need 60 generated art sources, found {len(unique)}")
-    return unique[:60]
+def generate(limit,start):
+    OUT.mkdir(parents=True,exist_ok=True); mp=OUT/"provenance.json"
+    manifest={"requirement":"REQ-PPAUG-029","method":"build_prompt_text -> hypertext.gemini.style.generate_with_styles",
+      "model":image_model(),"request":{"aspect_ratio":"2:3","image_size":"2K","response_modalities":["IMAGE"]},
+      "visible_face_composition":"Gemini full-card raster only; no programmatic face drawing or overlays","schedule_enabled":False,"records":[]}
+    if mp.exists(): manifest["records"]=json.loads(mp.read_text()).get("records",[])
+    by_id={x["id"]:x for x in manifest["records"]}; attempted=0
+    for r in source_records():
+        if r["id"]<start or (limit is not None and attempted>=limit): continue
+        attempted+=1; slug=f"{r['id']:03d}-{r['type']}-{r['rarity']}-v{r['variant']}"; case=OUT/"individual"/slug
+        output=case/"outputs/card_1024x1536.png"; output.parent.mkdir(parents=True,exist_ok=True)
+        card=card_data(r); prompt=build_prompt_text(card); template=TEMPLATES/r["type"]/r["rarity"]/"template_1024x1536.png"; refs=[template,*examples(r["type"],r["rarity"])]
+        (case/"card.json").write_text(json.dumps(card,ensure_ascii=False,indent=2)+"\n"); (case/"prompt.txt").write_text(prompt+"\n")
+        req={"model":image_model(),"workflow":"hypertext.gemini.style.generate_with_styles","template_role":"reference [1], authoritative complete geometry",
+          "references":[{"path":str(p.relative_to(ROOT)),"sha256":sha(p)} for p in refs],"target_type":r["type"],"target_rarity":r["rarity"]}
+        (case/"request.json").write_text(json.dumps(req,indent=2)+"\n")
+        if not output.is_file(): generate_with_styles(prompt,[str(p) for p in refs],str(output),model=image_model(),target_rarity=r["rarity"].upper())
+        generation=output.with_name("generation.json")
+        by_id[r["id"]]={"id":r["id"],"slug":slug,"type":r["type"],"rarity":r["rarity"],"variant":r["variant"],"word":r["word"],
+          "card_json":str((case/"card.json").relative_to(ROOT)),"prompt":str((case/"prompt.txt").relative_to(ROOT)),"request":str((case/"request.json").relative_to(ROOT)),
+          "output":str(output.relative_to(ROOT)),"output_sha256":sha(output),"generation":str(generation.relative_to(ROOT)),
+          "generated_at":datetime.now(timezone.utc).isoformat(),"qa_status":"pending_visual_review"}
+        manifest["records"]=[by_id[k] for k in sorted(by_id)]; mp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n")
 
-def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
-
-def build():
-    cards_dir=OUT/"cards"; cards_dir.mkdir(parents=True,exist_ok=True)
-    sources=art_sources(); records=[]; template_hashes={}
-    index=0
-    for typ in TYPES:
-      for rarity in RARITIES:
-        template=TEMPLATES/typ/rarity/"template_1024x1536.png"
-        template_hashes[str(template.relative_to(ROOT))]=sha(template)
-        for variant,(word,definition,theme) in enumerate(WORDS[typ],1):
-          index+=1; image=Image.open(template).convert("RGB")
-          # Clear only template placeholder zones; native labels, icon, frame and costs remain untouched.
-          for box in [(210,60,640,170),(100,575,755,625),(90,685,760,735),(90,790,760,840),(65,890,410,1010),(440,890,785,1010),(65,1060,780,1170)]: clean_box(image,sb(box))
-          ImageDraw.Draw(image).rectangle((35,1215,610,1255),fill=image.getpixel((700,1235)))
-          source=sources[index-1]; src=Image.open(source).convert("RGB")
-          artwork=ImageOps.fit(src.crop((55,200,min(800,src.width-20),425)),(740,220),method=Image.Resampling.LANCZOS)
-          image.paste(artwork,(54,205)); draw=ImageDraw.Draw(image)
-          centered(draw,(205,58,645,118),word.upper(),font(42,True))
-          centered(draw,(205,120,645,165),definition,font(21))
-          stats=((index+1)%5+1,(index+2)%5+1,(index+3)%5+1)
-          draw.rectangle((55,440,795,525),fill=image.getpixel((400,520)))
-          for label,cx in (("LORE",150),("CONTEXT",410),("COMPLEXITY",680)):
-            centered(draw,(cx-110,440,cx+110,474),label,font(20,True))
-          for sx,count in zip((71,326,590),stats):
-            for j in range(5): draw.ellipse((sx+j*43,478,sx+31+j*43,509),outline=(25,36,69),width=4)
-            for j in range(count): draw.ellipse((sx+j*43,478,sx+31+j*43,509),fill=(25,36,69))
-          ability=f"{theme}. At {rarity} rank, this word rewards variant {variant} play."
-          centered(draw,(100,575,755,625),ability,font(18))
-          centered(draw,(90,685,760,735),OT[variant-1],font(17))
-          centered(draw,(90,790,760,840),NT[variant-1],font(17))
-          centered(draw,(70,890,405,995),HEBREW[variant-1][1].upper()+"\nHebrew witness • Psalm 119",font(18))
-          centered(draw,(445,890,780,995),GREEK[variant-1][1].upper()+"\nGreek witness • John 8",font(18))
-          trivia=f"• {word} joins image and meaning.\n• {theme}\n• Variant {variant} explores {rarity} play."
-          draw.multiline_text((85,1070),trivia,font=font(16),fill=(20,20,24),spacing=8)
-          draw.text((42,1222),f"SERIES: 2026 Q3 — EXAMPLE SET • {index:03d}/060",font=font(16),fill=(220,205,177))
-          if rarity in ("rare", "glorious"):
-            # Reassert the approved printed rarity/cost block after content composition.
-            cost_box=(655,15,835,175)
-            image.paste(Image.open(template).convert("RGB").crop(cost_box),cost_box)
-          # Native type label and icon are the final authority in the upper-left.
-          type_box=(20,15,210,190)
-          image.paste(Image.open(template).convert("RGB").crop(type_box),type_box)
-          name=f"{index:03d}-{typ}-{rarity}-v{variant}.png"; dest=cards_dir/name
-          image.save(dest,optimize=True)
-          prompt=(f"Compose a finished {rarity} {typ} Word Card for '{word}' from the approved {typ}/{rarity} blank; "
-                  f"preserve its native badge, icon, frame, and cost; use generated source art; render canonical structured fields.")
-          records.append({"id":index,"type":typ,"rarity":rarity,"variant":variant,"word":word,"definition":definition,
-            "theme":theme,"ability":ability,"stats":{"lore":stats[0],"context":stats[1],"complexity":stats[2]},"ot":OT[variant-1],"nt":NT[variant-1],
-            "hebrew":HEBREW[variant-1],"greek":GREEK[variant-1],"output":str(dest.relative_to(ROOT)),"output_sha256":sha(dest),
-            "template":str(template.relative_to(ROOT)),"template_sha256":sha(template),"art_source":str(source.relative_to(ROOT)),
-            "art_source_sha256":sha(source),"model":"repository-generated source artwork; deterministic Pillow composition",
-            "prompt":prompt,"dimensions":list(image.size),"native_cost_required":rarity in ("rare","glorious")})
-    (OUT/"provenance.json").write_text(json.dumps({"requirement":"REQ-PPAUG-028","schedule_enabled":False,"records":records},indent=2)+"\n")
-    (OUT/"template-fingerprints.json").write_text(json.dumps(template_hashes,indent=2)+"\n")
-    montage(records)
-
-def montage(records):
-    thumb=(192,288); margin=24; label_h=62; cols=12; rows=5
-    canvas=Image.new("RGB",(margin*2+cols*thumb[0],margin*2+rows*(thumb[1]+label_h)),(17,22,40)); d=ImageDraw.Draw(canvas)
+def montage():
+    records=json.loads((OUT/"provenance.json").read_text())["records"]
+    if len(records)!=60: raise RuntimeError(f"montage requires 60 generated cards, found {len(records)}")
+    thumb=(212,316); lh=32; margin=20; canvas=Image.new("RGB",(margin*2+12*thumb[0],margin*2+5*(thumb[1]+lh)),"#111628")
+    draw=ImageDraw.Draw(canvas); font=ImageFont.load_default(size=14)
     for row,typ in enumerate(TYPES):
-      group=[r for r in records if r["type"]==typ]
-      for col,r in enumerate(group):
-        x=margin+col*thumb[0]; y=margin+row*(thumb[1]+label_h)
-        im=Image.open(ROOT/r["output"]).resize(thumb,Image.Resampling.LANCZOS); canvas.paste(im,(x,y))
-        text=f"{typ.upper()} • {r['rarity'].upper()} • V{r['variant']}"
-        d.rectangle((x,y+thumb[1],x+thumb[0],y+thumb[1]+label_h),fill=(17,22,40))
-        centered(d,(x,y+thumb[1],x+thumb[0],y+thumb[1]+label_h),text,font(12,True),fill=(238,220,174))
-    canvas.save(OUT/"review-montage-by-type-rarity.png",optimize=True)
+      for col,r in enumerate(x for x in records if x["type"]==typ):
+        x=margin+col*thumb[0]; y=margin+row*(thumb[1]+lh); im=Image.open(ROOT/r["output"]).convert("RGB"); im.thumbnail(thumb,Image.Resampling.LANCZOS)
+        canvas.paste(im,(x+(thumb[0]-im.width)//2,y)); draw.text((x+4,y+thumb[1]+7),f"{r['id']:03d} {typ.upper()} {r['rarity'].upper()} V{r['variant']}",fill="#eedcae",font=font)
+    canvas.save(OUT/"review-montage-by-type-rarity.png")
 
-if __name__ == "__main__": build()
+def main():
+    p=argparse.ArgumentParser(); p.add_argument("--generate",action="store_true"); p.add_argument("--limit",type=int); p.add_argument("--start",type=int,default=1); p.add_argument("--montage",action="store_true"); a=p.parse_args()
+    if a.generate: generate(a.limit,a.start)
+    if a.montage: montage()
+    if not a.generate and not a.montage: p.error("choose --generate and/or --montage")
+if __name__=="__main__": main()
