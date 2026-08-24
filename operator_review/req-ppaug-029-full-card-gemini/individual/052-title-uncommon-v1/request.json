@@ -1,5 +1,8 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "render_contract_version": 3,
   "model": "gemini-3.1-flash-image",
   "workflow": "hypertext.gemini.style.generate_with_styles",
   "aspect_ratio": "2:3",
@@ -9,14 +12,30 @@
   ],
   "template_role": "reference [1], authoritative complete geometry",
   "canonical_source": "series/2026-Q1/cards/019-keeper/card.json",
+  "locked_visual_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
   "references": [
     {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
       "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/018-redeemer/outputs/card_1024x1536.png",
       "sha256": "073f59b5f23e79ff5a11d2883e92855a42bd83483e640cca36db8b69f928795f"
+    },
+    {
+      "role": "operator-accepted printed SEE Languages-region benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/printed-see-languages-reference.png",
+      "sha256": "03484f5f12b7f4ac6981fd877ebcb039d6183b9ec803e8583b798edc6215eebf"
     }
   ],
   "target_type": "title",

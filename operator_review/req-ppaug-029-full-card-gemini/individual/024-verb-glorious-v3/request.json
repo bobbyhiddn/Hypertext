@@ -1,22 +1,52 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "render_contract_version": 4,
   "model": "gemini-3.1-flash-image",
-  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "workflow": "hypertext.gemini.style.generate_with_styles/fix_mode",
+  "fix_mode": true,
+  "full_face_generation_only": true,
+  "visible_pixel_composition": false,
   "aspect_ratio": "2:3",
   "image_size": "2K",
   "response_modalities": [
     "IMAGE"
   ],
-  "template_role": "reference [1], authoritative complete geometry",
   "canonical_source": "series/2026-Q1/cards/005-create/card.json",
+  "corrections": [
+    "CONTEXT renders three filled pips. Render exactly four filled CONTEXT pips and one empty pip; preserve LORE 5 and COMPLEXITY 3."
+  ],
+  "source_output_sha256": "6a466c1c40b2288e4268544a3ecfb9701ef8234ae183132878b17970f15ca7ee",
+  "locked_visual_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
   "references": [
     {
+      "role": "rejected full face corrected by native Gemini fix mode",
+      "path": "operator_review/req-ppaug-029-full-card-gemini/individual/024-verb-glorious-v3/outputs/superseded-noncanonical-20260824T024003Z/card_1024x1536.png",
+      "sha256": "6a466c1c40b2288e4268544a3ecfb9701ef8234ae183132878b17970f15ca7ee"
+    },
+    {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
       "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/008-bless/outputs/card_1024x1536.png",
       "sha256": "2bdc9170cd2754cb0a9ea7557d49b0931aa64a749e7785b6b53a6fd42423e837"
+    },
+    {
+      "role": "operator-accepted printed SEE Languages-region benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/printed-see-languages-reference.png",
+      "sha256": "03484f5f12b7f4ac6981fd877ebcb039d6183b9ec803e8583b798edc6215eebf"
     }
   ],
   "target_type": "verb",

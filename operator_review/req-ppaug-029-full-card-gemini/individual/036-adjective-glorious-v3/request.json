@@ -1,5 +1,7 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
   "model": "gemini-3.1-flash-image",
   "workflow": "hypertext.gemini.style.generate_with_styles",
   "aspect_ratio": "2:3",
@@ -11,10 +13,17 @@
   "canonical_source": "series/2026-Q1/cards/023-naked/card.json",
   "references": [
     {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
       "sha256": "b4775d0b0fb015a6fb2c9d80135660cfb2904ebb283e43a8a7bf9c733752648a"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/012-sacred/outputs/card_1024x1536.png",
       "sha256": "08c550ad1cb2eb159c97b80d595210915f51196b9ecaef8ab4d6c08459206346"
     }

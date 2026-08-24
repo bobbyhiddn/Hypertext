@@ -1,5 +1,7 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
   "model": "gemini-3.1-flash-image",
   "workflow": "hypertext.gemini.style.generate_with_styles",
   "aspect_ratio": "2:3",
@@ -11,10 +13,17 @@
   "canonical_source": "series/2026-Q1/cards/019-keeper/card.json",
   "references": [
     {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
       "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/017-shepherd/outputs/card_1024x1536.png",
       "sha256": "d88f6b3e982a075b041515b970182aa137c7dba52adbc28b2bc7a8f0bb3ca3ce"
     }

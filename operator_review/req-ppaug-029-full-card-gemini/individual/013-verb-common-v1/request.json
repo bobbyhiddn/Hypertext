@@ -1,5 +1,7 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
   "model": "gemini-3.1-flash-image",
   "workflow": "hypertext.gemini.style.generate_with_styles",
   "aspect_ratio": "2:3",
@@ -11,10 +13,17 @@
   "canonical_source": "series/2026-Q1/cards/002-build/card.json",
   "references": [
     {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
       "sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/005-redeem/outputs/card_1024x1536.png",
       "sha256": "cde07a9c28dca684fa3bac1b961d2cccde3b15172c1a3759fd3133cdbeb668a0"
     }

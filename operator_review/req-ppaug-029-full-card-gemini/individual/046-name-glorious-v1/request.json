@@ -1,22 +1,52 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "render_contract_version": 4,
   "model": "gemini-3.1-flash-image",
-  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "workflow": "hypertext.gemini.style.generate_with_styles/fix_mode",
+  "fix_mode": true,
+  "full_face_generation_only": true,
+  "visible_pixel_composition": false,
   "aspect_ratio": "2:3",
   "image_size": "2K",
   "response_modalities": [
     "IMAGE"
   ],
-  "template_role": "reference [1], authoritative complete geometry",
   "canonical_source": "series/2026-Q1/cards/018-seth/card.json",
+  "corrections": [
+    "The rarity badge renders Glorious; print the exact uppercase token GLORIOUS while preserving the orange diamond and two-card cost geometry."
+  ],
+  "source_output_sha256": "f2a31b321ac3085a0117c61225a3ca7f219cf8aa108f3efca8d7b718cce18191",
+  "locked_visual_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
   "references": [
     {
+      "role": "rejected full face corrected by native Gemini fix mode",
+      "path": "operator_review/req-ppaug-029-full-card-gemini/individual/046-name-glorious-v1/outputs/superseded-noncanonical-20260824T024126Z/card_1024x1536.png",
+      "sha256": "f2a31b321ac3085a0117c61225a3ca7f219cf8aa108f3efca8d7b718cce18191"
+    },
+    {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
       "sha256": "717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/016-abraham/outputs/card_1024x1536.png",
       "sha256": "96d8b98ff65da6ba8fbafbcfeb6f6743133dc7ed45ef908288f374a23ea6804e"
+    },
+    {
+      "role": "operator-accepted printed SEE Languages-region benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/printed-see-languages-reference.png",
+      "sha256": "03484f5f12b7f4ac6981fd877ebcb039d6183b9ec803e8583b798edc6215eebf"
     }
   ],
   "target_type": "name",

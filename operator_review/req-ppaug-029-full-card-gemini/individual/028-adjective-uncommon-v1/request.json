@@ -1,5 +1,7 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
   "model": "gemini-3.1-flash-image",
   "workflow": "hypertext.gemini.style.generate_with_styles",
   "aspect_ratio": "2:3",
@@ -11,10 +13,17 @@
   "canonical_source": "series/2026-Q1/cards/003-mighty/card.json",
   "references": [
     {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
       "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/010-righteous/outputs/card_1024x1536.png",
       "sha256": "710562ce078097628a0fa710835604cf9e356723d8f0865877b18b9017a110da"
     }

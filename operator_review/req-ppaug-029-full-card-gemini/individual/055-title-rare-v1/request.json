@@ -1,22 +1,52 @@
 {
   "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "render_contract_version": 4,
   "model": "gemini-3.1-flash-image",
-  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "workflow": "hypertext.gemini.style.generate_with_styles/fix_mode",
+  "fix_mode": true,
+  "full_face_generation_only": true,
+  "visible_pixel_composition": false,
   "aspect_ratio": "2:3",
   "image_size": "2K",
   "response_modalities": [
     "IMAGE"
   ],
-  "template_role": "reference [1], authoritative complete geometry",
   "canonical_source": "series/2026-Q1/cards/019-keeper/card.json",
+  "corrections": [
+    "The footer contains the placeholder SERIES: 20XX QX - Set. Print exactly SERIES: 2026 Q3 \u2014 REQ-PPAUG-029 EXAMPLE SET while preserving the corrected uppercase RARE badge, + one-card cost, and every other element."
+  ],
+  "source_output_sha256": "35602b3c167d7f103f69beea435d02c8300c049910206c0ee53c727670f52279",
+  "locked_visual_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
   "references": [
     {
+      "role": "rejected full face corrected by native Gemini fix mode",
+      "path": "operator_review/req-ppaug-029-full-card-gemini/individual/055-title-rare-v1/outputs/superseded-noncanonical-20260824T024846Z/card_1024x1536.png",
+      "sha256": "35602b3c167d7f103f69beea435d02c8300c049910206c0ee53c727670f52279"
+    },
+    {
+      "role": "authoritative type/rarity geometry",
       "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
       "sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa"
     },
     {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
       "path": "templates/example_cards/019-savior/outputs/card_1024x1536.png",
       "sha256": "980f4ea9e530033a500530910b6104ebdb71502ca6e3772d9ab9164963608d3f"
+    },
+    {
+      "role": "operator-accepted printed SEE Languages-region benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/printed-see-languages-reference.png",
+      "sha256": "03484f5f12b7f4ac6981fd877ebcb039d6183b9ec803e8583b798edc6215eebf"
     }
   ],
   "target_type": "title",

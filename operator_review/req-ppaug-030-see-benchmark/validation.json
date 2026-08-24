@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": {
+    "descriptor_v2": true,
+    "exact_content_round_trip": true,
+    "printed_language_headers": true,
+    "bare_transliterations": true,
+    "verbatim_transliteration_glyphs": true,
+    "verbatim_reference_lines": true,
+    "literal_reference_bullet_count": true,
+    "type_icon_contract": true,
+    "stat_contract": true,
+    "face_avoidance": true,
+    "references_present": true,
+    "output_present": true,
+    "output_dimensions": true
+  },
+  "human_review_required": true
+}

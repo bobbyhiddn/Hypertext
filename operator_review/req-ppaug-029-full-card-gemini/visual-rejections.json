@@ -1,0 +1,32 @@
+{
+  "requirement": "REQ-PPAUG-029",
+  "round": "final-full-resolution-review-2026-08-23",
+  "status": "PASS",
+  "reviewer": "cap_alpha",
+  "method": "All 60 current faces were inspected at full resolution across 20 labeled type-by-rarity review sheets. Card 023 was additionally inspected individually after a fresh native Gemini full-face regeneration and in the regenerated VERB/GLORIOUS sheet.",
+  "locked_benchmark": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+  "reviewed_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+  "accepted_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+  "checks": {
+    "canonical_text_and_punctuation_visible": true,
+    "literal_reference_bullets_visible": true,
+    "compact_two_column_languages": true,
+    "type_badges_icons_and_stats": true,
+    "rarity_and_cost_geometry": true,
+    "symbolic_art_without_recognizable_faces": true,
+    "no_placeholders_or_stale_faces": true
+  },
+  "repaired_cards": [
+    {
+      "id": 23,
+      "slug": "023-verb-glorious-v2",
+      "result": "PASS",
+      "finding": "Both reference blocks contain exactly four internal bullets with no leading list markers; the GLORIOUS treatment has two blank card-stack icons; all other geometry, stats, text, and symbolic tower art remain correct."
+    }
+  ],
+  "blocked_cards": [],
+  "montage_released": true,
+  "montage": "operator_review/req-ppaug-029-full-card-gemini/review-montage-by-type-rarity.png",
+  "montage_visual_review": "PASS",
+  "rejections": []
+}

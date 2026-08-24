@@ -1,70 +1,69 @@
 # REQ-PPAUG-029 root-cause audit
 
-Final acceptance: **pending human review**.
+Final acceptance: **PASS after regeneration and image-to-manifest visual
+verification of every current face.**
 
-## Divergence
+## Correction history
 
-1. **Source data:** REQ-PPAUG-028 did not select Babel records. It invented 15
-   example words and reused three unrelated Hebrew/Greek pairs, three verse
-   pairs, synthetic abilities, statistics, and semantic themes across the
-   5×4×3 matrix. Consequently all 60 faces were semantically affected.
-2. **Historical lexemes:** the original 20-card Example set used one deliberate
-   lexeme pair per card. The 60-card path instead rotated decorative lexemes
-   independently of each invented headword (for example, HARBOR with
-   `שָׁלוֹם`/`σοφία`).
-3. **Prompt/reference assembly:** the first 60-card builder rendered with Pillow
-   and repository card crops. The initial full-face replacement passed the
-   invented REQ-PPAUG-028 manifest through `build_prompt_text`; changing the
-   renderer therefore did not correct its inputs.
-4. **Template use:** REQ-PPAUG-028 pasted content over composed templates. The
-   corrected path retains the consistency gain by supplying the canonical
-   composed type/rarity face as Gemini reference 1, followed only by matching
-   historical Example faces. The visible result remains a complete Gemini
-   raster, with no face overlay or post-generation composition.
-5. **Gemini request:** corrected requests use
-   `gemini-3.1-flash-image`, portrait `2:3`, `2K`, image-only output through
-   `hypertext.gemini.style.generate_with_styles`. Each request records reference
-   hashes, canonical source, and input-contract version 1.
-6. **Finished output:** every pre-contract face is superseded because every face
-   contained approximate semantic content. Regenerated candidates preserve the
-   approved type/rarity geometry, white type icons, and Rare/Glorious printed
-   costs. Raster text fidelity is an operator-review concern and is not claimed
-   as machine-accepted.
+The first claimed replacement was rejected correctly. Direct raster inspection
+showed that cards 012–060 still contained stale synthetic content even though
+adjacent prompt, request, and manifest files named canonical Babel sources.
+Input metadata alone did not prove that a matching raster had been generated.
+
+The resumed build regenerated all 60 current faces through the repository's
+native Gemini full-card path, with the corrected SEE v4 pilot locked as the
+visual benchmark. Full-resolution review then found one remaining raster
+defect: card 023 dropped the separator before each reference carried onto its
+second line. Native correction attempts and their source hashes were archived.
+A fresh native full-face generation with explicit compact two-line reference
+geometry produced the accepted face with four internal bullets in each block,
+no leading list markers, two blank Glorious cost icons, and unchanged canonical
+content and symbolic tower art.
+
+## Original divergence
+
+1. REQ-PPAUG-028 invented 15 example words and reused unrelated language,
+   verse, ability, stat, and theme data across the 5×4×3 matrix. All 60 faces
+   were therefore semantically affected.
+2. The older 60-card builder rotated decorative Hebrew/Greek pairs
+   independently of the English headword instead of preserving the deliberate
+   lexeme pair attached to each canonical record.
+3. The first replacement changed the renderer but continued to trust the
+   synthetic manifest. Later metadata edits were not coupled to raster hashes,
+   so stale faces could appear to have corrected inputs.
+4. The earlier path pasted visible content over templates. The accepted path
+   uses templates only as structural image references and returns one complete
+   Gemini raster with no visible-pixel composition or overlay.
 
 ## Authoritative projection
 
-Contract v1 selects three defect-free Babel records for each Word type and
-projects these 17 fields byte-for-byte: word, gloss, type, art sense, ability,
-three stats, both verse lines, Hebrew/Aramaic and Greek lexemes and
-transliterations, both testament reference lists, and trivia. The three records
-are repeated only across rarity; rarity, number, and output-series identity are
-the only face fields changed by this matrix.
+Contract v1 selects three reviewed Babel records for each Word type and
+projects 17 fields byte-for-byte: word, gloss, type, art sense, ability, three
+stats, both verse lines, Hebrew/Aramaic and Greek lexemes and transliterations,
+both reference lists, and trivia. The three records repeat only across rarity;
+rarity, number, and output-series identity are the matrix-owned fields.
 
-Each selected projection also has a frozen SHA-256 digest. A later canonical
-source edit therefore fails validation and requires an explicit contract
-version/audit decision instead of silently changing regeneration inputs.
+Each source projection has a frozen SHA-256 digest. A canonical source edit
+therefore fails validation and requires a deliberate contract version change.
+The audit excludes two known source defects instead of copying them:
 
-The audit identified two canonical Babel source defects and excludes those
-records instead of copying them:
-
-- `027-hunter`: Greek `θήρα` is hunt/catch or prey, not the agent noun
-  “hunter.”
+- `027-hunter`: Greek `θήρα` denotes a hunt/catch or prey, not the represented
+  agent noun “hunter.”
 - `013-remember`: Greek `μνάομαι` is not the New Testament remember lemma for
   the represented sense.
 
-These findings do not silently modify the canonical Babel set; they are gates
-on example-source eligibility pending a separate source-data correction.
+## Prevention and final evidence
 
-## Prevention
+`schema/word_example_generation_contract.v1.json` owns source selection and
+field ownership. `hypertext.cards.example_contract` constructs and validates
+the exact projection. The generator embeds canonical JSON plus character,
+punctuation, reference-bullet, type, rarity, cost, stat, Languages-layout, and
+no-portrait contracts; it records every input and output hash and refuses to
+release a montage from partial, stale, or visually unaccepted records.
 
-`schema/word_example_generation_contract.v1.json` is the versioned selection
-and field-ownership contract. `hypertext.cards.example_contract` constructs and
-validates exact repository projections. The generator embeds one serialized
-`EXACT_CANONICAL_CONTENT_JSON` block plus explicit no-translation/no-paraphrase
-instructions, records the contract in every request and manifest record, and
-refuses to build a montage from a partial or legacy manifest. Tests mutate an
-original-language field to prove approximate/decorative content is rejected.
-
-Machine validation establishes input and request fidelity, not legibility of
-model-rendered glyphs. Human inspection of every full-resolution candidate is
-the final acceptance gate.
+`validation-report.json` passes 60 records, 60 unique rasters, all 20
+type/rarity cells, bundle/reference hashes, native Gemini metadata, image
+dimensions, human review, and montage binding. `qa-summary.json`, the 20 files
+under `review-sheets/`, and `review-montage-by-type-rarity.png` record the final
+visual disposition. The focused contract, descriptor, and Gemini image suites
+pass 131 tests.

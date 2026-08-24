@@ -1,0 +1,31 @@
+{
+  "visual_descriptor_mode": "EXPLICIT",
+  "content": {
+    "NUMBER": "017",
+    "CARD_TYPE": "VERB",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "WORD": "SEE",
+    "GLOSS": "To perceive with the eyes; to discern, understand, or witness.",
+    "ART_PROMPT": "A luminous eye-like opening formed by dark storm clouds, a single iris at its center, with restrained golden rays falling onto a narrow reflective river; symbolic biblical illustration, no human face, no portrait, and no people.",
+    "STAT_LORE": 2,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 1,
+    "ABILITY_TEXT": "Look at the top 3 cards of the Tower, then return them in any order.",
+    "OT_VERSE_LINE": "Psalm 34:8 — “Taste and see that the LORD is good; blessed is the one who takes refuge in him.”",
+    "NT_VERSE_LINE": "Matthew 5:8 — “Blessed are the pure in heart, for they will see God.”",
+    "HEBREW": "רָאָה",
+    "HEBREW_TRANSLIT": "ra'ah",
+    "OT_REFS": "Gen 1:4 • Gen 16:13 • Ex 14:13 • 1 Sam 16:7",
+    "GREEK": "ὁράω",
+    "GREEK_TRANSLIT": "horaō",
+    "NT_REFS": "John 1:39 • John 9:25 • Heb 12:14 • Rev 1:7",
+    "TRIVIA_BULLETS": [
+      "The Hebrew verb 'ra'ah' is the root of 'ro'eh' (seer), an early title for prophets.",
+      "Hagar names God 'El Roi' (The God Who Sees Me) in Genesis 16, the only occurrence of this title.",
+      "In the Bible, physical sight is often a metaphor for spiritual understanding or faith.",
+      "The Greek 'horaō' implies not just catching sight of something, but mentally discerning it."
+    ],
+    "SERIES": "2026-Q1 Babel"
+  }
+}

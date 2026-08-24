@@ -1,14 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "HYPERTEXT_GLOBAL": {
     "canvas": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
-    "aesthetic": ["premium trading card layout", "antique parchment background with subtle grain", "navy and gold collector frame", "high legibility, crisp print-like typography", "clean TCG UI language with a large art window", "print-ready color grading, restrained contrast, no neon saturation"],
-    "negative": ["no surrounding text", "no generated watermark", "no captions outside the card", "no text outside the card border", "no brackets", "no warped text", "no garbled text", "no faux handwriting", "no duplicate headings", "no extra panels", "no text inside artwork", "no modern objects", "no neon colors", "no heavy HDR", "no washed-out grayscale", "no over-sharpen halos", "no partial stat-pip fills", "no stat-pip gradients or highlights", "no diamonds for stat pips", "do not render hidden metadata"]
+    "aesthetic": ["premium trading card layout", "antique parchment background with subtle grain", "navy and gold collector frame", "high legibility, crisp print-like typography", "clean TCG UI language with a compact art window", "dense restrained printed game-piece proportions", "print-ready color grading, restrained contrast, no neon saturation"],
+    "negative": ["no surrounding text", "no generated watermark", "no captions outside the card", "no text outside the card border", "no brackets", "no warped text", "no garbled text", "no faux handwriting", "no duplicate headings", "no extra panels", "no text inside artwork", "no modern objects", "no recognizable human faces", "no portrait likenesses", "no face-forward named figures", "no neon colors", "no heavy HDR", "no washed-out grayscale", "no over-sharpen halos", "no partial stat-pip fills", "no stat-pip gradients or highlights", "no diamonds for stat pips", "do not render hidden metadata"]
   },
   "structures": {
     "WORD_CARD": {
       "kind": "WORD_CARD",
-      "geometry": {"orientation": "vertical", "frame": "identical across all type and rarity combinations", "art_panel_height_fraction": 0.44, "original_language_split": {"left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}},
+      "geometry": {"orientation": "vertical", "frame": "identical across all type and rarity combinations", "art_panel_height_fraction": 0.16, "original_language_split": {"left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}},
+      "art_direction": {"subject_rule": "Represent people through what they are known for: defining work, objects, attire, gestures, environments, symbols, or achievements.", "figure_rule": "If a human figure is necessary, keep the figure secondary and show it from behind, in silhouette, at a distance, with the face obscured, or cropped so no recognizable face appears."},
+      "original_language_layout": {"container": "one compact equal-width two-column panel", "left_header": "HEBREW/ARAMAIC", "right_header": "GREEK", "native_script": "large centered native script with every supplied diacritic preserved", "transliteration": "bare italic transliteration directly below the native script; no TRANSLIT label, no parentheses, and no added English gloss", "left_refs": "OT Refs: followed by the exact supplied OT_REFS string", "right_refs": "NT Refs: followed by the exact supplied NT_REFS string", "density": "match the compact height, spacing, and hierarchy of the printed SEE reference"},
       "content_order": ["HEADER", "ART", "STATS", "ABILITY", "OT_VERSE", "NT_VERSE", "ORIGINAL_LANGUAGES", "TRIVIA", "FOOTER"]
     },
     "LOT": {
