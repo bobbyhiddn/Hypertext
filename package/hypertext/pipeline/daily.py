@@ -4394,6 +4394,13 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         _log(f"[phase grade] Description failed: {e}")
         return 1
 
+    # The committed template-relative gate has already inspected the exact
+    # fifteen pip locations. Apply those observed counts before rubric scoring
+    # so an approximate vision count cannot override a deterministic pass.
+    expected_pips, observed_pips = _apply_validated_stat_pip_counts(
+        description, content, stat_pip_gate
+    )
+
     # Check style match
     style_match = description.style_matches_reference
     style_reason = description.style_mismatch_reason or ""
@@ -4424,14 +4431,6 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         maximum = int(item.get("max", 0) or 0)
         return round(100 * int(item.get("score", 0) or 0) / maximum) if maximum else 0
 
-    expected_pips = (content.get("STAT_LORE", 0), content.get("STAT_CONTEXT", 0),
-                     content.get("STAT_COMPLEXITY", 0))
-    observed_pips = tuple(
-        stat_pip_gate["observed_counts"][name]
-        for name in ("STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY")
-    )
-    (description.stat_lore, description.stat_context,
-     description.stat_complexity) = observed_pips
     quality = quality_score({
         "composition": normalized("formatting"),
         "typography": normalized("text_clarity"),
@@ -4991,6 +4990,34 @@ def phase_visual_gate(
         "defects": report["defects"],
     }, sort_keys=True))
     return 0 if report["passed"] else 1
+
+
+def _apply_validated_stat_pip_counts(
+    description: CardDescription,
+    content: dict,
+    stat_pip_gate: dict,
+) -> tuple[tuple[int, int, int], tuple[int, int, int]]:
+    """Make the deterministic template-relative gate authoritative for scoring.
+
+    Vision description remains responsible for the rest of the card, but its
+    approximate pip count must not be scored after the exact committed gate has
+    already accepted and counted all fifteen template-relative circles.
+    """
+    expected = (
+        content.get("STAT_LORE", 0),
+        content.get("STAT_CONTEXT", 0),
+        content.get("STAT_COMPLEXITY", 0),
+    )
+    observed = tuple(
+        stat_pip_gate["observed_counts"][name]
+        for name in ("STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY")
+    )
+    (
+        description.stat_lore,
+        description.stat_context,
+        description.stat_complexity,
+    ) = observed
+    return expected, observed
 
 
 def main() -> int:

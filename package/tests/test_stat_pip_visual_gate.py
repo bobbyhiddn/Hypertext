@@ -7,12 +7,14 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 from click.testing import CliRunner
 from PIL import Image, ImageDraw
 
 from hypertext.cards.stat_pip_gate import inspect_stat_pips
 from hypertext.cli import cli
+from hypertext.pipeline.daily import _apply_validated_stat_pip_counts
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -99,6 +101,39 @@ class TemplateRelativeStatPipGateTests(unittest.TestCase):
         self.assertEqual(report["defects"], [])
         self.assertEqual(tuple(report["observed_counts"].values()), (3, 2, 4))
         self.assertEqual(_digest(TEMPLATE), before)
+
+    def test_validated_gate_counts_replace_vision_guess_before_scoring(self):
+        description = SimpleNamespace(
+            stat_lore=1,
+            stat_context=1,
+            stat_complexity=1,
+        )
+        expected, observed = _apply_validated_stat_pip_counts(
+            description,
+            {
+                "STAT_LORE": 4,
+                "STAT_CONTEXT": 5,
+                "STAT_COMPLEXITY": 1,
+            },
+            {
+                "observed_counts": {
+                    "STAT_LORE": 4,
+                    "STAT_CONTEXT": 5,
+                    "STAT_COMPLEXITY": 1,
+                }
+            },
+        )
+
+        self.assertEqual(expected, (4, 5, 1))
+        self.assertEqual(observed, (4, 5, 1))
+        self.assertEqual(
+            (
+                description.stat_lore,
+                description.stat_context,
+                description.stat_complexity,
+            ),
+            (4, 5, 1),
+        )
 
     def test_correct_pips_pass_against_all_twenty_immutable_template_cells(self):
         manifest_path = ROOT / "templates" / "card" / "v001" / "composed" / "manifest.json"
