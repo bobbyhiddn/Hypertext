@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import io
 import json
 import os
@@ -108,6 +109,7 @@ def record_success(out_path: str, *, model: str, mime_type: str,
         "width": dimensions[0], "height": dimensions[1], "attempts": attempts,
         "reference_count": reference_count,
     }
+    payload["output_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
     if latency_ms is not None:
         payload["latency_ms"] = latency_ms
     # Gemini image responses do not always report tokens. Preserve only numeric

@@ -37,9 +37,19 @@ from hypertext.gemini.review import (
     CardDescription,
 )
 from hypertext.cards.render import render_post
-from hypertext.cards.template_matrix import resolve_template
+from hypertext.cards.template_matrix import resolve_template_record
 from hypertext.cards.visual_descriptors import canonical_prompt_content, serialize_word_card_prompt
 from hypertext.gemini.config import image_model
+from hypertext.gemini.reference_pack import (
+    FINISHED_REFERENCE_MANIFEST,
+    MAX_EXAMPLE_REFERENCES,
+    ReferenceContractError,
+    ReferencePack,
+    build_reference_pack,
+    canonical_recipe_sha256,
+    sha256_file,
+    sha256_text,
+)
 from hypertext.quality import QUALITY_GATE, provenance, quality_score, write_provenance
 
 try:
@@ -756,86 +766,6 @@ def _find_card_by_rarity(series_root: Path) -> dict[str, Path]:
     return rarity_map
 
 
-def _find_matching_cards(
-    series_root: Path,
-    target_rarity: str | None = None,
-    target_type: str | None = None,
-    exclude_card: Path | None = None,
-    max_cards: int = 3,
-) -> list[Path]:
-    """Find cards matching rarity and/or type.
-
-    Args:
-        series_root: Series directory containing cards/
-        target_rarity: Rarity to match (e.g., "RARE")
-        target_type: Card type to match (e.g., "NOUN", "VERB")
-        exclude_card: Card directory to exclude (the card being fixed)
-        max_cards: Maximum number of cards to return
-
-    Returns:
-        List of paths to matching card images.
-    """
-    cards_dir = series_root / "cards"
-    if not cards_dir.exists():
-        # Try demo_cards structure
-        if series_root.name == "demo_cards" or "demo_cards" in str(series_root):
-            cards_dir = series_root
-        else:
-            return []
-
-    matches: list[Path] = []
-
-    for card_dir in sorted(cards_dir.iterdir()):
-        if not card_dir.is_dir():
-            continue
-        if exclude_card and card_dir.resolve() == exclude_card.resolve():
-            continue
-
-        meta_file = card_dir / "meta.yml"
-        img_file = card_dir / "outputs" / "card_1024x1536.png"
-        if not img_file.exists():
-            continue
-
-        # Check rarity and type from meta.yml
-        card_rarity = None
-        card_type = None
-
-        if meta_file.exists():
-            try:
-                with open(meta_file, "r", encoding="utf-8") as f:
-                    for line in f:
-                        line = line.strip()
-                        if line.startswith("rarity:"):
-                            card_rarity = line.split(":", 1)[1].strip().upper()
-                        elif line.startswith("card_type:"):
-                            card_type = line.split(":", 1)[1].strip().upper()
-            except OSError:
-                continue
-
-        # Also check card.json for type if not in meta
-        if card_type is None:
-            card_json = card_dir / "card.json"
-            if card_json.exists():
-                try:
-                    card_data = read_json(card_json)
-                    card_type = card_data.get("content", {}).get("TYPE", "").upper()
-                    if not card_rarity:
-                        card_rarity = card_data.get("content", {}).get("RARITY_TEXT", "").upper()
-                except Exception:
-                    pass
-
-        # Check if matches criteria
-        rarity_match = (target_rarity is None) or (card_rarity == target_rarity.upper())
-        type_match = (target_type is None) or (card_type == target_type.upper())
-
-        if rarity_match and type_match:
-            matches.append(img_file)
-            if len(matches) >= max_cards:
-                break
-
-    return matches
-
-
 def _get_series_theme(series_dir: Path) -> str:
     """Get the series theme/set name (e.g., 'Babel')."""
     stats_file = series_dir / "stats.yml"
@@ -863,159 +793,83 @@ def _build_style_refs(
     target_type: str | None = None,
     fix_mode: bool = False,
     templates_only: bool = True,
-) -> tuple[list[str], dict[int, str], bool]:
-    """Build list of style reference paths for image generation.
+    target_recipe: dict | None = None,
+    target_prompt: str | None = None,
+    max_examples: int = MAX_EXAMPLE_REFERENCES,
+    reference_manifest_path: Path | None = None,
+) -> ReferencePack:
+    """Build the validated, ordered reference pack consumed by Gemini.
 
-    Uses stable checked-in examples and templates by default. Series cards are
-    opt-in because their inclusion makes a card's geometry depend on generation
-    order and lets small generated defects propagate to later cards.
-    Example cards are always included as premium references.
+    ``series_root`` and ``templates_only`` remain in the private API for callers
+    that used the old selector, but generated series files are no longer searched.
+    Only the curated finished-card manifest can make an example eligible.
 
-    Reference priority order:
-        [1] = Current card being fixed (fix_mode only)
-        [2+] = Example cards matching type AND rarity (always searched)
-        [3+] = Series cards matching type AND rarity (unless templates_only)
-        [last] = Rarity template (weakest - just for badge reference)
-
-    Args:
-        series_root: Series directory for finding series cards.
-        current_card_path: Path to current card image (excluded from refs).
-        target_rarity: Target rarity to match.
-        target_type: Target type to match.
-        fix_mode: If True, includes current card as first reference.
-        templates_only: If True, skip series cards and only use templates + example cards.
-
-    Returns:
-        Tuple of (refs list, rarity_labels dict mapping position to rarity, fix_mode flag)
+    Generate order is TEMPLATE [1], then top-X examples.  Fix order is current
+    card [1], TEMPLATE [2], then top-X examples.  The canonical template is
+    resolved from the type-by-rarity manifest and verified before any candidate
+    selection; absence or corruption is a hard failure with no legacy fallback.
     """
-    refs: list[str] = []
-    rarity_labels: dict[int, str] = {}
-
-    # For fix mode, current card comes first
-    if fix_mode and current_card_path and current_card_path.exists():
-        refs.append(str(current_card_path))
-
-    # The canonical face treatment is selected by the complete type/rarity pair.
-    # resolve_template also rejects unknown or incomplete combinations explicitly.
-    treatment_template_path = resolve_template(target_type or "", target_rarity or "")
-
-    # Always collect matching example cards (premium references)
-    example_refs: list[tuple[Path, str]] = []  # [(path, rarity), ...]
-
-    example_cards_dir = Path("templates/example_cards")
-    if example_cards_dir.exists():
-        # Collect ONLY cards matching BOTH type AND rarity (cleanest refs)
-        for card_dir in sorted(example_cards_dir.iterdir()):
-            if not card_dir.is_dir():
-                continue
-            card_png = card_dir / "outputs" / "card_1024x1536.png"
-            if not card_png.exists():
-                continue
-            # Skip the card we're currently generating
-            if current_card_path and card_png.resolve() == current_card_path.resolve():
-                continue
-            # Get metadata
-            meta_path = card_dir / "meta.yml"
-            card_type_meta = ""
-            card_rarity_meta = ""
-            if meta_path.exists() and yaml:
-                with open(meta_path, "r", encoding="utf-8") as f:
-                    meta = yaml.safe_load(f) or {}
-                card_type_meta = (meta.get("card_type") or meta.get("type", "")).upper()
-                card_rarity_meta = meta.get("rarity", "").upper()
-
-            # Only include if it matches BOTH type AND rarity
-            matches_type = target_type and card_type_meta == target_type
-            matches_rarity = target_rarity and card_rarity_meta == target_rarity
-
-            if matches_type and matches_rarity:
-                example_refs.append((card_png, card_rarity_meta))
-
-    # Add example cards (strongest references)
-    for card_png, card_rarity_meta in example_refs:
-        refs.append(str(card_png))
-        if card_rarity_meta:
-            rarity_labels[len(refs)] = card_rarity_meta
-
-    # For series cards mode, find ONLY cards matching BOTH type AND rarity
-    if not templates_only:
-        exclude_dir = current_card_path.parent.parent if current_card_path else None
-
-        # Only use cards that match BOTH type AND rarity (cleanest refs)
-        matching_cards: list[Path] = []
-        if target_type and target_rarity:
-            matching_cards = _find_matching_cards(
-                series_root,
-                target_rarity=target_rarity,
-                target_type=target_type,
-                exclude_card=exclude_dir,
-                max_cards=3,
-            )
-
-        # Add series cards to refs
-        for card_path in matching_cards:
-            refs.append(str(card_path))
-            rarity_labels[len(refs)] = target_rarity
-
-    # Canonical treatment added LAST (weakest reference, but authoritative geometry).
-    if treatment_template_path:
-        refs.append(str(treatment_template_path))
-
-    return refs, rarity_labels, fix_mode
+    del series_root, templates_only
+    normalized_type = (target_type or "").upper()
+    normalized_rarity = (target_rarity or "").upper()
+    template_record = resolve_template_record(normalized_type, normalized_rarity)
+    recipe = target_recipe or {}
+    if target_prompt is None:
+        try:
+            target_prompt = build_prompt_text(recipe) if recipe else ""
+        except (KeyError, TypeError, ValueError):
+            target_prompt = json.dumps(recipe, ensure_ascii=False, sort_keys=True, default=str)
+    return build_reference_pack(
+        template_record=template_record,
+        target_type=normalized_type,
+        target_rarity=normalized_rarity,
+        target_recipe=recipe,
+        target_prompt=target_prompt,
+        current_card_path=current_card_path,
+        fix_mode=fix_mode,
+        max_examples=max_examples,
+        manifest_path=reference_manifest_path or FINISHED_REFERENCE_MANIFEST,
+        root=_REPO_ROOT,
+    )
 
 
 def _build_style_cmd_args(
-    style_refs: list[str],
-    rarity_labels: dict[int, str] | None = None,
-    target_rarity: str | None = None,
-    fix_mode: bool = False,
+    reference_pack_path: Path,
 ) -> list[str]:
-    """Build CLI args for gemini_style.py from style ref list."""
-    args: list[str] = []
-    for ref in style_refs:
-        args.extend(["--style", ref])
+    """Pass one serialized contract instead of independent path/label flags."""
+    return ["--reference-pack", str(reference_pack_path)]
 
-    if rarity_labels:
-        for pos, rarity in rarity_labels.items():
-            args.extend(["--rarity-label", f"{pos}:{rarity}"])
 
-    if target_rarity:
-        args.extend(["--target-rarity", target_rarity])
-
-    if fix_mode:
-        args.append("--fix-mode")
-
-    return args
+def _build_style_command(
+    *, card_dir: Path, prompt_file: Path, out_png: Path, reference_pack: ReferencePack,
+) -> list[str]:
+    """Persist and revalidate the exact contract that the Gemini process consumes."""
+    reference_pack.validate()
+    pack_path = reference_pack.write(card_dir / "outputs" / "reference-pack.json")
+    return [
+        sys.executable,
+        "-m",
+        "hypertext.gemini.style",
+        "--prompt-file",
+        str(prompt_file),
+        *_build_style_cmd_args(pack_path),
+        "--out",
+        str(out_png),
+    ]
 
 
 def _write_generation_log(
     card_dir: Path,
     *,
-    style_refs: list[str],
-    rarity_labels: dict[int, str],
-    target_rarity: str | None,
-    target_type: str | None,
-    fix_mode: bool,
+    reference_pack: ReferencePack,
     prompt_file: Path | None = None,
     phase: str = "generate",
 ) -> None:
-    """Write a generation.log file alongside the card with generation metadata.
-
-    This log captures crucial information about how the card was generated,
-    including which style reference images were used.
-
-    Args:
-        card_dir: Directory containing the card (log written to outputs/).
-        style_refs: List of style reference image paths used.
-        rarity_labels: Mapping of position -> rarity for style refs.
-        target_rarity: Target rarity for this card.
-        target_type: Target type for this card.
-        fix_mode: Whether fix mode was used (current card as first ref).
-        prompt_file: Path to the prompt file used.
-        phase: Name of the generation phase (e.g., "imagegen", "revise", "rebuild").
-    """
+    """Write human and machine-readable lineage for a full-card request."""
     from datetime import datetime
 
+    reference_pack.validate()
+    style_refs = reference_pack.paths
     log_path = card_dir / "outputs" / "generation.log"
     log_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -1025,27 +879,24 @@ def _write_generation_log(
         f"=== Generation Log ===",
         f"Timestamp: {timestamp}",
         f"Phase: {phase}",
-        f"Target Rarity: {target_rarity or 'N/A'}",
-        f"Target Type: {target_type or 'N/A'}",
-        f"Fix Mode: {fix_mode}",
+        f"Target Rarity: {reference_pack.target_rarity}",
+        f"Target Type: {reference_pack.target_type}",
+        f"Fix Mode: {reference_pack.fix_mode}",
         f"",
         f"Style References ({len(style_refs)} total):",
     ]
 
-    for i, ref in enumerate(style_refs, start=1):
+    for item, ref in zip(reference_pack.references, style_refs):
         ref_path = Path(ref)
         # Make path relative if possible for readability
         try:
             rel_path = ref_path.relative_to(Path.cwd())
         except ValueError:
             rel_path = ref_path
-        rarity_note = f" [{rarity_labels.get(i, '')}]" if i in rarity_labels else ""
-        position_note = ""
-        if fix_mode and i == 1:
-            position_note = " (CURRENT CARD)"
-        elif (fix_mode and i == 2) or (not fix_mode and i == 1):
-            position_note = " (TEMPLATE)" if "template" in str(ref).lower() else ""
-        lines.append(f"  [{i}] {rel_path}{rarity_note}{position_note}")
+        lines.append(
+            f"  [{item.position}] {item.role.upper()}: {rel_path} "
+            f"[{item.rarity_label}] sha256={item.sha256}"
+        )
 
     if prompt_file:
         lines.extend([
@@ -1058,27 +909,80 @@ def _write_generation_log(
     with open(log_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-    # Machine-readable, content-addressed lineage. Record only stages completed
-    # at this point; review appends its own evidence after grading.
+    # Machine-readable, content-addressed lineage.  This intentionally describes
+    # a full-card Gemini request; no visible-face assembly stage is introduced.
     card_path = card_dir / "card.json"
     image_path = card_dir / "outputs" / "card_1024x1536.png"
     card_payload = read_json(card_path) if card_path.exists() else {}
     prompt_payload = _read_text(prompt_file) if prompt_file and prompt_file.exists() else ""
+    pack_path = card_dir / "outputs" / "reference-pack.json"
+    generation_metadata_path = card_dir / "outputs" / "generation.json"
+    generation_metadata: dict = {}
+    if generation_metadata_path.exists():
+        try:
+            generation_metadata = read_json(generation_metadata_path)
+        except (OSError, ValueError, TypeError):
+            generation_metadata = {}
+    settings = {
+        "model": generation_metadata.get("model") or image_model(),
+        "aspect_ratio": "2:3",
+        "image_size": "2K",
+        "response_modalities": ["IMAGE"],
+        "guidance_scale": None,
+        "num_inference_steps": None,
+        "mode": reference_pack.mode,
+        "phase": phase,
+        "full_card_generation": True,
+        "max_example_references": reference_pack.max_examples,
+        "reference_count": len(reference_pack.references),
+    }
+    pack_payload = reference_pack.to_dict()
+    for item, resolved in zip(pack_payload["references"], reference_pack.paths):
+        item["resolved_path"] = resolved
+    output_sha256 = sha256_file(image_path) if image_path.exists() else None
+    generation_provenance = {
+        "contract": "hypertext.full-card-generation-provenance/v1",
+        "target": {
+            "card_type": reference_pack.target_type,
+            "rarity": reference_pack.target_rarity,
+        },
+        "reference_pack": pack_payload,
+        "reference_pack_path": str(pack_path),
+        "reference_pack_sha256": sha256_file(pack_path) if pack_path.exists() else None,
+        "recipe": {
+            "path": str(card_path),
+            "file_sha256": sha256_file(card_path) if card_path.exists() else None,
+            "canonical_sha256": canonical_recipe_sha256(card_payload),
+        },
+        "prompt": {
+            "path": str(prompt_file) if prompt_file else None,
+            "sha256": sha256_text(prompt_payload),
+        },
+        "settings": settings,
+        "output": {
+            "path": str(image_path),
+            "sha256": output_sha256,
+            "gemini_output_sha256": generation_metadata.get("output_sha256"),
+            "generation_metadata_path": str(generation_metadata_path),
+            "generation_metadata_sha256": (
+                sha256_file(generation_metadata_path) if generation_metadata_path.exists() else None
+            ),
+        },
+    }
+    generation_provenance_path = card_dir / "outputs" / "generation-provenance.json"
+    generation_provenance_path.write_text(
+        json.dumps(generation_provenance, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+
     records = [
         provenance("plan", card_payload, card_payload),
         provenance("prompt", card_payload, prompt_payload),
-        provenance("references", {"type": target_type, "rarity": target_rarity},
-                   {"ordered_refs": style_refs, "rarity_labels": rarity_labels}),
-        provenance("image_request", prompt_payload,
-                   {"model": image_model(), "aspect_ratio": "2:3", "image_size": "2K"}),
+        provenance("references", generation_provenance["target"], pack_payload),
+        provenance("image_request", prompt_payload, settings),
     ]
     if image_path.exists():
         image_bytes = image_path.read_bytes()
-        records.extend([
-            provenance("candidate", {"references": style_refs}, image_bytes),
-            provenance("composite", image_bytes, image_bytes,
-                       repaired=phase in {"revise", "rebuild"}),
-        ])
+        records.append(provenance("candidate", {"reference_pack": pack_payload}, image_bytes))
     if phase in {"revise", "rebuild"}:
         records.append(provenance("revision", card_payload, image_path.name,
                                   repaired=True))
@@ -2975,8 +2879,12 @@ def phase_example_cards(
 
     Reads cards from templates/example_cards/queue.yml and generates them one by one.
     If target_type and/or target_rarity are specified, only generates matching cards.
-    If override_style_refs is provided, uses only those refs instead of programmatic ones.
+    Path-only overrides are rejected; curate verified examples in the reference manifest.
     """
+    if override_style_refs:
+        raise ReferenceContractError(
+            "path-only style overrides are unverified; curate them in the finished-card manifest"
+        )
     example_dir.mkdir(parents=True, exist_ok=True)
     queue_path = example_dir / "queue.yml"
 
@@ -3191,26 +3099,19 @@ def phase_imagegen(*, series_dir: Path) -> int:
 
     _log(f"[phase imagegen] generating image for {target_dir.name} -> {out_png} (rarity={target_rarity}, type={target_type})")
 
-    style_refs, rarity_labels, fix_mode = _build_style_refs(
+    card_recipe = read_json(target_dir / "card.json")
+    reference_pack = _build_style_refs(
         series_dir,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
+        target_recipe=card_recipe,
+        target_prompt=_read_text(prompt_file),
     )
-    if style_refs:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.style",
-            "--prompt-file", str(prompt_file),
-            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, fix_mode),
-            "--out", str(out_png)
-        ]
-    else:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.image",
-            str(prompt_file),
-            str(out_png)
-        ]
-        
+    cmd = _build_style_command(
+        card_dir=target_dir, prompt_file=prompt_file, out_png=out_png,
+        reference_pack=reference_pack,
+    )
     subprocess.check_call(cmd)
 
     from hypertext.cards.stat_pips import render_stat_pips
@@ -3219,11 +3120,7 @@ def phase_imagegen(*, series_dir: Path) -> int:
     # Write generation log with style reference info
     _write_generation_log(
         target_dir,
-        style_refs=style_refs,
-        rarity_labels=rarity_labels,
-        target_rarity=target_rarity,
-        target_type=target_type,
-        fix_mode=fix_mode,
+        reference_pack=reference_pack,
         prompt_file=prompt_file,
         phase="imagegen",
     )
@@ -3252,6 +3149,10 @@ def _generate_image_for_card_dir(
     if not prompt_file.exists():
         print(f"Missing {prompt_file}")
         return 1
+    if override_style_refs:
+        raise ReferenceContractError(
+            "path-only style overrides are unverified; add accepted assets to the finished-card manifest"
+        )
 
     out_png = card_dir / "outputs" / out_name
     out_png.parent.mkdir(parents=True, exist_ok=True)
@@ -3283,49 +3184,25 @@ def _generate_image_for_card_dir(
         series_dir = Path(stored_style_series)
     else:
         series_dir = card_dir.parent.parent
-    if override_style_refs:
-        style_refs = list(override_style_refs)
-        rarity_labels = {}
-        fix_mode = False
-        _log(f"[batch] Using {len(style_refs)} override style refs")
-    else:
-        style_refs, rarity_labels, fix_mode = _build_style_refs(
-            series_dir,
-            target_rarity=target_rarity,
-            target_type=target_type,
-            fix_mode=False,
-            templates_only=templates_only,
-        )
-    if style_refs:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.style",
-            "--prompt-file", str(prompt_file),
-            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, fix_mode),
-            "--out", str(out_png)
-        ]
-    else:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.image",
-            str(prompt_file),
-            str(out_png)
-        ]
+    card_recipe = read_json(card_dir / "card.json")
+    reference_pack = _build_style_refs(
+        series_dir,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=False,
+        templates_only=templates_only,
+        target_recipe=card_recipe,
+        target_prompt=_read_text(prompt_file),
+    )
+    cmd = _build_style_command(
+        card_dir=card_dir, prompt_file=prompt_file, out_png=out_png,
+        reference_pack=reference_pack,
+    )
 
     subprocess.check_call(cmd)
 
     from hypertext.cards.stat_pips import render_stat_pips
     render_stat_pips(out_png, card_dir / "card.json")
-
-    # Write generation log with style reference info
-    _write_generation_log(
-        card_dir,
-        style_refs=style_refs,
-        rarity_labels=rarity_labels,
-        target_rarity=target_rarity,
-        target_type=target_type,
-        fix_mode=fix_mode,
-        prompt_file=prompt_file,
-        phase="batch",
-    )
 
     # Run polish step (optional)
     if not skip_polish:
@@ -3345,6 +3222,13 @@ def _generate_image_for_card_dir(
         _run_watermark(card_dir=card_dir, image_path=out_png)
     else:
         _log(f"[batch] skipping watermark step")
+
+    _write_generation_log(
+        card_dir,
+        reference_pack=reference_pack,
+        prompt_file=prompt_file,
+        phase="batch",
+    )
 
     print(f"Rendered image at {out_png}")
     return 0
@@ -3428,6 +3312,10 @@ def phase_batch(
 def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_refs: list[str] | None = None, extra_style_refs: list[str] | None = None, inline_revision: str | None = None, image_only: bool = False) -> int:
     if yaml is None:
         raise RuntimeError("pyyaml is required. Install with: pip install pyyaml")
+    if override_style_refs or extra_style_refs:
+        raise ReferenceContractError(
+            "path-only style overrides are unverified; curate them in the finished-card manifest"
+        )
 
     _log(f"[phase revise] card_dir={card_dir}")
 
@@ -3459,61 +3347,33 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         if is_example_card:
             _log("[phase revise] Example card detected - using templates only for style refs")
 
-        # Build style refs
-        if override_style_refs:
-            style_refs = list(override_style_refs)
-            rarity_labels = {}
-        else:
-            style_refs, rarity_labels, _ = _build_style_refs(
-                series_dir,
-                current_card_path=out_png if out_png.exists() else None,
-                target_rarity=target_rarity,
-                target_type=target_type,
-                fix_mode=out_png.exists(),
-                templates_only=True,
-            )
-            if extra_style_refs:
-                extra_resolved = [str(Path(r).resolve()) for r in extra_style_refs]
-                existing_resolved = [str(Path(r).resolve()) for r in style_refs]
-                new_extras = [r for r, res in zip(extra_style_refs, extra_resolved) if res not in existing_resolved]
-                if new_extras:
-                    if out_png.exists() and style_refs:
-                        style_refs = [style_refs[0]] + new_extras + style_refs[1:]
-                    else:
-                        style_refs = new_extras + style_refs
-                    _log(f"[phase revise] Added {len(new_extras)} extra style refs")
-
         use_fix_mode = out_png.exists()
-        if style_refs:
-            cmd = [
-                sys.executable, "-m", "hypertext.gemini.style",
-                "--prompt-file", str(prompt_path),
-                *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, use_fix_mode),
-                "--out", str(out_png)
-            ]
-        else:
-            cmd = [
-                sys.executable, "-m", "hypertext.gemini.image",
-                str(prompt_path),
-                str(out_png)
-            ]
-
-        subprocess.check_call(cmd)
-
-        # Write generation log with style reference info
-        _write_generation_log(
-            card_dir,
-            style_refs=style_refs,
-            rarity_labels=rarity_labels,
+        reference_pack = _build_style_refs(
+            series_dir,
+            current_card_path=out_png if use_fix_mode else None,
             target_rarity=target_rarity,
             target_type=target_type,
             fix_mode=use_fix_mode,
+            templates_only=True,
+            target_recipe=card,
+            target_prompt=revised_prompt,
+        )
+        cmd = _build_style_command(
+            card_dir=card_dir, prompt_file=prompt_path, out_png=out_png,
+            reference_pack=reference_pack,
+        )
+
+        subprocess.check_call(cmd)
+
+        _run_watermark(card_dir=card_dir, image_path=out_png)
+        _write_generation_log(
+            card_dir,
+            reference_pack=reference_pack,
             prompt_file=prompt_path,
             phase="revise-image-only",
         )
 
         _log("[phase revise] image-only revision complete")
-        _run_watermark(card_dir=card_dir, image_path=out_png)
         print(f"Revised card (image-only) at {card_dir}")
         return 0
 
@@ -3552,59 +3412,32 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         if is_example_card:
             _log("[phase revise] Example card detected - using templates only for style refs")
 
-        # Rebuild does NOT use fix_mode - generating fresh from scratch
-        if override_style_refs:
-            # Complete override - use only the provided refs
-            style_refs = list(override_style_refs)
-            rarity_labels = {}
-            _log(f"[phase revise] Using {len(style_refs)} override style refs (replacing programmatic refs)")
-        else:
-            style_refs, rarity_labels, _ = _build_style_refs(
-                series_dir,
-                target_rarity=target_rarity,
-                target_type=target_type,
-                fix_mode=False,
-                templates_only=True,
-            )
-            # Add extra style refs at start (highest priority), deduped
-            if extra_style_refs:
-                extra_resolved = [str(Path(r).resolve()) for r in extra_style_refs]
-                existing_resolved = [str(Path(r).resolve()) for r in style_refs]
-                new_extras = [r for r, res in zip(extra_style_refs, extra_resolved) if res not in existing_resolved]
-                if new_extras:
-                    style_refs = new_extras + style_refs
-                    _log(f"[phase revise] Added {len(new_extras)} extra style refs (highest priority)")
-        if style_refs:
-            cmd = [
-                sys.executable, "-m", "hypertext.gemini.style",
-                "--prompt-file", str(card_dir / "prompt.txt"),
-                *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, False),
-                "--out", str(out_png)
-            ]
-        else:
-            cmd = [
-                sys.executable, "-m", "hypertext.gemini.image",
-                str(card_dir / "prompt.txt"),
-                str(out_png)
-            ]
-
-        subprocess.check_call(cmd)
-
-        # Write generation log with style reference info
-        _write_generation_log(
-            card_dir,
-            style_refs=style_refs,
-            rarity_labels=rarity_labels,
+        prompt_path = card_dir / "prompt.txt"
+        reference_pack = _build_style_refs(
+            series_dir,
             target_rarity=target_rarity,
             target_type=target_type,
             fix_mode=False,
-            prompt_file=card_dir / "prompt.txt",
-            phase="revise-rebuild",
+            templates_only=True,
+            target_recipe=card,
+            target_prompt=_read_text(prompt_path),
         )
+        cmd = _build_style_command(
+            card_dir=card_dir, prompt_file=prompt_path, out_png=out_png,
+            reference_pack=reference_pack,
+        )
+
+        subprocess.check_call(cmd)
 
         _log("[phase revise] image rebuild complete")
 
         _run_watermark(card_dir=card_dir, image_path=out_png)
+        _write_generation_log(
+            card_dir,
+            reference_pack=reference_pack,
+            prompt_file=prompt_path,
+            phase="revise-rebuild",
+        )
 
         # Update meta with rebuild note
         meta_path = card_dir / "meta.yml"
@@ -3730,67 +3563,36 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
     if form_result.rebuild:
         _log("[phase revise] Rebuild requested - generating fresh image")
 
-    if override_style_refs:
-        # Complete override - use only the provided refs
-        style_refs = list(override_style_refs)
-        rarity_labels = {}
-        _log(f"[phase revise] Using {len(style_refs)} override style refs (replacing programmatic refs)")
-    else:
-        style_refs, rarity_labels, _ = _build_style_refs(
-            series_dir,
-            current_card_path=out_png if use_fix_mode else None,
-            target_rarity=target_rarity,
-            target_type=target_type,
-            fix_mode=use_fix_mode,
-            templates_only=True,
-        )
-        # Add extra style refs after current card (for fix_mode) or at start
-        if extra_style_refs:
-            # Dedupe - remove any extra refs that are already in the list
-            extra_resolved = [str(Path(r).resolve()) for r in extra_style_refs]
-            existing_resolved = [str(Path(r).resolve()) for r in style_refs]
-            new_extras = [r for r, res in zip(extra_style_refs, extra_resolved) if res not in existing_resolved]
-            if new_extras:
-                if use_fix_mode and style_refs:
-                    # Insert after current card [1], before templates
-                    style_refs = [style_refs[0]] + new_extras + style_refs[1:]
-                else:
-                    style_refs = new_extras + style_refs
-                _log(f"[phase revise] Added {len(new_extras)} extra style refs")
-    if style_refs:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.style",
-            "--prompt-file", str(card_dir / "prompt.txt"),
-            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, use_fix_mode),
-            "--out", str(out_png)
-        ]
-    else:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.image",
-            str(card_dir / "prompt.txt"),
-            str(out_png)
-        ]
+    prompt_path = card_dir / "prompt.txt"
+    reference_pack = _build_style_refs(
+        series_dir,
+        current_card_path=out_png if use_fix_mode else None,
+        target_rarity=target_rarity,
+        target_type=target_type,
+        fix_mode=use_fix_mode,
+        templates_only=True,
+        target_recipe=updated,
+        target_prompt=prompt_text,
+    )
+    cmd = _build_style_command(
+        card_dir=card_dir, prompt_file=prompt_path, out_png=out_png,
+        reference_pack=reference_pack,
+    )
 
     subprocess.check_call(cmd)
 
     from hypertext.cards.stat_pips import render_stat_pips
     render_stat_pips(out_png, card_dir / "card.json")
 
-    # Write generation log with style reference info
-    _write_generation_log(
-        card_dir,
-        style_refs=style_refs,
-        rarity_labels=rarity_labels,
-        target_rarity=target_rarity,
-        target_type=target_type,
-        fix_mode=use_fix_mode,
-        prompt_file=card_dir / "prompt.txt",
-        phase="revise",
-    )
-
     _log("[phase revise] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
+    _write_generation_log(
+        card_dir,
+        reference_pack=reference_pack,
+        prompt_file=prompt_path,
+        phase="revise",
+    )
 
     content = updated.get("content", {}) if isinstance(updated.get("content"), dict) else {}
     render_post(
@@ -3887,7 +3689,9 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
 
     # Get target rarity and type from card
     target_rarity = card.get("content", {}).get("RARITY_TEXT", "").upper() or None
-    target_type = card.get("content", {}).get("TYPE", "").upper() or None
+    target_type = (
+        card.get("content", {}).get("CARD_TYPE") or card.get("content", {}).get("TYPE", "")
+    ).upper() or None
 
     _log(f"[phase rebuild] generating image -> {out_png} (rarity={target_rarity}, type={target_type})")
 
@@ -3912,43 +3716,30 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
             series_dir = card_dir.parent.parent
 
     # Rebuild does NOT use fix_mode - generating fresh from scratch
-    style_refs, rarity_labels, fix_mode = _build_style_refs(
+    reference_pack = _build_style_refs(
         series_dir,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
+        target_recipe=card,
+        target_prompt=_read_text(prompt_path),
     )
-    if style_refs:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.style",
-            "--prompt-file", str(prompt_path),
-            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, fix_mode),
-            "--out", str(out_png)
-        ]
-    else:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.image",
-            str(prompt_path),
-            str(out_png)
-        ]
+    cmd = _build_style_command(
+        card_dir=card_dir, prompt_file=prompt_path, out_png=out_png,
+        reference_pack=reference_pack,
+    )
 
     subprocess.check_call(cmd)
-
-    # Write generation log with style reference info
-    _write_generation_log(
-        card_dir,
-        style_refs=style_refs,
-        rarity_labels=rarity_labels,
-        target_rarity=target_rarity,
-        target_type=target_type,
-        fix_mode=fix_mode,
-        prompt_file=prompt_path,
-        phase="rebuild",
-    )
 
     _log("[phase rebuild] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
+    _write_generation_log(
+        card_dir,
+        reference_pack=reference_pack,
+        prompt_file=prompt_path,
+        phase="rebuild",
+    )
 
     content = card.get("content", {}) if isinstance(card.get("content"), dict) else {}
     render_post(
@@ -4273,45 +4064,33 @@ def _generate_image_only(*, card_dir: Path) -> Path:
     if is_example_card:
         _log(f"[imagegen] Example card detected - using templates only")
 
-    # Exclude current card to prevent self-reference during rebuilds
-    style_refs, rarity_labels, fix_mode = _build_style_refs(
+    card_recipe = read_json(card_dir / "card.json")
+    # Exclude current card to prevent self-reference during fresh generation.
+    reference_pack = _build_style_refs(
         series_dir,
         current_card_path=out_png,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
         templates_only=True,
+        target_recipe=card_recipe,
+        target_prompt=_read_text(prompt_file),
     )
-    if style_refs:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.style",
-            "--prompt-file", str(prompt_file),
-            *_build_style_cmd_args(style_refs, rarity_labels, target_rarity, fix_mode),
-            "--out", str(out_png)
-        ]
-    else:
-        cmd = [
-            sys.executable, "-m", "hypertext.gemini.image",
-            str(prompt_file),
-            str(out_png)
-        ]
+    cmd = _build_style_command(
+        card_dir=card_dir, prompt_file=prompt_file, out_png=out_png,
+        reference_pack=reference_pack,
+    )
 
     subprocess.check_call(cmd)
 
-    # Write generation log with style reference info
+    from hypertext.cards.stat_pips import render_stat_pips
+    render_stat_pips(out_png, card_dir / "card.json")
     _write_generation_log(
         card_dir,
-        style_refs=style_refs,
-        rarity_labels=rarity_labels,
-        target_rarity=target_rarity,
-        target_type=target_type,
-        fix_mode=fix_mode,
+        reference_pack=reference_pack,
         prompt_file=prompt_file,
         phase="imagegen",
     )
-
-    from hypertext.cards.stat_pips import render_stat_pips
-    render_stat_pips(out_png, card_dir / "card.json")
 
     return out_png
 
@@ -4430,25 +4209,22 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
 
     # Build style references
     _log(f"[phase grade] Building style refs from {series_dir}...")
-    style_refs, rarity_labels, _ = _build_style_refs(
+    reference_pack = _build_style_refs(
         series_dir,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
+        target_recipe=card_json,
+        target_prompt=_read_text(card_dir / "prompt.txt") if (card_dir / "prompt.txt").exists() else "",
     )
+    style_refs = reference_pack.paths
 
     _log(f"[phase grade] Built {len(style_refs)} style reference(s):")
-    for i, ref in enumerate(style_refs, 1):
-        ref_path = Path(ref)
-        label = rarity_labels.get(i, "")
-        if "template" in ref.lower():
-            _log(f"  [{i}] TEMPLATE: {ref_path.name}")
-        else:
-            _log(f"  [{i}] REFERENCE: {ref_path.name} {label}")
+    for item, ref in zip(reference_pack.references, style_refs):
+        _log(f"  [{item.position}] {item.role.upper()}: {Path(ref).name} {item.rarity_label}")
 
     if len(style_refs) < 2:
-        _log("[phase grade] WARNING: Only 1 style reference - style matching may be unreliable!")
-        _log("[phase grade] Expected: 1 template + 3 matching cards = 4 references")
+        _log("[phase grade] No eligible finished example exists; using the verified template only")
 
     # Load static style rubric (pre-generated from reference analysis)
     _log("[phase grade] Loading style rubric...")
@@ -4651,14 +4427,17 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         _log(f"[phase review] Example card detected - using templates only")
 
     # Build style references for comparison (exclude current card to prevent self-reference)
-    style_refs, _, _ = _build_style_refs(
+    reference_pack = _build_style_refs(
         series_dir,
         current_card_path=out_png,
         target_rarity=target_rarity,
         target_type=target_type,
         fix_mode=False,
         templates_only=is_example_card,
+        target_recipe=card_json,
+        target_prompt=_read_text(card_dir / "prompt.txt") if (card_dir / "prompt.txt").exists() else "",
     )
+    style_refs = reference_pack.paths
     _log(f"[phase review] Using {len(style_refs)} style references for comparison")
 
     # Load static style rubric
@@ -5036,8 +4815,8 @@ def main() -> int:
     parser.add_argument("--rarity", help="For example-cards: generate only this rarity (COMMON, UNCOMMON, RARE, GLORIOUS)")
     parser.add_argument("--count", type=int, default=0, help="For example-cards: max cards to generate (0=all remaining, 1=next card only)")
     parser.add_argument("--ask-before-review", action="store_true", help="Pause after image generation to ask before running review phase")
-    parser.add_argument("--style-ref", action="append", dest="style_refs", help="Override style references (repeatable, replaces all programmatic refs)")
-    parser.add_argument("--extra-ref", action="append", dest="extra_refs", help="Additional style reference (repeatable, prepended to programmatic refs)")
+    parser.add_argument("--style-ref", action="append", dest="style_refs", help="Deprecated unverified override (full-card generation rejects it)")
+    parser.add_argument("--extra-ref", action="append", dest="extra_refs", help="Deprecated unverified extra reference (full-card generation rejects it)")
     parser.add_argument("--variant", type=int, default=1, help="Variant number (1-3) for parallel daily generation - influences card selection for variety")
     args = parser.parse_args()
 

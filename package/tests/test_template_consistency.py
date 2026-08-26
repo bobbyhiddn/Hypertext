@@ -5,7 +5,6 @@ import os
 import tempfile
 import unittest
 from pathlib import Path
-from unittest import mock
 
 from PIL import Image, ImageFont
 
@@ -55,14 +54,14 @@ class StableReferenceTests(unittest.TestCase):
         self.assertIn("Never rename, reorder, omit, or duplicate", text)
 
     def test_default_references_do_not_depend_on_prior_series_cards(self):
-        with tempfile.TemporaryDirectory() as td, mock.patch.object(
-            daily, "_find_matching_cards", side_effect=AssertionError("series drift")
-        ), mock.patch.object(daily, "resolve_template", return_value=Path("canonical-treatment.png")), \
-             mock.patch.object(daily.Path, "exists", return_value=False):
-            refs, labels, fix = daily._build_style_refs(
+        with tempfile.TemporaryDirectory() as td:
+            pack = daily._build_style_refs(
                 Path(td), target_rarity="COMMON", target_type="NOUN"
             )
-        self.assertEqual((refs, labels, fix), (["canonical-treatment.png"], {}, False))
+        self.assertEqual([item.role for item in pack.references], ["template"])
+        self.assertTrue(pack.paths[0].endswith(
+            "templates/card/v001/composed/noun/common/template_1024x1536.png"
+        ))
 
 
 class CompositeRendererTests(unittest.TestCase):

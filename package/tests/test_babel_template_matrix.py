@@ -64,10 +64,13 @@ def test_out_of_vocabulary_combinations_are_explicitly_rejected(card_type, rarit
 
 def test_runtime_style_reference_consumes_promoted_type_rarity_treatment(tmp_path, monkeypatch):
     monkeypatch.chdir(template_matrix.ROOT)
-    refs, labels, fix_mode = daily._build_style_refs(
+    pack = daily._build_style_refs(
         tmp_path, target_type="VERB", target_rarity="GLORIOUS"
     )
-    assert Path(refs[-1]) == template_matrix.resolve_template("VERB", "GLORIOUS")
+    refs, labels, fix_mode = pack
+    assert Path(refs[0]) == template_matrix.resolve_template("VERB", "GLORIOUS")
+    assert pack.references[0].role == "template"
+    assert pack.references[0].gemini_label.startswith("[1] = TEMPLATE:")
     assert set(labels.values()) <= {"GLORIOUS"}
     assert fix_mode is False
 

@@ -1,0 +1,27 @@
+{
+  "contract": "hypertext.finished-card-references/v1",
+  "schema_version": 1,
+  "status": "curated",
+  "selection_policy": "Only explicitly accepted, finished, nonlegacy, nonsuperseded full-card outputs with an expected SHA-256 and matching recipe/review type and rarity are eligible.",
+  "entries": [
+    {
+      "id": "013-moses",
+      "status": "accepted",
+      "finished": true,
+      "legacy": false,
+      "superseded_by": null,
+      "card_type": "NAME",
+      "rarity": "COMMON",
+      "path": "templates/example_cards/013-moses/outputs/card_1024x1536.png",
+      "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+      "recipe_path": "templates/example_cards/013-moses/card.json",
+      "prompt_path": "templates/example_cards/013-moses/prompt.txt",
+      "metadata_path": "templates/example_cards/013-moses/meta.yml",
+      "review": {
+        "status": "green",
+        "score": 100,
+        "evidence_path": "templates/example_cards/013-moses/grade.json"
+      }
+    }
+  ]
+}

@@ -17,6 +17,7 @@ from hypertext.gemini.image_contract import (
     MAX_ATTEMPTS, ImageContractError, atomic_write_image, classify_error,
     decode_and_validate, record_failure, record_success, validate_request,
 )
+from hypertext.gemini.reference_pack import ReferenceContractError, ReferencePack
 
 try:
     from google import genai
@@ -73,6 +74,12 @@ def _image_part_from_bytes(img_bytes: bytes):
     return image_part
 
 
+def reference_role_labels(reference_pack: ReferencePack) -> list[str]:
+    """Return role labels only after position, rarity, and digests validate together."""
+    reference_pack.validate()
+    return [item.gemini_label for item in reference_pack.references]
+
+
 def generate_with_styles(
     prompt_text: str,
     style_image_paths: list[str],
@@ -85,6 +92,7 @@ def generate_with_styles(
     rarity_labels: dict[int, str] | None = None,
     target_rarity: str | None = None,
     fix_mode: bool = False,
+    reference_pack: ReferencePack | None = None,
 ) -> None:
     """Generate an image with style references.
 
@@ -101,6 +109,8 @@ def generate_with_styles(
         target_rarity: Optional target rarity - the matching reference will be highlighted.
         fix_mode: If True, [1] is the card being fixed, [2] is template, [3+] are examples.
                   If False, [1] is template, [2+] are examples.
+        reference_pack: Validated full-card contract. When supplied it is the sole
+                        authority for paths, positions, labels, rarity, and mode.
 
     Raises:
         RuntimeError: If the API call fails or no image is returned.
@@ -109,6 +119,22 @@ def generate_with_styles(
         raise RuntimeError("google-genai package not found. Install with: pip install google-genai")
 
     validate_request(aspect_ratio, "2K")
+    if reference_pack is not None:
+        reference_pack.validate()
+        if style_image_paths and [str(Path(path).resolve()) for path in style_image_paths] != [
+            str(Path(path).resolve()) for path in reference_pack.paths
+        ]:
+            raise ReferenceContractError("style paths disagree with the serialized reference pack")
+        if rarity_labels not in (None, reference_pack.rarity_labels):
+            raise ReferenceContractError("rarity labels disagree with the serialized reference pack")
+        if target_rarity not in (None, reference_pack.target_rarity):
+            raise ReferenceContractError("target rarity disagrees with the serialized reference pack")
+        if fix_mode not in (False, reference_pack.fix_mode):
+            raise ReferenceContractError("fix mode disagrees with the serialized reference pack")
+        style_image_paths = reference_pack.paths
+        rarity_labels = reference_pack.rarity_labels
+        target_rarity = reference_pack.target_rarity
+        fix_mode = reference_pack.fix_mode
     if not style_image_paths:
         raise RuntimeError("At least one style image is required.")
     if len(style_image_paths) > 16:
@@ -123,10 +149,12 @@ def generate_with_styles(
 
     orientation = "portrait (2:3 aspect ratio, taller than wide)" if aspect_ratio == "2:3" else f"aspect ratio {aspect_ratio}"
 
-    # Build clear labeling for each reference image
-    ref_labels = []
+    # Contract mode gets labels from the same validated entries as the paths.
+    ref_labels = reference_role_labels(reference_pack) if reference_pack else []
 
-    if fix_mode:
+    if reference_pack:
+        example_start = 3 if reference_pack.fix_mode else 2
+    elif fix_mode:
         # Fix mode: [1]=card to fix, [2]=template, [3+]=examples
         ref_labels.append("[1] = Card being fixed (PRESERVE this card's style, only fix specified issues)")
         ref_labels.append("[2] = Clean template (layout/frame reference)")
@@ -140,7 +168,10 @@ def generate_with_styles(
     has_legacy_refs = False
     for i in range(example_start, len(style_image_paths) + 1):
         rarity = rarity_labels.get(i) if rarity_labels else None
-        if rarity:
+        if reference_pack:
+            if primary_ref is None:
+                primary_ref = i
+        elif rarity:
             # Check if this is a legacy reference (missing type icon)
             if "LEGACY" in rarity.upper():
                 has_legacy_refs = True
@@ -162,7 +193,10 @@ def generate_with_styles(
     ).strip()
 
     # Build example refs string based on mode
-    if fix_mode:
+    if reference_pack:
+        template_ref = str(reference_pack.template.position)
+        example_refs = "/".join(str(item.position) for item in reference_pack.examples) or template_ref
+    elif fix_mode:
         template_ref = "2"
         example_refs = "/".join(str(i) for i in range(3, len(style_image_paths) + 1)) if len(style_image_paths) > 2 else "2"
     else:
@@ -361,7 +395,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Generate image with Gemini Style Reference")
     parser.add_argument("--prompt", help="Text description of the image content")
     parser.add_argument("--prompt-file", help="Path to text file containing the prompt")
-    parser.add_argument("--style", required=True, action="append", help="Path to reference style image (repeatable)")
+    parser.add_argument("--style", action="append", help="Legacy path-only style input (repeatable)")
+    parser.add_argument(
+        "--reference-pack",
+        help="Validated JSON reference pack; required for Hypertext full-card pipeline requests",
+    )
     parser.add_argument("--out", required=True, help="Output PNG path")
     parser.add_argument("--model", default=image_model(), help="Gemini model ID")
     parser.add_argument("--rarity-label", action="append", help="Rarity label for style image at position (format: POS:RARITY e.g. 2:COMMON)")
@@ -369,6 +407,11 @@ def main() -> int:
     parser.add_argument("--fix-mode", action="store_true", help="Fix mode: [1]=card to fix, [2]=template, [3+]=examples")
 
     args = parser.parse_args()
+
+    if args.reference_pack and (args.style or args.rarity_label or args.target_rarity or args.fix_mode):
+        parser.error("--reference-pack cannot be combined with independent style/rarity/mode flags")
+    if not args.reference_pack and not args.style:
+        parser.error("provide --reference-pack or at least one --style")
 
     prompt_text = args.prompt
     if args.prompt_file:
@@ -382,7 +425,15 @@ def main() -> int:
         print("Error: Must provide either --prompt or --prompt-file", file=sys.stderr)
         return 1
 
-    # Parse rarity labels
+    reference_pack = None
+    if args.reference_pack:
+        try:
+            reference_pack = ReferencePack.read(Path(args.reference_pack))
+        except (OSError, ValueError, TypeError) as exc:
+            print(f"Error: invalid reference pack: {exc}", file=sys.stderr)
+            return 1
+
+    # Parse rarity labels for the explicit legacy mode only.
     rarity_labels = None
     if args.rarity_label:
         rarity_labels = {}
@@ -394,12 +445,13 @@ def main() -> int:
     try:
         generate_with_styles(
             prompt_text=prompt_text,
-            style_image_paths=args.style,
+            style_image_paths=reference_pack.paths if reference_pack else args.style,
             out_path=args.out,
             model=args.model,
             rarity_labels=rarity_labels,
             target_rarity=args.target_rarity,
             fix_mode=args.fix_mode,
+            reference_pack=reference_pack,
         )
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
