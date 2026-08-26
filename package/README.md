@@ -40,6 +40,11 @@ python -m hypertext.pipeline.daily --phase grade --cards-dir demo_cards
 
 # Rebuild cards that failed grading
 python -m hypertext.pipeline.daily --phase rebuild-failed --cards-dir demo_cards
+
+# Offline acceptance against the exact canonical type-by-rarity template
+python -m hypertext.pipeline.daily --phase visual-gate --card-dir path/to/card
+# Equivalent installed-package command
+hypertext visual-gate --card-dir path/to/card
 ```
 
 **Phases:**
@@ -47,6 +52,7 @@ python -m hypertext.pipeline.daily --phase rebuild-failed --cards-dir demo_cards
 - `art` - Generate card artwork via Gemini
 - `composite` - Combine template + art + text into final card
 - `grade` - Quality check cards against rubric
+- `visual-gate` - Reject non-solid/ringed fills and noncanonical empty-pip outlines
 - `demo` - Full pipeline for demo cards
 - `rebuild-failed` - Re-run pipeline for cards that failed grading
 

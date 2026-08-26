@@ -37,6 +37,13 @@ from hypertext.gemini.review import (
     CardDescription,
 )
 from hypertext.cards.render import render_post
+from hypertext.cards.abilities import ABILITY_RULES_CONTEXT, generate_validated_ability
+from hypertext.cards.stat_pip_gate import (
+    StatPipGateError,
+    defect_summary as stat_pip_defect_summary,
+    inspect_card_stat_pips,
+    write_report as write_stat_pip_gate_report,
+)
 from hypertext.cards.template_matrix import resolve_template_record
 from hypertext.cards.visual_descriptors import canonical_prompt_content, serialize_word_card_prompt
 from hypertext.gemini.config import image_model
@@ -122,6 +129,10 @@ GAME_RULES_SNIPPET = (
     "- Sacrifice Pages (GLORIOUS only, very rare): discard from your PAGES for devastating effects\n"
     "- Sacrifice Letters (GLORIOUS only, very rare): spend Letters for game-changing power"
 )
+
+# Backward-compatible name used by the metadata prompt. Ability design itself
+# happens in the semantic-first generator before the research call.
+GAME_RULES_SNIPPET = ABILITY_RULES_CONTEXT
 
 # Visual formatting standards that MUST be followed for card rendering
 FORMATTING_RUBRIC = """
@@ -858,6 +869,56 @@ def _build_style_command(
     ]
 
 
+def _run_stat_pip_visual_gate(
+    *,
+    card_dir: Path,
+    out_png: Path,
+    reference_pack: ReferencePack,
+    report_name: str = "visual-gate.json",
+) -> dict:
+    """Reject, but never repair, a full-card candidate's 15 stat pips."""
+    reference_pack.validate()
+    template_entry = reference_pack.template
+    template_path = template_entry.resolved_path(reference_pack.root)
+    report = inspect_card_stat_pips(
+        card_dir,
+        candidate_path=out_png,
+        template_path=template_path,
+    )
+    if report["template"]["sha256"] != template_entry.sha256:
+        raise StatPipGateError(
+            "stat pip gate template digest disagrees with the validated reference pack"
+        )
+    if report["target"] != {
+        "card_type": reference_pack.target_type,
+        "rarity": reference_pack.target_rarity,
+    }:
+        raise StatPipGateError(
+            "stat pip gate card identity disagrees with the validated reference pack"
+        )
+    report["reference_pack"] = {
+        "contract": reference_pack.contract,
+        "mode": reference_pack.mode,
+        "target_type": reference_pack.target_type,
+        "target_rarity": reference_pack.target_rarity,
+        "template_position": template_entry.position,
+        "template_sha256": template_entry.sha256,
+    }
+    report_path = card_dir / "outputs" / report_name
+    write_stat_pip_gate_report(report, report_path)
+    if not report["passed"]:
+        _log(
+            f"[visual gate] REJECTED {out_png}: "
+            f"{stat_pip_defect_summary(report)} (report={report_path})"
+        )
+        raise StatPipGateError(
+            "stat pip visual gate rejected the Gemini full-card candidate: "
+            + stat_pip_defect_summary(report)
+        )
+    _log(f"[visual gate] accepted 15 template-relative stat pips (report={report_path})")
+    return report
+
+
 def _write_generation_log(
     card_dir: Path,
     *,
@@ -1230,18 +1291,38 @@ def _generate_queue_entries(
     return out
 
 
-def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str, ability: str | None = None) -> dict:
+def _generate_card_recipe(
+    *,
+    number: int,
+    word: str,
+    card_type: str,
+    rarity: str,
+    ability: str | None = None,
+    gloss: str = "",
+) -> dict:
     rules_appendix = _load_rules_appendix()
 
-    # If ability is provided, instruct the model to use it; otherwise generate one
-    if ability:
-        ability_instruction = (
-            f"  \"ability_text\": \"{ability}\" (USE THIS EXACT ABILITY - do not modify),\n"
+    # Queue-supplied abilities remain exact legacy overrides. Otherwise derive
+    # semantics first, shape them with an explicit rarity budget, and require a
+    # fresh critic verdict before the research/metadata request can proceed.
+    ability_generation = None
+    resolved_ability = str(ability).strip() if ability else ""
+    if not resolved_ability:
+        ability_generation = generate_validated_ability(
+            word=word,
+            card_type=card_type,
+            rarity=rarity,
+            gloss=gloss,
+            generate=generate_text,
         )
-        ability_note = f"ABILITY (use exactly as provided): {ability}\n\n"
-    else:
-        ability_instruction = "  \"ability_text\": string,\n"
-        ability_note = ""
+        resolved_ability = ability_generation["ability_text"]
+
+    ability_instruction = "  \"ability_text\": string,\n"
+    ability_note = (
+        "LOCKED ABILITY (copy this exact string; do not rewrite it): "
+        + json.dumps(resolved_ability, ensure_ascii=False)
+        + "\n\n"
+    )
 
     prompt = (
         "You are generating research-backed metadata for a daily Bible word-study trading card. "
@@ -1269,7 +1350,7 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
         + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
-        + ("" if ability else "Keep ability_text consistent with rarity patterns (COMMON simple; UNCOMMON suit-based; RARE references stats; GLORIOUS unique).")
+        "The ability was generated and reviewed separately; copy it verbatim."
     )
 
     _log(f"[plan] generating recipe via Gemini (#{number:03d} {word} {card_type} {rarity})")
@@ -1291,6 +1372,10 @@ def _generate_card_recipe(*, number: int, word: str, card_type: str, rarity: str
     if not isinstance(data, dict):
         raise RuntimeError("Recipe generation did not return a JSON object.")
 
+    # Do not trust the research call to preserve the separately approved copy.
+    data["ability_text"] = resolved_ability
+    if ability_generation is not None:
+        data["ability_generation"] = ability_generation
     if isinstance(grounding, dict):
         data["grounding"] = grounding
     return data
@@ -3113,9 +3198,12 @@ def phase_imagegen(*, series_dir: Path) -> int:
         reference_pack=reference_pack,
     )
     subprocess.check_call(cmd)
-
-    from hypertext.cards.stat_pips import render_stat_pips
-    render_stat_pips(out_png, target_dir / "card.json")
+    _run_stat_pip_visual_gate(
+        card_dir=target_dir,
+        out_png=out_png,
+        reference_pack=reference_pack,
+        report_name="visual-gate.generated.json",
+    )
 
     # Write generation log with style reference info
     _write_generation_log(
@@ -3130,6 +3218,9 @@ def phase_imagegen(*, series_dir: Path) -> int:
     _log("[phase imagegen] skipping polish (will run after review)")
 
     _run_watermark(card_dir=target_dir, image_path=out_png)
+    _run_stat_pip_visual_gate(
+        card_dir=target_dir, out_png=out_png, reference_pack=reference_pack
+    )
 
     print(f"Rendered image at {out_png}")
     return 0
@@ -3200,9 +3291,12 @@ def _generate_image_for_card_dir(
     )
 
     subprocess.check_call(cmd)
-
-    from hypertext.cards.stat_pips import render_stat_pips
-    render_stat_pips(out_png, card_dir / "card.json")
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir,
+        out_png=out_png,
+        reference_pack=reference_pack,
+        report_name="visual-gate.generated.json",
+    )
 
     # Run polish step (optional)
     if not skip_polish:
@@ -3222,6 +3316,10 @@ def _generate_image_for_card_dir(
         _run_watermark(card_dir=card_dir, image_path=out_png)
     else:
         _log(f"[batch] skipping watermark step")
+
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+    )
 
     _write_generation_log(
         card_dir,
@@ -3364,8 +3462,17 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         )
 
         subprocess.check_call(cmd)
+        _run_stat_pip_visual_gate(
+            card_dir=card_dir,
+            out_png=out_png,
+            reference_pack=reference_pack,
+            report_name="visual-gate.generated.json",
+        )
 
         _run_watermark(card_dir=card_dir, image_path=out_png)
+        _run_stat_pip_visual_gate(
+            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+        )
         _write_generation_log(
             card_dir,
             reference_pack=reference_pack,
@@ -3428,10 +3535,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         )
 
         subprocess.check_call(cmd)
+        _run_stat_pip_visual_gate(
+            card_dir=card_dir,
+            out_png=out_png,
+            reference_pack=reference_pack,
+            report_name="visual-gate.generated.json",
+        )
 
         _log("[phase revise] image rebuild complete")
 
         _run_watermark(card_dir=card_dir, image_path=out_png)
+        _run_stat_pip_visual_gate(
+            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+        )
         _write_generation_log(
             card_dir,
             reference_pack=reference_pack,
@@ -3580,13 +3696,19 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
     )
 
     subprocess.check_call(cmd)
-
-    from hypertext.cards.stat_pips import render_stat_pips
-    render_stat_pips(out_png, card_dir / "card.json")
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir,
+        out_png=out_png,
+        reference_pack=reference_pack,
+        report_name="visual-gate.generated.json",
+    )
 
     _log("[phase revise] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+    )
     _write_generation_log(
         card_dir,
         reference_pack=reference_pack,
@@ -3730,10 +3852,19 @@ def phase_rebuild(*, card_dir: Path, regen_prompt: bool) -> int:
     )
 
     subprocess.check_call(cmd)
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir,
+        out_png=out_png,
+        reference_pack=reference_pack,
+        report_name="visual-gate.generated.json",
+    )
 
     _log("[phase rebuild] image generation complete")
 
     _run_watermark(card_dir=card_dir, image_path=out_png)
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+    )
     _write_generation_log(
         card_dir,
         reference_pack=reference_pack,
@@ -4082,9 +4213,9 @@ def _generate_image_only(*, card_dir: Path) -> Path:
     )
 
     subprocess.check_call(cmd)
-
-    from hypertext.cards.stat_pips import render_stat_pips
-    render_stat_pips(out_png, card_dir / "card.json")
+    _run_stat_pip_visual_gate(
+        card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+    )
     _write_generation_log(
         card_dir,
         reference_pack=reference_pack,
@@ -4219,6 +4350,14 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     )
     style_refs = reference_pack.paths
 
+    try:
+        stat_pip_gate = _run_stat_pip_visual_gate(
+            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+        )
+    except StatPipGateError as exc:
+        _log(f"[phase grade] Template-relative stat pip gate failed: {exc}")
+        return 1
+
     _log(f"[phase grade] Built {len(style_refs)} style reference(s):")
     for item, ref in zip(reference_pack.references, style_refs):
         _log(f"  [{item.position}] {item.role.upper()}: {Path(ref).name} {item.rarity_label}")
@@ -4287,8 +4426,12 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
 
     expected_pips = (content.get("STAT_LORE", 0), content.get("STAT_CONTEXT", 0),
                      content.get("STAT_COMPLEXITY", 0))
-    observed_pips = (description.stat_lore, description.stat_context,
-                     description.stat_complexity)
+    observed_pips = tuple(
+        stat_pip_gate["observed_counts"][name]
+        for name in ("STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY")
+    )
+    (description.stat_lore, description.stat_context,
+     description.stat_complexity) = observed_pips
     quality = quality_score({
         "composition": normalized("formatting"),
         "typography": normalized("text_clarity"),
@@ -4322,6 +4465,13 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         "corrections": result.corrections,
         "categories": result.categories,
         "quality_contract": quality,
+        "stat_pip_visual_gate": {
+            "contract": stat_pip_gate["contract"],
+            "passed": stat_pip_gate["passed"],
+            "candidate_sha256": stat_pip_gate["candidate"]["sha256"],
+            "template_sha256": stat_pip_gate["template"]["sha256"],
+            "report": str(card_dir / "outputs" / "visual-gate.json"),
+        },
         "style_refs_count": len(style_refs),
         "style_refs": [Path(r).name for r in style_refs],
     }
@@ -4456,15 +4606,25 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
     for attempt in range(1, max_attempts + 1):
         _log(f"[phase review] === ATTEMPT {attempt}/{max_attempts} for {word} ===")
 
+        try:
+            stat_pip_gate = _run_stat_pip_visual_gate(
+                card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+            )
+        except StatPipGateError as exc:
+            _log(f"[phase review] Template-relative stat pip gate failed: {exc}")
+            return 1
+
         # Stage 1: DESCRIBE - Have LLM observe the card (with style refs + rubric for comparison)
         _log(f"[phase review] Stage 1: Describing card with {len(style_refs)} style refs + rubric...")
         try:
             description = describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
-            # Counts are renderer-owned binary pixels. Use the deterministic
-            # pixel contract rather than a vision model's unreliable counting.
-            from hypertext.cards.stat_pips import read_stat_pips
+            # Counts and visual style come from the same deterministic,
+            # template-relative gate; vision is not trusted to accept pips.
             (description.stat_lore, description.stat_context,
-             description.stat_complexity) = read_stat_pips(out_png)
+             description.stat_complexity) = tuple(
+                stat_pip_gate["observed_counts"][name]
+                for name in ("STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY")
+            )
             all_descriptions.append(description)
         except Exception as e:
             _log(f"[phase review] Description failed: {e}")
@@ -4601,6 +4761,14 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         _log(f"[phase review] Applying watermark after regenerated image...")
         _run_watermark(card_dir=card_dir, image_path=out_png)
 
+    try:
+        stat_pip_gate = _run_stat_pip_visual_gate(
+            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+        )
+    except StatPipGateError as exc:
+        _log(f"[phase review] Final stat pip visual gate failed: {exc}")
+        return 1
+
     # Update meta.yml with review status
     meta_path = card_dir / "meta.yml"
     if meta_path.exists():
@@ -4673,6 +4841,13 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
         "style_mismatch_count": style_mismatch_count,
         "corrections": best_result.corrections if best_result else [],
         "categories": best_result.categories if best_result else {},
+        "stat_pip_visual_gate": {
+            "contract": stat_pip_gate["contract"],
+            "passed": stat_pip_gate["passed"],
+            "candidate_sha256": stat_pip_gate["candidate"]["sha256"],
+            "template_sha256": stat_pip_gate["template"]["sha256"],
+            "report": str(card_dir / "outputs" / "visual-gate.json"),
+        },
     }
     with open(grade_json_path, "w", encoding="utf-8") as f:
         json.dump(grade_data, f, indent=2)
@@ -4792,9 +4967,35 @@ def phase_full(*, series_dir: Path, template_path: Path, auto: bool, batch: int)
     return phase_imagegen(series_dir=series_dir)
 
 
+def phase_visual_gate(
+    *,
+    card_dir: Path,
+    candidate_path: Path | None = None,
+    report_path: Path | None = None,
+) -> int:
+    """Run the offline, canonical-template stat pip acceptance phase."""
+    destination = report_path or card_dir / "outputs" / "visual-gate.json"
+    try:
+        report = inspect_card_stat_pips(
+            card_dir,
+            candidate_path=candidate_path,
+            report_path=destination,
+        )
+    except StatPipGateError as exc:
+        _log(f"[visual gate] ERROR: {exc}")
+        return 1
+    print(json.dumps({
+        "contract": report["contract"],
+        "passed": report["passed"],
+        "report": str(destination),
+        "defects": report["defects"],
+    }, sort_keys=True))
+    return 0 if report["passed"] else 1
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "example-cards", "revise", "rebuild", "upgrade", "rebuild-failed", "rebuild-index", "review", "grade", "gallery", "full"], required=True)
+    parser.add_argument("--phase", choices=["plan", "imagegen", "demo", "example-cards", "revise", "rebuild", "upgrade", "rebuild-failed", "rebuild-index", "review", "grade", "visual-gate", "gallery", "full"], required=True)
     parser.add_argument("--series", default=str(DEFAULT_SERIES_DIR), help="Series directory (for demo phase: output dir)")
     parser.add_argument("--style-series", default=str(DEFAULT_SERIES_DIR), help="Series to use for style references (default: series/2026-Q1)")
     parser.add_argument("--template", default=str(DEFAULT_TEMPLATE_PATH))
@@ -4802,6 +5003,8 @@ def main() -> int:
     parser.add_argument("--batch", type=int, default=1)
     parser.add_argument("--demo-dir", default=str(DEFAULT_DEMO_DIR))
     parser.add_argument("--card-dir")
+    parser.add_argument("--candidate", help="Candidate PNG override for --phase visual-gate")
+    parser.add_argument("--gate-report", help="JSON report path for --phase visual-gate")
     parser.add_argument("--revise-file")
     parser.add_argument("--revision", type=str, help="Inline revision instructions (overrides revise.txt)")
     parser.add_argument("--image-only", action="store_true", help="Skip JSON patching, only regenerate image with revision in prompt")
@@ -4966,6 +5169,16 @@ def main() -> int:
             print("Missing --card-dir")
             return 2
         return phase_grade(card_dir=Path(args.card_dir), style_series_dir=style_series_dir)
+
+    if args.phase == "visual-gate":
+        if not args.card_dir:
+            print("Missing --card-dir")
+            return 2
+        return phase_visual_gate(
+            card_dir=Path(args.card_dir),
+            candidate_path=Path(args.candidate) if args.candidate else None,
+            report_path=Path(args.gate_report) if args.gate_report else None,
+        )
 
     if args.phase == "gallery":
         return phase_gallery(series_dir=series_dir, out_dir=Path(args.out_dir))
