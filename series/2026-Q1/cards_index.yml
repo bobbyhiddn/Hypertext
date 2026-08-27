@@ -8,6 +8,7 @@ words:
 - COVENANT
 - CREATE
 - CURSE
+- DEEP
 - DESCEND
 - EARTH
 - ELDER
@@ -35,6 +36,7 @@ words:
 - STONE
 ability_patterns:
 - add_hand_choice_discard_tower
+- add_hand_conditional_draw_stat_complexity_tower
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
@@ -230,3 +232,8 @@ cards:
   type: TITLE
   rarity: COMMON
   ability_pattern: conditional_tower
+- number: 35
+  word: DEEP
+  type: ADJECTIVE
+  rarity: RARE
+  ability_pattern: add_hand_conditional_draw_stat_complexity_tower

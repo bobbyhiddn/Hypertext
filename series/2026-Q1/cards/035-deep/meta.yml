@@ -1,0 +1,87 @@
+number: '035'
+word: DEEP
+gloss: Reaching far beneath the surface; profound beyond sounding
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A knotted sounding line with a stone weight descending into dark layered
+  waters, faint light rays filtering from the surface far above, dim silhouettes of
+  great sea creatures in the depths below, engraved devotional style on warm parchment
+  tones
+stats:
+  lore: 4
+  context: 3
+  complexity: 4
+ability: Reveal one card from the top of the Tower. If that revealed card has COMPLEXITY
+  three or more, add that revealed card to your hand; if that revealed card has COMPLEXITY
+  two or less, put that revealed card on the bottom of the Tower, then draw one card
+  from the Tower.
+ot_verse:
+  ref: Psalm 42:7
+  snippet: deep calleth unto deep
+nt_verse:
+  ref: 1 Corinthians 2:10
+  snippet: the deep things of God
+greek:
+  text: βαθύς
+  translit: bathys
+hebrew:
+  text: עָמֹק
+  translit: amoq
+ot_refs: Gen 1:2 • Ps 42:7 • Dan 2:22
+nt_refs: 1 Cor 2:10 • Rom 11:33 • John 4:11
+trivia:
+- Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words for the primeval
+  sea.
+- Psalm 42:7 lets one deep call to another - flood and grief in a single image.
+- Greek bathys survives in English bathysphere, the vessel built to visit the deep.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+revision: 3
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  Visual fix only, change nothing except this single correction: Change the card''s
+  word from ''CARD TITLE'' to ''DEEP''. Keep every other pixel, panel, and text exactly
+  as rendered.
+
+  # Card_Word: DEEP
+
+  # Card_Gloss: Reaching far beneath the surface; profound beyond sounding
+
+  # Card_Type: ADJECTIVE
+
+  # Card_Rarity: RARE
+
+  # Card_Ability: Reveal one card from the top of the Tower. If that revealed card
+  has COMPLEXITY three or more, add that revealed card to your hand; if that revealed
+  card has COMPLEXITY two or less, put that revealed card on the bottom of the Tower,
+  then draw one card from the Tower.
+
+  # Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 4
+
+  # Card_Art_Prompt: A knotted sounding line with a stone weight descending into dark
+  layered waters, faint light rays filtering from the surface far above, dim silhouettes
+  of great sea creatures in the depths below, engraved devotional style on warm parchment
+  tones
+
+  # Card_OT_Verse: Psalm 42:7 — deep calleth unto deep
+
+  # Card_NT_Verse: 1 Corinthians 2:10 — the deep things of God
+
+  # Card_Hebrew: עָמֹק (amoq)
+
+  # Card_Greek: βαθύς (bathys)
+
+  # Card_Trivia_1: Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words
+  for the primeval sea.
+
+  # Card_Trivia_2: Psalm 42:7 lets one deep call to another - flood and grief in a
+  single image.
+
+  # Card_Trivia_3: Greek bathys survives in English bathysphere, the vessel built
+  to visit the deep.'
