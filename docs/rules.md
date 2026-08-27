@@ -106,9 +106,14 @@ serve in either role:
 | 6-card | 10 points | 2 | 1 |
 | 7-card | 14 points | 3 | 2 |
 
-- **Chapter Value** — the points a Page is worth when the Chapter is scored. Printed on the Lot face as `CHAPTER VALUE`.
-- **Owner Letters** — earned by Recording *your own* Portion Lot. Printed on the Lot face as `PAGE VALUE` (the value of the Lot as a Portion).
-- **Visitor Letters** — earned by Recording *another player's* Portion Lot. Fixed by Lot size; not printed.
+- **Chapter Value** — the points a Page is worth when the Chapter is scored. Printed on the Lot face as `CHAPTER VALUE: n POINTS`.
+- **Owner Letters** — earned by Recording *your own* Portion Lot.
+- **Visitor Letters** — earned by Recording *another player's* Portion Lot.
+
+The Lot face prints both Letter values on one line as the visitor/owner
+split: `PORTION VALUE: 1/2 LETTERS` on 5- and 6-card Lots and
+`PORTION VALUE: 2/3 LETTERS` on 7-card Lots — read it as
+*visitor Letters / owner Letters*. Canonical faces: `templates/lot/v002/`.
 
 Because only Chapter Lot Records create Pages, and every player may Record the
 Chapter Lot once per Chapter, the points available in a Chapter are bounded by
