@@ -90,3 +90,17 @@ def test_documentation_names_current_entry_points_phases_flags_and_gate():
     assert "--phase composite" not in pipeline_docs
     assert "--phase imagegen" in pipeline_docs
     assert "every dimension must reach 100" in pipeline_docs
+
+
+def test_documentation_distinguishes_review_gate_from_daily_grade_gate():
+    package_readme = (ROOT / "package/README.md").read_text(encoding="utf-8")
+    review_source = (ROOT / "package/hypertext/gemini/review.py").read_text(encoding="utf-8")
+    pipeline_docs = package_readme.split("### Pipeline", 1)[1].split("### Template Refinement", 1)[0]
+    gemini_docs = package_readme.split("### Gemini Integration", 1)[1].split("## Quality Grading", 1)[0]
+    quality_docs = package_readme.split("## Quality Grading", 1)[1]
+
+    assert 'parser.add_argument("--threshold", type=int, default=90' in review_source
+    assert "python -m hypertext.gemini.review --card-dir path/to/card --threshold 90" in gemini_docs
+    assert "--threshold 85" not in gemini_docs
+    assert "**Pass threshold:** 90 points with 0 style mismatches" in quality_docs
+    assert "every dimension must reach 100" in pipeline_docs

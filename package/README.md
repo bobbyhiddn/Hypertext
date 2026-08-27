@@ -229,7 +229,7 @@ python -m hypertext.gemini.image --prompt "A golden chalice" --out chalice.png
 python -m hypertext.gemini.text --prompt "Explain the word 'shalom'"
 
 # Review card quality
-python -m hypertext.gemini.review --card-dir path/to/card --threshold 85
+python -m hypertext.gemini.review --card-dir path/to/card --threshold 90
 
 # Style-referenced image generation
 python -m hypertext.gemini.style \
