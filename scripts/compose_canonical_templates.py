@@ -13,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MATRIX = ROOT / "schema/babel_template_matrix.json"
 WORD_MANIFEST = ROOT / "templates/card/v001/composed/manifest.json"
 LOT_MANIFEST = ROOT / "templates/lot/v001/shared/manifest.json"
+LOT_SCHEMA = ROOT / "schema/lot_template_family.json"
+LOT_REVIEW = ROOT / "operator_review/lot-template-family-d2429168"
 EVIDENCE = ROOT / "docs/evidence/deterministic-reconstruction"
 CARD_INDEX = ROOT / "series/2026-Q1/cards_index.yml"
 CARD_RENDER_MANIFEST = EVIDENCE / "canonical-card-renders/manifest.json"
@@ -45,15 +47,6 @@ def apply_word_identity(image: Image.Image, word_type: str, rarity: str) -> None
     centered(draw, type_pill, word_type, 25)
     draw.rectangle(rarity_pill, fill=NAVY)
     centered(draw, rarity_pill, rarity, 25)
-
-
-def apply_lot_values(image: Image.Image, chapter: int, page: int) -> None:
-    """Spell out the two rule roles inside the existing reward ribbon."""
-    draw = ImageDraw.Draw(image)
-    box = (130, 302, 900, 480)
-    draw.rectangle(box, fill=NAVY)
-    centered(draw, (box[0], 312, box[2], 382), f"CHAPTER: {chapter} POINTS", 32)
-    centered(draw, (box[0], 382, box[2], 452), f"PAGE: {page} LETTERS", 32)
 
 
 def sha(path: Path) -> str:
@@ -117,23 +110,14 @@ def compose_words() -> dict:
 
 
 def compose_lots() -> dict:
-    rewards = {5: (8, 2), 6: (10, 2), 7: (14, 3)}
-    outputs = []
-    for cards, (chapter, page) in rewards.items():
-        source = ROOT / f"templates/lot/v001/{cards}-card/template_1024x1536.png"
-        relative = Path(f"templates/lot/v001/shared/{cards}-card/template_1024x1536.png")
-        output = ROOT / relative
-        image = png(source)
-        apply_lot_values(image, chapter, page)
-        save(image, output)
-        outputs.append({"subtype": f"{cards}-card", "path": str(relative), "source": str(source.relative_to(ROOT)),
-                        "chapter_value": {"points": chapter, "visible_label": f"CHAPTER: {chapter} POINTS"},
-                        "page_value": {"letters": page, "visible_label": f"PAGE: {page} LETTERS"}, "sha256": sha(output)})
-    result = {"schema_version": 1, "scope": "shared-across-all-sets", "family": "Lot",
-              "roles": {"table": "Chapter Lot", "player": "Page Lot"}, "canvas": [1024, 1536], "outputs": outputs}
-    LOT_MANIFEST.parent.mkdir(parents=True, exist_ok=True)
-    LOT_MANIFEST.write_text(json.dumps(result, indent=2) + "\n")
-    contact_sheet([(x["subtype"], ROOT / x["path"]) for x in outputs], EVIDENCE / "shared-lots-contact-sheet.png", 3)
+    result = json.loads(LOT_MANIFEST.read_text())
+    if len(result["cells"]) != 3 or {cell["cards"] for cell in result["cells"]} != {5, 6, 7}:
+        raise RuntimeError("expected exactly three model-produced Lot size faces")
+    for cell in result["cells"]:
+        face = ROOT / cell["path"]
+        png(face)
+        if sha(face) != cell["sha256"]:
+            raise RuntimeError(f"Lot provenance mismatch: {face}")
     return result
 
 
@@ -164,20 +148,32 @@ def render_canonical_cards(words: dict) -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(); parser.add_argument("--check", action="store_true"); args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--family", choices=("all", "words", "lots"), default="all")
+    args = parser.parse_args()
     before = {}
     if args.check:
         for root in (WORD_MANIFEST.parent, LOT_MANIFEST.parent, EVIDENCE):
             if root.exists():
                 before.update({p: sha(p) for p in root.rglob("*") if p.is_file()})
-    words, lots = compose_words(), compose_lots()
-    cards = render_canonical_cards(words)
-    if len(words["outputs"]) != 20 or len(lots["outputs"]) != 3 or cards["count"] != 31:
-        raise RuntimeError("canonical coverage mismatch")
+    words = lots = cards = None
+    if args.family in ("all", "words"):
+        words = compose_words()
+        cards = render_canonical_cards(words)
+        if len(words["outputs"]) != 20 or cards["count"] != 31:
+            raise RuntimeError("canonical word coverage mismatch")
+    if args.family in ("all", "lots"):
+        lots = compose_lots()
+        if len(lots["cells"]) != 3:
+            raise RuntimeError("canonical Lot coverage mismatch")
     if args.check:
         after = {p: sha(p) for p in before}
         if before != after: raise RuntimeError("composition is not deterministic")
-    print(f'validated {len(words["outputs"])} word templates, {cards["count"]} canonical cards, and {len(lots["outputs"])} shared Lot subtypes')
+    counts = []
+    if words: counts.append(f'{len(words["outputs"])} word templates and {cards["count"]} canonical cards')
+    if lots: counts.append(f'{len(lots["cells"])} shared Lot size faces')
+    print("validated " + " plus ".join(counts))
 
 
 if __name__ == "__main__": main()

@@ -170,13 +170,24 @@ def test_manifest_evidence_reconstructs_every_promoted_face_exactly():
 def test_shared_lots_are_only_actual_sizes_and_expose_both_values():
     manifest = json.loads((ROOT / "templates/lot/v001/shared/manifest.json").read_text())
     assert manifest["scope"] == "shared-across-all-sets"
-    assert {x["subtype"] for x in manifest["outputs"]} == {"5-card", "6-card", "7-card"}
-    for item in manifest["outputs"]:
+    assert {f'{x["cards"]}-card' for x in manifest["cells"]} == {"5-card", "6-card", "7-card"}
+    assert len(manifest["cells"]) == 3
+    assert len(manifest["references"]) == 3
+    for item in manifest["cells"]:
         with Image.open(ROOT / item["path"]) as image:
             assert image.format == "PNG" and image.size == LOT_SIZE
-        assert item["chapter_value"]["points"] and item["page_value"]["letters"]
-        assert item["chapter_value"]["visible_label"].startswith("CHAPTER:")
-        assert item["page_value"]["visible_label"].startswith("PAGE:")
+        assert item["chapter_value"] and item["page_value"] and item["recipe"]
+        assert hashlib.sha256((ROOT / item["path"]).read_bytes()).hexdigest() == item["sha256"]
+
+
+def test_lot_representatives_are_exact_authoritative_phase_recipes():
+    phases = {x["id"]: x for x in yaml.safe_load((ROOT / "templates/phases.yml").read_text())["phases"]}
+    schema = json.loads((ROOT / "schema/lot_template_family.json").read_text())
+    for subtype in schema["subtypes"]:
+        phase = phases[subtype["representative"]["id"]]
+        assert phase["cards"] == subtype["cards"]
+        assert phase["name"] == subtype["representative"]["name"]
+        assert phase["display"].upper() == subtype["representative"]["display"]
 
 def test_every_canonical_card_is_rendered_through_its_matrix_template():
     source = yaml.safe_load((ROOT / "series/2026-Q1/cards_index.yml").read_text())["cards"]
