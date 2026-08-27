@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: |
+          pip install -e package/ pytest
+      - name: Run tests
+        run: |
+          # Cold provenance evidence lives in the evidence-2026-08 release;
+          # the provenance tests skip when it is absent. Full verification:
+          # gh release download evidence-2026-08 + scripts/fetch_evidence.sh
+          pytest package/tests -q

@@ -25,6 +25,9 @@ jobs:
     if: github.actor != 'github-actions[bot]'
     steps:
       - uses: actions/checkout@v4
+       with:
+         lfs: true
+         lfs: true
         with:
           fetch-depth: 0
 

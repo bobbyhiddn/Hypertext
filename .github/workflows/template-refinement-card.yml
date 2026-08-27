@@ -23,6 +23,9 @@ jobs:
       template_version: ${{ steps.run-refine.outputs.template_version }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          lfs: true
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -62,6 +65,9 @@ jobs:
     needs: refine
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          lfs: true
 
       - name: Download refined artifacts
         uses: actions/download-artifact@v4

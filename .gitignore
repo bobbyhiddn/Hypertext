@@ -34,3 +34,7 @@ package-lock.json
 .claude/
 # build artifacts
 package/hypertext_tools.egg-info/
+
+# generation working evidence (persisted results live in series/ and templates/)
+operator_review/lot-bakeoff/
+operator_review/lot-rework-30/
