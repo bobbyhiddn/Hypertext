@@ -1,9 +1,11 @@
-# Babel Alpha slot grammar - the 59 remaining Word Card slots (approved 2026-08-27)
 series: 2026-Q1
 approved: '2026-08-27'
 notes:
 - Slots BABEL-032..090 fill the 59 open cells of the corrected 90-card combination
   targets.
+- 'Numbering reconciled 2026-08-27 to actual queue-derived card numbers: pilots are
+  032 HIGH, 033 ELDER, 034 SEED, 035 DEEP, 036 FOREIGN (FOREIGN was deferred and re-queued);
+  planned slots follow from 037.'
 - word = chosen candidate; alternate kept for swaps. mechanic_family / stat_profile
   / theme are planning guidance;
 - the ability validator enforces rarity budgets - family enforcement in the planner
@@ -22,17 +24,6 @@ slots:
   status: pilot
 - slot_id: BABEL-033
   number: 33
-  type: ADJECTIVE
-  rarity: UNCOMMON
-  word: FOREIGN
-  gloss: Of another land, another tongue, another people.
-  alternate: STRANGE
-  mechanic_family: SELECT
-  stat_profile: high CONTEXT
-  theme: the confusion of tongues
-  status: pilot
-- slot_id: BABEL-034
-  number: 34
   type: TITLE
   rarity: COMMON
   word: ELDER
@@ -42,8 +33,8 @@ slots:
   stat_profile: high COMPLEXITY
   theme: the scattering of the nations
   status: pilot
-- slot_id: BABEL-035
-  number: 35
+- slot_id: BABEL-034
+  number: 34
   type: NOUN
   rarity: UNCOMMON
   word: SEED
@@ -53,8 +44,8 @@ slots:
   stat_profile: balanced
   theme: the remnant and covenant line
   status: pilot
-- slot_id: BABEL-036
-  number: 36
+- slot_id: BABEL-035
+  number: 35
   type: ADJECTIVE
   rarity: RARE
   word: DEEP
@@ -63,6 +54,17 @@ slots:
   mechanic_family: STAT_CHECK
   stat_profile: high LORE
   theme: echoes of creation and flood
+  status: pilot
+- slot_id: BABEL-036
+  number: 36
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: FOREIGN
+  gloss: Of another land, another tongue, another people.
+  alternate: STRANGE
+  mechanic_family: SELECT
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
   status: pilot
 - slot_id: BABEL-037
   number: 37

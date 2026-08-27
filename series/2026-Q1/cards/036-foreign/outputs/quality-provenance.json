@@ -1,0 +1,65 @@
+{
+  "contract": "hypertext-quality/v1",
+  "stages": [
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "e2e8fafac1e6820a10d69d32fb7c19d35a359de73d7136fa2da566a132d9054a",
+      "output_sha256": "e2e8fafac1e6820a10d69d32fb7c19d35a359de73d7136fa2da566a132d9054a",
+      "repaired": false,
+      "stage": "plan",
+      "status": "success",
+      "timestamp": "2026-08-27T18:17:45.269367+00:00"
+    },
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "e2e8fafac1e6820a10d69d32fb7c19d35a359de73d7136fa2da566a132d9054a",
+      "output_sha256": "58feb56a5f37da175faae4646af39b2f90e72caaab65cb8d238253c7ebbc0021",
+      "repaired": false,
+      "stage": "prompt",
+      "status": "success",
+      "timestamp": "2026-08-27T18:17:45.269473+00:00"
+    },
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "43c088766630fa2b765643a3650e0adf7b201eb44c31e5572899403cce35f4c4",
+      "output_sha256": "80ea3aea6ea8bb87e773310c25b9c8ea59c8c028e84fd6fa9100691367eb179c",
+      "repaired": false,
+      "stage": "references",
+      "status": "success",
+      "timestamp": "2026-08-27T18:17:45.269500+00:00"
+    },
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "58feb56a5f37da175faae4646af39b2f90e72caaab65cb8d238253c7ebbc0021",
+      "output_sha256": "5a5d422683450c9d6c9b5d881dfe2b1ffc07931ec752d7c69960e205b7e26b55",
+      "repaired": false,
+      "stage": "image_request",
+      "status": "success",
+      "timestamp": "2026-08-27T18:17:45.269532+00:00"
+    },
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "c7d2761dc00849f37d4400a699f75e70123968d6ddb28ed425f787f2de99cc5f",
+      "output_sha256": "cd97a1d286c099e5e87a0bfd313b5757ae5ba70ca36ebf488cbe0102c449773f",
+      "repaired": false,
+      "stage": "candidate",
+      "status": "success",
+      "timestamp": "2026-08-27T18:17:45.320181+00:00"
+    },
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "e2e8fafac1e6820a10d69d32fb7c19d35a359de73d7136fa2da566a132d9054a",
+      "output_sha256": "3ef9367bef59dc8380816fe6878b838957bf577de52b6bfc5085faf6c47a19c4",
+      "repaired": true,
+      "stage": "revision",
+      "status": "success",
+      "timestamp": "2026-08-27T18:17:45.320332+00:00"
+    }
+  ]
+}

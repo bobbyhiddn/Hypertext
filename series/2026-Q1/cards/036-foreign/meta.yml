@@ -1,0 +1,43 @@
+number: '036'
+word: FOREIGN
+gloss: Of another people, land, or tongue; strange to the hearer
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A caravan of robed travelers seen from behind approaching a great walled
+  city gate hung with unfamiliar banners, camels laden with bundles, distant ziggurat
+  silhouette beyond the walls, low evening light, engraved devotional style on warm
+  parchment tones
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Name a card type, then reveal one card from the top of the Tower. Add that
+  revealed card to your hand; if that revealed card is not the named type, gain one
+  Letter.
+ot_verse:
+  ref: Psalm 137:4
+  snippet: the LORD's song in a strange land
+nt_verse:
+  ref: Ephesians 2:19
+  snippet: no more strangers and foreigners
+greek:
+  text: ξένος
+  translit: xenos
+hebrew:
+  text: נָכְרִי
+  translit: nokri
+ot_refs: Exod 2:22 • Ps 137:4 • Deut 10:19
+nt_refs: Eph 2:19 • Heb 11:9 • 1 Cor 14:11
+trivia:
+- Hebrew nokri covers foreign lands, foreign gods, and the stranger at the gate alike.
+- Psalm 137 asks how to sing the LORD's song in a strange land - the exiles' question
+  in Babylon.
+- Greek xenos gives English both xenophobia and xenia, the old duty of welcoming strangers.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

@@ -12,6 +12,7 @@ words:
 - DESCEND
 - EARTH
 - ELDER
+- FOREIGN
 - FORM
 - GOOD
 - GRACE
@@ -37,6 +38,7 @@ words:
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_conditional_draw_stat_complexity_tower
+- add_hand_conditional_tower_type_name
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
@@ -238,3 +240,8 @@ cards:
   type: ADJECTIVE
   rarity: RARE
   ability_pattern: add_hand_conditional_draw_stat_complexity_tower
+- number: 36
+  word: FOREIGN
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: add_hand_conditional_tower_type_name
