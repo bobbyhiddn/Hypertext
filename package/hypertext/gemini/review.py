@@ -128,6 +128,7 @@ A correctly formatted Hypertext card should have these elements:
 14. FRAME: Is the card frame/border intact and complete?
 15. PANELS: Are all expected panels visible? List any missing sections.
 16. TEXT QUALITY: Is any text garbled, warped, or illegible? Where?
+17. PLACEHOLDER LEAKS: Does the card print any template placeholder text - the literal strings 'CARD TITLE', 'DEFINITION TEXT', 'TRANSLIT', a 'WORD:' or similar field-name prefix, '#XXX', a footer '- Set' suffix after the series name, or any bracketed slot label? List each leak and its location.
 
 Return ONLY JSON in this exact format:
 ```json
@@ -199,7 +200,7 @@ Describe in detail:
 11. COLOR SCHEME: What are the primary colors used throughout? Navy? Gold? Parchment?
 
 Be EXTREMELY SPECIFIC about visual details - this will be used to grade other cards for style consistency.
-When judging list sections, count bullet MARKERS, never wrapped continuation lines - a wrapped bullet is one bullet, and an indented continuation line without its own leading dot is never a new bullet. Before declaring a bullet-count mismatch, transcribe the first three words after each leading dot and count those entries; if that count meets the requirement there is no mismatch. Any card that differs in these structural/style elements is a STYLE MISMATCH and must FAIL."""
+When judging list sections, count bullet MARKERS, never wrapped continuation lines - a wrapped bullet is one bullet, and an indented continuation line without its own leading dot is never a new bullet. Before declaring a bullet-count mismatch, transcribe the first three words after each leading dot and count those entries; if that count meets the requirement there is no mismatch. Any printed template placeholder text (the literal strings 'CARD TITLE', 'DEFINITION TEXT', a footer '- Set' suffix, '#XXX', a field-name prefix such as 'WORD:', or a bracketed slot label) is a STYLE MISMATCH. Any card that differs in these structural/style elements is a STYLE MISMATCH and must FAIL."""
 
 
 # Stage 1b: Description prompt WITH style reference comparison
