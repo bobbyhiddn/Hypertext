@@ -992,6 +992,37 @@ def format_review_report(result: ReviewResult) -> str:
     return "\n".join(lines)
 
 
+def count_trivia_bullets(image_path: Path, model: str | None = None) -> int:
+    """Focused recount of trivia bullet markers on a rendered card.
+
+    The full 15-question description stage misreads wrapped bullets often
+    enough to zero good renders, so bullet-count style complaints are
+    cross-checked with this single-purpose query before they can fail a card.
+
+    Returns the counted number of leading-dot entries, or -1 when the
+    response cannot be parsed.
+    """
+    prompt = (
+        "Look ONLY at the TRIVIA panel at the bottom of this trading card. "
+        "Each trivia entry begins with a round leading dot at the left margin; "
+        "a long entry wraps onto indented continuation lines that have no dot "
+        "and is still ONE entry. Transcribe the first three words after each "
+        "leading dot, one entry per line, then return ONLY JSON: "
+        '{"entries": ["first three words", ...], "bullet_count": N} '
+        "where N equals the number of entries you transcribed."
+    )
+    text = _call_gemini(prompt, image_path=image_path, model=model)
+    try:
+        data = _parse_json_response(text)
+        count = int(data.get("bullet_count", -1))
+        entries = data.get("entries")
+        if isinstance(entries, list) and entries and count != len(entries):
+            count = len(entries)
+        return count
+    except Exception:
+        return -1
+
+
 def describe_palette(image_path: Path, model: str | None = None) -> str:
     """Describe symbols/icons in a palette image without card-specific assumptions.
 

@@ -4,6 +4,7 @@ import glob
 import json
 import os
 import random
+import re
 import signal
 import subprocess
 import sys
@@ -4416,6 +4417,28 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     # Check style match
     style_match = description.style_matches_reference
     style_reason = description.style_mismatch_reason or ""
+
+    # The description stage misreads wrapped trivia bullets often enough to
+    # zero good renders. When the only mismatch complaint is the bullet count,
+    # recount with a focused single-question query and let a matching count
+    # overturn the vote.
+    if not style_match and re.search(r"\bbullet", style_reason, re.IGNORECASE):
+        other_complaints = re.sub(r"[^.]*bullet[^.]*\.?", "", style_reason, flags=re.IGNORECASE).strip()
+        if not other_complaints:
+            expected_bullets = len(content.get("TRIVIA_BULLETS") or [])
+            try:
+                from hypertext.gemini.review import count_trivia_bullets
+                recount = count_trivia_bullets(out_png)
+            except Exception as e:
+                _log(f"[phase grade] bullet recount failed: {e}")
+                recount = -1
+            _log(f"[phase grade] bullet recount: {recount} (expected {expected_bullets})")
+            if recount == expected_bullets and expected_bullets > 0:
+                style_match = True
+                style_reason = ""
+                description.style_matches_reference = True
+                description.style_mismatch_reason = ""
+                _log("[phase grade] bullet-count complaint overturned by focused recount")
 
     _log(f"[phase grade] Style match: {style_match}")
     if not style_match:
