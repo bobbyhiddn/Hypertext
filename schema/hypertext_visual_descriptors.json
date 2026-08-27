@@ -44,6 +44,7 @@
  "structures": {
   "WORD_CARD": {
    "kind": "WORD_CARD",
+   "header": "Top-left: the collector number as # followed by the exact supplied digits in their exact order (render the NUMBER value verbatim, never reordered or repadded), then the navy type pill; top-right: the rarity text and diamond.",
    "geometry": {
     "orientation": "vertical",
     "frame": "identical across all type and rarity combinations",
