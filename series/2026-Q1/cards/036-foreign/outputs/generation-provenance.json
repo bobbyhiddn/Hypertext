@@ -1,11 +1,11 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "b0ebfec96dce7b43c13dd277816f6d8555457b506e6a3d9d2e4e05ca57539df1",
+    "gemini_output_sha256": "72cd06e1eb1ed0d18ca1ee37c631b323c613ef89c38b75a9cbe9e6a66f7cf1ec",
     "generation_metadata_path": "series/2026-Q1/cards/036-foreign/outputs/generation.json",
-    "generation_metadata_sha256": "d9ce7a71d0036e57bcfb27802b944ce554eaf10017037f199630bbc00b2ef87c",
+    "generation_metadata_sha256": "7eb413ab390f96603fb007b03cc6c9e4b04d49b4a741db77bd4ae3d1a3f2d63b",
     "path": "series/2026-Q1/cards/036-foreign/outputs/card_1024x1536.png",
-    "sha256": "b0ebfec96dce7b43c13dd277816f6d8555457b506e6a3d9d2e4e05ca57539df1"
+    "sha256": "72cd06e1eb1ed0d18ca1ee37c631b323c613ef89c38b75a9cbe9e6a66f7cf1ec"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/036-foreign/prompt.txt",
@@ -48,8 +48,43 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "ADJECTIVE",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/036-foreign/outputs/reference-inputs/current-585e1bb2647358fe1386a0c03c89acbad7e6ecedcb44768cc0b45771360852a9.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "UNCOMMON",
+        "rarity_label": "UNCOMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/036-foreign/outputs/reference-inputs/current-585e1bb2647358fe1386a0c03c89acbad7e6ecedcb44768cc0b45771360852a9.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "585e1bb2647358fe1386a0c03c89acbad7e6ecedcb44768cc0b45771360852a9",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "ADJECTIVE",
@@ -59,11 +94,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified ADJECTIVE UNCOMMON structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified ADJECTIVE UNCOMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "UNCOMMON",
@@ -92,18 +127,18 @@
     "target_type": "ADJECTIVE"
   },
   "reference_pack_path": "series/2026-Q1/cards/036-foreign/outputs/reference-pack.json",
-  "reference_pack_sha256": "553f20aa52072165a4de29f3e845ef9f59d9b821c9ff4acdbf20452cec98f692",
+  "reference_pack_sha256": "32d689873fdb6fd7f77a1536954504c582b7de2aa219393c2b4969c7482efc68",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]

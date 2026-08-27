@@ -41,3 +41,45 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+revision: 2
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  Visual fix only, change nothing except this single correction: Add one trivia bullet
+  to the card. The total count must be exactly 3. Keep every other pixel, panel, and
+  text exactly as rendered.
+
+  # Card_Word: FOREIGN
+
+  # Card_Gloss: Of another people, land, or tongue; strange to the hearer
+
+  # Card_Type: ADJECTIVE
+
+  # Card_Rarity: UNCOMMON
+
+  # Card_Ability: Name a card type, then reveal one card from the top of the Tower.
+  Add that revealed card to your hand; if that revealed card is not the named type,
+  gain one Letter.
+
+  # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 3
+
+  # Card_Art_Prompt: A caravan of robed travelers seen from behind approaching a great
+  walled city gate hung with unfamiliar banners, camels laden with bundles, distant
+  ziggurat silhouette beyond the walls, low evening light, engraved devotional style
+  on warm parchment tones
+
+  # Card_OT_Verse: Psalm 137:4 — the LORD''s song in a strange land
+
+  # Card_NT_Verse: Ephesians 2:19 — no more strangers and foreigners
+
+  # Card_Hebrew: נָכְרִי (nokri)
+
+  # Card_Greek: ξένος (xenos)
+
+  # Card_Trivia_1: Hebrew nokri covers foreign lands, foreign gods, and the stranger
+  at the gate alike.
+
+  # Card_Trivia_2: Psalm 137 asks how to sing the LORD''s song in a strange land -
+  the exiles'' question in Babylon.
+
+  # Card_Trivia_3: Greek xenos gives English both xenophobia and xenia, the old duty
+  of welcoming strangers.'
