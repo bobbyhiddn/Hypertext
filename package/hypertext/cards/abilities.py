@@ -812,7 +812,9 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     else:
         scope = 1 if actions else 0
 
-    resolution_actions = [action for action in actions if action not in {"look at", "reveal"}]
+    resolution_actions = [
+        action for action in actions if action not in {"look at", "reveal", "name", "choose"}
+    ]
     complexity = min(3, len(resolution_actions)) if resolution_actions else (1 if actions else 0)
     if _CONDITION_PATTERN.search(ability_text):
         complexity = max(2, complexity)
