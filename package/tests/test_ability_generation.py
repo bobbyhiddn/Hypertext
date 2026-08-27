@@ -306,7 +306,9 @@ def test_generator_calls_semantics_then_budgeted_candidate_then_independent_crit
             "unstated condition or duration, or rating that overstates or understates the printed effect. "
             "Apply the draw-one baseline: fail power_floor when a rational player would usually rather have a plain "
             '"Draw one card from the Tower." than this ability, and also fail it when a COMMON beats that baseline '
-            "by more than one modest kicker. "
+            "by more than one modest kicker. Apply the card-advantage ladder net of printed activation costs: fail "
+            "power_floor when a RARE accounts for less than two cards' worth of advantage or a GLORIOUS for less than "
+            "three, remembering that exclusive branches never add together. "
             "Do not rewrite the ability."
         ),
     ]

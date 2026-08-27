@@ -65,8 +65,8 @@ RATING_SCALE = {
     "payoff": {
         0: "no material game effect; information, peeking, or blind reordering alone",
         1: "one card of real material or equivalent - a draw, a selective add to hand, or an informed filter attached to a draw",
-        2: "clear card, Letter, protection, or tempo advantage",
-        3: "multi-card swing, reset, scoring impact, or game-changing advantage",
+        2: "about two cards' worth of advantage - e.g. selected recursion plus a draw, or a clear card-and-resource gain; outcomes on exclusive branches do not add together",
+        3: "three or more cards' worth - a multi-card swing, reset, scoring impact, or game-changing advantage",
     },
 }
 
@@ -324,6 +324,7 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Branching copy with one binary condition states that condition once and resolves every remaining case with "otherwise" (for example, "If that revealed card has COMPLEXITY three or more, add that revealed card to your hand; otherwise, put ..."). Do not restate the complementary condition in full; "otherwise" already covers it exhaustively. Never use "or else" or a bare "if not".
 - Avoid bare pronouns such as it, them, they, "that many," or a bare "the other"; repeat the player, card, quantity, or zone instead ("the other card" with its noun is fine).
 - DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
+- CARD-ADVANTAGE LADDER: activation costs are part of the math (a RARE pays one discard, a GLORIOUS two). A COMMON beats a plain draw modestly; an UNCOMMON is worth about one card plus a real kicker; a RARE must account for at least two cards' worth of advantage; a GLORIOUS at least three. Outcomes on exclusive branches never add together - an ability that either adds or draws, but never both, delivers only its better branch.
 """
 
 
@@ -855,11 +856,16 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         material_actions = [
             action for action in actions if action not in {"choose", "reveal", "look at", "name"}
         ]
-        acquisitive_actions = [
-            action for action in material_actions
-            if action in {"draw", "add", "gain", "return", "exchange", "record", "redeem"}
-        ]
-        if len(acquisitive_actions) >= 2:
+        acquisitive = {"draw", "add", "gain", "return", "exchange", "record", "redeem"}
+        # Exclusive branches ("...; otherwise ..." / "...; if ...") never stack:
+        # an ability that either adds or draws delivers one card, not two, so
+        # count acquisitive actions per branch segment and take the best branch.
+        segments = re.split(r";\s*(?:otherwise\b|if\b)", ability_text, flags=re.IGNORECASE)
+        branch_best = max(
+            sum(1 for _, _, action in _action_occurrences(segment) if action in acquisitive)
+            for segment in segments
+        )
+        if branch_best >= 2:
             payoff = 2
         elif "gain" in material_actions:
             payoff = 2
@@ -1049,7 +1055,9 @@ def build_critic_prompt(
         "unstated condition or duration, or rating that overstates or understates the printed effect. "
         "Apply the draw-one baseline: fail power_floor when a rational player would usually rather have a plain "
         '"Draw one card from the Tower." than this ability, and also fail it when a COMMON beats that baseline '
-        "by more than one modest kicker. "
+        "by more than one modest kicker. Apply the card-advantage ladder net of printed activation costs: fail "
+        "power_floor when a RARE accounts for less than two cards' worth of advantage or a GLORIOUS for less than "
+        "three, remembering that exclusive branches never add together. "
         "Do not rewrite the ability.\n\n"
         f"Word: {word_key}\nCard type: {type_key}\nRarity: {rarity_key}\n"
         f"Semantic seed:\n{json.dumps(semantic_seed, ensure_ascii=False, indent=2)}\n"
