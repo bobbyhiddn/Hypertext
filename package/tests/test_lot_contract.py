@@ -6,8 +6,8 @@ from PIL import Image
 
 from hypertext.lots.generation import _staged_render
 from hypertext.lots.renderer import _build_lot_prompt, _build_lot_style_refs
-from hypertext.lots.rules import (CHAPTER_LETTERS, IMAGE_DIMENSIONS, OPPONENT_LETTERS,
-                                  OWNER_LETTERS, PAGE_VALUE, POINTS, VISITOR_LETTERS,
+from hypertext.lots.rules import (CHAPTER_VALUE, IMAGE_DIMENSIONS, OPPONENT_LETTERS,
+                                  OWNER_LETTERS, POINTS, VISITOR_LETTERS,
                                   load_lot_rules, subtype_reference)
 from hypertext.lots.rules import reference_manifest
 from hypertext.gemini import style
@@ -24,22 +24,21 @@ def test_all_30_rules_and_variants_are_canonical():
         assert p["opponent_letters"] == OPPONENT_LETTERS[p["cards"]]
         assert "[" not in p["composition_label"]
         assert p["card_count_label"] == f'{p["cards"]}-CARD'
-        assert p["page_value"] == PAGE_VALUE[p["cards"]] == p["points"]
+        assert p["chapter_value"] == CHAPTER_VALUE[p["cards"]] == p["points"]
         assert p["owner_letters"] == OWNER_LETTERS[p["cards"]] == p["opponent_letters"]
-        assert p["chapter_letters"] == CHAPTER_LETTERS[p["cards"]]
         assert p["visitor_letters"] == VISITOR_LETTERS[p["cards"]]
 
 
 def test_babel_alpha_lot_values_match_rulebook():
-    assert PAGE_VALUE == {5: 8, 6: 10, 7: 14}
+    assert CHAPTER_VALUE == {5: 8, 6: 10, 7: 14}
     assert OWNER_LETTERS == {5: 2, 6: 2, 7: 3}
-    assert CHAPTER_LETTERS == {5: 1, 6: 2, 7: 2}
     assert VISITOR_LETTERS == {5: 1, 6: 1, 7: 2}
     rules = Path(ROOT / "docs" / "rules.md").read_text(encoding="utf-8")
     for size in (5, 6, 7):
-        row = (f"| {size}-card | {CHAPTER_LETTERS[size]} | {OWNER_LETTERS[size]} | "
-               f"{VISITOR_LETTERS[size]} | {PAGE_VALUE[size]} points |")
+        row = (f"| {size}-card | {CHAPTER_VALUE[size]} points | {OWNER_LETTERS[size]} | "
+               f"{VISITOR_LETTERS[size]} |")
         assert row in rules, row
+
 
 @pytest.mark.parametrize("cards,points,letters", [(5, 8, 2), (6, 10, 2), (7, 14, 3)])
 def test_source_subtype_prompt_and_reference_agree(tmp_path, cards, points, letters):

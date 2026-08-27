@@ -12,9 +12,10 @@ document must be corrected to match them.
 Hypertext is a word-study card game for 2–8 players built on Biblical
 vocabulary. Players write a **Chapter** together: they reveal Word Cards from
 the Tower, activate abilities, and **Record** exact combinations of card types
-that match the **Lots** in play. Recording your own Page Lot creates a
-**Page** — a scored, face-up set in front of you. Recording the shared Chapter
-Lot or another player's Page Lot earns **Letters** instead.
+that match the **Lots** in play. Recording the shared **Chapter Lot** creates a
+**Page** — a scored, face-up set in front of you. Recording a **Page Lot**
+(your own or another player's) earns **Letters** instead, and scores nothing
+directly.
 
 The structure of a game is:
 
@@ -94,26 +95,24 @@ serve in either role:
 
 | Role | Lifetime | Function |
 |------|----------|----------|
-| **Chapter Lot** | Current Chapter | One shared recipe everyone may Record against |
-| **Page Lot** | Current Chapter | A personal recipe assigned to one player; others may still Record against it |
+| **Chapter Lot** | Current Chapter | One shared recipe everyone may Record against. Recording it creates a **Page** worth the Lot's Chapter Value. |
+| **Page Lot** | Current Chapter | A personal recipe assigned to one player. Anyone may Record against it for **Letters**; no Page is created. |
 
 ### Lot values by size
 
-| Lot size | Chapter Letters | Owner Letters | Visitor Letters | Page Value |
-|----------|-----------------|---------------|-----------------|------------|
-| 5-card | 1 | 2 | 1 | 8 points |
-| 6-card | 2 | 2 | 1 | 10 points |
-| 7-card | 2 | 3 | 2 | 14 points |
+| Lot size | Chapter Value (as Chapter Lot) | Owner Letters (own Page Lot) | Visitor Letters (another's Page Lot) |
+|----------|--------------------------------|------------------------------|--------------------------------------|
+| 5-card | 8 points | 2 | 1 |
+| 6-card | 10 points | 2 | 1 |
+| 7-card | 14 points | 3 | 2 |
 
-- **Chapter Letters** — earned by anyone who Records the Chapter Lot.
-- **Owner Letters** — earned by Recording *your own* Page Lot (this creates a Page).
-- **Visitor Letters** — earned by Recording *another player's* Page Lot.
-- **Page Value** — the points a Page is worth when the Chapter is scored.
+- **Chapter Value** — the points a Page is worth when the Chapter is scored. Printed on the Lot face as `CHAPTER VALUE`.
+- **Owner Letters** — earned by Recording *your own* Page Lot. Printed on the Lot face as `PAGE VALUE`.
+- **Visitor Letters** — earned by Recording *another player's* Page Lot. Fixed by Lot size; not printed.
 
-On the current Lot faces the Page Value is printed as `CHAPTER VALUE: n POINTS`
-and the Owner Letters as `PAGE VALUE: n LETTERS`. Read them as Page Value and
-Owner Letters respectively. Chapter Letters and Visitor Letters are fixed by
-Lot size and are not printed.
+Because only Chapter Lot Records create Pages, and every player may Record the
+Chapter Lot once per Chapter, the points available in a Chapter are bounded by
+one Page per player plus Letters and Wreaths.
 
 ### The 30 Lots
 
@@ -163,10 +162,10 @@ playtesting.
 | **Tower** | Current Chapter | Face-down draw pile |
 | **Hand** | Current Chapter | Private Word Cards held by a player |
 | **Resolve** | One activation | Temporary area holding the activated card and the cards paid as its cost until the ability finishes |
-| **Sheol** | Current Chapter | Shared face-up discard pile: activated cards, activation costs, cards Recorded to the Chapter Lot or a visited Page Lot, End discards, ability discards, and the seeded Chapter-start card |
-| **Chapter Lot** | Current Chapter | Shared recipe available to every player |
-| **Page Lot** | Current Chapter | Personal recipe assigned to one player, visible to all |
-| **Page** | Current Chapter | Scored face-up set created by Recording your own Page Lot |
+| **Sheol** | Current Chapter | Shared face-up discard pile: activated cards, activation costs, cards Recorded to any Page Lot, End discards, ability discards, and the seeded Chapter-start card |
+| **Chapter Lot** | Current Chapter | Shared recipe available to every player; Recording it creates a Page |
+| **Page Lot** | Current Chapter | Personal recipe assigned to one player, visible to all; Recording it earns Letters |
+| **Page** | Current Chapter | Scored face-up set created by Recording the Chapter Lot |
 | **Used Chapters** | Whole game | Completed Chapter Lots; they do not repeat during the game |
 | **Letters** | Current Chapter | Open resource tokens; spent on activations or retained for score |
 | **Wreaths** | Current Chapter | Chapter bonus tokens (+2 points each) |
@@ -263,8 +262,8 @@ Record several different Lots in one Record stage.
 
 | You Record… | Matching cards go to | You gain | Page created? |
 |-------------|----------------------|----------|---------------|
-| **The Chapter Lot** | Sheol | Chapter Letters | No |
-| **Your own Page Lot** | Your Pages, face-up | Owner Letters | **Yes** — worth its Page Value at Chapter scoring |
+| **The Chapter Lot** | Your Pages, face-up | A Page worth the Lot's Chapter Value at Chapter scoring | **Yes** |
+| **Your own Page Lot** | Sheol | Owner Letters | No |
 | **Another player's Page Lot** | Sheol | Visitor Letters | No |
 
 Procedure:
@@ -274,8 +273,7 @@ Procedure:
 3. Declare any TITLE substitution.
 4. Verify the recipe matches exactly.
 5. Mark yourself as having Recorded that Lot this Chapter.
-6. Take the Letters.
-7. Move the cards to Sheol, or to your Pages if you Recorded your own Page Lot.
+6. If you Recorded the Chapter Lot, place the cards face-up in your Pages. Otherwise move them to Sheol and take the Letters.
 
 The first player to Record the Chapter Lot takes the **Record Wreath**.
 
@@ -321,7 +319,7 @@ When a player makes their normal End discard, other players may **Redeem** it
 When the active player's hand is empty at the end of their turn:
 
 1. Award the **Empty Wreath** to that player.
-2. **Grace period:** each other player, in clockwise order, receives one final Record stage. They may Record any active Lot they have not already Recorded this Chapter. There is no Reveal, no activation, no Redeem, and no End discard during Grace. Letters earned during Grace count for scoring.
+2. **Grace period:** each other player, in clockwise order, receives one final Record stage. They may Record any active Lot they have not already Recorded this Chapter. There is no Reveal, no activation, no Redeem, and no End discard during Grace. Pages and Letters earned during Grace count for scoring.
 3. A player who empties their hand during Grace receives no Empty Wreath, but suffers no hand penalty.
 4. Proceed to Chapter Scoring.
 
@@ -340,13 +338,13 @@ A player may earn both in the same Chapter.
 
 Each player's Chapter score is:
 
-> **Page Values of all Pages created this Chapter**
+> **Chapter Value of each Page created this Chapter**
 > **+ remaining Letters × 3**
 > **+ Wreath points**
 > **− 1 per card remaining in hand**
 
 - Spent Letters score nothing.
-- Records to the Chapter Lot or to another player's Page Lot do not score directly; their value is the Letters they earned.
+- Records to Page Lots do not score directly; their value is the Letters they earned.
 - Negative Chapter scores are permitted.
 - Score exactly once, then add the result to the running total before reset.
 
@@ -427,7 +425,7 @@ If players are tied for the highest score after the final Chapter:
 |-------|---------|
 | **1. Reveal** | Reveal top card: **Draw-Activate** it (0 Letters + printed cost) *or* **Pass** (keep it and draw 1 more) |
 | **2. Activate** | Hand Activations: 1 Letter + printed cost each, repeatable |
-| **3. Record** | Chapter Lot → Sheol, Chapter Letters · Own Page Lot → Page, Owner Letters · Other's Page Lot → Sheol, Visitor Letters |
+| **3. Record** | Chapter Lot → Page (Chapter Value points) · Own Page Lot → Sheol, Owner Letters · Other's Page Lot → Sheol, Visitor Letters |
 | **4. End** | Discard 1 (Redeem window) · empty hand closes the Chapter |
 
 ### Values
@@ -436,17 +434,16 @@ If players are tied for the highest score after the final Chapter:
 |------|-------|
 | Printed cost | COMMON 0 · UNCOMMON 0 · RARE 1 · GLORIOUS 2 |
 | Hand Activation access | 1 Letter |
-| Chapter Letters (5 / 6 / 7-card) | 1 / 2 / 2 |
+| Chapter Value (5 / 6 / 7-card Page) | 8 / 10 / 14 points |
 | Owner Letters (5 / 6 / 7-card) | 2 / 2 / 3 |
 | Visitor Letters (5 / 6 / 7-card) | 1 / 1 / 2 |
-| Page Value (5 / 6 / 7-card) | 8 / 10 / 14 points |
 | Record Wreath · Empty Wreath | +2 · +2 |
 | Retained Letter | 3 points |
 | Card left in hand | −1 point |
 
 ### Alpha hypotheses
 
-The Letter and Page values above are Babel Alpha hypotheses and are
+The Letter values and Chapter Values above are Babel Alpha hypotheses and are
 instrumented during playtesting. Individual Lots may eventually justify ±1
 Letter adjustments. The printed cost matrix and the 20-template Word Card
 matrix are locked.
@@ -458,10 +455,10 @@ matrix are locked.
 | Term | Definition |
 |------|------------|
 | **Chapter** | One complete round of play, from a fresh Tower to full reset; the Pages created during it constitute the Chapter |
-| **Chapter Lot** | The shared Lot for the current Chapter; Recording it earns Chapter Letters |
-| **Page Lot** | A player's personal Lot for the current Chapter; the owner Records it to create a Page, visitors Record it for Visitor Letters |
-| **Page** | A face-up set created by Recording your own Page Lot; worth its Page Value at Chapter scoring; cleared at reset |
-| **Page Value** | The points a Page scores (8 / 10 / 14 by Lot size) |
+| **Chapter Lot** | The shared Lot for the current Chapter; Recording it creates a Page |
+| **Chapter Value** | The points a Page scores (8 / 10 / 14 by Lot size) |
+| **Page Lot** | A player's personal Lot for the current Chapter; Recording it earns Owner Letters (owner) or Visitor Letters (anyone else) and scores nothing directly |
+| **Page** | A face-up set created by Recording the Chapter Lot; worth its Chapter Value at Chapter scoring; cleared at reset |
 | **Lot** | A 5-, 6-, or 7-card recipe of card types |
 | **Record** | Play an exact match for a Lot from your hand |
 | **Tower** | The face-down draw pile — language dispersed from Babel |

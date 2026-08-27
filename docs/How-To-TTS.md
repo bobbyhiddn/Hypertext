@@ -171,8 +171,8 @@ Each player color has their own hand zone:
 
 ### 3. Record
 - Play exact sets matching the Chapter Lot or any Page Lot
-- **Chapter Lot**: Cards go to Sheol, gain Chapter Letters
-- **Your Page Lot**: Cards go to your Pages (face-up in front of you), gain Owner Letters; the Page scores its Page Value at Chapter end
+- **Chapter Lot**: Cards go to your Pages (face-up in front of you); the Page scores its Chapter Value at Chapter end
+- **Your Page Lot**: Cards go to Sheol, gain Owner Letters
 - **Another player's Page Lot**: Cards go to Sheol, gain Visitor Letters
 - See [rules.md](rules.md) for the value table
 
@@ -187,7 +187,7 @@ Each player color has their own hand zone:
 When a player empties their hand:
 
 1. **Grace period**: Each other player, clockwise, gets one final Record stage
-2. **Score Pages**: Each Page scores its Page Value (8 / 10 / 14)
+2. **Score Pages**: Each Page scores its Chapter Value (8 / 10 / 14)
 3. **Convert Letters**: Each remaining Letter = 3 points; add Wreaths
 4. **Hand penalty**: -1 point per card remaining
 5. **Click NEW CHAPTER** and reset:

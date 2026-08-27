@@ -8,13 +8,12 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 RULES_PATH = PROJECT_ROOT / "templates" / "phases.yml"
 LOT_TEMPLATE_ROOT = PROJECT_ROOT / "templates" / "lot" / "v001"
 # Babel Alpha Lot values by Lot size (see docs/rules.md, "Lot values by size").
-PAGE_VALUE = {5: 8, 6: 10, 7: 14}        # points a Page scores at Chapter scoring
-OWNER_LETTERS = {5: 2, 6: 2, 7: 3}       # Letters for Recording your own Page Lot
-CHAPTER_LETTERS = {5: 1, 6: 2, 7: 2}     # Letters for Recording the Chapter Lot
-VISITOR_LETTERS = {5: 1, 6: 1, 7: 2}     # Letters for Recording another player's Page Lot
+CHAPTER_VALUE = {5: 8, 6: 10, 7: 14}     # points a Page scores; Pages are created by Recording the Chapter Lot
+OWNER_LETTERS = {5: 2, 6: 2, 7: 3}       # Letters for Recording your own Page Lot (no Page created)
+VISITOR_LETTERS = {5: 1, 6: 1, 7: 2}     # Letters for Recording another player's Page Lot (no Page created)
 # Legacy names for the two values printed on the v001 Lot faces
-# ("CHAPTER VALUE: n POINTS" == PAGE_VALUE, "PAGE VALUE: n LETTERS" == OWNER_LETTERS).
-POINTS = PAGE_VALUE
+# ("CHAPTER VALUE: n POINTS" == CHAPTER_VALUE, "PAGE VALUE: n LETTERS" == OWNER_LETTERS).
+POINTS = CHAPTER_VALUE
 OPPONENT_LETTERS = OWNER_LETTERS
 IMAGE_MIME = "image/png"
 IMAGE_DIMENSIONS = (1024, 1536)
@@ -59,9 +58,9 @@ def load_lot_rules(path: Path = RULES_PATH) -> list[dict[str, Any]]:
             raise ValueError(f"{p.get('name')}: invalid points")
         if not isinstance(p.get("composition"), list) or len(p["composition"]) != cards:
             raise ValueError(f"{p.get('name')}: invalid composition")
-        p.update(opponent_letters=OWNER_LETTERS[cards], page_value=PAGE_VALUE[cards],
-                 owner_letters=OWNER_LETTERS[cards], chapter_letters=CHAPTER_LETTERS[cards],
-                 visitor_letters=VISITOR_LETTERS[cards], card_count_label=card_count_label(cards),
+        p.update(opponent_letters=OWNER_LETTERS[cards], chapter_value=CHAPTER_VALUE[cards],
+                 owner_letters=OWNER_LETTERS[cards], visitor_letters=VISITOR_LETTERS[cards],
+                 card_count_label=card_count_label(cards),
                  composition_label=composition_label(p["composition"]), schema_revision=SCHEMA_REVISION)
         result.append(p)
     return result
