@@ -30,6 +30,7 @@ CRITIC_CATEGORIES = (
     "rules_legality",
     "operand_completeness",
     "rules_clarity",
+    "power_floor",
 )
 
 
@@ -62,8 +63,8 @@ RATING_SCALE = {
         3: "changes every player or the turn/chapter structure",
     },
     "payoff": {
-        0: "no material game effect",
-        1: "minor filtering, ordering, information, or one-card-equivalent value",
+        0: "no material game effect; information, peeking, or blind reordering alone",
+        1: "one card of real material or equivalent - a draw, a selective add to hand, or an informed filter attached to a draw",
         2: "clear card, Letter, protection, or tempo advantage",
         3: "multi-card swing, reset, scoring impact, or game-changing advantage",
     },
@@ -73,14 +74,14 @@ RATING_SCALE = {
 RARITY_BUDGETS = {
     "COMMON": {
         "dimensions": {
-            "scope": {"min": 1, "max": 1},
-            "complexity": {"min": 1, "max": 1},
+            "scope": {"min": 1, "max": 2},
+            "complexity": {"min": 1, "max": 2},
             "setup": {"min": 0, "max": 0},
             "interaction": {"min": 0, "max": 0},
             "payoff": {"min": 1, "max": 1},
         },
-        "total": {"min": 3, "max": 3},
-        "intent": "immediate, self-contained, one-step value",
+        "total": {"min": 3, "max": 5},
+        "intent": "a plain draw beaten by one modest kicker: immediate, self-contained, no setup or interaction",
     },
     "UNCOMMON": {
         "dimensions": {
@@ -215,7 +216,7 @@ _ACTION_PATTERNS = {
 _QUANTITY_PATTERN = re.compile(
     r"\b(?:exactly\s+|up\s+to\s+)?\d+\b"
     r"|\b(?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|all|each|every|any)\b"
-    r"|\b(?:that|this|those|these|both)\b|\bchosen\b",
+    r"|\b(?:that|this|those|these|both)\b|\bthe\s+other\b|\bchosen\b",
     re.IGNORECASE,
 )
 _CARD_OR_RESOURCE_PATTERN = re.compile(
@@ -225,7 +226,7 @@ _CARD_OR_RESOURCE_PATTERN = re.compile(
 )
 _ZONE_PATTERN = re.compile(r"\b(?:Tower|hand|Pages|Sheol|Chapter Lot|Lots?|Lot)\b", re.IGNORECASE)
 _AMBIGUOUS_REFERENCES = re.compile(
-    r"\b(?:it|them|they|that many|this way|as normal|normally|the other)\b",
+    r"\b(?:it|them|they|that many|this way|as normal|normally|the other(?!\s+cards?\b))\b",
     re.IGNORECASE,
 )
 _CONDITION_PATTERN = re.compile(
@@ -320,7 +321,8 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Flavor words are not rules actions. Never turn a card word or semantic anchor into an imperative label, a colon heading, or invented shorthand (for example, "Sink").
 - Every action must explicitly identify its actor or target, affected quantity, relevant source and destination zones, condition, duration, and outcome wherever those operands apply.
 - Draw copy names the Tower as its source. Card movement names both the cards and their destination. Ongoing copy states its duration. Conditional copy states both the condition and result.
-- Avoid bare pronouns such as it, them, they, "that many," or "the other"; repeat the player, card, quantity, or zone instead.
+- Avoid bare pronouns such as it, them, they, "that many," or a bare "the other"; repeat the player, card, quantity, or zone instead ("the other card" with its noun is fine).
+- DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
 """
 
 
@@ -810,7 +812,8 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     else:
         scope = 1 if actions else 0
 
-    complexity = min(3, len(actions)) if actions else 0
+    resolution_actions = [action for action in actions if action not in {"look at", "reveal"}]
+    complexity = min(3, len(resolution_actions)) if resolution_actions else (1 if actions else 0)
     if _CONDITION_PATTERN.search(ability_text):
         complexity = max(2, complexity)
     if global_players:
@@ -849,7 +852,11 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         material_actions = [
             action for action in actions if action not in {"choose", "reveal", "look at", "name"}
         ]
-        if len(material_actions) >= 2:
+        acquisitive_actions = [
+            action for action in material_actions
+            if action in {"draw", "add", "gain", "return", "exchange", "record", "redeem"}
+        ]
+        if len(acquisitive_actions) >= 2:
             payoff = 2
         elif "gain" in material_actions:
             payoff = 2
@@ -939,6 +946,16 @@ def validate_ability_candidate(candidate: dict, semantic_seed: dict, rarity: str
     issues.extend(operand_issues)
     checks["all_action_operands_explicit"] = not operand_issues
 
+    material_actions = [
+        action for action in detected_actions if action not in {"choose", "reveal", "look at", "name"}
+    ]
+    checks["draw_one_baseline_material"] = bool(material_actions)
+    if not material_actions:
+        issues.append(
+            "draw-one baseline: the ability must move real material "
+            "(a draw, add, gain, or similar), not information or ordering alone"
+        )
+
     ratings: dict[str, int] = {}
     budget_value = candidate.get("rarity_budget")
     if not isinstance(budget_value, dict):
@@ -1027,6 +1044,9 @@ def build_critic_prompt(
         "Reject weak flavor when the state change does not causally embody the word and type. "
         "Reject any invented action label, undefined shorthand, foreign game term, missing operand, ambiguous antecedent, "
         "unstated condition or duration, or rating that overstates or understates the printed effect. "
+        "Apply the draw-one baseline: fail power_floor when a rational player would usually rather have a plain "
+        '"Draw one card from the Tower." than this ability, and also fail it when a COMMON beats that baseline '
+        "by more than one modest kicker. "
         "Do not rewrite the ability.\n\n"
         f"Word: {word_key}\nCard type: {type_key}\nRarity: {rarity_key}\n"
         f"Semantic seed:\n{json.dumps(semantic_seed, ensure_ascii=False, indent=2)}\n"
@@ -1042,6 +1062,7 @@ def build_critic_prompt(
         '  "rules_legality": {"pass": true, "reason": "only established terms and actions are used"},\n'
         '  "operand_completeness": {"pass": true, "reason": "trigger, timing, target, zones, quantities, duration, condition, and outcomes are explicit wherever applicable"},\n'
         '  "rules_clarity": {"pass": true, "reason": "order and references have one first-read interpretation"},\n'
+        '  "power_floor": {"pass": true, "reason": "a player would prefer this over a plain draw, by a margin fitting the rarity"},\n'
         '  "overall_pass": true,\n'
         '  "issues": []\n'
         "}\n"

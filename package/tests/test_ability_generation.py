@@ -47,20 +47,26 @@ def candidate_for(*, ability_text=None):
         "semantic_anchor": "survey",
         "semantic_evidence": ["exactly 1 card", "top of the Tower"],
         "ability_text": ability_text
-        or "You reveal exactly 1 card from the top of the Tower.",
-        "rules_terms": ["reveal", "card", "Tower"],
-        "rules_actions": ["reveal"],
+        or (
+            "You reveal exactly 1 card from the top of the Tower, "
+            "then add that revealed card to your hand."
+        ),
+        "rules_terms": ["reveal", "card", "Tower", "add", "hand"],
+        "rules_actions": ["reveal", "add"],
         "clarity": {
             "trigger": "activation",
             "timing": "instantaneous",
             "targets": ["you"],
-            "zones": ["Tower"],
+            "zones": ["Tower", "hand"],
             "quantities": ["exactly 1 card"],
             "duration": "instantaneous",
             "condition": "none",
-            "outcomes": ["reveal exactly 1 card from the top of the Tower"],
+            "outcomes": [
+                "reveal exactly 1 card from the top of the Tower",
+                "add that revealed card to your hand",
+            ],
         },
-        "rarity_budget": _ratings([1, 1, 0, 0, 1]),
+        "rarity_budget": _ratings([2, 2, 0, 0, 1]),
     }
 
 
@@ -73,6 +79,7 @@ def passing_critic():
         "rules_legality": "Every action and game term is established in Hypertext.",
         "operand_completeness": "Trigger, actor, quantity, source, timing, and outcome are explicit.",
         "rules_clarity": "The single step has one first-read interpretation.",
+        "power_floor": "A selective reveal taken into hand beats a plain draw by a modest margin.",
     }
     return {
         category: {"pass": True, "reason": reasons[category]}
@@ -123,9 +130,9 @@ def test_candidate_and_critic_prompts_demand_first_read_clarity_and_legality():
 def test_deterministic_validation_accepts_explicit_budgeted_copy_and_rejects_over_budget_copy():
     valid = validate_ability_candidate(candidate_for(), semantic_seed(), "COMMON")
     assert valid["passed"] is True, valid["issues"]
-    assert valid["total"] == 3
+    assert valid["total"] == 5
     assert valid["printed_rating_estimate"] == {
-        "scope": 1,
+        "scope": 2,
         "complexity": 1,
         "setup": 0,
         "interaction": 0,
@@ -242,7 +249,7 @@ def test_deterministic_validation_rejects_forged_rarity_ratings():
     forged["rarity_budget"] = _ratings([3, 3, 1, 3, 3])
     report = validate_ability_candidate(forged, semantic_seed(), "GLORIOUS")
     assert report["passed"] is False
-    assert report["printed_rating_estimate"]["scope"] == 1
+    assert report["printed_rating_estimate"]["scope"] == 2
     assert any("rarity mismatch" in issue for issue in report["issues"])
     assert any("outside GLORIOUS range" in issue for issue in report["issues"])
 
@@ -297,6 +304,9 @@ def test_generator_calls_semantics_then_budgeted_candidate_then_independent_crit
             "Reject weak flavor when the state change does not causally embody the word and type. "
             "Reject any invented action label, undefined shorthand, foreign game term, missing operand, ambiguous antecedent, "
             "unstated condition or duration, or rating that overstates or understates the printed effect. "
+            "Apply the draw-one baseline: fail power_floor when a rational player would usually rather have a plain "
+            '"Draw one card from the Tower." than this ability, and also fail it when a COMMON beats that baseline '
+            "by more than one modest kicker. "
             "Do not rewrite the ability."
         ),
     ]
