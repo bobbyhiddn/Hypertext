@@ -1,0 +1,41 @@
+number: '022'
+word: SHEM
+gloss: Name, reputation, or fame; the eldest son of Noah.
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient patriarch standing at the entrance of a tent, holding a lantern
+  and looking up at a starry sky. In the distance, a faint silhouette of a ziggurat
+  or tower. Warm, earthy tones, no text.
+stats:
+  lore: 4
+  context: 4
+  complexity: 2
+ability: Look at the top 3 cards of the Tower. You may reveal a NAME and add it to
+  your hand. Discard the rest.
+ot_verse:
+  ref: Genesis 9:26
+  snippet: Blessed be the LORD, the God of Shem!
+nt_verse:
+  ref: Luke 3:36
+  snippet: '...the son of Shem, the son of Noah...'
+greek:
+  text: Σήμ
+  translit: Sēm
+hebrew:
+  text: שֵׁם
+  translit: Shem
+ot_refs: Gen 5:32 • Gen 10:1 • Gen 11:10
+nt_refs: Luke 3:36
+trivia:
+- Literally means 'name' in Hebrew; implies authority and reputation.
+- Ancestor of the Semitic peoples and the covenant line of Abraham.
+- Often identified in Jewish tradition as Melchizedek, King of Salem.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

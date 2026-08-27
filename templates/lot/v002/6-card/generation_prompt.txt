@@ -1,0 +1,15 @@
+Use case: stylized-concept. Asset type: canonical Hypertext LOT template face, 6-CARD size, for print.
+Image [1] is the approved original Hypertext Lot template. Your job is to REPRODUCE [1] AS EXACTLY AS POSSIBLE — same canvas, same warm heavily-mottled golden parchment, same navy border and thin double gold frame, same LOT tab and CARD COUNT tab shapes and positions, same title and subtitle typography ("TEMPLATE LOT" / "Example Subtitle for Card Type" stay EXACTLY as in [1]), same swallowtail ribbon shape, shadow and gold edging, same verse placeholder line ("Example verse text - Book 1:1"), same composition panel frame, same ornate CONTEXT panel with filigree corners and its placeholder paragraph, same footer strip ("SERIES: 20XX-QX Lots") — a viewer should mistake the result for [1] at a glance.
+
+Apply ONLY these changes and nothing else:
+1. Ribbon text: first line, large: "CHAPTER VALUE: 10 POINTS". Second line, italic, smaller: "PORTION VALUE: 2 LETTERS". No other words in the ribbon (no REWARD, no Wreath Bonus).
+2. Right tab: keep the small "CARD COUNT" header word and beneath it "6-CARD" instead of "X-CARD".
+3. Reproduce the slot row of [1] (book, book, pencil, pencil, sparkle pencil) and EXTEND it with one more slot of identical size and spacing: a feather-quill icon. Six slots total, five plus signs. Remove the small descriptor words; each slot shows only its icon with its single type word beneath (NOUN, NOUN, VERB, VERB, ADJECTIVE, NAME). Slightly reduce slot width so all six fit the same panel width.
+4. Do not render the words REWARD, Wreath, MATCH, ANY, X-CARD, or any bracketed word like [NOUN].
+
+Count the slots before rendering: exactly 6 slots and 5 plus signs. Output one complete flat portrait card face, 2:3, no exterior margin, sharp, fully legible text, no watermark, no duplicated element.
+
+--- FINAL PASS (applied to the image above the base prompt produced) ---
+Single-string edit, gemini-3-pro-image: the ribbon's second line was changed from
+"PORTION VALUE: 2 LETTERS" to exactly "PORTION VALUE: 1/2 LETTERS"
+(visitor/owner Letter split). Nothing else on the card was altered.

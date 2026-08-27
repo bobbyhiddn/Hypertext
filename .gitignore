@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.so
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+_site/
+
+# Temporary revision changes file (used for PR comments, not committed)
+.revision_changes.txt
+
+# NPM stuff
+node_modules/
+package-lock.json
+
+# claude folder
+.claude/
+# build artifacts
+package/hypertext_tools.egg-info/

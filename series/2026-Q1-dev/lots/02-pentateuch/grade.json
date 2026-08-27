@@ -1,0 +1,10 @@
+{
+  "lot_id": 2,
+  "phase_name": "PENTATEUCH",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition labels contain literal square brackets (e.g., '[NOUN]') which should not be present"
+  ],
+  "attempt": 1
+}

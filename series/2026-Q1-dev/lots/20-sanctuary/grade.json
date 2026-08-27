@@ -1,0 +1,10 @@
+{
+  "lot_id": 20,
+  "phase_name": "SANCTUARY",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes square brackets around type names (e.g. '[NOUN]') where plain text was expected"
+  ],
+  "attempt": 1
+}

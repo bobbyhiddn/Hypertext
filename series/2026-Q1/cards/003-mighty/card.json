@@ -1,0 +1,281 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "003",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "MIGHTY",
+    "GLOSS": "Possessing great power, strength, or authority; effective and potent.",
+    "CARD_TYPE": "ADJECTIVE",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A colossal, ancient mountain peak piercing through a layer of dark, swirling storm clouds, illuminated by a single, intense shaft of golden sunlight from above.",
+    "ABILITY_TEXT": "Return a VERB from Sheol to your hand.",
+    "STAT_LORE": 3,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Isaiah 9:6",
+    "OT_VERSE_SNIPPET": "And his name shall be called Wonderful, Counsellor, The mighty God...",
+    "NT_VERSE_REF": "Luke 1:49",
+    "NT_VERSE_SNIPPET": "For he that is mighty hath done to me great things; and holy is his name.",
+    "OT_VERSE_LINE": "Isaiah 9:6 — “And his name shall be called Wonderful, Counsellor, The mighty God...”",
+    "NT_VERSE_LINE": "Luke 1:49 — “For he that is mighty hath done to me great things; and holy is his name.”",
+    "GREEK": "δυνατός",
+    "GREEK_TRANSLIT": "dunatos",
+    "HEBREW": "גִּבּוֹר",
+    "HEBREW_TRANSLIT": "gibbor",
+    "OT_REFS": "Gen 10:8 • Deut 10:17 • Ps 24:8 • Jer 32:18",
+    "NT_REFS": "Luke 24:19 • 1 Cor 1:26 • Eph 1:19 • Rev 19:6",
+    "TRIVIA_BULLETS": [
+      "The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty Men'.",
+      "In Isaiah 9:6, the Messiah is given the title 'El Gibbor', meaning 'Mighty God'.",
+      "The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern word 'dynamite'.",
+      "Luke 1:49 refers to God simply as 'Ho Dunatos'—'The Mighty One'."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Mighty men of David trivia",
+      "Hebrew word for Mighty Gibbor",
+      "Greek word for Mighty Dunatos",
+      "Luke 1:49 he that is mighty greek",
+      "Isaiah 9:6 mighty god hebrew"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHXmy271HBojHsG6kBaTwVezklQX6t5IgDWnjJzUBEg38dSKIxOGGnx7GXM7D76Fwmyz-U8XTSETU-At3-_JEFMriNVwddi6zglzIgI4owEfx9yhKK4fjsICtvQF5h",
+        "title": "bibleapps.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDQ2SyFtHnGQYRe3i74Y2IeKq_CmNTWUOKcZpXdmIV7HPfxs9vSH0C9XdGu4dHnD6Aw2naQy0iAvb3T-vczW4c_lmRuHx94lvk0HPeI3ex-VD1OvYz3sBd1IS0-_KfATeHYa6p",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1LEQnevPavFEnscxKhDWeKp1aKCTLTASbqSrnJjFyBQ_E6MGeXydlHw4Uq_rv_DjZ9_C_1zBI-1vZQtqaIOimxl9kZWqYuRS8AOB2IlD2ovWGETAOkXOAXevU4o2uICuC",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQd2zmjLuRBtUCiUOf9pbrf88RzkGXciNe8DxmSJezs2wgQASCXw4xyZfIvGUENwReXjbo40Mu2CmQRl-Yy2UJ0RldupEoNLI9GTxu-d0_L_iIlDaNlIPtSxemaEc=",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHagcP1V0gsB1p9BWZXstESgcEYBSsif3wbIdkseFk0zzOGknvYR8KnH4UQfX25oThGaYIuQEQ04tqLHEtoop7KZJups1kwLaGQxAz1JXT3IY_92_RwYXu6Kv9cAkYEEoy6mL6tkfFcCMcrW-F9VkETMs-u8A9ZKWwiFYOqfuBLjE8P9MFerX1KCBYz",
+        "title": "bibletools.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrWfy6RYIw4ooxiPsBMQqc6J7vJv4GRtAqD1pAyVyutplDFzTPta8SWa7gVexHlEJcUwsoHvITcLfEu9WFiJlVGdsTKleyYppMa-gWbY9ZrsegP2W6zv74-Vz2WaF2zCmA4wJbVsgR55jBiMTKwn2VVAtNGMl-Zvy5fNtA4H5hHhF5",
+        "title": "charisfoundationromania.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDw5oO_JL2m6TWiX2b2WLH6EDpgshzAW5cpMZwtR5tCiURaWY3sJQm6G2j9gKQjwQ7ZIT4XzQNYUyzP4Bm7fS-RQmmK6eAWSL5RcVkWo4zJ4WiqWt5Ku_apNBvTG59lrAmJAqDxsG_3M9TRy5-psY48TGUwYN_9FtXTYPFlZL6OJopTlxSd8BuAnMJ3tcRlva0LdrVS7z8HFYwx8iFPi1iOIAqlFecuFNaep-lcrqrbjuNkV7RCKhke1z17iJ4v6MCSXWmvwI7",
+        "title": "jewsforjesus.org"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEasqToN8cMtnqu8WY079rVNuHi6cs3xplHYlQv3VIL3s_yfLA7FlgHiKq02f7fvy4vT6w1_2A4_6-nPiG3Wp-MVjCPz4NZUF-ECPlJ58nhuTOCrpdQLGBSXzYuzhvQ9tBFlpj3eTAqmAyffSCXoCoeACM=",
+        "title": "comelybankchurch.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFD2R1xV2RnKSEeQurzz8NSeULnFHbnGeCHToBO8BISivUYrOHmouubGfpi57pLsJ4fInsjT0IuVWtiVGWwuc0V_wSnZWyOS8HrmzNbfkk14WEFFwUt2rqCg0CXc1J-OJAYkE7nu6Pqo0zP__5mIX0JeaHSF9Roa3mx39ryyqIAW69PlQ==",
+        "title": "todaydevotional.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAGmt-CBLVu4JAbmVzZ0wRu7fNiCiia6PHXU3HI20dxcDjV0_fasLXJVANgHeyDuOI5pQKEKgA90R51Z-rbamnykZeWDXqWyQ40zx53uaeNQqMjF6md0fVPJZYVmaE_MQzlAs6aqirX3-Ua4m6VaGXNhVdjQ==",
+        "title": "hebrew4christians.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtCy7hg08HwEdzkJxiKMoFbzFBgkAxJfmwNMZrK3R8Qtye3ea71TVc_PeV9s0fft0h0t_Au33EdL9nv1xdCLLoEjopWKuzaTewVm7_ItBSEjeKpKZDW78Db4Ke4pf6cHqJtEZYWlom6iu6lV808XdUY2iFOMQhSg==",
+        "title": "biblicalwarfare.com"
+      }
+    ]
+  }
+}

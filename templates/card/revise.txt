@@ -1,0 +1,23 @@
+# Hypertext Card Template Revision Form (revise.txt)
+#
+# Edit this file, then run the template refinement:
+#   python -m hypertext.pipeline.template --type card --phase refine
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the template from scratch
+#
+# Revision Categories:
+# - Frame_Revision: Changes to borders, corners, filigree
+# - Layout_Revision: Changes to panel positions, sizes, spacing
+# - Typography_Revision: Changes to fonts, text styles, sizing
+# - Color_Revision: Changes to palette, gradients, fills
+# - Stats_Revision: Changes to stat pips, icons, indicators
+# - General_Revision: Any other changes
+#
+# Notes:
+# - Leave a field blank to keep it unchanged
+# - Lines starting with # are ignored
+# - Be specific about what should change and how
+
+Rebuild: false
+Frame_Revision:

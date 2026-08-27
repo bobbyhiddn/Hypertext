@@ -1,0 +1,44 @@
+IMAGE ROLES:
+[1] Lot_Template: Card template showing structure, borders, and text zones
+[2] Creation: Completed example card showing target style and finish
+[3] Epistle: Completed example card showing target style and finish
+[4] lot_1024x1536: Completed example card showing target style and finish
+
+TASK:
+Generate a new LOT card using the structural layout from the template image.
+Apply the visual style, coloring, shading, and artistic finish from the example cards.
+
+CARD CONTENT:
+- Title: "FOUNDATION"
+- Subtitle (italic): "One language binds the mortar; one purpose lays the stone."
+- Top left badge: "LOT"
+- Top right: "CARD COUNT" label (small) above "5-CARD" value (larger)
+- Reward banner: "REWARD: 8 Points"
+- Wreath bonus: "Wreath Bonus: +2 Points (First to record)"
+- Composition: NAME + NAME + NAME + NOUN + VERB
+- Context header: "CONTEXT"
+- Context body: "The laying of Babel’s foundation (Genesis 11:3-4) epitomizes the anthropocentric shift from divine reliance to collective human autonomy. Theologically, this phase illustrates the futility of establishing a legacy upon the shifting sands of pride rather than the eternal cornerstone of God’s will."
+- Footer left: "SERIES: 2026-Q1 Lots"
+
+PRESERVATION:
+- Exact border structure and double-frame from template
+- Navy tab badge shape for "LOT" (top-left)
+- Navy rectangle with gold border for card count (top-right)
+- Navy ribbon banner with gold trim for reward section
+- Decorative corner flourishes on composition box
+- Navy "CONTEXT" header bar above context text
+
+STYLE MATCHING:
+- Match color palette: Navy (#102030), Gold (#C0A060), Parchment background
+- Apply same artistic finish and texture as examples
+- Use consistent serif typography
+- Match icon style for card types (book, pen, quill, frame icons)
+- Composition type labels WITHOUT square brackets (e.g., "NOUN + VERB", NOT "[NOUN] + [VERB]")
+
+OUTPUT: 2:3 portrait, 1024x1536px
+
+AVOID:
+- Text rendering errors or garbled characters
+- Border distortion or misalignment
+- Missing sections or labels
+- Wrong card count or points values

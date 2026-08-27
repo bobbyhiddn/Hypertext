@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #018
+WORD: SETH
+GLOSS: Appointed / Compensation
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Discard 1 card from your hand to draw 2 cards.
+
+VERSES:
+OT: Genesis 4:25 — “God hath appointed me another seed instead of Abel, whom Cain slew.”
+NT: Luke 3:38 — “Which was the son of Enos, which was the son of Seth, which was the son of Adam.”
+
+LANGUAGES:
+Hebrew: שֵׁת - Sheth - Gen 4:25 • Gen 5:3-8 • 1 Chr 1:1
+Greek: Σήθ - Sēth - Luke 3:38
+
+TRIVIA:
+• Name means 'appointed' or 'compensation' for the loss of Abel.
+• Lived 912 years and became the ancestor of Noah and Jesus.
+• Born when Adam was 130, expressly in his father's likeness.
+
+ART: A young sapling growing vigorously next to a fallen, withered branch in a prehistoric landscape, illuminated by a shaft of warm light, symbolizing restoration and a new lineage.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

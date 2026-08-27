@@ -1,0 +1,41 @@
+number: '023'
+word: NAKED
+gloss: Exposed, vulnerable, or stripped of covering; lacking defense or concealment.
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A discarded heavy robe lying crumpled on a cold stone floor, illuminated
+  by a harsh beam of light from above, symbolizing exposure and vulnerability.
+stats:
+  lore: 3
+  context: 5
+  complexity: 1
+ability: Target player reveals their hand. Choose a card for them to discard. Draw
+  cards equal to its LORE.
+ot_verse:
+  ref: Job 1:21
+  snippet: Naked I came from my mother’s womb, and naked I will depart.
+nt_verse:
+  ref: Hebrews 4:13
+  snippet: Nothing in all creation is hidden... everything is naked and exposed before
+    his eyes.
+greek:
+  text: γυμνός
+  translit: gymnos
+hebrew:
+  text: עָרוֹם
+  translit: arom
+ot_refs: Gen 2:25 • Gen 3:7 • Isa 20:3 • Hos 2:3
+nt_refs: Matt 25:36 • 2Cor 5:3 • Rev 3:17 • Rev 16:15
+trivia:
+- Isaiah walked stripped of his sackcloth for three years as a sign to Egypt.
+- Peter was fishing 'naked' (stripped for work) before swimming to Jesus.
+- The Greek 'gymnos' often implies being poorly clad rather than fully nude.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []

@@ -1,0 +1,394 @@
+# Hypertext Package
+
+Biblical word-study trading card game toolkit.
+
+## Installation
+
+```bash
+cd package
+pip install -e .
+```
+
+## Quick Reference
+
+| Command | Description |
+|---------|-------------|
+| `python -m hypertext.pipeline.daily` | Main card generation pipeline |
+| `python -m hypertext.pipeline.template` | Template refinement pipeline |
+| `python -m hypertext.tgc prep` | Prepare cards for TGC upload |
+| `python -m hypertext.tgc print` | Export print-ready PDFs |
+| `python -m hypertext.lots.generation` | Generate phase/lot cards |
+| `python -m hypertext.utils.image` | Convert JPEG to PNG |
+
+---
+
+## Modules
+
+### Pipeline (`hypertext.pipeline.daily`)
+
+Main card generation pipeline with multiple phases.
+
+```bash
+# Generate demo cards (full pipeline)
+python -m hypertext.pipeline.daily --phase demo --cards-dir demo_cards --parallel 4
+
+# Individual phases
+python -m hypertext.pipeline.daily --phase plan --cards-dir demo_cards
+python -m hypertext.pipeline.daily --phase art --cards-dir demo_cards
+python -m hypertext.pipeline.daily --phase composite --cards-dir demo_cards
+python -m hypertext.pipeline.daily --phase grade --cards-dir demo_cards
+
+# Rebuild cards that failed grading
+python -m hypertext.pipeline.daily --phase rebuild-failed --cards-dir demo_cards
+
+# Offline acceptance against the exact canonical type-by-rarity template
+python -m hypertext.pipeline.daily --phase visual-gate --card-dir path/to/card
+# Equivalent installed-package command
+hypertext visual-gate --card-dir path/to/card
+```
+
+**Phases:**
+- `plan` - Generate card content (word, gloss, ability, stats, trivia)
+- `art` - Generate card artwork via Gemini
+- `composite` - Combine template + art + text into final card
+- `grade` - Quality check cards against rubric
+- `visual-gate` - Reject non-solid/ringed fills and noncanonical empty-pip outlines
+- `demo` - Full pipeline for demo cards
+- `rebuild-failed` - Re-run pipeline for cards that failed grading
+
+---
+
+### Template Refinement (`hypertext.pipeline.template`)
+
+Refine card and lot templates using style references with version control and subtypes.
+
+```bash
+# Refine base template (creates new version)
+python -m hypertext.pipeline.template --type lot --phase refine --subtype base
+
+# Rebuild a subtype from scratch
+python -m hypertext.pipeline.template --type lot --phase refine --subtype 5-card --from-scratch
+
+# Rebuild all subtypes for a version
+python -m hypertext.pipeline.template --type lot --phase rebuild --version 1
+
+# Skip certain subtypes during rebuild
+python -m hypertext.pipeline.template --type lot --phase rebuild --version 1 --skip base
+
+# Re-run a failed refinement (overwrite existing version)
+python -m hypertext.pipeline.template --type lot --phase refine --version 1 --subtype 5-card --target-version 1
+
+# Use custom style reference
+python -m hypertext.pipeline.template --type lot --phase refine --subtype base --style-ref path/to/template.png
+
+# Compile current version as new v001 (reset history)
+python -m hypertext.pipeline.template --type lot --phase compile --version 3
+
+# Generate rubric description
+python -m hypertext.pipeline.template --type lot --phase describe --version 1 --subtype base
+
+# List versions
+python -m hypertext.pipeline.template --type lot --phase list
+```
+
+**Template Structure:**
+```
+templates/
+├── card/
+│   ├── prompt.txt          # Parent prompt (fallback)
+│   ├── revise.txt          # Global revision form
+│   ├── meta.yml            # Version tracking
+│   └── v001/
+│       ├── revise.txt      # Version-specific revisions
+│       ├── base/
+│       │   ├── prompt.txt
+│       │   ├── rubric.txt
+│       │   └── template_1024x1536.png
+│       ├── common/
+│       ├── uncommon/
+│       ├── rare/
+│       └── glorious/
+└── lot/
+    └── v001/
+        ├── revise.txt
+        ├── base/           # Base template with X placeholders
+        ├── 5-card/         # 5-card lot (fills in values)
+        ├── 6-card/
+        └── 7-card/
+```
+
+**Subtypes:**
+- **Card:** base, common, uncommon, rare, glorious (rarity-specific styling)
+- **Lot:** base, 5-card, 6-card, 7-card (card count variations)
+
+**Workflow:**
+1. Edit `templates/lot/v001/revise.txt` with desired changes
+2. Run refine command for the target subtype
+3. Revision fields auto-clear after success
+4. Base subtype auto-syncs to `package/hypertext/templates/`
+5. Use `compile` to lock in a version as new v001
+
+---
+
+### TGC Integration (`hypertext.tgc`)
+
+Tools for The Game Crafter manufacturing and local printing.
+
+```bash
+# Prepare cards for manual TGC upload (batches of 25)
+python -m hypertext.tgc prep --cards-dir demo_cards
+
+# Export print-ready PDFs for Office Depot
+python -m hypertext.tgc print --cards-dir demo_cards
+python -m hypertext.tgc print --cards-dir demo_cards --output playtest.pdf
+
+# Upload via API (requires TGC credentials)
+python -m hypertext.tgc upload --cards-dir demo_cards --dry-run
+```
+
+**Print Output:**
+- `playtest_prep/card_deck.pdf` - Main deck cards (9 per page, double-sided)
+- `playtest_prep/lot_deck.pdf` - Phase/lot cards (9 per page, double-sided)
+
+**Environment Variables:**
+```bash
+TGC_API_KEY=your_api_key
+TGC_USERNAME=your_username
+TGC_PASSWORD=your_password
+```
+
+---
+
+### Lots/Phase Cards (`hypertext.lots.generation`)
+
+Generate and manage phase (lot) cards.
+
+```bash
+# Initialize lot content template
+python -m hypertext.lots.generation --phase init --series series/2026-Q1
+
+# Generate flavor text and context via Gemini
+python -m hypertext.lots.generation --phase generate --series series/2026-Q1
+
+# Render lot card images
+python -m hypertext.lots.generation --phase render --series series/2026-Q1 --parallel 4
+
+# Render with quality grading and retry
+python -m hypertext.lots.generation --phase render --series series/2026-Q1 --review
+
+# Force rebuild all with grading
+python -m hypertext.lots.generation --phase rebuild --series series/2026-Q1
+
+# Full pipeline (init + generate + render)
+python -m hypertext.lots.generation --phase batch --series series/2026-Q1
+
+# Export for manufacturing
+python -m hypertext.lots.generation --phase export --series series/2026-Q1 --target thegamecrafter
+
+# Grade existing cards
+python -m hypertext.lots.generation --phase grade --series series/2026-Q1
+```
+
+**Export Targets:** `playingcards`, `makeplayingcards`, `thegamecrafter`
+
+---
+
+### Card Utilities (`hypertext.cards`)
+
+Individual card processing tools.
+
+```bash
+# Validate card JSON against schema
+python -m hypertext.cards.validate path/to/card.json
+
+# Composite card from components
+python -m hypertext.cards.composite \
+  --template raw_template.png \
+  --art art.png \
+  --card-json card.json \
+  --out output.png
+
+# Polish card (remove bracket artifacts)
+python -m hypertext.cards.polish input.png output.png
+```
+
+---
+
+### Gemini Integration (`hypertext.gemini`)
+
+Google Gemini API wrappers for text, image, and review.
+
+```bash
+# Generate image from prompt
+python -m hypertext.gemini.image --prompt "A golden chalice" --out chalice.png
+
+# Generate text
+python -m hypertext.gemini.text --prompt "Explain the word 'shalom'"
+
+# Review card quality
+python -m hypertext.gemini.review --card-dir path/to/card --threshold 85
+
+# Style-referenced image generation
+python -m hypertext.gemini.style \
+  --prompt-file prompt.txt \
+  --style template.png \
+  --style example1.png \
+  --out output.png
+```
+
+**Environment Variables:**
+```bash
+GEMINI_API_KEY=your_api_key
+GEMINI_IMAGE_MODEL=gemini-3.1-flash-image  # optional; this is the default
+
+Generated card images must be PNG files at exactly 1024x1536 pixels (the
+documented Hypertext interpretation of Gemini `2:3` `2K`). The generator
+validates MIME type, decoding, format, and dimensions before atomically
+publishing the image. It also writes `outputs/generation.json` with the model,
+MIME type, dimensions, attempts, and reference count; failures replace that
+file atomically with a non-secret category and optional HTTP status.
+GEMINI_TEXT_MODEL=gemini-2.5-pro                # optional stable override
+```
+
+---
+
+### Watermark (`hypertext.watermark`)
+
+Cryptographic watermarking for card authenticity.
+
+```bash
+# Apply watermark to card
+python -m hypertext.watermark.apply --card-dir path/to/card
+
+# Verify watermark
+python -m hypertext.watermark.verify --card-dir path/to/card
+```
+
+---
+
+### Image Utilities (`hypertext.utils.image`)
+
+Image format conversion.
+
+```bash
+# Convert single file (deletes original)
+python -m hypertext.utils.image image.jpg
+
+# Convert all JPEGs in directory
+python -m hypertext.utils.image ./my_folder
+
+# Keep original files
+python -m hypertext.utils.image ./my_folder --keep
+```
+
+---
+
+### Gallery (`hypertext.gallery`)
+
+Static gallery site generation.
+
+```bash
+# Build gallery site
+python -m hypertext.gallery.builder --series series/2026-Q1 --out-dir docs/gallery
+```
+
+---
+
+## Card Specifications
+
+Word-face template selection uses `hypertext.cards.template_matrix.resolve_template(type, rarity)`. It resolves the closed five-type by four-rarity vocabulary to `templates/card/v001/composed/<type>/<rarity>/template_1024x1536.png` and verifies the canonical SHA-256 before returning the path. All 20 in-vocabulary pairs are occupied; unknown types and rarities are invalid and raise `ValueError`. The composed manifest records the accepted candidate under `operator_review/constrained/e50961ad0f4d/` plus the checked-in historical type-label witness used for the bounded label correction.
+
+### Dimensions
+- **Card size:** 1024 x 1536 pixels
+- **Print size:** 825 x 1125 pixels (300 DPI with bleed)
+- **Safe zone:** 753 x 1053 pixels
+
+### Color Palette
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Navy | `#0B1F3B` | Borders, headers |
+| Gold | `#C9A44C` | Accents, rare |
+| Parchment | `#F3E7C8` | Background |
+| Ink | `#111111` | Text |
+| Orange | `#F28C28` | Glorious rarity |
+| Green | `#2E8B57` | Uncommon rarity |
+
+### Card Types
+- **NOUN** - Person, place, thing, concept
+- **VERB** - Action or state
+- **ADJECTIVE** - Descriptive word
+- **NAME** - Proper noun
+- **TITLE** - Wild card (substitutes for NOUN or NAME)
+
+### Rarities
+| Rarity | Icon | Printed Cost |
+|--------|------|--------------|
+| COMMON | White diamond | 0 |
+| UNCOMMON | Green diamond | 0 |
+| RARE | Gold diamond | Discard 1 |
+| GLORIOUS | Orange diamond | Discard 2 |
+
+Full rules: [docs/rules.md](../docs/rules.md).
+
+---
+
+## Directory Structure
+
+```
+series/2026-Q1/
+├── cards/
+│   ├── 001-word/
+│   │   ├── card.json          # Card data
+│   │   ├── prompt.txt         # Art generation prompt
+│   │   ├── meta.yml           # Metadata
+│   │   ├── grade.json         # Quality grade
+│   │   └── outputs/
+│   │       └── card_1024x1536.png
+│   └── ...
+├── lots/
+│   ├── lot_content.yml        # Flavor/context for all lots
+│   ├── 01-remnant/
+│   │   ├── meta.yml
+│   │   ├── grade.json
+│   │   └── outputs/
+│   │       └── lot_1024x1536.png
+│   └── ...
+├── exports/
+│   └── tabletopsimulator/
+│       └── Hypertext.json
+└── stats.yml                  # Series metadata
+```
+
+---
+
+## Quality Grading
+
+Cards are graded on a 100-point scale:
+
+| Category | Points | Checks |
+|----------|--------|--------|
+| Formatting | 35 | Number format, title case, stat ranges |
+| Text Clarity | 30 | No garbled text, proper verses |
+| Art Quality | 20 | Style match, no artifacts |
+| Content Alignment | 15 | Stats match card type expectations |
+
+**Pass threshold:** 90 points with 0 style mismatches
+
+---
+
+## Dependencies
+
+```
+google-genai>=1.40.0  # Gemini API compatibility floor
+Pillow            # Image processing
+pyyaml            # YAML parsing
+requests          # HTTP (TGC)
+python-dotenv     # Environment variables
+jsonschema        # Card validation
+markdown          # Gallery generation
+```
+
+Install all:
+```bash
+pip install google-genai Pillow pyyaml requests python-dotenv jsonschema markdown
+```

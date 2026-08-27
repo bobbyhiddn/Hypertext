@@ -1,0 +1,256 @@
+# Canonical Hypertext Lot recipes (Babel Alpha typed grammar, lot-rules-v2)
+# Universal across sets. recipe.kind is one of: fixed | groups | all_types_plus_pair.
+#  fixed: composition lists exact card types.
+#  groups: ordered groups of {count, constraint, caption}; constraints: same_type (all one type),
+#    one_type/another_type (two distinct types), any (unconstrained). TITLE-wild rules apply per docs/rules.md.
+#  all_types_plus_pair: one of each of the five types plus a pair of any single type.
+# Values (points/Letters) are derived from Lot size in hypertext.lots.rules; faces are series assets.
+
+phases:
+  - id: 1
+    name: REMNANT
+    cards: 5
+    recipe:
+      kind: groups
+      groups:
+        - {count: 4, constraint: same_type, caption: "SAME TYPE ×4"}
+        - {count: 1, constraint: any, caption: "ANY"}
+    display: "4 of one type + 1 any"
+
+  - id: 2
+    name: PENTATEUCH
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NOUN, VERB, ADJECTIVE, NAME, TITLE]
+    display: "NOUN + VERB + ADJ + NAME + TITLE"
+
+  - id: 3
+    name: SCROLL
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [VERB, VERB, ADJECTIVE, ADJECTIVE, TITLE]
+    display: "VERB ×2 + ADJ ×2 + TITLE"
+
+  - id: 4
+    name: WITNESS
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NAME, NAME, VERB, VERB, ADJECTIVE]
+    display: "NAME ×2 + VERB ×2 + ADJ"
+
+  - id: 5
+    name: EPISTLE
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NAME, VERB, VERB, NOUN, NOUN]
+    display: "NAME + VERB ×2 + NOUN ×2"
+
+  - id: 6
+    name: PSALM
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [ADJECTIVE, ADJECTIVE, ADJECTIVE, VERB, NOUN]
+    display: "ADJ ×3 + VERB + NOUN"
+
+  - id: 7
+    name: PARABLE
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NOUN, NOUN, NOUN, VERB, ADJECTIVE]
+    display: "NOUN ×3 + VERB + ADJ"
+
+  - id: 8
+    name: ORACLE
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [VERB, VERB, VERB, NAME, ADJECTIVE]
+    display: "VERB ×3 + NAME + ADJ"
+
+  - id: 9
+    name: COVENANT
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NAME, NAME, NOUN, NOUN, TITLE]
+    display: "NAME ×2 + NOUN ×2 + TITLE"
+
+  - id: 10
+    name: BENEDICTION
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [TITLE, TITLE, ADJECTIVE, NOUN, NAME]
+    display: "TITLE ×2 + ADJ + NOUN + NAME"
+
+  - id: 11
+    name: ALTAR
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NOUN, NOUN, NOUN, VERB, TITLE]
+    display: "NOUN ×3 + VERB + TITLE"
+
+  - id: 12
+    name: FOUNDATION
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [NAME, NAME, NAME, NOUN, VERB]
+    display: "NAME ×3 + NOUN + VERB"
+
+  - id: 13
+    name: PROVERB
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [ADJECTIVE, ADJECTIVE, VERB, NOUN, TITLE]
+    display: "ADJ ×2 + VERB + NOUN + TITLE"
+
+  - id: 14
+    name: LAMENT
+    cards: 5
+    recipe:
+      kind: fixed
+      composition: [ADJECTIVE, ADJECTIVE, ADJECTIVE, NOUN, NAME]
+    display: "ADJ ×3 + NOUN + NAME"
+
+  - id: 15
+    name: CONGREGATION
+    cards: 6
+    recipe:
+      kind: groups
+      groups:
+        - {count: 4, constraint: same_type, caption: "SAME TYPE ×4"}
+        - {count: 2, constraint: any, caption: "ANY ×2"}
+    display: "4 of one type + 2 any"
+
+  - id: 16
+    name: ASSEMBLY
+    cards: 6
+    recipe:
+      kind: groups
+      groups:
+        - {count: 3, constraint: one_type, caption: "ONE TYPE ×3"}
+        - {count: 3, constraint: another_type, caption: "ANOTHER TYPE ×3"}
+    display: "3 of one type + 3 of another type"
+
+  - id: 17
+    name: TRINITY
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [NAME, NAME, NOUN, NOUN, VERB, VERB]
+    display: "NAME ×2 + NOUN ×2 + VERB ×2"
+
+  - id: 18
+    name: TABERNACLE
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [NOUN, NOUN, NOUN, NAME, NAME, TITLE]
+    display: "NOUN ×3 + NAME ×2 + TITLE"
+
+  - id: 19
+    name: CHORUS
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [VERB, VERB, VERB, ADJECTIVE, ADJECTIVE, NOUN]
+    display: "VERB ×3 + ADJ ×2 + NOUN"
+
+  - id: 20
+    name: SANCTUARY
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [NOUN, NOUN, NOUN, NOUN, NAME, TITLE]
+    display: "NOUN ×4 + NAME + TITLE"
+
+  - id: 21
+    name: HYMNAL
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [ADJECTIVE, ADJECTIVE, VERB, VERB, NOUN, NOUN]
+    display: "ADJ ×2 + VERB ×2 + NOUN ×2"
+
+  - id: 22
+    name: GOSPEL
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [NAME, NAME, VERB, VERB, NOUN, TITLE]
+    display: "NAME ×2 + VERB ×2 + NOUN + TITLE"
+
+  - id: 23
+    name: JUBILEE
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [VERB, VERB, VERB, ADJECTIVE, ADJECTIVE, NAME]
+    display: "VERB ×3 + ADJ ×2 + NAME"
+
+  - id: 24
+    name: WISDOM
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [ADJECTIVE, ADJECTIVE, ADJECTIVE, NOUN, NOUN, TITLE]
+    display: "ADJ ×3 + NOUN ×2 + TITLE"
+
+  - id: 25
+    name: PROPHECY
+    cards: 6
+    recipe:
+      kind: fixed
+      composition: [ADJECTIVE, ADJECTIVE, NAME, NAME, VERB, VERB]
+    display: "ADJ ×2 + NAME ×2 + VERB ×2"
+
+  - id: 26
+    name: SELAH
+    cards: 6
+    recipe:
+      kind: groups
+      groups:
+        - {count: 5, constraint: same_type, caption: "SAME TYPE ×5"}
+        - {count: 1, constraint: any, caption: "ANY"}
+    display: "5 of one type + 1 any"
+
+  - id: 27
+    name: CREATION
+    cards: 7
+    recipe: {kind: all_types_plus_pair}
+    display: "all 5 types + a pair"
+
+  - id: 28
+    name: REVELATION
+    cards: 7
+    recipe:
+      kind: fixed
+      composition: [NOUN, VERB, ADJECTIVE, NAME, TITLE, TITLE, TITLE]
+    display: "NOUN + VERB + ADJ + NAME + TITLE ×3"
+
+  - id: 29
+    name: EXODUS
+    cards: 7
+    recipe:
+      kind: fixed
+      composition: [VERB, VERB, VERB, NAME, NAME, NOUN, NOUN]
+    display: "VERB ×3 + NAME ×2 + NOUN ×2"
+
+  - id: 30
+    name: APOCALYPSE
+    cards: 7
+    recipe:
+      kind: groups
+      groups:
+        - {count: 4, constraint: one_type, caption: "ONE TYPE ×4"}
+        - {count: 3, constraint: another_type, caption: "ANOTHER TYPE ×3"}
+    display: "4 of one type + 3 of another type"

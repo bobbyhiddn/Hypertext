@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "package_kind": "canonical-lot-template-set",
+  "template_version": "v002",
+  "requirement_id": "lot-rework-2026-08",
+  "template_count": 3,
+  "portion_value_notation": "visitor/owner Letters, printed as 'PORTION VALUE: v/o LETTERS'",
+  "style_authority": "templates/lot/v001/base/template_1024x1536.png (reproduced near-exactly; REWARD/Wreath wording replaced by CHAPTER VALUE / PORTION VALUE, size tab concretized, icon-descriptor words removed)",
+  "source": {
+    "model": "gemini-3-pro-image",
+    "generated": "2026-08-27",
+    "workflow": "faithful reproduction pass + single-string portion fix; operator-reviewed via Babel Lot Ledger artifact",
+    "native_size": [
+      1696,
+      2528
+    ],
+    "resampled_to": [
+      1024,
+      1536
+    ],
+    "resample": "PIL LANCZOS"
+  },
+  "review_gate": {
+    "operator_approved": true,
+    "approved_on": "2026-08-27",
+    "checks": [
+      "slot count = card count",
+      "exact visible strings",
+      "no bracketed type words",
+      "no REWARD/Wreath/MATCH/ANY",
+      "family consistency"
+    ]
+  },
+  "templates": [
+    {
+      "cards": 5,
+      "path": "templates/lot/v002/5-card/template_1024x1536.png",
+      "sha256": "e6395b23a1f713aab82f2a932286c04533d04395aae27cca93e6ee2715e9a69b",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "pixel_mode": "RGB",
+      "format": "PNG",
+      "chapter_points": 8,
+      "visitor_letters": 1,
+      "owner_letters": 2,
+      "visible_strings": [
+        "LOT",
+        "CARD COUNT",
+        "5-CARD",
+        "TEMPLATE LOT",
+        "Example Subtitle for Card Type",
+        "CHAPTER VALUE: 8 POINTS",
+        "PORTION VALUE: 1/2 LETTERS",
+        "Example verse text - Book 1:1",
+        "CONTEXT",
+        "SERIES: 20XX-QX Lots"
+      ],
+      "slot_row": {
+        "slots": 5,
+        "plus_signs": 4,
+        "icons": [
+          "closed book",
+          "closed book",
+          "slanted pencil",
+          "slanted pencil",
+          "sparkle pencil"
+        ],
+        "labels": [
+          "NOUN",
+          "NOUN",
+          "VERB",
+          "VERB",
+          "ADJECTIVE"
+        ]
+      }
+    },
+    {
+      "cards": 6,
+      "path": "templates/lot/v002/6-card/template_1024x1536.png",
+      "sha256": "7791a5e2efb6f91d2dc729294ead0e2b501322cc79019b2d6444bded913367bc",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "pixel_mode": "RGB",
+      "format": "PNG",
+      "chapter_points": 10,
+      "visitor_letters": 1,
+      "owner_letters": 2,
+      "visible_strings": [
+        "LOT",
+        "CARD COUNT",
+        "6-CARD",
+        "TEMPLATE LOT",
+        "Example Subtitle for Card Type",
+        "CHAPTER VALUE: 10 POINTS",
+        "PORTION VALUE: 1/2 LETTERS",
+        "Example verse text - Book 1:1",
+        "CONTEXT",
+        "SERIES: 20XX-QX Lots"
+      ],
+      "slot_row": {
+        "slots": 6,
+        "plus_signs": 5,
+        "icons": [
+          "closed book",
+          "closed book",
+          "slanted pencil",
+          "slanted pencil",
+          "sparkle pencil",
+          "feather quill"
+        ],
+        "labels": [
+          "NOUN",
+          "NOUN",
+          "VERB",
+          "VERB",
+          "ADJECTIVE",
+          "NAME"
+        ]
+      }
+    },
+    {
+      "cards": 7,
+      "path": "templates/lot/v002/7-card/template_1024x1536.png",
+      "sha256": "703dd2d0b9d5a37676ed33741e197fce53fb79646e4420e1d965538b59527ca0",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "pixel_mode": "RGB",
+      "format": "PNG",
+      "chapter_points": 14,
+      "visitor_letters": 2,
+      "owner_letters": 3,
+      "visible_strings": [
+        "LOT",
+        "CARD COUNT",
+        "7-CARD",
+        "TEMPLATE LOT",
+        "Example Subtitle for Card Type",
+        "CHAPTER VALUE: 14 POINTS",
+        "PORTION VALUE: 2/3 LETTERS",
+        "Example verse text - Book 1:1",
+        "CONTEXT",
+        "SERIES: 20XX-QX Lots"
+      ],
+      "slot_row": {
+        "slots": 7,
+        "plus_signs": 6,
+        "icons": [
+          "closed book",
+          "closed book",
+          "slanted pencil",
+          "slanted pencil",
+          "sparkle pencil",
+          "feather quill",
+          "ornate frame"
+        ],
+        "labels": [
+          "NOUN",
+          "NOUN",
+          "VERB",
+          "VERB",
+          "ADJECTIVE",
+          "NAME",
+          "TITLE"
+        ]
+      }
+    }
+  ]
+}

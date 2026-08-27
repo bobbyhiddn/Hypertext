@@ -1,0 +1,88 @@
+number: 009
+word: SEE
+gloss: To perceive with the eyes; to discern, experience, or understand spiritually.
+card_type: VERB
+rarity: COMMON
+art_prompt: A stylized eye formed by the negative space between parting storm clouds,
+  revealing a bright, clear horizon.
+stats:
+  lore: 3
+  context: 4
+  complexity: 1
+ability: Look at the top 2 cards of the Tower; add one to your hand and put the other
+  on the bottom.
+ot_verse:
+  ref: Psalm 34:8
+  snippet: Taste and see that the LORD is good; blessed is the man who takes refuge
+    in him!
+nt_verse:
+  ref: Matthew 5:8
+  snippet: Blessed are the pure in heart, for they will see God.
+greek:
+  text: ὁράω
+  translit: Horao
+hebrew:
+  text: רָאָה
+  translit: Ra'ah
+ot_refs: Gen 16:13 • Ex 14:13 • Isa 6:9 • Ps 34:8
+nt_refs: Matt 5:8 • John 1:39 • 1 John 3:2 • Heb 12:14
+trivia:
+- The Hebrew root 'ra'ah' forms the word 'ro'eh' (seer), an early title for prophets
+  in Israel.
+- In biblical thought, 'seeing' often denotes deep understanding or experience rather
+  than just visual perception.
+- Hagar names God 'El Roi' (The God Who Sees Me) in Genesis 16, the only occurrence
+  of this title.
+- Jesus' invitation 'Come and you will see' (John 1:39) emphasizes personal verification
+  over hearsay.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU9YmFiB7kbOljmMWxlGpN0t8yZ9iqVuRO7Bnd9YeucrwHMjAx5eq-f_6Z-b5Q0Fnw4pXxYJRQEaO2mqLbMS8khDE8EslKjI7RES4KX09kYnogQFe7BRpSHbeGlJAgZ6_GZvPCgpJmiUootPE=
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAW5f595seGHHZMqBXe_jlaH-lizZ-O0Lt5iA8sG9d871FTUasB0ghUjqr-A6pfV-zSE6uIp7osRzlixk71q_JFGzq1wQdteK-6fsWc6XoLz7QILdb0G4Hte4JNHTW4zN99Twi
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrfLmyZoiwwf9y_271cXE6Jzbd70-y3AvLPPFJzqvE5F3O9W7UjiF-L-Bt3ubgA2CS6LLbARPm38W9HujE8Mtr0cQSa18NawTx6dVxylhG82fP3G2lRUtkhlRcOCYud-1-y7uWKymjR36Vg6z_fxassQjAfkBfTkBv
+  title: bffbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkU9DKpUb8Ty2eSEJnVVX2SkKChgk8yoFyIKRnG3Od_2ehJtkFB8Q5WE26OoARR_Bj2sM8ElpeOjfG-KFNgtkDTGJiBRw6l5PMTAkcFv8IJojWcoTM2ntdDQ==
+  title: catenabible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5_ER02c9YWr91FSjhWO3vHtSwiqmjggPNhDEdb4Bt00KvsjDTpplhCQIt6WRAZ2fADAi_5gCOcK1H-tUE9VF2H-O6hdRHCnx_3nxVtU3keSoHPUss1dARRWgGCOqyeaqa5ZFcXWUqWnJj
+  title: trulyrandomverse.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhPPtcC-rtPbwv9XN6ZbODpCHi_x0zupikl3jkjSkBcSwo2KAgThOOExxb2C3zz8tuO40mbe4Dz3tolr0L858tkof2yVUMSqZ2kd75hn10NTb-ZH2YzuR71CzyH-FA-_a8scVg2koloqgKAzOydHr0RFb9KFdvcEE=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHW3yJ9XNvSFj5D6sM7eu1lbDS5Elvwdo6I1Xz9-NhDiFTejtKx1zg5kXzISUTFH3zFi5X_Js4d1nJblrr4W62g94DqlF9ZPwo1R2JBswSZJ1VBIz32KbaICoG0ZPlbEmi9Gg==
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjYcgABAMgnaBOlXhhqXRBNG5eCa1cXW2oiNPwFVO1TcqFCMONAfDK7wdzcNL2A-v8opfXPbsUqd_Gzzb0ANYqpzaNjgpp3Ex_CM4Jq8AmqsGCotoekcvw2dwO6B_XCqTolP0zTj_yS-s=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYguKad0cp0jFLFwALZrNkAmGY0R1zxGlqqnc7HiExbuqbE2SAHmmrDSim7RxDLdYnZcYMspTb8NE2Eb7dx3MP0E2iTSU1HWtpE7t4IureJ7DZA1Vy9u1aXB4ecwsgWoVO1BkQc57j
+  title: bible.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9hT3TDGxKbertYj8wPR7yrnf_dl-yjaa7Ywa6gUy0QBUhig4ms3peHhu0f9kOiZH9Qlj5jv4cp-gg-sPC5LSnlky8J20-L76wH07YISjwRNK_6IWl3iZth5FfMDsVBykWCRPtuYEJIGfY4oF673iOg_C6TxGa9UMtL57XKIuqDp_f3YkoeBfK6i8=
+  title: bibletools.org
+search_queries:
+- ''
+- Hebrew word for see ra'ah definition
+- Bible verse see NT Matthew 5:8
+- Greek word for see horao definition
+- Bible verse see OT Psalm 34:8
+- Bible verse see NT John 1:39
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#009'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: green
+revision: 1
+revision_notes: 'Ability change request:
+
+  Change the ability to look at target player''s hand and draw 1
+
+
+  Stats change request:
+
+  set context to 3'

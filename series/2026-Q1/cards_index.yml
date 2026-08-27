@@ -1,0 +1,211 @@
+words:
+- ADAM
+- ARK
+- BROTHER
+- BUILD
+- CITY
+- CONFUSE
+- COVENANT
+- CREATE
+- CURSE
+- DESCEND
+- EARTH
+- FORM
+- GOOD
+- GRACE
+- HEAR
+- HUNTER
+- KEEPER
+- MIGHTY
+- MULTIPLY
+- NAKED
+- NAME
+- NATION
+- NOAH
+- REMEMBER
+- RIGHTEOUS
+- SCATTER
+- SETH
+- SHEM
+- SPEAK
+- SPIRIT
+- STONE
+ability_patterns:
+- add_hand_choice_discard_tower
+- add_hand_discard_look_top_tower
+- add_hand_discard_look_top_tower_type_name
+- add_hand_look_top_tower
+- choice_discard_draw_stat_lore
+- choice_draw
+- conditional_discard_draw_type_verb
+- conditional_draw
+- conditional_draw_pages_type_name
+- conditional_draw_type_name
+- discard_draw
+- discard_type_name
+- draw_look_top_sheol_tower
+- draw_sheol_tower
+- draw_tower
+- look_top_tower
+- pages_sheol
+- sheol
+- sheol_tower
+- sheol_type_noun
+- sheol_type_verb
+- unique
+cards:
+- number: 1
+  word: GRACE
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: conditional_draw
+- number: 2
+  word: BUILD
+  type: VERB
+  rarity: COMMON
+  ability_pattern: look_top_tower
+- number: 3
+  word: MIGHTY
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_verb
+- number: 4
+  word: SCATTER
+  type: VERB
+  rarity: RARE
+  ability_pattern: draw_tower
+- number: 5
+  word: CREATE
+  type: VERB
+  rarity: RARE
+  ability_pattern: sheol_tower
+- number: 6
+  word: CONFUSE
+  type: VERB
+  rarity: RARE
+  ability_pattern: unique
+- number: 7
+  word: EARTH
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 8
+  word: STONE
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: look_top_tower
+- number: 9
+  word: CITY
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: add_hand_discard_look_top_tower
+- number: 10
+  word: NAME
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: conditional_draw_pages_type_name
+- number: 11
+  word: DESCEND
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: draw_tower
+- number: 12
+  word: FORM
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: sheol_type_noun
+- number: 13
+  word: REMEMBER
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: pages_sheol
+- number: 14
+  word: MULTIPLY
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: conditional_discard_draw_type_verb
+- number: 15
+  word: SPEAK
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: conditional_draw_type_name
+- number: 16
+  word: GOOD
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: discard_draw
+- number: 17
+  word: NATION
+  type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: add_hand_choice_discard_tower
+- number: 18
+  word: SETH
+  type: NAME
+  rarity: COMMON
+  ability_pattern: discard_draw
+- number: 19
+  word: KEEPER
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: unique
+- number: 20
+  word: ARK
+  type: NOUN
+  rarity: RARE
+  ability_pattern: add_hand_look_top_tower
+- number: 21
+  word: BROTHER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: choice_draw
+- number: 22
+  word: SHEM
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: add_hand_discard_look_top_tower_type_name
+- number: 23
+  word: NAKED
+  type: ADJECTIVE
+  rarity: RARE
+  ability_pattern: choice_discard_draw_stat_lore
+- number: 24
+  word: COVENANT
+  type: NOUN
+  rarity: GLORIOUS
+  ability_pattern: draw_sheol_tower
+- number: 25
+  word: NOAH
+  type: NAME
+  rarity: RARE
+  ability_pattern: sheol
+- number: 26
+  word: CURSE
+  type: VERB
+  rarity: GLORIOUS
+  ability_pattern: discard_type_name
+- number: 27
+  word: HUNTER
+  type: TITLE
+  rarity: RARE
+  ability_pattern: discard_type_name
+- number: 28
+  word: RIGHTEOUS
+  type: ADJECTIVE
+  rarity: GLORIOUS
+  ability_pattern: sheol
+- number: 29
+  word: ADAM
+  type: NAME
+  rarity: GLORIOUS
+  ability_pattern: draw_sheol_tower
+- number: 30
+  word: SPIRIT
+  type: TITLE
+  rarity: GLORIOUS
+  ability_pattern: draw_sheol_tower
+- number: 31
+  word: HEAR
+  type: VERB
+  rarity: COMMON
+  ability_pattern: draw_look_top_sheol_tower

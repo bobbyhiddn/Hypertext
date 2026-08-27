@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #022
+WORD: SHEM
+GLOSS: Name, reputation, or fame; the eldest son of Noah.
+TYPE: NAME (top-left navy circle must contain WHITE feather quill icon)
+RARITY: UNCOMMON (top-right navy pill with "UNCOMMON" text and GREEN diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 4/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at the top 3 cards of the Tower. You may reveal a NAME and add it to your hand. Discard the rest.
+
+VERSES:
+OT: Genesis 9:26 — “Blessed be the LORD, the God of Shem!”
+NT: Luke 3:36 — “...the son of Shem, the son of Noah...”
+
+LANGUAGES:
+Hebrew: שֵׁם - Shem - Gen 5:32 • Gen 10:1 • Gen 11:10
+Greek: Σήμ - Sēm - Luke 3:36
+
+TRIVIA:
+• Literally means 'name' in Hebrew; implies authority and reputation.
+• Ancestor of the Semitic peoples and the covenant line of Abraham.
+• Often identified in Jewish tradition as Melchizedek, King of Salem.
+
+ART: An ancient patriarch standing at the entrance of a tent, holding a lantern and looking up at a starry sky. In the distance, a faint silhouette of a ziggurat or tower. Warm, earthy tones, no text.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

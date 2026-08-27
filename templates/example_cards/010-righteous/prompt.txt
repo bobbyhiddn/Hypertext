@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #010
+WORD: RIGHTEOUS
+GLOSS: Morally right or justifiable; acting in accord with divine or moral law; free from guilt or sin.
+TYPE: ADJECTIVE (use matching type icon from references)
+RARITY: UNCOMMON (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 4/5 filled
+CONTEXT: 3/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return an ADJECTIVE from Sheol to your hand.
+
+VERSES:
+OT: Psalm 1:6 — "For the LORD knoweth the way of the righteous: but the way of the ungodly shall perish."
+NT: Romans 1:17 — "As it is written, The righteous shall live by faith."
+
+LANGUAGES:
+Hebrew: צַדִּיק (Tsaddiq) - Gen 15:6 • Ps 37:29 • Prov 10:25 • Isa 64:6
+Greek: δίκαιος (Dikaios) - Mt 5:6 • Mt 25:46 • 2 Tim 4:8 • 1 Pet 3:12
+
+TRIVIA:
+• The Hebrew 'tsaddiq' implies adherence to a standard, often used in legal contexts for one who is innocent.
+• In the New Testament, righteousness is often presented as a gift from God (imputed) rather than solely earned by human effort.
+• The 'Breastplate of Righteousness' is a key piece of the spiritual armor described in Ephesians 6.
+• Abraham's belief in God was credited to him as righteousness long before the Law of Moses was given.
+
+ART: A golden plumb line hanging perfectly straight, glowing with inner light, set against a backdrop of crooked, shadowy stone pillars. The light from the line reveals the imperfections of the surrounding architecture.
+
+FOOTER: Example
+
+Output only the card image.

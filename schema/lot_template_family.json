@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "scope": "shared-across-all-sets",
+  "family": "Lot",
+  "roles": {
+    "table": "Chapter Lot",
+    "player": "Portion Lot"
+  },
+  "subtypes": [
+    {
+      "cards": 5,
+      "chapter_value": {
+        "points": 8
+      },
+      "representative": {
+        "id": 1,
+        "name": "REMNANT",
+        "display": "4 OF ONE TYPE + 1 ANY"
+      },
+      "portion_value": {
+        "visitor_letters": 1,
+        "owner_letters": 2
+      }
+    },
+    {
+      "cards": 6,
+      "chapter_value": {
+        "points": 10
+      },
+      "representative": {
+        "id": 15,
+        "name": "CONGREGATION",
+        "display": "4 OF ONE TYPE + 2 ANY"
+      },
+      "portion_value": {
+        "visitor_letters": 1,
+        "owner_letters": 2
+      }
+    },
+    {
+      "cards": 7,
+      "chapter_value": {
+        "points": 14
+      },
+      "representative": {
+        "id": 27,
+        "name": "CREATION",
+        "display": "ALL 5 TYPES + A PAIR"
+      },
+      "portion_value": {
+        "visitor_letters": 2,
+        "owner_letters": 3
+      }
+    }
+  ],
+  "output_pattern": "templates/lot/v002/{cards}-card/template_1024x1536.png"
+}

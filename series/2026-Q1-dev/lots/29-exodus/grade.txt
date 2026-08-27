@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: EXODUS
+Lot ID: 29
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text contains square brackets (e.g., [VERB]) instead of plain text types

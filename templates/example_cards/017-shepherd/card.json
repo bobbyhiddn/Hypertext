@@ -1,0 +1,268 @@
+{
+  "style_guide": {
+    "game_name": "Hypertext: Towerfall",
+    "card_type": "word_study_trading_card",
+    "orientation": "vertical",
+    "aspect_ratio": "2:3",
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
+    "visual_style": [
+      "premium trading card layout",
+      "antique parchment background with subtle grain",
+      "navy and gold collector frame",
+      "high legibility, crisp print-like typography",
+      "clean TCG UI language with a large art window"
+    ],
+    "palette": {
+      "primary": "navy",
+      "secondary": "gold",
+      "background": "warm parchment",
+      "ink": "near-black"
+    },
+    "typography": {
+      "title": "classic serif display",
+      "labels": "uppercase small caps",
+      "body": "clean serif",
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
+    },
+    "iconography": {
+      "rarity_system": {
+        "placement": "top_right_small",
+        "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
+        "icons": {
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
+        }
+      },
+      "cost_indicator": {
+        "placement": "below_rarity",
+        "render_rule": "For RARE and GLORIOUS cards only, display the activation cost below the rarity diamond using a plus symbol and card icons.",
+        "costs": {
+          "COMMON": null,
+          "UNCOMMON": null,
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
+        }
+      },
+      "stat_pips": {
+        "shape": "circle",
+        "max": 5,
+        "filled_style": "solid navy fill with gold outline",
+        "empty_style": "parchment fill with navy outline",
+        "no_other_shapes": true
+      }
+    }
+  },
+  "layout": {
+    "frame": {
+      "rounded_corners": true,
+      "navy_border": "thick",
+      "gold_trim": "thin",
+      "corner_filigree": "subtle"
+    },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
+    "header": {
+      "collector_id_left": "#{NUMBER} {CARD_TYPE}",
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
+      "type_badge_left": "{CARD_TYPE}",
+      "title_center_key": "WORD",
+      "subtitle_center_key": "GLOSS"
+    },
+    "footer": {
+      "series_left_key": "SERIES"
+    },
+    "art_panel": {
+      "height_fraction": 0.44,
+      "frame_style": "gold inner frame, navy outline",
+      "art_prompt_key": "ART_PROMPT",
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
+    },
+    "stats_row": {
+      "stats": [
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
+      ]
+    },
+    "panels": [
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
+      {
+        "type": "split",
+        "left_label": "HEB/ARAM",
+        "left_primary_key": "HEBREW",
+        "left_secondary_label": "TRANSLIT",
+        "left_secondary_key": "HEBREW_TRANSLIT",
+        "left_refs_label": "OT",
+        "left_refs_key": "OT_REFS",
+        "right_label": "GREEK",
+        "right_primary_key": "GREEK",
+        "right_secondary_label": "TRANSLIT",
+        "right_secondary_key": "GREEK_TRANSLIT",
+        "right_refs_label": "NT",
+        "right_refs_key": "NT_REFS"
+      },
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 4
+      }
+    ]
+  },
+  "content": {
+    "NUMBER": "017",
+    "SERIES": "Example",
+    "WORD": "SHEPHERD",
+    "GLOSS": "One who tends, feeds, and guards a flock; metaphorically, a spiritual leader or God.",
+    "CARD_TYPE": "TITLE",
+    "RARITY_TEXT": "COMMON",
+    "RARITY_ICON": "COMMON",
+    "ART_PROMPT": "A weathered wooden staff with a hooked end resting against a rough stone in a lush green pasture under a soft twilight sky, silhouette of a flock in the distance, warm lighting.",
+    "ABILITY_TEXT": "Look at the top 2 cards of the Tower; put one into your hand and the other on the bottom.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 5,
+    "STAT_COMPLEXITY": 2,
+    "OT_VERSE_REF": "Psalm 23:1",
+    "OT_VERSE_SNIPPET": "The Lord is my shepherd; I shall not want.",
+    "NT_VERSE_REF": "John 10:11",
+    "NT_VERSE_SNIPPET": "I am the good shepherd. The good shepherd lays down his life for the sheep.",
+    "OT_VERSE_LINE": "Psalm 23:1 — \"The Lord is my shepherd; I shall not want.\"",
+    "NT_VERSE_LINE": "John 10:11 — \"I am the good shepherd. The good shepherd lays down his life for the sheep.\"",
+    "GREEK": "ποιμήν",
+    "GREEK_TRANSLIT": "Poimēn",
+    "HEBREW": "רֹעֶה",
+    "HEBREW_TRANSLIT": "Ro'eh",
+    "OT_REFS": "Gen 4:2 • Ps 23:1 • Ps 80:1 • Ezek 34:12",
+    "NT_REFS": "Matt 9:36 • John 10:11 • Heb 13:20 • 1 Pet 5:4",
+    "TRIVIA_BULLETS": [
+      "Abel was the first shepherd mentioned in the Bible (Genesis 4:2).",
+      "The Egyptians considered shepherds 'detestable' due to cultural differences.",
+      "David learned to fight lions and bears as a shepherd before facing Goliath.",
+      "The Latin word for shepherd is 'pastor', the origin of the modern church title."
+    ]
+  },
+  "render_instructions": {
+    "strict_no_duplicate_headings": true,
+    "single_panel_labels_render_once": true,
+    "no_extra_panels": true,
+    "text_accuracy_priority": "very_high",
+    "no_warped_or_garbled_text": true,
+    "hebrew_right_to_left": true,
+    "no_text_inside_art_panel": true,
+    "prioritize_legibility": true,
+    "rarity_icon_must_be_exact_shape": true,
+    "rarity_text_must_match_exactly": true,
+    "output_must_contain_only_the_card": true,
+    "no_text_outside_card_border": true,
+    "no_captions_or_watermarks_outside_card": true,
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "QUARTET_ID",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
+  },
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [
+      "",
+      "Shepherd Bible trivia",
+      "Hebrew word for Shepherd transliteration",
+      "Greek word for Shepherd transliteration",
+      "Shepherd card ability game design"
+    ],
+    "sources": [
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEW2iNKp52BnaVX4Po02f0ZsPTU0XckI0nCOPoKSTgNEM17eA5rrqbgipbZQhaHDy_bPkdAyrvWkRDV4iltu5_r7Nu9Wdj1m8mtBa9z7duN7FVap54XIkz8cR-NJ9dJ0Feoik4LjrO9rEi1fi8EJMIsqsS",
+        "title": "gods-abcs.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaHluHznK7K9_yWBf-hYXWYMRGfX6cLQp0GntAUHvee0aXLSAVZekIxU2pl5UWDp08ZVLcPq6Dsru2nAWMmxlxuSDYKIcWqusmhJOhUd_YqGz__Lsr4NXpwrxsFdH-mw==",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-nFBZn_cL-7gpHIly2IHzOCMKjn2CoW8HV4hC868boZrJqsdx8mDhUZFPcZoYx_Dc-x4y-jfotasd0PEVDPFQJv0dgaQHVvj0X2YtfHz6wYSJpjBE3n4OvXE-fw_AuqJr8muGIYkgXT7Www==",
+        "title": "biblehub.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG22H0wFPVj1BiGbQg-crxDYggh6utdLwbFwff4oqqmBv90pvpYIH4WJQ--oMFRAIS0-PfiVZtuB9PJslbsn22HJd_gDf6jqWFjPisQI0-FZx0-dJC-pKrKHbtmrjf9oTBHm-eI04oe_-8d",
+        "title": "biblehub.net"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTv8ShOOFr9wFDTQo5VwadbujWk_MyKDe0GqibxIOUW3meafHv0bxx3lybq1muyF89GpXt7OzJzXhnxd8AGCvWc64ZHabEQOsMZKjtSmWKgPaNfvu32mJ3stkuKe6s",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGLKjexiPWT_Ggu4EhQx-RsCCZ5T_vK92NdF_p1LYFasGYxOnNN7TW_4xTofIT6drGg-Vr0oojryUhjQGDaTfycOZleyXOoC5g2Y_O4JDedMQPvgjy6Q_oNOW_pBRb",
+        "title": "biblehub.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGzHCPXnwhNbw1VWAz_azKbeV-jKSdDa3Twgg18Qu2jTaQN8mHJwcF5ity-3wvunayFeCZdfQKxWbPu8Q-NqNHoLzDnV2GYkOviTyf8yBLdUaFJTKzkxTfAuiAoAl93mEzknzCcleInEDeoOb8E",
+        "title": "billmounce.com"
+      },
+      {
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG3hQy32N563UXu9Ckpfs9Ed1JdSWJHunv7fJYsIFyX4wmyFtG09XdUGkoJO-nZsYQiSo5nhswBqYd6CnLsPJLHCQjSJ_-7YKeAzRdDHNRySbfDDCCMWjbWBkIelBHo04Qd4MHiVxlvGTPsPLJpzXpw1LwJu4c2A==",
+        "title": "kingjamesbibledictionary.com"
+      }
+    ]
+  }
+}

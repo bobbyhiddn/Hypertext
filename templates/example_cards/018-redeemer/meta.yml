@@ -1,0 +1,17 @@
+number: 018
+word: REDEEMER
+gloss: One who buys back, rescues, or pays a ransom to recover something lost; a kinsman
+  with the right to restore property or freedom.
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Example
+art_prompt: A pair of ancient bronze scales hanging in a dark void; on one side sits
+  a heavy, rusted iron shackle, while the other side is weighed down by a single,
+  glowing drop of golden light, tipping the balance.
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: Return a NOUN or NAME from Sheol to your hand.
+style_series_dir: series\2026-Q1

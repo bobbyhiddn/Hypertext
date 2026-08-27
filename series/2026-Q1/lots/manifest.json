@@ -1,0 +1,1256 @@
+{
+  "schema_version": 1,
+  "package_kind": "babel-lot-face-set",
+  "series": "2026-Q1",
+  "count": 30,
+  "template_authority": "templates/lot/v002/manifest.json",
+  "value_notation": "ribbon prints CHAPTER VALUE: n POINTS and PORTION VALUE: visitor/owner LETTERS",
+  "source": {
+    "model": "gemini-3-pro-image",
+    "generated": "2026-08-27",
+    "workflow": "generate from v002 template -> gemini-2.5-pro vision gate (slot count, plus count, exact strings, forbidden tokens, empty-slot check) -> feedback retry -> operator review via Babel Lot Ledger",
+    "native_size": [
+      1696,
+      2528
+    ],
+    "resampled_to": [
+      1024,
+      1536
+    ],
+    "resample": "PIL LANCZOS"
+  },
+  "review_gate": {
+    "gate_passed": "30/30",
+    "operator_reviewed": true,
+    "approved_on": "2026-08-27"
+  },
+  "lots": [
+    {
+      "id": 1,
+      "name": "REMNANT",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "groups",
+        "groups": [
+          {
+            "count": 4,
+            "constraint": "same_type",
+            "caption": "SAME TYPE \u00d74"
+          },
+          {
+            "count": 1,
+            "constraint": "any",
+            "caption": "ANY"
+          }
+        ]
+      },
+      "content": {
+        "flavor": "From the scattering of tongues, the chosen few endure.",
+        "context": "Amidst Babel's judgment, God preserves a remnant through Shem's line, ensuring human rebellion cannot thwart His redemptive plan. This faithful seed carries the covenant forward, proving His sovereignty even in universal apostasy.",
+        "verse": "So too at the present time there is a remnant, chosen by grace. - Romans 11:5"
+      },
+      "path": "series/2026-Q1/lots/faces/01-remnant.png",
+      "sha256": "ba1436c5b7503623e9d899e081dd8aefcc1b753d71b49c4697a00803d0fd51ab",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 2,
+      "name": "PENTATEUCH",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NOUN",
+          "VERB",
+          "ADJECTIVE",
+          "NAME",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "Five sacred scrolls to bind the scattered tongues.",
+        "context": "The Pentateuch establishes the covenantal framework and primeval history, including Babel's judgment. These five books define the tension between human hubris and divine Law, setting the stage for Abraham's redemptive election.",
+        "verse": "The law of the LORD is perfect, reviving the soul. - Psalm 19:7"
+      },
+      "path": "series/2026-Q1/lots/faces/02-pentateuch.png",
+      "sha256": "b2c7449f40606621aacfd58e0ba441168960bf96ca48c58ceb559a39a18a5fd3",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 3,
+      "name": "SCROLL",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "VERB",
+          "VERB",
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "The ink preserves what the confused tongue has lost.",
+        "context": "The scroll symbolizes the preservation of divine revelation amidst Babel's linguistic fracture. It is a testament to God's immutable truth, ensuring His word transcends the confusion of tongues and carries redemptive history forward.",
+        "verse": "Take a scroll and write on it all the words that I have spoken to you. - Jeremiah 36:2"
+      },
+      "path": "series/2026-Q1/lots/faces/03-scroll.png",
+      "sha256": "23202c0fdeb2ff35a41259c368f5b163b17a9e9daa6b65da3b1d33085e26280f",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 4,
+      "name": "WITNESS",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NAME",
+          "NAME",
+          "VERB",
+          "VERB",
+          "ADJECTIVE"
+        ]
+      },
+      "content": {
+        "flavor": "Bear witness as one voice fractures into a thousand cries.",
+        "context": "As the Lord descended to observe the city and the tower, Babel's dispersion stands as an enduring witness that collective rebellion cannot thwart God's command to fill the earth.",
+        "verse": "The LORD came down to see the city and the tower. - Genesis 11:5"
+      },
+      "path": "series/2026-Q1/lots/faces/04-witness.png",
+      "sha256": "75301afe3db1af049930545fdc09739856902cbb715e65ac32baf9f14b4fe766",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "pass": true,
+        "note": "approved in rung 2"
+      },
+      "gen_attempts": null,
+      "reused_from_rung2": true,
+      "fix_pass": false
+    },
+    {
+      "id": 5,
+      "name": "EPISTLE",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NAME",
+          "VERB",
+          "VERB",
+          "NOUN",
+          "NOUN"
+        ]
+      },
+      "content": {
+        "flavor": "Through the ruin of speech, the written word endures.",
+        "context": "The Epistle counters Babel's fragmentation by uniting scattered believers under apostolic authority. These letters transcend cultural barriers, cultivating a singular mind and doctrine among the body of Christ.",
+        "verse": "I appeal to you... that there be no divisions among you. - 1 Corinthians 1:10"
+      },
+      "path": "series/2026-Q1/lots/faces/05-epistle.png",
+      "sha256": "c585f5145133d46efbbbbb5d355576b08870781c460a041e796d2cc5fbac7171",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 6,
+      "name": "PSALM",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "VERB",
+          "NOUN"
+        ]
+      },
+      "content": {
+        "flavor": "From the ruin of language, a new song ascends.",
+        "context": "The Psalms redeem language from Babel's confusion by reorienting speech toward God's glory. This liturgical response signifies the shift from the hubris of self-exaltation to the humble confidence of worship.",
+        "verse": "Sing to the LORD a new song, for he has done marvelous things! - Psalm 98:1"
+      },
+      "path": "series/2026-Q1/lots/faces/06-psalm.png",
+      "sha256": "88ca0adc0a9c7ca097db70429b004d5fb32ef9d32d555e72808b80754f401da4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 7,
+      "name": "PARABLE",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NOUN",
+          "NOUN",
+          "NOUN",
+          "VERB",
+          "ADJECTIVE"
+        ]
+      },
+      "content": {
+        "flavor": "He who builds to heaven learns the language of dust.",
+        "context": "Like the confusion of tongues, the parable veils truth from the proud while revealing it to the faithful. This narrative mode requires spiritual discernment over intellectual might, humbling those who would build their own way to heaven.",
+        "verse": "He did not speak to them without a parable. - Matthew 13:34"
+      },
+      "path": "series/2026-Q1/lots/faces/07-parable.png",
+      "sha256": "9a30a19a40bb2c5b75569e2d0ec4b0b7ac6dcd642deaa30fb8561ce61f81af51",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 8,
+      "name": "ORACLE",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "VERB",
+          "VERB",
+          "VERB",
+          "NAME",
+          "ADJECTIVE"
+        ]
+      },
+      "content": {
+        "flavor": "One language binds them; a divine word breaks them.",
+        "context": "An oracle is a weighty prophetic utterance that confronts human hubris with divine judgment. Like the pronouncements against Babylon, it signifies the sovereign intrusion of God\u2019s voice to dismantle earthly schemes built on pride.",
+        "verse": "The oracle that Isaiah the son of Amoz saw concerning Babylon. - Isaiah 13:1"
+      },
+      "path": "series/2026-Q1/lots/faces/08-oracle.png",
+      "sha256": "4b2cd23f631901026932d731d5e9328ebc9908286bdf0b24bcb960b8b618f6bc",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 9,
+      "name": "COVENANT",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NAME",
+          "NAME",
+          "NOUN",
+          "NOUN",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "A divine promise to gather those the tower scattered.",
+        "context": "In contrast to Babel's human autonomy, the covenant is God's administration of grace. He unilaterally binds Himself to a people for redemption, pivoting from the judgment of dispersion to the election of a line to bless the earth.",
+        "verse": "I will establish my covenant between me and you. - Genesis 17:7"
+      },
+      "path": "series/2026-Q1/lots/faces/09-covenant.png",
+      "sha256": "8c3a30fd10392a79ad02b681ead58364c22a08d528e3430e8920985e0ac82ace",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 10,
+      "name": "BENEDICTION",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "TITLE",
+          "TITLE",
+          "ADJECTIVE",
+          "NOUN",
+          "NAME"
+        ]
+      },
+      "content": {
+        "flavor": "May mercy speak where human tongues have failed.",
+        "context": "Contrasting Babel's chaos, the benediction is God's authoritative \"good word\" that places His name upon His people. This liturgical act seals the faithful in divine favor, transforming the uncertainty of dispersion into covenant peace.",
+        "verse": "The LORD bless you and keep you. - Numbers 6:24"
+      },
+      "path": "series/2026-Q1/lots/faces/10-benediction.png",
+      "sha256": "fc17cf378e5e03d282570df8bceb64915bcc746fe6bfee1d3f3bb1cfd8a5d601",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 11,
+      "name": "ALTAR",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NOUN",
+          "NOUN",
+          "NOUN",
+          "VERB",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "Where human pride ascends, true worship bows low.",
+        "context": "In opposition to Babel's self-exalting tower, the altar is the authorized place for divine encounter through humility and sacrifice. It shows that access to heaven is not achieved by human engineering but granted by covenant grace.",
+        "verse": "Then Noah built an altar to the LORD. - Genesis 8:20"
+      },
+      "path": "series/2026-Q1/lots/faces/11-altar.png",
+      "sha256": "f2fa421ac751aba22b2dfcf34327324f1b2c7bd36c7ccbc526a8b7a4d419f3f1",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 12,
+      "name": "FOUNDATION",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NAME",
+          "NAME",
+          "NAME",
+          "NOUN",
+          "VERB"
+        ]
+      },
+      "content": {
+        "flavor": "One language binds the mortar; one purpose lays the stone.",
+        "context": "Babel\u2019s foundation epitomizes the shift from divine reliance to collective human autonomy. Theologically, it illustrates the futility of establishing a legacy upon the shifting sands of pride rather than the cornerstone of God\u2019s will.",
+        "verse": "Unless the LORD builds the house, those who build it labor in vain. - Psalm 127:1"
+      },
+      "path": "series/2026-Q1/lots/faces/12-foundation.png",
+      "sha256": "b1ad8b92cbab77958c1fae9b54ec62dc0aadbd9b2b0a6ba9c08a28977234d93a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 13,
+      "name": "PROVERB",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "VERB",
+          "NOUN",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "Better a silent heart than a tower of babbling tongues.",
+        "context": "The proverb is the antithesis of Babel's confusion, grounding believers in the fear of the Lord rather than human hubris. It applies divine wisdom to dismantle the folly of self-exaltation and prideful autonomy.",
+        "verse": "The fear of the LORD is the beginning of wisdom. - Proverbs 9:10"
+      },
+      "path": "series/2026-Q1/lots/faces/13-proverb.png",
+      "sha256": "2c73b538632f0d7681cba5ee7ba565742e7b93ed80dcaca3778f2ffcf937fa48",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 14,
+      "name": "LAMENT",
+      "cards": 5,
+      "chapter_value_points": 8,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "NOUN",
+          "NAME"
+        ]
+      },
+      "content": {
+        "flavor": "Beneath the unfinished tower, we sat down and wept.",
+        "context": "Lament is the theological corrective to Babel's hubris, acknowledging that fractured human unity is a tragedy requiring divine intervention. It turns from the chaos of self-exaltation to a posture of humble dependence on God.",
+        "verse": "How lonely sits the city that was full of people! - Lamentations 1:1"
+      },
+      "path": "series/2026-Q1/lots/faces/14-lament.png",
+      "sha256": "c409527b3cd05af562da2579543a093a10776153e6af37f05695e49c851cfc81",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 5,
+        "plus_count": 4,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 15,
+      "name": "CONGREGATION",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "groups",
+        "groups": [
+          {
+            "count": 4,
+            "constraint": "same_type",
+            "caption": "SAME TYPE \u00d74"
+          },
+          {
+            "count": 2,
+            "constraint": "any",
+            "caption": "ANY \u00d72"
+          }
+        ]
+      },
+      "content": {
+        "flavor": "United by one tongue, they gathered to touch the heavens.",
+        "context": "The gathering at Shinar perverted the holy purpose of a congregation. Instead of gathering to worship God, they united in rebellion to make a name for themselves, turning a potential blessing into a source of judgment and scattering.",
+        "verse": "Let us not neglect to meet together, as is the habit of some. - Hebrews 10:25"
+      },
+      "path": "series/2026-Q1/lots/faces/15-congregation.png",
+      "sha256": "8ffdbaee8193c99be9432baf7d665dfbd3944ad0abae02efdc1cc0c4553f0ba1",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": true
+    },
+    {
+      "id": 16,
+      "name": "ASSEMBLY",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "groups",
+        "groups": [
+          {
+            "count": 3,
+            "constraint": "one_type",
+            "caption": "ONE TYPE \u00d73"
+          },
+          {
+            "count": 3,
+            "constraint": "another_type",
+            "caption": "ANOTHER TYPE \u00d73"
+          }
+        ]
+      },
+      "content": {
+        "flavor": "Brick for stone, bitumen for mortar, rising as one.",
+        "context": "Defying the mandate to fill the earth, the assembly at Shinar was a political act to consolidate power. This gathering illustrates the peril of unity founded on human pride and the ambition to build a monolithic, godless culture.",
+        "verse": "Why do the nations rage and the peoples plot in vain? - Psalm 2:1"
+      },
+      "path": "series/2026-Q1/lots/faces/16-assembly.png",
+      "sha256": "3a91d2bdbfa635ee5c445e42a331ba35a2ae8195334e81f8e0a0614134e1e627",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true,
+        "captions": [
+          "ONE TYPE \u00d73",
+          "ANOTHER TYPE \u00d73"
+        ]
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": true
+    },
+    {
+      "id": 17,
+      "name": "TRINITY",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NAME",
+          "NAME",
+          "NOUN",
+          "NOUN",
+          "VERB",
+          "VERB"
+        ]
+      },
+      "content": {
+        "flavor": "Three voices speak as one, descending to scatter the proud.",
+        "context": "The divine plural in Genesis 11:7, \u201cCome, let us go down,\u201d foreshadows the Triune Godhead acting in judgment. This passage contrasts the perfect, uncreated unity of the Godhead with mankind's rebellious, manufactured unity.",
+        "verse": "Let us make man in our image, after our likeness. - Genesis 1:26"
+      },
+      "path": "series/2026-Q1/lots/faces/17-trinity.png",
+      "sha256": "51f20497e04019dbf3cb8be2458c535443ae3b807872272e64384731eec0fa9a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 18,
+      "name": "TABERNACLE",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NOUN",
+          "NOUN",
+          "NOUN",
+          "NAME",
+          "NAME",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "Heaven descends to dwell where the tower could not reach.",
+        "context": "In contrast to the ascending pride of Babel, the Tabernacle signifies God's gracious condescension to dwell among His people. This holy sanctuary establishes the true meeting place between heaven and earth, replacing human ambition with covenant order.",
+        "verse": "And let them make me a sanctuary, that I may dwell in their midst. - Exodus 25:8"
+      },
+      "path": "series/2026-Q1/lots/faces/18-tabernacle.png",
+      "sha256": "fd058f9554f24bd54d6022137ecfde98893fa5fbc37392c3dcf73619c9d63952",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 19,
+      "name": "CHORUS",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "VERB",
+          "VERB",
+          "VERB",
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "NOUN"
+        ]
+      },
+      "content": {
+        "flavor": "A symphony of pride, echoing against the gates of heaven.",
+        "context": "The monolingual unity at Shinar created a chorus of rebellion, with humanity declaring, \"let us make a name for ourselves.\" This collective voice illustrates how a single language and purpose can be marshaled for prideful, godless ambition.",
+        "verse": "Our tongue is our own; who is lord over us? - Psalm 12:4"
+      },
+      "path": "series/2026-Q1/lots/faces/19-chorus.png",
+      "sha256": "81e6fb5704dcd895fbab27be8edb2638fdb4640b94870f43354084c16d40dad4",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 20,
+      "name": "SANCTUARY",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NOUN",
+          "NOUN",
+          "NOUN",
+          "NOUN",
+          "NAME",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "Find rest within, far from the clamor of confused tongues.",
+        "context": "The Sanctuary offers a divine refuge from the chaos and judgment exemplified by Babel's scattering. It is a place of holy communion, where God's presence brings order and peace, contrasting with the confusion of human ambition.",
+        "verse": "You are a hiding place for me; you preserve me from trouble. - Psalm 32:7"
+      },
+      "path": "series/2026-Q1/lots/faces/20-sanctuary.png",
+      "sha256": "9e95756e78dedfd4edbacbaf1fb156b502e79fa5ef91298ab6ff8f49f092ed80",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 21,
+      "name": "HYMNAL",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "VERB",
+          "VERB",
+          "NOUN",
+          "NOUN"
+        ]
+      },
+      "content": {
+        "flavor": "A harmony of pride shattered into a chaos of tongues.",
+        "context": "The builders of Babel used their one language to compose a hymn of human autonomy, seeking to make a name for themselves. This represents the perversion of praise, which is redeemed when scattered tongues are united to glorify God.",
+        "verse": "Let the word of Christ dwell in you richly... singing psalms and hymns. - Colossians 3:16"
+      },
+      "path": "series/2026-Q1/lots/faces/21-hymnal.png",
+      "sha256": "86cf859e4322b5223664eb02195958c6d8249deacc01f54cd1a8bd7373648fa9",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 22,
+      "name": "GOSPEL",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NAME",
+          "NAME",
+          "VERB",
+          "VERB",
+          "NOUN",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "One voice gathers what the tower has driven apart.",
+        "context": "Against Babel's futile ascent, the Gospel proclaims God's gracious descent to redeem a scattered people, reversing the confusion of tongues under the Lordship of Christ.",
+        "verse": "Each one heard them speaking in his own language. - Acts 2:6"
+      },
+      "path": "series/2026-Q1/lots/faces/22-gospel.png",
+      "sha256": "9f7880105dae596a16f275140ce85b7d19d8a72f94b7189856f7e61ab9acf1ca",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "pass": true,
+        "note": "approved in rung 2"
+      },
+      "gen_attempts": null,
+      "reused_from_rung2": true,
+      "fix_pass": false
+    },
+    {
+      "id": 23,
+      "name": "JUBILEE",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "VERB",
+          "VERB",
+          "VERB",
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "NAME"
+        ]
+      },
+      "content": {
+        "flavor": "A holy blast gathers what the confusion has scattered.",
+        "context": "The Jubilee is a divine reset that dismantles systemic servitude, reminding Israel that all belongs to God. It opposes the imperial accumulation of Babel and foreshadows the ultimate restoration of freedom for the scattered.",
+        "verse": "and you shall consecrate the fiftieth year, and proclaim liberty. - Leviticus 25:10"
+      },
+      "path": "series/2026-Q1/lots/faces/23-jubilee.png",
+      "sha256": "0e94c1a50ffd9df83769b75f3a0a7fd5346075288e07c069a8626d65cf3eebd9",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 2,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 24,
+      "name": "WISDOM",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "NOUN",
+          "NOUN",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "The wise build with humble hearts, not with towers of pride.",
+        "context": "The story of Babel illustrates the futility of human ingenuity when divorced from divine submission. It teaches that true wisdom begins not with technical mastery or grand ambition, but with the humble fear of the Lord.",
+        "verse": "Pride goes before destruction, and a haughty spirit before a fall. - Proverbs 16:18"
+      },
+      "path": "series/2026-Q1/lots/faces/24-wisdom.png",
+      "sha256": "e7a30d09d6cabde4aab21a243efdeb32963a3be988c464e6c81a4aab534fab43",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 25,
+      "name": "PROPHECY",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "ADJECTIVE",
+          "ADJECTIVE",
+          "NAME",
+          "NAME",
+          "VERB",
+          "VERB"
+        ]
+      },
+      "content": {
+        "flavor": "What is built in pride shall be scattered in confusion.",
+        "context": "Prophecy is the divine word that pierces human confusion, asserting God's sovereign will over the hubris of nations. It dismantles the builders' autonomy, proving the necessity of reliance on God's revelation, not human innovation.",
+        "verse": "The grass withers, the flower fades, but the word of our God will stand forever. - Isaiah 40:8"
+      },
+      "path": "series/2026-Q1/lots/faces/25-prophecy.png",
+      "sha256": "e035e0771d752de96949a8eb5e004a94b7b146f033e8598e73d5bdcfe66298d5",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 26,
+      "name": "SELAH",
+      "cards": 6,
+      "chapter_value_points": 10,
+      "portion_visitor_letters": 1,
+      "portion_owner_letters": 2,
+      "recipe": {
+        "kind": "groups",
+        "groups": [
+          {
+            "count": 5,
+            "constraint": "same_type",
+            "caption": "SAME TYPE \u00d75"
+          },
+          {
+            "count": 1,
+            "constraint": "any",
+            "caption": "ANY"
+          }
+        ]
+      },
+      "content": {
+        "flavor": "A breath held between the rising stone and falling word.",
+        "context": "Selah is a liturgical pause, likely for musical interlude or solemn meditation. It invites the worshiper to weigh the gravity of divine revelation, contrasting the clamor of human ambition with the silence of holy reflection.",
+        "verse": "Be still, and know that I am God. - Psalm 46:10"
+      },
+      "path": "series/2026-Q1/lots/faces/26-selah.png",
+      "sha256": "dbd99649b639dd3cf2d8c22fe10e16a06756cc895cdc86b242525deb7402438b",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 6,
+        "plus_count": 5,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": true
+    },
+    {
+      "id": 27,
+      "name": "CREATION",
+      "cards": 7,
+      "chapter_value_points": 14,
+      "portion_visitor_letters": 2,
+      "portion_owner_letters": 3,
+      "recipe": {
+        "kind": "all_types_plus_pair"
+      },
+      "content": {
+        "flavor": "In the beginning: every kind, and then a pair.",
+        "context": "God's creation ex nihilo establishes the sovereign order of the cosmos and the mandate to fill the earth for His glory, the standard against which Shinar's rebellion is measured.",
+        "verse": "In the beginning, God created the heavens and the earth. - Genesis 1:1"
+      },
+      "path": "series/2026-Q1/lots/faces/27-creation.png",
+      "sha256": "ec10bda54571279bbda09c254b8edc5052e926e6d7e934c1e936b373a2ae62bc",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "pass": true,
+        "note": "approved in rung 2"
+      },
+      "gen_attempts": null,
+      "reused_from_rung2": true,
+      "fix_pass": false
+    },
+    {
+      "id": 28,
+      "name": "REVELATION",
+      "cards": 7,
+      "chapter_value_points": 14,
+      "portion_visitor_letters": 2,
+      "portion_owner_letters": 3,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "NOUN",
+          "VERB",
+          "ADJECTIVE",
+          "NAME",
+          "TITLE",
+          "TITLE",
+          "TITLE"
+        ]
+      },
+      "content": {
+        "flavor": "Every tongue is silenced when the heavens finally speak.",
+        "context": "At Babel, revelation was a judicial descent, where God intervened to dismantle human hubris. This shows that true knowledge of the divine is not achieved by human ascent but is granted solely through God's sovereign self-disclosure.",
+        "verse": "The secret things belong to the LORD our God. - Deuteronomy 29:29"
+      },
+      "path": "series/2026-Q1/lots/faces/28-revelation.png",
+      "sha256": "590c2f8370b27d3e597ef2bcc47d5c988123ce3a06a02a99dd029884983a112a",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 7,
+        "plus_count": 6,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": true
+    },
+    {
+      "id": 29,
+      "name": "EXODUS",
+      "cards": 7,
+      "chapter_value_points": 14,
+      "portion_visitor_letters": 2,
+      "portion_owner_letters": 3,
+      "recipe": {
+        "kind": "fixed",
+        "composition": [
+          "VERB",
+          "VERB",
+          "VERB",
+          "NAME",
+          "NAME",
+          "NOUN",
+          "NOUN"
+        ]
+      },
+      "content": {
+        "flavor": "A people called out from the shadow of the brick-pits.",
+        "context": "The Exodus is the archetype of salvation, forming God's people through divine deliverance, not human achievement. In contrast to Babel's imperial ambition, God redeems a people from bondage to be His own possession.",
+        "verse": "I am the LORD your God, who brought you out of the land of Egypt. - Exodus 20:2"
+      },
+      "path": "series/2026-Q1/lots/faces/29-exodus.png",
+      "sha256": "a14c75f9cf028131dacbc431b3e6ad09690a97dfb27587402f284615fb546608",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 7,
+        "plus_count": 6,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": false
+    },
+    {
+      "id": 30,
+      "name": "APOCALYPSE",
+      "cards": 7,
+      "chapter_value_points": 14,
+      "portion_visitor_letters": 2,
+      "portion_owner_letters": 3,
+      "recipe": {
+        "kind": "groups",
+        "groups": [
+          {
+            "count": 4,
+            "constraint": "one_type",
+            "caption": "ONE TYPE \u00d74"
+          },
+          {
+            "count": 3,
+            "constraint": "another_type",
+            "caption": "ANOTHER TYPE \u00d73"
+          }
+        ]
+      },
+      "content": {
+        "flavor": "They reached for heaven, and heaven answered with fire.",
+        "context": "Apocalypse, an \"unveiling,\" signifies the final judgment against the archetypal \"Mystery Babylon.\" It is the definitive collapse of human hubris, replacing the confusion of earthly empires with the revealed sovereignty of God.",
+        "verse": "Fallen, fallen is Babylon the great! - Revelation 18:2"
+      },
+      "path": "series/2026-Q1/lots/faces/30-apocalypse.png",
+      "sha256": "6b113368bb91718b5f8770b6f4681330843ce52f5c96899238bc4e885a6a6da6",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "gate": {
+        "slot_count": 7,
+        "plus_count": 6,
+        "missing_strings": [],
+        "garbled_text": [],
+        "forbidden_found": [],
+        "pass": true,
+        "captions": [
+          "ONE TYPE \u00d74",
+          "ANOTHER TYPE \u00d73"
+        ]
+      },
+      "gen_attempts": 1,
+      "reused_from_rung2": false,
+      "fix_pass": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "lot_id": 7,
+  "phase_name": "PARABLE",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes literal square brackets (e.g., [NOUN]) contrary to reference style",
+    "Inconsistent formatting in Composition text (ADJECTIVE lacks brackets while others have them)"
+  ],
+  "attempt": 1
+}

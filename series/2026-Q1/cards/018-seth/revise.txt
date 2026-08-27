@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: SETH
+# Card_Gloss: Appointed / Compensation
+# Card_Type: NAME
+# Card_Rarity: COMMON
+# Card_Ability: Discard 1 card from your hand to draw 2 cards.
+# Card_Stats: LORE 2 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A young sapling growing vigorously next to a fallen, withered branch in a prehistoric landscape, illuminated by a shaft of warm light, symbolizing restoration and a new lineage.
+# Card_OT_Verse: Genesis 4:25 — God hath appointed me another seed instead of Abel, whom Cain slew.
+# Card_NT_Verse: Luke 3:38 — Which was the son of Enos, which was the son of Seth, which was the son of Adam.
+# Card_Hebrew: שֵׁת (Sheth)
+# Card_Greek: Σήθ (Sēth)
+# Card_Trivia_1: Name means 'appointed' or 'compensation' for the loss of Abel.
+# Card_Trivia_2: Lived 912 years and became the ancestor of Noah and Jesus.
+# Card_Trivia_3: Born when Adam was 130, expressly in his father's likeness.

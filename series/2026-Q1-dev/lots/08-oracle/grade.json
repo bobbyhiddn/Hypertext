@@ -1,0 +1,10 @@
+{
+  "lot_id": 8,
+  "phase_name": "ORACLE",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes square brackets around card type names (e.g., [VERB]) which violates the requirement for no brackets"
+  ],
+  "attempt": 1
+}

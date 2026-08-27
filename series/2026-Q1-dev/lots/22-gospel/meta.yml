@@ -1,0 +1,12 @@
+id: 22
+name: GOSPEL
+cards: 6
+points: 10
+display: NAME + VERB + NOUN + ADJ + TITLE + VERB
+flavor: One voice gathers what the tower has driven apart.
+context: Contrasting Babel’s futile attempt at human ascension, the Gospel proclaims
+  God’s gracious descent to redeem a scattered people. This good news reverses the
+  confusion of languages by uniting every tribe and tongue under the Lordship of Jesus
+  Christ.
+render_attempts: 1
+final_score: 95

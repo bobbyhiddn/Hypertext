@@ -1,0 +1,39 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #{NUMBER}
+WORD: {WORD}
+GLOSS: {GLOSS}
+TYPE: {CARD_TYPE} (top-left navy circle must contain WHITE {TYPE_ICON} icon)
+RARITY: {RARITY_TEXT} (top-right navy pill with "{RARITY_TEXT}" text and {RARITY_COLOR} diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: {STAT_LORE}/5 filled
+CONTEXT: {STAT_CONTEXT}/5 filled
+COMPLEXITY: {STAT_COMPLEXITY}/5 filled
+
+STAT COUNT CHECK (AUTHORITATIVE): Draw five circles in each row. Reading left to right,
+fill exactly {STAT_LORE} LORE circles, exactly {STAT_CONTEXT} CONTEXT circles, and
+exactly {STAT_COMPLEXITY} COMPLEXITY circles. Do not infer or copy stat counts from
+any reference image; these numeric values override the references.
+
+ABILITY:
+{ABILITY_TEXT}
+
+VERSES:
+OT: {OT_VERSE_LINE}
+NT: {NT_VERSE_LINE}
+
+LANGUAGES:
+Hebrew: {HEBREW} - {HEBREW_TRANSLIT} - {OT_REFS}
+Greek: {GREEK} - {GREEK_TRANSLIT} - {NT_REFS}
+
+TRIVIA:
+{TRIVIA_BULLETS_FORMATTED}
+
+ART: {ART_PROMPT}
+
+FOOTER: {SERIES}
+
+Output only the card image.

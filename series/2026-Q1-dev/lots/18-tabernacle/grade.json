@@ -1,0 +1,10 @@
+{
+  "lot_id": 18,
+  "phase_name": "TABERNACLE",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition labels include square brackets (e.g., [NOUN]) which should not be present in the text"
+  ],
+  "attempt": 1
+}

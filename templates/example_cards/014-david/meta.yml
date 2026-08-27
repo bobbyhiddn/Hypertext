@@ -1,0 +1,17 @@
+number: '014'
+word: DAVID
+gloss: The second king of Israel, a shepherd, poet, and warrior described as a man
+  after God's own heart.
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Example
+art_prompt: A rustic wooden harp resting against a rough stone, with a simple leather
+  sling and five smooth river stones lying nearby in the grass, illuminated by a golden
+  ray of sunlight.
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+ability: Return a TITLE from Sheol to your hand.
+style_series_dir: series\2026-Q1

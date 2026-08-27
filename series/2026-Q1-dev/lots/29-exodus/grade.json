@@ -1,0 +1,10 @@
+{
+  "lot_id": 29,
+  "phase_name": "EXODUS",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text contains square brackets (e.g., [VERB]) instead of plain text types"
+  ],
+  "attempt": 1
+}

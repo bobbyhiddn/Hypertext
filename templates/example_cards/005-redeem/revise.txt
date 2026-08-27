@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: REDEEM
+# Card_Gloss: To buy back, recover, or liberate by payment; to restore from captivity or death.
+# Card_Type: VERB
+# Card_Rarity: COMMON
+# Card_Ability: Return a card from Sheol to your hand, then discard 1 card.
+# Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 2
+# Card_Art_Prompt: A pair of rusted iron shackles lying open and empty on a cold stone floor, illuminated by a single beam of warm golden light breaking through the darkness.
+# Card_OT_Verse: Job 19:25 — I know that my redeemer lives, and that in the end he will stand on the earth.
+# Card_NT_Verse: Galatians 3:13 — Christ redeemed us from the curse of the law by becoming a curse for us.
+# Card_Hebrew: גָּאַל (ga'al)
+# Card_Greek: ἐξαγοράζω (exagorazō)
+# Card_Trivia_1: The Hebrew 'ga'al' refers to a 'kinsman-redeemer' obligated to buy back family land or relatives sold into slavery.
+# Card_Trivia_2: Boaz is the famous kinsman-redeemer in the book of Ruth, foreshadowing Christ.
+# Card_Trivia_3: Job's declaration of a living Redeemer is one of the oldest attestations of resurrection hope.
+# Card_Trivia_4: In the New Testament, the ransom price ('lytron') for redemption is identified as the blood of Christ.

@@ -1,0 +1,54 @@
+number: 008
+word: BEAUTIFUL
+gloss: Pleasing to the senses or mind; possessing qualities of excellence, perfection,
+  or timeliness.
+card_type: ADJECTIVE
+rarity: COMMON
+art_prompt: A glowing, ornate golden gate standing open amidst swirling dust, rays
+  of light pouring through, intricate geometric patterns, warm sunrise colors, ethereal
+  atmosphere
+stats:
+  lore: 2
+  context: 3
+  complexity: 1
+ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other
+  on the bottom.
+ot_verse:
+  ref: Ecclesiastes 3:11
+  snippet: He has made everything beautiful in its time.
+nt_verse:
+  ref: Romans 10:15
+  snippet: How beautiful are the feet of those who preach the gospel of peace!
+greek:
+  text: ὡραῖος
+  translit: horaios
+hebrew:
+  text: יָפָה
+  translit: yaphah
+ot_refs: Gen 29:17 • 2 Sam 14:25 • Est 2:7 • Psa 48:2 • Isa 52:7
+nt_refs: Matt 23:27 • Acts 3:2 • Acts 3:10 • Rom 10:15
+trivia:
+- The Greek word 'horaios' comes from 'hora' (hour), implying that true beauty is
+  often about timeliness or maturity.
+- Absalom was praised as the most beautiful man in all Israel, without blemish from
+  sole to crown.
+- The 'Gate Beautiful' in Jerusalem (Acts 3) was likely the Nicanor Gate, made of
+  massive Corinthian bronze.
+- Scripture often contrasts physical beauty, which is fleeting, with the enduring
+  beauty of a gentle and quiet spirit.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+review_score: 100
+review_attempts: 2
+last_description:
+  card_number_format: '#008'
+  stat_pip_shape: circle
+  stat_pip_fill_color: navy
+  has_brackets: false
+  bracket_locations: []
+review_status: green

@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: REMNANT
+Lot ID: 01
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes literal square brackets (e.g., [NOUN]) which should not be present

@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: FOUNDATION
+Lot ID: 12
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition text includes square brackets around type names (e.g. [NOUN]), expected plain text

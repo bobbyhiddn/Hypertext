@@ -1,0 +1,10 @@
+{
+  "lot_id": 13,
+  "phase_name": "PROVERB",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition type labels include literal square brackets (e.g., '[ADJECTIVE]') which should not be present in the text"
+  ],
+  "attempt": 1
+}

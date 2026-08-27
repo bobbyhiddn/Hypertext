@@ -1,0 +1,36 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #007
+WORD: EARTH
+GLOSS: The dry land, ground, or soil; the material world distinct from the heavens.
+TYPE: NOUN (top-left navy circle must contain WHITE closed book icon)
+RARITY: COMMON (top-right navy pill with "COMMON" text and WHITE diamond)
+
+STATS (each has 5 pip slots total, filled pips are NAVY colored):
+LORE: 2/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 1/5 filled
+
+ABILITY:
+Look at the top 2 cards of the Tower. Add 1 to your hand and put the other on the bottom.
+
+VERSES:
+OT: Genesis 1:1 — In the beginning God created the heaven and the earth.
+NT: Matthew 5:5 — Blessed are the meek: for they shall inherit the earth.
+
+LANGUAGES:
+Hebrew: אֶרֶץ - 'Eretz - Gen 1:1 • Ps 24:1 • Isa 66:1 • Job 26:7
+Greek: γῆ - Gē - Matt 5:5 • Rev 21:1 • Acts 1:8 • 1 Cor 15:47
+
+TRIVIA:
+• The Hebrew word 'eretz' appears over 2,500 times in the Old Testament.
+• Adam's name is derived from 'adamah', meaning ground or earth.
+• Ancient cosmology often depicted the earth as a foundation set upon pillars.
+
+ART: A pair of weathered hands holding a sphere of rich, dark soil that is crumbling slightly, with a faint glow emanating from the cracks, set against a void.
+
+FOOTER: 2026-Q1 Babel
+
+Output only the card image.

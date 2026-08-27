@@ -1,0 +1,75 @@
+number: '025'
+word: NOAH
+gloss: Rest, comfort; the patriarch who built the ark to preserve life during the
+  Flood
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: An ancient bearded figure standing on a wooden deck amidst a stormy gray
+  ocean, holding a white dove, with a massive timber structure rising behind him
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: Return up to 2 cards of the same type from Sheol to your hand.
+ot_verse:
+  ref: Genesis 6:8
+  snippet: But Noah found favor in the eyes of the Lord.
+nt_verse:
+  ref: Hebrews 11:7
+  snippet: By faith Noah... in reverent fear constructed an ark for the saving of
+    his household.
+greek:
+  text: Νῶε
+  translit: Nōe
+hebrew:
+  text: נֹחַ
+  translit: Noach
+ot_refs: Gen 5-9 • Ezek 14:14 • Isa 54:9
+nt_refs: Matt 24:37 • Heb 11:7 • 1 Pet 3:20 • 2 Pet 2:5
+trivia:
+- Name means 'rest' or 'comfort' (Gen 5:29)
+- Lived to be 950 years old (Gen 9:29)
+- First person in the Bible described as 'righteous'
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3sja-zwgtnkVcI8zaz5J79x8mHXAvrYtPxSvp9W2CzIc3RdjpER5wZwdG1v57JHaIA1elGEXyPzQbK5NMJ45dhrBzr59a24uj9uaoklVBDEMtk8H0GiBGLOOijSCpYlvQhgGeXVM=
+  title: biblehub.net
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELh4wn0xxpMH3KToYxT6PEN2BlBd5uqCAg63U4t206e7qJ7ONo__pJsMVypFJewkpZj0E9rsAMpIZxDf42Gl_lM-BcaecGj5f4sgSLMOMrGc7HNHvxpZbYUc6uDns=
+  title: wikipedia.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2QdXU9526_-3LiSu7JG71Pm1HVTRukQkFcTAyYMMoMoY8jSSSTWGgqnbQ00od-iJj4nhp1wYe01rGNMMkyzDxFCAVJ3jU-Gofwvdz8eosIMPtKUjtHk0Q8yveGO-1dkt9o6S9hZaJQIUEIuYvBcCdAH-cHlM1oecsiL7Z-go=
+  title: parents.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3GAAc4mnqhU-G3TuDmoonn6s1gN6Llpc_lUDAk-whOL6FxciCwWXZQ-20blJo1MVwmFEpeGrLmb1yJ47mzIEjTGuHTLPW2ypeRaZks2e-tzLx7rGXNaGtOf9Wf36PS4Mm7w==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwpaHcFCuuyneOXQnM4LqZqxw6pPjsGwt48rz3BebrzYOth8JS6Nw-rb90yxpyTItI0BaXvmcCo_bD9Gd4WOTbiOHUjm9bBnUOq7rNi_cNMaSNWoloCsyAwtogGgCat5G36e1i1o3B0piH
+  title: esv.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGJOaYMk3UUDqJVTK45Hh7FvkKzrYXHummg9r4vDDfPcrKK_IdhYtD6WyN_G_SmHzfDvgN7wUrOwFJ8sKW2cddozDuhMz3BuAaynZNwOCML6MNTi9kKd2u4F2uiq1Pwffp1Y9JsYWh9xe8g45jdVXjGmg-vLwQuQ==
+  title: answersingenesis.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGon3fac17IKKz7Jb3fiWdlMLTwM9LJpE3MSL23m2MfjoejYm46jhp0OkHoSUegQDOcOUIcVCPHyU1B93SpPir4Tq-nPHgtCLQ2sbYRvtmOz0O2ZI7I_AMpj0mSisoD4Hz-gcvj9mPP7UxAjDDdIL8=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaGOHCeo8qX5WnFRsAQyekxk1W-RQZ7jVJFMCcqMMoblpr-MZef3NFIVtYKswSpeoivnjl6mcpFcjdOriWaD5Yq1D07oyhMQ5Vpj17j4pyoCx1XO4B0VHYty3raaLy4HybKU0=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF8j0tomMyp4qZv0TLpHvGWbSGFISslhIl_JHAy2AH4vtoU8f7nqdf9QCTfbkGwgrIlrQscNKeUsgRb9w3yYnQ2ezJ5lyFA4vrxJ58T2cq2dShvuV9p3EYqtIqLFcIL5GrTgBSdEuSge5COQuFt036r
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpuA6idiVqMnoYWOXi6c8r9DV7gfhAc_tXQ7NXULNetE5k0GmTm04ZLpyQu-u2HKXgekO_z2HkN7R4X36T57rqiXUNvsFFLbx8GFHzPpeEc7HLktPWwVwdCARiX5vABU72-JGU
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpp7f84VHqWeT3ko9bxSjAAuFZ1NwObrU6y-OFDIrt0tsqtyx71oxlyUhoYVDbEuwmcpJ5_PdxkhNgEe15xAgEav-Bx5R8UkTIUpX6UmO4kJRhA_t_o9emuVL6nryx
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmXp3YVZWfKngVIJJ0AIP8dhySjLSkc484uCZPU-k2irJStspY_mY6ynrZ_u7LMiYoeIh1zw4345BIAFNAiYyqARET55UhbdFfBHs3Z_aBvJbTvKw8Iyjz0tPh796mJooDPTtT6gungaUI7jbqpjGJe8U=
+  title: creation.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlDGzFwJl_kqwGJPAU1KB1nqF9_DUeabspCbHVNku_s50fw7ekr7pw7vvM1FsBEW6WI_OlNPAoV4Ddny8VxI34VcvOsw4pv6Xk2Cjm6rM1LHjTN-eZfFMgnMWQQ3I5_aE3LTO0L6qaz2CHBIqZRrmsckaErdZX5fbyaJXHFmt_HmY=
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8Yivu_P0U0AePNbgq4ij-nSEuiwfxYvfnN2YJX3DOv1cIXDa2Zz0X5nQ98CSvhYlwF2pBRlOQALYp_35swEA3LN0fTNTq_V3KMUforEmuStaLoIImFwpp6qMB9HC-Igu9xMyf43MqVKX-ottGLDfM
+  title: abarim-publications.com
+search_queries:
+- ''
+- Noah Hebrew meaning and spelling
+- Hebrews 11:7 ESV snippet
+- Noah Greek spelling Strong's
+- Noah Bible trivia facts
+- Genesis 6:8 ESV snippet

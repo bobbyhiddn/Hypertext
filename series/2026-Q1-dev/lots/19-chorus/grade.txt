@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: CHORUS
+Lot ID: 19
+Score: 95/100
+Status: PASS
+Attempt: 2/3
+
+Issues:
+  - Composition labels include literal square brackets '[VERB]' where none were expected per reference style

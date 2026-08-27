@@ -1,0 +1,10 @@
+{
+  "lot_id": 10,
+  "phase_name": "BENEDICTION",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text contains literal square brackets around card type names (e.g., '[TITLE]'), violating the requirement for no brackets."
+  ],
+  "attempt": 1
+}

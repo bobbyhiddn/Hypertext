@@ -1,0 +1,35 @@
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #002
+WORD: COVENANT
+GLOSS: A binding agreement, solemn promise, or compact between two or more parties, often sealed by an oath.
+TYPE: NOUN (use matching type icon from references)
+RARITY: UNCOMMON with green diamond icon
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 4/5 filled
+COMPLEXITY: 3/5 filled
+
+ABILITY:
+Swap a card from your hand with a NOUN or NAME from Sheol.
+
+VERSES:
+OT: Jeremiah 31:31 — "Behold, the days come... that I will make a new covenant with the house of Israel."
+NT: Luke 22:20 — "This cup is the new covenant in my blood, which is poured out for you."
+
+LANGUAGES:
+Hebrew: בְּרִית (berith) - Gen 9:13 • Gen 15:18 • Ex 19:5 • Ps 89:3
+Greek: διαθήκη (diathēkē) - Mat 26:28 • Acts 3:25 • Gal 3:17 • Heb 8:6
+
+TRIVIA:
+• The Hebrew word 'berith' comes from a root meaning 'to cut,' referring to the ancient custom of cutting animals to seal a pact.
+• Biblical covenants are often unilateral (initiated by God) rather than bilateral contracts between equals.
+• The Greek 'diatheke' can also translate to 'testament' or 'will,' implying an inheritance.
+• Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant.
+
+ART: Two weathered hands clasping firmly over a rough stone altar, a glowing golden ethereal cord wrapping around their wrists binding them together, dramatic lighting, ancient atmosphere
+
+FOOTER: Example
+
+Output only the card image.

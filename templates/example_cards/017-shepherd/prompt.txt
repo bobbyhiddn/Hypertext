@@ -1,0 +1,37 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #017
+WORD: SHEPHERD
+GLOSS: One who tends, feeds, and guards a flock; metaphorically, a spiritual leader or God.
+TYPE: TITLE (use matching type icon from references)
+RARITY: COMMON (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Look at the top 2 cards of the Tower; put one into your hand and the other on the bottom.
+
+VERSES:
+OT: Psalm 23:1 — "The Lord is my shepherd; I shall not want."
+NT: John 10:11 — "I am the good shepherd. The good shepherd lays down his life for the sheep."
+
+LANGUAGES:
+Hebrew: רֹעֶה (Ro'eh) - Gen 4:2 • Ps 23:1 • Ps 80:1 • Ezek 34:12
+Greek: ποιμήν (Poimēn) - Matt 9:36 • John 10:11 • Heb 13:20 • 1 Pet 5:4
+
+TRIVIA:
+• Abel was the first shepherd mentioned in the Bible (Genesis 4:2).
+• The Egyptians considered shepherds 'detestable' due to cultural differences.
+• David learned to fight lions and bears as a shepherd before facing Goliath.
+• The Latin word for shepherd is 'pastor', the origin of the modern church title.
+
+ART: A weathered wooden staff with a hooked end resting against a rough stone in a lush green pasture under a soft twilight sky, silhouette of a flock in the distance, warm lighting.
+
+FOOTER: Example
+
+Output only the card image.

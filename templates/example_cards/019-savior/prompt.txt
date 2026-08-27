@@ -1,0 +1,51 @@
+CRITICAL: Match the EXACT visual style of the reference images. Copy their borders, text boxes, fonts, colors, and formatting precisely.
+
+Replicate the card layout from the reference images with this content:
+
+NUMBER: #019
+WORD: SAVIOR
+GLOSS: One who rescues, delivers, or preserves from danger or destruction.
+TYPE: TITLE
+  ⚠️ TYPE ICON REQUIRED: The top-left circle MUST contain the correct WHITE type icon:
+    - NOUN → Closed Book icon
+    - VERB → Pencil icon
+    - ADJECTIVE → Sparkle Pencil icon (pencil with small stars)
+    - NAME → Feather Quill icon
+    - TITLE → Ornate empty rectangular frame icon, simple white silhouette
+  The type icon goes INSIDE the navy circle with gold border in the top-left corner.
+  Copy the exact icon style from the type-specific template reference.
+RARITY: RARE (use matching rarity badge style from references)
+
+STATS (each has 5 pip slots total):
+LORE: 5/5 filled
+CONTEXT: 5/5 filled
+COMPLEXITY: 2/5 filled
+
+ABILITY:
+Return up to 2 cards from Sheol to your hand.
+
+VERSES:
+OT: Isaiah 43:11 — "I, even I, am the LORD, and apart from me there is no savior."
+NT: Luke 2:11 — "Today in the town of David a Savior has been born to you; he is the Messiah, the Lord."
+
+LANGUAGES:
+Hebrew: מוֹשִׁיעַ (Moshia) - Isa 43:11 • 2 Sam 22:3 • Ps 106:21
+Greek: σωτήρ (Sōtēr) - Luke 2:11 • Acts 5:31 • Tit 2:13
+
+TRIVIA:
+• The Greek title Sōtēr was used by rulers like Ptolemy I, making the gospel a political challenge.
+• The Hebrew root yasha implies being brought to a wide, open space, signifying freedom.
+• The early Christian Ichthys (fish) symbol is an acronym ending in Sōtēr.
+
+ART: A brilliant, warm light breaking through dark, turbulent storm clouds, illuminating a single, outstretched hand reaching upward from a chaotic sea.
+
+FOOTER: Example
+
+Output only the card image.
+
+
+REVISION INSTRUCTIONS:
+Fix the RARE rarity badge - the text RARE and the diamond icon must be GOLD colored, not white. Match the RARE styling from WISDOM.
+
+REVISION INSTRUCTIONS:
+Remove the brackets from around the transliteration

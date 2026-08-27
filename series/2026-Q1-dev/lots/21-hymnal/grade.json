@@ -1,0 +1,10 @@
+{
+  "lot_id": 21,
+  "phase_name": "HYMNAL",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition type labels include square brackets (e.g., [ADJECTIVE]) where plain text is expected"
+  ],
+  "attempt": 2
+}

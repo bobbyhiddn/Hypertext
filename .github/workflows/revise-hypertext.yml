@@ -1,0 +1,214 @@
+name: Revise Hypertext Card
+
+env:
+  GEMINI_IMAGE_MODEL: gemini-3.1-flash-image
+
+on:
+  workflow_dispatch:
+    inputs:
+      card_dir:
+        description: "Path to card folder (e.g. series/2026-Q1/cards/002-gospel)"
+        required: false
+        type: string
+      revise_file:
+        description: "Optional path to revise instruction file (defaults to <card_dir>/revise.txt)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  revise:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          pip install -e package/
+
+      - name: Revise card(s) (apply minimal JSON patch + rerender)
+        env:
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+        run: |
+          set -euo pipefail
+          EVENT_NAME="${{ github.event_name }}"
+
+          REVISE_FILES=()
+          REBUILD_FILES=()
+          if [[ "${EVENT_NAME}" == "workflow_dispatch" ]]; then
+            if [[ -n "${{ inputs.revise_file }}" ]]; then
+              REVISE_FILES+=("${{ inputs.revise_file }}")
+            elif [[ -n "${{ inputs.card_dir }}" ]]; then
+              REVISE_FILES+=("${{ inputs.card_dir }}/revise.txt")
+            else
+              git fetch origin main || true
+              mapfile -t REVISE_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)revise\.txt$' || true)
+              mapfile -t REBUILD_FILES < <(git diff --name-only origin/main...HEAD | grep -E '(^|/)(card\.json|prompt\.(txt|json))$' || true)
+              if [[ ${#REVISE_FILES[@]} -eq 0 ]]; then
+                mapfile -t CANDIDATES < <(git ls-files | grep -E '(^|/)revise\.txt$' || true)
+                for REV in "${CANDIDATES[@]}"; do
+                  if grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
+                    REVISE_FILES+=("${REV}")
+                  fi
+                done
+
+                if [[ ${#REVISE_FILES[@]} -gt 1 ]]; then
+                  echo "Multiple revise.txt files contain instructions. Please rerun with workflow inputs to choose one:"
+                  printf ' - %s\n' "${REVISE_FILES[@]}"
+                  exit 2
+                fi
+              fi
+            fi
+          else
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.sha }}"
+            if [[ -z "${BEFORE}" || "${BEFORE}" == "0000000000000000000000000000000000000000" ]]; then
+              BEFORE="$(git rev-parse HEAD~1)"
+            fi
+            mapfile -t REVISE_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)revise\.txt$' || true)
+            mapfile -t REBUILD_FILES < <(git diff --name-only "${BEFORE}" "${AFTER}" | grep -E '(^|/)(card\.json|prompt\.(txt|json))$' || true)
+          fi
+
+          declare -A DIRS_REVISE=()
+          declare -A DIRS_REBUILD=()
+
+          for REV in "${REVISE_FILES[@]}"; do
+            if ! grep -v '^\s*#' "${REV}" | grep -v '^\s*$' | grep -v '<.*>' | grep -q '.'; then
+              echo "No meaningful instructions in ${REV} (boilerplate only). Skipping revise."
+              continue
+            fi
+            DIRS_REVISE["$(dirname "${REV}")"]="${REV}"
+          done
+
+          for F in "${REBUILD_FILES[@]}"; do
+            DIRS_REBUILD["$(dirname "${F}")"]=1
+          done
+
+          if [[ ${#DIRS_REVISE[@]} -eq 0 && ${#DIRS_REBUILD[@]} -eq 0 ]]; then
+            echo "No revise.txt/card.json/prompt.txt changes detected."
+            exit 0
+          fi
+
+          for DIR in "${!DIRS_REVISE[@]}"; do
+            REV="${DIRS_REVISE[${DIR}]}"
+            echo "Running revise for ${DIR} using ${REV}"
+            python -m hypertext.pipeline.daily --phase revise --card-dir "${DIR}" --revise-file "${REV}"
+            unset DIRS_REBUILD["${DIR}"] || true
+          done
+
+          for DIR in "${!DIRS_REBUILD[@]}"; do
+            REGEN=0
+            for F in "${REBUILD_FILES[@]}"; do
+              if [[ "${F}" == "${DIR}/card.json" ]]; then
+                REGEN=1
+                break
+              fi
+            done
+            if [[ ${REGEN} -eq 1 ]]; then
+              echo "Running rebuild for ${DIR} (regen prompt from card.json)"
+              python -m hypertext.pipeline.daily --phase rebuild --card-dir "${DIR}" --regen-prompt
+            else
+              echo "Running rebuild for ${DIR}"
+              python -m hypertext.pipeline.daily --phase rebuild --card-dir "${DIR}"
+            fi
+          done
+
+      - name: Commit and push changes
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$(git status --porcelain)" ]]; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+
+          declare -A CARD_DIRS=()
+          while read -r _status path; do
+            [[ -n "${path:-}" ]] || continue
+            d="$(dirname "${path}")"
+            while [[ "${d}" != "." && "${d}" != "/" ]]; do
+              if [[ -f "${d}/card.json" ]]; then
+                CARD_DIRS["${d}"]=1
+                break
+              fi
+              d="$(dirname "${d}")"
+            done
+          done < <(git status --porcelain)
+
+          if [[ ${#CARD_DIRS[@]} -eq 0 ]]; then
+            echo "No card directories inferred from changes."
+            exit 0
+          fi
+
+          for DIR in "${!CARD_DIRS[@]}"; do
+            git add "${DIR}/card.json" "${DIR}/prompt.txt" "${DIR}/post.md" "${DIR}/meta.yml" 2>/dev/null || true
+            git add "${DIR}/outputs" 2>/dev/null || true
+          done
+
+          git commit -m "Revise card(s)" || exit 0
+          git push
+
+      - name: Comment revised PNG on PR (if PR exists)
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+
+          PR_URL="$(gh pr view --json url -q .url 2>/dev/null || true)"
+          if [[ -z "${PR_URL}" ]]; then
+            echo "No PR found for this branch; skipping PR comment."
+            exit 0
+          fi
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+
+          mapfile -t PNGS < <(git show --name-only --pretty="" HEAD | grep -E '/outputs/card_1024x1536\.png$' || true)
+          if [[ ${#PNGS[@]} -eq 0 ]]; then
+            echo "No revised card_1024x1536.png found in latest commit; skipping PR comment."
+            exit 0
+          fi
+
+          BODY=$'### Revised render(s)\n'
+          for PNG_PATH in "${PNGS[@]}"; do
+            CARD_DIR="$(dirname "$(dirname "${PNG_PATH}")")"
+            CARD_SLUG="$(basename "${CARD_DIR}")"
+            RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
+            BODY+=$'\n'
+            BODY+="#### ${CARD_SLUG}"
+            BODY+=$'\n\n'
+            BODY+="![${CARD_SLUG}](${RAW_URL})"
+            BODY+=$'\n'
+
+            # Include revision changes if the file exists
+            CHANGES_FILE="${CARD_DIR}/.revision_changes.txt"
+            if [[ -f "${CHANGES_FILE}" ]]; then
+              BODY+=$'\n'
+              BODY+="<details>"
+              BODY+=$'\n'
+              BODY+="<summary>Changes applied</summary>"
+              BODY+=$'\n\n'
+              BODY+="$(cat "${CHANGES_FILE}")"
+              BODY+=$'\n\n'
+              BODY+="</details>"
+              BODY+=$'\n'
+              # Clean up the changes file (don't commit it)
+              rm -f "${CHANGES_FILE}"
+            fi
+          done
+
+          gh pr comment "${PR_URL}" --body "${BODY}"

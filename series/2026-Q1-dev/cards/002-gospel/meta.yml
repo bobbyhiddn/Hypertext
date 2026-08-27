@@ -1,0 +1,72 @@
+number: '002'
+word: GOSPEL
+gloss: Good news; the message of salvation through Jesus Christ.
+card_type: NOUN
+rarity: RARE
+art_prompt: A herald standing on a mountain peak at sunrise, blowing a horn, golden
+  light flooding a valley below, cinematic lighting, oil painting style
+stats:
+  lore: 5
+  context: 5
+  complexity: 3
+ability: You may reveal a card from your hand. Reveal cards from the top of the shared
+  deck equal to that card's Lore stat; keep one and discard the rest.
+ot_verse:
+  ref: Isaiah 52:7
+  snippet: How beautiful upon the mountains are the feet of him that bringeth good
+    tidings, that publisheth peace...
+nt_verse:
+  ref: Romans 1:16
+  snippet: 'For I am not ashamed of the gospel of Christ: for it is the power of God
+    unto salvation to every one that believeth...'
+greek:
+  text: εὐαγγέλιον
+  translit: euangelion
+hebrew:
+  text: בְּשׂוֹרָה
+  translit: besorah
+ot_refs: Isa 40:9 • Isa 52:7 • Isa 61:1 • Nah 1:15
+nt_refs: Mark 1:1 • Rom 1:16 • 1 Cor 15:1 • Gal 1:6
+trivia:
+- Derived from Old English 'godspell' meaning 'good story' or 'good news'.
+- Originally used in the Roman Empire to announce a Caesar's birth or military victory.
+- Paul uses the term 'euangelion' more frequently than any other biblical writer.
+- Mark 1:1 is the first use of the word to describe a specific genre of literature.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7c-Qo3nWb-mXvEU3n3fF4QYooydsY-B41bxPmrtEHC_UP1sUqSDsaEqAQC0oXVQ03DXFlAwSvOYAmJcBexZf5H37o7wFDyeBHxm7XSzgDDrq8yucfRFxu1RfVUlSTZxLZUPNAJFtZXRev9HvSB8A=
+  title: biblestudytools.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Kgl4umd8yEM0aAgT_uDMOjRGXX9P7ftWx59BJ7MRHAu_VgLHdTBCuWwZnerfs_n9EJ4sexHsj7t_5NtXqtPdy0UoocVH_mdiBjo_mtaDaQmXS8uRcBIyMeo9jFg_mmPXshNSBjUZDccgrZEK-PBeDKbIOcP-zz10i3qIsX1t89HwrRqw3w==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFS8mlxpZK-J38ZVBdW15b2D7dK5LG1KUGyAF2zS5BVyfxlD9mDz_R68kHPnVi8kCm_T4CwPMzOSFJxMrNO8qTxbdLwceaiVVYguOiLU6JtK4FyfimGI_IXEdhLEFx_gh7Vu9XRDoAVmFYDw4MI82xFIQ==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGf4vlPMLYhhVp3I1JzZZ6ORMtdd8RBQP_h3-Su3FdVYLdsivbYxhv5a55V3PSsw6woMzAr_xTIWAVbXWypFrRH4DePsFQkzw-_XNo-D4UD97S6g3xHANki5VoWCUaZChaaapFYcQrl
+  title: biblia.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4wQ3Wm8tQag0Y2GBEIae111ahWJ6mDPQtIwGWHT8_4q3RV2TimITo6Mli9iIAi_jvc-N42AxNgLNF_nBszxeMTqKxU2t5JglCtnDSZy6sqNzvsNB0mtNPstlUsoWRBJ8hAr4PERKLRZV1jBPlaHLfBXDItg==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsCymdRfQQVHjk7Kfg78rylcAMsqdTONwb-4vv5lzPrhtmTnnqtNXBNGDu7_h67feZ2nrKLqrwnrjr250GnAKxDgDwWt6yOTOilA0ANkDX99AAcyKRxJ6iBXs4jV-9jaOcr4RLdPAb
+  title: fossilizedcustoms.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyTl21T92KMIpOZ23me_1CYEeQieDDX4Gq3l-qfZh_YN0n7ipQD68miLmOI-ZAJbrdGIsYfK1_ie8i75uHmLBoTNPTCZUFdRSDxTvTWqlv6rwfCGnD76orZegwyffmQZn_5d6Wb67nhlbLomxBXEvJuFzg0yqf1M_QYaPaHvjH2zxLbQ==
+  title: biblegateway.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE322DT94WHbWLCEy31Zd-Fh40Go06yEm5I2Biw6tGx7DYOBOk_k-ZGwL-lxDLVbSrW21JWsZXAnOuf0fMHkbkuFloei-TfpwFDvJ0_tM5a0Vlzy5GzjROB4RPSDp_7dg==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0k5CrrQapxT-szT4hLGuQIzywji8TBr1xf40RwJrM1T1ASr6gZ2V5kNeFo8KZeHLz7X7FdYKRDBFKyA_LUkEap68aYIiIqbfNiVtJcWCiwZU7MrJJGR8oWkwbGY0j_OwlQFvFpxNciM26Hs145Lrkjoyk-Q==
+  title: blueletterbible.org
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFaub4JosC3exFFV4KJq-1Ylubzcnu-NfBhh3U7rdh9DooO11o5YxMr1dLouz3Q_Vx1p_t3ssIv0-jPZJM4ZEG15jiGkrNjpsIsfCjtKfWMKaGp5J9W1v8jSx-bGSQJCPybxkzyVb5JKS-Kn5yZEaXqUVVXQUQj2k=
+  title: truthmagazine.com
+search_queries:
+- ''
+- Greek word euangelion transliteration
+- etymology of gospel godspell
+- Romans 1:16 snippet KJV
+- Isaiah 52:7 snippet KJV
+- hebrew word for gospel besorah vs basar
+review_score: 95
+review_attempts: 2
+review_status: yellow
+review_notes: Change the rarity icon shape from a diamond to a hexagon to align with
+  the RARE specification.

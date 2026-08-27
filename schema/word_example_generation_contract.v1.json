@@ -1,0 +1,52 @@
+{
+  "contract_version": 1,
+  "requirement": "REQ-PPAUG-029",
+  "canonical_series": "series/2026-Q1",
+  "output_series": "2026 Q3 — REQ-PPAUG-029 EXAMPLE SET",
+  "variants": {
+    "noun": ["001-grace", "007-earth", "008-stone"],
+    "verb": ["002-build", "004-scatter", "005-create"],
+    "adjective": ["003-mighty", "016-good", "023-naked"],
+    "name": ["018-seth", "022-shem", "025-noah"],
+    "title": ["019-keeper", "021-brother", "030-spirit"]
+  },
+  "rarities": ["common", "uncommon", "rare", "glorious"],
+  "source_projection_sha256": {
+    "001-grace": "df80b89898ef7273693fde5162c14e6bc4682c21b27fb56c1707cdc9b0f0f897",
+    "007-earth": "1ec8964fd59cda939450892d9042d8089cba389cf26b9cbbdb3857d59afa43fb",
+    "008-stone": "dea1950b0af5f1a68b7a39247baa763be7183c9fe6df55a7b625cc284a6938c1",
+    "002-build": "1ac3b5ca67a796297eaa14038a53d75f33fcbb3521d8046b91e921c3061ba109",
+    "004-scatter": "e4946e4eff1cd99388f53ecf19cf75b87792b12f38ff5f9da68d39b3ab9e4232",
+    "005-create": "af15f9c4d058b98843722c8c9e48cc2d594f0c293bc2bdd6c360a4109134ae71",
+    "003-mighty": "5f1e50e4480f6c655fed5f063ea9f1803de7f114db9fd802710ed04c1dd05325",
+    "016-good": "0e41cf3a40c32009a1baeb7d02b45200ecbe92d9979af0a855cb128bc4b189f2",
+    "023-naked": "5ec4fda2bcce42a680555dc554ea97bdfba9bc4370bd2961f37acf89f1acae42",
+    "018-seth": "c89e217672f94513e4b5ea24386049fb51299318d85501743fac091b111879fe",
+    "022-shem": "f6633a6b5a006540ae23a63bfafd9e971283cdd5bfebff90d94ab2c984c6334f",
+    "025-noah": "6136514522d8153be42e25564f1c5c03b5221196dbb1cbe5cb1f15a082f9eb7e",
+    "019-keeper": "0a6ead22f8054f3a4a48c533bba219b035687c090a9ca45cfd3376dbcf9a0764",
+    "021-brother": "aaeb748ebbad9cf7d596bca0b8b8a2c7c894b949c809d39a13fb0c17c2c57178",
+    "030-spirit": "3b0e6dd58069ff11d7010e534aef6e4f1b357fce2993bc7840e3c8fba3b3ad1d"
+  },
+  "authoritative_fields": [
+    "WORD", "GLOSS", "CARD_TYPE", "ART_PROMPT", "ABILITY_TEXT",
+    "STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY", "OT_VERSE_LINE",
+    "NT_VERSE_LINE", "HEBREW", "HEBREW_TRANSLIT", "GREEK",
+    "GREEK_TRANSLIT", "OT_REFS", "NT_REFS", "TRIVIA_BULLETS"
+  ],
+  "mutable_fields": ["NUMBER", "SERIES", "RARITY_TEXT", "RARITY_ICON"],
+  "source_defects_excluded": [
+    {
+      "card": "027-hunter",
+      "field": "GREEK",
+      "value": "θήρα",
+      "reason": "The repository value denotes a hunt/catch or prey, not the agent noun 'hunter'; it must not seed an example until the canonical card is separately corrected."
+    },
+    {
+      "card": "013-remember",
+      "field": "GREEK",
+      "value": "μνάομαι",
+      "reason": "The repository form is not the New Testament remember lexeme represented by the card sense; it must not seed an example until separately corrected."
+    }
+  ]
+}

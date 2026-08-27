@@ -1,0 +1,159 @@
+name: Daily Hypertext
+
+env:
+  GEMINI_IMAGE_MODEL: gemini-3.1-flash-image
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Number of cards to generate (1-3)"
+        required: false
+        default: "3"
+        type: choice
+        options:
+          - "1"
+          - "2"
+          - "3"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-card:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant: [1, 2, 3]
+      fail-fast: false
+      max-parallel: 3
+    steps:
+      - name: Check if variant should run
+        id: check
+        run: |
+          COUNT="${{ inputs.count || '3' }}"
+          VARIANT="${{ matrix.variant }}"
+          if [[ "$VARIANT" -gt "$COUNT" ]]; then
+            echo "Skipping variant $VARIANT (count=$COUNT)"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Running variant $VARIANT (count=$COUNT)"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.check.outputs.skip != 'true'
+
+      - name: Setup Python
+        if: steps.check.outputs.skip != 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        if: steps.check.outputs.skip != 'true'
+        run: pip install -e package/
+
+      - name: Run plan phase (variant ${{ matrix.variant }})
+        if: steps.check.outputs.skip != 'true'
+        id: run-plan
+        run: |
+          python -m hypertext.pipeline.daily --phase plan --auto --variant ${{ matrix.variant }}
+        env:
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+
+      - name: Verify card was created
+        if: steps.check.outputs.skip != 'true'
+        run: |
+          CARD_DIR="${{ steps.run-plan.outputs.card_dir }}"
+          if [[ -z "${CARD_DIR}" ]]; then
+            echo "ERROR: No card_dir output from plan phase"
+            exit 1
+          fi
+          if [[ ! -f "${CARD_DIR}/card.json" ]]; then
+            echo "ERROR: ${CARD_DIR}/card.json not found"
+            exit 1
+          fi
+          echo "Card created: ${CARD_DIR}"
+          ls -la "${CARD_DIR}"
+
+      - name: Generate image
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GEMINI_TEXT_API_KEY: ${{ secrets.GEMINI_TEXT_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI_TEXT_API_KEY }}
+          HYPERTEXT_SIGNING_KEY: ${{ secrets.HYPERTEXT_SIGNING_KEY }}
+        run: |
+          python -m hypertext.pipeline.daily --phase imagegen
+
+      - name: Verify image was generated
+        if: steps.check.outputs.skip != 'true'
+        env:
+          CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
+        run: |
+          if [[ ! -f "${CARD_DIR}/outputs/card_1024x1536.png" ]]; then
+            echo "ERROR: Image not found at ${CARD_DIR}/outputs/card_1024x1536.png"
+            ls -la "${CARD_DIR}/outputs" || echo "outputs directory does not exist"
+            exit 1
+          fi
+          echo "Image generated successfully"
+
+      - name: Create PR branch, commit, open PR
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
+          CARD_SLUG: ${{ steps.run-plan.outputs.card_slug }}
+          VARIANT: ${{ matrix.variant }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          if [[ -z "${CARD_DIR}" ]]; then
+            echo "No card directory from plan output."
+            exit 1
+          fi
+          BRANCH="daily/${DATE}-${VARIANT:+${VARIANT}-}${CARD_SLUG}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git checkout -b "${BRANCH}"
+          git add "${CARD_DIR}" series/2026-Q1/deck/queue.yml series/2026-Q1/stats.yml series/2026-Q1/cards_index.yml
+          git config user.name "hypertext-bot"
+          git config user.email "hypertext-bot@users.noreply.github.com"
+          git commit -m "Daily Hypertext: ${DATE} (pending review)" || exit 0
+          git push --set-upstream origin "${BRANCH}"
+          gh label create "daily-hypertext" --description "Daily Hypertext card awaiting review" --color "0E8A16" --force || true
+          gh pr create \
+            --title "Daily Hypertext: ${DATE} (#${VARIANT}) - ${CARD_SLUG}" \
+            --body "## Staged daily card (Option ${VARIANT} of 3)
+
+          **Status:** Awaiting review
+
+          ### Commands
+          - Comment \`approve\` or \`lgtm\` to run the review stage
+          - Comment \`upgrade\` to increase rarity and regenerate ability
+          - Comment with revision instructions to run a targeted revise
+
+          The card will be updated in this PR after review/revise completes." \
+            --base main \
+            --head "${BRANCH}" \
+            --label "daily-hypertext"
+
+      - name: Comment rendered PNG on PR
+        if: steps.check.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PR_BOT_TOKEN || github.token }}
+          CARD_DIR: ${{ steps.run-plan.outputs.card_dir }}
+          CARD_SLUG: ${{ steps.run-plan.outputs.card_slug }}
+        run: |
+          set -euo pipefail
+
+          PR_URL="$(gh pr view --json url -q .url)"
+          if [[ -z "${PR_URL}" ]]; then
+            echo "No PR URL found."
+            exit 1
+          fi
+
+          REF="$(git rev-parse --abbrev-ref HEAD)"
+
+          PNG_PATH="${CARD_DIR}/outputs/card_1024x1536.png"
+          RAW_URL="https://github.com/${GITHUB_REPOSITORY}/blob/${REF}/${PNG_PATH}?raw=1"
+
+          gh pr comment "${PR_URL}" --body $'### Rendered card (pre-review)\n\nComment `approve` to run review, or provide revision instructions.\n\n'"![${CARD_SLUG}](${RAW_URL})"

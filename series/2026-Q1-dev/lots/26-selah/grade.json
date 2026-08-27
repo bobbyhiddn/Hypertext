@@ -1,0 +1,10 @@
+{
+  "lot_id": 26,
+  "phase_name": "SELAH",
+  "score": 95,
+  "passed": true,
+  "issues": [
+    "Composition text includes literal square brackets around type names (e.g., '[NOUN]'), which should not be present."
+  ],
+  "attempt": 1
+}

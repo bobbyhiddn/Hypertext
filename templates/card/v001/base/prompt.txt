@@ -1,0 +1,73 @@
+Reproduce and refine the provided card template reference image.
+
+INSTRUCTIONS:
+Use the reference template [1] as your primary source. Generate a refined version that:
+- Preserves the EXACT layout, frame, and geometry
+- Maintains the navy/gold color scheme
+- Keeps all panel positions and text zones in place
+- Ensures clean, crisp rendering of all elements
+
+TARGET TEMPLATE SPECIFICATIONS:
+- Orientation: Vertical (2:3 aspect ratio, 1024x1536 pixels)
+- Style: Premium trading card layout with antique parchment background
+- Frame: Navy and gold collector frame with rounded corners
+
+LAYOUT TO PRESERVE:
+
+1. HEADER AREA
+   - Top-Left: Card number "#XXX" followed by TYPE PILL (navy rounded rectangle with white text showing type name like "NOUN")
+   - Type Circle: Small navy circle with gold border INSIDE the type pill, containing a WHITE type icon
+   - Top-Right: RARITY AREA with two elements side by side:
+     * Rarity TEXT in white serif on navy background (e.g., "Rarity")
+     * Rarity DIAMOND shape next to the text - a SOLID WHITE diamond (◆) with navy outline
+   - Center: Card title in large bold black serif, subtitle below in italics
+
+2. ART PANEL
+   - ~44% of card height
+   - Gold inner frame border
+   - Art placeholder area
+
+3. STATS ROW
+   - Three stat categories: LORE, CONTEXT, COMPLEXITY
+   - Each shows 5 circular pips
+   - ALL pips should be EMPTY/HOLLOW navy circle outlines (not filled)
+   - Navy blue circle outlines on parchment background
+
+4. TEXT PANELS
+   - Ability panel with navy header bar
+   - OT Verse panel with centered header
+   - NT Verse panel with centered header
+   - Greek/Hebrew reference strip
+   - Trivia panel at bottom
+
+5. FOOTER
+   - Navy blue strip at very bottom
+   - Left Text: "Series: 20XX QX - Set" in grey/faded white text (e.g., "Series: 2026 Q1 - Babel")
+
+COLOR PALETTE:
+- Navy Blue: approximately #102030
+- Gold/Tan: approximately #C0A060
+- Parchment background: Beige/Tan textured
+- Text: Near-black for body, white/cream for headers
+
+REFINEMENT GOALS:
+- Sharper text rendering
+- Cleaner frame edges
+- Consistent typography throughout
+- Proper stat pip rendering (empty navy circles)
+- Clear panel separation
+
+CRITICAL RULES:
+- NEVER print brackets [ ] anywhere on the card
+- TYPE AREA (top-left):
+  * Type pill: Navy rounded rectangle with WHITE text showing "TYPE" placeholder
+  * Type circle: Navy circle with gold border, empty (no icon) for base template
+- RARITY AREA (top-right):
+  * Rarity text: WHITE text on navy background showing "Rarity" placeholder
+  * Rarity diamond: SOLID WHITE diamond (◆) next to the text - white fill with navy outline
+- Stat pips: ALL pips MUST be EMPTY/HOLLOW navy-blue circle OUTLINES ONLY
+  Each stat row should show 5 unfilled circular outlines (like ○ ○ ○ ○ ○, not ● ● ● ○ ○)
+  The pips should have a navy stroke/border but NO fill - the parchment background should show through
+- Hebrew text must render right-to-left
+- Corners should be rounded (not chamfered)
+- Output ONLY the card - no surrounding text or watermarks

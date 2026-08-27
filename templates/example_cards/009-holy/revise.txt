@@ -1,0 +1,52 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: HOLY
+# Card_Gloss: Set apart; sacred; distinct from the common or profane
+# Card_Type: ADJECTIVE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top 2 cards of the Tower. Add 1 to your hand and place the other on the bottom of the Tower.
+# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
+# Card_Art_Prompt: A single, brilliant white ember resting on a rough, dark stone surface, illuminating the surrounding shadows with sharp, distinct light; high contrast, ethereal and pure atmosphere
+# Card_OT_Verse: Isaiah 6:3 — Holy, holy, holy is the LORD of hosts; the whole earth is full of his glory!
+# Card_NT_Verse: 1 Peter 1:16 — For it is written: “Be holy, because I am holy.”
+# Card_Hebrew: קָדוֹשׁ (qadosh)
+# Card_Greek: ἅγιος (hagios)
+# Card_Trivia_1: The Hebrew root 'qdš' implies being 'cut off' or 'separated' from the common.
+# Card_Trivia_2: God's holiness is the only attribute repeated three times ('Holy, holy, holy') in Scripture to denote infinite perfection.
+# Card_Trivia_3: In the Temple, the 'Holy of Holies' was the most sacred space, accessible only once a year.
+# Card_Trivia_4: New Testament believers are frequently called 'saints' (hagioi), which literally means 'holy ones'.

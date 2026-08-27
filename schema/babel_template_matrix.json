@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "series": "2026-Q1",
+  "theme": "Babel",
+  "canonical_card_source": "series/2026-Q1/cards_index.yml",
+  "grammar_sources": [
+    "schema/hypertext_card.schema.json",
+    "docs/rules.md",
+    "docs/prompt-recipe.md"
+  ],
+  "word_types": ["NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"],
+  "rarity_tiers": ["COMMON", "UNCOMMON", "RARE", "GLORIOUS"],
+  "layers": {
+    "base": "templates/card/v001/base/template_1024x1536.png",
+    "type_structure": {
+      "NOUN": "templates/card/v001/noun/template_1024x1536.png",
+      "VERB": "templates/card/v001/verb/template_1024x1536.png",
+      "ADJECTIVE": "templates/card/v001/adjective/template_1024x1536.png",
+      "NAME": "templates/card/v001/name/template_1024x1536.png",
+      "TITLE": "templates/card/v001/title/template_1024x1536.png"
+    },
+    "rarity_treatment": {
+      "COMMON": "templates/card/v001/common/template_1024x1536.png",
+      "UNCOMMON": "templates/card/v001/uncommon/template_1024x1536.png",
+      "RARE": "templates/card/v001/rare/template_1024x1536.png",
+      "GLORIOUS": "templates/card/v001/glorious/template_1024x1536.png"
+    },
+    "composed_output_pattern": "templates/card/v001/composed/{type-lower}/{rarity-lower}/template_1024x1536.png"
+  },
+  "valid_combinations": [
+    {"type": "NOUN", "rarity": "COMMON", "card_count": 5},
+    {"type": "NOUN", "rarity": "UNCOMMON", "card_count": 1},
+    {"type": "NOUN", "rarity": "RARE", "card_count": 1},
+    {"type": "NOUN", "rarity": "GLORIOUS", "card_count": 1},
+    {"type": "VERB", "rarity": "COMMON", "card_count": 2},
+    {"type": "VERB", "rarity": "UNCOMMON", "card_count": 5},
+    {"type": "VERB", "rarity": "RARE", "card_count": 3},
+    {"type": "VERB", "rarity": "GLORIOUS", "card_count": 1},
+    {"type": "ADJECTIVE", "rarity": "COMMON", "card_count": 1},
+    {"type": "ADJECTIVE", "rarity": "UNCOMMON", "card_count": 1},
+    {"type": "ADJECTIVE", "rarity": "RARE", "card_count": 1},
+    {"type": "ADJECTIVE", "rarity": "GLORIOUS", "card_count": 1},
+    {"type": "NAME", "rarity": "COMMON", "card_count": 1},
+    {"type": "NAME", "rarity": "UNCOMMON", "card_count": 1},
+    {"type": "NAME", "rarity": "RARE", "card_count": 1},
+    {"type": "NAME", "rarity": "GLORIOUS", "card_count": 1},
+    {"type": "TITLE", "rarity": "COMMON", "card_count": 1},
+    {"type": "TITLE", "rarity": "UNCOMMON", "card_count": 1},
+    {"type": "TITLE", "rarity": "RARE", "card_count": 1},
+    {"type": "TITLE", "rarity": "GLORIOUS", "card_count": 1}
+  ],
+  "invalid_combinations": [],
+  "invalid_combination_rule": "Any type outside word_types or rarity outside rarity_tiers is invalid. The 5 x 4 in-vocabulary Cartesian product is fully occupied.",
+  "totals": {
+    "word_types": 5,
+    "rarity_tiers": 4,
+    "valid_combinations": 20,
+    "invalid_combinations": 0,
+    "canonical_cards": 31,
+    "canonical_templates_required": 20,
+    "current_type_layers": 5,
+    "current_rarity_layers": 4,
+    "current_composed_templates": 20
+  }
+}

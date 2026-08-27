@@ -1,0 +1,32 @@
+{
+  "word": "COVENANT",
+  "card_type": "NOUN",
+  "rarity": "COMMON",
+  "score": 100,
+  "passed": true,
+  "attempts": 2,
+  "style_mismatch_count": 0,
+  "corrections": [],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 15,
+      "max": 15,
+      "issues": []
+    }
+  }
+}

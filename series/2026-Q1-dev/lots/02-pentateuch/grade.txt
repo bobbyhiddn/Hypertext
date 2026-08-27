@@ -1,0 +1,10 @@
+LOT CARD GRADE
+==============
+Phase: PENTATEUCH
+Lot ID: 02
+Score: 95/100
+Status: PASS
+Attempt: 1/3
+
+Issues:
+  - Composition labels contain literal square brackets (e.g., '[NOUN]') which should not be present

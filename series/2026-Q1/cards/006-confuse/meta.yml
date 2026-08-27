@@ -1,0 +1,68 @@
+number: '006'
+word: CONFUSE
+gloss: To mix up, bewilder, or throw into disorder; to make indistinct.
+card_type: VERB
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A spiraling stone tower dissolving into swirling mist and chaotic geometric
+  shapes, ancient architecture fragmenting into dust, surreal style
+stats:
+  lore: 5
+  context: 4
+  complexity: 4
+ability: Swap your Lot with target player's Lot.
+ot_verse:
+  ref: Genesis 11:7
+  snippet: Come, let us go down and there confuse their language, that they may not
+    understand one another's speech.
+nt_verse:
+  ref: Acts 2:6
+  snippet: And when this sound occurred, the multitude came together, and were confused,
+    because everyone heard them speak in his own language.
+greek:
+  text: συγχέω
+  translit: sygcheō
+hebrew:
+  text: בָּלַל
+  translit: balal
+ot_refs: Gen 11:7 • Gen 11:9 • Deut 28:20 • Isa 19:3
+nt_refs: Acts 2:6 • Acts 9:22 • Acts 19:32 • 1 Cor 14:33
+trivia:
+- The Hebrew word 'balal' is a deliberate wordplay on the name 'Babel'.
+- The confusion of tongues at Babel is thematically reversed at Pentecost.
+- Balal also technically describes mixing oil into flour for grain offerings.
+wild_id: null
+wild_counts_as: null
+quartet_id: null
+letter: null
+notes: null
+sources:
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMsQzFD3RH1Yg_25e5MuVwDxNr2RHbjlD9NY3UM1NnN3_BOHPRCy2C4lDnEZU2Rau-uBP4Q0FzwSRonndPkVcntKGd4SGs3QO7UXuS57-UbyXARyX82ECNi_8XqFcarxExOOxk_CwF_w==
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElASBAR13MqBOwInySWGLxNGocK2PRIb3ZIWpOTVqBSjrC1gN7Gtx-7lGGGOjjpmdp0rq3z0zGRxXEMaVz2Crz4fin5ElijDCYnYEBbb6lqjk3FaprbaC0pl2FnhelovR4C0wOR3ykjHFa9VzXJGC00FwFRuk1U1aeygfEYDpGNeE-RuyEH22qacuD7scIivlu3noK2XobVkz0gN7rILskFC8K9hxmUHzU
+  title: thebiblemadeplain.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcXVsGLgILZm25pn_VDBSA_PvtGODjmXyS-EG7IRI4dLFQ9J8tiY0kSJLteWxFDE-5idht8Y5VtujCwRazcIMMvUCU234EAr15bLbp4uoLdTHHDq1kveT62zKLSjHQ-6grBe7zqZnO6bYio6SmiYHmgq75EHkkSvVNfm3MO3vy0OgJ1ypOIoDbccJwIabI3HFnU_hpGAQWJPHw5QK_WVJk9xbDYG3rei-1bchk-dU7dGe7A_HqvDhpQZvUk33EtkDaiMF9cQkmkdem5J8=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyunvbyhR8TvDOls5Kzdsbf-FPczA2Ww7aqV0CPseCAB9ab4qOVerNsutDxoq0WTQ16VOJX53N6f8iHgK8WqNLU1Uqr3L_aZyoH3IJkoy-G1QpE7QqksVG_PsqTtQUWeg1EHsWRKsFxdK-JU-QaVTvbOJX1Ozpd0VWUavtQG1DUO0HCy5su44D8W3OS8M5mLG7BTPkMnptWiRqF9M7igfPUjhBT3muA9AUssf9pVuVKF47nor6f88Biagf2iE=
+  title: stackexchange.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjrm7EQVVRBkwLJ8Oyen3D2AiTdRHbdAxrl0VSHhRluhWLv6JdJ9iVDqN_xknYzqgKe-OQm8EKSNI5OL8djlRPf3-4X4vx6ykhMwXKcDCFKBKhDQs_KZyvAD-MYAMJSc7V9f5l83eV
+  title: bibleapps.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDgSHrvoCmNuDirQrNoMuGFh6vkZXvvVfsS7GcEhiUpu2r3Yvtl7dFzBtBEi_mJvh5AOBcJKbcRYwmq3KwQLzv_THew9GS1xzLZGo2jCZgOBAYihdIEDsIYehKzimW
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0srm6Kq3gqunV5XgKiYrqLEilQnrchLSR3fZKJ3I2dQRO2Lh1MF5hvxhisjNTFnOgKI5DWXW6k0bSgRzLK6vom0UdGKYmq5MA4ztqUMH3ygKcOh5otoOLUJ_L9Iy8Or_AjcGMMqXXxVBHAIsGXVE=
+  title: biblehub.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlsJBG4UQzewpcBpP4m_biQv6hzIfV985CWvT5JCZFWVA2wi8NyADBq-6S9kxdEfAE4cSd0Lz0xQwtbn9qd0ngnz6-3E7aLo1iXjpXqdIfQe9VPCXrWleqbCaDif1hbVFDATBvybHvwL6aGyd5ow==
+  title: billmounce.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnr8j8EXICVjIkqkYP55_odjRY2kFrpb2I9VJuwlp-VKl3zGniLBCTWGT0AF2gM5jcicKneCyraN2cQPm43pDz7V4MrxDpTc8yElJeLsrMcevDzD-prEzUPMFyr2Wg4MqT5nygqUGHOQ==
+  title: knowing-jesus.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKPj9uTVlM3pcALjYDIdZyvYdc-iMfjh6LJvFfBLrQfcGpUglvOlnwJx1vZb1SG0q1mIFNy6n2DQapxUvtj6mvOyTa9BH5jEHMp4ea3UhTeoNgIUTUNTcqIRwgY5p_gdDzbxJOwZG9gnpP9wJYV9BeDps2jzhOiaWaI2lJoMRjlBEfrMudkH8u3GNSn3QTXtoAybP-DrrX6l7JScl0
+  title: bethmelekh.com
+- uri: https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjGbut9IFF3VgpA5qw_ZU8PYB7BkJD79HyZnYAjBBK3dcyP6vUqYAnrkv7cgIFhHi-bNLy3Ut8xrzAw0xyj_RCdegpjyluuuK36WS9uiaXz67EA6tYSss6pVNLssWvr3CrJAfWJ6EaqlZ6dg==
+  title: trulyrandomverse.com
+search_queries:
+- ''
+- 1 Corinthians 14:33 greek word confusion
+- hebrew word for confuse Genesis 11:7
+- greek word for confuse Acts 2:6
+- confuse bible verse trading card
