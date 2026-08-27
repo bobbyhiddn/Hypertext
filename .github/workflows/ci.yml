@@ -25,4 +25,4 @@ jobs:
           # Cold provenance evidence lives in the evidence-2026-08 release;
           # the provenance tests skip when it is absent. Full verification:
           # gh release download evidence-2026-08 + scripts/fetch_evidence.sh
-          pytest package/tests -q
+          python -m pytest package/tests -q
