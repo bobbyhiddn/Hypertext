@@ -2,14 +2,12 @@
   "word": "HIGH",
   "card_type": "ADJECTIVE",
   "rarity": "COMMON",
-  "content_score": 95,
-  "final_score": 95,
-  "passed": false,
+  "content_score": 100,
+  "final_score": 100,
+  "passed": true,
   "style_matches_reference": true,
   "style_mismatch_reason": "",
-  "corrections": [
-    "Change the card's Word from 'HIGH TITLE' to 'HIGH'."
-  ],
+  "corrections": [],
   "categories": {
     "formatting": {
       "score": 35,
@@ -17,11 +15,9 @@
       "issues": []
     },
     "text_clarity": {
-      "score": 25,
+      "score": 30,
       "max": 30,
-      "issues": [
-        "Word/title does not match expected. Observed 'HIGH TITLE' instead of 'HIGH'."
-      ]
+      "issues": []
     },
     "art_quality": {
       "score": 20,
@@ -37,20 +33,20 @@
   "quality_contract": {
     "dimensions": {
       "composition": 100,
-      "typography": 83,
+      "typography": 100,
       "template_fidelity": 100,
       "metadata": 100,
       "stat_pips": 100,
       "artifact_cleanliness": 100
     },
-    "score": 83,
-    "passed": false,
+    "score": 100,
+    "passed": true,
     "gate": 100
   },
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "696bb5420f0f51a8dfec9caa3640155dc7c61a13857c25bc6d9450b17e1e59b7",
+    "candidate_sha256": "14976085c43a7c000e7797e8e0cbcd9644a543b36437ac397159b6dd2ad7240a",
     "template_sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c",
     "report": "series/2026-Q1/cards/032-high/outputs/visual-gate.json"
   },
