@@ -302,7 +302,7 @@ _BANNED_FRAGMENTS = (
 ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - There is one shared 90-card draw pile, the Tower. Never say "your deck" or "their deck".
 - A player may have cards in hand and face-up Pages. Sheol is the shared face-up discard pile. Resolve holds an activated card and its cost until the ability finishes.
-- A Lot is a 5-, 6-, or 7-card type-composition recipe. The Chapter Lot is shared; each player also has a Page Lot. Recording the Chapter Lot creates a Page (a face-up scored set); Recording any Page Lot sends the cards to Sheol and earns Letters, never a Page.
+- A Lot is a 5-, 6-, or 7-card type-composition recipe. The Chapter Lot is shared; each player also has a Portion Lot. Recording the Chapter Lot creates a Page (a face-up scored set); Recording any Portion Lot sends the cards to Sheol and earns Letters, never a Page.
 - Pages exist only within the current Chapter and are cleared at Chapter reset; abilities that reference Pages see only Pages created this Chapter.
 - Letters pay for Hand Activations (1 Letter each) and are worth 3 points each at Chapter scoring. Wreaths award points for Recording the Chapter Lot first or closing the Chapter.
 - Activating the revealed card costs 0 Letters; activating from hand costs 1 Letter; both pay the printed rarity cost (COMMON 0, UNCOMMON 0, RARE 1, GLORIOUS 2 discards).

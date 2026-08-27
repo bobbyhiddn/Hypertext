@@ -13,13 +13,13 @@ Hypertext is a word-study card game for 2–8 players built on Biblical
 vocabulary. Players write a **Chapter** together: they reveal Word Cards from
 the Tower, activate abilities, and **Record** exact combinations of card types
 that match the **Lots** in play. Recording the shared **Chapter Lot** creates a
-**Page** — a scored, face-up set in front of you. Recording a **Page Lot**
+**Page** — a scored, face-up set in front of you. Recording a **Portion Lot**
 (your own or another player's) earns **Letters** instead, and scores nothing
 directly.
 
 The structure of a game is:
 
-> **Game → Chapters → Chapter Lot + Page Lots → Records → Pages / Sheol →
+> **Game → Chapters → Chapter Lot + Portion Lots → Records → Pages / Sheol →
 > Chapter scoring → full 90-card reset**
 
 The Pages created during play collectively constitute the Chapter. When the
@@ -96,19 +96,19 @@ serve in either role:
 | Role | Lifetime | Function |
 |------|----------|----------|
 | **Chapter Lot** | Current Chapter | One shared recipe everyone may Record against. Recording it creates a **Page** worth the Lot's Chapter Value. |
-| **Page Lot** | Current Chapter | A personal recipe assigned to one player. Anyone may Record against it for **Letters**; no Page is created. |
+| **Portion Lot** | Current Chapter | A personal recipe assigned to one player. Anyone may Record against it for **Letters**; no Page is created. |
 
 ### Lot values by size
 
-| Lot size | Chapter Value (as Chapter Lot) | Owner Letters (own Page Lot) | Visitor Letters (another's Page Lot) |
+| Lot size | Chapter Value (as Chapter Lot) | Owner Letters (own Portion Lot) | Visitor Letters (another's Portion Lot) |
 |----------|--------------------------------|------------------------------|--------------------------------------|
 | 5-card | 8 points | 2 | 1 |
 | 6-card | 10 points | 2 | 1 |
 | 7-card | 14 points | 3 | 2 |
 
 - **Chapter Value** — the points a Page is worth when the Chapter is scored. Printed on the Lot face as `CHAPTER VALUE`.
-- **Owner Letters** — earned by Recording *your own* Page Lot. Printed on the Lot face as `PAGE VALUE`.
-- **Visitor Letters** — earned by Recording *another player's* Page Lot. Fixed by Lot size; not printed.
+- **Owner Letters** — earned by Recording *your own* Portion Lot. Printed on the Lot face as `PAGE VALUE` (the value of the Lot as a Portion).
+- **Visitor Letters** — earned by Recording *another player's* Portion Lot. Fixed by Lot size; not printed.
 
 Because only Chapter Lot Records create Pages, and every player may Record the
 Chapter Lot once per Chapter, the points available in a Chapter are bounded by
@@ -162,9 +162,9 @@ playtesting.
 | **Tower** | Current Chapter | Face-down draw pile |
 | **Hand** | Current Chapter | Private Word Cards held by a player |
 | **Resolve** | One activation | Temporary area holding the activated card and the cards paid as its cost until the ability finishes |
-| **Sheol** | Current Chapter | Shared face-up discard pile: activated cards, activation costs, cards Recorded to any Page Lot, End discards, ability discards, and the seeded Chapter-start card |
+| **Sheol** | Current Chapter | Shared face-up discard pile: activated cards, activation costs, cards Recorded to any Portion Lot, End discards, ability discards, and the seeded Chapter-start card |
 | **Chapter Lot** | Current Chapter | Shared recipe available to every player; Recording it creates a Page |
-| **Page Lot** | Current Chapter | Personal recipe assigned to one player, visible to all; Recording it earns Letters |
+| **Portion Lot** | Current Chapter | Personal recipe assigned to one player, visible to all; Recording it earns Letters |
 | **Page** | Current Chapter | Scored face-up set created by Recording the Chapter Lot |
 | **Used Chapters** | Whole game | Completed Chapter Lots; they do not repeat during the game |
 | **Letters** | Current Chapter | Open resource tokens; spent on activations or retained for score |
@@ -186,9 +186,9 @@ playtesting.
 1. Gather all 90 Word Cards and shuffle them to form the Tower.
 2. Move the top card of the Tower face-up to Sheol. This seeded card cannot be Redeemed.
 3. Reveal one Chapter Lot from the Lot deck that has not been used this game.
-4. Deal two Lot Cards face-down to each player as Page Lot candidates.
-5. Each player chooses one candidate as their Page Lot, before receiving Word Cards.
-6. Reveal the chosen Page Lots face-up in front of their owners. Return the unchosen candidates to the Lot deck.
+4. Deal two Lot Cards face-down to each player as Portion Lot candidates.
+5. Each player chooses one candidate as their Portion Lot, before receiving Word Cards.
+6. Reveal the chosen Portion Lots face-up in front of their owners. Return the unchosen candidates to the Lot deck.
 7. Deal seven Word Cards to each player.
 8. Reset Letters, Wreaths, Record markers, Redeem markers, and temporary effects.
 9. Establish the starting player. The starting player rotates clockwise after each Chapter.
@@ -263,8 +263,8 @@ Record several different Lots in one Record stage.
 | You Record… | Matching cards go to | You gain | Page created? |
 |-------------|----------------------|----------|---------------|
 | **The Chapter Lot** | Your Pages, face-up | A Page worth the Lot's Chapter Value at Chapter scoring | **Yes** |
-| **Your own Page Lot** | Sheol | Owner Letters | No |
-| **Another player's Page Lot** | Sheol | Visitor Letters | No |
+| **Your own Portion Lot** | Sheol | Owner Letters | No |
+| **Another player's Portion Lot** | Sheol | Visitor Letters | No |
 
 Procedure:
 
@@ -344,7 +344,7 @@ Each player's Chapter score is:
 > **− 1 per card remaining in hand**
 
 - Spent Letters score nothing.
-- Records to Page Lots do not score directly; their value is the Letters they earned.
+- Records to Portion Lots do not score directly; their value is the Letters they earned.
 - Negative Chapter scores are permitted.
 - Score exactly once, then add the result to the running total before reset.
 
@@ -355,7 +355,7 @@ Each player's Chapter score is:
 After scoring:
 
 1. Move the completed Chapter Lot to Used Chapters. It does not repeat this game.
-2. Return all Page Lots to the Lot deck.
+2. Return all Portion Lots to the Lot deck.
 3. Gather all 90 Word Cards from every hand, the Tower, Sheol, Resolve, and every player's Pages.
 4. Confirm all 90 cards are present.
 5. Shuffle them into a fresh Tower.
@@ -363,7 +363,7 @@ After scoring:
 7. Reset Letters, Wreaths, Record markers, and Redeem markers.
 8. End all temporary effects.
 9. Rotate the starting player clockwise.
-10. Begin the next Chapter Setup: reveal the next unused Chapter Lot and deal new Page Lot candidates.
+10. Begin the next Chapter Setup: reveal the next unused Chapter Lot and deal new Portion Lot candidates.
 
 Because Pages exist only within a Chapter, any Page-dependent ability
 accumulates during the current Chapter only and resets automatically.
@@ -411,7 +411,7 @@ If players are tied for the highest score after the final Chapter:
 
 1. Only the tied players play a tiebreaker Chapter.
 2. Shuffle the 90 Word Cards, seed Sheol, and deal seven cards to each tied player.
-3. Reveal a new unused Chapter Lot. No Page Lots are dealt.
+3. Reveal a new unused Chapter Lot. No Portion Lots are dealt.
 4. Play proceeds normally (Reveal, Activate, Record, End).
 5. The first player to Record the Chapter Lot wins the game. Nothing else is scored.
 
@@ -425,7 +425,7 @@ If players are tied for the highest score after the final Chapter:
 |-------|---------|
 | **1. Reveal** | Reveal top card: **Draw-Activate** it (0 Letters + printed cost) *or* **Pass** (keep it and draw 1 more) |
 | **2. Activate** | Hand Activations: 1 Letter + printed cost each, repeatable |
-| **3. Record** | Chapter Lot → Page (Chapter Value points) · Own Page Lot → Sheol, Owner Letters · Other's Page Lot → Sheol, Visitor Letters |
+| **3. Record** | Chapter Lot → Page (Chapter Value points) · Own Portion Lot → Sheol, Owner Letters · Other's Portion Lot → Sheol, Visitor Letters |
 | **4. End** | Discard 1 (Redeem window) · empty hand closes the Chapter |
 
 ### Values
@@ -457,7 +457,7 @@ matrix are locked.
 | **Chapter** | One complete round of play, from a fresh Tower to full reset; the Pages created during it constitute the Chapter |
 | **Chapter Lot** | The shared Lot for the current Chapter; Recording it creates a Page |
 | **Chapter Value** | The points a Page scores (8 / 10 / 14 by Lot size) |
-| **Page Lot** | A player's personal Lot for the current Chapter; Recording it earns Owner Letters (owner) or Visitor Letters (anyone else) and scores nothing directly |
+| **Portion Lot** | The Lot that falls to one player for the current Chapter (their portion); Recording it earns Owner Letters (owner) or Visitor Letters (anyone else) and scores nothing directly |
 | **Page** | A face-up set created by Recording the Chapter Lot; worth its Chapter Value at Chapter scoring; cleared at reset |
 | **Lot** | A 5-, 6-, or 7-card recipe of card types |
 | **Record** | Play an exact match for a Lot from your hand |
@@ -472,7 +472,7 @@ matrix are locked.
 | **Wreath** | +2-point bonus token: Record Wreath (first to Record the Chapter Lot) or Empty Wreath (closing the Chapter) |
 | **Redeem** | Take another player's End discard into hand; owe a discard before your next Reveal; once per Chapter; disabled with 2 players |
 | **Grace** | The final Record stage each other player receives after the Chapter closes |
-| **Matthias Rule** | Tiebreaker Chapter with no Page Lots; first to Record the Chapter Lot wins |
+| **Matthias Rule** | Tiebreaker Chapter with no Portion Lots; first to Record the Chapter Lot wins |
 
 ---
 

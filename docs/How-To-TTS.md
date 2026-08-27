@@ -49,7 +49,7 @@ When you spawn Hypertext, you get:
 | Component | Description |
 |-----------|-------------|
 | **Main Deck (90 cards)** | The Tower - main playing cards |
-| **Lot Deck (30 cards)** | Chapter Lot and Page Lot recipes |
+| **Lot Deck (30 cards)** | Chapter Lot and Portion Lot recipes |
 | **24 Letter Tokens** | Blue chips for tracking Letters |
 | **2 Wreath Tokens** | Gold Alpha (Record) and Omega (Empty) wreaths |
 | **Sheol Zone** | Red-tinted discard area |
@@ -151,7 +151,7 @@ Each player color has their own hand zone:
    - Switch seats and repeat for each player
 6. **Deal 2 Lot candidates** to each player:
    - Hover Lot deck, press **2**
-   - Each player keeps one as their Page Lot (face-up in their area) and returns the other to the Lot deck
+   - Each player keeps one as their Portion Lot (face-up in their area) and returns the other to the Lot deck
 7. **Flip 1 Lot** face-up to the center as the Chapter Lot (press F to flip)
    - Also flip the top card of the Tower into Sheol to seed it
 8. **Designate Sheol**: The red zone is for discards
@@ -170,10 +170,10 @@ Each player color has their own hand zone:
 - Activated cards and their costs go to Sheol (drag to red zone)
 
 ### 3. Record
-- Play exact sets matching the Chapter Lot or any Page Lot
+- Play exact sets matching the Chapter Lot or any Portion Lot
 - **Chapter Lot**: Cards go to your Pages (face-up in front of you); the Page scores its Chapter Value at Chapter end
-- **Your Page Lot**: Cards go to Sheol, gain Owner Letters
-- **Another player's Page Lot**: Cards go to Sheol, gain Visitor Letters
+- **Your Portion Lot**: Cards go to Sheol, gain Owner Letters
+- **Another player's Portion Lot**: Cards go to Sheol, gain Visitor Letters
 - See [rules.md](rules.md) for the value table
 
 ### 4. End
@@ -191,7 +191,7 @@ When a player empties their hand:
 3. **Convert Letters**: Each remaining Letter = 3 points; add Wreaths
 4. **Hand penalty**: -1 point per card remaining
 5. **Click NEW CHAPTER** and reset:
-   - Set the finished Chapter Lot aside (it does not repeat); return Page Lots to the Lot deck
+   - Set the finished Chapter Lot aside (it does not repeat); return Portion Lots to the Lot deck
    - Gather all 90 Word Cards (hands, Tower, Sheol, Pages) and shuffle a fresh Tower
    - Deal 2 Lot candidates and 7 cards each
    - Flip the new Chapter Lot and seed Sheol
