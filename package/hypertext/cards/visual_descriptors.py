@@ -123,7 +123,7 @@ def serialize_lot_prompt(*, content: dict, mode: str = "EXPLICIT",
     rule = ("materialize GLOBAL, LOT, and selected SIZE in full" if mode == "EXPLICIT" else
             "inherit GLOBAL -> LOT -> selected SIZE; serialized values below are authoritative")
     return "\n".join((
-        "HYPERTEXT VISUAL DESCRIPTOR v1", f"COMPOSITION={mode}: {rule}.",
+        "HYPERTEXT VISUAL DESCRIPTOR v2", f"COMPOSITION={mode}: {rule}.",
         f"INHERITANCE=HYPERTEXT_GLOBAL -> structures.LOT -> sizes.{size_name}",
         "GLOBAL=" + dump(descriptor["HYPERTEXT_GLOBAL"]),
         "STRUCTURE=" + dump(descriptor["structures"]["LOT"]), "SIZE=" + dump(size),
@@ -142,6 +142,15 @@ def serialize_word_card_prompt(*, card_type: str, rarity: str, content: dict,
     if structure["geometry"]["original_language_split"] != {
             "left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}:
         raise DescriptorError("original-language sides may not be swapped")
+    language_layout = structure["original_language_layout"]
+    if (language_layout["left_header"] != "HEBREW/ARAMAIC"
+            or language_layout["right_header"] != "GREEK"
+            or not language_layout["left_refs"].startswith("OT Refs:")
+            or not language_layout["right_refs"].startswith("NT Refs:")):
+        raise DescriptorError("printed SEE original-language layout is immutable")
+    art_direction = structure["art_direction"]
+    if "what they are known for" not in art_direction["subject_rule"] or "recognizable face" not in art_direction["figure_rule"]:
+        raise DescriptorError("Babel art must avoid recognizable human faces")
     validate_descriptors(descriptor)
     _validate_request(card_type, rarity, mode, content)
     global_descriptor = descriptor["HYPERTEXT_GLOBAL"]
@@ -150,13 +159,15 @@ def serialize_word_card_prompt(*, card_type: str, rarity: str, content: dict,
             if mode == "EXPLICIT" else
             "inherit GLOBAL -> WORD_CARD -> selected TYPE + selected RARITY; serialized values below are authoritative")
     return "\n".join((
-        "HYPERTEXT VISUAL DESCRIPTOR v1", f"COMPOSITION={mode}: {rule}.",
+        "HYPERTEXT VISUAL DESCRIPTOR v2", f"COMPOSITION={mode}: {rule}.",
         f"INHERITANCE=HYPERTEXT_GLOBAL -> structures.WORD_CARD -> types.{card_type} + rarities.{rarity}",
         "GLOBAL=" + dump(global_descriptor), "STRUCTURE=" + dump(structure),
         "TYPE=" + dump({"name": card_type, **descriptor["types"][card_type]}),
         "RARITY=" + dump({"name": rarity, **descriptor["rarities"][rarity]}),
         "CONTENT_ORDER=" + dump(structure["content_order"]),
-        "ORIGINAL LANGUAGE PLACEMENT: LEFT is Old Testament HEB/ARAM with HEBREW, HEBREW_TRANSLIT, OT_REFS. RIGHT is New Testament GREEK with GREEK, GREEK_TRANSLIT, NT_REFS.",
+        "ART DIRECTION=" + dump(art_direction),
+        "ORIGINAL LANGUAGE LAYOUT=" + dump(language_layout),
+        "ORIGINAL LANGUAGE PLACEMENT: LEFT header is exactly HEBREW/ARAMAIC and contains HEBREW, bare italic HEBREW_TRANSLIT, then 'OT Refs:' plus OT_REFS. RIGHT header is exactly GREEK and contains GREEK, bare italic GREEK_TRANSLIT, then 'NT Refs:' plus NT_REFS.",
         "REPEAT PLACEMENT: never swap languages; Old Testament is LEFT; New Testament is RIGHT.",
         "EXACT_CANONICAL_CONTENT_JSON=" + dump(content),
         "Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.",

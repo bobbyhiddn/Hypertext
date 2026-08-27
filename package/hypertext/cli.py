@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Hypertext CLI - Biblical word-study trading card game toolkit."""
 
+import json
+
 import click
 
 
@@ -49,6 +51,55 @@ def review(card_dir, threshold, describe_only):
     click.echo(f"Reviewing card: {card_dir}")
     # TODO: Wire up to review logic
     raise NotImplementedError("review command not yet implemented")
+
+
+@cli.command("visual-gate")
+@click.option(
+    "--card-dir",
+    required=True,
+    type=click.Path(path_type=str),
+    help="Card directory containing card.json and outputs/card_1024x1536.png",
+)
+@click.option(
+    "--candidate",
+    type=click.Path(path_type=str),
+    help="Candidate PNG override (defaults to the card output)",
+)
+@click.option(
+    "--report",
+    "report_path",
+    type=click.Path(path_type=str),
+    help="JSON report path (defaults to card-dir/outputs/visual-gate.json)",
+)
+def visual_gate(card_dir, candidate, report_path):
+    """Reject stat pips that differ from the exact canonical template family."""
+    from pathlib import Path
+
+    from hypertext.cards.stat_pip_gate import (
+        StatPipGateError,
+        defect_summary,
+        inspect_card_stat_pips,
+    )
+
+    directory = Path(card_dir)
+    destination = Path(report_path) if report_path else directory / "outputs" / "visual-gate.json"
+    try:
+        result = inspect_card_stat_pips(
+            directory,
+            candidate_path=Path(candidate) if candidate else None,
+            report_path=destination,
+        )
+    except StatPipGateError as exc:
+        raise click.ClickException(str(exc)) from exc
+
+    click.echo(json.dumps({
+        "contract": result["contract"],
+        "passed": result["passed"],
+        "report": str(destination),
+        "defects": result["defects"],
+    }, sort_keys=True))
+    if not result["passed"]:
+        raise click.ClickException("stat pip visual gate rejected candidate: " + defect_summary(result))
 
 
 @cli.command()

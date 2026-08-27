@@ -1,0 +1,30 @@
+{
+  "semantic_source": "operator-accepted printed SEE benchmark",
+  "visual_descriptor_version": 2,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "full_face_generation_only": true,
+  "references": [
+    {
+      "role": "geometry",
+      "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
+      "sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a"
+    },
+    {
+      "role": "clean original Babel SEE art/style",
+      "path": "series/2026-Q1-dev/cards/009-see/outputs/card_1024x1536.png",
+      "sha256": "32025bbe9ca509cda9d54f0147fe8df90000834ada934380f1fd64744cf466bb"
+    },
+    {
+      "role": "Babel typography/style",
+      "path": "templates/example_cards/005-redeem/outputs/card_1024x1536.png",
+      "sha256": "cde07a9c28dca684fa3bac1b961d2cccde3b15172c1a3759fd3133cdbeb668a0"
+    }
+  ],
+  "operator_reference_photo_sha256": "471da5d6a8ab8a599702f95aae18413266acab7890b990285fe7b8d95d0e2b31"
+}

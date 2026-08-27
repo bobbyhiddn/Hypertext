@@ -1,0 +1,33 @@
+{
+  "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/008-stone/card.json",
+  "references": [
+    {
+      "role": "authoritative type/rarity geometry",
+      "path": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+      "sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c"
+    },
+    {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
+      "path": "templates/example_cards/001-grace/outputs/card_1024x1536.png",
+      "sha256": "e4af9c36ac164b960c088ce0f4ec1b90947e585045279cd7006f867a9a105518"
+    }
+  ],
+  "target_type": "noun",
+  "target_rarity": "common"
+}

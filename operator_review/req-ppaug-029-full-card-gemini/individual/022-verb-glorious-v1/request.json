@@ -1,0 +1,33 @@
+{
+  "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/002-build/card.json",
+  "references": [
+    {
+      "role": "authoritative type/rarity geometry",
+      "path": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+      "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b"
+    },
+    {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
+      "path": "templates/example_cards/008-bless/outputs/card_1024x1536.png",
+      "sha256": "2bdc9170cd2754cb0a9ea7557d49b0931aa64a749e7785b6b53a6fd42423e837"
+    }
+  ],
+  "target_type": "verb",
+  "target_rarity": "glorious"
+}

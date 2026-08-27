@@ -1,0 +1,54 @@
+{
+  "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "render_contract_version": 4,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles/fix_mode",
+  "fix_mode": true,
+  "full_face_generation_only": true,
+  "visible_pixel_composition": false,
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "canonical_source": "series/2026-Q1/cards/001-grace/card.json",
+  "corrections": [
+    "Remove the literal vertical bar between #007 and NOUN. The header must show #007 followed by the NOUN badge with no typed separator; preserve every other corrected element exactly."
+  ],
+  "source_output_sha256": "5a2a022f1899350ede91952e1f89c5d4c850a5b21b6d9a85f61f69d9ac911739",
+  "locked_visual_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
+  "references": [
+    {
+      "role": "rejected full face corrected by native Gemini fix mode",
+      "path": "operator_review/req-ppaug-029-full-card-gemini/individual/007-noun-rare-v1/outputs/superseded-noncanonical-20260824T024746Z/card_1024x1536.png",
+      "sha256": "5a2a022f1899350ede91952e1f89c5d4c850a5b21b6d9a85f61f69d9ac911739"
+    },
+    {
+      "role": "authoritative type/rarity geometry",
+      "path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+    },
+    {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
+      "path": "templates/example_cards/003-wisdom/outputs/card_1024x1536.png",
+      "sha256": "93d9009bcef4f41d9bef66af2b9be2dad92b2a28d14cbdcc7704b319f8211a2d"
+    },
+    {
+      "role": "operator-accepted printed SEE Languages-region benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/printed-see-languages-reference.png",
+      "sha256": "03484f5f12b7f4ac6981fd877ebcb039d6183b9ec803e8583b798edc6215eebf"
+    }
+  ],
+  "target_type": "noun",
+  "target_rarity": "rare"
+}

@@ -4,7 +4,7 @@
   "promoted_from": "operator_review/constrained/e50961ad0f4d",
   "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
   "promotion_base_commit": "b22f3d3",
-  "integrity": "Each canonical PNG is a byte-for-byte copy of the named accepted candidate; sha256 is authoritative.",
+  "integrity": "Each canonical PNG reconstructs from the accepted candidate evidence plus the established type-label crop declared by its output record; sha256 is authoritative.",
   "construction_evidence": [
     "operator_review/constrained/e50961ad0f4d/manifest.json",
     "operator_review/name-quill-recovery/manifest.json"
@@ -38,7 +38,8 @@
     "historical_type_witness_through_type_mask",
     "name_only_derived_quill_white_fill",
     "historical_rarity_witness_through_rarity_mask",
-    "name_only_complete_quill_recovery"
+    "name_only_complete_quill_recovery",
+    "historical_type_label_pill"
   ],
   "construction_stages": {
     "frozen_base": {
@@ -53,12 +54,21 @@
     "name_only_derived_quill_white_fill": {
       "applies_to_type": "NAME",
       "operation": "fill_white_through_mask_derived_from_type_witness",
-      "scan_box": [38, 68, 151, 174],
+      "scan_box": [
+        38,
+        68,
+        151,
+        174
+      ],
       "pixel_selection": {
         "minimum_channel_at_least": 185,
         "channel_range_less_than": 45
       },
-      "fill_rgb": [255, 255, 255],
+      "fill_rgb": [
+        255,
+        255,
+        255
+      ],
       "expected_changed_pixels_per_output": 24
     },
     "historical_rarity_witness_through_rarity_mask": {
@@ -71,14 +81,32 @@
       "operation": "nearest_neutral_pixel_projection",
       "records": "operator_review/name-quill-recovery/manifest.json",
       "mask": "operator_review/name-quill-recovery/mask/complete_current_quill_mask.png",
-      "raw_resize": [848, 1264],
+      "raw_resize": [
+        848,
+        1264
+      ],
       "raw_resampling": "LANCZOS",
-      "neutral_source_scan_box": [45, 70, 140, 165],
+      "neutral_source_scan_box": [
+        45,
+        70,
+        140,
+        165
+      ],
       "pixel_selection": {
         "minimum_channel_at_least": 205,
         "neutral_source_channel_range_less_than": 18,
         "replace_channel_range_greater_than": 18
       }
+    },
+    "historical_type_label_pill": {
+      "operation": "paste_type_label_crop",
+      "box": [
+        122,
+        24,
+        274,
+        58
+      ],
+      "source_field": "type_label_source"
     }
   },
   "outputs": [
@@ -88,8 +116,9 @@
       "visible_type_label": "NOUN",
       "visible_rarity_label": "COMMON",
       "path": "templates/card/v001/composed/noun/common/template_1024x1536.png",
-      "sha256": "47e19a03ede6ef65e724d8cf53267de6789fcfd7f74f2f35f9ad72f4ee6cb946",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__common.png"
+      "sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__common.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_witness.png"
     },
     {
       "type": "NOUN",
@@ -97,8 +126,9 @@
       "visible_type_label": "NOUN",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-      "sha256": "98c12eb50bb0ca44ce8dcdfb06745829d2ebec9898b6775390201f497083d977",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__uncommon.png"
+      "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__uncommon.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_witness.png"
     },
     {
       "type": "NOUN",
@@ -106,8 +136,9 @@
       "visible_type_label": "NOUN",
       "visible_rarity_label": "RARE",
       "path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
-      "sha256": "84af23c8f5c782c1f89d649982ac7023f5ab1f456759156f1e501cb5319a8c10",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__rare.png"
+      "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__rare.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_witness.png"
     },
     {
       "type": "NOUN",
@@ -115,8 +146,9 @@
       "visible_type_label": "NOUN",
       "visible_rarity_label": "GLORIOUS",
       "path": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
-      "sha256": "418d915567e6c591891f7b5f5540be69edc871e1c812ae1328ac511e3dcf265a",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__glorious.png"
+      "sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__glorious.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_witness.png"
     },
     {
       "type": "VERB",
@@ -124,8 +156,9 @@
       "visible_type_label": "VERB",
       "visible_rarity_label": "COMMON",
       "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
-      "sha256": "c539263571476a880b37f7dc7eb40a7a7688481a2cf8775c616ec090a4241f94",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__common.png"
+      "sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__common.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_witness.png"
     },
     {
       "type": "VERB",
@@ -133,8 +166,9 @@
       "visible_type_label": "VERB",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
-      "sha256": "a0c3657adbf57acad01a4a01b5f8c06aaa1effb39c4db5598d37aaee372e3dbd",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__uncommon.png"
+      "sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__uncommon.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_witness.png"
     },
     {
       "type": "VERB",
@@ -142,8 +176,9 @@
       "visible_type_label": "VERB",
       "visible_rarity_label": "RARE",
       "path": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
-      "sha256": "17c57326712e3d88e2f4286da08722497a74e7c613dea238c8f548ea52c405c6",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__rare.png"
+      "sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__rare.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_witness.png"
     },
     {
       "type": "VERB",
@@ -151,8 +186,9 @@
       "visible_type_label": "VERB",
       "visible_rarity_label": "GLORIOUS",
       "path": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
-      "sha256": "a9fff5a92b705b1b8addc14dac76801b064efc5e053ae7b32e53cb86d567c48a",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__glorious.png"
+      "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__glorious.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_witness.png"
     },
     {
       "type": "ADJECTIVE",
@@ -160,8 +196,9 @@
       "visible_type_label": "ADJECTIVE",
       "visible_rarity_label": "COMMON",
       "path": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
-      "sha256": "505455bb133b785d0ffc5d59f778a497692099d51d30956c40ce39a3b10211b7",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__common.png"
+      "sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__common.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_witness.png"
     },
     {
       "type": "ADJECTIVE",
@@ -169,8 +206,9 @@
       "visible_type_label": "ADJECTIVE",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-      "sha256": "f8c962cfaad3c8829e40b218aaf82fcc721cdee7dace261e5e3ff73bad1fef45",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__uncommon.png"
+      "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__uncommon.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_witness.png"
     },
     {
       "type": "ADJECTIVE",
@@ -178,8 +216,9 @@
       "visible_type_label": "ADJECTIVE",
       "visible_rarity_label": "RARE",
       "path": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
-      "sha256": "a847c9d7cfb8f1b6943e2e908af6bca06069a58b4baabcb80b1e8cecec9d8f77",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__rare.png"
+      "sha256": "f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__rare.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_witness.png"
     },
     {
       "type": "ADJECTIVE",
@@ -187,8 +226,9 @@
       "visible_type_label": "ADJECTIVE",
       "visible_rarity_label": "GLORIOUS",
       "path": "templates/card/v001/composed/adjective/glorious/template_1024x1536.png",
-      "sha256": "5edb89b457cb9dfbff37af74e78b693c6fee4581c1696e6d1e33eb3ac2b70218",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__glorious.png"
+      "sha256": "b4775d0b0fb015a6fb2c9d80135660cfb2904ebb283e43a8a7bf9c733752648a",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__glorious.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_witness.png"
     },
     {
       "type": "NAME",
@@ -196,8 +236,9 @@
       "visible_type_label": "NAME",
       "visible_rarity_label": "COMMON",
       "path": "templates/card/v001/composed/name/common/template_1024x1536.png",
-      "sha256": "6a587654d34231de765525111e56acdc1ad1295625e1d69d57195a38b09078e6",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__common.png"
+      "sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__common.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_witness.png"
     },
     {
       "type": "NAME",
@@ -205,8 +246,9 @@
       "visible_type_label": "NAME",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
-      "sha256": "767426d33e1ac0391ab512637caeddb461efc16d7804539dd967d50d556d3a7c",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__uncommon.png"
+      "sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__uncommon.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_witness.png"
     },
     {
       "type": "NAME",
@@ -214,8 +256,9 @@
       "visible_type_label": "NAME",
       "visible_rarity_label": "RARE",
       "path": "templates/card/v001/composed/name/rare/template_1024x1536.png",
-      "sha256": "d62eecbaccd216f86f82d316c17def0227bfa185cbcd305e62fa630f737ba35a",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__rare.png"
+      "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__rare.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_witness.png"
     },
     {
       "type": "NAME",
@@ -223,8 +266,9 @@
       "visible_type_label": "NAME",
       "visible_rarity_label": "GLORIOUS",
       "path": "templates/card/v001/composed/name/glorious/template_1024x1536.png",
-      "sha256": "d940257b325b71ce5bc444969717f2bc984400acdb5a31c8f1fa60cde480d14d",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__glorious.png"
+      "sha256": "717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb",
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__glorious.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_witness.png"
     },
     {
       "type": "TITLE",
@@ -233,7 +277,8 @@
       "visible_rarity_label": "COMMON",
       "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
       "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__common.png"
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__common.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
     },
     {
       "type": "TITLE",
@@ -242,7 +287,8 @@
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
       "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__uncommon.png"
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__uncommon.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
     },
     {
       "type": "TITLE",
@@ -251,7 +297,8 @@
       "visible_rarity_label": "RARE",
       "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
       "sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__rare.png"
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__rare.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
     },
     {
       "type": "TITLE",
@@ -260,7 +307,15 @@
       "visible_rarity_label": "GLORIOUS",
       "path": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
       "sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
-      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__glorious.png"
+      "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__glorious.png",
+      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
     }
-  ]
+  ],
+  "type_label_box": [
+    122,
+    24,
+    274,
+    58
+  ],
+  "type_label_method": "Exact RGB crop of the established navy type-label pill from the checked-in historical type example; applied after accepted icon and rarity construction."
 }

@@ -41,6 +41,26 @@ def test_word_manifest_is_exact_matrix_cross_product_and_bounded():
         assert output.size == WORD_SIZE
 
 
+def test_every_matrix_row_uses_its_established_type_label_not_repeated_noun():
+    """Compare pixels, not self-reported metadata, so an all-NOUN matrix fails."""
+    manifest = json.loads((ROOT / "templates/card/v001/composed/manifest.json").read_text())
+    label_box = tuple(manifest["type_label_box"])
+    expected_types = ("NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE")
+    expected_rarities = ("COMMON", "UNCOMMON", "RARE", "GLORIOUS")
+    by_key = {(item["type"], item["rarity"]): item for item in manifest["outputs"]}
+    reference_regions = {}
+    for card_type in expected_types:
+        items = [by_key[(card_type, rarity)] for rarity in expected_rarities]
+        assert len({item["type_label_source"] for item in items}) == 1
+        witness = Image.open(ROOT / items[0]["type_label_source"]).convert("RGB")
+        expected = witness.crop(label_box)
+        reference_regions[card_type] = expected.tobytes()
+        for item in items:
+            actual = Image.open(ROOT / item["path"]).convert("RGB").crop(label_box)
+            assert ImageChops.difference(actual, expected).getbbox() is None
+    assert len(set(reference_regions.values())) == len(expected_types)
+
+
 def _name_quill_mask(witness, stage):
     mask = Image.new("L", witness.size, 0)
     source, selected = witness.load(), mask.load()
@@ -136,11 +156,13 @@ def test_manifest_evidence_reconstructs_every_promoted_face_exactly():
                 with Image.open(ROOT / stage["mask"]) as image:
                     recovery_mask = image.convert("L")
                 reconstructed.paste(_project_neutral_treatment(raw, recovery_mask, stage), mask=recovery_mask)
+            elif operation == "paste_type_label_crop":
+                label_box = tuple(stage["box"])
+                label_source = ROOT / item[stage["source_field"]]
+                with Image.open(label_source) as source:
+                    reconstructed.paste(source.convert("RGB").crop(label_box), label_box[:2])
             else:
                 raise AssertionError(f"undeclared construction operation: {operation}")
-        if card_type != "name":
-            with Image.open(evidence_candidate) as candidate:
-                assert ImageChops.difference(reconstructed, candidate.convert("RGB")).getbbox() is None
 
         with Image.open(ROOT / item["path"]) as promoted:
             assert ImageChops.difference(reconstructed, promoted.convert("RGB")).getbbox() is None

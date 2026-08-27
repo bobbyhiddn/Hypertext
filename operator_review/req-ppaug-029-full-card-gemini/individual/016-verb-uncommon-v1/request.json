@@ -1,0 +1,33 @@
+{
+  "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles",
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "template_role": "reference [1], authoritative complete geometry",
+  "canonical_source": "series/2026-Q1/cards/002-build/card.json",
+  "references": [
+    {
+      "role": "authoritative type/rarity geometry",
+      "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+      "sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb"
+    },
+    {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
+      "path": "templates/example_cards/006-forgive/outputs/card_1024x1536.png",
+      "sha256": "920fb4060cd36619630f8e845b4a17ee0203fd0f9781fe435eb1a00722c014d2"
+    }
+  ],
+  "target_type": "verb",
+  "target_rarity": "uncommon"
+}

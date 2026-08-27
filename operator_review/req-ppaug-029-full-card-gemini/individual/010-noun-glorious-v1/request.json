@@ -1,0 +1,54 @@
+{
+  "input_contract_version": 1,
+  "visual_descriptor_version": 2,
+  "visual_benchmark_version": "see-v4",
+  "render_contract_version": 4,
+  "model": "gemini-3.1-flash-image",
+  "workflow": "hypertext.gemini.style.generate_with_styles/fix_mode",
+  "fix_mode": true,
+  "full_face_generation_only": true,
+  "visible_pixel_composition": false,
+  "aspect_ratio": "2:3",
+  "image_size": "2K",
+  "response_modalities": [
+    "IMAGE"
+  ],
+  "canonical_source": "series/2026-Q1/cards/001-grace/card.json",
+  "corrections": [
+    "The footer prints 2026-Q3 with a hyphen. Print the complete footer exactly as SERIES: 2026 Q3 \u2014 REQ-PPAUG-029 EXAMPLE SET, with a space between 2026 and Q3 and the em dash preserved; keep every other element unchanged."
+  ],
+  "source_output_sha256": "8a66c6779f58dca6627ae7a25602379a7a52fc3aa1e3627a0d12c46cad4beb8e",
+  "locked_visual_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
+  "references": [
+    {
+      "role": "rejected full face corrected by native Gemini fix mode",
+      "path": "operator_review/req-ppaug-029-full-card-gemini/individual/010-noun-glorious-v1/outputs/superseded-noncanonical-20260824T025744Z/card_1024x1536.png",
+      "sha256": "8a66c6779f58dca6627ae7a25602379a7a52fc3aa1e3627a0d12c46cad4beb8e"
+    },
+    {
+      "role": "authoritative type/rarity geometry",
+      "path": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
+      "sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d"
+    },
+    {
+      "role": "accepted SEE v4 visual benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+      "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+    },
+    {
+      "role": "historical matching type/rarity style",
+      "path": "templates/example_cards/004-glory/outputs/card_1024x1536.png",
+      "sha256": "9642a0eb2f3b2f17a3dcb3781caaf8bd13a72e97dae84e432b8a132834e5fc59"
+    },
+    {
+      "role": "operator-accepted printed SEE Languages-region benchmark",
+      "path": "operator_review/req-ppaug-030-see-benchmark/printed-see-languages-reference.png",
+      "sha256": "03484f5f12b7f4ac6981fd877ebcb039d6183b9ec803e8583b798edc6215eebf"
+    }
+  ],
+  "target_type": "noun",
+  "target_rarity": "glorious"
+}

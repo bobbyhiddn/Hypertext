@@ -69,8 +69,35 @@ def test_prompt_preserves_exact_canonical_unicode_and_redundant_language_sides(c
     payload = prompt.split("EXACT_CANONICAL_CONTENT_JSON=", 1)[1].split("\n", 1)[0]
     assert json.loads(payload) == content
     assert "Old Testament is LEFT; New Testament is RIGHT" in prompt
-    assert "LEFT is Old Testament HEB/ARAM" in prompt
-    assert "RIGHT is New Testament GREEK" in prompt
+    assert "LEFT header is exactly HEBREW/ARAMAIC" in prompt
+    assert "RIGHT header is exactly GREEK" in prompt
+    assert "bare italic HEBREW_TRANSLIT" in prompt
+    assert "'OT Refs:' plus OT_REFS" in prompt
+    assert "'NT Refs:' plus NT_REFS" in prompt
+
+
+def test_printed_see_language_layout_is_machine_readable_and_compact():
+    word = load_descriptors()["structures"]["WORD_CARD"]
+    layout = word["original_language_layout"]
+    assert word["geometry"]["art_panel_height_fraction"] == 0.16
+    assert layout["left_header"] == "HEBREW/ARAMAIC"
+    assert layout["right_header"] == "GREEK"
+    assert layout["left_refs"].startswith("OT Refs:")
+    assert layout["right_refs"].startswith("NT Refs:")
+    assert "no TRANSLIT label" in layout["transliteration"]
+    assert "compact" in layout["density"]
+
+
+def test_babel_art_direction_avoids_people_faces_and_uses_known_symbols(content):
+    word = load_descriptors()["structures"]["WORD_CARD"]
+    assert "what they are known for" in word["art_direction"]["subject_rule"]
+    assert "recognizable face" in word["art_direction"]["figure_rule"]
+    for card_type in ("NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"):
+        item = dict(content, CARD_TYPE=card_type)
+        prompt = serialize_word_card_prompt(card_type=card_type, rarity="RARE", content=item)
+        assert "no recognizable human faces" in prompt
+        assert "no portrait likenesses" in prompt
+        assert "Represent people through what they are known for" in prompt
 
 
 def test_generated_watermark_is_always_forbidden(content):
@@ -139,6 +166,9 @@ def test_real_generation_keeps_deterministic_watermark_as_post_processing(monkey
     lambda d: d["rarities"]["RARE"].update(card_bonus=2),
     lambda d: d["HYPERTEXT_GLOBAL"].update(unexpected=True),
     lambda d: d["structures"]["WORD_CARD"]["geometry"].update(unexpected=True),
+    lambda d: d["structures"]["WORD_CARD"]["geometry"].update(art_panel_height_fraction=0.44),
+    lambda d: d["structures"]["WORD_CARD"]["original_language_layout"].update(left_header="HEB/ARAM"),
+    lambda d: d["structures"]["WORD_CARD"]["art_direction"].update(unexpected=True),
     lambda d: d["sizes"]["LOT_5"].update(card_count="5"),
     lambda d: d["types"]["TITLE"].update(icon="crown"),
 ])

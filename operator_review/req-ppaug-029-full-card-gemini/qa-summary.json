@@ -1,0 +1,523 @@
+{
+  "requirement": "REQ-PPAUG-029",
+  "round": "final",
+  "status": "PASS",
+  "reviewed_at": "2026-08-24T03:40:01.456206+00:00",
+  "reviewer": "cap_alpha",
+  "method": "full-resolution individual faces via labeled type-by-rarity review sheets; montage release and inspection are recorded separately",
+  "locked_benchmark": {
+    "path": "operator_review/req-ppaug-030-see-benchmark/pilot-see-v4/outputs/card_1024x1536.png",
+    "sha256": "04c0228187e89b023385ff1413edda1232424b1d403b4d0b45cb64ee4baeedc2"
+  },
+  "checks": {
+    "all_60_individual_faces_reviewed": true,
+    "canonical_text_and_punctuation_visible": true,
+    "literal_reference_bullets_visible": true,
+    "compact_two_column_languages": true,
+    "type_badges_icons_and_stats": true,
+    "rarity_and_cost_geometry": true,
+    "symbolic_art_without_recognizable_faces": true,
+    "no_placeholders_or_stale_faces": true
+  },
+  "blocked_cards": [],
+  "montage_released": true,
+  "cards": [
+    {
+      "id": 1,
+      "word": "GRACE",
+      "type": "noun",
+      "rarity": "common",
+      "output_sha256": "90ee71bd4df3b50f28cf8549dcccff519ae8a9635d472abc90dd9c87dd93e111",
+      "status": "PASS"
+    },
+    {
+      "id": 2,
+      "word": "EARTH",
+      "type": "noun",
+      "rarity": "common",
+      "output_sha256": "7757cefa6d44225eda4077e20b821a9185928abea3b9b3299276858f18be4827",
+      "status": "PASS"
+    },
+    {
+      "id": 3,
+      "word": "STONE",
+      "type": "noun",
+      "rarity": "common",
+      "output_sha256": "4ce1e6ce3f2fa434d2ed118ddaeaecf23a2ca5bb3eb2f6f137f1b9b12afb0627",
+      "status": "PASS"
+    },
+    {
+      "id": 4,
+      "word": "GRACE",
+      "type": "noun",
+      "rarity": "uncommon",
+      "output_sha256": "bd3f4ef42df211c0b3aef740136ad08fc288c9809f00fa92f86932c8d4fcfd5d",
+      "status": "PASS"
+    },
+    {
+      "id": 5,
+      "word": "EARTH",
+      "type": "noun",
+      "rarity": "uncommon",
+      "output_sha256": "8291b2b6df1da08ed277a05ed9082b4cc0dc9ed88af0046724d28636f82821d9",
+      "status": "PASS"
+    },
+    {
+      "id": 6,
+      "word": "STONE",
+      "type": "noun",
+      "rarity": "uncommon",
+      "output_sha256": "23c8e59acfaed2fb43fe4f63a317b250782a078cf7206cb27dfb5f2a6344927d",
+      "status": "PASS"
+    },
+    {
+      "id": 7,
+      "word": "GRACE",
+      "type": "noun",
+      "rarity": "rare",
+      "output_sha256": "23d38bc099776092b4e6a6de07d43e840ae2b57b921be8b5faf21a4a1313d36c",
+      "status": "PASS"
+    },
+    {
+      "id": 8,
+      "word": "EARTH",
+      "type": "noun",
+      "rarity": "rare",
+      "output_sha256": "8b42e559b2654646481a5e2405d868ce940693bf71bfc10aca303b0b51b33282",
+      "status": "PASS"
+    },
+    {
+      "id": 9,
+      "word": "STONE",
+      "type": "noun",
+      "rarity": "rare",
+      "output_sha256": "6ab4adfcf880552494954541cb6baeccc2e1f735b5db0c65195af21e4094856a",
+      "status": "PASS"
+    },
+    {
+      "id": 10,
+      "word": "GRACE",
+      "type": "noun",
+      "rarity": "glorious",
+      "output_sha256": "00db099e68097f97a9f31dfb649a1a14dc1ffd2a5a37e5335bf03fc6433c8537",
+      "status": "PASS"
+    },
+    {
+      "id": 11,
+      "word": "EARTH",
+      "type": "noun",
+      "rarity": "glorious",
+      "output_sha256": "b8667065543030e348aa7c1b681f6798ede9f7d9e91d17de1b78bcab53cb43e5",
+      "status": "PASS"
+    },
+    {
+      "id": 12,
+      "word": "STONE",
+      "type": "noun",
+      "rarity": "glorious",
+      "output_sha256": "f3370ecacce9722389e7283338d6bfbdf227e0dd610b2fbbb62141f79052a728",
+      "status": "PASS"
+    },
+    {
+      "id": 13,
+      "word": "BUILD",
+      "type": "verb",
+      "rarity": "common",
+      "output_sha256": "7d89b2d45d5b8d73c6d16387dcfba1c575dbca63c0061c8bce231132703b743c",
+      "status": "PASS"
+    },
+    {
+      "id": 14,
+      "word": "SCATTER",
+      "type": "verb",
+      "rarity": "common",
+      "output_sha256": "d0faa7ccebdd8a392c7fbdf3a8707cf65b47af3a09db717c51acbfd8644a4d87",
+      "status": "PASS"
+    },
+    {
+      "id": 15,
+      "word": "CREATE",
+      "type": "verb",
+      "rarity": "common",
+      "output_sha256": "0b5524cff5312f8dfe5cb0242d62d758969d457f25ce1bae6be25422e98bea97",
+      "status": "PASS"
+    },
+    {
+      "id": 16,
+      "word": "BUILD",
+      "type": "verb",
+      "rarity": "uncommon",
+      "output_sha256": "1c466b33229c194cc606bfe7a5ced8dc54a9165b4af8be2f9a5669533c392bd2",
+      "status": "PASS"
+    },
+    {
+      "id": 17,
+      "word": "SCATTER",
+      "type": "verb",
+      "rarity": "uncommon",
+      "output_sha256": "a90ed3bcc9b1ab09a1d72a394451e4ad3893f60d391e832d53f5163dce9b5563",
+      "status": "PASS"
+    },
+    {
+      "id": 18,
+      "word": "CREATE",
+      "type": "verb",
+      "rarity": "uncommon",
+      "output_sha256": "bb6a8a9741aab549225d819613e7b756767c8c55e626be18e7f0883c7c044df0",
+      "status": "PASS"
+    },
+    {
+      "id": 19,
+      "word": "BUILD",
+      "type": "verb",
+      "rarity": "rare",
+      "output_sha256": "ef53affc74fb789927ccdb10316454516959aa3e3b0df7fc8c24ba0c5d9ad7c6",
+      "status": "PASS"
+    },
+    {
+      "id": 20,
+      "word": "SCATTER",
+      "type": "verb",
+      "rarity": "rare",
+      "output_sha256": "ca8d035d36c69941abda7aca7b0fbf11507f78b156d255f4ecc2ba98f88796a8",
+      "status": "PASS"
+    },
+    {
+      "id": 21,
+      "word": "CREATE",
+      "type": "verb",
+      "rarity": "rare",
+      "output_sha256": "d23a3b3378217d35d1dc92b564f56d8d97390c323d08eb27e9f26799bab5aee6",
+      "status": "PASS"
+    },
+    {
+      "id": 22,
+      "word": "BUILD",
+      "type": "verb",
+      "rarity": "glorious",
+      "output_sha256": "32e4d96b59f8b159eb15459b28708074f5cdd53a27af19a18b6c62cfee2d5f23",
+      "status": "PASS"
+    },
+    {
+      "id": 23,
+      "word": "SCATTER",
+      "type": "verb",
+      "rarity": "glorious",
+      "output_sha256": "a8480a9374c93119834d474f636e5e16df346c3b18e2e49620b805bd4cf3835a",
+      "status": "PASS"
+    },
+    {
+      "id": 24,
+      "word": "CREATE",
+      "type": "verb",
+      "rarity": "glorious",
+      "output_sha256": "ed510f2531fdf1567042d551e1bfe750ebaca9692af1b061d46c3f3bece61cde",
+      "status": "PASS"
+    },
+    {
+      "id": 25,
+      "word": "MIGHTY",
+      "type": "adjective",
+      "rarity": "common",
+      "output_sha256": "640db8179bce1a7061f1207dba2e4138e7fcb35be16cc855a0e6ed0510f3eb38",
+      "status": "PASS"
+    },
+    {
+      "id": 26,
+      "word": "GOOD",
+      "type": "adjective",
+      "rarity": "common",
+      "output_sha256": "89a5aeafd936d4c5a4098f849fb0b41ddd588672a2c7b2191e51380535330c5a",
+      "status": "PASS"
+    },
+    {
+      "id": 27,
+      "word": "NAKED",
+      "type": "adjective",
+      "rarity": "common",
+      "output_sha256": "ea3b045ad65588a6be2b838d65727812400bece2b8f1f0165f2fffba517fad75",
+      "status": "PASS"
+    },
+    {
+      "id": 28,
+      "word": "MIGHTY",
+      "type": "adjective",
+      "rarity": "uncommon",
+      "output_sha256": "1740356f6ae40e83a3afb62783019065b44d1547f7552f59803b996eac1fb1b5",
+      "status": "PASS"
+    },
+    {
+      "id": 29,
+      "word": "GOOD",
+      "type": "adjective",
+      "rarity": "uncommon",
+      "output_sha256": "6a6afebc118aad9ad1efc42f5172e966b4b3c5ed556baa797b81881638b92f6f",
+      "status": "PASS"
+    },
+    {
+      "id": 30,
+      "word": "NAKED",
+      "type": "adjective",
+      "rarity": "uncommon",
+      "output_sha256": "c8a6b763d5f97451b7fc27f55eb5a415c9ea4180e53ed7f8a5e812e05f1e3292",
+      "status": "PASS"
+    },
+    {
+      "id": 31,
+      "word": "MIGHTY",
+      "type": "adjective",
+      "rarity": "rare",
+      "output_sha256": "64ed6cbb88a4d9af49ab80807b71fc4d60e67bf0ec3ac35073b8bc0b65fbf8b5",
+      "status": "PASS"
+    },
+    {
+      "id": 32,
+      "word": "GOOD",
+      "type": "adjective",
+      "rarity": "rare",
+      "output_sha256": "bcb7a5446ee922e5ebb284bc75d6d7a1aac054501e77632132d4c6dacb22aa27",
+      "status": "PASS"
+    },
+    {
+      "id": 33,
+      "word": "NAKED",
+      "type": "adjective",
+      "rarity": "rare",
+      "output_sha256": "c9c6fde9b84f604e6afec99c94ee83317feb27ead2e522816ec5a733eedeee99",
+      "status": "PASS"
+    },
+    {
+      "id": 34,
+      "word": "MIGHTY",
+      "type": "adjective",
+      "rarity": "glorious",
+      "output_sha256": "2013ea8fb725feb64ae9ff148eef597af68fa91c0118de708ccde6301c98df2a",
+      "status": "PASS"
+    },
+    {
+      "id": 35,
+      "word": "GOOD",
+      "type": "adjective",
+      "rarity": "glorious",
+      "output_sha256": "121674ce73b44340a646d3493d3542e862ed31fd075210535a333860b76234f3",
+      "status": "PASS"
+    },
+    {
+      "id": 36,
+      "word": "NAKED",
+      "type": "adjective",
+      "rarity": "glorious",
+      "output_sha256": "9ebbd78a4fa4f1bfbf2d4aada78540c90a950bcf23f4212e37cab778ae61c056",
+      "status": "PASS"
+    },
+    {
+      "id": 37,
+      "word": "SETH",
+      "type": "name",
+      "rarity": "common",
+      "output_sha256": "ece44680d149f200a929b93116179d608d7af6afbf47dfe3065a393de19972fd",
+      "status": "PASS"
+    },
+    {
+      "id": 38,
+      "word": "SHEM",
+      "type": "name",
+      "rarity": "common",
+      "output_sha256": "bff2aef72c603f5e70fcee68a8189a5049f30d9c37495dda37c7e617963a0064",
+      "status": "PASS"
+    },
+    {
+      "id": 39,
+      "word": "NOAH",
+      "type": "name",
+      "rarity": "common",
+      "output_sha256": "93a4a2352cd6a7ee84539b5ce72c28d8742f4921a1874d8902021f536d20e20d",
+      "status": "PASS"
+    },
+    {
+      "id": 40,
+      "word": "SETH",
+      "type": "name",
+      "rarity": "uncommon",
+      "output_sha256": "dfd6e53fac41a71436229a1705c2e08b14d2b1790347e9493ad9ad1ca523fb2e",
+      "status": "PASS"
+    },
+    {
+      "id": 41,
+      "word": "SHEM",
+      "type": "name",
+      "rarity": "uncommon",
+      "output_sha256": "b641b2cc2b1884ce07dd66333b5b977c43de88b24304b7df644b947315e43722",
+      "status": "PASS"
+    },
+    {
+      "id": 42,
+      "word": "NOAH",
+      "type": "name",
+      "rarity": "uncommon",
+      "output_sha256": "32ed72d9f6515fdd9c9ef4a16023da9098ae914150434f28f79e9e8234312b41",
+      "status": "PASS"
+    },
+    {
+      "id": 43,
+      "word": "SETH",
+      "type": "name",
+      "rarity": "rare",
+      "output_sha256": "7d330b8dfd053325f328b45a5868950401b3af286f6bb8c6a53418fad4c66dff",
+      "status": "PASS"
+    },
+    {
+      "id": 44,
+      "word": "SHEM",
+      "type": "name",
+      "rarity": "rare",
+      "output_sha256": "88ab117907930405b3613846fb5e21d8026da6a9a712beb38923326c038a0aaa",
+      "status": "PASS"
+    },
+    {
+      "id": 45,
+      "word": "NOAH",
+      "type": "name",
+      "rarity": "rare",
+      "output_sha256": "f6bbfa3e447fc6e6f080457037c01697d63cfa21553154faf0d55fdae8a296d3",
+      "status": "PASS"
+    },
+    {
+      "id": 46,
+      "word": "SETH",
+      "type": "name",
+      "rarity": "glorious",
+      "output_sha256": "85de78ba05dbed9683ba0ba068814c9871c801e9295329188f37ea1a716eb8d2",
+      "status": "PASS"
+    },
+    {
+      "id": 47,
+      "word": "SHEM",
+      "type": "name",
+      "rarity": "glorious",
+      "output_sha256": "2eb42cde0ba6cc82d715e9a85a364c14e955a971fd25527125be46b99572d21b",
+      "status": "PASS"
+    },
+    {
+      "id": 48,
+      "word": "NOAH",
+      "type": "name",
+      "rarity": "glorious",
+      "output_sha256": "e8521938048310479532dd02392a3f4543457e3e93da3c24d55368780dcada91",
+      "status": "PASS"
+    },
+    {
+      "id": 49,
+      "word": "KEEPER",
+      "type": "title",
+      "rarity": "common",
+      "output_sha256": "d798be25a2fa8bfd88672ad021e431ceef9e9808c0a4d121a8cfaae9cfd31999",
+      "status": "PASS"
+    },
+    {
+      "id": 50,
+      "word": "BROTHER",
+      "type": "title",
+      "rarity": "common",
+      "output_sha256": "051175b27808e263dd51044c3a95e896fa7801774210c8fd3c6c23a2c34a45ee",
+      "status": "PASS"
+    },
+    {
+      "id": 51,
+      "word": "SPIRIT",
+      "type": "title",
+      "rarity": "common",
+      "output_sha256": "d82a4e1cde1c61b9c22b1a158e64eca7a96038349496b7167dd37334b41bc34e",
+      "status": "PASS"
+    },
+    {
+      "id": 52,
+      "word": "KEEPER",
+      "type": "title",
+      "rarity": "uncommon",
+      "output_sha256": "82b782c3186c7209f22576b8ae78e1a32457c0a1f3d9ff0996a416aaa625b628",
+      "status": "PASS"
+    },
+    {
+      "id": 53,
+      "word": "BROTHER",
+      "type": "title",
+      "rarity": "uncommon",
+      "output_sha256": "b45e419f69a1f6fbe69fc121436408b55f0f5a3c66431f2ed15e404d2300fbfa",
+      "status": "PASS"
+    },
+    {
+      "id": 54,
+      "word": "SPIRIT",
+      "type": "title",
+      "rarity": "uncommon",
+      "output_sha256": "7c705137fa2e648234efc2d87765cfd003a46fd151dd81c3fb390a8ebaf2eca5",
+      "status": "PASS"
+    },
+    {
+      "id": 55,
+      "word": "KEEPER",
+      "type": "title",
+      "rarity": "rare",
+      "output_sha256": "5e67a92229997d38ebd53253063723a6993d34f4bf0e9779cf190f274c374ff5",
+      "status": "PASS"
+    },
+    {
+      "id": 56,
+      "word": "BROTHER",
+      "type": "title",
+      "rarity": "rare",
+      "output_sha256": "f2ba1160fd8037911bdc1ef360108aafa8d3ee014fd0731bd9d916ce50c492e8",
+      "status": "PASS"
+    },
+    {
+      "id": 57,
+      "word": "SPIRIT",
+      "type": "title",
+      "rarity": "rare",
+      "output_sha256": "601e0116200f96a9d26acba16bb5cdea7e86f5006c8bae9846a7598007196a53",
+      "status": "PASS"
+    },
+    {
+      "id": 58,
+      "word": "KEEPER",
+      "type": "title",
+      "rarity": "glorious",
+      "output_sha256": "4ba43b18ddd57d7adfb2a32463665aacb7810908aca7448626499558f3e1547d",
+      "status": "PASS"
+    },
+    {
+      "id": 59,
+      "word": "BROTHER",
+      "type": "title",
+      "rarity": "glorious",
+      "output_sha256": "06ca903782325b8e9e8af23ed4f13cdbe1a2dfd4c26f3a6276f446059b3bdf03",
+      "status": "PASS"
+    },
+    {
+      "id": 60,
+      "word": "SPIRIT",
+      "type": "title",
+      "rarity": "glorious",
+      "output_sha256": "199957ee772688e68df4d92584e3dce3be69bc12f8b071a096d2d1f7802ecf5b",
+      "status": "PASS"
+    }
+  ],
+  "montage": {
+    "path": "operator_review/req-ppaug-029-full-card-gemini/review-montage-by-type-rarity.png",
+    "sha256": "893e7782d9af1d66984278cba22a3932e6736f9a3e9b4ddc0d966a4ecaa8f6ad"
+  },
+  "montage_visual_review": {
+    "status": "PASS",
+    "reviewer": "cap_alpha",
+    "reviewed_at": "2026-08-24T03:40:59.708298+00:00",
+    "sha256": "893e7782d9af1d66984278cba22a3932e6736f9a3e9b4ddc0d966a4ecaa8f6ad",
+    "checks": {
+      "all_60_current_faces_present": true,
+      "labels_readable": true,
+      "no_placeholders_or_stale_rejections": true,
+      "no_semantic_drift_or_missing_separators": true,
+      "no_recognizable_faces_or_portrait_likenesses": true
+    }
+  }
+}

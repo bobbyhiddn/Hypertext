@@ -1,0 +1,37 @@
+{
+  "requirement": "REQ-PPAUG-029",
+  "validated_at": "2026-08-24T03:44:29.861836+00:00",
+  "status": "PASS",
+  "records": 60,
+  "unique_output_hashes": 60,
+  "type_rarity_counts": {
+    "noun/common": 3,
+    "noun/uncommon": 3,
+    "noun/rare": 3,
+    "noun/glorious": 3,
+    "verb/common": 3,
+    "verb/uncommon": 3,
+    "verb/rare": 3,
+    "verb/glorious": 3,
+    "adjective/common": 3,
+    "adjective/uncommon": 3,
+    "adjective/rare": 3,
+    "adjective/glorious": 3,
+    "name/common": 3,
+    "name/uncommon": 3,
+    "name/rare": 3,
+    "name/glorious": 3,
+    "title/common": 3,
+    "title/uncommon": 3,
+    "title/rare": 3,
+    "title/glorious": 3
+  },
+  "checks": {
+    "canonical_projection": true,
+    "bundle_and_reference_hashes": true,
+    "native_generation_metadata": true,
+    "image_dimensions_and_uniqueness": true,
+    "human_review_and_montage": true
+  },
+  "errors": []
+}
