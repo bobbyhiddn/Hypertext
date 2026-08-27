@@ -4440,6 +4440,26 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
                 description.style_mismatch_reason = ""
                 _log("[phase grade] bullet-count complaint overturned by focused recount")
 
+    # The description stage's trivia count is unreliable on wrapped bullets in
+    # BOTH the style and content paths. When it disagrees with the printed
+    # content, defer to the focused recount before scoring (mirroring the
+    # deterministic pip-count application above).
+    expected_bullets = len(content.get("TRIVIA_BULLETS") or [])
+    if expected_bullets and description.trivia_bullet_count != expected_bullets:
+        try:
+            from hypertext.gemini.review import count_trivia_bullets
+            recount = count_trivia_bullets(out_png)
+        except Exception as e:
+            _log(f"[phase grade] bullet recount failed: {e}")
+            recount = -1
+        _log(
+            f"[phase grade] description counted {description.trivia_bullet_count} trivia bullets; "
+            f"focused recount: {recount} (expected {expected_bullets})"
+        )
+        if recount == expected_bullets:
+            description.trivia_bullet_count = recount
+            _log("[phase grade] description trivia count corrected by focused recount")
+
     # Placeholder leaks defeat the style comparison entirely: the blank-form
     # reference template itself prints the placeholders, so a leaking card
     # looks MORE like the template. Hunt them with a reference-free focused
