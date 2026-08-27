@@ -47,12 +47,12 @@ def candidate_for(*, ability_text=None):
         "semantic_anchor": "survey",
         "semantic_evidence": ["exactly 1 card", "top of the Tower"],
         "ability_text": ability_text
-        or "When this ability resolves, you reveal exactly 1 card from the top of the Tower.",
-        "rules_terms": ["ability", "resolve", "reveal", "card", "Tower"],
+        or "You reveal exactly 1 card from the top of the Tower.",
+        "rules_terms": ["reveal", "card", "Tower"],
         "rules_actions": ["reveal"],
         "clarity": {
-            "trigger": "this ability resolves",
-            "timing": "When this ability resolves",
+            "trigger": "activation",
+            "timing": "instantaneous",
             "targets": ["you"],
             "zones": ["Tower"],
             "quantities": ["exactly 1 card"],
@@ -100,7 +100,7 @@ def test_semantic_prompt_is_built_without_a_target_rarity_or_budget():
 def test_candidate_and_critic_prompts_demand_first_read_clarity_and_legality():
     candidate_prompt = build_candidate_prompt("SEE", "VERB", "COMMON", semantic_seed())
     for phrase in (
-        "When this ability resolves,",
+        "",
         "Flavor words are not rules actions",
         "trigger",
         "targets",
@@ -142,7 +142,7 @@ def test_deterministic_validation_accepts_explicit_budgeted_copy_and_rejects_ove
 def test_deterministic_validation_rejects_ambiguity_and_missing_operands():
     ambiguous = candidate_for(
         ability_text=(
-            "When this ability resolves, you reveal exactly 2 cards from the top of the Tower, "
+            "You reveal exactly 2 cards from the top of the Tower, "
             "then put them on the bottom of the Tower."
         )
     )
@@ -152,9 +152,9 @@ def test_deterministic_validation_rejects_ambiguity_and_missing_operands():
     report = validate_ability_candidate(ambiguous, semantic_seed(), "UNCOMMON")
     assert report["passed"] is False
     assert any("ambiguous shorthand or antecedent" in issue for issue in report["issues"])
-    assert any("every step after then" in issue for issue in report["issues"])
+    # imperative continuation after "then" is legal active voice now
 
-    missing = candidate_for(ability_text="When this ability resolves, you put cards.")
+    missing = candidate_for(ability_text="You put cards.")
     missing["rules_terms"] = ["ability", "resolve", "put", "cards"]
     missing["rules_actions"] = ["put"]
     missing["clarity"]["zones"] = []
@@ -166,7 +166,7 @@ def test_deterministic_validation_rejects_ambiguity_and_missing_operands():
     assert any("put is missing an explicit destination zone" in issue for issue in report["issues"])
 
     source_only = candidate_for(
-        ability_text="When this ability resolves, you put exactly 1 card from your hand."
+        ability_text="You put exactly 1 card from your hand."
     )
     source_only["rules_terms"] = ["ability", "resolve", "put", "card", "hand"]
     source_only["rules_actions"] = ["put"]
@@ -181,7 +181,7 @@ def test_deterministic_validation_rejects_ambiguity_and_missing_operands():
 def test_deterministic_validation_rejects_undefined_shorthand_and_illegal_terms():
     shorthand = candidate_for(
         ability_text=(
-            "When this ability resolves, you sink exactly 1 card from the top of the Tower "
+            "You sink exactly 1 card from the top of the Tower "
             "to the bottom of the Tower."
         )
     )
@@ -193,7 +193,7 @@ def test_deterministic_validation_rejects_undefined_shorthand_and_illegal_terms(
 
     conditional_shorthand = candidate_for(
         ability_text=(
-            "When this ability resolves, if you have exactly 1 card in hand, you sink exactly 1 card "
+            " if you have exactly 1 card in hand, you sink exactly 1 card "
             "from the top of the Tower to the bottom of the Tower."
         )
     )
@@ -210,7 +210,7 @@ def test_deterministic_validation_rejects_undefined_shorthand_and_illegal_terms(
 
     illegal = candidate_for(
         ability_text=(
-            "When this ability resolves, you return exactly 1 card from your graveyard to your hand."
+            "You return exactly 1 card from your graveyard to your hand."
         )
     )
     illegal["rules_terms"] = ["ability", "resolve", "return", "card", "hand"]
@@ -224,7 +224,7 @@ def test_deterministic_validation_rejects_undefined_shorthand_and_illegal_terms(
 
 def test_deterministic_validation_rejects_anchor_only_weak_flavor():
     generic = candidate_for(
-        ability_text="When this ability resolves, you draw exactly 1 card from the Tower."
+        ability_text="You draw exactly 1 card from the Tower."
     )
     generic["mechanical_expression"] = "The survey is asserted as a label for a generic draw."
     generic["semantic_evidence"] = ["draw exactly 1 card", "from the Tower"]
@@ -281,7 +281,7 @@ def test_generator_calls_semantics_then_budgeted_candidate_then_independent_crit
         rarity="COMMON",
         generate=fake_generate,
     )
-    assert result["ability_text"].startswith("When this ability resolves")
+    assert not result["ability_text"].casefold().startswith("when this ability resolves")
     assert result["version"] == "semantic-rarity-clarity-v2"
     assert result["selected_attempt"] == 1
     assert [call[0].splitlines()[0] for call in calls] == [
@@ -427,7 +427,7 @@ def test_exact_six_producer_records_preserve_prior_card_schema_shape():
 
 def test_daily_recipe_preserves_validated_copy_against_research_rewrite(monkeypatch):
     generated = {
-        "ability_text": "When this ability resolves, you reveal exactly 1 card from the top of the Tower.",
+        "ability_text": "You reveal exactly 1 card from the top of the Tower.",
         "version": "semantic-rarity-clarity-v2",
     }
     monkeypatch.setattr(daily, "generate_validated_ability", lambda **_kwargs: generated)

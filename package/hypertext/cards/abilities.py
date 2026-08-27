@@ -315,7 +315,7 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Card types are NOUN, VERB, ADJECTIVE, NAME, and TITLE. Stats are LORE, CONTEXT, and COMPLEXITY.
 - TITLE may stand for NOUN or NAME only when recorded, at most one substitution per Record.
 - An activated card and its activation-cost discards go to Sheol and cannot be redeemed. Do not restate or replace that base rule in an ability.
-- Generated copy begins "When this ability resolves," so its trigger and timing are explicit without restating the activation cost.
+- Ability copy is imperative active voice addressed to the activating player (for example, "Draw one card from the Tower."). Never open with trigger boilerplate such as "When this ability resolves,"; activation itself is the trigger.
 - Legal rules actions are: draw, discard, reveal, look at, put, add, return, shuffle, choose, exchange, gain, spend, record, activate, redeem, and name.
 - Flavor words are not rules actions. Never turn a card word or semantic anchor into an imperative label, a colon heading, or invented shorthand (for example, "Sink").
 - Every action must explicitly identify its actor or target, affected quantity, relevant source and destination zones, condition, duration, and outcome wherever those operands apply.
@@ -448,12 +448,12 @@ def build_candidate_prompt(
         '  "mechanical_expression": "how the seed becomes this exact game-state change",\n'
         '  "semantic_anchor": "one mechanical_anchors value copied exactly and explained in mechanical_expression; do not print it as an action label",\n'
         '  "semantic_evidence": ["two or more exact excerpts from ability_text whose relationships embody the seed without an invented action"],\n'
-        '  "ability_text": "one or two sentences, at most 60 words, beginning exactly When this ability resolves,",\n'
+        '  "ability_text": "one or two sentences, at most 60 words, imperative active voice with no trigger boilerplate",\n'
         '  "rules_terms": ["every canonical game term used in ability_text"],\n'
         '  "rules_actions": ["every legal rules action used in ability_text, in resolution order"],\n'
         '  "clarity": {\n'
-        '    "trigger": "exact printed trigger excerpt",\n'
-        '    "timing": "exact printed timing excerpt",\n'
+        '    "trigger": "the literal activation, or an exact printed trigger excerpt",\n'
+        '    "timing": "the literal instantaneous, or an exact printed timing excerpt",\n'
         '    "targets": ["exact printed actor or target excerpts"],\n'
         '    "zones": ["every canonical zone named in the copy"],\n'
         '    "quantities": ["exact printed quantity excerpts"],\n'
@@ -585,11 +585,14 @@ def _validate_clarity(candidate: dict, ability_text: str) -> tuple[list[str], di
         issues.append("clarity is missing fields: " + ", ".join(missing))
 
     excerpts_are_printed = True
+    clarity_literals = {"trigger": ("activation",), "timing": ("instantaneous", "activation")}
     for field in ("trigger", "timing"):
         value = clarity.get(field)
         if not isinstance(value, str) or not value.strip():
             issues.append(f"clarity.{field} must be a non-empty exact excerpt")
             excerpts_are_printed = False
+        elif value.strip().casefold() in clarity_literals[field]:
+            pass
         elif not _excerpt_in_text(value, ability_text):
             issues.append(f"clarity.{field} is not printed verbatim")
             excerpts_are_printed = False
@@ -650,11 +653,11 @@ def _validate_clarity(candidate: dict, ability_text: str) -> tuple[list[str], di
         issues.append("clarity.condition declares a condition that the copy does not express")
 
     checks["clarity_excerpts_are_printed"] = excerpts_are_printed
-    checks["explicit_resolution_timing"] = ability_text.casefold().startswith(
-        "when this ability resolves,"
+    checks["active_voice_opening"] = not ability_text.casefold().startswith(
+        "when this ability resolves"
     )
-    if not checks["explicit_resolution_timing"]:
-        issues.append('ability_text must begin exactly "When this ability resolves,"')
+    if not checks["active_voice_opening"]:
+        issues.append('ability_text must use imperative active voice; drop the "When this ability resolves," boilerplate')
     checks["no_colon_action_labels"] = ":" not in ability_text
     if not checks["no_colon_action_labels"]:
         issues.append("colon action labels are forbidden; use only established rules actions")
@@ -665,8 +668,10 @@ def _validate_clarity(candidate: dict, ability_text: str) -> tuple[list[str], di
         issues.append("ambiguous shorthand or antecedent: " + ", ".join(ambiguous))
 
     body = re.sub(r"^when this ability resolves,\s*", "", ability_text, flags=re.IGNORECASE)
+    _imperative = r"(?:draw|discard|reveal|look\s+at|put|add|return|shuffle|choose|exchange|gain|spend|record|activate|redeem|name)\b"
     checks["explicit_initial_actor"] = re.match(
-        r"^(?:you\b|each player\b|every player\b|all players\b|target player\b|the chosen player\b)",
+        r"^(?:you\b|each player\b|every player\b|all players\b|target player\b|the chosen player\b|"
+        + _imperative + r")",
         body,
         re.IGNORECASE,
     ) is not None
@@ -674,7 +679,8 @@ def _validate_clarity(candidate: dict, ability_text: str) -> tuple[list[str], di
         issues.append("the first resolution step must explicitly name its actor or target")
     implicit_then = re.search(
         r"\bthen\s+(?!(?:you\b|each player\b|every player\b|all players\b|target player\b|"
-        r"the chosen player\b|each of you\b))",
+        r"the chosen player\b|each of you\b|draw\b|discard\b|reveal\b|look\b|put\b|add\b|"
+        r"return\b|shuffle\b|choose\b|exchange\b|gain\b|spend\b|record\b|activate\b|redeem\b|name\b))",
         ability_text,
         re.IGNORECASE,
     )
