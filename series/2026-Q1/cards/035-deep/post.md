@@ -6,7 +6,7 @@
 **DEEP** — Reaching far beneath the surface; profound beyond sounding
 
 ## Old Testament
-> Psalm 42:7 — "deep calleth unto deep"
+> Psalm 130:1 — "Out of the depths have I cried"
 
 ## New Testament
 > 1 Corinthians 2:10 — "the deep things of God"
