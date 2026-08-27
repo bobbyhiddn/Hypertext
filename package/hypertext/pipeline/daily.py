@@ -4440,6 +4440,27 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
                 description.style_mismatch_reason = ""
                 _log("[phase grade] bullet-count complaint overturned by focused recount")
 
+    # Placeholder leaks defeat the style comparison entirely: the blank-form
+    # reference template itself prints the placeholders, so a leaking card
+    # looks MORE like the template. Hunt them with a reference-free focused
+    # query and hard-fail on any hit.
+    placeholder_leaks: list[str] = []
+    try:
+        from hypertext.gemini.review import detect_placeholder_leaks
+        placeholder_leaks = detect_placeholder_leaks(out_png)
+    except Exception as e:
+        _log(f"[phase grade] placeholder leak check failed: {e}")
+    if placeholder_leaks == ["__unreadable__"]:
+        _log("[phase grade] placeholder leak check unreadable; treating as clean")
+        placeholder_leaks = []
+    if placeholder_leaks:
+        leak_reason = "Template placeholder leak: " + "; ".join(placeholder_leaks)
+        style_match = False
+        style_reason = (style_reason + " " + leak_reason).strip()
+        description.style_matches_reference = False
+        description.style_mismatch_reason = style_reason
+        _log(f"[phase grade] ⚠️ {leak_reason}")
+
     _log(f"[phase grade] Style match: {style_match}")
     if not style_match:
         _log(f"[phase grade] ⚠️ STYLE MISMATCH: {style_reason}")
@@ -4451,6 +4472,11 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     except Exception as e:
         _log(f"[phase grade] Scoring failed: {e}")
         return 1
+
+    for leak in placeholder_leaks:
+        result.corrections.append(
+            f"Remove the template placeholder text {leak}; replace the slot with the supplied content only."
+        )
 
     # CRITICAL: Style mismatch = score of 0, automatic fail
     content_score = result.score

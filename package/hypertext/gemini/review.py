@@ -1024,6 +1024,69 @@ def count_trivia_bullets(image_path: Path, model: str | None = None) -> int:
         return -1
 
 
+PLACEHOLDER_LEAK_STRINGS = (
+    "DEFINITION TEXT",
+    "CARD TITLE",
+    "ABILITY DESCRIPTION HERE",
+    "VERSE CITATION AND TEXT HERE",
+    "HEBREW WORD",
+    "GREEK WORD",
+    "TRIVIA POINT",
+    "OT CITATIONS",
+    "#XXX",
+    "20XX QX",
+    "- Set",
+    "WORD:",
+)
+
+
+def detect_placeholder_leaks(image_path: Path, model: str | None = None) -> list[str]:
+    """Hunt template placeholder strings on a rendered card with a focused query.
+
+    The style comparison cannot catch these: the blank-form reference template
+    itself prints the placeholders, so a leaking card looks MORE like the
+    template, not less. This check is asked without any reference image so the
+    form exerts no pull.
+
+    Returns the list of leaked strings found (empty when clean), or a
+    single-element ["__unreadable__"] sentinel when the response cannot be
+    parsed.
+    """
+    listed = "; ".join(f'"{s}"' for s in PLACEHOLDER_LEAK_STRINGS)
+    prompt = (
+        "This is a finished trading card that must contain NO leftover template "
+        "placeholder text. Check the card for each of these literal strings, "
+        f"anywhere on the card: {listed}. "
+        'For "- Set": report it only if the bottom footer bar ends with a dash '
+        "followed by the word Set after the series name. "
+        'For "WORD:": report it only if a field-name prefix like WORD: appears '
+        "before the large card title. "
+        "The navy type pill beside the collector number legitimately prints the "
+        "card type (NOUN, VERB, ADJECTIVE, NAME, or TITLE) - never report that "
+        'pill; report "CARD TITLE" only as the literal two-word string in the '
+        "large title position. "
+        "Return ONLY JSON: "
+        '{"leaks": [{"string": "<which>", "location": "<where>"}, ...]} '
+        "with an empty list when none are present."
+    )
+    text = _call_gemini(prompt, image_path=image_path, model=model)
+    try:
+        data = _parse_json_response(text)
+        leaks = data.get("leaks")
+        if not isinstance(leaks, list):
+            return ["__unreadable__"]
+        allowed = {s.casefold() for s in PLACEHOLDER_LEAK_STRINGS}
+        found = []
+        for item in leaks:
+            if isinstance(item, dict) and item.get("string"):
+                if str(item["string"]).strip().casefold() not in allowed:
+                    continue
+                found.append(f"{item['string']} ({item.get('location', 'unknown')})")
+        return found
+    except Exception:
+        return ["__unreadable__"]
+
+
 def describe_palette(image_path: Path, model: str | None = None) -> str:
     """Describe symbols/icons in a palette image without card-specific assumptions.
 
