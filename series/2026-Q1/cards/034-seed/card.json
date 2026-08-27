@@ -167,7 +167,37 @@
       }
     ]
   },
-  "content": {},
+  "content": {
+    "NUMBER": "034",
+    "SERIES": "2026-Q1 Babel",
+    "WORD": "SEED",
+    "GLOSS": "Offspring; the kernel of life sown now for a later harvest",
+    "CARD_TYPE": "NOUN",
+    "RARITY_TEXT": "UNCOMMON",
+    "RARITY_ICON": "UNCOMMON",
+    "ART_PROMPT": "A single luminous seed pressed into dark furrowed soil, a tender green shoot uncoiling upward toward warm dawn light, distant ripening grain fields on the horizon, antique devotional engraving style on warm parchment tones, reverent and quiet",
+    "ABILITY_TEXT": "When this ability resolves, you put one NOUN from your hand on the bottom of the Tower. At the start of your next turn, you draw two cards from the Tower.",
+    "STAT_LORE": 5,
+    "STAT_CONTEXT": 4,
+    "STAT_COMPLEXITY": 3,
+    "OT_VERSE_REF": "Genesis 3:15",
+    "OT_VERSE_SNIPPET": "enmity between thy seed and her seed",
+    "NT_VERSE_REF": "Galatians 3:16",
+    "NT_VERSE_SNIPPET": "and to thy seed, which is Christ",
+    "OT_VERSE_LINE": "Genesis 3:15 — “enmity between thy seed and her seed”",
+    "NT_VERSE_LINE": "Galatians 3:16 — “and to thy seed, which is Christ”",
+    "GREEK": "σπέρμα",
+    "GREEK_TRANSLIT": "sperma",
+    "HEBREW": "זֶרַע",
+    "HEBREW_TRANSLIT": "zera",
+    "OT_REFS": "Gen 3:15 • Gen 22:17 • Isa 55:10",
+    "NT_REFS": "Gal 3:16 • Matt 13:31 • 1 Pet 1:23",
+    "TRIVIA_BULLETS": [
+      "Hebrew zera names both literal grain and human offspring with one collective word.",
+      "Paul's argument in Galatians 3:16 turns on the promise reading seed in the singular.",
+      "Genesis 3:15 is called the protoevangelium, Scripture's first gospel promise."
+    ]
+  },
   "render_instructions": {
     "strict_no_duplicate_headings": true,
     "single_panel_labels_render_once": true,
@@ -189,5 +219,9 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "grounding": {
+    "queries": [],
+    "sources": []
+  }
 }

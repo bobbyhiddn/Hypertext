@@ -29,7 +29,7 @@
   },
   "valid_combinations": [
     {"type": "NOUN", "rarity": "COMMON", "card_count": 5},
-    {"type": "NOUN", "rarity": "UNCOMMON", "card_count": 1},
+    {"type": "NOUN", "rarity": "UNCOMMON", "card_count": 2},
     {"type": "NOUN", "rarity": "RARE", "card_count": 1},
     {"type": "NOUN", "rarity": "GLORIOUS", "card_count": 1},
     {"type": "VERB", "rarity": "COMMON", "card_count": 2},

@@ -1,0 +1,41 @@
+number: '034'
+word: SEED
+gloss: Offspring; the kernel of life sown now for a later harvest
+card_type: NOUN
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single luminous seed pressed into dark furrowed soil, a tender green
+  shoot uncoiling upward toward warm dawn light, distant ripening grain fields on
+  the horizon, antique devotional engraving style on warm parchment tones, reverent
+  and quiet
+stats:
+  lore: 5
+  context: 4
+  complexity: 3
+ability: When this ability resolves, you put one NOUN from your hand on the bottom
+  of the Tower. At the start of your next turn, you draw two cards from the Tower.
+ot_verse:
+  ref: Genesis 3:15
+  snippet: enmity between thy seed and her seed
+nt_verse:
+  ref: Galatians 3:16
+  snippet: and to thy seed, which is Christ
+greek:
+  text: σπέρμα
+  translit: sperma
+hebrew:
+  text: זֶרַע
+  translit: zera
+ot_refs: Gen 3:15 • Gen 22:17 • Isa 55:10
+nt_refs: Gal 3:16 • Matt 13:31 • 1 Pet 1:23
+trivia:
+- Hebrew zera names both literal grain and human offspring with one collective word.
+- Paul's argument in Galatians 3:16 turns on the promise reading seed in the singular.
+- Genesis 3:15 is called the protoevangelium, Scripture's first gospel promise.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

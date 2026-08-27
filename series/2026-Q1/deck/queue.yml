@@ -94,9 +94,6 @@
 - word: HIGH
   card_type: ADJECTIVE
   rarity: COMMON
-- word: FOREIGN
-  card_type: ADJECTIVE
-  rarity: UNCOMMON
 - word: ELDER
   card_type: TITLE
   rarity: COMMON
