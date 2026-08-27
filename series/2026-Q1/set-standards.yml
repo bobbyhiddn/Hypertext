@@ -58,7 +58,7 @@ combination_targets:
   RARE_NOUN: 2
   RARE_VERB: 3
   RARE_ADJECTIVE: 3
-  RARE_NAME: 3
+  RARE_NAME: 2
   RARE_TITLE: 3
 
   # GLORIOUS (9 cards total - 10% of set)
@@ -91,5 +91,7 @@ sequential_rules:
 # ============================================================================
 # - Distribution calculated as: rarity_pct * type_weight * 90, rounded
 # - Some rounding adjustments made to ensure totals sum correctly
-# - NAME type given +1 in RARE to accommodate important Biblical figures
 # - TITLE given -1 in GLORIOUS to balance totals
+# - 2026-08-27: RARE_NAME restored 3 -> 2; the earlier +1 had no offset, making
+#   the grid sum to 91 cards and the NAME column to 17. Rows and columns now
+#   match rarity_distribution and type_distribution exactly (90 total).
