@@ -200,7 +200,6 @@
     "do_not_render_hidden_metadata": [
       "WILD_ID",
       "WILD_COUNTS_AS",
-      "QUARTET_ID",
       "LETTER",
       "NOTES_INTERNAL"
     ]

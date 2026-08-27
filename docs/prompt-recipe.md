@@ -53,7 +53,7 @@ Trivia bullets
 
 Hidden metadata (not rendered)
 - wild_id + wild_counts_as if TITLE
-- quartet_id + letter if not TITLE
+- letter if not TITLE
 - internal_notes
 
 ## Output rules (image model constraints)

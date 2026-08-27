@@ -4,7 +4,10 @@
     "card_type": "word_study_trading_card",
     "orientation": "vertical",
     "aspect_ratio": "2:3",
-    "target_resolution": { "width": 1024, "height": 1536 },
+    "target_resolution": {
+      "width": 1024,
+      "height": 1536
+    },
     "visual_style": [
       "premium trading card layout",
       "antique parchment background with subtle grain",
@@ -22,17 +25,36 @@
       "title": "classic serif display",
       "labels": "uppercase small caps",
       "body": "clean serif",
-      "glyph_support": ["Greek renders correctly", "Hebrew renders correctly right-to-left"]
+      "glyph_support": [
+        "Greek renders correctly",
+        "Hebrew renders correctly right-to-left"
+      ]
     },
     "iconography": {
       "rarity_system": {
         "placement": "top_right_small",
         "render_rule": "Render the rarity text followed by a small diamond icon. Format: 'RARE ◆'. All rarities use diamond shape, only fill color varies. No brackets.",
         "icons": {
-          "COMMON": { "shape": "diamond", "fill": "white", "outline": "navy" },
-          "UNCOMMON": { "shape": "diamond", "fill": "green", "outline": "navy" },
-          "RARE": { "shape": "diamond", "fill": "gold", "outline": "navy" },
-          "GLORIOUS": { "shape": "diamond", "fill": "orange", "outline": "navy" }
+          "COMMON": {
+            "shape": "diamond",
+            "fill": "white",
+            "outline": "navy"
+          },
+          "UNCOMMON": {
+            "shape": "diamond",
+            "fill": "green",
+            "outline": "navy"
+          },
+          "RARE": {
+            "shape": "diamond",
+            "fill": "gold",
+            "outline": "navy"
+          },
+          "GLORIOUS": {
+            "shape": "diamond",
+            "fill": "orange",
+            "outline": "navy"
+          }
         }
       },
       "cost_indicator": {
@@ -41,8 +63,14 @@
         "costs": {
           "COMMON": null,
           "UNCOMMON": null,
-          "RARE": { "display": "+🂠", "meaning": "discard 1 card to activate" },
-          "GLORIOUS": { "display": "+🂠🂠", "meaning": "discard 2 cards to activate" }
+          "RARE": {
+            "display": "+🂠",
+            "meaning": "discard 1 card to activate"
+          },
+          "GLORIOUS": {
+            "display": "+🂠🂠",
+            "meaning": "discard 2 cards to activate"
+          }
         }
       },
       "stat_pips": {
@@ -61,10 +89,16 @@
       "gold_trim": "thin",
       "corner_filigree": "subtle"
     },
-    "top_microtext": { "left": "", "right": "" },
+    "top_microtext": {
+      "left": "",
+      "right": ""
+    },
     "header": {
       "collector_id_left": "#{NUMBER} {CARD_TYPE}",
-      "rarity_icon_and_text_right": { "icon_key": "RARITY_ICON", "text_key": "RARITY_TEXT" },
+      "rarity_icon_and_text_right": {
+        "icon_key": "RARITY_ICON",
+        "text_key": "RARITY_TEXT"
+      },
       "type_badge_left": "{CARD_TYPE}",
       "title_center_key": "WORD",
       "subtitle_center_key": "GLOSS"
@@ -76,19 +110,41 @@
       "height_fraction": 0.44,
       "frame_style": "gold inner frame, navy outline",
       "art_prompt_key": "ART_PROMPT",
-      "rules": ["no text inside artwork", "single coherent scene", "no modern objects"]
+      "rules": [
+        "no text inside artwork",
+        "single coherent scene",
+        "no modern objects"
+      ]
     },
     "stats_row": {
       "stats": [
-        { "label": "LORE", "pips_key": "STAT_LORE" },
-        { "label": "CONTEXT", "pips_key": "STAT_CONTEXT" },
-        { "label": "COMPLEXITY", "pips_key": "STAT_COMPLEXITY" }
+        {
+          "label": "LORE",
+          "pips_key": "STAT_LORE"
+        },
+        {
+          "label": "CONTEXT",
+          "pips_key": "STAT_CONTEXT"
+        },
+        {
+          "label": "COMPLEXITY",
+          "pips_key": "STAT_COMPLEXITY"
+        }
       ]
     },
     "panels": [
-      { "label": "ABILITY", "content_key": "ABILITY_TEXT" },
-      { "label": "OT VERSE", "content_key": "OT_VERSE_LINE" },
-      { "label": "NT VERSE", "content_key": "NT_VERSE_LINE" },
+      {
+        "label": "ABILITY",
+        "content_key": "ABILITY_TEXT"
+      },
+      {
+        "label": "OT VERSE",
+        "content_key": "OT_VERSE_LINE"
+      },
+      {
+        "label": "NT VERSE",
+        "content_key": "NT_VERSE_LINE"
+      },
       {
         "type": "split",
         "left_label": "HEB/ARAM",
@@ -104,7 +160,11 @@
         "right_refs_label": "NT",
         "right_refs_key": "NT_REFS"
       },
-      { "label": "TRIVIA", "bullets_key": "TRIVIA_BULLETS", "bullets_count": 3 }
+      {
+        "label": "TRIVIA",
+        "bullets_key": "TRIVIA_BULLETS",
+        "bullets_count": 3
+      }
     ]
   },
   "content": {},
@@ -122,7 +182,12 @@
     "output_must_contain_only_the_card": true,
     "no_text_outside_card_border": true,
     "no_captions_or_watermarks_outside_card": true,
-    "do_not_render_hidden_metadata": ["WILD_ID", "WILD_COUNTS_AS", "QUARTET_ID", "LETTER", "NOTES_INTERNAL"]
+    "do_not_render_hidden_metadata": [
+      "WILD_ID",
+      "WILD_COUNTS_AS",
+      "LETTER",
+      "NOTES_INTERNAL"
+    ]
   },
   "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Render: header, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left)."
 }

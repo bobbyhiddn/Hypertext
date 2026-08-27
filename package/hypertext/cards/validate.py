@@ -88,10 +88,6 @@ def lint_card(card: dict) -> list[str]:
     if card_type == 'TITLE':
         if not content.get('WILD_ID'):
             warnings.append("TITLE cards should have WILD_ID set")
-    else:
-        # Non-TITLE cards should have quartet info
-        if not content.get('QUARTET_ID') and not content.get('LETTER'):
-            pass  # Optional, don't warn
 
     # Check for empty required strings
     required_strings = ['WORD', 'GLOSS', 'ART_PROMPT', 'ABILITY_TEXT']

@@ -1684,7 +1684,7 @@ def _parse_revise_form(raw: str, card: dict | None = None) -> ReviseFormResult:
             "/content/OT_REFS", "/content/NT_REFS",
             "/content/TRIVIA_BULLETS",
             "/content/WILD_ID", "/content/WILD_COUNTS_AS",
-            "/content/QUARTET_ID", "/content/LETTER", "/content/NOTES_INTERNAL",
+            "/content/LETTER", "/content/NOTES_INTERNAL",
             "/model_prompt",  # Allow updating the generation prompt
         })
 
@@ -2179,7 +2179,6 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
             "trivia": card["content"]["TRIVIA_BULLETS"],
             "wild_id": None,
             "wild_counts_as": None,
-            "quartet_id": None,
             "letter": None,
             "notes": None,
             "sources": grounding.get("sources", []) if isinstance(grounding.get("sources"), list) else [],
@@ -2584,7 +2583,6 @@ def _plan_demo_card(
         "trivia": trivia_items,
         "wild_id": None,
         "wild_counts_as": None,
-        "quartet_id": None,
         "letter": None,
         "notes": None,
         "sources": grounding.get("sources", []) if isinstance(grounding.get("sources"), list) else [],
