@@ -61,10 +61,8 @@ jobs:
           echo "PR head branch: ${HEAD_REF}"
 
       - uses: actions/checkout@v4
-       with:
-         lfs: true
-         lfs: true
         with:
+          lfs: true
           ref: ${{ steps.get-pr-info.outputs.head_ref }}
           fetch-depth: 0
 
@@ -108,10 +106,8 @@ jobs:
     if: needs.process-comment.outputs.action == 'review'
     steps:
       - uses: actions/checkout@v4
-       with:
-         lfs: true
-         lfs: true
         with:
+          lfs: true
           ref: ${{ needs.process-comment.outputs.head_ref }}
           fetch-depth: 0
 
@@ -180,10 +176,8 @@ jobs:
     if: needs.process-comment.outputs.action == 'rebuild'
     steps:
       - uses: actions/checkout@v4
-       with:
-         lfs: true
-         lfs: true
         with:
+          lfs: true
           ref: ${{ needs.process-comment.outputs.head_ref }}
           fetch-depth: 0
 
@@ -247,10 +241,8 @@ jobs:
     if: needs.process-comment.outputs.action == 'upgrade'
     steps:
       - uses: actions/checkout@v4
-       with:
-         lfs: true
-         lfs: true
         with:
+          lfs: true
           ref: ${{ needs.process-comment.outputs.head_ref }}
           fetch-depth: 0
 
@@ -322,10 +314,8 @@ jobs:
     if: needs.process-comment.outputs.action == 'revise'
     steps:
       - uses: actions/checkout@v4
-       with:
-         lfs: true
-         lfs: true
         with:
+          lfs: true
           ref: ${{ needs.process-comment.outputs.head_ref }}
           fetch-depth: 0
 

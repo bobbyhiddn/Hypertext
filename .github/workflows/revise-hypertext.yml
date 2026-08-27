@@ -25,10 +25,8 @@ jobs:
     if: github.actor != 'github-actions[bot]'
     steps:
       - uses: actions/checkout@v4
-       with:
-         lfs: true
-         lfs: true
         with:
+          lfs: true
           fetch-depth: 0
 
       - name: Setup Python
