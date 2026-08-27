@@ -49,7 +49,7 @@ When you spawn Hypertext, you get:
 | Component | Description |
 |-----------|-------------|
 | **Main Deck (90 cards)** | The Tower - main playing cards |
-| **Lot Deck (30 cards)** | Phase cards |
+| **Lot Deck (30 cards)** | Chapter Lot and Page Lot recipes |
 | **24 Letter Tokens** | Blue chips for tracking Letters |
 | **2 Wreath Tokens** | Gold Alpha (Record) and Omega (Empty) wreaths |
 | **Sheol Zone** | Red-tinted discard area |
@@ -149,29 +149,32 @@ Each player color has their own hand zone:
    - Press **7** to deal 7 cards
    - Cards go to the current player's hand
    - Switch seats and repeat for each player
-6. **Deal 1 Lot** to each player:
-   - Hover Lot deck, press **1**
-   - Drag the Lot card to that player's area
-   - Repeat for each player
-7. **Flip 1 Lot** face-up to the center as the Board Phase (press F to flip)
+6. **Deal 2 Lot candidates** to each player:
+   - Hover Lot deck, press **2**
+   - Each player keeps one as their Page Lot (face-up in their area) and returns the other to the Lot deck
+7. **Flip 1 Lot** face-up to the center as the Chapter Lot (press F to flip)
+   - Also flip the top card of the Tower into Sheol to seed it
 8. **Designate Sheol**: The red zone is for discards
 
 ---
 
 ## Turn Sequence
 
-### 1. Draw
-- Draw 1 card from the Tower (Main Deck)
+### 1. Reveal
+- Reveal the top card of the Tower (Main Deck)
+- Either **Draw-Activate** it (see below) or **Pass**: take it into hand and draw 1 more
 
-### 2. Play
-- **Free Activation**: Reveal the card you just drew to use its ability
-- **Letter Activation**: Spend 1 Letter token to reveal a card from hand
-- Activated cards go to Sheol (drag to red zone)
+### 2. Activate
+- **Draw Activation**: Activate the card you just revealed (0 Letters + printed cost)
+- **Hand Activation**: Spend 1 Letter token plus the printed cost to activate a card from hand
+- Activated cards and their costs go to Sheol (drag to red zone)
 
 ### 3. Record
-- Play sets matching the Board Phase or your Lot
-- **Board Phase**: Cards go to your Pages (face-up in front of you)
-- **Lot**: Cards go to Sheol, gain 1 Letter (2 for 7-card Lots)
+- Play exact sets matching the Chapter Lot or any Page Lot
+- **Chapter Lot**: Cards go to Sheol, gain Chapter Letters
+- **Your Page Lot**: Cards go to your Pages (face-up in front of you), gain Owner Letters; the Page scores its Page Value at Chapter end
+- **Another player's Page Lot**: Cards go to Sheol, gain Visitor Letters
+- See [rules.md](rules.md) for the value table
 
 ### 4. End
 - Discard 1 card to Sheol
@@ -183,15 +186,15 @@ Each player color has their own hand zone:
 
 When a player empties their hand:
 
-1. **Grace period**: Others may play to open phases
-2. **Score**: Tally points for the chapter
-3. **Convert Letters**: Each Letter = 5 points
+1. **Grace period**: Each other player, clockwise, gets one final Record stage
+2. **Score Pages**: Each Page scores its Page Value (8 / 10 / 14)
+3. **Convert Letters**: Each remaining Letter = 3 points; add Wreaths
 4. **Hand penalty**: -1 point per card remaining
 5. **Click NEW CHAPTER** and reset:
-   - Collect Lots, reshuffle into Lot deck
-   - Shuffle Sheol back into Tower
-   - Deal new Lots and 7 cards each
-   - Flip new Board Phase
+   - Set the finished Chapter Lot aside (it does not repeat); return Page Lots to the Lot deck
+   - Gather all 90 Word Cards (hands, Tower, Sheol, Pages) and shuffle a fresh Tower
+   - Deal 2 Lot candidates and 7 cards each
+   - Flip the new Chapter Lot and seed Sheol
 
 ---
 
@@ -199,12 +202,12 @@ When a player empties their hand:
 
 | Source | Points |
 |--------|--------|
-| 5-card Board Phase | 8 |
-| 6-card Board Phase | 10 |
-| 7-card Board Phase | 12 |
+| 5-card Page | 8 |
+| 6-card Page | 10 |
+| 7-card Page | 14 |
 | Record Wreath (Alpha) | +2 |
 | Empty Wreath (Omega) | +2 |
-| Letter conversion | 5 each |
+| Letter conversion | 3 each |
 | Hand penalty | -1 per card |
 
 ---

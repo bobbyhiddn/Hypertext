@@ -24,13 +24,15 @@ During active production, we aim for one new card per day or every other day. Ca
 - **VERB**: Action or state of being
 - **ADJECTIVE**: Descriptive word
 - **NAME**: Proper name (person or place)
-- **TITLE**: Special/wild card that can count as other cards
+- **TITLE**: Wild card that may stand for NOUN or NAME when recording (one substitution per Record)
 
 ### What do the rarities mean?
-- **COMMON** (white circle): Frequently occurring words with simple abilities
-- **UNCOMMON** (green square): Less common words with suit-based abilities
-- **RARE** (gold hexagon): Notable words with stat-referencing abilities
-- **GLORIOUS** (orange rhombus): Significant theological terms with unique abilities
+Every rarity is shown as a diamond beside its printed activation cost (cards discarded from hand to activate):
+
+- **COMMON** (white diamond, cost 0): Frequently occurring words with simple abilities
+- **UNCOMMON** (green diamond, cost 0): Less common words with suit-based abilities
+- **RARE** (gold diamond, cost 1): Notable words with stat-referencing abilities
+- **GLORIOUS** (orange diamond, cost 2): Significant theological terms with unique abilities
 
 ## Stats
 

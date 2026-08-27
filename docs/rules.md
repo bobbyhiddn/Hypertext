@@ -1,32 +1,45 @@
 # Hypertext: Rules of Play
 
+**Ruleset:** Babel Alpha (canonical model). This document is the authoritative
+prose statement of the Hypertext game system. Where it disagrees with older
+documentation, this document wins. Where it disagrees with the machine-readable
+Lot rules (`templates/phases.yml`, `hypertext.lots.rules`) or the approved
+template matrix, the numbers printed on approved templates win and this
+document must be corrected to match them.
+
 ## Overview
 
-Hypertext is a word-study trading card game for 2–8 players. Collect cards by type to record sets matching phase requirements. Race to empty your hand while scoring points through strategic records. The player with the most points after all chapters wins.
+Hypertext is a word-study card game for 2–8 players built on Biblical
+vocabulary. Players write a **Chapter** together: they reveal Word Cards from
+the Tower, activate abilities, and **Record** exact combinations of card types
+that match the **Lots** in play. Recording your own Page Lot creates a
+**Page** — a scored, face-up set in front of you. Recording the shared Chapter
+Lot or another player's Page Lot earns **Letters** instead.
 
-### Scaled Rounds by Player Count
+The structure of a game is:
 
-| Players | Chapters | Special Rules | Chapter Flavor | Matthias Flavor |
-|---------|----------|---------------|----------------|-----------------|
-| 2 | 3 | No redeeming | *"On the third day He rose"* | *"Thereafter, the lot fell on Matthias"* |
-| 3–4 | 6 | — | *"Two were proposed, that twelve be restored"* | *"The lot was cast between them"* |
-| 5+ | 12 | — | *"Twelve apostles; twelve gates"* | *"Matthias numbered with them, alongside Paul"* |
+> **Game → Chapters → Chapter Lot + Page Lots → Records → Pages / Sheol →
+> Chapter scoring → full 90-card reset**
+
+The Pages created during play collectively constitute the Chapter. When the
+Chapter closes, every Page is scored, all 90 Word Cards are gathered and
+reshuffled, and the next Chapter begins with a fresh Tower and a new Chapter
+Lot. The player with the highest total after the final Chapter wins.
 
 ---
 
 ## Components
 
-- **90 Card Main Deck / The Tower** (5 types)
-- **30 Phase Cards**
-- **Letter Tokens**
-- **Wreath Tokens** (2)
-- **Score Tracker**
+- **90 Word Cards** — the Tower (5 types × 4 rarities)
+- **30 Lot Cards** — 5-, 6-, and 7-card recipes
+- **Letter tokens**
+- **2 Wreath tokens** — Record Wreath and Empty Wreath
+- **Redeem markers** (one per player)
+- **Score tracker**
 
 ---
 
 ## Card Anatomy
-
-Each card has:
 
 | Element | Description |
 |---------|-------------|
@@ -35,342 +48,408 @@ Each card has:
 | **Gloss** | Short definition |
 | **Type** | NOUN, VERB, ADJECTIVE, NAME, or TITLE |
 | **Rarity** | COMMON, UNCOMMON, RARE, or GLORIOUS |
+| **Printed cost** | Cards discarded from hand to activate (shown beside the rarity) |
 | **Art** | Thematic illustration |
 | **Stats** | LORE, CONTEXT, COMPLEXITY (1–5 each) |
 | **Ability** | Effect when activated |
 | **Verses** | OT and NT scripture references |
-| **Greek/Hebrew** | Original language forms |
-| **Trivia** | Educational bullet points |
+| **Hebrew/Aramaic · Greek** | Original-language forms |
+| **Trivia** | Educational notes |
 
 ---
 
 ## Card Types
 
-| Type | Role | Count |
-|------|------|-------|
-| **NOUN** | Person, place, thing, or concept | 16 |
-| **VERB** | Action or state | 20 |
-| **ADJECTIVE** | Descriptive word | 20 |
-| **NAME** | Proper noun (person or place) | 16 |
-| **TITLE** | Wild—substitutes for NOUN or NAME in records | 18 |
+| Type | Icon | Role | Count |
+|------|------|------|-------|
+| **NOUN** | Closed book | Person, place, thing, or concept | 16 |
+| **VERB** | Slanted pencil | Action or state | 20 |
+| **ADJECTIVE** | Pencil with sparkle | Descriptive word | 20 |
+| **NAME** | Feather quill | Proper noun (person or place) | 16 |
+| **TITLE** | Ornate empty frame | Wild — may stand for NOUN or NAME when recording | 18 |
 
-**Total: 90 cards**
-
----
-
-## Rarity & Abilities
-
-Abilities activate when you **reveal** a card during the Play phase.
-
-**Free Activation:** Once per turn, you may reveal the card you just drew.
-
-**Letter Activation:** Spend 1 Letter to reveal a card from your hand (repeatable).
-
-Activated cards cannot be recorded—they go to Sheol (along with any cards discarded to pay the activation cost). **Activated cards and their costs cannot be redeemed.**
-
-### Ability Costs
-
-| Rarity | Icon | Cost to Activate |
-|--------|------|------------------|
-| **COMMON** | ◆ White | Reveal only |
-| **UNCOMMON** | ◆ Green | Discard 1 from hand |
-| **RARE** | ◆ Gold | Discard 2 from hand |
-| **GLORIOUS** | ◆ Orange | Discard 3 from hand |
+**Total: 90 cards.**
 
 ---
 
-## Phases
+## Rarity and Printed Cost
 
-Phases define the **type composition** required to record a valid set. All phases require 5–7 cards.
+| Rarity | Diamond | Printed cost (discard from hand) |
+|--------|---------|----------------------------------|
+| **COMMON** | White | 0 |
+| **UNCOMMON** | Green | 0 |
+| **RARE** | Gold | 1 |
+| **GLORIOUS** | Orange | 2 |
 
-### 5-Card Phases (8 pts)
-
-| Phase | Composition | Points |
-|-------|-------------|--------|
-| **Remnant** | 5 same type | 8 |
-| **Pentateuch** | 5 different types | 8 |
-| **Scroll** | NAME + VERB + ADJ + NOUN + TITLE | 8 |
-| **Witness** | NAME + NAME + VERB + NOUN + ADJ | 8 |
-| **Epistle** | NAME + VERB + VERB + NOUN + NOUN | 8 |
-| **Psalm** | ADJ + ADJ + ADJ + VERB + NOUN | 8 |
-| **Parable** | NOUN + NOUN + NOUN + VERB + ADJ | 8 |
-| **Oracle** | VERB + VERB + ADJ + NAME + NOUN | 8 |
-| **Covenant** | NAME + VERB + NOUN + NOUN + ADJ | 8 |
-| **Benediction** | TITLE + TITLE + ADJ + NOUN + NAME | 8 |
-| **Altar** | NOUN + NOUN + NOUN + NOUN + VERB | 8 |
-| **Foundation** | NAME + NAME + NAME + NOUN + VERB | 8 |
-| **Proverb** | ADJ + ADJ + VERB + NOUN + TITLE | 8 |
-| **Lament** | ADJ + ADJ + ADJ + ADJ + NOUN | 8 |
-
-### 6-Card Phases (10 pts)
-
-| Phase | Composition | Points |
-|-------|-------------|--------|
-| **Assembly** | 3 + 3 (two types) | 10 |
-| **Trinity** | 2 + 2 + 2 (three types) | 10 |
-| **Tabernacle** | NOUN + NOUN + NOUN + NAME + NAME + NAME | 10 |
-| **Chorus** | VERB + VERB + VERB + ADJ + ADJ + ADJ | 10 |
-| **Sanctuary** | NOUN + NOUN + NOUN + NOUN + NAME + NAME | 10 |
-| **Hymnal** | ADJ + ADJ + VERB + VERB + NOUN + NOUN | 10 |
-| **Gospel** | NAME + VERB + NOUN + ADJ + TITLE + VERB | 10 |
-| **Jubilee** | VERB + VERB + VERB + VERB + ADJ + ADJ | 10 |
-| **Wisdom** | ADJ + ADJ + ADJ + ADJ + NOUN + NOUN | 10 |
-| **Prophecy** | ADJ + ADJ + NAME + NAME + NOUN + VERB | 10 |
-| **Selah** | 6 same type | 10 |
-
-### 7-Card Phases (14 pts)
-
-| Phase | Composition | Points |
-|-------|-------------|--------|
-| **Creation** | 3 + 2 + 2 (three types) | 14 |
-| **Revelation** | All 5 types + 2 same | 14 |
-| **Exodus** | VERB + VERB + VERB + NAME + NAME + NOUN + NOUN | 14 |
-| **Apocalypse** | 7 same type | 14 |
+The printed cost is paid every time the card is activated, regardless of how
+the activation was accessed (see *Activation*).
 
 ---
 
-## Setup
+## Lots
 
-1. **Shuffle** the main deck (90 cards) to form the **Tower**.
-2. **Shuffle** the phase deck (30 phases).
-3. **Deal 7 cards** to each player.
-4. **Deal 1 Phase card** to each player face-up (Lot).
-5. **Flip 1 Phase card** to the center (Chapter).
-6. Place remaining decks face-down. Start a face-up **Sheol** (discard pile).
+A **Lot** is a recipe: the exact type composition of a 5-, 6-, or 7-card set.
+The 30 Lot Cards are universal across all Hypertext sets. Every Lot Card can
+serve in either role:
+
+| Role | Lifetime | Function |
+|------|----------|----------|
+| **Chapter Lot** | Current Chapter | One shared recipe everyone may Record against |
+| **Page Lot** | Current Chapter | A personal recipe assigned to one player; others may still Record against it |
+
+### Lot values by size
+
+| Lot size | Chapter Letters | Owner Letters | Visitor Letters | Page Value |
+|----------|-----------------|---------------|-----------------|------------|
+| 5-card | 1 | 2 | 1 | 8 points |
+| 6-card | 2 | 2 | 1 | 10 points |
+| 7-card | 2 | 3 | 2 | 14 points |
+
+- **Chapter Letters** — earned by anyone who Records the Chapter Lot.
+- **Owner Letters** — earned by Recording *your own* Page Lot (this creates a Page).
+- **Visitor Letters** — earned by Recording *another player's* Page Lot.
+- **Page Value** — the points a Page is worth when the Chapter is scored.
+
+On the current Lot faces the Page Value is printed as `CHAPTER VALUE: n POINTS`
+and the Owner Letters as `PAGE VALUE: n LETTERS`. Read them as Page Value and
+Owner Letters respectively. Chapter Letters and Visitor Letters are fixed by
+Lot size and are not printed.
+
+### The 30 Lots
+
+**5-card** (14): Remnant (5 same type) · Pentateuch (5 different types) ·
+Scroll (NAME + VERB + ADJ + NOUN + TITLE) · Witness (NAME + NAME + VERB +
+NOUN + ADJ) · Epistle (NAME + VERB + VERB + NOUN + NOUN) · Psalm (ADJ + ADJ +
+ADJ + VERB + NOUN) · Parable (NOUN + NOUN + NOUN + VERB + ADJ) · Oracle (VERB +
+VERB + ADJ + NAME + NOUN) · Covenant (NAME + VERB + NOUN + NOUN + ADJ) ·
+Benediction (TITLE + TITLE + ADJ + NOUN + NAME) · Altar (NOUN + NOUN + NOUN +
+NOUN + VERB) · Foundation (NAME + NAME + NAME + NOUN + VERB) · Proverb (ADJ +
+ADJ + VERB + NOUN + TITLE) · Lament (ADJ + ADJ + ADJ + ADJ + NOUN)
+
+**6-card** (12): Congregation (6 any mix) · Assembly (3 + 3, two types) ·
+Trinity (2 + 2 + 2, three types) · Tabernacle (NOUN ×3 + NAME ×3) · Chorus
+(VERB ×3 + ADJ ×3) · Sanctuary (NOUN ×4 + NAME ×2) · Hymnal (ADJ ×2 + VERB ×2 +
+NOUN ×2) · Gospel (NAME + VERB + NOUN + ADJ + TITLE + VERB) · Jubilee (VERB ×4 +
+ADJ ×2) · Wisdom (ADJ ×4 + NOUN ×2) · Prophecy (ADJ ×2 + NAME ×2 + NOUN + VERB)
+· Selah (6 same type)
+
+**7-card** (4): Creation (3 + 2 + 2, three types) · Revelation (all 5 types +
+2 same) · Exodus (VERB ×3 + NAME ×2 + NOUN ×2) · Apocalypse (7 same type)
+
+Canonical compositions live in `templates/phases.yml`.
 
 ---
 
-## The Judge
+## Game Length
 
-Appoint one player as Judge for the game. The Judge:
+| Mode | Chapters | Flavor |
+|------|----------|--------|
+| **Quick** | 3 | *"On the third day He rose"* |
+| **Standard** | 6 | *"Two were proposed, that twelve be restored"* |
+| **Epic** | 12 | *"Twelve apostles; twelve gates"* |
 
-- Tracks all players' scores at the end of each chapter
-- Holds the Wreath tokens and awards them each chapter
-- Arbitrates disputes (who called Redeem first, timing conflicts)
-- The Judge plays normally; the role is administrative only
-
----
-
-## Two Phase Types
-
-| Phase Type | Location | Reward | Cards Go... |
-|------------|----------|--------|-------------|
-| **Chapter Lot** | Center of table | Points (8–14) + Record Wreath | Your Pages (open) |
-| **Lot** | In front of you | Letters (see below) | Sheol |
-
-- **Chapter Lot:** Score points. Cards stay on table in your Pages.
-- **Lot:** Earn Letters. Cards leave your hand to Sheol.
-
-### Lot Letter Rewards
-
-| Lot Size | Own Lot | Opponent's Lot |
-|----------|---------|----------------|
-| 5-card | 2 Letters | 2 Letters |
-| 6-card | 2 Letters | 2 Letters |
-| 7-card | 3 Letters | 3 Letters |
-
-Canonical Lot rewards are defined in `templates/phases.yml` and validated by
-`hypertext.lots.rules`. As a Chapter Lot, five-, six-, and seven-card Lots score
-8, 10, and 14 points. When an opponent records your personal Lot, they earn 2,
-2, or 3 Letters respectively. Visible composition labels are unbracketed and
-the count badge uses the singular form `5-CARD`, `6-CARD`, or `7-CARD`.
+Standard (6 Chapters) is the recommended default. Quick (3 Chapters) is the
+recommended starting point for large tables. Redeem is disabled in two-player
+games. Six-to-eight-player play is supported but remains subject to Alpha
+playtesting.
 
 ---
 
-## Turn Sequence
+## Objects and Zones
 
-### 1. Draw
+| Object | Lifetime | Function |
+|--------|----------|----------|
+| **Word Cards** | Whole game | The 90-card corpus, reconstituted into the Tower each Chapter |
+| **Tower** | Current Chapter | Face-down draw pile |
+| **Hand** | Current Chapter | Private Word Cards held by a player |
+| **Resolve** | One activation | Temporary area holding the activated card and the cards paid as its cost until the ability finishes |
+| **Sheol** | Current Chapter | Shared face-up discard pile: activated cards, activation costs, cards Recorded to the Chapter Lot or a visited Page Lot, End discards, ability discards, and the seeded Chapter-start card |
+| **Chapter Lot** | Current Chapter | Shared recipe available to every player |
+| **Page Lot** | Current Chapter | Personal recipe assigned to one player, visible to all |
+| **Page** | Current Chapter | Scored face-up set created by Recording your own Page Lot |
+| **Used Chapters** | Whole game | Completed Chapter Lots; they do not repeat during the game |
+| **Letters** | Current Chapter | Open resource tokens; spent on activations or retained for score |
+| **Wreaths** | Current Chapter | Chapter bonus tokens (+2 points each) |
+| **Redeem marker** | Current Chapter | Marks a player who owes a Redeem-debt discard |
 
-Reveal the top card of the Tower. Choose one:
-- **Take it**: Add the revealed card to your hand.
-- **Pass**: Return it face-down to the top, then draw 2 cards.
+### Visibility
 
-### 2. Play
+| Location | Visibility |
+|----------|------------|
+| Hand | Hidden (yours only) |
+| Tower | Hidden |
+| Pages, Sheol, Resolve, Lots, Letters, Wreaths | Open |
 
-**Free Activation (once per turn):**
-- You may reveal the card you just drew (if you took the top card).
-- Pay its rarity cost (discard cards from hand).
-- Resolve ability.
-- Card and cost go to Sheol (not redeemable).
+---
 
-**Letter Activation (repeatable):**
-- Spend 1 Letter to reveal a card from your hand.
-- Pay its rarity cost.
-- Resolve ability.
-- Card and cost go to Sheol (not redeemable).
+## Chapter Setup
+
+1. Gather all 90 Word Cards and shuffle them to form the Tower.
+2. Move the top card of the Tower face-up to Sheol. This seeded card cannot be Redeemed.
+3. Reveal one Chapter Lot from the Lot deck that has not been used this game.
+4. Deal two Lot Cards face-down to each player as Page Lot candidates.
+5. Each player chooses one candidate as their Page Lot, before receiving Word Cards.
+6. Reveal the chosen Page Lots face-up in front of their owners. Return the unchosen candidates to the Lot deck.
+7. Deal seven Word Cards to each player.
+8. Reset Letters, Wreaths, Record markers, Redeem markers, and temporary effects.
+9. Establish the starting player. The starting player rotates clockwise after each Chapter.
+
+---
+
+## Turn Structure
+
+Each turn has four stages, in order:
+
+1. **Reveal**
+2. **Activate**
+3. **Record**
+4. **End**
+
+### 1. Reveal
+
+Reveal the top card of the Tower, then choose one:
+
+**Draw Activation** — activate the revealed card.
+- Spend **0 Letters**.
+- Pay its printed rarity cost from hand.
+- Place the card and its payment in Resolve, resolve the ability, then move everything in Resolve to Sheol.
+- The revealed card is *not* added to your hand, and no additional card is drawn.
+
+**Pass** — decline the activation.
+- Add the revealed card to your hand.
+- Draw one additional card into your hand.
+- Neither card receives a Draw Activation.
+
+The choice is: *activate the revealed card, or gain two cards.*
+
+### 2. Activate
+
+After Reveal resolves, you may activate cards from your hand. Each **Hand
+Activation** costs **1 Letter** plus the card's printed rarity cost. Hand
+Activations are repeatable as long as you can pay.
+
+Letters earned later this turn (during Record) cannot be spent until a future
+turn.
+
+#### Activation costs
+
+| Access | Letter cost | Printed cost |
+|--------|-------------|--------------|
+| Draw Activation (revealed card) | 0 | As printed (0 / 0 / 1 / 2) |
+| Hand Activation (card from hand) | 1 | As printed (0 / 0 / 1 / 2) |
+
+A zero-Letter Draw Activation does not waive the printed cost.
+
+#### Cost resolution
+
+For every activation:
+
+1. Declare the activation.
+2. Pay the Letter access cost, if any.
+3. Pay the printed discard cost from hand.
+4. Move the activated card and the payment cards to Resolve.
+5. Resolve the ability.
+6. Move everything in Resolve to Sheol.
+
+Cards in Resolve cannot be targeted by the ability currently resolving, so an
+ability can never retrieve its own cost before that cost reaches Sheol.
+Activated cards and their costs cannot be Redeemed.
 
 ### 3. Record
 
-You may record as many times as you are able:
+You may Record exact card combinations from your hand that match any active
+Lot. Every player may Record each active Lot **once per Chapter**, and may
+Record several different Lots in one Record stage.
 
-**Record Chapter Lot:**
-- Play cards from hand matching the Chapter Lot composition exactly.
-- Place cards face-up in your Pages.
-- Score the phase's point value.
-- **First player** to record the Chapter Lot takes the **Record Wreath (+2 points)**.
+| You Record… | Matching cards go to | You gain | Page created? |
+|-------------|----------------------|----------|---------------|
+| **The Chapter Lot** | Sheol | Chapter Letters | No |
+| **Your own Page Lot** | Your Pages, face-up | Owner Letters | **Yes** — worth its Page Value at Chapter scoring |
+| **Another player's Page Lot** | Sheol | Visitor Letters | No |
 
-**Record Lot:**
-- Play cards from hand matching your Lot composition exactly.
-- Cards go to Sheol.
-- Earn **2 Letters** (or **3 Letters** for 7-card Lots).
+Procedure:
 
-**Record to Opponent's Lot:**
-- Play cards from hand matching any opponent's Lot exactly.
-- Cards go to Sheol.
-- Earn **1 Letter** (or **2 Letters** for 7-card Lots).
+1. Choose the Lot.
+2. Reveal the required cards from your hand.
+3. Declare any TITLE substitution.
+4. Verify the recipe matches exactly.
+5. Mark yourself as having Recorded that Lot this Chapter.
+6. Take the Letters.
+7. Move the cards to Sheol, or to your Pages if you Recorded your own Page Lot.
+
+The first player to Record the Chapter Lot takes the **Record Wreath**.
+
+A Page stays face-up in front of you for the rest of the Chapter. Abilities
+that refer to cards "in your Pages" see only the Pages you have created this
+Chapter.
+
+#### TITLE wild rule
+
+A TITLE card may stand for **TITLE, NOUN, or NAME**. It may not stand for VERB
+or ADJECTIVE. At most **one** TITLE substitution is allowed per Record; a TITLE
+occupying an explicit TITLE slot in the recipe is not a substitution. Declare
+the substituted role when presenting the Record.
 
 ### 4. End
 
-**Discard 1 card** to Sheol.
+1. Discard one card from hand to Sheol, if able.
+2. Open the Redeem window on that discard (see *Redeem*).
+3. Resolve any Redeem.
+4. Check your hand. If it is empty, the Chapter closes (see *Closing the Chapter*). Otherwise play passes clockwise.
 
-If your hand is empty, the chapter ends immediately (skip to Chapter End). The first player to empty their hand takes the **Empty Wreath (+2 points)**.
-
----
-
-## Wreath Bonuses
-
-Two Wreath tokens are awarded each chapter:
-
-- **Record Wreath:** First player to record the Chapter Lot (+2 points)
-- **Empty Wreath:** First player to empty their hand (+2 points)
-
-A player may earn both Wreaths in the same chapter.
+Only the active player can close a Chapter, and only after their complete turn
+has resolved.
 
 ---
 
 ## Redeem
 
-When a player discards at End, any other player may call **"Redeem!"** to take that card.
+When a player makes their normal End discard, other players may **Redeem** it
+— take it into hand.
 
-- First to call becomes the card's **redeemer**.
-- The redeemer takes the discarded card into their hand.
-- The redeemer must discard 1 card at the end of their next turn (in addition to their normal discard).
-- Limit: 1 redeem per player per chapter.
-- Activated cards and their costs **cannot be redeemed**—only End discards.
+- Redeem is disabled in two-player games.
+- Only the normal End discard can be Redeemed. Activated cards, activation costs, Recorded cards, ability discards, the seeded Chapter-start card, and Redeem-debt discards can never be Redeemed.
+- Priority starts with the next player clockwise from the discarding player and proceeds clockwise. The first eligible player who accepts becomes the **redeemer**.
+- Each player may Redeem once per Chapter.
+- The redeemer takes a Redeem marker. At the start of their next turn, before Reveal, they discard one card to Sheol. That debt discard cannot be Redeemed.
+- Redeem debt expires at Chapter reset.
 
 ---
 
-## Chapter End
+## Closing the Chapter
 
-When a player empties their hand:
+When the active player's hand is empty at the end of their turn:
 
-1. **Award Empty Wreath**: Give the empty wreath to the accomplishing player.
-2. **Grace period:** All other players may play to any open Lots (Chapter or Page) if they have exact matches.
-3. **Score the chapter:** The Judge tallies all points earned this chapter (Chapter Lot records, Wreath bonuses, Letter conversions, hand penalties) and updates the score tracker.
-4. **Reset Letters:** After scoring letters (3 points each), reset all letters.
-5. **Hand penalty:** -1 point per card remaining in hand.
-6. **Reset:**
-    - All Letters reset to 0.
-    - Collect all Lot cards, reshuffle into phase deck.
-    - Deal new Lot to each player.
-    - Flip new Chapter Lot (no repeats; redraw if duplicate; only relevant if lots have reshuffled).
-    - Reshuffle Sheol into Tower. Flip top card of Tower into Sheol.
-    - Deal 7 new cards to each player.
+1. Award the **Empty Wreath** to that player.
+2. **Grace period:** each other player, in clockwise order, receives one final Record stage. They may Record any active Lot they have not already Recorded this Chapter. There is no Reveal, no activation, no Redeem, and no End discard during Grace. Letters earned during Grace count for scoring.
+3. A player who empties their hand during Grace receives no Empty Wreath, but suffers no hand penalty.
+4. Proceed to Chapter Scoring.
+
+### Wreaths
+
+| Wreath | Awarded to | Value |
+|--------|------------|-------|
+| **Record Wreath** | First player to Record the Chapter Lot | +2 points |
+| **Empty Wreath** | The player who closes the Chapter | +2 points |
+
+A player may earn both in the same Chapter.
+
+---
+
+## Chapter Scoring
+
+Each player's Chapter score is:
+
+> **Page Values of all Pages created this Chapter**
+> **+ remaining Letters × 3**
+> **+ Wreath points**
+> **− 1 per card remaining in hand**
+
+- Spent Letters score nothing.
+- Records to the Chapter Lot or to another player's Page Lot do not score directly; their value is the Letters they earned.
+- Negative Chapter scores are permitted.
+- Score exactly once, then add the result to the running total before reset.
+
+---
+
+## Chapter Reset
+
+After scoring:
+
+1. Move the completed Chapter Lot to Used Chapters. It does not repeat this game.
+2. Return all Page Lots to the Lot deck.
+3. Gather all 90 Word Cards from every hand, the Tower, Sheol, Resolve, and every player's Pages.
+4. Confirm all 90 cards are present.
+5. Shuffle them into a fresh Tower.
+6. Clear all Pages.
+7. Reset Letters, Wreaths, Record markers, and Redeem markers.
+8. End all temporary effects.
+9. Rotate the starting player clockwise.
+10. Begin the next Chapter Setup: reveal the next unused Chapter Lot and deal new Page Lot candidates.
+
+Because Pages exist only within a Chapter, any Page-dependent ability
+accumulates during the current Chapter only and resets automatically.
+
+---
+
+## Tower Exhaustion
+
+When the Tower is empty and a draw is required:
+
+1. Shuffle the eligible cards in Sheol into a new Tower.
+2. Exclude cards in Resolve.
+3. Exclude an End discard whose Redeem window is still open.
+4. Continue drawing.
+
+If fewer cards exist than required, draw as many as possible.
+
+---
+
+## Ability Resolution Principles
+
+Card text may create explicit exceptions to these rules. Otherwise:
+
+- Costs are paid before effects.
+- "Cannot" overrides "can".
+- Required targets must exist; resolve the legal portions of an ability in written order.
+- **Draw** means move a card from the Tower to hand. Draws caused by abilities never create a Draw Activation.
+- **Discard** means move a card to Sheol. Only the normal End discard opens a Redeem window.
+- Cards in Resolve cannot be targeted by the ability currently resolving.
+- Temporary effects end at their stated duration or at Chapter reset, whichever comes first.
+- Abilities that refer to Pages see only Pages created this Chapter.
 
 ---
 
 ## Game End
 
-The game ends after completing the number of chapters for your player count (see Scaled Rounds table in Overview).
+The game ends after the number of Chapters for the chosen mode. The player with
+the highest total score wins.
 
-The player with the highest total score wins.
-
----
-
-## The Matthias Rule (Tiebreaker)
+### The Matthias Rule (tiebreaker)
 
 > *"And they cast lots, and the lot fell on Matthias."* — Acts 1:26
 
-If two or more players are tied for highest score after the final chapter:
+If players are tied for the highest score after the final Chapter:
 
-1. Only tied players participate in a tiebreaker chapter.
-2. Deal 7 cards to each tied player.
-3. Flip a new Chapter Lot (no player Page Lots are dealt).
-4. Play proceeds normally (draw, play, record, end).
-5. **First to record the Chapter Lot wins the game.**
-6. No points scored—just victory.
+1. Only the tied players play a tiebreaker Chapter.
+2. Shuffle the 90 Word Cards, seed Sheol, and deal seven cards to each tied player.
+3. Reveal a new unused Chapter Lot. No Page Lots are dealt.
+4. Play proceeds normally (Reveal, Activate, Record, End).
+5. The first player to Record the Chapter Lot wins the game. Nothing else is scored.
 
 ---
 
 ## Quick Reference
 
-### Turn Actions
+### Turn
 
-| Phase | Actions |
+| Stage | Actions |
 |-------|---------|
-| **1. Draw** | Reveal top card: Take it OR pass (return it, draw 2) |
-| **2. Play** | Free activation (if took top card) + Letter activations |
-| **3. Record** | Chapter / Lot / Opponent's Lot |
-| **4. End** | Discard 1 to Sheol (can be redeemed) |
+| **1. Reveal** | Reveal top card: **Draw-Activate** it (0 Letters + printed cost) *or* **Pass** (keep it and draw 1 more) |
+| **2. Activate** | Hand Activations: 1 Letter + printed cost each, repeatable |
+| **3. Record** | Chapter Lot → Sheol, Chapter Letters · Own Page Lot → Page, Owner Letters · Other's Page Lot → Sheol, Visitor Letters |
+| **4. End** | Discard 1 (Redeem window) · empty hand closes the Chapter |
 
-### Other Actions
+### Values
 
-| Action | Effect |
-|--------|--------|
-| **Activate** | Reveal card, pay cost → Sheol (not redeemable) |
-| **Redeem** | Call on opponent's End discard; Take card into hand; If multiple people call, Judge decides who gets it |
-| **Record Chapter Lot** | Score points, cards to Pages |
-| **Record Lot** | Earn 2 Letters (3 for 7-card), cards to Sheol |
+| Item | Value |
+|------|-------|
+| Printed cost | COMMON 0 · UNCOMMON 0 · RARE 1 · GLORIOUS 2 |
+| Hand Activation access | 1 Letter |
+| Chapter Letters (5 / 6 / 7-card) | 1 / 2 / 2 |
+| Owner Letters (5 / 6 / 7-card) | 2 / 2 / 3 |
+| Visitor Letters (5 / 6 / 7-card) | 1 / 1 / 2 |
+| Page Value (5 / 6 / 7-card) | 8 / 10 / 14 points |
+| Record Wreath · Empty Wreath | +2 · +2 |
+| Retained Letter | 3 points |
+| Card left in hand | −1 point |
 
-### Scoring Summary
+### Alpha hypotheses
 
-| Source | Points |
-|--------|--------|
-| 5-card Chapter Lot | 8 |
-| 6-card Chapter Lot | 10 |
-| 7-card Chapter Lot | 14 |
-| Record Wreath | +2 |
-| Empty Wreath | +2 |
-| Letter conversion | 3 per Letter |
-| Hand penalty | -1 per card |
-
-### Activation Costs
-
-| Rarity | Cost |
-|--------|------|
-| COMMON | Reveal only |
-| UNCOMMON | Discard 1 |
-| RARE | Discard 2 |
-| GLORIOUS | Discard 3 |
-
----
-
-## Visibility
-
-| Location | Visibility |
-|----------|------------|
-| Hand | Hidden (yours only) |
-| Pages | Open (all see your records) |
-| Sheol | Open |
-| Tower | Hidden |
-| Chapter Lot | Open |
-| Lots | Open (each player's Lot visible) |
-| Letters | Open |
-
----
-
-## Special Rules
-
-### TITLE Cards
-TITLE cards are wild. They may substitute for NOUN or NAME in any record. A TITLE counts as whichever type you declare when recording.
-
-### Tower Empty
-Shuffle Sheol to form a new Tower. Continue play.
-
-### Phase Deck Cycling
-When all Lots have been used as Chapter Lots, reshuffle the Lot deck. The Chapter Lot may not repeat consecutively—redraw if duplicate.
-
----
-
-## Design Notes
-
-The tension in Hypertext:
-
-- **Play vs. Record:** Abilities give tempo, but activated cards can't record. Burn for advantage or hold for points?
-- **Chapter vs. Page:** Chapter Lots score big but don't shrink your hand. Page Lots dump cards fast but score less.
-- **Racing:** First to record the Chapter Lot earns the Record Wreath (+2). First to empty their hand earns the Empty Wreath (+2). But overcommitting leaves you vulnerable if you can't score.
-- **Letter Economy:** Letters fuel extra activations and convert to points. Spend for tempo or bank for score?
-- **Redeem:** Watch the discard—snatch what you need, but you'll owe an extra card next turn.
+The Letter and Page values above are Babel Alpha hypotheses and are
+instrumented during playtesting. Individual Lots may eventually justify ±1
+Letter adjustments. The printed cost matrix and the 20-template Word Card
+matrix are locked.
 
 ---
 
@@ -378,36 +457,25 @@ The tension in Hypertext:
 
 | Term | Definition |
 |------|------------|
-| **Set** | A completed group of cards matching a phase recipe |
-| **Phase** | The required type composition for a valid set (5–7 cards) |
-| **Record** | Play cards from hand to complete a set |
-| **Chapter** | One round of play; game length varies by player count (3–12 chapters) |
-| **Pages** | Your face-up area of scored Chapter Lot records |
-| **Lot** | Your personal phase; what falls to you |
-| **Tower** | The draw pile—language dispersed from Babel |
-| **Sheol** | The discard pile—the grave |
-| **Judge** | Appointed player who tracks score and arbitrates timing disputes |
-| **Wreath** | Token awarded for being first (+2 points each) |
-| **Record Wreath** | +2 points for first player to record the Chapter Lot |
-| **Empty Wreath** | +2 points for first player to empty their hand |
-| **Letter** | Token earned from Lot records (own: 2 per Lot, 3 for 7-card; opponent's: 1 per Lot, 2 for 7-card; worth 3 pts each) |
-| **Redeem** | Call on opponent's End discard to take it; owe extra discard next turn (1/chapter) |
-| **Redeemer** | The player who called Redeem and took the card |
-| **Activate** | Reveal a card to trigger its ability (card goes to Sheol, not redeemable) |
-| **Matthias Rule** | Tiebreaker chapter (no Page Lots); first to record the Chapter Lot wins |
-
----
-
-## Phase Quick Reference
-
-### 5-Card (14 phases)
-Remnant, Pentateuch, Scroll, Witness, Epistle, Psalm, Parable, Oracle, Covenant, Benediction, Altar, Foundation, Proverb, Lament
-
-### 6-Card (11 phases)
-Assembly, Trinity, Tabernacle, Chorus, Sanctuary, Hymnal, Gospel, Jubilee, Wisdom, Prophecy, Selah
-
-### 7-Card (4 phases)
-Creation, Revelation, Exodus, Apocalypse
+| **Chapter** | One complete round of play, from a fresh Tower to full reset; the Pages created during it constitute the Chapter |
+| **Chapter Lot** | The shared Lot for the current Chapter; Recording it earns Chapter Letters |
+| **Page Lot** | A player's personal Lot for the current Chapter; the owner Records it to create a Page, visitors Record it for Visitor Letters |
+| **Page** | A face-up set created by Recording your own Page Lot; worth its Page Value at Chapter scoring; cleared at reset |
+| **Page Value** | The points a Page scores (8 / 10 / 14 by Lot size) |
+| **Lot** | A 5-, 6-, or 7-card recipe of card types |
+| **Record** | Play an exact match for a Lot from your hand |
+| **Tower** | The face-down draw pile — language dispersed from Babel |
+| **Sheol** | The shared face-up discard pile — the grave |
+| **Resolve** | Where an activated card and its cost sit while the ability resolves |
+| **Used Chapters** | Chapter Lots already completed this game |
+| **Letter** | Resource token; spend 1 to activate from hand, or keep for 3 points each |
+| **Draw Activation** | Activating the card you just revealed for 0 Letters |
+| **Hand Activation** | Activating a card from hand for 1 Letter |
+| **Printed cost** | Cards discarded from hand to activate: 0 / 0 / 1 / 2 by rarity |
+| **Wreath** | +2-point bonus token: Record Wreath (first to Record the Chapter Lot) or Empty Wreath (closing the Chapter) |
+| **Redeem** | Take another player's End discard into hand; owe a discard before your next Reveal; once per Chapter; disabled with 2 players |
+| **Grace** | The final Record stage each other player receives after the Chapter closes |
+| **Matthias Rule** | Tiebreaker Chapter with no Page Lots; first to Record the Chapter Lot wins |
 
 ---
 

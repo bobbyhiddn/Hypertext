@@ -301,12 +301,14 @@ _BANNED_FRAGMENTS = (
 
 ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - There is one shared 90-card draw pile, the Tower. Never say "your deck" or "their deck".
-- A player may have cards in hand and face-up recorded cards in Pages. Sheol is the shared face-up discard pile.
-- A Lot is a player's visible type-composition goal. The shared scoring goal is the Chapter Lot.
-- Letters pay for extra activations and are also worth points at game end. Wreaths award points for recording first or emptying a hand first.
+- A player may have cards in hand and face-up Pages. Sheol is the shared face-up discard pile. Resolve holds an activated card and its cost until the ability finishes.
+- A Lot is a 5-, 6-, or 7-card type-composition recipe. The Chapter Lot is shared; each player also has a Page Lot. Recording your own Page Lot creates a Page (a face-up scored set); Recording the Chapter Lot or another player's Page Lot sends the cards to Sheol and earns Letters.
+- Pages exist only within the current Chapter and are cleared at Chapter reset; abilities that reference Pages see only Pages created this Chapter.
+- Letters pay for Hand Activations (1 Letter each) and are worth 3 points each at Chapter scoring. Wreaths award points for Recording the Chapter Lot first or closing the Chapter.
+- Activating the revealed card costs 0 Letters; activating from hand costs 1 Letter; both pay the printed rarity cost (COMMON 0, UNCOMMON 0, RARE 1, GLORIOUS 2 discards).
 - Draw means take from the Tower. Discard means move from hand to Sheol unless the copy explicitly names another legal origin.
 - Card types are NOUN, VERB, ADJECTIVE, NAME, and TITLE. Stats are LORE, CONTEXT, and COMPLEXITY.
-- TITLE may stand for NOUN or NAME only when recorded.
+- TITLE may stand for NOUN or NAME only when recorded, at most one substitution per Record.
 - An activated card and its activation-cost discards go to Sheol and cannot be redeemed. Do not restate or replace that base rule in an ability.
 - Generated copy begins "When this ability resolves," so its trigger and timing are explicit without restating the activation cost.
 - Legal rules actions are: draw, discard, reveal, look at, put, add, return, shuffle, choose, exchange, gain, spend, record, activate, redeem, and name.

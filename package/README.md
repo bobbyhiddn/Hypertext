@@ -321,12 +321,14 @@ Word-face template selection uses `hypertext.cards.template_matrix.resolve_templ
 - **TITLE** - Wild card (substitutes for NOUN or NAME)
 
 ### Rarities
-| Rarity | Icon | Activation Cost |
-|--------|------|-----------------|
-| COMMON | White diamond | Reveal only |
-| UNCOMMON | Green square | Discard 1 |
-| RARE | Gold diamond | Discard 2 |
-| GLORIOUS | Orange hexagon | Discard 3 |
+| Rarity | Icon | Printed Cost |
+|--------|------|--------------|
+| COMMON | White diamond | 0 |
+| UNCOMMON | Green diamond | 0 |
+| RARE | Gold diamond | Discard 1 |
+| GLORIOUS | Orange diamond | Discard 2 |
+
+Full rules: [docs/rules.md](../docs/rules.md).
 
 ---
 
