@@ -25,7 +25,8 @@ def test_matrix_is_complete_and_counts_canonical_cards():
     assert len(matrix["rarity_tiers"]) == 4
     assert len(combinations) == 20
     assert matrix["invalid_combinations"] == []
-    assert sum(item["card_count"] for item in combinations) == 31
+    canonical = template_matrix.load_canonical_cards(matrix)
+    assert sum(item["card_count"] for item in combinations) == len(canonical)
     assert {(item["type"], item["rarity"]) for item in combinations} == {
         (card_type, rarity)
         for card_type in matrix["word_types"]
