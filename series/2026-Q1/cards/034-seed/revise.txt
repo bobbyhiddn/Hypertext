@@ -29,7 +29,7 @@ Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say
 
 Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
 
-General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+General_Revision_Request: <describe any changes; unlocks all content fields>
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)
@@ -39,7 +39,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Gloss: Offspring; the kernel of life sown now for a later harvest
 # Card_Type: NOUN
 # Card_Rarity: UNCOMMON
-# Card_Ability: When this ability resolves, you put one NOUN from your hand on the bottom of the Tower. At the start of your next turn, you draw two cards from the Tower.
+# Card_Ability: Put one NOUN from your hand on the bottom of the Tower. At the start of your next turn, draw two cards from the Tower.
 # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
 # Card_Art_Prompt: A single luminous seed pressed into dark furrowed soil, a tender green shoot uncoiling upward toward warm dawn light, distant ripening grain fields on the horizon, antique devotional engraving style on warm parchment tones, reverent and quiet
 # Card_OT_Verse: Genesis 3:15 — enmity between thy seed and her seed

@@ -39,3 +39,42 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+revision: 2
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  Visual fix only, change nothing except this: the collector number at the top-left
+  currently reads #003; it must read #033. Correct those digits in place and keep
+  every other pixel, panel, and text exactly as rendered.
+
+  # Card_Word: ELDER
+
+  # Card_Gloss: One honored with age and authority, seated in judgment at the gate
+
+  # Card_Type: TITLE
+
+  # Card_Rarity: COMMON
+
+  # Card_Ability: Put one card from the top of the Tower on the bottom of the Tower.
+
+  # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+
+  # Card_Art_Prompt: A white-bearded figure in flowing robes seen from behind, seated
+  on a stone bench beneath a city gate arch, staff resting against the stone, morning
+  light and distant townspeople in silhouette beyond the gateway, engraved devotional
+  style on warm parchment tones
+
+  # Card_OT_Verse: Ruth 4:2 — ten men of the elders of the city
+
+  # Card_NT_Verse: 1 Peter 5:1 — the elders which are among you I exhort
+
+  # Card_Hebrew: זָקֵן (zaqen)
+
+  # Card_Greek: πρεσβύτερος (presbyteros)
+
+  # Card_Trivia_1: Hebrew zaqen is kin to zaqan, the beard - seniority worn visibly.
+
+  # Card_Trivia_2: City gates were Israel''s courtrooms; Boaz settled Ruth''s case
+  before ten elders there.
+
+  # Card_Trivia_3: Greek presbyteros is the root behind the English words priest and
+  presbytery.'

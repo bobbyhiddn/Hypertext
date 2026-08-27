@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-27 12:01:39
-Phase: rebuild
+Timestamp: 2026-08-27 12:21:41
+Phase: revise
 Target Rarity: COMMON
 Target Type: TITLE
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/title/common/template_1024x1536.png [COMMON] sha256=3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/033-elder/outputs/reference-inputs/current-1b8de43f91475968291f99e76e89b7dd2878e6a00ec902290cacce8fce35d8a1.png [COMMON] sha256=1b8de43f91475968291f99e76e89b7dd2878e6a00ec902290cacce8fce35d8a1
+  [2] TEMPLATE: templates/card/v001/composed/title/common/template_1024x1536.png [COMMON] sha256=3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8
 
 Prompt File: series/2026-Q1/cards/033-elder/prompt.txt
