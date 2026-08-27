@@ -14,9 +14,8 @@ stats:
   context: 3
   complexity: 4
 ability: Reveal one card from the top of the Tower. If that revealed card has COMPLEXITY
-  three or more, add that revealed card to your hand; if that revealed card has COMPLEXITY
-  two or less, put that revealed card on the bottom of the Tower, then draw one card
-  from the Tower.
+  three or more, add that revealed card to your hand; otherwise, put that revealed
+  card on the bottom of the Tower, then draw one card from the Tower.
 ot_verse:
   ref: Psalm 42:7
   snippet: deep calleth unto deep
@@ -42,13 +41,13 @@ letter: null
 notes: null
 sources: []
 search_queries: []
-revision: 4
+revision: 1
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: In the ability text,
-  change the phrase ''...if that revealed card has two or less...'' to ''...if that
-  revealed card has COMPLEXITY two or less...'' Keep every other pixel, panel, and
-  text exactly as rendered.
+  Visual fix only, change nothing except this single correction: Update the ability
+  text to match the expected text. The current text is missing the condition ''If
+  that revealed card has COMPLEXITY three or more'' and has an incorrect starting
+  phrase. Keep every other pixel, panel, and text exactly as rendered.
 
   # Card_Word: DEEP
 
@@ -59,9 +58,8 @@ revision_notes: 'General revision request (you may modify any content field as n
   # Card_Rarity: RARE
 
   # Card_Ability: Reveal one card from the top of the Tower. If that revealed card
-  has COMPLEXITY three or more, add that revealed card to your hand; if that revealed
-  card has COMPLEXITY two or less, put that revealed card on the bottom of the Tower,
-  then draw one card from the Tower.
+  has COMPLEXITY three or more, add that revealed card to your hand; otherwise, put
+  that revealed card on the bottom of the Tower, then draw one card from the Tower.
 
   # Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 4
 
