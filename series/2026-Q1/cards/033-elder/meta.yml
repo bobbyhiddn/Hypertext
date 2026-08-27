@@ -13,8 +13,7 @@ stats:
   lore: 3
   context: 4
   complexity: 2
-ability: When this ability resolves, you put one card from the top of the Tower on
-  the bottom of the Tower.
+ability: Put one card from the top of the Tower on the bottom of the Tower.
 ot_verse:
   ref: Ruth 4:2
   snippet: ten men of the elders of the city

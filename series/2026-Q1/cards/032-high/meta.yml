@@ -12,7 +12,7 @@ stats:
   lore: 4
   context: 3
   complexity: 2
-ability: When this ability resolves, you look at the top two cards of the Tower.
+ability: Look at the top two cards of the Tower.
 ot_verse:
   ref: Genesis 11:4
   snippet: a tower, whose top may reach unto heaven

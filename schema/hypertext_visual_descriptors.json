@@ -1,42 +1,222 @@
 {
-  "schema_version": 2,
-  "HYPERTEXT_GLOBAL": {
-    "canvas": {"width": 1024, "height": 1536, "aspect_ratio": "2:3"},
-    "aesthetic": ["premium trading card layout", "antique parchment background with subtle grain", "navy and gold collector frame", "high legibility, crisp print-like typography", "clean TCG UI language with a compact art window", "dense restrained printed game-piece proportions", "print-ready color grading, restrained contrast, no neon saturation"],
-    "negative": ["no surrounding text", "no generated watermark", "no captions outside the card", "no text outside the card border", "no brackets", "no warped text", "no garbled text", "no faux handwriting", "no duplicate headings", "no extra panels", "no text inside artwork", "no modern objects", "no recognizable human faces", "no portrait likenesses", "no face-forward named figures", "no neon colors", "no heavy HDR", "no washed-out grayscale", "no over-sharpen halos", "no partial stat-pip fills", "no stat-pip gradients or highlights", "no diamonds for stat pips", "do not render hidden metadata"]
+ "schema_version": 2,
+ "HYPERTEXT_GLOBAL": {
+  "canvas": {
+   "width": 1024,
+   "height": 1536,
+   "aspect_ratio": "2:3"
   },
-  "structures": {
-    "WORD_CARD": {
-      "kind": "WORD_CARD",
-      "geometry": {"orientation": "vertical", "frame": "identical across all type and rarity combinations", "art_panel_height_fraction": 0.16, "original_language_split": {"left": "OLD_TESTAMENT_HEBREW_ARAMAIC", "right": "NEW_TESTAMENT_GREEK"}},
-      "art_direction": {"subject_rule": "Represent people through what they are known for: defining work, objects, attire, gestures, environments, symbols, or achievements.", "figure_rule": "If a human figure is necessary, keep the figure secondary and show it from behind, in silhouette, at a distance, with the face obscured, or cropped so no recognizable face appears."},
-      "original_language_layout": {"container": "one compact equal-width two-column panel", "left_header": "HEBREW/ARAMAIC", "right_header": "GREEK", "native_script": "large centered native script with every supplied diacritic preserved", "transliteration": "bare italic transliteration directly below the native script; no TRANSLIT label, no parentheses, and no added English gloss", "left_refs": "OT Refs: followed by the exact supplied OT_REFS string", "right_refs": "NT Refs: followed by the exact supplied NT_REFS string", "density": "match the compact height, spacing, and hierarchy of the printed SEE reference"},
-      "content_order": ["HEADER", "ART", "STATS", "ABILITY", "OT_VERSE", "NT_VERSE", "ORIGINAL_LANGUAGES", "TRIVIA", "FOOTER"]
-    },
-    "LOT": {
-      "kind": "LOT",
-      "geometry": {"orientation": "vertical", "frame": {"navy_border": "thick", "gold_trim": "thin"}},
-      "content_order": ["TITLE", "ART", "REWARD"],
-      "spec_boundary": "The received Lot Reward section ended after 'trim'. Only the declared reward field and frame geometry are represented; no omitted reward content or geometry is inferred."
+  "aesthetic": [
+   "premium trading card layout",
+   "antique parchment background with subtle grain",
+   "navy and gold collector frame",
+   "high legibility, crisp print-like typography",
+   "clean TCG UI language with a compact art window",
+   "dense restrained printed game-piece proportions",
+   "print-ready color grading, restrained contrast, no neon saturation"
+  ],
+  "negative": [
+   "no surrounding text",
+   "no generated watermark",
+   "no captions outside the card",
+   "no text outside the card border",
+   "no brackets",
+   "no warped text",
+   "no garbled text",
+   "no faux handwriting",
+   "no duplicate headings",
+   "no extra panels",
+   "no text inside artwork",
+   "no modern objects",
+   "no recognizable human faces",
+   "no portrait likenesses",
+   "no face-forward named figures",
+   "no neon colors",
+   "no heavy HDR",
+   "no washed-out grayscale",
+   "no over-sharpen halos",
+   "no partial stat-pip fills",
+   "no stat-pip gradients or highlights",
+   "no diamonds for stat pips",
+   "do not render hidden metadata"
+  ]
+ },
+ "structures": {
+  "WORD_CARD": {
+   "kind": "WORD_CARD",
+   "geometry": {
+    "orientation": "vertical",
+    "frame": "identical across all type and rarity combinations",
+    "art_panel_height_fraction": 0.16,
+    "original_language_split": {
+     "left": "OLD_TESTAMENT_HEBREW_ARAMAIC",
+     "right": "NEW_TESTAMENT_GREEK"
     }
+   },
+   "stat_pips": "Fifteen stat circles in three labeled groups of five, copied from the template's pip row exactly: every filled pip is one flat matte uniformly dark navy disc with no highlight, gloss, inner ring, or gradient, and every empty pip is a thin navy outline with a plain parchment interior, at the template's exact positions and sizes.",
+   "art_direction": {
+    "subject_rule": "Represent people through what they are known for: defining work, objects, attire, gestures, environments, symbols, or achievements.",
+    "figure_rule": "If a human figure is necessary, keep the figure secondary and show it from behind, in silhouette, at a distance, with the face obscured, or cropped so no recognizable face appears."
+   },
+   "original_language_layout": {
+    "container": "one compact equal-width two-column panel",
+    "left_header": "HEBREW/ARAMAIC",
+    "right_header": "GREEK",
+    "native_script": "large centered native script with every supplied diacritic preserved",
+    "transliteration": "bare italic transliteration directly below the native script; no TRANSLIT label, no parentheses, and no added English gloss",
+    "left_refs": "OT Refs: followed by the exact supplied OT_REFS string",
+    "right_refs": "NT Refs: followed by the exact supplied NT_REFS string",
+    "density": "match the compact height, spacing, and hierarchy of the printed SEE reference"
+   },
+   "content_order": [
+    "HEADER",
+    "ART",
+    "STATS",
+    "ABILITY",
+    "OT_VERSE",
+    "NT_VERSE",
+    "ORIGINAL_LANGUAGES",
+    "TRIVIA",
+    "FOOTER"
+   ]
   },
-  "types": {
-    "NOUN": {"scope": "type_only", "icon": "closed book", "prompt": "TYPE is exactly NOUN; the white header icon is a closed book."},
-    "VERB": {"scope": "type_only", "icon": "pencil", "prompt": "TYPE is exactly VERB; the white header icon is a pencil."},
-    "ADJECTIVE": {"scope": "type_only", "icon": "sparkle pencil", "prompt": "TYPE is exactly ADJECTIVE; the white header icon is a sparkle pencil."},
-    "NAME": {"scope": "type_only", "icon": "feather quill", "prompt": "TYPE is exactly NAME; the white header icon is a feather quill."},
-    "TITLE": {"scope": "type_only", "icon": "ornate empty rectangular frame", "prompt": "TYPE label is exactly TITLE; icon concept is an ornate empty rectangular frame; style is a simple white silhouette."}
+  "LOT": {
+   "kind": "LOT",
+   "geometry": {
+    "orientation": "vertical",
+    "frame": {
+     "navy_border": "thick",
+     "gold_trim": "thin"
+    }
+   },
+   "content_order": [
+    "TITLE",
+    "ART",
+    "REWARD"
+   ],
+   "spec_boundary": "The received Lot Reward section ended after 'trim'. Only the declared reward field and frame geometry are represented; no omitted reward content or geometry is inferred."
+  }
+ },
+ "types": {
+  "NOUN": {
+   "scope": "type_only",
+   "icon": "closed book",
+   "prompt": "TYPE is exactly NOUN; the white header icon is a closed book."
   },
-  "rarities": {
-    "COMMON": {"scope": "rarity_only", "diamond_fill": "white", "card_bonus": 0, "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."},
-    "UNCOMMON": {"scope": "rarity_only", "diamond_fill": "green", "card_bonus": 0, "prompt": "RARITY is exactly UNCOMMON followed by one green diamond; no activation cost."},
-    "RARE": {"scope": "rarity_only", "diamond_fill": "gold", "card_bonus": 1, "prompt": "RARITY is exactly RARE followed by one gold diamond; show +🂠 below it."},
-    "GLORIOUS": {"scope": "rarity_only", "diamond_fill": "orange", "card_bonus": 2, "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."}
+  "VERB": {
+   "scope": "type_only",
+   "icon": "pencil",
+   "prompt": "TYPE is exactly VERB; the white header icon is a pencil."
   },
-  "sizes": {
-    "LOT_5": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 5, "chapter_points": 8, "page_letters": 2, "phase_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]},
-    "LOT_6": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 6, "chapter_points": 10, "page_letters": 2, "phase_ids": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]},
-    "LOT_7": {"width": 1024, "height": 1536, "aspect_ratio": "2:3", "card_count": 7, "chapter_points": 14, "page_letters": 3, "phase_ids": [27, 28, 29, 30]}
+  "ADJECTIVE": {
+   "scope": "type_only",
+   "icon": "sparkle pencil",
+   "prompt": "TYPE is exactly ADJECTIVE; the white header icon is a sparkle pencil."
   },
-  "composition": {"modes": ["EXPLICIT", "PATTERN"], "default": "EXPLICIT"}
+  "NAME": {
+   "scope": "type_only",
+   "icon": "feather quill",
+   "prompt": "TYPE is exactly NAME; the white header icon is a feather quill."
+  },
+  "TITLE": {
+   "scope": "type_only",
+   "icon": "ornate empty rectangular frame",
+   "prompt": "TYPE label is exactly TITLE; icon concept is an ornate empty rectangular frame; style is a simple white silhouette."
+  }
+ },
+ "rarities": {
+  "COMMON": {
+   "scope": "rarity_only",
+   "diamond_fill": "white",
+   "card_bonus": 0,
+   "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."
+  },
+  "UNCOMMON": {
+   "scope": "rarity_only",
+   "diamond_fill": "green",
+   "card_bonus": 0,
+   "prompt": "RARITY is exactly UNCOMMON followed by one green diamond; no activation cost."
+  },
+  "RARE": {
+   "scope": "rarity_only",
+   "diamond_fill": "gold",
+   "card_bonus": 1,
+   "prompt": "RARITY is exactly RARE followed by one gold diamond; show +🂠 below it."
+  },
+  "GLORIOUS": {
+   "scope": "rarity_only",
+   "diamond_fill": "orange",
+   "card_bonus": 2,
+   "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; show +🂠🂠 below it."
+  }
+ },
+ "sizes": {
+  "LOT_5": {
+   "width": 1024,
+   "height": 1536,
+   "aspect_ratio": "2:3",
+   "card_count": 5,
+   "chapter_points": 8,
+   "page_letters": 2,
+   "phase_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  "LOT_6": {
+   "width": 1024,
+   "height": 1536,
+   "aspect_ratio": "2:3",
+   "card_count": 6,
+   "chapter_points": 10,
+   "page_letters": 2,
+   "phase_ids": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+   ]
+  },
+  "LOT_7": {
+   "width": 1024,
+   "height": 1536,
+   "aspect_ratio": "2:3",
+   "card_count": 7,
+   "chapter_points": 14,
+   "page_letters": 3,
+   "phase_ids": [
+    27,
+    28,
+    29,
+    30
+   ]
+  }
+ },
+ "composition": {
+  "modes": [
+   "EXPLICIT",
+   "PATTERN"
+  ],
+  "default": "EXPLICIT"
+ }
 }
