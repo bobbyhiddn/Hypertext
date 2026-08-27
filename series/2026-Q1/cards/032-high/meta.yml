@@ -12,7 +12,8 @@ stats:
   lore: 4
   context: 3
   complexity: 2
-ability: Look at the top two cards of the Tower.
+ability: Look at the top two cards of the Tower. Add one of those cards to your hand
+  and put the other card on the bottom of the Tower.
 ot_verse:
   ref: Genesis 11:4
   snippet: a tower, whose top may reach unto heaven
@@ -41,10 +42,10 @@ search_queries: []
 revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Delete the small rounded banner that reads ORIGINAL LANGUAGES sitting between the
-  NT VERSE panel and the language columns. Nothing may appear between the NT VERSE
-  panel bottom edge and the top edges of the HEBREW/ARAMAIC and GREEK column headers.
-  Change absolutely nothing else on the card.
+  Visual fix only, change nothing except this correction: Remove the italic line ''DEFINITION
+  TEXT'' above the gloss so only the gloss line remains under the word HIGH, and change
+  the footer to read exactly ''SERIES: 2026-Q1 Babel'' with no ''- Set'' suffix. Keep
+  every other pixel, panel, and text exactly as rendered.
 
   # Card_Word: HIGH
 
@@ -54,8 +55,8 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: COMMON
 
-  # Card_Ability: When this ability resolves, you look at the top two cards of the
-  Tower.
+  # Card_Ability: Look at the top two cards of the Tower. Add one of those cards to
+  your hand and put the other card on the bottom of the Tower.
 
   # Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
 

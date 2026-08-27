@@ -42,12 +42,13 @@ letter: null
 notes: null
 sources: []
 search_queries: []
-revision: 3
+revision: 4
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: Change the card''s
-  word from ''CARD TITLE'' to ''DEEP''. Keep every other pixel, panel, and text exactly
-  as rendered.
+  Visual fix only, change nothing except this single correction: In the ability text,
+  change the phrase ''...if that revealed card has two or less...'' to ''...if that
+  revealed card has COMPLEXITY two or less...'' Keep every other pixel, panel, and
+  text exactly as rendered.
 
   # Card_Word: DEEP
 

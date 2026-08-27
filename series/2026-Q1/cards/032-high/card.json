@@ -176,7 +176,7 @@
     "RARITY_TEXT": "COMMON",
     "RARITY_ICON": "COMMON",
     "ART_PROMPT": "A colossal ziggurat rising from a sunbaked plain into swirling clouds, tiny human figures climbing its ramps, dawn light striking the distant summit, engraved devotional style on warm parchment tones, an overwhelming sense of height",
-    "ABILITY_TEXT": "Look at the top two cards of the Tower.",
+    "ABILITY_TEXT": "Look at the top two cards of the Tower. Add one of those cards to your hand and put the other card on the bottom of the Tower.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 2,
@@ -219,7 +219,7 @@
       "NOTES_INTERNAL"
     ]
   },
-  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Every filled pip is one flat, solid, uniformly dark navy disc with no highlight, gloss, gradient, inner ring, or concentric texture; every empty pip is a thin navy outline with plain parchment interior. Render: header, stats, ability, OT verse, NT verse, a two-column language panel with only 'HEB/ARAM' and 'GREEK' as headers, trivia. The language panel must immediately follow the NT verse panel; do NOT add any intermediate banner (like 'ORIGINAL LANGUAGES'). Greek/Hebrew must be legible (Hebrew right-to-left).",
+  "model_prompt": "Generate a premium vertical trading card. Output ONLY the card; no surrounding text or watermarks. NEVER use brackets [ ]. Do not render an extra label like 'DEFINITION TEXT' above the gloss. The footer must read exactly 'SERIES: 2026-Q1 Babel' and must not include a '- Set' suffix. RARITY: Print rarity text then a diamond icon (e.g. 'RARE ◆'). Diamond color: white=COMMON, green=UNCOMMON, gold=RARE, orange=GLORIOUS. All use same diamond shape. COST INDICATOR: Below rarity for RARE show '+🂠' (plus and one card), for GLORIOUS show '+🂠🂠' (plus and two cards). No cost indicator for COMMON/UNCOMMON. STAT PIPS: Use navy circles only, not diamonds. Every filled pip is one flat, solid, uniformly dark navy disc with no highlight, gloss, gradient, inner ring, or concentric texture; every empty pip is a thin navy outline with plain parchment interior. Render: header, footer, stats, ability, OT verse, NT verse, Greek/Heb strip, trivia. Greek/Hebrew must be legible (Hebrew right-to-left).",
   "grounding": {
     "queries": [],
     "sources": []

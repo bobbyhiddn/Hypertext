@@ -29,7 +29,7 @@ Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say
 
 Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
 
-General_Revision_Request: Visual fix only, change nothing except this single correction: In the Ability text, change the second clause from '...if that revealed card has or that revealed card on the bottom of the Tower...' to '...if that revealed card has COMPLEXITY two or less, put that revealed card on the bottom of the Tower...' Keep every other pixel, panel, and text exactly as rendered.
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CURRENT CARD (edit values below to request changes)
