@@ -50,6 +50,16 @@
       "stage": "candidate",
       "status": "success",
       "timestamp": "2026-08-27T15:06:33.719155+00:00"
+    },
+    {
+      "attempt": 1,
+      "contract": "hypertext-quality/v1",
+      "input_sha256": "576ca4e6645b340d9500169c509ffbf9330da36778767f7d705ca3ba51d441b4",
+      "output_sha256": "2d17f3c934f5136136b0eb27b53cddde8bd4156df5aea0a75d91fa8893ec47ac",
+      "repaired": false,
+      "stage": "review",
+      "status": "success",
+      "timestamp": "2026-08-27T15:09:10.112222+00:00"
     }
   ]
 }

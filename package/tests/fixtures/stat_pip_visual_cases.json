@@ -1,53 +1,117 @@
 {
   "contract": "hypertext.stat-pip-visual-regressions/v1",
-  "reference_size": [1024, 1536],
+  "reference_size": [
+    1024,
+    1536
+  ],
   "row_y": 601,
   "row_x": [
-    [108, 160, 212, 264, 316],
-    [414, 466, 518, 570, 622],
-    [721, 773, 825, 877, 929]
+    [
+      108,
+      160,
+      212,
+      264,
+      316
+    ],
+    [
+      414,
+      466,
+      518,
+      570,
+      622
+    ],
+    [
+      721,
+      773,
+      825,
+      877,
+      929
+    ]
   ],
-  "expected_counts": [3, 2, 4],
+  "expected_counts": [
+    3,
+    2,
+    4
+  ],
   "styles": {
     "correct_solid_filled": {
       "radius": 21,
-      "fill_rgb": [44, 42, 79],
+      "fill_rgb": [
+        44,
+        42,
+        79
+      ],
       "source": "COVENANT full-resolution filled-pip interior"
     },
     "wrong_dark_filled_defect": {
       "radius": 21,
-      "fill_rgb": [5, 5, 5],
+      "fill_rgb": [
+        5,
+        5,
+        5
+      ],
       "source": "synthetic wrong-hue control with correct solid geometry and luminance class"
     },
     "concentric_filled_defect": {
       "outer_radius": 21,
-      "outer_rgb": [36, 37, 72],
+      "outer_rgb": [
+        36,
+        37,
+        72
+      ],
       "middle_radius": 16,
-      "middle_rgb": [105, 88, 106],
+      "middle_rgb": [
+        105,
+        88,
+        106
+      ],
       "core_radius": 11,
-      "core_rgb": [36, 37, 72],
+      "core_rgb": [
+        36,
+        37,
+        72
+      ],
       "source": "ARK full-resolution ringed filled-pip radial profile"
     },
     "pale_gold_empty_defect": {
       "outer_radius": 23,
-      "outline_rgb": [196, 147, 102],
+      "outline_rgb": [
+        196,
+        147,
+        102
+      ],
       "inner_radius": 17,
-      "interior_rgb": [230, 190, 130],
+      "interior_rgb": [
+        230,
+        190,
+        130
+      ],
       "source": "COVENANT full-resolution pale/gold empty-pip profile"
     }
   },
   "evidence": {
-    "ark": {
-      "path": "/home/cap/hypertext-six-card-proof-9cacafa179a431fd-20260826T214546Z/cards/020-ark-noun-rare.png",
-      "template": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
-      "expected_counts": [5, 4, 2],
-      "expected_defect": "filled-concentric-or-nonuniform"
-    },
     "covenant": {
       "path": "/home/cap/hypertext-six-card-proof-9cacafa179a431fd-20260826T214546Z/cards/024-covenant-noun-glorious.png",
       "template": "templates/card/v001/composed/noun/glorious/template_1024x1536.png",
-      "expected_counts": [5, 5, 4],
+      "expected_counts": [
+        5,
+        5,
+        4
+      ],
       "expected_defect": "empty-outline-style-mismatch"
+    }
+  },
+  "registration_rescued": {
+    "ark": {
+      "path": "/home/cap/hypertext-six-card-proof-9cacafa179a431fd-20260826T214546Z/cards/020-ark-noun-rare.png",
+      "template": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+      "expected_counts": [
+        5,
+        4,
+        2
+      ],
+      "expected_defect": "filled-concentric-or-nonuniform",
+      "note": "Rejected by the unregistered gate as filled-concentric-or-nonuniform; the render's pip row sits 4px high and passes every style check once registered. Recorded as a false rejection example."
     }
   }
 }

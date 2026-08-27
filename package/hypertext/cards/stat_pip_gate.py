@@ -109,11 +109,13 @@ def _slot_zones(
     image: Image.Image,
     *,
     base_x: int,
+    dx: float = 0.0,
+    dy: float = 0.0,
 ) -> dict[str, list[Pixel]]:
     """Return normalized radial RGB samples for one template slot."""
     sx, sy, radius_scale = _image_scale(image)
-    center_x = round(base_x * sx)
-    center_y = round(_ROW_Y * sy)
+    center_x = round((base_x + dx) * sx)
+    center_y = round((_ROW_Y + dy) * sy)
     maximum = math.ceil(_ZONES["outside"][1] * radius_scale) + 2
     pixels = image.load()
     zones = {name: [] for name in _ZONES}
@@ -128,12 +130,54 @@ def _slot_zones(
     return zones
 
 
-def _all_slot_zones(image: Image.Image) -> list[tuple[str, int, dict[str, list[Pixel]]]]:
+def _all_slot_zones(
+    image: Image.Image, dx: float = 0.0, dy: float = 0.0
+) -> list[tuple[str, int, dict[str, list[Pixel]]]]:
     return [
-        (row_name, slot + 1, _slot_zones(image, base_x=base_x))
+        (row_name, slot + 1, _slot_zones(image, base_x=base_x, dx=dx, dy=dy))
         for row_name, row in zip(ROW_NAMES, _ROW_X, strict=True)
         for slot, base_x in enumerate(row)
     ]
+
+
+def _registration_score(image: Image.Image, calibration: dict[str, float], dx: float, dy: float) -> float:
+    """Mean dark-ring response at the slot anchors for one candidate offset.
+
+    Every pip - filled or empty - carries a dark circular outline at the edge
+    zone, so the offset that best aligns the anchors with the printed pip row
+    maximizes edge darkness regardless of fill state.
+    """
+    cutoff = calibration["outline_luma"] + 60.0
+    total = 0.0
+    count = 0
+    for _row, _slot, zones in _all_slot_zones(image, dx=dx, dy=dy):
+        total += _dark_fraction(_lumas(zones["edge"]), cutoff)
+        count += 1
+    return total / count if count else 0.0
+
+
+def _register_candidate(image: Image.Image, calibration: dict[str, float]) -> tuple[float, float, float]:
+    """Locate the candidate's pip row near the template anchors.
+
+    Full-face generation breathes a little vertically (gloss line wraps, art
+    height), so the anchors are registered within a bounded window before the
+    template-relative style contract is applied. Returns (dx, dy, score).
+    """
+    best = (0.0, 0.0, _registration_score(image, calibration, 0.0, 0.0))
+    for dy in range(-72, 73, 4):
+        score = _registration_score(image, calibration, 0.0, float(dy))
+        if score > best[2] + 1e-9:
+            best = (0.0, float(dy), score)
+    base_dy = best[1]
+    for dy in (base_dy - 2, base_dy + 2):
+        score = _registration_score(image, calibration, 0.0, dy)
+        if score > best[2] + 1e-9:
+            best = (0.0, dy, score)
+    for dx in range(-24, 25, 4):
+        score = _registration_score(image, calibration, float(dx), best[1])
+        if score > best[2] + 1e-9:
+            best = (float(dx), best[1], score)
+    return best
 
 
 def _calibrate_template(template: Image.Image) -> dict[str, float]:
@@ -363,7 +407,13 @@ def inspect_stat_pips(
     rows: list[dict[str, Any]] = []
     defects: list[dict[str, Any]] = []
     observed_counts: list[int] = []
-    slot_samples = _all_slot_zones(candidate)
+    reg_dx, reg_dy, reg_score = _register_candidate(candidate, calibration)
+    if abs(reg_dy) > 48 or abs(reg_dx) > 16:
+        # Registration absorbs layout breathing, not layout violations.
+        defects.append({"code": "pip-row-misregistered", "row": "ALL", "slot": 0,
+                        "dx": reg_dx, "dy": reg_dy})
+        reg_dx, reg_dy = 0.0, 0.0
+    slot_samples = _all_slot_zones(candidate, dx=reg_dx, dy=reg_dy)
     sample_index = 0
 
     for row_name, expected_count in zip(ROW_NAMES, counts, strict=True):
@@ -410,6 +460,7 @@ def inspect_stat_pips(
 
     report = {
         "contract": CONTRACT,
+        "registration": {"dx": reg_dx, "dy": reg_dy, "score": round(reg_score, 4)},
         "passed": not defects and tuple(observed_counts) == counts,
         "candidate": {
             "path": str(candidate_path),

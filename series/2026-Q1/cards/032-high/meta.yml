@@ -1,0 +1,40 @@
+number: '032'
+word: HIGH
+gloss: Lifted far above; lofty in place, in honor, or in pride
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A colossal ziggurat rising from a sunbaked plain into swirling clouds,
+  tiny human figures climbing its ramps, dawn light striking the distant summit, engraved
+  devotional style on warm parchment tones, an overwhelming sense of height
+stats:
+  lore: 4
+  context: 3
+  complexity: 2
+ability: When this ability resolves, you look at the top two cards of the Tower.
+ot_verse:
+  ref: Genesis 11:4
+  snippet: a tower, whose top may reach unto heaven
+nt_verse:
+  ref: Romans 12:16
+  snippet: mind not high things
+greek:
+  text: ὑψηλός
+  translit: hypselos
+hebrew:
+  text: גָּבֹהַּ
+  translit: gavoah
+ot_refs: Gen 11:4 • Ps 103:11 • Isa 55:9
+nt_refs: Rom 12:16 • Luke 16:15 • Heb 7:26
+trivia:
+- Hebrew gavoah describes lofty towers and the proud heart alike in Scripture.
+- Babel's builders wanted a top in the heavens; Isaiah answers that God's ways are
+  higher still.
+- Greek hypselos shares its root with hypsos, height, the word behind English hypsometer.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

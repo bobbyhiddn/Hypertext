@@ -39,14 +39,6 @@
     "STAT_LORE": 5
   },
   "passed": true,
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "UNCOMMON",
-    "target_type": "NOUN",
-    "template_position": 1,
-    "template_sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
-  },
   "rows": [
     {
       "expected_count": 5,
@@ -517,7 +509,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "d73f0033e9cd67e09f9d99de63b57ff6d816cb2e4dacd1b6d98056db3f9b08f5",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-    "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+    "repository_path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+    "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+    "template_version": "v001"
   }
 }

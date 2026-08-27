@@ -197,6 +197,14 @@ class TemplateRelativeStatPipGateTests(unittest.TestCase):
         if missing:
             self.skipTest("external rejection evidence unavailable: " + ", ".join(missing))
 
+        for name, item in FIXTURE.get("registration_rescued", {}).items():
+            if not Path(item["path"]).is_file():
+                continue
+            with self.subTest(name=name + "-rescued"):
+                report = inspect_stat_pips(
+                    item["path"], ROOT / item["template"], item["expected_counts"])
+                self.assertTrue(report["passed"])
+                self.assertLessEqual(abs(report["registration"]["dy"]), 48)
         for name, item in FIXTURE["evidence"].items():
             with self.subTest(name=name):
                 report = inspect_stat_pips(
