@@ -226,7 +226,7 @@ _CARD_OR_RESOURCE_PATTERN = re.compile(
 )
 _ZONE_PATTERN = re.compile(r"\b(?:Tower|hand|Pages|Sheol|Chapter Lot|Lots?|Lot)\b", re.IGNORECASE)
 _AMBIGUOUS_REFERENCES = re.compile(
-    r"\b(?:it|them|they|that many|this way|as normal|normally|the other(?!\s+cards?\b))\b",
+    r"\b(?:it|them|they|that many|this way|as normal|normally|otherwise|or else|if not|the other(?!\s+cards?\b))\b",
     re.IGNORECASE,
 )
 _CONDITION_PATTERN = re.compile(
@@ -321,6 +321,7 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Flavor words are not rules actions. Never turn a card word or semantic anchor into an imperative label, a colon heading, or invented shorthand (for example, "Sink").
 - Every action must explicitly identify its actor or target, affected quantity, relevant source and destination zones, condition, duration, and outcome wherever those operands apply.
 - Draw copy names the Tower as its source. Card movement names both the cards and their destination. Ongoing copy states its duration. Conditional copy states both the condition and result.
+- Branching copy states every branch's full condition explicitly (for example, "if that revealed card has COMPLEXITY three or more, ...; if that revealed card has COMPLEXITY two or less, ..."). Never compress a branch with "otherwise", "or else", or a bare "if not"; the printed conditions must visibly cover the whole range.
 - Avoid bare pronouns such as it, them, they, "that many," or a bare "the other"; repeat the player, card, quantity, or zone instead ("the other card" with its noun is fine).
 - DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
 """
