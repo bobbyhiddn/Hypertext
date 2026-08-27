@@ -29,17 +29,13 @@ pip install -e .
 Main card generation pipeline with multiple phases.
 
 ```bash
-# Generate demo cards (full pipeline)
-python -m hypertext.pipeline.daily --phase demo --cards-dir demo_cards --parallel 4
+# Plan and generate from a series
+python -m hypertext.pipeline.daily --phase plan --series series/2026-Q1 --auto
+python -m hypertext.pipeline.daily --phase imagegen --series series/2026-Q1
 
-# Individual phases
-python -m hypertext.pipeline.daily --phase plan --cards-dir demo_cards
-python -m hypertext.pipeline.daily --phase art --cards-dir demo_cards
-python -m hypertext.pipeline.daily --phase composite --cards-dir demo_cards
-python -m hypertext.pipeline.daily --phase grade --cards-dir demo_cards
-
-# Rebuild cards that failed grading
-python -m hypertext.pipeline.daily --phase rebuild-failed --cards-dir demo_cards
+# Grade or rebuild one explicit card
+python -m hypertext.pipeline.daily --phase grade --card-dir path/to/card --style-series series/2026-Q1
+python -m hypertext.pipeline.daily --phase rebuild --card-dir path/to/card
 
 # Offline acceptance against the exact canonical type-by-rarity template
 python -m hypertext.pipeline.daily --phase visual-gate --card-dir path/to/card
@@ -49,12 +45,19 @@ hypertext visual-gate --card-dir path/to/card
 
 **Phases:**
 - `plan` - Generate card content (word, gloss, ability, stats, trivia)
-- `art` - Generate card artwork via Gemini
-- `composite` - Combine template + art + text into final card
-- `grade` - Quality check cards against rubric
+- `imagegen` - Generate the newest missing image in `--series`; `--card-dir` is rejected
+- `grade` - Quality check one `--card-dir`; every dimension must reach 100
+- `revise` - Apply a bounded revision to one `--card-dir`
+- `rebuild` - Regenerate one explicit `--card-dir`
+- `review` - Iteratively review and mutate one explicit card
 - `visual-gate` - Reject non-solid/ringed fills and noncanonical empty-pip outlines
 - `demo` - Full pipeline for demo cards
 - `rebuild-failed` - Re-run pipeline for cards that failed grading
+- `rebuild-index`, `example-cards`, `upgrade`, `gallery`, and `full` - Maintained specialist/batch phases shown by `--help`
+
+The installed `hypertext generate` command supports `plan`, `imagegen`, and
+`full` and delegates to this same pipeline. Other legacy Click surfaces fail
+closed with an unsupported-command error; they never report silent success.
 
 ---
 

@@ -29,20 +29,20 @@ hypertext/
 
 1. **Plan a new card**:
    ```bash
-   python tools/daily_pipeline.py --phase plan --series series/2026-Q1 --auto
+   python -m hypertext.pipeline.daily --phase plan --series series/2026-Q1 --auto
    ```
 2. **Generate Image & Watermark**:
    ```bash
-   python tools/daily_pipeline.py --phase imagegen --series series/2026-Q1
+   python -m hypertext.pipeline.daily --phase imagegen --series series/2026-Q1
    ```
 3. **Review & Revise**:
    ```bash
    # If revision is needed, edit revise.txt in the card folder
-   python tools/daily_pipeline.py --phase revise --card-dir series/2026-Q1/cards/NNN-word
+   python -m hypertext.pipeline.daily --phase revise --card-dir series/2026-Q1/cards/NNN-word
    ```
 4. **Build Gallery**:
    ```bash
-   python tools/daily_pipeline.py --phase gallery --series series --out-dir _site
+   python -m hypertext.pipeline.daily --phase gallery --series series --out-dir _site
    ```
 
 ## Documentation

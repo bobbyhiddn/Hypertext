@@ -2,6 +2,8 @@
 """Hypertext CLI - Biblical word-study trading card game toolkit."""
 
 import json
+import sys
+from contextlib import contextmanager
 
 import click
 
@@ -18,16 +20,48 @@ def cli():
 
 @cli.command()
 @click.option("--series", required=True, help="Path to series directory")
-@click.option("--phase", type=click.Choice(["plan", "image", "batch", "full"]), required=True)
+@click.option("--phase", type=click.Choice(["plan", "imagegen", "full"]), required=True)
 @click.option("--batch", type=int, default=1, help="Number of cards to generate")
 @click.option("--parallel", type=int, default=1, help="Parallel workers for image generation")
+@click.option("--auto", is_flag=True, help="Use the production planner")
 @click.option("--skip-polish", is_flag=True, help="Skip polish step")
 @click.option("--skip-watermark", is_flag=True, help="Skip watermark step")
-def generate(series, phase, batch, parallel, skip_polish, skip_watermark):
-    """Generate cards for a series."""
-    click.echo(f"Generating cards: series={series}, phase={phase}, batch={batch}")
-    # TODO: Wire up to pipeline logic
-    raise NotImplementedError("generate command not yet implemented")
+def generate(series, phase, batch, parallel, auto, skip_polish, skip_watermark):
+    """Run the supported daily package pipeline."""
+    arguments = ["--phase", phase, "--series", series, "--batch", str(batch),
+                 "--parallel", str(parallel)]
+    if auto:
+        arguments.append("--auto")
+    if skip_polish:
+        arguments.append("--skip-polish")
+    if skip_watermark:
+        arguments.append("--skip-watermark")
+    _run_daily(arguments)
+
+
+@contextmanager
+def _daily_argv(arguments):
+    previous = sys.argv
+    sys.argv = ["hypertext.pipeline.daily", *arguments]
+    try:
+        yield
+    finally:
+        sys.argv = previous
+
+
+def _run_daily(arguments):
+    from hypertext.pipeline.daily import main
+
+    with _daily_argv(arguments):
+        result = main()
+    if result:
+        raise click.ClickException(f"daily pipeline exited with status {result}")
+
+
+def _unsupported(command):
+    raise click.ClickException(
+        f"'{command}' is not supported by the installed CLI; use the documented package module entry point"
+    )
 
 
 @cli.command()
@@ -37,9 +71,7 @@ def generate(series, phase, batch, parallel, skip_polish, skip_watermark):
 @click.option("--skip-polish", is_flag=True, help="Skip polish step")
 def demo(series, batch, parallel, skip_polish):
     """Generate demo cards."""
-    click.echo(f"Generating demo cards: series={series}, batch={batch}")
-    # TODO: Wire up to pipeline logic
-    raise NotImplementedError("demo command not yet implemented")
+    _unsupported("demo")
 
 
 @cli.command()
@@ -48,9 +80,7 @@ def demo(series, batch, parallel, skip_polish):
 @click.option("--describe-only", is_flag=True, help="Only describe, don't score")
 def review(card_dir, threshold, describe_only):
     """Review a card for quality."""
-    click.echo(f"Reviewing card: {card_dir}")
-    # TODO: Wire up to review logic
-    raise NotImplementedError("review command not yet implemented")
+    _unsupported("review")
 
 
 @cli.command("visual-gate")
@@ -107,9 +137,7 @@ def visual_gate(card_dir, candidate, report_path):
 @click.option("--out-dir", default="_site", help="Output directory")
 def gallery(series, out_dir):
     """Build static gallery site."""
-    click.echo(f"Building gallery: series={series}, out={out_dir}")
-    # TODO: Wire up to gallery builder
-    raise NotImplementedError("gallery command not yet implemented")
+    _unsupported("gallery")
 
 
 @cli.group()
@@ -124,9 +152,7 @@ def watermark():
 @click.option("--out", "out_path", help="Output PNG path (default: same as input)")
 def watermark_apply(card_dir, in_path, out_path):
     """Apply watermark to a card."""
-    click.echo(f"Applying watermark: {card_dir}")
-    # TODO: Wire up to watermark apply
-    raise NotImplementedError("watermark apply not yet implemented")
+    _unsupported("watermark apply")
 
 
 @watermark.command("verify")
@@ -134,9 +160,7 @@ def watermark_apply(card_dir, in_path, out_path):
 @click.option("--svg", help="Path to watermark SVG (default: card_dir/watermark.svg)")
 def watermark_verify(card_dir, svg):
     """Verify watermark authenticity."""
-    click.echo(f"Verifying watermark: {card_dir}")
-    # TODO: Wire up to watermark verify
-    raise NotImplementedError("watermark verify not yet implemented")
+    _unsupported("watermark verify")
 
 
 @cli.group()
@@ -162,9 +186,7 @@ def convert_jpeg_to_png(path, keep):
               help="Export target (required for export phase)")
 def lot(series, phase, parallel, target):
     """Manage LOT (phase) cards."""
-    click.echo(f"LOT phase: series={series}, phase={phase}")
-    # TODO: Wire up to lot generation
-    raise NotImplementedError("lot command not yet implemented")
+    _unsupported("lot")
 
 
 if __name__ == "__main__":

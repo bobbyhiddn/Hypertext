@@ -5111,6 +5111,9 @@ def main() -> int:
     parser.add_argument("--variant", type=int, default=1, help="Variant number (1-3) for parallel daily generation - influences card selection for variety")
     args = parser.parse_args()
 
+    if args.phase == "imagegen" and args.card_dir:
+        parser.error("--card-dir is not supported with --phase imagegen; imagegen selects the newest card without an output from --series")
+
     _log(
         "[cli] "
         + "phase="

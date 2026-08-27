@@ -34,15 +34,16 @@ The card workflow is the module CLI:
 .venv/bin/python -m hypertext.pipeline.daily --help
 ```
 
-The installed `hypertext` command is supported for the offline pip gate:
+The installed `hypertext` command is supported for generation and the offline pip gate:
 
 ```bash
 .venv/bin/hypertext visual-gate --help
+.venv/bin/hypertext generate --help
 ```
 
-Do not use `hypertext generate`, `hypertext demo`, `hypertext review`, `hypertext gallery`, `hypertext watermark`, or `hypertext lot`; they are advertised Click commands that raise `NotImplementedError`. `python -m hypertext` exposes the same group. Do not use the missing `tools/daily_pipeline.py` commands in the root README.
+`hypertext generate` delegates the supported `plan`, `imagegen`, and `full` phases to the daily package pipeline. Do not use `hypertext demo`, `hypertext review`, `hypertext gallery`, `hypertext watermark`, or `hypertext lot`; these legacy Click surfaces fail closed with an explicit unsupported error. `python -m hypertext` exposes the same group.
 
-The package README examples for daily phases `art` and `composite` and its `--cards-dir` flag do not match the current parser. Use `--phase imagegen` with `--series` as documented below and trust current `--help` plus code over those stale examples.
+The package README follows the current parser: use `--phase imagegen` with `--series`, and use `--card-dir` only for explicit-card phases such as revise, rebuild, grade, and visual-gate.
 
 Treat `python -m hypertext.gemini.style` as an internal worker. The pipeline is responsible for creating and validating its serialized reference pack. Path-only `--style`, daily `--style-ref`, and daily `--extra-ref` inputs are legacy or explicitly rejected for full-card work. The supported boundaries are visible in [package/hypertext/cli.py](package/hypertext/cli.py) and [package/hypertext/pipeline/daily.py](package/hypertext/pipeline/daily.py).
 
@@ -108,7 +109,7 @@ Generate the newest recipe in the series that has no output image:
 .venv/bin/python -m hypertext.pipeline.daily --phase imagegen --series series/2026-Q1
 ```
 
-`imagegen` has no per-card targeting contract; `--card-dir` is ignored for this phase. Ensure the intended card is the newest missing output, or use `rebuild` on an explicit card directory. The pipeline validates the reference pack, Gemini MIME/decoding/dimensions, and the template-relative stat pips before and after watermarking. It atomically publishes a normalized 1024×1536 PNG and writes provenance. `--phase full` is only plan plus image generation; it does not replace grading or human approval.
+`imagegen` has no per-card targeting contract; passing `--card-dir` is rejected. Ensure the intended card is the newest missing output, or use `rebuild` on an explicit card directory. The pipeline validates the reference pack, Gemini MIME/decoding/dimensions, and the template-relative stat pips before and after watermarking. It atomically publishes a normalized 1024×1536 PNG and writes provenance. `--phase full` is only plan plus image generation; it does not replace grading or human approval.
 
 ## Revise
 
