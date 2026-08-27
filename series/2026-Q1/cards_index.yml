@@ -52,6 +52,7 @@ ability_patterns:
 - discard_draw
 - discard_type_name
 - draw_look_top_sheol_tower
+- draw_look_top_tower
 - draw_sheol_tower
 - draw_tower
 - look_top_tower
@@ -226,12 +227,12 @@ cards:
   word: HIGH
   type: ADJECTIVE
   rarity: COMMON
-  ability_pattern: conditional_look_top_tower
+  ability_pattern: add_hand_look_top_tower
 - number: 33
   word: ELDER
   type: TITLE
   rarity: COMMON
-  ability_pattern: conditional_tower
+  ability_pattern: draw_look_top_tower
 - number: 35
   word: DEEP
   type: ADJECTIVE

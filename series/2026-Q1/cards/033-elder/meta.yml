@@ -13,7 +13,8 @@ stats:
   lore: 3
   context: 4
   complexity: 2
-ability: Put one card from the top of the Tower on the bottom of the Tower.
+ability: Look at one card from the top of the Tower. You may put that card on the
+  bottom of the Tower; then draw one card from the Tower.
 ot_verse:
   ref: Ruth 4:2
   snippet: ten men of the elders of the city
@@ -39,12 +40,11 @@ letter: null
 notes: null
 sources: []
 search_queries: []
-revision: 2
+revision: 1
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this: the collector number at the top-left
-  currently reads #003; it must read #033. Correct those digits in place and keep
-  every other pixel, panel, and text exactly as rendered.
+  Visual fix only, change nothing except this single correction: Change the card number
+  from #003 to #033. Keep every other pixel, panel, and text exactly as rendered.
 
   # Card_Word: ELDER
 
@@ -54,7 +54,8 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: COMMON
 
-  # Card_Ability: Put one card from the top of the Tower on the bottom of the Tower.
+  # Card_Ability: Look at one card from the top of the Tower. You may put that card
+  on the bottom of the Tower; then draw one card from the Tower.
 
   # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
 

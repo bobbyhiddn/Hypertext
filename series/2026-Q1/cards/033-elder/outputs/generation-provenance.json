@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "3dacd8021501b7e3becfc9216ae572cf66c850da29a6c0fadbc9aef38d6ba656",
+    "gemini_output_sha256": "ab98c1a05d4af1d92753da7ec9d293d12f3b16eea38856a5b139c0ce7e613249",
     "generation_metadata_path": "series/2026-Q1/cards/033-elder/outputs/generation.json",
-    "generation_metadata_sha256": "9aaf85727a1e7769e9cd9ff8e2a2698502144e62ebdba9e3a0a0e571ae50bb83",
+    "generation_metadata_sha256": "b6a364eb39fb0dac63383c7745e22e10078ee4a063c2332e2e9baec261152db5",
     "path": "series/2026-Q1/cards/033-elder/outputs/card_1024x1536.png",
-    "sha256": "3dacd8021501b7e3becfc9216ae572cf66c850da29a6c0fadbc9aef38d6ba656"
+    "sha256": "ab98c1a05d4af1d92753da7ec9d293d12f3b16eea38856a5b139c0ce7e613249"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/033-elder/prompt.txt",
-    "sha256": "2da31e7d54b7251b849d1477ff58cf1526eace7da65df4c5c905ce173c905932"
+    "sha256": "61ecf5e5ce8d14579b351031c8271d24a20fbae64c2a33d9b4c411f128d53368"
   },
   "recipe": {
-    "canonical_sha256": "a49db587bb80cdd1c36174c75a1cac85186d21edbc6de077bb88a673c5d65e53",
-    "file_sha256": "a36d6d0e488963ec4be5eaf6b592b0fe1e5172a2e524d98ee2aa05377b2d9d76",
+    "canonical_sha256": "1deba9ccd0c9375c37516de7b4fd57003fcb71cf5182cdf4caa59886b17cf6c8",
+    "file_sha256": "418af8a578758796df1ef083c5e10dcca5a9b7bc0fa00c6a6260c589b7334ed6",
     "path": "series/2026-Q1/cards/033-elder/card.json"
   },
   "reference_pack": {
@@ -47,43 +47,8 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "fix",
+    "mode": "generate",
     "references": [
-      {
-        "assigned_role": "current_card",
-        "card_type": "TITLE",
-        "eligibility_reasons": [
-          "existing_current_card",
-          "sha256=verified",
-          "requested_fix_source"
-        ],
-        "eligible": true,
-        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
-        "metadata_path": null,
-        "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/033-elder/outputs/reference-inputs/current-1b8de43f91475968291f99e76e89b7dd2878e6a00ec902290cacce8fce35d8a1.png",
-        "position": 1,
-        "prompt_path": null,
-        "prompt_sha256": null,
-        "rarity": "COMMON",
-        "rarity_label": "COMMON",
-        "recipe_path": null,
-        "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/033-elder/outputs/reference-inputs/current-1b8de43f91475968291f99e76e89b7dd2878e6a00ec902290cacce8fce35d8a1.png",
-        "review_evidence_path": null,
-        "review_evidence_sha256": null,
-        "role": "current_card",
-        "sha256": "1b8de43f91475968291f99e76e89b7dd2878e6a00ec902290cacce8fce35d8a1",
-        "similarity_components": {},
-        "similarity_reason": "not_applicable_current_card",
-        "similarity_score": 0,
-        "source_manifest": null,
-        "source_manifest_sha256": null,
-        "template_commit": null,
-        "template_manifest_schema_version": null,
-        "template_manifest_status": null,
-        "template_version": null
-      },
       {
         "assigned_role": "template",
         "card_type": "TITLE",
@@ -93,11 +58,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[2] = TEMPLATE: SHA-256-verified TITLE COMMON structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified TITLE COMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
-        "position": 2,
+        "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "COMMON",
@@ -126,18 +91,18 @@
     "target_type": "TITLE"
   },
   "reference_pack_path": "series/2026-Q1/cards/033-elder/outputs/reference-pack.json",
-  "reference_pack_sha256": "f7a353776b5c5f968aa7a272810427c2b6d94a3d4b6015ad40c822db54b75da6",
+  "reference_pack_sha256": "99bea54079b88f63bd5ea1a58ebb171d5d2441eb875e5822fb4132d6cb87e9fd",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "fix",
+    "mode": "generate",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "revise",
-    "reference_count": 2,
+    "phase": "rebuild",
+    "reference_count": 1,
     "response_modalities": [
       "IMAGE"
     ]
