@@ -4387,7 +4387,21 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     _log("[phase grade] " + "=" * 50)
     _log(f"[phase grade] Describing card with {len(style_refs)} style refs + rubric...")
     try:
-        description = describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
+        # The vision judge is stochastic on borderline style calls (the same
+        # image can grade both ways), so take the majority of three
+        # independent descriptions and keep every vote on the record.
+        descriptions = []
+        for vote in range(3):
+            descriptions.append(
+                describe_card(out_png, style_refs=style_refs, style_rubric=style_rubric)
+            )
+        votes = [bool(d.style_matches_reference) for d in descriptions]
+        majority = votes.count(True) >= 2
+        _log(f"[phase grade] style votes: {votes} -> majority {majority}")
+        description = next(
+            (d for d in descriptions if bool(d.style_matches_reference) == majority),
+            descriptions[0],
+        )
     except Exception as e:
         _log(f"[phase grade] Description failed: {e}")
         return 1
