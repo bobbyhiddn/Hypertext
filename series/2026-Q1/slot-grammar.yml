@@ -1,0 +1,660 @@
+# Babel Alpha slot grammar - the 59 remaining Word Card slots (approved 2026-08-27)
+series: 2026-Q1
+approved: '2026-08-27'
+notes:
+- Slots BABEL-032..090 fill the 59 open cells of the corrected 90-card combination
+  targets.
+- word = chosen candidate; alternate kept for swaps. mechanic_family / stat_profile
+  / theme are planning guidance;
+- the ability validator enforces rarity budgets - family enforcement in the planner
+  is a pending pipeline extension.
+slots:
+- slot_id: BABEL-032
+  number: 32
+  type: ADJECTIVE
+  rarity: COMMON
+  word: HIGH
+  gloss: Reaching toward the heavens in human pride.
+  alternate: ONE
+  mechanic_family: DRAW
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: pilot
+- slot_id: BABEL-033
+  number: 33
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: FOREIGN
+  gloss: Of another land, another tongue, another people.
+  alternate: STRANGE
+  mechanic_family: SELECT
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: pilot
+- slot_id: BABEL-034
+  number: 34
+  type: TITLE
+  rarity: COMMON
+  word: ELDER
+  gloss: A patriarch leading his clan from Babel.
+  alternate: PRINCE
+  mechanic_family: GAIN_LETTER
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: pilot
+- slot_id: BABEL-035
+  number: 35
+  type: NOUN
+  rarity: UNCOMMON
+  word: SEED
+  gloss: The promised offspring of the faithful line.
+  alternate: LINEAGE
+  mechanic_family: EXCHANGE
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: pilot
+- slot_id: BABEL-036
+  number: 36
+  type: ADJECTIVE
+  rarity: RARE
+  word: DEEP
+  gloss: The chaotic waters of creation and flood.
+  alternate: VOID
+  mechanic_family: STAT_CHECK
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: pilot
+- slot_id: BABEL-037
+  number: 37
+  type: VERB
+  rarity: COMMON
+  word: GATHER
+  gloss: To bring together what was once scattered.
+  alternate: PROCLAIM
+  mechanic_family: DISCARD
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-038
+  number: 38
+  type: NAME
+  rarity: UNCOMMON
+  word: SODOM
+  gloss: A city judged and destroyed for its sin.
+  alternate: LOT
+  mechanic_family: RETURN
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-039
+  number: 39
+  type: NOUN
+  rarity: GLORIOUS
+  word: KINGDOM
+  gloss: The final gathering under God's perfect rule.
+  alternate: GLORY
+  mechanic_family: COPY_EFFECT
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-040
+  number: 40
+  type: NAME
+  rarity: COMMON
+  word: SHINAR
+  gloss: The land where humanity built its tower.
+  alternate: NIMROD
+  mechanic_family: VIEW
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-041
+  number: 41
+  type: TITLE
+  rarity: UNCOMMON
+  word: MESSENGER
+  gloss: A bearer of words no longer understood.
+  alternate: ORACLE
+  mechanic_family: VIEW
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-042
+  number: 42
+  type: NOUN
+  rarity: COMMON
+  word: TONGUE
+  gloss: The source of division and new identity.
+  alternate: LAND
+  mechanic_family: DRAW
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
+- slot_id: BABEL-043
+  number: 43
+  type: VERB
+  rarity: UNCOMMON
+  word: CHOOSE
+  gloss: To set apart a people for redemption.
+  alternate: BLESS
+  mechanic_family: DRAW
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: planned
+- slot_id: BABEL-044
+  number: 44
+  type: ADJECTIVE
+  rarity: COMMON
+  word: DARK
+  gloss: The state of the world before created light.
+  alternate: EMPTY
+  mechanic_family: GAIN_LETTER
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: planned
+- slot_id: BABEL-045
+  number: 45
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: FILLED
+  gloss: With the Spirit, speaking in other tongues.
+  alternate: UNIFIED
+  mechanic_family: LOSE_LETTER
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-046
+  number: 46
+  type: TITLE
+  rarity: COMMON
+  word: WATCHMAN
+  gloss: One who warns of coming judgment.
+  alternate: JUDGE
+  mechanic_family: DISCARD
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-047
+  number: 47
+  type: TITLE
+  rarity: RARE
+  word: REDEEMER
+  gloss: The one who gathers his purchased people.
+  alternate: SAVIOR
+  mechanic_family: RETRIEVE
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-048
+  number: 48
+  type: NOUN
+  rarity: UNCOMMON
+  word: BRICK
+  gloss: Man-made stone for a man-made name.
+  alternate: TOWER
+  mechanic_family: SELECT
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-049
+  number: 49
+  type: VERB
+  rarity: COMMON
+  word: BABBLE
+  gloss: To speak words without any shared meaning.
+  alternate: MOCK
+  mechanic_family: VIEW
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-050
+  number: 50
+  type: NAME
+  rarity: UNCOMMON
+  word: JAPHETH
+  gloss: Son of Noah, his descendants spread abroad.
+  alternate: HAM
+  mechanic_family: EXCHANGE
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
+- slot_id: BABEL-051
+  number: 51
+  type: NAME
+  rarity: COMMON
+  word: ABRAM
+  gloss: Called from Ur to be a blessing.
+  alternate: EBER
+  mechanic_family: DRAW
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: planned
+- slot_id: BABEL-052
+  number: 52
+  type: VERB
+  rarity: GLORIOUS
+  word: HOVER
+  gloss: To brood over the waters of creation.
+  alternate: BREATHE
+  mechanic_family: SHEOL_EFFECT
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: planned
+- slot_id: BABEL-053
+  number: 53
+  type: ADJECTIVE
+  rarity: COMMON
+  word: NEW
+  gloss: A new tongue, a new heart, a new people.
+  alternate: AMAZED
+  mechanic_family: GAIN_LETTER
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-054
+  number: 54
+  type: TITLE
+  rarity: UNCOMMON
+  word: DESTROYER
+  gloss: The agent of God's wrath and judgment.
+  alternate: WITNESS
+  mechanic_family: RETURN
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-055
+  number: 55
+  type: TITLE
+  rarity: COMMON
+  word: SHEPHERD
+  gloss: The one who gathers his scattered sheep.
+  alternate: FATHER
+  mechanic_family: DISCARD
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-056
+  number: 56
+  type: VERB
+  rarity: UNCOMMON
+  word: ASCEND
+  gloss: To climb toward heaven in human strength.
+  alternate: UNIFY
+  mechanic_family: VIEW
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-057
+  number: 57
+  type: NOUN
+  rarity: RARE
+  word: DISCORD
+  gloss: The sound of unity breaking into strife.
+  alternate: CHAOS
+  mechanic_family: MOVE
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-058
+  number: 58
+  type: VERB
+  rarity: COMMON
+  word: DEPART
+  gloss: To leave the plain of Shinar forever.
+  alternate: DIVIDE
+  mechanic_family: VIEW
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
+- slot_id: BABEL-059
+  number: 59
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: CHOSEN
+  gloss: Set apart by God for his covenant.
+  alternate: FAITHFUL
+  mechanic_family: DRAW
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: planned
+- slot_id: BABEL-060
+  number: 60
+  type: NAME
+  rarity: COMMON
+  word: EDEN
+  gloss: The garden home, a lost paradise.
+  alternate: ARARAT
+  mechanic_family: DRAW
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: planned
+- slot_id: BABEL-061
+  number: 61
+  type: NOUN
+  rarity: UNCOMMON
+  word: FIRE
+  gloss: A visible sign of the Spirit's presence.
+  alternate: UNITY
+  mechanic_family: LOSE_LETTER
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-062
+  number: 62
+  type: ADJECTIVE
+  rarity: COMMON
+  word: WICKED
+  gloss: The state of those deserving of judgment.
+  alternate: PROUD
+  mechanic_family: GAIN_LETTER
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-063
+  number: 63
+  type: NAME
+  rarity: UNCOMMON
+  word: ZION
+  gloss: The holy mountain, the city of God.
+  alternate: ISRAEL
+  mechanic_family: SELECT
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-064
+  number: 64
+  type: TITLE
+  rarity: COMMON
+  word: MASTER
+  gloss: One who directs the defiant building project.
+  alternate: ARCHITECT
+  mechanic_family: DISCARD
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-065
+  number: 65
+  type: NAME
+  rarity: RARE
+  word: PELEG
+  gloss: In his time the earth was divided.
+  alternate: JOKTAN
+  mechanic_family: LOT_EFFECT
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-066
+  number: 66
+  type: TITLE
+  rarity: UNCOMMON
+  word: EXILE
+  gloss: One driven from home by divine decree.
+  alternate: WANDERER
+  mechanic_family: EXCHANGE
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
+- slot_id: BABEL-067
+  number: 67
+  type: VERB
+  rarity: COMMON
+  word: BEGET
+  gloss: To continue the line of the promise.
+  alternate: INCREASE
+  mechanic_family: VIEW
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: planned
+- slot_id: BABEL-068
+  number: 68
+  type: ADJECTIVE
+  rarity: GLORIOUS
+  word: ETERNAL
+  gloss: Existing outside of created time and space.
+  alternate: SOVEREIGN
+  mechanic_family: MODIFY_SCORE
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: planned
+- slot_id: BABEL-069
+  number: 69
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: CLOVEN
+  gloss: Divided tongues of fire upon each one.
+  alternate: HEAVENLY
+  mechanic_family: RETURN
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-070
+  number: 70
+  type: NAME
+  rarity: COMMON
+  word: CAIN
+  gloss: The builder of a city, marked by God.
+  alternate: LAMECH
+  mechanic_family: DRAW
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-071
+  number: 71
+  type: ADJECTIVE
+  rarity: COMMON
+  word: MANY
+  gloss: A great multitude that no one could number.
+  alternate: EVERY
+  mechanic_family: GAIN_LETTER
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-072
+  number: 72
+  type: NOUN
+  rarity: UNCOMMON
+  word: PRIDE
+  gloss: The heart's desire to be like God.
+  alternate: AMBITION
+  mechanic_family: VIEW
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-073
+  number: 73
+  type: TITLE
+  rarity: COMMON
+  word: STRANGER
+  gloss: One whose speech is now unintelligible.
+  alternate: NEIGHBOR
+  mechanic_family: DISCARD
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-074
+  number: 74
+  type: NAME
+  rarity: UNCOMMON
+  word: TARSHISH
+  gloss: A distant land at the earth's edge.
+  alternate: CUSH
+  mechanic_family: DRAW
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
+- slot_id: BABEL-075
+  number: 75
+  type: ADJECTIVE
+  rarity: RARE
+  word: ELECT
+  gloss: Chosen before the foundation of the world.
+  alternate: REDEEMED
+  mechanic_family: STAT_CHECK
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: planned
+- slot_id: BABEL-076
+  number: 76
+  type: VERB
+  rarity: COMMON
+  word: COVER
+  gloss: For waters to spread over the land.
+  alternate: SWARM
+  mechanic_family: VIEW
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: planned
+- slot_id: BABEL-077
+  number: 77
+  type: TITLE
+  rarity: UNCOMMON
+  word: APOSTLE
+  gloss: One sent to proclaim the gospel to all.
+  alternate: PREACHER
+  mechanic_family: LOSE_LETTER
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-078
+  number: 78
+  type: NAME
+  rarity: COMMON
+  word: EVE
+  gloss: The mother of all living, first to sin.
+  alternate: SERPENT
+  mechanic_family: DRAW
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-079
+  number: 79
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: GLORIOUS
+  gloss: The final state of the redeemed church.
+  alternate: HOLY
+  mechanic_family: SELECT
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-080
+  number: 80
+  type: ADJECTIVE
+  rarity: COMMON
+  word: BAKED
+  gloss: Bricks hardened by fire for the tower.
+  alternate: UNITED
+  mechanic_family: GAIN_LETTER
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-081
+  number: 81
+  type: NOUN
+  rarity: UNCOMMON
+  word: VOICE
+  gloss: The sound of a person, now incomprehensible.
+  alternate: WORD
+  mechanic_family: EXCHANGE
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-082
+  number: 82
+  type: TITLE
+  rarity: COMMON
+  word: PATRIARCH
+  gloss: The father of a newly formed tribe.
+  alternate: ANCESTOR
+  mechanic_family: DISCARD
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
+- slot_id: BABEL-083
+  number: 83
+  type: NAME
+  rarity: GLORIOUS
+  word: ABRAHAM
+  gloss: Father of a multitude of nations.
+  alternate: MELCHIZEDEK
+  mechanic_family: LOT_EFFECT
+  stat_profile: balanced
+  theme: the remnant and covenant line
+  status: planned
+- slot_id: BABEL-084
+  number: 84
+  type: NAME
+  rarity: UNCOMMON
+  word: EUPHRATES
+  gloss: A great river flowing out of Eden.
+  alternate: TIGRIS
+  mechanic_family: RETURN
+  stat_profile: high LORE
+  theme: echoes of creation and flood
+  status: planned
+- slot_id: BABEL-085
+  number: 85
+  type: VERB
+  rarity: COMMON
+  word: HEAL
+  gloss: To mend the deep division of nations.
+  alternate: RESTORE
+  mechanic_family: VIEW
+  stat_profile: high CONTEXT
+  theme: the reversal at Pentecost
+  status: planned
+- slot_id: BABEL-086
+  number: 86
+  type: TITLE
+  rarity: RARE
+  word: LAWGIVER
+  gloss: The one whose standard reveals all sin.
+  alternate: ADVERSARY
+  mechanic_family: RETRIEVE
+  stat_profile: high COMPLEXITY
+  theme: watchfulness and judgment
+  status: planned
+- slot_id: BABEL-087
+  number: 87
+  type: TITLE
+  rarity: UNCOMMON
+  word: BRIDEGROOM
+  gloss: The one who gathers his beloved bride.
+  alternate: KING
+  mechanic_family: VIEW
+  stat_profile: balanced
+  theme: the gathering of the redeemed
+  status: planned
+- slot_id: BABEL-088
+  number: 88
+  type: ADJECTIVE
+  rarity: COMMON
+  word: VAST
+  gloss: The great plain and the ambitious project.
+  alternate: WIDE
+  mechanic_family: DRAW
+  stat_profile: high LORE
+  theme: the building of the tower
+  status: planned
+- slot_id: BABEL-089
+  number: 89
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  word: DIVIDED
+  gloss: A people split by unintelligible speech.
+  alternate: UNKNOWN
+  mechanic_family: DRAW
+  stat_profile: high CONTEXT
+  theme: the confusion of tongues
+  status: planned
+- slot_id: BABEL-090
+  number: 90
+  type: TITLE
+  rarity: COMMON
+  word: LEADER
+  gloss: One who directs a clan to new lands.
+  alternate: GUIDE
+  mechanic_family: GAIN_LETTER
+  stat_profile: high COMPLEXITY
+  theme: the scattering of the nations
+  status: planned
