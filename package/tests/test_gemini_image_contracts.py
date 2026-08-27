@@ -421,7 +421,9 @@ class ConfigurationTests(unittest.TestCase):
                 with open(os.path.join(workflow_dir, name), encoding="utf-8") as f:
                     content = f.read()
                 self.assertIn("  workflow_dispatch:", content, name)
-                self.assertNotRegex(content, automatic, name)
+                if "GEMINI" in content:
+                    # Anything that can spend generation quota stays manual-only.
+                    self.assertNotRegex(content, automatic, name)
 
 
 if __name__ == "__main__":
