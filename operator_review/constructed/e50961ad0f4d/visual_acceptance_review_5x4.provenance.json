@@ -1,0 +1,921 @@
+{
+  "requirement": "REQ-PPAUG-024",
+  "artifact": "operator_review/constructed/e50961ad0f4d/visual_acceptance_review_5x4.png",
+  "repository_remote": "https://github.com/bobbyhiddn/Hypertext.git",
+  "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+  "generated_at_utc": "2026-08-23T02:26:00Z",
+  "policy": "Read-only collage of exact existing repository faces; no image model, generation, repaint, approximation, overlay, or crop.",
+  "scope": {
+    "native_template_cells": 11,
+    "completed_sample_cells": 20,
+    "excluded": [
+      "generated/reconstructed type-by-rarity candidates",
+      "Lot cards",
+      "card backs",
+      "reference palettes"
+    ]
+  },
+  "proof_method": "For each bbox, RGB pixels equal the recorded deterministic full-face LANCZOS resize of the authority blob.",
+  "collage_byte_sha256": "085b634b389bd10675258a7581c09b98e7c525f2ff258c73dc8d8a475b3c619f",
+  "cells": [
+    {
+      "cell": 1,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 baseline output",
+      "repository_path": "templates/card/outputs/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "cb91443d5f50250c8b2770bfefd7a23aabfe7f3d",
+      "source_byte_sha256": "a243869492f55f96e9f14f0fa464fdbee7fa7a57a15ebba4fab8ceda963f30ba",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "3600041502f4cf45b320a94e911540a6488e74f440b4b0933df5bb62c47bb8a9",
+      "collage_face_bbox_xywh": [
+        34,
+        282,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 2,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 v001 base geometry",
+      "repository_path": "templates/card/v001/base/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "298d816b4b2fba1a249ae725a3cf26f7df75ced2",
+      "source_byte_sha256": "16eac7e1472afdf78fb6b788c7abe65eea5ba45143fcec0407f270a4dc5eff5a",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "91ae248445ae3e9bde9c4ddafb8c190abec5ccb05d9f9e5bffbc0ba57d78a2af",
+      "collage_face_bbox_xywh": [
+        332,
+        282,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 3,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 word type: adjective",
+      "repository_path": "templates/card/v001/adjective/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "51337d323ab8a678099315fc10bc9f33522b0bdb",
+      "source_byte_sha256": "c644e87cf0492c8c1b2c355534ff1fb30dd0f676a386497facef28d130fda10e",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "aa8e6359e8b4e454195fd5a4d70b997ec8941121f025d9f8561fd5f2136e58aa",
+      "collage_face_bbox_xywh": [
+        630,
+        282,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 4,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 word type: name",
+      "repository_path": "templates/card/v001/name/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "9ef51b1290cc1fa4de96e42f5d8115419523b813",
+      "source_byte_sha256": "045fde4c2a7d4e32760f092665d146b19e84e9d8cddcf2e3af79b0cce9dc0b46",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "4b79de79ff19e1c57424fe233336828b8468baae6bd37dac21b004f04967a620",
+      "collage_face_bbox_xywh": [
+        928,
+        282,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 5,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 word type: noun",
+      "repository_path": "templates/card/v001/noun/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "a2f073a4915e9de3b7e11a73edbfc8c0b3f0b22f",
+      "source_byte_sha256": "01a07e9ee54f89f08491fddd9e85cd00979e0ce551f16336d6a0f6a5addfbad0",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "840a57695724dfb2d317e6a7020596ad95f911bec983dc37a12b3e4c58df472f",
+      "collage_face_bbox_xywh": [
+        1226,
+        282,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 6,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 word type: title",
+      "repository_path": "templates/card/v001/title/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "eb90f0d4a240c2569cae71d3cb4fe6dd3ef84cc5",
+      "source_byte_sha256": "f9d6069746eeb3dece95469fe3e604b4d022492213eb7060586401f3a36ce6fb",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "1ced150bf7acfec27530a9c64265cda10a446fd7bc305a81e71eabcf73015e8e",
+      "collage_face_bbox_xywh": [
+        34,
+        811,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 7,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 word type: verb",
+      "repository_path": "templates/card/v001/verb/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "860093ebd217df992c188f310f6adaf9a9c91f82",
+      "source_byte_sha256": "f2c797fbf8b5b84530aeeb7177af61f40844beebb8fa0fcab21dd6a559383339",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "18e17adb19362dff27441c2ac6ff140f2842ba52d17f2abbcad068302421bcfa",
+      "collage_face_bbox_xywh": [
+        332,
+        811,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 8,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 rarity: common",
+      "repository_path": "templates/card/v001/common/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "7b189da0ad8187dae72399615f9e032f028c5f19",
+      "source_byte_sha256": "6faf6802ba9028dc28c10ec0874c0b79678a2ee8956b52df15557539cfc73da2",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "9928b5e202ba75e644393ce2777664a20b5e5702909a20c9752b5598a979e3a5",
+      "collage_face_bbox_xywh": [
+        630,
+        811,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 9,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 rarity: glorious",
+      "repository_path": "templates/card/v001/glorious/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "5adef84efec7fa5ac3855869e6f9f08062cf15c6",
+      "source_byte_sha256": "b5a5bb101862210086a81fc88b6e4ff13e73d3beb89946da207c837e8373f0d0",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "b2e794a0f41d6abcdf68557f0f76cdb847c44c0f2dcf70479c056492153d6187",
+      "collage_face_bbox_xywh": [
+        928,
+        811,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 10,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 rarity: rare",
+      "repository_path": "templates/card/v001/rare/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "c57f280e34ff016e3e579e15b364689a8c010041",
+      "source_byte_sha256": "034b6e18e7b535e2c1b0d1fa1164b8004b113ea645473077e86ad62783229a3f",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "a2f5e1bbdb5d7c045f0209b309805ea1601dad3e271dc64623b465304b4d8a11",
+      "collage_face_bbox_xywh": [
+        1226,
+        811,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 11,
+      "section": "NATIVE WORD CARD TEMPLATES (11)",
+      "role": "native template \u2014 rarity: uncommon",
+      "repository_path": "templates/card/v001/uncommon/template_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "bc170f216df5e45d4875b2f5170097ba32d807a2",
+      "source_byte_sha256": "d993dd8ea76da0e4c1141a8479f32d301923b1cb522fdadb2ede842b355ca000",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "e68cdae33fc8fb34d9ef3bbeec4d6bb2e7c69357c759a0c6a59630f4892db74f",
+      "collage_face_bbox_xywh": [
+        34,
+        1340,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 12,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 001 GRACE",
+      "repository_path": "templates/example_cards/001-grace/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "6e0799ecfb272915757dd421eec1340c9217c33b",
+      "source_byte_sha256": "e4af9c36ac164b960c088ce0f4ec1b90947e585045279cd7006f867a9a105518",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "d9396a7185f614710fa9afaf4dc29b6ef85bf1adc4814d31d30b433072f3514c",
+      "collage_face_bbox_xywh": [
+        34,
+        1931,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 13,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 002 COVENANT",
+      "repository_path": "templates/example_cards/002-covenant/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "64ce0912d1e8be999b9461cee68d5702735af516",
+      "source_byte_sha256": "9a3d0b7cc53a6028f890befe4358e8d7966505353aa61fbf4f3ab99523db9e30",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "2d04b58e58530f67d01108ef2e46f16885e11635e40d9ed1a5ee361ba78864d9",
+      "collage_face_bbox_xywh": [
+        332,
+        1931,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 14,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 003 WISDOM",
+      "repository_path": "templates/example_cards/003-wisdom/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "102a8c303b27b30a2f7f7d2b900ac28f8ed5e6f2",
+      "source_byte_sha256": "93d9009bcef4f41d9bef66af2b9be2dad92b2a28d14cbdcc7704b319f8211a2d",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "47df590c2c6050ab6cebbb1d66538d8c0170f6169cd722271896b25faf0fdb42",
+      "collage_face_bbox_xywh": [
+        630,
+        1931,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 15,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 004 GLORY",
+      "repository_path": "templates/example_cards/004-glory/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "48cc4e29f0140bad8cfb2546f2bfd8e4e27e0d39",
+      "source_byte_sha256": "9642a0eb2f3b2f17a3dcb3781caaf8bd13a72e97dae84e432b8a132834e5fc59",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "6ed806bddd1e17010193c123366993bb362e5c01f43a4a0dcc3229c0ac9837d5",
+      "collage_face_bbox_xywh": [
+        928,
+        1931,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 16,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 005 REDEEM",
+      "repository_path": "templates/example_cards/005-redeem/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "636823d0b3e401d5e631b6997379759f2e0d8c94",
+      "source_byte_sha256": "cde07a9c28dca684fa3bac1b961d2cccde3b15172c1a3759fd3133cdbeb668a0",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "0a00e5fb7c2392d48097bd95eeeedcd5c2a60e1ce8dbe06dc3c96333a4071f1f",
+      "collage_face_bbox_xywh": [
+        1226,
+        1931,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 17,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 006 FORGIVE",
+      "repository_path": "templates/example_cards/006-forgive/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "55afc3f438c63dd9ea5f4bd4c3aab51bcc73d505",
+      "source_byte_sha256": "920fb4060cd36619630f8e845b4a17ee0203fd0f9781fe435eb1a00722c014d2",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "f592174c81e0d8caa31250771b87df19a28325a36ca541542ca17cfe5bc8b2b7",
+      "collage_face_bbox_xywh": [
+        34,
+        2460,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 18,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 007 SANCTIFY",
+      "repository_path": "templates/example_cards/007-sanctify/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "d861d4759cd561fa603bc8b14d00e409517c1c95",
+      "source_byte_sha256": "fd596550837bd9818954b4fce5cf5485f601f3ee9d08a042986aa5d7e0a71c14",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "f37701273dd3c1ec0dfa71f4f5f4d0e98e69f227269ac403ce580a437867c3d9",
+      "collage_face_bbox_xywh": [
+        332,
+        2460,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 19,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 008 BLESS",
+      "repository_path": "templates/example_cards/008-bless/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "9fb6be8767d8c7bc3dbf98930cedb085fa16f8f3",
+      "source_byte_sha256": "2bdc9170cd2754cb0a9ea7557d49b0931aa64a749e7785b6b53a6fd42423e837",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "4918d991d3a4fec477134872442949aeef75814981285f73c78a3750be2f685e",
+      "collage_face_bbox_xywh": [
+        630,
+        2460,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 20,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 009 HOLY",
+      "repository_path": "templates/example_cards/009-holy/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "ed50eebbf1ba9f7a28a1cbceabe0709b3582c1a9",
+      "source_byte_sha256": "9ed42430982eec65bd8eec9b8bb1d0756a3407e81e653f8ee4dd2a9bf3eeb614",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "661486112c8ee8e2cb584fa2323b64055a12cf1ad4ffed78993ede0178ac90ec",
+      "collage_face_bbox_xywh": [
+        928,
+        2460,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 21,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 010 RIGHTEOUS",
+      "repository_path": "templates/example_cards/010-righteous/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "b7f2321106fe7e51593179e5ec6012ac417357d7",
+      "source_byte_sha256": "4c45feb5192455ba42209342e4b26b4ac6b332d6b542068a9b12fafd70226483",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "edcc78d167864347472cbc51177e3111e8c6878afdef538299f7dc381c904fd9",
+      "collage_face_bbox_xywh": [
+        1226,
+        2460,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 22,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 011 ETERNAL",
+      "repository_path": "templates/example_cards/011-eternal/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "413b468d05ec9a4cda9b8740e4e43c28f4cf8cea",
+      "source_byte_sha256": "0897f2913084725571816bab65c3b7e0687d0d4a82bead3d76203e2548b9a952",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "dd2a703acfaf5528a86ae3a794e404bc3f22b74a1ff50980e45e6fb19cb77f11",
+      "collage_face_bbox_xywh": [
+        34,
+        2989,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 23,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 012 SACRED",
+      "repository_path": "templates/example_cards/012-sacred/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "6db508bb42655b19ba415c57e944f99e25dcbf42",
+      "source_byte_sha256": "08c550ad1cb2eb159c97b80d595210915f51196b9ecaef8ab4d6c08459206346",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "40e694e458d315328a25d84eefdedc38d458c4c0bee8dfb0bd5d63f8c5150471",
+      "collage_face_bbox_xywh": [
+        332,
+        2989,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 24,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 013 MOSES",
+      "repository_path": "templates/example_cards/013-moses/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "86bfb4250f11ef69be0a621685e35c5d891e0642",
+      "source_byte_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "4b1531b1b4937ad5b8979fb28bd1cdc08209cb2bd14360205ad55208401d509b",
+      "collage_face_bbox_xywh": [
+        630,
+        2989,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 25,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 014 DAVID",
+      "repository_path": "templates/example_cards/014-david/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "5cc5fb6bd136b1cf30c807bad155463ac6bada96",
+      "source_byte_sha256": "78753d89fd8179853960cfca30490c69cfc18d27e52439ceb84e41f8838d4e43",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "9c7999fcfe9109bae5f1f2bd94d2f5976661e0eff249c06ba612cf151f24c8f0",
+      "collage_face_bbox_xywh": [
+        928,
+        2989,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 26,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 015 ELIJAH",
+      "repository_path": "templates/example_cards/015-elijah/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "6836c5dadb89c586e1e3036184b698c936077dc1",
+      "source_byte_sha256": "c88762c9d83f7641850c8de65e981e7e2a474270cb33c0885d31b86a7a3693e7",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "e77fc90143962ec3ad9938ba8b7fdc1adced586fb7c17255fe002eecd9faa24e",
+      "collage_face_bbox_xywh": [
+        1226,
+        2989,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 27,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 016 ABRAHAM",
+      "repository_path": "templates/example_cards/016-abraham/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "7cc3c1071579e1ca9c870b0ff72d5a8503569060",
+      "source_byte_sha256": "96d8b98ff65da6ba8fbafbcfeb6f6743133dc7ed45ef908288f374a23ea6804e",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "7e3b0d47e08680576ee18ccb47f5ae45f37f186df01a1c4f7dbb9589002be701",
+      "collage_face_bbox_xywh": [
+        34,
+        3518,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 28,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 017 SHEPHERD",
+      "repository_path": "templates/example_cards/017-shepherd/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "f46af028886834b13f13af8689a85d6b7648464e",
+      "source_byte_sha256": "d88f6b3e982a075b041515b970182aa137c7dba52adbc28b2bc7a8f0bb3ca3ce",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "3626bd9a350bd357ead3aedc92e6803a9ed6740894ccc46494eb722c63d9f181",
+      "collage_face_bbox_xywh": [
+        332,
+        3518,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 29,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 018 REDEEMER",
+      "repository_path": "templates/example_cards/018-redeemer/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "ecb50fc3f711926db0ad027cabd61a7d3594e6f3",
+      "source_byte_sha256": "624c235a5e283d4211de8bf1cffa9a4b7385ea7f875e41fa8acb2e3623d433de",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "d7c62f4f96fcbc63dbb2582712888897d109104fc7aa8808f017676f2d138368",
+      "collage_face_bbox_xywh": [
+        630,
+        3518,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 30,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 019 SAVIOR",
+      "repository_path": "templates/example_cards/019-savior/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "03f4231e4d13f05bf07be2927417099c00a57f2d",
+      "source_byte_sha256": "4c8d778346719c5f27b9f031192419bbd570c8e4e0947e2b0ff3b200d8d20550",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "eccb15bbe74fc17ab61dab47864f452ac67e2b2f819c9f74998e80e57088223c",
+      "collage_face_bbox_xywh": [
+        928,
+        3518,
+        254,
+        379
+      ]
+    },
+    {
+      "cell": 31,
+      "section": "COMPLETED SAMPLE CARDS (20) \u2014 references, not templates",
+      "role": "completed sample card \u2014 020 MESSIAH",
+      "repository_path": "templates/example_cards/020-messiah/outputs/card_1024x1536.png",
+      "authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+      "git_blob_sha": "2d34b03afcaf2dbea1611d3d3257b0e12ee59f31",
+      "source_byte_sha256": "fa6e07b4f25d3e2aad2eb2a5295887a0661e0255dabfcf88f42c73f98a7c09ab",
+      "source_dimensions": [
+        848,
+        1264
+      ],
+      "transform": {
+        "operation": "uniform full-face resize",
+        "crop": false,
+        "resampling": "Pillow LANCZOS",
+        "rendered_dimensions": [
+          254,
+          379
+        ]
+      },
+      "rendered_rgb_sha256": "df125b3e0c044d7168c8b058bfb70e2ce00dbf8a264c1b4998d816d2d9addd32",
+      "collage_face_bbox_xywh": [
+        1226,
+        3518,
+        254,
+        379
+      ]
+    }
+  ]
+}
