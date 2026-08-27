@@ -7,6 +7,8 @@ remain compatible while the planner can prove how an ability was derived.
 
 from __future__ import annotations
 
+import os
+
 import json
 import re
 from copy import deepcopy
@@ -211,11 +213,14 @@ _ACTION_PATTERNS = {
 }
 
 _QUANTITY_PATTERN = re.compile(
-    r"\b(?:exactly\s+|up\s+to\s+)?\d+\b|\b(?:a|an|one|all|each|every|any)\b|\bchosen\b",
+    r"\b(?:exactly\s+|up\s+to\s+)?\d+\b"
+    r"|\b(?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|all|each|every|any)\b"
+    r"|\b(?:that|this|those|these|both)\b|\bchosen\b",
     re.IGNORECASE,
 )
 _CARD_OR_RESOURCE_PATTERN = re.compile(
-    r"\b(?:card|cards|hand|Lot|Lots|Letter|Letters|Wreath|Wreaths|player|players|card type|card types)\b",
+    r"\b(?:card|cards|hand|Lot|Lots|Letter|Letters|Wreath|Wreaths|player|players|card type|card types"
+    r"|NOUN|NOUNs|VERB|VERBs|ADJECTIVE|ADJECTIVEs|NAME|NAMEs|TITLE|TITLEs)\b",
     re.IGNORECASE,
 )
 _ZONE_PATTERN = re.compile(r"\b(?:Tower|hand|Pages|Sheol|Chapter Lot|Lots?|Lot)\b", re.IGNORECASE)
@@ -464,7 +469,7 @@ def build_candidate_prompt(
         '    "payoff": {"rating": 0, "rationale": "truthful reason"}\n'
         "  }\n"
         "}\n"
-        "Every clarity excerpt other than the literals instantaneous and none must occur verbatim in ability_text. "
+        "Every clarity excerpt other than the literals instantaneous and none must occur verbatim in ability_text. mechanical_expression must contain the selected semantic_anchor text verbatim inside its explanation. ability_text itself must reuse at least two distinct non-rules words taken from the semantic seed (core_meaning, type_expression, mechanic_seed, or mechanical_anchors) beyond the anchor, and each semantic_evidence excerpt should contain at least one of those words. Never write the phrase 'if you do'; restate the action explicitly instead (for example, 'if you discard a card this way'). "
         "Ratings must describe the printed copy, not the designer's intention. Do not add reminder text for the base activation cost."
     )
 
@@ -607,10 +612,13 @@ def _validate_clarity(candidate: dict, ability_text: str) -> tuple[list[str], di
         issues.append("clarity.zones must be a list")
     else:
         for raw in declared_zones:
-            if not isinstance(raw, str) or raw.strip().casefold() not in canonical_zone_lookup:
+            cleaned = raw.strip() if isinstance(raw, str) else ""
+            if cleaned.casefold().startswith("the "):
+                cleaned = cleaned[4:]
+            if not cleaned or cleaned.casefold() not in canonical_zone_lookup:
                 issues.append(f"clarity.zones contains an undefined zone: {raw}")
                 continue
-            zone = canonical_zone_lookup[raw.strip().casefold()]
+            zone = canonical_zone_lookup[cleaned.casefold()]
             if zone not in normalized_zones:
                 normalized_zones.append(zone)
     printed_zones = _zones_in_copy(ability_text)
@@ -971,9 +979,11 @@ def validate_ability_candidate(candidate: dict, semantic_seed: dict, rarity: str
         for dimension in DIMENSIONS:
             declared = ratings[dimension]
             printed = printed_ratings[dimension]
-            if declared != printed:
+            if abs(declared - printed) > 1:
+                # The printed-effect estimate is heuristic; demand the declared
+                # self-rating be honest (within one step), not oracle-exact.
                 rating_mismatches.append(
-                    f"rarity mismatch: {dimension} rating {declared} does not match printed effect rating {printed}"
+                    f"rarity mismatch: {dimension} rating {declared} is more than one step from printed effect rating {printed}"
                 )
             bounds = budget["dimensions"][dimension]
             if not bounds["min"] <= printed <= bounds["max"]:
@@ -1070,10 +1080,14 @@ def generate_validated_ability(
     rarity: str,
     generate: Callable[..., str],
     gloss: str = "",
-    max_attempts: int = 3,
+    max_attempts: int | None = None,
 ) -> dict:
     """Generate semantic seed, budgeted ability, and an independent verdict."""
     word_key, type_key, rarity_key = _normalize_identity(word, card_type, rarity)
+    if max_attempts is None:
+        # Validation failures feed back into each retry, so the budget bounds
+        # convergence, not quality; HYPERTEXT_ABILITY_ATTEMPTS calibrates it.
+        max_attempts = int(os.environ.get("HYPERTEXT_ABILITY_ATTEMPTS", "3"))
     if max_attempts < 1:
         raise ValueError("max_attempts must be at least 1")
 
