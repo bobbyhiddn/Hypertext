@@ -10,6 +10,7 @@ words:
 - CURSE
 - DESCEND
 - EARTH
+- ELDER
 - FORM
 - GOOD
 - GRACE
@@ -45,6 +46,7 @@ ability_patterns:
 - conditional_draw_tower_type_noun
 - conditional_draw_type_name
 - conditional_look_top_tower
+- conditional_tower
 - discard_draw
 - discard_type_name
 - draw_look_top_sheol_tower
@@ -223,3 +225,8 @@ cards:
   type: ADJECTIVE
   rarity: COMMON
   ability_pattern: conditional_look_top_tower
+- number: 33
+  word: ELDER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: conditional_tower
