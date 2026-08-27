@@ -1,0 +1,64 @@
+{
+  "word": "FOREIGN",
+  "card_type": "ADJECTIVE",
+  "rarity": "UNCOMMON",
+  "content_score": 90,
+  "final_score": 90,
+  "passed": false,
+  "style_matches_reference": true,
+  "style_mismatch_reason": "",
+  "corrections": [
+    "Change the ability text from '...Add ti your hand...' to '...Add that revealed card to your hand...'.",
+    "Increase the trivia bullet count from 2 to 3."
+  ],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 25,
+      "max": 30,
+      "issues": [
+        "Ability text is incorrect. It contains a typo and is missing words: 'Add ti your hand' instead of 'Add that revealed card to your hand'."
+      ]
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 10,
+      "max": 15,
+      "issues": [
+        "Trivia bullet count is 2, but it is expected to be exactly 3."
+      ]
+    }
+  },
+  "quality_contract": {
+    "dimensions": {
+      "composition": 100,
+      "typography": 83,
+      "template_fidelity": 100,
+      "metadata": 67,
+      "stat_pips": 100,
+      "artifact_cleanliness": 100
+    },
+    "score": 67,
+    "passed": false,
+    "gate": 100
+  },
+  "stat_pip_visual_gate": {
+    "contract": "hypertext.template-relative-stat-pip-gate/v1",
+    "passed": true,
+    "candidate_sha256": "b0ebfec96dce7b43c13dd277816f6d8555457b506e6a3d9d2e4e05ca57539df1",
+    "template_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+    "report": "series/2026-Q1/cards/036-foreign/outputs/visual-gate.json"
+  },
+  "style_refs_count": 1,
+  "style_refs": [
+    "template_1024x1536.png"
+  ]
+}
