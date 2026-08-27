@@ -66,6 +66,40 @@ def generate_text(
     return text
 
 
+def _driver_exchange(prompt: str, *, temperature, use_google_search: bool) -> str:
+    """Operator-driven text mode (HYPERTEXT_TEXT_DRIVER_DIR).
+
+    Spools the prompt to a numbered file and blocks until the operator (or an
+    operator-controlled agent) writes the matching response file. Everything
+    downstream - validators, independent critic, assembly, provenance - runs
+    unchanged; only the author of the text differs. Exchanges stay on disk as
+    part of the planning record.
+    """
+    from pathlib import Path
+
+    root = Path(os.environ["HYPERTEXT_TEXT_DRIVER_DIR"])
+    root.mkdir(parents=True, exist_ok=True)
+    seq_file = root / "seq"
+    seq = int(seq_file.read_text()) + 1 if seq_file.exists() else 1
+    seq_file.write_text(str(seq))
+    stem = f"{seq:04d}"
+    (root / f"{stem}-meta.json").write_text(json.dumps(
+        {"temperature": temperature, "use_google_search": bool(use_google_search)}))
+    prompt_path = root / f"{stem}-prompt.txt"
+    tmp_path = root / f"{stem}-prompt.tmp"
+    tmp_path.write_text(prompt)
+    tmp_path.rename(prompt_path)
+    response = root / f"{stem}-response.txt"
+    deadline = time.time() + float(os.environ.get("HYPERTEXT_TEXT_DRIVER_TIMEOUT_S", "3600"))
+    while time.time() < deadline:
+        if response.exists():
+            text = response.read_text()
+            if text.strip():
+                return text
+        time.sleep(0.5)
+    raise RuntimeError(f"text driver timed out waiting for {response}")
+
+
 def generate_text_with_grounding(
     prompt: str,
     *,
@@ -85,6 +119,9 @@ def generate_text_with_grounding(
         Tuple of (generated_text, grounding_metadata).
         Grounding metadata includes 'queries' and 'sources' lists.
     """
+    if os.environ.get("HYPERTEXT_TEXT_DRIVER_DIR"):
+        driven = _driver_exchange(prompt, temperature=temperature, use_google_search=use_google_search)
+        return driven, {"queries": [], "sources": []}
     api_key = os.environ.get("GEMINI_TEXT_API_KEY") or os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_TEXT_API_KEY (or GEMINI_API_KEY) env var is not set.")
