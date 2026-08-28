@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 06:48:33
-Phase: rebuild
+Timestamp: 2026-08-28 07:21:21
+Phase: revise-image-only
 Target Rarity: COMMON
 Target Type: NAME
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/name/common/template_1024x1536.png [COMMON] sha256=70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/040-shinar/outputs/reference-inputs/current-38e84338084b1c139da3986cf256ff537f0768a44645e60a897420d229f6c458.png [COMMON] sha256=38e84338084b1c139da3986cf256ff537f0768a44645e60a897420d229f6c458
+  [2] TEMPLATE: templates/card/v001/composed/name/common/template_1024x1536.png [COMMON] sha256=70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151
 
-Prompt File: series/2026-Q1/cards/040-shinar/prompt.txt
+Prompt File: series/2026-Q1/cards/040-shinar/outputs/prompt.revision.txt
