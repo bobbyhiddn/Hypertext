@@ -34,6 +34,7 @@ words:
 - SEED
 - SETH
 - SHEM
+- SHINAR
 - SODOM
 - SPEAK
 - SPIRIT
@@ -267,3 +268,8 @@ cards:
   type: NOUN
   rarity: GLORIOUS
   ability_pattern: add_hand_sheol
+- number: 40
+  word: SHINAR
+  type: NAME
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower

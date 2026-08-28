@@ -1,0 +1,43 @@
+number: '040'
+word: SHINAR
+gloss: The plain of Babel, whose clay supplied brick for the tower
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A wide river plain with smoking brick kilns, lines of workers seen from
+  behind carrying bricks toward the stepped foundation of a rising ziggurat, two great
+  rivers winding to the horizon, engraved devotional style on warm parchment tones
+stats:
+  lore: 4
+  context: 2
+  complexity: 2
+ability: Look at the bottom two cards of the Tower. Add one of those cards to your
+  hand and put the other card on top of the Tower.
+ot_verse:
+  ref: Genesis 11:2
+  snippet: a plain in the land of Shinar
+nt_verse:
+  ref: Acts 7:2
+  snippet: when he was in Mesopotamia
+greek:
+  text: Σεννααρ
+  translit: Sennaar
+hebrew:
+  text: שִׁנְעָר
+  translit: Shinar
+ot_refs: Gen 10:10 • Gen 11:2 • Zech 5:11
+nt_refs: Acts 7:2 • Heb 11:8 • Rev 18:2
+trivia:
+- Genesis 10:10 places Babel, Erech, and Accad in Shinar - the plain scholars link
+  with Sumer.
+- With no stone on the plain, Babel's builders fired brick for stone and used slime
+  for mortar.
+- Zechariah's vision carries wickedness in a basket back to Shinar - the land of exile
+  again.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
