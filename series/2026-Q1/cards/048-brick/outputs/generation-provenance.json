@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "17db4c6cdf2e5c6ed532e8392a00f474f7ca1cb66ec150ebe7767d37f8d20e94",
+    "gemini_output_sha256": "6eac4cf0fd77c2383c3dfc301e08cb17ba83d4bcf405936cc5b41419f8adbc99",
     "generation_metadata_path": "series/2026-Q1/cards/048-brick/outputs/generation.json",
-    "generation_metadata_sha256": "abcd1dc031ab980ee1b41f73f879bf819f2041c32cf327f9366355bb5cb4211e",
+    "generation_metadata_sha256": "e94f586a9b54c064e85b9b4d8971d9302fbab51706b5d4fc17f69b18dca6bcd7",
     "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-    "sha256": "17db4c6cdf2e5c6ed532e8392a00f474f7ca1cb66ec150ebe7767d37f8d20e94"
+    "sha256": "6eac4cf0fd77c2383c3dfc301e08cb17ba83d4bcf405936cc5b41419f8adbc99"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/048-brick/prompt.txt",
-    "sha256": "ebc8a9ca757e5368fd931e00c55e7737ed2bf4a009ac15717da60d2d5fb051cc"
+    "path": "series/2026-Q1/cards/048-brick/outputs/prompt.revision.txt",
+    "sha256": "94b6a2205b7c9241f63eba2c3044ff877d142a765df48ca1f3937728e97b45d5"
   },
   "recipe": {
-    "canonical_sha256": "0a6dc0516c76db64c78ec12c48d2a469a5522b20c4b94bcbea6e010d46413864",
-    "file_sha256": "8cf20df469753dafb7b0a4d2e91ccdda8276c5bdec80b6f726a95f42361b7626",
+    "canonical_sha256": "2c348a13ca581b8b394e5cce191b93447478aa81c7a059e1e7518ec9dea10e64",
+    "file_sha256": "a79ee49b46747d1b18886db096a4bd9f6edf3b05bf6396cb65064af35f0b33f9",
     "path": "series/2026-Q1/cards/048-brick/card.json"
   },
   "reference_pack": {
@@ -22,6 +22,8 @@
         "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
         "card_type": "NAME",
         "eligibility_reasons": [
+          "status=retired",
+          "legacy!=false",
           "target_type_mismatch=NAME",
           "target_rarity_mismatch=COMMON"
         ],
@@ -43,13 +45,48 @@
         "similarity_reason": "not_scored_ineligible",
         "similarity_score": null,
         "source_manifest": "templates/card/v001/finished-card-references.json",
-        "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed"
+        "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
       }
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "NOUN",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/048-brick/outputs/reference-inputs/current-17db4c6cdf2e5c6ed532e8392a00f474f7ca1cb66ec150ebe7767d37f8d20e94.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "UNCOMMON",
+        "rarity_label": "UNCOMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/048-brick/outputs/reference-inputs/current-17db4c6cdf2e5c6ed532e8392a00f474f7ca1cb66ec150ebe7767d37f8d20e94.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "17db4c6cdf2e5c6ed532e8392a00f474f7ca1cb66ec150ebe7767d37f8d20e94",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "NOUN",
@@ -59,11 +96,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NOUN UNCOMMON structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified NOUN UNCOMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "UNCOMMON",
@@ -92,18 +129,18 @@
     "target_type": "NOUN"
   },
   "reference_pack_path": "series/2026-Q1/cards/048-brick/outputs/reference-pack.json",
-  "reference_pack_sha256": "02282e4fea6a674c9f714b23106b95588e0cd028965d9bad79edf221f7be7b5b",
+  "reference_pack_sha256": "160bc5efaf0386ec76553aac4f8d0758dc4cbda29671c460ecb65b911664cb9b",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise-image-only",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]
