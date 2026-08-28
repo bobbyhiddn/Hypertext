@@ -40,7 +40,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Type: NOUN
 # Card_Rarity: UNCOMMON
 # Card_Ability: Draw two cards from the Tower, then put one NOUN from your hand on top of the Tower.
-# Card_Stats: LORE 4 | CONTEXT 2 | COMPLEXITY 3
+# Card_Stats: LORE 1 | CONTEXT 3 | COMPLEXITY 1
 # Card_Art_Prompt: Rows of sun-dried mud bricks laid out on a riverside plain beside a smoking kiln, a half-built wall of fired brick rising behind them, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
 # Card_OT_Verse: Genesis 11:3 — let us make brick
 # Card_NT_Verse: 1 Peter 2:5 — as lively stones, are built up

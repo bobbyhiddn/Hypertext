@@ -10,9 +10,9 @@ art_prompt: Rows of sun-dried mud bricks laid out on a riverside plain beside a 
   oil painting with impressionistic brushwork, deep shadowed background, one radiant
   golden light source, rich saturated blues and golds
 stats:
-  lore: 4
-  context: 2
-  complexity: 3
+  lore: 1
+  context: 3
+  complexity: 1
 ability: Draw two cards from the Tower, then put one NOUN from your hand on top of
   the Tower.
 ot_verse:
@@ -42,3 +42,7 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: incidental; transparent word
+  context: levenah ~12 + lithos ~60 = ~72
+  complexity: incidental; transparent word

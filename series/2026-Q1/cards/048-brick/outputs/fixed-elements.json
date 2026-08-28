@@ -1,0 +1,84 @@
+{
+  "contract": "hypertext.fixed-elements/v1",
+  "template": {
+    "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+    "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+  },
+  "font": {
+    "family": "Liberation Serif",
+    "path": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+    "sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4"
+  },
+  "regions": {
+    "stat_pips": {
+      "box": [
+        68,
+        561,
+        969,
+        641
+      ],
+      "offset": [
+        0,
+        -1
+      ],
+      "counts": [
+        1,
+        3,
+        1
+      ]
+    },
+    "type_pill": {
+      "box": [
+        142,
+        25,
+        266,
+        73
+      ],
+      "offset": [
+        0,
+        -5
+      ],
+      "text": "NOUN"
+    },
+    "rarity_chip": {
+      "box": [
+        768,
+        8,
+        1010,
+        112
+      ],
+      "offset": [
+        0,
+        -5
+      ]
+    },
+    "number": {
+      "box": [
+        59,
+        32,
+        136,
+        54
+      ],
+      "offset": [
+        0,
+        -6
+      ],
+      "text": "#048"
+    },
+    "footer": {
+      "box": [
+        63,
+        1484,
+        337,
+        1508
+      ],
+      "offset": [
+        0,
+        4
+      ],
+      "text": "SERIES: 2026-Q1 Babel"
+    }
+  },
+  "face_sha256_before": "6eac4cf0fd77c2383c3dfc301e08cb17ba83d4bcf405936cc5b41419f8adbc99",
+  "face_sha256_after": "e2d5404e3ddbcada6394a56849ad77c847d2b2e5fdf581798e9d53876aefc0f3"
+}
