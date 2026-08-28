@@ -3466,12 +3466,15 @@ def phase_revise(*, card_dir: Path, revise_file: Path | None, override_style_ref
         out_png = card_dir / "outputs" / "card_1024x1536.png"
         prompt_path = card_dir / "prompt.txt"
 
-        # Read existing prompt and append revision
+        # Read the canonical prompt and append the revision into a sidecar so
+        # prompt.txt itself stays the reproducible record of the card content.
         existing_prompt = _read_text(prompt_path) if prompt_path.exists() else ""
         revised_prompt = existing_prompt + f"\n\nREVISION INSTRUCTIONS:\n{inline_revision}"
+        prompt_path = card_dir / "outputs" / "prompt.revision.txt"
+        prompt_path.parent.mkdir(parents=True, exist_ok=True)
         with open(prompt_path, "w", encoding="utf-8") as f:
             f.write(revised_prompt)
-        _log(f"[phase revise] Updated prompt with revision instructions")
+        _log(f"[phase revise] Wrote revision prompt sidecar {prompt_path.name}")
 
         target_rarity = card.get("content", {}).get("RARITY_TEXT", "").upper() or None
         target_type = card.get("content", {}).get("CARD_TYPE", "").upper() or None
