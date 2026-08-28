@@ -1,0 +1,99 @@
+# Hypertext ability grammar - the option space of a Word Card ability.
+#
+# Every ability is: [COST] CORE [KICKER] [CONDITION] [TIMING], addressed to the
+# activating player, in the closed vocabulary of package/hypertext/cards/abilities.py.
+# Nothing here is a new keyword. The estimator in abilities.py prices the printed
+# copy; this file names the productions so designs can be classified, audited for
+# coverage, and generated from a finite menu.
+#
+# Status per option: core (in the rules today) | ruled (needs the ruling in
+# docs/rules.md "Abilities") | deferred (not an ability action yet).
+contract: hypertext.ability-grammar/v1
+tiers:
+  COMMON:    {printed_cost: 0, interaction: none,          cards_worth: "one, beaten modestly",     word_cap: 34}
+  UNCOMMON:  {printed_cost: 0, interaction: one chosen player, cards_worth: "about one plus a kicker", word_cap: 40}
+  RARE:      {printed_cost: 1, interaction: one chosen player heavily, or every player by information, cards_worth: "two or more, net of cost", word_cap: 48}
+  GLORIOUS:  {printed_cost: 2, interaction: every player's material, cards_worth: "three or more, net of cost", word_cap: 56}
+
+values:
+  card: 1
+  letter: 3          # a Letter is worth three cards (user, 2026-08-28)
+  cost_discount: "every three units of cost paid by the activating player take one step off the payoff rating, never below one"
+
+vocabulary:
+  actions: [draw, add, look at, reveal, put, choose, name, gain, spend, shuffle, discard, return, exchange, activate]
+  deferred_actions: [record, redeem]         # turn stages, not ability actions
+  zones: [Tower, hand, Sheol, Page, Pages, Lot, Lots, Chapter Lot, Letters]
+  positions: [the top of the Tower, the bottom of the Tower, on top of the Tower in any order]
+  types: [NOUN, VERB, ADJECTIVE, NAME, TITLE]
+  stats: [LORE, CONTEXT, COMPLEXITY]
+  players: ["you (implicit)", "another player (chosen)", "each player", "each other player"]
+  lots: ["the Chapter Lot", "your Lot", "another player's Lot", "that chosen player's Lot"]
+
+productions:
+  COST:
+    spend_letter:      {copy: "Spend one Letter", units: 3, tiers: [UNCOMMON, RARE, GLORIOUS]}
+    discard_n:         {copy: "Discard N cards from your hand into Sheol", units: N, tiers: [UNCOMMON, RARE, GLORIOUS]}
+    bury_hand_card:    {copy: "Put one card from your hand on the bottom of the Tower", units: 1, tiers: [COMMON, UNCOMMON, RARE, GLORIOUS]}
+    spend_letters_n:   {copy: "Spend N Letters", units: 3N, tiers: [RARE, GLORIOUS], note: "buys an action a tier larger than the printed cost allows"}
+    discard_page:      {copy: "Discard one of your Pages", units: "5-7 (the Page's card count); the Page scores nothing", tiers: [RARE, GLORIOUS], status: ruled}
+  CORE:
+    draw:              {copy: "Draw N cards from the Tower", gain: N, tiers: {COMMON: [1], UNCOMMON: [1, 2], RARE: [2, 3], GLORIOUS: [3]}}
+    add_top:           {copy: "Add one card from the top of the Tower to your hand", gain: 1}
+    add_bottom:        {copy: "Add one card from the bottom of the Tower to your hand", gain: 1}
+    look_take:         {copy: "Look at the (top|bottom) N cards of the Tower. Add (one|up to one FILTER) of those cards to your hand REST", gain: 1, n: [1, 2, 3, 4]}
+    reveal_take:       {copy: "Reveal one card from the top of the Tower and add that revealed card to your hand", gain: 1, public: true}
+    reveal_test:       {copy: "Reveal one card from the top of the Tower and PUT-OR-ADD. If that revealed card TEST, RESULT", gain: "1 + branch", tiers: [UNCOMMON, RARE]}
+    recover:           {copy: "Choose up to N cards in Sheol [FILTER]. Add those chosen cards to your hand", gain: N, tiers: {UNCOMMON: [1], RARE: [2, 3], GLORIOUS: [3, 4, 5]}}
+    mill_take:         {copy: "Put the top N cards of the Tower into Sheol, then add one of those cards to your hand", gain: 1, tiers: [UNCOMMON, RARE]}
+    gain_letter:       {copy: "Gain one Letter", gain: 3, tiers: [RARE, GLORIOUS], note: "UNCOMMON only behind a condition or a cost of three units"}
+    scale_structure:   {copy: "Add up to N cards from (Sheol|the revealed cards) to your hand, one card of each card type in (that chosen Page|the Chapter Lot|your Lot|another player's Lot)", gain: "3+", tiers: [RARE, GLORIOUS], status: ruled}
+    return_to_tower:   {copy: "Choose up to N cards in Sheol and return those chosen cards to the top of the Tower in any order", gain: "selection", tiers: [RARE, GLORIOUS]}
+    return_from_page:  {copy: "Return one card from one of your Pages to your hand", gain: 1, tiers: [RARE, GLORIOUS], status: ruled}
+    exchange_sheol:    {copy: "Exchange up to N cards from your hand with up to N cards in Sheol", gain: "selection", tiers: [RARE, GLORIOUS]}
+    exchange_player:   {copy: "Choose another player. Exchange one card from your hand with one card from that chosen player's hand", gain: "selection", tiers: [RARE, GLORIOUS]}
+    reset_tower:       {copy: "Return every card in Sheol to the Tower and shuffle the cards in the Tower", gain: "reset", tiers: [GLORIOUS]}
+    activate_sheol:    {copy: "Choose one COMMON card in Sheol and activate that chosen card", gain: "that card", tiers: [GLORIOUS], status: ruled}
+    move_lot:          {copy: "Choose another player. Exchange your Lot with that chosen player's Lot", gain: "structure", tiers: [GLORIOUS], status: ruled}
+  INTERACT:
+    reveal_hand:       {copy: "Choose another player. That chosen player reveals one card from that chosen player's hand", interaction: 1, tiers: [UNCOMMON, RARE, GLORIOUS]}
+    lose_card:         {copy: "Choose another player. That chosen player puts N cards from that chosen player's hand into Sheol", interaction: 1, tiers: [UNCOMMON, RARE, GLORIOUS]}
+    lose_letter:       {copy: "Choose another player. That chosen player spends one Letter", interaction: 2, tiers: [UNCOMMON, RARE, GLORIOUS]}
+    every_reveals:     {copy: "Each player reveals one card from that player's hand", interaction: 1, scope: 3, tiers: [RARE, GLORIOUS]}
+    every_material:    {copy: "Each player (draws|adds|discards) one card ...", interaction: 3, tiers: [GLORIOUS]}
+  KICKER:
+    reorder:           {copy: "put those cards back on top of the Tower in any order"}
+    rest_bottom:       {copy: "put the other cards on the bottom of the Tower"}
+    rest_top:          {copy: "put the other cards on top of the Tower in any order"}
+    rest_sheol:        {copy: "put the other cards into Sheol", tiers: [UNCOMMON, RARE, GLORIOUS]}
+    bury_looked:       {copy: "You may put that card on the bottom of the Tower"}
+    bury_hand:         {copy: "Then you may put one card from your hand on the bottom of the Tower"}
+    shuffle:           {copy: "Then shuffle the cards in the Tower"}
+    name_type:         {copy: "Name a card type"}
+    peek:              {copy: "Then look at one card from the top of the Tower"}
+    reveal_next:       {copy: "Then reveal one card from the top of the Tower", public: true}
+    draw_one_more:     {copy: "then draw one card from the Tower", tiers: [UNCOMMON, RARE, GLORIOUS]}
+  FILTER:
+    type:              {copy: "that is a TYPE", tiers: [COMMON, UNCOMMON, RARE, GLORIOUS]}
+    named_type:        {copy: "of the named type"}
+    same_type:         {copy: "of the same card type as that added card"}
+    stat_floor:        {copy: "that has STAT N or more"}
+    in_lot:            {copy: "whose card type is in (the Chapter Lot|your Lot)", tiers: [UNCOMMON, RARE, GLORIOUS]}
+  CONDITION:
+    revealed_is_type:  {copy: "If that revealed card is a TYPE, RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
+    revealed_in_lot:   {copy: "If that revealed card's card type is in (the Chapter Lot|your Lot), RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
+    hand_lacks_type:   {copy: "If no TYPE is in your hand, RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
+    pages_threshold:   {copy: "If you have at least N cards in Pages, RESULT", tiers: [RARE, GLORIOUS]}
+    otherwise:         {copy: "...; otherwise, RESULT", note: "exclusive branches never add"}
+    for_each:          {copy: "for each (card fewer than N in your hand|card type in ...)", tiers: [UNCOMMON, RARE, GLORIOUS]}
+  TIMING:
+    now:               {copy: ""}
+    next_turn:         {copy: "At the start of your next turn, ...", tiers: [UNCOMMON, RARE, GLORIOUS]}
+
+constraints:
+  - "one CORE per ability; at most one KICKER; at most one CONDITION; costs may stack (Spend two Letters and discard one of your Pages)"
+  - "COMMON: no COST beyond bury_hand_card, no CONDITION, no INTERACT, no Sheol, no Pages, no Letters, no second draw"
+  - "COMMON may use reveal_take, reveal_next, and a bare type FILTER; COMMONs may rhyme - distinctness comes from look count and destination"
+  - "resolution steps (every action except look at, reveal, name, choose) are at most two below RARE"
+  - "no two cards share a shape (hypertext ability-audit); no two cards share a lemma or word (hypertext lemma-audit)"
+  - "every ability beats 'Draw one card from the Tower.'"

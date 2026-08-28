@@ -68,6 +68,23 @@ def lemma_audit(series):
         raise SystemExit(1)
 
 
+@cli.command("grammar-check")
+@click.option("--series", required=True, help="Series directory (contains cards/)")
+def grammar_check(series):
+    """Classify every ability into the grammar's productions; report unused cores per tier and anything unclassified."""
+    from hypertext.cards.ability_grammar import classify, coverage, load_series_abilities
+
+    for label, rarity, text in load_series_abilities(series):
+        c = classify(text)
+        slots = " ".join(f"{k}={v}" for k, v in c.items() if k not in ("unclassified", "timing") and v)
+        click.echo(f"{label:18s} {rarity:9s} {slots or 'UNCLASSIFIED'}")
+    cov = coverage(series)
+    for rarity, cores in sorted(cov["used"].items()):
+        unused = [k for k in cov["cores"] if k not in cores]
+        click.echo(f"{rarity}: cores used {sorted(cores)}; unused {unused}")
+    click.echo(f"{len(cov['unclassified'])} unclassified")
+
+
 @cli.command("ability-audit")
 @click.option("--series", required=True, help="Series directory (contains cards/)")
 @click.option("--show", is_flag=True, help="Print every card's shape signature")

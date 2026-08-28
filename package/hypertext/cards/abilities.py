@@ -88,7 +88,7 @@ RARITY_BUDGETS = {
             "scope": {"min": 1, "max": 2},
             "complexity": {"min": 1, "max": 2},
             "setup": {"min": 0, "max": 1},
-            "interaction": {"min": 0, "max": 1},
+            "interaction": {"min": 0, "max": 2},   # UNCOMMON, RARE and GLORIOUS may interact with opponents; COMMON never (user, 2026-08-28)
             "payoff": {"min": 1, "max": 2},
         },
         "total": {"min": 4, "max": 7},
@@ -329,6 +329,12 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Draw copy names the Tower as its source. Card movement names both the cards and their destination. Ongoing copy states its duration. Conditional copy states both the condition and result.
 - Branching copy with one binary condition states that condition once and resolves every remaining case with "otherwise" (for example, "If that revealed card has COMPLEXITY three or more, add that revealed card to your hand; otherwise, put ..."). Do not restate the complementary condition in full; "otherwise" already covers it exhaustively. Never use "or else" or a bare "if not".
 - Avoid bare pronouns such as it, them, they, "that many," or a bare "the other"; repeat the player, card, quantity, or zone instead ("the other card" with its noun is fine).
+- A player's Lot is that player's personal recipe; write "your Lot", "another player's Lot", or "that chosen player's Lot" - never a new term. The shared recipe is "the Chapter Lot". An ability may read a Lot's card types, and a RARE or GLORIOUS may move Lots between players or return one for a new one.
+- Pages keep their Chapter Value once created. An ability may return a card from a Page to its owner's hand; the Page still scores in full.
+- Activate: "activate that chosen card" resolves that card's ability at once as if it were the revealed card - no Letter access cost, its printed rarity cost is paid from your hand, and the card returns to Sheol afterwards; a card activated this way cannot activate another. Record and Redeem are turn stages, not ability actions, until the rules say otherwise.
+- INTERACTION BY TIER: a COMMON never touches another player. An UNCOMMON may target one chosen player - make that player reveal, put a card into Sheol, or spend a Letter. A RARE may do the same more heavily or reach every player with information ("each player reveals ..."). Only a GLORIOUS moves every player's material ("each player draws / discards ...").
+- COSTS AS A LEVER: "Spend two Letters", "Discard three cards from your hand into Sheol", or "Discard one of your Pages" may open the ability and buy an action a tier larger than the printed cost alone allows. A discarded Page goes to Sheol and scores nothing; it costs at least five cards.
+- COSTS COUNT: a discard or a buried hand card is one card of cost, a Letter spent is three; costs are subtracted from the gain when the tier is priced, so "Gain one Letter, then discard three cards from your hand into Sheol" is UNCOMMON-weight, not RARE.
 - DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
 - COPY LENGTH: the printed image model garbles long copy. Keep a COMMON ability to about 30 words (hard cap 34), an UNCOMMON to 40, a RARE to 48, a GLORIOUS to 56; prefer one sentence when the effect allows it.
 - CARD-ADVANTAGE LADDER: activation costs are part of the math (a RARE pays one discard, a GLORIOUS two). A COMMON beats a plain draw modestly; an UNCOMMON is worth about one card plus a real kicker; a RARE must account for at least two cards' worth of advantage; a GLORIOUS at least three. Outcomes on exclusive branches never add together - an ability that either adds or draws, but never both, delivers only its better branch.
@@ -825,6 +831,13 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     zones = _zones_in_copy(ability_text)
     global_players = re.search(r"\b(?:each|every|all) players?\b", lower) is not None
     another_player = re.search(r"\b(?:other|chosen|target|another) player\b", lower) is not None
+    # Reveal-reach: "each player reveals/names/looks" shows information and
+    # touches nobody's material. Material-reach: each player draws, adds,
+    # discards, puts, spends, gains. Only material-reach prices as GLORIOUS.
+    global_material = global_players and re.search(
+        r"\b(?:each|every|all)\s+(?:other\s+)?players?\s+(?:draws?|adds?|discards?|puts?|spends?|gains?|returns?|exchanges?)\b", lower
+    ) is not None
+    global_reveal = global_players and not global_material
 
     if global_players:
         scope = 3
@@ -841,7 +854,7 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         complexity = max(2, complexity)
     if _CONDITION_PATTERN.search(ability_text):
         complexity = max(2, complexity)
-    if global_players:
+    if global_material:
         complexity = 3
 
     setup = 0
@@ -865,8 +878,10 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     if structure_scaling:
         setup = 2
 
-    if global_players:
+    if global_material:
         interaction = 3
+    elif global_reveal:
+        interaction = 1
     elif another_player:
         if re.search(r"\b(?:exchange|Lot|Lots|discard|from (?:the )?(?:chosen|other|target) player's hand|spends?\s+(?:one|two|three|a)\s+Letters?)\b", ability_text, re.IGNORECASE):
             interaction = 2
@@ -876,7 +891,7 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         interaction = 0
 
     payoff = 1 if actions else 0
-    if global_players and ("hand" in lower or "draw" in actions):
+    if global_material and ("hand" in lower or "draw" in actions):
         payoff = 3
     elif structure_scaling and any(a in actions for a in ("add", "draw", "return")):
         payoff = 3
@@ -894,7 +909,7 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         re.IGNORECASE,
     ):
         payoff = 2
-    elif re.search(r"\bgains?\s+(?:[2-9]|\d{2,})\s+Letters?\b", ability_text, re.IGNORECASE):
+    elif re.search(r"\bgains?\s+(?:[2-9]|\d{2,}|two|three|four|five)\s+Letters?\b", ability_text, re.IGNORECASE):
         payoff = 3
     elif re.search(r"\bgains?\s+(?:one|1|a)\s+Letter\b", ability_text, re.IGNORECASE) and not _CONDITION_PATTERN.search(ability_text):
         # A Letter is worth three cards (user, 2026-08-28): an unconditional
@@ -917,6 +932,19 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
             payoff = 2
         elif "gain" in material_actions:
             payoff = 2
+    # Costs paid by the activating player count against the gain (user,
+    # 2026-08-28: "Gain a Letter, discard 3 cards" is an UNCOMMON). A discarded
+    # or buried hand card is one unit; a Letter spent is three. Every three
+    # units of cost take one step off the payoff, never below one.
+    cost_units = 0
+    for m in re.finditer(r"\b(?:discard|put)\s+(one|two|three|four|five|\d+|up to \w+|any number of)\s+(?:other\s+)?(?:[A-Z]+\s+)?cards?\s+(?:of[^.;]*?\s)?from your hand\b", ability_text, re.IGNORECASE):
+        cost_units += _WORD_NUMBERS.get(m.group(1).lower(), 1)
+    for m in re.finditer(r"(?:^|[.;]\s*)spend\s+(one|two|three|a|\d+)\s+Letters?\b", ability_text, re.IGNORECASE):
+        cost_units += 3 * _WORD_NUMBERS.get(m.group(1).lower(), 1)
+    if re.search(r"\bdiscard one of your Pages\b|\bput every card in one of your Pages into Sheol\b", ability_text, re.IGNORECASE):
+        cost_units += 5   # a Page is at least five cards and scores nothing once discarded
+    if cost_units and payoff > 1:
+        payoff = max(1, payoff - cost_units // 3)
     return {
         "scope": scope,
         "complexity": complexity,
@@ -924,6 +952,9 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         "interaction": interaction,
         "payoff": payoff,
     }
+
+
+_WORD_NUMBERS = {"a": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5}
 
 
 def validate_ability_candidate(candidate: dict, semantic_seed: dict, rarity: str) -> dict:

@@ -333,6 +333,34 @@ has resolved.
 
 ---
 
+## Abilities
+
+Ability copy uses only the rules vocabulary above. Rulings that abilities depend on:
+
+- **A player's Lot.** Each player's personal recipe is "your Lot" / "another
+  player's Lot"; the shared recipe is "the Chapter Lot". An ability may read a
+  Lot's card types. When an ability moves a Lot between players or returns one
+  for a new one, the Lot arrives unrecorded for everyone this Chapter.
+- **Pages keep their value.** A Page scores its Chapter Value once created. An
+  ability may return a card from a Page to its owner's hand; the Page still
+  scores in full.
+- **Activate from an ability.** "Activate that chosen card" resolves the card's
+  ability at once as if it were the revealed card: no Letter access cost, its
+  printed rarity cost paid from the activating player's hand, and the card
+  returns to Sheol afterwards. A card activated this way cannot activate
+  another card.
+- **Record and Redeem** are turn stages, not ability actions.
+- **Interaction by tier.** A COMMON never touches another player. An UNCOMMON
+  may target one chosen player. A RARE may do so more heavily, or reach every
+  player with information. Only a GLORIOUS moves every player's material.
+- **Costs count.** A discarded or buried hand card is one card of cost and a
+  spent Letter is three; an ability's tier is judged on gain net of cost.
+- **Discarding a Page.** An ability may name "discard one of your Pages" as
+  its cost: every card in that Page goes to Sheol, the Page no longer exists,
+  and it scores nothing. The cost is worth the Page's card count.
+
+---
+
 ## Redeem
 
 When a player makes their normal End discard, other players may **Redeem** it

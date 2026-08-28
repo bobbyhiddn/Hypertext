@@ -249,6 +249,10 @@
     {
       "when": "2026-08-28",
       "what": "#049 -> OVERTHROW (user: 'we can just replace babble with another verb'); legacy #006 CONFUSE stays; lemma audit 0, shape audit clean. Ability Options artifact drafted for review: the closed vocabulary, pricing table, per-rarity option menus (in set / open / needs spec), coverage against targets, a grammar sketch, and five decisions before a spec."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "ABILITY SPEC + GRAMMAR built from the user's decisions on the Ability Options artifact: docs/ability-grammar.md and schema/ability_grammar.yml (ABILITY := [COST] CORE [KICKER] [CONDITION] [TIMING]); ability_grammar.classify + 'hypertext grammar-check' (all 30 current abilities classify; legacy do not). Rulings in docs/rules.md \u00a7 Abilities: 'your Lot / another player's Lot' instead of a new term; Pages keep their value and may have a card returned; activate = resolve as if revealed, printed cost paid, back to Sheol, no chaining; record/redeem deferred; COMMONs may reveal, take a bare type filter, and rhyme. Estimator: costs count (hand card 1, Letter 3, Page 5 units; one payoff step per three units) so 'Gain a Letter, discard three' is UNCOMMON and a Page-discard buys a five-card Sheol pull at RARE; reveal-reach vs material-reach for 'each player'; UNCOMMON interaction 0-2 (UNCOMMON, RARE, GLORIOUS may interact with opponents; COMMON never); 'gain N Letters' with word numbers."
     }
   ]
 }
