@@ -157,6 +157,10 @@
     {
       "when": "2026-08-28",
       "what": "ART STYLE RESTORED (user: 'we've lost the original art style I enjoyed with vibrant colors and impressionistic art'). Every art prompt I had written said 'engraved devotional style on warm parchment tones' - my invention. The authority is the printed set (example cards 001-020): luminous cinematic oil painting, deep shadowed fields lit by one radiant golden light, saturated blues and golds, symbolic subjects. Rule encoded in the descriptor (art_direction.style_rule), the metadata prompt, the recipe doc, and memory; all 20 art prompts rewritten; all 20 faces repainted panel-only via image-only revise (ELDER and GATHER needed fresh rebuilds after pip wobble), every one 100/100 and eyeballed. Stat rubric proposed (LORE/CONTEXT/COMPLEXITY definitions with anchors, 10/25/30/25/10 target shape, optional rarity sum caps) - awaiting the user's two calls before rescoring."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "DETERMINISTIC FIXED ELEMENTS (user principle: 'setting things deterministically should most always be a deterministic method' - prove no quality loss). hypertext.cards.fixed_elements stamps stat pips (template ring glyphs), type pill (template block + CARD_TYPE word), rarity chip with cost glyphs (template, block recolored to the face's navy), collector number and series footer (Liberation Serif at template size) with per-region registration and provenance; proof on BRICK and REDEEMER: pip + cost gates green, judge 100/100 with 3-0 votes, 0.95% of pixels touched. Found in passing: all four TITLE composed templates carry a NOUN pill (staged in the Lot ledger's template matrix). Also: the /tmp scratch tooling was wiped between turns - loop scripts, driver daemon, and this tracker's generator now live in scripts/pipeline and scripts/babel with state in series/2026-Q1/tracker-state.json. Stat rubric encoded (LORE weight, CONTEXT frequency buckets, COMPLEXITY history); 20 cards rescored on record, pip rows to be re-stamped deterministically."
     }
   ]
 }
