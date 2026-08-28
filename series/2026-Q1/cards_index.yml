@@ -33,6 +33,7 @@ words:
 - SEED
 - SETH
 - SHEM
+- SODOM
 - SPEAK
 - SPIRIT
 - STONE
@@ -45,6 +46,7 @@ ability_patterns:
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
+- add_hand_sheol_tower
 - choice_discard_draw_stat_lore
 - choice_draw
 - conditional_discard_draw_type_verb
@@ -253,3 +255,8 @@ cards:
   type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_tower
+- number: 38
+  word: SODOM
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: add_hand_sheol_tower
