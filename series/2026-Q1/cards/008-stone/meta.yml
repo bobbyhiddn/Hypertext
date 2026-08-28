@@ -1,14 +1,13 @@
 number: 008
 word: STONE
-gloss: Hard, solid mineral matter used for building, memorials, or weapons; a symbol
-  of strength and permanence.
+gloss: Hard, solid mineral matter used for building, memorials, or weapons; a symbol of strength
+  and permanence.
 card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A single, ancient cornerstone resting in the desert sand, illuminated
-  by a shaft of divine light, realistic texture, cinematic composition, heavy shadows,
-  no text
+art_prompt: A single, ancient cornerstone resting in the desert sand, illuminated by a shaft
+  of divine light, realistic texture, cinematic composition, heavy shadows, no text
 stats:
   lore: 4
   context: 5
@@ -16,18 +15,18 @@ stats:
 ability: Look at the top 3 cards of the Tower. Put them back in any order.
 ot_verse:
   ref: Psalm 118:22
-  snippet: The stone the builders rejected has become the cornerstone.
+  snippet: The stone which the builders refused is become the head stone of the corner
 nt_verse:
-  ref: 1 Peter 2:5
-  snippet: You also, like living stones, are being built into a spiritual house.
+  ref: Matthew 16:18
+  snippet: upon this rock I will build my church
 greek:
-  text: λίθος
-  translit: lithos
+  text: πέτρα
+  translit: petra
 hebrew:
   text: אֶבֶן
   translit: eben
 ot_refs: Gen 28:18 • Ex 24:12 • Josh 4:3 • 1 Sam 17:49 • Ezek 36:26
-nt_refs: Matt 7:9 • Mark 16:4 • Luke 19:40 • John 8:7 • Acts 4:11
+nt_refs: Matt 16:18 • 1 Cor 10:4 • Rom 9:33
 trivia:
 - '"Ebenezer" translates from Hebrew as "Stone of Help."'
 - The Ten Commandments were inscribed on two tablets of stone.
@@ -35,6 +34,7 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: 'Greek re-lemma''d 2026-08-28 under the one-lemma rule (lithos belongs to BRICK #048):
+  petra. Legacy face still prints lithos until the legacy regeneration pass.'
 sources: []
 search_queries: []

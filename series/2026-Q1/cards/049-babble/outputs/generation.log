@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 07:41:32
-Phase: revise-image-only
+Timestamp: 2026-08-28 18:07:14
+Phase: rebuild
 Target Rarity: COMMON
 Target Type: VERB
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/049-babble/outputs/reference-inputs/current-28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2.png [COMMON] sha256=28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2
-  [2] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
 
-Prompt File: series/2026-Q1/cards/049-babble/outputs/prompt.revision.txt
+Prompt File: series/2026-Q1/cards/049-babble/prompt.txt

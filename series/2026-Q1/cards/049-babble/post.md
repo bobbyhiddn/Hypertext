@@ -6,13 +6,13 @@
 **BABBLE** — To speak in confounded sounds that no hearer shares
 
 ## Old Testament
-> Genesis 11:9 — "the LORD did there confound the language"
+> Genesis 11:9 — "Therefore is the name of it called Babel"
 
 ## New Testament
-> Acts 2:6 — "the multitude came together, and were confounded"
+> Matthew 6:7 — "use not vain repetitions, as the heathen do"
 
 ## Trivia
-- Genesis 11:9 names Babel from balal, to confound - a Hebrew pun on Babylon's own name.
-- The Greek Old Testament renders balal with syncheo, the very word Acts 2 uses when the crowd was confounded.
-- English babble is not from Babel - it imitates a baby's first sounds - but the two have kept company since Chaucer.
+- Babel in Akkadian meant gate of god; Genesis hears balal, to confound - the city named by the pun that judged it.
+- Battalogeo, Jesus' word for heathen prayer-babble in Matthew 6, is a New Testament hapax - possibly from Battus the stammerer.
+- English babble is not from Babel at all - it is baby-talk onomatopoeia - yet the pun was waiting three thousand years for it.
 

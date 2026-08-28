@@ -178,24 +178,24 @@
     "ART_PROMPT": "A lone robed figure seen from behind standing on a city wall at night, a ram's horn at his side, watching two horizons under a starry sky, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
     "ABILITY_TEXT": "Look at one card from the top of the Tower and one card from the bottom of the Tower. Add one of those cards to your hand.",
     "STAT_LORE": 2,
-    "STAT_CONTEXT": 2,
+    "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 2,
     "OT_VERSE_REF": "Ezekiel 33:7",
     "OT_VERSE_SNIPPET": "I have set thee a watchman",
-    "NT_VERSE_REF": "Acts 12:6",
-    "NT_VERSE_SNIPPET": "the keepers before the door kept the prison",
+    "NT_VERSE_REF": "Mark 13:37",
+    "NT_VERSE_SNIPPET": "what I say unto you I say unto all, Watch",
     "OT_VERSE_LINE": "Ezekiel 33:7 — “I have set thee a watchman”",
-    "NT_VERSE_LINE": "Acts 12:6 — “the keepers before the door kept the prison”",
-    "GREEK": "φύλαξ",
-    "GREEK_TRANSLIT": "phylax",
+    "NT_VERSE_LINE": "Mark 13:37 — “what I say unto you I say unto all, Watch”",
+    "GREEK": "γρηγορέω",
+    "GREEK_TRANSLIT": "gregoreo",
     "HEBREW": "צֹפֶה",
     "HEBREW_TRANSLIT": "tsopheh",
     "OT_REFS": "Ezek 33:7 • Ezek 3:17 • 2 Sam 18:24",
-    "NT_REFS": "Acts 12:6 • Acts 5:23 • Acts 12:19",
+    "NT_REFS": "Mark 13:37 • 1 Cor 16:13 • Rev 3:2",
     "TRIVIA_BULLETS": [
       "Ezekiel's watchman must sound the trumpet or answer for the blood of those he failed to warn.",
       "Hebrew tsopheh comes from a verb meaning to look out - the watchman is defined by his gaze.",
-      "Greek phylax, a guard, survives in prophylactic - a guarding set up beforehand."
+      "Greek gregoreo, to stay awake and watch, gave the church the name Gregory - the watchful one."
     ]
   },
   "render_instructions": {

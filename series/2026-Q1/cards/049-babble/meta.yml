@@ -5,48 +5,49 @@ card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: An unfinished brick tower at the moment of confusion, abandoned scaffolding
-  and dropped tools, bricks tumbling from a half-laid course, great flocks of birds
-  bursting upward from the tower like scattered words, only tiny distant figures far
-  below walking away in every direction with backs turned, no faces, luminous cinematic
-  oil painting with impressionistic brushwork, deep shadowed background, one radiant
-  golden light source, rich saturated blues and golds
+art_prompt: An unfinished brick tower at the moment of confusion, abandoned scaffolding and
+  dropped tools, bricks tumbling from a half-laid course, great flocks of birds bursting upward
+  from the tower like scattered words, only tiny distant figures far below walking away in
+  every direction with backs turned, no faces, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 3
-  context: 3
+  context: 4
   complexity: 4
-ability: Reveal one card from the top of the Tower and add that revealed card to your
-  hand. Then shuffle the cards in the Tower.
+ability: Reveal one card from the top of the Tower and add that revealed card to your hand.
+  Then shuffle the cards in the Tower.
 ot_verse:
   ref: Genesis 11:9
-  snippet: the LORD did there confound the language
+  snippet: Therefore is the name of it called Babel
 nt_verse:
-  ref: Acts 2:6
-  snippet: the multitude came together, and were confounded
+  ref: Matthew 6:7
+  snippet: use not vain repetitions, as the heathen do
 greek:
-  text: συγχέω
-  translit: syncheo
+  text: βατταλογέω
+  translit: battalogeo
 hebrew:
-  text: בָּלַל
-  translit: balal
-ot_refs: Gen 11:9 • Gen 11:7 • Ps 92:10
-nt_refs: Acts 2:6 • Acts 9:22 • Acts 19:32
+  text: בָּבֶל
+  translit: Bavel
+ot_refs: Gen 11:9 • Gen 10:10 • Jer 51:6
+nt_refs: Matt 6:7
 trivia:
-- Genesis 11:9 names Babel from balal, to confound - a Hebrew pun on Babylon's own
-  name.
-- The Greek Old Testament renders balal with syncheo, the very word Acts 2 uses when
-  the crowd was confounded.
-- English babble is not from Babel - it imitates a baby's first sounds - but the two
-  have kept company since Chaucer.
+- Babel in Akkadian meant gate of god; Genesis hears balal, to confound - the city named by
+  the pun that judged it.
+- Battalogeo, Jesus' word for heathen prayer-babble in Matthew 6, is a New Testament hapax
+  - possibly from Battus the stammerer.
+- English babble is not from Babel at all - it is baby-talk onomatopoeia - yet the pun was
+  waiting three thousand years for it.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: 'Re-lemma''d 2026-08-28 under the one-lemma rule (balal / syncheo belong to CONFUSE
+  #006): Bavel / battalogeo.'
 sources: []
 search_queries: []
 stats_rationale:
-  lore: the confusion at Babel is a theme; the balal/Babel pun and LXX syncheo are
-    a linguistic study
-  context: balal ~43 + syncheo ~5 = ~48
-  complexity: the confusion at Babel is a theme; the balal/Babel pun and LXX syncheo
-    are a linguistic study
+  lore: the confusion at Babel is a theme; a recognized theme rather than a doctrine
+  context: Bavel occurs 262 times in the Hebrew Bible; battalogeo occurs 1 time in the New
+    Testament; total 263
+  complexity: Babel's own name is a two-language pun (gate of god / confound) and battalogeo's
+    origin is disputed - a history that is itself a study

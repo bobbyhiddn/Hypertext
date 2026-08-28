@@ -5,43 +5,45 @@ card_type: TITLE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A lone robed figure seen from behind standing on a city wall at night,
-  a ram's horn at his side, watching two horizons under a starry sky, luminous cinematic
-  oil painting with impressionistic brushwork, deep shadowed background, one radiant
-  golden light source, rich saturated blues and golds
+art_prompt: A lone robed figure seen from behind standing on a city wall at night, a ram's
+  horn at his side, watching two horizons under a starry sky, luminous cinematic oil painting
+  with impressionistic brushwork, deep shadowed background, one radiant golden light source,
+  rich saturated blues and golds
 stats:
   lore: 2
-  context: 2
+  context: 3
   complexity: 2
-ability: Look at one card from the top of the Tower and one card from the bottom of
-  the Tower. Add one of those cards to your hand.
+ability: Look at one card from the top of the Tower and one card from the bottom of the Tower.
+  Add one of those cards to your hand.
 ot_verse:
   ref: Ezekiel 33:7
   snippet: I have set thee a watchman
 nt_verse:
-  ref: Acts 12:6
-  snippet: the keepers before the door kept the prison
+  ref: Mark 13:37
+  snippet: what I say unto you I say unto all, Watch
 greek:
-  text: φύλαξ
-  translit: phylax
+  text: γρηγορέω
+  translit: gregoreo
 hebrew:
   text: צֹפֶה
   translit: tsopheh
 ot_refs: Ezek 33:7 • Ezek 3:17 • 2 Sam 18:24
-nt_refs: Acts 12:6 • Acts 5:23 • Acts 12:19
+nt_refs: Mark 13:37 • 1 Cor 16:13 • Rev 3:2
 trivia:
-- Ezekiel's watchman must sound the trumpet or answer for the blood of those he failed
-  to warn.
-- Hebrew tsopheh comes from a verb meaning to look out - the watchman is defined by
-  his gaze.
-- Greek phylax, a guard, survives in prophylactic - a guarding set up beforehand.
+- Ezekiel's watchman must sound the trumpet or answer for the blood of those he failed to
+  warn.
+- Hebrew tsopheh comes from a verb meaning to look out - the watchman is defined by his gaze.
+- Greek gregoreo, to stay awake and watch, gave the church the name Gregory - the watchful
+  one.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: 'Greek re-lemma''d 2026-08-28 under the one-lemma rule (phylax belongs to KEEPER #019):
+  gregoreo, to watch.'
 sources: []
 search_queries: []
 stats_rationale:
-  lore: a minor motif from Ezekiel; simple participle
-  context: tsopheh ~20 + phylax ~3 = ~23
-  complexity: a minor motif from Ezekiel; simple participle
+  lore: a minor motif from Ezekiel
+  context: tsopheh occurs 20 times in the Hebrew Bible; gregoreo occurs 22 times in the New
+    Testament; total 42
+  complexity: a simple participle; gregoreo is the plain verb to stay awake

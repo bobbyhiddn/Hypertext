@@ -58,7 +58,7 @@
     },
     "46": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100. Greek re-lemma'd 2026-08-28 to gregoreo (Mark 13:37) - phylax stays with KEEPER #019 by the user's call; re-rendered 100/100 3-0 (first roll was a full template leak, caught)."
     },
     "47": {
       "status": "pass",
@@ -70,7 +70,7 @@
     },
     "49": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100. Re-lemma'd 2026-08-28 to Bavel / battalogeo (Gen 11:9 / Matt 6:7) - balal/syncheo belong to CONFUSE #006; stats 3/4/4; re-rendered 100/100 3-0."
     },
     "50": {
       "status": "pass",
@@ -237,6 +237,10 @@
     {
       "when": "2026-08-28",
       "what": "CREATIVITY RULES (user: 'We aren\\'t being creative enough with abilities. I think hover does the same thing as kingdom\u2026 it could have utilized hovering over the pages'; 'a letter is worth three cards\u2026 we need creativity using the mechanics'). (1) Shape-uniqueness: hypertext.cards.ability_shape signs every ability (core gain verb+zone+quantity, reach, look count, bottom, filter, cost, condition, rest destination, put source, secondary gain, opponent effect, shuffle, delayed); identical shapes fail the plan phase; 'hypertext ability-audit --series --show'. HOVER v1 = KINGDOM confirmed by the check. (2) Letters weigh three cards: an unconditional Letter gain is payoff 3, a conditional one 2, forcing another player to spend a Letter is interaction 2. (3) Design palette now demands Letters, Lots, or Pages on at least two of five cards per batch, with concrete patterns; the estimator scores Page/Lot-driven scaling as setup 2 / payoff 3 and accepts a single 'Page' as the Pages zone. Redesigned and re-rendered at 100/100 3-0: HOVER v2 (one card of each card type in another player\\'s Page, from Sheol), FIRE v2 (reveal the top card into Sheol; a VERB earns a Letter), DARK v2 (cover the top, take from the bottom; v1 shared WATCHMAN\\'s shape). Remaining shape duplicates are all legacy #001-#031."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "LEMMA AUDIT RESOLVED (user: 'keep brick and keeper'). STONE #008 -> petra (Matt 16:18; legacy face regenerates with the legacy pass), WATCHMAN #046 -> gregoreo (Mark 13:37), BABBLE #049 -> Bavel / battalogeo (Gen 11:9 / Matt 6:7). WATCHMAN and BABBLE re-rendered at 100/100 3-0; 'hypertext lemma-audit' reports 0 conflicts."
     }
   ]
 }
