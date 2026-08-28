@@ -6,17 +6,13 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "",
-  "corrections": [
-    "Correct the `card_number_format` field in the observation data from '#003' to '#036' to match the actual card number."
-  ],
+  "style_mismatch_reason": "none",
+  "corrections": [],
   "categories": {
     "formatting": {
       "score": 35,
       "max": 35,
-      "issues": [
-        "The `card_number_format` field in the observed data is '#003', which conflicts with the `card_number` field of '#036'. This is a data entry error and does not affect the score as the primary field is correct."
-      ]
+      "issues": []
     },
     "text_clarity": {
       "score": 30,
@@ -50,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "2ef83fc45dca38927b4568abd014e635ba4b9da157fd75c6201fb6b814f8b9a3",
+    "candidate_sha256": "f78ede1bbe8a71b849050915a13312e044f176b6956730e3c39e5cd1d8f5485f",
     "template_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
     "report": "series/2026-Q1/cards/036-foreign/outputs/visual-gate.json"
   },
