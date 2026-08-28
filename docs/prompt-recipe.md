@@ -81,3 +81,5 @@ Quarterly
 3) Export print-ready PDF from the compiled images and print specs.
 
 Set theme: each Hypertext set is one fallen kingdom, in historical order. The first set (2026-Q1, Babel) covers the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, Babel. Art draws from the whole era, not the tower by default. The next set is Egypt, so Egyptian subjects are reserved for it.
+
+Art style: the illustration panel is a vibrant full-color painterly illustration with impressionistic brushwork, luminous cinematic lighting, and a rich saturated (print-safe) palette - never sepia, monochrome, engraving, etching, woodcut, or line art. The parchment-and-navy frame is the only antique element; the art itself is vivid and painterly (see the legacy faces #001-#031 and the original example cards). Every art_prompt ends with 'vibrant full-color impressionistic painting, luminous cinematic light'.

@@ -1379,6 +1379,7 @@ def _generate_card_recipe(
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
+        "ART STYLE (hard requirement): art_prompt must describe a vibrant full-color painterly illustration with impressionistic brushwork, luminous cinematic lighting, and a rich saturated (print-safe) palette - never sepia, monochrome, engraving, etching, woodcut, or line art; end every art_prompt with the phrase 'vibrant full-color impressionistic painting, luminous cinematic light'. "
         "SET THEME (hard requirement): this series is the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, and Babel. Draw art subjects from the WHOLE era rather than defaulting to the tower; the tower belongs only to words that are about it. Every Hypertext set is one fallen kingdom in historical order and the next set is Egypt, so no Egyptian subjects, places, or imagery in this set. "
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
