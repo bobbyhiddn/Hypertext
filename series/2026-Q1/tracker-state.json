@@ -173,6 +173,10 @@
     {
       "when": "2026-08-28",
       "what": "STAMP WIRED INTO THE PIPELINE + 20 FACES RE-STAMPED. daily._run_stat_pip_visual_gate now applies the fixed-elements stamp (pips, type pill, number, footer) to every freshly rendered face before the pip, cost and chip gates; grade/review never stamp. The image prompt zeroes the three stat fields and tells the model to paint every pip empty - pips are set only by the stamp. All 20 rescored cards (#032-#051) re-stamped from their model renders, gates green, judge 100/100 with 3-0 style votes on every one. Batch found one stamp bug: the number cover took parchment from a fixed x that the wide ADJECTIVE pill reaches, pasting 'VE' over the number on HIGH/DEEP/DARK/FILLED (and silently on FOREIGN); the cover now sits relative to the measured pill box and the five were re-run clean."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "TEMPLATE PACKAGE REPAIRED (user: 'just run the template repair'). scripts/templates/repair_composed_labels.py --apply rewrote eight golden PNGs: four TITLE pills now read TITLE, five UNCOMMON chips set 'Uncommon' inside the block, from two SHA-pinned Liberation Serif patches declared in composed/manifest.json; persistence manifest and verifier re-pinned, verifier extended to expect and digest-check the patches; package verification PASS; the two guarded package tests now run and pass. Compromise noted: the repair condenses 'Uncommon' 13% to fit the existing block while the model paints it full-width in a wider block; the rarity chip gate now expects word width from the COMMON word scaled by font metrics (-25%/+12%) so both conventions pass and all twenty current faces stay green. Commit 619da56."
     }
   ]
 }
