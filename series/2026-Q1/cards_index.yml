@@ -3,11 +3,13 @@ words:
 - ARK
 - BROTHER
 - BUILD
+- CHOOSE
 - CITY
 - CONFUSE
 - COVENANT
 - CREATE
 - CURSE
+- DARK
 - DEEP
 - DESCEND
 - EARTH
@@ -40,10 +42,12 @@ words:
 - SPEAK
 - SPIRIT
 - STONE
+- TONGUE
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_choice_draw_sheol_stat_complexity_tower
 - add_hand_choice_sheol_stat_complexity
+- add_hand_choice_sheol_tower
 - add_hand_conditional_draw_stat_complexity_tower
 - add_hand_conditional_tower_type_name
 - add_hand_discard_look_top_tower
@@ -280,3 +284,18 @@ cards:
   type: TITLE
   rarity: UNCOMMON
   ability_pattern: add_hand_tower_type_name
+- number: 42
+  word: TONGUE
+  type: NOUN
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 43
+  word: CHOOSE
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: add_hand_choice_sheol_tower
+- number: 44
+  word: DARK
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower

@@ -121,3 +121,12 @@
 - word: MESSENGER
   card_type: TITLE
   rarity: UNCOMMON
+- word: TONGUE
+  card_type: NOUN
+  rarity: COMMON
+- word: CHOOSE
+  card_type: VERB
+  rarity: UNCOMMON
+- word: DARK
+  card_type: ADJECTIVE
+  rarity: COMMON

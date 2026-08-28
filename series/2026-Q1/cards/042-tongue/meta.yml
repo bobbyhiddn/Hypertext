@@ -1,0 +1,42 @@
+number: '042'
+word: TONGUE
+gloss: The organ of speech, and the language it speaks; at Babel one became many
+card_type: NOUN
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vast crowd on a sunlit plain seen from behind, breaking apart into separate
+  streams of people walking away toward every horizon, an unfinished brick tower looming
+  behind them, engraved devotional style on warm parchment tones
+stats:
+  lore: 3
+  context: 3
+  complexity: 4
+ability: Look at the top three cards of the Tower. Add one of those cards to your
+  hand and put the other cards on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 10:5
+  snippet: every one after his tongue
+nt_verse:
+  ref: Acts 2:4
+  snippet: began to speak with other tongues
+greek:
+  text: γλῶσσα
+  translit: glossa
+hebrew:
+  text: לָשׁוֹן
+  translit: lashon
+ot_refs: Gen 10:5 • Isa 28:11 • Ps 34:13
+nt_refs: Acts 2:4 • Rev 7:9 • Jas 3:8
+trivia:
+- Hebrew lashon names the tongue in the mouth, a language, and even a tongue of the
+  sea.
+- Genesis 10 lists the nations 'after his tongue' before Genesis 11 tells how the
+  tongues were divided.
+- Greek glossa gives English glossary - a list of hard words explained.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
