@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: CHOOSE
+# Card_Gloss: To pick out from among many and set apart for a purpose
+# Card_Type: VERB
+# Card_Rarity: UNCOMMON
+# Card_Ability: Choose one card in Sheol. Add that chosen card to your hand and put one other card in Sheol on the bottom of the Tower.
+# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 3
+# Card_Art_Prompt: A shepherd seen from behind at dusk lifting one lamb out of a crowded flock on a hillside, the rest of the flock milling below, engraved devotional style on warm parchment tones
+# Card_OT_Verse: Deuteronomy 7:6 — the LORD thy God hath chosen thee
+# Card_NT_Verse: John 15:16 — I have chosen you
+# Card_Hebrew: בָּחַר (bachar)
+# Card_Greek: ἐκλέγομαι (eklegomai)
+# Card_Trivia_1: Hebrew bachar is the covenant verb of election - Israel was chosen not for its size but for love.
+# Card_Trivia_2: Greek eklegomai gives English eclectic - picked out from among many.
+# Card_Trivia_3: Isaiah names the chosen a remnant that returns - the few kept through the scattering.
