@@ -1,0 +1,53 @@
+number: '060'
+word: EDEN
+gloss: The garden home, a lost paradise
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A lush garden at dawn where four rivers part from a single spring, a great
+  tree at the center haloed in radiant golden light, mist drifting through deep blue
+  shadows beneath the boughs, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 5
+  context: 2
+  complexity: 4
+stats_rationale:
+  lore: creation, the fall, and paradise regained all turn on Eden; the doctrine of
+    the fall hangs on this place
+  context: Eden occurs 14 times in the Hebrew Bible as the garden and its land; paradeisos
+    occurs 3 times in the New Testament; total 17
+  complexity: Eden may mean delight or descend from a Sumerian word for the open plain;
+    the Septuagint rendered the garden as paradeisos, a Persian loanword for a walled
+    park, which the New Testament keeps - a history that is itself a study
+ability: Draw one card from the Tower. Then look at the top two cards of the Tower
+  and put those cards back on top of the Tower in any order.
+ot_verse:
+  ref: Genesis 2:8
+  snippet: the LORD God planted a garden eastward in Eden
+nt_verse:
+  ref: Revelation 2:7
+  snippet: the tree of life, which is in the midst of the paradise of God
+greek:
+  text: παράδεισος
+  translit: paradeisos
+hebrew:
+  text: עֵדֶן
+  translit: Eden
+ot_refs: Gen 2:8 • Gen 3:24 • Ezek 28:13
+nt_refs: Rev 2:7 • Luke 23:43 • 2 Cor 12:4
+trivia:
+- Eden may mean delight - or echo the Sumerian edin, the open plain - the same plain
+  where Babel would rise.
+- The Septuagint called the garden paradeisos, a Persian word for a walled royal park;
+  paradise is Eden in Greek dress.
+- The New Testament never names Eden, yet promises the tree of life in the paradise
+  of God.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

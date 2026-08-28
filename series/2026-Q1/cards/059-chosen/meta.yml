@@ -1,0 +1,51 @@
+number: 059
+word: CHOSEN
+gloss: Set apart by God for his covenant
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A single olive tree standing in a golden shaft of light on a dark hillside
+  at night, a lamp burning at its roots, a ring of standing stones marking the ground
+  apart, deep blue shadow beyond, no people, luminous cinematic oil painting with
+  impressionistic brushwork, deep shadowed background, one radiant golden light source,
+  rich saturated blues and golds
+stats:
+  lore: 5
+  context: 2
+  complexity: 3
+stats_rationale:
+  lore: election - Israel chosen, the church a chosen generation - is a doctrine that
+    hangs on this word
+  context: bachir occurs 13 times in the Hebrew Bible; eklektos occurs 22 times in
+    the New Testament; total 35
+  complexity: bachir is the passive adjective of bachar, to choose; eklektos, picked
+    out, gives English both elect and eclectic - a derivation worth explaining
+ability: Draw two cards from the Tower. If no NAME is in your hand, put one card from
+  your hand on the bottom of the Tower.
+ot_verse:
+  ref: Psalm 105:6
+  snippet: ye children of Jacob his chosen
+nt_verse:
+  ref: 1 Peter 2:9
+  snippet: ye are a chosen generation
+greek:
+  text: ἐκλεκτός
+  translit: eklektos
+hebrew:
+  text: בָּחִיר
+  translit: bachir
+ot_refs: Ps 105:6 • Isa 42:1 • Isa 45:4
+nt_refs: 1 Pet 2:9 • Matt 22:14 • Col 3:12
+trivia:
+- Bachir is the passive of bachar, to choose - the chosen one is the one picked out.
+- Eklektos means picked out from among; the same word gives eclectic, a choice made
+  from many.
+- After Babel scattered the nations, God chose one man from Ur - election begins as
+  a departure.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

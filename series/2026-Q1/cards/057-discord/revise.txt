@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: DISCORD
+# Card_Gloss: The sound of unity breaking into strife
+# Card_Type: NOUN
+# Card_Rarity: RARE
+# Card_Ability: Choose another player. That chosen player puts two cards from that chosen player's hand into Sheol; then draw two cards from the Tower.
+# Card_Stats: LORE 3 | CONTEXT 2 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A great unfinished brick tower at dusk with its wooden scaffolds splitting apart, cracked bricks tumbling from the ramps, torn banners whipped in opposite directions by a rising wind, one radiant golden light breaking through the storm clouds above, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Proverbs 6:19 — and he that soweth discord among brethren
+# Card_NT_Verse: 1 Corinthians 3:3 — there is among you envying, and strife, and divisions
+# Card_Hebrew: מָדוֹן (madon)
+# Card_Greek: ἔρις (eris)
+# Card_Trivia_1: Madon comes from din, to contend at law; discord in Proverbs is a lawsuit that never ends.
+# Card_Trivia_2: The Greek eris was the goddess whose golden apple started the Trojan war; Paul lists her name among the works of the flesh.
+# Card_Trivia_3: Babel's judgment was not silence but discord - every word still spoken, none understood.

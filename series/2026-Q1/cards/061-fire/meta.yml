@@ -1,0 +1,51 @@
+number: '061'
+word: FIRE
+gloss: A visible sign of the Spirit's presence
+card_type: NOUN
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A thornbush burning with radiant golden flame yet unconsumed on a dark
+  mountainside at night, a pair of sandals set on the rock before it, sparks rising
+  into deep indigo shadow, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+stats_rationale:
+  lore: theophany, judgment, and the tongues of fire at Pentecost - fire is a major
+    sign of God's presence, a theme close to doctrine
+  context: esh occurs 377 times in the Hebrew Bible; pyr occurs 71 times in the New
+    Testament; total 448
+  complexity: esh and pyr are both transparent everyday words; pyr survives in pyre
+    and pyrotechnics - little history to explain
+ability: Choose another player. That chosen player spends one Letter; then draw one
+  card from the Tower.
+ot_verse:
+  ref: Exodus 3:2
+  snippet: the bush burned with fire, and the bush was not consumed
+nt_verse:
+  ref: Acts 2:3
+  snippet: cloven tongues like as of fire
+greek:
+  text: πῦρ
+  translit: pyr
+hebrew:
+  text: אֵשׁ
+  translit: esh
+ot_refs: Exod 3:2 • Deut 4:24 • Gen 19:24
+nt_refs: Acts 2:3 • Heb 12:29 • 1 Cor 3:13
+trivia:
+- At Babel, fire baked the bricks; at Pentecost, fire sat on the heads of those who
+  would speak every tongue.
+- Deuteronomy calls the LORD a consuming fire, and Hebrews repeats the words without
+  softening them.
+- Pyr gives English pyre and pyrotechnics; the Greek word never lost its heat.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

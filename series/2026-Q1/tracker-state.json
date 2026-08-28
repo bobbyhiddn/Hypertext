@@ -99,6 +99,26 @@
     "56": {
       "status": "pass",
       "note": "ASCEND VERB/UNCOMMON. Look at four, take up to one with LORE 4+, reorder the rest. Stats 4/5/3. Re-rendered 2026-08-28 (first face read pale with thin text); 100/100 3-0."
+    },
+    "57": {
+      "status": "pass",
+      "note": "DISCORD NOUN/RARE. Chosen player puts two cards into Sheol; draw two. Stats 3/2/3 (madon x23 + eris x9). Passed first render, 100/100 3-0."
+    },
+    "58": {
+      "status": "pass",
+      "note": "DEPART VERB/COMMON. Look at three, put any number on the bottom, draw one. Stats 3/4/4 (nasa x146 + anachoreo x14). Attempt 1 placeholder leak (DEFINITION TEXT), attempt 2 100/100 3-0."
+    },
+    "59": {
+      "status": "pass",
+      "note": "CHOSEN ADJECTIVE/UNCOMMON. Draw two; if no NAME in hand, put one on the bottom. Stats 5/2/3 (bachir x13 + eklektos x22). Passed first render, 100/100 3-0."
+    },
+    "60": {
+      "status": "pass",
+      "note": "EDEN NAME/COMMON. Draw one, then set the next two in order. Greek is the NT name for the same place, paradeisos (Rev 2:7). Stats 5/2/4. Passed first render, 100/100 3-0."
+    },
+    "61": {
+      "status": "pass",
+      "note": "FIRE NOUN/UNCOMMON. Chosen player spends one Letter; draw one. Stats 4/5/2 (esh x377 + pyr x71). Passed first render, 100/100 3-0."
     }
   },
   "log": [
@@ -205,6 +225,10 @@
     {
       "when": "2026-08-28",
       "what": "WHY NEW TOOK SIX RENDERS, FIXED: (1) crowd art prompt -> face-forward figures twice; metadata prompt and descriptor figure_rule now forbid crowds/groups (prefer no people, else one figure from behind); (2) self-heal now repaints the art panel for a figure-rule failure at any score instead of re-rolling the whole card; (3) 42-word ability garbled twice -> per-rarity render word caps in the validator (COMMON 34, UNCOMMON 40, RARE 48, GLORIOUS 56) with prompt guidance, NEW shortened to 34 words and re-rendered; (4) self-heal archives every attempt's grade.txt under outputs/grades/. Also re-rendered ASCEND (pale first face, garbled 38-word copy fixed) and DEEP (its face was still the alternate deep-sea style; standard style is the default) - all three at 100/100 3-0."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "BATCH 6 (#057-#061: DISCORD, DEPART, CHOSEN, EDEN, FIRE), timed. Design + offline validation 17:14:18-17:17:56 (3m38s); daemon-driven plan, render, stamp, gates, judge 17:17:56-17:23:58 (6m02s) - about 72s per card, six renders for five cards (DEPART's first roll leaked DEFINITION TEXT). All five 100/100 with 3-0 style votes; no self-heal fixes needed. The post-mortem fixes held: no crowds, every ability inside its word cap, first-render pass rate 4/5. Designs at scripts/pipeline/designs/batch6_057_061.py."
     }
   ]
 }
