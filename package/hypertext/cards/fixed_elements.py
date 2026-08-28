@@ -37,6 +37,8 @@ NAVY = (26, 34, 64)
 NUMBER_COLOR = (44, 34, 74)
 FOOTER_COLOR = (156, 146, 180)
 FONT_FAMILY = "Liberation Serif"
+PILL_FONT_FAMILY = "Liberation Serif:bold"
+PILL_TEXT_COLOR = (238, 226, 228)
 
 # Face-space regions (template coordinates after scaling to FACE_SIZE).
 REGION_NUMBER = (58, 24, 140, 66)
@@ -172,6 +174,60 @@ def _prefill_chip_block(face: Image.Image, template: Image.Image, box: tuple[int
     face.paste(fill, fbox[:2], block)
 
 
+def stamp_chip(face: Image.Image, template: Image.Image, box: tuple[int, int, int, int], offset: tuple[int, int]) -> None:
+    """Stamp the whole rarity chip (block, word, diamond, cost glyphs) from the
+    template, with the block's navy recolored to the face's own navy so the
+    model's chip is fully covered and the block edges merge into the frame."""
+    dx, dy = offset
+    tpatch = template.crop(box).copy()
+    fbox = (box[0] + dx, box[1] + dy, box[2] + dx, box[3] + dy)
+    fpatch = face.crop(fbox)
+    tl, fl = tpatch.convert("L"), fpatch.convert("L")
+    w, h = tpatch.size
+    dark = [fpatch.getpixel((x, y)) for y in range(h) for x in range(w) if tl.getpixel((x, y)) < 70 and fl.getpixel((x, y)) < 90]
+    if len(dark) >= 50:
+        navy = tuple(sorted(c[i] for c in dark)[len(dark) // 2] for i in range(3))
+        tp = tpatch.load()
+        for y in range(h):
+            for x in range(w):
+                if tl.getpixel((x, y)) < 70:
+                    tp[x, y] = navy
+    # Everything that is not the template's parchment (left-edge background) is
+    # part of the chip: the block, its word, the diamond, and any cost glyphs.
+    def median_of(points):
+        return tuple(sorted(c[i] for c in points)[len(points) // 2] for i in range(3))
+    parch = median_of([template.crop(box).getpixel((0, y)) for y in range(h)])
+    mask = Image.new("L", (w, h), 0)
+    src, mp = template.crop(box).load(), mask.load()
+    for y in range(h):
+        for x in range(w):
+            r, g, b = src[x, y]
+            if abs(r - parch[0]) + abs(g - parch[1]) + abs(b - parch[2]) > 48:
+                mp[x, y] = 255
+    from PIL import ImageFilter
+    mask = mask.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1))
+    face.paste(tpatch, fbox[:2], mask)
+
+
+def stamp_pill_text(face: Image.Image, template: Image.Image, pill_box: tuple[int, int, int, int], offset: tuple[int, int], word: str, font: ImageFont.FreeTypeFont) -> None:
+    """Repaint the pill interior in the template's pill navy and set the type
+    word from the card record. The TITLE composed templates carry a NOUN pill
+    (template-package defect found 2026-08-28), so the word never comes from
+    the template image itself."""
+    dx, dy = offset
+    tp = template.crop(pill_box); L = tp.convert("L")
+    w, h = tp.size
+    navy = [tp.getpixel((x, y)) for y in range(h) for x in range(w) if L.getpixel((x, y)) < 80]
+    fill = tuple(sorted(c[i] for c in navy)[len(navy) // 2] for i in range(3)) if navy else NAVY
+    box = (pill_box[0] + dx + 4, pill_box[1] + dy + 4, pill_box[2] + dx - 4, pill_box[3] + dy - 4)
+    draw = ImageDraw.Draw(face)
+    draw.rounded_rectangle(box, radius=(box[3] - box[1]) // 2, fill=fill)
+    tb = draw.textbbox((0, 0), word, font=font)
+    tx = (box[0] + box[2]) // 2 - (tb[2] - tb[0]) // 2 - tb[0]
+    ty = (box[1] + box[3]) // 2 - (tb[3] - tb[1]) // 2 - tb[1]
+    draw.text((tx, ty), word, font=font, fill=PILL_TEXT_COLOR)
+
+
 def stamp_number(face: Image.Image, template: Image.Image, number: str, offset: tuple[int, int], font: ImageFont.FreeTypeFont, pill_box: tuple[int, int, int, int] | None = None) -> tuple[int, int, int, int]:
     dx, dy = offset
     x0, y0, x1, y1 = REGION_NUMBER
@@ -271,6 +327,7 @@ def apply_fixed_elements(card_dir: str | Path, *, candidate_path: str | Path | N
     fpath = font_path()
     number_font = ImageFont.truetype(str(fpath), 40)
     footer_font = ImageFont.truetype(str(fpath), 27)
+    pill_font = ImageFont.truetype(str(font_path(PILL_FONT_FAMILY)), 28)
 
     pip_box = (_ROW_X[0][0] - 40, _ROW_Y - 40, _ROW_X[2][4] + 40, _ROW_Y + 40)
     regions: dict[str, Any] = {}
@@ -284,13 +341,11 @@ def apply_fixed_elements(card_dir: str | Path, *, candidate_path: str | Path | N
         pill_box = (pill_box[0] - 6, pill_box[1] - 6, pill_box[2] + 6, pill_box[3] + 6)
         off = register(face, template, pill_box)
         stamp_template_region(face, template, pill_box, off)
-        regions["type_pill"] = {"box": pill_box, "offset": off}
+        stamp_pill_text(face, template, pill_box, off, str(content["CARD_TYPE"]).upper(), pill_font)
+        regions["type_pill"] = {"box": pill_box, "offset": off, "text": str(content["CARD_TYPE"]).upper()}
 
     off = register(face, template, REGION_CHIP)
-    _prefill_chip_block(face, template, REGION_CHIP, off)
-    # The chip's word, diamond, and cost glyphs are light on the navy block; a
-    # luminance floor keeps the block's own edge pixels out of the stamp.
-    stamp_template_region(face, template, REGION_CHIP, off, min_luma=95)
+    stamp_chip(face, template, REGION_CHIP, off)
     regions["rarity_chip"] = {"box": REGION_CHIP, "offset": off}
 
     off = register(face, template, (REGION_NUMBER[0], REGION_NUMBER[1], REGION_PILL_SEARCH[2], REGION_NUMBER[3]))
