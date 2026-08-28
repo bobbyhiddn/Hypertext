@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 04:56:22
+Timestamp: 2026-08-28 07:11:45
 Phase: revise-image-only
 Target Rarity: UNCOMMON
 Target Type: NOUN
 Fix Mode: True
 
 Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/034-seed/outputs/reference-inputs/current-69d0ba21ae806d3f4d9ccfaf7595a2bd83f508f6465169810e11055fcc87abc1.png [UNCOMMON] sha256=69d0ba21ae806d3f4d9ccfaf7595a2bd83f508f6465169810e11055fcc87abc1
+  [1] CURRENT_CARD: series/2026-Q1/cards/034-seed/outputs/reference-inputs/current-6d96eafc638e30baaf89e3bb098e6c35d96f4e04c4c06eb28b52adbfb74cabdf.png [UNCOMMON] sha256=6d96eafc638e30baaf89e3bb098e6c35d96f4e04c4c06eb28b52adbfb74cabdf
   [2] TEMPLATE: templates/card/v001/composed/noun/uncommon/template_1024x1536.png [UNCOMMON] sha256=7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7
 
-Prompt File: series/2026-Q1/cards/034-seed/prompt.txt
+Prompt File: series/2026-Q1/cards/034-seed/outputs/prompt.revision.txt
