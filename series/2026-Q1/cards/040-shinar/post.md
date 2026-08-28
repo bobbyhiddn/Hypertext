@@ -9,7 +9,7 @@
 > Genesis 11:2 — "a plain in the land of Shinar"
 
 ## New Testament
-> Acts 7:2 — "when he was in Mesopotamia"
+> Revelation 18:2 — "Babylon the great is fallen"
 
 ## Trivia
 - Genesis 10:10 places Babel, Erech, and Accad in Shinar - the plain scholars link with Sumer.

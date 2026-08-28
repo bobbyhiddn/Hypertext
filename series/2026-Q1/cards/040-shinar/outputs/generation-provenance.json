@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "5d2e3b9578e95f2ddadeb1e298b15065996f9a7ff30e4e9d15757854a266f1a8",
+    "gemini_output_sha256": "5f46b0474bac27c2f188660907b872b9fb67cadd177da12e0a3292b7c8082f47",
     "generation_metadata_path": "series/2026-Q1/cards/040-shinar/outputs/generation.json",
-    "generation_metadata_sha256": "b35db54d11b8cf2dc11e6a83d634a1fc439e7b273c7a0b8280413388139db44c",
+    "generation_metadata_sha256": "9d70c96bb7438a99ad25abfb4e459e2c5cc10800ab6a403e9d9b28705d60909d",
     "path": "series/2026-Q1/cards/040-shinar/outputs/card_1024x1536.png",
-    "sha256": "5d2e3b9578e95f2ddadeb1e298b15065996f9a7ff30e4e9d15757854a266f1a8"
+    "sha256": "5f46b0474bac27c2f188660907b872b9fb67cadd177da12e0a3292b7c8082f47"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/040-shinar/prompt.txt",
-    "sha256": "ac275fa456a4836c666e5c3bc3b681aa44f1330395eb995801955d4237e6a29e"
+    "sha256": "0a3cc397d08d29dacf76d8469163e985aad263436c51c17b07719ea6b8e5ae39"
   },
   "recipe": {
-    "canonical_sha256": "eb8a4bf23d747575c7258f6eda2ab1972c000c922c732a969ae59b64af63a130",
-    "file_sha256": "ce868be0fc3df4e53b2abd05fffe3eb789c2837c5b996fea583b9ad41220c271",
+    "canonical_sha256": "2512904c6512eb9ea0d1fbe9ea41a4087ee1eb11db8a0ef2bc69ff0d319996a7",
+    "file_sha256": "a90c3b3b4f6b60fe00bcabf161416b7ab0e477569a74d33b79189c6ba6a3a5b6",
     "path": "series/2026-Q1/cards/040-shinar/card.json"
   },
   "reference_pack": {
@@ -48,20 +48,55 @@
         "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
         "similarity_components": {
           "art_prompt_token_jaccard_bp": 833,
-          "semantic_content_token_jaccard_bp": 1068,
-          "serialized_prompt_token_jaccard_bp": 1346,
+          "semantic_content_token_jaccard_bp": 1076,
+          "serialized_prompt_token_jaccard_bp": 1252,
           "stat_proximity_bp": 6000
         },
-        "similarity_reason": "weighted_similarity=1781; art=833*35%, semantic=1068*30%, serialized_prompt=1346*20%, stats=6000*15%; tie_break=sha256,path",
-        "similarity_score": 1781,
+        "similarity_reason": "weighted_similarity=1764; art=833*35%, semantic=1076*30%, serialized_prompt=1252*20%, stats=6000*15%; tie_break=sha256,path",
+        "similarity_score": 1764,
         "source_manifest": "templates/card/v001/finished-card-references.json",
         "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed"
       }
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "NAME",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/040-shinar/outputs/reference-inputs/current-5d2e3b9578e95f2ddadeb1e298b15065996f9a7ff30e4e9d15757854a266f1a8.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "COMMON",
+        "rarity_label": "COMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/040-shinar/outputs/reference-inputs/current-5d2e3b9578e95f2ddadeb1e298b15065996f9a7ff30e4e9d15757854a266f1a8.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "5d2e3b9578e95f2ddadeb1e298b15065996f9a7ff30e4e9d15757854a266f1a8",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "NAME",
@@ -71,11 +106,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NAME COMMON structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified NAME COMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/name/common/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "COMMON",
@@ -112,11 +147,11 @@
           "review=accepted_100"
         ],
         "eligible": true,
-        "gemini_label": "[2] = EXAMPLE: eligible finished NAME COMMON card selected by deterministic similarity",
+        "gemini_label": "[3] = EXAMPLE: eligible finished NAME COMMON card selected by deterministic similarity",
         "metadata_path": "templates/example_cards/013-moses/meta.yml",
         "metadata_sha256": "b7c271b57eb61036934ca9e5be692948cf5f44082a18068ac7c3e05e8f4d5fb6",
         "path": "templates/example_cards/013-moses/outputs/card_1024x1536.png",
-        "position": 2,
+        "position": 3,
         "prompt_path": "templates/example_cards/013-moses/prompt.txt",
         "prompt_sha256": "c5434bcc218c686070760b69cefe56da389bad8df8e5330c0375e7155d6d0337",
         "rarity": "COMMON",
@@ -130,12 +165,12 @@
         "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
         "similarity_components": {
           "art_prompt_token_jaccard_bp": 833,
-          "semantic_content_token_jaccard_bp": 1068,
-          "serialized_prompt_token_jaccard_bp": 1346,
+          "semantic_content_token_jaccard_bp": 1076,
+          "serialized_prompt_token_jaccard_bp": 1252,
           "stat_proximity_bp": 6000
         },
-        "similarity_reason": "weighted_similarity=1781; art=833*35%, semantic=1068*30%, serialized_prompt=1346*20%, stats=6000*15%; tie_break=sha256,path",
-        "similarity_score": 1781,
+        "similarity_reason": "weighted_similarity=1764; art=833*35%, semantic=1076*30%, serialized_prompt=1252*20%, stats=6000*15%; tie_break=sha256,path",
+        "similarity_score": 1764,
         "source_manifest": "templates/card/v001/finished-card-references.json",
         "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed",
         "template_commit": null,
@@ -150,18 +185,18 @@
     "target_type": "NAME"
   },
   "reference_pack_path": "series/2026-Q1/cards/040-shinar/outputs/reference-pack.json",
-  "reference_pack_sha256": "6a5463e6efc2ec7e63b67cfd9cde589dd552750ee88d7c3d68b4b21d4efe8785",
+  "reference_pack_sha256": "a4b3cf4fd2fa7e651235c4e7c2863a45c664003d28058f79d834a930fe833813",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 2,
+    "phase": "revise-image-only",
+    "reference_count": 3,
     "response_modalities": [
       "IMAGE"
     ]
