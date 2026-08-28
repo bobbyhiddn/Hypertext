@@ -16,19 +16,19 @@ stats:
 ability: Choose up to three cards in Sheol that each have COMPLEXITY three or more.
   Add those chosen cards to your hand.
 ot_verse:
-  ref: Psalm 130:1
-  snippet: Out of the depths have I cried
+  ref: Proverbs 20:5
+  snippet: is like deep water
 nt_verse:
-  ref: 1 Corinthians 2:10
-  snippet: the deep things of God
+  ref: John 4:11
+  snippet: the well is deep
 greek:
   text: βαθύς
   translit: bathys
 hebrew:
   text: עָמֹק
   translit: amoq
-ot_refs: Gen 1:2 • Ps 130:1 • Ps 42:7
-nt_refs: 1 Cor 2:10 • Rom 11:33 • John 4:11
+ot_refs: Prov 20:5 • Job 12:22 • Ps 64:6
+nt_refs: John 4:11 • Acts 20:9 • Luke 24:1
 trivia:
 - Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words for the primeval
   sea.

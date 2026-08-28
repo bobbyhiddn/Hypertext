@@ -6,10 +6,10 @@
 **DEEP** — Reaching far beneath the surface; profound beyond sounding
 
 ## Old Testament
-> Psalm 130:1 — "Out of the depths have I cried"
+> Proverbs 20:5 — "is like deep water"
 
 ## New Testament
-> 1 Corinthians 2:10 — "the deep things of God"
+> John 4:11 — "the well is deep"
 
 ## Trivia
 - Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words for the primeval sea.

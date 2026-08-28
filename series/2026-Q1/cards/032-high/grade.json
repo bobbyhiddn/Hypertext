@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "The card is a perfect match to the style rubric and reference template across all critical checks.",
+  "style_mismatch_reason": "",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "ed353679647defe23d19754f50b7f36f259fccdf33b8db1ca8ab36e61f4b49e2",
+    "candidate_sha256": "bbb5d69db8da003697abd94fb34e356060458eaed87104d994e2b2c646d9e59f",
     "template_sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c",
     "report": "series/2026-Q1/cards/032-high/outputs/visual-gate.json"
   },

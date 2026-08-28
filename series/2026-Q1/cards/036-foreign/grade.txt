@@ -6,4 +6,7 @@ Status: PASS
 Style Match: True
 Style Refs: 1
   - template_1024x1536.png
+
+Corrections Needed:
+  - Correct the `card_number_format` field in the observation data from '#003' to '#036' to match the actual card number.
 ============================================================

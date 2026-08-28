@@ -6,7 +6,7 @@
 **HIGH** — Lifted far above; lofty in place, in honor, or in pride
 
 ## Old Testament
-> Genesis 11:4 — "a tower, whose top may reach unto heaven"
+> Psalm 103:11 — "as the heaven is high above the earth"
 
 ## New Testament
 > Romans 12:16 — "mind not high things"

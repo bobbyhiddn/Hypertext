@@ -6,7 +6,7 @@
 **FOREIGN** — Of another people, land, or tongue; strange to the hearer
 
 ## Old Testament
-> Psalm 137:4 — "the LORD's song in a strange land"
+> Exodus 2:22 — "a stranger in a strange land"
 
 ## New Testament
 > Ephesians 2:19 — "no more strangers and foreigners"

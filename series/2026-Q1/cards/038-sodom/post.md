@@ -9,7 +9,7 @@
 > Genesis 19:24 — "rained upon Sodom brimstone and fire"
 
 ## New Testament
-> Luke 17:32 — "Remember Lot's wife"
+> Luke 17:29 — "Lot went out of Sodom it rained fire"
 
 ## Trivia
 - Ezekiel 16:49 names Sodom's sins as pride, fullness of bread, and neglect of the poor.
