@@ -5,16 +5,16 @@ card_type: ADJECTIVE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Primeval waters under total darkness, the faintest first edge of light
-  breaking along a distant horizon, no figures, luminous cinematic oil painting with
-  impressionistic brushwork, deep shadowed background, one radiant golden light source,
-  rich saturated blues and golds
+art_prompt: Primeval waters under total darkness, the faintest first edge of light breaking
+  along a distant horizon, no figures, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 3
   context: 3
   complexity: 2
-ability: Add one card from the bottom of the Tower to your hand. Then look at one
-  card from the top of the Tower.
+ability: Put one card from the top of the Tower on the bottom of the Tower. Then add one card
+  from the bottom of the Tower to your hand.
 ot_verse:
   ref: Genesis 1:2
   snippet: darkness was upon the face of the deep
@@ -30,14 +30,13 @@ hebrew:
 ot_refs: Gen 1:2 • Exod 10:22 • Isa 45:7
 nt_refs: 1 Pet 2:9 • Matt 4:16 • Matt 27:45
 trivia:
-- Hebrew choshek is the first condition named after the deep in Genesis 1:2 - before
-  any light.
+- Hebrew choshek is the first condition named after the deep in Genesis 1:2 - before any light.
 - The ninth plague was a darkness that could be felt, three days thick over Egypt.
 - Greek skotos gives us scotoma, the physician's word for a blind spot in the eye.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 (v2) under the shape-uniqueness and Letter-weight rules.
 sources: []
 search_queries: []
 stats_rationale:

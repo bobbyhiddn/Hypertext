@@ -50,7 +50,7 @@
     },
     "44": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100. v2 2026-08-28: \"Put one card from the top of the Tower on the bottom of the Tower. Then add one card from the bottom of the Tower to your hand.\" (v1 shared WATCHMAN's shape.) 100/100 3-0."
     },
     "45": {
       "status": "pass",
@@ -82,7 +82,7 @@
     },
     "52": {
       "status": "pass",
-      "note": "HOVER VERB/GLORIOUS. Each player draws one; then add up to three from Sheol. Stats 5/1/4 (rachaph x3 + epiphero x3). Passed first render, 100/100 3-0."
+      "note": "HOVER VERB/GLORIOUS v2: \"Choose one Page belonging to another player. Add up to five cards from Sheol to your hand, one card of each card type in that chosen Page.\" (v1 duplicated KINGDOM's shape.) Stats 5/1/4. 100/100 3-0."
     },
     "53": {
       "status": "pass",
@@ -118,7 +118,7 @@
     },
     "61": {
       "status": "pass",
-      "note": "FIRE NOUN/UNCOMMON. Chosen player spends one Letter; draw one. Stats 4/5/2 (esh x377 + pyr x71). Passed first render, 100/100 3-0."
+      "note": "FIRE NOUN/UNCOMMON v2: \"Reveal one card from the top of the Tower and put that revealed card into Sheol. If that revealed card is a VERB, gain one Letter.\" (v1 forced another player to spend a Letter - RARE weight once a Letter counts as three cards.) Stats 4/5/2. 100/100 3-0."
     }
   },
   "log": [
@@ -233,6 +233,10 @@
     {
       "when": "2026-08-28",
       "what": "ONE LEMMA, ONE CARD (user: 'if we have a word in a different tense, like Choose, we should not have derivatives unless they use different lemma'). hypertext.cards.lemma_uniqueness rejects a candidate that shares a printed Hebrew or Greek lemma, a Hebrew root (consonant skeleton of the transliteration), or an English stem with any existing card; hard fail in the plan phase after metadata, plus 'hypertext lemma-audit --series'. Proper-name/noun homographs (SHEM / NAME) are exempt. CHOSEN #059 retired (bachar/bachir, eklegomai/eklektos vs CHOOSE #043) and the slot regenerated as FAITHFUL (neeman / pistos) in five minutes, 100/100 first render. The audit found three more collisions, all involving a legacy card or BABBLE: BABBLE #049 prints exactly CONFUSE #006's lemmas (balal / syncheo); BRICK #048 and STONE #008 both print lithos; WATCHMAN #046 and KEEPER #019 both print phylax. Awaiting the user's call on which card yields in each pair."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "CREATIVITY RULES (user: 'We aren\\'t being creative enough with abilities. I think hover does the same thing as kingdom\u2026 it could have utilized hovering over the pages'; 'a letter is worth three cards\u2026 we need creativity using the mechanics'). (1) Shape-uniqueness: hypertext.cards.ability_shape signs every ability (core gain verb+zone+quantity, reach, look count, bottom, filter, cost, condition, rest destination, put source, secondary gain, opponent effect, shuffle, delayed); identical shapes fail the plan phase; 'hypertext ability-audit --series --show'. HOVER v1 = KINGDOM confirmed by the check. (2) Letters weigh three cards: an unconditional Letter gain is payoff 3, a conditional one 2, forcing another player to spend a Letter is interaction 2. (3) Design palette now demands Letters, Lots, or Pages on at least two of five cards per batch, with concrete patterns; the estimator scores Page/Lot-driven scaling as setup 2 / payoff 3 and accepts a single 'Page' as the Pages zone. Redesigned and re-rendered at 100/100 3-0: HOVER v2 (one card of each card type in another player\\'s Page, from Sheol), FIRE v2 (reveal the top card into Sheol; a VERB earns a Letter), DARK v2 (cover the top, take from the bottom; v1 shared WATCHMAN\\'s shape). Remaining shape duplicates are all legacy #001-#031."
     }
   ]
 }

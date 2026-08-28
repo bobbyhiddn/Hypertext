@@ -176,7 +176,7 @@
     "RARITY_TEXT": "UNCOMMON",
     "RARITY_ICON": "UNCOMMON",
     "ART_PROMPT": "A thornbush burning with radiant golden flame yet unconsumed on a dark mountainside at night, a pair of sandals set on the rock before it, sparks rising into deep indigo shadow, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Choose another player. That chosen player spends one Letter; then draw one card from the Tower.",
+    "ABILITY_TEXT": "Reveal one card from the top of the Tower and put that revealed card into Sheol. If that revealed card is a VERB, gain one Letter.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 2,

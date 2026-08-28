@@ -133,6 +133,7 @@ CANONICAL_RULE_TERMS = (
     "resolve",
     "Tower",
     "hand",
+    "Page",
     "Pages",
     "Sheol",
     "Lot",
@@ -224,7 +225,7 @@ _CARD_OR_RESOURCE_PATTERN = re.compile(
     r"|NOUN|NOUNs|VERB|VERBs|ADJECTIVE|ADJECTIVEs|NAME|NAMEs|TITLE|TITLEs)\b",
     re.IGNORECASE,
 )
-_ZONE_PATTERN = re.compile(r"\b(?:Tower|hand|Pages|Sheol|Chapter Lot|Lots?|Lot)\b", re.IGNORECASE)
+_ZONE_PATTERN = re.compile(r"\b(?:Tower|hand|Pages?|Sheol|Chapter Lot|Lots?|Lot)\b", re.IGNORECASE)
 _AMBIGUOUS_REFERENCES = re.compile(
     r"\b(?:it|them|they|that many|this way|as normal|normally|or else|if not|the other(?!\s+cards?\b))\b",
     re.IGNORECASE,
@@ -457,6 +458,8 @@ def build_candidate_prompt(
         "- UNCOMMON: about one card plus a real kicker - a Letter earned through the flavor, a burst after paying a cost, a type-hooked or named selection.\n"
         "- RARE: at least two cards' worth in a single motion - multi-card selective recovery from Sheol, a scaling selection (\"up to three cards that each ...\"), a threshold that converts a built-up state into material, a strong exchange, or targeted interaction with another player's zones.\n"
         "- GLORIOUS: at least three cards' worth or a chapter-shaping motion - touch every player, reset or reorder a zone, convert Pages or Lots into material, or bend the turn structure once.\n"
+        "USE THE WHOLE GAME (user, 2026-08-28): drawing and discarding are necessary but not creative. A Letter is worth three cards - an unconditional Letter gain is RARE-weight material, a conditional or paid-for Letter fits an UNCOMMON, and forcing another player to spend a Letter is a heavy interaction. Lots are the recipes players are building toward: read the Chapter Lot or a Portion Lot (\"if that revealed card's type is in the Chapter Lot\", \"one card for each card type in your Portion Lot you do not hold\"), or bend them (\"return your Portion Lot to the Lot deck and reveal a new one\" is chapter-shaping). Pages are built structures: scale off them (\"one card of each card type in that chosen Page\"), read them, or return a card from one. Record and Redeem are timings an ability may hook. Every batch should spend at least two of its five cards on Letters, Lots, or Pages.\n"
+        "SHAPE UNIQUENESS: no two cards in the set may share a core motion - the biggest gain, its source zone and quantity, plus reach, look count, filter, cost, condition, and where the untaken cards go. \"Each player draws one, then take up to three from Sheol\" is KINGDOM with a different verb; do not write it again. Prefer a motion the set does not have yet.\n"
         "Hand size is not pure advantage - players want to empty their hands into Lots - so multi-card adds are a legitimate stretch, and \"up to N\" handles scarcity honestly. "
         "A look is only a kicker when the player can act on what is seen - choose it, reorder it, or draw it next; looking at a card that cannot then be taken or affected (for example the bottom card when the ability only draws from the top) is worthless and must not be printed. "
         "A creative shape that carries the flavor at full rarity weight always beats a safe shape that merely satisfies the budget.\n\n"
@@ -578,6 +581,7 @@ def _validate_semantic_evidence(
 
 def _zones_in_copy(text: str) -> list[str]:
     canonical = {zone.casefold(): zone for zone in CANONICAL_ZONES}
+    canonical["page"] = "Pages"   # a single Page is the Pages zone
     zones: list[str] = []
     for match in _ZONE_PATTERN.finditer(text):
         key = match.group(0).casefold()
@@ -849,11 +853,22 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         re.IGNORECASE,
     ):
         setup = 2
+    # Scaling off a built-up structure ("one card of each card type in that
+    # chosen Page", "for each card in that Lot") converts Chapter state into
+    # material: that is setup 2 and a scaling (three-plus) payoff.
+    structure_scaling = re.search(
+        r"\b(?:one|a)\s+card\s+(?:of|for)\s+each\s+(?:card type|card|NOUN|VERB|ADJECTIVE|NAME|TITLE)\s+in\s+(?:that|the|a|any)\s+(?:chosen\s+)?(?:Page|Pages|Lot|Chapter Lot)\b"
+        r"|\bfor\s+each\s+(?:card type|card|NOUN|VERB|ADJECTIVE|NAME|TITLE)\s+in\s+(?:that|the|a|any)\s+(?:chosen\s+)?(?:Page|Pages|Lot|Chapter Lot)\b",
+        ability_text,
+        re.IGNORECASE,
+    )
+    if structure_scaling:
+        setup = 2
 
     if global_players:
         interaction = 3
     elif another_player:
-        if re.search(r"\b(?:exchange|Lot|Lots|discard|from (?:the )?(?:chosen|other|target) player's hand)\b", ability_text, re.IGNORECASE):
+        if re.search(r"\b(?:exchange|Lot|Lots|discard|from (?:the )?(?:chosen|other|target) player's hand|spends?\s+(?:one|two|three|a)\s+Letters?)\b", ability_text, re.IGNORECASE):
             interaction = 2
         else:
             interaction = 1
@@ -862,6 +877,8 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
 
     payoff = 1 if actions else 0
     if global_players and ("hand" in lower or "draw" in actions):
+        payoff = 3
+    elif structure_scaling and any(a in actions for a in ("add", "draw", "return")):
         payoff = 3
     elif "exchange" in actions and "gain" in actions:
         payoff = 3
@@ -878,6 +895,10 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     ):
         payoff = 2
     elif re.search(r"\bgains?\s+(?:[2-9]|\d{2,})\s+Letters?\b", ability_text, re.IGNORECASE):
+        payoff = 3
+    elif re.search(r"\bgains?\s+(?:one|1|a)\s+Letter\b", ability_text, re.IGNORECASE) and not _CONDITION_PATTERN.search(ability_text):
+        # A Letter is worth three cards (user, 2026-08-28): an unconditional
+        # Letter gain is three-card material; a conditional one counts as two.
         payoff = 3
     else:
         material_actions = [

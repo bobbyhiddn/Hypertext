@@ -5,27 +5,26 @@ card_type: VERB
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A vast black ocean beneath a starless void, a radiant golden light spreading
-  low over the still waters like outstretched wings of mist, ripples of luminous blue
-  awakening beneath the glow, deep shadow all around, luminous cinematic oil painting
-  with impressionistic brushwork, deep shadowed background, one radiant golden light
-  source, rich saturated blues and golds
+art_prompt: A vast black ocean beneath a starless void, a radiant golden light spreading low
+  over the still waters like outstretched wings of mist, ripples of luminous blue awakening
+  beneath the glow, deep shadow all around, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 5
   context: 1
   complexity: 4
 stats_rationale:
-  lore: Genesis 1:2 - the Spirit of God brooding over the deep is the first act of
-    the Spirit in Scripture and the seed of every doctrine of the Spirit's creative
-    work; a doctrine hangs on this verse
-  context: rachaph occurs 3 times in the Hebrew Bible; epiphero occurs 3 times in
-    the New Testament; total 6
-  complexity: rachaph is rare and its sense is disputed - brood, hover, or shake (Jer
-    23:9); Syriac and Ugaritic cognates mean to brood like a bird; the Septuagint
-    rendered it epiphero, to bring upon, which the New Testament uses of God bringing
-    wrath
-ability: Each player draws one card from the Tower. Then choose up to three cards
-  in Sheol and add those chosen cards to your hand.
+  lore: Genesis 1:2 - the Spirit of God brooding over the deep is the first act of the Spirit
+    in Scripture and the seed of every doctrine of the Spirit's creative work; a doctrine
+    hangs on this verse
+  context: rachaph occurs 3 times in the Hebrew Bible; epiphero occurs 3 times in the New
+    Testament; total 6
+  complexity: rachaph is rare and its sense is disputed - brood, hover, or shake (Jer 23:9);
+    Syriac and Ugaritic cognates mean to brood like a bird; the Septuagint rendered it epiphero,
+    to bring upon, which the New Testament uses of God bringing wrath
+ability: Choose one Page belonging to another player. Add up to five cards from Sheol to your
+  hand, one card of each card type in that chosen Page.
 ot_verse:
   ref: Genesis 1:2
   snippet: the Spirit of God moved upon the face of the waters
@@ -41,15 +40,17 @@ hebrew:
 ot_refs: Gen 1:2 • Deut 32:11 • Jer 23:9
 nt_refs: Rom 3:5 • Phil 1:16 • Jude 1:9
 trivia:
-- Rachaph appears only three times; in Deuteronomy 32 it is the eagle fluttering over
-  her young, so many read Genesis 1:2 as the Spirit brooding like a bird.
-- The Septuagint rendered it epiphero, to bring upon, the same verb Paul uses of God
-  bringing wrath - creation and judgment share one word.
-- Before Babel's builders reached upward, the Spirit had already come down to hover
-  over an empty deep.
+- Rachaph appears only three times; in Deuteronomy 32 it is the eagle fluttering over her
+  young, so many read Genesis 1:2 as the Spirit brooding like a bird.
+- The Septuagint rendered it epiphero, to bring upon, the same verb Paul uses of God bringing
+  wrath - creation and judgment share one word.
+- Before Babel's builders reached upward, the Spirit had already come down to hover over an
+  empty deep.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: 'Ability redesigned 2026-08-28 (v2): v1 duplicated KINGDOM''s shape (each player takes
+  one, you take up to three from Sheol); v2 hovers over another player''s Page and brings
+  up one card of each kind from Sheol - Genesis 1 "after its kind".'
 sources: []
 search_queries: []

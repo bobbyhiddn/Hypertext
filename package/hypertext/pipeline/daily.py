@@ -2264,6 +2264,14 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         gloss = str(q_gloss).strip() if q_gloss else str(recipe.get("gloss", "")).strip()
         art_prompt = str(q_art_prompt).strip() if q_art_prompt else str(recipe.get("art_prompt", "")).strip()
         ability_text = str(q_ability).strip() if q_ability else str(recipe.get("ability_text", "")).strip()
+        # No two cards share an ability shape (user, 2026-08-28: "HOVER does the
+        # same thing as KINGDOM").
+        from hypertext.cards.ability_shape import load_series_abilities, shape_conflicts
+
+        shape_issues = shape_conflicts(ability_text, load_series_abilities(series_dir))
+        if shape_issues:
+            raise RuntimeError("ability shape rule: same shape as " + ", ".join(f"{c['with']} ({c['detail']})" for c in shape_issues))
+        _log("[plan] ability shape rule: no card in the set shares this shape")
 
         ot_ref = str(ot_verse.get("ref", "")).strip()
         ot_snip = str(ot_verse.get("snippet", "")).strip()

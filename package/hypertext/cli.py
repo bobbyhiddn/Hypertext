@@ -68,6 +68,24 @@ def lemma_audit(series):
         raise SystemExit(1)
 
 
+@cli.command("ability-audit")
+@click.option("--series", required=True, help="Series directory (contains cards/)")
+@click.option("--show", is_flag=True, help="Print every card's shape signature")
+def ability_audit(series, show):
+    """Report every group of cards whose abilities share one shape (core motion + qualifiers)."""
+    from hypertext.cards.ability_shape import ability_signature, audit_series, load_series_abilities, signature_key
+
+    if show:
+        for label, text in load_series_abilities(series):
+            click.echo(f"{label:18s} {signature_key(ability_signature(text))}")
+    groups = audit_series(series)
+    for g in groups:
+        click.echo(f"{' = '.join(g['cards'])}: {g['shape']}")
+    click.echo(f"{len(groups)} shared shape(s)")
+    if groups:
+        raise SystemExit(1)
+
+
 @cli.command()
 @click.option("--card-dir", required=True, help="Path to card directory")
 @click.option("--threshold", type=float, default=0.7, help="Quality threshold")

@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 07:29:39
-Phase: revise-image-only
+Timestamp: 2026-08-28 18:00:37
+Phase: rebuild
 Target Rarity: COMMON
 Target Type: ADJECTIVE
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/044-dark/outputs/reference-inputs/current-cfde8f85f129efc2df120246a149f8718a40213f3a8471aee156dd2e81a2b740.png [COMMON] sha256=cfde8f85f129efc2df120246a149f8718a40213f3a8471aee156dd2e81a2b740
-  [2] TEMPLATE: templates/card/v001/composed/adjective/common/template_1024x1536.png [COMMON] sha256=93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/adjective/common/template_1024x1536.png [COMMON] sha256=93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c
 
-Prompt File: series/2026-Q1/cards/044-dark/outputs/prompt.revision.txt
+Prompt File: series/2026-Q1/cards/044-dark/prompt.txt
