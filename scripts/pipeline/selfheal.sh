@@ -16,6 +16,7 @@ for slug in "$@"; do
     $HX visual-gate --card-dir $CD >/dev/null 2>&1 || { echo "$slug a$a: pip fail"; continue; }
     out=$(timeout 900 $PY -m hypertext.pipeline.daily --phase grade --card-dir $CD --style-series series/2026-Q1 2>&1)
     score=$(echo "$out" | grep -o 'Final Score: [0-9]*' | head -1)
+    mkdir -p $CD/outputs/grades; cp $CD/grade.txt $CD/outputs/grades/a$a.txt 2>/dev/null   # keep every attempt's verdict; grade.txt is overwritten
     echo "$slug a$a: pips ok, $score"
     if echo "$out" | grep -q 'Status: PASS'; then echo "$slug: FULL PASS (a$a)"; break; fi
     corr=$(grep -A2 'Corrections Needed' $CD/grade.txt 2>/dev/null | sed -n 2p | sed 's/^ *- *//')
@@ -26,6 +27,7 @@ for slug in "$@"; do
       $HX fixed-elements --card-dir $CD >/dev/null 2>&1 || true
       $HX visual-gate --card-dir $CD >/dev/null 2>&1 || { echo "$slug a$a: post-fix pip fail"; continue; }
       out=$(timeout 900 $PY -m hypertext.pipeline.daily --phase grade --card-dir $CD --style-series series/2026-Q1 2>&1)
+      cp $CD/grade.txt $CD/outputs/grades/a$a-fix.txt 2>/dev/null
       echo "$slug a$a-fix: $(echo "$out" | grep -o 'Final Score: [0-9]*' | head -1)"
       if echo "$out" | grep -q 'Status: PASS'; then echo "$slug: FULL PASS (a$a+fix)"; break; fi
     fi
