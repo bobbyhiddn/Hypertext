@@ -43,7 +43,9 @@ PILL_TEXT_COLOR = (238, 226, 228)
 # Face-space regions (template coordinates after scaling to FACE_SIZE).
 REGION_NUMBER = (58, 24, 140, 66)
 REGION_PILL_SEARCH = (142, 24, 420, 84)
-REGION_CHIP = (768, 8, 1010, 112)
+REGION_CHIP = (736, 8, 1010, 112)
+CHIP_GLYPH_LUMA = 110   # chip word / diamond pixels are lighter than this; the block is < 70
+CHIP_WORD_PAD = 28   # rarity word inset from the chip block's left edge (COMMON/RARE/GLORIOUS templates)
 REGION_FOOTER_TEXT = (56, 1472, 700, 1514)
 REGION_FOOTER_BLANK = (730, 1470, 960, 1518)
 REGION_PARCHMENT = (290, 22, 380, 74)
@@ -174,19 +176,136 @@ def _prefill_chip_block(face: Image.Image, template: Image.Image, box: tuple[int
     face.paste(fill, fbox[:2], block)
 
 
-def stamp_chip(face: Image.Image, template: Image.Image, box: tuple[int, int, int, int], offset: tuple[int, int]) -> None:
+def _median_rgb(points: list[tuple[int, int, int]]) -> tuple[int, int, int]:
+    return tuple(sorted(c[i] for c in points)[len(points) // 2] for i in range(3))
+
+
+def chip_geometry(patch: Image.Image) -> dict[str, Any] | None:
+    """Measure the rarity chip inside a template (or face) patch: the navy block,
+    the rarity word's glyph run, and the diamond, all in patch coordinates.
+
+    The block is the tallest band of mostly-dark rows that does not start at the
+    patch edge (the card's frame lines do); the light runs inside it are the word
+    (all but the last) and the diamond (the last). `clipped` is true when the
+    word starts short of the set's left inset - the UNCOMMON composed templates
+    ship that way (template-package defect, 2026-08-28)."""
+    L = patch.convert("L")
+    w, h = patch.size
+    px = L.load()
+    lefts_all = []
+    for y in range(h):
+        dark = [x for x in range(w) if px[x, y] < 70]
+        lefts_all.append(dark[0] if len(dark) >= 60 and dark[0] >= 20 else None)
+    bands: list[list[int]] = []
+    for y, left in enumerate(lefts_all):
+        if left is not None:
+            if bands and bands[-1][1] == y:
+                bands[-1][1] = y + 1
+            else:
+                bands.append([y, y + 1])
+    if not bands:
+        return None
+    y0, y1 = max(bands, key=lambda b: b[1] - b[0])
+    if y1 - y0 < 12:
+        return None
+    upper = [lefts_all[y] for y in range(y0, y0 + max(6, (y1 - y0) * 6 // 10))]
+    x0 = sorted(upper)[len(upper) // 2]
+    x1 = w - 12   # the block runs into the right frame; the outline lives beyond this
+    # Only rows where the block is at full width count (its lower-left corner is bevelled).
+    full = [y for y in range(y0, y1) if lefts_all[y] is not None and lefts_all[y] <= x0 + 3]
+    ys0, ys1 = min(full) + 2, max(full) - 1
+    cols = [any(px[x, y] > CHIP_GLYPH_LUMA for y in range(ys0, ys1)) for x in range(w)]
+    light_runs: list[list[int]] = []
+    for x in range(x0 + 4, x1):
+        if cols[x]:
+            if light_runs and x - light_runs[-1][1] <= 6:
+                light_runs[-1][1] = x + 1
+            else:
+                light_runs.append([x, x + 1])
+    light_runs = [r for r in light_runs if r[1] - r[0] >= 8]   # drop outline slivers
+    if len(light_runs) < 2:
+        return None
+    diamond = tuple(light_runs[-1])
+    word = (light_runs[0][0], light_runs[-2][1])
+    rows = [y for y in range(ys0 - 1, ys1 + 1) if any(px[x, y] > CHIP_GLYPH_LUMA for x in range(word[0], word[1]))]
+    word_rows = (min(rows), max(rows) + 1) if rows else (y0, y1)
+    return {
+        "block": (x0, y0, x1, y1),
+        "word": word,
+        "word_rows": word_rows,
+        "diamond": diamond,
+        "gap": diamond[0] - word[1],
+        "left_pad": word[0] - x0,
+        "clipped": word[0] - x0 < CHIP_WORD_PAD - 8,
+    }
+
+
+def _fit_font(path: Path, text: str, target_height: int, lo: int = 14, hi: int = 60) -> ImageFont.FreeTypeFont:
+    best, best_err = None, None
+    for size in range(lo, hi + 1):
+        font = ImageFont.truetype(str(path), size)
+        bb = font.getbbox(text)
+        err = abs((bb[3] - bb[1]) - target_height)
+        if best is None or err < best_err:
+            best, best_err = font, err
+    return best
+
+
+def correct_chip_patch(tpatch: Image.Image, word: str, font_file: Path) -> tuple[Image.Image, dict[str, Any]]:
+    """Return a copy of the template chip patch whose rarity word sits inside
+    the block at the set's inset. When the template's own word is clipped, the
+    block is extended to the left (edge strip and an interior column cloned from
+    the template) and the word is re-set in the matched font at the template's
+    glyph height, colour, and cap line. Otherwise the patch is returned untouched."""
+    geo = chip_geometry(tpatch)
+    info: dict[str, Any] = {"word": word, "word_rendered": False, "block_extended_px": 0}
+    if not geo or not geo["clipped"]:
+        return tpatch.copy(), info
+    bx0, by0, bx1, by1 = geo["block"]
+    w, h = tpatch.size
+    wy0, wy1 = geo["word_rows"]
+    font = _fit_font(font_file, word, wy1 - wy0)
+    tb = font.getbbox(word)
+    text_w = tb[2] - tb[0]
+    gap = max(geo["gap"], 6)
+    text_left = geo["diamond"][0] - gap - text_w
+    new_left = text_left - CHIP_WORD_PAD
+    delta = max(0, bx0 - new_left)
+    if new_left < 6:
+        raise RuntimeError(f"chip region too narrow to extend the block by {delta}px")
+    out = tpatch.copy()
+    band = (max(0, by0 - 1), min(h, by1 + 4))
+    edge = tpatch.crop((bx0 - 5, band[0], bx0 + 3, band[1]))
+    column = tpatch.crop((bx0 + 20, band[0], bx0 + 21, band[1]))
+    # Interior first (erases the old word and the clipped fragment), then the edge.
+    for x in range(new_left + 3, geo["diamond"][0] - 3):
+        out.paste(column, (x, band[0]))
+    out.paste(edge, (new_left - 5, band[0]))
+    lum = tpatch.convert("L").load()
+    src = tpatch.load()
+    light = [src[x, y] for y in range(wy0, wy1) for x in range(geo["word"][0], geo["word"][1]) if lum[x, y] > CHIP_GLYPH_LUMA]
+    colour = _median_rgb(light) if light else (190, 184, 204)
+    ImageDraw.Draw(out).text((text_left - tb[0], wy0 - tb[1]), word, font=font, fill=colour)
+    info.update({"word_rendered": True, "block_extended_px": delta, "font_size": font.size, "template_defect": "rarity word clipped by the chip block"})
+    return out, info
+
+
+def stamp_chip(face: Image.Image, template: Image.Image, box: tuple[int, int, int, int], offset: tuple[int, int], word: str = "", font_file: Path | None = None) -> dict[str, Any]:
     """Stamp the whole rarity chip (block, word, diamond, cost glyphs) from the
     template, with the block's navy recolored to the face's own navy so the
-    model's chip is fully covered and the block edges merge into the frame."""
+    model's chip is fully covered and the block edges merge into the frame.
+    A clipped template word is re-set inside a widened block (see
+    correct_chip_patch), and whatever the model painted of its own chip outside
+    the stamped chip is covered with the face's own parchment."""
     dx, dy = offset
-    tpatch = template.crop(box).copy()
+    tpatch, info = correct_chip_patch(template.crop(box), word, font_file or font_path())
     fbox = (box[0] + dx, box[1] + dy, box[2] + dx, box[3] + dy)
     fpatch = face.crop(fbox)
     tl, fl = tpatch.convert("L"), fpatch.convert("L")
     w, h = tpatch.size
     dark = [fpatch.getpixel((x, y)) for y in range(h) for x in range(w) if tl.getpixel((x, y)) < 70 and fl.getpixel((x, y)) < 90]
     if len(dark) >= 50:
-        navy = tuple(sorted(c[i] for c in dark)[len(dark) // 2] for i in range(3))
+        navy = _median_rgb(dark)
         tp = tpatch.load()
         for y in range(h):
             for x in range(w):
@@ -194,19 +313,39 @@ def stamp_chip(face: Image.Image, template: Image.Image, box: tuple[int, int, in
                     tp[x, y] = navy
     # Everything that is not the template's parchment (left-edge background) is
     # part of the chip: the block, its word, the diamond, and any cost glyphs.
-    def median_of(points):
-        return tuple(sorted(c[i] for c in points)[len(points) // 2] for i in range(3))
-    parch = median_of([template.crop(box).getpixel((0, y)) for y in range(h)])
+    parch = _median_rgb([template.crop(box).getpixel((0, y)) for y in range(h)])
     mask = Image.new("L", (w, h), 0)
-    src, mp = template.crop(box).load(), mask.load()
+    src, mp = tpatch.load(), mask.load()
     for y in range(h):
         for x in range(w):
             r, g, b = src[x, y]
             if abs(r - parch[0]) + abs(g - parch[1]) + abs(b - parch[2]) > 48:
                 mp[x, y] = 255
     from PIL import ImageFilter
-    mask = mask.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1))
-    face.paste(tpatch, fbox[:2], mask)
+    mask = mask.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.MaxFilter(5))
+    # Ghost cleanup: the model's chip may be wider than the stamped one. Any face
+    # pixel in this region that is neither the face's parchment nor under the
+    # stamp is covered with the face's own parchment from just left of the chip.
+    src_box = (box[0] - 60 + dx, box[1] + dy, box[0] - 10 + dx, box[3] + dy)
+    parch_src = face.crop(src_box)
+    face_parch = _median_rgb([parch_src.getpixel((x, y)) for y in range(0, parch_src.height, 3) for x in range(0, parch_src.width, 3)])
+    ghost = Image.new("L", (w, h), 0)
+    fp, gp, cover = fpatch.load(), ghost.load(), mask.filter(ImageFilter.MaxFilter(5)).load()
+    for y in range(h):
+        for x in range(w):
+            if cover[x, y]:
+                continue
+            r, g, b = fp[x, y]
+            if abs(r - face_parch[0]) + abs(g - face_parch[1]) + abs(b - face_parch[2]) > 90:
+                gp[x, y] = 255
+    ghost = ghost.filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1))
+    tile = Image.new("RGB", (w, h))
+    for x in range(0, w, parch_src.width):
+        tile.paste(parch_src, (x, 0))
+    face.paste(tile, fbox[:2], ghost)
+    info["ghost_pixels"] = sum(1 for v in ghost.getdata() if v > 127)
+    face.paste(tpatch, fbox[:2], mask.filter(ImageFilter.GaussianBlur(1)))
+    return info
 
 
 def stamp_pill_text(face: Image.Image, template: Image.Image, pill_box: tuple[int, int, int, int], offset: tuple[int, int], word: str, font: ImageFont.FreeTypeFont) -> None:
@@ -345,8 +484,8 @@ def apply_fixed_elements(card_dir: str | Path, *, candidate_path: str | Path | N
         regions["type_pill"] = {"box": pill_box, "offset": off, "text": str(content["CARD_TYPE"]).upper()}
 
     off = register(face, template, REGION_CHIP)
-    stamp_chip(face, template, REGION_CHIP, off)
-    regions["rarity_chip"] = {"box": REGION_CHIP, "offset": off}
+    chip_info = stamp_chip(face, template, REGION_CHIP, off, str(content["RARITY_TEXT"]).title(), fpath)
+    regions["rarity_chip"] = {"box": REGION_CHIP, "offset": off, **chip_info}
 
     off = register(face, template, (REGION_NUMBER[0], REGION_NUMBER[1], REGION_PILL_SEARCH[2], REGION_NUMBER[3]))
     regions["number"] = {"box": stamp_number(face, template, str(content["NUMBER"]), off, number_font, pill_box), "offset": off, "text": f"#{content['NUMBER']}"}

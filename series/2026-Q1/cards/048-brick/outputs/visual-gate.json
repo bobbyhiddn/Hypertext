@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-    "sha256": "e2d5404e3ddbcada6394a56849ad77c847d2b2e5fdf581798e9d53876aefc0f3"
+    "sha256": "089c09ed27e681e7f50e57e889030aba5ea00ffecc72d16bc90a68996660fbee"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/048-brick/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-      "sha256": "e2d5404e3ddbcada6394a56849ad77c847d2b2e5fdf581798e9d53876aefc0f3"
+      "sha256": "089c09ed27e681e7f50e57e889030aba5ea00ffecc72d16bc90a68996660fbee"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",

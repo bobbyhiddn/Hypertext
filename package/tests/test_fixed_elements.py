@@ -59,3 +59,31 @@ def test_restamping_is_stable_and_keeps_the_gate_green(tmp_path):
     changed = sum(1 for v in diff.get_flattened_data() if v) / (1024 * 1536)
     assert changed < 0.002, changed
     assert inspect_card_stat_pips(card_dir)["passed"]
+
+
+def test_chip_word_sits_inside_the_block_for_every_composed_template():
+    """The UNCOMMON composed templates clip the rarity word at the block's left
+    edge (template-package defect, 2026-08-28). The stamp must re-set the word
+    inside a widened block for those and leave the other templates untouched."""
+    import glob
+
+    from hypertext.cards.fixed_elements import (
+        CHIP_WORD_PAD, FACE_SIZE, REGION_CHIP, chip_geometry, correct_chip_patch, font_path,
+    )
+
+    paths = sorted(glob.glob(str(ROOT / "templates/card/v001/composed/*/*/template_1024x1536.png")))
+    assert len(paths) == 20
+    font = font_path()
+    for path in paths:
+        rarity = Path(path).parent.name
+        template = Image.open(path).convert("RGB").resize(FACE_SIZE, Image.Resampling.LANCZOS)
+        patch = template.crop(REGION_CHIP)
+        before = chip_geometry(patch)
+        assert before is not None, path
+        assert before["clipped"] == (rarity == "uncommon"), path
+        fixed, info = correct_chip_patch(patch, rarity.title(), font)
+        assert info["word_rendered"] == (rarity == "uncommon"), path
+        after = chip_geometry(fixed)
+        assert after is not None and not after["clipped"], path
+        assert after["left_pad"] >= CHIP_WORD_PAD - 8, (path, after)
+        assert after["gap"] >= 6, (path, after)

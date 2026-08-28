@@ -66,7 +66,7 @@
     },
     "48": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric 1/3/1. Deterministic fixed elements applied: pips re-stamped from the template; UNCOMMON chip word re-set inside a widened block (template defect #2). Gates green, judge 100/100 3-0."
     },
     "49": {
       "status": "pass",
@@ -161,6 +161,10 @@
     {
       "when": "2026-08-28",
       "what": "DETERMINISTIC FIXED ELEMENTS (user principle: 'setting things deterministically should most always be a deterministic method' - prove no quality loss). hypertext.cards.fixed_elements stamps stat pips (template ring glyphs), type pill (template block + CARD_TYPE word), rarity chip with cost glyphs (template, block recolored to the face's navy), collector number and series footer (Liberation Serif at template size) with per-region registration and provenance; proof on BRICK and REDEEMER: pip + cost gates green, judge 100/100 with 3-0 votes, 0.95% of pixels touched. Found in passing: all four TITLE composed templates carry a NOUN pill (staged in the Lot ledger's template matrix). Also: the /tmp scratch tooling was wiped between turns - loop scripts, driver daemon, and this tracker's generator now live in scripts/pipeline and scripts/babel with state in series/2026-Q1/tracker-state.json. Stat rubric encoded (LORE weight, CONTEXT frequency buckets, COMPLEXITY history); 20 cards rescored on record, pip rows to be re-stamped deterministically."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "TEMPLATE DEFECT #2 - UNCOMMON chip (found via ledger comment on the BRICK proof: 'the rarity escaped the pill'). All five composed */uncommon templates set 'Uncommon' 12px from the chip block's left edge where the other rarities use ~32px, clipping the U; the image model had been quietly widening the chip on every UNCOMMON render, so the deterministic stamp was the first thing to expose it. Fix in fixed_elements: chip_geometry() measures block, word and diamond on the template; correct_chip_patch() extends the block left and re-sets the word in Liberation Serif at the template's cap height and colour whenever the word is clipped; stamp_chip() also covers any wider model-painted chip with the face's own parchment. Test asserts the word sits at the set inset for all 20 templates. BRICK re-stamped from the model render: gates green, judge 100/100 3-0, 1.2% pixels touched. Lesson: every element copied from a template needs a geometry assertion, not just a hash."
     }
   ]
 }
