@@ -213,13 +213,15 @@ slots:
   number: 50
   type: NAME
   rarity: UNCOMMON
-  word: JAPHETH
-  gloss: Son of Noah, his descendants spread abroad.
-  alternate: HAM
+  word: EGYPT
+  gloss: Mizraim son of Ham; the granary the nations went down to.
+  alternate: JAPHETH
   mechanic_family: EXCHANGE
   stat_profile: high COMPLEXITY
   theme: the scattering of the nations
   status: planned
+  note: 'JAPHETH swapped out 2026-08-28: no Greek NT occurrence, so the verse lexical
+    rule cannot be met; EGYPT keeps the scattering-of-nations theme (Gen 10:6).'
 - slot_id: BABEL-051
   number: 51
   type: NAME
