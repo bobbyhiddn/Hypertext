@@ -1,0 +1,41 @@
+number: '051'
+word: ABRAM
+gloss: Called out of Ur to a land unseen, to become a blessing
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A small caravan with tents and flocks leaving a great walled river city
+  at dawn, seen from behind, one figure walking ahead toward distant hills, engraved
+  devotional style on warm parchment tones
+stats:
+  lore: 3
+  context: 3
+  complexity: 3
+ability: Draw one card from the Tower and look at one card from the top of the Tower.
+  Then you may put one card from your hand on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 12:1
+  snippet: the LORD had said unto Abram, Get thee out
+nt_verse:
+  ref: Hebrews 11:8
+  snippet: By faith Abraham, when he was called
+greek:
+  text: Ἀβραάμ
+  translit: Abraam
+hebrew:
+  text: אַבְרָם
+  translit: Avram
+ot_refs: Gen 12:1 • Gen 12:4 • Gen 14:13
+nt_refs: Heb 11:8 • Gal 3:8 • Acts 7:2
+trivia:
+- Abram means exalted father; God lengthened it to Abraham, father of a multitude.
+- Ur of the Chaldees lay on the same plain of Shinar where Babel's tower rose.
+- The New Testament never uses the short form - to Paul and Hebrews he is always Abraham,
+  the name of the promise.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

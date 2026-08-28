@@ -136,3 +136,18 @@
 - word: WATCHMAN
   card_type: TITLE
   rarity: COMMON
+- word: REDEEMER
+  card_type: TITLE
+  rarity: RARE
+- word: BRICK
+  card_type: NOUN
+  rarity: UNCOMMON
+- word: BABBLE
+  card_type: VERB
+  rarity: COMMON
+- word: ENOCH
+  card_type: NAME
+  rarity: UNCOMMON
+- word: ABRAM
+  card_type: NAME
+  rarity: COMMON

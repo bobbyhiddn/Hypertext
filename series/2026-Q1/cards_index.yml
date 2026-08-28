@@ -1,6 +1,9 @@
 words:
+- ABRAM
 - ADAM
 - ARK
+- BABBLE
+- BRICK
 - BROTHER
 - BUILD
 - CHOOSE
@@ -14,6 +17,7 @@ words:
 - DESCEND
 - EARTH
 - ELDER
+- ENOCH
 - FILLED
 - FOREIGN
 - FORM
@@ -32,6 +36,7 @@ words:
 - NAME
 - NATION
 - NOAH
+- REDEEMER
 - REMEMBER
 - RIGHTEOUS
 - SCATTER
@@ -48,6 +53,7 @@ words:
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_choice_draw_sheol_stat_complexity_tower
+- add_hand_choice_sheol
 - add_hand_choice_sheol_stat_complexity
 - add_hand_choice_sheol_tower
 - add_hand_conditional_draw_stat_complexity_tower
@@ -57,9 +63,11 @@ ability_patterns:
 - add_hand_look_top_tower
 - add_hand_sheol
 - add_hand_sheol_tower
+- add_hand_tower
 - add_hand_tower_type_name
 - choice_discard_draw_stat_lore
 - choice_draw
+- choice_draw_tower
 - conditional_discard_draw_type_verb
 - conditional_draw
 - conditional_draw_pages_type_name
@@ -73,6 +81,7 @@ ability_patterns:
 - draw_look_top_tower
 - draw_sheol_tower
 - draw_tower
+- draw_tower_type_noun
 - look_top_tower
 - pages_sheol
 - sheol
@@ -311,3 +320,28 @@ cards:
   type: TITLE
   rarity: COMMON
   ability_pattern: add_hand_look_top_tower
+- number: 47
+  word: REDEEMER
+  type: TITLE
+  rarity: RARE
+  ability_pattern: add_hand_choice_sheol
+- number: 48
+  word: BRICK
+  type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: draw_tower_type_noun
+- number: 49
+  word: BABBLE
+  type: VERB
+  rarity: COMMON
+  ability_pattern: add_hand_tower
+- number: 50
+  word: ENOCH
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: choice_draw_tower
+- number: 51
+  word: ABRAM
+  type: NAME
+  rarity: COMMON
+  ability_pattern: draw_look_top_tower
