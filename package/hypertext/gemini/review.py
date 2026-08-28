@@ -1121,6 +1121,28 @@ def check_refs_labels(image_path: Path, model: str | None = None) -> list[str]:
     return missing
 
 
+def check_figure_rule(image_path: Path, model: str | None = None) -> int:
+    """Reference-free focused count of face-forward figures with clearly visible faces.
+
+    The broad description pass tolerates rooms full of faces; the art rule
+    allows figures only from behind, in silhouette, at a distance, or with
+    faces obscured. Returns the count (0 is clean) or -1 when unreadable.
+    """
+    prompt = (
+        "Look ONLY at the illustration panel of this trading card (the artwork below the title). "
+        "Count the human figures whose faces are clearly visible and turned toward the viewer - "
+        "eyes, nose, and mouth rendered and facing forward or three-quarter. Do NOT count figures "
+        "seen from behind, in silhouette, tiny distant figures, or figures whose faces are hidden. "
+        'Return ONLY JSON: {"face_forward_figures": N, "notes": "<brief>"}.'
+    )
+    text = _call_gemini(prompt, image_path=image_path, model=model)
+    try:
+        data = _parse_json_response(text)
+        return int(data.get("face_forward_figures", -1))
+    except Exception:
+        return -1
+
+
 def describe_palette(image_path: Path, model: str | None = None) -> str:
     """Describe symbols/icons in a palette image without card-specific assumptions.
 

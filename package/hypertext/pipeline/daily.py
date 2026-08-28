@@ -4533,6 +4533,25 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         description.style_mismatch_reason = style_reason
         _log(f"[phase grade] ⚠️ {label_reason}")
 
+    # Figure rule: artwork may not show face-forward figures with visible
+    # faces. The description pass tolerates them, so count them in isolation.
+    face_forward = 0
+    try:
+        from hypertext.gemini.review import check_figure_rule
+        face_forward = check_figure_rule(out_png)
+    except Exception as e:
+        _log(f"[phase grade] figure rule check failed: {e}")
+    if face_forward < 0:
+        _log("[phase grade] figure rule check unreadable; treating as clean")
+        face_forward = 0
+    if face_forward > 0:
+        face_reason = f"Figure rule: {face_forward} face-forward figure(s) with visible faces in the art"
+        style_match = False
+        style_reason = (style_reason + " " + face_reason).strip()
+        description.style_matches_reference = False
+        description.style_mismatch_reason = style_reason
+        _log(f"[phase grade] ⚠️ {face_reason}")
+
     if placeholder_leaks:
         leak_reason = "Template placeholder leak: " + "; ".join(placeholder_leaks)
         style_match = False
@@ -4553,6 +4572,11 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         _log(f"[phase grade] Scoring failed: {e}")
         return 1
 
+    if face_forward > 0:
+        result.corrections.append(
+            f"Redraw the artwork so no figure faces the viewer: {face_forward} figure(s) currently show visible faces; "
+            "show every figure from behind, in silhouette, at a distance, or with the face obscured."
+        )
     for missing in missing_labels:
         result.corrections.append(
             f"{missing}; the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'."
