@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2",
+    "gemini_output_sha256": "83112d8a102ca52d7569142a245a60c0ce94feda9169018cdf04bec13373e3fa",
     "generation_metadata_path": "series/2026-Q1/cards/049-babble/outputs/generation.json",
-    "generation_metadata_sha256": "d64632ec384f8718c402fc9e019c65b6c25c2a8fabe0a372a59318f693edb47c",
+    "generation_metadata_sha256": "72662feb4b0804eef33c42ed8bc1b11abce62de499550bf4cf797f9e946041aa",
     "path": "series/2026-Q1/cards/049-babble/outputs/card_1024x1536.png",
-    "sha256": "28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2"
+    "sha256": "83112d8a102ca52d7569142a245a60c0ce94feda9169018cdf04bec13373e3fa"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/049-babble/prompt.txt",
-    "sha256": "3a40d5cd4167ba30799f6a6e192c721924da584d526c3194a3fc0976a1b15722"
+    "path": "series/2026-Q1/cards/049-babble/outputs/prompt.revision.txt",
+    "sha256": "27920bf6ecffdcf159c26bb0902cf39eb18eb0fb8fa5b327a9157c0b139a25ac"
   },
   "recipe": {
-    "canonical_sha256": "3f78f245e16a31ac9fc715c05e402e9f48d87f2da0cea7c155fc06f2d6f14c1f",
-    "file_sha256": "80c6ee1b998eba8c3b3fbb75062922024828cf971ba64a1294dd9a7c140823d0",
+    "canonical_sha256": "303f4dec15a8fa4b90735e692ae07ef3c621fd048374bda1daf7521d8a0c5807",
+    "file_sha256": "e9f07c997b655f5d325c20f9f4e00e5fd31154226c8ae1b07f2d8a8098b3c27e",
     "path": "series/2026-Q1/cards/049-babble/card.json"
   },
   "reference_pack": {
@@ -22,6 +22,8 @@
         "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
         "card_type": "NAME",
         "eligibility_reasons": [
+          "status=retired",
+          "legacy!=false",
           "target_type_mismatch=NAME"
         ],
         "eligible": false,
@@ -42,13 +44,48 @@
         "similarity_reason": "not_scored_ineligible",
         "similarity_score": null,
         "source_manifest": "templates/card/v001/finished-card-references.json",
-        "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed"
+        "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
       }
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "VERB",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/049-babble/outputs/reference-inputs/current-28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "COMMON",
+        "rarity_label": "COMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/049-babble/outputs/reference-inputs/current-28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "28535c6938be07fbf1a04eab50e04440ff09ec207a473a91b593526ddefc2ed2",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "VERB",
@@ -58,11 +95,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified VERB COMMON structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified VERB COMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "COMMON",
@@ -91,18 +128,18 @@
     "target_type": "VERB"
   },
   "reference_pack_path": "series/2026-Q1/cards/049-babble/outputs/reference-pack.json",
-  "reference_pack_sha256": "795ebcba72e4d8d2f072825e6d08033d88b668663cc7c0337c406c33213dd8c6",
+  "reference_pack_sha256": "696fa0877831290f5b41f3c8bed2b200847a7b0c01c44f53ee874be78280479e",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise-image-only",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]
