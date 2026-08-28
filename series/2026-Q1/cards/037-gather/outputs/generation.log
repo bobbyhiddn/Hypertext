@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 04:57:57
-Phase: revise-image-only
+Timestamp: 2026-08-28 07:19:03
+Phase: rebuild
 Target Rarity: COMMON
 Target Type: VERB
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/037-gather/outputs/reference-inputs/current-2a8db8857e5ea70cdfcdd470cfc96850810b6617f017cfa90bbee352e32c3c22.png [COMMON] sha256=2a8db8857e5ea70cdfcdd470cfc96850810b6617f017cfa90bbee352e32c3c22
-  [2] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
 
 Prompt File: series/2026-Q1/cards/037-gather/prompt.txt
