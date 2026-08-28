@@ -79,3 +79,5 @@ Quarterly
 1) Freeze the series folder (2026-Q1).
 2) Generate decklist.yml from the cards present.
 3) Export print-ready PDF from the compiled images and print specs.
+
+Set theme: each Hypertext set is one fallen kingdom, in historical order. The first set (2026-Q1, Babel) covers the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, Babel. Art draws from the whole era, not the tower by default. The next set is Egypt, so Egyptian subjects are reserved for it.

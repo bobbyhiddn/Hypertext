@@ -1379,6 +1379,7 @@ def _generate_card_recipe(
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
+        "SET THEME (hard requirement): this series is the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, and Babel. Draw art subjects from the WHOLE era rather than defaulting to the tower; the tower belongs only to words that are about it. Every Hypertext set is one fallen kingdom in historical order and the next set is Egypt, so no Egyptian subjects, places, or imagery in this set. "
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
         "LEXICAL RULE (hard requirement): the printed OT verse must contain the exact Hebrew lemma given in "
