@@ -72,34 +72,71 @@ def review(card_dir, threshold, describe_only):
     help="JSON report path (defaults to card-dir/outputs/visual-gate.json)",
 )
 def visual_gate(card_dir, candidate, report_path):
-    """Reject stat pips that differ from the exact canonical template family."""
+    """Reject noncanonical stat pips or a noncanonical printed +CARD cost."""
     from pathlib import Path
 
+    from hypertext.cards.cost_indicator_gate import (
+        CostIndicatorGateError,
+        inspect_cost_indicator,
+    )
     from hypertext.cards.stat_pip_gate import (
         StatPipGateError,
         defect_summary,
         inspect_card_stat_pips,
     )
+    from hypertext.cards.template_matrix import resolve_template_record
 
     directory = Path(card_dir)
     destination = Path(report_path) if report_path else directory / "outputs" / "visual-gate.json"
+    candidate_file = Path(candidate) if candidate else directory / "outputs" / "card_1024x1536.png"
     try:
         result = inspect_card_stat_pips(
             directory,
-            candidate_path=Path(candidate) if candidate else None,
+            candidate_path=candidate_file,
             report_path=destination,
         )
     except StatPipGateError as exc:
         raise click.ClickException(str(exc)) from exc
 
-    click.echo(json.dumps({
+    try:
+        card = json.loads((directory / "card.json").read_text(encoding="utf-8"))
+        content = card["content"]
+        record = resolve_template_record(
+            str(content["CARD_TYPE"]).upper(),
+            str(content["RARITY_TEXT"]).upper(),
+            verify=True,
+        )
+        cost = inspect_cost_indicator(candidate_file, record["path"], card)
+    except (CostIndicatorGateError, OSError, KeyError, ValueError) as exc:
+        raise click.ClickException(f"cost indicator gate failed: {exc}") from exc
+
+    combined = {
         "contract": result["contract"],
-        "passed": result["passed"],
+        "passed": bool(result["passed"]) and bool(cost["passed"]),
         "report": str(destination),
-        "defects": result["defects"],
-    }, sort_keys=True))
-    if not result["passed"]:
-        raise click.ClickException("stat pip visual gate rejected candidate: " + defect_summary(result))
+        "defects": list(result["defects"]) + list(cost["defects"]),
+        "cost_indicator": {
+            "contract": cost["contract"],
+            "passed": cost["passed"],
+            "observed": cost.get("observed"),
+        },
+    }
+    try:
+        report = json.loads(destination.read_text(encoding="utf-8"))
+        report["stat_pips"] = {"passed": result["passed"], "defects": result["defects"]}
+        report["cost_indicator"] = cost
+        report["passed"] = combined["passed"]
+        destination.write_text(json.dumps(report, indent=2, sort_keys=True), encoding="utf-8")
+    except (OSError, ValueError):
+        pass
+    click.echo(json.dumps(combined, sort_keys=True, default=str))
+    if not combined["passed"]:
+        pip_summary = defect_summary(result) if not result["passed"] else ""
+        cost_summary = "; ".join(d["code"] for d in cost["defects"]) if not cost["passed"] else ""
+        raise click.ClickException(
+            "visual gate rejected candidate: "
+            + "; ".join(part for part in (pip_summary, cost_summary) if part)
+        )
 
 
 @cli.command()

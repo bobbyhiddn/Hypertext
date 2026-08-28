@@ -1,0 +1,31 @@
+{
+  "contract": "hypertext.cost-indicator-visual-regressions/v1",
+  "reference_size": [1024, 1536],
+  "cost_region": [790, 80, 1002, 194],
+  "mutations": {
+    "build_forbidden_card_label": {
+      "center": [950, 134],
+      "half_width": 11,
+      "half_height": 16,
+      "fill_rgb": [224, 157, 34],
+      "source": "rejected BUILD / VERB / RARE candidate with a gold rarity diamond inside the cost-card face"
+    },
+    "rare_plus_patch": [860, 94, 914, 172],
+    "rare_card_patch": [914, 91, 982, 181],
+    "duplicate_card_destination": [800, 91],
+    "displacement": [-48, 0]
+  },
+  "evidence": {
+    "rejected_build": {
+      "candidate": "/home/cap/hypertext-six-card-proof-b1665fe3518f7612-20260827T001553Z/cards/002-build-verb-rare.png",
+      "card": "/home/cap/hypertext-six-card-proof-b1665fe3518f7612-20260827T001553Z/evidence/002-build-verb-rare/card.json",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+      "expected_defect": "cost-card-label-or-face-mismatch"
+    },
+    "accepted_plain_build": {
+      "candidate": "/home/cap/hypertext-six-card-proof-8091dd206574763a-20260826T231601Z/cards/002-build-verb-rare.png",
+      "card": "/home/cap/hypertext-six-card-proof-8091dd206574763a-20260826T231601Z/cases/002-build-verb-rare/card.json",
+      "template": "templates/card/v001/composed/verb/rare/template_1024x1536.png"
+    }
+  }
+}

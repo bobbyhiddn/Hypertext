@@ -917,7 +917,37 @@ def _run_stat_pip_visual_gate(
             + stat_pip_defect_summary(report)
         )
     _log(f"[visual gate] accepted 15 template-relative stat pips (report={report_path})")
+
+    # The printed +CARD activation cost shares the same fail-closed gate so no
+    # supported render path (generate/revise/rebuild/grade/review) can accept a
+    # face whose cost glyphs deviate from the hash-verified template.
+    from hypertext.cards.cost_indicator_gate import (
+        CostIndicatorGateError,
+        inspect_cost_indicator,
+    )
+
+    card = json.loads((card_dir / "card.json").read_text(encoding="utf-8"))
+    try:
+        cost = inspect_cost_indicator(out_png, template_path, card)
+    except CostIndicatorGateError as exc:
+        raise StatPipGateError(f"cost indicator gate could not evaluate the candidate: {exc}") from exc
+    report["stat_pips"] = {"passed": True, "defects": []}
+    report["cost_indicator"] = cost
+    report["passed"] = bool(cost["passed"])
+    write_stat_pip_gate_report(report, report_path)
+    if not cost["passed"]:
+        summary = "; ".join(item["code"] for item in cost["defects"])
+        _log(f"[visual gate] REJECTED {out_png}: {summary} (report={report_path})")
+        raise StatPipGateError(
+            "cost indicator visual gate rejected the Gemini full-card candidate: " + summary
+        )
+    _log(f"[visual gate] accepted structured +CARD cost indicator (report={report_path})")
     return report
+
+
+# Combined-contract alias: the stat-pip runner above IS the full-card gate, so
+# every caller of either name gets binary pips and the +CARD cost together.
+_run_card_visual_gate = _run_stat_pip_visual_gate
 
 
 def _write_generation_log(

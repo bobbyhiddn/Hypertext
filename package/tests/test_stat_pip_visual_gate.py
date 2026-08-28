@@ -228,18 +228,22 @@ class TemplateRelativeStatPipGateTests(unittest.TestCase):
             card_dir = Path(directory) / "card"
             output_dir = card_dir / "outputs"
             output_dir.mkdir(parents=True)
-            (card_dir / "card.json").write_text(
-                json.dumps({
-                    "content": {
-                        "CARD_TYPE": "NOUN",
-                        "RARITY_TEXT": "RARE",
-                        "STAT_LORE": 3,
-                        "STAT_CONTEXT": 2,
-                        "STAT_COMPLEXITY": 4,
-                    }
-                }),
-                encoding="utf-8",
+            recipe = json.loads(
+                (ROOT / "templates" / "card_prompt_template_explicit.json").read_text(
+                    encoding="utf-8"
+                )
             )
+            recipe["content"].update(
+                {
+                    "CARD_TYPE": "NOUN",
+                    "RARITY_TEXT": "RARE",
+                    "RARITY_ICON": "RARE",
+                    "STAT_LORE": 3,
+                    "STAT_CONTEXT": 2,
+                    "STAT_COMPLEXITY": 4,
+                }
+            )
+            (card_dir / "card.json").write_text(json.dumps(recipe), encoding="utf-8")
             candidate = output_dir / "card_1024x1536.png"
 
             _make_candidate(candidate)
