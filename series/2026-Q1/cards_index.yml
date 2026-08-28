@@ -21,6 +21,7 @@ words:
 - HIGH
 - HUNTER
 - KEEPER
+- KINGDOM
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -46,6 +47,7 @@ ability_patterns:
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
 - add_hand_look_top_tower
+- add_hand_sheol
 - add_hand_sheol_tower
 - choice_discard_draw_stat_lore
 - choice_draw
@@ -260,3 +262,8 @@ cards:
   type: NAME
   rarity: UNCOMMON
   ability_pattern: add_hand_sheol_tower
+- number: 39
+  word: KINGDOM
+  type: NOUN
+  rarity: GLORIOUS
+  ability_pattern: add_hand_sheol
