@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 06:50:45
+Timestamp: 2026-08-28 07:46:04
 Phase: revise-image-only
 Target Rarity: COMMON
 Target Type: NAME
 Fix Mode: True
 
 Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/051-abram/outputs/reference-inputs/current-d2187d87225c3ddb99737277f5d2e273354753126e29a6a109ac83f37d7def88.png [COMMON] sha256=d2187d87225c3ddb99737277f5d2e273354753126e29a6a109ac83f37d7def88
+  [1] CURRENT_CARD: series/2026-Q1/cards/051-abram/outputs/reference-inputs/current-3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d.png [COMMON] sha256=3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d
   [2] TEMPLATE: templates/card/v001/composed/name/common/template_1024x1536.png [COMMON] sha256=70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151
 
 Prompt File: series/2026-Q1/cards/051-abram/outputs/prompt.revision.txt

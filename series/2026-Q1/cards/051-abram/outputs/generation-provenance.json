@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d",
+    "gemini_output_sha256": "a5c63deada4f4fe186a16562f19cafcc289cdfbea1a2e95327dfbb05e6e06ced",
     "generation_metadata_path": "series/2026-Q1/cards/051-abram/outputs/generation.json",
-    "generation_metadata_sha256": "b8cc2df6de6721b236f254ab4179f18bef898a324e0efab864a78a4827e2937d",
+    "generation_metadata_sha256": "1d6aa5a51eff92614421278d0f96b55fc42124cf87e86065712845ec1662b3de",
     "path": "series/2026-Q1/cards/051-abram/outputs/card_1024x1536.png",
-    "sha256": "3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d"
+    "sha256": "a5c63deada4f4fe186a16562f19cafcc289cdfbea1a2e95327dfbb05e6e06ced"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/051-abram/outputs/prompt.revision.txt",
-    "sha256": "185dbf2ae8e34f927d7a42dc0a0946059e2fa7fa2b2701c30a9b0cddb2e2e729"
+    "sha256": "cf21c36d151b5d6c605b731a7eb24acef0f996a854a8c2415fabf4a40024e24f"
   },
   "recipe": {
-    "canonical_sha256": "6cb92980804d4d75c6916745e552d5c4397cdb32ca2df5a34d0864752ed5d289",
-    "file_sha256": "71efd81e5114d003052761b09f12adb2320cf81803689d53df309cc02a00d3b6",
+    "canonical_sha256": "aa3527e8e6daf9f68471a336c520967efc5897f1072e4a309e66f5a622b0fd7c",
+    "file_sha256": "f9c7d27033b822cda2c23eeeb2be481b2bf2bbe543f085f876eba6958474751c",
     "path": "series/2026-Q1/cards/051-abram/card.json"
   },
   "reference_pack": {
@@ -62,7 +62,7 @@
         "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/051-abram/outputs/reference-inputs/current-d2187d87225c3ddb99737277f5d2e273354753126e29a6a109ac83f37d7def88.png",
+        "path": "series/2026-Q1/cards/051-abram/outputs/reference-inputs/current-3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d.png",
         "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
@@ -70,11 +70,11 @@
         "rarity_label": "COMMON",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/051-abram/outputs/reference-inputs/current-d2187d87225c3ddb99737277f5d2e273354753126e29a6a109ac83f37d7def88.png",
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/051-abram/outputs/reference-inputs/current-3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "current_card",
-        "sha256": "d2187d87225c3ddb99737277f5d2e273354753126e29a6a109ac83f37d7def88",
+        "sha256": "3d263cfe7b5e9aa43e43f02d05c45fbe0126b84fc7a2e64d9db894ef76cb7b9d",
         "similarity_components": {},
         "similarity_reason": "not_applicable_current_card",
         "similarity_score": 0,
@@ -127,7 +127,7 @@
     "target_type": "NAME"
   },
   "reference_pack_path": "series/2026-Q1/cards/051-abram/outputs/reference-pack.json",
-  "reference_pack_sha256": "0a87c299e303de599c223d7524df2becccaff4ff232541c058a97e959cd1cd42",
+  "reference_pack_sha256": "5da21664a66d268e75e320711ea8a345e7fcd99058ee1fbcd62688c81663039c",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
