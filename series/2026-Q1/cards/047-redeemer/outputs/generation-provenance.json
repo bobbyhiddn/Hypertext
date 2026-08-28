@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "94f737248ea5b93a301cced23c3af8ae6648b6c8046c5cb2543c61c9204d70d9",
+    "gemini_output_sha256": "f58719970d5f63e84e80b2442972ff33761ba8c8ffc77ceee0964dbb465f4e85",
     "generation_metadata_path": "series/2026-Q1/cards/047-redeemer/outputs/generation.json",
-    "generation_metadata_sha256": "7f43b7efed9ddf93d0cdc47e3da20a4aaa33dd110fcd8704cfa7ed6ec0b443a6",
+    "generation_metadata_sha256": "d8aafc83a211ed9e942340ec0f4057d081f84935643fd4d56bc7194dd63b3353",
     "path": "series/2026-Q1/cards/047-redeemer/outputs/card_1024x1536.png",
-    "sha256": "94f737248ea5b93a301cced23c3af8ae6648b6c8046c5cb2543c61c9204d70d9"
+    "sha256": "f58719970d5f63e84e80b2442972ff33761ba8c8ffc77ceee0964dbb465f4e85"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/047-redeemer/prompt.txt",
-    "sha256": "2e65429b32dc1ce4f631244d8fa78af74ae98dc040133dd6b9f4633bd95005b3"
+    "path": "series/2026-Q1/cards/047-redeemer/outputs/prompt.revision.txt",
+    "sha256": "5ccdcf7d04db5550ef96d3b752064fb2b2326c74bd7a2e87ab1863ad135f15d6"
   },
   "recipe": {
-    "canonical_sha256": "0c2b1f9c7d4828817ffd27fd3fa285afe86345f9405b9266f432e6d840f77933",
-    "file_sha256": "b50864fcccf4ed1bdb1dc14c2fd99872bd7a0c26dd396d780ac0354044692d80",
+    "canonical_sha256": "c920ee87ea2145871b75588a7a6f5943b7c15474eaa1f459a9528fc15a438ad2",
+    "file_sha256": "5f95fa9c1f9308c0f5562975256bf3b857036809e34353e9b7858c0fc904893d",
     "path": "series/2026-Q1/cards/047-redeemer/card.json"
   },
   "reference_pack": {
@@ -22,6 +22,8 @@
         "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
         "card_type": "NAME",
         "eligibility_reasons": [
+          "status=retired",
+          "legacy!=false",
           "target_type_mismatch=NAME",
           "target_rarity_mismatch=COMMON"
         ],
@@ -43,13 +45,48 @@
         "similarity_reason": "not_scored_ineligible",
         "similarity_score": null,
         "source_manifest": "templates/card/v001/finished-card-references.json",
-        "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed"
+        "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
       }
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "TITLE",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/047-redeemer/outputs/reference-inputs/current-94f737248ea5b93a301cced23c3af8ae6648b6c8046c5cb2543c61c9204d70d9.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "RARE",
+        "rarity_label": "RARE",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/047-redeemer/outputs/reference-inputs/current-94f737248ea5b93a301cced23c3af8ae6648b6c8046c5cb2543c61c9204d70d9.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "94f737248ea5b93a301cced23c3af8ae6648b6c8046c5cb2543c61c9204d70d9",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "TITLE",
@@ -59,11 +96,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified TITLE RARE structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified TITLE RARE structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "RARE",
@@ -92,18 +129,18 @@
     "target_type": "TITLE"
   },
   "reference_pack_path": "series/2026-Q1/cards/047-redeemer/outputs/reference-pack.json",
-  "reference_pack_sha256": "e64bbddf9283403035da702793954324555503742badd829c3230d337d6cb087",
+  "reference_pack_sha256": "17812e9e9b2c9cda3217b42a32a13338e602885a99b596757a55e4cb4fd86396",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise-image-only",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]
