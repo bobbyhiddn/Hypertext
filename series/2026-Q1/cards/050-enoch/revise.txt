@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ENOCH
+# Card_Gloss: The seventh from Adam, who walked with God and was taken without death
+# Card_Type: NAME
+# Card_Rarity: UNCOMMON
+# Card_Ability: Choose one card in your hand and put that chosen card on the bottom of the Tower, then draw two cards from the Tower.
+# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 4
+# Card_Art_Prompt: A lone robed figure seen from behind walking up a grassy hillside path that dissolves into cloud and light at its crest, an antediluvian valley of great trees and rivers below, no faces, engraved devotional style on warm parchment tones
+# Card_OT_Verse: Genesis 5:24 — Enoch walked with God: and he was not; for God took him
+# Card_NT_Verse: Hebrews 11:5 — By faith Enoch was translated
+# Card_Hebrew: חֲנוֹךְ (Chanokh)
+# Card_Greek: Ἐνώχ (Enoch)
+# Card_Trivia_1: Enoch lived 365 years - a year of years - and then was not, for God took him.
+# Card_Trivia_2: Jude quotes a prophecy of Enoch, and the Ethiopian church still keeps the Book of Enoch as Scripture.
+# Card_Trivia_3: Hebrews says Enoch was translated - carried across - the same Greek verb used for moving a body or a law.
