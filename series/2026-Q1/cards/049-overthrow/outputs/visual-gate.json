@@ -19,12 +19,12 @@
       1024,
       1536
     ],
-    "path": "series/2026-Q1/cards/049-confuse/outputs/card_1024x1536.png",
-    "sha256": "02796f8b9231fd36daf58bdcdab0d95fa2376be071068fc9c0dab1f75f3f6412"
+    "path": "series/2026-Q1/cards/049-overthrow/outputs/card_1024x1536.png",
+    "sha256": "022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b"
   },
   "card_record": {
-    "path": "series/2026-Q1/cards/049-confuse/card.json",
-    "sha256": "62e72cc8091e9cc82765ff986358190f0b04a93cdb1f9e36dd52686ce6ba746a"
+    "path": "series/2026-Q1/cards/049-overthrow/card.json",
+    "sha256": "7ef25b82161082f835954b4fb8659013c897095e1c1f4b9cd6255a2c52538248"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -33,8 +33,8 @@
         1024,
         1536
       ],
-      "path": "series/2026-Q1/cards/049-confuse/outputs/card_1024x1536.png",
-      "sha256": "02796f8b9231fd36daf58bdcdab0d95fa2376be071068fc9c0dab1f75f3f6412"
+      "path": "series/2026-Q1/cards/049-overthrow/outputs/card_1024x1536.png",
+      "sha256": "022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -46,7 +46,7 @@
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "46d6b2889c5df13e8bb8234c506d6eda21475f37f27fcdda1c731aee5d1371ff",
+      "canonical_sha256": "022c1d5c7146f41c9278a18f69cb0731f2d8310ac540f1eaf948941a64da7d2b",
       "declared_display": null
     },
     "region": [
@@ -74,45 +74,21 @@
   },
   "defects": [],
   "expected_counts": {
-    "STAT_COMPLEXITY": 4,
+    "STAT_COMPLEXITY": 3,
     "STAT_CONTEXT": 3,
     "STAT_LORE": 3
   },
-  "fixed_elements": {
-    "contract": "hypertext.fixed-elements/v1",
-    "face_sha256_after": "02796f8b9231fd36daf58bdcdab0d95fa2376be071068fc9c0dab1f75f3f6412",
-    "face_sha256_before": "0b90e235cbd29021b2c6da81e3599e6935cab330c92218e1dcda9168bbea1e47",
-    "font_sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4",
-    "regions": {
-      "footer": [
-        0,
-        0
-      ],
-      "number": [
-        1,
-        -1
-      ],
-      "stat_pips": [
-        0,
-        0
-      ],
-      "type_pill": [
-        0,
-        0
-      ]
-    },
-    "template_sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a"
-  },
+  "fixed_elements": null,
   "observed_counts": {
-    "STAT_COMPLEXITY": 4,
+    "STAT_COMPLEXITY": 3,
     "STAT_CONTEXT": 3,
     "STAT_LORE": 3
   },
   "passed": true,
   "rarity_chip": {
     "candidate": {
-      "path": "series/2026-Q1/cards/049-confuse/outputs/card_1024x1536.png",
-      "sha256": "02796f8b9231fd36daf58bdcdab0d95fa2376be071068fc9c0dab1f75f3f6412"
+      "path": "series/2026-Q1/cards/049-overthrow/outputs/card_1024x1536.png",
+      "sha256": "022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -141,7 +117,7 @@
       "word_width": 127
     },
     "observed": {
-      "cap_height": 21,
+      "cap_height": 23,
       "diamond": [
         226,
         262
@@ -149,19 +125,19 @@
       "diamond_colour": [
         255,
         255,
-        255
+        254
       ],
-      "gap": 13,
-      "left_inset": 31,
+      "gap": 12,
+      "left_inset": 27,
       "word": [
         86,
-        213
+        214
       ],
       "word_rows": [
         27,
-        48
+        50
       ],
-      "word_width": 127
+      "word_width": 128
     },
     "passed": true,
     "region": {
@@ -196,7 +172,7 @@
   "registration": {
     "dx": 0.0,
     "dy": 0.0,
-    "score": 0.9548
+    "score": 0.9515
   },
   "rows": [
     {
@@ -227,7 +203,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 190.6096,
+            "outside_median_luma": 190.855,
             "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
@@ -285,7 +261,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.3971,
+            "outside_median_luma": 209.2593,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -314,7 +290,7 @@
             "middle_median_luma": 205.6442,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.0782,
+            "outside_median_luma": 212.1777,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -343,7 +319,7 @@
             "middle_median_luma": 213.0774,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.1909,
+            "outside_median_luma": 215.5078,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -380,7 +356,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 214.5874,
+            "outside_median_luma": 215.012,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -409,7 +385,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.3983,
+            "outside_median_luma": 213.5458,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -438,7 +414,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 214.6923,
+            "outside_median_luma": 214.992,
             "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "filled",
@@ -467,7 +443,7 @@
             "middle_median_luma": 201.4797,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.7737,
+            "outside_median_luma": 213.0118,
             "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "empty",
@@ -496,7 +472,7 @@
             "middle_median_luma": 210.6396,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.0872,
+            "outside_median_luma": 212.021,
             "outside_palette_rgb_distance": 5.3852
           },
           "observed_state": "empty",
@@ -506,9 +482,9 @@
       ]
     },
     {
-      "expected_count": 4,
+      "expected_count": 3,
       "name": "STAT_COMPLEXITY",
-      "observed_count": 4,
+      "observed_count": 3,
       "passed": true,
       "slots": [
         {
@@ -533,7 +509,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.4146,
+            "outside_median_luma": 207.8983,
             "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
@@ -562,7 +538,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.2192,
+            "outside_median_luma": 211.357,
             "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
@@ -591,7 +567,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.0058,
+            "outside_median_luma": 209.4737,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -600,30 +576,30 @@
         },
         {
           "defects": [],
-          "expected_state": "filled",
+          "expected_state": "empty",
           "metrics": {
-            "core_dark_fraction": 1.0,
-            "core_median_luma": 34.4652,
-            "core_middle_luma_step": 0.0,
-            "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 1.0,
-            "edge_median_luma": 34.4652,
-            "edge_palette_rgb_distance": 37.0135,
-            "empty_outline_contrast": 0.0,
-            "interior_dark_fraction": 1.0,
-            "interior_luma_p10": 34.4652,
-            "interior_luma_p90": 34.4652,
-            "interior_luma_spread": 0.0,
-            "interior_median_luma": 34.4652,
-            "interior_palette_rgb_distance": 37.0135,
-            "middle_dark_fraction": 1.0,
-            "middle_median_luma": 34.4652,
-            "middle_palette_rgb_distance": 37.0135,
+            "core_dark_fraction": 0.0,
+            "core_median_luma": 192.105,
+            "core_middle_luma_step": 1.0246,
+            "core_palette_rgb_distance": 441.673,
+            "edge_dark_fraction": 0.9722,
+            "edge_median_luma": 38.114,
+            "edge_palette_rgb_distance": 10.9545,
+            "empty_outline_contrast": 154.5658,
+            "interior_dark_fraction": 0.0,
+            "interior_luma_p10": 188.466,
+            "interior_luma_p90": 200.1936,
+            "interior_luma_spread": 11.7276,
+            "interior_median_luma": 192.6798,
+            "interior_palette_rgb_distance": 441.673,
+            "middle_dark_fraction": 0.0,
+            "middle_median_luma": 193.1296,
+            "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 198.7473,
+            "outside_median_luma": 198.6192,
             "outside_palette_rgb_distance": 441.673
           },
-          "observed_state": "filled",
+          "observed_state": "empty",
           "passed": true,
           "slot": 4
         },
@@ -649,7 +625,7 @@
             "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.1737,
+            "outside_median_luma": 192.266,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",

@@ -24,7 +24,7 @@
       "counts": [
         3,
         3,
-        4
+        3
       ]
     },
     "type_pill": {
@@ -35,21 +35,21 @@
         73
       ],
       "offset": [
-        1,
+        2,
         0
       ],
       "text": "VERB",
-      "ghost_pixels": 81
+      "ghost_pixels": 96
     },
     "number": {
       "box": [
-        61,
+        62,
         37,
-        138,
+        139,
         59
       ],
       "offset": [
-        2,
+        3,
         -1
       ],
       "text": "#049"
@@ -68,6 +68,6 @@
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "02796f8b9231fd36daf58bdcdab0d95fa2376be071068fc9c0dab1f75f3f6412",
-  "face_sha256_after": "e0cdb819acb2e3a66536d9d2cb4526acd3e9095b2917790f074db4ba785e60dd"
+  "face_sha256_before": "14dc7c8b06c783ce22ca3b405b1658421c5d61ca7ed2494e528309c1faf936bb",
+  "face_sha256_after": "022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b"
 }

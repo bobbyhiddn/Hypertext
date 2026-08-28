@@ -70,7 +70,7 @@
     },
     "49": {
       "status": "pass",
-      "note": "CONFUSE VERB/COMMON (renamed from BABBLE 2026-08-28 by the user; balal / syncheo restored, Gen 11:9 / Acts 2:6). Reveal-add the top card, then shuffle the Tower. Stats 3/3/4. Legacy #006 CONFUSE must take a new word in the legacy regeneration pass - the audit shows that one same-word conflict until then."
+      "note": "OVERTHROW VERB/COMMON (slot re-worded 2026-08-28: BABBLE -> CONFUSE -> OVERTHROW at the user's direction; haphak / katastrepho, Gen 19:25 / Matt 21:12). Reveal-add the top card, then shuffle the Tower. Stats 3/3/3. Attempt 1 drifted layout (gate rejected), attempt 2 100/100 3-0. Legacy #006 CONFUSE stays."
     },
     "50": {
       "status": "pass",
@@ -245,6 +245,10 @@
     {
       "when": "2026-08-28",
       "what": "BABBLE -> CONFUSE (user: 'just change babble to confuse'): #049 renamed with balal / syncheo restored; the one-lemma rule now also rejects the same WORD twice, so legacy #006 CONFUSE is flagged for a new word in the legacy pass. Plan-phase lemma and shape checks skip the slot being re-planned."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "#049 -> OVERTHROW (user: 'we can just replace babble with another verb'); legacy #006 CONFUSE stays; lemma audit 0, shape audit clean. Ability Options artifact drafted for review: the closed vocabulary, pricing table, per-rarity option menus (in set / open / needs spec), coverage against targets, a grammar sketch, and five decisions before a spec."
     }
   ]
 }

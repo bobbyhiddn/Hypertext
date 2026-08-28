@@ -1,20 +1,20 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "0b90e235cbd29021b2c6da81e3599e6935cab330c92218e1dcda9168bbea1e47",
-    "generation_metadata_path": "series/2026-Q1/cards/049-confuse/outputs/generation.json",
-    "generation_metadata_sha256": "cc8deecfb69425eccf72d93205fac35349675d710d6d63a980073b082a8e81c4",
-    "path": "series/2026-Q1/cards/049-confuse/outputs/card_1024x1536.png",
-    "sha256": "e0cdb819acb2e3a66536d9d2cb4526acd3e9095b2917790f074db4ba785e60dd"
+    "gemini_output_sha256": "311651b01b0773f84c450334309280b9a1dbcf7e6529ff86e8415f694e4bd78e",
+    "generation_metadata_path": "series/2026-Q1/cards/049-overthrow/outputs/generation.json",
+    "generation_metadata_sha256": "182b6192492871677ca959fdeba2a7cb998b6b2c19ab8d961eff7ea7d86bf915",
+    "path": "series/2026-Q1/cards/049-overthrow/outputs/card_1024x1536.png",
+    "sha256": "14dc7c8b06c783ce22ca3b405b1658421c5d61ca7ed2494e528309c1faf936bb"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/049-confuse/prompt.txt",
-    "sha256": "0e95a2601e821e6839e1609c067688b9b59a047564ecb89c2af611e6080a12a0"
+    "path": "series/2026-Q1/cards/049-overthrow/prompt.txt",
+    "sha256": "40e73b42790f63933f9ca8d89e55e79ae73481a34cf7c5dd55e3b4c77d35af66"
   },
   "recipe": {
-    "canonical_sha256": "46d6b2889c5df13e8bb8234c506d6eda21475f37f27fcdda1c731aee5d1371ff",
-    "file_sha256": "62e72cc8091e9cc82765ff986358190f0b04a93cdb1f9e36dd52686ce6ba746a",
-    "path": "series/2026-Q1/cards/049-confuse/card.json"
+    "canonical_sha256": "022c1d5c7146f41c9278a18f69cb0731f2d8310ac540f1eaf948941a64da7d2b",
+    "file_sha256": "7ef25b82161082f835954b4fb8659013c897095e1c1f4b9cd6255a2c52538248",
+    "path": "series/2026-Q1/cards/049-overthrow/card.json"
   },
   "reference_pack": {
     "candidate_audit": [
@@ -92,7 +92,7 @@
     "target_rarity": "COMMON",
     "target_type": "VERB"
   },
-  "reference_pack_path": "series/2026-Q1/cards/049-confuse/outputs/reference-pack.json",
+  "reference_pack_path": "series/2026-Q1/cards/049-overthrow/outputs/reference-pack.json",
   "reference_pack_sha256": "2978bbe9872aba77c4e3eb833f933892bdb2a9085e0f81424967fbfdffb73f5d",
   "settings": {
     "aspect_ratio": "2:3",

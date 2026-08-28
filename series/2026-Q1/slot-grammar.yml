@@ -201,15 +201,15 @@ slots:
   number: 49
   type: VERB
   rarity: COMMON
-  word: CONFUSE
-  gloss: To mix speech until no hearer understands.
-  alternate: MOCK
+  word: OVERTHROW
+  gloss: To turn a city upside down in judgment.
+  alternate: DIVIDE
   mechanic_family: VIEW
   stat_profile: high CONTEXT
-  theme: the confusion of tongues
+  theme: judgment on the plain
   status: planned
-  note: 'Renamed from BABBLE 2026-08-28 (user); balal / syncheo. Legacy #006 CONFUSE takes
-    a new word in the legacy pass.'
+  note: 'Was BABBLE (lemmas duplicated CONFUSE #006); re-worded OVERTHROW 2026-08-28 (haphak
+    / katastrepho). Alternate DIVIDE (palag / diamerizo) also clean under the one-lemma rule.'
 - slot_id: BABEL-050
   number: 50
   type: NAME
