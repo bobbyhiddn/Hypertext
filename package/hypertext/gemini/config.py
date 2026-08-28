@@ -3,8 +3,8 @@
 import os
 
 DEFAULT_IMAGE_MODEL = "gemini-3.1-flash-image"
-DEFAULT_TEXT_MODEL = "gemini-2.5-pro"
-DEFAULT_REVIEW_MODEL = "gemini-2.5-pro"
+DEFAULT_TEXT_MODEL = "gemini-3.7-flash"
+DEFAULT_REVIEW_MODEL = "gemini-3.7-flash"
 IMAGE_API_BASE = "https://generativelanguage.googleapis.com/v1beta/models"
 
 

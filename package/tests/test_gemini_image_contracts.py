@@ -307,10 +307,10 @@ class ConfigurationTests(unittest.TestCase):
             self.assertEqual(image_model(), "custom")
         with mock.patch.dict(os.environ, {"GEMINI_TEXT_MODEL": "custom-text"}):
             self.assertEqual(text_model(), "custom-text")
-        self.assertEqual(DEFAULT_TEXT_MODEL, "gemini-2.5-pro")
+        self.assertEqual(DEFAULT_TEXT_MODEL, "gemini-3.7-flash")
         with mock.patch.dict(os.environ, {"GEMINI_REVIEW_MODEL": "custom-review"}):
             self.assertEqual(review_model(), "custom-review")
-        self.assertEqual(DEFAULT_REVIEW_MODEL, "gemini-2.5-pro")
+        self.assertEqual(DEFAULT_REVIEW_MODEL, "gemini-3.7-flash")
 
     def test_jpeg_and_known_gemini_2k_are_normalized_to_png(self):
         for data, mime in ((jpeg(), "image/jpeg"),
