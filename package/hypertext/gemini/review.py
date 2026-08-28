@@ -128,7 +128,7 @@ A correctly formatted Hypertext card should have these elements:
 14. FRAME: Is the card frame/border intact and complete?
 15. PANELS: Are all expected panels visible? List any missing sections.
 16. TEXT QUALITY: Is any text garbled, warped, or illegible? Where?
-17. PLACEHOLDER LEAKS: Does the card print any template placeholder text - the literal strings 'CARD TITLE', 'DEFINITION TEXT', 'TRANSLIT', a 'WORD:' or similar field-name prefix, '#XXX', a footer '- Set' suffix after the series name, or any bracketed slot label? List each leak and its location.
+17. PLACEHOLDER LEAKS: Does the card print any template placeholder text - the literal strings 'CARD TITLE', 'DEFINITION TEXT', 'TRANSLIT', a 'WORD:' or similar field-name prefix, '#XXX', a footer '- Set' suffix after the series name, an extra 'ORIGINAL LANGUAGES' heading above the language panels, or any bracketed slot label? List each leak and its location.
 
 Return ONLY JSON in this exact format:
 ```json
@@ -1037,6 +1037,7 @@ PLACEHOLDER_LEAK_STRINGS = (
     "20XX QX",
     "- Set",
     "WORD:",
+    "ORIGINAL LANGUAGES",
 )
 
 
