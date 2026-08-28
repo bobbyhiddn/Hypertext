@@ -5,11 +5,12 @@ card_type: ADJECTIVE
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A knotted sounding line with a stone weight descending into dark layered
-  waters, faint light rays filtering from the surface far above, dim silhouettes of
-  great sea creatures in the depths below, luminous cinematic oil painting with impressionistic
-  brushwork, deep shadowed background, one radiant golden light source, rich saturated
-  blues and golds
+art_prompt: A knotted sounding line with a stone weight descending into deep blue-black
+  water, one radiant golden shaft of light from far above striking the stone and the
+  line while the depths around fall into shadow, dim dark silhouettes of great sea
+  creatures below, warm gold against the dark, luminous cinematic oil painting with
+  impressionistic brushwork, deep shadowed background, one radiant golden light source,
+  rich saturated blues and golds
 stats:
   lore: 4
   context: 3
