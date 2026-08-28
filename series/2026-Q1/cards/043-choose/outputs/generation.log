@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 05:35:42
-Phase: rebuild
+Timestamp: 2026-08-28 07:27:18
+Phase: revise-image-only
 Target Rarity: UNCOMMON
 Target Type: VERB
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/verb/uncommon/template_1024x1536.png [UNCOMMON] sha256=f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/043-choose/outputs/reference-inputs/current-9007c3a6f90e9b39cb5f07443aa5fde4d504bbcdbdf807b39bc13de0c0e4199f.png [UNCOMMON] sha256=9007c3a6f90e9b39cb5f07443aa5fde4d504bbcdbdf807b39bc13de0c0e4199f
+  [2] TEMPLATE: templates/card/v001/composed/verb/uncommon/template_1024x1536.png [UNCOMMON] sha256=f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb
 
-Prompt File: series/2026-Q1/cards/043-choose/prompt.txt
+Prompt File: series/2026-Q1/cards/043-choose/outputs/prompt.revision.txt
