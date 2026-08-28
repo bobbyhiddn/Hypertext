@@ -1,0 +1,41 @@
+number: '044'
+word: DARK
+gloss: Without light; the unlit deep before the first day
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Primeval waters under total darkness, the faintest first edge of light
+  breaking along a distant horizon, no figures, engraved devotional style on warm
+  parchment tones
+stats:
+  lore: 4
+  context: 2
+  complexity: 2
+ability: Add one card from the bottom of the Tower to your hand. Then look at one
+  card from the top of the Tower.
+ot_verse:
+  ref: Genesis 1:2
+  snippet: darkness was upon the face of the deep
+nt_verse:
+  ref: 1 Peter 2:9
+  snippet: out of darkness into his marvellous light
+greek:
+  text: σκότος
+  translit: skotos
+hebrew:
+  text: חֹשֶׁךְ
+  translit: choshek
+ot_refs: Gen 1:2 • Exod 10:22 • Isa 45:7
+nt_refs: 1 Pet 2:9 • Matt 4:16 • Matt 27:45
+trivia:
+- Hebrew choshek is the first condition named after the deep in Genesis 1:2 - before
+  any light.
+- The ninth plague was a darkness that could be felt, three days thick over Egypt.
+- Greek skotos gives us scotoma, the physician's word for a blind spot in the eye.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

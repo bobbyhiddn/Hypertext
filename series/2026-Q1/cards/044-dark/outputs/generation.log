@@ -1,0 +1,12 @@
+=== Generation Log ===
+Timestamp: 2026-08-28 05:38:02
+Phase: revise-image-only
+Target Rarity: COMMON
+Target Type: ADJECTIVE
+Fix Mode: True
+
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/044-dark/outputs/reference-inputs/current-5e38714c7aa38f0d1b595b9e5d5d1bca585122fa7fd0431d3906a9e6583676cb.png [COMMON] sha256=5e38714c7aa38f0d1b595b9e5d5d1bca585122fa7fd0431d3906a9e6583676cb
+  [2] TEMPLATE: templates/card/v001/composed/adjective/common/template_1024x1536.png [COMMON] sha256=93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c
+
+Prompt File: series/2026-Q1/cards/044-dark/outputs/prompt.revision.txt
