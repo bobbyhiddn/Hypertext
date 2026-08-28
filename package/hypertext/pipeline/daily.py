@@ -1381,6 +1381,13 @@ def _generate_card_recipe(
         + "\n\n"
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
+        "LEXICAL RULE (hard requirement): the printed OT verse must contain the exact Hebrew lemma given in "
+        "hebrew.text (an inflected form of that same lemma counts; a different word from the same root does not), "
+        "and the printed NT verse must contain the exact Greek lemma given in greek.text. Every entry in ot_refs "
+        "must likewise contain the Hebrew lemma and every entry in nt_refs the Greek lemma. Choose the language "
+        "forms first, then choose verses that contain them. If the word never occurs in the Greek New Testament, "
+        "set greek.text to the New Testament's own Greek name for the same referent (for example Shinar -> Babylon) "
+        "and cite verses containing that word; never cite a verse that merely alludes to the subject. "
         "The ability was generated and reviewed separately; copy it verbatim."
     )
 
