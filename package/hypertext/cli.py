@@ -42,6 +42,18 @@ def demo(series, batch, parallel, skip_polish):
     raise NotImplementedError("demo command not yet implemented")
 
 
+@cli.command("fixed-elements")
+@click.option("--card-dir", required=True, help="Card directory whose rendered face receives the deterministic fixed elements")
+def fixed_elements(card_dir):
+    """Stamp the stat pips, type pill, rarity chip, number, and series footer deterministically."""
+    from pathlib import Path
+
+    from hypertext.cards.fixed_elements import apply_fixed_elements
+
+    provenance = apply_fixed_elements(Path(card_dir))
+    click.echo(json.dumps({"contract": provenance["contract"], "regions": {k: v.get("offset") for k, v in provenance["regions"].items()}, "face_sha256_after": provenance["face_sha256_after"]}, sort_keys=True))
+
+
 @cli.command()
 @click.option("--card-dir", required=True, help="Path to card directory")
 @click.option("--threshold", type=float, default=0.7, help="Quality threshold")
