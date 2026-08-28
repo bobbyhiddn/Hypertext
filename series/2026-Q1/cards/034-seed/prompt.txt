@@ -14,6 +14,3 @@ EXACT_CANONICAL_CONTENT_JSON={"ABILITY_TEXT":"Put one NOUN from your hand on the
 Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.
 NEGATIVE GRAMMAR: no surrounding text; no generated watermark; no captions outside the card; no text outside the card border; no brackets; no warped text; no garbled text; no faux handwriting; no duplicate headings; no extra panels; no text inside artwork; no modern objects; no recognizable human faces; no portrait likenesses; no face-forward named figures; no neon colors; no heavy HDR; no washed-out grayscale; no over-sharpen halos; no partial stat-pip fills; no stat-pip gradients or highlights; no diamonds for stat pips; do not render hidden metadata.
 Output only one vertical 1024x1536 Word Card.
-
-REVISION INSTRUCTIONS:
-Text corrections only: the OT VERSE panel text must read exactly 'Genesis 3:15 — “enmity between thy seed and her seed”' and the NT VERSE panel text must read exactly 'Galatians 3:16 — “and to thy seed, which is Christ”' (add the curly quotation marks around each snippet, matching the other cards). Keep everything else exactly as rendered.

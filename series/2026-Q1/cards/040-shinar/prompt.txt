@@ -14,6 +14,3 @@ EXACT_CANONICAL_CONTENT_JSON={"ABILITY_TEXT":"Look at the bottom two cards of th
 Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.
 NEGATIVE GRAMMAR: no surrounding text; no generated watermark; no captions outside the card; no text outside the card border; no brackets; no warped text; no garbled text; no faux handwriting; no duplicate headings; no extra panels; no text inside artwork; no modern objects; no recognizable human faces; no portrait likenesses; no face-forward named figures; no neon colors; no heavy HDR; no washed-out grayscale; no over-sharpen halos; no partial stat-pip fills; no stat-pip gradients or highlights; no diamonds for stat pips; do not render hidden metadata.
 Output only one vertical 1024x1536 Word Card.
-
-REVISION INSTRUCTIONS:
-Text corrections only: the OT VERSE panel text must read exactly 'Genesis 11:2 — “a plain in the land of Shinar”'; the NT VERSE panel text must read exactly 'Revelation 18:2 — “Babylon the great is fallen”'; the HEBREW/ARAMAIC panel refs line must read exactly 'OT Refs: Gen 10:10 • Gen 11:2 • Zech 5:11'; the GREEK panel must show the native word 'Βαβυλών' with transliteration 'Babylon' and its refs line must read exactly 'NT Refs: Rev 18:2 • Matt 1:11 • 1 Pet 5:13'. Keep the artwork, frame, header, stats, ability, and trivia exactly as rendered.
