@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 05:10:13
-Phase: rebuild
+Timestamp: 2026-08-28 07:23:11
+Phase: revise-image-only
 Target Rarity: UNCOMMON
 Target Type: TITLE
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/title/uncommon/template_1024x1536.png [UNCOMMON] sha256=f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/041-messenger/outputs/reference-inputs/current-d23d4c47e326c6f34426f5cb0bebfeb361019b68c0faf08b8c5272b5fce82c5d.png [UNCOMMON] sha256=d23d4c47e326c6f34426f5cb0bebfeb361019b68c0faf08b8c5272b5fce82c5d
+  [2] TEMPLATE: templates/card/v001/composed/title/uncommon/template_1024x1536.png [UNCOMMON] sha256=f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0
 
-Prompt File: series/2026-Q1/cards/041-messenger/prompt.txt
+Prompt File: series/2026-Q1/cards/041-messenger/outputs/prompt.revision.txt
