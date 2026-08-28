@@ -22,6 +22,7 @@ words:
 - HUNTER
 - KEEPER
 - KINGDOM
+- MESSENGER
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -50,6 +51,7 @@ ability_patterns:
 - add_hand_look_top_tower
 - add_hand_sheol
 - add_hand_sheol_tower
+- add_hand_tower_type_name
 - choice_discard_draw_stat_lore
 - choice_draw
 - conditional_discard_draw_type_verb
@@ -273,3 +275,8 @@ cards:
   type: NAME
   rarity: COMMON
   ability_pattern: add_hand_look_top_tower
+- number: 41
+  word: MESSENGER
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: add_hand_tower_type_name

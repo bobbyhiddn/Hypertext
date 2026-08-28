@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: MESSENGER
+# Card_Gloss: One sent to bear a word to those who wait for it
+# Card_Type: TITLE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Name a card type and reveal the top three cards of the Tower. Add one revealed card of the named type to your hand and put each other revealed card on top of the Tower in any order.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 3
+# Card_Art_Prompt: A robed runner seen from behind on a mountain road at dawn, a sealed scroll clasped in one hand, a distant walled city gate waiting across the valley, long morning shadows, engraved devotional style on warm parchment tones
+# Card_OT_Verse: Proverbs 25:13 — a faithful messenger to them that send him
+# Card_NT_Verse: Luke 7:27 — I send my messenger before thy face
+# Card_Hebrew: מַלְאָךְ (malakh)
+# Card_Greek: ἄγγελος (angelos)
+# Card_Trivia_1: Hebrew malakh and Greek angelos both mean simply messenger - angel names the office, not the species.
+# Card_Trivia_2: Isaiah 52:7 blesses the very feet of the messenger who brings good tidings over the mountains.
+# Card_Trivia_3: Proverbs likens a faithful messenger to snow-cold water in harvest - refreshing those who sent him.

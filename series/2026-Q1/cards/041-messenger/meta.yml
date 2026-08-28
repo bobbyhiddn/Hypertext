@@ -1,0 +1,85 @@
+number: '041'
+word: MESSENGER
+gloss: One sent to bear a word to those who wait for it
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A robed runner seen from behind on a mountain road at dawn, a sealed scroll
+  clasped in one hand, a distant walled city gate waiting across the valley, long
+  morning shadows, engraved devotional style on warm parchment tones
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Name a card type and reveal the top three cards of the Tower. Add one revealed
+  card of the named type to your hand and put each other revealed card on top of the
+  Tower in any order.
+ot_verse:
+  ref: Proverbs 25:13
+  snippet: a faithful messenger to them that send him
+nt_verse:
+  ref: Luke 7:27
+  snippet: I send my messenger before thy face
+greek:
+  text: ἄγγελος
+  translit: angelos
+hebrew:
+  text: מַלְאָךְ
+  translit: malakh
+ot_refs: Prov 25:13 • Mal 3:1 • Isa 52:7
+nt_refs: Luke 7:27 • Mark 1:2 • 2 Cor 8:23
+trivia:
+- Hebrew malakh and Greek angelos both mean simply messenger - angel names the office,
+  not the species.
+- Isaiah 52:7 blesses the very feet of the messenger who brings good tidings over
+  the mountains.
+- Proverbs likens a faithful messenger to snow-cold water in harvest - refreshing
+  those who sent him.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
+revision: 1
+revision_notes: 'General revision request (you may modify any content field as needed):
+
+  Visual fix only, change nothing except this single correction: In the ability text,
+  change ''...Add one or revealed card...'' to ''...Add one revealed card...'' Keep
+  every other pixel, panel, and text exactly as rendered.
+
+  # Card_Word: MESSENGER
+
+  # Card_Gloss: One sent to bear a word to those who wait for it
+
+  # Card_Type: TITLE
+
+  # Card_Rarity: UNCOMMON
+
+  # Card_Ability: Name a card type and reveal the top three cards of the Tower. Add
+  one revealed card of the named type to your hand and put each other revealed card
+  on top of the Tower in any order.
+
+  # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 3
+
+  # Card_Art_Prompt: A robed runner seen from behind on a mountain road at dawn, a
+  sealed scroll clasped in one hand, a distant walled city gate waiting across the
+  valley, long morning shadows, engraved devotional style on warm parchment tones
+
+  # Card_OT_Verse: Proverbs 25:13 — a faithful messenger to them that send him
+
+  # Card_NT_Verse: Luke 7:27 — I send my messenger before thy face
+
+  # Card_Hebrew: מַלְאָךְ (malakh)
+
+  # Card_Greek: ἄγγελος (angelos)
+
+  # Card_Trivia_1: Hebrew malakh and Greek angelos both mean simply messenger - angel
+  names the office, not the species.
+
+  # Card_Trivia_2: Isaiah 52:7 blesses the very feet of the messenger who brings good
+  tidings over the mountains.
+
+  # Card_Trivia_3: Proverbs likens a faithful messenger to snow-cold water in harvest
+  - refreshing those who sent him.'
