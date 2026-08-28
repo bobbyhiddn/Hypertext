@@ -16,8 +16,8 @@ ability: Name a card type and reveal the top three cards of the Tower. Add one r
   card of the named type to your hand and put each other revealed card on top of the
   Tower in any order.
 ot_verse:
-  ref: Proverbs 25:13
-  snippet: a faithful messenger to them that send him
+  ref: Malachi 3:1
+  snippet: I will send my messenger
 nt_verse:
   ref: Luke 7:27
   snippet: I send my messenger before thy face
@@ -27,8 +27,8 @@ greek:
 hebrew:
   text: מַלְאָךְ
   translit: malakh
-ot_refs: Prov 25:13 • Mal 3:1 • Isa 52:7
-nt_refs: Luke 7:27 • Mark 1:2 • 2 Cor 8:23
+ot_refs: Mal 3:1 • Gen 32:3 • Prov 13:17
+nt_refs: Luke 7:27 • Mark 1:2 • Jas 2:25
 trivia:
 - Hebrew malakh and Greek angelos both mean simply messenger - angel names the office,
   not the species.

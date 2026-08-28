@@ -6,7 +6,7 @@
 **MESSENGER** — One sent to bear a word to those who wait for it
 
 ## Old Testament
-> Proverbs 25:13 — "a faithful messenger to them that send him"
+> Malachi 3:1 — "I will send my messenger"
 
 ## New Testament
 > Luke 7:27 — "I send my messenger before thy face"
