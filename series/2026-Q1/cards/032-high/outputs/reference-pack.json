@@ -4,6 +4,8 @@
       "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
       "card_type": "NAME",
       "eligibility_reasons": [
+        "status=retired",
+        "legacy!=false",
         "target_type_mismatch=NAME"
       ],
       "eligible": false,
@@ -24,7 +26,7 @@
       "similarity_reason": "not_scored_ineligible",
       "similarity_score": null,
       "source_manifest": "templates/card/v001/finished-card-references.json",
-      "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed"
+      "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
     }
   ],
   "contract": "hypertext.gemini.reference-pack/v1",
@@ -43,7 +45,7 @@
       "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
       "metadata_path": null,
       "metadata_sha256": null,
-      "path": "series/2026-Q1/cards/032-high/outputs/reference-inputs/current-ed353679647defe23d19754f50b7f36f259fccdf33b8db1ca8ab36e61f4b49e2.png",
+      "path": "series/2026-Q1/cards/032-high/outputs/reference-inputs/current-bbb5d69db8da003697abd94fb34e356060458eaed87104d994e2b2c646d9e59f.png",
       "position": 1,
       "prompt_path": null,
       "prompt_sha256": null,
@@ -54,7 +56,7 @@
       "review_evidence_path": null,
       "review_evidence_sha256": null,
       "role": "current_card",
-      "sha256": "ed353679647defe23d19754f50b7f36f259fccdf33b8db1ca8ab36e61f4b49e2",
+      "sha256": "bbb5d69db8da003697abd94fb34e356060458eaed87104d994e2b2c646d9e59f",
       "similarity_components": {},
       "similarity_reason": "not_applicable_current_card",
       "similarity_score": 0,
