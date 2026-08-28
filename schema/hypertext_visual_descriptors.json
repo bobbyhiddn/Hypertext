@@ -66,8 +66,8 @@
         "right_header": "GREEK",
         "native_script": "large centered native script with every supplied diacritic preserved",
         "transliteration": "bare italic transliteration directly below the native script; no TRANSLIT label, no parentheses, and no added English gloss",
-        "left_refs": "OT Refs: followed by the exact supplied OT_REFS string",
-        "right_refs": "NT Refs: followed by the exact supplied NT_REFS string",
+        "left_refs": "a references line that begins with the literal label 'OT Refs: ' followed by the exact supplied OT_REFS string; the label is mandatory",
+        "right_refs": "a references line that begins with the literal label 'NT Refs: ' followed by the exact supplied NT_REFS string; the label is mandatory",
         "density": "match the compact height, spacing, and hierarchy of the printed SEE reference"
       },
       "content_order": [

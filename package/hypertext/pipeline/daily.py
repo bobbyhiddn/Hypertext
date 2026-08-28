@@ -4513,6 +4513,26 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     if placeholder_leaks == ["__unreadable__"]:
         _log("[phase grade] placeholder leak check unreadable; treating as clean")
         placeholder_leaks = []
+    # The refs labels are dropped by the image model often enough, and missed
+    # by the broad description pass reliably enough, to deserve their own
+    # reference-free focused check with a hard fail.
+    missing_labels: list[str] = []
+    try:
+        from hypertext.gemini.review import check_refs_labels
+        missing_labels = check_refs_labels(out_png)
+    except Exception as e:
+        _log(f"[phase grade] refs label check failed: {e}")
+    if missing_labels == ["__unreadable__"]:
+        _log("[phase grade] refs label check unreadable; treating as present")
+        missing_labels = []
+    if missing_labels:
+        label_reason = "Refs label missing: " + "; ".join(missing_labels)
+        style_match = False
+        style_reason = (style_reason + " " + label_reason).strip()
+        description.style_matches_reference = False
+        description.style_mismatch_reason = style_reason
+        _log(f"[phase grade] ⚠️ {label_reason}")
+
     if placeholder_leaks:
         leak_reason = "Template placeholder leak: " + "; ".join(placeholder_leaks)
         style_match = False
@@ -4533,6 +4553,10 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         _log(f"[phase grade] Scoring failed: {e}")
         return 1
 
+    for missing in missing_labels:
+        result.corrections.append(
+            f"{missing}; the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'."
+        )
     for leak in placeholder_leaks:
         result.corrections.append(
             f"Remove the template placeholder text {leak}; replace the slot with the supplied content only."

@@ -1089,6 +1089,38 @@ def detect_placeholder_leaks(image_path: Path, model: str | None = None) -> list
         return ["__unreadable__"]
 
 
+def check_refs_labels(image_path: Path, model: str | None = None) -> list[str]:
+    """Reference-free focused check that both language panels print their refs labels.
+
+    Vision judges reliably miss an ABSENT label during the broad description
+    pass, so the two references lines are transcribed in isolation and tested
+    for their literal 'OT Refs:' / 'NT Refs:' prefixes.
+
+    Returns the list of missing labels (empty when both are present), or
+    ["__unreadable__"] when the response cannot be parsed.
+    """
+    prompt = (
+        "Look ONLY at the two side-by-side language panels near the bottom of this trading card: "
+        "the HEBREW/ARAMAIC panel on the left and the GREEK panel on the right. Each panel ends with a "
+        "small references line beneath the transliteration. Transcribe each references line EXACTLY as "
+        "printed, including any leading label. Return ONLY JSON: "
+        '{"hebrew_refs_line": "<exact text>", "greek_refs_line": "<exact text>"}'
+    )
+    text = _call_gemini(prompt, image_path=image_path, model=model)
+    try:
+        data = _parse_json_response(text)
+        heb = str(data.get("hebrew_refs_line", "")).strip()
+        grk = str(data.get("greek_refs_line", "")).strip()
+    except Exception:
+        return ["__unreadable__"]
+    missing = []
+    if not heb.upper().startswith("OT REFS"):
+        missing.append(f"OT Refs label missing (line reads: {heb!r})")
+    if not grk.upper().startswith("NT REFS"):
+        missing.append(f"NT Refs label missing (line reads: {grk!r})")
+    return missing
+
+
 def describe_palette(image_path: Path, model: str | None = None) -> str:
     """Describe symbols/icons in a palette image without card-specific assumptions.
 
