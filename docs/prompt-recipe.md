@@ -48,6 +48,8 @@ Languages
 - ot_refs (references only)
 - nt_refs (references only)
 
+Lexical rule for every verse and reference: the OT verse and each ot_refs entry must contain the card's Hebrew lemma (an inflected form of the same lemma counts; a different word from the same root does not), and the NT verse and each nt_refs entry must contain the card's Greek lemma. Never cite a verse that merely alludes to the subject. If the word never occurs in the Greek New Testament, the Greek panel carries the New Testament's own name for the same referent (Shinar -> Babylon) and the NT citations contain that word.
+
 Trivia bullets
 - 3 to 5 bullets, short
 
