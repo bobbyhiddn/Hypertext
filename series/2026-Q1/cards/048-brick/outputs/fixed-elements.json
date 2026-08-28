@@ -40,24 +40,6 @@
       ],
       "text": "NOUN"
     },
-    "rarity_chip": {
-      "box": [
-        736,
-        8,
-        1010,
-        112
-      ],
-      "offset": [
-        0,
-        -5
-      ],
-      "word": "Uncommon",
-      "word_rendered": true,
-      "block_extended_px": 26,
-      "font_size": 33,
-      "template_defect": "rarity word clipped by the chip block",
-      "ghost_pixels": 0
-    },
     "number": {
       "box": [
         59,
@@ -86,5 +68,5 @@
     }
   },
   "face_sha256_before": "6eac4cf0fd77c2383c3dfc301e08cb17ba83d4bcf405936cc5b41419f8adbc99",
-  "face_sha256_after": "089c09ed27e681e7f50e57e889030aba5ea00ffecc72d16bc90a68996660fbee"
+  "face_sha256_after": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
 }

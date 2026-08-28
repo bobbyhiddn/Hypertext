@@ -122,21 +122,34 @@ def visual_gate(card_dir, candidate, report_path):
     except (CostIndicatorGateError, OSError, KeyError, ValueError) as exc:
         raise click.ClickException(f"cost indicator gate failed: {exc}") from exc
 
+    from hypertext.cards.rarity_chip_gate import RarityChipGateError, inspect_rarity_chip
+
+    try:
+        chip = inspect_rarity_chip(candidate_file, Path(record["path"]), card)
+    except (RarityChipGateError, OSError) as exc:
+        raise click.ClickException(f"rarity chip gate failed: {exc}") from exc
+
     combined = {
         "contract": result["contract"],
-        "passed": bool(result["passed"]) and bool(cost["passed"]),
+        "passed": bool(result["passed"]) and bool(cost["passed"]) and bool(chip["passed"]),
         "report": str(destination),
-        "defects": list(result["defects"]) + list(cost["defects"]),
+        "defects": list(result["defects"]) + list(cost["defects"]) + list(chip["defects"]),
         "cost_indicator": {
             "contract": cost["contract"],
             "passed": cost["passed"],
             "observed": cost.get("observed"),
+        },
+        "rarity_chip": {
+            "contract": chip["contract"],
+            "passed": chip["passed"],
+            "observed": chip.get("observed"),
         },
     }
     try:
         report = json.loads(destination.read_text(encoding="utf-8"))
         report["stat_pips"] = {"passed": result["passed"], "defects": result["defects"]}
         report["cost_indicator"] = cost
+        report["rarity_chip"] = chip
         report["passed"] = combined["passed"]
         destination.write_text(json.dumps(report, indent=2, sort_keys=True), encoding="utf-8")
     except (OSError, ValueError):
@@ -145,9 +158,10 @@ def visual_gate(card_dir, candidate, report_path):
     if not combined["passed"]:
         pip_summary = defect_summary(result) if not result["passed"] else ""
         cost_summary = "; ".join(d["code"] for d in cost["defects"]) if not cost["passed"] else ""
+        chip_summary = "; ".join(d["code"] for d in chip["defects"]) if not chip["passed"] else ""
         raise click.ClickException(
             "visual gate rejected candidate: "
-            + "; ".join(part for part in (pip_summary, cost_summary) if part)
+            + "; ".join(part for part in (pip_summary, cost_summary, chip_summary) if part)
         )
 
 

@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-    "sha256": "089c09ed27e681e7f50e57e889030aba5ea00ffecc72d16bc90a68996660fbee"
+    "sha256": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/048-brick/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-      "sha256": "089c09ed27e681e7f50e57e889030aba5ea00ffecc72d16bc90a68996660fbee"
+      "sha256": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -84,6 +84,81 @@
     "STAT_LORE": 1
   },
   "passed": true,
+  "rarity_chip": {
+    "candidate": {
+      "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
+      "sha256": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
+    },
+    "contract": "hypertext.template-relative-rarity-chip-gate/v1",
+    "defects": [],
+    "expected": {
+      "cap_height": 22,
+      "diamond": [
+        226,
+        262
+      ],
+      "diamond_colour": [
+        124,
+        185,
+        146
+      ],
+      "gap": 13,
+      "left_inset": 12,
+      "word": [
+        67,
+        213
+      ],
+      "word_rows": [
+        27,
+        49
+      ],
+      "word_width": 146
+    },
+    "observed": {
+      "cap_height": 23,
+      "diamond": [
+        226,
+        262
+      ],
+      "diamond_colour": [
+        112,
+        172,
+        123
+      ],
+      "gap": 13,
+      "left_inset": 11,
+      "word": [
+        53,
+        213
+      ],
+      "word_rows": [
+        28,
+        51
+      ],
+      "word_width": 160
+    },
+    "passed": true,
+    "region": {
+      "box": [
+        736,
+        8,
+        1010,
+        112
+      ],
+      "offset": [
+        0,
+        -5
+      ]
+    },
+    "target": {
+      "card_type": "NOUN",
+      "rarity": "UNCOMMON"
+    },
+    "template": {
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+    }
+  },
   "reference_pack": {
     "contract": "hypertext.gemini.reference-pack/v1",
     "mode": "generate",

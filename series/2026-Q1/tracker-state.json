@@ -66,7 +66,7 @@
     },
     "48": {
       "status": "pass",
-      "note": "Stats rescored to rubric 1/3/1. Deterministic fixed elements applied: pips re-stamped from the template; UNCOMMON chip word re-set inside a widened block (template defect #2). Gates green, judge 100/100 3-0."
+      "note": "Stats rescored to rubric 1/3/1. Deterministic fixed elements applied (pips, pill, number, footer); rarity chip kept as painted and verified by the chip gate. Gates green."
     },
     "49": {
       "status": "pass",
@@ -165,6 +165,10 @@
     {
       "when": "2026-08-28",
       "what": "TEMPLATE DEFECT #2 - UNCOMMON chip (found via ledger comment on the BRICK proof: 'the rarity escaped the pill'). All five composed */uncommon templates set 'Uncommon' 12px from the chip block's left edge where the other rarities use ~32px, clipping the U; the image model had been quietly widening the chip on every UNCOMMON render, so the deterministic stamp was the first thing to expose it. Fix in fixed_elements: chip_geometry() measures block, word and diamond on the template; correct_chip_patch() extends the block left and re-sets the word in Liberation Serif at the template's cap height and colour whenever the word is clipped; stamp_chip() also covers any wider model-painted chip with the face's own parchment. Test asserts the word sits at the set inset for all 20 templates. BRICK re-stamped from the model render: gates green, judge 100/100 3-0, 1.2% pixels touched. Lesson: every element copied from a template needs a geometry assertion, not just a hash."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "RARITY CHIP: VERIFIED, NOT STAMPED (user, on the BRICK proof: the stamped chip 'doesn't blend into the card like the original did'). Side by side with model-painted UNCOMMON chips (SEED, MESSENGER, BRICK's own render) the stamped chip was flat navy with a hard outline and a thinner word; the painted chips carry a soft gradient, doubled outline and a halo. Decision: the chip is the one fixed element where the model beats the template, so it stays Gemini output and hypertext.cards.rarity_chip_gate makes it deterministic the other way - block, word width, inset, gap, cap height and diamond colour measured against the canonical template, wired into hypertext visual-gate and the pipeline gate beside the pip and cost gates. Stamp scope is now pips, type pill, number, footer. BRICK re-stamped from the model render with its own chip: 0.94% of pixels touched, chip region byte-identical, gates green. Template defects (TITLE pill, UNCOMMON chip) are handled by scripts/templates/repair_composed_labels.py (user runs --apply)."
     }
   ]
 }

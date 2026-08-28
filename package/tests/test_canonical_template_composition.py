@@ -156,9 +156,18 @@ def test_manifest_evidence_reconstructs_every_promoted_face_exactly():
             stage = stages[stage_name]
             if stage.get("applies_to_type", "").lower() not in ("", card_type):
                 continue
+            if stage.get("applies_to_rarity", "").lower() not in ("", rarity):
+                continue
             operation = stage["operation"]
             if operation == "copy_rgb":
                 reconstructed = base.copy()
+            elif operation == "paste_rgb_patch":
+                patch_path = resolve(stage["patch"])
+                assert hashlib.sha256(patch_path.read_bytes()).hexdigest() == stage["patch_sha256"]
+                with Image.open(patch_path) as patch:
+                    left, top, right, bottom = stage["box"]
+                    assert patch.size == (right - left, bottom - top)
+                    reconstructed.paste(patch.convert("RGB"), (left, top))
             elif operation == "paste_witness_through_mask":
                 witness, mask = ((type_witness, type_mask) if stage["witness_edit_kind"] == "type"
                                  else (rarity_witness, rarity_mask))

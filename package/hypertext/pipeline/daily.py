@@ -941,7 +941,25 @@ def _run_stat_pip_visual_gate(
         raise StatPipGateError(
             "cost indicator visual gate rejected the Gemini full-card candidate: " + summary
         )
-    _log(f"[visual gate] accepted structured +CARD cost indicator (report={report_path})")
+
+    # The painted rarity chip (word + diamond) is verified against the same
+    # template, never stamped: the model paints it better than a template copy.
+    from hypertext.cards.rarity_chip_gate import RarityChipGateError, inspect_rarity_chip
+
+    try:
+        chip = inspect_rarity_chip(out_png, template_path, card)
+    except RarityChipGateError as exc:
+        raise StatPipGateError(f"rarity chip gate could not evaluate the candidate: {exc}") from exc
+    report["rarity_chip"] = chip
+    report["passed"] = bool(chip["passed"])
+    write_stat_pip_gate_report(report, report_path)
+    if not chip["passed"]:
+        summary = "; ".join(item["code"] for item in chip["defects"])
+        _log(f"[visual gate] REJECTED {out_png}: {summary} (report={report_path})")
+        raise StatPipGateError(
+            "rarity chip visual gate rejected the Gemini full-card candidate: " + summary
+        )
+    _log(f"[visual gate] accepted structured +CARD cost indicator and painted rarity chip (report={report_path})")
     return report
 
 

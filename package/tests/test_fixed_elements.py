@@ -3,6 +3,7 @@ import json
 import shutil
 from pathlib import Path
 
+import pytest
 from PIL import Image
 
 from hypertext.cards.fixed_elements import apply_fixed_elements, register
@@ -61,29 +62,40 @@ def test_restamping_is_stable_and_keeps_the_gate_green(tmp_path):
     assert inspect_card_stat_pips(card_dir)["passed"]
 
 
-def test_chip_word_sits_inside_the_block_for_every_composed_template():
-    """The UNCOMMON composed templates clip the rarity word at the block's left
-    edge (template-package defect, 2026-08-28). The stamp must re-set the word
-    inside a widened block for those and leave the other templates untouched."""
-    import glob
+def test_rarity_word_sits_inside_the_block_on_every_composed_template():
+    """The package once shipped 'Uncommon' clipped by the block's left edge
+    (repaired 2026-08-28); keep every cell's word inset from the block."""
+    from hypertext.cards.template_matrix import MANIFEST_PATH, resolve_template_record
 
-    from hypertext.cards.fixed_elements import (
-        CHIP_WORD_PAD, FACE_SIZE, REGION_CHIP, chip_geometry, correct_chip_patch, font_path,
-    )
+    if "repairs" not in json.loads(MANIFEST_PATH.read_text(encoding="utf-8")):
+        pytest.skip("composed template repair not applied yet (scripts/templates/repair_composed_labels.py --apply)")
+    block_left, edge_cols, word_rows = 658, (659, 666), (27, 49)   # stops short of the rounded corner at (658, 50)
+    for card_type in ("NOUN", "VERB", "ADJECTIVE", "NAME", "TITLE"):
+        for rarity in ("COMMON", "UNCOMMON", "RARE", "GLORIOUS"):
+            record = resolve_template_record(card_type, rarity, verify=True)
+            image = Image.open(record["path"]).convert("L")
+            assert image.size == (848, 1264)
+            edge = image.crop((edge_cols[0], word_rows[0], edge_cols[1], word_rows[1]))
+            assert max(edge.getdata()) < 120, f"{card_type}/{rarity}: rarity word touches the block edge"
+            word = image.crop((block_left + 8, word_rows[0], 786, word_rows[1]))
+            assert max(word.getdata()) > 120, f"{card_type}/{rarity}: no rarity word inside the block"
 
-    paths = sorted(glob.glob(str(ROOT / "templates/card/v001/composed/*/*/template_1024x1536.png")))
-    assert len(paths) == 20
-    font = font_path()
-    for path in paths:
-        rarity = Path(path).parent.name
-        template = Image.open(path).convert("RGB").resize(FACE_SIZE, Image.Resampling.LANCZOS)
-        patch = template.crop(REGION_CHIP)
-        before = chip_geometry(patch)
-        assert before is not None, path
-        assert before["clipped"] == (rarity == "uncommon"), path
-        fixed, info = correct_chip_patch(patch, rarity.title(), font)
-        assert info["word_rendered"] == (rarity == "uncommon"), path
-        after = chip_geometry(fixed)
-        assert after is not None and not after["clipped"], path
-        assert after["left_pad"] >= CHIP_WORD_PAD - 8, (path, after)
-        assert after["gap"] >= 6, (path, after)
+
+def test_title_templates_carry_the_repaired_title_pill():
+    """The historical TITLE witness was a NOUN card, so every TITLE cell shipped
+    with a NOUN pill; the 2026-08-28 repair points them at a repaired witness."""
+    from hypertext.cards.template_matrix import MANIFEST_PATH, ROOT, resolve_template_record
+
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+    if "repairs" not in manifest:
+        pytest.skip("composed template repair not applied yet (scripts/templates/repair_composed_labels.py --apply)")
+    witness_record = manifest["repairs"][0]["title_type_label_witness"]
+    pill_box = tuple(manifest["type_label_box"])
+    witness = Image.open(ROOT / witness_record["path"]).convert("RGB").crop(pill_box)
+    noun = Image.open(resolve_template_record("NOUN", "COMMON", verify=True)["path"]).convert("RGB").crop(pill_box)
+    assert witness.tobytes() != noun.tobytes()
+    for rarity in ("COMMON", "UNCOMMON", "RARE", "GLORIOUS"):
+        record = resolve_template_record("TITLE", rarity, verify=True)
+        assert record["type_label_source"] == witness_record["path"]
+        title = Image.open(record["path"]).convert("RGB").crop(pill_box)
+        assert title.tobytes() == witness.tobytes()
