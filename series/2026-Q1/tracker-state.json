@@ -1,0 +1,162 @@
+{
+  "pilot": {
+    "32": {
+      "status": "pass",
+      "note": ""
+    },
+    "33": {
+      "status": "pass",
+      "note": ""
+    },
+    "34": {
+      "status": "pass",
+      "note": ""
+    },
+    "35": {
+      "status": "pass",
+      "note": ""
+    },
+    "36": {
+      "status": "pass",
+      "note": ""
+    },
+    "37": {
+      "status": "pass",
+      "note": ""
+    },
+    "38": {
+      "status": "pass",
+      "note": ""
+    },
+    "39": {
+      "status": "pass",
+      "note": ""
+    },
+    "40": {
+      "status": "pass",
+      "note": ""
+    },
+    "41": {
+      "status": "pass",
+      "note": ""
+    },
+    "42": {
+      "status": "pass",
+      "note": ""
+    },
+    "43": {
+      "status": "pass",
+      "note": ""
+    },
+    "44": {
+      "status": "pass",
+      "note": ""
+    },
+    "45": {
+      "status": "pass",
+      "note": ""
+    },
+    "46": {
+      "status": "pass",
+      "note": ""
+    },
+    "47": {
+      "status": "pass",
+      "note": ""
+    },
+    "48": {
+      "status": "pass",
+      "note": ""
+    },
+    "49": {
+      "status": "pass",
+      "note": ""
+    },
+    "50": {
+      "status": "pass",
+      "note": ""
+    },
+    "51": {
+      "status": "pass",
+      "note": ""
+    }
+  },
+  "log": [
+    {
+      "when": "2026-08-27",
+      "what": "Slot grammar approved and committed (59 slots, BABEL-032..090). Pilot batch queued: HIGH (COMMON ADJ), FOREIGN (UNCOMMON ADJ), ELDER (COMMON TITLE), SEED (UNCOMMON NOUN), DEEP (RARE ADJ)."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "Pilot running through the production pipeline: plan --auto (ability budgets + critic) -> validate -> imagegen (golden-matrix reference pack) -> visual-gate -> grade."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "#034 SEED complete: 100/100. Validator calibration (5 fixes) + operator-driven text mode landed on main. Schema drifts fixed en route: game_name Towerfall->Hypertext, rarity shapes ->diamond, growth-tolerant census tests."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "#032 HIGH complete at 100/100. Pipeline hardened en route: pip-row registration with bounds ('ark' proof reclassified as false rejection), 3-vote style majority, bullet-marker counting. Known open item: content score wobbles 90-100 - candidate for voting too."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "#033 ELDER complete: first-attempt 100/100 - the hardening from HIGH's fight (registration, voting, marker counting) paid off immediately."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "Active voice adopted set-wide (prefix boilerplate retired); all three pilot cards revoiced and re-rendered to 100/100. Self-healing loop added: render -> pip gate -> voted grade -> single-defect fix-mode revise. Descriptor gains flat-pip and verbatim-digit rules; revise.txt preview revert loophole closed."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "#035 DEEP complete at 100/100 (a5). RARE tier proven: two-branch COMPLEXITY stat-check renders legibly."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "Draw-one baseline power floor adopted: every ability must beat a plain 'Draw one card from the Tower.', commons only modestly. Enforced at three layers - budget table (payoff 1 = real material; COMMON widened to 3-5 with setup 0/interaction 0/payoff exactly 1 as brakes), deterministic material-action check, and a new power_floor critic category. HIGH (look-only) and ELDER (blind cycling) fell below the floor and were replanned through the full pipeline with their v1 scholarship preserved."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "ROOT CAUSE of render roulette found: the 20 golden templates are blank forms containing literal placeholder text ([ABILITY DESCRIPTION HERE], CARD TITLE, DEFINITION TEXT, #XXX, '- Set' footer). Models transcribed the form instead of filling it. Worse, the style judge could not catch leaks because the reference IS the form - a leaking card looks MORE like the template. Fixes: descriptor placeholder-substitution rule, reference-free focused leak query as a hard grade gate, focused bullet recount to stop wrapped-trivia false zeros. ELDER then passed first-attempt; HIGH/SEED/DEEP faces re-rendered leak-clean."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "#036 FOREIGN re-added and planned under the complete new contract (baseline floor + leak gate active from its first render)."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "PILOT COMPLETE: all 5 cards (HIGH, ELDER, SEED, DEEP, FOREIGN) at 100/100 with leak-clean faces and draw-one-baseline abilities. Trivia recount now guards the content scoring path too. Pipeline verdict: green for the remaining 54 slots and the 31 legacy face regenerations."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "Branching style ruling: a binary condition is stated once and the remainder resolved with 'otherwise' - don't restate the complement. Encoded in the ability primer ('or else'/bare 'if not' stay banned); DEEP replanned and re-rendered under it at 100/100."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "CARD-ADVANTAGE LADDER ruling: activation costs are part of the math - RARE must account for at least two cards' worth of advantage, GLORIOUS at least three; exclusive branches never stack. Encoded in the budget scale, primer, power_floor critic, and a branch-aware payoff estimator (the old DEEP is now deterministically rejected). DEEP redesigned as Sheol recovery plus draw - 'out of the deep' made literal - and re-rendered at first-attempt 100/100 with Psalm 130:1."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "Design-space ruling: the generation prompt, not any one card, was the problem - it stated budgets as constraints without opening creative space, so designs reached the floor by bolting a generic draw onto a small effect. build_candidate_prompt now carries a RARITY DESIGN SPACE palette per tier plus the anti-pattern by name; hand size noted as not-pure-advantage (players empty hands into Lots), making multi-card adds a legitimate RARE stretch. DEEP finalized as a single motion: up to three deep recoveries from Sheol."
+    },
+    {
+      "when": "2026-08-27",
+      "what": "BATCH 2 COMPLETE (#037-#041): GATHER, SODOM, KINGDOM, SHINAR, MESSENGER - all 100/100, three on first attempt. First GLORIOUS proven (table-wide Sheol gathering; two-card-back cost glyph gate-verified). Cost indicator gate revived from the pre-baseline WIP and wired fail-closed into every render path after DEEP's cross-marked card back slipped past the style judge; ledger cards are now tappable with a zoom lightbox."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "VERSE LEXICAL RULE (user): the printed OT verse must contain the card's Hebrew lemma and the NT verse its Greek lemma, and every ref-strip entry likewise - allusion-only verses (Luke 17:32 for SODOM) are out. Audit found 9 of 10 cards in violation; all patched at content level and re-rendered panel-only (image-only revises keep approved art). SHINAR's Greek panel now carries the NT's own name for the land (Babylon, Rev 18:2). Rule encoded in the metadata prompt, docs/prompt-recipe.md, and memory. Also: cost-indicator gate revived and made fail-closed on every render path; extra 'ORIGINAL LANGUAGES' heading now rejected by the leak gate; image-only revises write a prompt sidecar instead of mutating prompt.txt."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "BATCH 3 COMPLETE (#042-#046): TONGUE, CHOOSE, DARK, FILLED, WATCHMAN. First batch on the gemini-3.7-flash judge and the first run of the spool daemon: all twenty plan prompts answered from the validated design file, no manual driving. Two absence-class defects the vision judge cannot see reliably - missing 'OT Refs:/NT Refs:' labels and face-forward figures - now have reference-free focused gates in the grade phase (same pattern as the placeholder-leak gate). Lesson recorded: a schema-invalid descriptor edit silently broke the live gate; pytest exit codes are now checked explicitly."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "BATCH 4 (#047-#051): REDEEMER, BRICK, BABBLE, ENOCH, ABRAM. User rulings encoded: a look is only a kicker if the player can act on it (WATCHMAN reworked); the set's canvas is the whole antediluvian-to-Babel era, not the tower by default; each set is one fallen kingdom in order and Egypt is set 2 (EGYPT pulled from slot 050 before planning, ENOCH takes it). Root cause of NAME/COMMON style drift found: the curated finished-card reference manifest fed a pre-matrix MOSES example (caps rarity, hollow diamond, heavy borders, Nile scene) to every NAME/COMMON render - retired; SHINAR and ABRAM re-rendered on the template alone. Refs lines now ship with their labels baked in like verse lines; the descriptor pins title-case rarity text; the quantity grammar accepts 'another player' (first gift-to-a-rival design, held back for set 2)."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "ART STYLE RESTORED (user: 'we've lost the original art style I enjoyed with vibrant colors and impressionistic art'). Every art prompt I had written said 'engraved devotional style on warm parchment tones' - my invention. The authority is the printed set (example cards 001-020): luminous cinematic oil painting, deep shadowed fields lit by one radiant golden light, saturated blues and golds, symbolic subjects. Rule encoded in the descriptor (art_direction.style_rule), the metadata prompt, the recipe doc, and memory; all 20 art prompts rewritten; all 20 faces repainted panel-only via image-only revise (ELDER and GATHER needed fresh rebuilds after pip wobble), every one 100/100 and eyeballed. Stat rubric proposed (LORE/CONTEXT/COMPLEXITY definitions with anchors, 10/25/30/25/10 target shape, optional rarity sum caps) - awaiting the user's two calls before rescoring."
+    }
+  ]
+}
