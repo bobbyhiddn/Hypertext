@@ -1100,6 +1100,53 @@ def _log(msg: str) -> None:
     print(msg, flush=True)
 
 
+
+_CONTEXT_BUCKETS = ((10, 1), (40, 2), (120, 3), (400, 4))
+
+
+def _context_bucket(total: int) -> int:
+    for ceiling, bucket in _CONTEXT_BUCKETS:
+        if total <= ceiling:
+            return bucket
+    return 5
+
+
+def _validate_card_stats(stats: dict, rarity: str, rationale: dict | None) -> None:
+    """Fail closed on stats that violate the stat rubric (docs/rules.md).
+
+    LORE is theological weight and COMPLEXITY is linguistic history - both are
+    judgments that must cite a reason. CONTEXT is frequency: the rationale must
+    state the occurrence counts and the printed value must match their bucket.
+    Stats never scale with rarity, and a COMMON or UNCOMMON card may not carry
+    three stats of 4 or more (the "pip generosity" guard).
+    """
+    values = {}
+    for key in ("lore", "context", "complexity"):
+        try:
+            value = int(stats.get(key))
+        except (TypeError, ValueError):
+            raise RuntimeError(f"stat {key} is missing or not an integer")
+        if not 1 <= value <= 5:
+            raise RuntimeError(f"stat {key}={value} is outside 1-5")
+        values[key] = value
+    rationale = rationale if isinstance(rationale, dict) else {}
+    for key in ("lore", "context", "complexity"):
+        if not str(rationale.get(key, "")).strip():
+            raise RuntimeError(f"stats_rationale.{key} is required by the stat rubric")
+    numbers = [int(n) for n in re.findall(r"\d+", str(rationale["context"]))]
+    if not numbers:
+        raise RuntimeError("stats_rationale.context must state the lemma occurrence counts")
+    total = max(numbers)
+    expected = _context_bucket(total)
+    if values["context"] != expected:
+        raise RuntimeError(
+            f"CONTEXT={values['context']} disagrees with the frequency bucket {expected} for ~{total} occurrences"
+        )
+    if str(rarity).upper() in {"COMMON", "UNCOMMON"} and all(v >= 4 for v in values.values()):
+        raise RuntimeError(f"{rarity} card may not carry three stats of 4 or more: {values}")
+    _log(f"[plan] stats {values} accepted (context bucket from ~{total} occurrences)")
+
+
 def slugify(word: str) -> str:
     out = []
     prev_dash = False
@@ -1362,6 +1409,7 @@ def _generate_card_recipe(
         "  \"art_prompt\": string (must NOT mention text/letters/words/writing),\n"
         + ability_instruction +
         "  \"stats\": {\"lore\": int 1-5, \"context\": int 1-5, \"complexity\": int 1-5},\n"
+        "  \"stats_rationale\": {\"lore\": string, \"context\": string (must state the occurrence counts of the printed Hebrew lemma and Greek lemma and their sum), \"complexity\": string},\n"
         "  \"ot_verse\": {\"ref\": string, \"snippet\": string},\n"
         "  \"nt_verse\": {\"ref\": string, \"snippet\": string},\n"
         "  \"greek\": {\"text\": string, \"translit\": string},\n"
@@ -1379,6 +1427,7 @@ def _generate_card_recipe(
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
+        "STAT RUBRIC (hard requirement): LORE is theological weight (1 incidental, 3 a recognized theme, 5 a doctrine hangs on the word). CONTEXT is frequency: count occurrences of the printed Hebrew lemma plus the printed Greek lemma and bucket the sum - 1 for 10 or fewer, 2 for 11-40, 3 for 41-120, 4 for 121-400, 5 for more than 400; state the counts in stats_rationale.context. COMPLEXITY is etymological and linguistic history (1 transparent, 3 a derivation or translation choice worth explaining, 5 a word whose history is itself a study). Stats never scale with rarity and every filled pip must be earned; a COMMON or UNCOMMON card may not carry three stats of 4 or more. "
         "ART STYLE (hard requirement): art_prompt must describe a luminous, vibrant, full-color cinematic oil painting with impressionistic brushwork - deep shadowed backgrounds lit by one radiant golden light source, rich saturated blues and golds, ethereal atmosphere, a strong symbolic subject - in the manner of the printed Hypertext set (example cards 001-020); never sepia, monochrome, engraving, etching, woodcut, or line art; end every art_prompt with the phrase 'luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds'. "
         "SET THEME (hard requirement): this series is the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, and Babel. Draw art subjects from the WHOLE era rather than defaulting to the tower; the tower belongs only to words that are about it. Every Hypertext set is one fallen kingdom in historical order and the next set is Egypt, so no Egyptian subjects, places, or imagery in this set. "
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
@@ -2144,6 +2193,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=q_ability)
         grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
         stats = q_stats if q_stats else (recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {})
+        stats_rationale = recipe.get("stats_rationale") if isinstance(recipe.get("stats_rationale"), dict) else None
+        _validate_card_stats(stats, rarity, stats_rationale)
         ot_verse = q_ot_verse if q_ot_verse else (recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {})
         nt_verse = q_nt_verse if q_nt_verse else (recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {})
         greek = q_greek if q_greek else (recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {})
@@ -2209,6 +2260,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
                 "context": card["content"]["STAT_CONTEXT"],
                 "complexity": card["content"]["STAT_COMPLEXITY"],
             },
+            "stats_rationale": stats_rationale,
             "ability": ability_text,
             "ot_verse": {"ref": ot_ref, "snippet": ot_snip},
             "nt_verse": {"ref": nt_ref, "snippet": nt_snip},

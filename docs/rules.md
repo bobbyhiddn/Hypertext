@@ -51,11 +51,23 @@ Lot. The player with the highest total after the final Chapter wins.
 | **Rarity** | COMMON, UNCOMMON, RARE, or GLORIOUS |
 | **Printed cost** | Cards discarded from hand to activate (shown beside the rarity) |
 | **Art** | Thematic illustration |
-| **Stats** | LORE, CONTEXT, COMPLEXITY (1–5 each) |
+| **Stats** | LORE, CONTEXT, COMPLEXITY (1–5 each; see *Stat rubric* below) |
 | **Ability** | Effect when activated |
 | **Verses** | OT and NT scripture references |
 | **Hebrew/Aramaic · Greek** | Original-language forms |
 | **Trivia** | Educational notes |
+
+### Stat rubric
+
+The three stats are word-study measurements, not power. They are scored against these anchors and recorded with a one-line rationale per stat.
+
+| Stat | Measures | 1 | 3 | 5 |
+|------|----------|---|---|---|
+| **LORE** | theological weight | incidental; no teaching rests on it | a recognized theme with clear teaching | a doctrine hangs on the word (SEED, KINGDOM, election, redemption) |
+| **CONTEXT** | frequency: occurrences of the printed Hebrew lemma plus the printed Greek lemma | 10 or fewer | 41–120 | more than 400 (2 = 11–40, 4 = 121–400) |
+| **COMPLEXITY** | etymological history and linguistic complexity | transparent word, plain derivation, stable translation | a notable derivation or a translation choice to explain | the word's history is itself a study: contested etymology or a semantic range that changes doctrine |
+
+CONTEXT is computed from counts and must match its bucket. LORE and COMPLEXITY are judgments and must cite their reason. Stats do not scale with rarity; a filled row must be earned by the word, and a COMMON or UNCOMMON card may not carry three stats of 4 or more.
 
 ---
 
