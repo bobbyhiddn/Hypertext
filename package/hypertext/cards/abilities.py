@@ -445,6 +445,14 @@ def build_candidate_prompt(
         f"Word: {word_key}\nCard type: {type_key}\nTarget rarity: {rarity_key}\n"
         f"Semantic seed (authoritative):\n{json.dumps(semantic_seed, ensure_ascii=False, indent=2)}\n\n"
         f"Exact rarity budget:\n{_budget_prompt(rarity_key)}\n\n"
+        "RARITY DESIGN SPACE - spend the whole budget as ONE flavorful motion at the target weight; "
+        "never reach the rarity floor by bolting a generic draw or Letter onto a smaller effect:\n"
+        "- COMMON: a plain draw improved by one modest flavorful kicker - peek-and-pick, an informed filter, deliberate placement.\n"
+        "- UNCOMMON: about one card plus a real kicker - a Letter earned through the flavor, a burst after paying a cost, a type-hooked or named selection.\n"
+        "- RARE: at least two cards' worth in a single motion - multi-card selective recovery from Sheol, a scaling selection (\"up to three cards that each ...\"), a threshold that converts a built-up state into material, a strong exchange, or targeted interaction with another player's zones.\n"
+        "- GLORIOUS: at least three cards' worth or a chapter-shaping motion - touch every player, reset or reorder a zone, convert Pages or Lots into material, or bend the turn structure once.\n"
+        "Hand size is not pure advantage - players want to empty their hands into Lots - so multi-card adds are a legitimate stretch, and \"up to N\" handles scarcity honestly. "
+        "A creative shape that carries the flavor at full rarity weight always beats a safe shape that merely satisfies the budget.\n\n"
         + ABILITY_RULES_CONTEXT
         + feedback_text
         + "\nReturn ONLY JSON with this shape:\n"
@@ -818,6 +826,8 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         action for action in actions if action not in {"look at", "reveal", "name", "choose"}
     ]
     complexity = min(3, len(resolution_actions)) if resolution_actions else (1 if actions else 0)
+    if actions and re.search(r"\bup to\b|\bfor each\b", ability_text, re.IGNORECASE):
+        complexity = max(2, complexity)
     if _CONDITION_PATTERN.search(ability_text):
         complexity = max(2, complexity)
     if global_players:
@@ -848,8 +858,18 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         payoff = 3
     elif "exchange" in actions and "gain" in actions:
         payoff = 3
-    elif re.search(r"\b(?:adds?|draws?|returns?)\s+(?:up to\s+|exactly\s+)?(?:[2-9]|\d{2,})\b", ability_text, re.IGNORECASE):
+    elif re.search(
+        r"\b(?:adds?|draws?|returns?|chooses?)\s+(?:up to\s+|exactly\s+)?(?:[3-9]|\d{2,}|three|four|five|six|seven|eight|nine|ten)\b",
+        ability_text,
+        re.IGNORECASE,
+    ):
         payoff = 3
+    elif re.search(
+        r"\b(?:adds?|draws?|returns?|chooses?)\s+(?:up to\s+|exactly\s+)?(?:2|two)\b",
+        ability_text,
+        re.IGNORECASE,
+    ):
+        payoff = 2
     elif re.search(r"\bgains?\s+(?:[2-9]|\d{2,})\s+Letters?\b", ability_text, re.IGNORECASE):
         payoff = 3
     else:
