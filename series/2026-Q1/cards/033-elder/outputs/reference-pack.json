@@ -4,6 +4,8 @@
       "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
       "card_type": "NAME",
       "eligibility_reasons": [
+        "status=retired",
+        "legacy!=false",
         "target_type_mismatch=NAME"
       ],
       "eligible": false,
@@ -24,7 +26,7 @@
       "similarity_reason": "not_scored_ineligible",
       "similarity_score": null,
       "source_manifest": "templates/card/v001/finished-card-references.json",
-      "source_manifest_sha256": "2b7ba88d809a198b4672ba731b16803001d3416481dcf039c5ae88863fb571ed"
+      "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
     }
   ],
   "contract": "hypertext.gemini.reference-pack/v1",

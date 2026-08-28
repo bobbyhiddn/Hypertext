@@ -4,72 +4,72 @@
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "bdfbe96e904b62a7207f2cd248ba445f29ff7bde29b695c3499a6f82344869fb",
-      "output_sha256": "bdfbe96e904b62a7207f2cd248ba445f29ff7bde29b695c3499a6f82344869fb",
+      "input_sha256": "57de4ca91be0dbf09b5ed36c0f77267d4c448dda9b6f927a766c22502cba1e00",
+      "output_sha256": "57de4ca91be0dbf09b5ed36c0f77267d4c448dda9b6f927a766c22502cba1e00",
       "repaired": false,
       "stage": "plan",
       "status": "success",
-      "timestamp": "2026-08-27T17:48:07.782734+00:00"
+      "timestamp": "2026-08-28T11:12:01.137684+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "bdfbe96e904b62a7207f2cd248ba445f29ff7bde29b695c3499a6f82344869fb",
-      "output_sha256": "39e6b4d37569ebcde21339ef29d7d7ade02cbaaa588feb3bd57c0a56164431f6",
+      "input_sha256": "57de4ca91be0dbf09b5ed36c0f77267d4c448dda9b6f927a766c22502cba1e00",
+      "output_sha256": "b801198e583e14ee97f1da701fdf0e7313b3235be59d1a6d8965afce175acdb7",
       "repaired": false,
       "stage": "prompt",
       "status": "success",
-      "timestamp": "2026-08-27T17:48:07.782817+00:00"
+      "timestamp": "2026-08-28T11:12:01.137765+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
       "input_sha256": "f01eb519c7fb9b7fe0edc83c86571045e12502f27739e54ba7a12e5815005e9f",
-      "output_sha256": "a158891e3a905e8e52981f5b9c4be04c81fbbe477214d57f8d64c3f6e84c84f3",
+      "output_sha256": "7c5c4221aa960c06c57f1617b2caf956da1efcecd9c6ed4ddd71307099b8b8fb",
       "repaired": false,
       "stage": "references",
       "status": "success",
-      "timestamp": "2026-08-27T17:48:07.782843+00:00"
+      "timestamp": "2026-08-28T11:12:01.137791+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "39e6b4d37569ebcde21339ef29d7d7ade02cbaaa588feb3bd57c0a56164431f6",
+      "input_sha256": "b801198e583e14ee97f1da701fdf0e7313b3235be59d1a6d8965afce175acdb7",
       "output_sha256": "5a5d422683450c9d6c9b5d881dfe2b1ffc07931ec752d7c69960e205b7e26b55",
       "repaired": false,
       "stage": "image_request",
       "status": "success",
-      "timestamp": "2026-08-27T17:48:07.782879+00:00"
+      "timestamp": "2026-08-28T11:12:01.137833+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "c27795b427e17c775ccdca3d3ba020d71074aaaec021eaca1e7a69fd4faf6676",
-      "output_sha256": "79095cca03b36d1da33479dec4b9a8d58da994c75eb8f3f3176badcef49734d9",
+      "input_sha256": "5dfc4af743e30f44597328780d996d4094fd2eb057d183a382745d04e41568a3",
+      "output_sha256": "1a018ca87a32be2cdf3a17f3ca7d48e39356db0b9c669b0581de6f2830dda69a",
       "repaired": false,
       "stage": "candidate",
       "status": "success",
-      "timestamp": "2026-08-27T17:48:07.835055+00:00"
+      "timestamp": "2026-08-28T11:12:01.184309+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "bdfbe96e904b62a7207f2cd248ba445f29ff7bde29b695c3499a6f82344869fb",
+      "input_sha256": "57de4ca91be0dbf09b5ed36c0f77267d4c448dda9b6f927a766c22502cba1e00",
       "output_sha256": "3ef9367bef59dc8380816fe6878b838957bf577de52b6bfc5085faf6c47a19c4",
       "repaired": true,
       "stage": "revision",
       "status": "success",
-      "timestamp": "2026-08-27T17:48:07.835193+00:00"
+      "timestamp": "2026-08-28T11:12:01.184468+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "6ff5f0bfced632d618110c22f4559c3af3f6e270ba4963b04d77ea3539402245",
+      "input_sha256": "1f7ba248d7931ecaa3ab2bedce4c94a84762207d6db2719e3d660e5852681c6d",
       "output_sha256": "2d17f3c934f5136136b0eb27b53cddde8bd4156df5aea0a75d91fa8893ec47ac",
       "repaired": false,
       "stage": "review",
       "status": "success",
-      "timestamp": "2026-08-28T09:21:46.487627+00:00"
+      "timestamp": "2026-08-28T11:14:35.486335+00:00"
     }
   ]
 }
