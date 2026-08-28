@@ -24,7 +24,7 @@
   ],
   "pixel_mode": "RGB",
   "format": "PNG",
-  "asset_set_sha256": "6a308258488c8512e78c4f2b125a1bf8516861301b5938cd0a0046c6c655562c",
+  "asset_set_sha256": "ab0a8d4fd95c64c45fb6ce1ac84d1fc6006caa255fdf20500a93575f954f672f",
   "asset_set_sha256_algorithm": "SHA-256 of UTF-8 lines TYPE<TAB>RARITY<TAB>PATH<TAB>SHA256<TAB>WIDTHxHEIGHT<LF>, ordered by type_order then rarity_order",
   "source": {
     "plm_product_id": "2a013f5d71406d4a",
@@ -35,14 +35,15 @@
     "branch_head_at_packaging": "ee071060c4ff075f081de53af73d7d2dccd0b9b4",
     "construction_authority_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
     "manifest_path": "templates/card/v001/composed/manifest.json",
-    "manifest_sha256": "d73f0033e9cd67e09f9d99de63b57ff6d816cb2e4dacd1b6d98056db3f9b08f5"
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3"
   },
   "provenance": {
     "task_id": "363b064b54134649",
     "delivery_artifact_id": 213,
-    "delivery_composite_sha256": "782bc1237e814c8b7ed214ff0394a21e3effa241a2d58d3d2e616e74e253a985",
+    "delivery_composite_sha256": "50ec1ee1601d5b58e1249e529f65e5b704b238c6570a6f6fb886269dddbf7853",
     "delivery_composite_sha256_algorithm": "SHA-256 of concatenated lowercase SHA-256 hex digests of raw delivered file bytes, with file paths sorted lexicographically",
-    "verification": "All 20 pair, path, and SHA-256 records were matched to the completed delivery and recomputed from the repository PNGs."
+    "verification": "All 20 pair, path, and SHA-256 records were matched to the completed delivery and recomputed from the repository PNGs.",
+    "delivery_composite_files": "the 20 template PNGs, repo-relative paths sorted lexicographically"
   },
   "review_gate": {
     "requirement_id": "REQ-PPAUG-006",
@@ -73,7 +74,7 @@
       "type": "NOUN",
       "rarity": "UNCOMMON",
       "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-      "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+      "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
       "dimensions": [
         848,
         1264
@@ -149,7 +150,7 @@
       "type": "VERB",
       "rarity": "UNCOMMON",
       "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
-      "sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+      "sha256": "1e6872702773b4628b2cd72712e83f00e2461d6af0e0d72b3c6244ff717832a7",
       "dimensions": [
         848,
         1264
@@ -225,7 +226,7 @@
       "type": "ADJECTIVE",
       "rarity": "UNCOMMON",
       "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-      "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+      "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
       "dimensions": [
         848,
         1264
@@ -301,7 +302,7 @@
       "type": "NAME",
       "rarity": "UNCOMMON",
       "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
-      "sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+      "sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275",
       "dimensions": [
         848,
         1264
@@ -358,7 +359,7 @@
       "type": "TITLE",
       "rarity": "COMMON",
       "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
-      "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+      "sha256": "7a959dbbdc483bc0b27b1de85bda918607ffb260b448c3a4e0e4bf967f65a7ed",
       "dimensions": [
         848,
         1264
@@ -368,7 +369,7 @@
       "content_kind": "blank-type-by-rarity-template",
       "source_record": {
         "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__common.png",
-        "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png",
+        "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png",
         "visible_type_label": "TITLE",
         "visible_rarity_label": "COMMON"
       }
@@ -377,7 +378,7 @@
       "type": "TITLE",
       "rarity": "UNCOMMON",
       "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-      "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+      "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f",
       "dimensions": [
         848,
         1264
@@ -387,7 +388,7 @@
       "content_kind": "blank-type-by-rarity-template",
       "source_record": {
         "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__uncommon.png",
-        "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png",
+        "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png",
         "visible_type_label": "TITLE",
         "visible_rarity_label": "UNCOMMON"
       }
@@ -396,7 +397,7 @@
       "type": "TITLE",
       "rarity": "RARE",
       "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
-      "sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+      "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064",
       "dimensions": [
         848,
         1264
@@ -406,7 +407,7 @@
       "content_kind": "blank-type-by-rarity-template",
       "source_record": {
         "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__rare.png",
-        "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png",
+        "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png",
         "visible_type_label": "TITLE",
         "visible_rarity_label": "RARE"
       }
@@ -415,7 +416,7 @@
       "type": "TITLE",
       "rarity": "GLORIOUS",
       "path": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
-      "sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+      "sha256": "9871609e71da0f85f8846d0490cc9e0083c9fdf6c4aa9084613bdef85a48a260",
       "dimensions": [
         848,
         1264
@@ -425,10 +426,27 @@
       "content_kind": "blank-type-by-rarity-template",
       "source_record": {
         "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__glorious.png",
-        "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png",
+        "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png",
         "visible_type_label": "TITLE",
         "visible_rarity_label": "GLORIOUS"
       }
+    }
+  ],
+  "repairs": [
+    {
+      "date": "2026-08-28",
+      "contract": "hypertext.template-label-repair/v1",
+      "composed_manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+      "outputs": [
+        "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+        "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+        "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+        "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+        "templates/card/v001/composed/title/common/template_1024x1536.png",
+        "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+        "templates/card/v001/composed/title/rare/template_1024x1536.png",
+        "templates/card/v001/composed/title/glorious/template_1024x1536.png"
+      ]
     }
   ]
 }

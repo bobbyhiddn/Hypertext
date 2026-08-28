@@ -33,15 +33,15 @@ EXPECTED_PAIRS = {
 }
 EXPECTED_DIMENSIONS = (848, 1264)
 EXPECTED_SOURCE_MANIFEST_SHA256 = (
-    "d73f0033e9cd67e09f9d99de63b57ff6"
-    "d816cb2e4dacd1b6d98056db3f9b08f5"
+    "bb0f6beabbff74f76789cfa73a81ce03"
+    "2f80b5cbfb36af907857497e2bf368d3"
 )
 EXPECTED_PACKAGING_HEAD = "ee071060c4ff075f081de53af73d7d2dccd0b9b4"
 EXPECTED_CORRECTING_COMMIT = "ae62d3b39808aab8b1cd71761d85295488b52c46"
 EXPECTED_AUTHORITY_COMMIT = "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4"
 EXPECTED_PROVENANCE_COMPOSITE = (
-    "782bc1237e814c8b7ed214ff0394a21e"
-    "3effa241a2d58d3d2e616e74e253a985"
+    "50ec1ee1601d5b58e1249e529f65e5b7"
+    "04b238c6570a6f6fb886269dddbf7853"
 )
 ASSET_SET_ALGORITHM = (
     "SHA-256 of UTF-8 lines TYPE<TAB>RARITY<TAB>PATH<TAB>SHA256"
@@ -395,6 +395,25 @@ def verify_package(
     for digest, count in sorted(digest_counter.items()):
         if count > 1:
             _error(errors, f"duplicate asset digest {digest} ({count} entries)")
+
+    # Repair patches declared by the manifest (paste_rgb_patch stages and the
+    # repaired TITLE witness) are package PNGs too: expected on disk and
+    # digest-pinned, like every composed output.
+    declared_patches: list[tuple[str, str | None, str]] = []
+    for stage_name, stage in (source_manifest.get("construction_stages") or {}).items():
+        if isinstance(stage, dict) and stage.get("patch"):
+            declared_patches.append((str(stage["patch"]), stage.get("patch_sha256"), f"stages.{stage_name}.patch"))
+    for index, repair in enumerate(source_manifest.get("repairs") or []):
+        witness = repair.get("title_type_label_witness") if isinstance(repair, dict) else None
+        if isinstance(witness, dict) and witness.get("path"):
+            declared_patches.append((str(witness["path"]), witness.get("sha256"), f"repairs[{index}].title_type_label_witness"))
+    for rel_path, digest, label in declared_patches:
+        expected_disk_paths.add(rel_path)
+        patch_file = root / rel_path
+        if not patch_file.is_file():
+            _error(errors, f"{label} missing on disk: {rel_path}")
+        elif digest and hashlib.sha256(patch_file.read_bytes()).hexdigest() != digest:
+            _error(errors, f"{label} digest mismatch: {rel_path}")
 
     package_path = root / PACKAGE_ROOT
     if package_path.is_dir():

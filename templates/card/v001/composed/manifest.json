@@ -39,7 +39,8 @@
     "name_only_derived_quill_white_fill",
     "historical_rarity_witness_through_rarity_mask",
     "name_only_complete_quill_recovery",
-    "historical_type_label_pill"
+    "historical_type_label_pill",
+    "uncommon_rarity_word_repair"
   ],
   "construction_stages": {
     "frozen_base": {
@@ -107,6 +108,66 @@
         58
       ],
       "source_field": "type_label_source"
+    },
+    "uncommon_rarity_word_repair": {
+      "operation": "paste_rgb_patch",
+      "applies_to_rarity": "UNCOMMON",
+      "patch": "templates/card/v001/composed/repair/uncommon-rarity-word.png",
+      "patch_sha256": "c7a285382b86584d134e0c47c0f348ee7f3cde2731aab2370e7e77c0ac65fe67",
+      "box": [
+        652,
+        13,
+        791,
+        56
+      ],
+      "reason": "The accepted UNCOMMON rarity witness sets 'Uncommon' too wide for the block; its 'U' is clipped by the block's left edge. The patch clears the word to the block's own row profile and re-sets it to fit.",
+      "construction": {
+        "contract": "hypertext.template-label-repair/v1",
+        "script": "scripts/templates/repair_composed_labels.py",
+        "source": {
+          "template": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+          "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+        },
+        "edge_source": {
+          "template": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+          "sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c",
+          "columns": [
+            658,
+            664
+          ]
+        },
+        "clear_box": [
+          664,
+          27,
+          791,
+          51
+        ],
+        "profile_columns": [
+          700,
+          781
+        ],
+        "text": "Uncommon",
+        "font": {
+          "family": "Liberation Serif",
+          "file": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+          "sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4"
+        },
+        "font_size": 29,
+        "condense": 0.87,
+        "cap_rows": [
+          29,
+          48
+        ],
+        "right_x": 786,
+        "colour": [
+          141,
+          140,
+          151
+        ],
+        "supersample": 4,
+        "soften": 0.4,
+        "pillow": "12.3.0"
+      }
     }
   },
   "outputs": [
@@ -126,7 +187,7 @@
       "visible_type_label": "NOUN",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-      "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+      "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/noun__uncommon.png",
       "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/noun/historical_witness.png"
     },
@@ -166,7 +227,7 @@
       "visible_type_label": "VERB",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
-      "sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+      "sha256": "1e6872702773b4628b2cd72712e83f00e2461d6af0e0d72b3c6244ff717832a7",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/verb__uncommon.png",
       "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/verb/historical_witness.png"
     },
@@ -206,7 +267,7 @@
       "visible_type_label": "ADJECTIVE",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-      "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+      "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/adjective__uncommon.png",
       "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/adjective/historical_witness.png"
     },
@@ -246,7 +307,7 @@
       "visible_type_label": "NAME",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
-      "sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+      "sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/name__uncommon.png",
       "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/name/historical_witness.png"
     },
@@ -276,9 +337,9 @@
       "visible_type_label": "TITLE",
       "visible_rarity_label": "COMMON",
       "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
-      "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+      "sha256": "7a959dbbdc483bc0b27b1de85bda918607ffb260b448c3a4e0e4bf967f65a7ed",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__common.png",
-      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
+      "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png"
     },
     {
       "type": "TITLE",
@@ -286,9 +347,9 @@
       "visible_type_label": "TITLE",
       "visible_rarity_label": "UNCOMMON",
       "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-      "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+      "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__uncommon.png",
-      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
+      "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png"
     },
     {
       "type": "TITLE",
@@ -296,9 +357,9 @@
       "visible_type_label": "TITLE",
       "visible_rarity_label": "RARE",
       "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
-      "sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+      "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__rare.png",
-      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
+      "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png"
     },
     {
       "type": "TITLE",
@@ -306,9 +367,9 @@
       "visible_type_label": "TITLE",
       "visible_rarity_label": "GLORIOUS",
       "path": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
-      "sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+      "sha256": "9871609e71da0f85f8846d0490cc9e0083c9fdf6c4aa9084613bdef85a48a260",
       "accepted_candidate": "operator_review/constrained/e50961ad0f4d/title__glorious.png",
-      "type_label_source": "operator_review/constrained/e50961ad0f4d/edits/type/title/historical_witness.png"
+      "type_label_source": "templates/card/v001/composed/repair/title-type-label-witness.png"
     }
   ],
   "type_label_box": [
@@ -317,5 +378,137 @@
     274,
     58
   ],
-  "type_label_method": "Exact RGB crop of the established navy type-label pill from the checked-in historical type example; applied after accepted icon and rarity construction."
+  "type_label_method": "Exact RGB crop of the established navy type-label pill from the checked-in historical type example; applied after accepted icon and rarity construction.",
+  "repairs": [
+    {
+      "date": "2026-08-28",
+      "contract": "hypertext.template-label-repair/v1",
+      "script": "scripts/templates/repair_composed_labels.py",
+      "defects": [
+        "UNCOMMON rarity word clipped by the block (all five UNCOMMON cells)",
+        "TITLE cells carried the NOUN type pill (historical TITLE witness was a NOUN card)"
+      ],
+      "title_type_label_witness": {
+        "path": "templates/card/v001/composed/repair/title-type-label-witness.png",
+        "sha256": "7a959dbbdc483bc0b27b1de85bda918607ffb260b448c3a4e0e4bf967f65a7ed",
+        "derived_from": {
+          "template": "templates/card/v001/composed/title/common/template_1024x1536.png",
+          "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8"
+        },
+        "pill_interior": [
+          126,
+          28,
+          214,
+          54
+        ],
+        "radius": 13,
+        "fill": [
+          7,
+          6,
+          22
+        ],
+        "text": "TITLE",
+        "font": {
+          "family": "Liberation Serif:bold",
+          "file": "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf",
+          "sha256": "443a4dbd694b6e4689925947b456e0532e10b19c90fa32eb39ea6c2cd9db9ebd"
+        },
+        "font_size": 26,
+        "condense": 0.92,
+        "cap_rows": [
+          32,
+          49
+        ],
+        "center_x": 168.5,
+        "colour": [
+          235,
+          234,
+          247
+        ]
+      },
+      "outputs": [
+        {
+          "type": "NOUN",
+          "rarity": "UNCOMMON",
+          "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+          "previous_sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7",
+          "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
+          "stages": [
+            "uncommon_rarity_word_repair"
+          ]
+        },
+        {
+          "type": "VERB",
+          "rarity": "UNCOMMON",
+          "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
+          "previous_sha256": "f2759c9c4fa0bb87d2c6e37e5a290edf71b1c28f8c908a8a480f8d23af6bd0fb",
+          "sha256": "1e6872702773b4628b2cd72712e83f00e2461d6af0e0d72b3c6244ff717832a7",
+          "stages": [
+            "uncommon_rarity_word_repair"
+          ]
+        },
+        {
+          "type": "ADJECTIVE",
+          "rarity": "UNCOMMON",
+          "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+          "previous_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+          "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
+          "stages": [
+            "uncommon_rarity_word_repair"
+          ]
+        },
+        {
+          "type": "NAME",
+          "rarity": "UNCOMMON",
+          "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+          "previous_sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+          "sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275",
+          "stages": [
+            "uncommon_rarity_word_repair"
+          ]
+        },
+        {
+          "type": "TITLE",
+          "rarity": "COMMON",
+          "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
+          "previous_sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8",
+          "sha256": "7a959dbbdc483bc0b27b1de85bda918607ffb260b448c3a4e0e4bf967f65a7ed",
+          "stages": [
+            "paste_type_label_crop:repaired-witness"
+          ]
+        },
+        {
+          "type": "TITLE",
+          "rarity": "UNCOMMON",
+          "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+          "previous_sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0",
+          "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f",
+          "stages": [
+            "uncommon_rarity_word_repair",
+            "paste_type_label_crop:repaired-witness"
+          ]
+        },
+        {
+          "type": "TITLE",
+          "rarity": "RARE",
+          "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+          "previous_sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
+          "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064",
+          "stages": [
+            "paste_type_label_crop:repaired-witness"
+          ]
+        },
+        {
+          "type": "TITLE",
+          "rarity": "GLORIOUS",
+          "path": "templates/card/v001/composed/title/glorious/template_1024x1536.png",
+          "previous_sha256": "bb3d3b60bd129b85b01ae38c875a35775b7968f6942dae971c9acfc96c8571f1",
+          "sha256": "9871609e71da0f85f8846d0490cc9e0083c9fdf6c4aa9084613bdef85a48a260",
+          "stages": [
+            "paste_type_label_crop:repaired-witness"
+          ]
+        }
+      ]
+    }
+  ]
 }

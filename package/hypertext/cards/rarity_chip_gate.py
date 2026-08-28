@@ -30,7 +30,9 @@ REGION_CHIP = (736, 8, 1010, 112)   # face-space; block, word, diamond and the f
 SEARCH = 14
 BLOCK_LUMA = 70          # block pixels are darker than this
 GLYPH_LUMA = 110         # word / diamond pixels are lighter than this
-WORD_WIDTH_TOLERANCE = (-0.12, 0.16)   # painted "Uncommon" is up to 11% wider than the clipped template word
+WORD_WIDTH_TOLERANCE = (-0.25, 0.12)   # painted words track the metric expectation; a template copy of the
+                                        # condensed repaired "Uncommon" (126px vs 161 expected) must still pass
+WORD_METRIC_FONT = "Liberation Serif"   # width ratios between rarity words are taken from this face
 MIN_WORD_INSET = 6       # px between the block's left edge and the word (never clipped)
 MIN_WORD_GAP = 5         # px between the word and the diamond
 MAX_EXTRA_GAP = 25
@@ -143,6 +145,32 @@ def _distance(a: tuple[int, int, int], b: tuple[int, int, int]) -> float:
     return sum((x - y) ** 2 for x, y in zip(a, b)) ** 0.5
 
 
+def _metric_ratio(word: str, base: str = "Common") -> float:
+    """Width of `word` relative to `base` in the metric font (font-size independent)."""
+    import subprocess
+
+    from PIL import ImageFont
+
+    path = subprocess.run(["fc-match", "-f", "%{file}", WORD_METRIC_FONT], capture_output=True, text=True, check=True).stdout.strip()
+    font = ImageFont.truetype(path, 80)
+    width = lambda text: font.getbbox(text)[2] - font.getbbox(text)[0]
+    return width(word) / width(base)
+
+
+def expected_word_width(template_path: Path, rarity: str, own: dict[str, Any]) -> int:
+    """The rarity word's expected painted width: the COMMON sibling template's
+    word scaled by the metric ratio of the two words. The model paints every
+    rarity word in one consistent face, so this tracks painted faces better
+    than the rarity's own template word (whose UNCOMMON repair is condensed)."""
+    folder = template_path.parent.parent
+    common = folder / "common" / template_path.name
+    if rarity != "COMMON" and common.is_file():
+        geo = chip_geometry(_load(common).crop(REGION_CHIP))
+        if geo:
+            return round(geo["word_width"] * _metric_ratio(rarity.title()))
+    return own["word_width"]
+
+
 def _sibling_diamond_colours(template_path: Path, rarity: str) -> dict[str, tuple[int, int, int]]:
     """Diamond colours of the other rarities' templates in the same type folder,
     for nearest-template classification of the painted diamond."""
@@ -189,9 +217,11 @@ def inspect_rarity_chip(candidate_path: Path, template_path: Path, card: dict[st
         defects.append({"code": "rarity-chip-missing", "detail": "no navy block with a word and a diamond inside the chip region"})
     else:
         lo, hi = WORD_WIDTH_TOLERANCE
-        ratio = observed["word_width"] / expected["word_width"] - 1.0
+        want = expected_word_width(template_path, rarity, expected)
+        expected["expected_word_width"] = want
+        ratio = observed["word_width"] / want - 1.0
         if not (lo <= ratio <= hi):
-            defects.append({"code": "rarity-word-width", "detail": f"word width {observed['word_width']}px vs template {expected['word_width']}px ({ratio:+.0%}); wrong or missing rarity word"})
+            defects.append({"code": "rarity-word-width", "detail": f"word width {observed['word_width']}px vs expected {want}px ({ratio:+.0%}); missing or garbled rarity word"})
         if observed["left_inset"] < MIN_WORD_INSET:
             defects.append({"code": "rarity-word-clipped", "detail": f"word starts {observed['left_inset']}px from the block's left edge"})
         if observed["gap"] < MIN_WORD_GAP or observed["gap"] > expected["gap"] + MAX_EXTRA_GAP:
