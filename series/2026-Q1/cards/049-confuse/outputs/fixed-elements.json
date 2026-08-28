@@ -23,7 +23,7 @@
       ],
       "counts": [
         3,
-        4,
+        3,
         4
       ]
     },
@@ -68,6 +68,6 @@
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "d66d48fc6c7e153bf73e6b0cff8cf4448a04cdb05180cab8d59efb514cec4f36",
-  "face_sha256_after": "d13c34c858ca43a73e97c6d1a1c81bd885c0a13b6cbc360b1cf0b4da90a56701"
+  "face_sha256_before": "02796f8b9231fd36daf58bdcdab0d95fa2376be071068fc9c0dab1f75f3f6412",
+  "face_sha256_after": "e0cdb819acb2e3a66536d9d2cb4526acd3e9095b2917790f074db4ba785e60dd"
 }

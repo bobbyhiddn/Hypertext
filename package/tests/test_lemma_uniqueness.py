@@ -45,7 +45,12 @@ def test_distinct_lemmas_pass():
 
 
 def test_a_card_never_conflicts_with_itself():
-    assert lemma_conflicts(FIRE, [("061-fire", FIRE)]) == []
+    assert lemma_conflicts(FIRE, []) == []
+
+
+def test_the_same_word_twice_is_a_conflict():
+    kinds = {c["kind"] for c in lemma_conflicts(CONFUSE, [("006-confuse", CONFUSE)])}
+    assert "same-word" in kinds
 
 
 def test_a_proper_name_spelled_like_a_noun_is_a_homograph_not_a_derivative():

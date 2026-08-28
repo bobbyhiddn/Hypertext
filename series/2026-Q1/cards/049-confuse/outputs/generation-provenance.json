@@ -1,20 +1,20 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "cb61efce1666ac60291473cc2157d2834d76ddbad727b9d58969d821000b65a3",
-    "generation_metadata_path": "series/2026-Q1/cards/049-babble/outputs/generation.json",
-    "generation_metadata_sha256": "8cb82a5d184240fd0e6559b3cf80de73d7574445fb0b22190f921ea63139892e",
-    "path": "series/2026-Q1/cards/049-babble/outputs/card_1024x1536.png",
-    "sha256": "d13c34c858ca43a73e97c6d1a1c81bd885c0a13b6cbc360b1cf0b4da90a56701"
+    "gemini_output_sha256": "0b90e235cbd29021b2c6da81e3599e6935cab330c92218e1dcda9168bbea1e47",
+    "generation_metadata_path": "series/2026-Q1/cards/049-confuse/outputs/generation.json",
+    "generation_metadata_sha256": "cc8deecfb69425eccf72d93205fac35349675d710d6d63a980073b082a8e81c4",
+    "path": "series/2026-Q1/cards/049-confuse/outputs/card_1024x1536.png",
+    "sha256": "e0cdb819acb2e3a66536d9d2cb4526acd3e9095b2917790f074db4ba785e60dd"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/049-babble/prompt.txt",
-    "sha256": "381130549d49b2fba816a20099381664e85624b96eefe9c795d7dc7a50db7482"
+    "path": "series/2026-Q1/cards/049-confuse/prompt.txt",
+    "sha256": "0e95a2601e821e6839e1609c067688b9b59a047564ecb89c2af611e6080a12a0"
   },
   "recipe": {
-    "canonical_sha256": "8753f18a57f12d8b552ddefe6aeb537efb2684e709110520d36310b9b0645836",
-    "file_sha256": "e77dc40721322916024fc6cdc26263e41bf2147e1fe72f659e30e19d85a58780",
-    "path": "series/2026-Q1/cards/049-babble/card.json"
+    "canonical_sha256": "46d6b2889c5df13e8bb8234c506d6eda21475f37f27fcdda1c731aee5d1371ff",
+    "file_sha256": "62e72cc8091e9cc82765ff986358190f0b04a93cdb1f9e36dd52686ce6ba746a",
+    "path": "series/2026-Q1/cards/049-confuse/card.json"
   },
   "reference_pack": {
     "candidate_audit": [
@@ -92,7 +92,7 @@
     "target_rarity": "COMMON",
     "target_type": "VERB"
   },
-  "reference_pack_path": "series/2026-Q1/cards/049-babble/outputs/reference-pack.json",
+  "reference_pack_path": "series/2026-Q1/cards/049-confuse/outputs/reference-pack.json",
   "reference_pack_sha256": "2978bbe9872aba77c4e3eb833f933892bdb2a9085e0f81424967fbfdffb73f5d",
   "settings": {
     "aspect_ratio": "2:3",

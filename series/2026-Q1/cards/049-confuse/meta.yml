@@ -1,0 +1,54 @@
+number: 049
+word: CONFUSE
+gloss: To mix speech until no hearer understands
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An unfinished brick tower at the moment of confusion, abandoned scaffolding and
+  dropped tools, bricks tumbling from a half-laid course, great flocks of birds bursting upward
+  from the tower like scattered words, only tiny distant figures far below walking away in
+  every direction with backs turned, no faces, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
+stats:
+  lore: 3
+  context: 3
+  complexity: 4
+ability: Reveal one card from the top of the Tower and add that revealed card to your hand.
+  Then shuffle the cards in the Tower.
+ot_verse:
+  ref: Genesis 11:9
+  snippet: the LORD did there confound the language
+nt_verse:
+  ref: Acts 2:6
+  snippet: the multitude came together, and were confounded
+greek:
+  text: συγχέω
+  translit: syncheo
+hebrew:
+  text: בָּלַל
+  translit: balal
+ot_refs: Gen 11:9 • Gen 11:7 • Ps 92:10
+nt_refs: Acts 2:6 • Acts 9:22 • Acts 19:32
+trivia:
+- Genesis 11:9 names Babel from balal, to confound - a Hebrew pun on Babylon's own name.
+- The Greek Old Testament renders balal with syncheo, the very word Acts 2 uses when the crowd
+  was confounded.
+- Balal first means to mix - oil mingled with flour in the offerings - before it means to
+  confuse.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: 'Re-lemma''d 2026-08-28 under the one-lemma rule (balal / syncheo belong to CONFUSE
+  #006): Bavel / battalogeo. Renamed BABBLE -> CONFUSE 2026-08-28 by the user ("just change
+  babble to confuse"), restoring balal / syncheo; legacy #006 CONFUSE must take a new word
+  in the legacy regeneration pass.'
+sources: []
+search_queries: []
+stats_rationale:
+  lore: the confusion at Babel is a theme; the balal/Babel pun and LXX syncheo are a linguistic
+    study
+  context: balal ~43 + syncheo ~5 = ~48
+  complexity: the confusion at Babel is a theme; the balal/Babel pun and LXX syncheo are a
+    linguistic study

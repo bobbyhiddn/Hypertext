@@ -70,7 +70,7 @@
     },
     "49": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100. Re-lemma'd 2026-08-28 to Bavel / battalogeo (Gen 11:9 / Matt 6:7) - balal/syncheo belong to CONFUSE #006; stats 3/4/4; re-rendered 100/100 3-0."
+      "note": "CONFUSE VERB/COMMON (renamed from BABBLE 2026-08-28 by the user; balal / syncheo restored, Gen 11:9 / Acts 2:6). Reveal-add the top card, then shuffle the Tower. Stats 3/3/4. Legacy #006 CONFUSE must take a new word in the legacy regeneration pass - the audit shows that one same-word conflict until then."
     },
     "50": {
       "status": "pass",
@@ -241,6 +241,10 @@
     {
       "when": "2026-08-28",
       "what": "LEMMA AUDIT RESOLVED (user: 'keep brick and keeper'). STONE #008 -> petra (Matt 16:18; legacy face regenerates with the legacy pass), WATCHMAN #046 -> gregoreo (Mark 13:37), BABBLE #049 -> Bavel / battalogeo (Gen 11:9 / Matt 6:7). WATCHMAN and BABBLE re-rendered at 100/100 3-0; 'hypertext lemma-audit' reports 0 conflicts."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "BABBLE -> CONFUSE (user: 'just change babble to confuse'): #049 renamed with balal / syncheo restored; the one-lemma rule now also rejects the same WORD twice, so legacy #006 CONFUSE is flagged for a new word in the legacy pass. Plan-phase lemma and shape checks skip the slot being re-planned."
     }
   ]
 }

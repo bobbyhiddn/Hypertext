@@ -2252,7 +2252,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
 
         lemma_issues = lemma_conflicts(
             {"WORD": word, "CARD_TYPE": card_type, "HEBREW": hebrew.get("text", ""), "HEBREW_TRANSLIT": hebrew.get("translit", ""), "GREEK": greek.get("text", "")},
-            load_series_records(series_dir),
+            [r for r in load_series_records(series_dir) if not r[0].startswith(f"{number:03d}-")],   # a re-plan of this slot is not a conflict with itself
         )
         if lemma_issues:
             raise RuntimeError("one-lemma rule: " + summarize(lemma_issues))
@@ -2268,7 +2268,7 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         # same thing as KINGDOM").
         from hypertext.cards.ability_shape import load_series_abilities, shape_conflicts
 
-        shape_issues = shape_conflicts(ability_text, load_series_abilities(series_dir))
+        shape_issues = shape_conflicts(ability_text, [r for r in load_series_abilities(series_dir) if not r[0].startswith(f"{number:03d}-")])
         if shape_issues:
             raise RuntimeError("ability shape rule: same shape as " + ", ".join(f"{c['with']} ({c['detail']})" for c in shape_issues))
         _log("[plan] ability shape rule: no card in the set shares this shape")

@@ -94,6 +94,7 @@ def lemma_conflicts(candidate: dict[str, Any], existing: Iterable[tuple[str, dic
     for label, content in existing:
         other = _record_keys(content)
         if other["word"] == cand["word"]:
+            found.append({"with": label, "kind": "same-word", "detail": f"both cards are {cand['word']}"})
             continue
         # A proper name spelled like a common noun (SHEM / NAME) is a homograph,
         # not a derivative: exempt when exactly one of the two is a NAME card.

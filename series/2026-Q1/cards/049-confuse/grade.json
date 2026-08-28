@@ -1,5 +1,5 @@
 {
-  "word": "BABBLE",
+  "word": "CONFUSE",
   "card_type": "VERB",
   "rarity": "COMMON",
   "content_score": 100,
@@ -46,9 +46,9 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "d13c34c858ca43a73e97c6d1a1c81bd885c0a13b6cbc360b1cf0b4da90a56701",
+    "candidate_sha256": "e0cdb819acb2e3a66536d9d2cb4526acd3e9095b2917790f074db4ba785e60dd",
     "template_sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a",
-    "report": "series/2026-Q1/cards/049-babble/outputs/visual-gate.json"
+    "report": "series/2026-Q1/cards/049-confuse/outputs/visual-gate.json"
   },
   "style_refs_count": 1,
   "style_refs": [
