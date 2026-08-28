@@ -13,8 +13,8 @@ stats:
   lore: 4
   context: 3
   complexity: 4
-ability: Choose one card in Sheol that has COMPLEXITY three or more. Add that chosen
-  card to your hand, then draw one card from the Tower.
+ability: Choose up to three cards in Sheol that each have COMPLEXITY three or more.
+  Add those chosen cards to your hand.
 ot_verse:
   ref: Psalm 130:1
   snippet: Out of the depths have I cried

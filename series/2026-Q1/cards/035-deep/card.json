@@ -176,7 +176,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "A knotted sounding line with a stone weight descending into dark layered waters, faint light rays filtering from the surface far above, dim silhouettes of great sea creatures in the depths below, engraved devotional style on warm parchment tones",
-    "ABILITY_TEXT": "Choose one card in Sheol that has COMPLEXITY three or more. Add that chosen card to your hand, then draw one card from the Tower.",
+    "ABILITY_TEXT": "Choose up to three cards in Sheol that each have COMPLEXITY three or more. Add those chosen cards to your hand.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 4,
