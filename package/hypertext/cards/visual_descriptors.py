@@ -91,6 +91,13 @@ def canonical_prompt_content(content: dict) -> dict:
         if text != icon or text not in RARITY_VALUES:
             raise DescriptorError("canonical RARITY_TEXT and RARITY_ICON must match a declared rarity")
         data["RARITY_TEXT"] = data["RARITY_ICON"] = text
+    # The image model drops a bare references label often enough to matter;
+    # the verse lines never lose their reference because the whole line is
+    # supplied verbatim, so supply the refs lines the same way.
+    for key, label in (("OT_REFS", "OT Refs: "), ("NT_REFS", "NT Refs: ")):
+        value = data.get(key)
+        if isinstance(value, str) and value.strip() and not value.strip().upper().startswith(label.strip().upper()):
+            data[key] = label + value.strip()
     return data
 
 def serialize_lot_prompt(*, content: dict, mode: str = "EXPLICIT",
@@ -167,7 +174,7 @@ def serialize_word_card_prompt(*, card_type: str, rarity: str, content: dict,
         "CONTENT_ORDER=" + dump(structure["content_order"]),
         "ART DIRECTION=" + dump(art_direction),
         "ORIGINAL LANGUAGE LAYOUT=" + dump(language_layout),
-        "ORIGINAL LANGUAGE PLACEMENT: LEFT header is exactly HEBREW/ARAMAIC and contains HEBREW, bare italic HEBREW_TRANSLIT, then 'OT Refs:' plus OT_REFS. RIGHT header is exactly GREEK and contains GREEK, bare italic GREEK_TRANSLIT, then 'NT Refs:' plus NT_REFS.",
+        "ORIGINAL LANGUAGE PLACEMENT: LEFT header is exactly HEBREW/ARAMAIC and contains HEBREW, bare italic HEBREW_TRANSLIT, then the OT_REFS line printed exactly as supplied (it already begins with the label 'OT Refs:'; print that label once, never twice, never omitted). RIGHT header is exactly GREEK and contains GREEK, bare italic GREEK_TRANSLIT, then the NT_REFS line printed exactly as supplied (it already begins with 'NT Refs:'; once, never omitted).",
         "REPEAT PLACEMENT: never swap languages; Old Testament is LEFT; New Testament is RIGHT.",
         "EXACT_CANONICAL_CONTENT_JSON=" + dump(content),
         "Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.",

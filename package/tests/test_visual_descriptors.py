@@ -72,8 +72,8 @@ def test_prompt_preserves_exact_canonical_unicode_and_redundant_language_sides(c
     assert "LEFT header is exactly HEBREW/ARAMAIC" in prompt
     assert "RIGHT header is exactly GREEK" in prompt
     assert "bare italic HEBREW_TRANSLIT" in prompt
-    assert "'OT Refs:' plus OT_REFS" in prompt
-    assert "'NT Refs:' plus NT_REFS" in prompt
+    assert "the OT_REFS line printed exactly as supplied" in prompt
+    assert "the NT_REFS line printed exactly as supplied" in prompt
 
 
 def test_printed_see_language_layout_is_machine_readable_and_compact():
