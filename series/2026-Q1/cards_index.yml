@@ -14,6 +14,7 @@ words:
 - ELDER
 - FOREIGN
 - FORM
+- GATHER
 - GOOD
 - GRACE
 - HEAR
@@ -247,3 +248,8 @@ cards:
   type: ADJECTIVE
   rarity: UNCOMMON
   ability_pattern: add_hand_conditional_tower_type_name
+- number: 37
+  word: GATHER
+  type: VERB
+  rarity: COMMON
+  ability_pattern: draw_look_top_tower

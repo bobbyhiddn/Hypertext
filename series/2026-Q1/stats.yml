@@ -17,16 +17,16 @@ rarity_counts:
   GLORIOUS: 5
   RARE: 8
   UNCOMMON: 11
-  COMMON: 12
+  COMMON: 13
 type_counts:
   NOUN: 9
-  VERB: 11
+  VERB: 12
   ADJECTIVE: 7
   NAME: 4
   TITLE: 5
 combination_counts:
   COMMON_NOUN: 5
-  COMMON_VERB: 2
+  COMMON_VERB: 3
   UNCOMMON_ADJECTIVE: 2
   UNCOMMON_VERB: 5
   RARE_VERB: 3
@@ -45,6 +45,6 @@ combination_counts:
   GLORIOUS_ADJECTIVE: 1
   GLORIOUS_NAME: 1
   GLORIOUS_TITLE: 1
-last_rarity: RARE
-last_type: ADJECTIVE
-total: 36
+last_rarity: COMMON
+last_type: VERB
+total: 37

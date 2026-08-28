@@ -1,0 +1,41 @@
+number: '037'
+word: GATHER
+gloss: To bring together into one what was scattered abroad
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: Hands binding scattered wheat stalks into one sheaf in a harvest field,
+  distant robed figures converging from every direction toward a single meeting point
+  on the plain, low golden light, engraved devotional style on warm parchment tones
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+ability: Look at the top three cards of the Tower and put those cards back on top
+  of the Tower in any order. Then draw one card from the Tower.
+ot_verse:
+  ref: Isaiah 11:12
+  snippet: gather together the dispersed of Judah
+nt_verse:
+  ref: John 11:52
+  snippet: gather together in one the children of God
+greek:
+  text: συνάγω
+  translit: synago
+hebrew:
+  text: קָבַץ
+  translit: qavats
+ot_refs: Isa 11:12 • Deut 30:3 • Ps 106:47
+nt_refs: John 11:52 • Acts 2:6 • Matt 23:37
+trivia:
+- Hebrew qavats is the word the prophets use for God gathering exiles out of every
+  land.
+- Greek synago, to gather, is the root of synagogue - the gathering place.
+- John 11:52 promises to gather into one the children scattered abroad - Babel reversed.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
