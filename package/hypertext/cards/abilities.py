@@ -452,6 +452,7 @@ def build_candidate_prompt(
         "- RARE: at least two cards' worth in a single motion - multi-card selective recovery from Sheol, a scaling selection (\"up to three cards that each ...\"), a threshold that converts a built-up state into material, a strong exchange, or targeted interaction with another player's zones.\n"
         "- GLORIOUS: at least three cards' worth or a chapter-shaping motion - touch every player, reset or reorder a zone, convert Pages or Lots into material, or bend the turn structure once.\n"
         "Hand size is not pure advantage - players want to empty their hands into Lots - so multi-card adds are a legitimate stretch, and \"up to N\" handles scarcity honestly. "
+        "A look is only a kicker when the player can act on what is seen - choose it, reorder it, or draw it next; looking at a card that cannot then be taken or affected (for example the bottom card when the ability only draws from the top) is worthless and must not be printed. "
         "A creative shape that carries the flavor at full rarity weight always beats a safe shape that merely satisfies the budget.\n\n"
         + ABILITY_RULES_CONTEXT
         + feedback_text
