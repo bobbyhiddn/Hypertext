@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "37abccfbda2d87d08f1026e51232d586ee85113aa9dd9540b2b9ff6594461c2b",
+    "gemini_output_sha256": "578d1893869bc578b2e07cd3ba43824ca1beb9b21f595b5c4657cdca79844fbe",
     "generation_metadata_path": "series/2026-Q1/cards/046-watchman/outputs/generation.json",
-    "generation_metadata_sha256": "4cc74586db4204881106c7baad36c2970a058e5e6908bb6e9b0cd4a4a3768968",
+    "generation_metadata_sha256": "2f8216167631baf4f97969ad15e938437ccf360c9c3f48761724995b818c5ab3",
     "path": "series/2026-Q1/cards/046-watchman/outputs/card_1024x1536.png",
-    "sha256": "37abccfbda2d87d08f1026e51232d586ee85113aa9dd9540b2b9ff6594461c2b"
+    "sha256": "578d1893869bc578b2e07cd3ba43824ca1beb9b21f595b5c4657cdca79844fbe"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/046-watchman/outputs/prompt.revision.txt",
-    "sha256": "a35505f9274428a3378ff00ad140ba98dd1efd8ff6f3681ddf7cc89c92cc2b32"
+    "path": "series/2026-Q1/cards/046-watchman/prompt.txt",
+    "sha256": "fe701c448cba51e6788ea1ca92999c1ddde3e372e5d93bbcb40fe7e98c119e0f"
   },
   "recipe": {
-    "canonical_sha256": "e3f6b4c84ce8582e1a961bbce60f25510a1d7429a401b3e2678ef0b38163e7c0",
-    "file_sha256": "64fe426e5aa7f67b5405e0f6b23ded1c36a13b65148700c241402ddb317c6c5f",
+    "canonical_sha256": "d7b0865b411ebc7d09e6020c8928bcea85791ceb0432f6ddab761cc44237dc0b",
+    "file_sha256": "7b3faaf217006f50653ecd0133cdc2668493efcd4a8fe75f2adab30958cb24c0",
     "path": "series/2026-Q1/cards/046-watchman/card.json"
   },
   "reference_pack": {
@@ -47,43 +47,8 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "fix",
+    "mode": "generate",
     "references": [
-      {
-        "assigned_role": "current_card",
-        "card_type": "TITLE",
-        "eligibility_reasons": [
-          "existing_current_card",
-          "sha256=verified",
-          "requested_fix_source"
-        ],
-        "eligible": true,
-        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
-        "metadata_path": null,
-        "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/046-watchman/outputs/reference-inputs/current-5245148ef3ecb7c72f12bdefddc959154b21be6e0e7ae43bae79a5c3e2627d7b.png",
-        "position": 1,
-        "prompt_path": null,
-        "prompt_sha256": null,
-        "rarity": "COMMON",
-        "rarity_label": "COMMON",
-        "recipe_path": null,
-        "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/046-watchman/outputs/reference-inputs/current-5245148ef3ecb7c72f12bdefddc959154b21be6e0e7ae43bae79a5c3e2627d7b.png",
-        "review_evidence_path": null,
-        "review_evidence_sha256": null,
-        "role": "current_card",
-        "sha256": "5245148ef3ecb7c72f12bdefddc959154b21be6e0e7ae43bae79a5c3e2627d7b",
-        "similarity_components": {},
-        "similarity_reason": "not_applicable_current_card",
-        "similarity_score": 0,
-        "source_manifest": null,
-        "source_manifest_sha256": null,
-        "template_commit": null,
-        "template_manifest_schema_version": null,
-        "template_manifest_status": null,
-        "template_version": null
-      },
       {
         "assigned_role": "template",
         "card_type": "TITLE",
@@ -93,11 +58,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[2] = TEMPLATE: SHA-256-verified TITLE COMMON structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified TITLE COMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/title/common/template_1024x1536.png",
-        "position": 2,
+        "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "COMMON",
@@ -126,18 +91,18 @@
     "target_type": "TITLE"
   },
   "reference_pack_path": "series/2026-Q1/cards/046-watchman/outputs/reference-pack.json",
-  "reference_pack_sha256": "0cea31eaaafdb8beb5dd3ed65a4616649ec7d406c367e797db2b54b6725c9d13",
+  "reference_pack_sha256": "99bea54079b88f63bd5ea1a58ebb171d5d2441eb875e5822fb4132d6cb87e9fd",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "fix",
+    "mode": "generate",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "revise-image-only",
-    "reference_count": 2,
+    "phase": "rebuild",
+    "reference_count": 1,
     "response_modalities": [
       "IMAGE"
     ]

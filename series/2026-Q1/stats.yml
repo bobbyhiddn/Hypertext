@@ -6,24 +6,24 @@ rarity_targets:
   GLORIOUS: 10
   RARE: 15
   UNCOMMON: 35
-  COMMON: 40
+  COMMON: 39
 type_targets:
   NOUN: 16
   VERB: 20
   ADJECTIVE: 20
   NAME: 16
-  TITLE: 18
+  TITLE: 17
 rarity_counts:
   GLORIOUS: 6
   RARE: 8
   UNCOMMON: 15
-  COMMON: 17
+  COMMON: 18
 type_counts:
   NOUN: 11
   VERB: 13
   ADJECTIVE: 9
   NAME: 6
-  TITLE: 7
+  TITLE: 8
 combination_counts:
   COMMON_NOUN: 6
   COMMON_VERB: 3

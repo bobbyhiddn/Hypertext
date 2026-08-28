@@ -39,7 +39,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Gloss: One posted to look out and sound warning of what approaches
 # Card_Type: TITLE
 # Card_Rarity: COMMON
-# Card_Ability: Look at one card from the top of the Tower and one card from the bottom of the Tower. Then draw one card from the Tower.
+# Card_Ability: Look at one card from the top of the Tower and one card from the bottom of the Tower. Add one of those cards to your hand.
 # Card_Stats: LORE 2 | CONTEXT 3 | COMPLEXITY 4
 # Card_Art_Prompt: A lone robed figure seen from behind standing on a city wall at night, a ram's horn at his side, watching two horizons under a starry sky, engraved devotional style on warm parchment tones
 # Card_OT_Verse: Ezekiel 33:7 — I have set thee a watchman

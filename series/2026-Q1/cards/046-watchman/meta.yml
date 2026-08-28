@@ -13,7 +13,7 @@ stats:
   context: 3
   complexity: 4
 ability: Look at one card from the top of the Tower and one card from the bottom of
-  the Tower. Then draw one card from the Tower.
+  the Tower. Add one of those cards to your hand.
 ot_verse:
   ref: Ezekiel 33:7
   snippet: I have set thee a watchman

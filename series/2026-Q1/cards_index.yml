@@ -310,4 +310,4 @@ cards:
   word: WATCHMAN
   type: TITLE
   rarity: COMMON
-  ability_pattern: draw_look_top_tower
+  ability_pattern: add_hand_look_top_tower
