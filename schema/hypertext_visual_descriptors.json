@@ -131,25 +131,25 @@
       "scope": "rarity_only",
       "diamond_fill": "white",
       "card_bonus": 0,
-      "prompt": "RARITY is exactly COMMON followed by one white diamond; no activation cost."
+      "prompt": "RARITY is exactly COMMON, printed in title case as 'Common' exactly like the template (never all capitals), followed by one white diamond; no activation cost."
     },
     "UNCOMMON": {
       "scope": "rarity_only",
       "diamond_fill": "green",
       "card_bonus": 0,
-      "prompt": "RARITY is exactly UNCOMMON followed by one green diamond; no activation cost."
+      "prompt": "RARITY is exactly UNCOMMON, printed in title case as 'Uncommon' exactly like the template (never all capitals), followed by one green diamond; no activation cost."
     },
     "RARE": {
       "scope": "rarity_only",
       "diamond_fill": "gold",
       "card_bonus": 1,
-      "prompt": "RARITY is exactly RARE followed by one gold diamond; below it show the activation cost as a plus sign followed by ONE plain card back copied from the template - a solid uniformly dark navy rounded rectangle with a thin outline and a completely blank face; never draw a cross, symbol, letter, or any marking on the card back."
+      "prompt": "RARITY is exactly RARE, printed in title case as 'Rare' exactly like the template (never all capitals), followed by one gold diamond; below it show the activation cost as a plus sign followed by ONE plain card back copied from the template - a solid uniformly dark navy rounded rectangle with a thin outline and a completely blank face; never draw a cross, symbol, letter, or any marking on the card back."
     },
     "GLORIOUS": {
       "scope": "rarity_only",
       "diamond_fill": "orange",
       "card_bonus": 2,
-      "prompt": "RARITY is exactly GLORIOUS followed by one orange diamond; below it show the activation cost as TWO plain card backs with a plus sign between them, copied from the template - each a solid uniformly dark navy rounded rectangle with a thin outline and a completely blank face; never draw a cross, symbol, letter, or any marking on the card backs."
+      "prompt": "RARITY is exactly GLORIOUS, printed in title case as 'Glorious' exactly like the template (never all capitals), followed by one orange diamond; below it show the activation cost as TWO plain card backs with a plus sign between them, copied from the template - each a solid uniformly dark navy rounded rectangle with a thin outline and a completely blank face; never draw a cross, symbol, letter, or any marking on the card backs."
     }
   },
   "sizes": {
