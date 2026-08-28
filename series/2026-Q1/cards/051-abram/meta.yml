@@ -10,8 +10,8 @@ art_prompt: A small caravan with tents and flocks leaving a great walled river c
   cinematic oil painting with impressionistic brushwork, deep shadowed background,
   one radiant golden light source, rich saturated blues and golds
 stats:
-  lore: 3
-  context: 3
+  lore: 4
+  context: 4
   complexity: 3
 ability: Draw one card from the Tower and look at one card from the top of the Tower.
   Then you may put one card from your hand on the bottom of the Tower.
@@ -40,3 +40,9 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: justification by faith is argued from Abraham (Rom 4) - major; the Abram/Abraham
+    name change is the note
+  context: Avram ~61 + Abraam ~73 = ~134
+  complexity: justification by faith is argued from Abraham (Rom 4) - major; the Abram/Abraham
+    name change is the note

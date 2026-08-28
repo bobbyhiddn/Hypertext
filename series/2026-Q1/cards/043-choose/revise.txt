@@ -40,7 +40,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Type: VERB
 # Card_Rarity: UNCOMMON
 # Card_Ability: Choose one card in Sheol. Add that chosen card to your hand and put one other card in Sheol on the bottom of the Tower.
-# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 3
+# Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
 # Card_Art_Prompt: A shepherd seen from behind at dusk lifting one lamb out of a crowded flock on a hillside, the rest of the flock milling below, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
 # Card_OT_Verse: Deuteronomy 7:6 — the LORD thy God hath chosen thee
 # Card_NT_Verse: John 15:16 — I have chosen you

@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "",
+  "style_mismatch_reason": "None",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "f58719970d5f63e84e80b2442972ff33761ba8c8ffc77ceee0964dbb465f4e85",
+    "candidate_sha256": "458f1254de2daef5d90e494333f8691296beab1b5a791a8599b6bb5b810df57d",
     "template_sha256": "b358d4a5bf279f411be09e9ad10d2c3333a7236640e2840ce591fece4f443eaa",
     "report": "series/2026-Q1/cards/047-redeemer/outputs/visual-gate.json"
   },

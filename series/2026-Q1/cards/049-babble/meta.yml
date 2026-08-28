@@ -13,8 +13,8 @@ art_prompt: An unfinished brick tower at the moment of confusion, abandoned scaf
   golden light source, rich saturated blues and golds
 stats:
   lore: 3
-  context: 4
-  complexity: 2
+  context: 3
+  complexity: 4
 ability: Reveal one card from the top of the Tower and add that revealed card to your
   hand. Then shuffle the cards in the Tower.
 ot_verse:
@@ -44,3 +44,9 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: the confusion at Babel is a theme; the balal/Babel pun and LXX syncheo are
+    a linguistic study
+  context: balal ~43 + syncheo ~5 = ~48
+  complexity: the confusion at Babel is a theme; the balal/Babel pun and LXX syncheo
+    are a linguistic study

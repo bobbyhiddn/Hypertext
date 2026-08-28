@@ -11,9 +11,9 @@ art_prompt: A wide river plain with smoking brick kilns, lines of workers seen f
   brushwork, deep shadowed background, one radiant golden light source, rich saturated
   blues and golds
 stats:
-  lore: 4
-  context: 2
-  complexity: 2
+  lore: 2
+  context: 1
+  complexity: 3
 ability: Look at the bottom two cards of the Tower. Add one of those cards to your
   hand and put the other card on top of the Tower.
 ot_verse:
@@ -43,3 +43,10 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: a setting, not a theme; identification with Sumer and the name's origin are
+    debated
+  context: Shinar 8 + Babylon (NT name) counted separately; the card lemma occurs
+    8x
+  complexity: a setting, not a theme; identification with Sumer and the name's origin
+    are debated

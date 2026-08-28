@@ -11,8 +11,8 @@ art_prompt: A vast crowd on a sunlit plain seen from behind, breaking apart into
   shadowed background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
-  context: 3
-  complexity: 4
+  context: 4
+  complexity: 3
 ability: Look at the top three cards of the Tower. Add one of those cards to your
   hand and put the other cards on the bottom of the Tower.
 ot_verse:
@@ -41,3 +41,7 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: Babel and Pentecost make it a theme; tongue/language polysemy
+  context: lashon ~117 + glossa ~50 = ~167
+  complexity: Babel and Pentecost make it a theme; tongue/language polysemy

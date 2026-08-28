@@ -870,17 +870,44 @@ def _build_style_command(
     ]
 
 
+def _apply_fixed_elements_before_gate(card_dir: Path, out_png: Path) -> dict:
+    """Stamp the deterministic fixed elements (stat pips, type pill, collector
+    number, series footer) onto a freshly rendered face before it is gated.
+    The rarity chip and cost glyphs are left to the model and verified by their
+    gates. Idempotent, so re-gating a stamped face is safe."""
+    from hypertext.cards.fixed_elements import apply_fixed_elements
+
+    try:
+        provenance = apply_fixed_elements(card_dir, candidate_path=out_png)
+    except (OSError, RuntimeError, KeyError, ValueError) as exc:
+        raise StatPipGateError(f"fixed elements could not be stamped onto {out_png}: {exc}") from exc
+    offsets = {name: region.get("offset") for name, region in provenance["regions"].items()}
+    _log(f"[fixed elements] stamped pips/pill/number/footer on {out_png.name} offsets={offsets}")
+    return {
+        "contract": provenance["contract"],
+        "template_sha256": provenance["template"]["sha256"],
+        "font_sha256": provenance["font"]["sha256"],
+        "regions": offsets,
+        "face_sha256_before": provenance["face_sha256_before"],
+        "face_sha256_after": provenance["face_sha256_after"],
+    }
+
+
 def _run_stat_pip_visual_gate(
     *,
     card_dir: Path,
     out_png: Path,
     reference_pack: ReferencePack,
     report_name: str = "visual-gate.json",
+    stamp: bool = True,
 ) -> dict:
-    """Reject, but never repair, a full-card candidate's 15 stat pips."""
+    """Gate a full-card candidate: stamp the deterministic fixed elements (unless
+    stamp=False, as in grade/review of an existing face), then reject - never
+    repair - the 15 stat pips, the +CARD cost glyphs, and the painted rarity chip."""
     reference_pack.validate()
     template_entry = reference_pack.template
     template_path = template_entry.resolved_path(reference_pack.root)
+    fixed_elements = _apply_fixed_elements_before_gate(card_dir, out_png) if stamp else None
     report = inspect_card_stat_pips(
         card_dir,
         candidate_path=out_png,
@@ -897,6 +924,7 @@ def _run_stat_pip_visual_gate(
         raise StatPipGateError(
             "stat pip gate card identity disagrees with the validated reference pack"
         )
+    report["fixed_elements"] = fixed_elements
     report["reference_pack"] = {
         "contract": reference_pack.contract,
         "mode": reference_pack.mode,
@@ -1890,7 +1918,7 @@ def _build_revise_content(card: dict) -> str:
         f"# Card_Type: {content.get('CARD_TYPE', '')}",
         f"# Card_Rarity: {content.get('RARITY_TEXT', '')}",
         f"# Card_Ability: {content.get('ABILITY_TEXT', '')}",
-        f"# Card_Stats: LORE {content.get('STAT_LORE', 0)} | CONTEXT {content.get('STAT_CONTEXT', 0)} | COMPLEXITY {content.get('STAT_COMPLEXITY', 0)}",
+        f"# Card_Stats: LORE {content.get('STAT_LORE', 0)} | CONTEXT {content.get('STAT_CONTEXT', 0)} | COMPLEXITY {content.get('STAT_COMPLEXITY', 0)} (stamped deterministically after render; the model paints every pip empty)",
         f"# Card_Art_Prompt: {content.get('ART_PROMPT', '')}",
         f"# Card_OT_Verse: {content.get('OT_VERSE_REF', '')} — {content.get('OT_VERSE_SNIPPET', '')}",
         f"# Card_NT_Verse: {content.get('NT_VERSE_REF', '')} — {content.get('NT_VERSE_SNIPPET', '')}",
@@ -4463,7 +4491,7 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
 
     try:
         stat_pip_gate = _run_stat_pip_visual_gate(
-            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack, stamp=False
         )
     except StatPipGateError as exc:
         _log(f"[phase grade] Template-relative stat pip gate failed: {exc}")
@@ -4848,7 +4876,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
 
         try:
             stat_pip_gate = _run_stat_pip_visual_gate(
-                card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+                card_dir=card_dir, out_png=out_png, reference_pack=reference_pack, stamp=False
             )
         except StatPipGateError as exc:
             _log(f"[phase review] Template-relative stat pip gate failed: {exc}")
@@ -5003,7 +5031,7 @@ def phase_review(*, card_dir: Path, max_attempts: int = 2) -> int:
 
     try:
         stat_pip_gate = _run_stat_pip_visual_gate(
-            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack
+            card_dir=card_dir, out_png=out_png, reference_pack=reference_pack, stamp=False
         )
     except StatPipGateError as exc:
         _log(f"[phase review] Final stat pip visual gate failed: {exc}")

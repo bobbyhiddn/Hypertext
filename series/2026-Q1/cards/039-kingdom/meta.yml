@@ -11,7 +11,7 @@ art_prompt: A radiant throne on a high hill crowned with golden light, rivers of
   painting with impressionistic brushwork, deep shadowed background, one radiant golden
   light source, rich saturated blues and golds
 stats:
-  lore: 4
+  lore: 5
   context: 4
   complexity: 4
 ability: Each player adds one card from Sheol to their hand. Then add up to three
@@ -87,3 +87,9 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_3: Revelation 11:15 crowns the story: the kingdoms of this world become
   the kingdom of our Lord.'
+stats_rationale:
+  lore: the kingdom of God - a doctrine hangs on it; realm vs reign, kingdom of heaven
+    vs of God
+  context: malkut ~91 + basileia ~162 = ~253
+  complexity: the kingdom of God - a doctrine hangs on it; realm vs reign, kingdom
+    of heaven vs of God

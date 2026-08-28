@@ -67,7 +67,10 @@ def test_language_swap_is_rejected(content):
 def test_prompt_preserves_exact_canonical_unicode_and_redundant_language_sides(content, mode):
     prompt = serialize_word_card_prompt(card_type="NOUN", rarity="RARE", content=content, mode=mode)
     payload = prompt.split("EXACT_CANONICAL_CONTENT_JSON=", 1)[1].split("\n", 1)[0]
-    assert json.loads(payload) == content
+    # Stat pips are stamped deterministically after rendering, so the image
+    # model is asked for empty pips: the three stat fields are zeroed for it.
+    assert json.loads(payload) == {**content, "STAT_LORE": 0, "STAT_CONTEXT": 0, "STAT_COMPLEXITY": 0}
+    assert "STAT PIPS: paint all fifteen stat pips EMPTY" in prompt
     assert "Old Testament is LEFT; New Testament is RIGHT" in prompt
     assert "LEFT header is exactly HEBREW/ARAMAIC" in prompt
     assert "RIGHT header is exactly GREEK" in prompt

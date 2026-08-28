@@ -11,9 +11,9 @@ art_prompt: A walled city burning on a wide plain under a sky raining streaks of
   oil painting with impressionistic brushwork, deep shadowed background, one radiant
   golden light source, rich saturated blues and golds
 stats:
-  lore: 4
+  lore: 3
   context: 3
-  complexity: 4
+  complexity: 2
 ability: Put the top three cards of the Tower into Sheol, then add one of those cards
   to your hand.
 ot_verse:
@@ -43,3 +43,7 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: the paradigm of judgment; name etymology uncertain but not a study
+  context: Sedom ~48 + Sodoma ~9 = ~57
+  complexity: the paradigm of judgment; name etymology uncertain but not a study

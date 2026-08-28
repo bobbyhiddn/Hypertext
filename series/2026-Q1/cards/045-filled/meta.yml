@@ -14,7 +14,7 @@ art_prompt: A tall clay jar on a stone floor being filled from a bright stream p
 stats:
   lore: 3
   context: 4
-  complexity: 3
+  complexity: 4
 ability: Draw one card from the Tower. Then draw one card from the Tower for each
   card fewer than four in your hand.
 ot_verse:
@@ -44,3 +44,8 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: Spirit-filling is a real theme; fill/fulfil semantic range is a genuine study
+  context: male ~250 + pleroo ~86 = ~336
+  complexity: Spirit-filling is a real theme; fill/fulfil semantic range is a genuine
+    study

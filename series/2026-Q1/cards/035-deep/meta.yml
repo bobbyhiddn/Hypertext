@@ -12,9 +12,9 @@ art_prompt: A knotted sounding line with a stone weight descending into deep blu
   impressionistic brushwork, deep shadowed background, one radiant golden light source,
   rich saturated blues and golds
 stats:
-  lore: 4
-  context: 3
-  complexity: 4
+  lore: 3
+  context: 2
+  complexity: 2
 ability: Choose up to three cards in Sheol that each have COMPLEXITY three or more.
   Add those chosen cards to your hand.
 ot_verse:
@@ -42,3 +42,7 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: the deep things of God is a recognized theme; simple root
+  context: amoq ~17 + bathys ~4 = ~21
+  complexity: the deep things of God is a recognized theme; simple root

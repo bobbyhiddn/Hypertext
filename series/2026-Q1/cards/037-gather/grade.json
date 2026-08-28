@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "",
+  "style_mismatch_reason": "None. Layout and elements align with reference standard.",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "56e284e20fa219a60ae6076c17ff0d251acd5d1f284f7a8ed83bb6b69ac8fa21",
+    "candidate_sha256": "ea19b317ed32ec343da17bab759d0849473078bab8b0c1fe4e321b2fa40d423b",
     "template_sha256": "48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a",
     "report": "series/2026-Q1/cards/037-gather/outputs/visual-gate.json"
   },

@@ -35,6 +35,7 @@
       "no heavy HDR",
       "no washed-out grayscale",
       "no over-sharpen halos",
+      "no filled stat pips",
       "no partial stat-pip fills",
       "no stat-pip gradients or highlights",
       "no diamonds for stat pips",
@@ -55,7 +56,7 @@
           "right": "NEW_TESTAMENT_GREEK"
         }
       },
-      "stat_pips": "Fifteen stat circles in three labeled groups of five, copied from the template's pip row exactly: every filled pip is one flat matte uniformly dark navy disc with no highlight, gloss, inner ring, or gradient, and every empty pip is a thin navy outline with a plain parchment interior, at the template's exact positions and sizes.",
+      "stat_pips": "Fifteen stat circles in three labeled groups of five, copied from the template's pip row exactly and ALL LEFT EMPTY: every pip is a thin navy outline with a plain parchment interior at the template's exact positions and sizes; never fill a pip. The stat values are applied after rendering by the deterministic fixed-elements stamp.",
       "art_direction": {
         "subject_rule": "Represent people through what they are known for: defining work, objects, attire, gestures, environments, symbols, or achievements.",
         "figure_rule": "If a human figure is necessary, keep the figure secondary and show it from behind, in silhouette, at a distance, with the face obscured, or cropped so no recognizable face appears.",

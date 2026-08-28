@@ -2,67 +2,67 @@
   "pilot": {
     "32": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "33": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "34": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "35": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "36": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "37": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "38": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "39": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "40": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "41": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "42": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "43": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "44": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "45": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "46": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "47": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "48": {
       "status": "pass",
@@ -70,15 +70,15 @@
     },
     "49": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "50": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     },
     "51": {
       "status": "pass",
-      "note": ""
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
     }
   },
   "log": [
@@ -169,6 +169,10 @@
     {
       "when": "2026-08-28",
       "what": "RARITY CHIP: VERIFIED, NOT STAMPED (user, on the BRICK proof: the stamped chip 'doesn't blend into the card like the original did'). Side by side with model-painted UNCOMMON chips (SEED, MESSENGER, BRICK's own render) the stamped chip was flat navy with a hard outline and a thinner word; the painted chips carry a soft gradient, doubled outline and a halo. Decision: the chip is the one fixed element where the model beats the template, so it stays Gemini output and hypertext.cards.rarity_chip_gate makes it deterministic the other way - block, word width, inset, gap, cap height and diamond colour measured against the canonical template, wired into hypertext visual-gate and the pipeline gate beside the pip and cost gates. Stamp scope is now pips, type pill, number, footer. BRICK re-stamped from the model render with its own chip: 0.94% of pixels touched, chip region byte-identical, gates green. Template defects (TITLE pill, UNCOMMON chip) are handled by scripts/templates/repair_composed_labels.py (user runs --apply)."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "STAMP WIRED INTO THE PIPELINE + 20 FACES RE-STAMPED. daily._run_stat_pip_visual_gate now applies the fixed-elements stamp (pips, type pill, number, footer) to every freshly rendered face before the pip, cost and chip gates; grade/review never stamp. The image prompt zeroes the three stat fields and tells the model to paint every pip empty - pips are set only by the stamp. All 20 rescored cards (#032-#051) re-stamped from their model renders, gates green, judge 100/100 with 3-0 style votes on every one. Batch found one stamp bug: the number cover took parchment from a fixed x that the wide ADJECTIVE pill reaches, pasting 'VE' over the number on HIGH/DEEP/DARK/FILLED (and silently on FOREIGN); the cover now sits relative to the measured pill box and the five were re-run clean."
     }
   ]
 }

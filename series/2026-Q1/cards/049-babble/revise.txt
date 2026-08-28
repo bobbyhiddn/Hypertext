@@ -40,7 +40,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Type: VERB
 # Card_Rarity: COMMON
 # Card_Ability: Reveal one card from the top of the Tower and add that revealed card to your hand. Then shuffle the cards in the Tower.
-# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
+# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 4
 # Card_Art_Prompt: An unfinished brick tower at the moment of confusion, abandoned scaffolding and dropped tools, bricks tumbling from a half-laid course, great flocks of birds bursting upward from the tower like scattered words, only tiny distant figures far below walking away in every direction with backs turned, no faces, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
 # Card_OT_Verse: Genesis 11:9 — the LORD did there confound the language
 # Card_NT_Verse: Acts 2:6 — the multitude came together, and were confounded

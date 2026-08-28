@@ -40,7 +40,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Type: NOUN
 # Card_Rarity: COMMON
 # Card_Ability: Look at the top three cards of the Tower. Add one of those cards to your hand and put the other cards on the bottom of the Tower.
-# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 4
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 3
 # Card_Art_Prompt: A vast crowd on a sunlit plain seen from behind, breaking apart into separate streams of people walking away toward every horizon, an unfinished brick tower looming behind them, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
 # Card_OT_Verse: Genesis 10:5 — every one after his tongue
 # Card_NT_Verse: Acts 2:4 — began to speak with other tongues

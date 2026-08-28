@@ -11,7 +11,7 @@ art_prompt: A colossal ziggurat rising from a sunbaked plain into swirling cloud
   one radiant golden light source, rich saturated blues and golds, an overwhelming
   sense of height
 stats:
-  lore: 4
+  lore: 2
   context: 3
   complexity: 2
 ability: Look at the top two cards of the Tower. Add one of those cards to your hand
@@ -82,3 +82,7 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_3: Greek hypselos shares its root with hypsos, height, the word behind
   English hypsometer.'
+stats_rationale:
+  lore: pride/exaltation is a motif, not a doctrine; plain adjective from gvh
+  context: gavoah ~41 + hypselos ~11 = ~52
+  complexity: pride/exaltation is a motif, not a doctrine; plain adjective from gvh

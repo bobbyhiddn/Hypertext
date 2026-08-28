@@ -11,8 +11,8 @@ art_prompt: A lone robed figure seen from behind standing on a city wall at nigh
   golden light source, rich saturated blues and golds
 stats:
   lore: 2
-  context: 3
-  complexity: 4
+  context: 2
+  complexity: 2
 ability: Look at one card from the top of the Tower and one card from the bottom of
   the Tower. Add one of those cards to your hand.
 ot_verse:
@@ -41,3 +41,7 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: a minor motif from Ezekiel; simple participle
+  context: tsopheh ~20 + phylax ~3 = ~23
+  complexity: a minor motif from Ezekiel; simple participle

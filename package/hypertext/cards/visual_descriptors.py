@@ -100,6 +100,20 @@ def canonical_prompt_content(content: dict) -> dict:
             data[key] = label + value.strip()
     return data
 
+STAMPED_STAT_FIELDS = ("STAT_LORE", "STAT_CONTEXT", "STAT_COMPLEXITY")
+
+
+def prompt_content_for_image(content: dict) -> dict:
+    """The content JSON the image model sees. Stat pips are stamped
+    deterministically after rendering (hypertext.cards.fixed_elements), so the
+    model is asked to paint every pip empty: the three stat fields go to 0."""
+    data = deepcopy(content)
+    for key in STAMPED_STAT_FIELDS:
+        if key in data:
+            data[key] = 0
+    return data
+
+
 def serialize_lot_prompt(*, content: dict, mode: str = "EXPLICIT",
                          descriptor: dict | None = None) -> str:
     """Serialize inherited global/LOT/size constraints ahead of exact Lot content."""
@@ -176,8 +190,9 @@ def serialize_word_card_prompt(*, card_type: str, rarity: str, content: dict,
         "ORIGINAL LANGUAGE LAYOUT=" + dump(language_layout),
         "ORIGINAL LANGUAGE PLACEMENT: LEFT header is exactly HEBREW/ARAMAIC and contains HEBREW, bare italic HEBREW_TRANSLIT, then the OT_REFS line printed exactly as supplied (it already begins with the label 'OT Refs:'; print that label once, never twice, never omitted). RIGHT header is exactly GREEK and contains GREEK, bare italic GREEK_TRANSLIT, then the NT_REFS line printed exactly as supplied (it already begins with 'NT Refs:'; once, never omitted).",
         "REPEAT PLACEMENT: never swap languages; Old Testament is LEFT; New Testament is RIGHT.",
-        "EXACT_CANONICAL_CONTENT_JSON=" + dump(content),
+        "EXACT_CANONICAL_CONTENT_JSON=" + dump(prompt_content_for_image(content)),
         "Copy every JSON value exactly; do not translate, normalize, paraphrase, add, omit, or correct text.",
+        "STAT PIPS: paint all fifteen stat pips EMPTY - thin navy outline, plain parchment interior - exactly as on the template; never fill any pip. The stat values are set after rendering by the deterministic fixed-elements stamp, not by you.",
         "NEGATIVE GRAMMAR: " + "; ".join(global_descriptor["negative"]) + ".",
         "Output only one vertical 1024x1536 Word Card.",
     ))

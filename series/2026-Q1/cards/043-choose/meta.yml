@@ -10,8 +10,8 @@ art_prompt: A shepherd seen from behind at dusk lifting one lamb out of a crowde
   painting with impressionistic brushwork, deep shadowed background, one radiant golden
   light source, rich saturated blues and golds
 stats:
-  lore: 3
-  context: 3
+  lore: 5
+  context: 4
   complexity: 3
 ability: Choose one card in Sheol. Add that chosen card to your hand and put one other
   card in Sheol on the bottom of the Tower.
@@ -40,3 +40,8 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: election - a doctrine hangs on it; eklegomai's middle voice is worth a note
+  context: bachar ~170 + eklegomai ~22 = ~192
+  complexity: election - a doctrine hangs on it; eklegomai's middle voice is worth
+    a note

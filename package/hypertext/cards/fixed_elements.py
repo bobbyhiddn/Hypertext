@@ -185,8 +185,14 @@ def stamp_number(face: Image.Image, template: Image.Image, number: str, offset: 
     x0, y0, x1, y1 = REGION_NUMBER
     if pill_box:
         x1 = min(x1 + 6, pill_box[0] - 3)
-    # Cover the model's number with the face's OWN parchment from just right of the pill.
-    src = (REGION_PARCHMENT[0] + dx, REGION_PARCHMENT[1] + dy, REGION_PARCHMENT[2] + dx, REGION_PARCHMENT[3] + dy)
+    # Cover the model's number with the face's OWN parchment from just right of
+    # the pill. The pill's width depends on the type word (ADJECTIVE reaches
+    # past x=320), so the source sits relative to the measured pill, never at a
+    # fixed x - a fixed patch once pasted the tail of "ADJECTIVE" over the number.
+    if pill_box:
+        src = (pill_box[2] + 8 + dx, pill_box[1] + 6 + dy, pill_box[2] + 88 + dx, pill_box[3] - 6 + dy)
+    else:
+        src = (REGION_PARCHMENT[0] + dx, REGION_PARCHMENT[1] + dy, REGION_PARCHMENT[2] + dx, REGION_PARCHMENT[3] + dy)
     parchment = face.crop(src).resize((x1 - x0, y1 - y0), Image.Resampling.LANCZOS)
     from PIL import ImageFilter
     soft = Image.new("L", parchment.size, 0)

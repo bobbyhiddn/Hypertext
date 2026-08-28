@@ -10,8 +10,8 @@ art_prompt: Primeval waters under total darkness, the faintest first edge of lig
   impressionistic brushwork, deep shadowed background, one radiant golden light source,
   rich saturated blues and golds
 stats:
-  lore: 4
-  context: 2
+  lore: 3
+  context: 3
   complexity: 2
 ability: Add one card from the bottom of the Tower to your hand. Then look at one
   card from the top of the Tower.
@@ -40,3 +40,7 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: light/darkness is a recognized theme; plain noun
+  context: choshek ~80 + skotos ~31 = ~111
+  complexity: light/darkness is a recognized theme; plain noun

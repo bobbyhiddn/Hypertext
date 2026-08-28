@@ -178,7 +178,7 @@
     "ART_PROMPT": "A caravan of robed travelers seen from behind approaching a great walled city gate hung with unfamiliar banners, camels laden with bundles, distant ziggurat silhouette beyond the walls, low evening light, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
     "ABILITY_TEXT": "Name a card type, then reveal one card from the top of the Tower. Add that revealed card to your hand; if that revealed card is not the named type, gain one Letter.",
     "STAT_LORE": 3,
-    "STAT_CONTEXT": 4,
+    "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 3,
     "OT_VERSE_REF": "Exodus 2:22",
     "OT_VERSE_SNIPPET": "a stranger in a strange land",

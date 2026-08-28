@@ -64,12 +64,12 @@
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "3edb79f8ff7210e5e50baf8e13d341fbbbbc0cd0b6aa3c0056b3860bf0351d69",
+      "input_sha256": "8a1460be995595a0023f6366d253b9e919a94c641869e5a0ac634ca3e945e28a",
       "output_sha256": "2d17f3c934f5136136b0eb27b53cddde8bd4156df5aea0a75d91fa8893ec47ac",
       "repaired": false,
       "stage": "review",
       "status": "success",
-      "timestamp": "2026-08-28T11:36:46.023617+00:00"
+      "timestamp": "2026-08-28T19:32:37.842307+00:00"
     }
   ]
 }

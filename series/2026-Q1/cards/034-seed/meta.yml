@@ -13,7 +13,7 @@ art_prompt: A single luminous seed pressed into dark furrowed soil, a tender gre
 stats:
   lore: 5
   context: 4
-  complexity: 3
+  complexity: 4
 ability: Put one NOUN from your hand on the bottom of the Tower. At the start of your
   next turn, draw two cards from the Tower.
 ot_verse:
@@ -81,3 +81,9 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_3: Genesis 3:15 is called the protoevangelium, Scripture''s first
   gospel promise.'
+stats_rationale:
+  lore: the Seed promise (Gen 3:15, Gal 3:16) - a doctrine hangs on it; collective/singular
+    ambiguity drives Paul's argument
+  context: zera ~229 + sperma ~43 = ~272
+  complexity: the Seed promise (Gen 3:15, Gal 3:16) - a doctrine hangs on it; collective/singular
+    ambiguity drives Paul's argument

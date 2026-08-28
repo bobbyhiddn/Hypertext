@@ -11,9 +11,9 @@ art_prompt: A robed figure seen from behind laying silver on a stone table befor
   deep shadowed background, one radiant golden light source, rich saturated blues
   and golds
 stats:
-  lore: 4
-  context: 4
-  complexity: 3
+  lore: 5
+  context: 3
+  complexity: 4
 ability: Spend one Letter and choose up to three cards in Sheol. Add those chosen
   cards to your hand.
 ot_verse:
@@ -41,3 +41,9 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+stats_rationale:
+  lore: redemption - a doctrine hangs on it; kinsman-redeemer institution and lytron
+    ransom are a study
+  context: goel ~44 + lytroo ~3 = ~47
+  complexity: redemption - a doctrine hangs on it; kinsman-redeemer institution and
+    lytron ransom are a study

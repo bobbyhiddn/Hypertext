@@ -13,7 +13,7 @@ art_prompt: A white-bearded figure in flowing robes seen from behind, seated on 
 stats:
   lore: 3
   context: 4
-  complexity: 2
+  complexity: 3
 ability: Look at one card from the top of the Tower. You may put that card on the
   bottom of the Tower; then draw one card from the Tower.
 ot_verse:
@@ -80,3 +80,7 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_3: Greek presbyteros is the root behind the English words priest and
   presbytery.'
+stats_rationale:
+  lore: a real office in Israel and the church
+  context: zaqen ~180 + presbyteros ~66 = ~246
+  complexity: zaqen from zaqan (beard), presbyteros a comparative turned title

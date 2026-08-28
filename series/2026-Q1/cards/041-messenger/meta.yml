@@ -13,7 +13,7 @@ art_prompt: A robed runner seen from behind on a mountain road at dawn, a sealed
 stats:
   lore: 3
   context: 4
-  complexity: 3
+  complexity: 4
 ability: Name a card type and reveal the top three cards of the Tower. Add one revealed
   card of the named type to your hand and put each other revealed card on top of the
   Tower in any order.
@@ -85,3 +85,9 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_3: Proverbs likens a faithful messenger to snow-cold water in harvest
   - refreshing those who sent him.'
+stats_rationale:
+  lore: angelology is a secondary theme; the messenger/angel ambiguity and the angel
+    of the LORD are a genuine linguistic study
+  context: malakh ~213 + angelos ~175 = ~388
+  complexity: angelology is a secondary theme; the messenger/angel ambiguity and the
+    angel of the LORD are a genuine linguistic study

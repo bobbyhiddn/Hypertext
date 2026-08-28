@@ -40,7 +40,7 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # Card_Type: NAME
 # Card_Rarity: UNCOMMON
 # Card_Ability: Choose one card in your hand and put that chosen card on the bottom of the Tower, then draw two cards from the Tower.
-# Card_Stats: LORE 3 | CONTEXT 3 | COMPLEXITY 4
+# Card_Stats: LORE 3 | CONTEXT 2 | COMPLEXITY 3
 # Card_Art_Prompt: A lone robed figure seen from behind walking up a grassy hillside path that dissolves into cloud and light at its crest, an antediluvian valley of great trees and rivers below, no faces, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
 # Card_OT_Verse: Genesis 5:24 — Enoch walked with God: and he was not; for God took him
 # Card_NT_Verse: Hebrews 11:5 — By faith Enoch was translated
