@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: REDEEMER
+# Card_Gloss: The kinsman who buys back what was lost and gathers his own
+# Card_Type: TITLE
+# Card_Rarity: RARE
+# Card_Ability: Spend one Letter and choose up to three cards in Sheol. Add those chosen cards to your hand.
+# Card_Stats: LORE 4 | CONTEXT 4 | COMPLEXITY 3
+# Card_Art_Prompt: A robed figure seen from behind laying silver on a stone table before an open gate, while a line of freed figures walk away from the viewer through the gate into morning light, engraved devotional style on warm parchment tones
+# Card_OT_Verse: Job 19:25 — I know that my redeemer liveth
+# Card_NT_Verse: Titus 2:14 — that he might redeem us
+# Card_Hebrew: גֹּאֵל (goel)
+# Card_Greek: λυτρόω (lytroo)
+# Card_Trivia_1: Hebrew goel is the kinsman-redeemer who buys back a relative's land or liberty - Boaz for Ruth.
+# Card_Trivia_2: Job 19:25 - I know that my redeemer liveth - is carved on countless gravestones.
+# Card_Trivia_3: Greek lytroo comes from lytron, the ransom price paid to set a slave free.

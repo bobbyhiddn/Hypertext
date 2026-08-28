@@ -1,0 +1,41 @@
+number: '047'
+word: REDEEMER
+gloss: The kinsman who buys back what was lost and gathers his own
+card_type: TITLE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A robed figure seen from behind laying silver on a stone table before
+  an open gate, while a line of freed figures walk away from the viewer through the
+  gate into morning light, engraved devotional style on warm parchment tones
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Spend one Letter and choose up to three cards in Sheol. Add those chosen
+  cards to your hand.
+ot_verse:
+  ref: Job 19:25
+  snippet: I know that my redeemer liveth
+nt_verse:
+  ref: Titus 2:14
+  snippet: that he might redeem us
+greek:
+  text: λυτρόω
+  translit: lytroo
+hebrew:
+  text: גֹּאֵל
+  translit: goel
+ot_refs: Job 19:25 • Isa 59:20 • Isa 41:14
+nt_refs: Titus 2:14 • Luke 24:21 • 1 Pet 1:18
+trivia:
+- Hebrew goel is the kinsman-redeemer who buys back a relative's land or liberty -
+  Boaz for Ruth.
+- Job 19:25 - I know that my redeemer liveth - is carved on countless gravestones.
+- Greek lytroo comes from lytron, the ransom price paid to set a slave free.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
