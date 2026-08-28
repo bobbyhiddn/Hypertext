@@ -1,0 +1,55 @@
+number: '052'
+word: HOVER
+gloss: To brood over the face of the waters
+card_type: VERB
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: A vast black ocean beneath a starless void, a radiant golden light spreading
+  low over the still waters like outstretched wings of mist, ripples of luminous blue
+  awakening beneath the glow, deep shadow all around, luminous cinematic oil painting
+  with impressionistic brushwork, deep shadowed background, one radiant golden light
+  source, rich saturated blues and golds
+stats:
+  lore: 5
+  context: 1
+  complexity: 4
+stats_rationale:
+  lore: Genesis 1:2 - the Spirit of God brooding over the deep is the first act of
+    the Spirit in Scripture and the seed of every doctrine of the Spirit's creative
+    work; a doctrine hangs on this verse
+  context: rachaph occurs 3 times in the Hebrew Bible; epiphero occurs 3 times in
+    the New Testament; total 6
+  complexity: rachaph is rare and its sense is disputed - brood, hover, or shake (Jer
+    23:9); Syriac and Ugaritic cognates mean to brood like a bird; the Septuagint
+    rendered it epiphero, to bring upon, which the New Testament uses of God bringing
+    wrath
+ability: Each player draws one card from the Tower. Then choose up to three cards
+  in Sheol and add those chosen cards to your hand.
+ot_verse:
+  ref: Genesis 1:2
+  snippet: the Spirit of God moved upon the face of the waters
+nt_verse:
+  ref: Romans 3:5
+  snippet: Is God unrighteous who taketh vengeance?
+greek:
+  text: ἐπιφέρω
+  translit: epiphero
+hebrew:
+  text: רָחַף
+  translit: rachaph
+ot_refs: Gen 1:2 • Deut 32:11 • Jer 23:9
+nt_refs: Rom 3:5 • Phil 1:16 • Jude 1:9
+trivia:
+- Rachaph appears only three times; in Deuteronomy 32 it is the eagle fluttering over
+  her young, so many read Genesis 1:2 as the Spirit brooding like a bird.
+- The Septuagint rendered it epiphero, to bring upon, the same verb Paul uses of God
+  bringing wrath - creation and judgment share one word.
+- Before Babel's builders reached upward, the Spirit had already come down to hover
+  over an empty deep.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

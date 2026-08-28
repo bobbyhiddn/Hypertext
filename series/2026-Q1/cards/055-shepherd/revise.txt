@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: SHEPHERD
+# Card_Gloss: The one who gathers his scattered sheep
+# Card_Type: TITLE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top three cards of the Tower. Add one of those cards to your hand and put the other cards on top of the Tower in any order.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A lone shepherd seen from behind on a dusk hillside, staff raised, guiding scattered sheep down toward a stone fold whose gate glows with one radiant golden lantern, deep blue shadowed valley beyond, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Psalm 23:1 — The LORD is my shepherd; I shall not want
+# Card_NT_Verse: John 10:11 — I am the good shepherd
+# Card_Hebrew: רֹעֶה (roeh)
+# Card_Greek: ποιμήν (poimen)
+# Card_Trivia_1: Roeh means the one who pastures - the shepherd is literally the feeder of the flock.
+# Card_Trivia_2: Ezekiel 34 promises one shepherd over the scattered; John 10 answers with one fold and one shepherd.
+# Card_Trivia_3: Pastor is simply the Latin for shepherd; the office kept the old name.

@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: HOVER
+# Card_Gloss: To brood over the face of the waters
+# Card_Type: VERB
+# Card_Rarity: GLORIOUS
+# Card_Ability: Each player draws one card from the Tower. Then choose up to three cards in Sheol and add those chosen cards to your hand.
+# Card_Stats: LORE 5 | CONTEXT 1 | COMPLEXITY 4 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A vast black ocean beneath a starless void, a radiant golden light spreading low over the still waters like outstretched wings of mist, ripples of luminous blue awakening beneath the glow, deep shadow all around, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 1:2 — the Spirit of God moved upon the face of the waters
+# Card_NT_Verse: Romans 3:5 — Is God unrighteous who taketh vengeance?
+# Card_Hebrew: רָחַף (rachaph)
+# Card_Greek: ἐπιφέρω (epiphero)
+# Card_Trivia_1: Rachaph appears only three times; in Deuteronomy 32 it is the eagle fluttering over her young, so many read Genesis 1:2 as the Spirit brooding like a bird.
+# Card_Trivia_2: The Septuagint rendered it epiphero, to bring upon, the same verb Paul uses of God bringing wrath - creation and judgment share one word.
+# Card_Trivia_3: Before Babel's builders reached upward, the Spirit had already come down to hover over an empty deep.

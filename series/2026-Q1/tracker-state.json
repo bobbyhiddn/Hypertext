@@ -79,6 +79,26 @@
     "51": {
       "status": "pass",
       "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+    },
+    "52": {
+      "status": "pass",
+      "note": "HOVER VERB/GLORIOUS. Each player draws one; then add up to three from Sheol. Stats 5/1/4 (rachaph x3 + epiphero x3). Passed first render, 100/100 3-0."
+    },
+    "53": {
+      "status": "pass",
+      "note": "NEW ADJECTIVE/COMMON. Reveal-and-add the top card; may send an old card of the same type to the bottom (grammar family GAIN_LETTER infeasible at COMMON under the printed-rating validator). Stats 4/3/3. Art moved to an empty upper room after two face-forward crowd renders; passed on attempt 6 + text fix, re-stamped with pill ghost cleanup, 100/100 3-0."
+    },
+    "54": {
+      "status": "pass",
+      "note": "DESTROYER TITLE/UNCOMMON. Chosen player puts one card into Sheol; draw one. Stats 3/2/4 (mashchit x19 + olothreutes x1). Passed first render, 100/100 3-0."
+    },
+    "55": {
+      "status": "pass",
+      "note": "SHEPHERD TITLE/COMMON. Look at three, take one, set the rest in order (grammar family DISCARD infeasible at COMMON: a discard-cycle fails the draw-one baseline). Stats 4/3/2. Passed first render, 100/100 3-0."
+    },
+    "56": {
+      "status": "pass",
+      "note": "ASCEND VERB/UNCOMMON. Look at four, take up to one with LORE 4+, reorder the rest. Stats 4/5/3 (alah x890 + anabaino x82). Passed attempt 2, 100/100 3-0."
     }
   },
   "log": [
@@ -177,6 +197,10 @@
     {
       "when": "2026-08-28",
       "what": "TEMPLATE PACKAGE REPAIRED (user: 'just run the template repair'). scripts/templates/repair_composed_labels.py --apply rewrote eight golden PNGs: four TITLE pills now read TITLE, five UNCOMMON chips set 'Uncommon' inside the block, from two SHA-pinned Liberation Serif patches declared in composed/manifest.json; persistence manifest and verifier re-pinned, verifier extended to expect and digest-check the patches; package verification PASS; the two guarded package tests now run and pass. Compromise noted: the repair condenses 'Uncommon' 13% to fit the existing block while the model paints it full-width in a wider block; the rarity chip gate now expects word width from the COMMON word scaled by font metrics (-25%/+12%) so both conventions pass and all twenty current faces stay green. Commit 619da56."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "BATCH 5 (#052-#056: HOVER, NEW, DESTROYER, SHEPHERD, ASCEND) - the first batch produced end to end under the full contract: designs validated offline against the seed/candidate validators and the stat rubric before any model call (the printed-rating estimator is a hard constraint: a COMMON carries no condition, no Letter gain, no second draw - so NEW and SHEPHERD left their grammar families), daemon-driven plan, render with the model painting empty pips, deterministic stamp inside the pipeline gate, pip/cost/chip gates, judge. All five at 100/100 with 3-0 style votes. Found in passing: the model paints its type pill and '#' a little wider than the template's, so the stamp now clears the model's dark pixels around the pill and widens the number cover (NEW #053 showed a pill sliver and a '#' ghost). Designs module kept at scripts/pipeline/designs/batch5_052_056.py."
     }
   ]
 }

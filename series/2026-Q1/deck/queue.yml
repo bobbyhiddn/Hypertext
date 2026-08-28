@@ -151,3 +151,18 @@
 - word: ABRAM
   card_type: NAME
   rarity: COMMON
+- word: HOVER
+  card_type: VERB
+  rarity: GLORIOUS
+- word: NEW
+  card_type: ADJECTIVE
+  rarity: COMMON
+- word: DESTROYER
+  card_type: TITLE
+  rarity: UNCOMMON
+- word: SHEPHERD
+  card_type: TITLE
+  rarity: COMMON
+- word: ASCEND
+  card_type: VERB
+  rarity: UNCOMMON

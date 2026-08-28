@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: DESTROYER
+# Card_Gloss: The agent of God's wrath sent through the land
+# Card_Type: TITLE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Choose another player. That chosen player puts one card from that chosen player's hand into Sheol; then draw one card from the Tower.
+# Card_Stats: LORE 3 | CONTEXT 2 | COMPLEXITY 4 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A moonlit Egyptian street at midnight, a towering shadow sweeping past a doorway whose lintel glows red-gold in lamplight, palm silhouettes and deep indigo darkness beyond, one radiant golden light within the door, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Exodus 12:23 — will not suffer the destroyer to come in unto your houses
+# Card_NT_Verse: 1 Corinthians 10:10 — and were destroyed of the destroyer
+# Card_Hebrew: מַשְׁחִית (mashchit)
+# Card_Greek: ὀλοθρευτής (olothreutes)
+# Card_Trivia_1: Mashchit is a participle - the one ruining - and the same word names the pit of corruption in Psalm 55.
+# Card_Trivia_2: Paul's olothreutes in 1 Corinthians 10 is a New Testament hapax, echoing the Septuagint's word for the Passover destroyer.
+# Card_Trivia_3: Revelation gives the office a name in two tongues, Abaddon and Apollyon - the Destroyer.

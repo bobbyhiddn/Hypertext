@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: ASCEND
+# Card_Gloss: To climb toward heaven in human strength
+# Card_Type: VERB
+# Card_Rarity: UNCOMMON
+# Card_Ability: Look at the top four cards of the Tower. Add up to one of those cards that has LORE four or more to your hand and put the other cards on top of the Tower in any order.
+# Card_Stats: LORE 4 | CONTEXT 5 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A colossal brick ziggurat spiraling up into storm clouds, tiny figures climbing its ramps seen from far below, a break of radiant golden light at the summit against deep indigo sky, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Isaiah 14:13 — thou hast said in thine heart, I will ascend into heaven
+# Card_NT_Verse: John 3:13 — no man hath ascended up to heaven, but he that came down
+# Card_Hebrew: עָלָה (alah)
+# Card_Greek: ἀναβαίνω (anabaino)
+# Card_Trivia_1: The burnt offering is the olah, the going-up, from the same verb - sacrifice ascends where the builders could not.
+# Card_Trivia_2: The king of Babylon boasts I will ascend into heaven in Isaiah 14, the tower's ambition in one sentence.
+# Card_Trivia_3: Jacob's ladder shows angels ascending and descending; John 1:51 says they do so upon the Son of man.

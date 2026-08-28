@@ -1,0 +1,11 @@
+=== Generation Log ===
+Timestamp: 2026-08-28 16:14:20
+Phase: rebuild
+Target Rarity: GLORIOUS
+Target Type: VERB
+Fix Mode: False
+
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/verb/glorious/template_1024x1536.png [GLORIOUS] sha256=fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b
+
+Prompt File: series/2026-Q1/cards/052-hover/prompt.txt

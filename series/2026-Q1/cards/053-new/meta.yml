@@ -1,0 +1,54 @@
+number: '053'
+word: NEW
+gloss: A new tongue, a new heart, a new people
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An empty upper room at dawn, a long wooden table with overturned cups and abandoned
+  cloaks on the benches, small tongues of golden flame hovering in the air above the empty
+  seats, a rushing wind lifting the curtains at an open doorway, one radiant light breaking
+  through the door into deep shadow, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
+stats:
+  lore: 4
+  context: 3
+  complexity: 3
+stats_rationale:
+  lore: new covenant, new heart, new creation, new tongues - the reversal of Babel at Pentecost
+    and the new-creation theme run through this word; a recognized theme close to doctrine
+  context: chadash occurs 53 times in the Hebrew Bible; kainos occurs 42 times in the New
+    Testament; total 95
+  complexity: Greek keeps two words, kainos (new in kind) and neos (new in time), and chadash
+    covers both; the choice of kainos for the new covenant and new tongues is a translation
+    decision worth explaining
+ability: Reveal one card from the top of the Tower and add that revealed card to your hand.
+  Then you may put one other card from your hand with the same card type as that revealed
+  card on the bottom of the Tower.
+ot_verse:
+  ref: Ezekiel 36:26
+  snippet: A new heart also will I give you, and a new spirit
+nt_verse:
+  ref: Mark 16:17
+  snippet: they shall speak with new tongues
+greek:
+  text: καινός
+  translit: kainos
+hebrew:
+  text: חָדָשׁ
+  translit: chadash
+ot_refs: Ezek 36:26 • Isa 65:17 • Lam 3:23
+nt_refs: Mark 16:17 • 2 Cor 5:17 • Rev 21:5
+trivia:
+- 'Greek has two words for new: neos means recent, kainos means unprecedented in kind; the
+  new tongues and the new covenant are kainos.'
+- Babel confused one tongue into many; at Pentecost many tongues carried one message - a new
+  thing, not a repaired old one.
+- Chadash also names the new moon, chodesh - the month begins when the light is made new.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

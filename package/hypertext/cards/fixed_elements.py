@@ -161,6 +161,29 @@ def _median_rgb(points: list[tuple[int, int, int]]) -> tuple[int, int, int]:
     return tuple(sorted(c[i] for c in points)[len(points) // 2] for i in range(3))
 
 
+def _clear_dark_outside(face: Image.Image, region: tuple[int, int, int, int], keep: tuple[int, int, int, int], src_box: tuple[int, int, int, int], cutoff: int = 100) -> int:
+    """Cover, with the face's own parchment (tiled from src_box), every dark pixel
+    in `region` that lies outside `keep`. The model paints its type pill and
+    number a little wider than the template's, so a stamp that only covers the
+    template footprint leaves slivers of the painted pill or a ghost "#"."""
+    from PIL import ImageFilter
+
+    rx0, ry0, rx1, ry1 = region
+    patch = face.crop(region)
+    L = patch.convert("L")
+    mask = L.point(lambda v: 255 if v < cutoff else 0)
+    ImageDraw.Draw(mask).rectangle((keep[0] - rx0, keep[1] - ry0, keep[2] - rx0, keep[3] - ry0), fill=0)
+    mask = mask.filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1))
+    ImageDraw.Draw(mask).rectangle((keep[0] - rx0 + 2, keep[1] - ry0 + 2, keep[2] - rx0 - 2, keep[3] - ry0 - 2), fill=0)
+    src = face.crop(src_box)
+    tile = Image.new("RGB", patch.size)
+    for x in range(0, patch.width, src.width):
+        for y in range(0, patch.height, src.height):
+            tile.paste(src, (x, y))
+    face.paste(tile, (rx0, ry0), mask)
+    return sum(1 for v in mask.getdata() if v > 127)
+
+
 def stamp_pill_text(face: Image.Image, template: Image.Image, pill_box: tuple[int, int, int, int], offset: tuple[int, int], word: str, font: ImageFont.FreeTypeFont) -> None:
     """Repaint the pill interior in the template's pill navy and set the type
     word from the card record. The TITLE composed templates carry a NOUN pill
@@ -193,12 +216,15 @@ def stamp_number(face: Image.Image, template: Image.Image, number: str, offset: 
         src = (pill_box[2] + 8 + dx, pill_box[1] + 6 + dy, pill_box[2] + 88 + dx, pill_box[3] - 6 + dy)
     else:
         src = (REGION_PARCHMENT[0] + dx, REGION_PARCHMENT[1] + dy, REGION_PARCHMENT[2] + dx, REGION_PARCHMENT[3] + dy)
-    parchment = face.crop(src).resize((x1 - x0, y1 - y0), Image.Resampling.LANCZOS)
+    # The cover reaches 10px left and 2px above/below the anchor box: the model
+    # often draws its "#" a little left of the template's, leaving a ghost.
+    cx0, cy0, cx1, cy1 = x0 - 10, y0 - 2, x1, y1 + 2
+    parchment = face.crop(src).resize((cx1 - cx0, cy1 - cy0), Image.Resampling.LANCZOS)
     from PIL import ImageFilter
     soft = Image.new("L", parchment.size, 0)
     ImageDraw.Draw(soft).rectangle((1, 1, parchment.width - 2, parchment.height - 2), fill=255)
     soft = soft.filter(ImageFilter.GaussianBlur(1.5))
-    face.paste(parchment, (x0 + dx, y0 + dy), soft)
+    face.paste(parchment, (cx0 + dx, cy0 + dy), soft)
     anchor = _dark_bbox(template, (x0, y0, x1, y1)) or (x0, y0, x1, y1)
     text = f"#{number}"
     draw = ImageDraw.Draw(face)
@@ -298,9 +324,17 @@ def apply_fixed_elements(card_dir: str | Path, *, candidate_path: str | Path | N
     if pill_box:
         pill_box = (pill_box[0] - 6, pill_box[1] - 6, pill_box[2] + 6, pill_box[3] + 6)
         off = register(face, template, pill_box)
+        dx, dy = off
+        parch_src = (pill_box[2] + 8 + dx, pill_box[1] + 8 + dy, pill_box[2] + 72 + dx, pill_box[3] - 8 + dy)
+        ghost = _clear_dark_outside(
+            face,
+            (pill_box[0] - 12 + dx, pill_box[1] - 8 + dy, pill_box[2] + 12 + dx, pill_box[3] + 4 + dy),
+            (pill_box[0] + dx + 4, pill_box[1] + dy + 4, pill_box[2] + dx - 4, pill_box[3] + dy - 4),
+            parch_src,
+        )
         stamp_template_region(face, template, pill_box, off)
         stamp_pill_text(face, template, pill_box, off, str(content["CARD_TYPE"]).upper(), pill_font)
-        regions["type_pill"] = {"box": pill_box, "offset": off, "text": str(content["CARD_TYPE"]).upper()}
+        regions["type_pill"] = {"box": pill_box, "offset": off, "text": str(content["CARD_TYPE"]).upper(), "ghost_pixels": ghost}
 
     # The rarity chip is verified by hypertext.cards.rarity_chip_gate, never stamped:
     # the model paints it better than a template copy (decision 2026-08-28).
