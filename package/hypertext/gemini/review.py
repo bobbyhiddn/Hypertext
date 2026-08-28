@@ -122,6 +122,7 @@ A correctly formatted Hypertext card should have these elements:
 10. GREEK/HEBREW: Is Greek text visible? Is Hebrew text visible? Are transliterations shown?
    - TRANSLITERATION POSITION: Are transliterations positioned BELOW their respective scripts (correct) or BESIDE/NEXT TO them (wrong)?
    - TRANSLITERATION PARENTHESES: Are transliterations wrapped in parentheses (wrong) or shown without parentheses (correct)?
+   - REFS LABELS: Does the Hebrew panel's references line begin with the literal label 'OT Refs:' and the Greek panel's with 'NT Refs:'? Report any panel whose references line lacks its label.
 11. TRIVIA: How many trivia bullet points are visible? Count the bullet MARKERS (the leading dot of each entry), never text lines. Procedure: transcribe the first three words that follow each leading dot, one per entry, then report the count of transcribed entries as the bullet count. A long bullet wraps onto continuation lines that carry no leading dot and still counts as ONE bullet; an indented line without its own dot is never a new bullet.
 12. BRACKETS: Are there any square brackets [ ] visible ANYWHERE on the card? If yes, list exact locations.
 13. ART PANEL: Briefly describe the artwork. Is there any TEXT inside the art panel?
@@ -200,7 +201,7 @@ Describe in detail:
 11. COLOR SCHEME: What are the primary colors used throughout? Navy? Gold? Parchment?
 
 Be EXTREMELY SPECIFIC about visual details - this will be used to grade other cards for style consistency.
-When judging list sections, count bullet MARKERS, never wrapped continuation lines - a wrapped bullet is one bullet, and an indented continuation line without its own leading dot is never a new bullet. Before declaring a bullet-count mismatch, transcribe the first three words after each leading dot and count those entries; if that count meets the requirement there is no mismatch. Any printed template placeholder text (the literal strings 'CARD TITLE', 'DEFINITION TEXT', a footer '- Set' suffix, '#XXX', a field-name prefix such as 'WORD:', or a bracketed slot label) is a STYLE MISMATCH. Any card that differs in these structural/style elements is a STYLE MISMATCH and must FAIL."""
+When judging list sections, count bullet MARKERS, never wrapped continuation lines - a wrapped bullet is one bullet, and an indented continuation line without its own leading dot is never a new bullet. Before declaring a bullet-count mismatch, transcribe the first three words after each leading dot and count those entries; if that count meets the requirement there is no mismatch. A references line that lacks its 'OT Refs:' or 'NT Refs:' label is a STYLE MISMATCH. Any printed template placeholder text (the literal strings 'CARD TITLE', 'DEFINITION TEXT', a footer '- Set' suffix, '#XXX', a field-name prefix such as 'WORD:', or a bracketed slot label) is a STYLE MISMATCH. Any card that differs in these structural/style elements is a STYLE MISMATCH and must FAIL."""
 
 
 # Stage 1b: Description prompt WITH style reference comparison
