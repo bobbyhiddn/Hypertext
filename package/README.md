@@ -247,7 +247,7 @@ validates MIME type, decoding, format, and dimensions before atomically
 publishing the image. It also writes `outputs/generation.json` with the model,
 MIME type, dimensions, attempts, and reference count; failures replace that
 file atomically with a non-secret category and optional HTTP status.
-GEMINI_TEXT_MODEL=gemini-2.5-pro                # optional stable override
+GEMINI_TEXT_MODEL=gemini-3.7-flash              # optional override (default: gemini-3.7-flash, also the review model)
 ```
 
 ---
