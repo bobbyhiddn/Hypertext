@@ -1,5 +1,5 @@
 {
-  "word": "CHOSEN",
+  "word": "FAITHFUL",
   "card_type": "ADJECTIVE",
   "rarity": "UNCOMMON",
   "content_score": 100,
@@ -46,9 +46,9 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "75cbaf9b6204d012425d24df769c72428d2a0a4ec40a702241c740a3048dbcd5",
+    "candidate_sha256": "722570321bf64af16d81793d0e73f62385bbd64fce3b69743d83ead19c55f440",
     "template_sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
-    "report": "series/2026-Q1/cards/059-chosen/outputs/visual-gate.json"
+    "report": "series/2026-Q1/cards/059-faithful/outputs/visual-gate.json"
   },
   "style_refs_count": 1,
   "style_refs": [

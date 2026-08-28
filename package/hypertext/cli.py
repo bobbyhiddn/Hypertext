@@ -54,6 +54,20 @@ def fixed_elements(card_dir):
     click.echo(json.dumps({"contract": provenance["contract"], "regions": {k: v.get("offset") for k, v in provenance["regions"].items()}, "face_sha256_after": provenance["face_sha256_after"]}, sort_keys=True))
 
 
+@cli.command("lemma-audit")
+@click.option("--series", required=True, help="Series directory (contains cards/)")
+def lemma_audit(series):
+    """Report every pair of cards that share a Hebrew lemma, a Greek lemma, a Hebrew root, or an English stem."""
+    from hypertext.cards.lemma_uniqueness import audit_series
+
+    conflicts = audit_series(series)
+    for c in conflicts:
+        click.echo(f"{c['card']} <> {c['with']}: {c['kind']} - {c['detail']}")
+    click.echo(f"{len(conflicts)} conflict(s)")
+    if conflicts:
+        raise SystemExit(1)
+
+
 @cli.command()
 @click.option("--card-dir", required=True, help="Path to card directory")
 @click.option("--threshold", type=float, default=0.7, help="Quality threshold")

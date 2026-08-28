@@ -35,17 +35,17 @@ General_Revision_Request: <describe any changes; unlocks all fields: art, gloss,
 # CURRENT CARD (edit values below to request changes)
 # ─────────────────────────────────────────────────────────────────────────────
 #
-# Card_Word: CHOSEN
-# Card_Gloss: Set apart by God for his covenant
+# Card_Word: FAITHFUL
+# Card_Gloss: Steadfast in keeping covenant
 # Card_Type: ADJECTIVE
 # Card_Rarity: UNCOMMON
-# Card_Ability: Draw two cards from the Tower. If no NAME is in your hand, put one card from your hand on the bottom of the Tower.
-# Card_Stats: LORE 5 | CONTEXT 2 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
-# Card_Art_Prompt: A single olive tree standing in a golden shaft of light on a dark hillside at night, a lamp burning at its roots, a ring of standing stones marking the ground apart, deep blue shadow beyond, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
-# Card_OT_Verse: Psalm 105:6 — ye children of Jacob his chosen
-# Card_NT_Verse: 1 Peter 2:9 — ye are a chosen generation
-# Card_Hebrew: בָּחִיר (bachir)
-# Card_Greek: ἐκλεκτός (eklektos)
-# Card_Trivia_1: Bachir is the passive of bachar, to choose - the chosen one is the one picked out.
-# Card_Trivia_2: Eklektos means picked out from among; the same word gives eclectic, a choice made from many.
-# Card_Trivia_3: After Babel scattered the nations, God chose one man from Ur - election begins as a departure.
+# Card_Ability: Reveal one card from the top of the Tower and add that revealed card to your hand. If that revealed card is a NAME, draw one card from the Tower.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A single oil lamp burning steadily in a stone window through a long night, stars wheeling above a dark hillside, an anointed standing stone beside the door glinting with poured gold, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Deuteronomy 7:9 — the faithful God, which keepeth covenant
+# Card_NT_Verse: 1 Corinthians 1:9 — God is faithful, by whom ye were called
+# Card_Hebrew: נֶאֱמָן (neeman)
+# Card_Greek: πιστός (pistos)
+# Card_Trivia_1: Neeman is the passive of aman - to be made firm - the same root as amen and emunah, faith.
+# Card_Trivia_2: Pistos means faithful and also believing; the faithful God and the faithful servant share one Greek word.
+# Card_Trivia_3: After Babel's broken promise of a name, God made a covenant and kept it - faithfulness is the reply to the tower.

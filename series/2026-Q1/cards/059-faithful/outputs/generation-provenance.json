@@ -1,20 +1,20 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "7a91cd326b252c1eb46fba7fb8e31468d2d90d56ab25979506ef732c8520da4d",
-    "generation_metadata_path": "series/2026-Q1/cards/059-chosen/outputs/generation.json",
-    "generation_metadata_sha256": "74f407a2af74e5fe147f8a71ece91653c1eda58a8f2a2e83e1925ebc99c17a92",
-    "path": "series/2026-Q1/cards/059-chosen/outputs/card_1024x1536.png",
-    "sha256": "60fe35e8591e412d8167743183b3e552c190e2bee208d0f95607875130faa92d"
+    "gemini_output_sha256": "c0a1c94c72e93cc3ceb834647bb149324f3ed97a6814a4c25a48b5a1f5dbc4ac",
+    "generation_metadata_path": "series/2026-Q1/cards/059-faithful/outputs/generation.json",
+    "generation_metadata_sha256": "d053f9ac97f17a717679998a4036a8fdb589d83a41f2ca040157f0da82ad3e23",
+    "path": "series/2026-Q1/cards/059-faithful/outputs/card_1024x1536.png",
+    "sha256": "e852907896b07fc6278d7039ba02629133206b6ba0623339c676caa67ac8ccf4"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/059-chosen/prompt.txt",
-    "sha256": "180546cf651aae1c6e90a0e091734201c336353175613f75337f018915c8300a"
+    "path": "series/2026-Q1/cards/059-faithful/prompt.txt",
+    "sha256": "555b313319a7dc9e12f8afdeb40b2d0267d7efa0a91536c53625222b54e6334b"
   },
   "recipe": {
-    "canonical_sha256": "8bb80cf9961c1abd256499fdcd279292886166860d2f63c954fe107f939e9fb9",
-    "file_sha256": "b5c32d1180445bdc363ecebce0a5a6079f9b0919b1a9ef5afa905b1dd051defa",
-    "path": "series/2026-Q1/cards/059-chosen/card.json"
+    "canonical_sha256": "8094d856653d8a3b72cd266816309adf3b3e71cfeaffad20b336bc198220ed9e",
+    "file_sha256": "4c1d12be0cc7032ddf258904072785db3cc1e017ea9b05cc922b13566c253384",
+    "path": "series/2026-Q1/cards/059-faithful/card.json"
   },
   "reference_pack": {
     "candidate_audit": [
@@ -93,7 +93,7 @@
     "target_rarity": "UNCOMMON",
     "target_type": "ADJECTIVE"
   },
-  "reference_pack_path": "series/2026-Q1/cards/059-chosen/outputs/reference-pack.json",
+  "reference_pack_path": "series/2026-Q1/cards/059-faithful/outputs/reference-pack.json",
   "reference_pack_sha256": "6e35e85994ffa404c16800fb4ffe38e58983df3123213c498b2ce81c3ae1fd82",
   "settings": {
     "aspect_ratio": "2:3",

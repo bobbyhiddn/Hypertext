@@ -58,6 +58,21 @@ Hidden metadata (not rendered)
 - letter if not TITLE
 - internal_notes
 
+## One lemma, one card
+
+A word may not enter the set as a derivative of a word already in it - a
+different tense, number, or part of speech of the same root (CHOOSE / CHOSEN,
+GATHER / GATHERING) - unless it prints different lemmas, and two cards may
+never share a printed Hebrew lemma or a printed Greek lemma. Each card is a
+word study; two cards on one root dilute the set.
+
+Enforced deterministically by `hypertext.cards.lemma_uniqueness`: same Hebrew
+text (points stripped), same Greek text (accents stripped), same Hebrew root
+(consonant skeleton of the transliteration), or same English stem. The plan
+phase fails closed on a conflict, and `hypertext lemma-audit --series
+series/2026-Q1` reports every conflicting pair in a series. Check candidate
+lemmas offline before spending renders.
+
 ## Output rules (image model constraints)
 - Render only the card. No extra border outside the card.
 - No top microtext like "GAME: HYPERTEXT".

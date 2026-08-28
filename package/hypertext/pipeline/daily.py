@@ -2246,6 +2246,17 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         nt_verse = q_nt_verse if q_nt_verse else (recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {})
         greek = q_greek if q_greek else (recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {})
         hebrew = q_hebrew if q_hebrew else (recipe.get("hebrew", {}) if isinstance(recipe.get("hebrew"), dict) else {})
+        # One lemma, one card (2026-08-28): no derivative of a word already in the
+        # set, and never a shared printed Hebrew or Greek lemma.
+        from hypertext.cards.lemma_uniqueness import lemma_conflicts, load_series_records, summarize
+
+        lemma_issues = lemma_conflicts(
+            {"WORD": word, "CARD_TYPE": card_type, "HEBREW": hebrew.get("text", ""), "HEBREW_TRANSLIT": hebrew.get("translit", ""), "GREEK": greek.get("text", "")},
+            load_series_records(series_dir),
+        )
+        if lemma_issues:
+            raise RuntimeError("one-lemma rule: " + summarize(lemma_issues))
+        _log("[plan] one-lemma rule: no conflict with the existing set")
         trivia = q_trivia if q_trivia else recipe.get("trivia", [])
         if not isinstance(trivia, list):
             trivia = []

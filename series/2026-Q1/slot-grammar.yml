@@ -1,15 +1,14 @@
 series: 2026-Q1
 approved: '2026-08-27'
 notes:
-- Slots BABEL-032..090 fill the 59 open cells of the corrected 90-card combination
-  targets.
-- 'Numbering reconciled 2026-08-27 to actual queue-derived card numbers: pilots are
-  032 HIGH, 033 ELDER, 034 SEED, 035 DEEP, 036 FOREIGN (FOREIGN was deferred and re-queued);
-  planned slots follow from 037.'
-- word = chosen candidate; alternate kept for swaps. mechanic_family / stat_profile
-  / theme are planning guidance;
-- the ability validator enforces rarity budgets - family enforcement in the planner
-  is a pending pipeline extension.
+- Slots BABEL-032..090 fill the 59 open cells of the corrected 90-card combination targets.
+- 'Numbering reconciled 2026-08-27 to actual queue-derived card numbers: pilots are 032 HIGH,
+  033 ELDER, 034 SEED, 035 DEEP, 036 FOREIGN (FOREIGN was deferred and re-queued); planned
+  slots follow from 037.'
+- word = chosen candidate; alternate kept for swaps. mechanic_family / stat_profile / theme
+  are planning guidance;
+- the ability validator enforces rarity budgets - family enforcement in the planner is a pending
+  pipeline extension.
 slots:
 - slot_id: BABEL-032
   number: 32
@@ -220,9 +219,8 @@ slots:
   stat_profile: high COMPLEXITY
   theme: the remnant and covenant line
   status: planned
-  note: JAPHETH lacks Greek NT attestation (verse lexical rule); EGYPT was considered
-    and rejected because Egypt is the next set's kingdom. ENOCH keeps the antediluvian
-    era.
+  note: JAPHETH lacks Greek NT attestation (verse lexical rule); EGYPT was considered and
+    rejected because Egypt is the next set's kingdom. ENOCH keeps the antediluvian era.
 - slot_id: BABEL-051
   number: 51
   type: NAME
@@ -315,13 +313,16 @@ slots:
   number: 59
   type: ADJECTIVE
   rarity: UNCOMMON
-  word: CHOSEN
-  gloss: Set apart by God for his covenant.
-  alternate: FAITHFUL
+  word: FAITHFUL
+  gloss: Steadfast in keeping covenant.
+  alternate: CHOSEN (rejected)
   mechanic_family: DRAW
   stat_profile: balanced
   theme: the remnant and covenant line
   status: planned
+  note: 'CHOSEN was generated first and rejected under the one-lemma rule (2026-08-28): a
+    derivative of CHOOSE #043 (bachar/bachir, eklegomai/eklektos). FAITHFUL prints neeman
+    / pistos, which no other card shares.'
 - slot_id: BABEL-060
   number: 60
   type: NAME

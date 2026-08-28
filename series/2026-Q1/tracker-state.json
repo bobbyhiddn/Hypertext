@@ -110,7 +110,7 @@
     },
     "59": {
       "status": "pass",
-      "note": "CHOSEN ADJECTIVE/UNCOMMON. Draw two; if no NAME in hand, put one on the bottom. Stats 5/2/3 (bachir x13 + eklektos x22). Passed first render, 100/100 3-0."
+      "note": "FAITHFUL ADJECTIVE/UNCOMMON (replaced CHOSEN under the one-lemma rule: bachir/eklektos were derivatives of CHOOSE #043). Reveal the top card and add it; if it is a NAME, draw one. Stats 4/3/3 (neeman x45 + pistos x67). Passed first render, 100/100 3-0."
     },
     "60": {
       "status": "pass",
@@ -229,6 +229,10 @@
     {
       "when": "2026-08-28",
       "what": "BATCH 6 (#057-#061: DISCORD, DEPART, CHOSEN, EDEN, FIRE), timed. Design + offline validation 17:14:18-17:17:56 (3m38s); daemon-driven plan, render, stamp, gates, judge 17:17:56-17:23:58 (6m02s) - about 72s per card, six renders for five cards (DEPART's first roll leaked DEFINITION TEXT). All five 100/100 with 3-0 style votes; no self-heal fixes needed. The post-mortem fixes held: no crowds, every ability inside its word cap, first-render pass rate 4/5. Designs at scripts/pipeline/designs/batch6_057_061.py."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "ONE LEMMA, ONE CARD (user: 'if we have a word in a different tense, like Choose, we should not have derivatives unless they use different lemma'). hypertext.cards.lemma_uniqueness rejects a candidate that shares a printed Hebrew or Greek lemma, a Hebrew root (consonant skeleton of the transliteration), or an English stem with any existing card; hard fail in the plan phase after metadata, plus 'hypertext lemma-audit --series'. Proper-name/noun homographs (SHEM / NAME) are exempt. CHOSEN #059 retired (bachar/bachir, eklegomai/eklektos vs CHOOSE #043) and the slot regenerated as FAITHFUL (neeman / pistos) in five minutes, 100/100 first render. The audit found three more collisions, all involving a legacy card or BABBLE: BABBLE #049 prints exactly CONFUSE #006's lemmas (balal / syncheo); BRICK #048 and STONE #008 both print lithos; WATCHMAN #046 and KEEPER #019 both print phylax. Awaiting the user's call on which card yields in each pair."
     }
   ]
 }
