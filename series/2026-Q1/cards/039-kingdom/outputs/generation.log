@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 04:59:42
+Timestamp: 2026-08-28 07:19:54
 Phase: revise-image-only
 Target Rarity: GLORIOUS
 Target Type: NOUN
 Fix Mode: True
 
 Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/039-kingdom/outputs/reference-inputs/current-c403c90c16fced7dea7a3de998ebac7df1609d4fdd8548bc16e7869e9ae5132c.png [GLORIOUS] sha256=c403c90c16fced7dea7a3de998ebac7df1609d4fdd8548bc16e7869e9ae5132c
+  [1] CURRENT_CARD: series/2026-Q1/cards/039-kingdom/outputs/reference-inputs/current-945f6a7229842dcef2ceb37b7d8852ae673ea1459b8abd1d4c12c293fc5f062e.png [GLORIOUS] sha256=945f6a7229842dcef2ceb37b7d8852ae673ea1459b8abd1d4c12c293fc5f062e
   [2] TEMPLATE: templates/card/v001/composed/noun/glorious/template_1024x1536.png [GLORIOUS] sha256=6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d
 
-Prompt File: series/2026-Q1/cards/039-kingdom/prompt.txt
+Prompt File: series/2026-Q1/cards/039-kingdom/outputs/prompt.revision.txt
