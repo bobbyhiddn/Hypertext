@@ -13,6 +13,7 @@ from PIL import Image
 from hypertext.cards import template_matrix
 from hypertext.gemini import style
 from hypertext.gemini.reference_pack import (
+    FINISHED_REFERENCE_MANIFEST,
     FINISHED_REFERENCE_CONTRACT,
     ReferenceContractError,
     ReferencePack,
@@ -127,7 +128,19 @@ def _manifest(root: Path, entries: list[dict]) -> Path:
     }))
 
 
-def test_daily_regression_template_is_not_appended_after_examples():
+def _live_manifest_with_moses_accepted(tmp_path: Path) -> Path:
+    """The live manifest retired the MOSES example (pre-matrix style); these
+    contract tests need an accepted NAME/COMMON example, so re-accept it in a
+    temporary copy rather than depending on curation state."""
+    live = json.loads(FINISHED_REFERENCE_MANIFEST.read_text(encoding="utf-8"))
+    for entry in live["entries"]:
+        if entry["id"] == "013-moses":
+            entry["status"] = "accepted"
+            entry["legacy"] = False
+    return _write(tmp_path / "live-manifest-moses-accepted.json", json.dumps(live))
+
+
+def test_daily_regression_template_is_not_appended_after_examples(tmp_path):
     """Reproduces the old seam: daily appended TEMPLATE last while style labeled [1]."""
     recipe = _recipe("MOSES", "basket reeds river", card_type="NAME")
     pack = daily._build_style_refs(
@@ -136,6 +149,7 @@ def test_daily_regression_template_is_not_appended_after_examples():
         target_rarity="COMMON",
         target_recipe=recipe,
         target_prompt="basket reeds river",
+        reference_manifest_path=_live_manifest_with_moses_accepted(tmp_path),
     )
     assert [item.role for item in pack.references] == ["template", "example"]
     assert pack.references[0].gemini_label.startswith("[1] = TEMPLATE:")
@@ -147,10 +161,12 @@ def test_daily_regression_template_is_not_appended_after_examples():
 
 
 def test_generate_and_fix_positions_share_gemini_role_contract(tmp_path):
+    manifest = _live_manifest_with_moses_accepted(tmp_path)
     generate = daily._build_style_refs(
         tmp_path, target_type="NAME", target_rarity="COMMON",
         target_recipe=_recipe("MOSES", "basket river", card_type="NAME"),
         target_prompt="basket river",
+        reference_manifest_path=manifest,
     )
     current = _write(tmp_path / "current-card.png", b"current-card")
     fix = daily._build_style_refs(
@@ -161,6 +177,7 @@ def test_generate_and_fix_positions_share_gemini_role_contract(tmp_path):
         target_recipe=_recipe("MOSES", "basket river", card_type="NAME"),
         target_prompt="basket river",
         fix_mode=True,
+        reference_manifest_path=manifest,
     )
 
     assert [item.role for item in generate.references] == ["template", "example"]

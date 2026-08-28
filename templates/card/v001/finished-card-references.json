@@ -6,9 +6,9 @@
   "entries": [
     {
       "id": "013-moses",
-      "status": "accepted",
+      "status": "retired",
       "finished": true,
-      "legacy": false,
+      "legacy": true,
       "superseded_by": null,
       "card_type": "NAME",
       "rarity": "COMMON",
@@ -21,7 +21,8 @@
         "status": "green",
         "score": 100,
         "evidence_path": "templates/example_cards/013-moses/grade.json"
-      }
+      },
+      "retired_reason": "2026-08-28: pre-matrix example face (caps rarity text, hollow diamond, heavy panel borders, dark title, Egyptian subject) pulled every NAME/COMMON render off the golden-matrix style (SHINAR, ABRAM). Templates alone guide renders until an approved current-set face is curated per type/rarity."
     }
   ]
 }
