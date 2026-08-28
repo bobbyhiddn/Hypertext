@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "",
+  "style_mismatch_reason": "none",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,13 +46,12 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "5f46b0474bac27c2f188660907b872b9fb67cadd177da12e0a3292b7c8082f47",
+    "candidate_sha256": "38e84338084b1c139da3986cf256ff537f0768a44645e60a897420d229f6c458",
     "template_sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
     "report": "series/2026-Q1/cards/040-shinar/outputs/visual-gate.json"
   },
-  "style_refs_count": 2,
+  "style_refs_count": 1,
   "style_refs": [
-    "template_1024x1536.png",
-    "card_1024x1536.png"
+    "template_1024x1536.png"
   ]
 }
