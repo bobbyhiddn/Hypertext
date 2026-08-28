@@ -213,15 +213,16 @@ slots:
   number: 50
   type: NAME
   rarity: UNCOMMON
-  word: EGYPT
-  gloss: Mizraim son of Ham; the granary the nations went down to.
+  word: ENOCH
+  gloss: The seventh from Adam, taken without death.
   alternate: JAPHETH
   mechanic_family: EXCHANGE
   stat_profile: high COMPLEXITY
-  theme: the scattering of the nations
+  theme: the remnant and covenant line
   status: planned
-  note: 'JAPHETH swapped out 2026-08-28: no Greek NT occurrence, so the verse lexical
-    rule cannot be met; EGYPT keeps the scattering-of-nations theme (Gen 10:6).'
+  note: JAPHETH lacks Greek NT attestation (verse lexical rule); EGYPT was considered
+    and rejected because Egypt is the next set's kingdom. ENOCH keeps the antediluvian
+    era.
 - slot_id: BABEL-051
   number: 51
   type: NAME
