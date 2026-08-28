@@ -5,7 +5,7 @@
 ### Standard Playing Card Size
 - Width: 2.5 inches (63.5 mm)
 - Height: 3.5 inches (88.9 mm)
-- Aspect ratio: 2:3
+- Aspect ratio: 5:7 (0.714). Note: the rendered faces are 2:3 (1024 x 1536), so they must never be stretched or cropped to the card; the Game Crafter prep uses a frame fit (face scaled uniformly into the true safe zone, 675 x 975 px, centered on a navy mat at cut size, bleed extended in the same navy to 825 x 1125).
 
 ### Resolution Requirements
 

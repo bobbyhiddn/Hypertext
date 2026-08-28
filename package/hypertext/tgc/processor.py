@@ -147,10 +147,44 @@ def crop_to_fill(
     return resized.crop((left, top, right, bottom))
 
 
+# Cut size and true safe zone (1/8" inside the cut) at 300 DPI. SAFE_WIDTH /
+# SAFE_HEIGHT above are historically the CUT size; the frame fit below uses
+# the real safe zone so no header or footer content ever nears the trim.
+CUT_WIDTH, CUT_HEIGHT = 750, 1050
+INNER_WIDTH, INNER_HEIGHT = 675, 975
+
+
+def _frame_color(image: Image.Image) -> tuple:
+    """Sample the face's own outer border (left edge, middle band) for the mat."""
+    band = image.crop((0, image.height // 4, max(1, image.width // 80), image.height * 3 // 4))
+    pixels = list(band.getdata())
+    n = max(1, len(pixels))
+    return tuple(sum(px[i] for px in pixels) // n for i in range(3))
+
+
+def frame_fit(image: Image.Image, fill_color: tuple | None = None) -> Image.Image:
+    """Fit a 2:3 Hypertext face onto the TGC poker card without distortion.
+
+    The face is scaled uniformly into the true safe zone, centered on a mat of
+    its own border navy at cut size, and the mat is extended for bleed. The
+    result is exactly PRINT_WIDTH x PRINT_HEIGHT with no stretch, no crop, and
+    all printed content at least 1/8" inside the cut line.
+    """
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+    fill = fill_color or _frame_color(image)
+    scale = min(INNER_WIDTH / image.width, INNER_HEIGHT / image.height)
+    new_w, new_h = int(round(image.width * scale)), int(round(image.height * scale))
+    face = image.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    canvas = Image.new("RGB", (PRINT_WIDTH, PRINT_HEIGHT), fill)
+    canvas.paste(face, ((PRINT_WIDTH - new_w) // 2, (PRINT_HEIGHT - new_h) // 2))
+    return canvas
+
+
 def prepare_for_print(
     image: Image.Image,
-    mode: str = "resize",
-    border: bool = True,
+    mode: str = "frame",
+    border: bool = False,
     border_percent: float = 0.10,
     border_color: tuple = (0, 0, 0),
 ) -> Image.Image:
@@ -158,8 +192,10 @@ def prepare_for_print(
 
     Args:
         image: Source card image (any size)
-        mode: "resize" (scale to exact dimensions),
-              "fill" (crop to fill), or "fit" (letterbox)
+        mode: "frame" (default: uniform fit into the true safe zone on a
+              navy mat with bleed - the only mode that neither stretches
+              nor crops a 2:3 face), "resize" (stretch to exact dimensions),
+              "fill" (crop to fill), or "fit" (letterbox into the cut area)
         border: If True, shrink image and add border for cut lines
         border_percent: Border size as percentage (0.10 = 10%)
         border_color: RGB tuple for border color (default black)
@@ -171,7 +207,9 @@ def prepare_for_print(
     if image.mode != "RGB":
         image = image.convert("RGB")
 
-    if mode == "resize":
+    if mode == "frame":
+        resized = frame_fit(image)
+    elif mode == "resize":
         # Direct resize to exact TGC dimensions
         resized = image.resize((PRINT_WIDTH, PRINT_HEIGHT), Image.Resampling.LANCZOS)
     elif mode == "fill":
@@ -204,7 +242,7 @@ def prepare_for_print(
 def process_card_file(
     input_path: Path,
     output_path: Path,
-    mode: str = "fill",
+    mode: str = "frame",
 ) -> None:
     """Process a card image file for print.
 
@@ -230,7 +268,7 @@ def process_card_file(
 def process_card_back(
     input_path: Path,
     output_path: Path,
-    mode: str = "fill",
+    mode: str = "frame",
 ) -> None:
     """Process card back image for print (same as card face processing).
 
