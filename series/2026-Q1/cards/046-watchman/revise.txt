@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: WATCHMAN
+# Card_Gloss: One posted to look out and sound warning of what approaches
+# Card_Type: TITLE
+# Card_Rarity: COMMON
+# Card_Ability: Look at one card from the top of the Tower and one card from the bottom of the Tower. Then draw one card from the Tower.
+# Card_Stats: LORE 2 | CONTEXT 3 | COMPLEXITY 4
+# Card_Art_Prompt: A lone robed figure seen from behind standing on a city wall at night, a ram's horn at his side, watching two horizons under a starry sky, engraved devotional style on warm parchment tones
+# Card_OT_Verse: Ezekiel 33:7 — I have set thee a watchman
+# Card_NT_Verse: Acts 12:6 — the keepers before the door kept the prison
+# Card_Hebrew: צֹפֶה (tsopheh)
+# Card_Greek: φύλαξ (phylax)
+# Card_Trivia_1: Ezekiel's watchman must sound the trumpet or answer for the blood of those he failed to warn.
+# Card_Trivia_2: Hebrew tsopheh comes from a verb meaning to look out - the watchman is defined by his gaze.
+# Card_Trivia_3: Greek phylax, a guard, survives in prophylactic - a guarding set up beforehand.

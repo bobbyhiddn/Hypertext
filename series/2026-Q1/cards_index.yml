@@ -14,6 +14,7 @@ words:
 - DESCEND
 - EARTH
 - ELDER
+- FILLED
 - FOREIGN
 - FORM
 - GATHER
@@ -43,6 +44,7 @@ words:
 - SPIRIT
 - STONE
 - TONGUE
+- WATCHMAN
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_choice_draw_sheol_stat_complexity_tower
@@ -299,3 +301,13 @@ cards:
   type: ADJECTIVE
   rarity: COMMON
   ability_pattern: add_hand_look_top_tower
+- number: 45
+  word: FILLED
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: draw_tower
+- number: 46
+  word: WATCHMAN
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: draw_look_top_tower

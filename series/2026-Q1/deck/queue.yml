@@ -130,3 +130,9 @@
 - word: DARK
   card_type: ADJECTIVE
   rarity: COMMON
+- word: FILLED
+  card_type: ADJECTIVE
+  rarity: UNCOMMON
+- word: WATCHMAN
+  card_type: TITLE
+  rarity: COMMON

@@ -1,0 +1,42 @@
+number: '046'
+word: WATCHMAN
+gloss: One posted to look out and sound warning of what approaches
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A lone robed figure seen from behind standing on a city wall at night,
+  a ram's horn at his side, watching two horizons under a starry sky, engraved devotional
+  style on warm parchment tones
+stats:
+  lore: 2
+  context: 3
+  complexity: 4
+ability: Look at one card from the top of the Tower and one card from the bottom of
+  the Tower. Then draw one card from the Tower.
+ot_verse:
+  ref: Ezekiel 33:7
+  snippet: I have set thee a watchman
+nt_verse:
+  ref: Acts 12:6
+  snippet: the keepers before the door kept the prison
+greek:
+  text: φύλαξ
+  translit: phylax
+hebrew:
+  text: צֹפֶה
+  translit: tsopheh
+ot_refs: Ezek 33:7 • Ezek 3:17 • 2 Sam 18:24
+nt_refs: Acts 12:6 • Acts 5:23 • Acts 12:19
+trivia:
+- Ezekiel's watchman must sound the trumpet or answer for the blood of those he failed
+  to warn.
+- Hebrew tsopheh comes from a verb meaning to look out - the watchman is defined by
+  his gaze.
+- Greek phylax, a guard, survives in prophylactic - a guarding set up beforehand.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
