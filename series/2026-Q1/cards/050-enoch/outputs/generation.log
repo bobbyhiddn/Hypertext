@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 06:20:17
-Phase: rebuild
+Timestamp: 2026-08-28 07:04:43
+Phase: revise-image-only
 Target Rarity: UNCOMMON
 Target Type: NAME
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/name/uncommon/template_1024x1536.png [UNCOMMON] sha256=1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/050-enoch/outputs/reference-inputs/current-452687af810761df9d541bdbde037eeebd0243d6a46a6bbe288bcaf3d28cad18.png [UNCOMMON] sha256=452687af810761df9d541bdbde037eeebd0243d6a46a6bbe288bcaf3d28cad18
+  [2] TEMPLATE: templates/card/v001/composed/name/uncommon/template_1024x1536.png [UNCOMMON] sha256=1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53
 
-Prompt File: series/2026-Q1/cards/050-enoch/prompt.txt
+Prompt File: series/2026-Q1/cards/050-enoch/outputs/prompt.revision.txt

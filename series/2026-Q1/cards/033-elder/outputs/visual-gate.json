@@ -27,6 +27,51 @@
     "sha256": "418af8a578758796df1ef083c5e10dcca5a9b7bc0fa00c6a6260c589b7334ed6"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
+  "cost_indicator": {
+    "candidate": {
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "path": "series/2026-Q1/cards/033-elder/outputs/card_1024x1536.png",
+      "sha256": "ab98c1a05d4af1d92753da7ec9d293d12f3b16eea38856a5b139c0ce7e613249"
+    },
+    "candidate_features": [],
+    "contract": "hypertext.template-relative-cost-indicator-gate/v1",
+    "defects": [],
+    "observed": {
+      "card": 0,
+      "plus": 0,
+      "unknown": 0
+    },
+    "passed": true,
+    "recipe": {
+      "canonical_sha256": "1deba9ccd0c9375c37516de7b4fd57003fcb71cf5182cdf4caa59886b17cf6c8",
+      "declared_display": null
+    },
+    "region": [
+      790,
+      80,
+      1002,
+      194
+    ],
+    "target": {
+      "card_type": "TITLE",
+      "expected_card_count": 0,
+      "expected_plus_count": 0,
+      "placement": "below_rarity",
+      "rarity": "COMMON"
+    },
+    "template": {
+      "dimensions": [
+        848,
+        1264
+      ],
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/common/template_1024x1536.png",
+      "sha256": "3b16ec12fc7d9263a7f561061355d6be1f13ed7c6de3973dfb4c764e15b81cf8"
+    },
+    "template_features": []
+  },
   "defects": [],
   "expected_counts": {
     "STAT_COMPLEXITY": 2,
@@ -513,6 +558,10 @@
       ]
     }
   ],
+  "stat_pips": {
+    "defects": [],
+    "passed": true
+  },
   "target": {
     "card_type": "TITLE",
     "rarity": "COMMON"
