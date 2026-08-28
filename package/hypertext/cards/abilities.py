@@ -216,7 +216,7 @@ _ACTION_PATTERNS = {
 _QUANTITY_PATTERN = re.compile(
     r"\b(?:exactly\s+|up\s+to\s+)?\d+\b"
     r"|\b(?:a|an|one|two|three|four|five|six|seven|eight|nine|ten|all|each|every|any)\b"
-    r"|\b(?:that|this|those|these|both)\b|\bthe\s+other\b|\bchosen\b",
+    r"|\b(?:that|this|those|these|both|another)\b|\bthe\s+other\b|\bchosen\b",
     re.IGNORECASE,
 )
 _CARD_OR_RESOURCE_PATTERN = re.compile(
