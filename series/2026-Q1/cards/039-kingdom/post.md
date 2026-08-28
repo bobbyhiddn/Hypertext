@@ -6,7 +6,7 @@
 **KINGDOM** — The realm and reign under one perfect rule, gathering every redeemed one
 
 ## Old Testament
-> Daniel 2:44 — "a kingdom, which shall never be destroyed"
+> Psalm 145:13 — "Thy kingdom is an everlasting kingdom"
 
 ## New Testament
 > Revelation 11:15 — "the kingdoms of this world are become the kingdoms of our Lord"
