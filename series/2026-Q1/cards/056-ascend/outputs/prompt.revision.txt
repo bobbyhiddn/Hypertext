@@ -17,4 +17,4 @@ NEGATIVE GRAMMAR: no surrounding text; no generated watermark; no captions outsi
 Output only one vertical 1024x1536 Word Card.
 
 REVISION INSTRUCTIONS:
-Visual fix only, change nothing except this single correction: Fix the typo in the ability text by removing 'is' near the end so it reads: '...and put the other cards on top of the Tower in any order.' Keep every other pixel, panel, and text exactly as rendered.
+Visual fix only, change nothing except this single correction: Update ability text to: 'Look at the top four cards of the Tower. Add up to one of those cards that has LORE four or more to your hand and put the other cards on top of the Tower in any order.' Keep every other pixel, panel, and text exactly as rendered.

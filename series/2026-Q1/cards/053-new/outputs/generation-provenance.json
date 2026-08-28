@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "59ac169d088e7ec1fc09a4be127aac36037a07bc5eb5f41a06f3adedeab574aa",
+    "gemini_output_sha256": "448ebf083350864c75f4eb5a54203652a18e0273015276871ecd0689365ef2ab",
     "generation_metadata_path": "series/2026-Q1/cards/053-new/outputs/generation.json",
-    "generation_metadata_sha256": "d7c5c59867c08980f9e5406326b6fb2c858af1d768d5995d46df333ee7cc0a16",
+    "generation_metadata_sha256": "1ff4b697713667b6f4e53dddcc66d3d0bc28bbd842d29718f3ba0745350f11f3",
     "path": "series/2026-Q1/cards/053-new/outputs/card_1024x1536.png",
-    "sha256": "ff55d9cc123e8dc1b26189b60f289f26832d81cc2ae47093b2d3a7f495891b9d"
+    "sha256": "145d5162eb85924ffdc0df7fc77fb0842b55a1a7e59e9581a9bf89e7f289bea1"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/053-new/outputs/prompt.revision.txt",
-    "sha256": "95ffe58bbf808402f8861d2cb1b318051ebe874b8f9df570e7134a03f2e67a8d"
+    "sha256": "df6a70c2acf1b9e8f901b7cf183337f1c22cc986abf15d495008025b919680a5"
   },
   "recipe": {
-    "canonical_sha256": "9701660b416a6d0a911ae7b2789b33a4960f9499f229489e46c6156321d27948",
-    "file_sha256": "af9c7a5353d9af5d24ad9b7773dc427fff17b311c45d9bc6aab8caff22d2f62d",
+    "canonical_sha256": "35421fd6464be891f6522f4d93fe3464c984620ccc506fd75c39d78152d2d9e1",
+    "file_sha256": "e5a28e3aa16a2fa169d65e95b077796e18a361b7b4fca97d654ab32ae1762c0d",
     "path": "series/2026-Q1/cards/053-new/card.json"
   },
   "reference_pack": {
@@ -63,7 +63,7 @@
         "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/053-new/outputs/reference-inputs/current-cd6d6c85e2f44bc113a9a61134d5ff11457d576d838a7a7fb9a2e54527ad40b2.png",
+        "path": "series/2026-Q1/cards/053-new/outputs/reference-inputs/current-10ce7352362213b9d75bf1b7b6bd9d988dee1e58c259bae618e4827ea3f5ca64.png",
         "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
@@ -71,11 +71,11 @@
         "rarity_label": "COMMON",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/053-new/outputs/reference-inputs/current-cd6d6c85e2f44bc113a9a61134d5ff11457d576d838a7a7fb9a2e54527ad40b2.png",
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/053-new/outputs/reference-inputs/current-10ce7352362213b9d75bf1b7b6bd9d988dee1e58c259bae618e4827ea3f5ca64.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "current_card",
-        "sha256": "cd6d6c85e2f44bc113a9a61134d5ff11457d576d838a7a7fb9a2e54527ad40b2",
+        "sha256": "10ce7352362213b9d75bf1b7b6bd9d988dee1e58c259bae618e4827ea3f5ca64",
         "similarity_components": {},
         "similarity_reason": "not_applicable_current_card",
         "similarity_score": 0,
@@ -128,7 +128,7 @@
     "target_type": "ADJECTIVE"
   },
   "reference_pack_path": "series/2026-Q1/cards/053-new/outputs/reference-pack.json",
-  "reference_pack_sha256": "395f11756831b33d4eeb761478e1b6425ac0a4e943f45132a4052e88c44ca9a5",
+  "reference_pack_sha256": "3f1dd72ccadee8e0a2792fad32c3f3a6782b17a3cd85cb78bd22309867c631df",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,

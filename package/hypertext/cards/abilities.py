@@ -305,6 +305,11 @@ _BANNED_FRAGMENTS = (
 )
 
 
+# Render caps by rarity (2026-08-28): the image model starts garbling ability
+# copy past ~35 words (NEW #053 needed six renders at 42 words). Shorter than
+# the 60-word legal maximum on purpose.
+ABILITY_WORD_CAPS = {"COMMON": 34, "UNCOMMON": 40, "RARE": 48, "GLORIOUS": 56}
+
 ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - There is one shared 90-card draw pile, the Tower. Never say "your deck" or "their deck".
 - A player may have cards in hand and face-up Pages. Sheol is the shared face-up discard pile. Resolve holds an activated card and its cost until the ability finishes.
@@ -324,6 +329,7 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Branching copy with one binary condition states that condition once and resolves every remaining case with "otherwise" (for example, "If that revealed card has COMPLEXITY three or more, add that revealed card to your hand; otherwise, put ..."). Do not restate the complementary condition in full; "otherwise" already covers it exhaustively. Never use "or else" or a bare "if not".
 - Avoid bare pronouns such as it, them, they, "that many," or a bare "the other"; repeat the player, card, quantity, or zone instead ("the other card" with its noun is fine).
 - DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
+- COPY LENGTH: the printed image model garbles long copy. Keep a COMMON ability to about 30 words (hard cap 34), an UNCOMMON to 40, a RARE to 48, a GLORIOUS to 56; prefer one sentence when the effect allows it.
 - CARD-ADVANTAGE LADDER: activation costs are part of the math (a RARE pays one discard, a GLORIOUS two). A COMMON beats a plain draw modestly; an UNCOMMON is worth about one card plus a real kicker; a RARE must account for at least two cards' worth of advantage; a GLORIOUS at least three. Outcomes on exclusive branches never add together - an ability that either adds or draws, but never both, delivers only its better branch.
 """
 
@@ -919,6 +925,9 @@ def validate_ability_candidate(candidate: dict, semantic_seed: dict, rarity: str
     checks["copy_within_60_words"] = bool(ability_text) and word_count <= 60
     if ability_text and word_count > 60:
         issues.append(f"ability_text has {word_count} words; maximum is 60")
+    cap = ABILITY_WORD_CAPS.get(rarity_key, 60)
+    if ability_text and word_count > cap:
+        issues.append(f"ability_text has {word_count} words; the {rarity_key} render cap is {cap} (the image model garbles long copy)")
     sentence_count = len(re.findall(r"[.!?]+(?:\s|$)", ability_text))
     if ability_text and sentence_count == 0:
         sentence_count = 1

@@ -31,6 +31,7 @@
       "no recognizable human faces",
       "no portrait likenesses",
       "no face-forward named figures",
+      "no crowds",
       "no neon colors",
       "no heavy HDR",
       "no washed-out grayscale",
@@ -59,7 +60,7 @@
       "stat_pips": "Fifteen stat circles in three labeled groups of five, copied from the template's pip row exactly and ALL LEFT EMPTY: every pip is a thin navy outline with a plain parchment interior at the template's exact positions and sizes; never fill a pip. The stat values are applied after rendering by the deterministic fixed-elements stamp.",
       "art_direction": {
         "subject_rule": "Represent people through what they are known for: defining work, objects, attire, gestures, environments, symbols, or achievements.",
-        "figure_rule": "If a human figure is necessary, keep the figure secondary and show it from behind, in silhouette, at a distance, with the face obscured, or cropped so no recognizable face appears.",
+        "figure_rule": "If a human figure is necessary, keep the figure secondary and show it from behind, in silhouette, at a distance, with the face obscured, or cropped so no recognizable face appears. Never a crowd, gathering, or group of people; prefer no people at all, or exactly one figure seen from behind, in silhouette, or at a distance.",
         "style_rule": "The illustration panel is a luminous, vibrant, full-color cinematic oil painting with impressionistic brushwork - deep shadowed backgrounds lit by one radiant golden light source, rich saturated blues and golds, ethereal atmosphere, a strong symbolic subject - in the manner of the printed Hypertext set (example cards 001-020); never sepia, monochrome, engraving, etching, woodcut, or line art. The frame and panels stay antique parchment and navy; only the artwork inside the art window carries this vivid painterly style. This standard style is the default for every card in a base set; an alternate palette or register (for example a cool underwater or nocturne treatment) is an expansion-level decision, never a per-card one, so that all faces in a set match."
       },
       "original_language_layout": {

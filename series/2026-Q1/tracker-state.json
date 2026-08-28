@@ -14,7 +14,7 @@
     },
     "35": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100. Re-rendered 2026-08-28 in the standard style (the face had been the alternate deep-sea render); 100/100 3-0."
     },
     "36": {
       "status": "pass",
@@ -86,7 +86,7 @@
     },
     "53": {
       "status": "pass",
-      "note": "NEW ADJECTIVE/COMMON. Reveal-and-add the top card; may send an old card of the same type to the bottom (grammar family GAIN_LETTER infeasible at COMMON under the printed-rating validator). Stats 4/3/3. Art moved to an empty upper room after two face-forward crowd renders; passed on attempt 6 + text fix, re-stamped with pill ghost cleanup, 100/100 3-0."
+      "note": "NEW ADJECTIVE/COMMON. Ability shortened to 34 words (render cap) and re-rendered: \"Add one card from the top of the Tower to your hand. Then you may put one other card of that added card's card type from your hand on the bottom of the Tower.\" Stats 4/3/3. 100/100 3-0."
     },
     "54": {
       "status": "pass",
@@ -98,7 +98,7 @@
     },
     "56": {
       "status": "pass",
-      "note": "ASCEND VERB/UNCOMMON. Look at four, take up to one with LORE 4+, reorder the rest. Stats 4/5/3 (alah x890 + anabaino x82). Passed attempt 2, 100/100 3-0."
+      "note": "ASCEND VERB/UNCOMMON. Look at four, take up to one with LORE 4+, reorder the rest. Stats 4/5/3. Re-rendered 2026-08-28 (first face read pale with thin text); 100/100 3-0."
     }
   },
   "log": [
@@ -201,6 +201,10 @@
     {
       "when": "2026-08-28",
       "what": "BATCH 5 (#052-#056: HOVER, NEW, DESTROYER, SHEPHERD, ASCEND) - the first batch produced end to end under the full contract: designs validated offline against the seed/candidate validators and the stat rubric before any model call (the printed-rating estimator is a hard constraint: a COMMON carries no condition, no Letter gain, no second draw - so NEW and SHEPHERD left their grammar families), daemon-driven plan, render with the model painting empty pips, deterministic stamp inside the pipeline gate, pip/cost/chip gates, judge. All five at 100/100 with 3-0 style votes. Found in passing: the model paints its type pill and '#' a little wider than the template's, so the stamp now clears the model's dark pixels around the pill and widens the number cover (NEW #053 showed a pill sliver and a '#' ghost). Designs module kept at scripts/pipeline/designs/batch5_052_056.py."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "WHY NEW TOOK SIX RENDERS, FIXED: (1) crowd art prompt -> face-forward figures twice; metadata prompt and descriptor figure_rule now forbid crowds/groups (prefer no people, else one figure from behind); (2) self-heal now repaints the art panel for a figure-rule failure at any score instead of re-rolling the whole card; (3) 42-word ability garbled twice -> per-rarity render word caps in the validator (COMMON 34, UNCOMMON 40, RARE 48, GLORIOUS 56) with prompt guidance, NEW shortened to 34 words and re-rendered; (4) self-heal archives every attempt's grade.txt under outputs/grades/. Also re-rendered ASCEND (pale first face, garbled 38-word copy fixed) and DEEP (its face was still the alternate deep-sea style; standard style is the default) - all three at 100/100 3-0."
     }
   ]
 }

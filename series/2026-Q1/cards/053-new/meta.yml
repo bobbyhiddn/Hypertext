@@ -23,9 +23,8 @@ stats_rationale:
   complexity: Greek keeps two words, kainos (new in kind) and neos (new in time), and chadash
     covers both; the choice of kainos for the new covenant and new tongues is a translation
     decision worth explaining
-ability: Reveal one card from the top of the Tower and add that revealed card to your hand.
-  Then you may put one other card from your hand with the same card type as that revealed
-  card on the bottom of the Tower.
+ability: Add one card from the top of the Tower to your hand. Then you may put one other card
+  of that added card's card type from your hand on the bottom of the Tower.
 ot_verse:
   ref: Ezekiel 36:26
   snippet: A new heart also will I give you, and a new spirit
@@ -49,6 +48,7 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: 'Ability copy shortened 2026-08-28 from 42 to 34 words (render cap): the model garbled
+  the long version twice.'
 sources: []
 search_queries: []

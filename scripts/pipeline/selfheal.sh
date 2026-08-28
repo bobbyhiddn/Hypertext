@@ -21,7 +21,11 @@ for slug in "$@"; do
     if echo "$out" | grep -q 'Status: PASS'; then echo "$slug: FULL PASS (a$a)"; break; fi
     corr=$(grep -A2 'Corrections Needed' $CD/grade.txt 2>/dev/null | sed -n 2p | sed 's/^ *- *//')
     n=$(grep -A6 'Corrections Needed' $CD/grade.txt 2>/dev/null | grep -c '^ *-')
-    if [ "$n" = "1" ] && [ -n "$corr" ] && [ "${score#Final Score: }" -ge 90 ] 2>/dev/null; then
+    # Fix-mode for a single correction at score >= 90, or - at any score - when
+    # the single correction is the figure rule (an art-panel repaint fixes it;
+    # a full re-render just rolls the dice on the same subject again).
+    figure=0; echo "$corr" | grep -qi "no figure faces the viewer" && figure=1
+    if [ "$n" = "1" ] && [ -n "$corr" ] && { [ "${score#Final Score: }" -ge 90 ] 2>/dev/null || [ "$figure" = "1" ]; }; then
       echo "$slug a$a: single defect, fix-mode: $corr"
       timeout 900 $PY -m hypertext.pipeline.daily --phase revise --card-dir $CD --image-only --revision "Visual fix only, change nothing except this single correction: $corr Keep every other pixel, panel, and text exactly as rendered." >/dev/null 2>&1 || true
       $HX fixed-elements --card-dir $CD >/dev/null 2>&1 || true

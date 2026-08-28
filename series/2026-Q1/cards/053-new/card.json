@@ -176,7 +176,7 @@
     "RARITY_TEXT": "COMMON",
     "RARITY_ICON": "COMMON",
     "ART_PROMPT": "An empty upper room at dawn, a long wooden table with overturned cups and abandoned cloaks on the benches, small tongues of golden flame hovering in the air above the empty seats, a rushing wind lifting the curtains at an open doorway, one radiant light breaking through the door into deep shadow, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Reveal one card from the top of the Tower and add that revealed card to your hand. Then you may put one other card from your hand with the same card type as that revealed card on the bottom of the Tower.",
+    "ABILITY_TEXT": "Add one card from the top of the Tower to your hand. Then you may put one other card of that added card's card type from your hand on the bottom of the Tower.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 3,
