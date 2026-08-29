@@ -78,11 +78,14 @@ lemmas offline before spending renders.
 The illustration depicts **this card's own scene** - what the printed OT verse
 describes, or the object, place, creature, weather or light the word names.
 
-- **The tower is not the set's wallpaper.** At 76 cards, 14 prompts showed a
-  tower or ziggurat and about five were tower words. The tower may appear only
-  for the words in `art.tower_allowlist` (BUILD, BRICK, CITY, SHINAR, HIGH,
-  ASCEND, SCATTER, CONFUSE); the plan phase rejects any other prompt naming it.
-- **Motif caps** (`art.motif_caps`): tower 8, city 10, plain 10, tent 8,
+- **The tower is rationed, not banned.** It is the set's namesake and belongs
+  on the cards that are about it; at 76 cards, though, 14 prompts showed a
+  tower and only about five were tower words - it had become the default
+  backdrop. The words in `art.tower_allowlist` (BUILD, BRICK, CITY, SHINAR,
+  HIGH, ASCEND, SCATTER, CONFUSE) may always show it; any other word may while
+  the set is under `art.motif_caps.tower`. The plan phase fails closed only
+  once that ration is spent.
+- **Motif caps** (`art.motif_caps`): tower 12, city 10, plain 10, tent 8,
   water 12 out of 90. `hypertext art-audit` prints the histogram.
 - **Lighting palette.** A prompt ends with the fixed medium clause plus
   exactly one clause from `art.lighting_palette` (golden, dawn, noon, storm,

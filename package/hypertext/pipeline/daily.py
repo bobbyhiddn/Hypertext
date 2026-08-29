@@ -1459,8 +1459,10 @@ def _art_prompt_rules(series_dir: Path | None = None) -> str:
     caps = ", ".join(f"{k} at most {v} of 90" for k, v in art["motif_caps"].items())
     return (
         "ART SUBJECT (hard requirement): the illustration depicts THIS card's own scene - what the printed OT verse describes, "
-        "or the object, place, creature, weather, or light the word itself names. The tower of Babel may appear ONLY for these words: "
-        + ", ".join(str(w).upper() for w in art["tower_allowlist"]) + "; for any other word an art_prompt naming a tower or ziggurat is rejected. "
+        "or the object, place, creature, weather, or light the word itself names. "
+        "The tower of Babel is the set's namesake and is welcome where it belongs - always for these words: "
+        + ", ".join(str(w).upper() for w in art["tower_allowlist"]) + " - and for any other word while the set is under its tower ration. "
+        "It must not become the default backdrop for words that are not about it: when this card's scene is a tent, a river, a field, a threshold or a creature, paint that. "
         "Vary the scene: the set caps repeated motifs (" + caps + "). "
         "ART STYLE (hard requirement): a vivid full-colour painting - " + art["medium"] + " - never sepia, monochrome, engraving, etching, woodcut, or line art. "
         "ART LIGHTING (hard requirement): end art_prompt with the medium clause above followed by EXACTLY ONE lighting clause from this palette: " + palette + ". "
@@ -2344,9 +2346,12 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         # The art depicts the card's own verse scene; the tower belongs to tower
         # words only, and every prompt carries one palette lighting clause
         # (user, 2026-08-29: "we have way too many towers in our arts").
-        from hypertext.cards.art_motifs import check_art_prompt, load_art_standards
+        from hypertext.cards.art_motifs import check_art_prompt, load_art_standards, tower_count
 
-        art_issues = check_art_prompt(word, art_prompt, load_art_standards(series_dir))
+        art_issues = check_art_prompt(
+            word, art_prompt, load_art_standards(series_dir),
+            tower_used=tower_count(series_dir, skip_word=word),
+        )
         if art_issues:
             raise RuntimeError("art rule: " + "; ".join(art_issues))
         _log("[plan] art rule: subject, figures and lighting clause accepted")

@@ -8,8 +8,12 @@ light source") because every batch module appended one fixed STYLE string.
 Three rules, all read from series/<series>/set-standards.yml (`art:`):
 
 - SUBJECT: the illustration depicts the card's own OT-verse scene. The tower
-  appears only for words on `tower_allowlist`; the plan phase fails closed on
-  any other prompt that names it.
+  is the set's namesake and is NOT discouraged (user, 2026-08-29: "I don't
+  want to discourage all tower imagery obviously, we just have to be mindful
+  so it's not all towers") - it is rationed, not banned. Words on
+  `tower_allowlist` are about the tower and may always show it; any other word
+  may show it while the set is under `motif_caps.tower`. The plan phase fails
+  closed only when the cap is already spent.
 - MOTIF CAPS: `motif_caps` bounds how many prompts in the set may share one
   motif (tower, city, plain, tent, water); `hypertext art-audit` reports the
   histogram, and scripts/pipeline/offline_check.py prints a batch beside it.
@@ -65,7 +69,7 @@ LIGHTING_KEYS: dict[str, str] = {
 
 DEFAULT_ART = {
     "tower_allowlist": ["BUILD", "BRICK", "CITY", "SHINAR", "HIGH", "ASCEND", "SCATTER", "CONFUSE"],
-    "motif_caps": {"tower": 8, "city": 10, "plain": 10, "tent": 8, "water": 12},
+    "motif_caps": {"tower": 12, "city": 10, "plain": 10, "tent": 8, "water": 12},
     "lighting_share_cap": None,   # reporting only; golden is the set's signature
     "medium": "luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art",
     "lighting_palette": [
@@ -120,12 +124,24 @@ def style_suffix(art: dict[str, Any], lighting: str) -> str:
     raise KeyError(f"unknown lighting {lighting!r}; palette: {[e['name'] for e in art['lighting_palette']]}")
 
 
-def check_art_prompt(word: str, prompt: str, art: dict[str, Any]) -> list[str]:
-    """Per-card hard rules: the tower only for tower words; a palette lighting clause present."""
+def check_art_prompt(word: str, prompt: str, art: dict[str, Any], *, tower_used: int | None = None) -> list[str]:
+    """Per-card hard rules: the tower within its set-wide ration, and a palette lighting clause.
+
+    `tower_used` is how many OTHER cards in the set already show a tower. A word on
+    the allowlist is about the tower and always may; any other word may while the
+    set is under the cap. Pass None when the set is not known and only the
+    allowlist is checked.
+    """
     issues: list[str] = []
     w = str(word).strip().upper()
     if "tower" in motifs_in(prompt) and w not in {str(x).upper() for x in art["tower_allowlist"]}:
-        issues.append(f"{w} is not a tower word: its art must depict the word's own verse scene, not the tower (allowlist: {', '.join(art['tower_allowlist'])})")
+        cap = int(art["motif_caps"].get("tower", 12))
+        if tower_used is None or tower_used >= cap:
+            spent = f"the set has spent its tower ration ({tower_used} of {cap} of 90)" if tower_used is not None else "the tower ration is unknown here"
+            issues.append(
+                f"{w} is not one of the words the tower belongs to ({', '.join(art['tower_allowlist'])}) and {spent}: "
+                f"paint this card's own verse scene instead"
+            )
     # "a night sky crowded with stars" is not a crowd: the word has to be about people.
     crowd = (
         r"\bcrowds?\b|\bthrongs?\b|\bassembl(?:y|ies)\b"
@@ -137,6 +153,15 @@ def check_art_prompt(word: str, prompt: str, art: dict[str, Any]) -> list[str]:
     if lighting_of(prompt, art) is None:
         issues.append("art prompt carries no lighting clause from the palette; end it with one of: " + ", ".join(e["name"] for e in art["lighting_palette"]))
     return issues
+
+
+def tower_count(series_dir: str | Path, *, skip_word: str | None = None) -> int:
+    """How many cards in the set already show a tower, ignoring one word being replanned."""
+    skip = str(skip_word).strip().upper() if skip_word else None
+    return sum(
+        1 for _, word, prompt in load_series_prompts(series_dir)
+        if "tower" in motifs_in(prompt) and word.strip().upper() != skip
+    )
 
 
 def load_series_prompts(series_dir: str | Path) -> list[tuple[str, str, str]]:
@@ -183,4 +208,4 @@ def audit_series(series_dir: str | Path, extra: list[tuple[str, str, str]] | Non
     }
 
 
-__all__ = ["MOTIFS", "DEFAULT_ART", "load_art_standards", "motifs_in", "lighting_of", "style_suffix", "check_art_prompt", "audit_series", "load_series_prompts"]
+__all__ = ["MOTIFS", "DEFAULT_ART", "load_art_standards", "motifs_in", "lighting_of", "style_suffix", "check_art_prompt", "tower_count", "audit_series", "load_series_prompts"]

@@ -136,8 +136,11 @@ batch_minimums_per_ten:   # scaled by batch size (floor)
 
 art:
   tower_allowlist: [BUILD, BRICK, CITY, SHINAR, HIGH, ASCEND, SCATTER, CONFUSE]
+  # 2026-08-29: the tower is the set's namesake, rationed rather than banned - the
+  # allowlist words may always show it and any other word may while the set is under
+  # this cap. "we just have to be mindful so it's not all towers."
   motif_caps:
-    tower: 8
+    tower: 12
     city: 10
     plain: 10
     tent: 8

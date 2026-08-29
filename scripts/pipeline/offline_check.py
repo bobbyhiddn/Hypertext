@@ -83,7 +83,7 @@ def main():
         if w.upper() in capped and m["stats"]["context"] > 3:
             findings += 1; print(f" STATS: {w} is a numeral or function word; CONTEXT caps at 3")
         # Art: subject, figures, lighting clause (2026-08-29).
-        art_issues = am.check_art_prompt(w, m["art_prompt"], art)
+        art_issues = am.check_art_prompt(w, m["art_prompt"], art, tower_used=am.tower_count(SERIES, skip_word=w))
         if art_issues:
             findings += 1; print(" ART:", "; ".join(art_issues))
         batch_art.append((w.lower(), w, m["art_prompt"]))
