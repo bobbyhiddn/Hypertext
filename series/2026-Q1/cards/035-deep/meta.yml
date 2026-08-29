@@ -1,49 +1,59 @@
 number: '035'
 word: DEEP
-gloss: Reaching far beneath the surface; profound beyond sounding
+gloss: Reaching far beneath the surface
 card_type: ADJECTIVE
-rarity: RARE
+rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A knotted sounding line with a stone weight descending into deep blue-black water,
-  one radiant golden shaft of light from far above striking the stone and the line while the
-  depths around fall into shadow, dim dark silhouettes of great sea creatures below, warm
-  gold against the dark, luminous cinematic oil painting with impressionistic brushwork, deep
-  shadowed background, one radiant golden light source, rich saturated blues and golds
+art_prompt: A stone well shaft seen from directly above, a wet rope dropping away
+  into darkness and a small coin of light on the water far below, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, underwater green-gold light filtering
+  down through murky depth
 stats:
   lore: 3
   context: 2
-  complexity: 2
-ability: Look at the bottom four cards of the Tower. Add up to three of those cards to your
-  hand, put the other cards into Sheol, and then draw one card from the Tower.
+  complexity: 3
+ability: Look at the bottom three cards of the Tower. Add up to two of those cards
+  that each have LORE three or more to your hand and put the other cards into Sheol.
 ot_verse:
   ref: Proverbs 20:5
-  snippet: is like deep water
+  snippet: Counsel in the heart of man is like deep water; but a man of understanding
+    will draw it out
 nt_verse:
   ref: John 4:11
-  snippet: the well is deep
+  snippet: 'the well is deep: from whence then hast thou that living water?'
 greek:
   text: βαθύς
   translit: bathys
 hebrew:
   text: עָמֹק
   translit: amoq
-ot_refs: Prov 20:5 • Job 12:22 • Ps 64:6
-nt_refs: John 4:11 • Acts 20:9 • Luke 24:1
+ot_refs: Prov 20:5 • Eccl 7:24 • Ps 64:6
+nt_refs: John 4:11 • Rev 2:24 • Acts 20:9
 trivia:
-- Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words for the primeval sea.
-- Psalm 42:7 lets one deep call to another - flood and grief in a single image.
-- Greek bathys survives in English bathysphere, the vessel built to visit the deep.
+- 'Hebrew keeps two depths apart: amoq for a well or a thought, tehom for the deep
+  that covered the earth.'
+- Jacob's well at Sychar, the one the woman calls deep, is still over thirty metres
+  to the water.
+- Luke calls the dawn of the resurrection deep morning, using the same adjective as
+  the well.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+ / RARE
-  3+ / GLORIOUS wild).
+notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+
+  / RARE 3+ / GLORIOUS wild).
 sources: []
 search_queries: []
 stats_rationale:
-  lore: the deep things of God is a recognized theme; simple root
-  context: amoq ~17 + bathys ~4 = ~21
-  complexity: the deep things of God is a recognized theme; simple root
+  lore: in this card's verses depth is what a wise man draws out and what a well withholds
+    - a recognized theme with clear teaching, not a doctrine the word carries
+  context: amoq occurs 17 times in the Hebrew Bible; bathys occurs 4 times in the
+    New Testament; total 21
+  complexity: amoq is used of counsel, of thought, of a wound and of a well, never
+    of the sea, which Hebrew calls tehom; bathys stretches from a deep well to deep
+    morning in Luke 24:1 - a range that needs a note
 weight: 3
-weight_rationale: the deep of Genesis 1; thematic
+weight_rationale: amoq is the era's word for what lies below sounding - counsel, thought,
+  a well - thematic vocabulary with real teaching, but the deep of Genesis 1:2 is
+  tehom and belongs to another card

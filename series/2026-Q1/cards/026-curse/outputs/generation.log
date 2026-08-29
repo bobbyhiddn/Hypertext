@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-01-31 14:13:47
-Phase: imagegen
+Timestamp: 2026-08-29 09:47:11
+Phase: rebuild
 Target Rarity: GLORIOUS
 Target Type: VERB
 Fix Mode: False
 
-Style References (2 total):
-  [1] templates/example_cards/008-bless/outputs/card_1024x1536.png [GLORIOUS] (TEMPLATE)
-  [2] templates/card/v001/glorious/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/verb/glorious/template_1024x1536.png [GLORIOUS] sha256=fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b
 
 Prompt File: series/2026-Q1/cards/026-curse/prompt.txt

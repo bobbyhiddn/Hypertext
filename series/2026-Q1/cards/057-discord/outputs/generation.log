@@ -1,11 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 20:52:24
+Timestamp: 2026-08-29 09:57:45
 Phase: rebuild
-Target Rarity: RARE
+Target Rarity: UNCOMMON
 Target Type: NOUN
 Fix Mode: False
 
 Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/noun/rare/template_1024x1536.png [RARE] sha256=0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b
+  [1] TEMPLATE: templates/card/v001/composed/noun/uncommon/template_1024x1536.png [UNCOMMON] sha256=68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b
 
 Prompt File: series/2026-Q1/cards/057-discord/prompt.txt

@@ -1,35 +1,42 @@
 number: '025'
 word: NOAH
-gloss: Rest, comfort; the patriarch who built the ark to preserve life during the Flood
+gloss: The man carried through the flood
 card_type: NAME
-rarity: RARE
+rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: An ancient bearded figure standing on a wooden deck amidst a stormy gray ocean,
-  holding a white dove, with a massive timber structure rising behind him
+art_prompt: A great pitched cedar hull grounded on a dark shore with its ramp down,
+  paired animal tracks pressed into the mud leading up into the black hold, rain running
+  off the timbers, no people, luminous cinematic oil painting with impressionistic
+  brushwork, saturated full colour, a strong symbolic subject, no engraving or line
+  art, storm light under a bruised green-grey sky, one shaft of silver breaking through
 stats:
   lore: 5
-  context: 5
+  context: 3
   complexity: 3
-ability: Return up to 2 cards of the same type from Sheol to your hand.
+ability: Discard two cards from your hand into Sheol. Then choose five cards in Sheol,
+  one card of each card type, and add those chosen cards to your hand.
 ot_verse:
   ref: Genesis 6:8
-  snippet: But Noah found favor in the eyes of the Lord.
+  snippet: But Noah found grace in the eyes of the LORD
 nt_verse:
   ref: Hebrews 11:7
-  snippet: By faith Noah... in reverent fear constructed an ark for the saving of his household.
+  snippet: By faith Noah, being warned of God of things not seen as yet, moved with
+    fear, prepared an ark
 greek:
   text: Νῶε
-  translit: Nōe
+  translit: Noe
 hebrew:
   text: נֹחַ
   translit: Noach
-ot_refs: Gen 5-9 • Ezek 14:14 • Isa 54:9
-nt_refs: Matt 24:37 • Heb 11:7 • 1 Pet 3:20 • 2 Pet 2:5
+ot_refs: Gen 6:8 • Gen 6:9 • Gen 7:1
+nt_refs: Heb 11:7 • Matt 24:37 • 1 Pet 3:20
 trivia:
-- Name means 'rest' or 'comfort' (Gen 5:29)
-- Lived to be 950 years old (Gen 9:29)
-- First person in the Bible described as 'righteous'
+- Grace is first named in Scripture in Genesis 6:8, and it is named of Noah before
+  anything he does is reported.
+- Ezekiel names Noah with Daniel and Job as three men whose righteousness could deliver
+  only themselves.
+- 'Peter counts the saved: eight souls, in a world of one language and many years.'
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -71,4 +78,14 @@ search_queries:
 - Noah Bible trivia facts
 - Genesis 6:8 ESV snippet
 weight: 5
-weight_rationale: the flood's protagonist; a pillar
+weight_rationale: 'a pillar of the set: the era''s whole middle turns on this one
+  man - the flood, the ark, the covenant and the new beginning are all told as what
+  happened to Noah'
+stats_rationale:
+  lore: the printed verses make him the man who found grace and the pattern of faith
+    that saves a house - a doctrine hangs on the name
+  context: Noach occurs 46 times in the Hebrew Bible; Noe occurs 8 times in the New
+    Testament; total 54
+  complexity: Genesis 5:29 explains the name from nacham, to comfort, though it sounds
+    like nuach, to rest - the pun does not quite close, and both readings are printed
+    in English Bibles

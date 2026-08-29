@@ -1,7 +1,7 @@
 {
   "word": "DISCORD",
   "card_type": "NOUN",
-  "rarity": "RARE",
+  "rarity": "UNCOMMON",
   "content_score": 100,
   "final_score": 100,
   "passed": true,
@@ -46,8 +46,8 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87",
-    "template_sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+    "candidate_sha256": "18f071a70e548942be60d61afa63a89d0b700ec132a6e005b824cd634158ea8a",
+    "template_sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
     "report": "series/2026-Q1/cards/057-discord/outputs/visual-gate.json"
   },
   "style_refs_count": 1,

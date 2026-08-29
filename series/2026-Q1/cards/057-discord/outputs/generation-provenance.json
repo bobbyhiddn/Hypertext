@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "bfd0c40017e72092ef28fcb6cffe12a7f1e63c02591e3326ed2ef34d62c6fbc1",
+    "gemini_output_sha256": "e30291e4a7b490b37d95ac54c1a04741b1885c85b39e31b1e8dda62684078393",
     "generation_metadata_path": "series/2026-Q1/cards/057-discord/outputs/generation.json",
-    "generation_metadata_sha256": "3c9a64e0c657a33fd84f5afa7ad62b4ee36721d2a847058d50910b63ec658e82",
+    "generation_metadata_sha256": "4219b2c3fcf2aa3f5750acefa0f68a796bb87df0c21eb97f3905c5133fe4ae15",
     "path": "series/2026-Q1/cards/057-discord/outputs/card_1024x1536.png",
-    "sha256": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87"
+    "sha256": "a883c22b453e2294df63e4f69ee5767e7e9b8cb07e7d74c2e6be56efabb0ce05"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/057-discord/prompt.txt",
-    "sha256": "e6176c8e171d75ab1105381417975ecd273365f5d6586a78d65853a703503f3b"
+    "sha256": "180e8d3ca2c8300351cb18a4a224ea2b7c15916c05487770730871cd9c998efe"
   },
   "recipe": {
-    "canonical_sha256": "21f4c447a72f9f155564bb06e9bfb162bda23acc4b6e4e9832104240a7216fce",
-    "file_sha256": "dfdaaf78b27eb51c977f9ac5afccf0ac1ac8c3f10d401dbf196f0fc2eaf7f2bb",
+    "canonical_sha256": "d85c9e849da8d1ad8b9725d1986f0714107e6a72161ceadee42c2f5108d77995",
+    "file_sha256": "ddb83fabe04a7730ea608560f69d12fe75db6122ab0f2fcdb1860a83ee7d41a7",
     "path": "series/2026-Q1/cards/057-discord/card.json"
   },
   "reference_pack": {
@@ -61,22 +61,22 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NOUN RARE structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NOUN UNCOMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+        "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
         "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
-        "rarity": "RARE",
-        "rarity_label": "RARE",
+        "rarity": "UNCOMMON",
+        "rarity_label": "UNCOMMON",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/rare/template_1024x1536.png",
+        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "template",
-        "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+        "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
         "similarity_components": {},
         "similarity_reason": "authoritative_structure_not_ranked",
         "similarity_score": 0,
@@ -90,11 +90,11 @@
     ],
     "repo_root": "/home/cap/Code/Hypertext",
     "selection_contract": "exact type+rarity eligibility; accepted, finished, nonlegacy, nonsuperseded, SHA-256-verified assets only; rank by 35% art tokens + 30% semantic content + 20% serialized prompt tokens + 15% stat proximity; break ties by SHA-256 then path",
-    "target_rarity": "RARE",
+    "target_rarity": "UNCOMMON",
     "target_type": "NOUN"
   },
   "reference_pack_path": "series/2026-Q1/cards/057-discord/outputs/reference-pack.json",
-  "reference_pack_sha256": "3ffc074ae3d9298d99fe3ed61f8cc92668fcef8a1f43868fade16b0741b5d21e",
+  "reference_pack_sha256": "1f3d35649624190071ba9d660f30951e18be06526f43d9b75431ccb9e4e885d5",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
@@ -112,6 +112,6 @@
   },
   "target": {
     "card_type": "NOUN",
-    "rarity": "RARE"
+    "rarity": "UNCOMMON"
   }
 }

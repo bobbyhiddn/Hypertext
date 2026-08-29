@@ -1,40 +1,42 @@
 number: '027'
 word: HUNTER
-gloss: One who pursues game for food, sport, or capture; metaphorically, an agent of judgment
-  or persecution.
+gloss: One who pursues and takes
 card_type: TITLE
-rarity: RARE
+rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A worn wooden bow and a quiver of arrows resting in tall, dry grass near a forest
-  edge. A single arrow is embedded in a nearby tree trunk, casting a long shadow. No text
-  or letters.
+art_prompt: A great horn bow and a spotted skin hung on a lone oak at the edge of
+  a dark grazing ground, the deep tracks of a heavy beast pressed into the dust beneath,
+  no people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, moonlit silver-blue
+  with water and stone picked out in cool highlights
 stats:
   lore: 3
-  context: 4
-  complexity: 2
-ability: Name a card type. Target player must discard one card of that type or reveal their
-  hand.
+  context: 2
+  complexity: 3
+ability: Choose another player; that chosen player spends one Letter. Then draw two
+  cards from the Tower.
 ot_verse:
   ref: Genesis 10:9
-  snippet: 'He was a mighty hunter before the LORD: wherefore it is said, Even as Nimrod the
-    mighty hunter before the LORD.'
+  snippet: He was a mighty hunter before the LORD
 nt_verse:
   ref: Romans 11:9
-  snippet: 'And David says: ''Let their table become a snare and a trap, a stumbling block
-    and a retribution for them.'''
+  snippet: Let their table be made a snare, and a trap, and a stumblingblock
 greek:
   text: θήρα
-  translit: thēra
+  translit: thera
 hebrew:
   text: צַיָּד
   translit: tsayad
-ot_refs: Gen 10:9 • Gen 25:27 • Jer 16:16 • Lam 3:52
-nt_refs: Rom 11:9 • 1 Pet 5:8 • 2 Tim 2:26
+ot_refs: Gen 10:9 • Gen 25:27 • Jer 16:16
+nt_refs: Rom 11:9
 trivia:
-- Nimrod is the first individual described as a 'mighty hunter' in the Bible.
-- Jeremiah 16:16 contrasts 'fishers' who gather with 'hunters' sent for judgment.
-- Esau, a skillful hunter, famously traded his birthright for stew after a hunt.
+- Nimrod is the first man in Scripture called mighty, and the next verse makes Babel
+  the beginning of his kingdom.
+- 'Jeremiah turns the trade into judgment: I will send for many hunters, and they
+  shall hunt them from every mountain.'
+- Thera occurs once in the New Testament, in a psalm quotation where a table becomes
+  a trap.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -67,4 +69,15 @@ search_queries:
 - Genesis 10:9 hebrew analysis
 - hunter in the new testament bible verse
 weight: 3
-weight_rationale: Nimrod's title; thematic
+weight_rationale: Nimrod the mighty hunter is the era's first strong man and the founder
+  of Babel's cities, but the card word is the trade, not the man - thematic vocabulary
+  with real teaching behind it rather than a named agent
+stats_rationale:
+  lore: the hunter before the LORD begins the kingdom that raises Babel, and the New
+    Testament verse turns the hunt into judgment - a recognized theme with clear teaching,
+    not a doctrine
+  context: tsayad, the hunter, occurs 2 times in the Hebrew Bible and tsayid, the
+    hunt and its game, 19 times; thera occurs 1 time in the New Testament; total 22
+  complexity: tsayad the hunter and tsayid the hunt are read into one another, and
+    before the LORD in Genesis 10:9 is taken either as with God's favour or in defiance
+    of him - a contested phrase

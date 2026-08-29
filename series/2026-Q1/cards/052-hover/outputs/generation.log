@@ -1,11 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 17:54:34
+Timestamp: 2026-08-29 09:56:42
 Phase: rebuild
-Target Rarity: GLORIOUS
+Target Rarity: RARE
 Target Type: VERB
 Fix Mode: False
 
 Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/verb/glorious/template_1024x1536.png [GLORIOUS] sha256=fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b
+  [1] TEMPLATE: templates/card/v001/composed/verb/rare/template_1024x1536.png [RARE] sha256=1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4
 
 Prompt File: series/2026-Q1/cards/052-hover/prompt.txt

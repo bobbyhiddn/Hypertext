@@ -1,0 +1,57 @@
+{
+  "word": "RIGHTEOUS",
+  "card_type": "ADJECTIVE",
+  "rarity": "RARE",
+  "content_score": 100,
+  "final_score": 100,
+  "passed": true,
+  "style_matches_reference": true,
+  "style_mismatch_reason": "",
+  "corrections": [],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 15,
+      "max": 15,
+      "issues": []
+    }
+  },
+  "quality_contract": {
+    "dimensions": {
+      "composition": 100,
+      "typography": 100,
+      "template_fidelity": 100,
+      "metadata": 100,
+      "stat_pips": 100,
+      "artifact_cleanliness": 100
+    },
+    "score": 100,
+    "passed": true,
+    "gate": 100
+  },
+  "stat_pip_visual_gate": {
+    "contract": "hypertext.template-relative-stat-pip-gate/v1",
+    "passed": true,
+    "candidate_sha256": "262a81842798e331933aedf42e3a9b3d86f391e96364e5b0eabd8aa26afdd443",
+    "template_sha256": "f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e",
+    "report": "series/2026-Q1/cards/028-righteous/outputs/visual-gate.json"
+  },
+  "style_refs_count": 1,
+  "style_refs": [
+    "template_1024x1536.png"
+  ]
+}

@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-02-02 11:21:21
-Phase: imagegen
-Target Rarity: GLORIOUS
+Timestamp: 2026-08-29 09:50:38
+Phase: revise-image-only
+Target Rarity: RARE
 Target Type: ADJECTIVE
-Fix Mode: False
+Fix Mode: True
 
 Style References (2 total):
-  [1] templates/example_cards/012-sacred/outputs/card_1024x1536.png [GLORIOUS] (TEMPLATE)
-  [2] templates/card/v001/glorious/template_1024x1536.png
+  [1] CURRENT_CARD: series/2026-Q1/cards/028-righteous/outputs/reference-inputs/current-fac69e831347d9402cebc45b7e4c88c4cbdad25936cf8f160efa3051cf72c5f1.png [RARE] sha256=fac69e831347d9402cebc45b7e4c88c4cbdad25936cf8f160efa3051cf72c5f1
+  [2] TEMPLATE: templates/card/v001/composed/adjective/rare/template_1024x1536.png [RARE] sha256=f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e
 
-Prompt File: series/2026-Q1/cards/028-righteous/prompt.txt
+Prompt File: series/2026-Q1/cards/028-righteous/outputs/prompt.revision.txt

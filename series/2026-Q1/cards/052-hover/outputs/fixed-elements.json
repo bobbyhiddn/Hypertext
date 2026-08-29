@@ -1,8 +1,8 @@
 {
   "contract": "hypertext.fixed-elements/v1",
   "template": {
-    "path": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
-    "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b"
+    "path": "templates/card/v001/composed/verb/rare/template_1024x1536.png",
+    "sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4"
   },
   "font": {
     "family": "Liberation Serif",
@@ -22,7 +22,7 @@
         0
       ],
       "counts": [
-        5,
+        4,
         1,
         4
       ]
@@ -35,21 +35,21 @@
         73
       ],
       "offset": [
-        1,
+        2,
         0
       ],
       "text": "VERB",
-      "ghost_pixels": 81
+      "ghost_pixels": 96
     },
     "number": {
       "box": [
-        60,
+        61,
         36,
-        137,
+        138,
         58
       ],
       "offset": [
-        1,
+        2,
         -2
       ],
       "text": "#052"
@@ -68,6 +68,6 @@
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "fe0cd2b8e63322de1823738f4ad8531c5fad17c5fcfbeb79bfc9918de4264f14",
-  "face_sha256_after": "30608ed47428dcd5c4a2a9aa07c18651060003f53d79f40564e425a185509a4e"
+  "face_sha256_before": "bbeff0cba4cbd9e756d9dbba54ddad91d91cfb73c441e849b280d7decae19af5",
+  "face_sha256_after": "8365ba141ee4e9673cada4c0942c5044122306fa386633347b8edbbe6250921e"
 }

@@ -75,6 +75,26 @@ def _core(t: str, look_zone: str | None) -> dict[str, Any]:
     return best
 
 
+def _filter_kind(t: str, low: str) -> str | None:
+    """WHICH kind of filter narrows the take, not merely whether one does.
+
+    A Chapter-Lot filter and a NAME filter are different plays, and with a dozen
+    look-and-take COMMONs in the set a single boolean makes unrelated cards
+    collide on look count and destination alone.
+    """
+    if re.search(r"\b(?:LORE|CONTEXT|COMPLEXITY)\b", t):
+        return "same" if re.search(r"\bsame (?:LORE|CONTEXT|COMPLEXITY)\b", t) else "stat"
+    if re.search(r"\bcard type is (?:not )?in\b|\bcard type not in\b|\bChapter Lot\b|\byour Lot\b", t, re.IGNORECASE):
+        return "lot"
+    if "same card type" in low or "each card type" in low:
+        return "same"
+    if re.search(r"\bnamed type\b", low):
+        return "named"
+    if re.search(r"\b(?:NOUN|VERB|ADJECTIVE|NAME|TITLE)\b", t) or "card type" in low:
+        return "type"
+    return None
+
+
 def ability_signature(text: str) -> dict[str, Any]:
     """Structured shape of one ability's printed copy."""
     t = " ".join(str(text).split())
@@ -118,7 +138,7 @@ def ability_signature(text: str) -> dict[str, Any]:
         "bottom": bottom,
         "another_player": bool(re.search(r"\b(?:another|other|chosen|target) player\b", low)),
         "look": look_n,
-        "filter": bool(re.search(rf"\b{_STAT_OR_TYPE}\b", t)) or "same card type" in low or "each card type" in low,
+        "filter": _filter_kind(t, low),
         "cost": bool(re.search(r"\bspend\b", low)) or bool(re.search(r"\b(?:put|discard)\s+[^.;]*?\b(?:from your hand)\b[^.;]*?\binto Sheol\b", t, re.IGNORECASE)),
         "branch": bool(re.search(r"\b(?:if|unless|otherwise)\b", low)),
         "rest": rest,
@@ -136,7 +156,7 @@ def signature_key(sig: dict[str, Any]) -> str:
         f"{c['verb']}:{c['zone']}:{c['qty']}",
         "every" if sig["every_player"] else ("other" if sig["another_player"] else "self"),
         f"look{sig['look']}" + ("@bottom" if sig.get("bottom") else ""),
-        "filter" if sig["filter"] else "-",
+        f"filter:{sig['filter']}" if sig["filter"] else "-",
         "cost" if sig["cost"] else "-",
         "branch" if sig["branch"] else "-",
         f"rest:{sig['rest']}",

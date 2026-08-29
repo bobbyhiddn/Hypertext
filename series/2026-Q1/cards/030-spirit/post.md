@@ -3,16 +3,16 @@
 ![SPIRIT card](./outputs/card_1024x1536.png)
 
 ## Word
-**SPIRIT** — The immaterial part of a person; the animating force of life; the Holy Spirit.
+**SPIRIT** — The breath that gives life
 
 ## Old Testament
-> Job 33:4 — "The Spirit of God has made me; the breath of the Almighty gives me life."
+> Job 33:4 — "The Spirit of God hath made me, and the breath of the Almighty hath given me life"
 
 ## New Testament
-> 2 Corinthians 3:6 — "...for the letter kills, but the Spirit gives life."
+> 2 Corinthians 3:6 — "the letter killeth, but the spirit giveth life"
 
 ## Trivia
-- Hebrew 'ruach' and Greek 'pneuma' both mean wind, breath, and spirit.
-- The Spirit is often symbolized by a dove, fire, wind, or water.
-- In the Old Testament, the Spirit empowered individuals for specific tasks; in the New, He indwells believers.
+- Genesis 8:1 uses the same word for the wind God makes pass over the earth to dry the flood - wind and Spirit are one word.
+- Genesis 6:3 sets the era's clock: my spirit shall not always strive with man, yet his days shall be an hundred and twenty years.
+- John 3:8 turns on the double sense - the wind bloweth where it listeth, and so is every one that is born of the Spirit.
 

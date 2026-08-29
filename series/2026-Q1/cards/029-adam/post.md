@@ -3,16 +3,16 @@
 ![ADAM card](./outputs/card_1024x1536.png)
 
 ## Word
-**ADAM** — The first human; mankind; earth-born.
+**ADAM** — The man formed of the dust of the ground
 
 ## Old Testament
-> Genesis 2:7 — "The LORD God formed the man of dust from the ground and breathed into his nostrils the breath of life."
+> Genesis 2:7 — "And the LORD God formed man of the dust of the ground, and breathed into his nostrils the breath of life"
 
 ## New Testament
-> 1 Corinthians 15:45 — "The first man Adam became a living being; the last Adam became a life-giving spirit."
+> 1 Corinthians 15:45 — "The first man Adam was made a living soul"
 
 ## Trivia
-- Derived from the Hebrew 'adamah' (ground) and 'adom' (red).
-- Used as both a proper name and a generic term for 'mankind'.
-- Luke's genealogy traces Jesus' lineage back to 'Adam, the son of God'.
+- Adam is made from adamah, the ground - the name and the dust are the same word one letter apart.
+- Genesis 5:1 says God created them male and female and called their name Adam - the name is first a name for the pair.
+- Luke's genealogy runs backwards past every name of this era and ends: which was the son of Adam, which was the son of God.
 

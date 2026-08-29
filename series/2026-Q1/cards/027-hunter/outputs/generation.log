@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-02-01 11:09:51
-Phase: imagegen
-Target Rarity: RARE
+Timestamp: 2026-08-29 09:48:19
+Phase: rebuild
+Target Rarity: UNCOMMON
 Target Type: TITLE
 Fix Mode: False
 
-Style References (2 total):
-  [1] templates/example_cards/019-savior/outputs/card_1024x1536.png [RARE] (TEMPLATE)
-  [2] templates/card/v001/rare/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/title/uncommon/template_1024x1536.png [UNCOMMON] sha256=20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f
 
 Prompt File: series/2026-Q1/cards/027-hunter/prompt.txt

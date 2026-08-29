@@ -1,36 +1,44 @@
 number: 028
 word: RIGHTEOUS
-gloss: Acting in accord with divine or moral law; virtuous; free from guilt or sin.
+gloss: Straight before God; just
 card_type: ADJECTIVE
-rarity: GLORIOUS
+rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A brilliant, vertical beam of white light descending into a dark, chaotic ocean,
-  separating the waters perfectly. Geometric, golden, abstract, strictly vertical lines.
+art_prompt: A single cedar standing straight and unbroken among storm-felled trunks
+  on a bare ridge, its shadow falling square across the wreckage, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, deep shadowed background lit
+  by one radiant golden light source, rich saturated blues and golds
 stats:
-  lore: 5
-  context: 5
-  complexity: 4
-ability: Return up to 3 cards from Sheol to your hand.
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Reveal one card from the top of the Tower and add that revealed card to your
+  hand. If the cards in your Pages have total LORE ten or more, draw three cards from
+  the Tower.
 ot_verse:
-  ref: Proverbs 11:8
-  snippet: The righteous is delivered from trouble, and the wicked walks into it instead.
+  ref: Genesis 6:9
+  snippet: Noah was a just man and perfect in his generations, and Noah walked with
+    God
 nt_verse:
-  ref: 2 Corinthians 5:21
-  snippet: For our sake he made him to be sin who knew no sin, so that in him we might become
-    the righteousness of God.
+  ref: Romans 1:17
+  snippet: The just shall live by faith
 greek:
   text: δίκαιος
   translit: dikaios
 hebrew:
   text: צַדִּיק
   translit: tsaddiq
-ot_refs: Gen 6:9 • Gen 15:6 • Prov 10:2 • Ps 1:6 • Hab 2:4
-nt_refs: Mt 5:6 • Rom 1:17 • Rom 3:22 • Phil 3:9 • 1 Jn 2:29
+ot_refs: Gen 6:9 • Gen 7:1 • Prov 10:25
+nt_refs: Rom 1:17 • Matt 13:43 • 1 Pet 4:18
 trivia:
-- The Hebrew 'tsaddiq' implies adherence to a strict standard or plumb line.
-- First used in the Bible to describe Noah, who was 'perfect in his generations.'
-- In the NT, righteousness is often described as a gift (imputed) rather than earned.
+- Genesis 6:9 is the first time anyone in Scripture is called tsaddiq, and it is said
+  of a man in a generation about to be drowned.
+- Perfect in his generations translates tamim, the word used of an unblemished animal
+  brought for sacrifice.
+- The just shall live by faith is quoted three times in the New Testament, from one
+  half-verse of Habakkuk.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -73,4 +81,15 @@ search_queries:
 - 2 Corinthians 5:21 ESV
 - Proverbs 11:8 ESV
 weight: 3
-weight_rationale: Noah was righteous - thematic; demoted 2026-08-28 (user)
+weight_rationale: tsaddiq is thematic vocabulary with real teaching - Noah is the
+  first man Scripture calls just - but the adjective is not itself a named agent,
+  judgment or event; NOAH and COVENANT carry the era's weight
+stats_rationale:
+  lore: the verses printed here make righteousness the ground of survival and of life
+    itself - just and perfect in his generations, the just shall live by faith; a
+    major theme close to doctrine
+  context: tsaddiq occurs 206 times in the Hebrew Bible; dikaios occurs 79 times in
+    the New Testament; total 285
+  complexity: tsaddiq is a legal word - the one the court declares in the right -
+    so English must choose between just and righteous where Greek uses one dikaios
+    for both; a translation choice to explain

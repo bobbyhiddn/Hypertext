@@ -1,37 +1,44 @@
 number: '023'
 word: NAKED
-gloss: Exposed, vulnerable, or stripped of covering; lacking defense or concealment.
+gloss: Uncovered; stripped of covering
 card_type: ADJECTIVE
-rarity: RARE
+rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A discarded heavy robe lying crumpled on a cold stone floor, illuminated by a
-  harsh beam of light from above, symbolizing exposure and vulnerability.
+art_prompt: A clear pool among fig trees in the garden, two empty clay bowls on the
+  bank and not one garment or covering anywhere on the ground, the pool holding the
+  light unbroken, no people, luminous cinematic oil painting with impressionistic
+  brushwork, saturated full colour, a strong symbolic subject, no engraving or line
+  art, deep shadowed background lit by one radiant golden light source, rich saturated
+  blues and golds
 stats:
   lore: 3
-  context: 5
-  complexity: 1
-ability: Target player reveals their hand. Choose a card for them to discard. Draw cards equal
-  to its LORE.
+  context: 2
+  complexity: 3
+ability: Choose another player. That chosen player reveals one card from that chosen
+  player's hand; then choose two cards in Sheol of that revealed card's card type
+  and add those chosen cards to your hand.
 ot_verse:
-  ref: Job 1:21
-  snippet: Naked I came from my mother’s womb, and naked I will depart.
+  ref: Genesis 2:25
+  snippet: And they were both naked, the man and his wife, and were not ashamed
 nt_verse:
   ref: Hebrews 4:13
-  snippet: Nothing in all creation is hidden... everything is naked and exposed before his
-    eyes.
+  snippet: all things are naked and opened unto the eyes of him with whom we have
+    to do
 greek:
   text: γυμνός
   translit: gymnos
 hebrew:
   text: עָרוֹם
   translit: arom
-ot_refs: Gen 2:25 • Gen 3:7 • Isa 20:3 • Hos 2:3
-nt_refs: Matt 25:36 • 2Cor 5:3 • Rev 3:17 • Rev 16:15
+ot_refs: Gen 2:25 • Job 1:21 • Eccl 5:15
+nt_refs: Heb 4:13 • 2 Cor 5:3 • Rev 3:17
 trivia:
-- Isaiah walked stripped of his sackcloth for three years as a sign to Egypt.
-- Peter was fishing 'naked' (stripped for work) before swimming to Jesus.
-- The Greek 'gymnos' often implies being poorly clad rather than fully nude.
+- Genesis 2:25 calls the pair arummim, naked, and Genesis 3:1 calls the serpent arum,
+  subtil - the same consonants one verse apart.
+- 'Job answers his loss with the same adjective: naked came I out of my mother''s
+  womb, and naked shall I return.'
+- Gymnos gives us gymnasium, from the Greek habit of training stripped.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -39,4 +46,15 @@ notes: null
 sources: []
 search_queries: []
 weight: 2
-weight_rationale: descriptive
+weight_rationale: a descriptive word with a clear place in the era's opening scene
+  - naked and not ashamed, then hiding - but no judgment, agent or event turns on
+  the adjective itself; the fall is carried by other words
+stats_rationale:
+  lore: nakedness before God frames the era's first shame and, in this card's New
+    Testament verse, the openness of all things to him - a recognized theme with clear
+    teaching
+  context: arom occurs 16 times in the Hebrew Bible; gymnos occurs 15 times in the
+    New Testament; total 31
+  complexity: arom, naked, differs from arum, subtil, by one vowel - Genesis sets
+    the naked pair beside the crafty serpent in consecutive verses - and a second
+    Hebrew word, eyrom, carries the nakedness of Genesis 3:10; an ambiguity to explain

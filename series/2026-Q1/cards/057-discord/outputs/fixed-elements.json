@@ -1,8 +1,8 @@
 {
   "contract": "hypertext.fixed-elements/v1",
   "template": {
-    "path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
-    "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+    "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+    "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
   },
   "font": {
     "family": "Liberation Serif",
@@ -24,7 +24,7 @@
       "counts": [
         3,
         2,
-        3
+        4
       ]
     },
     "type_pill": {
@@ -35,11 +35,11 @@
         73
       ],
       "offset": [
-        1,
+        2,
         0
       ],
       "text": "NOUN",
-      "ghost_pixels": 81
+      "ghost_pixels": 96
     },
     "number": {
       "box": [
@@ -68,6 +68,6 @@
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "9b1fd7ac87020e149ff7b1d790f78d1ebba4a08014ecf6c57fdfe53774fe6f1c",
-  "face_sha256_after": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87"
+  "face_sha256_before": "a883c22b453e2294df63e4f69ee5767e7e9b8cb07e7d74c2e6be56efabb0ce05",
+  "face_sha256_after": "18f071a70e548942be60d61afa63a89d0b700ec132a6e005b824cd634158ea8a"
 }

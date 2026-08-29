@@ -3,16 +3,16 @@
 ![RIGHTEOUS card](./outputs/card_1024x1536.png)
 
 ## Word
-**RIGHTEOUS** — Acting in accord with divine or moral law; virtuous; free from guilt or sin.
+**RIGHTEOUS** — Straight before God; just
 
 ## Old Testament
-> Proverbs 11:8 — "The righteous is delivered from trouble, and the wicked walks into it instead."
+> Genesis 6:9 — "Noah was a just man and perfect in his generations, and Noah walked with God"
 
 ## New Testament
-> 2 Corinthians 5:21 — "For our sake he made him to be sin who knew no sin, so that in him we might become the righteousness of God."
+> Romans 1:17 — "The just shall live by faith"
 
 ## Trivia
-- The Hebrew 'tsaddiq' implies adherence to a strict standard or plumb line.
-- First used in the Bible to describe Noah, who was 'perfect in his generations.'
-- In the NT, righteousness is often described as a gift (imputed) rather than earned.
+- Genesis 6:9 is the first time anyone in Scripture is called tsaddiq, and it is said of a man in a generation about to be drowned.
+- Perfect in his generations translates tamim, the word used of an unblemished animal brought for sacrifice.
+- The just shall live by faith is quoted three times in the New Testament, from one half-verse of Habakkuk.
 

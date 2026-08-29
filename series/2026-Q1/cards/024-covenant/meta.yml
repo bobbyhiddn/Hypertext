@@ -1,38 +1,43 @@
 number: '024'
 word: COVENANT
-gloss: A solemn, binding agreement or promise, often sealed by blood or oath.
+gloss: A bond cut between two parties
 card_type: NOUN
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A beam of brilliant light striking a stone altar and splitting it, with a spectrum
-  of colors emerging from the fissure; abstract, ethereal style, no text.
+art_prompt: A great bow of colour standing over dark receding floodwaters, a wet stone
+  altar on the high ground beneath it and drenched cliffs behind, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, overcast grey-blue daylight,
+  soft and shadowless, wet colours saturated
 stats:
   lore: 5
-  context: 5
+  context: 4
   complexity: 4
-ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ability: Choose another player. Exchange your Lot with that chosen player's Lot, then
+  gain one Letter.
 ot_verse:
-  ref: Jeremiah 31:31
-  snippet: Behold, the days are coming... when I will make a new covenant with the house of
-    Israel.
+  ref: Genesis 9:13
+  snippet: I do set my bow in the cloud, and it shall be for a token of a covenant
+    between me and the earth
 nt_verse:
   ref: Luke 22:20
-  snippet: This cup is the new covenant in my blood, which is poured out for you.
+  snippet: This cup is the new testament in my blood
 greek:
   text: διαθήκη
-  translit: diathēkē
+  translit: diatheke
 hebrew:
   text: בְּרִית
   translit: berit
-ot_refs: Gen 9 • Gen 15 • Ex 24 • Jer 31
-nt_refs: Matt 26 • Luke 22 • Heb 8 • Heb 9
+ot_refs: Gen 6:18 • Gen 9:13 • Gen 17:7
+nt_refs: Luke 22:20 • Heb 9:15 • Gal 3:17
 trivia:
-- The Hebrew idiom 'karat berit' literally means 'to cut a covenant,' referring to the dividing
-  of sacrificial animals.
-- Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant.
-- Greek uses 'diathēkē' (testament/will) rather than 'synthēkē' (contract) to emphasize God's
-  initiative.
+- The first covenant named in Scripture is with Noah, and the second is made with
+  every living creature, not with people alone.
+- Hebrew cuts a covenant; Genesis 15 shows why, with the halves laid out and a flame
+  passing between them.
+- Diatheke is the ordinary Greek word for a will, which is why Hebrews 9 can argue
+  from the death of the one who made it.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -76,4 +81,14 @@ search_queries:
 - Luke 22:20 snippet
 - Jeremiah 31:31 snippet
 weight: 5
-weight_rationale: the covenant with Noah; a pillar
+weight_rationale: 'a pillar of the set: the bow in the cloud after the flood and the
+  promise to Abram are the two hinges the era turns on, and every later covenant is
+  read back through them'
+stats_rationale:
+  lore: the printed verses put the whole structure of promise on the word - the token
+    in the cloud and the cup of the new testament; a doctrine hangs on it
+  context: berit occurs 284 times in the Hebrew Bible; diatheke occurs 33 times in
+    the New Testament; total 317
+  complexity: Hebrew does not make a covenant, it cuts one - karat berit, from the
+    halves of animals in Genesis 15 - while the Greek diatheke is ordinarily a last
+    will, which is why English alternates covenant and testament in the same book

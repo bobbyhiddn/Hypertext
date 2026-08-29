@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/057-discord/outputs/card_1024x1536.png",
-    "sha256": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87"
+    "sha256": "18f071a70e548942be60d61afa63a89d0b700ec132a6e005b824cd634158ea8a"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/057-discord/card.json",
-    "sha256": "dfdaaf78b27eb51c977f9ac5afccf0ac1ac8c3f10d401dbf196f0fc2eaf7f2bb"
+    "sha256": "ddb83fabe04a7730ea608560f69d12fe75db6122ab0f2fcdb1860a83ee7d41a7"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,61 +34,20 @@
         1536
       ],
       "path": "series/2026-Q1/cards/057-discord/outputs/card_1024x1536.png",
-      "sha256": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87"
+      "sha256": "18f071a70e548942be60d61afa63a89d0b700ec132a6e005b824cd634158ea8a"
     },
-    "candidate_features": [
-      {
-        "box": [
-          884,
-          122,
-          911,
-          150
-        ],
-        "center": [
-          897.5,
-          136.0
-        ],
-        "cross": {
-          "horizontal_coverage": 1.0,
-          "vertical_coverage": 1.0
-        },
-        "height": 28,
-        "ink_area": 244.0,
-        "kind": "plus",
-        "width": 27
-      },
-      {
-        "box": [
-          924,
-          98,
-          981,
-          179
-        ],
-        "center": [
-          952.5,
-          138.5
-        ],
-        "cross": {
-          "horizontal_coverage": 0.9123,
-          "vertical_coverage": 0.9506
-        },
-        "height": 81,
-        "ink_area": 3788.0,
-        "kind": "card",
-        "width": 57
-      }
-    ],
+    "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
     "defects": [],
     "observed": {
-      "card": 1,
-      "plus": 1,
+      "card": 0,
+      "plus": 0,
       "unknown": 0
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "21f4c447a72f9f155564bb06e9bfb162bda23acc4b6e4e9832104240a7216fce",
-      "declared_display": "+\ud83c\udca0"
+      "canonical_sha256": "d85c9e849da8d1ad8b9725d1986f0714107e6a72161ceadee42c2f5108d77995",
+      "declared_display": null
     },
     "region": [
       790,
@@ -98,71 +57,30 @@
     ],
     "target": {
       "card_type": "NOUN",
-      "expected_card_count": 1,
-      "expected_plus_count": 1,
+      "expected_card_count": 0,
+      "expected_plus_count": 0,
       "placement": "below_rarity",
-      "rarity": "RARE"
+      "rarity": "UNCOMMON"
     },
     "template": {
       "dimensions": [
         848,
         1264
       ],
-      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/rare/template_1024x1536.png",
-      "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
     },
-    "template_features": [
-      {
-        "box": [
-          884,
-          123,
-          910,
-          151
-        ],
-        "center": [
-          897.0,
-          137.0
-        ],
-        "cross": {
-          "horizontal_coverage": 1.0,
-          "vertical_coverage": 1.0
-        },
-        "height": 28,
-        "ink_area": 237.747,
-        "kind": "plus",
-        "width": 26
-      },
-      {
-        "box": [
-          924,
-          97,
-          981,
-          179
-        ],
-        "center": [
-          952.5,
-          138.0
-        ],
-        "cross": {
-          "horizontal_coverage": 0.9362,
-          "vertical_coverage": 0.9552
-        },
-        "height": 82,
-        "ink_area": 3784.747,
-        "kind": "card",
-        "width": 57
-      }
-    ]
+    "template_features": []
   },
   "defects": [],
   "expected_counts": {
-    "STAT_COMPLEXITY": 3,
+    "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 2,
     "STAT_LORE": 3
   },
   "fixed_elements": null,
   "observed_counts": {
-    "STAT_COMPLEXITY": 3,
+    "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 2,
     "STAT_LORE": 3
   },
@@ -170,56 +88,56 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/057-discord/outputs/card_1024x1536.png",
-      "sha256": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87"
+      "sha256": "18f071a70e548942be60d61afa63a89d0b700ec132a6e005b824cd634158ea8a"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
     "expected": {
       "cap_height": 22,
       "diamond": [
-        225,
+        226,
         262
       ],
       "diamond_colour": [
-        214,
-        165,
-        58
+        124,
+        185,
+        146
       ],
-      "expected_word_width": 64,
-      "gap": 32,
-      "left_inset": 76,
+      "expected_word_width": 161,
+      "gap": 15,
+      "left_inset": 30,
       "word": [
-        131,
-        193
+        85,
+        211
       ],
       "word_rows": [
         27,
         49
       ],
-      "word_width": 62
+      "word_width": 126
     },
     "observed": {
       "cap_height": 23,
       "diamond": [
-        225,
+        226,
         262
       ],
       "diamond_colour": [
-        216,
-        162,
-        51
+        118,
+        184,
+        139
       ],
-      "gap": 32,
-      "left_inset": 76,
+      "gap": 14,
+      "left_inset": 16,
       "word": [
-        131,
-        193
+        71,
+        212
       ],
       "word_rows": [
-        27,
-        50
+        28,
+        51
       ],
-      "word_width": 62
+      "word_width": 141
     },
     "passed": true,
     "region": {
@@ -236,25 +154,25 @@
     },
     "target": {
       "card_type": "NOUN",
-      "rarity": "RARE"
+      "rarity": "UNCOMMON"
     },
     "template": {
-      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/rare/template_1024x1536.png",
-      "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+      "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
     }
   },
   "reference_pack": {
     "contract": "hypertext.gemini.reference-pack/v1",
     "mode": "generate",
-    "target_rarity": "RARE",
+    "target_rarity": "UNCOMMON",
     "target_type": "NOUN",
     "template_position": 1,
-    "template_sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+    "template_sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
   },
   "registration": {
     "dx": 0.0,
     "dy": 0.0,
-    "score": 0.9463
+    "score": 0.9496
   },
   "rows": [
     {
@@ -285,7 +203,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 190.841,
+            "outside_median_luma": 191.151,
             "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
@@ -314,7 +232,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 204.0455,
+            "outside_median_luma": 204.3135,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -343,7 +261,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.6524,
+            "outside_median_luma": 209.7559,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -372,7 +290,7 @@
             "middle_median_luma": 205.6442,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.2521,
+            "outside_median_luma": 212.2046,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -401,7 +319,7 @@
             "middle_median_luma": 213.0774,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.3018,
+            "outside_median_luma": 215.4422,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -438,7 +356,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 214.8197,
+            "outside_median_luma": 214.7988,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -467,7 +385,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.5458,
+            "outside_median_luma": 213.6301,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -496,7 +414,7 @@
             "middle_median_luma": 202.125,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 214.9344,
+            "outside_median_luma": 215.7206,
             "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "empty",
@@ -525,7 +443,7 @@
             "middle_median_luma": 201.4797,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.4651,
+            "outside_median_luma": 213.1943,
             "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "empty",
@@ -554,7 +472,7 @@
             "middle_median_luma": 210.6396,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.1333,
+            "outside_median_luma": 212.3044,
             "outside_palette_rgb_distance": 5.3852
           },
           "observed_state": "empty",
@@ -564,9 +482,9 @@
       ]
     },
     {
-      "expected_count": 3,
+      "expected_count": 4,
       "name": "STAT_COMPLEXITY",
-      "observed_count": 3,
+      "observed_count": 4,
       "passed": true,
       "slots": [
         {
@@ -591,7 +509,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.6518,
+            "outside_median_luma": 207.808,
             "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
@@ -620,7 +538,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.3676,
+            "outside_median_luma": 211.5782,
             "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
@@ -649,7 +567,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.6845,
+            "outside_median_luma": 209.7212,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -658,30 +576,30 @@
         },
         {
           "defects": [],
-          "expected_state": "empty",
+          "expected_state": "filled",
           "metrics": {
-            "core_dark_fraction": 0.0,
-            "core_median_luma": 192.105,
-            "core_middle_luma_step": 1.0246,
-            "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.9722,
-            "edge_median_luma": 38.114,
-            "edge_palette_rgb_distance": 10.9545,
-            "empty_outline_contrast": 154.5658,
-            "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 188.466,
-            "interior_luma_p90": 200.1936,
-            "interior_luma_spread": 11.7276,
-            "interior_median_luma": 192.6798,
-            "interior_palette_rgb_distance": 441.673,
-            "middle_dark_fraction": 0.0,
-            "middle_median_luma": 193.1296,
-            "middle_palette_rgb_distance": 441.673,
+            "core_dark_fraction": 1.0,
+            "core_median_luma": 34.4652,
+            "core_middle_luma_step": 0.0,
+            "core_palette_rgb_distance": 37.0135,
+            "edge_dark_fraction": 1.0,
+            "edge_median_luma": 34.4652,
+            "edge_palette_rgb_distance": 37.0135,
+            "empty_outline_contrast": 0.0,
+            "interior_dark_fraction": 1.0,
+            "interior_luma_p10": 34.4652,
+            "interior_luma_p90": 34.4652,
+            "interior_luma_spread": 0.0,
+            "interior_median_luma": 34.4652,
+            "interior_palette_rgb_distance": 37.0135,
+            "middle_dark_fraction": 1.0,
+            "middle_median_luma": 34.4652,
+            "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
             "outside_median_luma": 198.7473,
             "outside_palette_rgb_distance": 441.673
           },
-          "observed_state": "empty",
+          "observed_state": "filled",
           "passed": true,
           "slot": 4
         },
@@ -707,7 +625,7 @@
             "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.272,
+            "outside_median_luma": 192.3765,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -723,14 +641,14 @@
   },
   "target": {
     "card_type": "NOUN",
-    "rarity": "RARE"
+    "rarity": "UNCOMMON"
   },
   "template": {
     "dimensions": [
       848,
       1264
     ],
-    "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/rare/template_1024x1536.png",
-    "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+    "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+    "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
   }
 }

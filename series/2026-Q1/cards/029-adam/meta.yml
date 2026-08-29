@@ -1,36 +1,44 @@
 number: 029
 word: ADAM
-gloss: The first human; mankind; earth-born.
+gloss: The man formed of the dust of the ground
 card_type: NAME
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A figure formed of red clay emerging from the soil, glowing with an inner golden
-  light, set against a lush primordial garden, realistic style, cinematic lighting.
+art_prompt: A shallow hollow of red clay in a dark bank, the print of a body pressed
+  into it, fine dust lifting from the hollow in a still column of air, no people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, deep shadowed background lit
+  by one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 5
   context: 5
   complexity: 3
-ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
+ability: Return every card in Sheol to the Tower and shuffle the cards in the Tower.
+  Then draw three cards from the Tower and put one card from your hand on the bottom
+  of the Tower.
 ot_verse:
   ref: Genesis 2:7
-  snippet: The LORD God formed the man of dust from the ground and breathed into his nostrils
-    the breath of life.
+  snippet: And the LORD God formed man of the dust of the ground, and breathed into
+    his nostrils the breath of life
 nt_verse:
   ref: 1 Corinthians 15:45
-  snippet: The first man Adam became a living being; the last Adam became a life-giving spirit.
+  snippet: The first man Adam was made a living soul
 greek:
   text: Ἀδάμ
   translit: Adam
 hebrew:
   text: אָדָם
   translit: Adam
-ot_refs: Gen 1–5 • 1 Chr 1 • Hos 6:7
-nt_refs: Rom 5 • 1 Cor 15 • 1 Tim 2 • Jude 1
+ot_refs: Gen 1:26 • Gen 2:7 • Gen 5:1
+nt_refs: 1 Cor 15:45 • Rom 5:14 • Luke 3:38
 trivia:
-- Derived from the Hebrew 'adamah' (ground) and 'adom' (red).
-- Used as both a proper name and a generic term for 'mankind'.
-- Luke's genealogy traces Jesus' lineage back to 'Adam, the son of God'.
+- Adam is made from adamah, the ground - the name and the dust are the same word one
+  letter apart.
+- Genesis 5:1 says God created them male and female and called their name Adam - the
+  name is first a name for the pair.
+- 'Luke''s genealogy runs backwards past every name of this era and ends: which was
+  the son of Adam, which was the son of God.'
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -38,4 +46,13 @@ notes: null
 sources: []
 search_queries: []
 weight: 5
-weight_rationale: the first man; a pillar
+weight_rationale: 'a pillar of the set: the first man is where the story starts, and
+  every later name in the era is counted from him'
+stats_rationale:
+  lore: the printed verses set the first man against the last - formed of dust and
+    made a living soul, then the quickening spirit - a doctrine hangs on the name
+  context: adam occurs 552 times in the Hebrew Bible; Adam occurs 9 times in the New
+    Testament; total 561
+  complexity: adam is man, mankind and a proper name in the same chapters, and it
+    is built on adamah, the ground he is taken from; where Genesis stops saying the
+    man and starts saying Adam is a translator's decision

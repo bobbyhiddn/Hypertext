@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-02-03 11:18:11
-Phase: imagegen
+Timestamp: 2026-08-29 09:51:40
+Phase: rebuild
 Target Rarity: GLORIOUS
 Target Type: NAME
 Fix Mode: False
 
-Style References (2 total):
-  [1] templates/example_cards/016-abraham/outputs/card_1024x1536.png [GLORIOUS] (TEMPLATE)
-  [2] templates/card/v001/glorious/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/name/glorious/template_1024x1536.png [GLORIOUS] sha256=717a18d2227f0730cb588773b31e6059d89b11656946219750def86693a917bb
 
 Prompt File: series/2026-Q1/cards/029-adam/prompt.txt

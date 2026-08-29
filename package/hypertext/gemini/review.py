@@ -1039,6 +1039,9 @@ PLACEHOLDER_LEAK_STRINGS = (
     "20XX QX",
     "- Set",
     "WORD:",
+    "WORD",
+    "GLOSS:",
+    "GLOSS",
     "ORIGINAL LANGUAGES",
 )
 
@@ -1062,8 +1065,11 @@ def detect_placeholder_leaks(image_path: Path, model: str | None = None) -> list
         f"anywhere on the card: {listed}. "
         'For "- Set": report it only if the bottom footer bar ends with a dash '
         "followed by the word Set after the series name. "
-        'For "WORD:": report it only if a field-name prefix like WORD: appears '
-        "before the large card title. "
+        'For "WORD" and "WORD:": report it if the bare label WORD, with or without a '
+        "colon, is printed as a field name above, before, or beside the large card title. "
+        'For "GLOSS" and "GLOSS:": report it if the label GLOSS, with or without a '
+        "colon, is printed before the italic one-line definition under the title; that "
+        "line must print the definition alone, with no field name. "
         "The navy type pill beside the collector number legitimately prints the "
         "card type (NOUN, VERB, ADJECTIVE, NAME, or TITLE) - never report that "
         'pill; report "CARD TITLE" only as the literal two-word string in the '

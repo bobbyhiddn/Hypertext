@@ -1,0 +1,57 @@
+{
+  "word": "SPIRIT",
+  "card_type": "TITLE",
+  "rarity": "GLORIOUS",
+  "content_score": 100,
+  "final_score": 100,
+  "passed": true,
+  "style_matches_reference": true,
+  "style_mismatch_reason": "",
+  "corrections": [],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 15,
+      "max": 15,
+      "issues": []
+    }
+  },
+  "quality_contract": {
+    "dimensions": {
+      "composition": 100,
+      "typography": 100,
+      "template_fidelity": 100,
+      "metadata": 100,
+      "stat_pips": 100,
+      "artifact_cleanliness": 100
+    },
+    "score": 100,
+    "passed": true,
+    "gate": 100
+  },
+  "stat_pip_visual_gate": {
+    "contract": "hypertext.template-relative-stat-pip-gate/v1",
+    "passed": true,
+    "candidate_sha256": "777109a8680631e29c670b9a4b3a2b6c297178839ecfa4053aeb0925e0455a7f",
+    "template_sha256": "9871609e71da0f85f8846d0490cc9e0083c9fdf6c4aa9084613bdef85a48a260",
+    "report": "series/2026-Q1/cards/030-spirit/outputs/visual-gate.json"
+  },
+  "style_refs_count": 1,
+  "style_refs": [
+    "template_1024x1536.png"
+  ]
+}

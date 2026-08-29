@@ -3,16 +3,16 @@
 ![NOAH card](./outputs/card_1024x1536.png)
 
 ## Word
-**NOAH** — Rest, comfort; the patriarch who built the ark to preserve life during the Flood
+**NOAH** — The man carried through the flood
 
 ## Old Testament
-> Genesis 6:8 — "But Noah found favor in the eyes of the Lord."
+> Genesis 6:8 — "But Noah found grace in the eyes of the LORD"
 
 ## New Testament
-> Hebrews 11:7 — "By faith Noah... in reverent fear constructed an ark for the saving of his household."
+> Hebrews 11:7 — "By faith Noah, being warned of God of things not seen as yet, moved with fear, prepared an ark"
 
 ## Trivia
-- Name means 'rest' or 'comfort' (Gen 5:29)
-- Lived to be 950 years old (Gen 9:29)
-- First person in the Bible described as 'righteous'
+- Grace is first named in Scripture in Genesis 6:8, and it is named of Noah before anything he does is reported.
+- Ezekiel names Noah with Daniel and Job as three men whose righteousness could deliver only themselves.
+- Peter counts the saved: eight souls, in a world of one language and many years.
 

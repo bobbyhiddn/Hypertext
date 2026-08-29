@@ -3,16 +3,16 @@
 ![CURSE card](./outputs/card_1024x1536.png)
 
 ## Word
-**CURSE** — To invoke harm or punishment; a solemn utterance intended to bring about evil or destruction.
+**CURSE** — To speak a binding sentence against
 
 ## Old Testament
-> Genesis 3:17 — "Cursed is the ground because of you; through painful toil you will eat food from it all the days of your life."
+> Genesis 3:17 — "cursed is the ground for thy sake; in sorrow shalt thou eat of it all the days of thy life"
 
 ## New Testament
-> Galatians 3:13 — "Christ redeemed us from the curse of the law by becoming a curse for us."
+> James 3:9 — "therewith curse we men, which are made after the similitude of God"
 
 ## Trivia
-- The first biblical curse was spoken against the serpent, then the ground, but never Adam or Eve directly.
-- In the New Testament, the Greek word 'anathema' refers to something devoted to destruction.
-- Jesus cursed a fig tree in Mark 11 as a symbolic act of judgment against unfruitfulness.
+- The ground is cursed for the man's sake, not the man - the sentence falls on his work, and thorns are the first sign of it.
+- Genesis 12:3 uses two verbs: him that maketh light of thee I will bind under a curse.
+- Both Jesus and Paul answer the verb with its opposite - bless them that curse you, bless and curse not.
 

@@ -3,16 +3,16 @@
 ![DISCORD card](./outputs/card_1024x1536.png)
 
 ## Word
-**DISCORD** — The sound of unity breaking into strife
+**DISCORD** — Strife between two
 
 ## Old Testament
-> Proverbs 6:19 — "and he that soweth discord among brethren"
+> Proverbs 17:14 — "The beginning of strife is as when one letteth out water: therefore leave off contention, before it be meddled with"
 
 ## New Testament
-> 1 Corinthians 3:3 — "there is among you envying, and strife, and divisions"
+> 1 Corinthians 3:3 — "for whereas there is among you envying, and strife, and divisions, are ye not carnal"
 
 ## Trivia
-- Madon comes from din, to contend at law; discord in Proverbs is a lawsuit that never ends.
-- The Greek eris was the goddess whose golden apple started the Trojan war; Paul lists her name among the works of the flesh.
-- Babel's judgment was not silence but discord - every word still spoken, none understood.
+- Proverbs pictures a quarrel as a seep in an earth bank: stop it while it is a thread of water, because a breach cannot be argued shut.
+- Proverbs 26:20 gives the other end of the same rule - where there is no talebearer, the strife ceaseth.
+- Eris was also the name Greeks gave the goddess of strife; Paul lists it among the works of the flesh.
 

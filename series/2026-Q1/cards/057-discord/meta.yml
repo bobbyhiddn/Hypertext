@@ -1,55 +1,61 @@
 number: '057'
 word: DISCORD
-gloss: The sound of unity breaking into strife
+gloss: Strife between two
 card_type: NOUN
-rarity: RARE
+rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A great unfinished brick tower at dusk with its wooden scaffolds splitting apart,
-  cracked bricks tumbling from the ramps, torn banners whipped in opposite directions by a
-  rising wind, one radiant golden light breaking through the storm clouds above, no people,
-  luminous cinematic oil painting with impressionistic brushwork, deep shadowed background,
-  one radiant golden light source, rich saturated blues and golds
+art_prompt: A narrow breach opening in a packed earth bank, a first thread of water
+  cutting through into the dry channel below, cracked clay curling on either side,
+  no people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, storm light under
+  a bruised green-grey sky, one shaft of silver breaking through
 stats:
   lore: 3
   context: 2
-  complexity: 3
+  complexity: 4
 stats_rationale:
-  lore: strife among brethren is a recognized wisdom theme (Proverbs) and the moral shape
-    of Babel's confusion; not a doctrine in itself
-  context: madon occurs 23 times in the Hebrew Bible; eris occurs 9 times in the New Testament;
-    total 32
-  complexity: madon comes from din, to contend at law, and appears in the plural form medanim
-    in Proverbs; Greek eris is also the name of the goddess of strife - a derivation worth
-    explaining
-ability: Each player reveals one card from that player's hand. Then choose another player;
-  that chosen player puts two cards from that chosen player's hand into Sheol, and draw three
-  cards from the Tower.
+  lore: in this card's verses strife is a thing to be left off before it breaks out
+    and a mark of the carnal - a recognized theme with clear teaching, not a doctrine
+  context: madon occurs 19 times in the Hebrew Bible; eris occurs 9 times in the New
+    Testament; total 28
+  complexity: Hebrew keeps four words for strife - madon, midyan, rib and massah -
+    and the printed verse of Proverbs 6:19 uses the second where 17:14 uses the first;
+    eris then has to stand for all of them in Greek, which is why lists of the works
+    of the flesh vary in English
+ability: Choose another player; each of you reveals one card from your hand. If your
+  revealed card has the higher COMPLEXITY, add two cards from Sheol to your hand.
 ot_verse:
-  ref: Proverbs 6:19
-  snippet: and he that soweth discord among brethren
+  ref: Proverbs 17:14
+  snippet: 'The beginning of strife is as when one letteth out water: therefore leave
+    off contention, before it be meddled with'
 nt_verse:
   ref: 1 Corinthians 3:3
-  snippet: there is among you envying, and strife, and divisions
+  snippet: for whereas there is among you envying, and strife, and divisions, are
+    ye not carnal
 greek:
   text: ἔρις
   translit: eris
 hebrew:
   text: מָדוֹן
   translit: madon
-ot_refs: Prov 6:19 • Prov 6:14 • Prov 10:12
-nt_refs: 1 Cor 3:3 • Rom 1:29 • Gal 5:20
+ot_refs: Prov 17:14 • Prov 15:18 • Prov 26:20
+nt_refs: 1 Cor 3:3 • Gal 5:20 • Rom 1:29
 trivia:
-- Madon comes from din, to contend at law; discord in Proverbs is a lawsuit that never ends.
-- The Greek eris was the goddess whose golden apple started the Trojan war; Paul lists her
-  name among the works of the flesh.
-- Babel's judgment was not silence but discord - every word still spoken, none understood.
+- 'Proverbs pictures a quarrel as a seep in an earth bank: stop it while it is a thread
+  of water, because a breach cannot be argued shut.'
+- Proverbs 26:20 gives the other end of the same rule - where there is no talebearer,
+  the strife ceaseth.
+- Eris was also the name Greeks gave the goddess of strife; Paul lists it among the
+  works of the flesh.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+ / RARE
-  3+ / GLORIOUS wild).
+notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+
+  / RARE 3+ / GLORIOUS wild).
 sources: []
 search_queries: []
 weight: 2
-weight_rationale: descriptive
+weight_rationale: a descriptive word with a clear place - the strife that follows
+  the scattering - but no judgment, agent or event of the era turns on madon; CONFUSE
+  and SCATTER carry that weight

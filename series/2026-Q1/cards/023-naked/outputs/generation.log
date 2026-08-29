@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-01-27 11:11:22
-Phase: imagegen
-Target Rarity: RARE
+Timestamp: 2026-08-29 09:43:07
+Phase: rebuild
+Target Rarity: UNCOMMON
 Target Type: ADJECTIVE
 Fix Mode: False
 
-Style References (2 total):
-  [1] templates/example_cards/011-eternal/outputs/card_1024x1536.png [RARE] (TEMPLATE)
-  [2] templates/card/v001/rare/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/adjective/uncommon/template_1024x1536.png [UNCOMMON] sha256=2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9
 
 Prompt File: series/2026-Q1/cards/023-naked/prompt.txt

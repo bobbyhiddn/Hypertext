@@ -1,38 +1,43 @@
 number: '026'
 word: CURSE
-gloss: To invoke harm or punishment; a solemn utterance intended to bring about evil or destruction.
+gloss: To speak a binding sentence against
 card_type: VERB
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A withered fig tree standing alone in a barren, cracked landscape under a darkened,
-  violet sky, with thorns twisting around the roots.
+art_prompt: A hard cracked hillside of thorns and thistles closing over a broken wooden
+  plough and a spilled handful of seed, nothing green anywhere in the field, no people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, deep shadowed background lit
+  by one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 4
-  context: 5
+  context: 3
   complexity: 3
-ability: Name a card type; target player reveals their hand and discards all cards of that
-  type.
+ability: Name a card type; each player puts every card of the named type from that
+  player's hand into Sheol. Then draw three cards from the Tower.
 ot_verse:
   ref: Genesis 3:17
-  snippet: Cursed is the ground because of you; through painful toil you will eat food from
-    it all the days of your life.
+  snippet: cursed is the ground for thy sake; in sorrow shalt thou eat of it all the
+    days of thy life
 nt_verse:
-  ref: Galatians 3:13
-  snippet: Christ redeemed us from the curse of the law by becoming a curse for us.
+  ref: James 3:9
+  snippet: therewith curse we men, which are made after the similitude of God
 greek:
   text: καταράομαι
   translit: kataraomai
 hebrew:
   text: אָרַר
   translit: arar
-ot_refs: Gen 3:14 • Gen 12:3 • Deut 28:15 • Prov 26:2
-nt_refs: Matt 25:41 • Mark 11:21 • Rom 12:14 • James 3:10
+ot_refs: Gen 3:17 • Gen 9:25 • Gen 12:3
+nt_refs: James 3:9 • Luke 6:28 • Rom 12:14
 trivia:
-- The first biblical curse was spoken against the serpent, then the ground, but never Adam
-  or Eve directly.
-- In the New Testament, the Greek word 'anathema' refers to something devoted to destruction.
-- Jesus cursed a fig tree in Mark 11 as a symbolic act of judgment against unfruitfulness.
+- The ground is cursed for the man's sake, not the man - the sentence falls on his
+  work, and thorns are the first sign of it.
+- 'Genesis 12:3 uses two verbs: him that maketh light of thee I will bind under a
+  curse.'
+- Both Jesus and Paul answer the verb with its opposite - bless them that curse you,
+  bless and curse not.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -40,4 +45,15 @@ notes: null
 sources: []
 search_queries: []
 weight: 4
-weight_rationale: the curse on the ground, on Cain, on Canaan; a named judgment
+weight_rationale: the era's judgments are all spoken as this verb - the ground for
+  Adam's sake, Canaan after the tent, and the sentence on whoever curses Abram; a
+  named judgment the era turns on, though the pillar words are the covenants themselves
+stats_rationale:
+  lore: the printed verses make the curse both God's sentence on the ground and the
+    thing a tongue must not do to a man made in God's image - a major theme close
+    to doctrine
+  context: arar occurs 63 times in the Hebrew Bible; kataraomai occurs 5 times in
+    the New Testament; total 68
+  complexity: Hebrew has two verbs where English has one - arar is the binding sentence,
+    qalal is to make light of - and Genesis 12:3 uses both in a single line, so the
+    English reads curse twice for two different acts

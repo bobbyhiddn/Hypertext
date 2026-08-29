@@ -1,35 +1,42 @@
 number: '031'
 word: HEAR
-gloss: To perceive sound; to listen with attention, interest, and obedience.
+gloss: To perceive a voice and attend to it
 card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A vast, quiet desert landscape at twilight; a single shepherd stands still, head
-  tilted, listening to a distant, glowing wind swirling down from a mountain peak.
+art_prompt: A garden path of trodden earth between fig trees, the low leaves still
+  trembling where a voice has just passed, a stone seat empty beside the path, no
+  people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, deep shadowed
+  background lit by one radiant golden light source, rich saturated blues and golds
 stats:
-  lore: 5
-  context: 3
-  complexity: 1
-ability: Look at the top card of the Tower; you may put it into Sheol, then draw 1.
+  lore: 4
+  context: 5
+  complexity: 2
+ability: Reveal one card from the top of the Tower and add that revealed card to your
+  hand. Then look at one card from the top of the Tower.
 ot_verse:
-  ref: Deuteronomy 6:4
-  snippet: 'Hear, O Israel: The LORD our God, the LORD is one.'
+  ref: Genesis 3:8
+  snippet: And they heard the voice of the LORD God walking in the garden in the cool
+    of the day
 nt_verse:
-  ref: Romans 10:17
-  snippet: So faith comes from hearing, and hearing through the word of Christ.
+  ref: John 10:27
+  snippet: My sheep hear my voice, and I know them, and they follow me
 greek:
   text: ἀκούω
-  translit: akouō
+  translit: akouo
 hebrew:
   text: שָׁמַע
   translit: shama
-ot_refs: Deut 6:4 • 1 Sam 3:10 • Isa 55:3
-nt_refs: Rom 10:17 • Matt 11:15 • Jas 1:19
+ot_refs: Gen 3:8 • Gen 3:10 • Deut 6:4
+nt_refs: John 10:27 • Mark 4:9 • Matt 13:16
 trivia:
-- The Hebrew word 'shama' implies both listening and obeying.
-- The 'Shema' is the central confession of faith in Judaism.
-- Priests were consecrated by applying blood to the right ear lobe.
+- The first thing the man and the woman do after eating is hear - the sound of God
+  walking in the garden sends them into the trees.
+- Hebrew has no separate verb for obey; to hear a command and to keep it are the same
+  word, which is why the KJV writes hearken.
+- The Shema takes its name from its first word, shema - Hear, O Israel.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -37,4 +44,14 @@ notes: null
 sources: []
 search_queries: []
 weight: 3
-weight_rationale: hearing and obeying; a theme
+weight_rationale: shama is the era's verb of response - the man and the woman hear
+  God walking in the garden and hide - and the word the Shema is named for; thematic
+  vocabulary with real teaching, not a named agent or event
+stats_rationale:
+  lore: in this card's own verses hearing is the hinge - the first thing the fallen
+    pair do is hear God walking, and the sheep are known by hearing the voice; a major
+    theme close to doctrine
+  context: shama occurs 1159 times in the Hebrew Bible; akouo occurs 428 times in
+    the New Testament; total 1587
+  complexity: shama carries hearing and obeying in one verb, which is why translators
+    alternate hear and hearken; the range is wide but the choice is plain

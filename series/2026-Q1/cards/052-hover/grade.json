@@ -1,7 +1,7 @@
 {
   "word": "HOVER",
   "card_type": "VERB",
-  "rarity": "GLORIOUS",
+  "rarity": "RARE",
   "content_score": 100,
   "final_score": 100,
   "passed": true,
@@ -46,8 +46,8 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "30608ed47428dcd5c4a2a9aa07c18651060003f53d79f40564e425a185509a4e",
-    "template_sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
+    "candidate_sha256": "8365ba141ee4e9673cada4c0942c5044122306fa386633347b8edbbe6250921e",
+    "template_sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
     "report": "series/2026-Q1/cards/052-hover/outputs/visual-gate.json"
   },
   "style_refs_count": 1,

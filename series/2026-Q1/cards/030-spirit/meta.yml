@@ -1,36 +1,43 @@
 number: '030'
 word: SPIRIT
-gloss: The immaterial part of a person; the animating force of life; the Holy Spirit.
+gloss: The breath that gives life
 card_type: TITLE
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: Ethereal swirling wind and golden light forming a vague dove shape amidst chaotic
-  waves, glowing atmosphere, divine presence, digital painting style
+art_prompt: A stone oil lamp set in an open window, its flame streaming sideways in
+  a rush of night wind, dust and chaff lifting off the sill into the dark, no people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, night under a lantern, a warm
+  amber pool of light in deep indigo dark
 stats:
   lore: 5
   context: 5
   complexity: 4
-ability: Shuffle Sheol into the Tower, then draw 5 cards.
+ability: Choose one COMMON card in Sheol that has LORE three or more and activate
+  that chosen card. Then draw three cards from the Tower.
 ot_verse:
   ref: Job 33:4
-  snippet: The Spirit of God has made me; the breath of the Almighty gives me life.
+  snippet: The Spirit of God hath made me, and the breath of the Almighty hath given
+    me life
 nt_verse:
   ref: 2 Corinthians 3:6
-  snippet: '...for the letter kills, but the Spirit gives life.'
+  snippet: the letter killeth, but the spirit giveth life
 greek:
   text: πνεῦμα
   translit: pneuma
 hebrew:
   text: רוּחַ
   translit: ruach
-ot_refs: Gen 1:2 • Num 11:25 • Ezek 37:14 • Joel 2:28
-nt_refs: Matt 3:16 • John 3:8 • Acts 2:4 • Gal 5:22
+ot_refs: Gen 1:2 • Gen 6:3 • Job 33:4
+nt_refs: 2 Cor 3:6 • John 6:63 • Rom 8:11
 trivia:
-- Hebrew 'ruach' and Greek 'pneuma' both mean wind, breath, and spirit.
-- The Spirit is often symbolized by a dove, fire, wind, or water.
-- In the Old Testament, the Spirit empowered individuals for specific tasks; in the New, He
-  indwells believers.
+- Genesis 8:1 uses the same word for the wind God makes pass over the earth to dry
+  the flood - wind and Spirit are one word.
+- 'Genesis 6:3 sets the era''s clock: my spirit shall not always strive with man,
+  yet his days shall be an hundred and twenty years.'
+- John 3:8 turns on the double sense - the wind bloweth where it listeth, and so is
+  every one that is born of the Spirit.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -76,7 +83,17 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   Make the ability:
 
-  "Choose between Tower, Sheol, or Opponent''s Hand. Reveal up 5 cards from the chosen location
-  and take any number of them."'
+  "Choose between Tower, Sheol, or Opponent''s Hand. Reveal up 5 cards from the chosen
+  location and take any number of them."'
 weight: 5
-weight_rationale: the Spirit over the waters; a pillar
+weight_rationale: 'a pillar of the set: the Spirit moving on the face of the waters
+  is the first act reported after the heavens and the earth, and the same word is
+  the breath in every living thing of the era'
+stats_rationale:
+  lore: the printed verses make the Spirit the maker of a man and the giver of life
+    against the letter that kills - a doctrine hangs on the word
+  context: ruach occurs 378 times in the Hebrew Bible; pneuma occurs 379 times in
+    the New Testament; total 757
+  complexity: one word carries wind, breath and spirit in both languages, so every
+    occurrence is a translator's decision - and John 3:8 plays on all three at once,
+    a pun no English rendering can keep

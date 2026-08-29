@@ -1,7 +1,7 @@
 {
   "word": "DEEP",
   "card_type": "ADJECTIVE",
-  "rarity": "RARE",
+  "rarity": "UNCOMMON",
   "content_score": 100,
   "final_score": 100,
   "passed": true,
@@ -46,8 +46,8 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "7036757219696d746889ba1d1df4f83e6d508bf262c0ba85faf0e32c3ab6f98c",
-    "template_sha256": "f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e",
+    "candidate_sha256": "06862979aedee21712cf109e53a2dd4e188cab694912315c07b69be67e623885",
+    "template_sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
     "report": "series/2026-Q1/cards/035-deep/outputs/visual-gate.json"
   },
   "style_refs_count": 1,

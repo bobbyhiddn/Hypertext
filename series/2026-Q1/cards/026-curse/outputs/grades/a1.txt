@@ -1,0 +1,13 @@
+============================================================
+GRADE RESULT: CURSE
+============================================================
+Score: 0/100 (content: 100/100)
+Status: FAIL
+Style Match: False
+Style Issue: none Template placeholder leak: DEFINITION TEXT (under the title CURSE)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove the template placeholder text DEFINITION TEXT (under the title CURSE); replace the slot with the supplied content only.
+============================================================
