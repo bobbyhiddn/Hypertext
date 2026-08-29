@@ -121,7 +121,13 @@ def check_art_prompt(word: str, prompt: str, art: dict[str, Any]) -> list[str]:
     w = str(word).strip().upper()
     if "tower" in motifs_in(prompt) and w not in {str(x).upper() for x in art["tower_allowlist"]}:
         issues.append(f"{w} is not a tower word: its art must depict the word's own verse scene, not the tower (allowlist: {', '.join(art['tower_allowlist'])})")
-    if re.search(r"\bcrowd|\bgathering\b|\bassembly\b|\bthrong\b|\bmultitude of people", str(prompt), re.IGNORECASE):
+    # "a night sky crowded with stars" is not a crowd: the word has to be about people.
+    crowd = (
+        r"\bcrowds?\b|\bthrongs?\b|\bassembl(?:y|ies)\b"
+        r"|\bcrowded with (?:people|figures|men|women|travellers|travelers)\b"
+        r"|\b(?:gathering|multitude|group|line|procession)\s+of\s+(?:people|men|women|figures|travellers|travelers|worshippers|workers)\b"
+    )
+    if re.search(crowd, str(prompt), re.IGNORECASE):
         issues.append("art prompt describes a crowd; the figure rule needs no people or one figure seen from behind")
     if lighting_of(prompt, art) is None:
         issues.append("art prompt carries no lighting clause from the palette; end it with one of: " + ", ".join(e["name"] for e in art["lighting_palette"]))
