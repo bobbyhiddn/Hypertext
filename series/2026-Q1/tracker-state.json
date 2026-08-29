@@ -26,7 +26,7 @@
     },
     "38": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "SODOM NAME/RARE (promoted 2026-08-28: word weight 4). \"Put the top five cards of the Tower into Sheol. Then add up to three of those cards to your hand and put one card from your hand on the bottom of the Tower.\" 100/100 3-0."
     },
     "39": {
       "status": "pass",
@@ -78,7 +78,7 @@
     },
     "51": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "ABRAM NAME/RARE (promoted 2026-08-28: word weight 4, user). \"Draw one card from the Tower; if that drawn card is a NAME, gain one Letter. Then choose another player, and that chosen player draws one card from the Tower.\" 100/100 3-0 after a figure-rule repaint."
     },
     "52": {
       "status": "pass",
@@ -90,7 +90,7 @@
     },
     "54": {
       "status": "pass",
-      "note": "DESTROYER TITLE/UNCOMMON. Chosen player puts one card into Sheol; draw one. Stats 3/2/4 (mashchit x19 + olothreutes x1). Passed first render, 100/100 3-0."
+      "note": "DESTROYER TITLE/RARE (promoted 2026-08-28: word weight 4). \"Choose another player; that chosen player puts two cards from that chosen player's hand into Sheol. Then draw two cards from the Tower and add one card from Sheol to your hand.\" 100/100 3-0."
     },
     "55": {
       "status": "pass",
@@ -114,7 +114,7 @@
     },
     "60": {
       "status": "pass",
-      "note": "EDEN NAME/COMMON. Draw one, then set the next two in order. Greek is the NT name for the same place, paradeisos (Rev 2:7). Stats 5/2/4. Passed first render, 100/100 3-0."
+      "note": "EDEN NAME/RARE (promoted 2026-08-28: word weight 4, user). \"Look at the top five cards of the Tower. Add up to three of those cards to your hand, put one of the other cards into Sheol, and put each other card on the bottom of the Tower.\" 100/100 3-0 (attempt 2; attempt 1 drifted)."
     },
     "61": {
       "status": "pass",
@@ -257,6 +257,10 @@
     {
       "when": "2026-08-28",
       "what": "POWER LADDER (user: 'the current glorious power level should be rare, rare should be uncommon'; GLORIOUS 'should be able to do some pretty wild things given the right cost'). Budgets shifted a step: COMMON payoff 1; UNCOMMON payoff 2-3 total 5-8; RARE payoff 3 total 9-14 with layering; GLORIOUS payoff 4 - the wild step (gross gain >= 5, every player's material moved with a 3+ gain, or a structure bent: Tower reset, activate from Sheol, Lots renewed, a Page burned), judged on gross gain so a big cost buys it. Audit found 8 current cards below tier. Redesigned and re-rendered at 100/100 3-0: DEEP, REDEEMER, DISCORD (RARE) and KINGDOM (GLORIOUS: every player renews a Lot, then four from Sheol). HOVER already reaches the wild step (five off a Page). Pending the user's go: five UNCOMMONs that price as COMMON (SODOM, CHOOSE, DESTROYER, MESSENGER, ASCEND)."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "WORD WEIGHT (user: 'a word like destroyer and sodom need to at least be rare'). hypertext.cards.word_weight: weight 1-5 with a rationale beside the stats; floors 5 -> GLORIOUS, 4 -> at least RARE; hard fail in the plan phase; 'hypertext weight-audit' with the heavy-word budget (22 RARE+GLORIOUS slots, 9 GLORIOUS). Weights assigned to all 61 cards. Promoted to RARE with RARE-strength abilities (user's calls): SODOM, DESTROYER, EDEN, ABRAM - all 100/100 3-0 (ABRAM via the new figure-rule repaint). 'Demote weights': HOVER, SEED, REMEMBER, RIGHTEOUS, NAME 4 -> 3; heavy 16/22, pillars 7/9. RARE_NAME target 2 -> 4, COMMON_NAME 6 -> 4; cards_index.yml (the census test's canonical list) realigned. Remaining floor violations are legacy pillars GRACE, CREATE, NOAH (-> GLORIOUS in the legacy regeneration). Still pending: MESSENGER, CHOOSE, ASCEND price as COMMON on UNCOMMON slots."
     }
   ]
 }

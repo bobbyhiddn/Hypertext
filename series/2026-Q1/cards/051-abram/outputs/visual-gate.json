@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/051-abram/outputs/card_1024x1536.png",
-    "sha256": "73036458aa57a177307e14ff03671875bd72f0e3c89c57ccda55b435b2ee55e7"
+    "sha256": "d2426dd860e120db3f52303b72bedd41626b370c8325583efc962c0a0e28df73"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/051-abram/card.json",
-    "sha256": "1380b320156ec92d56fddc8848d46568ed866e8b9cf3ae08d5782715f1cfd8f3"
+    "sha256": "ab648715eaeec1348663fb5c3f7514955013c88d221b678c0050ad48b82860ee"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,20 +34,61 @@
         1536
       ],
       "path": "series/2026-Q1/cards/051-abram/outputs/card_1024x1536.png",
-      "sha256": "73036458aa57a177307e14ff03671875bd72f0e3c89c57ccda55b435b2ee55e7"
+      "sha256": "d2426dd860e120db3f52303b72bedd41626b370c8325583efc962c0a0e28df73"
     },
-    "candidate_features": [],
+    "candidate_features": [
+      {
+        "box": [
+          885,
+          119,
+          911,
+          146
+        ],
+        "center": [
+          898.0,
+          132.5
+        ],
+        "cross": {
+          "horizontal_coverage": 1.0,
+          "vertical_coverage": 1.0
+        },
+        "height": 27,
+        "ink_area": 238.0,
+        "kind": "plus",
+        "width": 26
+      },
+      {
+        "box": [
+          924,
+          93,
+          981,
+          175
+        ],
+        "center": [
+          952.5,
+          134.0
+        ],
+        "cross": {
+          "horizontal_coverage": 0.9123,
+          "vertical_coverage": 0.9512
+        },
+        "height": 82,
+        "ink_area": 3843.0,
+        "kind": "card",
+        "width": 57
+      }
+    ],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
     "defects": [],
     "observed": {
-      "card": 0,
-      "plus": 0,
+      "card": 1,
+      "plus": 1,
       "unknown": 0
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "3f4aea7cb25c1ea729be18a9c6a38f253e05c6338467ee0befda8db95c16871d",
-      "declared_display": null
+      "canonical_sha256": "c6895221ae6f542220e5a54bcfb570b1de2260fd96d228509af4017fbe7aaae2",
+      "declared_display": "+\ud83c\udca0"
     },
     "region": [
       790,
@@ -57,20 +98,61 @@
     ],
     "target": {
       "card_type": "NAME",
-      "expected_card_count": 0,
-      "expected_plus_count": 0,
+      "expected_card_count": 1,
+      "expected_plus_count": 1,
       "placement": "below_rarity",
-      "rarity": "COMMON"
+      "rarity": "RARE"
     },
     "template": {
       "dimensions": [
         848,
         1264
       ],
-      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/common/template_1024x1536.png",
-      "sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151"
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1"
     },
-    "template_features": []
+    "template_features": [
+      {
+        "box": [
+          884,
+          123,
+          910,
+          151
+        ],
+        "center": [
+          897.0,
+          137.0
+        ],
+        "cross": {
+          "horizontal_coverage": 1.0,
+          "vertical_coverage": 1.0
+        },
+        "height": 28,
+        "ink_area": 237.747,
+        "kind": "plus",
+        "width": 26
+      },
+      {
+        "box": [
+          924,
+          97,
+          981,
+          179
+        ],
+        "center": [
+          952.5,
+          138.0
+        ],
+        "cross": {
+          "horizontal_coverage": 0.9362,
+          "vertical_coverage": 0.9552
+        },
+        "height": 82,
+        "ink_area": 3784.747,
+        "kind": "card",
+        "width": 57
+      }
+    ]
   },
   "defects": [],
   "expected_counts": {
@@ -88,7 +170,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/051-abram/outputs/card_1024x1536.png",
-      "sha256": "73036458aa57a177307e14ff03671875bd72f0e3c89c57ccda55b435b2ee55e7"
+      "sha256": "d2426dd860e120db3f52303b72bedd41626b370c8325583efc962c0a0e28df73"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -99,44 +181,45 @@
         262
       ],
       "diamond_colour": [
-        250,
-        250,
-        250
+        214,
+        165,
+        58
       ],
-      "gap": 12,
-      "left_inset": 31,
+      "expected_word_width": 64,
+      "gap": 32,
+      "left_inset": 76,
       "word": [
-        86,
-        213
+        131,
+        193
       ],
       "word_rows": [
         27,
         49
       ],
-      "word_width": 127
+      "word_width": 62
     },
     "observed": {
-      "cap_height": 26,
+      "cap_height": 23,
       "diamond": [
-        226,
+        225,
         262
       ],
       "diamond_colour": [
-        254,
-        254,
-        254
+        205,
+        154,
+        33
       ],
-      "gap": 10,
-      "left_inset": 17,
+      "gap": 32,
+      "left_inset": 72,
       "word": [
-        79,
-        216
+        131,
+        193
       ],
       "word_rows": [
-        25,
+        28,
         51
       ],
-      "word_width": 137
+      "word_width": 62
     },
     "passed": true,
     "region": {
@@ -148,30 +231,30 @@
       ],
       "offset": [
         0,
-        -9
+        -5
       ]
     },
     "target": {
       "card_type": "NAME",
-      "rarity": "COMMON"
+      "rarity": "RARE"
     },
     "template": {
-      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/common/template_1024x1536.png",
-      "sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151"
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/rare/template_1024x1536.png",
+      "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1"
     }
   },
   "reference_pack": {
     "contract": "hypertext.gemini.reference-pack/v1",
     "mode": "generate",
-    "target_rarity": "COMMON",
+    "target_rarity": "RARE",
     "target_type": "NAME",
     "template_position": 1,
-    "template_sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151"
+    "template_sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1"
   },
   "registration": {
     "dx": 0.0,
     "dy": -2.0,
-    "score": 0.9607
+    "score": 0.9425
   },
   "rows": [
     {
@@ -188,7 +271,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9846,
+            "edge_dark_fraction": 0.9753,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -202,8 +285,8 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 189.9786,
-            "outside_palette_rgb_distance": 52.1344
+            "outside_median_luma": 191.9954,
+            "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
           "passed": true,
@@ -217,7 +300,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9985,
+            "edge_dark_fraction": 0.983,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -231,7 +314,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 203.7453,
+            "outside_median_luma": 204.7694,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -246,7 +329,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9954,
+            "edge_dark_fraction": 0.9753,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -260,7 +343,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.4779,
+            "outside_median_luma": 209.5842,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -275,7 +358,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9954,
+            "edge_dark_fraction": 0.9799,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -289,7 +372,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.0762,
+            "outside_median_luma": 211.5287,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -301,24 +384,24 @@
           "expected_state": "empty",
           "metrics": {
             "core_dark_fraction": 0.0,
-            "core_median_luma": 209.8454,
-            "core_middle_luma_step": 3.232,
+            "core_median_luma": 209.9216,
+            "core_middle_luma_step": 3.175,
             "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.9321,
-            "edge_median_luma": 44.5977,
+            "edge_dark_fraction": 0.912,
+            "edge_median_luma": 44.9888,
             "edge_palette_rgb_distance": 6.4031,
-            "empty_outline_contrast": 167.4655,
+            "empty_outline_contrast": 167.1654,
             "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 207.545,
-            "interior_luma_p90": 216.724,
-            "interior_luma_spread": 9.179,
-            "interior_median_luma": 212.0632,
+            "interior_luma_p10": 207.7938,
+            "interior_luma_p90": 216.7481,
+            "interior_luma_spread": 8.9542,
+            "interior_median_luma": 212.1542,
             "interior_palette_rgb_distance": 441.673,
             "middle_dark_fraction": 0.0,
-            "middle_median_luma": 213.0774,
+            "middle_median_luma": 213.0966,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.37,
+            "outside_median_luma": 215.3419,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -341,7 +424,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9985,
+            "edge_dark_fraction": 0.9738,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -355,41 +438,12 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 214.859,
+            "outside_median_luma": 214.5399,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
           "passed": true,
           "slot": 1
-        },
-        {
-          "defects": [],
-          "expected_state": "filled",
-          "metrics": {
-            "core_dark_fraction": 1.0,
-            "core_median_luma": 34.4652,
-            "core_middle_luma_step": 0.0,
-            "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9861,
-            "edge_median_luma": 34.4652,
-            "edge_palette_rgb_distance": 37.0135,
-            "empty_outline_contrast": 0.0,
-            "interior_dark_fraction": 1.0,
-            "interior_luma_p10": 34.4652,
-            "interior_luma_p90": 34.4652,
-            "interior_luma_spread": 0.0,
-            "interior_median_luma": 34.4652,
-            "interior_palette_rgb_distance": 37.0135,
-            "middle_dark_fraction": 1.0,
-            "middle_median_luma": 34.4652,
-            "middle_palette_rgb_distance": 37.0135,
-            "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.2413,
-            "outside_palette_rgb_distance": 441.673
-          },
-          "observed_state": "filled",
-          "passed": true,
-          "slot": 2
         },
         {
           "defects": [],
@@ -413,12 +467,12 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 214.9854,
-            "outside_palette_rgb_distance": 48.1768
+            "outside_median_luma": 212.4897,
+            "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
           "passed": true,
-          "slot": 3
+          "slot": 2
         },
         {
           "defects": [],
@@ -428,7 +482,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.983,
+            "edge_dark_fraction": 0.9599,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -442,50 +496,13 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.6424,
-            "outside_palette_rgb_distance": 8.0623
+            "outside_median_luma": 215.0184,
+            "outside_palette_rgb_distance": 49.7594
           },
           "observed_state": "filled",
           "passed": true,
-          "slot": 4
+          "slot": 3
         },
-        {
-          "defects": [],
-          "expected_state": "empty",
-          "metrics": {
-            "core_dark_fraction": 0.0,
-            "core_median_luma": 201.4098,
-            "core_middle_luma_step": 9.2298,
-            "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.8981,
-            "edge_median_luma": 40.8799,
-            "edge_palette_rgb_distance": 4.1231,
-            "empty_outline_contrast": 168.1087,
-            "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 198.1226,
-            "interior_luma_p90": 216.8139,
-            "interior_luma_spread": 18.6912,
-            "interior_median_luma": 208.9886,
-            "interior_palette_rgb_distance": 441.673,
-            "middle_dark_fraction": 0.0,
-            "middle_median_luma": 210.6396,
-            "middle_palette_rgb_distance": 441.673,
-            "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 210.6195,
-            "outside_palette_rgb_distance": 5.3852
-          },
-          "observed_state": "empty",
-          "passed": true,
-          "slot": 5
-        }
-      ]
-    },
-    {
-      "expected_count": 3,
-      "name": "STAT_COMPLEXITY",
-      "observed_count": 3,
-      "passed": true,
-      "slots": [
         {
           "defects": [],
           "expected_state": "filled",
@@ -508,8 +525,74 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.3616,
-            "outside_palette_rgb_distance": 8.3666
+            "outside_median_luma": 211.2742,
+            "outside_palette_rgb_distance": 5.0
+          },
+          "observed_state": "filled",
+          "passed": true,
+          "slot": 4
+        },
+        {
+          "defects": [],
+          "expected_state": "empty",
+          "metrics": {
+            "core_dark_fraction": 0.0,
+            "core_median_luma": 202.482,
+            "core_middle_luma_step": 8.0338,
+            "core_palette_rgb_distance": 441.673,
+            "edge_dark_fraction": 0.8843,
+            "edge_median_luma": 42.1653,
+            "edge_palette_rgb_distance": 3.1623,
+            "empty_outline_contrast": 167.0771,
+            "interior_dark_fraction": 0.0,
+            "interior_luma_p10": 198.4036,
+            "interior_luma_p90": 216.8139,
+            "interior_luma_spread": 18.4103,
+            "interior_median_luma": 209.2424,
+            "interior_palette_rgb_distance": 441.673,
+            "middle_dark_fraction": 0.0,
+            "middle_median_luma": 210.5158,
+            "middle_palette_rgb_distance": 441.673,
+            "outside_dark_fraction": 0.0019,
+            "outside_median_luma": 210.8359,
+            "outside_palette_rgb_distance": 4.6904
+          },
+          "observed_state": "empty",
+          "passed": true,
+          "slot": 5
+        }
+      ]
+    },
+    {
+      "expected_count": 3,
+      "name": "STAT_COMPLEXITY",
+      "observed_count": 3,
+      "passed": true,
+      "slots": [
+        {
+          "defects": [],
+          "expected_state": "filled",
+          "metrics": {
+            "core_dark_fraction": 1.0,
+            "core_median_luma": 34.4652,
+            "core_middle_luma_step": 0.0,
+            "core_palette_rgb_distance": 37.0135,
+            "edge_dark_fraction": 0.9599,
+            "edge_median_luma": 34.4652,
+            "edge_palette_rgb_distance": 37.0135,
+            "empty_outline_contrast": 0.0,
+            "interior_dark_fraction": 1.0,
+            "interior_luma_p10": 34.4652,
+            "interior_luma_p90": 34.4652,
+            "interior_luma_spread": 0.0,
+            "interior_median_luma": 34.4652,
+            "interior_palette_rgb_distance": 37.0135,
+            "middle_dark_fraction": 1.0,
+            "middle_median_luma": 34.4652,
+            "middle_palette_rgb_distance": 37.0135,
+            "outside_dark_fraction": 0.0019,
+            "outside_median_luma": 207.6518,
+            "outside_palette_rgb_distance": 7.6811
           },
           "observed_state": "filled",
           "passed": true,
@@ -523,7 +606,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9907,
+            "edge_dark_fraction": 0.9753,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -537,8 +620,8 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 210.6384,
-            "outside_palette_rgb_distance": 24.2899
+            "outside_median_luma": 211.5782,
+            "outside_palette_rgb_distance": 24.9199
           },
           "observed_state": "filled",
           "passed": true,
@@ -552,7 +635,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9877,
+            "edge_dark_fraction": 0.9784,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -566,7 +649,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 210.1003,
+            "outside_median_luma": 209.7172,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -579,23 +662,23 @@
           "metrics": {
             "core_dark_fraction": 0.0,
             "core_median_luma": 192.105,
-            "core_middle_luma_step": 1.0246,
+            "core_middle_luma_step": 1.0948,
             "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.9722,
-            "edge_median_luma": 38.114,
+            "edge_dark_fraction": 0.946,
+            "edge_median_luma": 38.9925,
             "edge_palette_rgb_distance": 10.9545,
-            "empty_outline_contrast": 154.5658,
+            "empty_outline_contrast": 153.7285,
             "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 188.466,
-            "interior_luma_p90": 200.1936,
-            "interior_luma_spread": 11.7276,
-            "interior_median_luma": 192.6798,
+            "interior_luma_p10": 188.5302,
+            "interior_luma_p90": 200.0686,
+            "interior_luma_spread": 11.5384,
+            "interior_median_luma": 192.721,
             "interior_palette_rgb_distance": 441.673,
             "middle_dark_fraction": 0.0,
-            "middle_median_luma": 193.1296,
+            "middle_median_luma": 193.1998,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 198.6192,
+            "outside_median_luma": 198.8536,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -607,24 +690,24 @@
           "expected_state": "empty",
           "metrics": {
             "core_dark_fraction": 0.0,
-            "core_median_luma": 183.5972,
-            "core_middle_luma_step": 3.7238,
+            "core_median_luma": 184.0276,
+            "core_middle_luma_step": 3.3389,
             "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.9769,
-            "edge_median_luma": 35.606,
+            "edge_dark_fraction": 0.9552,
+            "edge_median_luma": 36.3266,
             "edge_palette_rgb_distance": 14.8997,
-            "empty_outline_contrast": 150.7786,
+            "empty_outline_contrast": 150.1972,
             "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 181.2996,
-            "interior_luma_p90": 191.7146,
-            "interior_luma_spread": 10.415,
-            "interior_median_luma": 186.3846,
+            "interior_luma_p10": 181.8944,
+            "interior_luma_p90": 191.7668,
+            "interior_luma_spread": 9.8724,
+            "interior_median_luma": 186.5238,
             "interior_palette_rgb_distance": 441.673,
             "middle_dark_fraction": 0.0,
-            "middle_median_luma": 187.321,
+            "middle_median_luma": 187.3665,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.1737,
+            "outside_median_luma": 191.9058,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -640,14 +723,14 @@
   },
   "target": {
     "card_type": "NAME",
-    "rarity": "COMMON"
+    "rarity": "RARE"
   },
   "template": {
     "dimensions": [
       848,
       1264
     ],
-    "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/common/template_1024x1536.png",
-    "sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151"
+    "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/rare/template_1024x1536.png",
+    "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1"
   }
 }

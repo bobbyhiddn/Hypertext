@@ -2,7 +2,7 @@ number: '051'
 word: ABRAM
 gloss: Called out of Ur to a land unseen, to become a blessing
 card_type: NAME
-rarity: COMMON
+rarity: RARE
 series: 2026-Q1
 set: Babel
 art_prompt: A small caravan with tents and flocks leaving a great walled river city at dawn,
@@ -13,8 +13,8 @@ stats:
   lore: 4
   context: 4
   complexity: 3
-ability: Draw one card from the Tower and look at one card from the top of the Tower. Then
-  you may put one card from your hand on the bottom of the Tower.
+ability: Draw one card from the Tower; if that drawn card is a NAME, gain one Letter. Then
+  choose another player, and that chosen player draws one card from the Tower.
 ot_verse:
   ref: Genesis 12:1
   snippet: the LORD had said unto Abram, Get thee out
@@ -37,7 +37,8 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Promoted COMMON -> RARE 2026-08-28 under the word-weight rule (weight 4, user's call);
+  ability redesigned to RARE strength.
 sources: []
 search_queries: []
 stats_rationale:
