@@ -1,0 +1,56 @@
+number: 078
+word: DRY
+gloss: Without water, as the dry land that appeared
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A cracked mud flat baked to a hard crust, the last damp shine caught in
+  the deep fissures and a stranded olive branch drying on the mud, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, hard white noon glare, bleached
+  ochre ground and short black shadows
+stats:
+  lore: 2
+  context: 2
+  complexity: 3
+stats_rationale:
+  lore: the dry land is a real motif of creation and of the flood's end, but no doctrine
+    rests on the word
+  context: yabbashah occurs 14 times in the Hebrew Bible; xeros occurs 8 times in
+    the New Testament; total 22
+  complexity: yabbashah is a noun, the dry, used adjectivally for land uncovered by
+    water; xeros runs from dry land to a withered hand to the green tree and the dry
+    - a range to explain
+weight: 2
+weight_rationale: the third day's word and the flood's ending - a descriptive word
+  with a clear place in the era
+ability: Look at the bottom four cards of the Tower. Add one of those cards to your
+  hand and put the other cards on top of the Tower.
+ot_verse:
+  ref: Genesis 1:9
+  snippet: 'let the dry land appear: and it was so'
+nt_verse:
+  ref: Hebrews 11:29
+  snippet: they passed through the Red sea as by dry land
+greek:
+  text: ξηρός
+  translit: xeros
+hebrew:
+  text: יַבָּשָׁה
+  translit: yabbashah
+ot_refs: Gen 1:9 • Gen 1:10 • Ps 66:6
+nt_refs: Heb 11:29 • Matt 23:15 • Luke 23:31
+trivia:
+- The dry appears on the third day before anything is planted in it; the ground is
+  made ready before it is filled.
+- Genesis 8 measures the flood's end twice - the waters were abated, and then the
+  face of the ground was dry.
+- Jesus asks what shall be done in the dry, using the same word Greek readers knew
+  for dry land.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

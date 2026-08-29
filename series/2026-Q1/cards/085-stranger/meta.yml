@@ -1,0 +1,56 @@
+number: 085
+word: STRANGER
+gloss: One who dwells in a land that is not his own
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A traveller's dusty cloak and staff propped beside a closed wooden door
+  set in a stone wall, an unfamiliar road running away behind, one figure seen from
+  behind, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, deep shadowed
+  background lit by one radiant golden light source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 3
+  complexity: 3
+stats_rationale:
+  lore: the sojourner of Genesis 15 becomes the pattern for a people who confess they
+    are strangers on the earth - a recognized theme with clear teaching
+  context: ger occurs 92 times in the Hebrew Bible; paroikos occurs 4 times in the
+    New Testament; total 96
+  complexity: ger is a resident alien with standing, unlike nokri the outsider, and
+    paroikos is one who dwells beside rather than among - two distinctions English
+    flattens into stranger
+weight: 3
+weight_rationale: the word of the covenant warning to Abram and of the patriarchs'
+  whole manner of life - thematic vocabulary with real teaching behind it
+ability: Look at the top five cards of the Tower. Add one of those cards that has
+  a card type not in your Lot to your hand.
+ot_verse:
+  ref: Genesis 15:13
+  snippet: thy seed shall be a stranger in a land that is not theirs
+nt_verse:
+  ref: Ephesians 2:19
+  snippet: Now therefore ye are no more strangers and foreigners
+greek:
+  text: πάροικος
+  translit: paroikos
+hebrew:
+  text: גֵּר
+  translit: ger
+ot_refs: Gen 15:13 • Gen 23:4 • Ps 39:12
+nt_refs: Eph 2:19 • Acts 7:6 • 1 Pet 2:11
+trivia:
+- Abraham calls himself a stranger and a sojourner even while buying the field where
+  he will be buried.
+- Stephen quotes Genesis 15:13 word for word in his defence, and the Greek he uses
+  is paroikos.
+- The law's command to love the stranger is grounded in memory - ye were strangers
+  yourselves.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

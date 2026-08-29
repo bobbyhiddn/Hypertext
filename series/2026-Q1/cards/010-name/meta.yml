@@ -1,42 +1,45 @@
 number: '010'
 word: NAME
-gloss: A word or phrase by which a person, place, or concept is known, designated, or addressed;
-  distinct from essence yet representing it.
+gloss: The word a thing is called by; the standing it carries
 card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A smooth, glowing white stone resting on a dark velvet cloth, illuminated by a
-  single shaft of light; the stone has a unique, abstract seal carved into it, symbolizing
-  identity without using letters.
+art_prompt: A crested hoopoe on a low branch, a young ibex and a striped lizard on
+  warm stone, all three held still at the mouth of a walled garden as though waiting
+  to be called, no people, luminous cinematic oil painting with impressionistic brushwork,
+  saturated full colour, a strong symbolic subject, no engraving or line art, deep
+  shadowed background lit by one radiant golden light source, rich saturated blues
+  and golds
 stats:
-  lore: 5
+  lore: 3
   context: 5
-  complexity: 2
-ability: Draw 1. If you have a NAME in your Pages, draw 1 more.
+  complexity: 4
+ability: Look at the top four cards of the Tower. Add one of those cards that has
+  COMPLEXITY four or more to your hand and put the other cards on the bottom of the
+  Tower.
 ot_verse:
-  ref: Proverbs 22:1
-  snippet: A good name is rather to be chosen than great riches, and loving favour rather
-    than silver and gold.
+  ref: Genesis 2:19
+  snippet: whatsoever Adam called every living creature, that was the name thereof
 nt_verse:
   ref: Philippians 2:9
-  snippet: Wherefore God also hath highly exalted him, and given him a name which is above
-    every name.
+  snippet: given him a name which is above every name
 greek:
   text: ὄνομα
   translit: onoma
 hebrew:
   text: שֵׁם
   translit: shem
-ot_refs: Gen 2:19 • Ex 3:15 • Ps 20:7 • Isa 56:5
-nt_refs: Matt 28:19 • Acts 4:12 • Eph 1:21 • Rev 2:17
+ot_refs: Gen 2:19 • Gen 4:26 • Gen 11:4
+nt_refs: Phil 2:9 • Acts 4:12 • John 1:12
 trivia:
-- In biblical culture, a name was not just a label but represented the person's character,
-  authority, and essential nature.
-- God's personal name, YHWH, was considered so holy that readers would substitute 'Adonai'
-  (Lord) to avoid speaking it.
-- Receiving a new name (e.g., Jacob to Israel) often signified a divine transformation of
-  destiny and identity.
+- 'Genesis 2:19 is the first recorded speech of a man: God brings the creatures to
+  Adam to see what he would call them, and whatever he calls them stands.'
+- Babel's builders say let us make us a name, two chapters after a son of Noah has
+  been given the name that simply means Name.
+- To act in a name, in both Testaments, is to act in the authority the name carries
+  - which is why calling on the name of the LORD, begun in the days of Enos, counts
+  as worship.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -45,22 +48,36 @@ sources: []
 search_queries: []
 revision: 1
 revision_notes: "General revision request (you may modify any content field as needed):\n\
-  # Card_Word: NAME\n# Card_Gloss: A word or phrase by which a person, place, or concept is\
-  \ known, designated, or addressed; distinct from essence yet representing it.\n# Card_Type:\
-  \ NOUN\n# Card_Rarity: COMMON\n# Card_Ability: Draw 1. If you have a NAME in your Pages,\
-  \ draw 3 more.\n# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 2\n# Card_Art_Prompt: A smooth,\
-  \ glowing white stone resting on a dark velvet cloth, illuminated by a single shaft of light;\
-  \ the stone has a unique, abstract seal carved into it, symbolizing identity without using\
-  \ letters.\n# Card_OT_Verse: Proverbs 22:1 — A good name is rather to be chosen than great\
-  \ riches, and loving favour rather than silver and gold.\n# Card_NT_Verse: Philippians 2:9\
-  \ — Wherefore God also hath highly exalted him, and given him a name which is above every\
-  \ name.\n# Card_Hebrew: שֵׁם (shem)\n# Card_Greek: ὄνομα (onoma)\n# Card_Trivia_1: In biblical\
+  # Card_Word: NAME\n# Card_Gloss: A word or phrase by which a person, place, or concept\
+  \ is known, designated, or addressed; distinct from essence yet representing it.\n\
+  # Card_Type: NOUN\n# Card_Rarity: COMMON\n# Card_Ability: Draw 1. If you have a\
+  \ NAME in your Pages, draw 3 more.\n# Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY\
+  \ 2\n# Card_Art_Prompt: A smooth, glowing white stone resting on a dark velvet cloth,\
+  \ illuminated by a single shaft of light; the stone has a unique, abstract seal\
+  \ carved into it, symbolizing identity without using letters.\n# Card_OT_Verse:\
+  \ Proverbs 22:1 — A good name is rather to be chosen than great riches, and loving\
+  \ favour rather than silver and gold.\n# Card_NT_Verse: Philippians 2:9 — Wherefore\
+  \ God also hath highly exalted him, and given him a name which is above every name.\n\
+  # Card_Hebrew: שֵׁם (shem)\n# Card_Greek: ὄνομα (onoma)\n# Card_Trivia_1: In biblical\
   \ culture, a name was not just a label but represented the person's character, authority,\
-  \ and essential nature.\n# Card_Trivia_2: God's personal name, YHWH, was considered so holy\
-  \ that readers would substitute 'Adonai' (Lord) to avoid speaking it.\n# Card_Trivia_3:\
-  \ Receiving a new name (e.g., Jacob to Israel) often signified a divine transformation of\
-  \ destiny and identity.\n\nCard field changes (from preview):\n  ABILITY_TEXT: 'Draw 1.\
-  \ If you have a NAME in your Pages, draw 1 more.' -> 'Draw 1. If you have a NAME in your\
-  \ Pages, draw 3 more.'"
+  \ and essential nature.\n# Card_Trivia_2: God's personal name, YHWH, was considered\
+  \ so holy that readers would substitute 'Adonai' (Lord) to avoid speaking it.\n\
+  # Card_Trivia_3: Receiving a new name (e.g., Jacob to Israel) often signified a\
+  \ divine transformation of destiny and identity.\n\nCard field changes (from preview):\n\
+  \  ABILITY_TEXT: 'Draw 1. If you have a NAME in your Pages, draw 1 more.' -> 'Draw\
+  \ 1. If you have a NAME in your Pages, draw 3 more.'"
 weight: 3
-weight_rationale: '"let us make us a name" - thematic; demoted 2026-08-28 (user)'
+weight_rationale: calling upon the name of the LORD and making us a name at Babel
+  are two of the turns the era is built on, and the noun stands behind the patriarch
+  Shem - thematic vocabulary with real teaching, while the promise the era hangs on
+  is carried by COVENANT, so NAME stays at 3
+stats_rationale:
+  lore: the printed verses give the naming of every living creature and the name given
+    above every name - a recognized theme of the era with clear teaching, though in
+    Genesis what is taught hangs on who does the calling rather than on the noun
+  context: shem occurs 864 times in the Hebrew Bible; onoma occurs 231 times in the
+    New Testament; total 1095
+  complexity: shem is a standing rather than a label - to make a name is to seize
+    a reputation, to call on the name is to worship, and to cut off a name is to end
+    a house - and it is a proper name besides, so Babel's builders grasp at shem two
+    chapters after Shem has been given one

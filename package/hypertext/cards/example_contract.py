@@ -14,9 +14,9 @@ class ExampleContractError(ValueError):
 
 
 def load_contract(root: Path) -> dict:
-    path = root / "schema/word_example_generation_contract.v1.json"
+    path = root / "schema/word_example_generation_contract.v2.json"
     contract = json.loads(path.read_text(encoding="utf-8"))
-    if contract.get("contract_version") != 1:
+    if contract.get("contract_version") != 2:
         raise ExampleContractError("unsupported example contract version")
     if tuple(contract["variants"]) != TYPES:
         raise ExampleContractError("contract must define exactly the five Word types")

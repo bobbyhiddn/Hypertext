@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: FLOOD
+# Card_Gloss: The waters that came upon the earth and took them all away
+# Card_Type: NOUN
+# Card_Rarity: GLORIOUS
+# Card_Ability: Each player puts every card from that player's hand into Sheol. Then each player draws one card from the Tower and you draw four cards from the Tower.
+# Card_Stats: LORE 5 | CONTEXT 2 | COMPLEXITY 4 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: Black water surging through the open doorway of a stone house, a wooden bowl and a clay jar spinning on the flood, rain hammering the drowned threshold, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, storm light under a bruised green-grey sky, one shaft of silver breaking through
+# Card_OT_Verse: Genesis 7:17 — And the flood was forty days upon the earth
+# Card_NT_Verse: Matthew 24:39 — knew not until the flood came, and took them all away
+# Card_Hebrew: מַבּוּל (mabbul)
+# Card_Greek: κατακλυσμός (kataklysmos)
+# Card_Trivia_1: Hebrew keeps a separate word for this water: mabbul is never used of an ordinary river in flood.
+# Card_Trivia_2: Psalm 29:10 is the one place outside Genesis that uses it - the LORD sitteth upon the flood, still enthroned over it.
+# Card_Trivia_3: Peter reads the flood as a figure of baptism: the same water that destroys the world carries the ark.

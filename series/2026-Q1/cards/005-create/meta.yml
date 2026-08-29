@@ -1,36 +1,44 @@
 number: '005'
 word: CREATE
-gloss: To bring something into existence; to originate.
+gloss: To call into being what was not there
 card_type: VERB
-rarity: RARE
+rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A pair of glowing hands shaping a swirling nebula of dust and stars into a sphere;
-  cosmic scale, ethereal lighting, gold and deep blue palette.
+art_prompt: The rim of a lightless world seen from far above, one seam of radiance
+  splitting open along the horizon and gold dust streaming out of the seam into the
+  unformed dark, no people, luminous cinematic oil painting with impressionistic brushwork,
+  saturated full colour, a strong symbolic subject, no engraving or line art, deep
+  shadowed background lit by one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 5
-  context: 4
-  complexity: 3
-ability: Reveal the top 3 cards of the Tower. Put one into your hand, one into Sheol, and
-  one on the bottom of the Tower.
+  context: 3
+  complexity: 4
+ability: Discard two cards of the same card type from your hand into Sheol. Then gain
+  two Letters and add one card from the top of the Tower to your hand.
 ot_verse:
   ref: Genesis 1:1
-  snippet: In the beginning God created the heavens and the earth.
+  snippet: In the beginning God created the heaven and the earth
 nt_verse:
   ref: Colossians 1:16
-  snippet: For by him all things were created, in heaven and on earth, visible and invisible.
+  snippet: For by him were all things created, that are in heaven, and that are in
+    earth
 greek:
   text: κτίζω
-  translit: ktizō
+  translit: ktizo
 hebrew:
   text: בָּרָא
   translit: bara
-ot_refs: Gen 1:1 • Gen 1:27 • Isa 45:18 • Ps 51:10
-nt_refs: Col 1:16 • Eph 2:10 • Rev 4:11 • Rom 1:20
+ot_refs: Gen 1:1 • Gen 1:21 • Gen 1:27
+nt_refs: Col 1:16 • Eph 2:10 • Rev 4:11
 trivia:
-- The Hebrew verb 'bara' is used exclusively with God as the subject.
-- '''Creatio ex nihilo'' is the theological term for ''creation out of nothing''.'
-- Genesis 1 depicts creation as separating and ordering chaos ('tohu wa-bohu').
+- Genesis 1 uses bara only three times - for the heavens and earth, for the great
+  creatures, and for man - and asah, to make, for everything between.
+- No subject but God ever governs bara in the Hebrew Bible; the grammar itself refuses
+  the verb to anyone else.
+- Ktizo in classical Greek means to found a city, so the Septuagint's choice quietly
+  makes the world a colony settled by its founder.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -75,10 +83,10 @@ last_description:
   style_matches_reference: true
   style_mismatch_reason: ''
 style_mismatch_count: 1
-style_mismatch_reason: Transliterations in the Hebrew/Greek section are wrapped in parentheses
-  (e.g., '(bara)' and '(ktizō)'), which violates the critical style check requiring transliterations
-  to be shown WITHOUT parentheses.; Transliterations are wrapped in parentheses - must NOT
-  have parentheses
+style_mismatch_reason: Transliterations in the Hebrew/Greek section are wrapped in
+  parentheses (e.g., '(bara)' and '(ktizō)'), which violates the critical style check
+  requiring transliterations to be shown WITHOUT parentheses.; Transliterations are
+  wrapped in parentheses - must NOT have parentheses
 review_status: yellow
 review_notes: Increase Lore stat pips from 4 to 5 to match the expected stats
 user_action_required: true
@@ -99,18 +107,19 @@ revision_notes: 'Ability change request:
 
   # Card_Rarity: RARE
 
-  # Card_Ability: Reveal the top 3 cards of the Tower. Put one into your hand, one into Sheol,
-  and one on the bottom of the Tower.
+  # Card_Ability: Reveal the top 3 cards of the Tower. Put one into your hand, one
+  into Sheol, and one on the bottom of the Tower.
 
   # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
 
-  # Card_Art_Prompt: A pair of glowing hands shaping a swirling nebula of dust and stars into
-  a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.
+  # Card_Art_Prompt: A pair of glowing hands shaping a swirling nebula of dust and
+  stars into a sphere; cosmic scale, ethereal lighting, gold and deep blue palette.
 
-  # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heavens and the earth.
+  # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heavens and the
+  earth.
 
-  # Card_NT_Verse: Colossians 1:16 — For by him all things were created, in heaven and on
-  earth, visible and invisible.
+  # Card_NT_Verse: Colossians 1:16 — For by him all things were created, in heaven
+  and on earth, visible and invisible.
 
   # Card_Hebrew: בָּרָא (bara)
 
@@ -118,8 +127,22 @@ revision_notes: 'Ability change request:
 
   # Card_Trivia_1: The Hebrew verb ''bara'' is used exclusively with God as the subject.
 
-  # Card_Trivia_2: ''Creatio ex nihilo'' is the theological term for ''creation out of nothing''.
+  # Card_Trivia_2: ''Creatio ex nihilo'' is the theological term for ''creation out
+  of nothing''.
 
-  # Card_Trivia_3: Genesis 1 depicts creation as separating and ordering chaos (''tohu wa-bohu'').'
+  # Card_Trivia_3: Genesis 1 depicts creation as separating and ordering chaos (''tohu
+  wa-bohu'').'
 weight: 5
-weight_rationale: the first verb of Scripture
+weight_rationale: 'a pillar of the set: the first sentence of the era and of the Bible
+  is spoken in this verb, God alone is ever its subject, and the whole account of
+  what the world is and whose it is hangs on it; a weight-5 word, which is why it
+  prints GLORIOUS'
+stats_rationale:
+  lore: the printed verses are the opening sentence of Scripture and the claim that
+    by him were all things created - in this era nothing is prior to this verb
+  context: bara occurs 54 times in the Hebrew Bible; ktizo occurs 15 times in the
+    New Testament; total 69
+  complexity: bara never takes a human subject and never names the material used,
+    which is the whole of the argument for creation out of nothing; it stands beside
+    asah, to make, and yatsar, to form, in the same chapters, and identical consonants
+    elsewhere mean to cut down or to grow fat

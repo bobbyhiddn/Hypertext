@@ -1,0 +1,11 @@
+=== Generation Log ===
+Timestamp: 2026-08-29 10:25:21
+Phase: rebuild
+Target Rarity: RARE
+Target Type: TITLE
+Fix Mode: False
+
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/title/rare/template_1024x1536.png [RARE] sha256=b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064
+
+Prompt File: series/2026-Q1/cards/089-priest/prompt.txt

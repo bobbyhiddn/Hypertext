@@ -3,16 +3,16 @@
 ![NAME card](./outputs/card_1024x1536.png)
 
 ## Word
-**NAME** — A word or phrase by which a person, place, or concept is known, designated, or addressed; distinct from essence yet representing it.
+**NAME** — The word a thing is called by; the standing it carries
 
 ## Old Testament
-> Proverbs 22:1 — "A good name is rather to be chosen than great riches, and loving favour rather than silver and gold."
+> Genesis 2:19 — "whatsoever Adam called every living creature, that was the name thereof"
 
 ## New Testament
-> Philippians 2:9 — "Wherefore God also hath highly exalted him, and given him a name which is above every name."
+> Philippians 2:9 — "given him a name which is above every name"
 
 ## Trivia
-- In biblical culture, a name was not just a label but represented the person's character, authority, and essential nature.
-- God's personal name, YHWH, was considered so holy that readers would substitute 'Adonai' (Lord) to avoid speaking it.
-- Receiving a new name (e.g., Jacob to Israel) often signified a divine transformation of destiny and identity.
+- Genesis 2:19 is the first recorded speech of a man: God brings the creatures to Adam to see what he would call them, and whatever he calls them stands.
+- Babel's builders say let us make us a name, two chapters after a son of Noah has been given the name that simply means Name.
+- To act in a name, in both Testaments, is to act in the authority the name carries - which is why calling on the name of the LORD, begun in the days of Enos, counts as worship.
 

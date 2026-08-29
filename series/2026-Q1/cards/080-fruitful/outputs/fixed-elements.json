@@ -1,0 +1,73 @@
+{
+  "contract": "hypertext.fixed-elements/v1",
+  "template": {
+    "path": "templates/card/v001/composed/adjective/common/template_1024x1536.png",
+    "sha256": "93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c"
+  },
+  "font": {
+    "family": "Liberation Serif",
+    "path": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+    "sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4"
+  },
+  "regions": {
+    "stat_pips": {
+      "box": [
+        68,
+        561,
+        969,
+        641
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "counts": [
+        3,
+        2,
+        2
+      ]
+    },
+    "type_pill": {
+      "box": [
+        142,
+        25,
+        337,
+        73
+      ],
+      "offset": [
+        4,
+        2
+      ],
+      "text": "ADJECTIVE",
+      "ghost_pixels": 944
+    },
+    "number": {
+      "box": [
+        65,
+        38,
+        142,
+        60
+      ],
+      "offset": [
+        6,
+        0
+      ],
+      "text": "#080"
+    },
+    "footer": {
+      "box": [
+        63,
+        1479,
+        337,
+        1503
+      ],
+      "offset": [
+        0,
+        0
+      ],
+      "text": "SERIES: 2026-Q1 Babel"
+    }
+  },
+  "face_sha256_before": "f252660e80bff5983a494af22b8de0a1d1df19c59cdbeaffc236195ea41204d5",
+  "face_sha256_after": "4bc0b3cf6ffd8ea019b16526f85d0a82514dda28c86945bbd69f513d129d8cb6"
+}

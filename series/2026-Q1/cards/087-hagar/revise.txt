@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: HAGAR
+# Card_Gloss: Sarai's handmaid, driven out and found by the fountain
+# Card_Type: NAME
+# Card_Rarity: UNCOMMON
+# Card_Ability: Choose another player; that chosen player puts one card from that chosen player's hand on the bottom of the Tower. Then add up to two cards from Sheol to your hand.
+# Card_Stats: LORE 3 | CONTEXT 2 | COMPLEXITY 4 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A spring welling up among broken red rocks in the wilderness, a leather waterskin lying open on the sand beside it and one set of footprints leading away, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, red desert light of late afternoon, rust and copper against a turquoise sky
+# Card_OT_Verse: Genesis 16:8 — And he said, Hagar, Sarai's maid, whence camest thou? and whither wilt thou go?
+# Card_NT_Verse: Galatians 4:24 — the one from the mount Sinai, which gendereth to bondage, which is Agar
+# Card_Hebrew: הָגָר (Hagar)
+# Card_Greek: Ἁγάρ (Hagar)
+# Card_Trivia_1: Hagar is the first person in Scripture to give God a name - Thou God seest me.
+# Card_Trivia_2: The angel's command is to return and submit; the promise of a multitude comes only after the going back.
+# Card_Trivia_3: Paul makes Hagar and Sarah two covenants, which is why a handmaid of Genesis argues a point in Galatians.

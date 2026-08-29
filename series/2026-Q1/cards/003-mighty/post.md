@@ -3,17 +3,16 @@
 ![MIGHTY card](./outputs/card_1024x1536.png)
 
 ## Word
-**MIGHTY** — Possessing great power, strength, or authority; effective and potent.
+**MIGHTY** — Strong enough to overpower
 
 ## Old Testament
-> Isaiah 9:6 — "And his name shall be called Wonderful, Counsellor, The mighty God..."
+> Genesis 6:4 — "the same became mighty men which were of old, men of renown"
 
 ## New Testament
-> Luke 1:49 — "For he that is mighty hath done to me great things; and holy is his name."
+> Luke 1:49 — "For he that is mighty hath done to me great things"
 
 ## Trivia
-- The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty Men'.
-- In Isaiah 9:6, the Messiah is given the title 'El Gibbor', meaning 'Mighty God'.
-- The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern word 'dynamite'.
-- Luke 1:49 refers to God simply as 'Ho Dunatos'—'The Mighty One'.
+- Genesis 6:4 calls the mighty men anshei hashem, men of the name - two chapters before Babel's builders set out to make themselves a name.
+- Nimrod is the first man in Scripture called gibbor, and the text says he began to be one, as though might were something a man works up to.
+- The same adjective stands in Isaiah's El Gibbor, the Mighty God, so Hebrew praise and Hebrew menace share one word.
 

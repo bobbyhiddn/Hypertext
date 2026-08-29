@@ -1,0 +1,55 @@
+number: 084
+word: MOTHER
+gloss: She of whom the living come
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A woven grass nest holding four speckled eggs deep in a thorn bush, dew
+  standing on the thorns, painted close up, no people, luminous cinematic oil painting
+  with impressionistic brushwork, saturated full colour, a strong symbolic subject,
+  no engraving or line art, deep shadowed background lit by one radiant golden light
+  source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 4
+  complexity: 2
+stats_rationale:
+  lore: mother of all living is spoken over Eve immediately after the curse, and honour
+    thy mother stands in the commandments - a recognized theme with clear teaching
+  context: em occurs 220 times in the Hebrew Bible; meter occurs 83 times in the New
+    Testament; total 303
+  complexity: a plain kinship noun with stable translation; only its extension to
+    a city called a mother in Israel needs a note
+weight: 3
+weight_rationale: the title Adam gives Eve at the hinge of the curse and the promise
+  - thematic vocabulary with real teaching behind it
+ability: Reveal the top four cards of the Tower. Add one revealed card whose card
+  type is in the Chapter Lot to your hand.
+ot_verse:
+  ref: Genesis 3:20
+  snippet: Adam called his wife's name Eve; because she was the mother of all living
+nt_verse:
+  ref: Matthew 12:50
+  snippet: the same is my brother, and sister, and mother
+greek:
+  text: μήτηρ
+  translit: meter
+hebrew:
+  text: אֵם
+  translit: em
+ot_refs: Gen 2:24 • Gen 3:20 • Gen 20:12
+nt_refs: Matt 12:50 • Luke 2:51 • John 19:25
+trivia:
+- Eve is named mother of all living in the same chapter that promises she will bring
+  forth in sorrow.
+- Abram's defence of Sarai turns on the difference between a father's daughter and
+  a mother's daughter.
+- Jesus redraws the household by obedience - whoever does the will of my Father is
+  brother, sister and mother.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

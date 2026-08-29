@@ -1,0 +1,55 @@
+number: 079
+word: AFRAID
+gloss: Struck with fear, as the man who hid in the garden
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A wall of dark fig leaves and heavy trunks in a garden at evening, one
+  gap in the foliage where a body has pushed through, no people, luminous cinematic
+  oil painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, deep shadowed background lit by one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 4
+  context: 5
+  complexity: 2
+stats_rationale:
+  lore: the man's fear in the garden and the fear of the LORD that is the beginning
+    of wisdom - a major theme close to doctrine
+  context: yare occurs 314 times in the Hebrew Bible; phobeomai occurs 95 times in
+    the New Testament; total 409
+  complexity: one verb carries both terror and reverence, and Fear not is the standard
+    greeting of the messenger; the translation choice between afraid and fearing is
+    routine
+weight: 3
+weight_rationale: the first fear in Scripture and the fear of the LORD that answers
+  it - thematic vocabulary with real teaching behind it
+ability: Look at the top four cards of the Tower. Add one of those cards that has
+  LORE three or more to your hand and put the other cards on top of the Tower.
+ot_verse:
+  ref: Genesis 3:10
+  snippet: I was afraid, because I was naked; and I hid myself
+nt_verse:
+  ref: Matthew 14:30
+  snippet: when he saw the wind boisterous, he was afraid
+greek:
+  text: φοβέομαι
+  translit: phobeomai
+hebrew:
+  text: יָרֵא
+  translit: yare
+ot_refs: Gen 3:10 • Gen 15:1 • Gen 18:15
+nt_refs: Matt 14:30 • Luke 12:5 • Rev 1:17
+trivia:
+- Fear is the first thing the man confesses after the fruit, before he names the nakedness.
+- Fear not, Abram is the first of the Bible's many Fear nots, and it comes with a
+  shield.
+- The same verb is used for being afraid of God and for revering him; context, not
+  the word, decides.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

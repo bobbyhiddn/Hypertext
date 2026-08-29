@@ -1,0 +1,99 @@
+{
+  "contract_version": 2,
+  "requirement": "REQ-PPAUG-029",
+  "canonical_series": "series/2026-Q1",
+  "output_series": "2026 Q3 — REQ-PPAUG-029 EXAMPLE SET",
+  "variants": {
+    "noun": [
+      "001-grace",
+      "007-earth",
+      "008-stone"
+    ],
+    "verb": [
+      "002-build",
+      "004-scatter",
+      "005-create"
+    ],
+    "adjective": [
+      "003-mighty",
+      "016-good",
+      "023-naked"
+    ],
+    "name": [
+      "018-seth",
+      "022-shem",
+      "025-noah"
+    ],
+    "title": [
+      "019-keeper",
+      "021-brother",
+      "030-spirit"
+    ]
+  },
+  "rarities": [
+    "common",
+    "uncommon",
+    "rare",
+    "glorious"
+  ],
+  "source_projection_sha256": {
+    "001-grace": "2376a0afd63d62cb51e3688f318b861f493731cbb00cc3a2931bfc3214ffe964",
+    "007-earth": "c4894f7b83cd9a8bfd89c790645fa4d1da97b3abbda1baa0d9f5709c84da522e",
+    "008-stone": "5ea4f0879a61485098c578c10b978bbab18e8cf802e5fe3420fa1f1acc3ceef6",
+    "002-build": "5d27a3905139d492908259c7a28ea892795acf438ca895cef2e6c1bf014ac75e",
+    "004-scatter": "6c064606a9fbcf7b15f1ba024312a5a6e5fdd292c60b04fd6add2561d8c7b863",
+    "005-create": "5675636ff00edc6a663b6bd0d5ffcc2dfc6985fc25fe7e3bb521906ac5fcc009",
+    "003-mighty": "99ac48016a1938eca1817ba47aeee6f28b8ced8cc719031a21c0926bfaa26eda",
+    "016-good": "2ed5fc0a0fbafb19d2c24578e3a4de071f5782f8dafce354b485b90eee6ff547",
+    "023-naked": "b7b6d848b1d50ddde9004e48dc772a9141fc3da7fc8c70e0076a7432e0652293",
+    "018-seth": "b076792e3fcc5cce4f35b93552ac17998c920c7ed42375adb87f9a08cb22c5ec",
+    "022-shem": "11a85815040a9b5c24d4906e109e3ca1c3479e89fec70000300f3b992cc83bc9",
+    "025-noah": "0ea19d0431c64ed54fca87e14d1e70e2881acf9570bc4cba4dfc90c1907e99a5",
+    "019-keeper": "7211a68b52a43a68a67c33bef85cb3aa8123a726874639c15593a1e3fed10b10",
+    "021-brother": "0f247a39e2bb9e87483405d498c08fb3b56494730af4a6c564e9427ac9b01bc3",
+    "030-spirit": "8b7df5de43036b067036d167cd10daaf9c5065baea06198cbcf1b26b4883924d"
+  },
+  "authoritative_fields": [
+    "WORD",
+    "GLOSS",
+    "CARD_TYPE",
+    "ART_PROMPT",
+    "ABILITY_TEXT",
+    "STAT_LORE",
+    "STAT_CONTEXT",
+    "STAT_COMPLEXITY",
+    "OT_VERSE_LINE",
+    "NT_VERSE_LINE",
+    "HEBREW",
+    "HEBREW_TRANSLIT",
+    "GREEK",
+    "GREEK_TRANSLIT",
+    "OT_REFS",
+    "NT_REFS",
+    "TRIVIA_BULLETS"
+  ],
+  "mutable_fields": [
+    "NUMBER",
+    "SERIES",
+    "RARITY_TEXT",
+    "RARITY_ICON"
+  ],
+  "source_defects_excluded": [
+    {
+      "card": "027-hunter",
+      "field": "GREEK",
+      "value": "θήρα",
+      "reason": "The repository value denotes a hunt/catch or prey, not the agent noun 'hunter'; it must not seed an example until the canonical card is separately corrected."
+    },
+    {
+      "card": "013-remember",
+      "field": "GREEK",
+      "value": "μνάομαι",
+      "reason": "The repository form is not the New Testament remember lexeme represented by the card sense; it must not seed an example until separately corrected."
+    }
+  ],
+  "superseded": {
+    "version": 1,
+    "why": "The 2026-08-29 regeneration rewrote every canonical source: legacy #001-#031 were redesigned under the grammar, the power ladder and word weight; the stat rubric was re-scored at each card's own use; and the art prompts were rewritten to each card's own verse scene. Fifteen frozen projections all changed at once, which is exactly the audit-and-version path this contract asks for."
+  }
+}

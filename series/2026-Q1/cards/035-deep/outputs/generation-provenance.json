@@ -1,15 +1,15 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "1a828360ce238db203593386fc48b179b5b4af43d9719d01cbe274ed565bd0f8",
+    "gemini_output_sha256": "215f7a971d9a509472fa88621f1488d50c3ae0fc97703715c89b0fd5972b929b",
     "generation_metadata_path": "series/2026-Q1/cards/035-deep/outputs/generation.json",
-    "generation_metadata_sha256": "ca0587fb482f90771ba496664395eca3b316da3cb1d6ed4793a4fd761a567cba",
+    "generation_metadata_sha256": "386b8ac36140f407fe60ee377484880db25203a33f4829111fc01dbe27487ed5",
     "path": "series/2026-Q1/cards/035-deep/outputs/card_1024x1536.png",
-    "sha256": "cfc79d7d39d5d2b7da2415ff97488dedfab54218dd50cf61b90fbfd279fa900c"
+    "sha256": "eb5ae38e856ea18955fa36fb319f0e8dab80daa2efc1a4f9fa1a8f7065ffed3c"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/035-deep/prompt.txt",
-    "sha256": "f019767a3055dc846a6d8b2ad4fde3a099ab6b9ff426f82ad3b19e2bb5fac651"
+    "path": "series/2026-Q1/cards/035-deep/outputs/prompt.revision.txt",
+    "sha256": "9e3d3ab3b6b418b98f2082ee7e04a0f932750d77e448c11965c4b5a2c63111b9"
   },
   "recipe": {
     "canonical_sha256": "50872284ebcd3f5b36b370363ac1632f2e263ffb824bc704a22492e322a88a40",
@@ -50,8 +50,43 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "ADJECTIVE",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/035-deep/outputs/reference-inputs/current-2fcc2c6f6adbb6201cedbeaa74fb7d26dfd7c1930c2b154d0f7f5547781bb5ff.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "UNCOMMON",
+        "rarity_label": "UNCOMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/035-deep/outputs/reference-inputs/current-2fcc2c6f6adbb6201cedbeaa74fb7d26dfd7c1930c2b154d0f7f5547781bb5ff.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "2fcc2c6f6adbb6201cedbeaa74fb7d26dfd7c1930c2b154d0f7f5547781bb5ff",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "ADJECTIVE",
@@ -61,11 +96,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified ADJECTIVE UNCOMMON structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified ADJECTIVE UNCOMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "UNCOMMON",
@@ -94,18 +129,18 @@
     "target_type": "ADJECTIVE"
   },
   "reference_pack_path": "series/2026-Q1/cards/035-deep/outputs/reference-pack.json",
-  "reference_pack_sha256": "6e35e85994ffa404c16800fb4ffe38e58983df3123213c498b2ce81c3ae1fd82",
+  "reference_pack_sha256": "ec5d6fc71f4e4ec42b20eadb7680280154412170333d3000be0794475c43f737",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise-image-only",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]

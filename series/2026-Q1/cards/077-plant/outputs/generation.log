@@ -1,0 +1,12 @@
+=== Generation Log ===
+Timestamp: 2026-08-29 10:03:47
+Phase: revise-image-only
+Target Rarity: COMMON
+Target Type: VERB
+Fix Mode: True
+
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/077-plant/outputs/reference-inputs/current-4a716f308bf9aa5b7fe711eeee4cd0517996246219f6a705ecc24efc11d10e3e.png [COMMON] sha256=4a716f308bf9aa5b7fe711eeee4cd0517996246219f6a705ecc24efc11d10e3e
+  [2] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
+
+Prompt File: series/2026-Q1/cards/077-plant/outputs/prompt.revision.txt

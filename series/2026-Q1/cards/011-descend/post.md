@@ -3,16 +3,16 @@
 ![DESCEND card](./outputs/card_1024x1536.png)
 
 ## Word
-**DESCEND** — To move from a higher to a lower place; to come down, fall, or sink.
+**DESCEND** — To come down from a higher place to a lower
 
 ## Old Testament
-> Exodus 19:18 — "The LORD descended upon it in fire: and the smoke thereof ascended as the smoke of a furnace..."
+> Genesis 11:5 — "And the LORD came down to see the city and the tower, which the children of men builded"
 
 ## New Testament
-> 1 Thessalonians 4:16 — "For the Lord himself shall descend from heaven with a shout, with the voice of the archangel..."
+> John 3:13 — "no man hath ascended up to heaven, but he that came down from heaven"
 
 ## Trivia
-- The Jordan River (Yarden) is named 'The Descender' because of its steep slope down to the Dead Sea.
-- The theological term 'Kenosis' describes Christ's voluntary descent from divine glory to human humility.
-- In scripture, going to Egypt is always described as 'going down' due to elevation and spiritual symbolism.
+- The builders say let us go up; the very next verse says the LORD came down - the tower meant to reach heaven still has to be stooped to.
+- Genesis uses the same coming down before Sodom, where God says I will go down now, and see, as though judgment required an inspection first.
+- Hebrew direction is fixed to the land rather than the compass, so one always goes down to Egypt and up to Jerusalem, however the road actually runs.
 

@@ -1,11 +1,12 @@
 {
   "word": "SCATTER",
   "card_type": "VERB",
-  "rarity": "COMMON",
-  "score": 100,
+  "rarity": "RARE",
+  "content_score": 100,
+  "final_score": 100,
   "passed": true,
-  "attempts": 2,
-  "style_mismatch_count": 0,
+  "style_matches_reference": true,
+  "style_mismatch_reason": "None",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -28,5 +29,29 @@
       "max": 15,
       "issues": []
     }
-  }
+  },
+  "quality_contract": {
+    "dimensions": {
+      "composition": 100,
+      "typography": 100,
+      "template_fidelity": 100,
+      "metadata": 100,
+      "stat_pips": 100,
+      "artifact_cleanliness": 100
+    },
+    "score": 100,
+    "passed": true,
+    "gate": 100
+  },
+  "stat_pip_visual_gate": {
+    "contract": "hypertext.template-relative-stat-pip-gate/v1",
+    "passed": true,
+    "candidate_sha256": "29dcfe3f4ff1c1a499d486e4729f1c26a165c8d5bf102d290f4ac7b9f92f4700",
+    "template_sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
+    "report": "series/2026-Q1/cards/004-scatter/outputs/visual-gate.json"
+  },
+  "style_refs_count": 1,
+  "style_refs": [
+    "template_1024x1536.png"
+  ]
 }

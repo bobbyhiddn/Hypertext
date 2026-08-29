@@ -1,0 +1,58 @@
+number: 087
+word: HAGAR
+gloss: Sarai's handmaid, driven out and found by the fountain
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A spring welling up among broken red rocks in the wilderness, a leather
+  waterskin lying open on the sand beside it and one set of footprints leading away,
+  no people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, red desert light
+  of late afternoon, rust and copper against a turquoise sky
+stats:
+  lore: 3
+  context: 2
+  complexity: 4
+stats_rationale:
+  lore: the first person in Scripture to name God, and the figure Paul builds a covenant
+    argument on - a recognized theme with clear teaching
+  context: Hagar occurs 12 times in the Hebrew Bible; Hagar occurs 2 times in the
+    New Testament; total 14
+  complexity: her name is read as flight, as stranger, or from an Arabic root for
+    departure; Paul turns her into an allegory of Sinai, and the well she names, Beer-lahai-roi,
+    is itself a translation puzzle
+weight: 3
+weight_rationale: the outcast of Abram's household whom Paul reads as a covenant -
+  thematic vocabulary with real teaching behind it, but not a patriarch the era turns
+  on
+ability: Choose another player; that chosen player puts one card from that chosen
+  player's hand on the bottom of the Tower. Then add up to two cards from Sheol to
+  your hand.
+ot_verse:
+  ref: Genesis 16:8
+  snippet: And he said, Hagar, Sarai's maid, whence camest thou? and whither wilt
+    thou go?
+nt_verse:
+  ref: Galatians 4:24
+  snippet: the one from the mount Sinai, which gendereth to bondage, which is Agar
+greek:
+  text: Ἁγάρ
+  translit: Hagar
+hebrew:
+  text: הָגָר
+  translit: Hagar
+ot_refs: Gen 16:1 • Gen 16:8 • Gen 21:17
+nt_refs: Gal 4:24 • Gal 4:25
+trivia:
+- Hagar is the first person in Scripture to give God a name - Thou God seest me.
+- The angel's command is to return and submit; the promise of a multitude comes only
+  after the going back.
+- Paul makes Hagar and Sarah two covenants, which is why a handmaid of Genesis argues
+  a point in Galatians.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

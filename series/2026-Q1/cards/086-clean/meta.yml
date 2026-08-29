@@ -1,0 +1,57 @@
+number: 086
+word: CLEAN
+gloss: Fit to be brought near, as the clean beasts taken by sevens
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: The lamplit interior of the ark, a wicker cage of white doves and a pair
+  of young lambs bedded on fresh straw between cedar ribs, no people, luminous cinematic
+  oil painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, night under a lantern, a warm amber pool of light
+  in deep indigo dark
+stats:
+  lore: 3
+  context: 4
+  complexity: 3
+stats_rationale:
+  lore: the clean beasts board the ark by sevens and the pure in heart see God - a
+    recognized theme with clear teaching
+  context: tahor occurs 96 times in the Hebrew Bible; katharos occurs 27 times in
+    the New Testament; total 123
+  complexity: tahor is ritual fitness rather than cleanliness, and katharos slides
+    from ritually clean to morally pure to simply unmixed - a shift that changes how
+    a verse reads
+weight: 3
+weight_rationale: the clean and unclean distinction enters Scripture at the ark and
+  runs to Peter's sheet - thematic vocabulary with real teaching behind it
+ability: Name a card type. Choose another player; that chosen player puts one card
+  of the named type from that chosen player's hand into Sheol, then draw two cards
+  from the Tower.
+ot_verse:
+  ref: Genesis 7:2
+  snippet: Of every clean beast thou shalt take to thee by sevens
+nt_verse:
+  ref: Matthew 5:8
+  snippet: 'Blessed are the pure in heart: for they shall see God'
+greek:
+  text: καθαρός
+  translit: katharos
+hebrew:
+  text: טָהוֹר
+  translit: tahor
+ot_refs: Gen 7:2 • Gen 7:8 • Gen 8:20
+nt_refs: Matt 5:8 • John 15:3 • Titus 1:15
+trivia:
+- The clean and unclean distinction appears in Genesis 7, generations before any law
+  names which beasts are which.
+- Noah takes clean beasts by sevens precisely because he will sacrifice some of them
+  when he lands.
+- Katharos gives English catharsis; the same root covers a scrubbed pot and a clean
+  conscience.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

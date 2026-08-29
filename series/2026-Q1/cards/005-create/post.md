@@ -3,16 +3,16 @@
 ![CREATE card](./outputs/card_1024x1536.png)
 
 ## Word
-**CREATE** — To bring something into existence; to originate.
+**CREATE** — To call into being what was not there
 
 ## Old Testament
-> Genesis 1:1 — "In the beginning God created the heavens and the earth."
+> Genesis 1:1 — "In the beginning God created the heaven and the earth"
 
 ## New Testament
-> Colossians 1:16 — "For by him all things were created, in heaven and on earth, visible and invisible."
+> Colossians 1:16 — "For by him were all things created, that are in heaven, and that are in earth"
 
 ## Trivia
-- The Hebrew verb 'bara' is used exclusively with God as the subject.
-- 'Creatio ex nihilo' is the theological term for 'creation out of nothing'.
-- Genesis 1 depicts creation as separating and ordering chaos ('tohu wa-bohu').
+- Genesis 1 uses bara only three times - for the heavens and earth, for the great creatures, and for man - and asah, to make, for everything between.
+- No subject but God ever governs bara in the Hebrew Bible; the grammar itself refuses the verb to anyone else.
+- Ktizo in classical Greek means to found a city, so the Septuagint's choice quietly makes the world a colony settled by its founder.
 

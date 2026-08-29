@@ -1,21 +1,25 @@
 number: 008
 word: STONE
-gloss: Hard, solid mineral matter used for building, memorials, or weapons; a symbol of strength
-  and permanence.
+gloss: Hard rock; the found material a thing is founded on
 card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A single, ancient cornerstone resting in the desert sand, illuminated by a shaft
-  of divine light, realistic texture, cinematic composition, heavy shadows, no text
+art_prompt: A single undressed limestone block half-buried at the foot of a rising
+  course of mud brick, chisel marks raw across its face, an iron wedge and a coil
+  of measuring cord left lying on it, the red glow of a brick kiln beating across
+  the stone, no people, luminous cinematic oil painting with impressionistic brushwork,
+  saturated full colour, a strong symbolic subject, no engraving or line art, firelight
+  from below, red and orange on stone, smoke against black
 stats:
-  lore: 4
-  context: 5
-  complexity: 1
-ability: Look at the top 3 cards of the Tower. Put them back in any order.
+  lore: 3
+  context: 4
+  complexity: 3
+ability: Look at the bottom three cards of the Tower. Add one of those cards that
+  is a NOUN to your hand and put the other cards on the bottom of the Tower.
 ot_verse:
-  ref: Psalm 118:22
-  snippet: The stone which the builders refused is become the head stone of the corner
+  ref: Genesis 11:3
+  snippet: And they had brick for stone, and slime had they for morter
 nt_verse:
   ref: Matthew 16:18
   snippet: upon this rock I will build my church
@@ -25,18 +29,35 @@ greek:
 hebrew:
   text: אֶבֶן
   translit: eben
-ot_refs: Gen 28:18 • Ex 24:12 • Josh 4:3 • 1 Sam 17:49 • Ezek 36:26
-nt_refs: Matt 16:18 • 1 Cor 10:4 • Rom 9:33
+ot_refs: Gen 11:3 • Gen 2:12 • Gen 28:18
+nt_refs: Matt 16:18 • Matt 7:24 • 1 Cor 10:4
 trivia:
-- '"Ebenezer" translates from Hebrew as "Stone of Help."'
-- The Ten Commandments were inscribed on two tablets of stone.
-- David defeated Goliath with a single smooth stone.
+- There is no building stone in the alluvial plain of Shinar, so Babel's builders
+  burned brick for it and used slime for morter - a city of substitutes from the first
+  course up.
+- 'Greek splits the one Hebrew word: lithos is a stone a man can lift and petra is
+  the rock a house is founded on, and both stand for eben.'
+- Matthew 16:18 sets a name against a noun, Petros against petra - masculine for the
+  man, feminine for the rock - a pun that works only in Greek.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: 'Greek re-lemma''d 2026-08-28 under the one-lemma rule (lithos belongs to BRICK #048):
-  petra. Legacy face still prints lithos until the legacy regeneration pass.'
+notes: 'Greek re-lemma''d 2026-08-28 under the one-lemma rule (lithos belongs to BRICK
+  #048): petra. Legacy face still prints lithos until the legacy regeneration pass.'
 sources: []
 search_queries: []
 weight: 2
-weight_rationale: material vocabulary
+weight_rationale: the material Babel's builders did not have and counterfeited with
+  brick, and the era's measure of what lasts - a descriptive material word with a
+  clear place, not a named agent, place or event the era turns on, so it stays at
+  2 and prints COMMON
+stats_rationale:
+  lore: the printed verses set the builders' want of stone on the plain beside the
+    rock a church is founded on - a recognized theme with clear teaching, though the
+    doctrine rests on the builder rather than on the material
+  context: eben occurs 272 times in the Hebrew Bible; petra occurs 15 times in the
+    New Testament; total 287
+  complexity: Genesis 11:3 turns on a near-pun, lebenah put in the place of eben -
+    brick for stone - and Greek divides what Hebrew keeps whole, lithos for a stone
+    a man can lift and petra for living rock, so one eben is translated two ways by
+    size and setting

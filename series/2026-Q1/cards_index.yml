@@ -1,17 +1,17 @@
 words:
 - ABRAM
 - ADAM
+- AFRAID
 - ARK
 - ASCEND
-- BABBLE
 - BEAUTIFUL
 - BRICK
 - BROTHER
 - BUILD
 - CANAAN
 - CHOOSE
-- CHOSEN
 - CITY
+- CLEAN
 - CONFUSE
 - COVENANT
 - CREATE
@@ -23,6 +23,7 @@ words:
 - DESTROYER
 - DISCORD
 - DOVE
+- DRY
 - EARTH
 - EBER
 - EDEN
@@ -30,14 +31,18 @@ words:
 - ENOCH
 - EXILE
 - FAITHFUL
+- FATHER
 - FILLED
 - FIRE
+- FLOOD
 - FOREIGN
 - FORM
+- FRUITFUL
 - GATHER
 - GOOD
 - GRACE
 - GREAT
+- HAGAR
 - HEAR
 - HEIR
 - HIGH
@@ -45,10 +50,12 @@ words:
 - HUNTER
 - KEEPER
 - KINGDOM
+- LAMECH
 - MASTER
 - MESSENGER
 - METHUSELAH
 - MIGHTY
+- MOTHER
 - MULTIPLY
 - NAKED
 - NAME
@@ -56,7 +63,11 @@ words:
 - NEW
 - NOAH
 - ONE
+- OVERTHROW
 - PELEG
+- PERFECT
+- PLANT
+- PRIEST
 - REDEEMER
 - REMEMBER
 - RIGHTEOUS
@@ -70,7 +81,9 @@ words:
 - SPEAK
 - SPIRIT
 - STONE
+- STRANGER
 - TAKE
+- TERAH
 - TILLER
 - TONGUE
 - WALK
@@ -80,16 +93,20 @@ ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_choice_draw_sheol_stat_complexity_tower
 - add_hand_choice_draw_sheol_tower
+- add_hand_choice_pages_sheol
 - add_hand_choice_sheol
 - add_hand_choice_sheol_stat_complexity
 - add_hand_choice_sheol_tower
 - add_hand_conditional_draw_stat_complexity_tower
 - add_hand_conditional_draw_tower_type_name
+- add_hand_conditional_look_top_pages_stat_lore_tower
 - add_hand_conditional_tower_type_name
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
+- add_hand_look_top_stat_context_tower
 - add_hand_look_top_stat_lore_tower
 - add_hand_look_top_tower
+- add_hand_look_top_tower_type_name
 - add_hand_sheol
 - add_hand_sheol_tower
 - add_hand_tower
@@ -97,6 +114,7 @@ ability_patterns:
 - choice_discard_draw_stat_lore
 - choice_draw
 - choice_draw_sheol_tower
+- choice_draw_sheol_tower_type_name
 - choice_draw_tower
 - conditional_discard_draw_type_verb
 - conditional_draw
@@ -110,6 +128,7 @@ ability_patterns:
 - discard_look_top_sheol_tower
 - discard_type_name
 - draw_look_top_sheol_tower
+- draw_look_top_stat_lore_tower
 - draw_look_top_tower
 - draw_sheol_tower
 - draw_tower
@@ -126,7 +145,7 @@ cards:
 - number: 1
   word: GRACE
   type: NOUN
-  rarity: COMMON
+  rarity: GLORIOUS
   ability_pattern: conditional_draw
 - number: 2
   word: BUILD
@@ -146,7 +165,7 @@ cards:
 - number: 5
   word: CREATE
   type: VERB
-  rarity: RARE
+  rarity: GLORIOUS
   ability_pattern: sheol_tower
 - number: 6
   word: CONFUSE
@@ -236,7 +255,7 @@ cards:
 - number: 23
   word: NAKED
   type: ADJECTIVE
-  rarity: RARE
+  rarity: UNCOMMON
   ability_pattern: choice_discard_draw_stat_lore
 - number: 24
   word: COVENANT
@@ -246,7 +265,7 @@ cards:
 - number: 25
   word: NOAH
   type: NAME
-  rarity: RARE
+  rarity: GLORIOUS
   ability_pattern: sheol
 - number: 26
   word: CURSE
@@ -256,12 +275,12 @@ cards:
 - number: 27
   word: HUNTER
   type: TITLE
-  rarity: RARE
+  rarity: UNCOMMON
   ability_pattern: discard_type_name
 - number: 28
   word: RIGHTEOUS
   type: ADJECTIVE
-  rarity: GLORIOUS
+  rarity: RARE
   ability_pattern: sheol
 - number: 29
   word: ADAM
@@ -296,7 +315,7 @@ cards:
 - number: 35
   word: DEEP
   type: ADJECTIVE
-  rarity: RARE
+  rarity: UNCOMMON
   ability_pattern: add_hand_choice_sheol_stat_complexity
 - number: 36
   word: FOREIGN
@@ -364,7 +383,7 @@ cards:
   rarity: UNCOMMON
   ability_pattern: draw_tower_type_noun
 - number: 49
-  word: BABBLE
+  word: OVERTHROW
   type: VERB
   rarity: COMMON
   ability_pattern: add_hand_tower
@@ -381,7 +400,7 @@ cards:
 - number: 52
   word: HOVER
   type: VERB
-  rarity: GLORIOUS
+  rarity: RARE
   ability_pattern: add_hand_choice_draw_sheol_tower
 - number: 53
   word: NEW
@@ -406,7 +425,7 @@ cards:
 - number: 57
   word: DISCORD
   type: NOUN
-  rarity: RARE
+  rarity: UNCOMMON
   ability_pattern: choice_draw_sheol_tower
 - number: 58
   word: DEPART
@@ -503,3 +522,73 @@ cards:
   type: ADJECTIVE
   rarity: RARE
   ability_pattern: draw_tower_type_name
+- number: 77
+  word: PLANT
+  type: VERB
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_stat_context_tower
+- number: 78
+  word: DRY
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 79
+  word: AFRAID
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_stat_lore_tower
+- number: 80
+  word: FRUITFUL
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_stat_context_tower
+- number: 81
+  word: LAMECH
+  type: NAME
+  rarity: COMMON
+  ability_pattern: add_hand_tower
+- number: 82
+  word: TERAH
+  type: NAME
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower_type_name
+- number: 83
+  word: FATHER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: draw_look_top_stat_lore_tower
+- number: 84
+  word: MOTHER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: add_hand_tower
+- number: 85
+  word: STRANGER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 86
+  word: CLEAN
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: choice_draw_sheol_tower_type_name
+- number: 87
+  word: HAGAR
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: add_hand_choice_sheol_tower
+- number: 88
+  word: PERFECT
+  type: ADJECTIVE
+  rarity: RARE
+  ability_pattern: add_hand_conditional_look_top_pages_stat_lore_tower
+- number: 89
+  word: PRIEST
+  type: TITLE
+  rarity: RARE
+  ability_pattern: add_hand_choice_pages_sheol
+- number: 90
+  word: FLOOD
+  type: NOUN
+  rarity: GLORIOUS
+  ability_pattern: draw_sheol_tower

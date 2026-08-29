@@ -31,8 +31,10 @@ cells, built_legacy, pilot_done = [], 0, 0
 for n in range(1, 91):
     if n in idx:
         c = idx[n]; d = card_dir(n)
-        img = thumb(d / "outputs/card_1024x1536.png", 220) if d else ""
-        hires = thumb(d / "outputs/card_1024x1536.png", 640, quality=72) if d else ""
+        # The full 90-card set embeds 180 JPEGs; the artifact ceiling is 16 MB, so the
+        # tap-to-enlarge image is sized for a phone screen rather than for print.
+        img = thumb(d / "outputs/card_1024x1536.png", 200) if d else ""
+        hires = thumb(d / "outputs/card_1024x1536.png", 520, quality=62) if d else ""
         pilot = STATE["pilot"].get(str(n))
         if pilot:
             st, cls = pilot.get("status", "pilot"), {"pass": "ok", "fail": "fail"}.get(pilot.get("status"), "watch")

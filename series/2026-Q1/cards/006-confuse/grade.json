@@ -1,0 +1,57 @@
+{
+  "word": "CONFUSE",
+  "card_type": "VERB",
+  "rarity": "RARE",
+  "content_score": 100,
+  "final_score": 100,
+  "passed": true,
+  "style_matches_reference": true,
+  "style_mismatch_reason": "",
+  "corrections": [],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 15,
+      "max": 15,
+      "issues": []
+    }
+  },
+  "quality_contract": {
+    "dimensions": {
+      "composition": 100,
+      "typography": 100,
+      "template_fidelity": 100,
+      "metadata": 100,
+      "stat_pips": 100,
+      "artifact_cleanliness": 100
+    },
+    "score": 100,
+    "passed": true,
+    "gate": 100
+  },
+  "stat_pip_visual_gate": {
+    "contract": "hypertext.template-relative-stat-pip-gate/v1",
+    "passed": true,
+    "candidate_sha256": "fe48bdf5e0ad8ec40e595316bed84076996d301807c3ea45de92233ea83636af",
+    "template_sha256": "1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4",
+    "report": "series/2026-Q1/cards/006-confuse/outputs/visual-gate.json"
+  },
+  "style_refs_count": 1,
+  "style_refs": [
+    "template_1024x1536.png"
+  ]
+}

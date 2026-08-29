@@ -1,40 +1,43 @@
 number: '001'
 word: GRACE
-gloss: Unmerited favor; a free gift.
+gloss: Favour no one has earned, given freely
 card_type: NOUN
-rarity: COMMON
+rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A single drop of golden light falling into an open, cupped hand, dark background,
-  cinematic lighting, ethereal style
+art_prompt: One young cedar left standing green in a felled clearing of blackened
+  stumps, a single shaft of light falling on that tree alone while the ruined ground
+  around it stays dark, no people, luminous cinematic oil painting with impressionistic
+  brushwork, saturated full colour, a strong symbolic subject, no engraving or line
+  art, deep shadowed background lit by one radiant golden light source, rich saturated
+  blues and golds
 stats:
   lore: 5
-  context: 5
-  complexity: 3
-ability: Draw 1 card. If you have no Letters, draw 1 additional card.
+  context: 4
+  complexity: 4
+ability: Each player draws one card from the Tower. Then return one card from one
+  of your Pages to your hand and draw two cards from the Tower.
 ot_verse:
   ref: Genesis 6:8
-  snippet: But Noah found grace in the eyes of the LORD.
+  snippet: But Noah found grace in the eyes of the LORD
 nt_verse:
   ref: Ephesians 2:8
-  snippet: For by grace are ye saved through faith; and that not of yourselves...
+  snippet: For by grace are ye saved through faith; and that not of yourselves
 greek:
   text: χάρις
   translit: charis
 hebrew:
   text: חֵן
   translit: chen
-ot_refs: Gen 6:8 • Ex 33:17 • Ps 84:11
-nt_refs: Rom 3:24 • Eph 2:8 • 2 Cor 12:9
+ot_refs: Gen 6:8 • Gen 18:3 • Gen 19:19
+nt_refs: Eph 2:8 • John 1:17 • Rom 5:20
 trivia:
-- '"Charis" (Greek) originally meant "beauty" or "charm" before the New Testament gave it
-  deep theological weight.'
-- '"Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting a superior showing
-  kindness to an inferior.'
-- Grace is often defined as receiving what you do not deserve, while mercy is not receiving
-  the punishment you do deserve.
-- The Apostle Paul uses the word "grace" over 100 times in his letters, making it a central
-  theme of his theology.
+- Genesis 6:8 comes before Genesis 6:9 calls Noah just and perfect - the favour is
+  stated first and the character afterwards, and the order is the argument.
+- Chen is always found, never earned or seized; Hebrew finds it in the eyes of another,
+  which is why the KJV keeps the whole phrase rather than shortening it.
+- Charis and eucharistia, grace and thanksgiving, grow from one root - in Greek a
+  gift and the thanks for it are a syllable apart.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -93,29 +96,42 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
 
-  # Card_Art_Prompt: A single drop of golden light falling into an open, cupped hand, dark
-  background, cinematic lighting, ethereal style
+  # Card_Art_Prompt: A single drop of golden light falling into an open, cupped hand,
+  dark background, cinematic lighting, ethereal style
 
   # Card_OT_Verse: Genesis 6:8 — But Noah found grace in the eyes of the LORD.
 
-  # Card_NT_Verse: Ephesians 2:8 — For by grace are ye saved through faith; and that not of
-  yourselves...
+  # Card_NT_Verse: Ephesians 2:8 — For by grace are ye saved through faith; and that
+  not of yourselves...
 
   # Card_Hebrew: חֵן (chen)
 
   # Card_Greek: χάρις (charis)
 
-  # Card_Trivia_1: "Charis" (Greek) originally meant "beauty" or "charm" before the New Testament
-  gave it deep theological weight.
+  # Card_Trivia_1: "Charis" (Greek) originally meant "beauty" or "charm" before the
+  New Testament gave it deep theological weight.
 
   # Card_Trivia_2: "Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting
   a superior showing kindness to an inferior.
 
-  # Card_Trivia_3: Grace is often defined as receiving what you do not deserve, while mercy
-  is not receiving the punishment you do deserve.
+  # Card_Trivia_3: Grace is often defined as receiving what you do not deserve, while
+  mercy is not receiving the punishment you do deserve.
 
-  # Card_Trivia_4: The Apostle Paul uses the word "grace" over 100 times in his letters, making
-  it a central theme of his theology.'
+  # Card_Trivia_4: The Apostle Paul uses the word "grace" over 100 times in his letters,
+  making it a central theme of his theology.'
 weight: 5
-weight_rationale: the word the whole gospel hangs on; the era's first mention of grace is
-  Noah's
+weight_rationale: 'a pillar of the set: grace is the hinge the flood account turns
+  on - Noah is said to have found it before he is ever called just, so the survival
+  of the whole era is credited rather than earned - and the New Testament goes on
+  to state salvation itself in this one noun; a weight-5 word, which is why it prints
+  GLORIOUS'
+stats_rationale:
+  lore: the printed verses are the one favourable verdict spoken over a condemned
+    generation and the statement that by grace are ye saved through faith - the era's
+    rescue and the gospel's ground both rest on this noun
+  context: chen occurs 69 times in the Hebrew Bible; charis occurs 156 times in the
+    New Testament; total 225
+  complexity: chen belongs to an idiom rather than a doctrine - one finds chen in
+    the eyes of another, and the finder may be a servant standing before a king -
+    while charis carries the Greek senses of charm and of a favour that is owed thanks,
+    so the English word grace is doing work neither original quite does alone

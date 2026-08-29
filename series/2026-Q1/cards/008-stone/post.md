@@ -3,16 +3,16 @@
 ![STONE card](./outputs/card_1024x1536.png)
 
 ## Word
-**STONE** — Hard, solid mineral matter used for building, memorials, or weapons; a symbol of strength and permanence.
+**STONE** — Hard rock; the found material a thing is founded on
 
 ## Old Testament
-> Psalm 118:22 — "The stone the builders rejected has become the cornerstone."
+> Genesis 11:3 — "And they had brick for stone, and slime had they for morter"
 
 ## New Testament
-> 1 Peter 2:5 — "You also, like living stones, are being built into a spiritual house."
+> Matthew 16:18 — "upon this rock I will build my church"
 
 ## Trivia
-- "Ebenezer" translates from Hebrew as "Stone of Help."
-- The Ten Commandments were inscribed on two tablets of stone.
-- David defeated Goliath with a single smooth stone.
+- There is no building stone in the alluvial plain of Shinar, so Babel's builders burned brick for it and used slime for morter - a city of substitutes from the first course up.
+- Greek splits the one Hebrew word: lithos is a stone a man can lift and petra is the rock a house is founded on, and both stand for eben.
+- Matthew 16:18 sets a name against a noun, Petros against petra - masculine for the man, feminine for the rock - a pun that works only in Greek.
 

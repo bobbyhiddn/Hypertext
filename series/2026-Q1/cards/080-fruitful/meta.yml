@@ -1,0 +1,55 @@
+number: 080
+word: FRUITFUL
+gloss: Bearing much, as the first blessing on living things
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A branch bowed under ripe purple figs and a split pomegranate spilling
+  wet red seeds onto a stone ledge, painted close up, no people, luminous cinematic
+  oil painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, deep shadowed background lit by one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 2
+  complexity: 2
+stats_rationale:
+  lore: the first blessing given to living things and repeated to Noah, and the fruitfulness
+    of good works - a recognized theme with clear teaching
+  context: parah occurs 29 times in the Hebrew Bible; karpophoreo occurs 8 times in
+    the New Testament; total 37
+  complexity: parah is fruit-bearing of plants, beasts and people alike; karpophoreo
+    is a compound of fruit and bearing - a derivation worth a note
+weight: 2
+weight_rationale: the blessing spoken over the creatures, over Adam and again over
+  Noah - a descriptive word with a clear place in the era
+ability: Look at the top two cards of the Tower. Add one of those cards that has CONTEXT
+  three or more to your hand and put the other card on top of the Tower.
+ot_verse:
+  ref: Genesis 1:28
+  snippet: Be fruitful, and multiply, and replenish the earth
+nt_verse:
+  ref: Colossians 1:10
+  snippet: being fruitful in every good work, and increasing in the knowledge of God
+greek:
+  text: καρποφορέω
+  translit: karpophoreo
+hebrew:
+  text: פָּרָה
+  translit: parah
+ot_refs: Gen 1:22 • Gen 1:28 • Gen 9:1
+nt_refs: Col 1:10 • Mark 4:20 • Rom 7:4
+trivia:
+- The blessing be fruitful is spoken over the fish and birds before it is spoken over
+  the man.
+- After the flood God repeats the blessing to Noah word for word; the world restarts
+  on the same terms.
+- Ephraim's name is built on this verb - God hath caused me to be fruitful in the
+  land of my affliction.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

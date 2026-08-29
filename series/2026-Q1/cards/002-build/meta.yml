@@ -1,39 +1,44 @@
 number: '002'
 word: BUILD
-gloss: To construct, establish, or edify; to raise a structure or strengthen a community.
+gloss: To raise a structure course upon course
 card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Rough-hewn stone blocks stacking upward into a golden light, a plumb line hanging
-  straight down in the foreground, ancient architectural style, warm lighting, digital painting
+art_prompt: A half-raised ziggurat of raw brick standing in unfinished courses on
+  a lattice of rough poles, mortar tubs crusting over and a plumb line hanging dead
+  still against the face, no people, luminous cinematic oil painting with impressionistic
+  brushwork, saturated full colour, a strong symbolic subject, no engraving or line
+  art, deep shadowed background lit by one radiant golden light source, rich saturated
+  blues and golds
 stats:
-  lore: 2
-  context: 4
-  complexity: 2
-ability: Look at the top 2 cards of the Tower; put one into your hand and the other on the
-  bottom.
+  lore: 3
+  context: 5
+  complexity: 3
+ability: Reveal the top four cards of the Tower. Add one revealed card whose card
+  type is in your Lot to your hand and put each other revealed card on top of the
+  Tower.
 ot_verse:
-  ref: Psalm 127:1
-  snippet: Unless the Lord builds the house, the builders labor in vain.
+  ref: Genesis 11:4
+  snippet: Go to, let us build us a city and a tower, whose top may reach unto heaven
 nt_verse:
-  ref: Matthew 16:18
-  snippet: On this rock I will build my church, and the gates of Hades will not overcome it.
+  ref: Matthew 7:24
+  snippet: a wise man, which built his house upon a rock
 greek:
   text: οἰκοδομέω
-  translit: oikodomeō
+  translit: oikodomeo
 hebrew:
   text: בָּנָה
   translit: banah
-ot_refs: Gen 11:4 • 1 Kings 6:1 • Neh 4:6 • Prov 24:3
-nt_refs: Matt 7:24 • 1 Cor 3:10 • Eph 2:20 • 1 Pet 2:5
+ot_refs: Gen 11:4 • Gen 11:5 • Gen 8:20
+nt_refs: Matt 7:24 • Matt 21:33 • Matt 16:18
 trivia:
-- The Hebrew word for 'son' (ben) shares the same root as 'build' (banah), implying sons build
-  the family line.
-- In Genesis 2:22, God 'built' Eve from Adam's rib, using the architectural verb rather than
-  'formed' or 'created'.
-- Jesus is often called a carpenter, but the Greek 'tekton' can more broadly mean a builder
-  or stonemason.
+- Genesis 11:5 says the LORD came down to see the city and the tower which the children
+  of men builded - the builders reach for heaven and heaven has to stoop to look.
+- Hebrew builds a son and a house with the same root, which is why a barren wife in
+  Genesis asks to be builded by her handmaid.
+- The first thing built after the flood is not a city but an altar; Noah builds it
+  before the ground has dried.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -41,4 +46,16 @@ notes: null
 sources: []
 search_queries: []
 weight: 2
-weight_rationale: the builders' verb; mechanical
+weight_rationale: the verb the whole Babel account is spoken in - go to, let us build
+  - but it is an ordinary action word with a clear place in the era rather than a
+  named agent or event; the named thing is the city and tower themselves, so BUILD
+  stays at 2 and prints COMMON
+stats_rationale:
+  lore: the printed verses set the builders' let us build us a city and a tower beside
+    a house built upon a rock - a recognized theme of the era with clear teaching,
+    though the doctrine hangs on what is built rather than on the verb
+  context: banah occurs 377 times in the Hebrew Bible; oikodomeo occurs 40 times in
+    the New Testament; total 417
+  complexity: banah and ben, to build and a son, are one root, so Sarai says I may
+    be builded by her of a child, and Greek splits the sense with oikodomeo, to house-build,
+    which the epistles then use for edifying people

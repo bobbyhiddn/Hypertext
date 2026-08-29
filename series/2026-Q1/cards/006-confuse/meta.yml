@@ -1,37 +1,46 @@
 number: '006'
 word: CONFUSE
-gloss: To mix up, bewilder, or throw into disorder; to make indistinct.
+gloss: To mingle until nothing can be told apart
 card_type: VERB
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A spiraling stone tower dissolving into swirling mist and chaotic geometric shapes,
-  ancient architecture fragmenting into dust, surreal style
+art_prompt: An abandoned worksite on the flank of an unfinished tower, half-set brick
+  courses breaking off mid-row, a mortar trough gone hard and a knot of measuring
+  cords tangled together on the scaffold boards, no people, luminous cinematic oil
+  painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, overcast grey-blue daylight, soft and shadowless,
+  wet colours saturated
 stats:
-  lore: 5
-  context: 4
-  complexity: 4
-ability: Swap your Lot with target player's Lot.
+  lore: 4
+  context: 3
+  complexity: 5
+ability: Choose another player; that chosen player reveals one card from that chosen
+  player's hand. If that revealed card has COMPLEXITY three or more, gain one Letter;
+  otherwise, draw one card from the Tower.
 ot_verse:
   ref: Genesis 11:7
-  snippet: Come, let us go down and there confuse their language, that they may not understand
-    one another's speech.
+  snippet: let us go down, and there confound their language, that they may not understand
+    one another's speech
 nt_verse:
   ref: Acts 2:6
-  snippet: And when this sound occurred, the multitude came together, and were confused, because
-    everyone heard them speak in his own language.
+  snippet: the multitude came together, and were confounded, because that every man
+    heard them speak in his own language
 greek:
   text: συγχέω
-  translit: sygcheō
+  translit: sygcheo
 hebrew:
   text: בָּלַל
   translit: balal
-ot_refs: Gen 11:7 • Gen 11:9 • Deut 28:20 • Isa 19:3
-nt_refs: Acts 2:6 • Acts 9:22 • Acts 19:32 • 1 Cor 14:33
+ot_refs: Gen 11:7 • Gen 11:9 • Ps 92:10
+nt_refs: Acts 2:6 • Acts 19:32 • Acts 21:27
 trivia:
-- The Hebrew word 'balal' is a deliberate wordplay on the name 'Babel'.
-- The confusion of tongues at Babel is thematically reversed at Pentecost.
-- Balal also technically describes mixing oil into flour for grain offerings.
+- Babel means gate of god in Akkadian; Genesis hears it instead as balal, confusion,
+  and the pun is the whole verdict on the city.
+- The same verb mixes oil into the fine flour of a meal offering - in Hebrew, confusion
+  and a careful blending are one word.
+- 'Acts 2 reverses the sentence without undoing it: the tongues stay many, and the
+  hearing is what is healed.'
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -66,4 +75,16 @@ search_queries:
 - greek word for confuse Acts 2:6
 - confuse bible verse trading card
 weight: 4
-weight_rationale: the act that named Babel
+weight_rationale: the named judgment the era ends in - the confounding of one lip
+  into many is the act that makes the nations and gives Babel its name; a weight-4
+  word, which is why it prints RARE
+stats_rationale:
+  lore: the printed verses are the confounding of the one language and the crowd at
+    Pentecost confounded because every man heard his own tongue - in this era the
+    state of human speech is decided by this verb
+  context: balal occurs 44 times in the Hebrew Bible; sygcheo occurs 5 times in the
+    New Testament; total 49
+  complexity: balal ordinarily means to mingle oil into flour for an offering, so
+    the word for a grain offering and the word for Babel's judgment are the same;
+    Genesis then puns Babel on it, and Greek answers with sygcheo, to pour together,
+    a word for liquids and for riots alike

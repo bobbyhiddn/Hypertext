@@ -1,0 +1,12 @@
+============================================================
+GRADE RESULT: FLOOD
+============================================================
+Score: 95/100
+Status: FAIL
+Style Match: True
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Fix the ability text to read exactly: 'Each player puts every card from that player's hand into Sheol. Then each player draws one card from the Tower and you draw four cards from the Tower.' (it currently reads: 'Each player puts every card from that player’s hand into Sheol. Then each player draws. card from the Tower and you draw four cards from the Tower.').
+============================================================

@@ -1,0 +1,18 @@
+============================================================
+GRADE RESULT: STONE
+============================================================
+Score: 0/100 (content: 95/100)
+Status: FAIL
+Style Match: False
+Style Issue: Refs label missing: OT Refs label missing (line reads: '[OT Refs: Gen 11:3 • Gen 2:12 • Gen 28:18]'); NT Refs label missing (line reads: '[NT Refs: Matt 16:18 • Matt 7:24 • 1 Cor 10:4]')
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove square brackets from the OT verse and NT verse sections
+  - Remove square brackets from Hebrew and Greek reference text
+  - Remove square brackets from the last trivia bullet
+  - OT Refs label missing (line reads: '[OT Refs: Gen 11:3 • Gen 2:12 • Gen 28:18]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - NT Refs label missing (line reads: '[NT Refs: Matt 16:18 • Matt 7:24 • 1 Cor 10:4]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - Fix the ability text to read exactly: 'Look at the bottom three cards of the Tower. Add one of those cards that is a NOUN to your hand and put the other cards on the bottom of the Tower.' (it currently reads: '[Look at the bottom three cards of the Tower. Add one of those cards that is a NOUN to your hand and put the other cards on the bottom of the Tower.]').
+============================================================

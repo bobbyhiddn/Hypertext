@@ -1,0 +1,58 @@
+number: 088
+word: PERFECT
+gloss: Whole and without blemish, with nothing wanting
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A carpenter's plumb line hanging dead straight beside a squared beam of
+  gopher wood, a bronze square and a bowl of black pitch on the bench, no people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, deep shadowed background lit
+  by one radiant golden light source, rich saturated blues and golds
+stats:
+  lore: 5
+  context: 3
+  complexity: 4
+stats_rationale:
+  lore: perfect in his generations is why Noah is saved, and Be ye therefore perfect
+    is the sermon's summary - a doctrine hangs on the word
+  context: tamim occurs 91 times in the Hebrew Bible; teleios occurs 19 times in the
+    New Testament; total 110
+  complexity: tamim means whole or unblemished rather than flawless, and is the sacrifice
+    word before it is a character word; teleios means brought to its end or complete,
+    so both languages say finished where English says perfect - a translation choice
+    that changes the doctrine
+weight: 4
+weight_rationale: the verdict on Noah that spares the world and the standard given
+  to Abram - a named judgment the era turns on, and the word people look for
+ability: Look at the top four cards of the Tower and add up to two of those cards
+  that each have LORE four or more to your hand. If the cards in your Pages have total
+  LORE ten or more, gain one Letter.
+ot_verse:
+  ref: Genesis 6:9
+  snippet: Noah was a just man and perfect in his generations
+nt_verse:
+  ref: Matthew 5:48
+  snippet: Be ye therefore perfect, even as your Father which is in heaven is perfect
+greek:
+  text: τέλειος
+  translit: teleios
+hebrew:
+  text: תָּמִים
+  translit: tamim
+ot_refs: Gen 6:9 • Gen 17:1 • Deut 18:13
+nt_refs: Matt 5:48 • Col 1:28 • James 1:4
+trivia:
+- Tamim is the word for a sacrifice without blemish; applied to Noah it says whole,
+  not sinless.
+- God tells Abram to walk before me, and be thou tamim - the same standard, given
+  as a command instead of a verdict.
+- Teleios is built on telos, an end or goal; the perfect thing is the finished thing,
+  not the flawless one.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

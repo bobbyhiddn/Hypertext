@@ -1,0 +1,54 @@
+number: 082
+word: TERAH
+gloss: The father of Abram, who set out for Canaan and stopped at Haran
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A laden ox cart halted beside a weathered stone waymarker where the road
+  forks, dust still settling around the wheels, no people, luminous cinematic oil
+  painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, deep shadowed background lit by one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 2
+  context: 2
+  complexity: 3
+stats_rationale:
+  lore: his journey sets up the call of Abram, but the teaching belongs to the son,
+    not the father
+  context: Terach occurs 11 times in the Hebrew Bible; Thara occurs 1 time in the
+    New Testament; total 12
+  complexity: the name is read as wanderer, as delay, or as a moon-word tying Terah
+    to the moon cities Ur and Haran, and Joshua says his fathers served other gods
+    - an etymology and a history both contested
+weight: 2
+weight_rationale: a genealogy name at the hinge between Babel and Abram; a clear place
+  in the era without teaching hanging on it
+ability: Look at the top four cards of the Tower. Add one of those cards that is a
+  NAME to your hand and put the other cards on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 11:31
+  snippet: And Terah took Abram his son ... to go into the land of Canaan
+nt_verse:
+  ref: Luke 3:34
+  snippet: which was the son of Thara
+greek:
+  text: Θάρα
+  translit: Thara
+hebrew:
+  text: תֶּרַח
+  translit: Terach
+ot_refs: Gen 11:24 • Gen 11:26 • Gen 11:31 • Gen 11:32
+nt_refs: Luke 3:34
+trivia:
+- Terah starts for Canaan a generation before Abram is called there, and never arrives.
+- Haran is both the name of Terah's dead son and the name of the city where he settles.
+- Genesis 11 closes with Terah's death; Genesis 12 opens with the call, so the journey
+  is finished by the son.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

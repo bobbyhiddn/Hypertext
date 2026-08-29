@@ -1,0 +1,55 @@
+number: 081
+word: LAMECH
+gloss: The father of Noah, who named his son for comfort
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A dark low room with a woven reed cradle and a worn mattock leaning against
+  the mud wall, one oil lamp burning on the sill, no people, luminous cinematic oil
+  painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, deep shadowed background lit by one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 2
+  context: 2
+  complexity: 3
+stats_rationale:
+  lore: his naming speech explains Noah and remembers the curse on the ground, but
+    no teaching rests on the man
+  context: Lemek occurs 11 times in the Hebrew Bible; Lamech occurs 1 time in the
+    New Testament; total 12
+  complexity: two men bear the name - Cain's descendant who boasts of killing, and
+    Seth's descendant who fathers Noah - and the naming of Noah puns on comfort rather
+    than on rest, a wordplay readers argue over
+weight: 2
+weight_rationale: a genealogy name with one memorable speech; a clear place in the
+  era without teaching hanging on it
+ability: Look at the bottom two cards of the Tower. Add one of those cards to your
+  hand and put the other card on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 5:28
+  snippet: And Lamech lived an hundred eighty and two years, and begat a son
+nt_verse:
+  ref: Luke 3:36
+  snippet: which was the son of Lamech
+greek:
+  text: Λάμεχ
+  translit: Lamech
+hebrew:
+  text: לֶמֶךְ
+  translit: Lemek
+ot_refs: Gen 4:18 • Gen 4:23 • Gen 5:28 • Gen 5:31
+nt_refs: Luke 3:36
+trivia:
+- 'Both lines of Genesis carry a Lamech: one sings a song of vengeance, the other
+  names the man who builds the ark.'
+- Lamech's is the last birth recorded before the flood generation begins.
+- The name Noah sounds like rest, but Lamech's reason is comfort - the Hebrew leans
+  on a second word.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

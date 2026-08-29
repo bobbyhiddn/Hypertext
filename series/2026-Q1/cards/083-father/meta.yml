@@ -1,0 +1,55 @@
+number: 083
+word: FATHER
+gloss: The one who begets and goes before his house
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A stone doorway opening on a night sky thick with stars, a signet ring
+  and a small burning lamp left together on the sill, no people, luminous cinematic
+  oil painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, deep shadowed background lit by one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 5
+  context: 5
+  complexity: 2
+stats_rationale:
+  lore: a father of many nations and Our Father which art in heaven - a doctrine hangs
+    on the word
+  context: av occurs 1215 times in the Hebrew Bible; pater occurs 413 times in the
+    New Testament; total 1628
+  complexity: a plain kinship noun with stable translation; only its extension to
+    a founder of a trade or a nation needs a note
+weight: 3
+weight_rationale: the era's relational vocabulary - father of many nations, father
+  of such as dwell in tents - carried further by Our Father; thematic, but a common
+  noun rather than a named agent the era turns on
+ability: Draw one card from the Tower. Then look at the top three cards of the Tower
+  and put one of those cards that has LORE four or more on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 17:4
+  snippet: and thou shalt be a father of many nations
+nt_verse:
+  ref: Matthew 6:9
+  snippet: Our Father which art in heaven, Hallowed be thy name
+greek:
+  text: πατήρ
+  translit: pater
+hebrew:
+  text: אָב
+  translit: av
+ot_refs: Gen 2:24 • Gen 4:20 • Gen 17:4
+nt_refs: Matt 6:9 • John 8:44 • Eph 3:14
+trivia:
+- Genesis calls Jabal the father of such as dwell in tents - the word names a founder
+  as easily as a parent.
+- A man leaves his father and his mother, the first law of the household, is given
+  before there is any father in the world.
+- Abram's new name, Abraham, is built from av and means father of a multitude.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

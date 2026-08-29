@@ -1,0 +1,55 @@
+number: '077'
+word: PLANT
+gloss: To set a living thing into the ground so that it grows
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A young fig sapling newly set into dark turned earth, a wooden dibber
+  and a handful of seed beside the open hole, painted close up on the wet roots, no
+  people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, deep shadowed
+  background lit by one radiant golden light source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 3
+  complexity: 2
+stats_rationale:
+  lore: God plants the garden, Noah plants the vineyard, and the Father plants every
+    plant that stands - a recognized theme with clear teaching
+  context: nata occurs 59 times in the Hebrew Bible; phyteuo occurs 11 times in the
+    New Testament; total 70
+  complexity: a plain verb of setting in the ground with stable translation; only
+    the passive sense of a people planted in a land needs a note
+weight: 2
+weight_rationale: the verb of Eden's garden and of Noah's vineyard - a descriptive
+  word of the era with a clear place, not a doctrine
+ability: Look at the top two cards of the Tower. Add one of those cards that has CONTEXT
+  four or more to your hand and put the other card on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 2:8
+  snippet: And the LORD God planted a garden eastward in Eden
+nt_verse:
+  ref: Matthew 15:13
+  snippet: Every plant, which my heavenly Father hath not planted, shall be rooted
+    up
+greek:
+  text: φυτεύω
+  translit: phyteuo
+hebrew:
+  text: נָטַע
+  translit: nata
+ot_refs: Gen 2:8 • Gen 9:20 • Gen 21:33
+nt_refs: Matt 15:13 • 1 Cor 3:6 • Luke 17:28
+trivia:
+- Genesis 2:8 is the first planting in Scripture, and the planter is God himself.
+- Noah's first act after the flood is to plant a vineyard - the same verb that opened
+  Eden.
+- Paul says I have planted, Apollos watered, but God gave the increase; the planter
+  is not the one who makes it grow.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

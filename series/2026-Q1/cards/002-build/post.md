@@ -3,16 +3,16 @@
 ![BUILD card](./outputs/card_1024x1536.png)
 
 ## Word
-**BUILD** — To construct, establish, or edify; to raise a structure or strengthen a community.
+**BUILD** — To raise a structure course upon course
 
 ## Old Testament
-> Psalm 127:1 — "Unless the Lord builds the house, the builders labor in vain."
+> Genesis 11:4 — "Go to, let us build us a city and a tower, whose top may reach unto heaven"
 
 ## New Testament
-> Matthew 16:18 — "On this rock I will build my church, and the gates of Hades will not overcome it."
+> Matthew 7:24 — "a wise man, which built his house upon a rock"
 
 ## Trivia
-- The Hebrew word for 'son' (ben) shares the same root as 'build' (banah), implying sons build the family line.
-- In Genesis 2:22, God 'built' Eve from Adam's rib, using the architectural verb rather than 'formed' or 'created'.
-- Jesus is often called a carpenter, but the Greek 'tekton' can more broadly mean a builder or stonemason.
+- Genesis 11:5 says the LORD came down to see the city and the tower which the children of men builded - the builders reach for heaven and heaven has to stoop to look.
+- Hebrew builds a son and a house with the same root, which is why a barren wife in Genesis asks to be builded by her handmaid.
+- The first thing built after the flood is not a city but an altar; Noah builds it before the ground has dried.
 

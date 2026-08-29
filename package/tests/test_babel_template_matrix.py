@@ -35,13 +35,22 @@ def test_matrix_is_complete_and_counts_canonical_cards():
 
 
 def test_missing_mapping_is_reported_with_canonical_card_identity():
+    """Drop whichever cell card #1 occupies and it must be named in the error.
+
+    The cell is read from the canonical card rather than hard-coded: the
+    2026-08-29 weight rebalance moved GRACE from NOUN+COMMON to NOUN+GLORIOUS,
+    and a card is free to change tier again.
+    """
     matrix = copy.deepcopy(template_matrix.load_matrix())
+    first = template_matrix.load_canonical_cards(matrix)[0]
+    cell = (first["type"], first["rarity"])
     matrix["valid_combinations"] = [
         item for item in matrix["valid_combinations"]
-        if (item["type"], item["rarity"]) != ("NOUN", "COMMON")
+        if (item["type"], item["rarity"]) != cell
     ]
     errors = template_matrix.validate_canonical_mappings(matrix)
-    assert any("canonical card 1 GRACE lacks template mapping NOUN+COMMON" in error for error in errors)
+    expected = f"canonical card {first['number']} {first['word']} lacks template mapping {cell[0]}+{cell[1]}"
+    assert any(expected in error for error in errors)
 
 
 @requires_evidence

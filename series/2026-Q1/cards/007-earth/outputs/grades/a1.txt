@@ -1,0 +1,12 @@
+============================================================
+GRADE RESULT: EARTH
+============================================================
+Score: 90/100
+Status: FAIL
+Style Match: True
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Fix the ability text to read exactly: 'Look at the top five cards of the Tower. Add one of those cards that has CONTEXT four or more to your hand and put the other cards on top of the Tower.' (it currently reads: 'Look at the top five cards of the Tower. Add one of those cards that has CONTEXT fou to your hand and put the other cards on top of the Tower.').
+============================================================

@@ -1,36 +1,43 @@
 number: '007'
 word: EARTH
-gloss: The dry land, ground, or soil; the material world distinct from the heavens.
+gloss: The ground; the whole land it makes up
 card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A pair of weathered hands holding a sphere of rich, dark soil that is crumbling
-  slightly, with a faint glow emanating from the cracks, set against a void.
+art_prompt: A close view of ploughed ground, dark cracked loam broken into clods along
+  one furrow, a flint blade and the dry white root of a thorn turned up in the topsoil,
+  no people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, deep shadowed
+  background lit by one radiant golden light source, rich saturated blues and golds
 stats:
-  lore: 2
+  lore: 3
   context: 5
-  complexity: 1
-ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other on the
-  bottom.
+  complexity: 3
+ability: Look at the top five cards of the Tower. Add one of those cards that has
+  CONTEXT four or more to your hand and put the other cards on top of the Tower.
 ot_verse:
-  ref: Genesis 1:1
-  snippet: In the beginning God created the heaven and the earth.
+  ref: Genesis 6:11
+  snippet: The earth also was corrupt before God, and the earth was filled with violence
 nt_verse:
   ref: Matthew 5:5
-  snippet: 'Blessed are the meek: for they shall inherit the earth.'
+  snippet: 'Blessed are the meek: for they shall inherit the earth'
 greek:
   text: γῆ
-  translit: Gē
+  translit: ge
 hebrew:
   text: אֶרֶץ
-  translit: '''Eretz'
-ot_refs: Gen 1:1 • Ps 24:1 • Isa 66:1 • Job 26:7
-nt_refs: Matt 5:5 • Rev 21:1 • Acts 1:8 • 1 Cor 15:47
+  translit: eretz
+ot_refs: Gen 6:11 • Gen 1:1 • Gen 11:1
+nt_refs: Matt 5:5 • Matt 5:18 • Rev 21:1
 trivia:
-- The Hebrew word 'eretz' appears over 2,500 times in the Old Testament.
-- Adam's name is derived from 'adamah', meaning ground or earth.
-- Ancient cosmology often depicted the earth as a foundation set upon pillars.
+- 'Genesis 6:11 charges the earth itself, not only the people on it: the ground is
+  corrupt before God and filled with violence.'
+- Eretz is both the planet and a parcel of it - the earth of Genesis 1:1 and the land
+  of Canaan are the same noun.
+- Matthew 5:5 quotes Psalm 37:11, where the inheritance promised is eretz, the land;
+  the meek inherit either a country or the whole world depending on which word you
+  hear.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -78,23 +85,26 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Word: EARTH
 
-  # Card_Gloss: The dry land, ground, or soil; the material world distinct from the heavens.
+  # Card_Gloss: The dry land, ground, or soil; the material world distinct from the
+  heavens.
 
   # Card_Type: NOUN
 
   # Card_Rarity: COMMON
 
-  # Card_Ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other
-  on the bottom.
+  # Card_Ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put
+  the other on the bottom.
 
   # Card_Stats: LORE 2 | CONTEXT 5 | COMPLEXITY 1
 
-  # Card_Art_Prompt: A pair of weathered hands holding a sphere of rich, dark soil that is
-  crumbling slightly, with a faint glow emanating from the cracks, set against a void.
+  # Card_Art_Prompt: A pair of weathered hands holding a sphere of rich, dark soil
+  that is crumbling slightly, with a faint glow emanating from the cracks, set against
+  a void.
 
   # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heaven and the earth.
 
-  # Card_NT_Verse: Matthew 5:5 — Blessed are the meek: for they shall inherit the earth.
+  # Card_NT_Verse: Matthew 5:5 — Blessed are the meek: for they shall inherit the
+  earth.
 
   # Card_Hebrew: אֶרֶץ (''Eretz)
 
@@ -104,6 +114,19 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_2: Adam''s name is derived from ''adamah'', meaning ground or earth.
 
-  # Card_Trivia_3: Ancient cosmology often depicted the earth as a foundation set upon pillars.'
+  # Card_Trivia_3: Ancient cosmology often depicted the earth as a foundation set
+  upon pillars.'
 weight: 2
-weight_rationale: setting vocabulary
+weight_rationale: the ground the whole era is played out on - corrupted, flooded,
+  dried and repopulated - but the word is the setting rather than a named agent, place
+  or event the era turns on, so it stays at 2 and prints COMMON
+stats_rationale:
+  lore: the printed verses charge the earth itself with corruption before the flood
+    and promise it to the meek as an inheritance - a recognized theme of the era with
+    clear teaching, though the doctrine hangs on judgment and promise rather than
+    on the ground
+  context: eretz occurs 2504 times in the Hebrew Bible; ge occurs 250 times in the
+    New Testament; total 2754
+  complexity: eretz is at once the whole earth and one particular country, so the
+    same word is world in Genesis 1:1 and land in the land of Canaan, and a translator
+    must choose which is meant almost line by line

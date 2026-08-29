@@ -1,0 +1,57 @@
+number: 090
+word: FLOOD
+gloss: The waters that came upon the earth and took them all away
+card_type: NOUN
+rarity: GLORIOUS
+series: 2026-Q1
+set: Babel
+art_prompt: Black water surging through the open doorway of a stone house, a wooden
+  bowl and a clay jar spinning on the flood, rain hammering the drowned threshold,
+  no people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, storm light under
+  a bruised green-grey sky, one shaft of silver breaking through
+stats:
+  lore: 5
+  context: 2
+  complexity: 4
+stats_rationale:
+  lore: the flood is the era's judgment and the New Testament's own picture of the
+    day of the Lord and of baptism - a doctrine hangs on the word
+  context: mabbul occurs 13 times in the Hebrew Bible; kataklysmos occurs 4 times
+    in the New Testament; total 17
+  complexity: mabbul is reserved for this one event and for the LORD sitting upon
+    the flood in Psalm 29, so its derivation is argued from yabal to flow, from nabal
+    to fall, and from an Akkadian loan; kataklysmos, the word the Greek translators
+    chose, gives English cataclysm
+weight: 5
+weight_rationale: the pillar the whole era turns on - the judgment the ark, the dove,
+  the covenant and the rainbow all hang from; the chase card of the set
+ability: Each player puts every card from that player's hand into Sheol. Then each
+  player draws one card from the Tower and you draw four cards from the Tower.
+ot_verse:
+  ref: Genesis 7:17
+  snippet: And the flood was forty days upon the earth
+nt_verse:
+  ref: Matthew 24:39
+  snippet: knew not until the flood came, and took them all away
+greek:
+  text: κατακλυσμός
+  translit: kataklysmos
+hebrew:
+  text: מַבּוּל
+  translit: mabbul
+ot_refs: Gen 6:17 • Gen 7:17 • Gen 9:11 • Ps 29:10
+nt_refs: Matt 24:38 • Matt 24:39 • Luke 17:27 • 2 Pet 2:5
+trivia:
+- 'Hebrew keeps a separate word for this water: mabbul is never used of an ordinary
+  river in flood.'
+- Psalm 29:10 is the one place outside Genesis that uses it - the LORD sitteth upon
+  the flood, still enthroned over it.
+- 'Peter reads the flood as a figure of baptism: the same water that destroys the
+  world carries the ark.'
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

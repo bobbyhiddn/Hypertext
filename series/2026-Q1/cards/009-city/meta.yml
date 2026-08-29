@@ -1,35 +1,43 @@
 number: 009
 word: CITY
-gloss: A large human settlement; a center of population, commerce, and defense.
+gloss: A walled settlement; a gathering behind one gate
 card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A fortified ancient settlement on a hill at twilight, high stone walls, towers,
-  warm glowing windows, aerial view, golden lighting, stylized geometric architecture.
+art_prompt: A mudbrick gateway at the end of a narrow lane, its heavy cedar doors
+  standing open on a rutted threshold, the unfinished tower rising over flat rooftops
+  beyond, no people, luminous cinematic oil painting with impressionistic brushwork,
+  saturated full colour, a strong symbolic subject, no engraving or line art, deep
+  shadowed background lit by one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 3
   context: 5
-  complexity: 1
-ability: Look at the top 3 cards of the Tower. Add 1 to your hand, then discard the others.
+  complexity: 3
+ability: Reveal the top four cards of the Tower. Add one revealed card whose card
+  type is in the Chapter Lot to your hand and put the other cards on top of the Tower.
 ot_verse:
-  ref: Psalm 127:1
-  snippet: Unless the Lord watches over the city, the watchman stays awake in vain.
+  ref: Genesis 11:4
+  snippet: let us build us a city and a tower, whose top may reach unto heaven
 nt_verse:
   ref: Matthew 5:14
-  snippet: You are the light of the world. A city set on a hill cannot be hidden.
+  snippet: A city that is set on an hill cannot be hid
 greek:
   text: πόλις
   translit: polis
 hebrew:
   text: עִיר
   translit: ir
-ot_refs: Gen 4:17 • Num 35:6 • Ps 46:4 • Ps 48:1 • Isa 26:1
-nt_refs: Heb 11:10 • Heb 13:14 • Rev 21:2 • Rev 22:19
+ot_refs: Gen 11:4 • Gen 4:17 • Gen 11:8
+nt_refs: Matt 5:14 • Heb 11:10 • Rev 21:2
 trivia:
-- The first city recorded in Scripture was built by Cain and named Enoch.
-- Jerusalem is mentioned over 800 times in the Bible.
-- Scripture begins in a garden (Eden) and ends in a city (New Jerusalem).
+- The first city in Scripture is built by Cain, the man sentenced to be a fugitive
+  and a vagabond, and he calls it after the name of his son.
+- 'Genesis 11 names the city more often than the tower: the LORD comes down to see
+  the city and the tower, and what the builders leave off building is the city.'
+- Hebrews 11:10 answers Babel exactly - Abraham looked for a city which hath foundations,
+  whose builder and maker is God.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -37,4 +45,17 @@ notes: null
 sources: []
 search_queries: []
 weight: 2
-weight_rationale: setting vocabulary
+weight_rationale: what Babel's builders set out to make and the first thing Cain builds
+  after the curse - a settlement word with a clear place in the era, but the named
+  event is Babel itself rather than the noun, so it stays at 2 and prints COMMON
+stats_rationale:
+  lore: the printed verses set the city the builders raised for their own name beside
+    the city set on a hill that cannot be hid - a recognized theme of the era with
+    clear teaching, though what is taught hangs on the builders' purpose rather than
+    on the walls
+  context: ir occurs 1093 times in the Hebrew Bible; polis occurs 162 times in the
+    New Testament; total 1255
+  complexity: ir covers everything from a walled capital to a hamlet - Cain builds
+    one for a single household - while Greek polis carries a civic and political sense
+    Hebrew never had, so the Septuagint quietly turns every Hebrew settlement into
+    a city-state

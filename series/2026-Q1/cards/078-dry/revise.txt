@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: DRY
+# Card_Gloss: Without water, as the dry land that appeared
+# Card_Type: ADJECTIVE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the bottom four cards of the Tower. Add one of those cards to your hand and put the other cards on top of the Tower.
+# Card_Stats: LORE 2 | CONTEXT 2 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A cracked mud flat baked to a hard crust, the last damp shine caught in the deep fissures and a stranded olive branch drying on the mud, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, hard white noon glare, bleached ochre ground and short black shadows
+# Card_OT_Verse: Genesis 1:9 — let the dry land appear: and it was so
+# Card_NT_Verse: Hebrews 11:29 — they passed through the Red sea as by dry land
+# Card_Hebrew: יַבָּשָׁה (yabbashah)
+# Card_Greek: ξηρός (xeros)
+# Card_Trivia_1: The dry appears on the third day before anything is planted in it; the ground is made ready before it is filled.
+# Card_Trivia_2: Genesis 8 measures the flood's end twice - the waters were abated, and then the face of the ground was dry.
+# Card_Trivia_3: Jesus asks what shall be done in the dry, using the same word Greek readers knew for dry land.

@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: FRUITFUL
+# Card_Gloss: Bearing much, as the first blessing on living things
+# Card_Type: ADJECTIVE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top two cards of the Tower. Add one of those cards that has CONTEXT three or more to your hand and put the other card on top of the Tower.
+# Card_Stats: LORE 3 | CONTEXT 2 | COMPLEXITY 2 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A branch bowed under ripe purple figs and a split pomegranate spilling wet red seeds onto a stone ledge, painted close up, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, deep shadowed background lit by one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 1:28 — Be fruitful, and multiply, and replenish the earth
+# Card_NT_Verse: Colossians 1:10 — being fruitful in every good work, and increasing in the knowledge of God
+# Card_Hebrew: פָּרָה (parah)
+# Card_Greek: καρποφορέω (karpophoreo)
+# Card_Trivia_1: The blessing be fruitful is spoken over the fish and birds before it is spoken over the man.
+# Card_Trivia_2: After the flood God repeats the blessing to Noah word for word; the world restarts on the same terms.
+# Card_Trivia_3: Ephraim's name is built on this verb - God hath caused me to be fruitful in the land of my affliction.

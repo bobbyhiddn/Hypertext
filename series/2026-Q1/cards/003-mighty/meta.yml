@@ -1,36 +1,44 @@
 number: '003'
 word: MIGHTY
-gloss: Possessing great power, strength, or authority; effective and potent.
+gloss: Strong enough to overpower
 card_type: ADJECTIVE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A colossal, ancient mountain peak piercing through a layer of dark, swirling storm
-  clouds, illuminated by a single, intense shaft of golden sunlight from above.
+art_prompt: An enormous bronze-scaled war belt and a spear shaft thicker than a roof
+  beam propped against a lone standing stone on a high moor, the turf beaten bare
+  in a ring around its foot, no people, luminous cinematic oil painting with impressionistic
+  brushwork, saturated full colour, a strong symbolic subject, no engraving or line
+  art, deep shadowed background lit by one radiant golden light source, rich saturated
+  blues and golds
 stats:
   lore: 3
   context: 4
-  complexity: 2
-ability: Return a VERB from Sheol to your hand.
+  complexity: 4
+ability: Choose another player; that chosen player puts one card from that chosen
+  player's hand into Sheol. Then choose up to two cards in Sheol with LORE four or
+  more and add those chosen cards to your hand.
 ot_verse:
-  ref: Isaiah 9:6
-  snippet: And his name shall be called Wonderful, Counsellor, The mighty God...
+  ref: Genesis 6:4
+  snippet: the same became mighty men which were of old, men of renown
 nt_verse:
   ref: Luke 1:49
-  snippet: For he that is mighty hath done to me great things; and holy is his name.
+  snippet: For he that is mighty hath done to me great things
 greek:
   text: δυνατός
   translit: dunatos
 hebrew:
   text: גִּבּוֹר
   translit: gibbor
-ot_refs: Gen 10:8 • Deut 10:17 • Ps 24:8 • Jer 32:18
-nt_refs: Luke 24:19 • 1 Cor 1:26 • Eph 1:19 • Rev 19:6
+ot_refs: Gen 6:4 • Gen 10:8 • Gen 10:9
+nt_refs: Luke 1:49 • Rom 4:21 • Acts 18:24
 trivia:
-- The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty Men'.
-- In Isaiah 9:6, the Messiah is given the title 'El Gibbor', meaning 'Mighty God'.
-- The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern word 'dynamite'.
-- Luke 1:49 refers to God simply as 'Ho Dunatos'—'The Mighty One'.
+- Genesis 6:4 calls the mighty men anshei hashem, men of the name - two chapters before
+  Babel's builders set out to make themselves a name.
+- Nimrod is the first man in Scripture called gibbor, and the text says he began to
+  be one, as though might were something a man works up to.
+- The same adjective stands in Isaiah's El Gibbor, the Mighty God, so Hebrew praise
+  and Hebrew menace share one word.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -66,4 +74,16 @@ search_queries:
 - Luke 1:49 he that is mighty greek
 - Isaiah 9:6 mighty god hebrew
 weight: 3
-weight_rationale: Nimrod the mighty hunter; a theme
+weight_rationale: the gibborim of Genesis 6 and Nimrod the mighty one are how the
+  era names raw human power before the flood and after it - thematic vocabulary with
+  real teaching, but the word describes a kind of man rather than naming an agent
+  or event the era turns on, so it stays at 3 and prints UNCOMMON
+stats_rationale:
+  lore: the printed verses give the mighty men of old, men of renown, and the Magnificat's
+    he that is mighty - a recognized theme of the era with clear teaching, though
+    the doctrine rests on who is mighty rather than on the adjective
+  context: gibbor occurs 159 times in the Hebrew Bible; dunatos occurs 32 times in
+    the New Testament; total 191
+  complexity: gibbor is at once a warrior, a champion, a tyrant and, in El Gibbor,
+    a name of God, so the same word praises and accuses; dunatos likewise slides between
+    able, powerful and possible, and Greek must choose which each time

@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: AFRAID
+# Card_Gloss: Struck with fear, as the man who hid in the garden
+# Card_Type: ADJECTIVE
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top four cards of the Tower. Add one of those cards that has LORE three or more to your hand and put the other cards on top of the Tower.
+# Card_Stats: LORE 4 | CONTEXT 5 | COMPLEXITY 2 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A wall of dark fig leaves and heavy trunks in a garden at evening, one gap in the foliage where a body has pushed through, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, deep shadowed background lit by one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 3:10 — I was afraid, because I was naked; and I hid myself
+# Card_NT_Verse: Matthew 14:30 — when he saw the wind boisterous, he was afraid
+# Card_Hebrew: יָרֵא (yare)
+# Card_Greek: φοβέομαι (phobeomai)
+# Card_Trivia_1: Fear is the first thing the man confesses after the fruit, before he names the nakedness.
+# Card_Trivia_2: Fear not, Abram is the first of the Bible's many Fear nots, and it comes with a shield.
+# Card_Trivia_3: The same verb is used for being afraid of God and for revering him; context, not the word, decides.

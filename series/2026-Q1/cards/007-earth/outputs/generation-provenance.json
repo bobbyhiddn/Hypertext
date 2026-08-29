@@ -1,0 +1,151 @@
+{
+  "contract": "hypertext.full-card-generation-provenance/v1",
+  "output": {
+    "gemini_output_sha256": "d72d5625e9682952b9a958f285fd418c4e6c900e78d311b25b7043313be971f9",
+    "generation_metadata_path": "series/2026-Q1/cards/007-earth/outputs/generation.json",
+    "generation_metadata_sha256": "8fdeb2446852fbb8e604d8c065374959d93af925645fa01395a81b4ec941c7f4",
+    "path": "series/2026-Q1/cards/007-earth/outputs/card_1024x1536.png",
+    "sha256": "b4800b14453f76d2dfc70b93efc7ffdbe72fe1ad0d1ed7e4e4bcb231cdd70032"
+  },
+  "prompt": {
+    "path": "series/2026-Q1/cards/007-earth/outputs/prompt.revision.txt",
+    "sha256": "016191e75cdd4b24d11c4061e43f5959e5bb064d95f4eb4def1064b2b2475f64"
+  },
+  "recipe": {
+    "canonical_sha256": "f26f5b37a59c8c0693773e9881cd29d089d96a45da88b0ad2c075073ce21a90d",
+    "file_sha256": "9b94f2c386dc5188b7cf3bdbabd28377ce7e476e1d4950dcb7f5ad47c1b7c8d2",
+    "path": "series/2026-Q1/cards/007-earth/card.json"
+  },
+  "reference_pack": {
+    "candidate_audit": [
+      {
+        "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+        "card_type": "NAME",
+        "eligibility_reasons": [
+          "status=retired",
+          "legacy!=false",
+          "target_type_mismatch=NAME"
+        ],
+        "eligible": false,
+        "id": "013-moses",
+        "metadata_path": "templates/example_cards/013-moses/meta.yml",
+        "metadata_sha256": "b7c271b57eb61036934ca9e5be692948cf5f44082a18068ac7c3e05e8f4d5fb6",
+        "path": "templates/example_cards/013-moses/outputs/card_1024x1536.png",
+        "prompt_path": "templates/example_cards/013-moses/prompt.txt",
+        "prompt_sha256": "c5434bcc218c686070760b69cefe56da389bad8df8e5330c0375e7155d6d0337",
+        "rarity": "COMMON",
+        "recipe_path": "templates/example_cards/013-moses/card.json",
+        "recipe_sha256": "63a2dd7037c9e83e7a5853c4424d557cf982659a04def4fc4a36f4bf980d9cc4",
+        "review_evidence_path": "templates/example_cards/013-moses/grade.json",
+        "review_evidence_sha256": "0cb7ea8b45df6d83032466d6cdf5baca6de8842996be19b504e50ee9f81a42ff",
+        "selected": false,
+        "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+        "similarity_components": {},
+        "similarity_reason": "not_scored_ineligible",
+        "similarity_score": null,
+        "source_manifest": "templates/card/v001/finished-card-references.json",
+        "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
+      }
+    ],
+    "contract": "hypertext.gemini.reference-pack/v1",
+    "max_examples": 3,
+    "mode": "fix",
+    "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "NOUN",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/007-earth/outputs/reference-inputs/current-afbe8351935a4f0b01e88c4d968798ab3227681be3444f177c1141da70cf8334.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "COMMON",
+        "rarity_label": "COMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/007-earth/outputs/reference-inputs/current-afbe8351935a4f0b01e88c4d968798ab3227681be3444f177c1141da70cf8334.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "afbe8351935a4f0b01e88c4d968798ab3227681be3444f177c1141da70cf8334",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
+      {
+        "assigned_role": "template",
+        "card_type": "NOUN",
+        "eligibility_reasons": [
+          "operator_accepted_canonical_manifest",
+          "exact_type_rarity_cell",
+          "sha256=verified"
+        ],
+        "eligible": true,
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified NOUN COMMON structural layout/frame reference",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "templates/card/v001/composed/noun/common/template_1024x1536.png",
+        "position": 2,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "COMMON",
+        "rarity_label": "COMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/common/template_1024x1536.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "template",
+        "sha256": "d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c",
+        "similarity_components": {},
+        "similarity_reason": "authoritative_structure_not_ranked",
+        "similarity_score": 0,
+        "source_manifest": "templates/card/v001/composed/manifest.json",
+        "source_manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+        "template_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+        "template_manifest_schema_version": 3,
+        "template_manifest_status": "operator-accepted-canonical",
+        "template_version": "v001"
+      }
+    ],
+    "repo_root": "/home/cap/Code/Hypertext",
+    "selection_contract": "exact type+rarity eligibility; accepted, finished, nonlegacy, nonsuperseded, SHA-256-verified assets only; rank by 35% art tokens + 30% semantic content + 20% serialized prompt tokens + 15% stat proximity; break ties by SHA-256 then path",
+    "target_rarity": "COMMON",
+    "target_type": "NOUN"
+  },
+  "reference_pack_path": "series/2026-Q1/cards/007-earth/outputs/reference-pack.json",
+  "reference_pack_sha256": "9991f82c2d211f11dcdd48eef3a2c4ca5bf810d5f5ae3e449ad28b0c6692b06f",
+  "settings": {
+    "aspect_ratio": "2:3",
+    "full_card_generation": true,
+    "guidance_scale": null,
+    "image_size": "2K",
+    "max_example_references": 3,
+    "mode": "fix",
+    "model": "gemini-3.1-flash-image",
+    "num_inference_steps": null,
+    "phase": "revise-image-only",
+    "reference_count": 2,
+    "response_modalities": [
+      "IMAGE"
+    ]
+  },
+  "target": {
+    "card_type": "NOUN",
+    "rarity": "COMMON"
+  }
+}
