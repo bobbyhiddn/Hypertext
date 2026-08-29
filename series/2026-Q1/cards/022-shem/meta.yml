@@ -1,37 +1,43 @@
 number: '022'
 word: SHEM
-gloss: Name, reputation, or fame; the eldest son of Noah.
+gloss: Name; the eldest son of Noah, father of the blessed line
 card_type: NAME
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: An ancient patriarch standing at the entrance of a tent, holding a lantern and
-  looking up at a starry sky. In the distance, a faint silhouette of a ziggurat or tower.
-  Warm, earthy tones, no text.
+art_prompt: A dark goat-hair dwelling on a ridge at night, its doorway flap drawn
+  back and lit from within, a striped woven mantle folded on the threshold, no people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, night under a lantern, a warm
+  amber pool of light in deep indigo dark
 stats:
-  lore: 4
-  context: 4
-  complexity: 2
-ability: Look at the top 3 cards of the Tower. You may reveal a NAME and add it to your hand.
-  Discard the rest.
+  lore: 3
+  context: 2
+  complexity: 4
+ability: Choose another player. Each of you reveals one card from your hand; if your
+  revealed card has the higher COMPLEXITY, add up to two cards from Sheol to your
+  hand.
 ot_verse:
   ref: Genesis 9:26
-  snippet: Blessed be the LORD, the God of Shem!
+  snippet: Blessed be the LORD God of Shem; and Canaan shall be his servant
 nt_verse:
   ref: Luke 3:36
-  snippet: '...the son of Shem, the son of Noah...'
+  snippet: which was the son of Sem, which was the son of Noe
 greek:
   text: Σήμ
-  translit: Sēm
+  translit: Sem
 hebrew:
   text: שֵׁם
   translit: Shem
-ot_refs: Gen 5:32 • Gen 10:1 • Gen 11:10
+ot_refs: Gen 9:26 • Gen 10:21 • Gen 11:10
 nt_refs: Luke 3:36
 trivia:
-- Literally means 'name' in Hebrew; implies authority and reputation.
-- Ancestor of the Semitic peoples and the covenant line of Abraham.
-- Often identified in Jewish tradition as Melchizedek, King of Salem.
+- Genesis 9:26 blesses the LORD God of Shem rather than Shem himself - the only blessing
+  in the chapter aimed past the man to his God.
+- Shem is introduced in Genesis 10:21 as the father of all the children of Eber, four
+  generations before Eber is born in the text.
+- The builders at Babel say let us make us a name - shem - two chapters after a man
+  named Shem has been given one.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -39,4 +45,16 @@ notes: null
 sources: []
 search_queries: []
 weight: 3
-weight_rationale: the line of Shem; second-rank figure
+weight_rationale: the son the promise runs through and the pun the Babel account turns
+  on - thematic vocabulary with real teaching; the patriarchs the era turns on are
+  Noah and Abram, so Shem stays at 3 and prints UNCOMMON
+stats_rationale:
+  lore: the printed verses bless the God of Shem and seat him in a genealogy - a recognized
+    theme of the era, since the promise travels his line, but the teaching rests on
+    the promise rather than the man
+  context: Shem occurs 17 times in the Hebrew Bible; Sem occurs 1 time in the New
+    Testament; total 18
+  complexity: his name is simply the noun name, so Genesis 11 sets a people who say
+    let us make us a name against the line already called Name; and Genesis 9:26 blesses
+    the God of Shem rather than Shem, a construction commentators have argued over
+    for centuries

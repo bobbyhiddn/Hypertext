@@ -1,36 +1,44 @@
 number: '020'
 word: ARK
-gloss: A vessel built for preservation; a sacred chest housing the presence of God.
+gloss: The vessel built to carry life through the flood
 card_type: NOUN
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A colossal, ancient wooden vessel resting on a mountain peak under a rainbow,
-  stylized geometric wood textures, golden light breaking through storm clouds, no text.
+art_prompt: A vast hull of gopher wood ribs rising on a bare hillside, pitch smoking
+  in an iron cauldron, curls of shaved wood trodden into the mud, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, overcast grey-blue daylight,
+  soft and shadowless, wet colours saturated
 stats:
   lore: 5
-  context: 4
-  complexity: 2
-ability: Look at the top 5 cards of the Tower. You may reveal 2 cards that share a type and
-  add them to your hand; put the rest on the bottom.
+  context: 2
+  complexity: 4
+ability: Choose up to three cards in Sheol whose card type is in the Chapter Lot and
+  add those chosen cards to your hand. If the cards in your Pages have total LORE
+  fifteen or more, draw one card from the Tower.
 ot_verse:
   ref: Genesis 6:14
-  snippet: Make for yourself an ark of gopher wood; you shall make the ark with rooms...
+  snippet: Make thee an ark of gopher wood ... and shalt pitch it within and without
+    with pitch
 nt_verse:
   ref: Hebrews 11:7
-  snippet: By faith Noah... prepared an ark for the salvation of his household.
+  snippet: prepared an ark to the saving of his house
 greek:
   text: κιβωτός
-  translit: kibōtos
+  translit: kibotos
 hebrew:
   text: תֵּבָה
   translit: tebah
-ot_refs: Gen 6:14 • Ex 25:10 • Josh 3:13 • 1 Sam 4:3
-nt_refs: Matt 24:38 • Heb 9:4 • 1 Pet 3:20 • Rev 11:19
+ot_refs: Gen 6:14 • Gen 7:1 • Gen 8:4
+nt_refs: Heb 11:7 • 1 Pet 3:20 • Matt 24:38
 trivia:
-- The Hebrew word 'tebah' is used only for Noah's ship and baby Moses' basket.
-- The Ark of the Covenant uses a different word, 'aron', meaning chest or coffin.
-- Noah's Ark used a 6:1 length-to-width ratio, a standard for stability in modern ships.
+- The same word carries Moses down the Nile in a basket of bulrushes daubed with pitch
+  - two rescues by water in one vocabulary.
+- The ark has no rudder, no sail and no oars; it is described as a floating chest,
+  and the LORD shuts the door.
+- Greek uses kibotos for Noah's ark and for the ark of the covenant alike; Hebrew
+  keeps them apart as tebah and aron.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -38,4 +46,15 @@ notes: null
 sources: []
 search_queries: []
 weight: 4
-weight_rationale: the vessel the flood turns on
+weight_rationale: the named thing the era turns on - the judgment of the whole earth
+  is survived inside it, and Hebrews makes it the pattern of salvation by faith; a
+  weight-4 word, which is why it prints RARE
+stats_rationale:
+  lore: the printed verses are the command to build and the verdict that by it Noah
+    condemned the world and became heir of righteousness - salvation through judgment
+    is stated on this object
+  context: tebah occurs 28 times in the Hebrew Bible; kibotos occurs 6 times in the
+    New Testament; total 34
+  complexity: tebah is used of only two things in all of Scripture, Noah's vessel
+    and the basket of bulrushes that carries Moses, and it is never the ark of the
+    covenant, which is aron - a distinction Greek loses by calling all of them kibotos

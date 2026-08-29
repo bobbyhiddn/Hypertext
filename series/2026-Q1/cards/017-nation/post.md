@@ -3,16 +3,16 @@
 ![NATION card](./outputs/card_1024x1536.png)
 
 ## Word
-**NATION** — A large body of people united by descent, history, culture, or language.
+**NATION** — A people gathered under one name
 
 ## Old Testament
-> Genesis 12:2 — "And I will make of you a great nation, and I will bless you and make your name great..."
+> Genesis 12:2 — "And I will make of thee a great nation, and I will bless thee"
 
 ## New Testament
-> 1 Peter 2:9 — "But you are a chosen race, a royal priesthood, a holy nation, a people for his own possession..."
+> 1 Peter 2:9 — "But ye are a chosen generation, a royal priesthood, an holy nation"
 
 ## Trivia
-- Hebrew 'goy' implies a political body, while 'am' suggests kinship.
-- Genesis 10, the 'Table of Nations,' lists 70 distinct people groups.
-- In the NT, 'ethnos' usually refers to Gentiles distinct from Israel.
+- Genesis 10 counts seventy nations from the three sons of Noah, and Genesis 11 explains how they came to be separate.
+- Israel is called a goy in Genesis 12:2 - the word is not reserved for outsiders until much later.
+- 1 Peter 2:9 hands Israel's titles to a scattered church, holy nation among them, and the Greek word is the one usually rendered Gentiles.
 

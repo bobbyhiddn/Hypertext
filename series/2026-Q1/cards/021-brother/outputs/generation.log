@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-01-26 11:11:15
-Phase: imagegen
+Timestamp: 2026-08-29 09:40:24
+Phase: rebuild
 Target Rarity: COMMON
 Target Type: TITLE
 Fix Mode: False
 
-Style References (2 total):
-  [1] templates/example_cards/017-shepherd/outputs/card_1024x1536.png [COMMON] (TEMPLATE)
-  [2] templates/card/v001/common/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/title/common/template_1024x1536.png [COMMON] sha256=7a959dbbdc483bc0b27b1de85bda918607ffb260b448c3a4e0e4bf967f65a7ed
 
 Prompt File: series/2026-Q1/cards/021-brother/prompt.txt

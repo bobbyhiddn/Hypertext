@@ -1,15 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-01-14 11:08:20
-Phase: imagegen
+Timestamp: 2026-08-29 09:21:28
+Phase: rebuild
 Target Rarity: UNCOMMON
 Target Type: VERB
 Fix Mode: False
 
-Style References (5 total):
-  [1] templates/example_cards/006-forgive/outputs/card_1024x1536.png [UNCOMMON] (TEMPLATE)
-  [2] series/2026-Q1/cards/011-descend/outputs/card_1024x1536.png [UNCOMMON]
-  [3] series/2026-Q1/cards/012-form/outputs/card_1024x1536.png [UNCOMMON]
-  [4] series/2026-Q1/cards/013-remember/outputs/card_1024x1536.png [UNCOMMON]
-  [5] templates/card/v001/uncommon/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/verb/uncommon/template_1024x1536.png [UNCOMMON] sha256=1e6872702773b4628b2cd72712e83f00e2461d6af0e0d72b3c6244ff717832a7
 
 Prompt File: series/2026-Q1/cards/014-multiply/prompt.txt

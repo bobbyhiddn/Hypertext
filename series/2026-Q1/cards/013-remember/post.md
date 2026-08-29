@@ -3,16 +3,16 @@
 ![REMEMBER card](./outputs/card_1024x1536.png)
 
 ## Word
-**REMEMBER** — To recall to mind; to think of and observe
+**REMEMBER** — To call back to mind and act upon it
 
 ## Old Testament
-> Exodus 20:8 — "Remember the Sabbath day, to keep it holy."
+> Genesis 8:1 — "And God remembered Noah ... and God made a wind to pass over the earth"
 
 ## New Testament
-> Luke 22:19 — "Do this in remembrance of me."
+> Luke 23:42 — "Lord, remember me when thou comest into thy kingdom"
 
 ## Trivia
-- The Hebrew word 'zakar' implies acting on a memory, not just recalling it.
-- God 'remembering' Noah or Rachel signaled His immediate intervention to save them.
-- Joshua set up twelve stones from the Jordan River as a physical sign for future generations.
+- Genesis 8:1 is the exact centre of the flood account; everything before it rises and everything after it falls.
+- God remembers Noah, then Abraham, then Rachel - in each case the next word is an action, never a thought.
+- The bow in the cloud is set there so that God may look upon it and remember; the sign is for the one who gave it.
 

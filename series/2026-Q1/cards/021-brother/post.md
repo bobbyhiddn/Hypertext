@@ -3,16 +3,16 @@
 ![BROTHER card](./outputs/card_1024x1536.png)
 
 ## Word
-**BROTHER** — A male sibling; a kinsman; a fellow member of a covenant, faith, or shared struggle.
+**BROTHER** — A kinsman; one who shares your kind
 
 ## Old Testament
-> Proverbs 17:17 — "A friend loves at all times, and a brother is born for adversity."
+> Genesis 13:8 — "let there be no strife, I pray thee, between me and thee ... for we be brethren"
 
 ## New Testament
-> Hebrews 2:11 — "For which cause he is not ashamed to call them brothers."
+> Hebrews 2:11 — "for which cause he is not ashamed to call them brethren"
 
 ## Trivia
-- The first murder in history was fratricide: Cain killed Abel.
-- Jesus redefined family, calling those who do God's will His brothers.
-- Hebrew 'ach' implies blood ties or covenant loyalty.
+- Adelphos is literally from one womb - a-delphys - which is why the New Testament has to stretch it to cover the church.
+- Genesis 4 calls Abel his brother seven times in six verses; the word is repeated until the murder is unmistakably fratricide.
+- Lot is Abram's nephew, yet Abram calls him brother - kinship in Genesis names the bond, not the exact degree.
 

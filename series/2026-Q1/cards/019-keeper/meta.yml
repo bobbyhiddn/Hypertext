@@ -1,37 +1,43 @@
 number: 019
 word: KEEPER
-gloss: One who guards, watches, protects, or maintains possession
+gloss: One who guards what is committed to him
 card_type: TITLE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A heavy, weathered iron key hanging from a hook on a rough stone wall next to
-  a sturdy wooden door, illuminated by a single lantern
+art_prompt: A stone sheepfold on a dark hillside with its gate of thorn branches shut
+  fast, a watchfire burning low against the wall, no people, luminous cinematic oil
+  painting with impressionistic brushwork, saturated full colour, a strong symbolic
+  subject, no engraving or line art, firelight from below, red and orange on stone,
+  smoke against black
 stats:
   lore: 3
   context: 5
-  complexity: 2
-ability: Target player cannot Redeem cards until your next turn.
+  complexity: 3
+ability: Look at the top three cards of the Tower. Add one of those cards whose card
+  type is in your Lot to your hand, put the other cards on the bottom of the Tower;
+  then gain one Letter.
 ot_verse:
-  ref: Psalm 121:5
-  snippet: 'The LORD is thy keeper: the LORD is thy shade upon thy right hand.'
+  ref: Genesis 4:9
+  snippet: 'I know not: Am I my brother''s keeper?'
 nt_verse:
-  ref: John 17:12
-  snippet: 'While I was with them in the world, I kept them in thy name: those that thou gavest
-    me I have kept...'
+  ref: Acts 5:23
+  snippet: the keepers standing without before the doors
 greek:
   text: φύλαξ
   translit: phylax
 hebrew:
   text: שֹׁמֵר
   translit: shomer
-ot_refs: Gen 4:9 • Ps 121:3-5 • Eccl 12:3
-nt_refs: Acts 16:27 • Jas 1:27 • 1 Pet 1:5
+ot_refs: Gen 4:9 • Ps 121:4 • Ps 121:5
+nt_refs: Acts 5:23 • Acts 12:6 • Acts 12:19
 trivia:
-- Cain's deflective question 'Am I my brother's keeper?' is the first biblical use of the
-  word.
-- The Psalms emphasize that the Keeper of Israel neither slumbers nor sleeps.
-- In Acts, the keeper of the prison was converted after an earthquake opened the doors.
+- 'Cain answers a question about his brother with a word from the garden: the man
+  was put there to dress it and to keep it.'
+- Psalm 121 uses the keeper word six times in eight verses - he that keepeth thee
+  will not slumber.
+- Phylax is the guard at a door; its cousin phylake is the cell behind that door,
+  which is why the same root is translated both watch and prison.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -39,4 +45,15 @@ notes: null
 sources: []
 search_queries: []
 weight: 3
-weight_rationale: '"am I my brother''s keeper"; a theme'
+weight_rationale: Cain's question and the keeping of the garden give the era its word
+  for responsibility - thematic vocabulary with real teaching; it names a role rather
+  than a person the era turns on, so it stays at 3
+stats_rationale:
+  lore: the printed verses give Cain's refusal of the charge and the LORD taken as
+    the keeper of his own - a recognized theme with clear teaching, though the doctrine
+    hangs on the keeping rather than the title
+  context: shomer is the participle of shamar, which occurs 468 times in the Hebrew
+    Bible; phylax occurs 3 times in the New Testament; total 471
+  complexity: shamar means to guard, to tend and to observe at once, so the keeper
+    of a garden, the keeper of a flock and the keeper of a commandment are one word;
+    phylax gives phylake, which is both a watch of the night and a prison

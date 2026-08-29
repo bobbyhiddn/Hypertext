@@ -3,16 +3,16 @@
 ![KEEPER card](./outputs/card_1024x1536.png)
 
 ## Word
-**KEEPER** — One who guards, watches, protects, or maintains possession
+**KEEPER** — One who guards what is committed to him
 
 ## Old Testament
-> Psalm 121:5 — "The LORD is thy keeper: the LORD is thy shade upon thy right hand."
+> Genesis 4:9 — "I know not: Am I my brother's keeper?"
 
 ## New Testament
-> John 17:12 — "While I was with them in the world, I kept them in thy name: those that thou gavest me I have kept..."
+> Acts 5:23 — "the keepers standing without before the doors"
 
 ## Trivia
-- Cain's deflective question 'Am I my brother's keeper?' is the first biblical use of the word.
-- The Psalms emphasize that the Keeper of Israel neither slumbers nor sleeps.
-- In Acts, the keeper of the prison was converted after an earthquake opened the doors.
+- Cain answers a question about his brother with a word from the garden: the man was put there to dress it and to keep it.
+- Psalm 121 uses the keeper word six times in eight verses - he that keepeth thee will not slumber.
+- Phylax is the guard at a door; its cousin phylake is the cell behind that door, which is why the same root is translated both watch and prison.
 

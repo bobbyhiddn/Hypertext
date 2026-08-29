@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-01-21 22:10:45
-Phase: imagegen
+Timestamp: 2026-08-29 09:37:27
+Phase: revise-image-only
 Target Rarity: RARE
 Target Type: NOUN
-Fix Mode: False
+Fix Mode: True
 
 Style References (2 total):
-  [1] templates/example_cards/003-wisdom/outputs/card_1024x1536.png [RARE] (TEMPLATE)
-  [2] templates/card/v001/rare/template_1024x1536.png
+  [1] CURRENT_CARD: series/2026-Q1/cards/020-ark/outputs/reference-inputs/current-f2bd4243bd4dad50c18eefc7528a72e082dc0fd1ffaacae3b9e4f61607ff07ba.png [RARE] sha256=f2bd4243bd4dad50c18eefc7528a72e082dc0fd1ffaacae3b9e4f61607ff07ba
+  [2] TEMPLATE: templates/card/v001/composed/noun/rare/template_1024x1536.png [RARE] sha256=0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b
 
-Prompt File: series/2026-Q1/cards/020-ark/prompt.txt
+Prompt File: series/2026-Q1/cards/020-ark/outputs/prompt.revision.txt

@@ -1,0 +1,14 @@
+============================================================
+GRADE RESULT: MULTIPLY
+============================================================
+Score: 0/100 (content: 95/100)
+Status: FAIL
+Style Match: False
+Style Issue: Template placeholder leak: DEFINITION TEXT (Under the card title, above the definition sentence)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Change the card title/word from 'MULD TITLY' to 'MULTIPLY'.
+  - Remove the template placeholder text DEFINITION TEXT (Under the card title, above the definition sentence); replace the slot with the supplied content only.
+============================================================

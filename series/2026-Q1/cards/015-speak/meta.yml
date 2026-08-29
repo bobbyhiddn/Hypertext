@@ -1,36 +1,44 @@
 number: '015'
 word: SPEAK
-gloss: To utter words; to express thoughts, declare truth, or articulate sounds.
+gloss: To utter words to a hearer
 card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A stylized, glowing wave of golden energy rippling outward from a central point,
-  shaping chaotic dust into ordered geometric forms against a dark void.
+art_prompt: One figure seen from behind standing on a bare hillside, head bowed and
+  hands open at his sides, the empty valley below still in shadow, no other people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, cold blue dawn light with long
+  violet shadows and a pale rose horizon
 stats:
   lore: 4
   context: 5
-  complexity: 2
-ability: Name a card type. Target player reveals their hand. If it contains that type, draw
-  1.
+  complexity: 3
+ability: Choose another player; that chosen player reveals one card from that chosen
+  player's hand. Then add one card of the same COMPLEXITY as that revealed card from
+  Sheol to your hand and draw one card from the Tower.
 ot_verse:
-  ref: 1 Samuel 3:9
-  snippet: Speak, LORD, for your servant hears.
+  ref: Genesis 8:15
+  snippet: And God spake unto Noah, saying
 nt_verse:
-  ref: James 1:19
-  snippet: Let every person be quick to hear, slow to speak, slow to anger.
+  ref: Hebrews 1:1
+  snippet: God, who at sundry times and in divers manners spake in time past unto
+    the fathers
 greek:
   text: λαλέω
-  translit: laleō
+  translit: laleo
 hebrew:
   text: דָּבַר
-  translit: dābar
-ot_refs: Gen 1:3 • Ex 4:10 • Ps 33:9 • Isa 55:11 • Amos 3:8
-nt_refs: Matt 12:34 • Acts 4:20 • Eph 4:15 • Col 4:6 • 1 Pet 4:11
+  translit: dabar
+ot_refs: Gen 8:15 • Gen 12:4 • Gen 17:3
+nt_refs: Heb 1:1 • John 8:38 • Acts 2:4
 trivia:
-- The Hebrew 'dabar' means both 'word' and 'thing,' implying that speech is a concrete reality.
-- In Genesis 1, the phrase 'And God said' occurs ten times, paralleling the Ten Commandments.
-- Greek uses 'laleo' for the sound of speech and 'lego' for the logical meaning or message.
+- Genesis 1 never says God spake; it says God said - amar - and the heavier dabar
+  waits until there is a man to be addressed.
+- Because dabar means both word and thing, the ten commandments are literally the
+  ten words, and a happening can be called a word.
+- Laleo first meant to make a sound, even of animals; the New Testament raises it
+  to the utterance of the gospel.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -81,4 +89,15 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   Change the ability to “Discard an Adjective, a Noun and a Verb to gain 1 Letter.”'
 weight: 3
-weight_rationale: one speech, one language; a theme
+weight_rationale: the era runs on divine address - God spake to Adam, to Noah, to
+  Abram - which is thematic vocabulary with real teaching; the pillar word for utterance
+  is the one the set already carries, so SPEAK stays at 3 and prints UNCOMMON
+stats_rationale:
+  lore: the printed verses are God speaking to Noah out of the ark and God speaking
+    in time past to the fathers - in this era being addressed by God is the whole
+    of revelation
+  context: dabar occurs 1143 times in the Hebrew Bible; laleo occurs 296 times in
+    the New Testament; total 1439
+  complexity: the verb dabar and the noun dabar - a word and also a thing or matter
+    - are the same consonants, and Greek splits what Hebrew joins by using laleo for
+    the sounding of speech and lego for its sense

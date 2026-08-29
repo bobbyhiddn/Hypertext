@@ -1,40 +1,57 @@
 number: 018
 word: SETH
-gloss: Appointed / Compensation
+gloss: Appointed; the seed set in Abel's place
 card_type: NAME
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A young sapling growing vigorously next to a fallen, withered branch in a prehistoric
-  landscape, illuminated by a shaft of warm light, symbolizing restoration and a new lineage.
+art_prompt: A young olive shoot rising from a cracked clay jar of earth beside a low
+  stone doorway, an older snapped shoot lying dry on the step, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, deep shadowed background lit
+  by one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 2
-  context: 4
-  complexity: 2
-ability: Discard 1 card from your hand to draw 2 cards.
+  context: 1
+  complexity: 3
+ability: Look at the top two cards of the Tower. Add one of those cards to your hand
+  and put the other card on top of the Tower.
 ot_verse:
   ref: Genesis 4:25
-  snippet: God hath appointed me another seed instead of Abel, whom Cain slew.
+  snippet: 'she called his name Seth: For God, said she, hath appointed me another
+    seed'
 nt_verse:
   ref: Luke 3:38
-  snippet: Which was the son of Enos, which was the son of Seth, which was the son of Adam.
+  snippet: which was the son of Seth, which was the son of Adam
 greek:
   text: Σήθ
-  translit: Sēth
+  translit: Seth
 hebrew:
   text: שֵׁת
   translit: Sheth
-ot_refs: Gen 4:25 • Gen 5:3-8 • 1 Chr 1:1
+ot_refs: Gen 4:25 • Gen 4:26 • Gen 5:3
 nt_refs: Luke 3:38
 trivia:
-- Name means 'appointed' or 'compensation' for the loss of Abel.
-- Lived 912 years and became the ancestor of Noah and Jesus.
-- Born when Adam was 130, expressly in his father's likeness.
+- Genesis 5:3 says Adam begat a son in his own likeness, after his image - the words
+  of Genesis 1 handed down one generation.
+- In the days of Seth's son Enos men began to call upon the name of the LORD.
+- Luke's genealogy runs backward through Seth to Adam, and only there stops at the
+  son of God.
 wild_id: null
 wild_counts_as: null
 letter: null
 notes: null
 sources: []
 search_queries: []
-weight: 3
-weight_rationale: the appointed line; a named figure of the second rank
+weight: 2
+weight_rationale: a genealogy name with a stated meaning that carries the line from
+  Adam to Noah - a clear place in the era, but the patriarchs the era turns on are
+  Adam and Noah, so Seth stays at 2
+stats_rationale:
+  lore: the printed verses give a replacement son and a name in a genealogy; the line
+    matters, but no teaching hangs on Seth himself
+  context: Sheth occurs 9 times in the Hebrew Bible; Seth occurs 1 time in the New
+    Testament; total 10
+  complexity: the name is read off shath, to set or appoint, in Eve's own explanation
+    - a folk etymology built into the verse, and the same consonants elsewhere mean
+    foundation or tumult

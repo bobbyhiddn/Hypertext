@@ -1,35 +1,42 @@
 number: '013'
 word: REMEMBER
-gloss: To recall to mind; to think of and observe
+gloss: To call back to mind and act upon it
 card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A pile of twelve rough river stones stacked as a monument on a grassy bank near
-  flowing water, soft sunlight breaking through clouds, realistic oil painting style
+art_prompt: Dark floodwaters draining off a bare mountain shoulder, a long wind-track
+  combing the surface, a bent olive branch dripping over the water, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, storm light under a bruised green-grey
+  sky, one shaft of silver breaking through
 stats:
-  lore: 5
-  context: 3
-  complexity: 2
-ability: Return a card from Sheol to your hand that shares a type with a card in your Pages.
+  lore: 4
+  context: 4
+  complexity: 3
+ability: Choose up to two cards in Sheol whose card type is in one of your Pages and
+  add those chosen cards to your hand.
 ot_verse:
-  ref: Exodus 20:8
-  snippet: Remember the Sabbath day, to keep it holy.
+  ref: Genesis 8:1
+  snippet: And God remembered Noah ... and God made a wind to pass over the earth
 nt_verse:
-  ref: Luke 22:19
-  snippet: Do this in remembrance of me.
+  ref: Luke 23:42
+  snippet: Lord, remember me when thou comest into thy kingdom
 greek:
   text: μνάομαι
-  translit: Mnaomai
+  translit: mnaomai
 hebrew:
   text: זָכַר
-  translit: Zakar
-ot_refs: Gen 9:15 • Ex 20:8 • Josh 4:7 • Ps 105:8
-nt_refs: Luke 22:19 • Acts 20:35 • Gal 2:10 • Rev 2:5
+  translit: zakar
+ot_refs: Gen 8:1 • Gen 9:15 • Gen 19:29
+nt_refs: Luke 23:42 • Matt 26:75 • Acts 10:31
 trivia:
-- The Hebrew word 'zakar' implies acting on a memory, not just recalling it.
-- God 'remembering' Noah or Rachel signaled His immediate intervention to save them.
-- Joshua set up twelve stones from the Jordan River as a physical sign for future generations.
+- Genesis 8:1 is the exact centre of the flood account; everything before it rises
+  and everything after it falls.
+- God remembers Noah, then Abraham, then Rachel - in each case the next word is an
+  action, never a thought.
+- The bow in the cloud is set there so that God may look upon it and remember; the
+  sign is for the one who gave it.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -71,4 +78,14 @@ search_queries:
 - biblical definition of remember
 - Exodus 20:8 text
 weight: 3
-weight_rationale: God remembered Noah - thematic; demoted 2026-08-28 (user)
+weight_rationale: God remembering Noah is the hinge the flood turns on and remembering
+  the covenant is how the era's promises hold - thematic vocabulary with real teaching,
+  while the pillar itself is COVENANT, so REMEMBER stays at 3
+stats_rationale:
+  lore: the printed verses turn the flood by God remembering Noah and answer a dying
+    thief who asks to be remembered - in this era remembering is the act that saves
+  context: zakar occurs 235 times in the Hebrew Bible; mnaomai occurs 21 times in
+    the New Testament; total 256
+  complexity: 'zakar never means mere recollection: God remembering is God acting,
+    and the noun zikkaron is a memorial object, so translators must decide between
+    mind and deed'

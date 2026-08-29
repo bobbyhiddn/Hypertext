@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-01-26 14:25:16
-Phase: imagegen
+Timestamp: 2026-08-29 09:41:35
+Phase: rebuild
 Target Rarity: UNCOMMON
 Target Type: NAME
 Fix Mode: False
 
-Style References (2 total):
-  [1] templates/example_cards/014-david/outputs/card_1024x1536.png [UNCOMMON] (TEMPLATE)
-  [2] templates/card/v001/uncommon/template_1024x1536.png
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/name/uncommon/template_1024x1536.png [UNCOMMON] sha256=1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275
 
 Prompt File: series/2026-Q1/cards/022-shem/prompt.txt

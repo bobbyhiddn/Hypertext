@@ -3,16 +3,16 @@
 ![FORM card](./outputs/card_1024x1536.png)
 
 ## Word
-**FORM** — To shape, fashion, or mold into a specific state of being; to give external appearance or internal character.
+**FORM** — To shape or mould as a potter shapes clay
 
 ## Old Testament
-> Genesis 2:7 — "And the Lord God formed man of the dust of the ground, and breathed into his nostrils the breath of life."
+> Genesis 2:7 — "And the LORD God formed man of the dust of the ground"
 
 ## New Testament
-> Galatians 4:19 — "My little children, of whom I travail in birth again until Christ be formed in you..."
+> Galatians 4:19 — "until Christ be formed in you"
 
 ## Trivia
-- The Hebrew 'yatsar' implies the squeezing of clay into shape, depicting God as a potter.
-- Paul uses 'morphoō' to describe spiritual maturity as the internal shaping of Christ within a believer.
-- In Genesis, 'formed' (yatsar) is distinct from 'created' (bara), emphasizing the use of existing material (dust).
+- Genesis 2:19 forms the beasts from the ground with the same verb it used for the man; only the man receives the breath of life.
+- Yatsar is written with a doubled letter in Genesis 2:7 that the rabbis read as two formations - one for this world and one for the next.
+- Isaiah turns the verb into the potter and clay argument that Paul takes up in Romans 9.
 

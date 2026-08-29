@@ -3,16 +3,16 @@
 ![SPEAK card](./outputs/card_1024x1536.png)
 
 ## Word
-**SPEAK** — To utter words; to express thoughts, declare truth, or articulate sounds.
+**SPEAK** — To utter words to a hearer
 
 ## Old Testament
-> 1 Samuel 3:9 — "Speak, LORD, for your servant hears."
+> Genesis 8:15 — "And God spake unto Noah, saying"
 
 ## New Testament
-> James 1:19 — "Let every person be quick to hear, slow to speak, slow to anger."
+> Hebrews 1:1 — "God, who at sundry times and in divers manners spake in time past unto the fathers"
 
 ## Trivia
-- The Hebrew 'dabar' means both 'word' and 'thing,' implying that speech is a concrete reality.
-- In Genesis 1, the phrase 'And God said' occurs ten times, paralleling the Ten Commandments.
-- Greek uses 'laleo' for the sound of speech and 'lego' for the logical meaning or message.
+- Genesis 1 never says God spake; it says God said - amar - and the heavier dabar waits until there is a man to be addressed.
+- Because dabar means both word and thing, the ten commandments are literally the ten words, and a happening can be called a word.
+- Laleo first meant to make a sound, even of animals; the New Testament raises it to the utterance of the gospel.
 

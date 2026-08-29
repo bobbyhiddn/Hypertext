@@ -1,35 +1,44 @@
 number: '021'
 word: BROTHER
-gloss: A male sibling; a kinsman; a fellow member of a covenant, faith, or shared struggle.
+gloss: A kinsman; one who shares your kind
 card_type: TITLE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Two rugged figures clasping forearms in a desert landscape, symbolizing loyalty
-  and strength in hard times; warm, dusty lighting, no text.
+art_prompt: Two shepherds' staffs leaning together against a boundary stone where
+  a track divides into two ways, the dust of a flock hanging over each way, no people,
+  luminous cinematic oil painting with impressionistic brushwork, saturated full colour,
+  a strong symbolic subject, no engraving or line art, deep shadowed background lit
+  by one radiant golden light source, rich saturated blues and golds
 stats:
-  lore: 4
-  context: 4
-  complexity: 2
-ability: Choose another player. You both draw 1.
+  lore: 3
+  context: 5
+  complexity: 3
+ability: Reveal the top three cards of the Tower. Add one revealed card whose card
+  type is in your Lot to your hand and put each other revealed card on top of the
+  Tower.
 ot_verse:
-  ref: Proverbs 17:17
-  snippet: A friend loves at all times, and a brother is born for adversity.
+  ref: Genesis 13:8
+  snippet: let there be no strife, I pray thee, between me and thee ... for we be
+    brethren
 nt_verse:
   ref: Hebrews 2:11
-  snippet: For which cause he is not ashamed to call them brothers.
+  snippet: for which cause he is not ashamed to call them brethren
 greek:
   text: ἀδελφός
   translit: adelphos
 hebrew:
   text: אָח
   translit: ach
-ot_refs: Gen 4:8 • Prov 17:17 • Ps 133:1 • Gen 45:4
-nt_refs: Matt 12:50 • Heb 2:11 • 1 John 3:16 • Rom 12:10
+ot_refs: Gen 13:8 • Gen 4:8 • Gen 9:22
+nt_refs: Heb 2:11 • 1 John 3:12 • Matt 5:24
 trivia:
-- 'The first murder in history was fratricide: Cain killed Abel.'
-- Jesus redefined family, calling those who do God's will His brothers.
-- Hebrew 'ach' implies blood ties or covenant loyalty.
+- Adelphos is literally from one womb - a-delphys - which is why the New Testament
+  has to stretch it to cover the church.
+- Genesis 4 calls Abel his brother seven times in six verses; the word is repeated
+  until the murder is unmistakably fratricide.
+- Lot is Abram's nephew, yet Abram calls him brother - kinship in Genesis names the
+  bond, not the exact degree.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -64,5 +73,15 @@ search_queries:
 - Hebrews 2:11 not ashamed to call them brothers
 - Bible trivia first brothers
 - Greek word for Brother
-weight: 3
-weight_rationale: Cain and Abel; a theme
+weight: 2
+weight_rationale: the era's first murder and Noah's three sons are told in the language
+  of brothers, but the word is a relation rather than a named agent or event, so it
+  stays at 2 and prints COMMON
+stats_rationale:
+  lore: the printed verses set Abram's peace with Lot beside the one who is not ashamed
+    to call us brethren - a recognized theme with clear teaching
+  context: ach occurs 629 times in the Hebrew Bible; adelphos occurs 343 times in
+    the New Testament; total 972
+  complexity: ach stretches from a blood brother to a nephew, a neighbour and a whole
+    nation - Lot is called Abram's brother though he is his brother's son - and adelphos
+    inherits the stretch

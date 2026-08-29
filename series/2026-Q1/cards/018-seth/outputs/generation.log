@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-01-19 05:33:37
-Phase: imagegen
+Timestamp: 2026-08-29 09:31:27
+Phase: revise-image-only
 Target Rarity: COMMON
 Target Type: NAME
-Fix Mode: False
+Fix Mode: True
 
 Style References (2 total):
-  [1] templates/example_cards/013-moses/outputs/card_1024x1536.png [COMMON] (TEMPLATE)
-  [2] templates/card/v001/common/template_1024x1536.png
+  [1] CURRENT_CARD: series/2026-Q1/cards/018-seth/outputs/reference-inputs/current-01370b4634969b22a2518ca7bba0130311da94018776e9b4982cac2c98db594a.png [COMMON] sha256=01370b4634969b22a2518ca7bba0130311da94018776e9b4982cac2c98db594a
+  [2] TEMPLATE: templates/card/v001/composed/name/common/template_1024x1536.png [COMMON] sha256=70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151
 
-Prompt File: series/2026-Q1/cards/018-seth/prompt.txt
+Prompt File: series/2026-Q1/cards/018-seth/outputs/prompt.revision.txt

@@ -1,41 +1,42 @@
 number: '012'
 word: FORM
-gloss: To shape, fashion, or mold into a specific state of being; to give external appearance
-  or internal character.
+gloss: To shape or mould as a potter shapes clay
 card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Ethereal hands of light emerging from darkness, gently molding a swirling cloud
-  of dust and clay into a glowing geometric vessel. Abstract, mystical style, deep earth tones
-  and bright highlights.
+art_prompt: A potter's workbench in a shuttered workshop, a half-shaped figure of
+  wet red clay standing on the wheel, a bowl of grey slip and a drift of dry dust
+  across the boards, no people, luminous cinematic oil painting with impressionistic
+  brushwork, saturated full colour, a strong symbolic subject, no engraving or line
+  art, night under a lantern, a warm amber pool of light in deep indigo dark
 stats:
   lore: 4
   context: 3
-  complexity: 2
-ability: Return a NOUN from Sheol to your hand.
+  complexity: 4
+ability: Add one card from the top of the Tower to your hand. Then choose one card
+  in Sheol of that added card's card type and add that chosen card to your hand.
 ot_verse:
   ref: Genesis 2:7
-  snippet: And the Lord God formed man of the dust of the ground, and breathed into his nostrils
-    the breath of life.
+  snippet: And the LORD God formed man of the dust of the ground
 nt_verse:
   ref: Galatians 4:19
-  snippet: My little children, of whom I travail in birth again until Christ be formed in
-    you...
+  snippet: until Christ be formed in you
 greek:
   text: μορφόω
-  translit: morphoō
+  translit: morphoo
 hebrew:
   text: יָצַר
   translit: yatsar
-ot_refs: Gen 2:7 • Isa 45:7 • Jer 18:6 • Isa 64:8
-nt_refs: Gal 4:19 • Rom 9:20 • Phil 2:6-7 • 1 Tim 2:13
+ot_refs: Gen 2:7 • Gen 2:8 • Gen 2:19
+nt_refs: Gal 4:19
 trivia:
-- The Hebrew 'yatsar' implies the squeezing of clay into shape, depicting God as a potter.
-- Paul uses 'morphoō' to describe spiritual maturity as the internal shaping of Christ within
-  a believer.
-- In Genesis, 'formed' (yatsar) is distinct from 'created' (bara), emphasizing the use of
-  existing material (dust).
+- Genesis 2:19 forms the beasts from the ground with the same verb it used for the
+  man; only the man receives the breath of life.
+- Yatsar is written with a doubled letter in Genesis 2:7 that the rabbis read as two
+  formations - one for this world and one for the next.
+- Isaiah turns the verb into the potter and clay argument that Paul takes up in Romans
+  9.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -43,4 +44,15 @@ notes: null
 sources: []
 search_queries: []
 weight: 3
-weight_rationale: God formed man; a theme
+weight_rationale: the potter's verb of Genesis 2:7 and of Christ formed in you - thematic
+  vocabulary with real teaching; the era's making is carried by CREATE, so FORM stays
+  at 3 rather than taking a RARE slot
+stats_rationale:
+  lore: the printed verses give the making of man from dust and Christ formed in a
+    people - the era's account of what a human being is rests on this verb
+  context: yatsar occurs 63 times in the Hebrew Bible; morphoo occurs 1 time in the
+    New Testament; total 64
+  complexity: yatsar is the potter's verb, and its noun yetser is the imagination
+    of the heart that Genesis 6:5 calls evil continually - the same root names both
+    the shaping and the thing shaped, and morphoo carries the argument about form
+    and nature into Greek

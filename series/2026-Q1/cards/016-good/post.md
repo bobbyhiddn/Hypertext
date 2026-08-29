@@ -3,16 +3,16 @@
 ![GOOD card](./outputs/card_1024x1536.png)
 
 ## Word
-**GOOD** — Morally excellent; virtuous; satisfactory; beneficial.
+**GOOD** — Fit for its purpose; approved on sight
 
 ## Old Testament
-> Genesis 1:31 — "God saw all that he had made, and it was very good."
+> Genesis 1:31 — "God saw every thing that he had made, and, behold, it was very good"
 
 ## New Testament
-> 1 Thessalonians 5:21 — "Test them all; hold on to what is good."
+> Matthew 19:17 — "there is none good but one, that is, God"
 
 ## Trivia
-- Hebrew 'tov' implies functional harmony, not just moral purity.
-- God pronounces creation 'good' seven times in Genesis 1.
-- Jesus declared that 'No one is good—except God alone.'
+- Six days are called good; only the sixth is called very good, and only one thing in Eden is called not good - that the man should be alone.
+- The tree of the knowledge of good and evil sets tov against ra, the only pairing in Genesis where knowing is forbidden.
+- Greek splits the word Hebrew keeps whole: agathos is good in worth, kalos good to look at, and the Septuagint chooses between them verse by verse.
 

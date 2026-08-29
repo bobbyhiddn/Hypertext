@@ -1,12 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-01-16 13:17:23
-Phase: imagegen
+Timestamp: 2026-08-29 09:28:11
+Phase: revise-image-only
 Target Rarity: COMMON
 Target Type: ADJECTIVE
-Fix Mode: False
+Fix Mode: True
 
 Style References (2 total):
-  [1] templates/example_cards/009-holy/outputs/card_1024x1536.png [COMMON] (TEMPLATE)
-  [2] templates/card/v001/common/template_1024x1536.png
+  [1] CURRENT_CARD: series/2026-Q1/cards/016-good/outputs/reference-inputs/current-fc43ea2677cadb1d659c44f029eb466fb6c41bd09596327f68ec7a98c2068bec.png [COMMON] sha256=fc43ea2677cadb1d659c44f029eb466fb6c41bd09596327f68ec7a98c2068bec
+  [2] TEMPLATE: templates/card/v001/composed/adjective/common/template_1024x1536.png [COMMON] sha256=93daa0a327ad2d788158a496ef8d4b94ecd72ce9d0c2ac20236c416df694628c
 
-Prompt File: series/2026-Q1/cards/016-good/prompt.txt
+Prompt File: series/2026-Q1/cards/016-good/outputs/prompt.revision.txt

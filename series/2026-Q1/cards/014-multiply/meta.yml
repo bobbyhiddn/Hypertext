@@ -1,38 +1,42 @@
 number: '014'
 word: MULTIPLY
-gloss: To increase in number or quantity; to reproduce and grow abundantly.
+gloss: To become many; to increase and fill
 card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A simple woven basket containing five loaves and two fish, but the food is glowing
-  and spilling over the edges, cascading into a massive mountain of bread and fish that fills
-  the entire frame with golden abundance.
+art_prompt: A dune of pale sand under a night sky crowded with stars, a single handful
+  of grain spilled across the crest, a worn threshing floor below, no people, luminous
+  cinematic oil painting with impressionistic brushwork, saturated full colour, a
+  strong symbolic subject, no engraving or line art, moonlit silver-blue with water
+  and stone picked out in cool highlights
 stats:
   lore: 4
-  context: 2
-  complexity: 2
-ability: Discard 1 card. Draw 2 cards. If you discarded a VERB, draw 3 instead.
+  context: 4
+  complexity: 3
+ability: Discard one card with CONTEXT four or more from your hand into Sheol. Then
+  gain one Letter.
 ot_verse:
   ref: Genesis 22:17
-  snippet: I will multiply your seed as the stars of the heaven, and as the sand which is
-    upon the sea shore.
+  snippet: in blessing I will bless thee, and in multiplying I will multiply thy seed
 nt_verse:
-  ref: Acts 6:7
-  snippet: And the word of God increased; and the number of the disciples multiplied in Jerusalem
-    greatly.
+  ref: Hebrews 6:14
+  snippet: Surely blessing I will bless thee, and multiplying I will multiply thee
 greek:
   text: πληθύνω
-  translit: plēthynō
+  translit: plethyno
 hebrew:
   text: רָבָה
   translit: rabah
-ot_refs: Gen 1:22 • Gen 9:1 • Ex 1:12 • Deut 8:13
-nt_refs: Matt 14:17 • Acts 9:31 • 2 Cor 9:10 • Heb 6:14
+ot_refs: Gen 22:17 • Gen 1:22 • Gen 9:7
+nt_refs: Heb 6:14 • Acts 6:7 • 2 Cor 9:10
 trivia:
-- The first command given to humanity in Genesis 1:28.
-- Used to describe the miracle of the loaves and fishes.
-- Often describes the rapid growth of the early church in Acts.
+- The blessing to be fruitful and multiply is given to the fish and birds before it
+  is ever given to man.
+- After the flood the blessing is repeated to Noah twice in one chapter, as if the
+  world were being started again.
+- Hebrews 6:14 keeps the Hebrew doubling in Greek - blessing I will bless, multiplying
+  I will multiply - rather than smoothing it into an adverb.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -71,4 +75,14 @@ search_queries:
 - Acts 6:7 greek snippet
 - Genesis 22:17 hebrew snippet
 weight: 3
-weight_rationale: the creation blessing; a theme
+weight_rationale: be fruitful and multiply is spoken at creation, again after the
+  flood and again to Abram - thematic vocabulary with real teaching behind it; the
+  promise itself is carried by COVENANT and SEED, so MULTIPLY stays at 3
+stats_rationale:
+  lore: the printed verses are the oath sworn to Abraham and the letter that quotes
+    it back - the era's promise is stated in this verb
+  context: rabah occurs 229 times in the Hebrew Bible; plethyno occurs 12 times in
+    the New Testament; total 241
+  complexity: Genesis 22:17 doubles the verb - harbah arbeh, in multiplying I will
+    multiply - an infinitive absolute that Hebrews 6:14 keeps word for word in Greek,
+    so the strangeness of the English is a deliberate carry-over

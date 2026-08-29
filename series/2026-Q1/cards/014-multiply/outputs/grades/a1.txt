@@ -1,0 +1,16 @@
+============================================================
+GRADE RESULT: MULTIPLY
+============================================================
+Score: 0/100 (content: 85/100)
+Status: FAIL
+Style Match: False
+Style Issue: Placeholder square brackets remain around text sections, and the title contains an unintended spacing error ('MUL D TIPLY'). Refs label missing: OT Refs label missing (line reads: '[ OT Refs: Gen 22:17 • Gen 1:22 • Gen 9:7 ]'); NT Refs label missing (line reads: '[ NT Refs: Heb 6:14 • Acts 6:7 • 2 Cor 9:10 ]')
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Fix title text from 'MUL D TIPLY' to 'MULTIPLY' and resolve text garbling in the title area.
+  - OT Refs label missing (line reads: '[ OT Refs: Gen 22:17 • Gen 1:22 • Gen 9:7 ]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - NT Refs label missing (line reads: '[ NT Refs: Heb 6:14 • Acts 6:7 • 2 Cor 9:10 ]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - Fix the ability text to read exactly: 'Discard one card with CONTEXT four or more from your hand into Sheol. Then gain one Letter.' (it currently reads: '[Discard one card with CONTEXT four or more from your hand into Sheol. Then gain one Letter.]').
+============================================================

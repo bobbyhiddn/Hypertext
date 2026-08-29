@@ -1,0 +1,117 @@
+{
+  "contract": "hypertext.full-card-generation-provenance/v1",
+  "output": {
+    "gemini_output_sha256": "16601eda52b29577350a2a44f763c691aa4381228b86351257982352f85a3d66",
+    "generation_metadata_path": "series/2026-Q1/cards/017-nation/outputs/generation.json",
+    "generation_metadata_sha256": "212931ef93f461c4863ed404a2a481894ac6f4df4fee36cd618dbbaae548dfa9",
+    "path": "series/2026-Q1/cards/017-nation/outputs/card_1024x1536.png",
+    "sha256": "d53ed42bd4c0d1e77fe97d1c146e26e2ea695bd3a342a244bcbcb107ac767383"
+  },
+  "prompt": {
+    "path": "series/2026-Q1/cards/017-nation/prompt.txt",
+    "sha256": "e975b73b343fc51821924778b3f1af860a6ef5f42e8717c458ce266e6dd2825e"
+  },
+  "recipe": {
+    "canonical_sha256": "8f67f5d7097bf62d77a2fe1b4c2735243c4a4993c7adde0fed6af79fda0d3c4f",
+    "file_sha256": "86519c3792af3579a4064ed710ecbbd6c32bc9899000477b4b5382130628bbee",
+    "path": "series/2026-Q1/cards/017-nation/card.json"
+  },
+  "reference_pack": {
+    "candidate_audit": [
+      {
+        "actual_sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+        "card_type": "NAME",
+        "eligibility_reasons": [
+          "status=retired",
+          "legacy!=false",
+          "target_type_mismatch=NAME",
+          "target_rarity_mismatch=COMMON"
+        ],
+        "eligible": false,
+        "id": "013-moses",
+        "metadata_path": "templates/example_cards/013-moses/meta.yml",
+        "metadata_sha256": "b7c271b57eb61036934ca9e5be692948cf5f44082a18068ac7c3e05e8f4d5fb6",
+        "path": "templates/example_cards/013-moses/outputs/card_1024x1536.png",
+        "prompt_path": "templates/example_cards/013-moses/prompt.txt",
+        "prompt_sha256": "c5434bcc218c686070760b69cefe56da389bad8df8e5330c0375e7155d6d0337",
+        "rarity": "COMMON",
+        "recipe_path": "templates/example_cards/013-moses/card.json",
+        "recipe_sha256": "63a2dd7037c9e83e7a5853c4424d557cf982659a04def4fc4a36f4bf980d9cc4",
+        "review_evidence_path": "templates/example_cards/013-moses/grade.json",
+        "review_evidence_sha256": "0cb7ea8b45df6d83032466d6cdf5baca6de8842996be19b504e50ee9f81a42ff",
+        "selected": false,
+        "sha256": "01abdb0b6efa54dc3ab3238533058f034f760f89432ed84a0642a37aafef36f7",
+        "similarity_components": {},
+        "similarity_reason": "not_scored_ineligible",
+        "similarity_score": null,
+        "source_manifest": "templates/card/v001/finished-card-references.json",
+        "source_manifest_sha256": "4047bec6c414d76dd2fd4ec45334f28d6b79a0143f2b285e7a78986b458f87f5"
+      }
+    ],
+    "contract": "hypertext.gemini.reference-pack/v1",
+    "max_examples": 3,
+    "mode": "generate",
+    "references": [
+      {
+        "assigned_role": "template",
+        "card_type": "NOUN",
+        "eligibility_reasons": [
+          "operator_accepted_canonical_manifest",
+          "exact_type_rarity_cell",
+          "sha256=verified"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NOUN UNCOMMON structural layout/frame reference",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "UNCOMMON",
+        "rarity_label": "UNCOMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "template",
+        "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
+        "similarity_components": {},
+        "similarity_reason": "authoritative_structure_not_ranked",
+        "similarity_score": 0,
+        "source_manifest": "templates/card/v001/composed/manifest.json",
+        "source_manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+        "template_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
+        "template_manifest_schema_version": 3,
+        "template_manifest_status": "operator-accepted-canonical",
+        "template_version": "v001"
+      }
+    ],
+    "repo_root": "/home/cap/Code/Hypertext",
+    "selection_contract": "exact type+rarity eligibility; accepted, finished, nonlegacy, nonsuperseded, SHA-256-verified assets only; rank by 35% art tokens + 30% semantic content + 20% serialized prompt tokens + 15% stat proximity; break ties by SHA-256 then path",
+    "target_rarity": "UNCOMMON",
+    "target_type": "NOUN"
+  },
+  "reference_pack_path": "series/2026-Q1/cards/017-nation/outputs/reference-pack.json",
+  "reference_pack_sha256": "1f3d35649624190071ba9d660f30951e18be06526f43d9b75431ccb9e4e885d5",
+  "settings": {
+    "aspect_ratio": "2:3",
+    "full_card_generation": true,
+    "guidance_scale": null,
+    "image_size": "2K",
+    "max_example_references": 3,
+    "mode": "generate",
+    "model": "gemini-3.1-flash-image",
+    "num_inference_steps": null,
+    "phase": "rebuild",
+    "reference_count": 1,
+    "response_modalities": [
+      "IMAGE"
+    ]
+  },
+  "target": {
+    "card_type": "NOUN",
+    "rarity": "UNCOMMON"
+  }
+}

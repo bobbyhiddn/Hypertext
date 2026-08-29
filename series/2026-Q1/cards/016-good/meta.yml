@@ -1,35 +1,42 @@
 number: '016'
 word: GOOD
-gloss: Morally excellent; virtuous; satisfactory; beneficial.
+gloss: Fit for its purpose; approved on sight
 card_type: ADJECTIVE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A warm, golden light illuminating a basket of ripe, perfect figs and pomegranates
-  sitting on a rough stone table, soft shadows, oil painting style
+art_prompt: A green valley heavy with ripe fruit trees, long grass and low fig branches,
+  small birds turning over the slope, no people, luminous cinematic oil painting with
+  impressionistic brushwork, saturated full colour, a strong symbolic subject, no
+  engraving or line art, hard white noon glare, bleached ochre ground and short black
+  shadows
 stats:
-  lore: 2
+  lore: 4
   context: 5
-  complexity: 1
-ability: Draw 2, then discard 1.
+  complexity: 3
+ability: Look at the top three cards of the Tower. Add one of those cards that has
+  LORE three or more to your hand and put the other cards on the bottom of the Tower.
 ot_verse:
   ref: Genesis 1:31
-  snippet: God saw all that he had made, and it was very good.
+  snippet: God saw every thing that he had made, and, behold, it was very good
 nt_verse:
-  ref: 1 Thessalonians 5:21
-  snippet: Test them all; hold on to what is good.
+  ref: Matthew 19:17
+  snippet: there is none good but one, that is, God
 greek:
   text: ἀγαθός
   translit: agathos
 hebrew:
   text: טוֹב
   translit: tov
-ot_refs: Gen 1:4 • Ps 34:8 • Mic 6:8 • Nah 1:7
-nt_refs: Matt 19:17 • Rom 8:28 • Gal 6:10 • 3 John 1:11
+ot_refs: Gen 1:31 • Gen 1:4 • Gen 2:18
+nt_refs: Matt 19:17 • Matt 7:17 • Rom 12:21
 trivia:
-- Hebrew 'tov' implies functional harmony, not just moral purity.
-- God pronounces creation 'good' seven times in Genesis 1.
-- Jesus declared that 'No one is good—except God alone.'
+- Six days are called good; only the sixth is called very good, and only one thing
+  in Eden is called not good - that the man should be alone.
+- The tree of the knowledge of good and evil sets tov against ra, the only pairing
+  in Genesis where knowing is forbidden.
+- 'Greek splits the word Hebrew keeps whole: agathos is good in worth, kalos good
+  to look at, and the Septuagint chooses between them verse by verse.'
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -56,5 +63,15 @@ search_queries:
 - greek word for good agathos vs kalos bible
 - hebrew word for good tov occurrences
 - trivia about the word good in the bible
-weight: 3
-weight_rationale: '"and it was good"; a theme'
+weight: 2
+weight_rationale: the refrain of the creation week and the name of the forbidden tree
+  - a descriptive word with a clear place in the era, not a named agent or event,
+  so it stays at 2 and prints COMMON
+stats_rationale:
+  lore: the printed verses are the verdict on the whole creation and the verdict that
+    none is good but God - the era's judgment of worth rests on this word
+  context: tov occurs 559 times in the Hebrew Bible; agathos occurs 102 times in the
+    New Testament; total 661
+  complexity: tov covers good, pleasant, fit and beautiful in one adjective, and the
+    tree of the knowledge of good and evil pairs it with ra - a range a translator
+    must choose within

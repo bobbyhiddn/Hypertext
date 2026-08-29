@@ -1,0 +1,22 @@
+============================================================
+GRADE RESULT: KEEPER
+============================================================
+Score: 0/100 (content: 90/100)
+Status: FAIL
+Style Match: False
+Style Issue: Refs label missing: OT Refs label missing (line reads: '[OT CITATIONS]'); NT Refs label missing (line reads: 'NT CITATIONS') Template placeholder leak: ABILITY DESCRIPTION HERE (Ability section); VERSE CITATION AND TEXT HERE (OT Verse section); VERSE CITATION AND TEXT HERE (NT Verse section); HEBREW WORD (Hebrew/Aramaic section); OT CITATIONS (Hebrew/Aramaic section); GREEK WORD (Greek section); TRIVIA POINT (Trivia section)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - OT Refs label missing (line reads: '[OT CITATIONS]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - NT Refs label missing (line reads: 'NT CITATIONS'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - Remove the template placeholder text ABILITY DESCRIPTION HERE (Ability section); replace the slot with the supplied content only.
+  - Remove the template placeholder text VERSE CITATION AND TEXT HERE (OT Verse section); replace the slot with the supplied content only.
+  - Remove the template placeholder text VERSE CITATION AND TEXT HERE (NT Verse section); replace the slot with the supplied content only.
+  - Remove the template placeholder text HEBREW WORD (Hebrew/Aramaic section); replace the slot with the supplied content only.
+  - Remove the template placeholder text OT CITATIONS (Hebrew/Aramaic section); replace the slot with the supplied content only.
+  - Remove the template placeholder text GREEK WORD (Greek section); replace the slot with the supplied content only.
+  - Remove the template placeholder text TRIVIA POINT (Trivia section); replace the slot with the supplied content only.
+  - Fix the ability text to read exactly: 'Look at the top three cards of the Tower. Add one of those cards whose card type is in your Lot to your hand, put the other cards on the bottom of the Tower; then gain one Letter.' (it currently reads: '[ABILITY DESCRIPTION HERE]').
+============================================================

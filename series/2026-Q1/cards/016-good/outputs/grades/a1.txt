@@ -1,0 +1,13 @@
+============================================================
+GRADE RESULT: GOOD
+============================================================
+Score: 0/100 (content: 100/100)
+Status: FAIL
+Style Match: False
+Style Issue: none Template placeholder leak: DEFINITION TEXT (Below the card title GOOD, above the definition)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove the template placeholder text DEFINITION TEXT (Below the card title GOOD, above the definition); replace the slot with the supplied content only.
+============================================================
