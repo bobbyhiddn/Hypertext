@@ -5,18 +5,17 @@ card_type: ADJECTIVE
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A knotted sounding line with a stone weight descending into deep blue-black
-  water, one radiant golden shaft of light from far above striking the stone and the
-  line while the depths around fall into shadow, dim dark silhouettes of great sea
-  creatures below, warm gold against the dark, luminous cinematic oil painting with
-  impressionistic brushwork, deep shadowed background, one radiant golden light source,
-  rich saturated blues and golds
+art_prompt: A knotted sounding line with a stone weight descending into deep blue-black water,
+  one radiant golden shaft of light from far above striking the stone and the line while the
+  depths around fall into shadow, dim dark silhouettes of great sea creatures below, warm
+  gold against the dark, luminous cinematic oil painting with impressionistic brushwork, deep
+  shadowed background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 2
   complexity: 2
-ability: Choose up to three cards in Sheol that each have COMPLEXITY three or more.
-  Add those chosen cards to your hand.
+ability: Look at the bottom four cards of the Tower. Add up to three of those cards to your
+  hand, put the other cards into Sheol, and then draw one card from the Tower.
 ot_verse:
   ref: Proverbs 20:5
   snippet: is like deep water
@@ -32,14 +31,14 @@ hebrew:
 ot_refs: Prov 20:5 • Job 12:22 • Ps 64:6
 nt_refs: John 4:11 • Acts 20:9 • Luke 24:1
 trivia:
-- Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words for the primeval
-  sea.
+- Hebrew tehom, the deep of Genesis 1:2, echoes the ancient words for the primeval sea.
 - Psalm 42:7 lets one deep call to another - flood and grief in a single image.
 - Greek bathys survives in English bathysphere, the vessel built to visit the deep.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+ / RARE
+  3+ / GLORIOUS wild).
 sources: []
 search_queries: []
 stats_rationale:

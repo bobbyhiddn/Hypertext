@@ -14,7 +14,7 @@
     },
     "35": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100. Re-rendered 2026-08-28 in the standard style (the face had been the alternate deep-sea render); 100/100 3-0."
+      "note": "DEEP ADJECTIVE/RARE v3 (power ladder): \"Look at the bottom four cards of the Tower. Add up to three of those cards to your hand, put the other cards into Sheol, and then draw one card from the Tower.\" 100/100 3-0."
     },
     "36": {
       "status": "pass",
@@ -30,7 +30,7 @@
     },
     "39": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "KINGDOM NOUN/GLORIOUS v2 (wild): \"Each player returns that player's Lot to the Lots and reveals a new Lot from the Lots. Then choose up to four cards in Sheol and add those chosen cards to your hand.\" 100/100 3-0."
     },
     "40": {
       "status": "pass",
@@ -62,7 +62,7 @@
     },
     "47": {
       "status": "pass",
-      "note": "Stats rescored to rubric; fixed elements stamped (pips, pill, number, footer); judge 100/100."
+      "note": "REDEEMER TITLE/RARE v2 (power ladder): \"Choose up to four cards in Sheol and add those chosen cards to your hand. Then put one card from your hand on top of the Tower and put one card from your hand into Sheol.\" 100/100 3-0."
     },
     "48": {
       "status": "pass",
@@ -102,7 +102,7 @@
     },
     "57": {
       "status": "pass",
-      "note": "DISCORD NOUN/RARE. Chosen player puts two cards into Sheol; draw two. Stats 3/2/3 (madon x23 + eris x9). Passed first render, 100/100 3-0."
+      "note": "DISCORD NOUN/RARE v2 (power ladder): \"Each player reveals one card from that player's hand. Then choose another player; that chosen player puts two cards from that chosen player's hand into Sheol, and draw three cards from the Tower.\" 100/100 3-0."
     },
     "58": {
       "status": "pass",
@@ -253,6 +253,10 @@
     {
       "when": "2026-08-28",
       "what": "ABILITY SPEC + GRAMMAR built from the user's decisions on the Ability Options artifact: docs/ability-grammar.md and schema/ability_grammar.yml (ABILITY := [COST] CORE [KICKER] [CONDITION] [TIMING]); ability_grammar.classify + 'hypertext grammar-check' (all 30 current abilities classify; legacy do not). Rulings in docs/rules.md \u00a7 Abilities: 'your Lot / another player's Lot' instead of a new term; Pages keep their value and may have a card returned; activate = resolve as if revealed, printed cost paid, back to Sheol, no chaining; record/redeem deferred; COMMONs may reveal, take a bare type filter, and rhyme. Estimator: costs count (hand card 1, Letter 3, Page 5 units; one payoff step per three units) so 'Gain a Letter, discard three' is UNCOMMON and a Page-discard buys a five-card Sheol pull at RARE; reveal-reach vs material-reach for 'each player'; UNCOMMON interaction 0-2 (UNCOMMON, RARE, GLORIOUS may interact with opponents; COMMON never); 'gain N Letters' with word numbers."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "POWER LADDER (user: 'the current glorious power level should be rare, rare should be uncommon'; GLORIOUS 'should be able to do some pretty wild things given the right cost'). Budgets shifted a step: COMMON payoff 1; UNCOMMON payoff 2-3 total 5-8; RARE payoff 3 total 9-14 with layering; GLORIOUS payoff 4 - the wild step (gross gain >= 5, every player's material moved with a 3+ gain, or a structure bent: Tower reset, activate from Sheol, Lots renewed, a Page burned), judged on gross gain so a big cost buys it. Audit found 8 current cards below tier. Redesigned and re-rendered at 100/100 3-0: DEEP, REDEEMER, DISCORD (RARE) and KINGDOM (GLORIOUS: every player renews a Lot, then four from Sheol). HOVER already reaches the wild step (five off a Page). Pending the user's go: five UNCOMMONs that price as COMMON (SODOM, CHOOSE, DESTROYER, MESSENGER, ASCEND)."
     }
   ]
 }

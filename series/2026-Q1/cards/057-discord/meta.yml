@@ -5,26 +5,26 @@ card_type: NOUN
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A great unfinished brick tower at dusk with its wooden scaffolds splitting
-  apart, cracked bricks tumbling from the ramps, torn banners whipped in opposite
-  directions by a rising wind, one radiant golden light breaking through the storm
-  clouds above, no people, luminous cinematic oil painting with impressionistic brushwork,
-  deep shadowed background, one radiant golden light source, rich saturated blues
-  and golds
+art_prompt: A great unfinished brick tower at dusk with its wooden scaffolds splitting apart,
+  cracked bricks tumbling from the ramps, torn banners whipped in opposite directions by a
+  rising wind, one radiant golden light breaking through the storm clouds above, no people,
+  luminous cinematic oil painting with impressionistic brushwork, deep shadowed background,
+  one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 2
   complexity: 3
 stats_rationale:
-  lore: strife among brethren is a recognized wisdom theme (Proverbs) and the moral
-    shape of Babel's confusion; not a doctrine in itself
-  context: madon occurs 23 times in the Hebrew Bible; eris occurs 9 times in the New
-    Testament; total 32
-  complexity: madon comes from din, to contend at law, and appears in the plural form
-    medanim in Proverbs; Greek eris is also the name of the goddess of strife - a
-    derivation worth explaining
-ability: Choose another player. That chosen player puts two cards from that chosen
-  player's hand into Sheol; then draw two cards from the Tower.
+  lore: strife among brethren is a recognized wisdom theme (Proverbs) and the moral shape
+    of Babel's confusion; not a doctrine in itself
+  context: madon occurs 23 times in the Hebrew Bible; eris occurs 9 times in the New Testament;
+    total 32
+  complexity: madon comes from din, to contend at law, and appears in the plural form medanim
+    in Proverbs; Greek eris is also the name of the goddess of strife - a derivation worth
+    explaining
+ability: Each player reveals one card from that player's hand. Then choose another player;
+  that chosen player puts two cards from that chosen player's hand into Sheol, and draw three
+  cards from the Tower.
 ot_verse:
   ref: Proverbs 6:19
   snippet: and he that soweth discord among brethren
@@ -40,14 +40,14 @@ hebrew:
 ot_refs: Prov 6:19 • Prov 6:14 • Prov 10:12
 nt_refs: 1 Cor 3:3 • Rom 1:29 • Gal 5:20
 trivia:
-- Madon comes from din, to contend at law; discord in Proverbs is a lawsuit that never
-  ends.
-- The Greek eris was the goddess whose golden apple started the Trojan war; Paul lists
-  her name among the works of the flesh.
+- Madon comes from din, to contend at law; discord in Proverbs is a lawsuit that never ends.
+- The Greek eris was the goddess whose golden apple started the Trojan war; Paul lists her
+  name among the works of the flesh.
 - Babel's judgment was not silence but discord - every word still spoken, none understood.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+ / RARE
+  3+ / GLORIOUS wild).
 sources: []
 search_queries: []

@@ -21,9 +21,16 @@ sit inside the tier's range, and the total inside the tier's total.
 | Tier | Cost | Scope | Complexity | Setup | Interaction | Payoff | Total | Cards' worth |
 |---|---|---|---|---|---|---|---|---|
 | COMMON | 0 | 1–2 | 1–2 | 0 | 0 | 1 | 3–5 | one, beaten modestly |
-| UNCOMMON | 0 | 1–2 | 1–2 | 0–1 | 0–2 | 1–2 | 4–7 | about one plus a kicker |
-| RARE | 1 discard | 1–2 | 2–3 | 1–2 | 0–2 | 2–3 | 7–11 | two or more, net of cost |
-| GLORIOUS | 2 discards | 2–3 | 2–3 | 0–3 | 1–3 | 3 | 10–15 | three or more, net of cost |
+| UNCOMMON | 0 | 1–2 | 1–3 | 0–2 | 0–2 | 2–3 | 5–8 | two or more |
+| RARE | 1 discard | 2–3 | 2–3 | 1–3 | 0–3 | 3 | 9–14 | three or more, net of cost; every player reached or a structure scaled |
+| GLORIOUS | 2 discards | 2–3 | 2–3 | 1–3 | 0–3 | 4 | 9–16 | wild: five or more, every player's material moved, or a structure bent — a big cost in the copy may buy it |
+
+Power ladder (2026-08-28): each tier's floor moved up one step — the old
+GLORIOUS strength is RARE, the old RARE strength is UNCOMMON — and GLORIOUS
+gained a fourth payoff step, the *wild* step, which only GLORIOUS may print.
+The wild step is judged on gross gain (five or more cards' worth, every
+player's material moved together with a three-card gain, or a structure
+bent), so a big cost is what makes a wild effect fair, not what shrinks it.
 
 ## 2. Values
 

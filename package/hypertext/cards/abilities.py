@@ -66,12 +66,19 @@ RATING_SCALE = {
         0: "no material game effect; information, peeking, or blind reordering alone",
         1: "one card of real material or equivalent - a draw, a selective add to hand, or an informed filter attached to a draw",
         2: "about two cards' worth of advantage - e.g. selected recursion plus a draw, or a clear card-and-resource gain; outcomes on exclusive branches do not add together",
-        3: "three or more cards' worth - a multi-card swing, reset, scoring impact, or game-changing advantage",
+        3: "three or four cards' worth - a multi-card swing or a Letter earned outright",
+        4: "five or more cards' worth net of cost, every player's material moved, or a structure bent - a zone reset, a Lot moved, a card activated from Sheol, a Page converted",
     },
 }
 
 
 RARITY_BUDGETS = {
+    # Power ladder (user, 2026-08-28): "the current glorious power level should
+    # be rare, rare should be uncommon", and GLORIOUS "should be able to do some
+    # pretty wild things given the right cost". Net of costs: COMMON one card
+    # beaten modestly; UNCOMMON two or more; RARE three or more, may reach every
+    # player or scale off a structure; GLORIOUS five or more, or a structure
+    # bent - and a big printed-copy cost may buy it.
     "COMMON": {
         "dimensions": {
             "scope": {"min": 1, "max": 2},
@@ -86,35 +93,35 @@ RARITY_BUDGETS = {
     "UNCOMMON": {
         "dimensions": {
             "scope": {"min": 1, "max": 2},
-            "complexity": {"min": 1, "max": 2},
-            "setup": {"min": 0, "max": 1},
-            "interaction": {"min": 0, "max": 2},   # UNCOMMON, RARE and GLORIOUS may interact with opponents; COMMON never (user, 2026-08-28)
-            "payoff": {"min": 1, "max": 2},
-        },
-        "total": {"min": 4, "max": 7},
-        "intent": "one meaningful condition, type hook, choice, or light interaction",
-    },
-    "RARE": {
-        "dimensions": {
-            "scope": {"min": 1, "max": 2},
-            "complexity": {"min": 2, "max": 3},
-            "setup": {"min": 1, "max": 2},
+            "complexity": {"min": 1, "max": 3},
+            "setup": {"min": 0, "max": 2},
             "interaction": {"min": 0, "max": 2},
             "payoff": {"min": 2, "max": 3},
         },
-        "total": {"min": 7, "max": 11},
-        "intent": "a substantial, earned effect with layered play or interaction",
+        "total": {"min": 5, "max": 8},   # three cards' worth with layering (total 9+) is RARE
+        "intent": "about two cards' worth: a real condition, type hook, Sheol access, or one chosen player touched",
+    },
+    "RARE": {
+        "dimensions": {
+            "scope": {"min": 2, "max": 3},
+            "complexity": {"min": 2, "max": 3},
+            "setup": {"min": 1, "max": 3},
+            "interaction": {"min": 0, "max": 3},
+            "payoff": {"min": 3, "max": 3},   # the wild step (4) prints only as GLORIOUS
+        },
+        "total": {"min": 9, "max": 14},
+        "intent": "three or more cards' worth net of cost: a multi-card swing, every player reached, or a Page or Lot scaled",
     },
     "GLORIOUS": {
         "dimensions": {
             "scope": {"min": 2, "max": 3},
             "complexity": {"min": 2, "max": 3},
-            "setup": {"min": 0, "max": 3},
-            "interaction": {"min": 1, "max": 3},
-            "payoff": {"min": 3, "max": 3},
+            "setup": {"min": 1, "max": 3},
+            "interaction": {"min": 0, "max": 3},   # may interact, need not (a paid solo wild effect is GLORIOUS too)
+            "payoff": {"min": 4, "max": 4},
         },
-        "total": {"min": 10, "max": 15},
-        "intent": "a broad, memorable effect that can materially redirect a chapter",
+        "total": {"min": 9, "max": 16},
+        "intent": "wild: five or more cards' worth, every player's material moved, or a structure bent - a big cost in the copy may buy it",
     },
 }
 
@@ -337,7 +344,7 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - COSTS COUNT: a discard or a buried hand card is one card of cost, a Letter spent is three; costs are subtracted from the gain when the tier is priced, so "Gain one Letter, then discard three cards from your hand into Sheol" is UNCOMMON-weight, not RARE.
 - DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
 - COPY LENGTH: the printed image model garbles long copy. Keep a COMMON ability to about 30 words (hard cap 34), an UNCOMMON to 40, a RARE to 48, a GLORIOUS to 56; prefer one sentence when the effect allows it.
-- CARD-ADVANTAGE LADDER: activation costs are part of the math (a RARE pays one discard, a GLORIOUS two). A COMMON beats a plain draw modestly; an UNCOMMON is worth about one card plus a real kicker; a RARE must account for at least two cards' worth of advantage; a GLORIOUS at least three. Outcomes on exclusive branches never add together - an ability that either adds or draws, but never both, delivers only its better branch.
+- CARD-ADVANTAGE LADDER (2026-08-28): activation costs are part of the math (a RARE pays one discard, a GLORIOUS two), and costs written into the copy count too. A COMMON beats a plain draw modestly; an UNCOMMON is worth two or more cards; a RARE three or more - a multi-card swing, every player reached, or a Page or Lot scaled; a GLORIOUS is wild - five or more cards' worth, every player's material moved, or a structure bent (a zone reset, a Lot moved, a card activated from Sheol, a Page converted) - and a big cost in the copy ("Spend two Letters", "Discard one of your Pages") may buy it. Outcomes on exclusive branches never add together - an ability that either adds or draws, but never both, delivers only its better branch.
 """
 
 
@@ -461,9 +468,9 @@ def build_candidate_prompt(
         "RARITY DESIGN SPACE - spend the whole budget as ONE flavorful motion at the target weight; "
         "never reach the rarity floor by bolting a generic draw or Letter onto a smaller effect:\n"
         "- COMMON: a plain draw improved by one modest flavorful kicker - peek-and-pick, an informed filter, deliberate placement.\n"
-        "- UNCOMMON: about one card plus a real kicker - a Letter earned through the flavor, a burst after paying a cost, a type-hooked or named selection.\n"
-        "- RARE: at least two cards' worth in a single motion - multi-card selective recovery from Sheol, a scaling selection (\"up to three cards that each ...\"), a threshold that converts a built-up state into material, a strong exchange, or targeted interaction with another player's zones.\n"
-        "- GLORIOUS: at least three cards' worth or a chapter-shaping motion - touch every player, reset or reorder a zone, convert Pages or Lots into material, or bend the turn structure once.\n"
+        "- UNCOMMON: two or more cards' worth - draw two with a hook, a conditional Letter, selective recovery from Sheol, a chosen player made to reveal or lose a card, a burst after paying a cost.\n"
+        "- RARE: three or more cards' worth net of cost - multi-card selective recovery, a scaling selection (\"up to three cards that each ...\"), a Letter earned outright, a threshold that converts Pages or a Lot into material, an exchange, every player reached.\n"
+        "- GLORIOUS: wild - five or more cards' worth, every player's material moved, or a structure bent: reset the Tower from Sheol, activate a card in Sheol, move or renew a Lot, convert a Page; a big cost in the copy (\"Spend two Letters\", \"Discard one of your Pages\") may buy it.\n"
         "USE THE WHOLE GAME (user, 2026-08-28): drawing and discarding are necessary but not creative. A Letter is worth three cards - an unconditional Letter gain is RARE-weight material, a conditional or paid-for Letter fits an UNCOMMON, and forcing another player to spend a Letter is a heavy interaction. Lots are the recipes players are building toward: read the Chapter Lot or a Portion Lot (\"if that revealed card's type is in the Chapter Lot\", \"one card for each card type in your Portion Lot you do not hold\"), or bend them (\"return your Portion Lot to the Lot deck and reveal a new one\" is chapter-shaping). Pages are built structures: scale off them (\"one card of each card type in that chosen Page\"), read them, or return a card from one. Record and Redeem are timings an ability may hook. Every batch should spend at least two of its five cards on Letters, Lots, or Pages.\n"
         "SHAPE UNIQUENESS: no two cards in the set may share a core motion - the biggest gain, its source zone and quantity, plus reach, look count, filter, cost, condition, and where the untaken cards go. \"Each player draws one, then take up to three from Sheol\" is KINGDOM with a different verb; do not write it again. Prefer a motion the set does not have yet.\n"
         "Hand size is not pure advantage - players want to empty their hands into Lots - so multi-card adds are a legitimate stretch, and \"up to N\" handles scarcity honestly. "
@@ -945,6 +952,31 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         cost_units += 5   # a Page is at least five cards and scores nothing once discarded
     if cost_units and payoff > 1:
         payoff = max(1, payoff - cost_units // 3)
+    # The wild step. Net material of five or more (gains minus cost), every
+    # player's material moved together with a three-plus gain, or a structure
+    # bent, is payoff 4 - GLORIOUS territory.
+    gain_units = 0
+    for m in re.finditer(r"\b(?:draws?|adds?|returns?)\s+(?:up to\s+)?(one|two|three|four|five|six|seven|\d+)\s+(?:[A-Z]+\s+)?cards?\b", ability_text, re.IGNORECASE):
+        gain_units += _WORD_NUMBERS.get(m.group(1).lower(), int(m.group(1)) if m.group(1).isdigit() else 1)
+    for m in re.finditer(r"\bgains?\s+(one|two|three|four|five|a|\d+)\s+Letters?\b", ability_text, re.IGNORECASE):
+        gain_units += 3 * _WORD_NUMBERS.get(m.group(1).lower(), 1)
+    for m in re.finditer(r"\bchoose\s+(?:up to\s+)?(one|two|three|four|five)\s+cards?\s+in\s+Sheol\b", ability_text, re.IGNORECASE):
+        if re.search(r"\badd\s+(?:that|those)\s+chosen\s+cards?", ability_text, re.IGNORECASE):
+            gain_units += _WORD_NUMBERS.get(m.group(1).lower(), 1)
+    if re.search(r"\bone card (?:of|for) each card type\b", ability_text, re.IGNORECASE) and gain_units < 5:
+        gain_units = max(gain_units, 5)
+    structure = re.search(
+        r"\breturn every card in Sheol to the Tower\b|\bactivate that chosen card\b|\bexchange your Lot\b|\breturn your Lot\b|\bdiscard one of your Pages\b[^.;]*?\b(?:add|draw|gain)\b",
+        ability_text, re.IGNORECASE,
+    )
+    # Gross, not net: the cost is what makes a wild effect fair, not what
+    # makes it small. "Discard one of your Pages, take five from Sheol" is a
+    # GLORIOUS that a Page pays for.
+    if structure or gain_units >= 5 or (global_material and gain_units >= 3):
+        payoff = 4
+        scope = max(scope, 2)
+        setup = max(setup, 1)
+        complexity = max(complexity, 2)
     return {
         "scope": scope,
         "complexity": complexity,

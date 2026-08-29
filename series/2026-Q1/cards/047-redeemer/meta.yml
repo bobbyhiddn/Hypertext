@@ -5,17 +5,16 @@ card_type: TITLE
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A robed figure seen from behind laying silver on a stone table before
-  an open gate, while a line of freed figures walk away from the viewer through the
-  gate into morning light, luminous cinematic oil painting with impressionistic brushwork,
-  deep shadowed background, one radiant golden light source, rich saturated blues
-  and golds
+art_prompt: A robed figure seen from behind laying silver on a stone table before an open
+  gate, while a line of freed figures walk away from the viewer through the gate into morning
+  light, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background,
+  one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 5
   context: 3
   complexity: 4
-ability: Spend one Letter and choose up to three cards in Sheol. Add those chosen
-  cards to your hand.
+ability: Choose up to four cards in Sheol and add those chosen cards to your hand. Then put
+  one card from your hand on top of the Tower and put one card from your hand into Sheol.
 ot_verse:
   ref: Job 19:25
   snippet: I know that my redeemer liveth
@@ -31,19 +30,20 @@ hebrew:
 ot_refs: Job 19:25 • Isa 59:20 • Isa 41:14
 nt_refs: Titus 2:14 • Luke 24:21 • 1 Pet 1:18
 trivia:
-- Hebrew goel is the kinsman-redeemer who buys back a relative's land or liberty -
-  Boaz for Ruth.
+- Hebrew goel is the kinsman-redeemer who buys back a relative's land or liberty - Boaz for
+  Ruth.
 - Job 19:25 - I know that my redeemer liveth - is carved on countless gravestones.
 - Greek lytroo comes from lytron, the ransom price paid to set a slave free.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+ / RARE
+  3+ / GLORIOUS wild).
 sources: []
 search_queries: []
 stats_rationale:
-  lore: redemption - a doctrine hangs on it; kinsman-redeemer institution and lytron
-    ransom are a study
+  lore: redemption - a doctrine hangs on it; kinsman-redeemer institution and lytron ransom
+    are a study
   context: goel ~44 + lytroo ~3 = ~47
-  complexity: redemption - a doctrine hangs on it; kinsman-redeemer institution and
-    lytron ransom are a study
+  complexity: redemption - a doctrine hangs on it; kinsman-redeemer institution and lytron
+    ransom are a study

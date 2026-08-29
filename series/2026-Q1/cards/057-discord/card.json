@@ -176,7 +176,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "A great unfinished brick tower at dusk with its wooden scaffolds splitting apart, cracked bricks tumbling from the ramps, torn banners whipped in opposite directions by a rising wind, one radiant golden light breaking through the storm clouds above, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Choose another player. That chosen player puts two cards from that chosen player's hand into Sheol; then draw two cards from the Tower.",
+    "ABILITY_TEXT": "Each player reveals one card from that player's hand. Then choose another player; that chosen player puts two cards from that chosen player's hand into Sheol, and draw three cards from the Tower.",
     "STAT_LORE": 3,
     "STAT_CONTEXT": 2,
     "STAT_COMPLEXITY": 3,

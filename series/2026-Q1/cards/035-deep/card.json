@@ -176,7 +176,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "A knotted sounding line with a stone weight descending into deep blue-black water, one radiant golden shaft of light from far above striking the stone and the line while the depths around fall into shadow, dim dark silhouettes of great sea creatures below, warm gold against the dark, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Choose up to three cards in Sheol that each have COMPLEXITY three or more. Add those chosen cards to your hand.",
+    "ABILITY_TEXT": "Look at the bottom four cards of the Tower. Add up to three of those cards to your hand, put the other cards into Sheol, and then draw one card from the Tower.",
     "STAT_LORE": 3,
     "STAT_CONTEXT": 2,
     "STAT_COMPLEXITY": 2,

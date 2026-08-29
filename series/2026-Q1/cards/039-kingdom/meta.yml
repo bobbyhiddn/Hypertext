@@ -5,17 +5,17 @@ card_type: NOUN
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A radiant throne on a high hill crowned with golden light, rivers of small
-  robed figures streaming toward it from every horizon across a wide plain, city walls
-  shining at dawn, all figures distant and seen from behind, luminous cinematic oil
-  painting with impressionistic brushwork, deep shadowed background, one radiant golden
-  light source, rich saturated blues and golds
+art_prompt: A radiant throne on a high hill crowned with golden light, rivers of small robed
+  figures streaming toward it from every horizon across a wide plain, city walls shining at
+  dawn, all figures distant and seen from behind, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 5
   context: 4
   complexity: 4
-ability: Each player adds one card from Sheol to their hand. Then add up to three
-  cards from Sheol to your hand.
+ability: Each player returns that player's Lot to the Lots and reveals a new Lot from the
+  Lots. Then choose up to four cards in Sheol and add those chosen cards to your hand.
 ot_verse:
   ref: Psalm 145:13
   snippet: Thy kingdom is an everlasting kingdom
@@ -31,65 +31,62 @@ hebrew:
 ot_refs: Ps 145:13 • Dan 2:44 • Esth 1:2
 nt_refs: Matt 6:10 • Rev 11:15 • Luke 17:21
 trivia:
-- Hebrew malkut and Greek basileia name both the realm and the active reign of the
-  king.
-- Daniel told Babylon's own king of a kingdom that would break every empire and stand
-  forever.
-- 'Revelation 11:15 crowns the story: the kingdoms of this world become the kingdom
-  of our Lord.'
+- Hebrew malkut and Greek basileia name both the realm and the active reign of the king.
+- Daniel told Babylon's own king of a kingdom that would break every empire and stand forever.
+- 'Revelation 11:15 crowns the story: the kingdoms of this world become the kingdom of our
+  Lord.'
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 under the power ladder (COMMON 1 / UNCOMMON 2+ / RARE
+  3+ / GLORIOUS wild).
 sources: []
 search_queries: []
 revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: In the GREEK panel,
-  change the NT Refs line to read exactly ''NT Refs: Matt 6:10 • Rev 11:15 • Luke
-  17:21'' (the third reference Luke 17:21 is missing). Keep every other pixel, panel,
-  and text exactly as rendered.
+  Visual fix only, change nothing except this single correction: In the GREEK panel, change
+  the NT Refs line to read exactly ''NT Refs: Matt 6:10 • Rev 11:15 • Luke 17:21'' (the third
+  reference Luke 17:21 is missing). Keep every other pixel, panel, and text exactly as rendered.
 
   # Card_Word: KINGDOM
 
-  # Card_Gloss: The realm and reign under one perfect rule, gathering every redeemed
-  one
+  # Card_Gloss: The realm and reign under one perfect rule, gathering every redeemed one
 
   # Card_Type: NOUN
 
   # Card_Rarity: GLORIOUS
 
-  # Card_Ability: Each player adds one card from Sheol to their hand. Then add up
-  to three cards from Sheol to your hand.
+  # Card_Ability: Each player adds one card from Sheol to their hand. Then add up to three
+  cards from Sheol to your hand.
 
   # Card_Stats: LORE 4 | CONTEXT 4 | COMPLEXITY 4
 
-  # Card_Art_Prompt: A radiant throne on a high hill crowned with golden light, rivers
-  of small robed figures streaming toward it from every horizon across a wide plain,
-  city walls shining at dawn, all figures distant and seen from behind, engraved devotional
-  style on warm parchment tones
+  # Card_Art_Prompt: A radiant throne on a high hill crowned with golden light, rivers of
+  small robed figures streaming toward it from every horizon across a wide plain, city walls
+  shining at dawn, all figures distant and seen from behind, engraved devotional style on
+  warm parchment tones
 
   # Card_OT_Verse: Daniel 2:44 — a kingdom, which shall never be destroyed
 
-  # Card_NT_Verse: Revelation 11:15 — the kingdoms of this world are become the kingdoms
-  of our Lord
+  # Card_NT_Verse: Revelation 11:15 — the kingdoms of this world are become the kingdoms of
+  our Lord
 
   # Card_Hebrew: מַלְכוּת (malkut)
 
   # Card_Greek: βασιλεία (basileia)
 
-  # Card_Trivia_1: Hebrew malkut and Greek basileia name both the realm and the active
-  reign of the king.
+  # Card_Trivia_1: Hebrew malkut and Greek basileia name both the realm and the active reign
+  of the king.
 
-  # Card_Trivia_2: Daniel told Babylon''s own king of a kingdom that would break every
-  empire and stand forever.
+  # Card_Trivia_2: Daniel told Babylon''s own king of a kingdom that would break every empire
+  and stand forever.
 
-  # Card_Trivia_3: Revelation 11:15 crowns the story: the kingdoms of this world become
-  the kingdom of our Lord.'
+  # Card_Trivia_3: Revelation 11:15 crowns the story: the kingdoms of this world become the
+  kingdom of our Lord.'
 stats_rationale:
-  lore: the kingdom of God - a doctrine hangs on it; realm vs reign, kingdom of heaven
-    vs of God
+  lore: the kingdom of God - a doctrine hangs on it; realm vs reign, kingdom of heaven vs
+    of God
   context: malkut ~91 + basileia ~162 = ~253
-  complexity: the kingdom of God - a doctrine hangs on it; realm vs reign, kingdom
-    of heaven vs of God
+  complexity: the kingdom of God - a doctrine hangs on it; realm vs reign, kingdom of heaven
+    vs of God

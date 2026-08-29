@@ -10,10 +10,10 @@
 # docs/rules.md "Abilities") | deferred (not an ability action yet).
 contract: hypertext.ability-grammar/v1
 tiers:
-  COMMON:    {printed_cost: 0, interaction: none,          cards_worth: "one, beaten modestly",     word_cap: 34}
-  UNCOMMON:  {printed_cost: 0, interaction: one chosen player, cards_worth: "about one plus a kicker", word_cap: 40}
-  RARE:      {printed_cost: 1, interaction: one chosen player heavily, or every player by information, cards_worth: "two or more, net of cost", word_cap: 48}
-  GLORIOUS:  {printed_cost: 2, interaction: every player's material, cards_worth: "three or more, net of cost", word_cap: 56}
+  COMMON:    {printed_cost: 0, interaction: none,          cards_worth: "one, beaten modestly",     payoff: 1, word_cap: 34}
+  UNCOMMON:  {printed_cost: 0, interaction: one chosen player, cards_worth: "two or more", payoff: "2-3", word_cap: 40}
+  RARE:      {printed_cost: 1, interaction: one chosen player heavily, or every player by information, cards_worth: "three or more net of cost; every player reached or a structure scaled", payoff: 3, word_cap: 48}
+  GLORIOUS:  {printed_cost: 2, interaction: may move every player's material, cards_worth: "wild - five or more, every player's material moved, or a structure bent; a big cost in the copy may buy it", payoff: 4, word_cap: 56}
 
 values:
   card: 1
@@ -38,15 +38,15 @@ productions:
     spend_letters_n:   {copy: "Spend N Letters", units: 3N, tiers: [RARE, GLORIOUS], note: "buys an action a tier larger than the printed cost allows"}
     discard_page:      {copy: "Discard one of your Pages", units: "5-7 (the Page's card count); the Page scores nothing", tiers: [RARE, GLORIOUS], status: ruled}
   CORE:
-    draw:              {copy: "Draw N cards from the Tower", gain: N, tiers: {COMMON: [1], UNCOMMON: [1, 2], RARE: [2, 3], GLORIOUS: [3]}}
+    draw:              {copy: "Draw N cards from the Tower", gain: N, tiers: {COMMON: [1], UNCOMMON: [2], RARE: [3], GLORIOUS: [3, 4, 5]}}
     add_top:           {copy: "Add one card from the top of the Tower to your hand", gain: 1}
     add_bottom:        {copy: "Add one card from the bottom of the Tower to your hand", gain: 1}
     look_take:         {copy: "Look at the (top|bottom) N cards of the Tower. Add (one|up to one FILTER) of those cards to your hand REST", gain: 1, n: [1, 2, 3, 4]}
     reveal_take:       {copy: "Reveal one card from the top of the Tower and add that revealed card to your hand", gain: 1, public: true}
     reveal_test:       {copy: "Reveal one card from the top of the Tower and PUT-OR-ADD. If that revealed card TEST, RESULT", gain: "1 + branch", tiers: [UNCOMMON, RARE]}
-    recover:           {copy: "Choose up to N cards in Sheol [FILTER]. Add those chosen cards to your hand", gain: N, tiers: {UNCOMMON: [1], RARE: [2, 3], GLORIOUS: [3, 4, 5]}}
+    recover:           {copy: "Choose up to N cards in Sheol [FILTER]. Add those chosen cards to your hand", gain: N, tiers: {UNCOMMON: [2, 3], RARE: [3, 4], GLORIOUS: [5]}}
     mill_take:         {copy: "Put the top N cards of the Tower into Sheol, then add one of those cards to your hand", gain: 1, tiers: [UNCOMMON, RARE]}
-    gain_letter:       {copy: "Gain one Letter", gain: 3, tiers: [RARE, GLORIOUS], note: "UNCOMMON only behind a condition or a cost of three units"}
+    gain_letter:       {copy: "Gain one Letter", gain: 3, tiers: [UNCOMMON, RARE, GLORIOUS], note: "UNCOMMON when conditional or paid for with three units of cost; RARE outright with layering; two or more Letters is the wild step"}
     scale_structure:   {copy: "Add up to N cards from (Sheol|the revealed cards) to your hand, one card of each card type in (that chosen Page|the Chapter Lot|your Lot|another player's Lot)", gain: "3+", tiers: [RARE, GLORIOUS], status: ruled}
     return_to_tower:   {copy: "Choose up to N cards in Sheol and return those chosen cards to the top of the Tower in any order", gain: "selection", tiers: [RARE, GLORIOUS]}
     return_from_page:  {copy: "Return one card from one of your Pages to your hand", gain: 1, tiers: [RARE, GLORIOUS], status: ruled}

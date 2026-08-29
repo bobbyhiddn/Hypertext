@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "None. Fully compliant with reference style.",
+  "style_mismatch_reason": "",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "3a753345f1dab400be7740d4d2d16c91855f23b22a616d4c3515c368bea14d2d",
+    "candidate_sha256": "7dd3b4dd1bf63f8a6a660e6110e9d1a2fb17cce68373f781e86972153f943326",
     "template_sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d",
     "report": "series/2026-Q1/cards/039-kingdom/outputs/visual-gate.json"
   },

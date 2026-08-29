@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "5e650997040be4b27bfa12698ec68c8402d26cde38440ce782dda9d0ff3531f2",
+    "gemini_output_sha256": "bfd0c40017e72092ef28fcb6cffe12a7f1e63c02591e3326ed2ef34d62c6fbc1",
     "generation_metadata_path": "series/2026-Q1/cards/057-discord/outputs/generation.json",
-    "generation_metadata_sha256": "408994dfed0a34d88f39b51f048543f6501f73c7dd068837a0aa983a478e4ccb",
+    "generation_metadata_sha256": "3c9a64e0c657a33fd84f5afa7ad62b4ee36721d2a847058d50910b63ec658e82",
     "path": "series/2026-Q1/cards/057-discord/outputs/card_1024x1536.png",
-    "sha256": "e3d6b160ad52e2ee3fd7799a5f05bd030cf1cd66f0c8fc2792ac5089c302450a"
+    "sha256": "66871e2f24585fed350115aa22cdfc3d86e1aef5e514bd096af8b8fbc12a4a87"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/057-discord/prompt.txt",
-    "sha256": "7a5f3bf9278996315353ab6a6ca1e40bf841a44e797d4dcae2e4ea6a6b051dab"
+    "sha256": "e6176c8e171d75ab1105381417975ecd273365f5d6586a78d65853a703503f3b"
   },
   "recipe": {
-    "canonical_sha256": "4f0a02997dced5e139c5bea7f2b9bcf2a9e7d062b52f7cfa752c5f9e9c96c84c",
-    "file_sha256": "76ae25218126faf74bd3da57f39383cdd0e04ae39aa1f2ab155fbf9d19508ec2",
+    "canonical_sha256": "21f4c447a72f9f155564bb06e9bfb162bda23acc4b6e4e9832104240a7216fce",
+    "file_sha256": "dfdaaf78b27eb51c977f9ac5afccf0ac1ac8c3f10d401dbf196f0fc2eaf7f2bb",
     "path": "series/2026-Q1/cards/057-discord/card.json"
   },
   "reference_pack": {
