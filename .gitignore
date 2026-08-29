@@ -40,3 +40,6 @@ package/hypertext_tools.egg-info/
 operator_review/lot-bakeoff/
 operator_review/lot-rework-30/
 /series/2026-Q1/tracker/
+
+# git worktrees for parallel review branches - never part of the tree
+.worktrees/
