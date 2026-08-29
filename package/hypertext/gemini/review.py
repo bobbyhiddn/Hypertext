@@ -12,6 +12,7 @@ to first observe, then judge.
 import argparse
 import base64
 import json
+import re
 import os
 import time
 from dataclasses import dataclass, field
@@ -1119,6 +1120,44 @@ def check_refs_labels(image_path: Path, model: str | None = None) -> list[str]:
     if not grk.upper().startswith("NT REFS"):
         missing.append(f"NT Refs label missing (line reads: {grk!r})")
     return missing
+
+
+def _normalize_copy(text: str) -> str:
+    """Case, whitespace, and typographic quote/dash differences do not count."""
+    t = str(text or "")
+    for a, b in (("\u2019", "'"), ("\u2018", "'"), ("\u201c", '"'), ("\u201d", '"'), ("\u2014", "-"), ("\u2013", "-"), ("\u00a0", " ")):
+        t = t.replace(a, b)
+    t = re.sub(r"\s+", " ", t).strip().lower()
+    t = re.sub(r"[.;,:]+$", "", t)
+    return t
+
+
+def check_ability_text(image_path: Path, expected: str, model: str | None = None) -> str | None:
+    """Reference-free focused transcription of the ability panel, compared
+    exactly (after normalisation) with the card record's ABILITY_TEXT.
+
+    The broad description pass passed a face whose ability copy had lost the
+    word 'cards' (DEEP #035, 2026-08-28); one dropped word changes a rule, so
+    the panel is transcribed in isolation and diffed deterministically.
+
+    Returns None when the printed copy matches, the transcribed copy when it
+    does not, or "__unreadable__" when the response cannot be parsed.
+    """
+    prompt = (
+        "Look ONLY at the panel headed ABILITY on this trading card. Transcribe the ability text "
+        "EXACTLY as printed, word for word, including every small word, with the original punctuation. "
+        "Do not correct, complete, or paraphrase anything. Return ONLY JSON: "
+        '{"ability_text": "<exact text>"}'
+    )
+    text = _call_gemini(prompt, image_path=image_path, model=model)
+    try:
+        data = _parse_json_response(text)
+        seen = str(data.get("ability_text", "")).strip()
+    except Exception:
+        return "__unreadable__"
+    if not seen:
+        return "__unreadable__"
+    return None if _normalize_copy(seen) == _normalize_copy(expected) else seen
 
 
 def check_figure_rule(image_path: Path, model: str | None = None) -> int:

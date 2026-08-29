@@ -4672,6 +4672,22 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         description.style_mismatch_reason = style_reason
         _log(f"[phase grade] ⚠️ {face_reason}")
 
+    # Ability copy is transcribed in isolation and diffed against the card
+    # record: one dropped word changes a rule, and the broad pass misses it.
+    # A mismatch is a single correction (fix-mode can repaint the text), not
+    # a style override.
+    ability_seen: str | None = None
+    try:
+        from hypertext.gemini.review import check_ability_text
+        ability_seen = check_ability_text(out_png, str(card_json.get("content", {}).get("ABILITY_TEXT", "")))
+    except Exception as e:
+        _log(f"[phase grade] ability text check failed: {e}")
+    if ability_seen == "__unreadable__":
+        _log("[phase grade] ability text check unreadable; treating as matching")
+        ability_seen = None
+    if ability_seen:
+        _log(f"[phase grade] ⚠️ Ability text mismatch: printed {ability_seen!r}")
+
     if placeholder_leaks:
         leak_reason = "Template placeholder leak: " + "; ".join(placeholder_leaks)
         style_match = False
@@ -4705,6 +4721,11 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         result.corrections.append(
             f"Remove the template placeholder text {leak}; replace the slot with the supplied content only."
         )
+    if ability_seen:
+        expected_ability = str(card_json.get("content", {}).get("ABILITY_TEXT", "")).strip()
+        result.corrections.append(
+            f"Fix the ability text to read exactly: '{expected_ability}' (it currently reads: '{ability_seen}')."
+        )
 
     # CRITICAL: Style mismatch = score of 0, automatic fail
     content_score = result.score
@@ -4713,7 +4734,7 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
     else:
         final_score = 0  # Style mismatch overrides content score
 
-    passed = style_match and result.passed
+    passed = style_match and result.passed and not ability_seen
 
     def normalized(category: str) -> int:
         item = result.categories.get(category, {})
