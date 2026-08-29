@@ -1202,7 +1202,7 @@ def describe_palette(image_path: Path, model: str | None = None) -> str:
         raise ImportError("google-genai package required")
 
     client = genai.Client()
-    model_name = model or os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+    model_name = model or review_model()
 
     with open(image_path, "rb") as f:
         image_bytes = f.read()

@@ -7,7 +7,9 @@ import os
 import tempfile
 import types as ns
 import unittest
+import re
 import urllib.error
+from pathlib import Path
 from unittest import mock
 
 from PIL import Image
@@ -428,3 +430,25 @@ class ConfigurationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestNoDeadModelIds(unittest.TestCase):
+    """A pinned model id ages out of the API and every call using it fails.
+
+    Both defaults this guards were dead when found: review.py fell back to
+    gemini-2.0-flash and Lot grading was pinned to gemini-3-pro-preview, neither
+    of which the API still lists. Model choice belongs in gemini.config.
+    """
+
+    ALLOWED = {"gemini-3.1-flash-image", "gemini-3.7-flash"}
+
+    def test_no_stale_model_ids_in_package(self):
+        root = Path(__file__).resolve().parents[1] / "hypertext"
+        pattern = re.compile(r"gemini-[0-9][\w.-]*")
+        offenders = []
+        for path in root.rglob("*.py"):
+            for n, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+                for hit in pattern.findall(line):
+                    if hit not in self.ALLOWED:
+                        offenders.append(f"{path.relative_to(root)}:{n}: {hit}")
+        self.assertEqual(offenders, [], "model ids outside gemini.config: " + "; ".join(offenders))

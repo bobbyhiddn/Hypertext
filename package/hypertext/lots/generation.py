@@ -36,6 +36,8 @@ import threading
 import tempfile
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+from hypertext.gemini.config import review_model
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Optional
@@ -267,7 +269,9 @@ def _image_part_from_bytes(img_bytes: bytes):
     return image_part
 
 
-GRADING_MODEL = "gemini-3-pro-preview"  # Vision model for grading
+# Vision model for grading. Kept in step with the review model the card pipeline
+# uses; a pinned preview id silently ages out of the API and every grade fails.
+GRADING_MODEL = review_model()
 
 
 def _get_template_rubric() -> str | None:
