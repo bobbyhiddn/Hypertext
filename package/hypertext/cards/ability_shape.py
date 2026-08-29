@@ -97,12 +97,15 @@ def ability_signature(text: str) -> dict[str, Any]:
     m = re.search(r"\b(?:that|the)\s+chosen\s+player\s+(puts?|spends?|discards?|draws?|returns?)\b[^.;]*?(into Sheol|Letters?|bottom of the Tower|top of the Tower|from the Tower)?", t, re.IGNORECASE)
     if m:
         opp = (m.group(1).lower().rstrip("s")) + ":" + ((m.group(2) or "").lower().replace(" ", "-") or "card")
+    # Where the untaken cards go is what distinguishes two otherwise identical
+    # looks, so the phrasing "each other REVEALED card" must match too.
+    _REST = r"\b(?:other|those|remaining)\s+(?:revealed\s+|looked\s+|chosen\s+)?cards?\b[^.;]*"
     rest = "none"
-    if re.search(r"\b(?:other|those|remaining)\s+cards?\b[^.;]*\bbottom of the Tower", t, re.IGNORECASE):
+    if re.search(_REST + r"\bbottom of the Tower", t, re.IGNORECASE):
         rest = "bottom"
-    elif re.search(r"\b(?:other|those|remaining)\s+cards?\b[^.;]*\btop of the Tower", t, re.IGNORECASE):
+    elif re.search(_REST + r"\btop of the Tower", t, re.IGNORECASE):
         rest = "top"
-    elif re.search(r"\b(?:other|those|remaining)\s+cards?\b[^.;]*\binto Sheol", t, re.IGNORECASE):
+    elif re.search(_REST + r"\binto Sheol", t, re.IGNORECASE):
         rest = "sheol"
     put_from = "none"
     if re.search(r"\bput\s+(?:one|two|any number of|up to \w+)\s+(?:other\s+)?cards?\s+(?:of[^.;]*?)?from your hand", t, re.IGNORECASE):
