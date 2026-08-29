@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "311651b01b0773f84c450334309280b9a1dbcf7e6529ff86e8415f694e4bd78e",
+    "gemini_output_sha256": "8d1fbbf81412a79b5cd62d9a6e9912e2b1a77e7654076a5da2f6ce1ba16adcfa",
     "generation_metadata_path": "series/2026-Q1/cards/049-overthrow/outputs/generation.json",
-    "generation_metadata_sha256": "182b6192492871677ca959fdeba2a7cb998b6b2c19ab8d961eff7ea7d86bf915",
+    "generation_metadata_sha256": "b8d294267793a2db4be7e9e90de7d0ef4890bf4b3431518890c6327ef28bf1ba",
     "path": "series/2026-Q1/cards/049-overthrow/outputs/card_1024x1536.png",
-    "sha256": "14dc7c8b06c783ce22ca3b405b1658421c5d61ca7ed2494e528309c1faf936bb"
+    "sha256": "e43e8c870d9d2eb3a263f3d67b69508ff74c77007e0f0573ebd305c1c8365633"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/049-overthrow/prompt.txt",
-    "sha256": "40e73b42790f63933f9ca8d89e55e79ae73481a34cf7c5dd55e3b4c77d35af66"
+    "path": "series/2026-Q1/cards/049-overthrow/outputs/prompt.revision.txt",
+    "sha256": "351b8a8bd919edaa1411c21e7e3778de4fa228a30a0e5c11069db0e77b711e05"
   },
   "recipe": {
-    "canonical_sha256": "022c1d5c7146f41c9278a18f69cb0731f2d8310ac540f1eaf948941a64da7d2b",
-    "file_sha256": "7ef25b82161082f835954b4fb8659013c897095e1c1f4b9cd6255a2c52538248",
+    "canonical_sha256": "cd385414896cb43c318aee868253da44b9cd7a1eeb4bb53835b65a6d5d8a16d7",
+    "file_sha256": "191660bb82484edf91e5a76d24847efb65f3fe1e3e40f575938d09f4213fc3de",
     "path": "series/2026-Q1/cards/049-overthrow/card.json"
   },
   "reference_pack": {
@@ -49,8 +49,43 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "VERB",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/049-overthrow/outputs/reference-inputs/current-022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "COMMON",
+        "rarity_label": "COMMON",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/049-overthrow/outputs/reference-inputs/current-022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "VERB",
@@ -60,11 +95,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified VERB COMMON structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified VERB COMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/verb/common/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "COMMON",
@@ -93,18 +128,18 @@
     "target_type": "VERB"
   },
   "reference_pack_path": "series/2026-Q1/cards/049-overthrow/outputs/reference-pack.json",
-  "reference_pack_sha256": "2978bbe9872aba77c4e3eb833f933892bdb2a9085e0f81424967fbfdffb73f5d",
+  "reference_pack_sha256": "9e3eb7e9af9cfe8f9b6974a4e5572f32621e4ee837a7a475d2d2e8dda6362849",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise-image-only",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]

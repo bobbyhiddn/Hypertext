@@ -5,11 +5,11 @@ card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Struck tents folded on the plain of Shinar at dawn, ox-carts and laden camels
-  seen from far behind winding away toward distant hills in every direction, the unfinished
-  tower a dark silhouette left behind, one radiant golden sunrise, no visible faces, luminous
-  cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant
-  golden light source, rich saturated blues and golds
+art_prompt: Empty tent pegs and dark rings of trampled grass where a camp stood, one
+  laden ox cart small on the far track, dust still hanging over the abandoned ground,
+  no people, luminous cinematic oil painting with impressionistic brushwork, saturated
+  full colour, a strong symbolic subject, no engraving or line art, cold blue dawn
+  light with long violet shadows and a pale rose horizon
 stats:
   lore: 3
   context: 4
@@ -17,12 +17,13 @@ stats:
 stats_rationale:
   lore: journeying by stages is the shape of the wilderness narrative and of the scattering
     from Shinar; a recognized theme rather than a doctrine
-  context: nasa occurs 146 times in the Hebrew Bible; anachoreo occurs 14 times in the New
-    Testament; total 160
-  complexity: nasa literally means to pull up tent pegs, and its noun massa names both a journey-stage
-    and a burden; anachoreo gives us the anchorite, one who withdraws - a history worth explaining
-ability: Look at the top three cards of the Tower. Put any number of those cards on the bottom
-  of the Tower, then draw one card from the Tower.
+  context: nasa occurs 146 times in the Hebrew Bible; anachoreo occurs 14 times in
+    the New Testament; total 160
+  complexity: nasa literally means to pull up tent pegs, and its noun massa names
+    both a journey-stage and a burden; anachoreo gives us the anchorite, one who withdraws
+    - a history worth explaining
+ability: Look at the top three cards of the Tower. Put any number of those cards on
+  the bottom of the Tower, then draw one card from the Tower.
 ot_verse:
   ref: Genesis 11:2
   snippet: as they journeyed from the east
@@ -39,8 +40,8 @@ ot_refs: Gen 11:2 • Gen 12:9 • Num 10:12
 nt_refs: Matt 2:12 • Matt 4:12 • John 6:15
 trivia:
 - Nasa is literally to pull up the pegs - a camp departs the way a tent comes down.
-- The same root gives massa, a stage of the journey in Numbers 33 and, by another sense, a
-  burden.
+- The same root gives massa, a stage of the journey in Numbers 33 and, by another
+  sense, a burden.
 - Anachoreo is the verb behind anchorite, the hermit who departs from the world.
 wild_id: null
 wild_counts_as: null

@@ -5,16 +5,17 @@ card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A great brick tower toppling sideways on the plain in a storm of dust, bricks
-  cascading from its broken ramps, one radiant column of golden fire falling from a black
-  sky, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed
-  background, one radiant golden light source, rich saturated blues and golds
+art_prompt: A city of the plain overturned in the night, walls and roof beams tumbled
+  upside down into a smoking hollow, salt crusting the broken stones and brimstone
+  still falling, no people, luminous cinematic oil painting with impressionistic brushwork,
+  saturated full colour, a strong symbolic subject, no engraving or line art, storm
+  light under a bruised green-grey sky, one shaft of silver breaking through
 stats:
   lore: 3
   context: 3
   complexity: 3
-ability: Reveal one card from the top of the Tower and add that revealed card to your hand.
-  Then shuffle the cards in the Tower.
+ability: Reveal one card from the top of the Tower and add that revealed card to your
+  hand. Then shuffle the cards in the Tower.
 ot_verse:
   ref: Genesis 19:25
   snippet: And he overthrew those cities, and all the plain
@@ -30,27 +31,27 @@ hebrew:
 ot_refs: Gen 19:25 • Deut 29:23 • Jonah 3:4
 nt_refs: Matt 21:12 • Mark 11:15
 trivia:
-- Haphak means to turn over - the same verb overturns Sodom in Genesis 19 and, in Jonah, threatens
-  Nineveh with being overturned, a city that turned instead.
+- Haphak means to turn over - the same verb overturns Sodom in Genesis 19 and, in
+  Jonah, threatens Nineveh with being overturned, a city that turned instead.
 - Katastrepho, to overturn, is the verb of the tables in the temple; its noun katastrophe
   passed into English unchanged.
-- Babel was not overthrown by fire but by confusion - the tower was simply left, the first
-  ruin abandoned rather than destroyed.
+- Babel was not overthrown by fire but by confusion - the tower was simply left, the
+  first ruin abandoned rather than destroyed.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: 'Slot #049 re-worded 2026-08-28: BABBLE (lemmas belonged to CONFUSE #006) -> briefly
-  CONFUSE -> OVERTHROW at the user''s direction ("replace babble with another verb"); the
-  shuffle-the-Tower ability is kept because overthrow is that motion.'
+notes: 'Slot #049 re-worded 2026-08-28: BABBLE (lemmas belonged to CONFUSE #006) ->
+  briefly CONFUSE -> OVERTHROW at the user''s direction ("replace babble with another
+  verb"); the shuffle-the-Tower ability is kept because overthrow is that motion.'
 sources: []
 search_queries: []
 stats_rationale:
   lore: the overthrow of Sodom and the threatened overturning of Nineveh are a recognized
     judgment theme, not a doctrine
-  context: haphak occurs 94 times in the Hebrew Bible; katastrepho occurs 2 times in the New
-    Testament; total 96
-  complexity: haphak means to turn, overturn, or change - Jonah's Nineveh is overturned by
-    repentance instead of fire - and katastrepho gives English catastrophe; a derivation worth
-    explaining
+  context: haphak occurs 94 times in the Hebrew Bible; katastrepho occurs 2 times
+    in the New Testament; total 96
+  complexity: haphak means to turn, overturn, or change - Jonah's Nineveh is overturned
+    by repentance instead of fire - and katastrepho gives English catastrophe; a derivation
+    worth explaining
 weight: 3
 weight_rationale: the overthrow of Sodom as a verb; thematic

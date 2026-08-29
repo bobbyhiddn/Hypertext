@@ -5,16 +5,17 @@ card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A vast crowd on a sunlit plain seen from behind, breaking apart into separate
-  streams of people walking away toward every horizon, an unfinished brick tower looming behind
-  them, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background,
-  one radiant golden light source, rich saturated blues and golds
+art_prompt: A ram's horn trumpet, a reed pipe, a bone flute and a small clay whistle
+  laid apart on dark cloth, each instrument shaped to a different voice and no two
+  alike, no people, luminous cinematic oil painting with impressionistic brushwork,
+  saturated full colour, a strong symbolic subject, no engraving or line art, firelight
+  from below, red and orange on stone, smoke against black
 stats:
   lore: 3
   context: 4
   complexity: 3
-ability: Look at the top three cards of the Tower. Add one of those cards to your hand and
-  put the other cards on the bottom of the Tower.
+ability: Look at the top three cards of the Tower. Add one of those cards to your
+  hand and put the other cards on the bottom of the Tower.
 ot_verse:
   ref: Genesis 10:5
   snippet: every one after his tongue
@@ -30,9 +31,10 @@ hebrew:
 ot_refs: Gen 10:5 • Isa 28:11 • Ps 34:13
 nt_refs: Acts 2:4 • Rev 7:9 • Jas 3:8
 trivia:
-- Hebrew lashon names the tongue in the mouth, a language, and even a tongue of the sea.
-- Genesis 10 lists the nations 'after his tongue' before Genesis 11 tells how the tongues
-  were divided.
+- Hebrew lashon names the tongue in the mouth, a language, and even a tongue of the
+  sea.
+- Genesis 10 lists the nations 'after his tongue' before Genesis 11 tells how the
+  tongues were divided.
 - Greek glossa gives English glossary - a list of hard words explained.
 wild_id: null
 wild_counts_as: null

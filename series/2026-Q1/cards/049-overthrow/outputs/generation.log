@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 18:18:42
-Phase: rebuild
+Timestamp: 2026-08-29 08:57:38
+Phase: revise-image-only
 Target Rarity: COMMON
 Target Type: VERB
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/049-overthrow/outputs/reference-inputs/current-022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b.png [COMMON] sha256=022e3b3ff6b751b3106de9925afc91ccfb474ded9b1ca2f3e7353ae648dac82b
+  [2] TEMPLATE: templates/card/v001/composed/verb/common/template_1024x1536.png [COMMON] sha256=48ca45941cf940576a7604c6c9ac86289335e9ba0062e802f571f0ac51f6aa1a
 
-Prompt File: series/2026-Q1/cards/049-overthrow/prompt.txt
+Prompt File: series/2026-Q1/cards/049-overthrow/outputs/prompt.revision.txt

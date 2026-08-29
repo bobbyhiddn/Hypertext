@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "5125732ee6461a73918eee16a47394f65a390a6fcf39bc1f306a8665a4c3c1b0",
+    "gemini_output_sha256": "8d9ca6b7071bcf9df3607c0a52f870105440fef90e43d477e4f3c5312e921eee",
     "generation_metadata_path": "series/2026-Q1/cards/076-one/outputs/generation.json",
-    "generation_metadata_sha256": "46ccc5f4029041320e01488717029216956eaec743251fc87658aa6be661a94f",
+    "generation_metadata_sha256": "028a3ca2d568f94d05081a5c43a2cee8d5f210f86c562b917482faccbc5e458d",
     "path": "series/2026-Q1/cards/076-one/outputs/card_1024x1536.png",
-    "sha256": "a86c0c839f417743596c11c2b3bdecbe07be69405b79b3e36cf5029310a85115"
+    "sha256": "655d1738a413d213a44ce1b6caf909e44d5d64760f597f88edde87cc8c3429ea"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/076-one/prompt.txt",
-    "sha256": "515150bd50e4ad42ad6cca691494f43348d0465800f4382b22f7abdcf7c56864"
+    "path": "series/2026-Q1/cards/076-one/outputs/prompt.revision.txt",
+    "sha256": "e0b5508ce35d8ad0002148720653dfb761cd5dc41a57baedf654fe4cbf4b2fb9"
   },
   "recipe": {
-    "canonical_sha256": "9c71ef53a5343989806f53843dc3d6910c3d23f4f43122c4f6ffcccc39302e88",
-    "file_sha256": "80b59ade48e7180173df2b12324909fb3ea343794670e4f55f8768cf1892a62e",
+    "canonical_sha256": "e450883b6e8dc0fe101fa5f482e6b183c6864055ddea15cfbdb4873ce02b9cdd",
+    "file_sha256": "97f5f9c9e2882dfffbb676e721b1bba6d912cfaf159e28c45661a6561066c437",
     "path": "series/2026-Q1/cards/076-one/card.json"
   },
   "reference_pack": {
@@ -50,8 +50,43 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "generate",
+    "mode": "fix",
     "references": [
+      {
+        "assigned_role": "current_card",
+        "card_type": "ADJECTIVE",
+        "eligibility_reasons": [
+          "existing_current_card",
+          "sha256=verified",
+          "requested_fix_source"
+        ],
+        "eligible": true,
+        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
+        "metadata_path": null,
+        "metadata_sha256": null,
+        "path": "series/2026-Q1/cards/076-one/outputs/reference-inputs/current-9bca9f9141f919180f8c4f0bb3389c55c4fc3734bb17b79de109e93e0e7f9298.png",
+        "position": 1,
+        "prompt_path": null,
+        "prompt_sha256": null,
+        "rarity": "RARE",
+        "rarity_label": "RARE",
+        "recipe_path": null,
+        "recipe_sha256": null,
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/076-one/outputs/reference-inputs/current-9bca9f9141f919180f8c4f0bb3389c55c4fc3734bb17b79de109e93e0e7f9298.png",
+        "review_evidence_path": null,
+        "review_evidence_sha256": null,
+        "role": "current_card",
+        "sha256": "9bca9f9141f919180f8c4f0bb3389c55c4fc3734bb17b79de109e93e0e7f9298",
+        "similarity_components": {},
+        "similarity_reason": "not_applicable_current_card",
+        "similarity_score": 0,
+        "source_manifest": null,
+        "source_manifest_sha256": null,
+        "template_commit": null,
+        "template_manifest_schema_version": null,
+        "template_manifest_status": null,
+        "template_version": null
+      },
       {
         "assigned_role": "template",
         "card_type": "ADJECTIVE",
@@ -61,11 +96,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified ADJECTIVE RARE structural layout/frame reference",
+        "gemini_label": "[2] = TEMPLATE: SHA-256-verified ADJECTIVE RARE structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
-        "position": 1,
+        "position": 2,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "RARE",
@@ -94,18 +129,18 @@
     "target_type": "ADJECTIVE"
   },
   "reference_pack_path": "series/2026-Q1/cards/076-one/outputs/reference-pack.json",
-  "reference_pack_sha256": "332e62c270e104a206661fe4836b08044b50b68d835129e6c5693d8005343573",
+  "reference_pack_sha256": "92307201fdd62d2e0a66ebeb0c5ed3c0b0bdedd12bf3ad84df1eef0e6b036e97",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "generate",
+    "mode": "fix",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "rebuild",
-    "reference_count": 1,
+    "phase": "revise-image-only",
+    "reference_count": 2,
     "response_modalities": [
       "IMAGE"
     ]

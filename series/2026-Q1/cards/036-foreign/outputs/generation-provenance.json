@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "f78ede1bbe8a71b849050915a13312e044f176b6956730e3c39e5cd1d8f5485f",
+    "gemini_output_sha256": "e929be872dc0bd8489f2d2b420d0aa04e46a357fc7245c25a14572923768a020",
     "generation_metadata_path": "series/2026-Q1/cards/036-foreign/outputs/generation.json",
-    "generation_metadata_sha256": "dee2d5031b1784d70e9e1ae42646ba6e4315353ff184b80e81acc5f38ca6c6f6",
+    "generation_metadata_sha256": "96e32ad890ac3137cb77a36b295b34c5889cc68c2ac1eb720318a19009a9f7be",
     "path": "series/2026-Q1/cards/036-foreign/outputs/card_1024x1536.png",
-    "sha256": "f78ede1bbe8a71b849050915a13312e044f176b6956730e3c39e5cd1d8f5485f"
+    "sha256": "93df2571315c3e4efe50b09769fad299521ffe326d86fcd0d078f5825dc59627"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/036-foreign/outputs/prompt.revision.txt",
-    "sha256": "132fdb32ee8e953278bed89cf87d78115f1ea7e290db8df3e78fd976c51bfc4b"
+    "sha256": "eb3b3b1b7efaf35a604e5953a6a9dbf6c17d4053ae161e855a1b09d224412eae"
   },
   "recipe": {
-    "canonical_sha256": "0e0d28a7915bea7ee2ab3f85294790b6bc2ffffd3fc77c9ca62e39ce95a92253",
-    "file_sha256": "53fa9a6664fe9eebca3d75057df4bdac4414b2b22e22fdd1f34b9d6da73af1be",
+    "canonical_sha256": "62760ee6c3e190e872705189dc22071002a495dbddff2c1db225043b7bfb229b",
+    "file_sha256": "0ae6b9eb27e338e3fe941a98f28a65ac1a4022bdb603d0435001dff355d0587b",
     "path": "series/2026-Q1/cards/036-foreign/card.json"
   },
   "reference_pack": {
@@ -64,7 +64,7 @@
         "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/036-foreign/outputs/reference-inputs/current-2ef83fc45dca38927b4568abd014e635ba4b9da157fd75c6201fb6b814f8b9a3.png",
+        "path": "series/2026-Q1/cards/036-foreign/outputs/reference-inputs/current-1655d0cf13f9b6048f4a0c3b5cda2e3546db400125e1e993ac939665627fb074.png",
         "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
@@ -72,11 +72,11 @@
         "rarity_label": "UNCOMMON",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/036-foreign/outputs/reference-inputs/current-2ef83fc45dca38927b4568abd014e635ba4b9da157fd75c6201fb6b814f8b9a3.png",
+        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/036-foreign/outputs/reference-inputs/current-1655d0cf13f9b6048f4a0c3b5cda2e3546db400125e1e993ac939665627fb074.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "current_card",
-        "sha256": "2ef83fc45dca38927b4568abd014e635ba4b9da157fd75c6201fb6b814f8b9a3",
+        "sha256": "1655d0cf13f9b6048f4a0c3b5cda2e3546db400125e1e993ac939665627fb074",
         "similarity_components": {},
         "similarity_reason": "not_applicable_current_card",
         "similarity_score": 0,
@@ -111,12 +111,12 @@
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "template",
-        "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344",
+        "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
         "similarity_components": {},
         "similarity_reason": "authoritative_structure_not_ranked",
         "similarity_score": 0,
         "source_manifest": "templates/card/v001/composed/manifest.json",
-        "source_manifest_sha256": "d73f0033e9cd67e09f9d99de63b57ff6d816cb2e4dacd1b6d98056db3f9b08f5",
+        "source_manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
         "template_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
         "template_manifest_schema_version": 3,
         "template_manifest_status": "operator-accepted-canonical",
@@ -129,7 +129,7 @@
     "target_type": "ADJECTIVE"
   },
   "reference_pack_path": "series/2026-Q1/cards/036-foreign/outputs/reference-pack.json",
-  "reference_pack_sha256": "109bd0a6075dd373212e780fe241f7ca7904bbeb0ad50b96924ed62ef7735fe0",
+  "reference_pack_sha256": "d8394442dc3b900f84b0bab939ebfbdd1fbc41054ad7ddea08415622c7fe7524",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
