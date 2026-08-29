@@ -20,8 +20,14 @@ Run from the repository root with Python 3.10 or newer. Create a Linux/macOS vir
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e package
+.venv/bin/python -m pip install -e 'package[test]'   # [test] adds pytest for the contract suite
 .venv/bin/python -m hypertext.pipeline.daily --help
+```
+
+The batch scripts read `HYPERTEXT_PY` and `HYPERTEXT_HX`; point both at this venv:
+
+```bash
+export HYPERTEXT_PY="$PWD/.venv/bin/python" HYPERTEXT_HX="$PWD/.venv/bin/hypertext"
 ```
 
 Planning needs `GEMINI_TEXT_API_KEY` or `GEMINI_API_KEY`. Full-card generation and automated review need `GEMINI_API_KEY`; watermarking needs `HYPERTEXT_SIGNING_KEY`. Supply secrets through the environment, never command arguments, prompts, logs, or committed files. Model defaults and supported overrides live in [package/hypertext/gemini/config.py](package/hypertext/gemini/config.py); dependencies and the installed entry point live in [package/pyproject.toml](package/pyproject.toml).

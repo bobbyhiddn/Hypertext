@@ -16,6 +16,14 @@ dependencies = [
     "markdown>=3.0.0",
 ]
 
+[project.optional-dependencies]
+# The suite is the repo's contract check (template digests, gates, lot rules), so the
+# tools needed to run it belong with the package: `pip install -e package[test]`.
+test = [
+    "pytest>=8.0.0",
+    "pytest-subtests>=0.11.0",
+]
+
 [project.scripts]
 hypertext = "hypertext.cli:cli"
 
