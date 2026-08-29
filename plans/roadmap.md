@@ -156,6 +156,53 @@ Implement a tamper-evident watermark system using a repository secret to authent
 
 ---
 
+## 6. Deterministic Lot type icons (and a gate)
+
+**Priority:** Medium
+**Status:** Open — raised 2026-08-29 when REVELATION shipped with mismatched TITLE icons
+
+Lot faces are painted by the image model from **prose** descriptions in
+`package/hypertext/lots/renderer.py` (`TYPE_ICONS`), e.g. TITLE is
+`"framed diamond/portrait icon"`. Nothing pins an actual glyph and nothing checks
+the result, so the model free-styles per card. Word cards solved exactly this
+class of problem by stamping pips, the type pill, number and footer
+deterministically after generation; Lot icons never got the same treatment.
+
+Known symptoms in the shipped set:
+
+- **#28 REVELATION** prints three TITLE slots with two different glyphs — the
+  first is a dark filled frame, the other two are light outlines. Visible on the
+  card.
+- **#27 CREATION** has the same dark filled TITLE frame. It reads as fine only
+  because it has a single TITLE with nothing beside it to clash with.
+- Measured fill ratio across the 13 TITLE icons in the set: 11 sit at 0.09–0.15
+  (outline), those two at 0.31–0.32 (filled).
+- The prompt asks for NAME as a `"person silhouette icon"`, but every rendered
+  Lot shows a **feather** — the model has been silently substituting, and the
+  feather is what the Word cards use, so the prose has been wrong all along.
+- The existing vision gate checks slot count, plus count, exact strings,
+  forbidden tokens and empty slots — but **not icon identity**, which is why
+  this shipped.
+
+Do:
+
+- [ ] Extract five canonical glyphs (NOUN, VERB, ADJECTIVE, NAME, TITLE) as
+      assets; a clean donor set exists on `02-pentateuch`.
+- [ ] Stamp them into the slot positions after generation, the way
+      `cards/fixed_elements.py` stamps the Word cards, and zero the icons in the
+      generation prompt so the model stops painting them.
+- [ ] Add a gate that fails a Lot face whose icons do not match the canonical
+      glyphs, and fix the `TYPE_ICONS` prose (NAME is a feather, not a
+      silhouette) so prompt and output agree.
+- [ ] Re-stamp #27 and #28, then regenerate `series/2026-Q1/tgc_prep/lots/`.
+
+Note: a pixel-surgery swap was tried on 2026-08-29 and reverted. The filled
+glyph's anti-aliased edge and drop shadow survive an ink-only erase, and a flat
+background patch does not match the parchment gradient — it looked worse than the
+defect. Stamping onto a regenerated face is the right fix, not retouching.
+
+---
+
 ## Completed
 
 - ✅ Multi-reference style generation
