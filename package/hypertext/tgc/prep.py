@@ -64,10 +64,21 @@ def find_card_images(cards_dir: Path, limit: int = 0) -> list[Path]:
 
 
 def find_lot_images(lots_dir: Path, limit: int = 0) -> list[Path]:
-    """Find lot images in a directory structure."""
-    lot_images = []
+    """Find lot images, in either layout the repo uses.
+
+    Word cards live in per-card folders with an outputs/ subdirectory, but the
+    Lot faces are a flat set of PNGs in lots/faces/ (one package, generated
+    together). Looking only for card-shaped folders silently found zero Lots.
+    """
+    lot_images: list[Path] = []
 
     logger.debug(f"Searching for lots in: {lots_dir}")
+    faces_dir = lots_dir / "faces"
+    if faces_dir.is_dir():
+        lot_images = sorted(p for p in faces_dir.glob("*.png") if p.is_file())
+        logger.debug(f"  Flat face set: {len(lot_images)} in {faces_dir}")
+        if lot_images:
+            return lot_images[:limit] if limit > 0 else lot_images
     for lot_dir in sorted(lots_dir.iterdir()):
         if not lot_dir.is_dir():
             continue

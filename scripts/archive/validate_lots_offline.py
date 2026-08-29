@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw
 from hypertext.lots.renderer import _build_lot_prompt
 from hypertext.lots.rules import IMAGE_DIMENSIONS, load_lot_rules, reference_manifest
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]   # scripts/archive/<file> -> repo root
 EVIDENCE = ROOT / "docs" / "evidence" / "lot-contract-offline"
 
 def main() -> int:
