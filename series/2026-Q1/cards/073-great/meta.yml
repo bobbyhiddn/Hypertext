@@ -1,0 +1,55 @@
+number: '073'
+word: GREAT
+gloss: Large in size or rank
+card_type: ADJECTIVE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A vast plain at the moment of dusk with an enormous radiant golden sun
+  sinking on one horizon and a huge pale moon rising on the other, a distant walled
+  city small between them, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+stats_rationale:
+  lore: the greater light, the great nation promised to Abram, and greatness in the
+    kingdom as service - a recognized theme with clear teaching
+  context: gadol occurs 527 times in the Hebrew Bible; megas occurs 243 times in the
+    New Testament; total 770
+  complexity: a plain adjective of size and rank with stable translation; only the
+    verb form make great in Genesis 12 needs a note
+weight: 3
+weight_rationale: the great lights, the great city, the great nation and the great
+  name - the era's word for magnitude; thematic
+ability: Look at the top five cards of the Tower. Add up to two of those cards to
+  your hand and put the other cards on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 12:2
+  snippet: And I will make of thee a great nation
+nt_verse:
+  ref: Matthew 20:26
+  snippet: whosoever will be great among you, let him be your minister
+greek:
+  text: μέγας
+  translit: megas
+hebrew:
+  text: גָּדוֹל
+  translit: gadol
+ot_refs: Gen 12:2 • Gen 1:16 • Gen 6:5
+nt_refs: Matt 20:26 • Matt 5:19 • Heb 4:14
+trivia:
+- Genesis 1 never names the sun and moon; they are the greater light and the lesser
+  light, gadol and qaton.
+- Babel's builders wanted to make a name; God tells Abram he will make his name great
+  - the same wish granted by gift instead of by brick.
+- Nineveh is called that great city three times in Jonah; its founder Nimrod was the
+  mighty hunter of Genesis 10.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

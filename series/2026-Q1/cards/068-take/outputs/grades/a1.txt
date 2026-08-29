@@ -1,0 +1,12 @@
+============================================================
+GRADE RESULT: TAKE
+============================================================
+Score: 95/100
+Status: FAIL
+Style Match: True
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Fix the ability text to read exactly: 'Add one card from the top of the Tower to your hand. Then look at one card from the top of the Tower; you may put that card on the bottom of the Tower.' (it currently reads: 'Add one card from the top of the Tower to your hand. Then look at one card from the top of the Tower; you may card on the bottom of the Tower.').
+============================================================

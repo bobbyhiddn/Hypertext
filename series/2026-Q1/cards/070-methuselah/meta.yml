@@ -1,0 +1,54 @@
+number: '070'
+word: METHUSELAH
+gloss: The oldest man who ever lived
+card_type: NAME
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A colossal ancient olive tree with a hollow trunk on a dark hillside under
+  a sky full of stars, a weathered stone marker at its roots, one radiant golden lantern
+  hanging from a low branch, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 2
+  context: 1
+  complexity: 4
+stats_rationale:
+  lore: his long life is a marvel and a chronology, not a teaching
+  context: Metushelach occurs 6 times in the Hebrew Bible; Mathousala occurs 1 time
+    in the New Testament; total 7
+  complexity: the name is read as man of the dart or as when he dies it shall be sent;
+    the numbers of Genesis 5 place his death in the flood year - an etymology and
+    a chronology both contested
+weight: 2
+weight_rationale: a genealogy name with a famous number; a clear place in the era
+  without teaching hanging on it
+ability: Look at the bottom three cards of the Tower. Add one of those cards to your
+  hand, then shuffle the cards in the Tower.
+ot_verse:
+  ref: Genesis 5:27
+  snippet: all the days of Methuselah were nine hundred sixty and nine years
+nt_verse:
+  ref: Luke 3:37
+  snippet: which was the son of Mathusala
+greek:
+  text: Μαθουσάλα
+  translit: Mathousala
+hebrew:
+  text: מְתוּשֶׁלַח
+  translit: Metushelach
+ot_refs: Gen 5:21 • Gen 5:25 • 1 Chr 1:3
+nt_refs: Luke 3:37
+trivia:
+- Nine hundred sixty and nine years is the longest life in Scripture; Jared, his grandfather,
+  is second at nine hundred sixty and two.
+- Adding the years of Genesis 5, Methuselah dies in the very year the flood comes
+  - the oldest man outlives none of the judgment.
+- Enoch, who never died, was the father of the man who lived longest.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

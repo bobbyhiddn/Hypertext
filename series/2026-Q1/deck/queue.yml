@@ -196,3 +196,33 @@
 - word: EXILE
   card_type: TITLE
   rarity: UNCOMMON
+- word: WALK
+  card_type: VERB
+  rarity: COMMON
+- word: TAKE
+  card_type: VERB
+  rarity: COMMON
+- word: BEAUTIFUL
+  card_type: ADJECTIVE
+  rarity: COMMON
+- word: METHUSELAH
+  card_type: NAME
+  rarity: COMMON
+- word: TILLER
+  card_type: TITLE
+  rarity: COMMON
+- word: DOVE
+  card_type: NOUN
+  rarity: UNCOMMON
+- word: GREAT
+  card_type: ADJECTIVE
+  rarity: UNCOMMON
+- word: EBER
+  card_type: NAME
+  rarity: UNCOMMON
+- word: HEIR
+  card_type: TITLE
+  rarity: UNCOMMON
+- word: ONE
+  card_type: ADJECTIVE
+  rarity: RARE

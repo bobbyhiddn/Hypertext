@@ -139,6 +139,46 @@
     "66": {
       "status": "pass",
       "note": "EXILE TITLE/UNCOMMON. Exchange one card with a chosen player, then draw two - the first exchange in the set. garash / ekballo (Gen 3:24 / Gal 4:30). Stats 4/4/3. Weight 3. Passed first render, 100/100 3-0."
+    },
+    "67": {
+      "status": "pass",
+      "note": "WALK VERB/COMMON. Look at the top two, pass one under, draw one - walking step by step. halak / peripateo (Gen 5:24 / 2 Cor 5:7). Stats 4/5/3. Weight 3. Passed first render, 100/100."
+    },
+    "68": {
+      "status": "pass",
+      "note": "TAKE VERB/COMMON. Add the top card, then look at the next and may bury it - took the man and put him in the garden. laqach / lambano (Gen 2:15 / Matt 26:26). Stats 3/5/2. Weight 3. 95 then exact-text fix-mode, 100/100."
+    },
+    "69": {
+      "status": "pass",
+      "note": "BEAUTIFUL ADJECTIVE/COMMON. Add the top card, then look at three and reorder - fair to look upon. yapheh / horaios (Gen 12:11 / Rom 10:15). Stats 2/3/3. Weight 2. Passed first render, 100/100."
+    },
+    "70": {
+      "status": "pass",
+      "note": "METHUSELAH NAME/COMMON. Look at the bottom three (the oldest cards), keep one, then shuffle the Tower - the flood came the year he died. Metushelach / Mathousala (Gen 5:27 / Luke 3:37). Stats 2/1/4. Weight 2. Passed first render, 100/100."
+    },
+    "71": {
+      "status": "pass",
+      "note": "TILLER TITLE/COMMON. Add the bottom card, may bury one from hand - turning the soil. abad / georgos (Gen 4:2 / John 15:1). Stats 3/4/4. Weight 2. Passed first render, 100/100."
+    },
+    "72": {
+      "status": "pass",
+      "note": "DOVE NOUN/UNCOMMON. Reveal three, keep up to two whose type is in your Lot (the olive leaf), the rest sink to the bottom - second Lot-reading card. yonah / peristera (Gen 8:11 / Matt 3:16). Stats 4/3/3. Weight 3. Passed first render, 100/100."
+    },
+    "73": {
+      "status": "pass",
+      "note": "GREAT ADJECTIVE/UNCOMMON. Look at five, keep two, rest to the bottom - the widest view. gadol / megas (Gen 12:2 / Matt 20:26). Stats 3/5/2. Weight 3. Passed first render, 100/100."
+    },
+    "74": {
+      "status": "pass",
+      "note": "EBER NAME/UNCOMMON. Look at three and put them under, then draw two - crossing over to the region beyond. Eber / Eber (Gen 10:21 / Luke 3:35). Stats 3/2/4. Weight 3. One gate fail, one placeholder leak, passed a3 100/100."
+    },
+    "75": {
+      "status": "pass",
+      "note": "HEIR TITLE/UNCOMMON. Discard three into Sheol, gain one Letter and look at the top card - the estate passes; first paid-Letter card (the user's 'gain a Letter, discard 3'). yarash / kleronomos (Gen 15:4 / Heb 11:7). Stats 4/4/3. Weight 3. One placeholder leak, passed a2 100/100."
+    },
+    "76": {
+      "status": "pass",
+      "note": "ONE ADJECTIVE/RARE. Name a type, each player reveals a card, draw two plus one per revealed card of the named type - the people is one. echad / heis (Gen 11:6 / John 17:21). Stats 5/5/4. Weight 4. Passed first render, 100/100."
     }
   },
   "log": [
@@ -256,7 +296,7 @@
     },
     {
       "when": "2026-08-28",
-      "what": "CREATIVITY RULES (user: 'We aren\\'t being creative enough with abilities. I think hover does the same thing as kingdom\u2026 it could have utilized hovering over the pages'; 'a letter is worth three cards\u2026 we need creativity using the mechanics'). (1) Shape-uniqueness: hypertext.cards.ability_shape signs every ability (core gain verb+zone+quantity, reach, look count, bottom, filter, cost, condition, rest destination, put source, secondary gain, opponent effect, shuffle, delayed); identical shapes fail the plan phase; 'hypertext ability-audit --series --show'. HOVER v1 = KINGDOM confirmed by the check. (2) Letters weigh three cards: an unconditional Letter gain is payoff 3, a conditional one 2, forcing another player to spend a Letter is interaction 2. (3) Design palette now demands Letters, Lots, or Pages on at least two of five cards per batch, with concrete patterns; the estimator scores Page/Lot-driven scaling as setup 2 / payoff 3 and accepts a single 'Page' as the Pages zone. Redesigned and re-rendered at 100/100 3-0: HOVER v2 (one card of each card type in another player\\'s Page, from Sheol), FIRE v2 (reveal the top card into Sheol; a VERB earns a Letter), DARK v2 (cover the top, take from the bottom; v1 shared WATCHMAN\\'s shape). Remaining shape duplicates are all legacy #001-#031."
+      "what": "CREATIVITY RULES (user: 'We aren\\'t being creative enough with abilities. I think hover does the same thing as kingdom… it could have utilized hovering over the pages'; 'a letter is worth three cards… we need creativity using the mechanics'). (1) Shape-uniqueness: hypertext.cards.ability_shape signs every ability (core gain verb+zone+quantity, reach, look count, bottom, filter, cost, condition, rest destination, put source, secondary gain, opponent effect, shuffle, delayed); identical shapes fail the plan phase; 'hypertext ability-audit --series --show'. HOVER v1 = KINGDOM confirmed by the check. (2) Letters weigh three cards: an unconditional Letter gain is payoff 3, a conditional one 2, forcing another player to spend a Letter is interaction 2. (3) Design palette now demands Letters, Lots, or Pages on at least two of five cards per batch, with concrete patterns; the estimator scores Page/Lot-driven scaling as setup 2 / payoff 3 and accepts a single 'Page' as the Pages zone. Redesigned and re-rendered at 100/100 3-0: HOVER v2 (one card of each card type in another player\\'s Page, from Sheol), FIRE v2 (reveal the top card into Sheol; a VERB earns a Letter), DARK v2 (cover the top, take from the bottom; v1 shared WATCHMAN\\'s shape). Remaining shape duplicates are all legacy #001-#031."
     },
     {
       "when": "2026-08-28",
@@ -272,7 +312,7 @@
     },
     {
       "when": "2026-08-28",
-      "what": "ABILITY SPEC + GRAMMAR built from the user's decisions on the Ability Options artifact: docs/ability-grammar.md and schema/ability_grammar.yml (ABILITY := [COST] CORE [KICKER] [CONDITION] [TIMING]); ability_grammar.classify + 'hypertext grammar-check' (all 30 current abilities classify; legacy do not). Rulings in docs/rules.md \u00a7 Abilities: 'your Lot / another player's Lot' instead of a new term; Pages keep their value and may have a card returned; activate = resolve as if revealed, printed cost paid, back to Sheol, no chaining; record/redeem deferred; COMMONs may reveal, take a bare type filter, and rhyme. Estimator: costs count (hand card 1, Letter 3, Page 5 units; one payoff step per three units) so 'Gain a Letter, discard three' is UNCOMMON and a Page-discard buys a five-card Sheol pull at RARE; reveal-reach vs material-reach for 'each player'; UNCOMMON interaction 0-2 (UNCOMMON, RARE, GLORIOUS may interact with opponents; COMMON never); 'gain N Letters' with word numbers."
+      "what": "ABILITY SPEC + GRAMMAR built from the user's decisions on the Ability Options artifact: docs/ability-grammar.md and schema/ability_grammar.yml (ABILITY := [COST] CORE [KICKER] [CONDITION] [TIMING]); ability_grammar.classify + 'hypertext grammar-check' (all 30 current abilities classify; legacy do not). Rulings in docs/rules.md § Abilities: 'your Lot / another player's Lot' instead of a new term; Pages keep their value and may have a card returned; activate = resolve as if revealed, printed cost paid, back to Sheol, no chaining; record/redeem deferred; COMMONs may reveal, take a bare type filter, and rhyme. Estimator: costs count (hand card 1, Letter 3, Page 5 units; one payoff step per three units) so 'Gain a Letter, discard three' is UNCOMMON and a Page-discard buys a five-card Sheol pull at RARE; reveal-reach vs material-reach for 'each player'; UNCOMMON interaction 0-2 (UNCOMMON, RARE, GLORIOUS may interact with opponents; COMMON never); 'gain N Letters' with word numbers."
     },
     {
       "when": "2026-08-28",
@@ -285,6 +325,10 @@
     {
       "when": "2026-08-28",
       "what": "BATCH 7 (#062-#066: WICKED, CANAAN, MASTER, PELEG, EXILE), the first designed from the grammar with word weights: 21:38:18 launch, all five passed on their first render by 21:43:47 - 5m29s, five renders for five cards, no self-heal. Two grammar cores enter the set (a Lot-reading RARE, an exchange UNCOMMON). ZION (#063) was replaced by CANAAN under the set-era rule. Before the batch: MESSENGER, CHOOSE, ASCEND redesigned to UNCOMMON strength (ASCEND needed five rolls - text garbles - and passed through the new exact-text fix-mode once duplicate corrections were collapsed). Audits after: lemma 0, weight 0 violations (16/22 heavy, 7/9 pillars), shapes unique among current-contract cards."
+    },
+    {
+      "when": "2026-08-29",
+      "what": "BATCH 8 (#067-#076: WALK, TAKE, BEAUTIFUL, METHUSELAH, TILLER, DOVE, GREAT, EBER, HEIR, ONE) - ten cards, five COMMON, four UNCOMMON, one RARE, all designed offline and pre-flighted with the new scripts/pipeline/offline_check.py (0 findings before launch). First launch 07:35:15 was lost to a missing HYPERTEXT_HX (every gate reported 'pip fail'); relaunched 07:37:22, last pass 07:52:39 - 15m17s, ~92 s per card, 14 renders for 10 cards: seven passed first render, TAKE took the exact-text fix-mode (a dropped 'put'), EBER and HEIR each re-rendered after a template placeholder leak. HEIR is the set's first paid Letter ('Discard three ... gain one Letter'), DOVE its second Lot-reading card, ONE its second every-player reveal. Audits: lemma 0, weight 17/22 heavy and 7/9 pillars, shapes unique. A hypertext-generation skill (.claude/skills) now documents the batch workflow; selfheal/repaint exit early when HYPERTEXT_HX is not executable. Open slots after this batch: COMMON 6, UNCOMMON 7, RARE 0, GLORIOUS 1 (ADJECTIVE) - the three legacy pillar promotions (GRACE, CREATE, NOAH) will need the GLORIOUS grid rebalanced."
     }
   ]
 }

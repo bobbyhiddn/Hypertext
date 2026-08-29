@@ -1,0 +1,56 @@
+number: '074'
+word: EBER
+gloss: The ancestor whose name means the region beyond
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A wide slow river at dawn with a ford of flat stones leading from the
+  dark near bank to a far bank of pale tents, mist over the water and one radiant
+  golden sunrise beyond the far shore, no people, luminous cinematic oil painting
+  with impressionistic brushwork, deep shadowed background, one radiant golden light
+  source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 2
+  complexity: 4
+stats_rationale:
+  lore: the father of all the children of Eber is the line the promise runs through
+    - a recognized theme, not a doctrine
+  context: Eber occurs 15 times in the Hebrew Bible; Eber occurs 1 time in the New
+    Testament; total 16
+  complexity: eber means the region beyond, and Hebrew, ivri, is read either as descendant
+    of Eber or as one from beyond the river - a contested etymology that is itself
+    a study
+weight: 3
+weight_rationale: the name behind the word Hebrew, seated in the line from Shem to
+  Abram; thematic
+ability: Look at the top three cards of the Tower and put those cards on the bottom
+  of the Tower. Then draw two cards from the Tower.
+ot_verse:
+  ref: Genesis 10:21
+  snippet: Shem also, the father of all the children of Eber
+nt_verse:
+  ref: Luke 3:35
+  snippet: which was the son of Heber
+greek:
+  text: Ἔβερ
+  translit: Eber
+hebrew:
+  text: עֵבֶר
+  translit: Eber
+ot_refs: Gen 10:21 • Gen 10:25 • Gen 11:14
+nt_refs: Luke 3:35
+trivia:
+- Shem is introduced in Genesis 10:21 not as Noah's son but as the father of all the
+  children of Eber - the line is named four generations early.
+- Abram is first called the Hebrew in Genesis 14:13; the word is Eber's name with
+  a gentilic ending.
+- Eber lived four hundred sixty-four years and, by the numbers of Genesis 11, outlived
+  Abraham.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

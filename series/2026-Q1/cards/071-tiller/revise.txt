@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: TILLER
+# Card_Gloss: One who works the ground
+# Card_Type: TITLE
+# Card_Rarity: COMMON
+# Card_Ability: Add one card from the bottom of the Tower to your hand. Then you may put one card from your hand on the bottom of the Tower.
+# Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 4 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A freshly furrowed dark field at dawn with a wooden mattock leaning on a boundary stone, thorns and thistles crowding the field's edge, one radiant golden sun breaking over the furrows, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 4:2 — but Cain was a tiller of the ground
+# Card_NT_Verse: John 15:1 — I am the true vine, and my Father is the husbandman
+# Card_Hebrew: עָבַד (abad)
+# Card_Greek: γεωργός (georgos)
+# Card_Trivia_1: Genesis 2:15 gives the man two verbs, to dress and to keep; the tiller and the keeper are the two oldest trades.
+# Card_Trivia_2: Cain's offering came from the ground he tilled; after the murder the ground would no longer yield him its strength.
+# Card_Trivia_3: Georgos, earth-worker, gives English the name George; Jesus calls his Father the georgos of the true vine.

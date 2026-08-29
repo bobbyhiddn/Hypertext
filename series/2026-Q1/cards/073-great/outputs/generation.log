@@ -1,0 +1,11 @@
+=== Generation Log ===
+Timestamp: 2026-08-29 07:45:49
+Phase: rebuild
+Target Rarity: UNCOMMON
+Target Type: ADJECTIVE
+Fix Mode: False
+
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/adjective/uncommon/template_1024x1536.png [UNCOMMON] sha256=2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9
+
+Prompt File: series/2026-Q1/cards/073-great/prompt.txt

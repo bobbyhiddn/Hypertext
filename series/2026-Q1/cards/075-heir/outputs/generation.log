@@ -1,0 +1,11 @@
+=== Generation Log ===
+Timestamp: 2026-08-29 07:50:47
+Phase: rebuild
+Target Rarity: UNCOMMON
+Target Type: TITLE
+Fix Mode: False
+
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/title/uncommon/template_1024x1536.png [UNCOMMON] sha256=20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f
+
+Prompt File: series/2026-Q1/cards/075-heir/prompt.txt

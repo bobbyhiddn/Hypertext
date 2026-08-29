@@ -1,0 +1,55 @@
+number: '075'
+word: HEIR
+gloss: The one to whom the estate passes
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A tent doorway open to a night sky crowded with stars above a dark plain,
+  an open cedar chest on the threshold spilling radiant golden light, a shepherd's
+  staff laid across it, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+stats_rationale:
+  lore: heirs of promise and joint-heirs with Christ - inheritance is a major theme
+    close to doctrine
+  context: yarash occurs 232 times in the Hebrew Bible; kleronomos occurs 15 times
+    in the New Testament; total 247
+  complexity: yarash means both to inherit and to dispossess - one verb for receiving
+    a land and for driving out its holders; kleronomos is built on kleros, the lot
+    cast for a portion - a derivation to explain
+weight: 3
+weight_rationale: Abram's question in Genesis 15 and Noah's title in Hebrews 11 -
+  inheritance is thematic vocabulary with real teaching
+ability: Discard three cards from your hand into Sheol. Then gain one Letter and look
+  at one card from the top of the Tower.
+ot_verse:
+  ref: Genesis 15:4
+  snippet: he that shall come forth out of thine own bowels shall be thine heir
+nt_verse:
+  ref: Hebrews 11:7
+  snippet: Noah ... became heir of the righteousness which is by faith
+greek:
+  text: κληρονόμος
+  translit: kleronomos
+hebrew:
+  text: יָרַשׁ
+  translit: yarash
+ot_refs: Gen 15:3 • Gen 15:4 • Gen 21:10
+nt_refs: Heb 11:7 • Rom 8:17 • Gal 4:7
+trivia:
+- Abram's heir, before Isaac, was Eliezer of Damascus, a servant born in his house.
+- Kleronomos joins kleros, a lot, to nemo, to hold - an heir is one who holds an allotted
+  portion.
+- 'Hebrews 11 names Noah heir of the righteousness which is by faith: the ark-builder
+  inherits before Abraham does.'
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

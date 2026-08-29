@@ -47,7 +47,7 @@
     {
       "type": "NOUN",
       "rarity": "UNCOMMON",
-      "card_count": 4
+      "card_count": 5
     },
     {
       "type": "NOUN",
@@ -62,7 +62,7 @@
     {
       "type": "VERB",
       "rarity": "COMMON",
-      "card_count": 5
+      "card_count": 7
     },
     {
       "type": "VERB",
@@ -82,34 +82,34 @@
     {
       "type": "ADJECTIVE",
       "rarity": "COMMON",
+      "card_count": 6
+    },
+    {
+      "type": "ADJECTIVE",
+      "rarity": "UNCOMMON",
       "card_count": 5
     },
     {
       "type": "ADJECTIVE",
+      "rarity": "RARE",
+      "card_count": 3
+    },
+    {
+      "type": "ADJECTIVE",
+      "rarity": "GLORIOUS",
+      "card_count": 1
+    },
+    {
+      "type": "NAME",
+      "rarity": "COMMON",
+      "card_count": 3
+    },
+    {
+      "type": "NAME",
       "rarity": "UNCOMMON",
       "card_count": 4
     },
     {
-      "type": "ADJECTIVE",
-      "rarity": "RARE",
-      "card_count": 2
-    },
-    {
-      "type": "ADJECTIVE",
-      "rarity": "GLORIOUS",
-      "card_count": 1
-    },
-    {
-      "type": "NAME",
-      "rarity": "COMMON",
-      "card_count": 2
-    },
-    {
-      "type": "NAME",
-      "rarity": "UNCOMMON",
-      "card_count": 3
-    },
-    {
       "type": "NAME",
       "rarity": "RARE",
       "card_count": 5
@@ -122,12 +122,12 @@
     {
       "type": "TITLE",
       "rarity": "COMMON",
-      "card_count": 5
+      "card_count": 6
     },
     {
       "type": "TITLE",
       "rarity": "UNCOMMON",
-      "card_count": 3
+      "card_count": 4
     },
     {
       "type": "TITLE",

@@ -1,0 +1,53 @@
+number: 068
+word: TAKE
+gloss: To lay hold of and carry off
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A garden path at dawn between dark cedars, a single leather sandal left
+  on the stones and a column of radiant golden light lifting upward through the branches,
+  no people, luminous cinematic oil painting with impressionistic brushwork, deep
+  shadowed background, one radiant golden light source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 5
+  complexity: 2
+stats_rationale:
+  lore: God takes the man into Eden and takes Enoch to himself; Jesus says take, eat
+    - a recognized theme with clear teaching
+  context: laqach occurs 966 times in the Hebrew Bible; lambano occurs 263 times in
+    the New Testament; total 1229
+  complexity: a plain verb of taking with stable translation; the range from seizing
+    to receiving is the ordinary range of the English word
+weight: 3
+weight_rationale: God took the man into the garden and took Enoch out of the world
+  - the verb of the era's two great removals; thematic
+ability: Add one card from the top of the Tower to your hand. Then look at one card
+  from the top of the Tower; you may put that card on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 2:15
+  snippet: the LORD God took the man, and put him into the garden
+nt_verse:
+  ref: Matthew 26:26
+  snippet: Take, eat; this is my body
+greek:
+  text: λαμβάνω
+  translit: lambano
+hebrew:
+  text: לָקַח
+  translit: laqach
+ot_refs: Gen 2:15 • Gen 3:6 • Gen 5:24
+nt_refs: Matt 26:26 • John 1:12 • Rev 22:17
+trivia:
+- 'Genesis 5:24 ends with three words: God took him. Enoch is the one man of the era
+  who does not die.'
+- The woman took of the fruit and did eat; the same verb carries both the taking in
+  Eden and the taking of bread at the last supper.
+- Lambano means both to take and to receive; John 1:12 says as many as received him.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

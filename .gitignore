@@ -31,7 +31,8 @@ node_modules/
 package-lock.json
 
 # claude folder
-.claude/
+.claude/*
+!.claude/skills/
 # build artifacts
 package/hypertext_tools.egg-info/
 

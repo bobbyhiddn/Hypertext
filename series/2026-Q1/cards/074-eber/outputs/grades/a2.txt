@@ -1,0 +1,13 @@
+============================================================
+GRADE RESULT: EBER
+============================================================
+Score: 0/100 (content: 100/100)
+Status: FAIL
+Style Match: False
+Style Issue: Template placeholder leak: ORIGINAL LANGUAGES (Section header banner above the Hebrew/Aramaic and Greek boxes)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove the template placeholder text ORIGINAL LANGUAGES (Section header banner above the Hebrew/Aramaic and Greek boxes); replace the slot with the supplied content only.
+============================================================

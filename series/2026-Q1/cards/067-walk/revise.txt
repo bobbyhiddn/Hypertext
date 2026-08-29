@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: WALK
+# Card_Gloss: To go on step by step, as Enoch walked with God
+# Card_Type: VERB
+# Card_Rarity: COMMON
+# Card_Ability: Look at the top two cards of the Tower. Put one of those cards on the bottom of the Tower, then draw one card from the Tower.
+# Card_Stats: LORE 4 | CONTEXT 5 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A narrow path of wet stones crossing a dark dewy plain at dusk, a single line of bare footprints leading toward a radiant golden horizon, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 5:24 — And Enoch walked with God
+# Card_NT_Verse: 2 Corinthians 5:7 — For we walk by faith, not by sight
+# Card_Hebrew: הָלַךְ (halak)
+# Card_Greek: περιπατέω (peripateo)
+# Card_Trivia_1: Genesis uses the same reflexive form for God walking in the garden in the cool of the day and for Enoch walking with God.
+# Card_Trivia_2: Noah walked with God; Abram is told to walk before God - the prepositions mark two different callings.
+# Card_Trivia_3: Paul's peripateo, to walk around, became the standard New Testament word for how a believer lives.

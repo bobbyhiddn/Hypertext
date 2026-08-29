@@ -1,0 +1,14 @@
+============================================================
+GRADE RESULT: HEIR
+============================================================
+Score: 0/100 (content: 93/100)
+Status: FAIL
+Style Match: False
+Style Issue: Contains leftover placeholder text, brackets in the ability panel, and untranslated label artifacts. Template placeholder leak: DEFINITION TEXT (below the card title HEIR); ABILITY DESCRIPTION HERE (inside the ABILITY text box)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove the template placeholder text DEFINITION TEXT (below the card title HEIR); replace the slot with the supplied content only.
+  - Fix the ability text to read exactly: 'Discard three cards from your hand into Sheol. Then gain one Letter and look at one card from the top of the Tower.' (it currently reads: '[Ability Description Here] Discard three cards from your hand into Sheol. Then gain one Letter and look at one card from the top of the Tower.').
+============================================================

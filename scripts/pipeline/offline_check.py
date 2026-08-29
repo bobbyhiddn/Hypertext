@@ -1,0 +1,74 @@
+"""Offline pre-flight for a designs module: run every deterministic set rule before spending a render.
+
+Usage: offline_check.py <designs_module.py> [WORD:TYPE ...]
+The module exposes DESIGNS[word] = (rarity, seed, candidate) and META[word]; card types come from a
+TYPES = {word: type} dict in the module or from WORD:TYPE arguments. Exit 1 on any finding.
+"""
+import importlib.util, re, sys
+from collections import Counter
+from hypertext.cards.abilities import validate_ability_candidate, _estimate_printed_ratings, ABILITY_WORD_CAPS
+from hypertext.cards.ability_shape import load_series_abilities, shape_conflicts, ability_signature, signature_key
+from hypertext.cards.lemma_uniqueness import lemma_conflicts, load_series_records
+from hypertext.cards.word_weight import check_word_weight
+from hypertext.cards import ability_grammar as ag
+
+SERIES = "series/2026-Q1"
+WORD = re.compile(r"\b[\w'-]+\b")
+
+def bucket(total):
+    return 1 if total <= 10 else 2 if total <= 40 else 3 if total <= 120 else 4 if total <= 400 else 5
+
+def main():
+    spec = importlib.util.spec_from_file_location("designs", sys.argv[1])
+    d = importlib.util.module_from_spec(spec); spec.loader.exec_module(d)
+    types = dict(getattr(d, "TYPES", {}))
+    for arg in sys.argv[2:]:
+        w, t = arg.split(":"); types[w] = t
+    missing = [w for w in d.DESIGNS if w not in types]
+    if missing:
+        sys.exit(f"no card type for {missing}: add TYPES to the module or pass WORD:TYPE")
+    existing_ab = load_series_abilities(SERIES)
+    existing_rec = list(load_series_records(SERIES))
+    findings, sigs = 0, {}
+    for w, (rar, seed, cand) in d.DESIGNS.items():
+        text, m = cand["ability_text"], d.META[w]
+        print(f"\n=== {w} {types[w]} {rar}  words={len(WORD.findall(text))}/{ABILITY_WORD_CAPS[rar]}")
+        r = validate_ability_candidate(cand, seed, rar)
+        if r.get("issues"):
+            findings += 1; print(" validate:", r["issues"])
+        est = _estimate_printed_ratings(text, cand["rules_actions"])
+        decl = {k: v["rating"] for k, v in cand["rarity_budget"].items()}
+        if est != decl:
+            findings += 1; print(" ratings differ from the estimator:", est, "vs declared", decl)
+        own = f"-{w.lower()}"   # a design already planned into the series is not its own conflict
+        sc = shape_conflicts(text, [r for r in existing_ab if not r[0].endswith(own)])
+        if sc:
+            findings += 1; print(" shape conflict:", sc)
+        sigs[w] = signature_key(ability_signature(text))
+        content = {"WORD": w, "CARD_TYPE": types[w], "HEBREW": m["hebrew"]["text"], "HEBREW_TRANSLIT": m["hebrew"]["translit"],
+                   "GREEK": m["greek"]["text"], "GREEK_TRANSLIT": m["greek"]["translit"]}
+        lc = lemma_conflicts(content, [r for r in existing_rec if not r[0].endswith(own)])
+        if lc:
+            findings += 1; print(" lemma conflict:", lc)
+        ww = check_word_weight(m["weight"], rar, m["weight_rationale"])
+        if ww:
+            findings += 1; print(" weight:", ww)
+        g = ag.classify(text)
+        if g.get("unclassified"):
+            findings += 1; print(" grammar: unclassified")
+        else:
+            print(" grammar:", {k: v for k, v in g.items() if v and k != "unclassified"})
+        nums = [int(x) for x in re.findall(r"total (\d+)", m["stats_rationale"]["context"])]
+        if not nums or bucket(nums[0]) != m["stats"]["context"]:
+            findings += 1; print(f" CONTEXT: rationale total {nums} does not match declared bucket {m['stats']['context']}")
+        if rar in ("COMMON", "UNCOMMON") and sum(1 for v in m["stats"].values() if v >= 4) >= 3:
+            findings += 1; print(" STATS: three stats of 4+ on a", rar)
+        print(" ok" if findings == 0 else "", sigs[w])
+    dup = [k for k, v in Counter(sigs.values()).items() if v > 1]
+    if dup:
+        findings += 1; print("\nintra-batch duplicate shapes:", dup)
+    print(f"\n{findings} finding(s)")
+    sys.exit(1 if findings else 0)
+
+if __name__ == "__main__":
+    main()

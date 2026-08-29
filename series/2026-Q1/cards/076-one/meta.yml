@@ -1,0 +1,56 @@
+number: '076'
+word: ONE
+gloss: Single and undivided, as the whole earth was of one language
+card_type: ADJECTIVE
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A single colossal brick ziggurat on the plain of Shinar at dusk, one unfinished
+  tower under a single column of radiant golden light, a single road running straight
+  to it across the dark plain, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 5
+  context: 5
+  complexity: 4
+stats_rationale:
+  lore: the LORD our God is one LORD, and I and my Father are one - a doctrine hangs
+    on the word
+  context: echad occurs 970 times in the Hebrew Bible; heis occurs 345 times in the
+    New Testament; total 1315
+  complexity: echad can mean a compound unity - one flesh, the people is one - and
+    the difference between echad and yachid shapes readings of the Shema; a semantic
+    range that changes doctrine
+weight: 4
+weight_rationale: the one language and one people that Babel turns on, and the word
+  of the Shema - the card people look for
+ability: Name a card type. Each player reveals one card from that player's hand; then
+  draw two cards from the Tower and draw one card from the Tower for each revealed
+  card of the named type.
+ot_verse:
+  ref: Genesis 11:6
+  snippet: Behold, the people is one, and they have all one language
+nt_verse:
+  ref: John 17:21
+  snippet: That they all may be one
+greek:
+  text: εἷς
+  translit: heis
+hebrew:
+  text: אֶחָד
+  translit: echad
+ot_refs: Gen 11:1 • Gen 11:6 • Deut 6:4
+nt_refs: John 17:21 • Eph 4:5 • John 10:30
+trivia:
+- Genesis 11:1 says the whole earth was of one lip and one set of words - the Hebrew
+  counts unity twice.
+- Echad is the last word of the Shema, Hear O Israel, the LORD our God, the LORD is
+  one.
+- Jesus prays that they all may be one - Babel's unity restored by gift, not by tower.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

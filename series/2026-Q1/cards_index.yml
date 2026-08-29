@@ -4,6 +4,7 @@ words:
 - ARK
 - ASCEND
 - BABBLE
+- BEAUTIFUL
 - BRICK
 - BROTHER
 - BUILD
@@ -21,7 +22,9 @@ words:
 - DESCEND
 - DESTROYER
 - DISCORD
+- DOVE
 - EARTH
+- EBER
 - EDEN
 - ELDER
 - ENOCH
@@ -34,7 +37,9 @@ words:
 - GATHER
 - GOOD
 - GRACE
+- GREAT
 - HEAR
+- HEIR
 - HIGH
 - HOVER
 - HUNTER
@@ -42,6 +47,7 @@ words:
 - KINGDOM
 - MASTER
 - MESSENGER
+- METHUSELAH
 - MIGHTY
 - MULTIPLY
 - NAKED
@@ -49,6 +55,7 @@ words:
 - NATION
 - NEW
 - NOAH
+- ONE
 - PELEG
 - REDEEMER
 - REMEMBER
@@ -63,7 +70,10 @@ words:
 - SPEAK
 - SPIRIT
 - STONE
+- TAKE
+- TILLER
 - TONGUE
+- WALK
 - WATCHMAN
 - WICKED
 ability_patterns:
@@ -97,6 +107,7 @@ ability_patterns:
 - conditional_look_top_tower
 - conditional_tower
 - discard_draw
+- discard_look_top_sheol_tower
 - discard_type_name
 - draw_look_top_sheol_tower
 - draw_look_top_tower
@@ -442,3 +453,53 @@ cards:
   type: TITLE
   rarity: UNCOMMON
   ability_pattern: choice_draw_tower
+- number: 67
+  word: WALK
+  type: VERB
+  rarity: COMMON
+  ability_pattern: draw_look_top_tower
+- number: 68
+  word: TAKE
+  type: VERB
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 69
+  word: BEAUTIFUL
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 70
+  word: METHUSELAH
+  type: NAME
+  rarity: COMMON
+  ability_pattern: add_hand_tower
+- number: 71
+  word: TILLER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: add_hand_tower
+- number: 72
+  word: DOVE
+  type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: add_hand_tower
+- number: 73
+  word: GREAT
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 74
+  word: EBER
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: draw_look_top_tower
+- number: 75
+  word: HEIR
+  type: TITLE
+  rarity: UNCOMMON
+  ability_pattern: discard_look_top_sheol_tower
+- number: 76
+  word: ONE
+  type: ADJECTIVE
+  rarity: RARE
+  ability_pattern: draw_tower_type_name

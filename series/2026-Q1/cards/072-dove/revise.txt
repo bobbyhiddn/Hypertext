@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: DOVE
+# Card_Gloss: The bird that brought back the olive leaf
+# Card_Type: NOUN
+# Card_Rarity: UNCOMMON
+# Card_Ability: Reveal the top three cards of the Tower. Add up to two revealed cards whose card type is in your Lot to your hand and put each other revealed card on the bottom of the Tower.
+# Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A white dove in flight low over dark receding floodwaters at dusk, an olive leaf in its beak, the black hull of the ark grounded on a mountain ridge behind, one radiant golden break in the storm clouds, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 8:11 — the dove came in to him in the evening; and, lo, in her mouth was an olive leaf
+# Card_NT_Verse: Matthew 3:16 — the Spirit of God descending like a dove
+# Card_Hebrew: יוֹנָה (yonah)
+# Card_Greek: περιστερά (peristera)
+# Card_Trivia_1: Noah sent the dove three times: once it found no rest, once it brought the olive leaf, and the third time it did not return.
+# Card_Trivia_2: The prophet Jonah's name is the word dove; he too was sent out over the waters and came back.
+# Card_Trivia_3: All four gospels see the Spirit descend like a dove at the Jordan - the flood's sign of peace returning over water.

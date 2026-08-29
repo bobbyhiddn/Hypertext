@@ -955,6 +955,9 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     # bent, is payoff 4 - GLORIOUS territory.
     gain_units = 0
     for m in re.finditer(r"\b(?:draws?|adds?|returns?)\s+(?:up to\s+)?(one|two|three|four|five|six|seven|\d+)\s+(?:[A-Z]+\s+)?cards?\b", ability_text, re.IGNORECASE):
+        # another player's draw is that player's gain, not yours
+        if re.search(r"\bplayers?\s*$", ability_text[:m.start()], re.IGNORECASE):
+            continue
         gain_units += _WORD_NUMBERS.get(m.group(1).lower(), int(m.group(1)) if m.group(1).isdigit() else 1)
     for m in re.finditer(r"\bgains?\s+(one|two|three|four|five|a|\d+)\s+Letters?\b", ability_text, re.IGNORECASE):
         gain_units += 3 * _WORD_NUMBERS.get(m.group(1).lower(), 1)

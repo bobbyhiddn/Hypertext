@@ -1,0 +1,11 @@
+=== Generation Log ===
+Timestamp: 2026-08-29 07:44:40
+Phase: rebuild
+Target Rarity: UNCOMMON
+Target Type: NOUN
+Fix Mode: False
+
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/noun/uncommon/template_1024x1536.png [UNCOMMON] sha256=68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b
+
+Prompt File: series/2026-Q1/cards/072-dove/prompt.txt

@@ -1,0 +1,55 @@
+number: 069
+word: BEAUTIFUL
+gloss: Fair to look upon
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A still pool at the edge of the Nile delta at golden hour reflecting a
+  radiant golden sky, a veiled tent doorway hung with woven cloth beside date palms,
+  no people, luminous cinematic oil painting with impressionistic brushwork, deep
+  shadowed background, one radiant golden light source, rich saturated blues and golds
+stats:
+  lore: 2
+  context: 3
+  complexity: 3
+stats_rationale:
+  lore: beauty is a real theme of creation and of the beautiful feet of the gospel,
+    but no doctrine rests on the word
+  context: yapheh occurs 42 times in the Hebrew Bible; horaios occurs 4 times in the
+    New Testament; total 46
+  complexity: horaios comes from hora, the season - beautiful because timely and ripe
+    - which is why the same word names the Beautiful gate and the feet of those who
+    bring good tidings; a derivation to explain
+weight: 2
+weight_rationale: a descriptive word of the era - Sarai fair to look upon, trees pleasant
+  to the sight - with a clear place
+ability: Add one card from the top of the Tower to your hand. Look at the top three
+  cards of the Tower and put those cards back on top of the Tower in any order.
+ot_verse:
+  ref: Genesis 12:11
+  snippet: I know that thou art a fair woman to look upon
+nt_verse:
+  ref: Romans 10:15
+  snippet: How beautiful are the feet of them that preach the gospel of peace
+greek:
+  text: ὡραῖος
+  translit: horaios
+hebrew:
+  text: יָפֶה
+  translit: yapheh
+ot_refs: Gen 12:11 • Gen 29:17 • Eccl 3:11
+nt_refs: Rom 10:15 • Acts 3:2 • Matt 23:27
+trivia:
+- Abram feared Sarai's beauty in Egypt; the fear, not the beauty, produced the lie
+  that she was his sister.
+- Ecclesiastes says God has made every thing beautiful in his time - yapheh joined
+  to the idea of season, exactly as horaios is in Greek.
+- The lame man of Acts 3 sat at the temple gate called Beautiful, horaia, and was
+  healed there.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

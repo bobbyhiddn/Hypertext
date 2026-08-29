@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: HEIR
+# Card_Gloss: The one to whom the estate passes
+# Card_Type: TITLE
+# Card_Rarity: UNCOMMON
+# Card_Ability: Discard three cards from your hand into Sheol. Then gain one Letter and look at one card from the top of the Tower.
+# Card_Stats: LORE 4 | CONTEXT 4 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A tent doorway open to a night sky crowded with stars above a dark plain, an open cedar chest on the threshold spilling radiant golden light, a shepherd's staff laid across it, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 15:4 — he that shall come forth out of thine own bowels shall be thine heir
+# Card_NT_Verse: Hebrews 11:7 — Noah ... became heir of the righteousness which is by faith
+# Card_Hebrew: יָרַשׁ (yarash)
+# Card_Greek: κληρονόμος (kleronomos)
+# Card_Trivia_1: Abram's heir, before Isaac, was Eliezer of Damascus, a servant born in his house.
+# Card_Trivia_2: Kleronomos joins kleros, a lot, to nemo, to hold - an heir is one who holds an allotted portion.
+# Card_Trivia_3: Hebrews 11 names Noah heir of the righteousness which is by faith: the ark-builder inherits before Abraham does.

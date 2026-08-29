@@ -1,0 +1,56 @@
+number: '071'
+word: TILLER
+gloss: One who works the ground
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A freshly furrowed dark field at dawn with a wooden mattock leaning on
+  a boundary stone, thorns and thistles crowding the field's edge, one radiant golden
+  sun breaking over the furrows, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 3
+  context: 4
+  complexity: 4
+stats_rationale:
+  lore: work before the fall and toil after it, and the Father as husbandman of the
+    vine - a recognized theme with clear teaching
+  context: abad occurs 289 times in the Hebrew Bible; georgos occurs 19 times in the
+    New Testament; total 308
+  complexity: abad is to work, to serve, and to worship in one verb - Israel's avodah
+    is both field labor and temple service; the tiller of the ground and the servant
+    of the LORD share a root, a history that is itself a study
+weight: 2
+weight_rationale: Cain's trade and Adam's task; a working title with a clear place
+  in the era
+ability: Add one card from the bottom of the Tower to your hand. Then you may put
+  one card from your hand on the bottom of the Tower.
+ot_verse:
+  ref: Genesis 4:2
+  snippet: but Cain was a tiller of the ground
+nt_verse:
+  ref: John 15:1
+  snippet: I am the true vine, and my Father is the husbandman
+greek:
+  text: γεωργός
+  translit: georgos
+hebrew:
+  text: עָבַד
+  translit: abad
+ot_refs: Gen 4:2 • Gen 2:15 • Gen 3:23
+nt_refs: John 15:1 • 2 Tim 2:6 • James 5:7
+trivia:
+- Genesis 2:15 gives the man two verbs, to dress and to keep; the tiller and the keeper
+  are the two oldest trades.
+- Cain's offering came from the ground he tilled; after the murder the ground would
+  no longer yield him its strength.
+- Georgos, earth-worker, gives English the name George; Jesus calls his Father the
+  georgos of the true vine.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

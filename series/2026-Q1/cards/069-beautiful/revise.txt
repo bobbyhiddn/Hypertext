@@ -1,0 +1,51 @@
+# Hypertext Card Revision Form (revise.txt)
+#
+# Edit this file in your PR branch, then run the "Revise Hypertext Card" workflow.
+#
+# Options:
+# - Rebuild: Set to 'true' to regenerate the card image from scratch
+#   (useful when revisions aren't fixing stubborn visual issues)
+#
+# Specific fields for targeted changes:
+# - Rarity_Change_Request: changes rarity only
+# - Ability_Change_Request: changes ability only
+# - Stats_Change_Request: changes stats only
+#
+# General_Revision_Request: unlocks ALL content fields for broad revisions
+# (art prompt, gloss, verses, trivia, Greek/Hebrew, etc.)
+#
+# Card Preview: Shows current card data. Edit values directly to request changes.
+# The system will detect your edits and apply them automatically.
+#
+# Notes:
+# - Leave a field blank to keep it unchanged.
+# - Lines starting with # are ignored (except Card_ fields below).
+
+Rebuild: false
+
+Rarity_Change_Request: <leave blank unless changing rarity>
+
+Ability_Change_Request: <describe the new ability; avoid saying "your deck"; say "the deck" or "the shared deck">
+
+Stats_Change_Request: <optional; if changing, specify LORE/CONTEXT/COMPLEXITY targets>
+
+General_Revision_Request: <describe any changes; unlocks all fields: art, gloss, verses, trivia, etc.>
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CURRENT CARD (edit values below to request changes)
+# ─────────────────────────────────────────────────────────────────────────────
+#
+# Card_Word: BEAUTIFUL
+# Card_Gloss: Fair to look upon
+# Card_Type: ADJECTIVE
+# Card_Rarity: COMMON
+# Card_Ability: Add one card from the top of the Tower to your hand. Look at the top three cards of the Tower and put those cards back on top of the Tower in any order.
+# Card_Stats: LORE 2 | CONTEXT 3 | COMPLEXITY 3 (stamped deterministically after render; the model paints every pip empty)
+# Card_Art_Prompt: A still pool at the edge of the Nile delta at golden hour reflecting a radiant golden sky, a veiled tent doorway hung with woven cloth beside date palms, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds
+# Card_OT_Verse: Genesis 12:11 — I know that thou art a fair woman to look upon
+# Card_NT_Verse: Romans 10:15 — How beautiful are the feet of them that preach the gospel of peace
+# Card_Hebrew: יָפֶה (yapheh)
+# Card_Greek: ὡραῖος (horaios)
+# Card_Trivia_1: Abram feared Sarai's beauty in Egypt; the fear, not the beauty, produced the lie that she was his sister.
+# Card_Trivia_2: Ecclesiastes says God has made every thing beautiful in his time - yapheh joined to the idea of season, exactly as horaios is in Greek.
+# Card_Trivia_3: The lame man of Acts 3 sat at the temple gate called Beautiful, horaia, and was healed there.

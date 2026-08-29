@@ -4,6 +4,7 @@ set -uo pipefail
 cd "$(git rev-parse --show-toplevel)"
 set -a; . ./.env; set +a
 PY=${HYPERTEXT_PY:-python3}; HX=${HYPERTEXT_HX:-hypertext}
+command -v "$HX" >/dev/null 2>&1 || { echo "HYPERTEXT_HX is not an executable hypertext CLI: $HX (every gate would fail as 'pip fail')" >&2; exit 2; }
 for slug in "$@"; do
   CD=series/2026-Q1/cards/$slug
   echo "=== REPAINT $slug ==="

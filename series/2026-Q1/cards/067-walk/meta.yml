@@ -1,0 +1,55 @@
+number: '067'
+word: WALK
+gloss: To go on step by step, as Enoch walked with God
+card_type: VERB
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A narrow path of wet stones crossing a dark dewy plain at dusk, a single
+  line of bare footprints leading toward a radiant golden horizon, no people, luminous
+  cinematic oil painting with impressionistic brushwork, deep shadowed background,
+  one radiant golden light source, rich saturated blues and golds
+stats:
+  lore: 4
+  context: 5
+  complexity: 3
+stats_rationale:
+  lore: walking with God names the whole life of Enoch and Noah and becomes the New
+    Testament's word for conduct - a major theme close to doctrine
+  context: halak occurs 1549 times in the Hebrew Bible; peripateo occurs 95 times
+    in the New Testament; total 1644
+  complexity: the hithpael of halak means to walk about habitually, the form used
+    of Enoch and of God in the garden; peripateo shifts from literal walking to a
+    way of life - a translation choice to explain
+weight: 3
+weight_rationale: walking with God is the era's measure of a righteous life - thematic
+  vocabulary with real teaching
+ability: Look at the top two cards of the Tower. Put one of those cards on the bottom
+  of the Tower, then draw one card from the Tower.
+ot_verse:
+  ref: Genesis 5:24
+  snippet: And Enoch walked with God
+nt_verse:
+  ref: 2 Corinthians 5:7
+  snippet: For we walk by faith, not by sight
+greek:
+  text: περιπατέω
+  translit: peripateo
+hebrew:
+  text: הָלַךְ
+  translit: halak
+ot_refs: Gen 5:24 • Gen 6:9 • Gen 17:1
+nt_refs: 2 Cor 5:7 • Eph 4:1 • 1 John 1:7
+trivia:
+- Genesis uses the same reflexive form for God walking in the garden in the cool of
+  the day and for Enoch walking with God.
+- Noah walked with God; Abram is told to walk before God - the prepositions mark two
+  different callings.
+- Paul's peripateo, to walk around, became the standard New Testament word for how
+  a believer lives.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

@@ -1,0 +1,58 @@
+number: '072'
+word: DOVE
+gloss: The bird that brought back the olive leaf
+card_type: NOUN
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A white dove in flight low over dark receding floodwaters at dusk, an
+  olive leaf in its beak, the black hull of the ark grounded on a mountain ridge behind,
+  one radiant golden break in the storm clouds, no people, luminous cinematic oil
+  painting with impressionistic brushwork, deep shadowed background, one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 4
+  context: 3
+  complexity: 3
+stats_rationale:
+  lore: the dove's return is the sign of the flood's end and the form of the Spirit
+    at the Jordan - a major theme close to doctrine
+  context: yonah occurs 32 times in the Hebrew Bible; peristera occurs 10 times in
+    the New Testament; total 42
+  complexity: yonah is also the prophet's name, the dove sent and returning; peristera
+    stands opposite the serpent in wise as serpents, harmless as doves - a pairing
+    to explain
+weight: 3
+weight_rationale: Noah's dove and the Spirit descending like a dove - thematic vocabulary
+  with real teaching behind it
+ability: Reveal the top three cards of the Tower. Add up to two revealed cards whose
+  card type is in your Lot to your hand and put each other revealed card on the bottom
+  of the Tower.
+ot_verse:
+  ref: Genesis 8:11
+  snippet: the dove came in to him in the evening; and, lo, in her mouth was an olive
+    leaf
+nt_verse:
+  ref: Matthew 3:16
+  snippet: the Spirit of God descending like a dove
+greek:
+  text: περιστερά
+  translit: peristera
+hebrew:
+  text: יוֹנָה
+  translit: yonah
+ot_refs: Gen 8:8 • Gen 8:11 • Song 2:14
+nt_refs: Matt 3:16 • Matt 10:16 • John 1:32
+trivia:
+- 'Noah sent the dove three times: once it found no rest, once it brought the olive
+  leaf, and the third time it did not return.'
+- The prophet Jonah's name is the word dove; he too was sent out over the waters and
+  came back.
+- All four gospels see the Spirit descend like a dove at the Jordan - the flood's
+  sign of peace returning over water.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []
