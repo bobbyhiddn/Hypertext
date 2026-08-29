@@ -84,8 +84,14 @@ def _filter_kind(t: str, low: str) -> str | None:
     """
     if re.search(r"\b(?:LORE|CONTEXT|COMPLEXITY)\b", t):
         return "same" if re.search(r"\bsame (?:LORE|CONTEXT|COMPLEXITY)\b", t) else "stat"
-    if re.search(r"\bcard type is (?:not )?in\b|\bcard type not in\b|\bChapter Lot\b|\byour Lot\b", t, re.IGNORECASE):
-        return "lot"
+    # Your Lot, the shared Chapter Lot and another player's Lot are three different
+    # objects in the rules, so reading one is not the same play as reading another.
+    if re.search(r"\bChapter Lot\b", t, re.IGNORECASE):
+        return "lot:chapter"
+    if re.search(r"\b(?:another player's|that chosen player's) Lot\b", t, re.IGNORECASE):
+        return "lot:other"
+    if re.search(r"\byour Lot\b|\bcard type is (?:not )?in\b|\bcard type not in\b", t, re.IGNORECASE):
+        return "lot:own"
     if "same card type" in low or "each card type" in low:
         return "same"
     if re.search(r"\bnamed type\b", low):
