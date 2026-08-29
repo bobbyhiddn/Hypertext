@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-    "sha256": "bebad34a57a08877dccc953404540dfb843790b97b3a2293cd7fe832cd0625de"
+    "sha256": "1d4954b23eec937505707e8fddbbcd66cd73ed439f17c2ad681058120cc89094"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/054-destroyer/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-      "sha256": "bebad34a57a08877dccc953404540dfb843790b97b3a2293cd7fe832cd0625de"
+      "sha256": "1d4954b23eec937505707e8fddbbcd66cd73ed439f17c2ad681058120cc89094"
     },
     "candidate_features": [
       {
@@ -160,7 +160,6 @@
     "STAT_CONTEXT": 2,
     "STAT_LORE": 3
   },
-  "fixed_elements": null,
   "observed_counts": {
     "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 2,
@@ -170,7 +169,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-      "sha256": "bebad34a57a08877dccc953404540dfb843790b97b3a2293cd7fe832cd0625de"
+      "sha256": "1d4954b23eec937505707e8fddbbcd66cd73ed439f17c2ad681058120cc89094"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -242,14 +241,6 @@
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/rare/template_1024x1536.png",
       "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
     }
-  },
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "RARE",
-    "target_type": "TITLE",
-    "template_position": 1,
-    "template_sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
   },
   "registration": {
     "dx": 0.0,
@@ -730,7 +721,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/rare/template_1024x1536.png",
-    "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
+    "repository_path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
+    "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064",
+    "template_version": "v001"
   }
 }

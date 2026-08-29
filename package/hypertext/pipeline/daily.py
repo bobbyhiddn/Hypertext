@@ -4488,10 +4488,20 @@ def _run_watermark(*, card_dir: Path, image_path: Path) -> None:
 
     If HYPERTEXT_SIGNING_KEY is not set, skips watermarking with a warning.
     """
-    # Check if signing key is available before attempting watermark
+    # Fail closed. Every other contract in this pipeline does - pips, rarity chip,
+    # cost glyphs, exact ability text - and signing was the one that shrugged: it
+    # logged a line and carried on, so all 90 cards of the first print run went out
+    # unsigned while README.md still said "Cards are signed". A series card must be
+    # signed; set HYPERTEXT_WATERMARK_OPTIONAL=1 for a proof or a scratch render.
     if not os.environ.get("HYPERTEXT_SIGNING_KEY"):
-        _log("[watermark] HYPERTEXT_SIGNING_KEY not set, skipping watermark")
-        return
+        if os.environ.get("HYPERTEXT_WATERMARK_OPTIONAL"):
+            _log("[watermark] no HYPERTEXT_SIGNING_KEY; skipping (HYPERTEXT_WATERMARK_OPTIONAL set)")
+            return
+        raise RuntimeError(
+            "HYPERTEXT_SIGNING_KEY is not set, so this card cannot be signed. Set it in .env "
+            "(it is also a GitHub Actions secret), or set HYPERTEXT_WATERMARK_OPTIONAL=1 to "
+            "render an unsigned proof deliberately."
+        )
 
     watermark_svg = card_dir / "watermark.svg"
     cmd_svg = [

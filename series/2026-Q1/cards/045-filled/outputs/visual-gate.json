@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/045-filled/outputs/card_1024x1536.png",
-    "sha256": "be9d06d416949dc59363b0816df2afc18e8c60b1d835cf4ad8963001e8d00777"
+    "sha256": "9dc61de3100f6e435a4315232743ecb76171d4419c4a9950b379f43de14254f5"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/045-filled/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/045-filled/outputs/card_1024x1536.png",
-      "sha256": "be9d06d416949dc59363b0816df2afc18e8c60b1d835cf4ad8963001e8d00777"
+      "sha256": "9dc61de3100f6e435a4315232743ecb76171d4419c4a9950b379f43de14254f5"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -68,7 +68,7 @@
         1264
       ],
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-      "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344"
+      "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9"
     },
     "template_features": []
   },
@@ -78,7 +78,6 @@
     "STAT_CONTEXT": 4,
     "STAT_LORE": 3
   },
-  "fixed_elements": null,
   "observed_counts": {
     "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 4,
@@ -88,7 +87,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/045-filled/outputs/card_1024x1536.png",
-      "sha256": "be9d06d416949dc59363b0816df2afc18e8c60b1d835cf4ad8963001e8d00777"
+      "sha256": "9dc61de3100f6e435a4315232743ecb76171d4419c4a9950b379f43de14254f5"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -103,17 +102,18 @@
         185,
         146
       ],
-      "gap": 13,
-      "left_inset": 12,
+      "expected_word_width": 161,
+      "gap": 15,
+      "left_inset": 30,
       "word": [
-        67,
-        213
+        85,
+        211
       ],
       "word_rows": [
         27,
         49
       ],
-      "word_width": 146
+      "word_width": 126
     },
     "observed": {
       "cap_height": 23,
@@ -157,16 +157,8 @@
     },
     "template": {
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-      "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344"
+      "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9"
     }
-  },
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "UNCOMMON",
-    "target_type": "ADJECTIVE",
-    "template_position": 1,
-    "template_sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344"
   },
   "registration": {
     "dx": 0.0,
@@ -647,7 +639,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
-    "sha256": "b50d935ef3bd98ba2280daeb57b3bef8a2a561c5250e3c8aca5271871e4d6344"
+    "repository_path": "templates/card/v001/composed/adjective/uncommon/template_1024x1536.png",
+    "sha256": "2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9",
+    "template_version": "v001"
   }
 }

@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/005-create/outputs/card_1024x1536.png",
-    "sha256": "8b3090365c68ee40b634bf928670d6b9df5ebc251a3e8dd7765b2608c89a4a5c"
+    "sha256": "e0c4e4c4b7cff93b4e044a027c182732a39b33ae9c90bc3f21f689ee8c69d3e1"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/005-create/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/005-create/outputs/card_1024x1536.png",
-      "sha256": "8b3090365c68ee40b634bf928670d6b9df5ebc251a3e8dd7765b2608c89a4a5c"
+      "sha256": "e0c4e4c4b7cff93b4e044a027c182732a39b33ae9c90bc3f21f689ee8c69d3e1"
     },
     "candidate_features": [
       {
@@ -200,7 +200,6 @@
     "STAT_CONTEXT": 3,
     "STAT_LORE": 5
   },
-  "fixed_elements": null,
   "observed_counts": {
     "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 3,
@@ -210,7 +209,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/005-create/outputs/card_1024x1536.png",
-      "sha256": "8b3090365c68ee40b634bf928670d6b9df5ebc251a3e8dd7765b2608c89a4a5c"
+      "sha256": "e0c4e4c4b7cff93b4e044a027c182732a39b33ae9c90bc3f21f689ee8c69d3e1"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -282,14 +281,6 @@
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/verb/glorious/template_1024x1536.png",
       "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b"
     }
-  },
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "GLORIOUS",
-    "target_type": "VERB",
-    "template_position": 1,
-    "template_sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b"
   },
   "registration": {
     "dx": 0.0,
@@ -770,7 +761,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/verb/glorious/template_1024x1536.png",
-    "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b"
+    "repository_path": "templates/card/v001/composed/verb/glorious/template_1024x1536.png",
+    "sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
+    "template_version": "v001"
   }
 }

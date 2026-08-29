@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/074-eber/outputs/card_1024x1536.png",
-    "sha256": "5b2b06903c4b4dcdd77583f2d625762271ba5f37d2e75659a9d077fb274cfd47"
+    "sha256": "bec94647d8c0373e80e15202a2c3541d8a797a7fd153607f62a1fa5e46b1a3c7"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/074-eber/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/074-eber/outputs/card_1024x1536.png",
-      "sha256": "5b2b06903c4b4dcdd77583f2d625762271ba5f37d2e75659a9d077fb274cfd47"
+      "sha256": "bec94647d8c0373e80e15202a2c3541d8a797a7fd153607f62a1fa5e46b1a3c7"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -78,7 +78,6 @@
     "STAT_CONTEXT": 2,
     "STAT_LORE": 3
   },
-  "fixed_elements": null,
   "observed_counts": {
     "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 2,
@@ -88,7 +87,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/074-eber/outputs/card_1024x1536.png",
-      "sha256": "5b2b06903c4b4dcdd77583f2d625762271ba5f37d2e75659a9d077fb274cfd47"
+      "sha256": "bec94647d8c0373e80e15202a2c3541d8a797a7fd153607f62a1fa5e46b1a3c7"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -160,14 +159,6 @@
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/uncommon/template_1024x1536.png",
       "sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275"
     }
-  },
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "UNCOMMON",
-    "target_type": "NAME",
-    "template_position": 1,
-    "template_sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275"
   },
   "registration": {
     "dx": 0.0,
@@ -648,7 +639,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/uncommon/template_1024x1536.png",
-    "sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275"
+    "repository_path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+    "sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275",
+    "template_version": "v001"
   }
 }

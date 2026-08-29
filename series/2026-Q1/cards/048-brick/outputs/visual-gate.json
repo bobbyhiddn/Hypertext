@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-    "sha256": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
+    "sha256": "f7b1f57d41f33ae9c85e253c4bbd2e7dd717161fca4bc8c333678aeb2355f388"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/048-brick/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-      "sha256": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
+      "sha256": "f7b1f57d41f33ae9c85e253c4bbd2e7dd717161fca4bc8c333678aeb2355f388"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -68,7 +68,7 @@
         1264
       ],
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-      "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+      "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
     },
     "template_features": []
   },
@@ -87,7 +87,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/048-brick/outputs/card_1024x1536.png",
-      "sha256": "d995c6cd39f5d7c6e6bb18447d60ccdc1bc67ed5e2b6c532627adda177479f20"
+      "sha256": "f7b1f57d41f33ae9c85e253c4bbd2e7dd717161fca4bc8c333678aeb2355f388"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -102,17 +102,18 @@
         185,
         146
       ],
-      "gap": 13,
-      "left_inset": 12,
+      "expected_word_width": 161,
+      "gap": 15,
+      "left_inset": 30,
       "word": [
-        67,
-        213
+        85,
+        211
       ],
       "word_rows": [
         27,
         49
       ],
-      "word_width": 146
+      "word_width": 126
     },
     "observed": {
       "cap_height": 23,
@@ -156,16 +157,8 @@
     },
     "template": {
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-      "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+      "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b"
     }
-  },
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "UNCOMMON",
-    "target_type": "NOUN",
-    "template_position": 1,
-    "template_sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
   },
   "registration": {
     "dx": 0.0,
@@ -646,7 +639,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
-    "sha256": "7bd7319532bc5b515ab54e186f0f7262bdf5ec7de965f60716a42db4442535f7"
+    "repository_path": "templates/card/v001/composed/noun/uncommon/template_1024x1536.png",
+    "sha256": "68b5951a611abfed17d3814770723eb20914e5ef79bc2fb2aa0fb0106b0ced8b",
+    "template_version": "v001"
   }
 }

@@ -20,7 +20,7 @@
       1536
     ],
     "path": "series/2026-Q1/cards/020-ark/outputs/card_1024x1536.png",
-    "sha256": "f79b8ce7a7bba1482663ff8fb1a0300dc20b7571b4215c1ad386076df8499823"
+    "sha256": "206bb892f326d83966738ba02f671b9f4b176933c1bf0e3e4a2c3a591340fe62"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/020-ark/card.json",
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/020-ark/outputs/card_1024x1536.png",
-      "sha256": "f79b8ce7a7bba1482663ff8fb1a0300dc20b7571b4215c1ad386076df8499823"
+      "sha256": "206bb892f326d83966738ba02f671b9f4b176933c1bf0e3e4a2c3a591340fe62"
     },
     "candidate_features": [
       {
@@ -160,7 +160,6 @@
     "STAT_CONTEXT": 2,
     "STAT_LORE": 5
   },
-  "fixed_elements": null,
   "observed_counts": {
     "STAT_COMPLEXITY": 4,
     "STAT_CONTEXT": 2,
@@ -170,7 +169,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/020-ark/outputs/card_1024x1536.png",
-      "sha256": "f79b8ce7a7bba1482663ff8fb1a0300dc20b7571b4215c1ad386076df8499823"
+      "sha256": "206bb892f326d83966738ba02f671b9f4b176933c1bf0e3e4a2c3a591340fe62"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -242,14 +241,6 @@
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/rare/template_1024x1536.png",
       "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
     }
-  },
-  "reference_pack": {
-    "contract": "hypertext.gemini.reference-pack/v1",
-    "mode": "generate",
-    "target_rarity": "RARE",
-    "target_type": "NOUN",
-    "template_position": 1,
-    "template_sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
   },
   "registration": {
     "dx": 0.0,
@@ -730,7 +721,13 @@
       848,
       1264
     ],
+    "manifest_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/manifest.json",
+    "manifest_schema_version": 3,
+    "manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
+    "manifest_status": "operator-accepted-canonical",
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/noun/rare/template_1024x1536.png",
-    "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b"
+    "repository_path": "templates/card/v001/composed/noun/rare/template_1024x1536.png",
+    "sha256": "0a9ad85d862281583981f86b04ec4c90cbf2738500d930762632c4a3a5a5217b",
+    "template_version": "v001"
   }
 }
