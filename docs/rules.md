@@ -9,7 +9,7 @@ document must be corrected to match them.
 
 ## Overview
 
-Hypertext is a word-study card game for 2–8 players built on Biblical
+Hypertext is a word-study card game for 2–6 players built on Biblical
 vocabulary. Players write a **Chapter** together: they reveal Word Cards from
 the Tower, activate abilities, and **Record** exact combinations of card types
 that match the **Lots** in play. Recording the shared **Chapter Lot** creates a
@@ -204,8 +204,13 @@ a pair*). The machine evaluator is `hypertext.lots.patterns`.
 
 Standard (6 Chapters) is the recommended default. Quick (3 Chapters) is the
 recommended starting point for large tables. Redeem is disabled in two-player
-games. Six-to-eight-player play is supported but remains subject to Alpha
-playtesting.
+games.
+
+**Player count and the Tower** (2026-08-29). One set supports **2–6 players**.
+Seven or more is playable, but a single 90-card Tower cannot feed that many
+hands for a full Chapter, so **7+ requires a second set shuffled into the
+Tower**. Lot Cards are universal and are not doubled - one Chapter Lot and one
+Portion Lot per player, drawn from a single Lot deck.
 
 ---
 
