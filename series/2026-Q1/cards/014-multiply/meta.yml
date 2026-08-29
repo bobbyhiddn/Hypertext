@@ -5,9 +5,9 @@ card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A simple woven basket containing five loaves and two fish, but the food
-  is glowing and spilling over the edges, cascading into a massive mountain of bread
-  and fish that fills the entire frame with golden abundance.
+art_prompt: A simple woven basket containing five loaves and two fish, but the food is glowing
+  and spilling over the edges, cascading into a massive mountain of bread and fish that fills
+  the entire frame with golden abundance.
 stats:
   lore: 4
   context: 2
@@ -15,12 +15,12 @@ stats:
 ability: Discard 1 card. Draw 2 cards. If you discarded a VERB, draw 3 instead.
 ot_verse:
   ref: Genesis 22:17
-  snippet: I will multiply your seed as the stars of the heaven, and as the sand which
-    is upon the sea shore.
+  snippet: I will multiply your seed as the stars of the heaven, and as the sand which is
+    upon the sea shore.
 nt_verse:
   ref: Acts 6:7
-  snippet: And the word of God increased; and the number of the disciples multiplied
-    in Jerusalem greatly.
+  snippet: And the word of God increased; and the number of the disciples multiplied in Jerusalem
+    greatly.
 greek:
   text: πληθύνω
   translit: plēthynō
@@ -70,3 +70,5 @@ search_queries:
 - greek word for multiply plethyno definition
 - Acts 6:7 greek snippet
 - Genesis 22:17 hebrew snippet
+weight: 3
+weight_rationale: the creation blessing; a theme

@@ -5,16 +5,16 @@ card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A shepherd seen from behind at dusk lifting one lamb out of a crowded
-  flock on a hillside, the rest of the flock milling below, luminous cinematic oil
-  painting with impressionistic brushwork, deep shadowed background, one radiant golden
-  light source, rich saturated blues and golds
+art_prompt: A shepherd seen from behind at dusk lifting one lamb out of a crowded flock on
+  a hillside, the rest of the flock milling below, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 5
   context: 4
   complexity: 3
-ability: Choose one card in Sheol. Add that chosen card to your hand and put one other
-  card in Sheol on the bottom of the Tower.
+ability: Choose one card in Sheol. Add that chosen card to your hand and put one other card
+  in Sheol on the bottom of the Tower.
 ot_verse:
   ref: Deuteronomy 7:6
   snippet: the LORD thy God hath chosen thee
@@ -30,8 +30,8 @@ hebrew:
 ot_refs: Deut 7:6 • Isa 41:8 • Ps 33:12
 nt_refs: John 15:16 • 1 Cor 1:27 • Eph 1:4
 trivia:
-- Hebrew bachar is the covenant verb of election - Israel was chosen not for its size
-  but for love.
+- Hebrew bachar is the covenant verb of election - Israel was chosen not for its size but
+  for love.
 - Greek eklegomai gives English eclectic - picked out from among many.
 - Isaiah names the chosen a remnant that returns - the few kept through the scattering.
 wild_id: null
@@ -43,5 +43,6 @@ search_queries: []
 stats_rationale:
   lore: election - a doctrine hangs on it; eklegomai's middle voice is worth a note
   context: bachar ~170 + eklegomai ~22 = ~192
-  complexity: election - a doctrine hangs on it; eklegomai's middle voice is worth
-    a note
+  complexity: election - a doctrine hangs on it; eklegomai's middle voice is worth a note
+weight: 3
+weight_rationale: election in everyday form; thematic

@@ -43,3 +43,5 @@ stats_rationale:
   lore: light/darkness is a recognized theme; plain noun
   context: choshek ~80 + skotos ~31 = ~111
   complexity: light/darkness is a recognized theme; plain noun
+weight: 2
+weight_rationale: descriptive

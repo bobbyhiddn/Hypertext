@@ -5,17 +5,17 @@ card_type: NAME
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A walled city burning on a wide plain under a sky raining streaks of fire,
-  small robed figures seen from behind fleeing up a rocky slope toward the hills,
-  one solitary pillar of salt standing in the middle distance, luminous cinematic
-  oil painting with impressionistic brushwork, deep shadowed background, one radiant
-  golden light source, rich saturated blues and golds
+art_prompt: A walled city burning on a wide plain under a sky raining streaks of fire, small
+  robed figures seen from behind fleeing up a rocky slope toward the hills, one solitary pillar
+  of salt standing in the middle distance, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 3
   context: 3
   complexity: 2
-ability: Put the top three cards of the Tower into Sheol, then add one of those cards
-  to your hand.
+ability: Put the top three cards of the Tower into Sheol, then add one of those cards to your
+  hand.
 ot_verse:
   ref: Genesis 19:24
   snippet: rained upon Sodom brimstone and fire
@@ -31,12 +31,11 @@ hebrew:
 ot_refs: Gen 13:13 • Gen 19:24 • Ezek 16:49
 nt_refs: Luke 17:29 • 2 Pet 2:6 • Jude 1:7
 trivia:
-- Ezekiel 16:49 names Sodom's sins as pride, fullness of bread, and neglect of the
-  poor.
-- Lot's wife looked back at the burning plain and became a pillar of salt - Luke says
-  simply, remember her.
-- The cities of the plain lay near the Dead Sea, whose salt and bitumen shape the
-  story's landscape.
+- Ezekiel 16:49 names Sodom's sins as pride, fullness of bread, and neglect of the poor.
+- Lot's wife looked back at the burning plain and became a pillar of salt - Luke says simply,
+  remember her.
+- The cities of the plain lay near the Dead Sea, whose salt and bitumen shape the story's
+  landscape.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -47,3 +46,5 @@ stats_rationale:
   lore: the paradigm of judgment; name etymology uncertain but not a study
   context: Sedom ~48 + Sodoma ~9 = ~57
   complexity: the paradigm of judgment; name etymology uncertain but not a study
+weight: 4
+weight_rationale: a named judgment; the card people look for

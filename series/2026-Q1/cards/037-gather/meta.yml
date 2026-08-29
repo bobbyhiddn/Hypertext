@@ -5,17 +5,16 @@ card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Hands binding scattered wheat stalks into one sheaf in a harvest field,
-  distant robed figures converging from every direction toward a single meeting point
-  on the plain, low golden light, luminous cinematic oil painting with impressionistic
-  brushwork, deep shadowed background, one radiant golden light source, rich saturated
-  blues and golds
+art_prompt: Hands binding scattered wheat stalks into one sheaf in a harvest field, distant
+  robed figures converging from every direction toward a single meeting point on the plain,
+  low golden light, luminous cinematic oil painting with impressionistic brushwork, deep shadowed
+  background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 4
   complexity: 2
-ability: Look at the top three cards of the Tower and put those cards back on top
-  of the Tower in any order. Then draw one card from the Tower.
+ability: Look at the top three cards of the Tower and put those cards back on top of the Tower
+  in any order. Then draw one card from the Tower.
 ot_verse:
   ref: Isaiah 11:12
   snippet: gather together the dispersed of Judah
@@ -31,8 +30,7 @@ hebrew:
 ot_refs: Isa 11:12 • Deut 30:3 • Ps 106:47
 nt_refs: John 11:52 • Matt 13:30 • Matt 25:32
 trivia:
-- Hebrew qavats is the word the prophets use for God gathering exiles out of every
-  land.
+- Hebrew qavats is the word the prophets use for God gathering exiles out of every land.
 - Greek synago, to gather, is the root of synagogue - the gathering place.
 - John 11:52 promises to gather into one the children scattered abroad - Babel reversed.
 wild_id: null
@@ -45,3 +43,5 @@ stats_rationale:
   lore: the ingathering is a prophetic theme; plain verb
   context: qavats ~127 + synago ~59 = ~186
   complexity: the ingathering is a prophetic theme; plain verb
+weight: 2
+weight_rationale: mechanical

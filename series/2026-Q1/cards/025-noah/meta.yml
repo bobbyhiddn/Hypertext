@@ -1,13 +1,12 @@
 number: '025'
 word: NOAH
-gloss: Rest, comfort; the patriarch who built the ark to preserve life during the
-  Flood
+gloss: Rest, comfort; the patriarch who built the ark to preserve life during the Flood
 card_type: NAME
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: An ancient bearded figure standing on a wooden deck amidst a stormy gray
-  ocean, holding a white dove, with a massive timber structure rising behind him
+art_prompt: An ancient bearded figure standing on a wooden deck amidst a stormy gray ocean,
+  holding a white dove, with a massive timber structure rising behind him
 stats:
   lore: 5
   context: 5
@@ -18,8 +17,7 @@ ot_verse:
   snippet: But Noah found favor in the eyes of the Lord.
 nt_verse:
   ref: Hebrews 11:7
-  snippet: By faith Noah... in reverent fear constructed an ark for the saving of
-    his household.
+  snippet: By faith Noah... in reverent fear constructed an ark for the saving of his household.
 greek:
   text: Νῶε
   translit: Nōe
@@ -72,3 +70,5 @@ search_queries:
 - Noah Greek spelling Strong's
 - Noah Bible trivia facts
 - Genesis 6:8 ESV snippet
+weight: 5
+weight_rationale: the flood's protagonist; a pillar

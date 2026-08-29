@@ -1,28 +1,28 @@
 number: '027'
 word: HUNTER
-gloss: One who pursues game for food, sport, or capture; metaphorically, an agent
-  of judgment or persecution.
+gloss: One who pursues game for food, sport, or capture; metaphorically, an agent of judgment
+  or persecution.
 card_type: TITLE
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A worn wooden bow and a quiver of arrows resting in tall, dry grass near
-  a forest edge. A single arrow is embedded in a nearby tree trunk, casting a long
-  shadow. No text or letters.
+art_prompt: A worn wooden bow and a quiver of arrows resting in tall, dry grass near a forest
+  edge. A single arrow is embedded in a nearby tree trunk, casting a long shadow. No text
+  or letters.
 stats:
   lore: 3
   context: 4
   complexity: 2
-ability: Name a card type. Target player must discard one card of that type or reveal
-  their hand.
+ability: Name a card type. Target player must discard one card of that type or reveal their
+  hand.
 ot_verse:
   ref: Genesis 10:9
-  snippet: 'He was a mighty hunter before the LORD: wherefore it is said, Even as
-    Nimrod the mighty hunter before the LORD.'
+  snippet: 'He was a mighty hunter before the LORD: wherefore it is said, Even as Nimrod the
+    mighty hunter before the LORD.'
 nt_verse:
   ref: Romans 11:9
-  snippet: 'And David says: ''Let their table become a snare and a trap, a stumbling
-    block and a retribution for them.'''
+  snippet: 'And David says: ''Let their table become a snare and a trap, a stumbling block
+    and a retribution for them.'''
 greek:
   text: θήρα
   translit: thēra
@@ -66,3 +66,5 @@ search_queries:
 - hebrew word for hunter
 - Genesis 10:9 hebrew analysis
 - hunter in the new testament bible verse
+weight: 3
+weight_rationale: Nimrod's title; thematic

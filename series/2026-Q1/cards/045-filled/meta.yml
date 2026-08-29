@@ -5,18 +5,17 @@ card_type: ADJECTIVE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A tall clay jar on a stone floor being filled from a bright stream poured
-  down from above until it brims and overflows, water spilling over the rim and spreading
-  in ripples across the flagstones, small tongues of flame hovering in the air above
-  the jar, an upper-room window behind, no people at all, luminous cinematic oil painting
-  with impressionistic brushwork, deep shadowed background, one radiant golden light
-  source, rich saturated blues and golds
+art_prompt: A tall clay jar on a stone floor being filled from a bright stream poured down
+  from above until it brims and overflows, water spilling over the rim and spreading in ripples
+  across the flagstones, small tongues of flame hovering in the air above the jar, an upper-room
+  window behind, no people at all, luminous cinematic oil painting with impressionistic brushwork,
+  deep shadowed background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 4
   complexity: 4
-ability: Draw one card from the Tower. Then draw one card from the Tower for each
-  card fewer than four in your hand.
+ability: Draw one card from the Tower. Then draw one card from the Tower for each card fewer
+  than four in your hand.
 ot_verse:
   ref: Exodus 31:3
   snippet: I have filled him with the spirit of God
@@ -32,12 +31,10 @@ hebrew:
 ot_refs: Exod 31:3 • Ps 33:5 • Hab 2:14
 nt_refs: Eph 5:18 • Acts 13:52 • Col 1:9
 trivia:
-- Hebrew male describes Bezalel filled with the Spirit for craftsmanship long before
-  Pentecost.
-- Greek pleroo means both to fill full and to fulfil - one word for a filled net and
-  a fulfilled prophecy.
-- Ephesians 5:18 sets being filled with wine against being filled with the Spirit
-  - two fullnesses.
+- Hebrew male describes Bezalel filled with the Spirit for craftsmanship long before Pentecost.
+- Greek pleroo means both to fill full and to fulfil - one word for a filled net and a fulfilled
+  prophecy.
+- Ephesians 5:18 sets being filled with wine against being filled with the Spirit - two fullnesses.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -47,5 +44,6 @@ search_queries: []
 stats_rationale:
   lore: Spirit-filling is a real theme; fill/fulfil semantic range is a genuine study
   context: male ~250 + pleroo ~86 = ~336
-  complexity: Spirit-filling is a real theme; fill/fulfil semantic range is a genuine
-    study
+  complexity: Spirit-filling is a real theme; fill/fulfil semantic range is a genuine study
+weight: 2
+weight_rationale: descriptive

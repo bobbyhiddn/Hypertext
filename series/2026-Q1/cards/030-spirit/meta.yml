@@ -5,8 +5,8 @@ card_type: TITLE
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: Ethereal swirling wind and golden light forming a vague dove shape amidst
-  chaotic waves, glowing atmosphere, divine presence, digital painting style
+art_prompt: Ethereal swirling wind and golden light forming a vague dove shape amidst chaotic
+  waves, glowing atmosphere, divine presence, digital painting style
 stats:
   lore: 5
   context: 5
@@ -29,8 +29,8 @@ nt_refs: Matt 3:16 • John 3:8 • Acts 2:4 • Gal 5:22
 trivia:
 - Hebrew 'ruach' and Greek 'pneuma' both mean wind, breath, and spirit.
 - The Spirit is often symbolized by a dove, fire, wind, or water.
-- In the Old Testament, the Spirit empowered individuals for specific tasks; in the
-  New, He indwells believers.
+- In the Old Testament, the Spirit empowered individuals for specific tasks; in the New, He
+  indwells believers.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -76,5 +76,7 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   Make the ability:
 
-  "Choose between Tower, Sheol, or Opponent''s Hand. Reveal up 5 cards from the chosen
-  location and take any number of them."'
+  "Choose between Tower, Sheol, or Opponent''s Hand. Reveal up 5 cards from the chosen location
+  and take any number of them."'
+weight: 5
+weight_rationale: the Spirit over the waters; a pillar

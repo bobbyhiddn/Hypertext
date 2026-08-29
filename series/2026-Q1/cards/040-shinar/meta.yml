@@ -5,17 +5,16 @@ card_type: NAME
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A wide river plain with smoking brick kilns, lines of workers seen from
-  behind carrying bricks toward the stepped foundation of a rising ziggurat, two great
-  rivers winding to the horizon, luminous cinematic oil painting with impressionistic
-  brushwork, deep shadowed background, one radiant golden light source, rich saturated
-  blues and golds
+art_prompt: A wide river plain with smoking brick kilns, lines of workers seen from behind
+  carrying bricks toward the stepped foundation of a rising ziggurat, two great rivers winding
+  to the horizon, luminous cinematic oil painting with impressionistic brushwork, deep shadowed
+  background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 2
   context: 1
   complexity: 3
-ability: Look at the bottom two cards of the Tower. Add one of those cards to your
-  hand and put the other card on top of the Tower.
+ability: Look at the bottom two cards of the Tower. Add one of those cards to your hand and
+  put the other card on top of the Tower.
 ot_verse:
   ref: Genesis 11:2
   snippet: a plain in the land of Shinar
@@ -31,12 +30,9 @@ hebrew:
 ot_refs: Gen 10:10 • Gen 11:2 • Zech 5:11
 nt_refs: Rev 18:2 • Matt 1:11 • 1 Pet 5:13
 trivia:
-- Genesis 10:10 places Babel, Erech, and Accad in Shinar - the plain scholars link
-  with Sumer.
-- With no stone on the plain, Babel's builders fired brick for stone and used slime
-  for mortar.
-- Zechariah's vision carries wickedness in a basket back to Shinar - the land of exile
-  again.
+- Genesis 10:10 places Babel, Erech, and Accad in Shinar - the plain scholars link with Sumer.
+- With no stone on the plain, Babel's builders fired brick for stone and used slime for mortar.
+- Zechariah's vision carries wickedness in a basket back to Shinar - the land of exile again.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -44,9 +40,9 @@ notes: null
 sources: []
 search_queries: []
 stats_rationale:
-  lore: a setting, not a theme; identification with Sumer and the name's origin are
+  lore: a setting, not a theme; identification with Sumer and the name's origin are debated
+  context: Shinar 8 + Babylon (NT name) counted separately; the card lemma occurs 8x
+  complexity: a setting, not a theme; identification with Sumer and the name's origin are
     debated
-  context: Shinar 8 + Babylon (NT name) counted separately; the card lemma occurs
-    8x
-  complexity: a setting, not a theme; identification with Sumer and the name's origin
-    are debated
+weight: 3
+weight_rationale: the plain of Babel; a named place of the second rank

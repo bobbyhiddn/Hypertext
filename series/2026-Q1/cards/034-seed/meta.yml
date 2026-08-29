@@ -5,17 +5,16 @@ card_type: NOUN
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A single luminous seed pressed into dark furrowed soil, a tender green
-  shoot uncoiling upward toward warm dawn light, distant ripening grain fields on
-  the horizon, antique, luminous cinematic oil painting with impressionistic brushwork,
-  deep shadowed background, one radiant golden light source, rich saturated blues
-  and golds, reverent and quiet
+art_prompt: A single luminous seed pressed into dark furrowed soil, a tender green shoot uncoiling
+  upward toward warm dawn light, distant ripening grain fields on the horizon, antique, luminous
+  cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant
+  golden light source, rich saturated blues and golds, reverent and quiet
 stats:
   lore: 5
   context: 4
   complexity: 4
-ability: Put one NOUN from your hand on the bottom of the Tower. At the start of your
-  next turn, draw two cards from the Tower.
+ability: Put one NOUN from your hand on the bottom of the Tower. At the start of your next
+  turn, draw two cards from the Tower.
 ot_verse:
   ref: Genesis 3:15
   snippet: enmity between thy seed and her seed
@@ -43,9 +42,9 @@ search_queries: []
 revision: 1
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: Remove the brackets
-  [ ] from the OT VERSE, NT VERSE, and TRIVIA sections. Keep every other pixel, panel,
-  and text exactly as rendered.
+  Visual fix only, change nothing except this single correction: Remove the brackets [ ] from
+  the OT VERSE, NT VERSE, and TRIVIA sections. Keep every other pixel, panel, and text exactly
+  as rendered.
 
   # Card_Word: SEED
 
@@ -55,15 +54,14 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: UNCOMMON
 
-  # Card_Ability: Put one NOUN from your hand on the bottom of the Tower. At the start
-  of your next turn, draw two cards from the Tower.
+  # Card_Ability: Put one NOUN from your hand on the bottom of the Tower. At the start of
+  your next turn, draw two cards from the Tower.
 
   # Card_Stats: LORE 5 | CONTEXT 4 | COMPLEXITY 3
 
-  # Card_Art_Prompt: A single luminous seed pressed into dark furrowed soil, a tender
-  green shoot uncoiling upward toward warm dawn light, distant ripening grain fields
-  on the horizon, antique devotional engraving style on warm parchment tones, reverent
-  and quiet
+  # Card_Art_Prompt: A single luminous seed pressed into dark furrowed soil, a tender green
+  shoot uncoiling upward toward warm dawn light, distant ripening grain fields on the horizon,
+  antique devotional engraving style on warm parchment tones, reverent and quiet
 
   # Card_OT_Verse: Genesis 3:15 — enmity between thy seed and her seed
 
@@ -73,17 +71,18 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Greek: σπέρμα (sperma)
 
-  # Card_Trivia_1: Hebrew zera names both literal grain and human offspring with one
-  collective word.
+  # Card_Trivia_1: Hebrew zera names both literal grain and human offspring with one collective
+  word.
 
-  # Card_Trivia_2: Paul''s argument in Galatians 3:16 turns on the promise reading
-  seed in the singular.
+  # Card_Trivia_2: Paul''s argument in Galatians 3:16 turns on the promise reading seed in
+  the singular.
 
-  # Card_Trivia_3: Genesis 3:15 is called the protoevangelium, Scripture''s first
-  gospel promise.'
+  # Card_Trivia_3: Genesis 3:15 is called the protoevangelium, Scripture''s first gospel promise.'
 stats_rationale:
   lore: the Seed promise (Gen 3:15, Gal 3:16) - a doctrine hangs on it; collective/singular
     ambiguity drives Paul's argument
   context: zera ~229 + sperma ~43 = ~272
   complexity: the Seed promise (Gen 3:15, Gal 3:16) - a doctrine hangs on it; collective/singular
     ambiguity drives Paul's argument
+weight: 4
+weight_rationale: the seed of the woman - the promise the era turns on

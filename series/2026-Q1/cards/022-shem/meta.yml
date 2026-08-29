@@ -5,15 +5,15 @@ card_type: NAME
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: An ancient patriarch standing at the entrance of a tent, holding a lantern
-  and looking up at a starry sky. In the distance, a faint silhouette of a ziggurat
-  or tower. Warm, earthy tones, no text.
+art_prompt: An ancient patriarch standing at the entrance of a tent, holding a lantern and
+  looking up at a starry sky. In the distance, a faint silhouette of a ziggurat or tower.
+  Warm, earthy tones, no text.
 stats:
   lore: 4
   context: 4
   complexity: 2
-ability: Look at the top 3 cards of the Tower. You may reveal a NAME and add it to
-  your hand. Discard the rest.
+ability: Look at the top 3 cards of the Tower. You may reveal a NAME and add it to your hand.
+  Discard the rest.
 ot_verse:
   ref: Genesis 9:26
   snippet: Blessed be the LORD, the God of Shem!
@@ -38,3 +38,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 3
+weight_rationale: the line of Shem; second-rank figure

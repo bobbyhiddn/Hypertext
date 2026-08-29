@@ -5,9 +5,8 @@ card_type: VERB
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A stone tower in the distance, silhouetted against a twilight sky, with
-  many small glowing embers or seeds blowing wildly away from it in the wind across
-  a vast desert landscape.
+art_prompt: A stone tower in the distance, silhouetted against a twilight sky, with many small
+  glowing embers or seeds blowing wildly away from it in the wind across a vast desert landscape.
 stats:
   lore: 3
   context: 4
@@ -18,8 +17,7 @@ ot_verse:
   snippet: From thence did the Lord scatter them abroad upon the face of all the earth.
 nt_verse:
   ref: Matthew 26:31
-  snippet: I will smite the shepherd, and the sheep of the flock shall be scattered
-    abroad.
+  snippet: I will smite the shepherd, and the sheep of the flock shall be scattered abroad.
 greek:
   text: διασκορπίζω
   translit: diaskorpizō
@@ -29,8 +27,7 @@ hebrew:
 ot_refs: Gen 11 • Deut 28 • Ps 147 • Jer 31 • Zech 13
 nt_refs: Matt 26 • Mark 14 • John 11 • Acts 8 • James 1
 trivia:
-- The Tower of Babel narrative is the primary biblical etiology for the scattering
-  of nations.
+- The Tower of Babel narrative is the primary biblical etiology for the scattering of nations.
 - The Greek term 'diaspora' literally means 'a scattering' or 'sowing across'.
 - Jesus quoted Zechariah 13:7 to predict the disciples fleeing upon His arrest.
 wild_id: null
@@ -83,3 +80,5 @@ last_description:
   style_matches_reference: true
   style_mismatch_reason: ''
 review_status: green
+weight: 4
+weight_rationale: the judgment of Babel itself

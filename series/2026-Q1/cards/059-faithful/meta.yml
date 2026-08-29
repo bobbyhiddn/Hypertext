@@ -5,25 +5,24 @@ card_type: ADJECTIVE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A single oil lamp burning steadily in a stone window through a long night,
-  stars wheeling above a dark hillside, an anointed standing stone beside the door
-  glinting with poured gold, no people, luminous cinematic oil painting with impressionistic
-  brushwork, deep shadowed background, one radiant golden light source, rich saturated
-  blues and golds
+art_prompt: A single oil lamp burning steadily in a stone window through a long night, stars
+  wheeling above a dark hillside, an anointed standing stone beside the door glinting with
+  poured gold, no people, luminous cinematic oil painting with impressionistic brushwork,
+  deep shadowed background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 4
   context: 3
   complexity: 3
 stats_rationale:
-  lore: God's faithfulness to his covenant is a governing theme from Deuteronomy to
-    Revelation; a major theme close to doctrine
-  context: neeman occurs 45 times in the Hebrew Bible; pistos occurs 67 times in the
-    New Testament; total 112
-  complexity: neeman is the Niphal participle of aman, the root of amen and emunah;
-    pistos means both faithful and believing, a double sense translators must choose
-    between - worth explaining
-ability: Reveal one card from the top of the Tower and add that revealed card to your
-  hand. If that revealed card is a NAME, draw one card from the Tower.
+  lore: God's faithfulness to his covenant is a governing theme from Deuteronomy to Revelation;
+    a major theme close to doctrine
+  context: neeman occurs 45 times in the Hebrew Bible; pistos occurs 67 times in the New Testament;
+    total 112
+  complexity: neeman is the Niphal participle of aman, the root of amen and emunah; pistos
+    means both faithful and believing, a double sense translators must choose between - worth
+    explaining
+ability: Reveal one card from the top of the Tower and add that revealed card to your hand.
+  If that revealed card is a NAME, draw one card from the Tower.
 ot_verse:
   ref: Deuteronomy 7:9
   snippet: the faithful God, which keepeth covenant
@@ -39,15 +38,16 @@ hebrew:
 ot_refs: Deut 7:9 • 1 Sam 2:35 • Isa 49:7
 nt_refs: 1 Cor 1:9 • Heb 10:23 • Rev 19:11
 trivia:
-- Neeman is the passive of aman - to be made firm - the same root as amen and emunah,
-  faith.
-- Pistos means faithful and also believing; the faithful God and the faithful servant
-  share one Greek word.
-- After Babel's broken promise of a name, God made a covenant and kept it - faithfulness
-  is the reply to the tower.
+- Neeman is the passive of aman - to be made firm - the same root as amen and emunah, faith.
+- Pistos means faithful and also believing; the faithful God and the faithful servant share
+  one Greek word.
+- After Babel's broken promise of a name, God made a covenant and kept it - faithfulness is
+  the reply to the tower.
 wild_id: null
 wild_counts_as: null
 letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 3
+weight_rationale: God's faithfulness; thematic

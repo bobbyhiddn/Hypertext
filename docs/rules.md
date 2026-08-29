@@ -67,6 +67,14 @@ The three stats are word-study measurements, not power. They are scored against 
 | **CONTEXT** | frequency: occurrences of the printed Hebrew lemma plus the printed Greek lemma | 10 or fewer | 41–120 | more than 400 (2 = 11–40, 4 = 121–400) |
 | **COMPLEXITY** | etymological history and linguistic complexity | transparent word, plain derivation, stable translation | a notable derivation or a translation choice to explain | the word's history is itself a study: contested etymology or a semantic range that changes doctrine |
 
+**Word weight** is a fourth judgment, separate from LORE: how much a card of
+this word means in the set's story. 1 everyday vocabulary; 2 a descriptive or
+mechanical word with a clear place; 3 thematic vocabulary with real teaching
+behind it; 4 a named judgment, agent, place, patriarch, or event the era turns
+on - the card people look for; 5 a pillar of the set. Weight 5 must print
+GLORIOUS and weight 4 at least RARE. RARE and GLORIOUS are 22 of 90 slots, so a
+set carries at most about 22 words of weight 4-5 and 9 of weight 5.
+
 CONTEXT is computed from counts and must match its bucket. LORE and COMPLEXITY are judgments and must cite their reason. Stats do not scale with rarity; a filled row must be earned by the word, and a COMMON or UNCOMMON card may not carry three stats of 4 or more.
 
 ---

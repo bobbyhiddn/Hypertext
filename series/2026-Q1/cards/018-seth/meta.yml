@@ -5,9 +5,8 @@ card_type: NAME
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A young sapling growing vigorously next to a fallen, withered branch in
-  a prehistoric landscape, illuminated by a shaft of warm light, symbolizing restoration
-  and a new lineage.
+art_prompt: A young sapling growing vigorously next to a fallen, withered branch in a prehistoric
+  landscape, illuminated by a shaft of warm light, symbolizing restoration and a new lineage.
 stats:
   lore: 2
   context: 4
@@ -18,8 +17,7 @@ ot_verse:
   snippet: God hath appointed me another seed instead of Abel, whom Cain slew.
 nt_verse:
   ref: Luke 3:38
-  snippet: Which was the son of Enos, which was the son of Seth, which was the son
-    of Adam.
+  snippet: Which was the son of Enos, which was the son of Seth, which was the son of Adam.
 greek:
   text: Σήθ
   translit: Sēth
@@ -38,3 +36,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 3
+weight_rationale: the appointed line; a named figure of the second rank

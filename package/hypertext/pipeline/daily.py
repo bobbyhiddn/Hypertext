@@ -1456,6 +1456,8 @@ def _generate_card_recipe(
         + ability_instruction +
         "  \"stats\": {\"lore\": int 1-5, \"context\": int 1-5, \"complexity\": int 1-5},\n"
         "  \"stats_rationale\": {\"lore\": string, \"context\": string (must state the occurrence counts of the printed Hebrew lemma and Greek lemma and their sum), \"complexity\": string},\n"
+        "  \"weight\": int 1-5 (word weight - see WORD WEIGHT),\n"
+        "  \"weight_rationale\": string,\n"
         "  \"ot_verse\": {\"ref\": string, \"snippet\": string},\n"
         "  \"nt_verse\": {\"ref\": string, \"snippet\": string},\n"
         "  \"greek\": {\"text\": string, \"translit\": string},\n"
@@ -1473,6 +1475,7 @@ def _generate_card_recipe(
         + GAME_RULES_SNIPPET
         + rules_appendix
         + "\n\n"
+        "WORD WEIGHT (hard requirement): weight is how much a card of this word means in the set's story, separate from LORE. 1 everyday vocabulary the era happens to use; 2 a descriptive or mechanical word with a clear place; 3 thematic vocabulary with real teaching behind it; 4 a named judgment, agent, place, patriarch, or event the era turns on - the card people look for (SODOM, DESTROYER, EDEN, ABRAM, ARK); 5 a pillar of the set, the act or name the whole story hangs on (SPIRIT, COVENANT, NOAH). Weight 5 must be GLORIOUS and weight 4 at least RARE; the printed rarity of this card is fixed, so state the weight honestly and the plan will fail closed if the slot is too low for the word. "
         "STAT RUBRIC (hard requirement): LORE is theological weight (1 incidental, 3 a recognized theme, 5 a doctrine hangs on the word). CONTEXT is frequency: count occurrences of the printed Hebrew lemma plus the printed Greek lemma and bucket the sum - 1 for 10 or fewer, 2 for 11-40, 3 for 41-120, 4 for 121-400, 5 for more than 400; state the counts in stats_rationale.context. COMPLEXITY is etymological and linguistic history (1 transparent, 3 a derivation or translation choice worth explaining, 5 a word whose history is itself a study). Stats never scale with rarity and every filled pip must be earned; a COMMON or UNCOMMON card may not carry three stats of 4 or more. "
         "FIGURES (hard requirement): art_prompt must never describe a crowd, a gathering, an assembly, or a group of people - the image model paints faces toward the viewer whenever several people are present, which fails the figure rule. Prefer scenes with no people at all (objects, places, symbols, animals, weather, light); when a person is essential, exactly one figure, seen from behind, in silhouette, or at a distance. "
         "ART STYLE (hard requirement): art_prompt must describe a luminous, vibrant, full-color cinematic oil painting with impressionistic brushwork - deep shadowed backgrounds lit by one radiant golden light source, rich saturated blues and golds, ethereal atmosphere, a strong symbolic subject - in the manner of the printed Hypertext set (example cards 001-020); never sepia, monochrome, engraving, etching, woodcut, or line art; end every art_prompt with the phrase 'luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds'. "
@@ -2242,6 +2245,15 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         stats = q_stats if q_stats else (recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {})
         stats_rationale = recipe.get("stats_rationale") if isinstance(recipe.get("stats_rationale"), dict) else None
         _validate_card_stats(stats, rarity, stats_rationale)
+        # Word weight (user, 2026-08-28): a heavy word may not print below its floor.
+        from hypertext.cards.word_weight import check_word_weight
+
+        word_weight = recipe.get("weight")
+        weight_rationale = recipe.get("weight_rationale")
+        weight_issues = check_word_weight(word_weight, rarity, weight_rationale)
+        if weight_issues:
+            raise RuntimeError("word weight: " + "; ".join(weight_issues))
+        _log(f"[plan] word weight {word_weight} accepted for {rarity}")
         ot_verse = q_ot_verse if q_ot_verse else (recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {})
         nt_verse = q_nt_verse if q_nt_verse else (recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {})
         greek = q_greek if q_greek else (recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {})
@@ -2327,6 +2339,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
                 "complexity": card["content"]["STAT_COMPLEXITY"],
             },
             "stats_rationale": stats_rationale,
+            "weight": int(word_weight),
+            "weight_rationale": str(weight_rationale).strip(),
             "ability": ability_text,
             "ot_verse": {"ref": ot_ref, "snippet": ot_snip},
             "nt_verse": {"ref": nt_ref, "snippet": nt_snip},

@@ -5,8 +5,8 @@ card_type: VERB
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A spiraling stone tower dissolving into swirling mist and chaotic geometric
-  shapes, ancient architecture fragmenting into dust, surreal style
+art_prompt: A spiraling stone tower dissolving into swirling mist and chaotic geometric shapes,
+  ancient architecture fragmenting into dust, surreal style
 stats:
   lore: 5
   context: 4
@@ -14,12 +14,12 @@ stats:
 ability: Swap your Lot with target player's Lot.
 ot_verse:
   ref: Genesis 11:7
-  snippet: Come, let us go down and there confuse their language, that they may not
-    understand one another's speech.
+  snippet: Come, let us go down and there confuse their language, that they may not understand
+    one another's speech.
 nt_verse:
   ref: Acts 2:6
-  snippet: And when this sound occurred, the multitude came together, and were confused,
-    because everyone heard them speak in his own language.
+  snippet: And when this sound occurred, the multitude came together, and were confused, because
+    everyone heard them speak in his own language.
 greek:
   text: συγχέω
   translit: sygcheō
@@ -65,3 +65,5 @@ search_queries:
 - hebrew word for confuse Genesis 11:7
 - greek word for confuse Acts 2:6
 - confuse bible verse trading card
+weight: 4
+weight_rationale: the act that named Babel

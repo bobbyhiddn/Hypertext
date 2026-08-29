@@ -5,8 +5,8 @@ card_type: ADJECTIVE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A colossal, ancient mountain peak piercing through a layer of dark, swirling
-  storm clouds, illuminated by a single, intense shaft of golden sunlight from above.
+art_prompt: A colossal, ancient mountain peak piercing through a layer of dark, swirling storm
+  clouds, illuminated by a single, intense shaft of golden sunlight from above.
 stats:
   lore: 3
   context: 4
@@ -27,11 +27,9 @@ hebrew:
 ot_refs: Gen 10:8 • Deut 10:17 • Ps 24:8 • Jer 32:18
 nt_refs: Luke 24:19 • 1 Cor 1:26 • Eph 1:19 • Rev 19:6
 trivia:
-- The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty
-  Men'.
+- The Hebrew 'Gibbor' is often used for warriors, specifically David's elite 'Mighty Men'.
 - In Isaiah 9:6, the Messiah is given the title 'El Gibbor', meaning 'Mighty God'.
-- The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern
-  word 'dynamite'.
+- The Greek word 'dunatos' shares a root with 'dynamis', the origin of the modern word 'dynamite'.
 - Luke 1:49 refers to God simply as 'Ho Dunatos'—'The Mighty One'.
 wild_id: null
 wild_counts_as: null
@@ -67,3 +65,5 @@ search_queries:
 - Greek word for Mighty Dunatos
 - Luke 1:49 he that is mighty greek
 - Isaiah 9:6 mighty god hebrew
+weight: 3
+weight_rationale: Nimrod the mighty hunter; a theme

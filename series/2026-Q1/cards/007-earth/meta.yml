@@ -5,14 +5,14 @@ card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A pair of weathered hands holding a sphere of rich, dark soil that is
-  crumbling slightly, with a faint glow emanating from the cracks, set against a void.
+art_prompt: A pair of weathered hands holding a sphere of rich, dark soil that is crumbling
+  slightly, with a faint glow emanating from the cracks, set against a void.
 stats:
   lore: 2
   context: 5
   complexity: 1
-ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other
-  on the bottom.
+ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other on the
+  bottom.
 ot_verse:
   ref: Genesis 1:1
   snippet: In the beginning God created the heaven and the earth.
@@ -78,26 +78,23 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Word: EARTH
 
-  # Card_Gloss: The dry land, ground, or soil; the material world distinct from the
-  heavens.
+  # Card_Gloss: The dry land, ground, or soil; the material world distinct from the heavens.
 
   # Card_Type: NOUN
 
   # Card_Rarity: COMMON
 
-  # Card_Ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put
-  the other on the bottom.
+  # Card_Ability: Look at the top 2 cards of the Tower. Add 1 to your hand and put the other
+  on the bottom.
 
   # Card_Stats: LORE 2 | CONTEXT 5 | COMPLEXITY 1
 
-  # Card_Art_Prompt: A pair of weathered hands holding a sphere of rich, dark soil
-  that is crumbling slightly, with a faint glow emanating from the cracks, set against
-  a void.
+  # Card_Art_Prompt: A pair of weathered hands holding a sphere of rich, dark soil that is
+  crumbling slightly, with a faint glow emanating from the cracks, set against a void.
 
   # Card_OT_Verse: Genesis 1:1 — In the beginning God created the heaven and the earth.
 
-  # Card_NT_Verse: Matthew 5:5 — Blessed are the meek: for they shall inherit the
-  earth.
+  # Card_NT_Verse: Matthew 5:5 — Blessed are the meek: for they shall inherit the earth.
 
   # Card_Hebrew: אֶרֶץ (''Eretz)
 
@@ -107,5 +104,6 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_2: Adam''s name is derived from ''adamah'', meaning ground or earth.
 
-  # Card_Trivia_3: Ancient cosmology often depicted the earth as a foundation set
-  upon pillars.'
+  # Card_Trivia_3: Ancient cosmology often depicted the earth as a foundation set upon pillars.'
+weight: 2
+weight_rationale: setting vocabulary

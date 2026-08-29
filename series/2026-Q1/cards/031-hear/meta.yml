@@ -5,9 +5,8 @@ card_type: VERB
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A vast, quiet desert landscape at twilight; a single shepherd stands still,
-  head tilted, listening to a distant, glowing wind swirling down from a mountain
-  peak.
+art_prompt: A vast, quiet desert landscape at twilight; a single shepherd stands still, head
+  tilted, listening to a distant, glowing wind swirling down from a mountain peak.
 stats:
   lore: 5
   context: 3
@@ -37,3 +36,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 3
+weight_rationale: hearing and obeying; a theme

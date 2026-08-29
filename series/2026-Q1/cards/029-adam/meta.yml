@@ -5,8 +5,8 @@ card_type: NAME
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A figure formed of red clay emerging from the soil, glowing with an inner
-  golden light, set against a lush primordial garden, realistic style, cinematic lighting.
+art_prompt: A figure formed of red clay emerging from the soil, glowing with an inner golden
+  light, set against a lush primordial garden, realistic style, cinematic lighting.
 stats:
   lore: 5
   context: 5
@@ -14,12 +14,11 @@ stats:
 ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
 ot_verse:
   ref: Genesis 2:7
-  snippet: The LORD God formed the man of dust from the ground and breathed into his
-    nostrils the breath of life.
+  snippet: The LORD God formed the man of dust from the ground and breathed into his nostrils
+    the breath of life.
 nt_verse:
   ref: 1 Corinthians 15:45
-  snippet: The first man Adam became a living being; the last Adam became a life-giving
-    spirit.
+  snippet: The first man Adam became a living being; the last Adam became a life-giving spirit.
 greek:
   text: Ἀδάμ
   translit: Adam
@@ -38,3 +37,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 5
+weight_rationale: the first man; a pillar

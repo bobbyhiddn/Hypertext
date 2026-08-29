@@ -5,17 +5,16 @@ card_type: TITLE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A white-bearded figure in flowing robes seen from behind, seated on a
-  stone bench beneath a city gate arch, staff resting against the stone, morning light
-  and distant townspeople in silhouette beyond the gateway, luminous cinematic oil
-  painting with impressionistic brushwork, deep shadowed background, one radiant golden
-  light source, rich saturated blues and golds
+art_prompt: A white-bearded figure in flowing robes seen from behind, seated on a stone bench
+  beneath a city gate arch, staff resting against the stone, morning light and distant townspeople
+  in silhouette beyond the gateway, luminous cinematic oil painting with impressionistic brushwork,
+  deep shadowed background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 4
   complexity: 3
-ability: Look at one card from the top of the Tower. You may put that card on the
-  bottom of the Tower; then draw one card from the Tower.
+ability: Look at one card from the top of the Tower. You may put that card on the bottom of
+  the Tower; then draw one card from the Tower.
 ot_verse:
   ref: Ruth 4:2
   snippet: ten men of the elders of the city
@@ -32,8 +31,7 @@ ot_refs: Ruth 4:2 • Exod 3:16 • Prov 31:23
 nt_refs: 1 Tim 5:17 • 1 Pet 5:1 • Rev 4:4
 trivia:
 - Hebrew zaqen is kin to zaqan, the beard - seniority worn visibly.
-- City gates were Israel's courtrooms; Boaz settled Ruth's case before ten elders
-  there.
+- City gates were Israel's courtrooms; Boaz settled Ruth's case before ten elders there.
 - Greek presbyteros is the root behind the English words priest and presbytery.
 wild_id: null
 wild_counts_as: null
@@ -44,8 +42,8 @@ search_queries: []
 revision: 1
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: Change the card number
-  from #003 to #033. Keep every other pixel, panel, and text exactly as rendered.
+  Visual fix only, change nothing except this single correction: Change the card number from
+  #003 to #033. Keep every other pixel, panel, and text exactly as rendered.
 
   # Card_Word: ELDER
 
@@ -55,15 +53,15 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: COMMON
 
-  # Card_Ability: Look at one card from the top of the Tower. You may put that card
-  on the bottom of the Tower; then draw one card from the Tower.
+  # Card_Ability: Look at one card from the top of the Tower. You may put that card on the
+  bottom of the Tower; then draw one card from the Tower.
 
   # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 2
 
-  # Card_Art_Prompt: A white-bearded figure in flowing robes seen from behind, seated
-  on a stone bench beneath a city gate arch, staff resting against the stone, morning
-  light and distant townspeople in silhouette beyond the gateway, engraved devotional
-  style on warm parchment tones
+  # Card_Art_Prompt: A white-bearded figure in flowing robes seen from behind, seated on a
+  stone bench beneath a city gate arch, staff resting against the stone, morning light and
+  distant townspeople in silhouette beyond the gateway, engraved devotional style on warm
+  parchment tones
 
   # Card_OT_Verse: Ruth 4:2 — ten men of the elders of the city
 
@@ -75,12 +73,13 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Trivia_1: Hebrew zaqen is kin to zaqan, the beard - seniority worn visibly.
 
-  # Card_Trivia_2: City gates were Israel''s courtrooms; Boaz settled Ruth''s case
-  before ten elders there.
+  # Card_Trivia_2: City gates were Israel''s courtrooms; Boaz settled Ruth''s case before
+  ten elders there.
 
-  # Card_Trivia_3: Greek presbyteros is the root behind the English words priest and
-  presbytery.'
+  # Card_Trivia_3: Greek presbyteros is the root behind the English words priest and presbytery.'
 stats_rationale:
   lore: a real office in Israel and the church
   context: zaqen ~180 + presbyteros ~66 = ~246
   complexity: zaqen from zaqan (beard), presbyteros a comparative turned title
+weight: 3
+weight_rationale: the office of elder; thematic

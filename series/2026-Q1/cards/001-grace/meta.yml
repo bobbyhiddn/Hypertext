@@ -5,8 +5,8 @@ card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A single drop of golden light falling into an open, cupped hand, dark
-  background, cinematic lighting, ethereal style
+art_prompt: A single drop of golden light falling into an open, cupped hand, dark background,
+  cinematic lighting, ethereal style
 stats:
   lore: 5
   context: 5
@@ -27,14 +27,14 @@ hebrew:
 ot_refs: Gen 6:8 • Ex 33:17 • Ps 84:11
 nt_refs: Rom 3:24 • Eph 2:8 • 2 Cor 12:9
 trivia:
-- '"Charis" (Greek) originally meant "beauty" or "charm" before the New Testament
-  gave it deep theological weight.'
-- '"Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting a superior
-  showing kindness to an inferior.'
-- Grace is often defined as receiving what you do not deserve, while mercy is not
-  receiving the punishment you do deserve.
-- The Apostle Paul uses the word "grace" over 100 times in his letters, making it
-  a central theme of his theology.
+- '"Charis" (Greek) originally meant "beauty" or "charm" before the New Testament gave it
+  deep theological weight.'
+- '"Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting a superior showing
+  kindness to an inferior.'
+- Grace is often defined as receiving what you do not deserve, while mercy is not receiving
+  the punishment you do deserve.
+- The Apostle Paul uses the word "grace" over 100 times in his letters, making it a central
+  theme of his theology.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -93,26 +93,29 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Stats: LORE 5 | CONTEXT 5 | COMPLEXITY 3
 
-  # Card_Art_Prompt: A single drop of golden light falling into an open, cupped hand,
-  dark background, cinematic lighting, ethereal style
+  # Card_Art_Prompt: A single drop of golden light falling into an open, cupped hand, dark
+  background, cinematic lighting, ethereal style
 
   # Card_OT_Verse: Genesis 6:8 — But Noah found grace in the eyes of the LORD.
 
-  # Card_NT_Verse: Ephesians 2:8 — For by grace are ye saved through faith; and that
-  not of yourselves...
+  # Card_NT_Verse: Ephesians 2:8 — For by grace are ye saved through faith; and that not of
+  yourselves...
 
   # Card_Hebrew: חֵן (chen)
 
   # Card_Greek: χάρις (charis)
 
-  # Card_Trivia_1: "Charis" (Greek) originally meant "beauty" or "charm" before the
-  New Testament gave it deep theological weight.
+  # Card_Trivia_1: "Charis" (Greek) originally meant "beauty" or "charm" before the New Testament
+  gave it deep theological weight.
 
   # Card_Trivia_2: "Chen" (Hebrew) comes from a root meaning "to bend or stoop," depicting
   a superior showing kindness to an inferior.
 
-  # Card_Trivia_3: Grace is often defined as receiving what you do not deserve, while
-  mercy is not receiving the punishment you do deserve.
+  # Card_Trivia_3: Grace is often defined as receiving what you do not deserve, while mercy
+  is not receiving the punishment you do deserve.
 
-  # Card_Trivia_4: The Apostle Paul uses the word "grace" over 100 times in his letters,
-  making it a central theme of his theology.'
+  # Card_Trivia_4: The Apostle Paul uses the word "grace" over 100 times in his letters, making
+  it a central theme of his theology.'
+weight: 5
+weight_rationale: the word the whole gospel hangs on; the era's first mention of grace is
+  Noah's

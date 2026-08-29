@@ -5,18 +5,17 @@ card_type: TITLE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A robed runner seen from behind on a mountain road at dawn, a sealed scroll
-  clasped in one hand, a distant walled city gate waiting across the valley, long
-  morning shadows, luminous cinematic oil painting with impressionistic brushwork,
-  deep shadowed background, one radiant golden light source, rich saturated blues
-  and golds
+art_prompt: A robed runner seen from behind on a mountain road at dawn, a sealed scroll clasped
+  in one hand, a distant walled city gate waiting across the valley, long morning shadows,
+  luminous cinematic oil painting with impressionistic brushwork, deep shadowed background,
+  one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 4
   complexity: 4
-ability: Name a card type and reveal the top three cards of the Tower. Add one revealed
-  card of the named type to your hand and put each other revealed card on top of the
-  Tower in any order.
+ability: Name a card type and reveal the top three cards of the Tower. Add one revealed card
+  of the named type to your hand and put each other revealed card on top of the Tower in any
+  order.
 ot_verse:
   ref: Malachi 3:1
   snippet: I will send my messenger
@@ -32,12 +31,11 @@ hebrew:
 ot_refs: Mal 3:1 • Gen 32:3 • Prov 13:17
 nt_refs: Luke 7:27 • Mark 1:2 • Jas 2:25
 trivia:
-- Hebrew malakh and Greek angelos both mean simply messenger - angel names the office,
-  not the species.
-- Isaiah 52:7 blesses the very feet of the messenger who brings good tidings over
-  the mountains.
-- Proverbs likens a faithful messenger to snow-cold water in harvest - refreshing
-  those who sent him.
+- Hebrew malakh and Greek angelos both mean simply messenger - angel names the office, not
+  the species.
+- Isaiah 52:7 blesses the very feet of the messenger who brings good tidings over the mountains.
+- Proverbs likens a faithful messenger to snow-cold water in harvest - refreshing those who
+  sent him.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -47,9 +45,9 @@ search_queries: []
 revision: 1
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: In the ability text,
-  change ''...Add one or revealed card...'' to ''...Add one revealed card...'' Keep
-  every other pixel, panel, and text exactly as rendered.
+  Visual fix only, change nothing except this single correction: In the ability text, change
+  ''...Add one or revealed card...'' to ''...Add one revealed card...'' Keep every other pixel,
+  panel, and text exactly as rendered.
 
   # Card_Word: MESSENGER
 
@@ -59,15 +57,15 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: UNCOMMON
 
-  # Card_Ability: Name a card type and reveal the top three cards of the Tower. Add
-  one revealed card of the named type to your hand and put each other revealed card
-  on top of the Tower in any order.
+  # Card_Ability: Name a card type and reveal the top three cards of the Tower. Add one revealed
+  card of the named type to your hand and put each other revealed card on top of the Tower
+  in any order.
 
   # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 3
 
-  # Card_Art_Prompt: A robed runner seen from behind on a mountain road at dawn, a
-  sealed scroll clasped in one hand, a distant walled city gate waiting across the
-  valley, long morning shadows, engraved devotional style on warm parchment tones
+  # Card_Art_Prompt: A robed runner seen from behind on a mountain road at dawn, a sealed
+  scroll clasped in one hand, a distant walled city gate waiting across the valley, long morning
+  shadows, engraved devotional style on warm parchment tones
 
   # Card_OT_Verse: Proverbs 25:13 — a faithful messenger to them that send him
 
@@ -77,17 +75,19 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Greek: ἄγγελος (angelos)
 
-  # Card_Trivia_1: Hebrew malakh and Greek angelos both mean simply messenger - angel
-  names the office, not the species.
+  # Card_Trivia_1: Hebrew malakh and Greek angelos both mean simply messenger - angel names
+  the office, not the species.
 
-  # Card_Trivia_2: Isaiah 52:7 blesses the very feet of the messenger who brings good
-  tidings over the mountains.
+  # Card_Trivia_2: Isaiah 52:7 blesses the very feet of the messenger who brings good tidings
+  over the mountains.
 
-  # Card_Trivia_3: Proverbs likens a faithful messenger to snow-cold water in harvest
-  - refreshing those who sent him.'
+  # Card_Trivia_3: Proverbs likens a faithful messenger to snow-cold water in harvest - refreshing
+  those who sent him.'
 stats_rationale:
-  lore: angelology is a secondary theme; the messenger/angel ambiguity and the angel
-    of the LORD are a genuine linguistic study
+  lore: angelology is a secondary theme; the messenger/angel ambiguity and the angel of the
+    LORD are a genuine linguistic study
   context: malakh ~213 + angelos ~175 = ~388
-  complexity: angelology is a secondary theme; the messenger/angel ambiguity and the
-    angel of the LORD are a genuine linguistic study
+  complexity: angelology is a secondary theme; the messenger/angel ambiguity and the angel
+    of the LORD are a genuine linguistic study
+weight: 3
+weight_rationale: angels and messengers; thematic

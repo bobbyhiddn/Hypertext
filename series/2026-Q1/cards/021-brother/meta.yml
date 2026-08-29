@@ -1,13 +1,12 @@
 number: '021'
 word: BROTHER
-gloss: A male sibling; a kinsman; a fellow member of a covenant, faith, or shared
-  struggle.
+gloss: A male sibling; a kinsman; a fellow member of a covenant, faith, or shared struggle.
 card_type: TITLE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Two rugged figures clasping forearms in a desert landscape, symbolizing
-  loyalty and strength in hard times; warm, dusty lighting, no text.
+art_prompt: Two rugged figures clasping forearms in a desert landscape, symbolizing loyalty
+  and strength in hard times; warm, dusty lighting, no text.
 stats:
   lore: 4
   context: 4
@@ -65,3 +64,5 @@ search_queries:
 - Hebrews 2:11 not ashamed to call them brothers
 - Bible trivia first brothers
 - Greek word for Brother
+weight: 3
+weight_rationale: Cain and Abel; a theme

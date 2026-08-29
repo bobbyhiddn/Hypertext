@@ -5,16 +5,15 @@ card_type: NOUN
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Rows of sun-dried mud bricks laid out on a riverside plain beside a smoking
-  kiln, a half-built wall of fired brick rising behind them, no people, luminous cinematic
-  oil painting with impressionistic brushwork, deep shadowed background, one radiant
-  golden light source, rich saturated blues and golds
+art_prompt: Rows of sun-dried mud bricks laid out on a riverside plain beside a smoking kiln,
+  a half-built wall of fired brick rising behind them, no people, luminous cinematic oil painting
+  with impressionistic brushwork, deep shadowed background, one radiant golden light source,
+  rich saturated blues and golds
 stats:
   lore: 1
   context: 3
   complexity: 1
-ability: Draw two cards from the Tower, then put one NOUN from your hand on top of
-  the Tower.
+ability: Draw two cards from the Tower, then put one NOUN from your hand on top of the Tower.
 ot_verse:
   ref: Genesis 11:3
   snippet: let us make brick
@@ -30,12 +29,11 @@ hebrew:
 ot_refs: Gen 11:3 • Exod 5:7 • Exod 1:14
 nt_refs: 1 Pet 2:5 • Matt 21:42 • 1 Pet 2:7
 trivia:
-- Babel's builders had brick for stone and slime for mortar - the plain of Shinar
-  has no quarries.
-- Egypt's bricks needed straw, and Pharaoh's cruelty was to withhold it while demanding
-  the count.
-- 'The New Testament never says brick: its builders use stone, lithos, and Peter calls
-  believers living stones.'
+- Babel's builders had brick for stone and slime for mortar - the plain of Shinar has no quarries.
+- Egypt's bricks needed straw, and Pharaoh's cruelty was to withhold it while demanding the
+  count.
+- 'The New Testament never says brick: its builders use stone, lithos, and Peter calls believers
+  living stones.'
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -46,3 +44,5 @@ stats_rationale:
   lore: incidental; transparent word
   context: levenah ~12 + lithos ~60 = ~72
   complexity: incidental; transparent word
+weight: 2
+weight_rationale: material vocabulary

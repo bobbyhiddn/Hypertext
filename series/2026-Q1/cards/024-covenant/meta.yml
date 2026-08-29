@@ -5,8 +5,8 @@ card_type: NOUN
 rarity: GLORIOUS
 series: 2026-Q1
 set: Babel
-art_prompt: A beam of brilliant light striking a stone altar and splitting it, with
-  a spectrum of colors emerging from the fissure; abstract, ethereal style, no text.
+art_prompt: A beam of brilliant light striking a stone altar and splitting it, with a spectrum
+  of colors emerging from the fissure; abstract, ethereal style, no text.
 stats:
   lore: 5
   context: 5
@@ -14,8 +14,8 @@ stats:
 ability: Shuffle your hand and Sheol into the Tower, then draw 7 cards.
 ot_verse:
   ref: Jeremiah 31:31
-  snippet: Behold, the days are coming... when I will make a new covenant with the
-    house of Israel.
+  snippet: Behold, the days are coming... when I will make a new covenant with the house of
+    Israel.
 nt_verse:
   ref: Luke 22:20
   snippet: This cup is the new covenant in my blood, which is poured out for you.
@@ -28,12 +28,11 @@ hebrew:
 ot_refs: Gen 9 • Gen 15 • Ex 24 • Jer 31
 nt_refs: Matt 26 • Luke 22 • Heb 8 • Heb 9
 trivia:
-- The Hebrew idiom 'karat berit' literally means 'to cut a covenant,' referring to
-  the dividing of sacrificial animals.
-- Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the
-  New Covenant.
-- Greek uses 'diathēkē' (testament/will) rather than 'synthēkē' (contract) to emphasize
-  God's initiative.
+- The Hebrew idiom 'karat berit' literally means 'to cut a covenant,' referring to the dividing
+  of sacrificial animals.
+- Major biblical covenants include the Noahic, Abrahamic, Mosaic, Davidic, and the New Covenant.
+- Greek uses 'diathēkē' (testament/will) rather than 'synthēkē' (contract) to emphasize God's
+  initiative.
 wild_id: null
 wild_counts_as: null
 letter: null
@@ -76,3 +75,5 @@ search_queries:
 - greek word for covenant strongs
 - Luke 22:20 snippet
 - Jeremiah 31:31 snippet
+weight: 5
+weight_rationale: the covenant with Noah; a pillar

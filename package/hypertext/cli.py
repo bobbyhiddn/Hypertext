@@ -85,6 +85,20 @@ def grammar_check(series):
     click.echo(f"{len(cov['unclassified'])} unclassified")
 
 
+@cli.command("weight-audit")
+@click.option("--series", required=True, help="Series directory (contains cards/)")
+def weight_audit(series):
+    """Report cards printed below their word-weight floor, unweighted cards, and the heavy-word budget."""
+    from hypertext.cards.word_weight import audit_series
+
+    a = audit_series(series)
+    for v in a["violations"]:
+        click.echo(f"{v['card']:18s} {v['word']:12s} {v['rarity']:9s} weight {v['weight']}: " + "; ".join(v["issues"]))
+    click.echo(f"heavy (weight 4-5): {len(a['heavy'])}/{a['heavy_budget']}  pillars (weight 5): {len(a['pillars'])}/{a['pillar_budget']}  unweighted: {len(a['unweighted'])}")
+    if a["violations"]:
+        raise SystemExit(1)
+
+
 @cli.command("ability-audit")
 @click.option("--series", required=True, help="Series directory (contains cards/)")
 @click.option("--show", is_flag=True, help="Print every card's shape signature")

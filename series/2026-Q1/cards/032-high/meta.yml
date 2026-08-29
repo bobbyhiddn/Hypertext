@@ -5,17 +5,16 @@ card_type: ADJECTIVE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A colossal ziggurat rising from a sunbaked plain into swirling clouds,
-  tiny human figures climbing its ramps, dawn light striking the distant summit, luminous
-  cinematic oil painting with impressionistic brushwork, deep shadowed background,
-  one radiant golden light source, rich saturated blues and golds, an overwhelming
-  sense of height
+art_prompt: A colossal ziggurat rising from a sunbaked plain into swirling clouds, tiny human
+  figures climbing its ramps, dawn light striking the distant summit, luminous cinematic oil
+  painting with impressionistic brushwork, deep shadowed background, one radiant golden light
+  source, rich saturated blues and golds, an overwhelming sense of height
 stats:
   lore: 2
   context: 3
   complexity: 2
-ability: Look at the top two cards of the Tower. Add one of those cards to your hand
-  and put the other card on the bottom of the Tower.
+ability: Look at the top two cards of the Tower. Add one of those cards to your hand and put
+  the other card on the bottom of the Tower.
 ot_verse:
   ref: Psalm 103:11
   snippet: as the heaven is high above the earth
@@ -32,8 +31,8 @@ ot_refs: Ps 103:11 • 1 Sam 16:7 • Ezek 17:24
 nt_refs: Rom 12:16 • Luke 16:15 • Heb 7:26
 trivia:
 - Hebrew gavoah describes lofty towers and the proud heart alike in Scripture.
-- Babel's builders wanted a top in the heavens; Isaiah answers that God's ways are
-  higher still.
+- Babel's builders wanted a top in the heavens; Isaiah answers that God's ways are higher
+  still.
 - Greek hypselos shares its root with hypsos, height, the word behind English hypsometer.
 wild_id: null
 wild_counts_as: null
@@ -45,9 +44,9 @@ revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
   Visual fix only, change nothing except this correction: Remove the italic line ''DEFINITION
-  TEXT'' above the gloss so only the gloss line remains under the word HIGH, and change
-  the footer to read exactly ''SERIES: 2026-Q1 Babel'' with no ''- Set'' suffix. Keep
-  every other pixel, panel, and text exactly as rendered.
+  TEXT'' above the gloss so only the gloss line remains under the word HIGH, and change the
+  footer to read exactly ''SERIES: 2026-Q1 Babel'' with no ''- Set'' suffix. Keep every other
+  pixel, panel, and text exactly as rendered.
 
   # Card_Word: HIGH
 
@@ -57,14 +56,14 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: COMMON
 
-  # Card_Ability: Look at the top two cards of the Tower. Add one of those cards to
-  your hand and put the other card on the bottom of the Tower.
+  # Card_Ability: Look at the top two cards of the Tower. Add one of those cards to your hand
+  and put the other card on the bottom of the Tower.
 
   # Card_Stats: LORE 4 | CONTEXT 3 | COMPLEXITY 2
 
-  # Card_Art_Prompt: A colossal ziggurat rising from a sunbaked plain into swirling
-  clouds, tiny human figures climbing its ramps, dawn light striking the distant summit,
-  engraved devotional style on warm parchment tones, an overwhelming sense of height
+  # Card_Art_Prompt: A colossal ziggurat rising from a sunbaked plain into swirling clouds,
+  tiny human figures climbing its ramps, dawn light striking the distant summit, engraved
+  devotional style on warm parchment tones, an overwhelming sense of height
 
   # Card_OT_Verse: Genesis 11:4 — a tower, whose top may reach unto heaven
 
@@ -74,15 +73,16 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Greek: ὑψηλός (hypselos)
 
-  # Card_Trivia_1: Hebrew gavoah describes lofty towers and the proud heart alike
-  in Scripture.
+  # Card_Trivia_1: Hebrew gavoah describes lofty towers and the proud heart alike in Scripture.
 
-  # Card_Trivia_2: Babel''s builders wanted a top in the heavens; Isaiah answers that
-  God''s ways are higher still.
+  # Card_Trivia_2: Babel''s builders wanted a top in the heavens; Isaiah answers that God''s
+  ways are higher still.
 
-  # Card_Trivia_3: Greek hypselos shares its root with hypsos, height, the word behind
-  English hypsometer.'
+  # Card_Trivia_3: Greek hypselos shares its root with hypsos, height, the word behind English
+  hypsometer.'
 stats_rationale:
   lore: pride/exaltation is a motif, not a doctrine; plain adjective from gvh
   context: gavoah ~41 + hypselos ~11 = ~52
   complexity: pride/exaltation is a motif, not a doctrine; plain adjective from gvh
+weight: 2
+weight_rationale: descriptive

@@ -5,14 +5,13 @@ card_type: NOUN
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A fortified ancient settlement on a hill at twilight, high stone walls,
-  towers, warm glowing windows, aerial view, golden lighting, stylized geometric architecture.
+art_prompt: A fortified ancient settlement on a hill at twilight, high stone walls, towers,
+  warm glowing windows, aerial view, golden lighting, stylized geometric architecture.
 stats:
   lore: 3
   context: 5
   complexity: 1
-ability: Look at the top 3 cards of the Tower. Add 1 to your hand, then discard the
-  others.
+ability: Look at the top 3 cards of the Tower. Add 1 to your hand, then discard the others.
 ot_verse:
   ref: Psalm 127:1
   snippet: Unless the Lord watches over the city, the watchman stays awake in vain.
@@ -37,3 +36,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 2
+weight_rationale: setting vocabulary

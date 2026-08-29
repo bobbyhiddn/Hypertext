@@ -1,14 +1,14 @@
 number: '012'
 word: FORM
-gloss: To shape, fashion, or mold into a specific state of being; to give external
-  appearance or internal character.
+gloss: To shape, fashion, or mold into a specific state of being; to give external appearance
+  or internal character.
 card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: Ethereal hands of light emerging from darkness, gently molding a swirling
-  cloud of dust and clay into a glowing geometric vessel. Abstract, mystical style,
-  deep earth tones and bright highlights.
+art_prompt: Ethereal hands of light emerging from darkness, gently molding a swirling cloud
+  of dust and clay into a glowing geometric vessel. Abstract, mystical style, deep earth tones
+  and bright highlights.
 stats:
   lore: 4
   context: 3
@@ -16,12 +16,12 @@ stats:
 ability: Return a NOUN from Sheol to your hand.
 ot_verse:
   ref: Genesis 2:7
-  snippet: And the Lord God formed man of the dust of the ground, and breathed into
-    his nostrils the breath of life.
+  snippet: And the Lord God formed man of the dust of the ground, and breathed into his nostrils
+    the breath of life.
 nt_verse:
   ref: Galatians 4:19
-  snippet: My little children, of whom I travail in birth again until Christ be formed
-    in you...
+  snippet: My little children, of whom I travail in birth again until Christ be formed in
+    you...
 greek:
   text: μορφόω
   translit: morphoō
@@ -31,15 +31,16 @@ hebrew:
 ot_refs: Gen 2:7 • Isa 45:7 • Jer 18:6 • Isa 64:8
 nt_refs: Gal 4:19 • Rom 9:20 • Phil 2:6-7 • 1 Tim 2:13
 trivia:
-- The Hebrew 'yatsar' implies the squeezing of clay into shape, depicting God as a
-  potter.
-- Paul uses 'morphoō' to describe spiritual maturity as the internal shaping of Christ
-  within a believer.
-- In Genesis, 'formed' (yatsar) is distinct from 'created' (bara), emphasizing the
-  use of existing material (dust).
+- The Hebrew 'yatsar' implies the squeezing of clay into shape, depicting God as a potter.
+- Paul uses 'morphoō' to describe spiritual maturity as the internal shaping of Christ within
+  a believer.
+- In Genesis, 'formed' (yatsar) is distinct from 'created' (bara), emphasizing the use of
+  existing material (dust).
 wild_id: null
 wild_counts_as: null
 letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 3
+weight_rationale: God formed man; a theme

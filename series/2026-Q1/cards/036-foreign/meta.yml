@@ -5,18 +5,17 @@ card_type: ADJECTIVE
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A caravan of robed travelers seen from behind approaching a great walled
-  city gate hung with unfamiliar banners, camels laden with bundles, distant ziggurat
-  silhouette beyond the walls, low evening light, luminous cinematic oil painting
-  with impressionistic brushwork, deep shadowed background, one radiant golden light
-  source, rich saturated blues and golds
+art_prompt: A caravan of robed travelers seen from behind approaching a great walled city
+  gate hung with unfamiliar banners, camels laden with bundles, distant ziggurat silhouette
+  beyond the walls, low evening light, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 3
   context: 3
   complexity: 3
-ability: Name a card type, then reveal one card from the top of the Tower. Add that
-  revealed card to your hand; if that revealed card is not the named type, gain one
-  Letter.
+ability: Name a card type, then reveal one card from the top of the Tower. Add that revealed
+  card to your hand; if that revealed card is not the named type, gain one Letter.
 ot_verse:
   ref: Exodus 2:22
   snippet: a stranger in a strange land
@@ -33,8 +32,7 @@ ot_refs: Exod 2:22 • Deut 17:15 • Ruth 2:10
 nt_refs: Eph 2:19 • Matt 25:35 • Heb 11:13
 trivia:
 - Hebrew nokri covers foreign lands, foreign gods, and the stranger at the gate alike.
-- Psalm 137 asks how to sing the LORD's song in a strange land - the exiles' question
-  in Babylon.
+- Psalm 137 asks how to sing the LORD's song in a strange land - the exiles' question in Babylon.
 - Greek xenos gives English both xenophobia and xenia, the old duty of welcoming strangers.
 wild_id: null
 wild_counts_as: null
@@ -45,9 +43,9 @@ search_queries: []
 revision: 2
 revision_notes: 'General revision request (you may modify any content field as needed):
 
-  Visual fix only, change nothing except this single correction: Add one trivia bullet
-  to the card. The total count must be exactly 3. Keep every other pixel, panel, and
-  text exactly as rendered.
+  Visual fix only, change nothing except this single correction: Add one trivia bullet to
+  the card. The total count must be exactly 3. Keep every other pixel, panel, and text exactly
+  as rendered.
 
   # Card_Word: FOREIGN
 
@@ -57,16 +55,14 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Rarity: UNCOMMON
 
-  # Card_Ability: Name a card type, then reveal one card from the top of the Tower.
-  Add that revealed card to your hand; if that revealed card is not the named type,
-  gain one Letter.
+  # Card_Ability: Name a card type, then reveal one card from the top of the Tower. Add that
+  revealed card to your hand; if that revealed card is not the named type, gain one Letter.
 
   # Card_Stats: LORE 3 | CONTEXT 4 | COMPLEXITY 3
 
-  # Card_Art_Prompt: A caravan of robed travelers seen from behind approaching a great
-  walled city gate hung with unfamiliar banners, camels laden with bundles, distant
-  ziggurat silhouette beyond the walls, low evening light, engraved devotional style
-  on warm parchment tones
+  # Card_Art_Prompt: A caravan of robed travelers seen from behind approaching a great walled
+  city gate hung with unfamiliar banners, camels laden with bundles, distant ziggurat silhouette
+  beyond the walls, low evening light, engraved devotional style on warm parchment tones
 
   # Card_OT_Verse: Psalm 137:4 — the LORD''s song in a strange land
 
@@ -76,16 +72,17 @@ revision_notes: 'General revision request (you may modify any content field as n
 
   # Card_Greek: ξένος (xenos)
 
-  # Card_Trivia_1: Hebrew nokri covers foreign lands, foreign gods, and the stranger
-  at the gate alike.
+  # Card_Trivia_1: Hebrew nokri covers foreign lands, foreign gods, and the stranger at the
+  gate alike.
 
-  # Card_Trivia_2: Psalm 137 asks how to sing the LORD''s song in a strange land -
-  the exiles'' question in Babylon.
+  # Card_Trivia_2: Psalm 137 asks how to sing the LORD''s song in a strange land - the exiles''
+  question in Babylon.
 
-  # Card_Trivia_3: Greek xenos gives English both xenophobia and xenia, the old duty
-  of welcoming strangers.'
+  # Card_Trivia_3: Greek xenos gives English both xenophobia and xenia, the old duty of welcoming
+  strangers.'
 stats_rationale:
   lore: stranger ethics and Gentile inclusion; nokri/ger/zar distinctions need explaining
   context: nokri ~45 + xenos ~14 = ~59
-  complexity: stranger ethics and Gentile inclusion; nokri/ger/zar distinctions need
-    explaining
+  complexity: stranger ethics and Gentile inclusion; nokri/ger/zar distinctions need explaining
+weight: 2
+weight_rationale: descriptive

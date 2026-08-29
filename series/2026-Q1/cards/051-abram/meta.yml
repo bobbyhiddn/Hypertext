@@ -5,16 +5,16 @@ card_type: NAME
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A small caravan with tents and flocks leaving a great walled river city
-  at dawn, seen from behind, one figure walking ahead toward distant hills, luminous
-  cinematic oil painting with impressionistic brushwork, deep shadowed background,
-  one radiant golden light source, rich saturated blues and golds
+art_prompt: A small caravan with tents and flocks leaving a great walled river city at dawn,
+  seen from behind, one figure walking ahead toward distant hills, luminous cinematic oil
+  painting with impressionistic brushwork, deep shadowed background, one radiant golden light
+  source, rich saturated blues and golds
 stats:
   lore: 4
   context: 4
   complexity: 3
-ability: Draw one card from the Tower and look at one card from the top of the Tower.
-  Then you may put one card from your hand on the bottom of the Tower.
+ability: Draw one card from the Tower and look at one card from the top of the Tower. Then
+  you may put one card from your hand on the bottom of the Tower.
 ot_verse:
   ref: Genesis 12:1
   snippet: the LORD had said unto Abram, Get thee out
@@ -41,8 +41,10 @@ notes: null
 sources: []
 search_queries: []
 stats_rationale:
-  lore: justification by faith is argued from Abraham (Rom 4) - major; the Abram/Abraham
-    name change is the note
+  lore: justification by faith is argued from Abraham (Rom 4) - major; the Abram/Abraham name
+    change is the note
   context: Avram ~61 + Abraam ~73 = ~134
   complexity: justification by faith is argued from Abraham (Rom 4) - major; the Abram/Abraham
     name change is the note
+weight: 4
+weight_rationale: the patriarch called out of Ur - the era's answer to Babel

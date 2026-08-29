@@ -6,14 +6,13 @@ rarity: RARE
 series: 2026-Q1
 set: Babel
 art_prompt: A colossal, ancient wooden vessel resting on a mountain peak under a rainbow,
-  stylized geometric wood textures, golden light breaking through storm clouds, no
-  text.
+  stylized geometric wood textures, golden light breaking through storm clouds, no text.
 stats:
   lore: 5
   context: 4
   complexity: 2
-ability: Look at the top 5 cards of the Tower. You may reveal 2 cards that share a
-  type and add them to your hand; put the rest on the bottom.
+ability: Look at the top 5 cards of the Tower. You may reveal 2 cards that share a type and
+  add them to your hand; put the rest on the bottom.
 ot_verse:
   ref: Genesis 6:14
   snippet: Make for yourself an ark of gopher wood; you shall make the ark with rooms...
@@ -31,11 +30,12 @@ nt_refs: Matt 24:38 • Heb 9:4 • 1 Pet 3:20 • Rev 11:19
 trivia:
 - The Hebrew word 'tebah' is used only for Noah's ship and baby Moses' basket.
 - The Ark of the Covenant uses a different word, 'aron', meaning chest or coffin.
-- Noah's Ark used a 6:1 length-to-width ratio, a standard for stability in modern
-  ships.
+- Noah's Ark used a 6:1 length-to-width ratio, a standard for stability in modern ships.
 wild_id: null
 wild_counts_as: null
 letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 4
+weight_rationale: the vessel the flood turns on

@@ -5,23 +5,23 @@ card_type: NOUN
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A vast, stylized landscape viewed from high above, divided into distinct,
-  colorful territories by rivers and mountains, with small abstract clusters representing
-  multitudes of people.
+art_prompt: A vast, stylized landscape viewed from high above, divided into distinct, colorful
+  territories by rivers and mountains, with small abstract clusters representing multitudes
+  of people.
 stats:
   lore: 3
   context: 4
   complexity: 2
-ability: Reveal the top 4 cards of the Tower. Choose a card type, then add all revealed
-  cards of that type to your hand and discard the rest.
+ability: Reveal the top 4 cards of the Tower. Choose a card type, then add all revealed cards
+  of that type to your hand and discard the rest.
 ot_verse:
   ref: Genesis 12:2
-  snippet: And I will make of you a great nation, and I will bless you and make your
-    name great...
+  snippet: And I will make of you a great nation, and I will bless you and make your name
+    great...
 nt_verse:
   ref: 1 Peter 2:9
-  snippet: But you are a chosen race, a royal priesthood, a holy nation, a people
-    for his own possession...
+  snippet: But you are a chosen race, a royal priesthood, a holy nation, a people for his
+    own possession...
 greek:
   text: ἔθνος
   translit: ethnos
@@ -65,3 +65,5 @@ search_queries:
 - Revelation 7:9 ESV snippet
 - Genesis 12:2 ESV snippet
 - Hebrew word for nation goy vs am meaning
+weight: 3
+weight_rationale: the table of nations; a theme

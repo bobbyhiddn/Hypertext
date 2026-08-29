@@ -5,24 +5,23 @@ card_type: TITLE
 rarity: COMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A lone shepherd seen from behind on a dusk hillside, staff raised, guiding
-  scattered sheep down toward a stone fold whose gate glows with one radiant golden
-  lantern, deep blue shadowed valley beyond, luminous cinematic oil painting with
-  impressionistic brushwork, deep shadowed background, one radiant golden light source,
-  rich saturated blues and golds
+art_prompt: A lone shepherd seen from behind on a dusk hillside, staff raised, guiding scattered
+  sheep down toward a stone fold whose gate glows with one radiant golden lantern, deep blue
+  shadowed valley beyond, luminous cinematic oil painting with impressionistic brushwork,
+  deep shadowed background, one radiant golden light source, rich saturated blues and golds
 stats:
   lore: 4
   context: 3
   complexity: 2
 stats_rationale:
-  lore: the LORD is my shepherd and I am the good shepherd - the shepherd is a governing
-    image of God's care and of Christ, a major theme close to doctrine
-  context: roeh as the noun shepherd occurs 62 times in the Hebrew Bible; poimen occurs
-    18 times in the New Testament; total 80
-  complexity: roeh is the participle of raah, to pasture or feed, so shepherd and
-    feeder are one word; poimen is straightforward and gives us pastor by way of Latin
-ability: Look at the top three cards of the Tower. Add one of those cards to your
-  hand and put the other cards on top of the Tower in any order.
+  lore: the LORD is my shepherd and I am the good shepherd - the shepherd is a governing image
+    of God's care and of Christ, a major theme close to doctrine
+  context: roeh as the noun shepherd occurs 62 times in the Hebrew Bible; poimen occurs 18
+    times in the New Testament; total 80
+  complexity: roeh is the participle of raah, to pasture or feed, so shepherd and feeder are
+    one word; poimen is straightforward and gives us pastor by way of Latin
+ability: Look at the top three cards of the Tower. Add one of those cards to your hand and
+  put the other cards on top of the Tower in any order.
 ot_verse:
   ref: Psalm 23:1
   snippet: The LORD is my shepherd; I shall not want
@@ -39,8 +38,8 @@ ot_refs: Ps 23:1 • Isa 40:11 • Ezek 34:23
 nt_refs: John 10:11 • Heb 13:20 • 1 Pet 2:25
 trivia:
 - Roeh means the one who pastures - the shepherd is literally the feeder of the flock.
-- Ezekiel 34 promises one shepherd over the scattered; John 10 answers with one fold
-  and one shepherd.
+- Ezekiel 34 promises one shepherd over the scattered; John 10 answers with one fold and one
+  shepherd.
 - Pastor is simply the Latin for shepherd; the office kept the old name.
 wild_id: null
 wild_counts_as: null
@@ -48,3 +47,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 3
+weight_rationale: the LORD is my shepherd; thematic

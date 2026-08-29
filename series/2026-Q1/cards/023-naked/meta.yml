@@ -5,21 +5,21 @@ card_type: ADJECTIVE
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A discarded heavy robe lying crumpled on a cold stone floor, illuminated
-  by a harsh beam of light from above, symbolizing exposure and vulnerability.
+art_prompt: A discarded heavy robe lying crumpled on a cold stone floor, illuminated by a
+  harsh beam of light from above, symbolizing exposure and vulnerability.
 stats:
   lore: 3
   context: 5
   complexity: 1
-ability: Target player reveals their hand. Choose a card for them to discard. Draw
-  cards equal to its LORE.
+ability: Target player reveals their hand. Choose a card for them to discard. Draw cards equal
+  to its LORE.
 ot_verse:
   ref: Job 1:21
   snippet: Naked I came from my mother’s womb, and naked I will depart.
 nt_verse:
   ref: Hebrews 4:13
-  snippet: Nothing in all creation is hidden... everything is naked and exposed before
-    his eyes.
+  snippet: Nothing in all creation is hidden... everything is naked and exposed before his
+    eyes.
 greek:
   text: γυμνός
   translit: gymnos
@@ -38,3 +38,5 @@ letter: null
 notes: null
 sources: []
 search_queries: []
+weight: 2
+weight_rationale: descriptive
