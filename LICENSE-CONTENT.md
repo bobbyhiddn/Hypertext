@@ -1,6 +1,6 @@
 # Licence for the cards, the art and the set
 
-Copyright 2026 bobbyhiddn (https://github.com/bobbyhiddn/Hypertext)
+Copyright 2026 Micah Alexander Longmire (https://github.com/bobbyhiddn/Hypertext)
 
 The **software** in this repository is licensed separately — see [LICENSE](LICENSE).
 
