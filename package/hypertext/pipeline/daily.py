@@ -11,6 +11,7 @@ import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from typing import Any
 
 # Global shutdown flag for Ctrl+C handling
 _shutdown_requested = threading.Event()
@@ -1157,7 +1158,23 @@ def _context_bucket(total: int) -> int:
     return 5
 
 
-def _validate_card_stats(stats: dict, rarity: str, rationale: dict | None) -> None:
+def _context_capped(word: str, series_dir: Path | None) -> tuple[bool, int]:
+    """Numerals and function words max the frequency count for free (user,
+    2026-08-29: "why is ONE so stat rich?"), so they cap below the bucket."""
+    words, cap = [], 3
+    try:
+        import yaml as _yaml
+        path = Path(series_dir) / "set-standards.yml" if series_dir else None
+        if path and path.exists():
+            s = (_yaml.safe_load(path.read_text(encoding="utf-8")) or {}).get("stats") or {}
+            words = [str(w).upper() for w in (s.get("context_capped_words") or [])]
+            cap = int(s.get("context_cap", 3))
+    except Exception:
+        pass
+    return str(word).strip().upper() in words, cap
+
+
+def _validate_card_stats(stats: dict, rarity: str, rationale: dict | None, *, word: str = "", weight: Any = None, series_dir: Path | None = None) -> None:
     """Fail closed on stats that violate the stat rubric (docs/rules.md).
 
     LORE is theological weight and COMPLEXITY is linguistic history - both are
@@ -1184,12 +1201,28 @@ def _validate_card_stats(stats: dict, rarity: str, rationale: dict | None) -> No
         raise RuntimeError("stats_rationale.context must state the lemma occurrence counts")
     total = max(numbers)
     expected = _context_bucket(total)
+    capped, cap = _context_capped(word, series_dir)
+    if capped:
+        expected = min(expected, cap)
     if values["context"] != expected:
         raise RuntimeError(
             f"CONTEXT={values['context']} disagrees with the frequency bucket {expected} for ~{total} occurrences"
+            + (f" (numeral or function word: capped at {cap})" if capped else "")
         )
     if str(rarity).upper() in {"COMMON", "UNCOMMON"} and all(v >= 4 for v in values.values()):
         raise RuntimeError(f"{rarity} card may not carry three stats of 4 or more: {values}")
+    # A heavy row must be earned by a heavy word (user, 2026-08-29: ONE printed
+    # 5/5/4, the highest row in the set, for a numeral).
+    row_total = sum(values.values())
+    if row_total >= 13:
+        try:
+            w = int(weight)
+        except (TypeError, ValueError):
+            w = None
+        if w is None or w < 4:
+            raise RuntimeError(
+                f"stat total {row_total} needs word weight 4 or more; this word's weight is {weight}"
+            )
     _log(f"[plan] stats {values} accepted (context bucket from ~{total} occurrences)")
 
 
@@ -1415,6 +1448,27 @@ def _generate_queue_entries(
     return out
 
 
+def _art_prompt_rules(series_dir: Path | None = None) -> str:
+    """The art contract for the metadata prompt: subject from the verse, the
+    tower allowlist, no crowds, and one lighting clause from the palette
+    (user, 2026-08-29: "we have way too many towers in our arts")."""
+    from hypertext.cards.art_motifs import load_art_standards
+
+    art = load_art_standards(series_dir or Path("series/2026-Q1"))
+    palette = "; ".join(f"{e['name']} = {e['clause']}" for e in art["lighting_palette"])
+    caps = ", ".join(f"{k} at most {v} of 90" for k, v in art["motif_caps"].items())
+    return (
+        "ART SUBJECT (hard requirement): the illustration depicts THIS card's own scene - what the printed OT verse describes, "
+        "or the object, place, creature, weather, or light the word itself names. The tower of Babel may appear ONLY for these words: "
+        + ", ".join(str(w).upper() for w in art["tower_allowlist"]) + "; for any other word an art_prompt naming a tower or ziggurat is rejected. "
+        "Vary the scene: the set caps repeated motifs (" + caps + "). "
+        "ART STYLE (hard requirement): a vivid full-colour painting - " + art["medium"] + " - never sepia, monochrome, engraving, etching, woodcut, or line art. "
+        "ART LIGHTING (hard requirement): end art_prompt with the medium clause above followed by EXACTLY ONE lighting clause from this palette, "
+        "chosen to fit the scene rather than defaulting to the first: " + palette + ". "
+        "No single lighting clause may carry more than a fifth of the set, so do not reach for the golden one unless the scene is genuinely about radiance. "
+    )
+
+
 def _generate_card_recipe(
     *,
     number: int,
@@ -1423,6 +1477,7 @@ def _generate_card_recipe(
     rarity: str,
     ability: str | None = None,
     gloss: str = "",
+    series_dir: Path | None = None,
 ) -> dict:
     rules_appendix = _load_rules_appendix()
 
@@ -1448,6 +1503,7 @@ def _generate_card_recipe(
         + "\n\n"
     )
 
+    art_rules = _art_prompt_rules(series_dir)
     prompt = (
         "You are generating research-backed metadata for a daily Bible word-study trading card. "
         "Return ONLY valid JSON with this exact shape: {\n"
@@ -1477,9 +1533,10 @@ def _generate_card_recipe(
         + "\n\n"
         "WORD WEIGHT (hard requirement): weight is how much a card of this word means in the set's story, separate from LORE. 1 everyday vocabulary the era happens to use; 2 a descriptive or mechanical word with a clear place; 3 thematic vocabulary with real teaching behind it; 4 a named judgment, agent, place, patriarch, or event the era turns on - the card people look for (SODOM, DESTROYER, EDEN, ABRAM, ARK); 5 a pillar of the set, the act or name the whole story hangs on (SPIRIT, COVENANT, NOAH). Weight 5 must be GLORIOUS and weight 4 at least RARE; the printed rarity of this card is fixed, so state the weight honestly and the plan will fail closed if the slot is too low for the word. "
         "STAT RUBRIC (hard requirement): LORE is theological weight (1 incidental, 3 a recognized theme, 5 a doctrine hangs on the word). CONTEXT is frequency: count occurrences of the printed Hebrew lemma plus the printed Greek lemma and bucket the sum - 1 for 10 or fewer, 2 for 11-40, 3 for 41-120, 4 for 121-400, 5 for more than 400; state the counts in stats_rationale.context. COMPLEXITY is etymological and linguistic history (1 transparent, 3 a derivation or translation choice worth explaining, 5 a word whose history is itself a study). Stats never scale with rarity and every filled pip must be earned; a COMMON or UNCOMMON card may not carry three stats of 4 or more. "
+        "STATS ARE SCORED AS THIS CARD USES THE WORD (hard requirement, 2026-08-29): LORE and COMPLEXITY are judged on the era's use of the word and on the verses printed on this face; a doctrinal use elsewhere in Scripture may lift a score only when that verse is one of the printed refs. Do not score a word at its theological peak somewhere else in the canon. A numeral or function word (ONE, ALL, EVERY, MANY, NO, WITH) maxes the frequency count for free, so its CONTEXT caps at 3 however large the count - still state the counts. A stat total of 13 or more across the three stats requires word weight 4 or more; if the word is lighter, print a lighter row. "
         "FIGURES (hard requirement): art_prompt must never describe a crowd, a gathering, an assembly, or a group of people - the image model paints faces toward the viewer whenever several people are present, which fails the figure rule. Prefer scenes with no people at all (objects, places, symbols, animals, weather, light); when a person is essential, exactly one figure, seen from behind, in silhouette, or at a distance. "
-        "ART STYLE (hard requirement): art_prompt must describe a luminous, vibrant, full-color cinematic oil painting with impressionistic brushwork - deep shadowed backgrounds lit by one radiant golden light source, rich saturated blues and golds, ethereal atmosphere, a strong symbolic subject - in the manner of the printed Hypertext set (example cards 001-020); never sepia, monochrome, engraving, etching, woodcut, or line art; end every art_prompt with the phrase 'luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds'. "
-        "SET THEME (hard requirement): this series is the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, and Babel. Draw art subjects from the WHOLE era rather than defaulting to the tower; the tower belongs only to words that are about it. Every Hypertext set is one fallen kingdom in historical order and the next set is Egypt, so no Egyptian subjects, places, or imagery in this set. "
+        + art_rules +
+        "SET THEME (hard requirement): this series is the antediluvian-to-Babel era - creation, Eden, the flood, the Table of Nations, and Babel. Every Hypertext set is one fallen kingdom in historical order and the next set is Egypt, so no Egyptian subjects, places, or imagery in this set. "
         "Use Google Search grounding to pick appropriate verses and correct language forms. "
         "Verses/snippets must be short (not full verses). "
         "LEXICAL RULE (hard requirement): the printed OT verse must contain the exact Hebrew lemma given in "
@@ -2240,11 +2297,10 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
 
     if auto:
         _log("[phase plan] auto mode: generating recipe")
-        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=q_ability)
+        recipe = _generate_card_recipe(number=number, word=word, card_type=card_type, rarity=rarity, ability=q_ability, series_dir=series_dir)
         grounding = recipe.get("grounding", {}) if isinstance(recipe.get("grounding"), dict) else {}
         stats = q_stats if q_stats else (recipe.get("stats", {}) if isinstance(recipe.get("stats"), dict) else {})
         stats_rationale = recipe.get("stats_rationale") if isinstance(recipe.get("stats_rationale"), dict) else None
-        _validate_card_stats(stats, rarity, stats_rationale)
         # Word weight (user, 2026-08-28): a heavy word may not print below its floor.
         from hypertext.cards.word_weight import check_word_weight
 
@@ -2254,6 +2310,8 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         if weight_issues:
             raise RuntimeError("word weight: " + "; ".join(weight_issues))
         _log(f"[plan] word weight {word_weight} accepted for {rarity}")
+        # Stats are judged against the word and its weight (2026-08-29).
+        _validate_card_stats(stats, rarity, stats_rationale, word=word, weight=word_weight, series_dir=series_dir)
         ot_verse = q_ot_verse if q_ot_verse else (recipe.get("ot_verse", {}) if isinstance(recipe.get("ot_verse"), dict) else {})
         nt_verse = q_nt_verse if q_nt_verse else (recipe.get("nt_verse", {}) if isinstance(recipe.get("nt_verse"), dict) else {})
         greek = q_greek if q_greek else (recipe.get("greek", {}) if isinstance(recipe.get("greek"), dict) else {})
@@ -2284,6 +2342,15 @@ def phase_plan(*, series_dir: Path, template_path: Path, auto: bool, variant: in
         if shape_issues:
             raise RuntimeError("ability shape rule: same shape as " + ", ".join(f"{c['with']} ({c['detail']})" for c in shape_issues))
         _log("[plan] ability shape rule: no card in the set shares this shape")
+        # The art depicts the card's own verse scene; the tower belongs to tower
+        # words only, and every prompt carries one palette lighting clause
+        # (user, 2026-08-29: "we have way too many towers in our arts").
+        from hypertext.cards.art_motifs import check_art_prompt, load_art_standards
+
+        art_issues = check_art_prompt(word, art_prompt, load_art_standards(series_dir))
+        if art_issues:
+            raise RuntimeError("art rule: " + "; ".join(art_issues))
+        _log("[plan] art rule: subject, figures and lighting clause accepted")
 
         ot_ref = str(ot_verse.get("ref", "")).strip()
         ot_snip = str(ot_verse.get("snippet", "")).strip()

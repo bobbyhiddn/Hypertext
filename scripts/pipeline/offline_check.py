@@ -11,6 +11,8 @@ from hypertext.cards.ability_shape import load_series_abilities, shape_conflicts
 from hypertext.cards.lemma_uniqueness import lemma_conflicts, load_series_records
 from hypertext.cards.word_weight import check_word_weight
 from hypertext.cards import ability_grammar as ag
+from hypertext.cards import axes as ax
+from hypertext.cards import art_motifs as am
 
 SERIES = "series/2026-Q1"
 WORD = re.compile(r"\b[\w'-]+\b")
@@ -29,7 +31,8 @@ def main():
         sys.exit(f"no card type for {missing}: add TYPES to the module or pass WORD:TYPE")
     existing_ab = load_series_abilities(SERIES)
     existing_rec = list(load_series_records(SERIES))
-    findings, sigs = 0, {}
+    art = am.load_art_standards(SERIES)
+    findings, sigs, batch_axes, batch_art = 0, {}, [], []
     for w, (rar, seed, cand) in d.DESIGNS.items():
         text, m = cand["ability_text"], d.META[w]
         print(f"\n=== {w} {types[w]} {rar}  words={len(WORD.findall(text))}/{ABILITY_WORD_CAPS[rar]}")
@@ -63,10 +66,48 @@ def main():
             findings += 1; print(f" CONTEXT: rationale total {nums} does not match declared bucket {m['stats']['context']}")
         if rar in ("COMMON", "UNCOMMON") and sum(1 for v in m["stats"].values() if v >= 4) >= 3:
             findings += 1; print(" STATS: three stats of 4+ on a", rar)
+        # A heavy stat row must be earned by a heavy word (2026-08-29).
+        row = sum(m["stats"].values())
+        if row >= 13 and int(m["weight"]) < 4:
+            findings += 1; print(f" STATS: total {row} needs word weight 4 or more; weight is {m['weight']}")
+        # Numerals and function words cap CONTEXT (2026-08-29).
+        capped = {str(x).upper() for x in ((am.yaml.safe_load(open(f"{SERIES}/set-standards.yml", encoding="utf-8")) or {}).get("stats") or {}).get("context_capped_words", [])}
+        if w.upper() in capped and m["stats"]["context"] > 3:
+            findings += 1; print(f" STATS: {w} is a numeral or function word; CONTEXT caps at 3")
+        # Art: subject, figures, lighting clause (2026-08-29).
+        art_issues = am.check_art_prompt(w, m["art_prompt"], art)
+        if art_issues:
+            findings += 1; print(" ART:", "; ".join(art_issues))
+        batch_art.append((w.lower(), w, m["art_prompt"]))
+        batch_axes.append(text)
+        print(" axes:", ", ".join(sorted(ax.classify_axes(text))) or "none",
+              "| lighting:", am.lighting_of(m["art_prompt"], art),
+              "| motifs:", ", ".join(sorted(am.motifs_in(m["art_prompt"]))) or "none")
         print(" ok" if findings == 0 else "", sigs[w])
     dup = [k for k, v in Counter(sigs.values()).items() if v > 1]
     if dup:
         findings += 1; print("\nintra-batch duplicate shapes:", dup)
+    # Mechanic axes: the batch must carry its share (2026-08-29).
+    shortfalls = ax.batch_shortfalls(SERIES, batch_axes)
+    if shortfalls:
+        findings += len(shortfalls)
+        print("\nmechanic axes:")
+        for s in shortfalls:
+            print("  " + s)
+    # Art: how this batch moves the set against its caps.
+    after = am.audit_series(SERIES, extra=batch_art)
+    over = {**after["over_motif_caps"]}
+    if over or after["over_lighting_cap"]:
+        print("\nart caps after this batch:")
+        for motif, n in over.items():
+            print(f"  {motif}: {n} of {after['motif_caps'][motif]} allowed")
+        for name, n in after["over_lighting_cap"].items():
+            print(f"  lighting {name}: {n}/{after['cards']} over the {after['lighting_share_cap']:.0%} share cap")
+        print("  (a legacy overrun is reported, not charged to this batch; a NEW overrun this batch causes is a finding)")
+    lights = Counter(am.lighting_of(p, art) for _, _, p in batch_art)
+    print("\nbatch lighting:", dict(lights))
+    if len(batch_art) >= 5 and max(lights.values()) > max(2, len(batch_art) // 2):
+        findings += 1; print(f"  one lighting clause carries {max(lights.values())} of {len(batch_art)} cards in this batch")
     print(f"\n{findings} finding(s)")
     sys.exit(1 if findings else 0)
 

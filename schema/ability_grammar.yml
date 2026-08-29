@@ -66,6 +66,7 @@ productions:
     lose_letter:       {copy: "Choose another player. That chosen player spends one Letter", interaction: 2, tiers: [UNCOMMON, RARE, GLORIOUS]}
     every_reveals:     {copy: "Each player reveals one card from that player's hand", interaction: 1, scope: 3, tiers: [RARE, GLORIOUS]}
     every_material:    {copy: "Each player (draws|adds|discards) one card ...", interaction: 3, tiers: [GLORIOUS]}
+    stat_duel:         {copy: "Choose another player; each of you reveals one card from your hand. If your revealed card has the higher STAT, RESULT", interaction: 1, tiers: [UNCOMMON, RARE, GLORIOUS]}
   KICKER:
     reorder:           {copy: "put those cards back on top of the Tower in any order"}
     rest_bottom:       {copy: "put the other cards on the bottom of the Tower"}
@@ -84,11 +85,15 @@ productions:
     same_type:         {copy: "of the same card type as that added card"}
     stat_floor:        {copy: "that has STAT N or more"}
     in_lot:            {copy: "whose card type is in (the Chapter Lot|your Lot)", tiers: [UNCOMMON, RARE, GLORIOUS]}
+    stat_match:        {copy: "of the same STAT as that added card", tiers: [UNCOMMON, RARE, GLORIOUS]}
   CONDITION:
     revealed_is_type:  {copy: "If that revealed card is a TYPE, RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
     revealed_in_lot:   {copy: "If that revealed card's card type is in (the Chapter Lot|your Lot), RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
     hand_lacks_type:   {copy: "If no TYPE is in your hand, RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
     pages_threshold:   {copy: "If you have at least N cards in Pages, RESULT", tiers: [RARE, GLORIOUS]}
+    stat_condition:    {copy: "If that revealed card has STAT N or more, RESULT; otherwise, RESULT", tiers: [UNCOMMON, RARE, GLORIOUS]}
+    stat_threshold:    {copy: "If the cards in your Pages have total STAT N or more, RESULT", tiers: [RARE, GLORIOUS], note: "setup 2 - a built structure is read"}
+    stat_scale:        {copy: "draw one card from the Tower for each point of STAT on that revealed card", tiers: [RARE, GLORIOUS], note: "prices as three cards, the average stat"}
     otherwise:         {copy: "...; otherwise, RESULT", note: "exclusive branches never add"}
     for_each:          {copy: "for each (card fewer than N in your hand|card type in ...)", tiers: [UNCOMMON, RARE, GLORIOUS]}
   TIMING:
@@ -102,3 +107,5 @@ constraints:
   - "resolution steps (every action except look at, reveal, name, choose) are at most two below RARE"
   - "no two cards share a shape (hypertext ability-audit); no two cards share a lemma or word (hypertext lemma-audit)"
   - "every ability beats 'Draw one card from the Tower.'"
+  - "stat rhyme (2026-08-29): the stat an ability reads matches the word - LORE for weight, glory, depth, holiness, judgment, promise; CONTEXT for multitude, all, many, gathering, filling; COMPLEXITY for tongue, name, confusion, foreignness, division"
+  - "mechanic axes (2026-08-29): per 90 cards at least 18 read a stat, 26 a type, 12 Letters, 10 Lots, 8 Pages, 16 another player, 24 Sheol (set-standards.yml mechanic_axis_targets); a batch of ten carries at least 2 stat readers, 1 Letter card, 1 Lot-or-Page card (offline_check fails closed)"

@@ -75,6 +75,7 @@ def classify(text: str) -> dict[str, Any]:
     ], t)
 
     interact = _first([
+        ("stat_duel", r"\bhas the higher (?:LORE|CONTEXT|COMPLEXITY)\b"),
         ("every_material", r"\b(?:each|every|all)\s+(?:other\s+)?players?\s+(?:draws?|adds?|discards?|puts?|spends?|gains?)\b"),
         ("every_reveals", r"\b(?:each|every|all)\s+(?:other\s+)?players?\s+(?:reveals?|names?|looks?)\b"),
         ("lose_letter", r"\bthat chosen player spends\b"),
@@ -99,6 +100,7 @@ def classify(text: str) -> dict[str, Any]:
 
     filt = _first([
         ("in_lot", r"\bcard type is in (?:the Chapter Lot|your Lot)\b"),
+        ("stat_match", r"\bsame (?:LORE|CONTEXT|COMPLEXITY) as\b"),
         ("stat_floor", r"\b(?:LORE|CONTEXT|COMPLEXITY)\s+(?:one|two|three|four|five)\s+or more\b"),
         ("named_type", r"\bof the named type\b|\bnot the named type\b"),
         ("same_type", r"\bsame card type\b|\bthat added card's card type\b"),
@@ -107,6 +109,9 @@ def classify(text: str) -> dict[str, Any]:
 
     condition = _first([
         ("pages_threshold", r"\bat least \w+ cards in Pages\b"),
+        ("stat_scale", r"\bfor each point of (?:LORE|CONTEXT|COMPLEXITY)\b"),
+        ("stat_threshold", r"\btotal (?:LORE|CONTEXT|COMPLEXITY) \w+ or more\b"),
+        ("stat_condition", r"\bIf that revealed card has (?:LORE|CONTEXT|COMPLEXITY)\b"),
         ("revealed_in_lot", r"\bIf that revealed card's card type is in\b"),
         ("revealed_is_type", r"\bIf that revealed card is\b"),
         ("hand_lacks_type", r"\bIf no (?:NOUN|VERB|ADJECTIVE|NAME|TITLE) is in your hand\b"),

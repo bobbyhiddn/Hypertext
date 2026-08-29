@@ -113,6 +113,37 @@ values, and the tiers each option may appear at. In summary:
 | CONDITION | revealed card is a type · revealed type is in a Lot · no type in hand · at least N cards in Pages · otherwise · for each |
 | TIMING | now · at the start of your next turn |
 
+## 6b. Stats as a design surface (2026-08-29)
+
+Every card prints LORE, CONTEXT and COMPLEXITY, and at 76 cards two abilities
+read one. Six productions put the pips in play:
+
+| Production | Copy | Tiers |
+|---|---|---|
+| `stat_floor` | "...that each have LORE three or more" | any |
+| `stat_match` | "one card of the same LORE as that added card" | UNCOMMON+ |
+| `stat_condition` | "If that revealed card has CONTEXT four or more, ...; otherwise, ..." | UNCOMMON+ |
+| `stat_duel` | "each of you reveals one card from your hand. If your revealed card has the higher LORE, ..." | UNCOMMON+ |
+| `stat_threshold` | "If the cards in your Pages have total LORE twelve or more, ..." | RARE+ |
+| `stat_scale` | "draw one card from the Tower for each point of COMPLEXITY on that revealed card" | RARE+ |
+
+`stat_scale` prices as three cards (the average pip), `stat_threshold` as
+setup 2, `stat_duel` as interaction 1.
+
+**Stat rhyme.** Read the stat the word is about: LORE for weight, glory,
+depth, holiness, judgment and promise; CONTEXT for multitude, all, many,
+gathering and filling; COMPLEXITY for tongue, name, confusion, foreignness
+and division.
+
+## 6c. Mechanic axes (2026-08-29)
+
+An axis is a game surface an ability reads or moves. Per 90 cards:
+stats 18, types 26, Letters 12, Lots 10, Pages 8, another player 16,
+Sheol 24 (`mechanic_axis_targets` in `set-standards.yml`). A batch of ten
+carries at least two stat readers, one Letter card and one Lot-or-Page card;
+`scripts/pipeline/offline_check.py` fails closed and `hypertext axis-audit`
+reports the set.
+
 ## 7. Uniqueness
 
 - **Shape:** no two cards share a core motion plus qualifiers

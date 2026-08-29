@@ -77,6 +77,20 @@ set carries at most about 22 words of weight 4-5 and 9 of weight 5.
 
 CONTEXT is computed from counts and must match its bucket. LORE and COMPLEXITY are judgments and must cite their reason. Stats do not scale with rarity; a filled row must be earned by the word, and a COMMON or UNCOMMON card may not carry three stats of 4 or more.
 
+**Scored as this card uses the word** (2026-08-29). LORE and COMPLEXITY are
+judged on the era's use and on the verses printed on this face; a doctrinal
+use elsewhere in Scripture lifts a score only when that verse is one of the
+printed refs. ONE printed 5/5/4 - the highest row in the set - by being scored
+at the Shema rather than at "the people is one" on its own face. A numeral or
+function word maxes the frequency count for free, so its CONTEXT caps at 3.
+A stat total of 13 or more requires word weight 4 or more.
+
+**Stats are playable.** An ability may read LORE, CONTEXT or COMPLEXITY the
+way it reads a card type: a floor filter, a binary condition, a match, a duel
+with a chosen player, a Pages total, or a per-point scale. The stat should
+rhyme with the word - LORE for weight, glory and depth; CONTEXT for multitude
+and gathering; COMPLEXITY for tongue, name and confusion.
+
 ---
 
 ## Card Types
@@ -363,6 +377,10 @@ Ability copy uses only the rules vocabulary above. Rulings that abilities depend
   player with information. Only a GLORIOUS moves every player's material.
 - **Costs count.** A discarded or buried hand card is one card of cost and a
   spent Letter is three; an ability's tier is judged on gain net of cost.
+- **Stats on cards.** "LORE three or more", "the higher COMPLEXITY", "total
+  LORE twelve or more in your Pages", and "one card for each point of
+  CONTEXT" all read the printed pips of the card named. A card in Sheol or a
+  Page keeps its printed stats; a face-down card has none until revealed.
 - **Discarding a Page.** An ability may name "discard one of your Pages" as
   its cost: every card in that Page goes to Sheol, the Page no longer exists,
   and it scores nothing. The cost is worth the Page's card count.

@@ -73,6 +73,26 @@ phase fails closed on a conflict, and `hypertext lemma-audit --series
 series/2026-Q1` reports every conflicting pair in a series. Check candidate
 lemmas offline before spending renders.
 
+## Art subject, motifs and lighting (2026-08-29)
+
+The illustration depicts **this card's own scene** - what the printed OT verse
+describes, or the object, place, creature, weather or light the word names.
+
+- **The tower is not the set's wallpaper.** At 76 cards, 14 prompts showed a
+  tower or ziggurat and about five were tower words. The tower may appear only
+  for the words in `art.tower_allowlist` (BUILD, BRICK, CITY, SHINAR, HIGH,
+  ASCEND, SCATTER, CONFUSE); the plan phase rejects any other prompt naming it.
+- **Motif caps** (`art.motif_caps`): tower 8, city 10, plain 10, tent 8,
+  water 12 out of 90. `hypertext art-audit` prints the histogram.
+- **Lighting palette.** A prompt ends with the fixed medium clause plus
+  exactly one clause from `art.lighting_palette` (golden, dawn, noon, storm,
+  lantern, firelight, underwater, overcast, desert, moonlit). No clause may
+  carry more than a fifth of the set - 45 of the first 76 prompts said "one
+  radiant golden light source", which is why unrelated cards shared one
+  evening on one plain.
+- **Figures** are unchanged: no crowds; prefer no people; one figure seen from
+  behind when a person is essential.
+
 ## Output rules (image model constraints)
 - Render only the card. No extra border outside the card.
 - No top microtext like "GAME: HYPERTEXT".

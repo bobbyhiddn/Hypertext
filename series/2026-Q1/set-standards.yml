@@ -16,9 +16,15 @@ cycle_days: 90
 
 rarity_distribution:
   COMMON: 40       # 36 cards - Foundational vocabulary, easy access
-  UNCOMMON: 35     # 32 cards - Moderate depth, good variety
-  RARE: 15         # 13 cards - Specialized terms, thematic significance
+  UNCOMMON: 34.5   # 31 cards - Moderate depth, good variety
+  RARE: 15.5       # 14 cards - Specialized terms, thematic significance
   GLORIOUS: 10     #  9 cards - Powerful theological concepts, chase cards
+# 2026-08-29 rebalance against word weight (the top of the grid no longer matched
+# the words in it): GRACE, CREATE and NOAH are weight-5 pillars and move up to
+# GLORIOUS; RIGHTEOUS and HOVER are weight 3 and move down to RARE; NAKED and
+# DISCORD are weight 2 and move down to UNCOMMON; HUNTER and DEEP (weight 3) move
+# down to UNCOMMON to seat two weight-4 words at RARE. One RARE slot is added and
+# one UNCOMMON slot removed so the rows still sum to 90.
 
 # ============================================================================
 # TYPE DISTRIBUTION (counts for 90-card set)
@@ -41,30 +47,32 @@ type_distribution:
 
 combination_targets:
   # COMMON (36 cards total - 40% of set)
-  COMMON_NOUN: 6
+  COMMON_NOUN: 5
   COMMON_VERB: 8
-  COMMON_ADJECTIVE: 8
-  COMMON_NAME: 4   # 2026-08-28: two NAME slots moved to RARE (word weight: SODOM, DESTROYER, EDEN, ABRAM are heavy names)
-  COMMON_TITLE: 8
+  COMMON_ADJECTIVE: 9
+  COMMON_NAME: 5
+  COMMON_TITLE: 9
 
-  # UNCOMMON (32 cards total - 35% of set)
+  # UNCOMMON (31 cards total)
   UNCOMMON_NOUN: 6
   UNCOMMON_VERB: 7
-  UNCOMMON_ADJECTIVE: 7
-  UNCOMMON_NAME: 6
-  UNCOMMON_TITLE: 6
+  UNCOMMON_ADJECTIVE: 8
+  UNCOMMON_NAME: 5
+  UNCOMMON_TITLE: 5
 
-  # RARE (13 cards total - 15% of set)
-  RARE_NOUN: 2
+  # RARE (14 cards total)
+  RARE_NOUN: 1
   RARE_VERB: 3
   RARE_ADJECTIVE: 3
-  RARE_NAME: 4     # 2026-08-28: was 2; the era has more heavy names than the grid assumed
+  RARE_NAME: 4
   RARE_TITLE: 3
 
   # GLORIOUS (9 cards total - 10% of set)
-  GLORIOUS_NOUN: 2
+  # 2026-08-29: ADJECTIVE leaves the top tier (RIGHTEOUS demoted, no weight-5
+  # adjective in the era); NOUN takes those slots (GRACE up, FLOOD to come).
+  GLORIOUS_NOUN: 4
   GLORIOUS_VERB: 2
-  GLORIOUS_ADJECTIVE: 2
+  GLORIOUS_ADJECTIVE: 0
   GLORIOUS_NAME: 2
   GLORIOUS_TITLE: 1
 
@@ -95,3 +103,67 @@ sequential_rules:
 # - 2026-08-27: RARE_NAME restored 3 -> 2; the earlier +1 had no offset, making
 #   the grid sum to 91 cards and the NAME column to 17. Rows and columns now
 #   match rarity_distribution and type_distribution exactly (90 total).
+
+# ============================================================================
+# MECHANIC AXES (2026-08-29)
+# ============================================================================
+# Which game surfaces abilities read or move. At 76 cards two abilities read a
+# stat while every card prints three; the targets below are gated per batch by
+# scripts/pipeline/offline_check.py and audited by 'hypertext axis-audit'.
+# A card may count on several axes.
+
+mechanic_axis_targets:
+  stats: 18        # LORE / CONTEXT / COMPLEXITY read by the ability
+  types: 26        # a card type named or filtered
+  letters: 12      # a Letter gained, spent, or taken
+  lots: 10         # the Chapter Lot or a player's Lot read or moved
+  pages: 8         # a Page read, scaled, or returned from
+  opponent: 16     # another player reached
+  sheol: 24        # Sheol read or written
+
+batch_minimums_per_ten:   # scaled by batch size (floor)
+  stats: 2
+  letters: 1
+  lots_or_pages: 1
+
+# ============================================================================
+# ART (2026-08-29)
+# ============================================================================
+# The illustration depicts the card's own OT-verse scene. The tower belongs to
+# tower words only; motif caps keep the set from repeating one scene; every
+# prompt ends with the fixed medium clause plus ONE lighting clause from the
+# palette, and no lighting clause may exceed the share cap.
+
+art:
+  tower_allowlist: [BUILD, BRICK, CITY, SHINAR, HIGH, ASCEND, SCATTER, CONFUSE]
+  motif_caps:
+    tower: 8
+    city: 10
+    plain: 10
+    tent: 8
+    water: 12
+  lighting_share_cap: 0.20
+  medium: "luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art"
+  lighting_palette:
+    - {name: golden,     clause: "deep shadowed background lit by one radiant golden light source, rich saturated blues and golds"}
+    - {name: dawn,       clause: "cold blue dawn light with long violet shadows and a pale rose horizon"}
+    - {name: noon,       clause: "hard white noon glare, bleached ochre ground and short black shadows"}
+    - {name: storm,      clause: "storm light under a bruised green-grey sky, one shaft of silver breaking through"}
+    - {name: lantern,    clause: "night under a lantern, a warm amber pool of light in deep indigo dark"}
+    - {name: firelight,  clause: "firelight from below, red and orange on stone, smoke against black"}
+    - {name: underwater, clause: "underwater green-gold light filtering down through murky depth"}
+    - {name: overcast,   clause: "overcast grey-blue daylight, soft and shadowless, wet colours saturated"}
+    - {name: desert,     clause: "red desert light of late afternoon, rust and copper against a turquoise sky"}
+    - {name: moonlit,    clause: "moonlit silver-blue with water and stone picked out in cool highlights"}
+
+# ============================================================================
+# STAT RUBRIC ADDENDA (2026-08-29)
+# ============================================================================
+# LORE and COMPLEXITY are judged on the era's use and the verses printed on the
+# face; a doctrinal use elsewhere lifts a score only when that verse is in the
+# ref strip. CONTEXT is a count, and a numeral or function word maxes the count
+# for free - those words cap at 3 (the count is still recorded).
+
+stats:
+  context_capped_words: [ONE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, TEN, HUNDRED, THOUSAND, FIRST, SECOND, ALL, EVERY, EACH, NO, NOT, WITH, UPON, AGAIN, AFTER, BEFORE, MANY, MUCH]
+  context_cap: 3

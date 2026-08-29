@@ -92,7 +92,7 @@ def ability_signature(text: str) -> dict[str, Any]:
     secondary = sorted({kind(v) for v in verbs if v != core["verb"]} - ({kind(core["verb"])} if core["verb"] else set()) - ({"card"} if every else set()))
     # Taking or looking from the bottom is a different play from the top; a
     # "put ... on the bottom" placement is not.
-    bottom = bool(re.search(r"\b(?:add|draw|look at|reveal)\b[^.;]*?\bbottom (?:card )?of the Tower\b", t, re.IGNORECASE))
+    bottom = bool(re.search(r"\b(?:look at|reveal)\s+(?:the\s+)?bottom\b|\b(?:add|draw)\s+[^.;]*?\bfrom the bottom of the Tower\b|\bone card from the bottom of the Tower\b", t, re.IGNORECASE))
     opp = "none"
     m = re.search(r"\b(?:that|the)\s+chosen\s+player\s+(puts?|spends?|discards?|draws?|returns?)\b[^.;]*?(into Sheol|Letters?|bottom of the Tower|top of the Tower|from the Tower)?", t, re.IGNORECASE)
     if m:

@@ -99,6 +99,50 @@ def weight_audit(series):
         raise SystemExit(1)
 
 
+@cli.command("axis-audit")
+@click.option("--series", required=True, help="Series directory (contains cards/)")
+def axis_audit(series):
+    """Report how many abilities read each mechanic axis against the set targets."""
+    from hypertext.cards.axes import audit_series
+
+    a = audit_series(series)
+    short = []
+    for axis, target in a["targets"].items():
+        have = len(a["by_axis"].get(axis, []))
+        room = 90 - a["cards"]
+        flag = "" if have >= target else ("  (needs %d more; %d slots left)" % (target - have, room))
+        if have < target and target - have > room:
+            flag = "  UNREACHABLE: needs %d more with %d slots left" % (target - have, room)
+            short.append(axis)
+        click.echo(f"{axis:10s} {have:3d}/{target:<3d}{flag}")
+    click.echo(f"{a['cards']} cards audited")
+    if short:
+        raise SystemExit(1)
+
+
+@cli.command("art-audit")
+@click.option("--series", required=True, help="Series directory (contains cards/)")
+def art_audit(series):
+    """Report art motif counts against their caps, off-allowlist towers, and the lighting spread."""
+    from hypertext.cards.art_motifs import audit_series
+
+    a = audit_series(series)
+    for motif, cards in sorted(a["motifs"].items(), key=lambda kv: -len(kv[1])):
+        cap = a["motif_caps"].get(motif)
+        over = "  OVER CAP" if cap is not None and len(cards) > int(cap) else ""
+        click.echo(f"{motif:10s} {len(cards):3d}" + (f"/{cap}" if cap is not None else "   ") + over)
+    if a["tower_off_allowlist"]:
+        click.echo("tower off the allowlist: " + ", ".join(a["tower_off_allowlist"]))
+    n = max(1, a["cards"])
+    for name, cards in sorted(a["lighting"].items(), key=lambda kv: -len(kv[1])):
+        share = len(cards) / n
+        over = "  OVER SHARE CAP" if name != "none" and share > a["lighting_share_cap"] else ""
+        click.echo(f"lighting {name:12s} {len(cards):3d}  {share:5.0%}{over}")
+    click.echo(f"{a['cards']} cards audited")
+    if a["tower_off_allowlist"] or a["over_motif_caps"] or a["over_lighting_cap"]:
+        raise SystemExit(1)
+
+
 @cli.command("ability-audit")
 @click.option("--series", required=True, help="Series directory (contains cards/)")
 @click.option("--show", is_flag=True, help="Print every card's shape signature")
