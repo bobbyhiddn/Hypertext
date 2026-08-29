@@ -48,6 +48,17 @@ bent), so a big cost is what makes a wild effect fair, not what shrinks it.
 - Every ability must beat *"Draw one card from the Tower."* Information,
   peeking, or blind reordering alone is worth nothing.
 
+## 2b. Word weight
+
+Rarity is priced from the ability, but the *word* has a floor of its own.
+Weight (1–5, stated with a rationale beside the stats) is how much a card of
+the word means in the set's story: 4 is a named judgment, agent, place,
+patriarch, or event the era turns on (SODOM, DESTROYER, EDEN, ABRAM); 5 is a
+pillar (SPIRIT, COVENANT, NOAH). Weight 5 must print GLORIOUS and weight 4 at
+least RARE; the plan phase fails closed otherwise, and
+`hypertext weight-audit` reports the set against its budget of 22 heavy words
+and 9 pillars. A slot's ability is then designed to the slot's tier.
+
 ## 3. Interaction by tier
 
 - **COMMON** never touches another player.

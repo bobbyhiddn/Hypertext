@@ -2,7 +2,7 @@ number: 038
 word: SODOM
 gloss: The city of the plain judged with fire, from which a remnant fled
 card_type: NAME
-rarity: UNCOMMON
+rarity: RARE
 series: 2026-Q1
 set: Babel
 art_prompt: A walled city burning on a wide plain under a sky raining streaks of fire, small
@@ -14,8 +14,8 @@ stats:
   lore: 3
   context: 3
   complexity: 2
-ability: Put the top three cards of the Tower into Sheol, then add one of those cards to your
-  hand.
+ability: Put the top five cards of the Tower into Sheol. Then add up to three of those cards
+  to your hand and put one card from your hand on the bottom of the Tower.
 ot_verse:
   ref: Genesis 19:24
   snippet: rained upon Sodom brimstone and fire
@@ -39,7 +39,8 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Promoted UNCOMMON -> RARE 2026-08-28 under the word-weight rule (weight 4); ability
+  redesigned to RARE strength.
 sources: []
 search_queries: []
 stats_rationale:

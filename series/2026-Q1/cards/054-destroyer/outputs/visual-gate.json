@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-    "sha256": "9d45fdabcf08f6646f7bd39befe950440336e6466f450c7c6582411911c5bbae"
+    "sha256": "e2f9945cdff4a4f15e24a25f8bebf27b95f7f42265588223547f68a6baf4063f"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/054-destroyer/card.json",
-    "sha256": "c4c963bd9d06c7f0293b9dab77b22518ce01befa7a7128f9ab0503766660862b"
+    "sha256": "eef5a907ec9be3c86893e2ad30ce4f7cafc7512612c9f47240b09580e8ff0e42"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,20 +34,61 @@
         1536
       ],
       "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-      "sha256": "9d45fdabcf08f6646f7bd39befe950440336e6466f450c7c6582411911c5bbae"
+      "sha256": "e2f9945cdff4a4f15e24a25f8bebf27b95f7f42265588223547f68a6baf4063f"
     },
-    "candidate_features": [],
+    "candidate_features": [
+      {
+        "box": [
+          885,
+          123,
+          911,
+          150
+        ],
+        "center": [
+          898.0,
+          136.5
+        ],
+        "cross": {
+          "horizontal_coverage": 1.0,
+          "vertical_coverage": 1.0
+        },
+        "height": 27,
+        "ink_area": 236.0,
+        "kind": "plus",
+        "width": 26
+      },
+      {
+        "box": [
+          924,
+          98,
+          981,
+          179
+        ],
+        "center": [
+          952.5,
+          138.5
+        ],
+        "cross": {
+          "horizontal_coverage": 0.9123,
+          "vertical_coverage": 0.9506
+        },
+        "height": 81,
+        "ink_area": 3797.0,
+        "kind": "card",
+        "width": 57
+      }
+    ],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
     "defects": [],
     "observed": {
-      "card": 0,
-      "plus": 0,
+      "card": 1,
+      "plus": 1,
       "unknown": 0
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "b59da178ff4ccb42a52a163bb93ac9a5d5facc0c6559a2a6333285a7b68e5d0b",
-      "declared_display": null
+      "canonical_sha256": "945bd19bb55a8338aebbe75d037c451d904d98c84deb981ba175aeec61901ba0",
+      "declared_display": "+\ud83c\udca0"
     },
     "region": [
       790,
@@ -57,20 +98,61 @@
     ],
     "target": {
       "card_type": "TITLE",
-      "expected_card_count": 0,
-      "expected_plus_count": 0,
+      "expected_card_count": 1,
+      "expected_plus_count": 1,
       "placement": "below_rarity",
-      "rarity": "UNCOMMON"
+      "rarity": "RARE"
     },
     "template": {
       "dimensions": [
         848,
         1264
       ],
-      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-      "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
     },
-    "template_features": []
+    "template_features": [
+      {
+        "box": [
+          884,
+          123,
+          910,
+          151
+        ],
+        "center": [
+          897.0,
+          137.0
+        ],
+        "cross": {
+          "horizontal_coverage": 1.0,
+          "vertical_coverage": 1.0
+        },
+        "height": 28,
+        "ink_area": 237.747,
+        "kind": "plus",
+        "width": 26
+      },
+      {
+        "box": [
+          924,
+          97,
+          981,
+          179
+        ],
+        "center": [
+          952.5,
+          138.0
+        ],
+        "cross": {
+          "horizontal_coverage": 0.9362,
+          "vertical_coverage": 0.9552
+        },
+        "height": 82,
+        "ink_area": 3784.747,
+        "kind": "card",
+        "width": 57
+      }
+    ]
   },
   "defects": [],
   "expected_counts": {
@@ -88,56 +170,56 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-      "sha256": "9d45fdabcf08f6646f7bd39befe950440336e6466f450c7c6582411911c5bbae"
+      "sha256": "e2f9945cdff4a4f15e24a25f8bebf27b95f7f42265588223547f68a6baf4063f"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
     "expected": {
       "cap_height": 22,
       "diamond": [
-        226,
+        225,
         262
       ],
       "diamond_colour": [
-        124,
-        185,
-        146
+        214,
+        165,
+        58
       ],
-      "expected_word_width": 161,
-      "gap": 15,
-      "left_inset": 30,
+      "expected_word_width": 64,
+      "gap": 32,
+      "left_inset": 76,
       "word": [
-        85,
-        211
+        131,
+        193
       ],
       "word_rows": [
         27,
         49
       ],
-      "word_width": 126
+      "word_width": 62
     },
     "observed": {
       "cap_height": 23,
       "diamond": [
-        226,
+        225,
         262
       ],
       "diamond_colour": [
-        117,
-        171,
-        140
-      ],
-      "gap": 15,
-      "left_inset": 16,
-      "word": [
-        71,
-        211
-      ],
-      "word_rows": [
-        28,
+        210,
+        160,
         51
       ],
-      "word_width": 140
+      "gap": 32,
+      "left_inset": 76,
+      "word": [
+        131,
+        193
+      ],
+      "word_rows": [
+        27,
+        50
+      ],
+      "word_width": 62
     },
     "passed": true,
     "region": {
@@ -154,20 +236,20 @@
     },
     "target": {
       "card_type": "TITLE",
-      "rarity": "UNCOMMON"
+      "rarity": "RARE"
     },
     "template": {
-      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-      "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
+      "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/rare/template_1024x1536.png",
+      "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
     }
   },
   "reference_pack": {
     "contract": "hypertext.gemini.reference-pack/v1",
     "mode": "generate",
-    "target_rarity": "UNCOMMON",
+    "target_rarity": "RARE",
     "target_type": "TITLE",
     "template_position": 1,
-    "template_sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
+    "template_sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
   },
   "registration": {
     "dx": 0.0,
@@ -203,7 +285,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 191.2995,
+            "outside_median_luma": 190.9794,
             "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
@@ -232,7 +314,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 204.1456,
+            "outside_median_luma": 203.8329,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -261,7 +343,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.8269,
+            "outside_median_luma": 209.6785,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -290,7 +372,7 @@
             "middle_median_luma": 205.6442,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.5814,
+            "outside_median_luma": 212.5473,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -319,7 +401,7 @@
             "middle_median_luma": 213.0774,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.6562,
+            "outside_median_luma": 215.5112,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -356,7 +438,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 215.082,
+            "outside_median_luma": 215.0872,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -414,7 +496,7 @@
             "middle_median_luma": 202.125,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.435,
+            "outside_median_luma": 214.9713,
             "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "empty",
@@ -443,7 +525,7 @@
             "middle_median_luma": 201.4797,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.0367,
+            "outside_median_luma": 212.666,
             "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "empty",
@@ -472,7 +554,7 @@
             "middle_median_luma": 210.6396,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.015,
+            "outside_median_luma": 212.0118,
             "outside_palette_rgb_distance": 5.3852
           },
           "observed_state": "empty",
@@ -509,7 +591,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 208.0894,
+            "outside_median_luma": 207.8983,
             "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
@@ -538,7 +620,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.5576,
+            "outside_median_luma": 211.4358,
             "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
@@ -567,7 +649,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.8401,
+            "outside_median_luma": 209.4244,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -596,7 +678,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 198.8952,
+            "outside_median_luma": 198.8883,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -625,7 +707,7 @@
             "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.272,
+            "outside_median_luma": 192.3075,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -641,14 +723,14 @@
   },
   "target": {
     "card_type": "TITLE",
-    "rarity": "UNCOMMON"
+    "rarity": "RARE"
   },
   "template": {
     "dimensions": [
       848,
       1264
     ],
-    "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-    "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
+    "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/rare/template_1024x1536.png",
+    "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064"
   }
 }

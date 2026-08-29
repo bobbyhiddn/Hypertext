@@ -111,7 +111,7 @@
   rarity: COMMON
 - word: SODOM
   card_type: NAME
-  rarity: UNCOMMON
+  rarity: RARE
 - word: KINGDOM
   card_type: NOUN
   rarity: GLORIOUS
@@ -159,7 +159,7 @@
   rarity: COMMON
 - word: DESTROYER
   card_type: TITLE
-  rarity: UNCOMMON
+  rarity: RARE
 - word: SHEPHERD
   card_type: TITLE
   rarity: COMMON

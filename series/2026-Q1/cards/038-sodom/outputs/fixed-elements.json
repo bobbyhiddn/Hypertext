@@ -1,8 +1,8 @@
 {
   "contract": "hypertext.fixed-elements/v1",
   "template": {
-    "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
-    "sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53"
+    "path": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+    "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1"
   },
   "font": {
     "family": "Liberation Serif",
@@ -19,7 +19,7 @@
       ],
       "offset": [
         0,
-        -2
+        0
       ],
       "counts": [
         3,
@@ -35,38 +35,39 @@
         73
       ],
       "offset": [
-        0,
-        -9
+        -4,
+        -2
       ],
-      "text": "NAME"
+      "text": "NAME",
+      "ghost_pixels": 1055
     },
     "number": {
       "box": [
-        57,
-        27,
-        134,
-        49
+        53,
+        35,
+        130,
+        57
       ],
       "offset": [
-        -2,
-        -11
+        -6,
+        -3
       ],
       "text": "#038"
     },
     "footer": {
       "box": [
         63,
-        1488,
+        1479,
         337,
-        1512
+        1503
       ],
       "offset": [
         0,
-        9
+        0
       ],
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "8adda77109d9c4a4d65c42039e02fdde9594864de96f161dbf4b7dcc7588b601",
-  "face_sha256_after": "6b3d857cad7b0ddfc79eeb3fd48c0eb6d7452dff3f3354628c753bae1627382b"
+  "face_sha256_before": "e7707e7a02cfc6818856d32e4f7fccbf969b32de6fff7bdc4b5ccfcde3ba0db8",
+  "face_sha256_after": "7b65bb56d51d9b1313b7ffcc8c82d80d36ca6985a4089d5d7b4c3fac0cbf0337"
 }

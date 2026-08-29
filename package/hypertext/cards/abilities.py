@@ -950,8 +950,6 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         cost_units += 3 * _WORD_NUMBERS.get(m.group(1).lower(), 1)
     if re.search(r"\bdiscard one of your Pages\b|\bput every card in one of your Pages into Sheol\b", ability_text, re.IGNORECASE):
         cost_units += 5   # a Page is at least five cards and scores nothing once discarded
-    if cost_units and payoff > 1:
-        payoff = max(1, payoff - cost_units // 3)
     # The wild step. Net material of five or more (gains minus cost), every
     # player's material moved together with a three-plus gain, or a structure
     # bent, is payoff 4 - GLORIOUS territory.
@@ -965,6 +963,14 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
             gain_units += _WORD_NUMBERS.get(m.group(1).lower(), 1)
     if re.search(r"\bone card (?:of|for) each card type\b", ability_text, re.IGNORECASE) and gain_units < 5:
         gain_units = max(gain_units, 5)
+    # Three cards' worth is payoff 3 however it is phrased (draw two and add
+    # one, two draws in separate sentences, a Letter and a card).
+    if gain_units >= 3:
+        payoff = max(payoff, 3)
+    elif gain_units == 2:
+        payoff = max(payoff, 2)
+    if cost_units and payoff > 1:
+        payoff = max(1, payoff - cost_units // 3)
     structure = re.search(
         r"\breturn every card in Sheol to the Tower\b|\bactivate that chosen card\b|\bexchange your Lot\b|\breturn your Lot\b|\bdiscard one of your Pages\b[^.;]*?\b(?:add|draw|gain)\b",
         ability_text, re.IGNORECASE,

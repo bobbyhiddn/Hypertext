@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 07:18:24
-Phase: revise-image-only
-Target Rarity: UNCOMMON
+Timestamp: 2026-08-28 21:10:55
+Phase: rebuild
+Target Rarity: RARE
 Target Type: NAME
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/038-sodom/outputs/reference-inputs/current-48786065ef00c84661d7a8621296c9a8b84101114edfb9eb9bc0903839eeb6fc.png [UNCOMMON] sha256=48786065ef00c84661d7a8621296c9a8b84101114edfb9eb9bc0903839eeb6fc
-  [2] TEMPLATE: templates/card/v001/composed/name/uncommon/template_1024x1536.png [UNCOMMON] sha256=1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/name/rare/template_1024x1536.png [RARE] sha256=b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1
 
-Prompt File: series/2026-Q1/cards/038-sodom/outputs/prompt.revision.txt
+Prompt File: series/2026-Q1/cards/038-sodom/prompt.txt

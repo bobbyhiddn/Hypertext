@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "37c2b7ee7e7aeca142cb3da7eaaa710358373edeaebf4732449956a457643af0",
+    "gemini_output_sha256": "cc5bf3ef18785b0923772cddeed870f4d563ac15c9f73edbe7427892b2e0fec5",
     "generation_metadata_path": "series/2026-Q1/cards/054-destroyer/outputs/generation.json",
-    "generation_metadata_sha256": "caac596dc5216cf0f74ca8eb2b5740668572b8ede7d2fc58d6ff29efacf3fd16",
+    "generation_metadata_sha256": "74844a3c003c82c42999705583c12653340be23f8eb5e91e590d00f5ffe24180",
     "path": "series/2026-Q1/cards/054-destroyer/outputs/card_1024x1536.png",
-    "sha256": "2e0ea0e96bfc97ac695feac8f9c9b24f9bdf86b7aa0f620d242933b9814930f3"
+    "sha256": "f7177dddd15a83dd416f640a893251b831fde7cb32ae9b63e6d20b55cd2e22d0"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/054-destroyer/prompt.txt",
-    "sha256": "9fd337c764f1bec0f35aaf97dd2b846635e0d09aef14eb66ce84a871934f42dd"
+    "sha256": "9367561ddfe8625ec846d4dfa8084a755d5eb558d5ce6c8ae8568eb51d7ebe43"
   },
   "recipe": {
-    "canonical_sha256": "b59da178ff4ccb42a52a163bb93ac9a5d5facc0c6559a2a6333285a7b68e5d0b",
-    "file_sha256": "c4c963bd9d06c7f0293b9dab77b22518ce01befa7a7128f9ab0503766660862b",
+    "canonical_sha256": "945bd19bb55a8338aebbe75d037c451d904d98c84deb981ba175aeec61901ba0",
+    "file_sha256": "eef5a907ec9be3c86893e2ad30ce4f7cafc7512612c9f47240b09580e8ff0e42",
     "path": "series/2026-Q1/cards/054-destroyer/card.json"
   },
   "reference_pack": {
@@ -61,22 +61,22 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified TITLE UNCOMMON structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified TITLE RARE structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+        "path": "templates/card/v001/composed/title/rare/template_1024x1536.png",
         "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
-        "rarity": "UNCOMMON",
-        "rarity_label": "UNCOMMON",
+        "rarity": "RARE",
+        "rarity_label": "RARE",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
+        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/rare/template_1024x1536.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "template",
-        "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f",
+        "sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064",
         "similarity_components": {},
         "similarity_reason": "authoritative_structure_not_ranked",
         "similarity_score": 0,
@@ -90,11 +90,11 @@
     ],
     "repo_root": "/home/cap/Code/Hypertext",
     "selection_contract": "exact type+rarity eligibility; accepted, finished, nonlegacy, nonsuperseded, SHA-256-verified assets only; rank by 35% art tokens + 30% semantic content + 20% serialized prompt tokens + 15% stat proximity; break ties by SHA-256 then path",
-    "target_rarity": "UNCOMMON",
+    "target_rarity": "RARE",
     "target_type": "TITLE"
   },
   "reference_pack_path": "series/2026-Q1/cards/054-destroyer/outputs/reference-pack.json",
-  "reference_pack_sha256": "2ae23acf08430f23f788a3ebad39bf6c438c7aa5f111eb5ccddb4649ffc9bf9b",
+  "reference_pack_sha256": "0d53be444156949623eb1c8b13870f69cec3f6db7099c52537456724e4315a97",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
@@ -112,6 +112,6 @@
   },
   "target": {
     "card_type": "TITLE",
-    "rarity": "UNCOMMON"
+    "rarity": "RARE"
   }
 }

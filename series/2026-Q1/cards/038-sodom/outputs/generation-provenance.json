@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "8adda77109d9c4a4d65c42039e02fdde9594864de96f161dbf4b7dcc7588b601",
+    "gemini_output_sha256": "1a2bcead96d42295d1a6150ad5a3267770f792fc3e99617ae1e05af4645e69d5",
     "generation_metadata_path": "series/2026-Q1/cards/038-sodom/outputs/generation.json",
-    "generation_metadata_sha256": "9e6e134596349bfa2c2b0eaf5190307841b2303b68223fb5c7a936591eeef919",
+    "generation_metadata_sha256": "3554055aff34293e077b37c8dfbbd060d291e7005ccd573681f62653d7b71092",
     "path": "series/2026-Q1/cards/038-sodom/outputs/card_1024x1536.png",
-    "sha256": "8adda77109d9c4a4d65c42039e02fdde9594864de96f161dbf4b7dcc7588b601"
+    "sha256": "e7707e7a02cfc6818856d32e4f7fccbf969b32de6fff7bdc4b5ccfcde3ba0db8"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/038-sodom/outputs/prompt.revision.txt",
-    "sha256": "ba7933fd6a1eb1d8038b9991d8c38dcb21e3613fb4d684ba96cf72235ca07388"
+    "path": "series/2026-Q1/cards/038-sodom/prompt.txt",
+    "sha256": "1bd2a50c038350688ddb1176fd01a3fd818531aa1c32d2dee43501b99ef8f98a"
   },
   "recipe": {
-    "canonical_sha256": "263e339f0470daa66764fec354b805c4253489f38f939faa5df42e0a20fffc76",
-    "file_sha256": "244a736403f5c9f65916f63afad60370c2373b59865f19f823d628bd0393a141",
+    "canonical_sha256": "a854749bca1f4c8b1db397a11d1fc823f336bf1a07bc3809723890991303e3cb",
+    "file_sha256": "9175fb35cd402b74ea695701a4dbe95be80fd275bb3615fb743f27240ef7abc4",
     "path": "series/2026-Q1/cards/038-sodom/card.json"
   },
   "reference_pack": {
@@ -49,43 +49,8 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "fix",
+    "mode": "generate",
     "references": [
-      {
-        "assigned_role": "current_card",
-        "card_type": "NAME",
-        "eligibility_reasons": [
-          "existing_current_card",
-          "sha256=verified",
-          "requested_fix_source"
-        ],
-        "eligible": true,
-        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
-        "metadata_path": null,
-        "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/038-sodom/outputs/reference-inputs/current-48786065ef00c84661d7a8621296c9a8b84101114edfb9eb9bc0903839eeb6fc.png",
-        "position": 1,
-        "prompt_path": null,
-        "prompt_sha256": null,
-        "rarity": "UNCOMMON",
-        "rarity_label": "UNCOMMON",
-        "recipe_path": null,
-        "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/038-sodom/outputs/reference-inputs/current-48786065ef00c84661d7a8621296c9a8b84101114edfb9eb9bc0903839eeb6fc.png",
-        "review_evidence_path": null,
-        "review_evidence_sha256": null,
-        "role": "current_card",
-        "sha256": "48786065ef00c84661d7a8621296c9a8b84101114edfb9eb9bc0903839eeb6fc",
-        "similarity_components": {},
-        "similarity_reason": "not_applicable_current_card",
-        "similarity_score": 0,
-        "source_manifest": null,
-        "source_manifest_sha256": null,
-        "template_commit": null,
-        "template_manifest_schema_version": null,
-        "template_manifest_status": null,
-        "template_version": null
-      },
       {
         "assigned_role": "template",
         "card_type": "NAME",
@@ -95,27 +60,27 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[2] = TEMPLATE: SHA-256-verified NAME UNCOMMON structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NAME RARE structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "templates/card/v001/composed/name/uncommon/template_1024x1536.png",
-        "position": 2,
+        "path": "templates/card/v001/composed/name/rare/template_1024x1536.png",
+        "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
-        "rarity": "UNCOMMON",
-        "rarity_label": "UNCOMMON",
+        "rarity": "RARE",
+        "rarity_label": "RARE",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/uncommon/template_1024x1536.png",
+        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/rare/template_1024x1536.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "template",
-        "sha256": "1366fc3a9ce6e00e9fa2251effe69f05bb95c265e791bc66ad1f50e520a51f53",
+        "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
         "similarity_components": {},
         "similarity_reason": "authoritative_structure_not_ranked",
         "similarity_score": 0,
         "source_manifest": "templates/card/v001/composed/manifest.json",
-        "source_manifest_sha256": "d73f0033e9cd67e09f9d99de63b57ff6d816cb2e4dacd1b6d98056db3f9b08f5",
+        "source_manifest_sha256": "bb0f6beabbff74f76789cfa73a81ce032f80b5cbfb36af907857497e2bf368d3",
         "template_commit": "e50961ad0f4d66f398f81706f092a7d0ea9cb0f4",
         "template_manifest_schema_version": 3,
         "template_manifest_status": "operator-accepted-canonical",
@@ -124,28 +89,28 @@
     ],
     "repo_root": "/home/cap/Code/Hypertext",
     "selection_contract": "exact type+rarity eligibility; accepted, finished, nonlegacy, nonsuperseded, SHA-256-verified assets only; rank by 35% art tokens + 30% semantic content + 20% serialized prompt tokens + 15% stat proximity; break ties by SHA-256 then path",
-    "target_rarity": "UNCOMMON",
+    "target_rarity": "RARE",
     "target_type": "NAME"
   },
   "reference_pack_path": "series/2026-Q1/cards/038-sodom/outputs/reference-pack.json",
-  "reference_pack_sha256": "cc924b017291ca0bc3cef894b7768efd5dfada6f747a393a298de998f0a46320",
+  "reference_pack_sha256": "97a767497a6ffea26ac55571de6f0438d7c0cd24c13c59027d796076555836d4",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "fix",
+    "mode": "generate",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "revise-image-only",
-    "reference_count": 2,
+    "phase": "rebuild",
+    "reference_count": 1,
     "response_modalities": [
       "IMAGE"
     ]
   },
   "target": {
     "card_type": "NAME",
-    "rarity": "UNCOMMON"
+    "rarity": "RARE"
   }
 }

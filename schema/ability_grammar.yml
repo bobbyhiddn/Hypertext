@@ -15,6 +15,11 @@ tiers:
   RARE:      {printed_cost: 1, interaction: one chosen player heavily, or every player by information, cards_worth: "three or more net of cost; every player reached or a structure scaled", payoff: 3, word_cap: 48}
   GLORIOUS:  {printed_cost: 2, interaction: may move every player's material, cards_worth: "wild - five or more, every player's material moved, or a structure bent; a big cost in the copy may buy it", payoff: 4, word_cap: 56}
 
+word_weight:
+  floors: {5: GLORIOUS, 4: RARE, 3: any, 2: any, 1: any}
+  budget: {heavy_4_5: 22, pillars_5: 9}
+  note: "the word's own floor, judged with a rationale beside the stats; the ability is then priced to the slot's tier"
+
 values:
   card: 1
   letter: 3          # a Letter is worth three cards (user, 2026-08-28)

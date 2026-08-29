@@ -1,12 +1,12 @@
 {
   "word": "DESTROYER",
   "card_type": "TITLE",
-  "rarity": "UNCOMMON",
+  "rarity": "RARE",
   "content_score": 100,
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "none",
+  "style_mismatch_reason": "",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,8 +46,8 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "9d45fdabcf08f6646f7bd39befe950440336e6466f450c7c6582411911c5bbae",
-    "template_sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f",
+    "candidate_sha256": "e2f9945cdff4a4f15e24a25f8bebf27b95f7f42265588223547f68a6baf4063f",
+    "template_sha256": "b73757ef5a74c2ec4c80360341d355056b61225d8007bda9c13a5ded284c8064",
     "report": "series/2026-Q1/cards/054-destroyer/outputs/visual-gate.json"
   },
   "style_refs_count": 1,

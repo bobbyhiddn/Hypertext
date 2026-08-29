@@ -79,7 +79,7 @@ slots:
 - slot_id: BABEL-038
   number: 38
   type: NAME
-  rarity: UNCOMMON
+  rarity: RARE
   word: SODOM
   gloss: A city judged and destroyed for its sin.
   alternate: LOT
@@ -87,6 +87,7 @@ slots:
   stat_profile: high COMPLEXITY
   theme: watchfulness and judgment
   status: planned
+  note: 'Promoted to RARE 2026-08-28: word weight 4.'
 - slot_id: BABEL-039
   number: 39
   type: NOUN
@@ -259,7 +260,7 @@ slots:
 - slot_id: BABEL-054
   number: 54
   type: TITLE
-  rarity: UNCOMMON
+  rarity: RARE
   word: DESTROYER
   gloss: The agent of God's wrath and judgment.
   alternate: WITNESS
@@ -267,6 +268,7 @@ slots:
   stat_profile: high COMPLEXITY
   theme: watchfulness and judgment
   status: planned
+  note: 'Promoted to RARE 2026-08-28: word weight 4.'
 - slot_id: BABEL-055
   number: 55
   type: TITLE
