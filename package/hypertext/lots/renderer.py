@@ -260,7 +260,16 @@ AVOID:
         "series": series, "verse": verse, "constraint": canonical.get("constraint"),
     }
     mode = str(card_data.get("visual_descriptor_mode", "EXPLICIT")).upper()
-    return serialize_lot_prompt(content=descriptor_content, mode=mode) + "\n\n" + legacy_prompt
+    prompt = serialize_lot_prompt(content=descriptor_content, mode=mode) + "\n\n" + legacy_prompt
+    # Fix mode, carried over from the card pipeline's phase_revise --image-only:
+    # a single named correction with the current face passed back as image 1, so
+    # the model repairs one thing instead of re-rolling a card that was otherwise
+    # correct. Regenerating a Lot to fix one icon cost us the right Portion values
+    # and printed placeholder verse text (2026-08-29).
+    revision = str(card_data.get("revision", "")).strip()
+    if revision:
+        prompt += "\n\nREVISION INSTRUCTIONS (these override anything above):\n" + revision
+    return prompt
 
 
 def render_lot_card(card_data: dict[str, Any], out_path: Path, style_refs: list[str] | None = None) -> None:
