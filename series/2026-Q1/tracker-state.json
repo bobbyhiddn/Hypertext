@@ -119,6 +119,26 @@
     "61": {
       "status": "pass",
       "note": "FIRE NOUN/UNCOMMON v2: \"Reveal one card from the top of the Tower and put that revealed card into Sheol. If that revealed card is a VERB, gain one Letter.\" (v1 forced another player to spend a Letter - RARE weight once a Letter counts as three cards.) Stats 4/5/2. 100/100 3-0."
+    },
+    "62": {
+      "status": "pass",
+      "note": "WICKED ADJECTIVE/COMMON. Look at four, take one, rest to the bottom. Stats 4/4/3 (rasha x263 + poneros x78). Weight 3. Passed first render, 100/100 3-0."
+    },
+    "63": {
+      "status": "pass",
+      "note": "CANAAN NAME/UNCOMMON (replaced ZION - post-Babel era). Chosen player reveals one card; draw two. Stats 3/3/3 (Kenaan x94 + Chanaan x2). Weight 3. Passed first render, 100/100 3-0."
+    },
+    "64": {
+      "status": "pass",
+      "note": "MASTER TITLE/COMMON. Name a type, draw one, may bury a card of the named type. baal / despotes. Stats 3/3/4. Weight 2. Passed first render, 100/100 3-0."
+    },
+    "65": {
+      "status": "pass",
+      "note": "PELEG NAME/RARE. Reveal four; take up to three whose type is in the Chapter Lot, the rest into Sheol, put one from hand on top - the first Lot-reading card. Stats 3/1/4 (Peleg x7 + Phalek x1). Weight 3. Passed first render, 100/100 3-0."
+    },
+    "66": {
+      "status": "pass",
+      "note": "EXILE TITLE/UNCOMMON. Exchange one card with a chosen player, then draw two - the first exchange in the set. garash / ekballo (Gen 3:24 / Gal 4:30). Stats 4/4/3. Weight 3. Passed first render, 100/100 3-0."
     }
   },
   "log": [
@@ -261,6 +281,10 @@
     {
       "when": "2026-08-28",
       "what": "WORD WEIGHT (user: 'a word like destroyer and sodom need to at least be rare'). hypertext.cards.word_weight: weight 1-5 with a rationale beside the stats; floors 5 -> GLORIOUS, 4 -> at least RARE; hard fail in the plan phase; 'hypertext weight-audit' with the heavy-word budget (22 RARE+GLORIOUS slots, 9 GLORIOUS). Weights assigned to all 61 cards. Promoted to RARE with RARE-strength abilities (user's calls): SODOM, DESTROYER, EDEN, ABRAM - all 100/100 3-0 (ABRAM via the new figure-rule repaint). 'Demote weights': HOVER, SEED, REMEMBER, RIGHTEOUS, NAME 4 -> 3; heavy 16/22, pillars 7/9. RARE_NAME target 2 -> 4, COMMON_NAME 6 -> 4; cards_index.yml (the census test's canonical list) realigned. Remaining floor violations are legacy pillars GRACE, CREATE, NOAH (-> GLORIOUS in the legacy regeneration). Still pending: MESSENGER, CHOOSE, ASCEND price as COMMON on UNCOMMON slots."
+    },
+    {
+      "when": "2026-08-28",
+      "what": "BATCH 7 (#062-#066: WICKED, CANAAN, MASTER, PELEG, EXILE), the first designed from the grammar with word weights: 21:38:18 launch, all five passed on their first render by 21:43:47 - 5m29s, five renders for five cards, no self-heal. Two grammar cores enter the set (a Lot-reading RARE, an exchange UNCOMMON). ZION (#063) was replaced by CANAAN under the set-era rule. Before the batch: MESSENGER, CHOOSE, ASCEND redesigned to UNCOMMON strength (ASCEND needed five rolls - text garbles - and passed through the new exact-text fix-mode once duplicate corrections were collapsed). Audits after: lemma 0, weight 0 violations (16/22 heavy, 7/9 pillars), shapes unique among current-contract cards."
     }
   ]
 }

@@ -7,6 +7,7 @@ words:
 - BRICK
 - BROTHER
 - BUILD
+- CANAAN
 - CHOOSE
 - CHOSEN
 - CITY
@@ -24,6 +25,7 @@ words:
 - EDEN
 - ELDER
 - ENOCH
+- EXILE
 - FAITHFUL
 - FILLED
 - FIRE
@@ -38,6 +40,7 @@ words:
 - HUNTER
 - KEEPER
 - KINGDOM
+- MASTER
 - MESSENGER
 - MIGHTY
 - MULTIPLY
@@ -46,6 +49,7 @@ words:
 - NATION
 - NEW
 - NOAH
+- PELEG
 - REDEEMER
 - REMEMBER
 - RIGHTEOUS
@@ -61,6 +65,7 @@ words:
 - STONE
 - TONGUE
 - WATCHMAN
+- WICKED
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_choice_draw_sheol_stat_complexity_tower
@@ -97,6 +102,7 @@ ability_patterns:
 - draw_look_top_tower
 - draw_sheol_tower
 - draw_tower
+- draw_tower_type_name
 - draw_tower_type_noun
 - look_top_tower
 - pages_sheol
@@ -409,5 +415,30 @@ cards:
 - number: 61
   word: FIRE
   type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: choice_draw_tower
+- number: 62
+  word: WICKED
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 63
+  word: CANAAN
+  type: NAME
+  rarity: UNCOMMON
+  ability_pattern: choice_draw_tower
+- number: 64
+  word: MASTER
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: draw_tower_type_name
+- number: 65
+  word: PELEG
+  type: NAME
+  rarity: RARE
+  ability_pattern: add_hand_sheol_tower
+- number: 66
+  word: EXILE
+  type: TITLE
   rarity: UNCOMMON
   ability_pattern: choice_draw_tower

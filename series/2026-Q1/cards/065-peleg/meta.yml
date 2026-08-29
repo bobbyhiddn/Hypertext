@@ -1,0 +1,57 @@
+number: '065'
+word: PELEG
+gloss: In his days the earth was divided
+card_type: NAME
+rarity: RARE
+series: 2026-Q1
+set: Babel
+art_prompt: A vast plain splitting along a widening crack at dusk, a river dividing
+  into two channels around the fissure, clusters of tents on either bank drifting
+  apart, one radiant golden sunset on the horizon, no people, luminous cinematic oil
+  painting with impressionistic brushwork, deep shadowed background, one radiant golden
+  light source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 1
+  complexity: 4
+stats_rationale:
+  lore: the division of the earth in Genesis 10 anchors the table of nations before
+    Babel; a recognized theme
+  context: Peleg occurs 7 times in the Hebrew Bible; Phalek occurs 1 time in the New
+    Testament; total 8
+  complexity: the name is a pun on palag, to divide, planted in the genealogy to mark
+    the scattering; Luke carries the Greek Phalek into the line of Jesus - a history
+    worth explaining
+weight: 3
+weight_rationale: a named figure of the second rank whose name carries the division
+  of the nations
+ability: Reveal the top four cards of the Tower. Add up to three revealed cards whose
+  card type is in the Chapter Lot to your hand, put each other revealed card into
+  Sheol, and put one card from your hand on top of the Tower.
+ot_verse:
+  ref: Genesis 10:25
+  snippet: the name of one was Peleg; for in his days was the earth divided
+nt_verse:
+  ref: Luke 3:35
+  snippet: which was the son of Phalec
+greek:
+  text: Φάλεκ
+  translit: Phalek
+hebrew:
+  text: פֶּלֶג
+  translit: Peleg
+ot_refs: Gen 10:25 • Gen 11:16 • 1 Chr 1:19
+nt_refs: Luke 3:35
+trivia:
+- Peleg means division; Genesis explains the name in the same breath - in his days
+  was the earth divided.
+- 'His name sits in the genealogy between Eber and Abram: Babel happens inside a family
+  tree.'
+- Luke's genealogy spells him Phalec and carries the divided age into the line of
+  Christ.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

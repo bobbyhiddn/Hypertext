@@ -1,0 +1,54 @@
+number: '062'
+word: WICKED
+gloss: Guilty before God and loose from his law
+card_type: ADJECTIVE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A storm-lit plain at night with a cracked and blackened altar, scattered
+  offerings blown across the stones, one column of radiant golden light striking down
+  from a break in the clouds, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+stats_rationale:
+  lore: the wicked and the righteous are the two ways of the Psalms and the reason
+    for the flood - a major theme close to doctrine
+  context: rasha occurs 263 times in the Hebrew Bible; poneros occurs 78 times in
+    the New Testament; total 341
+  complexity: rasha means guilty and loose, the one who has lost his case; poneros
+    began as toilsome and became evil - a derivation worth explaining
+weight: 3
+weight_rationale: the wicked of the flood generation and of Sodom - thematic vocabulary
+  with real teaching behind it
+ability: Look at the top four cards of the Tower. Add one of those cards to your hand
+  and put the other cards on the bottom of the Tower.
+ot_verse:
+  ref: Psalm 1:5
+  snippet: the ungodly shall not stand in the judgment
+nt_verse:
+  ref: Matthew 13:49
+  snippet: sever the wicked from among the just
+greek:
+  text: πονηρός
+  translit: poneros
+hebrew:
+  text: רָשָׁע
+  translit: rasha
+ot_refs: Ps 1:5 • Gen 18:23 • Ezek 33:11
+nt_refs: Matt 13:49 • Matt 6:13 • 1 John 5:19
+trivia:
+- Rasha is a courtroom word - the one found guilty - before it is a moral one.
+- Genesis 6 says the wickedness of man was great in the earth; the flood answers a
+  legal verdict.
+- Poneros meant toilsome before it meant evil; the Evil One in the Lord's Prayer is
+  the same word.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

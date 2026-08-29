@@ -1,0 +1,54 @@
+number: '066'
+word: EXILE
+gloss: One driven from home by divine decree
+card_type: TITLE
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A lone cloaked figure seen from far behind walking away from a gate of
+  radiant golden light into a wide dark wilderness, a flaming sword hanging above
+  the gate, no visible face, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 4
+  context: 4
+  complexity: 3
+stats_rationale:
+  lore: expulsion from Eden and the exile of Cain set the pattern for Babylon and
+    for every wandering; a major theme close to doctrine
+  context: garash occurs 47 times in the Hebrew Bible; ekballo occurs 81 times in
+    the New Testament; total 128
+  complexity: garash is to drive out or divorce, the verb of Eden's gate and Hagar's
+    tent; ekballo, to cast out, is the verb of demons and of the Spirit driving Jesus
+    into the wilderness - a derivation worth explaining
+weight: 3
+weight_rationale: Adam and Cain driven out - the era's first exiles; thematic
+ability: Choose another player. Exchange one card from your hand with one card from
+  that chosen player's hand, then draw two cards from the Tower.
+ot_verse:
+  ref: Genesis 3:24
+  snippet: So he drove out the man
+nt_verse:
+  ref: Galatians 4:30
+  snippet: Cast out the bondwoman and her son
+greek:
+  text: ἐκβάλλω
+  translit: ekballo
+hebrew:
+  text: גָּרַשׁ
+  translit: garash
+ot_refs: Gen 3:24 • Gen 4:14 • Gen 21:10
+nt_refs: Gal 4:30 • Mark 1:12 • John 9:34
+trivia:
+- Garash drives out the man from Eden and, in Cain's mouth, drives him from the face
+  of the earth - the same verb for both exiles.
+- Ekballo casts out demons, and in Mark 1 the Spirit casts Jesus out into the wilderness
+  - exile as calling.
+- Babel's scattering is the third exile of Genesis; each time the road leads east.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

@@ -1,0 +1,11 @@
+=== Generation Log ===
+Timestamp: 2026-08-28 21:42:10
+Phase: rebuild
+Target Rarity: RARE
+Target Type: NAME
+Fix Mode: False
+
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/name/rare/template_1024x1536.png [RARE] sha256=b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1
+
+Prompt File: series/2026-Q1/cards/065-peleg/prompt.txt

@@ -1,0 +1,57 @@
+{
+  "word": "CANAAN",
+  "card_type": "NAME",
+  "rarity": "UNCOMMON",
+  "content_score": 100,
+  "final_score": 100,
+  "passed": true,
+  "style_matches_reference": true,
+  "style_mismatch_reason": "None",
+  "corrections": [],
+  "categories": {
+    "formatting": {
+      "score": 35,
+      "max": 35,
+      "issues": []
+    },
+    "text_clarity": {
+      "score": 30,
+      "max": 30,
+      "issues": []
+    },
+    "art_quality": {
+      "score": 20,
+      "max": 20,
+      "issues": []
+    },
+    "content_alignment": {
+      "score": 15,
+      "max": 15,
+      "issues": []
+    }
+  },
+  "quality_contract": {
+    "dimensions": {
+      "composition": 100,
+      "typography": 100,
+      "template_fidelity": 100,
+      "metadata": 100,
+      "stat_pips": 100,
+      "artifact_cleanliness": 100
+    },
+    "score": 100,
+    "passed": true,
+    "gate": 100
+  },
+  "stat_pip_visual_gate": {
+    "contract": "hypertext.template-relative-stat-pip-gate/v1",
+    "passed": true,
+    "candidate_sha256": "d3f22eef3e01f752854aea5b35dfbb251c22d71471838204846fe6227792bd84",
+    "template_sha256": "1cd1dd587117e4ede8f41bc9e0ca6d3a6bdf762cb75fccb4f3fd912b1ca74275",
+    "report": "series/2026-Q1/cards/063-canaan/outputs/visual-gate.json"
+  },
+  "style_refs_count": 1,
+  "style_refs": [
+    "template_1024x1536.png"
+  ]
+}

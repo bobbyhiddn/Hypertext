@@ -1,0 +1,53 @@
+number: '063'
+word: CANAAN
+gloss: The son cursed to serve his brothers
+card_type: NAME
+rarity: UNCOMMON
+series: 2026-Q1
+set: Babel
+art_prompt: An empty vineyard at dawn beside a tent, an overturned wine cup and a
+  fallen cloak on the threshold, mist over the vines, one radiant golden light breaking
+  over the hills, no people, luminous cinematic oil painting with impressionistic
+  brushwork, deep shadowed background, one radiant golden light source, rich saturated
+  blues and golds
+stats:
+  lore: 3
+  context: 3
+  complexity: 3
+stats_rationale:
+  lore: the curse of Canaan and the land of promise - a recognized theme, not a doctrine
+  context: Kenaan occurs 94 times in the Hebrew Bible; Chanaan occurs 2 times in the
+    New Testament; total 96
+  complexity: a personal name that became a land, then a byword; the curse fell on
+    the son, not the father - a history worth explaining
+weight: 3
+weight_rationale: a named figure and land of the second rank; the curse of Genesis
+  9 is thematic
+ability: Choose another player; that chosen player reveals one card from that chosen
+  player's hand. Then draw two cards from the Tower.
+ot_verse:
+  ref: Genesis 9:25
+  snippet: Cursed be Canaan; a servant of servants shall he be
+nt_verse:
+  ref: Acts 7:11
+  snippet: there came a dearth over all the land of Egypt and Chanaan
+greek:
+  text: Χανάαν
+  translit: Chanaan
+hebrew:
+  text: כְּנַעַן
+  translit: Kenaan
+ot_refs: Gen 9:25 • Gen 10:6 • Gen 12:5
+nt_refs: Acts 7:11 • Acts 13:19
+trivia:
+- Noah cursed Canaan, not Ham - the grandson bears the word for the father's deed.
+- Canaan the man became Canaan the land; the name means merchant or lowland in later
+  Semitic use.
+- Stephen's speech in Acts 7 uses the Greek spelling Chanaan for the land the fathers
+  entered.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

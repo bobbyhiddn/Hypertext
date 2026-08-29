@@ -1,0 +1,56 @@
+number: '064'
+word: MASTER
+gloss: The one who owns and directs the work
+card_type: TITLE
+rarity: COMMON
+series: 2026-Q1
+set: Babel
+art_prompt: A great brick kiln and timber scaffold under a hot evening sky, a plumb
+  line and measuring rod laid on a stone table beside a heap of fired bricks, one
+  radiant golden glow from the kiln mouth, no people, luminous cinematic oil painting
+  with impressionistic brushwork, deep shadowed background, one radiant golden light
+  source, rich saturated blues and golds
+stats:
+  lore: 3
+  context: 3
+  complexity: 4
+stats_rationale:
+  lore: masters and servants order the household codes and the parables; a recognized
+    theme
+  context: baal occurs 84 times in the Hebrew Bible as owner or master; despotes occurs
+    10 times in the New Testament; total 94
+  complexity: baal means owner, master, and husband, and became the name of the Canaanite
+    god the prophets fought; despotes gives English despot - a history that is itself
+    a study
+weight: 2
+weight_rationale: an office word for the tower's overseers; descriptive with a clear
+  place
+ability: Name a card type and draw one card from the Tower. Then you may put one card
+  of the named type from your hand on the bottom of the Tower.
+ot_verse:
+  ref: Isaiah 1:3
+  snippet: the ox knoweth his owner, and the ass his master's crib
+nt_verse:
+  ref: 1 Timothy 6:1
+  snippet: count their own masters worthy of all honour
+greek:
+  text: δεσπότης
+  translit: despotes
+hebrew:
+  text: בַּעַל
+  translit: baal
+ot_refs: Isa 1:3 • Exod 21:28 • Gen 20:3
+nt_refs: 1 Tim 6:1 • 2 Tim 2:21 • Titus 2:9
+trivia:
+- Baal simply meant owner or master before it named the storm god; Hosea says Israel
+  will call God ishi, my husband, and no more baali, my master.
+- Despotes, the master of a household, is also the word Simeon uses to address God
+  - Lord, now lettest thou thy servant depart.
+- The tower's masters had bricks for stone and slime for mortar; the text names the
+  work before it names a single worker.
+wild_id: null
+wild_counts_as: null
+letter: null
+notes: null
+sources: []
+search_queries: []

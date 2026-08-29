@@ -181,3 +181,18 @@
 - word: FIRE
   card_type: NOUN
   rarity: UNCOMMON
+- word: WICKED
+  card_type: ADJECTIVE
+  rarity: COMMON
+- word: CANAAN
+  card_type: NAME
+  rarity: UNCOMMON
+- word: MASTER
+  card_type: TITLE
+  rarity: COMMON
+- word: PELEG
+  card_type: NAME
+  rarity: RARE
+- word: EXILE
+  card_type: TITLE
+  rarity: UNCOMMON
