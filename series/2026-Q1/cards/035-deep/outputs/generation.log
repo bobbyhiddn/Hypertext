@@ -1,11 +1,12 @@
 === Generation Log ===
-Timestamp: 2026-08-28 20:50:43
-Phase: rebuild
+Timestamp: 2026-08-28 20:55:29
+Phase: revise-image-only
 Target Rarity: RARE
 Target Type: ADJECTIVE
-Fix Mode: False
+Fix Mode: True
 
-Style References (1 total):
-  [1] TEMPLATE: templates/card/v001/composed/adjective/rare/template_1024x1536.png [RARE] sha256=f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e
+Style References (2 total):
+  [1] CURRENT_CARD: series/2026-Q1/cards/035-deep/outputs/reference-inputs/current-69fb5b199df7ba8a32a493c867573258750e04ff0c19017d4485c0e535c81441.png [RARE] sha256=69fb5b199df7ba8a32a493c867573258750e04ff0c19017d4485c0e535c81441
+  [2] TEMPLATE: templates/card/v001/composed/adjective/rare/template_1024x1536.png [RARE] sha256=f370ec2cd0ff6e963458fc7078139809524af6cbc87f9852b22189b42eac257e
 
-Prompt File: series/2026-Q1/cards/035-deep/prompt.txt
+Prompt File: series/2026-Q1/cards/035-deep/outputs/prompt.revision.txt
