@@ -22,15 +22,21 @@ from hypertext.gemini.review import _call_gemini, _parse_json_response
 
 X0, X1, ITOP, IBOT = 95, 960, 755, 825
 SPREAD_MAX = 0.09    # 0.077 (EXODUS' two NOUNs) reads as fine to the eye; the defect was 0.197
-# Per-type bands, measured over the 28 undisputed faces and widened by ~25%. A single
-# global band does not work: NOUN is a solid book and legitimately runs twice as dark as
-# an outline frame, while the bracket-only slots (PAIR, ANY, SAME_TYPE) are near-empty.
+# COARSE TRIPWIRE ONLY - do not treat a pass here as "the icon is right".
+# Fill ratio measures how much ink a glyph has, not what it looks like. It disagreed with
+# the eye three times: CREATION's plain thin rectangle passed at 0.174, its correct ornate
+# frame failed at 0.255, and IoU on the binarised glyph could not separate good lots from
+# bad (0.12-0.28 across all of them). What this band reliably catches is the ORIGINAL
+# defect - a solid filled block - and a glyph missing altogether. Judging shape needs the
+# deterministic stamping in plans/roadmap.md section 6; until then, LOOK at the icons.
+# Bands are per type because NOUN is a solid book and legitimately runs twice as dark as
+# an outline frame, while bracket-only slots (PAIR, ANY, SAME_TYPE) are near-empty.
 ICON_BANDS = {
     "NOUN":      (0.105, 0.290),
     "VERB":      (0.070, 0.175),
     "ADJECTIVE": (0.095, 0.195),
     "NAME":      (0.090, 0.210),
-    "TITLE":     (0.070, 0.190),
+    "TITLE":     (0.070, 0.290),   # ornate frames run 0.09-0.26 depending on how boldly drawn
 }
 
 
