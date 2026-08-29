@@ -176,7 +176,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "An abandoned worksite on the flank of an unfinished tower, half-set brick courses breaking off mid-row, a mortar trough gone hard and a knot of measuring cords tangled together on the scaffold boards, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, overcast grey-blue daylight, soft and shadowless, wet colours saturated",
-    "ABILITY_TEXT": "Choose another player; that chosen player reveals one card from that chosen player's hand. If that revealed card has COMPLEXITY three or more, gain one Letter; otherwise, draw one card from the Tower.",
+    "ABILITY_TEXT": "Choose another player; that chosen player reveals one card from that player's hand. If that revealed card has COMPLEXITY four or more, gain one Letter; otherwise, draw one card from the Tower.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 5,

@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "2e4ccaeefadcf8ea7a22fa3965b30dfc3348caf8ca1e7e589d4100768c249be2",
+    "gemini_output_sha256": "30a70bc6fef0b3961a3b5558662f2d647225db8b67af5abc80b69fd6d9774c13",
     "generation_metadata_path": "series/2026-Q1/cards/003-mighty/outputs/generation.json",
-    "generation_metadata_sha256": "95dc16b1035c44af3c7f057002080dc82024ada10c5ce10b9e053e91377e113d",
+    "generation_metadata_sha256": "6210e3f5fab076a64a73570eb21dce6a32ebc19e475dc485afc386b104eec6d8",
     "path": "series/2026-Q1/cards/003-mighty/outputs/card_1024x1536.png",
-    "sha256": "e052bbb251c6bbf92e44da268ba0cc49eaf4fc1a7e93ddf7b00402b85187e341"
+    "sha256": "9d3d4d5cd956f0761b20a6a26ff1d590050347cfcb86f9a6b4017f6f53250435"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/003-mighty/prompt.txt",
-    "sha256": "d51d3b7ad6c57e6d570d9ce0e000ccb32a1b98306399a3441e04d88ea297f206"
+    "sha256": "ab4f6f4b10fa4aa87c0e910351f0d73591ac9f2ef45f6ab172e6bf39d0c9b154"
   },
   "recipe": {
-    "canonical_sha256": "f7487923c16b1dec6140ae916ebc242e04f21a5fed87baa8893ead1b9d127a86",
-    "file_sha256": "605ecf7e988c416ce0b0acd11832d5b8cbef0f003b353d65edfd0a87dcd23cac",
+    "canonical_sha256": "348612004382a79061b7f15e32a9bfaccf136719fd1509f8ee55f4691be4d8e5",
+    "file_sha256": "de1f28136b617adce0d2e98c5fcf16036d27660e630e8cccdb6ade7eacd835c9",
     "path": "series/2026-Q1/cards/003-mighty/card.json"
   },
   "reference_pack": {

@@ -14,9 +14,9 @@ stats:
   lore: 4
   context: 5
   complexity: 3
-ability: Choose another player; that chosen player reveals one card from that chosen
-  player's hand. Then add one card of the same COMPLEXITY as that revealed card from
-  Sheol to your hand and draw one card from the Tower.
+ability: Choose another player; that chosen player reveals one card from that player's
+  hand. Then add one card of the same COMPLEXITY as that revealed card from Sheol
+  to your hand and draw one card from the Tower.
 ot_verse:
   ref: Genesis 8:15
   snippet: And God spake unto Noah, saying

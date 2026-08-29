@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/001-grace/outputs/card_1024x1536.png",
-    "sha256": "a6f7994a6c3e68ae8fe14c8e1a4ad556c450f70c35f1fb2397d510715e61c93f"
+    "sha256": "52fb854c28acb08ad0a90cf628cb824be251dae2e81b8aaff22b4d54b7f74d32"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/001-grace/card.json",
-    "sha256": "0d353b586acb8f00bb9440614851140372ee5bf4c90c97e0c951ae478d13c0b0"
+    "sha256": "f0161b79e6fe842c62fb229da291b814bdd0c88c5cdf2aae4de10c8fe6e1c009"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/001-grace/outputs/card_1024x1536.png",
-      "sha256": "a6f7994a6c3e68ae8fe14c8e1a4ad556c450f70c35f1fb2397d510715e61c93f"
+      "sha256": "52fb854c28acb08ad0a90cf628cb824be251dae2e81b8aaff22b4d54b7f74d32"
     },
     "candidate_features": [
       {
@@ -53,7 +53,7 @@
           "vertical_coverage": 0.9506
         },
         "height": 81,
-        "ink_area": 3815.0,
+        "ink_area": 3826.0,
         "kind": "card",
         "width": 57
       },
@@ -62,18 +62,18 @@
           885,
           122,
           911,
-          151
+          150
         ],
         "center": [
           898.0,
-          136.5
+          136.0
         ],
         "cross": {
           "horizontal_coverage": 1.0,
           "vertical_coverage": 1.0
         },
-        "height": 29,
-        "ink_area": 242.0,
+        "height": 28,
+        "ink_area": 238.0,
         "kind": "plus",
         "width": 26
       },
@@ -90,10 +90,10 @@
         ],
         "cross": {
           "horizontal_coverage": 0.9123,
-          "vertical_coverage": 0.9506
+          "vertical_coverage": 0.9753
         },
         "height": 81,
-        "ink_area": 3771.0,
+        "ink_area": 3820.0,
         "kind": "card",
         "width": 57
       }
@@ -107,7 +107,7 @@
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "8036be89f233fc7118f391714ce450c3c51616af7c6c34e54cdf0bbf954a7986",
+      "canonical_sha256": "c50c79fe26651c2f9760131037c6e7a5f2e85572ea071dfc27e2bc5cc090c6da",
       "declared_display": "+\ud83c\udca0\ud83c\udca0"
     },
     "region": [
@@ -210,7 +210,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/001-grace/outputs/card_1024x1536.png",
-      "sha256": "a6f7994a6c3e68ae8fe14c8e1a4ad556c450f70c35f1fb2397d510715e61c93f"
+      "sha256": "52fb854c28acb08ad0a90cf628cb824be251dae2e81b8aaff22b4d54b7f74d32"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -239,25 +239,25 @@
       "word_width": 121
     },
     "observed": {
-      "cap_height": 26,
+      "cap_height": 25,
       "diamond": [
         225,
         262
       ],
       "diamond_colour": [
-        253,
-        159,
-        12
+        254,
+        149,
+        3
       ],
-      "gap": 16,
-      "left_inset": 33,
+      "gap": 17,
+      "left_inset": 32,
       "word": [
-        88,
-        209
+        87,
+        208
       ],
       "word_rows": [
         25,
-        51
+        50
       ],
       "word_width": 121
     },
@@ -325,7 +325,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 191.2178,
+            "outside_median_luma": 190.855,
             "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
@@ -354,7 +354,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 204.012,
+            "outside_median_luma": 203.7453,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -383,7 +383,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.79,
+            "outside_median_luma": 209.6773,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -412,7 +412,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.5768,
+            "outside_median_luma": 212.0822,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -441,7 +441,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.713,
+            "outside_median_luma": 215.4737,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -478,7 +478,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 215.214,
+            "outside_median_luma": 214.7988,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -507,7 +507,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.6536,
+            "outside_median_luma": 213.2734,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -536,7 +536,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.6544,
+            "outside_median_luma": 214.9438,
             "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "filled",
@@ -565,7 +565,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.1542,
+            "outside_median_luma": 212.6502,
             "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "filled",
@@ -594,7 +594,7 @@
             "middle_median_luma": 210.6396,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.021,
+            "outside_median_luma": 211.2218,
             "outside_palette_rgb_distance": 5.3852
           },
           "observed_state": "empty",
@@ -631,7 +631,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.8917,
+            "outside_median_luma": 207.4246,
             "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
@@ -660,7 +660,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.5722,
+            "outside_median_luma": 211.3189,
             "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
@@ -689,7 +689,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.4809,
+            "outside_median_luma": 209.3241,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -718,7 +718,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 199.0298,
+            "outside_median_luma": 198.5496,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -747,7 +747,7 @@
             "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.272,
+            "outside_median_luma": 192.127,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",

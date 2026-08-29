@@ -176,7 +176,7 @@
     "RARITY_TEXT": "COMMON",
     "RARITY_ICON": "COMMON",
     "ART_PROMPT": "A wall of dark fig leaves and heavy trunks in a garden at evening, one gap in the foliage where a body has pushed through, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, deep shadowed background lit by one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Look at the top four cards of the Tower. Add one of those cards that has LORE three or more to your hand and put the other cards on top of the Tower.",
+    "ABILITY_TEXT": "Look at the top four cards of the Tower. Add one of those cards that has LORE four or more to your hand and put the other cards on top of the Tower.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 2,

@@ -363,9 +363,12 @@ Ability copy uses only the rules vocabulary above. Rulings that abilities depend
   player's Lot"; the shared recipe is "the Chapter Lot". An ability may read a
   Lot's card types. When an ability moves a Lot between players or returns one
   for a new one, the Lot arrives unrecorded for everyone this Chapter.
-- **Pages keep their value.** A Page scores its Chapter Value once created. An
-  ability may return a card from a Page to its owner's hand; the Page still
-  scores in full.
+- **Pages are sealed.** A Page scores its Chapter Value once created, and a
+  card recorded into a Page never leaves it *individually*. No ability
+  returns, moves, or exchanges a single card out of a Page. The two legal
+  Page plays are to **read** one (its card types, a stat total, how many cards
+  it holds) and to **discard a whole Page as a cost** - all or nothing, never
+  cherry-picking.
 - **Activate from an ability.** "Activate that chosen card" resolves the card's
   ability at once as if it were the revealed card: no Letter access cost, its
   printed rarity cost paid from the activating player's hand, and the card
@@ -381,6 +384,19 @@ Ability copy uses only the rules vocabulary above. Rulings that abilities depend
   LORE twelve or more in your Pages", and "one card for each point of
   CONTEXT" all read the printed pips of the card named. A card in Sheol or a
   Page keeps its printed stats; a face-down card has none until revealed.
+- **Waiting in front of you** (COVENANT, 2026-08-29). A card may direct itself
+  to be *put in front of you* instead of resolving at once. It waits there in
+  the open: it is not in hand, not in Sheol, and it is not a Page, and it is
+  not counted by anything that reads those zones. It waits until its printed
+  trigger fires - for COVENANT, when **any** player records a Page - and then
+  its effect resolves once and the waiting card goes to Sheol.
+- **Activating a card inside a Page.** COVENANT lets you activate one card in
+  the Page that was just recorded. That card resolves in place and **stays in
+  that Page**: it is not moved, not sent to Sheol, and the Page still scores
+  in full. This is the one exception to "an activated card goes to Sheol", and
+  it does not breach the sealed-Page rule, because no card leaves the Page.
+  The Page belongs to whoever recorded it, which may be an opponent.
+  *This is deliberate foreshadowing of a mechanic the next set builds on.*
 - **Discarding a Page.** An ability may name "discard one of your Pages" as
   its cost: every card in that Page goes to Sheol, the Page no longer exists,
   and it scores nothing. The cost is worth the Page's card count.

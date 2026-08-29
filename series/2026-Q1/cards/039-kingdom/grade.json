@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "7dd3b4dd1bf63f8a6a660e6110e9d1a2fb17cce68373f781e86972153f943326",
+    "candidate_sha256": "39dc3f3a6d071d26ec118377402b56efc12a0ddca72c91b538c7104465e2463f",
     "template_sha256": "6fa24f3e93f2065d3252d8065e3667bc603fa03202f31d5c753dacf4557a943d",
     "report": "series/2026-Q1/cards/039-kingdom/outputs/visual-gate.json"
   },

@@ -35,21 +35,21 @@
         73
       ],
       "offset": [
-        1,
+        2,
         2
       ],
       "text": "TITLE",
-      "ghost_pixels": 557
+      "ghost_pixels": 526
     },
     "number": {
       "box": [
-        61,
+        62,
         38,
-        138,
+        139,
         60
       ],
       "offset": [
-        2,
+        3,
         0
       ],
       "text": "#089"
@@ -68,6 +68,6 @@
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "943d4ed8dba3faf3abae4ba346ba6e46d8d424d578f6bc5d7fe99f2ab373a43e",
-  "face_sha256_after": "dcd20c69759fa9babaf96db436dcd2fb7ff0bc800156087f8c0d52f8357d449d"
+  "face_sha256_before": "8fc69ccc4c0bfefa3701b234e9441e842b1f3cb883b952ce46fba6ce160de6ff",
+  "face_sha256_after": "18556a7fe408c92279c9e4dbfe856a2e2cf115d7037fd63ba61d68e4d1dcf98a"
 }

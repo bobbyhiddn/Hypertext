@@ -15,7 +15,7 @@ stats:
   context: 2
   complexity: 3
 ability: Look at the bottom three cards of the Tower. Add up to two of those cards
-  that each have LORE three or more to your hand and put the other cards into Sheol.
+  that each have LORE four or more to your hand and put the other cards into Sheol.
 ot_verse:
   ref: Proverbs 20:5
   snippet: Counsel in the heart of man is like deep water; but a man of understanding

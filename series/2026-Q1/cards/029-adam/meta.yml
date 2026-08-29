@@ -14,9 +14,8 @@ stats:
   lore: 5
   context: 5
   complexity: 3
-ability: Return every card in Sheol to the Tower and shuffle the cards in the Tower.
-  Then draw three cards from the Tower and put one card from your hand on the bottom
-  of the Tower.
+ability: Discard one of your Pages. Return every card in Sheol to the Tower and shuffle
+  the cards in the Tower, then draw four cards from the Tower.
 ot_verse:
   ref: Genesis 2:7
   snippet: And the LORD God formed man of the dust of the ground, and breathed into

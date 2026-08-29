@@ -176,7 +176,7 @@
     "RARITY_TEXT": "GLORIOUS",
     "RARITY_ICON": "GLORIOUS",
     "ART_PROMPT": "A hard cracked hillside of thorns and thistles closing over a broken wooden plough and a spilled handful of seed, nothing green anywhere in the field, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, deep shadowed background lit by one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Name a card type; each player puts every card of the named type from that player's hand into Sheol. Then draw three cards from the Tower.",
+    "ABILITY_TEXT": "Discard one of your Pages. Name a card type; each player puts every card of the named type from that player's hand into Sheol, then draw three cards from the Tower.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 3,

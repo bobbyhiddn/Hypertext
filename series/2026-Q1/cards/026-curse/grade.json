@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "none",
+  "style_mismatch_reason": "",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "b3fc3dc8348d21967fd25135f390542a2ee2fb2173997d27b74843320042cfd1",
+    "candidate_sha256": "49a5876629ff33cd2878263444c922810d7548ddc3121c0173fd60cec9e47cd0",
     "template_sha256": "fe95ed40ea2c5a7943d8a3de8706903fe059f2b62d2b4783b3f770b5aba9561b",
     "report": "series/2026-Q1/cards/026-curse/outputs/visual-gate.json"
   },

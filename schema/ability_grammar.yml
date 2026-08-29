@@ -28,7 +28,7 @@ values:
 vocabulary:
   actions: [draw, add, look at, reveal, put, choose, name, gain, spend, shuffle, discard, return, exchange, activate]
   deferred_actions: [record, redeem]         # turn stages, not ability actions
-  zones: [Tower, hand, Sheol, Page, Pages, Lot, Lots, Chapter Lot, Letters]
+  zones: [Tower, hand, Sheol, Page, Pages, Lot, Lots, Chapter Lot, Letters, in front of you]
   positions: [the top of the Tower, the bottom of the Tower, on top of the Tower in any order]
   types: [NOUN, VERB, ADJECTIVE, NAME, TITLE]
   stats: [LORE, CONTEXT, COMPLEXITY]
@@ -54,12 +54,14 @@ productions:
     gain_letter:       {copy: "Gain one Letter", gain: 3, tiers: [UNCOMMON, RARE, GLORIOUS], note: "UNCOMMON when conditional or paid for with three units of cost; RARE outright with layering; two or more Letters is the wild step"}
     scale_structure:   {copy: "Add up to N cards from (Sheol|the revealed cards) to your hand, one card of each card type in (that chosen Page|the Chapter Lot|your Lot|another player's Lot)", gain: "3+", tiers: [RARE, GLORIOUS], status: ruled}
     return_to_tower:   {copy: "Choose up to N cards in Sheol and return those chosen cards to the top of the Tower in any order", gain: "selection", tiers: [RARE, GLORIOUS]}
-    return_from_page:  {copy: "Return one card from one of your Pages to your hand", gain: 1, tiers: [RARE, GLORIOUS], status: ruled}
     exchange_sheol:    {copy: "Exchange up to N cards from your hand with up to N cards in Sheol", gain: "selection", tiers: [RARE, GLORIOUS]}
     exchange_player:   {copy: "Choose another player. Exchange one card from your hand with one card from that chosen player's hand", gain: "selection", tiers: [RARE, GLORIOUS]}
     reset_tower:       {copy: "Return every card in Sheol to the Tower and shuffle the cards in the Tower", gain: "reset", tiers: [GLORIOUS]}
     activate_sheol:    {copy: "Choose one COMMON card in Sheol and activate that chosen card", gain: "that card", tiers: [GLORIOUS], status: ruled}
     move_lot:          {copy: "Choose another player. Exchange your Lot with that chosen player's Lot", gain: "structure", tiers: [GLORIOUS], status: ruled}
+    wait_and_activate: {copy: "Put this card in front of you. When any player records a Page, you may activate one card in that Page; that activated card stays in that Page",
+                        gain: "structure", tiers: [GLORIOUS], status: "set-2 foreshadow",
+                        note: "the set's first card that waits in play and triggers off another player's Record; the activated card is NOT sent to Sheol, which is the seed of the next set's mechanic"}
   INTERACT:
     reveal_hand:       {copy: "Choose another player. That chosen player reveals one card from that chosen player's hand", interaction: 1, tiers: [UNCOMMON, RARE, GLORIOUS]}
     lose_card:         {copy: "Choose another player. That chosen player puts N cards from that chosen player's hand into Sheol", interaction: 1, tiers: [UNCOMMON, RARE, GLORIOUS]}
@@ -98,6 +100,7 @@ productions:
     for_each:          {copy: "for each (card fewer than N in your hand|card type in ...)", tiers: [UNCOMMON, RARE, GLORIOUS]}
   TIMING:
     now:               {copy: ""}
+    until_recorded:    {copy: "When any player records a Page, ...", tiers: [GLORIOUS], status: "set-2 foreshadow", note: "the card waits in front of you until the trigger; it is not in hand, not in Sheol, and is not itself a Page"}
     next_turn:         {copy: "At the start of your next turn, ...", tiers: [UNCOMMON, RARE, GLORIOUS]}
 
 constraints:
@@ -107,5 +110,7 @@ constraints:
   - "resolution steps (every action except look at, reveal, name, choose) are at most two below RARE"
   - "no two cards share a shape (hypertext ability-audit); no two cards share a lemma or word (hypertext lemma-audit)"
   - "every ability beats 'Draw one card from the Tower.'"
+  - "PAGES ARE SEALED (2026-08-29): a card recorded into a Page never leaves it individually - no ability returns, moves or exchanges a single card out of one. The two legal Page plays are READING a Page (a card type in it, a stat total, a card count) and DISCARDING A WHOLE PAGE as a cost (the COST production discard_page): all or nothing, never cherry-picking"
+  - "stat gates must actually gate (2026-08-29): a per-card floor is FOUR or more (LORE 46%, CONTEXT 49%, COMPLEXITY 31% of the set) - three or more passes ~89% and is free. A single Page's stat total runs 18 (5 cards) to 25 (7 cards), so a Page threshold is TWENTY-TWO or more and is read on ONE Page, never on all of them"
   - "stat rhyme (2026-08-29): the stat an ability reads matches the word - LORE for weight, glory, depth, holiness, judgment, promise; CONTEXT for multitude, all, many, gathering, filling; COMPLEXITY for tongue, name, confusion, foreignness, division"
   - "mechanic axes (2026-08-29): per 90 cards at least 18 read a stat, 26 a type, 12 Letters, 10 Lots, 8 Pages, 16 another player, 24 Sheol (set-standards.yml mechanic_axis_targets); a batch of ten carries at least 2 stat readers, 1 Letter card, 1 Lot-or-Page card (offline_check fails closed)"

@@ -176,7 +176,7 @@
     "RARITY_TEXT": "RARE",
     "RARITY_ICON": "RARE",
     "ART_PROMPT": "Four hard-beaten roads running out from one abandoned camp of overturned baskets and dropped mattocks, each track climbing away over a different ridge until it thins to nothing, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, red desert light of late afternoon, rust and copper against a turquoise sky",
-    "ABILITY_TEXT": "Name a card type. Put the top six cards of the Tower into Sheol, then add up to three of those cards of the named type to your hand; if the cards in your Pages have total CONTEXT fifteen or more, draw one card from the Tower.",
+    "ABILITY_TEXT": "Name a card type. Put the top six cards of the Tower into Sheol, then add up to three of those cards of the named type to your hand; if one of your Pages has total CONTEXT twenty-two or more, draw one card from the Tower.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 3,

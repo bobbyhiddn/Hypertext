@@ -55,11 +55,11 @@ def classify(text: str) -> dict[str, Any]:
     ], t)
 
     core = _first([
+        ("wait_and_activate", r"\bput this card in front of you\b"),
         ("move_lot", r"\bexchange\s+your Lot\b|\breturn\s+your Lot\b"),
         ("activate_sheol", r"\bactivate\s+that chosen card\b"),
         ("reset_tower", r"\breturn\s+every card in Sheol to the Tower\b"),
         ("scale_structure", r"\bone card (?:of|for) each card type in (?:that chosen Page|the Chapter Lot|your Lot|another player's Lot|that chosen player's Lot)\b"),
-        ("return_from_page", r"\breturn\s+one card from (?:one of )?your Pages?\b"),
         ("return_to_tower", r"\breturn\s+those chosen cards to the top of the Tower\b"),
         ("exchange_player", r"\bexchange\s+one card from your hand with one card from that chosen player's hand\b"),
         ("exchange_sheol", r"\bexchange\s+(?:up to \w+ )?cards? from your hand with\b"),
@@ -110,7 +110,7 @@ def classify(text: str) -> dict[str, Any]:
     condition = _first([
         ("pages_threshold", r"\bat least \w+ cards in Pages\b"),
         ("stat_scale", r"\bfor each point of (?:LORE|CONTEXT|COMPLEXITY)\b"),
-        ("stat_threshold", r"\btotal (?:LORE|CONTEXT|COMPLEXITY) \w+ or more\b"),
+        ("stat_threshold", r"\btotal (?:LORE|CONTEXT|COMPLEXITY) [\w-]+ or more\b"),
         ("stat_condition", r"\bIf that revealed card has (?:LORE|CONTEXT|COMPLEXITY)\b"),
         ("revealed_in_lot", r"\bIf that revealed card's card type is in\b"),
         ("revealed_is_type", r"\bIf that revealed card is\b"),
@@ -120,7 +120,12 @@ def classify(text: str) -> dict[str, Any]:
         ("if", r"\bif\b"),
     ], t)
 
-    timing = "next_turn" if re.search(r"\bat the start of your next turn\b", low) else "now"
+    if re.search(r"\bwhen any player records a page\b", low):   # `low` is already lowercased
+        timing = "until_recorded"
+    elif re.search(r"\bat the start of your next turn\b", low):
+        timing = "next_turn"
+    else:
+        timing = "now"
     return {"cost": cost, "core": core, "interact": interact, "kicker": kicker, "filter": filt, "condition": condition, "timing": timing, "unclassified": core is None}
 
 

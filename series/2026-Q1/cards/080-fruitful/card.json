@@ -176,7 +176,7 @@
     "RARITY_TEXT": "COMMON",
     "RARITY_ICON": "COMMON",
     "ART_PROMPT": "A branch bowed under ripe purple figs and a split pomegranate spilling wet red seeds onto a stone ledge, painted close up, no people, luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art, deep shadowed background lit by one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Look at the top two cards of the Tower. Add one of those cards that has CONTEXT three or more to your hand and put the other card on top of the Tower.",
+    "ABILITY_TEXT": "Look at the top two cards of the Tower. Add one of those cards that has CONTEXT four or more to your hand and put the other card on top of the Tower.",
     "STAT_LORE": 3,
     "STAT_CONTEXT": 2,
     "STAT_COMPLEXITY": 2,

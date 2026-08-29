@@ -176,7 +176,7 @@
     "RARITY_TEXT": "UNCOMMON",
     "RARITY_ICON": "UNCOMMON",
     "ART_PROMPT": "A colossal brick ziggurat spiraling up into storm clouds, tiny figures climbing its ramps seen from far below, a break of radiant golden light at the summit against deep indigo sky, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Look at the top four cards of the Tower. Add up to two of those cards that each have LORE three or more to your hand and put the other cards on top of the Tower in any order.",
+    "ABILITY_TEXT": "Look at the top four cards of the Tower. Add up to two of those cards that each have LORE four or more to your hand and put the other cards on top of the Tower in any order.",
     "STAT_LORE": 4,
     "STAT_CONTEXT": 5,
     "STAT_COMPLEXITY": 3,

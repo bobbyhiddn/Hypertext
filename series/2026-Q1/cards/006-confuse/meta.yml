@@ -15,9 +15,9 @@ stats:
   lore: 4
   context: 3
   complexity: 5
-ability: Choose another player; that chosen player reveals one card from that chosen
-  player's hand. If that revealed card has COMPLEXITY three or more, gain one Letter;
-  otherwise, draw one card from the Tower.
+ability: Choose another player; that chosen player reveals one card from that player's
+  hand. If that revealed card has COMPLEXITY four or more, gain one Letter; otherwise,
+  draw one card from the Tower.
 ot_verse:
   ref: Genesis 11:7
   snippet: let us go down, and there confound their language, that they may not understand

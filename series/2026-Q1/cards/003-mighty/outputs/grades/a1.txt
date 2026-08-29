@@ -1,9 +1,15 @@
 ============================================================
 GRADE RESULT: MIGHTY
 ============================================================
-Score: 100/100
-Status: PASS
-Style Match: True
+Score: 0/100 (content: 95/100)
+Status: FAIL
+Style Match: False
+Style Issue: Unresolved template placeholder text in brackets within Hebrew and Greek language boxes. Template placeholder leak: HEBREW WORD (Hebrew/Aramaic section above the Hebrew text); GREEK WORD (Greek section above the Greek text)
 Style Refs: 1
   - template_1024x1536.png
+
+Corrections Needed:
+  - Remove bracket placeholders from the Hebrew and Greek language panels.
+  - Remove the template placeholder text HEBREW WORD (Hebrew/Aramaic section above the Hebrew text); replace the slot with the supplied content only.
+  - Remove the template placeholder text GREEK WORD (Greek section above the Greek text); replace the slot with the supplied content only.
 ============================================================

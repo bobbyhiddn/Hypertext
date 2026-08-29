@@ -1,12 +1,9 @@
 ============================================================
 GRADE RESULT: DEEP
 ============================================================
-Score: 98/100
-Status: FAIL
+Score: 100/100
+Status: PASS
 Style Match: True
 Style Refs: 1
   - template_1024x1536.png
-
-Corrections Needed:
-  - Fix the ability text to read exactly: 'Look at the bottom three cards of the Tower. Add up to two of those cards that each have LORE three or more to your hand and put the other cards into Sheol.' (it currently reads: 'Look at the bottom three cards of the Tower. Add up to two of those cards each have LORE three or more to your hand a put the other cards into Sheol.').
 ============================================================

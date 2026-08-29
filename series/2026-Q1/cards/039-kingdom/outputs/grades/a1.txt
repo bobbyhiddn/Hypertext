@@ -1,0 +1,13 @@
+============================================================
+GRADE RESULT: KINGDOM
+============================================================
+Score: 0/100 (content: 100/100)
+Status: FAIL
+Style Match: False
+Style Issue: Template placeholder leak: ORIGINAL LANGUAGES (badge between HEBREW/ARAMAIC and GREEK headers)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove the template placeholder text ORIGINAL LANGUAGES (badge between HEBREW/ARAMAIC and GREEK headers); replace the slot with the supplied content only.
+============================================================

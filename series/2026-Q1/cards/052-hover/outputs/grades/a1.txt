@@ -1,0 +1,17 @@
+============================================================
+GRADE RESULT: HOVER
+============================================================
+Score: 0/100 (content: 83/100)
+Status: FAIL
+Style Match: False
+Style Issue: Extra HOVER section added above ABILITY; OT VERSE box missing with both verses grouped under NT VERSE header. Template placeholder leak: CARD TITLE (title position at top center); DEFINITION TEXT (subtitle line directly below the main title)
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Change the card title from 'CARD TITLE' to 'HOVER'.
+  - Change the gloss from 'DEFINITION TEXT' to 'To brood over the face of the waters'.
+  - Add the missing OT Verse panel and ensure the OT verse text is clearly visible.
+  - Remove the template placeholder text CARD TITLE (title position at top center); replace the slot with the supplied content only.
+  - Remove the template placeholder text DEFINITION TEXT (subtitle line directly below the main title); replace the slot with the supplied content only.
+============================================================

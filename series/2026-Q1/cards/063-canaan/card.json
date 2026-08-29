@@ -176,7 +176,7 @@
     "RARITY_TEXT": "UNCOMMON",
     "RARITY_ICON": "UNCOMMON",
     "ART_PROMPT": "An empty vineyard at dawn beside a tent, an overturned wine cup and a fallen cloak on the threshold, mist over the vines, one radiant golden light breaking over the hills, no people, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Choose another player; that chosen player reveals one card from that chosen player's hand. Then draw two cards from the Tower.",
+    "ABILITY_TEXT": "Choose another player; that chosen player reveals one card from that player's hand. Then draw two cards from the Tower.",
     "STAT_LORE": 3,
     "STAT_CONTEXT": 3,
     "STAT_COMPLEXITY": 3,

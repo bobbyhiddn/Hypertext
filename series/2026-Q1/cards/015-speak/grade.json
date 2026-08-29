@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "",
+  "style_mismatch_reason": "none",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "1c786bd59a160a98413269de3a4bb02d03b4c14ca6a28200e40c7bc89314af03",
+    "candidate_sha256": "c12847cca529b7a37f3d0ae774c32de0de029537b9a655440a45dd9598db2ef7",
     "template_sha256": "1e6872702773b4628b2cd72712e83f00e2461d6af0e0d72b3c6244ff717832a7",
     "report": "series/2026-Q1/cards/015-speak/outputs/visual-gate.json"
   },

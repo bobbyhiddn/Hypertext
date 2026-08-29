@@ -1,15 +1,9 @@
 ============================================================
 GRADE RESULT: ARK
 ============================================================
-Score: 0/100 (content: 95/100)
-Status: FAIL
-Style Match: False
-Style Issue: Card retains template brackets enclosing ability, verse, language, and trivia texts. Refs label missing: OT Refs label missing (line reads: '[OT Refs: Gen 6:14 • Gen 7:1 • Gen 8:4]'); NT Refs label missing (line reads: '[NT Refs: Heb 11:7 • 1 Pet 3:20 • Matt 24:38]')
+Score: 100/100
+Status: PASS
+Style Match: True
 Style Refs: 1
   - template_1024x1536.png
-
-Corrections Needed:
-  - OT Refs label missing (line reads: '[OT Refs: Gen 6:14 • Gen 7:1 • Gen 8:4]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
-  - NT Refs label missing (line reads: '[NT Refs: Heb 11:7 • 1 Pet 3:20 • Matt 24:38]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
-  - Fix the ability text to read exactly: 'Choose up to three cards in Sheol whose card type is in the Chapter Lot and add those chosen cards to your hand. If the cards in your Pages have total LORE fifteen or more, draw one card from the Tower.' (it currently reads: '[Choose up to three cards in Sheol whose card type is in the Chapter Lot and add those chosen cards to your hand. If the cards in your Pages have total LORE fifteen or more, draw one card from the Tower.]').
 ============================================================

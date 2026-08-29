@@ -228,7 +228,7 @@ _QUANTITY_PATTERN = re.compile(
     re.IGNORECASE,
 )
 _CARD_OR_RESOURCE_PATTERN = re.compile(
-    r"\b(?:card|cards|hand|Lot|Lots|Letter|Letters|Wreath|Wreaths|player|players|card type|card types"
+    r"\b(?:card|cards|hand|Page|Pages|Lot|Lots|Letter|Letters|Wreath|Wreaths|player|players|card type|card types"
     r"|NOUN|NOUNs|VERB|VERBs|ADJECTIVE|ADJECTIVEs|NAME|NAMEs|TITLE|TITLEs)\b",
     re.IGNORECASE,
 )
@@ -337,13 +337,14 @@ ABILITY_RULES_CONTEXT = """GAME MECHANICS AND CLOSED VOCABULARY:
 - Branching copy with one binary condition states that condition once and resolves every remaining case with "otherwise" (for example, "If that revealed card has COMPLEXITY three or more, add that revealed card to your hand; otherwise, put ..."). Do not restate the complementary condition in full; "otherwise" already covers it exhaustively. Never use "or else" or a bare "if not".
 - Avoid bare pronouns such as it, them, they, "that many," or a bare "the other"; repeat the player, card, quantity, or zone instead ("the other card" with its noun is fine).
 - A player's Lot is that player's personal recipe; write "your Lot", "another player's Lot", or "that chosen player's Lot" - never a new term. The shared recipe is "the Chapter Lot". An ability may read a Lot's card types, and a RARE or GLORIOUS may move Lots between players or return one for a new one.
-- Pages keep their Chapter Value once created. An ability may return a card from a Page to its owner's hand; the Page still scores in full.
+- PAGES ARE SEALED: a Page scores its Chapter Value once created and a card recorded into a Page never leaves it individually - no ability returns, moves or exchanges a single card out of one. There are exactly two legal Page plays: READ a Page (a card type in it, a stat total, a card count), or DISCARD A WHOLE PAGE as a printed cost ("Discard one of your Pages"), which sends every card in it to Sheol, scores nothing, and is worth the Page's card count - all or nothing, never cherry-picking.
 - Activate: "activate that chosen card" resolves that card's ability at once as if it were the revealed card - no Letter access cost, its printed rarity cost is paid from your hand, and the card returns to Sheol afterwards; a card activated this way cannot activate another. Record and Redeem are turn stages, not ability actions, until the rules say otherwise.
 - INTERACTION BY TIER: a COMMON never touches another player. An UNCOMMON may target one chosen player - make that player reveal, put a card into Sheol, or spend a Letter. A RARE may do the same more heavily or reach every player with information ("each player reveals ..."). Only a GLORIOUS moves every player's material ("each player draws / discards ...").
 - COSTS AS A LEVER: "Spend two Letters", "Discard three cards from your hand into Sheol", or "Discard one of your Pages" may open the ability and buy an action a tier larger than the printed cost alone allows. A discarded Page goes to Sheol and scores nothing; it costs at least five cards.
 - COSTS COUNT: a discard or a buried hand card is one card of cost, a Letter spent is three; costs are subtracted from the gain when the tier is priced, so "Gain one Letter, then discard three cards from your hand into Sheol" is UNCOMMON-weight, not RARE.
 - DRAW-ONE BASELINE: every ability, at every rarity, must be clearly worth more to the activating player than a plain "Draw one card from the Tower." Information, peeking, or blind reordering alone never suffices; at least one step must move real material (a draw, an add to hand, a gain, or a filter attached to a draw). A COMMON should beat that baseline draw only modestly - a draw plus one small kicker - never by a wide margin.
 - COPY LENGTH: the printed image model garbles long copy. Keep a COMMON ability to about 30 words (hard cap 34), an UNCOMMON to 40, a RARE to 48, a GLORIOUS to 56; prefer one sentence when the effect allows it.
+- STAT GATES MUST ACTUALLY GATE (2026-08-29): a per-card stat floor is "four or more" - across the printed set LORE four or more matches 46% of cards, CONTEXT 49%, COMPLEXITY 31%, while "three or more" matches about 89% and gates nothing. A Page stat total is read on ONE Page and the threshold is "twenty-two or more": a five-card Page averages 18, a six-card 21 and a seven-card 25, so fifteen is automatic and twenty-two rewards the larger Lots.
 - STATS ARE PLAYABLE (2026-08-29): every card prints LORE, CONTEXT and COMPLEXITY (1-5). An ability may read them like a type: a floor filter ("up to two of those cards that each have LORE three or more"), a binary condition ("If that revealed card has CONTEXT four or more, ...; otherwise, ..."), a match ("one card of the same LORE as that added card"), a duel with a chosen player ("each of you reveals one card from your hand; if your revealed card has the higher COMPLEXITY, ..."), a Pages total ("If the cards in your Pages have total LORE twelve or more"), or a scale ("draw one card from the Tower for each point of COMPLEXITY on that revealed card" - RARE weight, three cards' worth). STAT RHYME: read the stat the word is about - LORE for weight, glory, depth, holiness, judgment, promise; CONTEXT for multitude, all, many, gathering, filling; COMPLEXITY for tongue, name, confusion, foreignness, division. Per ten cards at least two read a stat, one gains or spends a Letter, one reads a Lot or a Page.
 - CARD-ADVANTAGE LADDER (2026-08-28): activation costs are part of the math (a RARE pays one discard, a GLORIOUS two), and costs written into the copy count too. A COMMON beats a plain draw modestly; an UNCOMMON is worth two or more cards; a RARE three or more - a multi-card swing, every player reached, or a Page or Lot scaled; a GLORIOUS is wild - five or more cards' worth, every player's material moved, or a structure bent (a zone reset, a Lot moved, a card activated from Sheol, a Page converted) - and a big cost in the copy ("Spend two Letters", "Discard one of your Pages") may buy it. Outcomes on exclusive branches never add together - an ability that either adds or draws, but never both, delivers only its better branch.
 """
@@ -803,11 +804,15 @@ def _validate_action_operands(ability_text: str) -> list[str]:
                 issues.append(f"{action} is missing an explicit affected object: {segment}")
         if action == "draw" and "Tower" not in zones:
             issues.append(f"draw is missing the explicit Tower source: {segment}")
-        elif action == "discard" and not {"hand", "Sheol"}.issubset(set(zones)):
+        elif action == "discard" and not re.search(r"\bdiscard one of your Pages\b", segment, re.IGNORECASE) \
+                and not {"hand", "Sheol"}.issubset(set(zones)):
+            # "Discard one of your Pages" is a whole-Page cost the rules define; every
+            # card in it goes to Sheol by that ruling, so the copy need not restate it.
             issues.append(f"discard must explicitly state hand as source and Sheol as destination: {segment}")
         elif action in {"reveal", "look at"} and not zones:
             issues.append(f"{action} is missing an explicit source zone: {segment}")
         elif action == "put" and not re.search(
+            r"\bin front of you\b|"
             r"\b(?:on|onto|into|to)\b[^.;]{0,60}"
             r"\b(?:Tower|hand|Pages|Sheol|Chapter Lot|Lots?|Lot)\b",
             segment,
@@ -887,7 +892,7 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
         setup = 2
     # A stat total read off a built structure ("total LORE twelve or more" in
     # your Pages) is setup 2 like any Pages threshold.
-    if re.search(r"\btotal (?:LORE|CONTEXT|COMPLEXITY) \w+ or more\b", ability_text, re.IGNORECASE):
+    if re.search(r"\btotal (?:LORE|CONTEXT|COMPLEXITY) [\w-]+ or more\b", ability_text, re.IGNORECASE):
         setup = 2
 
     if global_material:
@@ -984,7 +989,9 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
     if cost_units and payoff > 1:
         payoff = max(1, payoff - cost_units // 3)
     structure = re.search(
-        r"\breturn every card in Sheol to the Tower\b|\bactivate that chosen card\b|\bexchange your Lot\b|\breturn your Lot\b|\bdiscard one of your Pages\b[^.;]*?\b(?:add|draw|gain)\b",
+        r"\breturn every card in Sheol to the Tower\b|\bactivate that chosen card\b|\bactivate one card in that Page\b"
+        r"|\bexchange your Lot\b|\breturn your Lot\b|\bput this card in front of you\b"
+        r"|\bdiscard one of your Pages\b[^.;]*?\b(?:add|draw|gain)\b",
         ability_text, re.IGNORECASE,
     )
     # Gross, not net: the cost is what makes a wild effect fair, not what
@@ -1005,6 +1012,27 @@ def _estimate_printed_ratings(ability_text: str, actions: list[str]) -> dict[str
 
 
 _WORD_NUMBERS = {"a": 1, "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "1": 1, "2": 2, "3": 3, "4": 4, "5": 5}
+
+
+# A card recorded into a Page never leaves it (user, 2026-08-29: "we have a few
+# cards that take cards from pages. this should not be allowed"). Reading a Page
+# stays legal, so the check looks for a card MOVING out of one.
+_PAGE_EXTRACTION = re.compile(
+    r"\b(?:return|add|take|move|put|discard|exchange|choose)\b[^.;]{0,80}?\bfrom\s+(?:one of\s+)?"
+    r"(?:your|that chosen player's|another player's|the)\s+Pages?\b",
+    re.IGNORECASE,
+)
+
+
+def page_extraction_issues(ability_text: str) -> list[str]:
+    """Copy that moves a card out of a Page. Reading a Page is fine."""
+    m = _PAGE_EXTRACTION.search(str(ability_text))
+    if not m:
+        return []
+    return [
+        "Pages are sealed: a card recorded into a Page never leaves it, so an ability "
+        f"may not move one out of it ({m.group(0).strip()!r}). A Page may only be read."
+    ]
 
 
 def validate_ability_candidate(candidate: dict, semantic_seed: dict, rarity: str) -> dict:
@@ -1071,6 +1099,7 @@ def validate_ability_candidate(candidate: dict, semantic_seed: dict, rarity: str
         issues.append("declared rules terms missing from ability_text: " + ", ".join(missing_terms))
 
     lower_copy = ability_text.casefold()
+    issues.extend(page_extraction_issues(ability_text))
     banned = [fragment.strip() for fragment in _BANNED_FRAGMENTS if fragment in lower_copy]
     checks["closed_vocabulary_has_no_banned_terms"] = not banned
     if banned:

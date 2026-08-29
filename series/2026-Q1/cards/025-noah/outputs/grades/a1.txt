@@ -1,9 +1,16 @@
 ============================================================
 GRADE RESULT: NOAH
 ============================================================
-Score: 100/100
-Status: PASS
-Style Match: True
+Score: 0/100 (content: 95/100)
+Status: FAIL
+Style Match: False
+Style Issue: Placeholder 'DEFINITION TEXT' remains above the gloss, and multiple sections contain unremoved template brackets. Refs label missing: OT Refs label missing (line reads: '[OT Refs: Gen 6:8 • Gen 6:9 • Gen 7:1]'); NT Refs label missing (line reads: '[NT Refs: Heb 11:7 • Matt 24:37 • 1 Pet 3:20]') Template placeholder leak: DEFINITION TEXT (above the definition line under the card title)
 Style Refs: 1
   - template_1024x1536.png
+
+Corrections Needed:
+  - OT Refs label missing (line reads: '[OT Refs: Gen 6:8 • Gen 6:9 • Gen 7:1]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - NT Refs label missing (line reads: '[NT Refs: Heb 11:7 • Matt 24:37 • 1 Pet 3:20]'); the Hebrew panel references line must begin with the literal 'OT Refs:' and the Greek panel's with 'NT Refs:'.
+  - Remove the template placeholder text DEFINITION TEXT (above the definition line under the card title); replace the slot with the supplied content only.
+  - Fix the ability text to read exactly: 'Discard one of your Pages. Then choose five cards in Sheol, one card of each card type, and add those chosen cards to your hand.' (it currently reads: '[Discard one of your Pages. Then choose five cards in Sheol, one card of each card type, and add those chosen cards to your hand.]').
 ============================================================

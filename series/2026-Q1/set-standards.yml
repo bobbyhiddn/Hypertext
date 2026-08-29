@@ -117,7 +117,10 @@ mechanic_axis_targets:
   types: 26        # a card type named or filtered
   letters: 12      # a Letter gained, spent, or taken
   lots: 10         # the Chapter Lot or a player's Lot read or moved
-  pages: 8         # a Page read, scaled, or returned from
+  # 2026-08-29: cards may no longer pull a single card back out of a Page, but the
+  # surface is not smaller - a Page can be READ, or a WHOLE Page discarded as a cost
+  # (user: "we can account for page abilities by allowing for discarding a page").
+  pages: 8         # a Page read, or a whole Page discarded as a cost
   opponent: 16     # another player reached
   sheol: 24        # Sheol read or written
 

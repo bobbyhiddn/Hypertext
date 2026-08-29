@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "f4fc9dfe9c8492470e7e96351cec992270441c88f50ed05a53f41a32d32cb69e",
+    "gemini_output_sha256": "148f3877121ceeaae5ad6224e9292daba652de011591ec6b17f12899dcc40637",
     "generation_metadata_path": "series/2026-Q1/cards/015-speak/outputs/generation.json",
-    "generation_metadata_sha256": "3d4d41c13eb7027f1d28a6e97f380f671c84589f121bbb5ee94cde88c3a8932c",
+    "generation_metadata_sha256": "5414e369f7bc9c1a0c9f1b10cc62460c9a2a43844803d5beb54f9c10ee2e9f7b",
     "path": "series/2026-Q1/cards/015-speak/outputs/card_1024x1536.png",
-    "sha256": "c7693ac6f4d6380112db0f0ad627d97a70d3946a0ffe374d41bb8593ce52f57b"
+    "sha256": "a95bfa9fc31911ef3144bb2b26806d891af2c53c8c8e95878f2d891e594aa328"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/015-speak/prompt.txt",
-    "sha256": "9a832292fc7ac73c8925874f759e585539bd17ce94c1018cbcabbd59afd8657e"
+    "sha256": "d0fbe0031c1440daf5c2b0cfde160a6455f70505978d1f224b3697f58c5d978c"
   },
   "recipe": {
-    "canonical_sha256": "bef639bc733346ec838dad95b616e2a6ac61460b3f3a691316a65cf3da3ece09",
-    "file_sha256": "9ade2976bca27f7821eb970dc89f856241f1462dae24dd746f2e92867b624f1c",
+    "canonical_sha256": "b21881ec8815e133999b9f7638ef1eb12b159170d94c4ea593ec7556c8f11005",
+    "file_sha256": "af16e34de3e6aac35c20093e19edf2c40329c0933c4d4f0f530ed7829b73b2a0",
     "path": "series/2026-Q1/cards/015-speak/card.json"
   },
   "reference_pack": {

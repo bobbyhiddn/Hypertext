@@ -14,8 +14,8 @@ stats:
   lore: 5
   context: 3
   complexity: 3
-ability: Discard two cards from your hand into Sheol. Then choose five cards in Sheol,
-  one card of each card type, and add those chosen cards to your hand.
+ability: Discard one of your Pages. Then choose five cards in Sheol, one card of each
+  card type, and add those chosen cards to your hand.
 ot_verse:
   ref: Genesis 6:8
   snippet: But Noah found grace in the eyes of the LORD

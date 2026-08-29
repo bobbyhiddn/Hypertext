@@ -6,7 +6,7 @@
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "none",
+  "style_mismatch_reason": "",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,7 +46,7 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "68d9a30f9f113156cc6b38139813c73aef4bf8ea4901f33c8109a0db1db51cb9",
+    "candidate_sha256": "d769c3671bfca1b94ee9189201fccb3f6b5f01dda24f19e28e5e1c11e11ee9fe",
     "template_sha256": "1e6872702773b4628b2cd72712e83f00e2461d6af0e0d72b3c6244ff717832a7",
     "report": "series/2026-Q1/cards/056-ascend/outputs/visual-gate.json"
   },

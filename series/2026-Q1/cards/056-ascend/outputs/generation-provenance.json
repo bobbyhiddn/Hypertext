@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "bf0ac9349e4fd18231f060aa6d25052d24a38375eeace125d531195b885d7ac4",
+    "gemini_output_sha256": "3cc02fb79755ead025f9d904711532418d62e1af5ae7a227663c019bcafd818b",
     "generation_metadata_path": "series/2026-Q1/cards/056-ascend/outputs/generation.json",
-    "generation_metadata_sha256": "b9c4525bbed47d7e0e562cfbff341427b48433ca09416d937aebaac26f64dde6",
+    "generation_metadata_sha256": "02a4ebf488417401760ba0faa8ca6f0178436992260f6587848bcf28b17436b9",
     "path": "series/2026-Q1/cards/056-ascend/outputs/card_1024x1536.png",
-    "sha256": "2e0f1fc79d7cbe1c13a1537db121e510d9b9d8e0145a3476170bbe0ab7b25ccf"
+    "sha256": "0546817fdee2fff3b1134010bbdc1d3f62d02fe29a8f2e0253ddc54f4b91b7ae"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/056-ascend/outputs/prompt.revision.txt",
-    "sha256": "9b9904aa65b585f77d41cb0ed77963f6bc393819c233661fa05fcab8ae0e2ea7"
+    "path": "series/2026-Q1/cards/056-ascend/prompt.txt",
+    "sha256": "64ea86450d3e9593a22f57a103b02b8fae0a6fc8646c3b2e23a461f4f6327806"
   },
   "recipe": {
-    "canonical_sha256": "94249da47d820f1c73a51df644a74bcd66ae2126d0bdf24204cd3db1b422dfb4",
-    "file_sha256": "dccb8b650d38b2a8575d1faffc8845649d90ef061bd3e245b56910b90accc5f9",
+    "canonical_sha256": "4bae2b7602c4da1387cadce32862a377ec7dccd279cf070f41af66b85a0f7bcf",
+    "file_sha256": "e5b2abfacbf48ea09b88ad96b75c283b3142101986a7693d1224bc189164d575",
     "path": "series/2026-Q1/cards/056-ascend/card.json"
   },
   "reference_pack": {
@@ -50,43 +50,8 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "fix",
+    "mode": "generate",
     "references": [
-      {
-        "assigned_role": "current_card",
-        "card_type": "VERB",
-        "eligibility_reasons": [
-          "existing_current_card",
-          "sha256=verified",
-          "requested_fix_source"
-        ],
-        "eligible": true,
-        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
-        "metadata_path": null,
-        "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/056-ascend/outputs/reference-inputs/current-cf5d0bbe084b7be804e06acea8f39d302d67d728d1a1eef6ffc8830f668b795e.png",
-        "position": 1,
-        "prompt_path": null,
-        "prompt_sha256": null,
-        "rarity": "UNCOMMON",
-        "rarity_label": "UNCOMMON",
-        "recipe_path": null,
-        "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/056-ascend/outputs/reference-inputs/current-cf5d0bbe084b7be804e06acea8f39d302d67d728d1a1eef6ffc8830f668b795e.png",
-        "review_evidence_path": null,
-        "review_evidence_sha256": null,
-        "role": "current_card",
-        "sha256": "cf5d0bbe084b7be804e06acea8f39d302d67d728d1a1eef6ffc8830f668b795e",
-        "similarity_components": {},
-        "similarity_reason": "not_applicable_current_card",
-        "similarity_score": 0,
-        "source_manifest": null,
-        "source_manifest_sha256": null,
-        "template_commit": null,
-        "template_manifest_schema_version": null,
-        "template_manifest_status": null,
-        "template_version": null
-      },
       {
         "assigned_role": "template",
         "card_type": "VERB",
@@ -96,11 +61,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[2] = TEMPLATE: SHA-256-verified VERB UNCOMMON structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified VERB UNCOMMON structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/verb/uncommon/template_1024x1536.png",
-        "position": 2,
+        "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "UNCOMMON",
@@ -129,18 +94,18 @@
     "target_type": "VERB"
   },
   "reference_pack_path": "series/2026-Q1/cards/056-ascend/outputs/reference-pack.json",
-  "reference_pack_sha256": "73dbb2c963857404c91000ddb295505853f3b9fa08c08a1dbf2b7da36f722c4e",
+  "reference_pack_sha256": "edb49e2240b1e26d9b039957abdf0eb1b1dfa0dd595d662335dca974d44869b7",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "fix",
+    "mode": "generate",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "revise-image-only",
-    "reference_count": 2,
+    "phase": "rebuild",
+    "reference_count": 1,
     "response_modalities": [
       "IMAGE"
     ]

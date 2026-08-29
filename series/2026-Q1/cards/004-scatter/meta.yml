@@ -15,8 +15,8 @@ stats:
   context: 3
   complexity: 3
 ability: Name a card type. Put the top six cards of the Tower into Sheol, then add
-  up to three of those cards of the named type to your hand; if the cards in your
-  Pages have total CONTEXT fifteen or more, draw one card from the Tower.
+  up to three of those cards of the named type to your hand; if one of your Pages
+  has total CONTEXT twenty-two or more, draw one card from the Tower.
 ot_verse:
   ref: Genesis 11:9
   snippet: from thence did the LORD scatter them abroad upon the face of all the earth

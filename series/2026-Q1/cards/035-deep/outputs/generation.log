@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-29 10:56:26
-Phase: revise-image-only
+Timestamp: 2026-08-29 12:23:13
+Phase: rebuild
 Target Rarity: UNCOMMON
 Target Type: ADJECTIVE
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/035-deep/outputs/reference-inputs/current-2fcc2c6f6adbb6201cedbeaa74fb7d26dfd7c1930c2b154d0f7f5547781bb5ff.png [UNCOMMON] sha256=2fcc2c6f6adbb6201cedbeaa74fb7d26dfd7c1930c2b154d0f7f5547781bb5ff
-  [2] TEMPLATE: templates/card/v001/composed/adjective/uncommon/template_1024x1536.png [UNCOMMON] sha256=2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/adjective/uncommon/template_1024x1536.png [UNCOMMON] sha256=2a38564a595114783d989319870cc6b12f5196a60f172f7add3c059cc24e26f9
 
-Prompt File: series/2026-Q1/cards/035-deep/outputs/prompt.revision.txt
+Prompt File: series/2026-Q1/cards/035-deep/prompt.txt

@@ -1,14 +1,9 @@
 ============================================================
 GRADE RESULT: CLEAN
 ============================================================
-Score: 0/100 (content: 100/100)
-Status: FAIL
-Style Match: False
-Style Issue: Template placeholder leak: DEFINITION TEXT (directly below the card title CLEAN)
+Score: 100/100
+Status: PASS
+Style Match: True
 Style Refs: 1
   - template_1024x1536.png
-
-Corrections Needed:
-  - Remove the template placeholder text DEFINITION TEXT (directly below the card title CLEAN); replace the slot with the supplied content only.
-  - Fix the ability text to read exactly: 'Name a card type. Choose another player; that chosen player puts one card of the named type from that chosen player's hand into Sheol, then draw two cards from the Tower.' (it currently reads: 'Ability: Name a card type. Choose another player; that chosen player puts one card of the named type from that chosen player’s hand into Sheol, then draw two cards from the Tower.').
 ============================================================

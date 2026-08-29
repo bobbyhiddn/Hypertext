@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "f056c76029f38be6782675c3d461b22bf625acc5a85b9d9a6af5838cb5b48043",
+    "gemini_output_sha256": "5e5a5207d44f92721bd324ad0abe91963a49cd95be7a2182e79f7ee9062f77e8",
     "generation_metadata_path": "series/2026-Q1/cards/028-righteous/outputs/generation.json",
-    "generation_metadata_sha256": "7e5fed535337f8b7b2a61ff775182a4dcd9d98d2234c901880cd898a7b53bc19",
+    "generation_metadata_sha256": "152c9b88ecd0cd225203a7005efda80b23ae400c118ffcbb51169b8770b5459c",
     "path": "series/2026-Q1/cards/028-righteous/outputs/card_1024x1536.png",
-    "sha256": "1180f870fbcaa56701bfa0b90bb3017990082d8c657d9637819c74bc683e4e40"
+    "sha256": "b7b0fc12bdf61f5ddb6bccb244bec981c99b934e3c4f3de4d51b760d333345a8"
   },
   "prompt": {
-    "path": "series/2026-Q1/cards/028-righteous/outputs/prompt.revision.txt",
-    "sha256": "a10fdc628663dc499c95ea487e77a5e600789a2468eaeedd3f5e9e0bf147c30e"
+    "path": "series/2026-Q1/cards/028-righteous/prompt.txt",
+    "sha256": "88bd6faec9c3646c71eaa09ab4b97c532d876f452c4676ff06cb8f28a49469d4"
   },
   "recipe": {
-    "canonical_sha256": "1b346ec9dd4a211099ec57d022643ff7079b1b0864d9b3a77c3d407eb4bc1de3",
-    "file_sha256": "6bb4b7e524586e1a64ed8e488ac79d79c50cfe51b4a796a75e71198eed85a2c1",
+    "canonical_sha256": "5f362cad183438d8038596d1281624d1b24436588416df5b68f365acd26b43ba",
+    "file_sha256": "3e683f21fb27d2a1572e78984181aacfc4b8b371c559a50bda553bc5eefc4d95",
     "path": "series/2026-Q1/cards/028-righteous/card.json"
   },
   "reference_pack": {
@@ -50,43 +50,8 @@
     ],
     "contract": "hypertext.gemini.reference-pack/v1",
     "max_examples": 3,
-    "mode": "fix",
+    "mode": "generate",
     "references": [
-      {
-        "assigned_role": "current_card",
-        "card_type": "ADJECTIVE",
-        "eligibility_reasons": [
-          "existing_current_card",
-          "sha256=verified",
-          "requested_fix_source"
-        ],
-        "eligible": true,
-        "gemini_label": "[1] = CURRENT_CARD: card being fixed; preserve it except for the requested corrections",
-        "metadata_path": null,
-        "metadata_sha256": null,
-        "path": "series/2026-Q1/cards/028-righteous/outputs/reference-inputs/current-fac69e831347d9402cebc45b7e4c88c4cbdad25936cf8f160efa3051cf72c5f1.png",
-        "position": 1,
-        "prompt_path": null,
-        "prompt_sha256": null,
-        "rarity": "RARE",
-        "rarity_label": "RARE",
-        "recipe_path": null,
-        "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/series/2026-Q1/cards/028-righteous/outputs/reference-inputs/current-fac69e831347d9402cebc45b7e4c88c4cbdad25936cf8f160efa3051cf72c5f1.png",
-        "review_evidence_path": null,
-        "review_evidence_sha256": null,
-        "role": "current_card",
-        "sha256": "fac69e831347d9402cebc45b7e4c88c4cbdad25936cf8f160efa3051cf72c5f1",
-        "similarity_components": {},
-        "similarity_reason": "not_applicable_current_card",
-        "similarity_score": 0,
-        "source_manifest": null,
-        "source_manifest_sha256": null,
-        "template_commit": null,
-        "template_manifest_schema_version": null,
-        "template_manifest_status": null,
-        "template_version": null
-      },
       {
         "assigned_role": "template",
         "card_type": "ADJECTIVE",
@@ -96,11 +61,11 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[2] = TEMPLATE: SHA-256-verified ADJECTIVE RARE structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified ADJECTIVE RARE structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
         "path": "templates/card/v001/composed/adjective/rare/template_1024x1536.png",
-        "position": 2,
+        "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
         "rarity": "RARE",
@@ -129,18 +94,18 @@
     "target_type": "ADJECTIVE"
   },
   "reference_pack_path": "series/2026-Q1/cards/028-righteous/outputs/reference-pack.json",
-  "reference_pack_sha256": "074067eec7cecb76095b73f7ab730c7ae82f99e9af2490f0189334d21963f8a6",
+  "reference_pack_sha256": "332e62c270e104a206661fe4836b08044b50b68d835129e6c5693d8005343573",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
     "guidance_scale": null,
     "image_size": "2K",
     "max_example_references": 3,
-    "mode": "fix",
+    "mode": "generate",
     "model": "gemini-3.1-flash-image",
     "num_inference_steps": null,
-    "phase": "revise-image-only",
-    "reference_count": 2,
+    "phase": "rebuild",
+    "reference_count": 1,
     "response_modalities": [
       "IMAGE"
     ]

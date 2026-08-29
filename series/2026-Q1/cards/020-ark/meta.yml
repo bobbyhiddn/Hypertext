@@ -15,8 +15,8 @@ stats:
   context: 2
   complexity: 4
 ability: Choose up to three cards in Sheol whose card type is in the Chapter Lot and
-  add those chosen cards to your hand. If the cards in your Pages have total LORE
-  fifteen or more, draw one card from the Tower.
+  add those chosen cards to your hand. If one of your Pages has total LORE twenty-two
+  or more, draw one card from the Tower.
 ot_verse:
   ref: Genesis 6:14
   snippet: Make thee an ark of gopher wood ... and shalt pitch it within and without

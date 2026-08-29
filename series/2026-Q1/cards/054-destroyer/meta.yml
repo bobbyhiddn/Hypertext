@@ -5,26 +5,26 @@ card_type: TITLE
 rarity: RARE
 series: 2026-Q1
 set: Babel
-art_prompt: A moonlit Egyptian street at midnight, a towering shadow sweeping past a doorway
-  whose lintel glows red-gold in lamplight, palm silhouettes and deep indigo darkness beyond,
-  one radiant golden light within the door, luminous cinematic oil painting with impressionistic
-  brushwork, deep shadowed background, one radiant golden light source, rich saturated blues
-  and golds
+art_prompt: A moonlit Egyptian street at midnight, a towering shadow sweeping past
+  a doorway whose lintel glows red-gold in lamplight, palm silhouettes and deep indigo
+  darkness beyond, one radiant golden light within the door, luminous cinematic oil
+  painting with impressionistic brushwork, deep shadowed background, one radiant golden
+  light source, rich saturated blues and golds
 stats:
   lore: 3
   context: 2
   complexity: 4
 stats_rationale:
-  lore: the Passover destroyer and the plague of 1 Corinthians 10 carry the theme of judgment
-    passing over the marked; a recognized theme rather than a doctrine
-  context: mashchit occurs 19 times in the Hebrew Bible; olothreutes occurs 1 time in the
-    New Testament (1 Cor 10:10); total 20
-  complexity: mashchit is the Hiphil participle of shachath, to ruin or corrupt, and also
-    means the pit; the Septuagint's olethreuon in Exodus 12 becomes Paul's olothreutes, a
-    New Testament hapax, and Revelation names the same office Apollyon
-ability: Choose another player; that chosen player puts two cards from that chosen player's
-  hand into Sheol. Then draw two cards from the Tower and add one card from Sheol to your
-  hand.
+  lore: the Passover destroyer and the plague of 1 Corinthians 10 carry the theme
+    of judgment passing over the marked; a recognized theme rather than a doctrine
+  context: mashchit occurs 19 times in the Hebrew Bible; olothreutes occurs 1 time
+    in the New Testament (1 Cor 10:10); total 20
+  complexity: mashchit is the Hiphil participle of shachath, to ruin or corrupt, and
+    also means the pit; the Septuagint's olethreuon in Exodus 12 becomes Paul's olothreutes,
+    a New Testament hapax, and Revelation names the same office Apollyon
+ability: Choose another player; that chosen player puts two cards from that player's
+  hand into Sheol. Then draw two cards from the Tower and add one card from Sheol
+  to your hand.
 ot_verse:
   ref: Exodus 12:23
   snippet: will not suffer the destroyer to come in unto your houses
@@ -40,16 +40,16 @@ hebrew:
 ot_refs: Exod 12:23 • 2 Sam 24:16 • Jer 51:25
 nt_refs: 1 Cor 10:10
 trivia:
-- Mashchit is a participle - the one ruining - and the same word names the pit of corruption
-  in Psalm 55.
+- Mashchit is a participle - the one ruining - and the same word names the pit of
+  corruption in Psalm 55.
 - Paul's olothreutes in 1 Corinthians 10 is a New Testament hapax, echoing the Septuagint's
   word for the Passover destroyer.
 - Revelation gives the office a name in two tongues, Abaddon and Apollyon - the Destroyer.
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: Promoted UNCOMMON -> RARE 2026-08-28 under the word-weight rule (weight 4); ability
-  redesigned to RARE strength.
+notes: Promoted UNCOMMON -> RARE 2026-08-28 under the word-weight rule (weight 4);
+  ability redesigned to RARE strength.
 sources: []
 search_queries: []
 weight: 4

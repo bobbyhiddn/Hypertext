@@ -15,7 +15,7 @@ stats:
   context: 5
   complexity: 3
 ability: Look at the top three cards of the Tower. Add one of those cards that has
-  LORE three or more to your hand and put the other cards on the bottom of the Tower.
+  LORE four or more to your hand and put the other cards on the bottom of the Tower.
 ot_verse:
   ref: Genesis 1:31
   snippet: God saw every thing that he had made, and, behold, it was very good

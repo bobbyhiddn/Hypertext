@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/089-priest/outputs/card_1024x1536.png",
-    "sha256": "b0719341ff8bf42e1ca6b841fd96ad716f53104631c591c54b2cacf237d06a97"
+    "sha256": "748838b5660fa187f49bec19220b8b946194aed64494d7d790a6953be39e8db8"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/089-priest/card.json",
-    "sha256": "2c13a6a5f8b5f883dd6e6e32de08f303e68983ba0535df04e1d362ebf5fc3d16"
+    "sha256": "66c1ab2c32a87573bb19274c1e4580202e1ef143496b47add3a593b9953da9c8"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/089-priest/outputs/card_1024x1536.png",
-      "sha256": "b0719341ff8bf42e1ca6b841fd96ad716f53104631c591c54b2cacf237d06a97"
+      "sha256": "748838b5660fa187f49bec19220b8b946194aed64494d7d790a6953be39e8db8"
     },
     "candidate_features": [
       {
@@ -53,7 +53,7 @@
           "vertical_coverage": 1.0
         },
         "height": 27,
-        "ink_area": 237.0,
+        "ink_area": 240.0,
         "kind": "plus",
         "width": 26
       },
@@ -73,7 +73,7 @@
           "vertical_coverage": 0.963
         },
         "height": 81,
-        "ink_area": 3773.0,
+        "ink_area": 3805.0,
         "kind": "card",
         "width": 57
       }
@@ -87,7 +87,7 @@
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "d334a3dda05fbb137b23c046ddcaa29e55ff1bb5e505ea4b4b1a7d88bf7d0074",
+      "canonical_sha256": "62115953dd11e66aeb112e755791dfca4fadc375e0b36a77b48478b181454bd9",
       "declared_display": "+\ud83c\udca0"
     },
     "region": [
@@ -162,8 +162,8 @@
   },
   "fixed_elements": {
     "contract": "hypertext.fixed-elements/v1",
-    "face_sha256_after": "b0719341ff8bf42e1ca6b841fd96ad716f53104631c591c54b2cacf237d06a97",
-    "face_sha256_before": "e9a31eae26bfc425ab73beefa5c61122c0614b7300ed9357af15aa62d21fa63e",
+    "face_sha256_after": "748838b5660fa187f49bec19220b8b946194aed64494d7d790a6953be39e8db8",
+    "face_sha256_before": "2b86112b8d6d6dbcbb93a7e4d49a03f6b977d36a897504189b88a3d849e7706c",
     "font_sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4",
     "regions": {
       "footer": [
@@ -171,15 +171,15 @@
         0
       ],
       "number": [
-        0,
-        -2
+        1,
+        -1
       ],
       "stat_pips": [
         0,
         0
       ],
       "type_pill": [
-        -1,
+        0,
         0
       ]
     },
@@ -194,7 +194,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/089-priest/outputs/card_1024x1536.png",
-      "sha256": "b0719341ff8bf42e1ca6b841fd96ad716f53104631c591c54b2cacf237d06a97"
+      "sha256": "748838b5660fa187f49bec19220b8b946194aed64494d7d790a6953be39e8db8"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -223,27 +223,27 @@
       "word_width": 62
     },
     "observed": {
-      "cap_height": 21,
+      "cap_height": 23,
       "diamond": [
-        225,
+        226,
         262
       ],
       "diamond_colour": [
-        212,
-        159,
-        34
+        208,
+        156,
+        28
       ],
-      "gap": 32,
-      "left_inset": 77,
+      "gap": 33,
+      "left_inset": 71,
       "word": [
-        132,
+        130,
         193
       ],
       "word_rows": [
-        28,
-        49
+        27,
+        50
       ],
-      "word_width": 61
+      "word_width": 63
     },
     "passed": true,
     "region": {
@@ -309,7 +309,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 191.0121,
+            "outside_median_luma": 190.9232,
             "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
@@ -367,7 +367,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.71,
+            "outside_median_luma": 209.79,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -396,7 +396,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.5473,
+            "outside_median_luma": 212.441,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -425,7 +425,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.37,
+            "outside_median_luma": 215.4422,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -462,7 +462,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 214.6392,
+            "outside_median_luma": 215.0074,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -491,7 +491,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.6536,
+            "outside_median_luma": 213.5126,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -520,7 +520,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 214.7952,
+            "outside_median_luma": 215.152,
             "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "filled",
@@ -549,7 +549,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.7081,
+            "outside_median_luma": 212.6502,
             "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "filled",
@@ -578,7 +578,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.9001,
+            "outside_median_luma": 211.731,
             "outside_palette_rgb_distance": 5.3852
           },
           "observed_state": "filled",
@@ -615,7 +615,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.6871,
+            "outside_median_luma": 208.1396,
             "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
@@ -644,7 +644,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.3676,
+            "outside_median_luma": 211.3189,
             "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
@@ -673,7 +673,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.6155,
+            "outside_median_luma": 209.733,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -702,7 +702,7 @@
             "middle_median_luma": 193.1296,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 198.5215,
+            "outside_median_luma": 198.6192,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -731,7 +731,7 @@
             "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.2754,
+            "outside_median_luma": 192.266,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",

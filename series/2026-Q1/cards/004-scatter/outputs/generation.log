@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-29 11:00:35
-Phase: revise-image-only
+Timestamp: 2026-08-29 12:10:47
+Phase: rebuild
 Target Rarity: RARE
 Target Type: VERB
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/004-scatter/outputs/reference-inputs/current-c6dc585b1b6d0440c6620a4247b00718b5b5fc1e2ae3f1080165a73e10ca392e.png [RARE] sha256=c6dc585b1b6d0440c6620a4247b00718b5b5fc1e2ae3f1080165a73e10ca392e
-  [2] TEMPLATE: templates/card/v001/composed/verb/rare/template_1024x1536.png [RARE] sha256=1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/verb/rare/template_1024x1536.png [RARE] sha256=1c73f6ea5a1860045c00ed6319723c5953d197caa8e476681783e62df302d5a4
 
-Prompt File: series/2026-Q1/cards/004-scatter/outputs/prompt.revision.txt
+Prompt File: series/2026-Q1/cards/004-scatter/prompt.txt

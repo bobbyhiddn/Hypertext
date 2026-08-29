@@ -15,9 +15,9 @@ stats:
   lore: 3
   context: 4
   complexity: 4
-ability: Choose another player; that chosen player puts one card from that chosen
-  player's hand into Sheol. Then choose up to two cards in Sheol with LORE four or
-  more and add those chosen cards to your hand.
+ability: Choose another player; that chosen player puts one card from that player's
+  hand into Sheol. Then choose up to two cards in Sheol with LORE four or more and
+  add those chosen cards to your hand.
 ot_verse:
   ref: Genesis 6:4
   snippet: the same became mighty men which were of old, men of renown

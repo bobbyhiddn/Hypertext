@@ -88,7 +88,7 @@ term.
 ## 5. Rulings abilities rely on
 
 - **Pages keep their value.** A Page scores its Chapter Value once created; an
-  ability may return a card from a Page to its owner's hand and the Page still
+  card recorded into a Page never leaves it - a Page may only be read - and it still
   scores in full.
 - **Activate.** *"Activate that chosen card"* resolves the card's ability at
   once as if it were the revealed card: no Letter access cost, its printed

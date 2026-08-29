@@ -15,9 +15,9 @@ stats:
   lore: 3
   context: 2
   complexity: 3
-ability: Choose another player. That chosen player reveals one card from that chosen
-  player's hand; then choose two cards in Sheol of that revealed card's card type
-  and add those chosen cards to your hand.
+ability: Choose another player. That chosen player reveals one card from that player's
+  hand; then choose two cards in Sheol of that revealed card's card type and add those
+  chosen cards to your hand.
 ot_verse:
   ref: Genesis 2:25
   snippet: And they were both naked, the man and his wife, and were not ashamed

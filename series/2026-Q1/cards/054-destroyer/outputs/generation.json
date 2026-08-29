@@ -1,32 +1,32 @@
 {
   "attempts": 1,
   "height": 1536,
-  "latency_ms": 15426,
+  "latency_ms": 16402,
   "mime_type": "image/png",
   "model": "gemini-3.1-flash-image",
-  "output_sha256": "cc5bf3ef18785b0923772cddeed870f4d563ac15c9f73edbe7427892b2e0fec5",
-  "reference_count": 1,
+  "output_sha256": "232f99d3b34b9196f765d783d3faef52cf51267516acd8dd9b8119a6b459ed74",
+  "reference_count": 2,
   "status": "success",
   "usage_metadata": {
-    "candidates_token_count": 2421,
+    "candidates_token_count": 2090,
     "candidates_tokens_details": [
       {
         "modality": "IMAGE",
         "token_count": 1680
       }
     ],
-    "prompt_token_count": 3207,
+    "prompt_token_count": 3603,
     "prompt_tokens_details": [
       {
         "modality": "TEXT",
-        "token_count": 2949
+        "token_count": 3087
       },
       {
         "modality": "IMAGE",
-        "token_count": 258
+        "token_count": 516
       }
     ],
-    "total_token_count": 5628
+    "total_token_count": 5693
   },
   "width": 1024
 }

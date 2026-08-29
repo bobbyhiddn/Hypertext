@@ -4,72 +4,72 @@
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "e9e41fa474e7fe7e47f502b1653d77369a8193fd6f407c53f13cba45d1908378",
-      "output_sha256": "e9e41fa474e7fe7e47f502b1653d77369a8193fd6f407c53f13cba45d1908378",
+      "input_sha256": "34bd99009a2229bfbc96653bbd78b5716002f69a4d52f1147ed035320b0b6e77",
+      "output_sha256": "34bd99009a2229bfbc96653bbd78b5716002f69a4d52f1147ed035320b0b6e77",
       "repaired": false,
       "stage": "plan",
       "status": "success",
-      "timestamp": "2026-08-29T01:11:54.744310+00:00"
+      "timestamp": "2026-08-29T16:51:45.041889+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "e9e41fa474e7fe7e47f502b1653d77369a8193fd6f407c53f13cba45d1908378",
-      "output_sha256": "0c91a490583f87c4190737944d33f8d1080adef5e52c6c14757041c472fb74d5",
+      "input_sha256": "34bd99009a2229bfbc96653bbd78b5716002f69a4d52f1147ed035320b0b6e77",
+      "output_sha256": "c91dd282a49fa6aa6732b9d4491a81b0133e2b6e0d71115ac28e190bdb273bc3",
       "repaired": false,
       "stage": "prompt",
       "status": "success",
-      "timestamp": "2026-08-29T01:11:54.744396+00:00"
+      "timestamp": "2026-08-29T16:51:45.041993+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
       "input_sha256": "ff65484960d97e24901adece9244b884214a91965ff8547e43860e27ae91746b",
-      "output_sha256": "64887adb71e2817b2c0cc544550378a67fbacd6d24d4542929f35ec2081eb8a6",
+      "output_sha256": "804ae6e4892ed5dcf306c06fc6c485762763a1461f31a204b978e79a44cfd0eb",
       "repaired": false,
       "stage": "references",
       "status": "success",
-      "timestamp": "2026-08-29T01:11:54.744422+00:00"
+      "timestamp": "2026-08-29T16:51:45.042024+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "0c91a490583f87c4190737944d33f8d1080adef5e52c6c14757041c472fb74d5",
-      "output_sha256": "5a5d422683450c9d6c9b5d881dfe2b1ffc07931ec752d7c69960e205b7e26b55",
+      "input_sha256": "c91dd282a49fa6aa6732b9d4491a81b0133e2b6e0d71115ac28e190bdb273bc3",
+      "output_sha256": "56e68331b05e5c0b2aea8c0489fcf991df85ddb86591104b151450ffc18b9036",
       "repaired": false,
       "stage": "image_request",
       "status": "success",
-      "timestamp": "2026-08-29T01:11:54.744463+00:00"
+      "timestamp": "2026-08-29T16:51:45.042075+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "7036cd7143bbf28ac7e64d6ef00ecd2f2f04ca94a64bc4a2f415c14ead2fd694",
-      "output_sha256": "1d6f512dd3f2ce6aef91037db5bece2456cdcdf48189410deb926806be84b37a",
+      "input_sha256": "99c009c689cd92f29ebe850772b955d6e94ac1671f46c1a17b87268f26c738e2",
+      "output_sha256": "a55323d8faa33a3a3d188628cdef319fd090c0007ca136d27f962e5958f21269",
       "repaired": false,
       "stage": "candidate",
       "status": "success",
-      "timestamp": "2026-08-29T01:11:54.786566+00:00"
+      "timestamp": "2026-08-29T16:51:45.089112+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "e9e41fa474e7fe7e47f502b1653d77369a8193fd6f407c53f13cba45d1908378",
+      "input_sha256": "34bd99009a2229bfbc96653bbd78b5716002f69a4d52f1147ed035320b0b6e77",
       "output_sha256": "3ef9367bef59dc8380816fe6878b838957bf577de52b6bfc5085faf6c47a19c4",
       "repaired": true,
       "stage": "revision",
       "status": "success",
-      "timestamp": "2026-08-29T01:11:54.786673+00:00"
+      "timestamp": "2026-08-29T16:50:38.240838+00:00"
     },
     {
       "attempt": 1,
       "contract": "hypertext-quality/v1",
-      "input_sha256": "491f0b535a748ee8b1062268a92e1fd8e2c49ba09f4f2caad74dbad0f17cfa28",
+      "input_sha256": "7aee90200b3a5f82a049cbd33162cef312e730da98a99046f60bf9d5a915ada2",
       "output_sha256": "2d17f3c934f5136136b0eb27b53cddde8bd4156df5aea0a75d91fa8893ec47ac",
       "repaired": false,
       "stage": "review",
       "status": "success",
-      "timestamp": "2026-08-29T01:12:32.555216+00:00"
+      "timestamp": "2026-08-29T16:52:34.324075+00:00"
     }
   ]
 }

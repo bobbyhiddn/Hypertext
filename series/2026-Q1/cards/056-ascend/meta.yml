@@ -5,24 +5,26 @@ card_type: VERB
 rarity: UNCOMMON
 series: 2026-Q1
 set: Babel
-art_prompt: A colossal brick ziggurat spiraling up into storm clouds, tiny figures climbing
-  its ramps seen from far below, a break of radiant golden light at the summit against deep
-  indigo sky, luminous cinematic oil painting with impressionistic brushwork, deep shadowed
-  background, one radiant golden light source, rich saturated blues and golds
+art_prompt: A colossal brick ziggurat spiraling up into storm clouds, tiny figures
+  climbing its ramps seen from far below, a break of radiant golden light at the summit
+  against deep indigo sky, luminous cinematic oil painting with impressionistic brushwork,
+  deep shadowed background, one radiant golden light source, rich saturated blues
+  and golds
 stats:
   lore: 4
   context: 5
   complexity: 3
 stats_rationale:
-  lore: no man hath ascended up to heaven but he that came down - the ascension and the futility
-    of climbing to God by strength are doctrine-bearing themes, though the verb itself is
-    ordinary
-  context: alah occurs 890 times in the Hebrew Bible; anabaino occurs 82 times in the New
-    Testament; total 972
-  complexity: alah underlies olah, the burnt offering that goes up, and the modern aliyah;
-    anabaino gives the ascension its name - a derivation worth explaining
-ability: Look at the top four cards of the Tower. Add up to two of those cards that each have
-  LORE three or more to your hand and put the other cards on top of the Tower in any order.
+  lore: no man hath ascended up to heaven but he that came down - the ascension and
+    the futility of climbing to God by strength are doctrine-bearing themes, though
+    the verb itself is ordinary
+  context: alah occurs 890 times in the Hebrew Bible; anabaino occurs 82 times in
+    the New Testament; total 972
+  complexity: alah underlies olah, the burnt offering that goes up, and the modern
+    aliyah; anabaino gives the ascension its name - a derivation worth explaining
+ability: Look at the top four cards of the Tower. Add up to two of those cards that
+  each have LORE four or more to your hand and put the other cards on top of the Tower
+  in any order.
 ot_verse:
   ref: Isaiah 14:13
   snippet: thou hast said in thine heart, I will ascend into heaven
@@ -38,12 +40,12 @@ hebrew:
 ot_refs: Isa 14:13 • Ps 24:3 • Gen 28:12
 nt_refs: John 3:13 • Eph 4:8 • Rom 10:6
 trivia:
-- The burnt offering is the olah, the going-up, from the same verb - sacrifice ascends where
-  the builders could not.
+- The burnt offering is the olah, the going-up, from the same verb - sacrifice ascends
+  where the builders could not.
 - The king of Babylon boasts I will ascend into heaven in Isaiah 14, the tower's ambition
   in one sentence.
-- Jacob's ladder shows angels ascending and descending; John 1:51 says they do so upon the
-  Son of man.
+- Jacob's ladder shows angels ascending and descending; John 1:51 says they do so
+  upon the Son of man.
 wild_id: null
 wild_counts_as: null
 letter: null

@@ -15,8 +15,8 @@ stats:
   lore: 5
   context: 4
   complexity: 4
-ability: Each player draws one card from the Tower. Then return one card from one
-  of your Pages to your hand and draw two cards from the Tower.
+ability: Each player draws one card from the Tower. Then draw three cards from the
+  Tower and gain one Letter.
 ot_verse:
   ref: Genesis 6:8
   snippet: But Noah found grace in the eyes of the LORD

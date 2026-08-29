@@ -14,8 +14,8 @@ stats:
   lore: 5
   context: 4
   complexity: 4
-ability: Choose another player. Exchange your Lot with that chosen player's Lot, then
-  gain one Letter.
+ability: Put this card in front of you. When any player records a Page, you may activate
+  one card in that Page; that activated card stays in that Page.
 ot_verse:
   ref: Genesis 9:13
   snippet: I do set my bow in the cloud, and it shall be for a token of a covenant

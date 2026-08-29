@@ -39,7 +39,7 @@
         2
       ],
       "text": "ADJECTIVE",
-      "ghost_pixels": 940
+      "ghost_pixels": 944
     },
     "number": {
       "box": [
@@ -68,6 +68,6 @@
       "text": "SERIES: 2026-Q1 Babel"
     }
   },
-  "face_sha256_before": "a52ccaf24dc5b6cfdcbf881a528c5de407022ae140921953f684e89ab399e81f",
-  "face_sha256_after": "18435646b1ec0eeefc40f412cc17329e20d4080e4ec0198d12bc72a3d230c92f"
+  "face_sha256_before": "e402ee9da3654a448821fb7090f49c2d850d82934e3f92d7d76f449442bdb028",
+  "face_sha256_after": "55f96009da3e731e80f91129ce410942dc94f1a57534c8f7fc3bd82f3886ffe2"
 }

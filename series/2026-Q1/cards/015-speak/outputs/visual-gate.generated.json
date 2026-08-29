@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/015-speak/outputs/card_1024x1536.png",
-    "sha256": "837997cf273b38233b0138531c13a1ab877a54141a8b720ed9bcfef40a8f7d1f"
+    "sha256": "648abd02f1d964926569c4cc8335a6d6e1210ba7f34e49faed3f4907f2cec989"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/015-speak/card.json",
-    "sha256": "9ade2976bca27f7821eb970dc89f856241f1462dae24dd746f2e92867b624f1c"
+    "sha256": "af16e34de3e6aac35c20093e19edf2c40329c0933c4d4f0f530ed7829b73b2a0"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/015-speak/outputs/card_1024x1536.png",
-      "sha256": "837997cf273b38233b0138531c13a1ab877a54141a8b720ed9bcfef40a8f7d1f"
+      "sha256": "648abd02f1d964926569c4cc8335a6d6e1210ba7f34e49faed3f4907f2cec989"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -46,7 +46,7 @@
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "bef639bc733346ec838dad95b616e2a6ac61460b3f3a691316a65cf3da3ece09",
+      "canonical_sha256": "b21881ec8815e133999b9f7638ef1eb12b159170d94c4ea593ec7556c8f11005",
       "declared_display": null
     },
     "region": [
@@ -80,8 +80,8 @@
   },
   "fixed_elements": {
     "contract": "hypertext.fixed-elements/v1",
-    "face_sha256_after": "837997cf273b38233b0138531c13a1ab877a54141a8b720ed9bcfef40a8f7d1f",
-    "face_sha256_before": "f4fc9dfe9c8492470e7e96351cec992270441c88f50ed05a53f41a32d32cb69e",
+    "face_sha256_after": "648abd02f1d964926569c4cc8335a6d6e1210ba7f34e49faed3f4907f2cec989",
+    "face_sha256_before": "148f3877121ceeaae5ad6224e9292daba652de011591ec6b17f12899dcc40637",
     "font_sha256": "9caef765d2e891c10dd73658894f01e660fe0c1c83e0bda7d6edf561d8f623d4",
     "regions": {
       "footer": [
@@ -89,8 +89,8 @@
         0
       ],
       "number": [
-        1,
-        0
+        0,
+        -1
       ],
       "stat_pips": [
         0,
@@ -112,7 +112,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/015-speak/outputs/card_1024x1536.png",
-      "sha256": "837997cf273b38233b0138531c13a1ab877a54141a8b720ed9bcfef40a8f7d1f"
+      "sha256": "648abd02f1d964926569c4cc8335a6d6e1210ba7f34e49faed3f4907f2cec989"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -147,9 +147,9 @@
         262
       ],
       "diamond_colour": [
-        119,
+        115,
         178,
-        137
+        134
       ],
       "gap": 14,
       "left_inset": 16,
@@ -227,7 +227,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 191.2178,
+            "outside_median_luma": 191.3456,
             "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
@@ -256,7 +256,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 204.5327,
+            "outside_median_luma": 204.4739,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -285,7 +285,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.855,
+            "outside_median_luma": 209.8971,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -314,7 +314,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.3842,
+            "outside_median_luma": 212.5046,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -343,7 +343,7 @@
             "middle_median_luma": 213.0774,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.4422,
+            "outside_median_luma": 215.6562,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -380,7 +380,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 214.8628,
+            "outside_median_luma": 214.9745,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -409,7 +409,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 213.6301,
+            "outside_median_luma": 213.5458,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -438,7 +438,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 214.9998,
+            "outside_median_luma": 215.4424,
             "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "filled",
@@ -467,7 +467,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 212.6135,
+            "outside_median_luma": 213.1542,
             "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "filled",
@@ -496,7 +496,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.9705,
+            "outside_median_luma": 211.8319,
             "outside_palette_rgb_distance": 5.3852
           },
           "observed_state": "filled",
@@ -533,7 +533,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.8983,
+            "outside_median_luma": 207.7032,
             "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
@@ -562,7 +562,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.5576,
+            "outside_median_luma": 211.4358,
             "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
@@ -591,7 +591,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.7651,
+            "outside_median_luma": 209.733,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -620,7 +620,7 @@
             "middle_median_luma": 193.1296,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 198.7694,
+            "outside_median_luma": 198.9519,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -649,7 +649,7 @@
             "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 192.345,
+            "outside_median_luma": 192.3396,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
