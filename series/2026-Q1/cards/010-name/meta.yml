@@ -62,5 +62,5 @@ revision_notes: "General revision request (you may modify any content field as n
   \ destiny and identity.\n\nCard field changes (from preview):\n  ABILITY_TEXT: 'Draw 1.\
   \ If you have a NAME in your Pages, draw 1 more.' -> 'Draw 1. If you have a NAME in your\
   \ Pages, draw 3 more.'"
-weight: 4
-weight_rationale: '"let us make us a name" - Babel''s motive'
+weight: 3
+weight_rationale: '"let us make us a name" - thematic; demoted 2026-08-28 (user)'

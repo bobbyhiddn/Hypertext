@@ -1,19 +1,19 @@
 {
   "contract": "hypertext.full-card-generation-provenance/v1",
   "output": {
-    "gemini_output_sha256": "52192612842c96ce191231fa1f3e9999e6a4c6cf3794024b7a1c23d827dc5c9f",
+    "gemini_output_sha256": "8071819ef9efcd0b1d30d953e857abcf76428f2358d06d384cd5171686ad7081",
     "generation_metadata_path": "series/2026-Q1/cards/060-eden/outputs/generation.json",
-    "generation_metadata_sha256": "3bec044f463f1ab0b05d8c8f6938f690fdc5990a47058770869ca82aa38348e9",
+    "generation_metadata_sha256": "2f88cee2de1b3b001409dc24dbd7e1d05fa83597394b0d5519cb3f8b34eba973",
     "path": "series/2026-Q1/cards/060-eden/outputs/card_1024x1536.png",
-    "sha256": "b7f4a90050ce8b56ae03abf6b1e3de3c6204d850561776da7e07cc21bc92176b"
+    "sha256": "f68fb3406a222cbdbb23fe689c43e2135b117238ca78db8a93d5bf03230ea0d8"
   },
   "prompt": {
     "path": "series/2026-Q1/cards/060-eden/prompt.txt",
-    "sha256": "cb32184338d0d403c3eeacd5346d8fc4411bc315e36f67c40cc2050392449612"
+    "sha256": "106893b35bcb5452afd2970375701cae8705822c821d60d2ad98ff1267cd5d0b"
   },
   "recipe": {
-    "canonical_sha256": "444dddfdcf21eff6ba90e8da04a2a379e785f5c9f241c4602e8b11331dc32a74",
-    "file_sha256": "e54f346b45b44eff43e732ad51230ebabbc2dab503d8df3ff20a8c36818dccad",
+    "canonical_sha256": "f6652842309452354c954cacc0218087d0121de53b55e6acbd0b08c3855dafd0",
+    "file_sha256": "1cc56a5c6231e803d1b82fd64feadb48de7cc643b8b2e1c21eb73639901d99e6",
     "path": "series/2026-Q1/cards/060-eden/card.json"
   },
   "reference_pack": {
@@ -23,7 +23,8 @@
         "card_type": "NAME",
         "eligibility_reasons": [
           "status=retired",
-          "legacy!=false"
+          "legacy!=false",
+          "target_rarity_mismatch=COMMON"
         ],
         "eligible": false,
         "id": "013-moses",
@@ -59,22 +60,22 @@
           "sha256=verified"
         ],
         "eligible": true,
-        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NAME COMMON structural layout/frame reference",
+        "gemini_label": "[1] = TEMPLATE: SHA-256-verified NAME RARE structural layout/frame reference",
         "metadata_path": null,
         "metadata_sha256": null,
-        "path": "templates/card/v001/composed/name/common/template_1024x1536.png",
+        "path": "templates/card/v001/composed/name/rare/template_1024x1536.png",
         "position": 1,
         "prompt_path": null,
         "prompt_sha256": null,
-        "rarity": "COMMON",
-        "rarity_label": "COMMON",
+        "rarity": "RARE",
+        "rarity_label": "RARE",
         "recipe_path": null,
         "recipe_sha256": null,
-        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/common/template_1024x1536.png",
+        "resolved_path": "/home/cap/Code/Hypertext/templates/card/v001/composed/name/rare/template_1024x1536.png",
         "review_evidence_path": null,
         "review_evidence_sha256": null,
         "role": "template",
-        "sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
+        "sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
         "similarity_components": {},
         "similarity_reason": "authoritative_structure_not_ranked",
         "similarity_score": 0,
@@ -88,11 +89,11 @@
     ],
     "repo_root": "/home/cap/Code/Hypertext",
     "selection_contract": "exact type+rarity eligibility; accepted, finished, nonlegacy, nonsuperseded, SHA-256-verified assets only; rank by 35% art tokens + 30% semantic content + 20% serialized prompt tokens + 15% stat proximity; break ties by SHA-256 then path",
-    "target_rarity": "COMMON",
+    "target_rarity": "RARE",
     "target_type": "NAME"
   },
   "reference_pack_path": "series/2026-Q1/cards/060-eden/outputs/reference-pack.json",
-  "reference_pack_sha256": "915bde8ec22c3a420c0a73b12f06a6ee1231ab91280b7c18b21f9d6ab4d4c9ab",
+  "reference_pack_sha256": "97a767497a6ffea26ac55571de6f0438d7c0cd24c13c59027d796076555836d4",
   "settings": {
     "aspect_ratio": "2:3",
     "full_card_generation": true,
@@ -110,6 +111,6 @@
   },
   "target": {
     "card_type": "NAME",
-    "rarity": "COMMON"
+    "rarity": "RARE"
   }
 }

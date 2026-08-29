@@ -227,7 +227,7 @@ slots:
 - slot_id: BABEL-051
   number: 51
   type: NAME
-  rarity: COMMON
+  rarity: RARE
   word: ABRAM
   gloss: Called from Ur to be a blessing.
   alternate: EBER
@@ -235,6 +235,7 @@ slots:
   stat_profile: balanced
   theme: the remnant and covenant line
   status: planned
+  note: 'Promoted to RARE 2026-08-28: word weight 4 (user).'
 - slot_id: BABEL-052
   number: 52
   type: VERB
@@ -330,7 +331,7 @@ slots:
 - slot_id: BABEL-060
   number: 60
   type: NAME
-  rarity: COMMON
+  rarity: RARE
   word: EDEN
   gloss: The garden home, a lost paradise.
   alternate: ARARAT
@@ -338,6 +339,7 @@ slots:
   stat_profile: high LORE
   theme: echoes of creation and flood
   status: planned
+  note: 'Promoted to RARE 2026-08-28: word weight 4 (user).'
 - slot_id: BABEL-061
   number: 61
   type: NOUN

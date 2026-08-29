@@ -44,7 +44,7 @@ combination_targets:
   COMMON_NOUN: 6
   COMMON_VERB: 8
   COMMON_ADJECTIVE: 8
-  COMMON_NAME: 6
+  COMMON_NAME: 4   # 2026-08-28: two NAME slots moved to RARE (word weight: SODOM, DESTROYER, EDEN, ABRAM are heavy names)
   COMMON_TITLE: 8
 
   # UNCOMMON (32 cards total - 35% of set)
@@ -58,7 +58,7 @@ combination_targets:
   RARE_NOUN: 2
   RARE_VERB: 3
   RARE_ADJECTIVE: 3
-  RARE_NAME: 2
+  RARE_NAME: 4     # 2026-08-28: was 2; the era has more heavy names than the grid assumed
   RARE_TITLE: 3
 
   # GLORIOUS (9 cards total - 10% of set)

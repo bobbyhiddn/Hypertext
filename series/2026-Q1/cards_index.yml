@@ -2,11 +2,13 @@ words:
 - ABRAM
 - ADAM
 - ARK
+- ASCEND
 - BABBLE
 - BRICK
 - BROTHER
 - BUILD
 - CHOOSE
+- CHOSEN
 - CITY
 - CONFUSE
 - COVENANT
@@ -14,11 +16,17 @@ words:
 - CURSE
 - DARK
 - DEEP
+- DEPART
 - DESCEND
+- DESTROYER
+- DISCORD
 - EARTH
+- EDEN
 - ELDER
 - ENOCH
+- FAITHFUL
 - FILLED
+- FIRE
 - FOREIGN
 - FORM
 - GATHER
@@ -26,6 +34,7 @@ words:
 - GRACE
 - HEAR
 - HIGH
+- HOVER
 - HUNTER
 - KEEPER
 - KINGDOM
@@ -35,6 +44,7 @@ words:
 - NAKED
 - NAME
 - NATION
+- NEW
 - NOAH
 - REDEEMER
 - REMEMBER
@@ -43,6 +53,7 @@ words:
 - SEED
 - SETH
 - SHEM
+- SHEPHERD
 - SHINAR
 - SODOM
 - SPEAK
@@ -53,13 +64,16 @@ words:
 ability_patterns:
 - add_hand_choice_discard_tower
 - add_hand_choice_draw_sheol_stat_complexity_tower
+- add_hand_choice_draw_sheol_tower
 - add_hand_choice_sheol
 - add_hand_choice_sheol_stat_complexity
 - add_hand_choice_sheol_tower
 - add_hand_conditional_draw_stat_complexity_tower
+- add_hand_conditional_draw_tower_type_name
 - add_hand_conditional_tower_type_name
 - add_hand_discard_look_top_tower
 - add_hand_discard_look_top_tower_type_name
+- add_hand_look_top_stat_lore_tower
 - add_hand_look_top_tower
 - add_hand_sheol
 - add_hand_sheol_tower
@@ -67,10 +81,12 @@ ability_patterns:
 - add_hand_tower_type_name
 - choice_discard_draw_stat_lore
 - choice_draw
+- choice_draw_sheol_tower
 - choice_draw_tower
 - conditional_discard_draw_type_verb
 - conditional_draw
 - conditional_draw_pages_type_name
+- conditional_draw_tower_type_name
 - conditional_draw_tower_type_noun
 - conditional_draw_type_name
 - conditional_look_top_tower
@@ -278,7 +294,7 @@ cards:
 - number: 38
   word: SODOM
   type: NAME
-  rarity: UNCOMMON
+  rarity: RARE
   ability_pattern: add_hand_sheol_tower
 - number: 39
   word: KINGDOM
@@ -343,5 +359,55 @@ cards:
 - number: 51
   word: ABRAM
   type: NAME
+  rarity: RARE
+  ability_pattern: draw_look_top_tower
+- number: 52
+  word: HOVER
+  type: VERB
+  rarity: GLORIOUS
+  ability_pattern: add_hand_choice_draw_sheol_tower
+- number: 53
+  word: NEW
+  type: ADJECTIVE
+  rarity: COMMON
+  ability_pattern: add_hand_tower
+- number: 54
+  word: DESTROYER
+  type: TITLE
+  rarity: RARE
+  ability_pattern: choice_draw_sheol_tower
+- number: 55
+  word: SHEPHERD
+  type: TITLE
+  rarity: COMMON
+  ability_pattern: add_hand_look_top_tower
+- number: 56
+  word: ASCEND
+  type: VERB
+  rarity: UNCOMMON
+  ability_pattern: add_hand_look_top_stat_lore_tower
+- number: 57
+  word: DISCORD
+  type: NOUN
+  rarity: RARE
+  ability_pattern: choice_draw_sheol_tower
+- number: 58
+  word: DEPART
+  type: VERB
   rarity: COMMON
   ability_pattern: draw_look_top_tower
+- number: 59
+  word: FAITHFUL
+  type: ADJECTIVE
+  rarity: UNCOMMON
+  ability_pattern: add_hand_conditional_draw_tower_type_name
+- number: 60
+  word: EDEN
+  type: NAME
+  rarity: RARE
+  ability_pattern: draw_look_top_tower
+- number: 61
+  word: FIRE
+  type: NOUN
+  rarity: UNCOMMON
+  ability_pattern: choice_draw_tower

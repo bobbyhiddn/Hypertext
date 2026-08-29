@@ -1,12 +1,12 @@
 {
   "word": "EDEN",
   "card_type": "NAME",
-  "rarity": "COMMON",
+  "rarity": "RARE",
   "content_score": 100,
   "final_score": 100,
   "passed": true,
   "style_matches_reference": true,
-  "style_mismatch_reason": "",
+  "style_mismatch_reason": "None",
   "corrections": [],
   "categories": {
     "formatting": {
@@ -46,8 +46,8 @@
   "stat_pip_visual_gate": {
     "contract": "hypertext.template-relative-stat-pip-gate/v1",
     "passed": true,
-    "candidate_sha256": "5fc5c1864c0daea3dd54ff872e14375a455a67e3226c23308939effe26ddd7cb",
-    "template_sha256": "70a9ebbc633fc5d8b8ff5c6401cad953f9e65a0a7cb717ff2b578d8d93c30151",
+    "candidate_sha256": "553429750c048688f6570a36faa4a6cf274e637e4704db4acf3d073af571a88d",
+    "template_sha256": "b0a5bf162c5d584ddce1cc8b89ad6c262fb4313582b16765fa0ff4fec8a582c1",
     "report": "series/2026-Q1/cards/060-eden/outputs/visual-gate.json"
   },
   "style_refs_count": 1,

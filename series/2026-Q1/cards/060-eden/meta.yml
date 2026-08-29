@@ -2,7 +2,7 @@ number: '060'
 word: EDEN
 gloss: The garden home, a lost paradise
 card_type: NAME
-rarity: COMMON
+rarity: RARE
 series: 2026-Q1
 set: Babel
 art_prompt: A lush garden at dawn where four rivers part from a single spring, a great tree
@@ -21,8 +21,8 @@ stats_rationale:
   complexity: Eden may mean delight or descend from a Sumerian word for the open plain; the
     Septuagint rendered the garden as paradeisos, a Persian loanword for a walled park, which
     the New Testament keeps - a history that is itself a study
-ability: Draw one card from the Tower. Then look at the top two cards of the Tower and put
-  those cards back on top of the Tower in any order.
+ability: Look at the top five cards of the Tower. Add up to three of those cards to your hand,
+  put one of the other cards into Sheol, and put each other card on the bottom of the Tower.
 ot_verse:
   ref: Genesis 2:8
   snippet: the LORD God planted a garden eastward in Eden
@@ -46,7 +46,8 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Promoted COMMON -> RARE 2026-08-28 under the word-weight rule (weight 4, user's call);
+  ability redesigned to RARE strength.
 sources: []
 search_queries: []
 weight: 4
