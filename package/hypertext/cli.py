@@ -135,9 +135,8 @@ def art_audit(series):
         click.echo("tower off the allowlist: " + ", ".join(a["tower_off_allowlist"]))
     n = max(1, a["cards"])
     for name, cards in sorted(a["lighting"].items(), key=lambda kv: -len(kv[1])):
-        share = len(cards) / n
-        over = "  OVER SHARE CAP" if name != "none" and share > a["lighting_share_cap"] else ""
-        click.echo(f"lighting {name:12s} {len(cards):3d}  {share:5.0%}{over}")
+        click.echo(f"lighting {name:12s} {len(cards):3d}  {len(cards) / n:5.0%}")
+    click.echo("(lighting is reported, not capped: golden is the set's signature)")
     click.echo(f"{a['cards']} cards audited")
     if a["tower_off_allowlist"] or a["over_motif_caps"] or a["over_lighting_cap"]:
         raise SystemExit(1)

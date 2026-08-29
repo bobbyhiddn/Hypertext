@@ -86,10 +86,12 @@ describes, or the object, place, creature, weather or light the word names.
   water 12 out of 90. `hypertext art-audit` prints the histogram.
 - **Lighting palette.** A prompt ends with the fixed medium clause plus
   exactly one clause from `art.lighting_palette` (golden, dawn, noon, storm,
-  lantern, firelight, underwater, overcast, desert, moonlit). No clause may
-  carry more than a fifth of the set - 45 of the first 76 prompts said "one
-  radiant golden light source", which is why unrelated cards shared one
-  evening on one plain.
+  lantern, firelight, underwater, overcast, desert, moonlit). **Golden is the
+  default and is not rationed** - it is the set's signature, restored at the
+  user's own request as the authority from the printed cards. Reach for
+  another clause when the scene genuinely needs it (a night, a storm,
+  firelight, underwater), not to spread the histogram. `art-audit` reports
+  the spread; nothing fails on it. The monotony worth fixing is the subject.
 - **Figures** are unchanged: no crowds; prefer no people; one figure seen from
   behind when a person is essential.
 

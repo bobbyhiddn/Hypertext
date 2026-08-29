@@ -142,7 +142,11 @@ art:
     plain: 10
     tent: 8
     water: 12
-  lighting_share_cap: 0.20
+  # 2026-08-29: reporting only, not a cap. Golden is the set's signature - it was
+  # restored at the user's own request as the authority from the printed cards, so
+  # rationing it fights the set's identity. The monotony worth fixing is in the
+  # subjects (towers, plains), which motif_caps and the allowlist handle.
+  lighting_share_cap: null
   medium: "luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art"
   lighting_palette:
     - {name: golden,     clause: "deep shadowed background lit by one radiant golden light source, rich saturated blues and golds"}

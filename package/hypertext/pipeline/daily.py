@@ -1463,9 +1463,8 @@ def _art_prompt_rules(series_dir: Path | None = None) -> str:
         + ", ".join(str(w).upper() for w in art["tower_allowlist"]) + "; for any other word an art_prompt naming a tower or ziggurat is rejected. "
         "Vary the scene: the set caps repeated motifs (" + caps + "). "
         "ART STYLE (hard requirement): a vivid full-colour painting - " + art["medium"] + " - never sepia, monochrome, engraving, etching, woodcut, or line art. "
-        "ART LIGHTING (hard requirement): end art_prompt with the medium clause above followed by EXACTLY ONE lighting clause from this palette, "
-        "chosen to fit the scene rather than defaulting to the first: " + palette + ". "
-        "No single lighting clause may carry more than a fifth of the set, so do not reach for the golden one unless the scene is genuinely about radiance. "
+        "ART LIGHTING (hard requirement): end art_prompt with the medium clause above followed by EXACTLY ONE lighting clause from this palette: " + palette + ". "
+        "The golden clause is the set's signature and the default - use it unless the scene genuinely calls for another (a night, a storm, firelight, underwater, an overcast day). Match the light to the scene; do not vary it for variety's sake. "
     )
 
 

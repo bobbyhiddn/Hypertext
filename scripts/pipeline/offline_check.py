@@ -1,6 +1,8 @@
 """Offline pre-flight for a designs module: run every deterministic set rule before spending a render.
 
-Usage: offline_check.py <designs_module.py> [WORD:TYPE ...]
+Usage: offline_check.py <designs_module.py> [--exclude 001,002,...] [WORD:TYPE ...]
+Slots listed in --exclude are dropped from the existing-set corpus, so a module that
+replaces them is not reported as conflicting with the abilities it is replacing.
 The module exposes DESIGNS[word] = (rarity, seed, candidate) and META[word]; card types come from a
 TYPES = {word: type} dict in the module or from WORD:TYPE arguments. Exit 1 on any finding.
 """
@@ -24,13 +26,19 @@ def main():
     spec = importlib.util.spec_from_file_location("designs", sys.argv[1])
     d = importlib.util.module_from_spec(spec); spec.loader.exec_module(d)
     types = dict(getattr(d, "TYPES", {}))
-    for arg in sys.argv[2:]:
+    exclude: set[str] = set()
+    args = sys.argv[2:]
+    if args and args[0] == "--exclude":
+        exclude = {x.strip() for x in args[1].split(",") if x.strip()}
+        args = args[2:]
+    for arg in args:
         w, t = arg.split(":"); types[w] = t
     missing = [w for w in d.DESIGNS if w not in types]
     if missing:
         sys.exit(f"no card type for {missing}: add TYPES to the module or pass WORD:TYPE")
-    existing_ab = load_series_abilities(SERIES)
-    existing_rec = list(load_series_records(SERIES))
+    keep = lambda label: label.split("-")[0] not in exclude
+    existing_ab = [r for r in load_series_abilities(SERIES) if keep(r[0])]
+    existing_rec = [r for r in load_series_records(SERIES) if keep(r[0])]
     art = am.load_art_standards(SERIES)
     findings, sigs, batch_axes, batch_art = 0, {}, [], []
     for w, (rar, seed, cand) in d.DESIGNS.items():
@@ -104,10 +112,9 @@ def main():
         for name, n in after["over_lighting_cap"].items():
             print(f"  lighting {name}: {n}/{after['cards']} over the {after['lighting_share_cap']:.0%} share cap")
         print("  (a legacy overrun is reported, not charged to this batch; a NEW overrun this batch causes is a finding)")
-    lights = Counter(am.lighting_of(p, art) for _, _, p in batch_art)
-    print("\nbatch lighting:", dict(lights))
-    if len(batch_art) >= 5 and max(lights.values()) > max(2, len(batch_art) // 2):
-        findings += 1; print(f"  one lighting clause carries {max(lights.values())} of {len(batch_art)} cards in this batch")
+    # Lighting is reported, never charged: golden is the set's signature, and the
+    # monotony worth fixing is in the subjects (towers, plains), not the light.
+    print("\nbatch lighting:", dict(Counter(am.lighting_of(p, art) for _, _, p in batch_art)))
     print(f"\n{findings} finding(s)")
     sys.exit(1 if findings else 0)
 

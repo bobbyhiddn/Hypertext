@@ -13,9 +13,14 @@ Three rules, all read from series/<series>/set-standards.yml (`art:`):
 - MOTIF CAPS: `motif_caps` bounds how many prompts in the set may share one
   motif (tower, city, plain, tent, water); `hypertext art-audit` reports the
   histogram, and scripts/pipeline/offline_check.py prints a batch beside it.
-- LIGHTING: every prompt ends with one clause from `lighting_palette`; no
-  clause may exceed `lighting_share_cap` of the set. The fixed `medium`
-  clause carries the painterly style; the lighting clause carries the mood.
+- LIGHTING: every prompt ends with one clause from `lighting_palette`. The
+  fixed `medium` clause carries the painterly style; the lighting clause
+  carries the mood. GOLDEN IS THE DEFAULT and is not rationed: it is the
+  set's established signature, restored at the user's own request from the
+  printed cards. Another clause is for a scene that genuinely needs it - a
+  night, a storm, firelight, underwater. The spread is reported, never
+  enforced (user, 2026-08-29: "I don't know why lighting is super important
+  here" - the complaint was towers, a subject problem, not the light).
 """
 
 from __future__ import annotations
@@ -61,7 +66,7 @@ LIGHTING_KEYS: dict[str, str] = {
 DEFAULT_ART = {
     "tower_allowlist": ["BUILD", "BRICK", "CITY", "SHINAR", "HIGH", "ASCEND", "SCATTER", "CONFUSE"],
     "motif_caps": {"tower": 8, "city": 10, "plain": 10, "tent": 8, "water": 12},
-    "lighting_share_cap": 0.20,
+    "lighting_share_cap": None,   # reporting only; golden is the set's signature
     "medium": "luminous cinematic oil painting with impressionistic brushwork, saturated full colour, a strong symbolic subject, no engraving or line art",
     "lighting_palette": [
         {"name": "golden", "clause": "deep shadowed background lit by one radiant golden light source, rich saturated blues and golds"},
@@ -162,8 +167,9 @@ def audit_series(series_dir: str | Path, extra: list[tuple[str, str, str]] | Non
         light_hist.setdefault(lighting_of(prompt, art) or "none", []).append(label)
     n = len(rows)
     over_motif = {m: len(v) for m, v in motif_hist.items() if m in art["motif_caps"] and len(v) > int(art["motif_caps"][m])}
-    cap = float(art["lighting_share_cap"])
-    over_light = {k: len(v) for k, v in light_hist.items() if k != "none" and n and len(v) / n > cap}
+    cap = art.get("lighting_share_cap")
+    cap = float(cap) if cap is not None else None
+    over_light: dict[str, int] = {}   # only populated when a series opts back in to a cap
     return {
         "cards": n,
         "motifs": motif_hist,
