@@ -1,7 +1,12 @@
-name: Deploy Gallery to Pages
+name: Deploy Pages
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/site/**'
+      - '.github/workflows/deploy-gallery.yml'
 
 permissions:
   contents: read
@@ -34,7 +39,16 @@ jobs:
 
       - name: Build Gallery
         run: |
-          python -m hypertext.pipeline.daily --phase gallery --series series --out-dir _site
+          python -m hypertext.pipeline.daily --phase gallery --series series --out-dir _site/gallery
+
+      # The write-up is the front door; the gallery lives under /gallery/. The
+      # landing page carries its images inline, so it can be copied verbatim -
+      # a file served straight from the repo would be an LFS pointer, not a PNG.
+      - name: Add landing page
+        run: |
+          cp docs/site/index.html _site/index.html
+          cp docs/site/og.jpg _site/og.jpg
+          test -s _site/index.html && test -s _site/gallery/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
