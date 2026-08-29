@@ -119,6 +119,18 @@ Cards are signed using a cryptographic watermark (SVG sigil + burned into PNG).
 
 See [ROADMAP.md](ROADMAP.md) for development phases.
 
-## License
+## Licence
 
-See [LICENSE](LICENSE) for details.
+**Source-available, not OSI open source.** The terms below deliberately treat a developer
+and a large company differently, which the Open Source Definition does not permit — so
+"source-available" is the honest word for it.
+
+| | Terms | Where |
+|---|---|---|
+| **Software** — `package/`, `scripts/`, `tools/`, `tests/`, `.github/` | [PolyForm Small Business 1.0.0](LICENSE) | Free for any purpose, including commercially, for a company under **100 people and under $1M revenue**. Larger organisations need a separate licence. |
+| **Cards, art, templates, rules** — `series/`, `templates/`, `docs/` | [CC BY-NC-SA 4.0](LICENSE-CONTENT.md) | Copy, print, remix and teach from it with credit, non-commercially, sharing alike. |
+
+In practice: read it, run it, fork it, build your own set with it, print a deck for your
+table, write about it. Do not sell it, and do not fold it into an enterprise product.
+The set is headed for commercial publication and those rights are reserved.
+
