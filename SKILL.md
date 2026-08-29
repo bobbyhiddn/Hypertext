@@ -175,6 +175,28 @@ Automated success is necessary, never sufficient. A human must inspect the final
 
 Record an explicit pass/fail in the review branch or its operator-review evidence. Any change to the raster, recipe, prompt, reference pack, or template invalidates the prior verdict. Do not merge, publish, deploy, or re-enable scheduling without explicit operator approval; there is no CLI flag that grants it. Follow the qualitative gates in [docs/gemini-migration-evaluation.md](docs/gemini-migration-evaluation.md) and the accepted evidence shape in [operator_review/req-ppaug-029-full-card-gemini/README.md](operator_review/req-ppaug-029-full-card-gemini/README.md).
 
+## Prepare for print (The Game Crafter)
+
+Once every card in the set passes, build the print set. It is committed with the
+set at `series/<id>/tgc_prep/`, so the exact files sent to the printer stay
+recoverable for any past state:
+
+```bash
+.venv/bin/python -m hypertext.tgc prep --cards-dir series/2026-Q1/cards
+```
+
+It reads each card's `outputs/card_1024x1536.png`, auto-detects the sibling
+`lots/` (a flat PNG package, not per-card folders), and writes both decks in
+25-card upload batches plus each deck's back - `templates/card_back.png` for
+Words, `templates/lots/Lot_Back.png` for Lots. Every file is exactly
+825 x 1125: the 2:3 face is **frame-fit** into the 5:7 card, scaled uniformly
+onto a mat sampled from its own border, never stretched or cropped
+(`package/tests/test_tgc_frame_fit.py` holds that contract).
+
+Regenerate after any card changes and commit the result. Product and upload
+details are in [docs/How-To-TGC.md](docs/How-To-TGC.md) and
+[docs/printing.md](docs/printing.md).
+
 ## Fail closed
 
 - Stop on missing inputs, invalid type/rarity, manifest or hash drift, invalid reference roles, corrupt/wrong-size Gemini output, safety/no-image responses, pip defects, style mismatch, timeout, or any quality dimension below 100.

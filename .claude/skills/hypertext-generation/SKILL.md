@@ -11,7 +11,7 @@ answer the plan prompts from a designs module, render in a self-heal loop, audit
 
 ## Environment
 
-- venv with the package installed (`python -m venv V && V/bin/pip install -e package`). Every script reads
+- The repo venv is `.venv` (`python3 -m venv .venv && .venv/bin/pip install -e 'package[test]'`). Every script reads
   `HYPERTEXT_PY` (that python) and `HYPERTEXT_HX` (that venv's `hypertext` CLI). **Export both** - the
   scripts default to `python3` / `hypertext` on PATH, and a missing `hypertext` makes every self-heal
   attempt print `pip fail` (the gate command fails, not the pips) while burning a render per attempt.
@@ -34,7 +34,7 @@ python3 -c "import json;[print(c) for c in json.load(open('schema/babel_template
 ```
 
 Targets per type x rarity: [series/2026-Q1/set-standards.yml](../../../series/2026-Q1/set-standards.yml)
-(36/32/13/9 overall). Open slots = target minus census. The canonical card list for the census test is
+(36/31/14/9 overall; `recount_census.py --dry-run` prints open slots). Open slots = target minus census. The canonical card list for the census test is
 [series/2026-Q1/cards_index.yml](../../../series/2026-Q1/cards_index.yml) - append every new word.
 Era: antediluvian to Babel (through Abram/Sodom); Egypt is set 2.
 
@@ -53,26 +53,37 @@ Era: antediluvian to Babel (through Abram/Sodom); Egypt is set 2.
 - **Render word caps** COMMON 34 / UNCOMMON 40 / RARE 48 / GLORIOUS 56; at most two sentences.
 - **Word weight** 1-5 with a rationale; 5 -> GLORIOUS, 4 -> at least RARE. Budget 22 heavy words, 9 pillars.
 - **One-lemma rule**: no shared Hebrew/Greek lemma, Hebrew root, or English stem with an existing card
-  (NAME homographs exempt). **Shape uniqueness**: `ability_shape` signature must be new (look count and
-  rest-destination distinguish COMMON rhymes; bottom-vs-top looks do NOT).
+  (NAME homographs exempt). **Shape uniqueness**: `ability_shape` signature must be new. Look count and
+  rest-destination distinguish COMMON rhymes; a look or take FROM the bottom is a different play from a
+  placement onto it; and your Lot / the Chapter Lot / another player's Lot are three different filters.
 - **Verse lexical rule**: the printed OT/NT verse and ref strips contain the card's own lemma; names absent
   from the NT (Ham, Japheth, Nimrod...) cannot be cards until a NT verse exists.
 - **Stats**: LORE and COMPLEXITY are judgments with a reason; CONTEXT is the bucket of Hebrew+Greek
   occurrence totals (<=10:1, 11-40:2, 41-120:3, 121-400:4, >400:5) and the rationale must read
-  "X occurs N times ...; Y occurs M times ...; total T". COMMON/UNCOMMON may not carry three stats of 4+.
-- **Rulings** (docs/rules.md "Abilities"): "your Lot" / "another player's Lot" / "the Chapter Lot"; Pages keep
-  value; "activate that chosen card"; interaction by tier; a Letter is worth three cards.
+  "X occurs N times ...; Y occurs M times ...; total T". COMMON/UNCOMMON may not carry three stats of 4+,
+  a row totalling 13+ needs weight 4+, and a numeral or function word caps CONTEXT at 3. LORE and
+  COMPLEXITY are scored on the era's use and THIS card's printed verses, never a doctrinal use elsewhere.
+- **Stat gates must gate**: a per-card floor is "four or more" (LORE 46% of the set, CONTEXT 49%,
+  COMPLEXITY 31%); "three or more" passes ~89% and gates nothing. A Page stat total is read on ONE Page at
+  "twenty-two or more" (a 5-card Page averages 18, a 7-card 25).
+- **Rulings** (docs/rules.md "Abilities"): "your Lot" / "another player's Lot" / "the Chapter Lot";
+  **Pages are sealed** - a card never leaves a Page, so a Page may only be READ or DISCARDED WHOLE as a
+  cost; "activate that chosen card"; interaction by tier; a Letter is worth three cards.
 - **Validator quirks**: never "the other" unless followed by "card(s)" ("put each other revealed card...");
   never "it/them/this way/if not"; `discard` states hand -> Sheol; `draw` names the Tower; `return` names both
   zones; `shuffle the cards in the Tower`; `name` says "card type"; separate "Choose another player." from
   the action sentence; the ability copy must contain at least two non-rules words from the seed
   (see `_GENERIC_SEMANTIC_WORDS`) - bottom/top/look/those/revealed/whose count, hand/card/draw do not.
-- **Art**: vivid painterly (luminous cinematic oil, one radiant golden light, saturated blues and golds);
-  no crowds, no figure facing the viewer, "no people" unless one figure seen from behind. Stat pips, type
+- **Art**: the illustration is THIS card's own verse scene. The tower is the set's namesake and is
+  **rationed, not banned** - allowlist words always, any other word while the set is under
+  `art.motif_caps.tower` (12 of 90). Lighting is **guidance**: the golden clause is the set's signature and
+  the default; reach for another palette clause only when the scene needs it, never to spread a histogram.
+  No crowds, no figure facing the viewer, "no people" unless one figure seen from behind. Stat pips, type
   pill, number and footer are stamped deterministically - the image prompt zeroes them; the rarity chip and
   cost glyphs are painted by the model and verified by gates.
-- Creativity: per batch use Letters/Lots/Pages on at least two cards and prefer cores unused at that tier
-  (`grammar-check` lists them).
+- **Mechanic axes**: per 90 cards stats 18, types 26, Letters 12, Lots 10, Pages 8, opponent 16, Sheol 24
+  (`set-standards.yml`); a batch of ten carries at least 2 stat readers, 1 Letter card and 1 Lot-or-Page
+  card - `offline_check.py` fails closed. Prefer cores unused at that tier (`grammar-check` lists them).
 
 ## 3. Designs module
 
@@ -131,7 +142,11 @@ Wait with a background `until grep -q END timing.txt` loop, not polling. Read `b
    another live session may republish them - `action: "read"` first, merge, then publish with `url`, no favicon.
 7. Commit everything the batch touched (cards/, queue.yml, matrix, stats.yml, cards_index.yml, tracker-state,
    designs module) with the batch summary and timing; push to `github main` (PNGs go through LFS).
-8. Report: launch/finish times, seconds per card, renders per card, self-heals, audit lines, open slots.
+8. Print set, once the whole set passes: `$HYPERTEXT_PY -m hypertext.tgc prep --cards-dir series/2026-Q1/cards`
+   writes `series/2026-Q1/tgc_prep/` (committed with the set) - both decks in 25-card
+   upload batches at 825x1125, plus `templates/card_back.png` and `templates/lots/Lot_Back.png`.
+   Faces are frame-fit, never stretched or cropped. Regenerate whenever a card changes.
+9. Report: launch/finish times, seconds per card, renders per card, self-heals, audit lines, open slots.
 
 ## Redesign / promotion of an existing card
 

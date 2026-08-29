@@ -10,7 +10,7 @@ Usage:
   python -m hypertext.tgc prep --cards-dir demo_cards
 
   # Prep cards from a series
-  python -m hypertext.tgc prep --cards-dir series/2026-Q1/cards
+  python -m hypertext.tgc prep --cards-dir series/2026-Q1/cards   # -> series/2026-Q1/tgc_prep
 
   # Prep with lots included
   python -m hypertext.tgc prep --cards-dir series/2026-Q1/cards --lots-dir series/2026-Q1/lots
@@ -177,13 +177,16 @@ def prep_command(args: argparse.Namespace) -> int:
                 lots_dir = series1_lots
                 logger.info(f"Using Series 1 lots: {lots_dir}")
 
-    # Determine output directory
+    # Determine output directory. For a series the print set belongs beside cards/
+    # and lots/ - it is an artifact of the whole set, not of the card folder - so
+    # series/<id>/cards -> series/<id>/tgc_prep. A loose folder (demo_cards) keeps
+    # its output nested inside itself.
     if args.output_dir:
         output_base = args.output_dir
     elif cards_dir:
-        output_base = cards_dir / "tgc_prep"
+        output_base = (cards_dir.parent if cards_dir.name == "cards" else cards_dir) / "tgc_prep"
     else:
-        output_base = lots_dir / "tgc_prep"
+        output_base = (lots_dir.parent if lots_dir.name == "lots" else lots_dir) / "tgc_prep"
 
     # Clean output directory if it exists
     if output_base.exists() and not args.no_clean:
@@ -270,7 +273,7 @@ def main():
         epilog="""
 Examples:
   # Prep series cards (auto-detects sibling lots/ directory)
-  python -m hypertext.tgc prep --cards-dir series/2026-Q1/cards
+  python -m hypertext.tgc prep --cards-dir series/2026-Q1/cards   # -> series/2026-Q1/tgc_prep
 
   # Prep demo cards only
   python -m hypertext.tgc prep --cards-dir demo_cards
