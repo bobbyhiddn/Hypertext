@@ -1,12 +1,11 @@
 === Generation Log ===
-Timestamp: 2026-08-28 07:24:46
-Phase: revise-image-only
+Timestamp: 2026-08-29 09:07:02
+Phase: rebuild
 Target Rarity: COMMON
 Target Type: NOUN
-Fix Mode: True
+Fix Mode: False
 
-Style References (2 total):
-  [1] CURRENT_CARD: series/2026-Q1/cards/042-tongue/outputs/reference-inputs/current-b526f9a6be1eb88fc05761e230f1eefb9aaa6170f79f81959b204c2122c3c2f4.png [COMMON] sha256=b526f9a6be1eb88fc05761e230f1eefb9aaa6170f79f81959b204c2122c3c2f4
-  [2] TEMPLATE: templates/card/v001/composed/noun/common/template_1024x1536.png [COMMON] sha256=d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c
+Style References (1 total):
+  [1] TEMPLATE: templates/card/v001/composed/noun/common/template_1024x1536.png [COMMON] sha256=d9dbc819cb1d963adb2574ba292cf13d2e64885a413567a83da87f5ed67a254c
 
-Prompt File: series/2026-Q1/cards/042-tongue/outputs/prompt.revision.txt
+Prompt File: series/2026-Q1/cards/042-tongue/prompt.txt
