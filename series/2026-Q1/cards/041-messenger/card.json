@@ -176,7 +176,7 @@
     "RARITY_TEXT": "UNCOMMON",
     "RARITY_ICON": "UNCOMMON",
     "ART_PROMPT": "A robed runner seen from behind on a mountain road at dawn, a sealed scroll clasped in one hand, a distant walled city gate waiting across the valley, long morning shadows, luminous cinematic oil painting with impressionistic brushwork, deep shadowed background, one radiant golden light source, rich saturated blues and golds",
-    "ABILITY_TEXT": "Name a card type and reveal the top three cards of the Tower. Add one revealed card of the named type to your hand and put each other revealed card on top of the Tower in any order.",
+    "ABILITY_TEXT": "Name a card type and reveal the top three cards of the Tower. Add up to two revealed cards of the named type to your hand and put each other revealed card on top of the Tower in any order.",
     "STAT_LORE": 3,
     "STAT_CONTEXT": 4,
     "STAT_COMPLEXITY": 4,

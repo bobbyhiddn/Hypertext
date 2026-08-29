@@ -67,7 +67,7 @@ def classify(text: str) -> dict[str, Any]:
         ("mill_take", r"\bput the top \w+ cards of the Tower into Sheol\.?,? (?:then )?add (?:one|up to \w+) of those cards\b"),
         ("reveal_test", r"\breveal one card from the top of the Tower\b.*\bIf that revealed card\b"),
         ("reveal_take", r"\breveal one card from the top of the Tower and add that revealed card to your hand\b"),
-        ("look_take", r"\b(?:look at|reveal) (?:the )?(?:top|bottom|one card from the top)\b.*\badd (?:one|up to \w+)(?: of those cards| of those cards that [^.;]*| revealed card of the named type)? to your hand\b|\blook at one card from the top of the Tower and one card from the bottom of the Tower\. Add one of those cards"),
+        ("look_take", r"\b(?:look at|reveal) (?:the )?(?:top|bottom|one card from the top)\b.*\badd (?:one|up to \w+)(?: of those cards| of those cards that [^.;]*| revealed cards? of the named type| revealed cards? whose card type is in [^.;]*?)? to your hand\b|\blook at one card from the top of the Tower and one card from the bottom of the Tower\. Add one of those cards"),
         ("gain_letter", r"(?:^|[.;]\s*(?:then\s+)?)gain\s+(?:one|two|three|four|five|a)\s+Letters?\b"),
         ("add_bottom", r"\badd one card from the bottom of the Tower to your hand\b"),
         ("add_top", r"\badd one card from the top of the Tower to your hand\b"),

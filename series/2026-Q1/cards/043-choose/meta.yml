@@ -13,8 +13,8 @@ stats:
   lore: 5
   context: 4
   complexity: 3
-ability: Choose one card in Sheol. Add that chosen card to your hand and put one other card
-  in Sheol on the bottom of the Tower.
+ability: Choose one card in Sheol whose card type is in the Chapter Lot and add that chosen
+  card to your hand. Then draw one card from the Tower.
 ot_verse:
   ref: Deuteronomy 7:6
   snippet: the LORD thy God hath chosen thee
@@ -37,7 +37,7 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 to UNCOMMON strength under the power ladder.
 sources: []
 search_queries: []
 stats_rationale:

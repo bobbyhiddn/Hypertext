@@ -13,9 +13,9 @@ stats:
   lore: 3
   context: 4
   complexity: 4
-ability: Name a card type and reveal the top three cards of the Tower. Add one revealed card
-  of the named type to your hand and put each other revealed card on top of the Tower in any
-  order.
+ability: Name a card type and reveal the top three cards of the Tower. Add up to two revealed
+  cards of the named type to your hand and put each other revealed card on top of the Tower
+  in any order.
 ot_verse:
   ref: Malachi 3:1
   snippet: I will send my messenger
@@ -39,7 +39,7 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 to UNCOMMON strength under the power ladder.
 sources: []
 search_queries: []
 revision: 1

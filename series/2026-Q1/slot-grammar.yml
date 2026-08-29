@@ -366,13 +366,15 @@ slots:
   number: 63
   type: NAME
   rarity: UNCOMMON
-  word: ZION
-  gloss: The holy mountain, the city of God.
-  alternate: ISRAEL
+  word: CANAAN
+  gloss: The son cursed to serve his brothers.
+  alternate: 'ZION (rejected: post-Babel era)'
   mechanic_family: SELECT
   stat_profile: balanced
-  theme: the gathering of the redeemed
+  theme: watchfulness and judgment
   status: planned
+  note: ZION and ISRAEL are outside the antediluvian-to-Babel era (set-era rule); CANAAN (Gen
+    9:25; Chanaan, Acts 7:11) keeps the era. Weight 3.
 - slot_id: BABEL-064
   number: 64
   type: TITLE

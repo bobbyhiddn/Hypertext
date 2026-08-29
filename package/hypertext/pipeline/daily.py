@@ -4737,6 +4737,9 @@ def phase_grade(*, card_dir: Path, style_series_dir: Path | None = None) -> int:
         )
     if ability_seen:
         expected_ability = str(card_json.get("content", {}).get("ABILITY_TEXT", "")).strip()
+        # The rubric usually notices the same garble in its own words; keep one
+        # correction so self-heal's single-defect fix-mode can repaint the text.
+        result.corrections = [c for c in result.corrections if "ability text" not in c.lower() and "ability_text" not in c.lower()]
         result.corrections.append(
             f"Fix the ability text to read exactly: '{expected_ability}' (it currently reads: '{ability_seen}')."
         )

@@ -20,11 +20,11 @@
       1536
     ],
     "path": "series/2026-Q1/cards/041-messenger/outputs/card_1024x1536.png",
-    "sha256": "2194d8732cf69e3cf96d2f7490377da1fcc4cd77d33e07f240bfc37c04706d7d"
+    "sha256": "3965a4ecff5816f2f517ba5ec40b9ae18a29a472da3470eb9f9cf44f15c7432b"
   },
   "card_record": {
     "path": "series/2026-Q1/cards/041-messenger/card.json",
-    "sha256": "01a3d760feafb31e2d563ee34974951395424aa0fb0bbe913e8fd4019f51fd09"
+    "sha256": "358ab0d4d13d40c934407ddf34664b1ef6518023f42178f816266c82f6d03456"
   },
   "contract": "hypertext.template-relative-stat-pip-gate/v1",
   "cost_indicator": {
@@ -34,7 +34,7 @@
         1536
       ],
       "path": "series/2026-Q1/cards/041-messenger/outputs/card_1024x1536.png",
-      "sha256": "2194d8732cf69e3cf96d2f7490377da1fcc4cd77d33e07f240bfc37c04706d7d"
+      "sha256": "3965a4ecff5816f2f517ba5ec40b9ae18a29a472da3470eb9f9cf44f15c7432b"
     },
     "candidate_features": [],
     "contract": "hypertext.template-relative-cost-indicator-gate/v1",
@@ -46,7 +46,7 @@
     },
     "passed": true,
     "recipe": {
-      "canonical_sha256": "ee764783a96541f6aa605ea4ee4599fbf935d5631cdfe06936e0adebc08b1704",
+      "canonical_sha256": "f7b6a42f4894077e2fe0a98e7a8350df3cae72c6e0fa7ab81149b2755ee0db1f",
       "declared_display": null
     },
     "region": [
@@ -68,7 +68,7 @@
         1264
       ],
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-      "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0"
+      "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
     },
     "template_features": []
   },
@@ -88,7 +88,7 @@
   "rarity_chip": {
     "candidate": {
       "path": "series/2026-Q1/cards/041-messenger/outputs/card_1024x1536.png",
-      "sha256": "2194d8732cf69e3cf96d2f7490377da1fcc4cd77d33e07f240bfc37c04706d7d"
+      "sha256": "3965a4ecff5816f2f517ba5ec40b9ae18a29a472da3470eb9f9cf44f15c7432b"
     },
     "contract": "hypertext.template-relative-rarity-chip-gate/v1",
     "defects": [],
@@ -103,17 +103,18 @@
         185,
         146
       ],
-      "gap": 13,
-      "left_inset": 12,
+      "expected_word_width": 161,
+      "gap": 15,
+      "left_inset": 30,
       "word": [
-        67,
-        213
+        85,
+        211
       ],
       "word_rows": [
         27,
         49
       ],
-      "word_width": 146
+      "word_width": 126
     },
     "observed": {
       "cap_height": 23,
@@ -122,21 +123,21 @@
         262
       ],
       "diamond_colour": [
-        131,
-        174,
-        135
+        120,
+        190,
+        156
       ],
-      "gap": 13,
-      "left_inset": 11,
+      "gap": 14,
+      "left_inset": 15,
       "word": [
-        53,
-        213
+        70,
+        212
       ],
       "word_rows": [
         28,
         51
       ],
-      "word_width": 160
+      "word_width": 142
     },
     "passed": true,
     "region": {
@@ -148,7 +149,7 @@
       ],
       "offset": [
         0,
-        -5
+        0
       ]
     },
     "target": {
@@ -157,7 +158,7 @@
     },
     "template": {
       "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-      "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0"
+      "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
     }
   },
   "reference_pack": {
@@ -166,12 +167,12 @@
     "target_rarity": "UNCOMMON",
     "target_type": "TITLE",
     "template_position": 1,
-    "template_sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0"
+    "template_sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
   },
   "registration": {
     "dx": 0.0,
-    "dy": -2.0,
-    "score": 0.9425
+    "dy": 0.0,
+    "score": 0.9601
   },
   "rows": [
     {
@@ -188,7 +189,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9753,
+            "edge_dark_fraction": 0.9846,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -202,8 +203,8 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 190.2759,
-            "outside_palette_rgb_distance": 441.673
+            "outside_median_luma": 190.855,
+            "outside_palette_rgb_distance": 52.1344
           },
           "observed_state": "filled",
           "passed": true,
@@ -217,7 +218,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.983,
+            "edge_dark_fraction": 0.9985,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -231,7 +232,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 203.9157,
+            "outside_median_luma": 203.7453,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -246,7 +247,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9753,
+            "edge_dark_fraction": 0.9954,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -260,7 +261,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 209.4272,
+            "outside_median_luma": 209.6484,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -272,24 +273,24 @@
           "expected_state": "empty",
           "metrics": {
             "core_dark_fraction": 0.0,
-            "core_median_luma": 202.8482,
-            "core_middle_luma_step": 3.0653,
+            "core_median_luma": 202.2746,
+            "core_middle_luma_step": 3.3696,
             "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.9383,
-            "edge_median_luma": 41.0223,
-            "edge_palette_rgb_distance": 2.2361,
-            "empty_outline_contrast": 164.3887,
+            "edge_dark_fraction": 0.9599,
+            "edge_median_luma": 40.559,
+            "edge_palette_rgb_distance": 2.0,
+            "empty_outline_contrast": 164.5752,
             "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 199.2088,
-            "interior_luma_p90": 211.3868,
-            "interior_luma_spread": 12.178,
-            "interior_median_luma": 205.411,
+            "interior_luma_p10": 199.1614,
+            "interior_luma_p90": 211.3186,
+            "interior_luma_spread": 12.1572,
+            "interior_median_luma": 205.1342,
             "interior_palette_rgb_distance": 441.673,
             "middle_dark_fraction": 0.0,
-            "middle_median_luma": 205.9135,
+            "middle_median_luma": 205.6442,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.3688,
+            "outside_median_luma": 212.2521,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -301,24 +302,24 @@
           "expected_state": "empty",
           "metrics": {
             "core_dark_fraction": 0.0,
-            "core_median_luma": 209.9216,
-            "core_middle_luma_step": 3.175,
+            "core_median_luma": 209.8454,
+            "core_middle_luma_step": 3.232,
             "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.912,
-            "edge_median_luma": 44.9888,
+            "edge_dark_fraction": 0.9321,
+            "edge_median_luma": 44.5977,
             "edge_palette_rgb_distance": 6.4031,
-            "empty_outline_contrast": 167.1654,
+            "empty_outline_contrast": 167.4655,
             "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 207.7938,
-            "interior_luma_p90": 216.7481,
-            "interior_luma_spread": 8.9542,
-            "interior_median_luma": 212.1542,
+            "interior_luma_p10": 207.545,
+            "interior_luma_p90": 216.724,
+            "interior_luma_spread": 9.179,
+            "interior_median_luma": 212.0632,
             "interior_palette_rgb_distance": 441.673,
             "middle_dark_fraction": 0.0,
-            "middle_median_luma": 213.0966,
+            "middle_median_luma": 213.0774,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 214.4731,
+            "outside_median_luma": 215.5794,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -341,7 +342,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9738,
+            "edge_dark_fraction": 0.9985,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -355,12 +356,41 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0,
-            "outside_median_luma": 214.0642,
+            "outside_median_luma": 214.7988,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
           "passed": true,
           "slot": 1
+        },
+        {
+          "defects": [],
+          "expected_state": "filled",
+          "metrics": {
+            "core_dark_fraction": 1.0,
+            "core_median_luma": 34.4652,
+            "core_middle_luma_step": 0.0,
+            "core_palette_rgb_distance": 37.0135,
+            "edge_dark_fraction": 0.9861,
+            "edge_median_luma": 34.4652,
+            "edge_palette_rgb_distance": 37.0135,
+            "empty_outline_contrast": 0.0,
+            "interior_dark_fraction": 1.0,
+            "interior_luma_p10": 34.4652,
+            "interior_luma_p90": 34.4652,
+            "interior_luma_spread": 0.0,
+            "interior_median_luma": 34.4652,
+            "interior_palette_rgb_distance": 37.0135,
+            "middle_dark_fraction": 1.0,
+            "middle_median_luma": 34.4652,
+            "middle_palette_rgb_distance": 37.0135,
+            "outside_dark_fraction": 0.0019,
+            "outside_median_luma": 213.3034,
+            "outside_palette_rgb_distance": 441.673
+          },
+          "observed_state": "filled",
+          "passed": true,
+          "slot": 2
         },
         {
           "defects": [],
@@ -384,12 +414,12 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.9971,
-            "outside_palette_rgb_distance": 441.673
+            "outside_median_luma": 214.9344,
+            "outside_palette_rgb_distance": 48.1768
           },
           "observed_state": "filled",
           "passed": true,
-          "slot": 2
+          "slot": 3
         },
         {
           "defects": [],
@@ -399,7 +429,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9599,
+            "edge_dark_fraction": 0.983,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -413,13 +443,50 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 215.0184,
-            "outside_palette_rgb_distance": 49.7594
+            "outside_median_luma": 212.7834,
+            "outside_palette_rgb_distance": 8.0623
           },
           "observed_state": "filled",
           "passed": true,
-          "slot": 3
+          "slot": 4
         },
+        {
+          "defects": [],
+          "expected_state": "empty",
+          "metrics": {
+            "core_dark_fraction": 0.0,
+            "core_median_luma": 201.4098,
+            "core_middle_luma_step": 9.2298,
+            "core_palette_rgb_distance": 441.673,
+            "edge_dark_fraction": 0.8981,
+            "edge_median_luma": 40.8799,
+            "edge_palette_rgb_distance": 4.1231,
+            "empty_outline_contrast": 168.1087,
+            "interior_dark_fraction": 0.0,
+            "interior_luma_p10": 198.1226,
+            "interior_luma_p90": 216.8139,
+            "interior_luma_spread": 18.6912,
+            "interior_median_luma": 208.9886,
+            "interior_palette_rgb_distance": 441.673,
+            "middle_dark_fraction": 0.0,
+            "middle_median_luma": 210.6396,
+            "middle_palette_rgb_distance": 441.673,
+            "outside_dark_fraction": 0.0019,
+            "outside_median_luma": 212.021,
+            "outside_palette_rgb_distance": 5.3852
+          },
+          "observed_state": "empty",
+          "passed": true,
+          "slot": 5
+        }
+      ]
+    },
+    {
+      "expected_count": 4,
+      "name": "STAT_COMPLEXITY",
+      "observed_count": 4,
+      "passed": true,
+      "slots": [
         {
           "defects": [],
           "expected_state": "filled",
@@ -442,74 +509,8 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 210.0312,
-            "outside_palette_rgb_distance": 5.0
-          },
-          "observed_state": "filled",
-          "passed": true,
-          "slot": 4
-        },
-        {
-          "defects": [],
-          "expected_state": "empty",
-          "metrics": {
-            "core_dark_fraction": 0.0,
-            "core_median_luma": 202.482,
-            "core_middle_luma_step": 8.0338,
-            "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.8843,
-            "edge_median_luma": 42.1653,
-            "edge_palette_rgb_distance": 3.1623,
-            "empty_outline_contrast": 167.0771,
-            "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 198.4036,
-            "interior_luma_p90": 216.8139,
-            "interior_luma_spread": 18.4103,
-            "interior_median_luma": 209.2424,
-            "interior_palette_rgb_distance": 441.673,
-            "middle_dark_fraction": 0.0,
-            "middle_median_luma": 210.5158,
-            "middle_palette_rgb_distance": 441.673,
-            "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.9478,
-            "outside_palette_rgb_distance": 4.6904
-          },
-          "observed_state": "empty",
-          "passed": true,
-          "slot": 5
-        }
-      ]
-    },
-    {
-      "expected_count": 4,
-      "name": "STAT_COMPLEXITY",
-      "observed_count": 4,
-      "passed": true,
-      "slots": [
-        {
-          "defects": [],
-          "expected_state": "filled",
-          "metrics": {
-            "core_dark_fraction": 1.0,
-            "core_median_luma": 34.4652,
-            "core_middle_luma_step": 0.0,
-            "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9599,
-            "edge_median_luma": 34.4652,
-            "edge_palette_rgb_distance": 37.0135,
-            "empty_outline_contrast": 0.0,
-            "interior_dark_fraction": 1.0,
-            "interior_luma_p10": 34.4652,
-            "interior_luma_p90": 34.4652,
-            "interior_luma_spread": 0.0,
-            "interior_median_luma": 34.4652,
-            "interior_palette_rgb_distance": 37.0135,
-            "middle_dark_fraction": 1.0,
-            "middle_median_luma": 34.4652,
-            "middle_palette_rgb_distance": 37.0135,
-            "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 207.1223,
-            "outside_palette_rgb_distance": 7.6811
+            "outside_median_luma": 207.3616,
+            "outside_palette_rgb_distance": 8.3666
           },
           "observed_state": "filled",
           "passed": true,
@@ -523,7 +524,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9753,
+            "edge_dark_fraction": 0.9907,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -537,8 +538,8 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 211.6023,
-            "outside_palette_rgb_distance": 24.9199
+            "outside_median_luma": 211.5367,
+            "outside_palette_rgb_distance": 24.2899
           },
           "observed_state": "filled",
           "passed": true,
@@ -552,7 +553,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9784,
+            "edge_dark_fraction": 0.9877,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -566,7 +567,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 209.3215,
+            "outside_median_luma": 209.7591,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -581,7 +582,7 @@
             "core_median_luma": 34.4652,
             "core_middle_luma_step": 0.0,
             "core_palette_rgb_distance": 37.0135,
-            "edge_dark_fraction": 0.9892,
+            "edge_dark_fraction": 1.0,
             "edge_median_luma": 34.4652,
             "edge_palette_rgb_distance": 37.0135,
             "empty_outline_contrast": 0.0,
@@ -595,7 +596,7 @@
             "middle_median_luma": 34.4652,
             "middle_palette_rgb_distance": 37.0135,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 197.4321,
+            "outside_median_luma": 198.7473,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "filled",
@@ -607,24 +608,24 @@
           "expected_state": "empty",
           "metrics": {
             "core_dark_fraction": 0.0,
-            "core_median_luma": 184.0276,
-            "core_middle_luma_step": 3.3389,
+            "core_median_luma": 183.5972,
+            "core_middle_luma_step": 3.7238,
             "core_palette_rgb_distance": 441.673,
-            "edge_dark_fraction": 0.9552,
-            "edge_median_luma": 36.3266,
+            "edge_dark_fraction": 0.9769,
+            "edge_median_luma": 35.606,
             "edge_palette_rgb_distance": 14.8997,
-            "empty_outline_contrast": 150.1972,
+            "empty_outline_contrast": 150.7786,
             "interior_dark_fraction": 0.0,
-            "interior_luma_p10": 181.8944,
-            "interior_luma_p90": 191.7668,
-            "interior_luma_spread": 9.8724,
-            "interior_median_luma": 186.5238,
+            "interior_luma_p10": 181.2996,
+            "interior_luma_p90": 191.7146,
+            "interior_luma_spread": 10.415,
+            "interior_median_luma": 186.3846,
             "interior_palette_rgb_distance": 441.673,
             "middle_dark_fraction": 0.0,
-            "middle_median_luma": 187.3665,
+            "middle_median_luma": 187.321,
             "middle_palette_rgb_distance": 441.673,
             "outside_dark_fraction": 0.0019,
-            "outside_median_luma": 191.7949,
+            "outside_median_luma": 192.0066,
             "outside_palette_rgb_distance": 441.673
           },
           "observed_state": "empty",
@@ -648,6 +649,6 @@
       1264
     ],
     "path": "/home/cap/Code/Hypertext/templates/card/v001/composed/title/uncommon/template_1024x1536.png",
-    "sha256": "f99d7e7013fbdc7a48926728f2198958e0ddda6d94961aba70fbdd9911e3bbe0"
+    "sha256": "20fea69f53f657a6b605613266439230a46b71959215323df79a25f8f038a59f"
   }
 }
