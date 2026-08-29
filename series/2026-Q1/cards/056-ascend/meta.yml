@@ -21,8 +21,8 @@ stats_rationale:
     Testament; total 972
   complexity: alah underlies olah, the burnt offering that goes up, and the modern aliyah;
     anabaino gives the ascension its name - a derivation worth explaining
-ability: Look at the top four cards of the Tower. Add up to one of those cards that has LORE
-  four or more to your hand and put the other cards on top of the Tower in any order.
+ability: Look at the top four cards of the Tower. Add up to two of those cards that each have
+  LORE three or more to your hand and put the other cards on top of the Tower in any order.
 ot_verse:
   ref: Isaiah 14:13
   snippet: thou hast said in thine heart, I will ascend into heaven
@@ -47,7 +47,7 @@ trivia:
 wild_id: null
 wild_counts_as: null
 letter: null
-notes: null
+notes: Ability redesigned 2026-08-28 to UNCOMMON strength under the power ladder.
 sources: []
 search_queries: []
 weight: 2

@@ -1,0 +1,14 @@
+============================================================
+GRADE RESULT: ASCEND
+============================================================
+Score: 0/100 (content: 90/100)
+Status: FAIL
+Style Match: False
+Style Issue: Definition text is missing beneath the main card title.
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Add the missing gloss text: 'To climb toward heaven in human strength'
+  - Fix the ability text to read exactly: 'Look at the top four cards of the Tower. Add up to two of those cards that each have LORE three or more to your hand and put the other cards on top of the Tower in any order.' (it currently reads: 'Look at the top four cards of the Tower. Add up to two of those cards that each have LORE three or more to your hand and put the: top of the Tower in any order.').
+============================================================

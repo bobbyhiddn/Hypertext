@@ -1,0 +1,15 @@
+============================================================
+GRADE RESULT: ASCEND
+============================================================
+Score: 0/100 (content: 93/100)
+Status: FAIL
+Style Match: False
+Style Issue: Ability text retains unformatted placeholder square brackets.
+Style Refs: 1
+  - template_1024x1536.png
+
+Corrections Needed:
+  - Remove square brackets around the ability text
+  - Fix typo in ability text to read 'the Tower' instead of 'thi Tower'
+  - Fix the ability text to read exactly: 'Look at the top four cards of the Tower. Add up to two of those cards that each have LORE three or more to your hand and put the other cards on top of the Tower in any order.' (it currently reads: '[Look at the top four cards of the Tower. Add up to two of those cards that each have LORE three or more to your hand and put the other cards on top of thi Tower in any order.]').
+============================================================
