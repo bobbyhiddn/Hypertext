@@ -12,6 +12,7 @@ from __future__ import annotations
 import json, re, sys
 from pathlib import Path
 from hypertext.cards import ability_grammar as ag
+import effects as FX
 
 ROOT = Path(__file__).resolve().parents[2]
 SERIES = Path("series/2026-Q1")
@@ -183,7 +184,11 @@ def spec_for(content: dict) -> dict:
     if re.search(r"exchanges that player's Lot for a new one", t, re.I):
         s["interact"] = {"kind": "exchange_lots", "who": "each"}
     s = {k: v for k, v in s.items() if v is not None}
-    return attach_branches(s, t)
+    s = attach_branches(s, t)
+    # The execution plan the game actually runs: effects in printed order. The
+    # slot vector above stays for the design gates, which classify shapes.
+    s["effects"] = FX.apply_scaling(FX.effects_of(t), t)
+    return s
 
 
 # A CONDITION with no consequent does nothing. Nine cards in the set print

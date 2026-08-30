@@ -21,24 +21,32 @@ RULES: list[tuple[str, tuple[str, ...]]] = [
     (r"\bgain (\w+) Letters?\b",                 ("gain_letter",)),
     (r"\bSpend (\w+) Letters?\b",                ("spend_letter",)),
     (r"\bloses (\w+) Letters?\b",                ("lose_letter",)),
-    (r"\bdraws? (\w+) cards? from the Tower\b",  ("draw", "add", "for_each", "each_player")),
-    (r"\bon the bottom of the Tower\b",          ("bury", "rest", "lose_card", "look_take")),
+    (r"\bdraws? (\w+) cards? from the Tower\b",  ("draw", "add", "for_each", "each_player",
+                                                  "give_draw")),
+    (r"\bon the bottom of the Tower\b",          ("bury", "rest", "lose_card", "look_take",
+                                                  "shift")),
     (r"\binto Sheol\b",                          ("discard", "reveal_take", "reveal_test",
-                                                  "mill_take", "lose_card", "discard_page",
-                                                  "each_player", "rest")),
+                                                  "mill_take", "mill", "lose_card",
+                                                  "discard_page", "each_player", "rest")),
     (r"\bshuffle\b",                             ("shuffle", "reset_tower")),
     (r"\bName a card type\b",                    ("name_type",)),
-    (r"\bLook at the (?:top|bottom)\b",          ("look_take", "peek", "mill_take")),
+    (r"\bLook at the (?:top|bottom)\b",          ("look_take", "peek", "mill_take", "look")),
     (r"\bcards? in Sheol\b",                     ("recover", "activate_sheol", "scale_structure",
-                                                  "mill_take")),
+                                                  "mill_take", "reset_tower")),
     (r"\bexchanges that player's Lot\b",         ("exchange_lots",)),
     (r"\bDiscard one of your Pages\b",           ("discard_page",)),
     (r"\breveals? one card from (?:that player's|your) hand\b",
                                                  ("reveal_hand", "stat_duel", "exchange_player")),
     (r"\bin front of you\b",                     ("wait",)),
-    (r"\bfor each\b",                            ("for_each", "scale_structure")),
+    (r"\bfor each\b",                            ("for_each", "scale_structure", "draw",
+                                                  "take", "recover")),
     (r"\bactivate\b",                            ("activate_sheol", "wait")),
     (r"\bexchanges? (?:one|a) card\b",           ("exchange_player",)),
+    (r"\bAdd (\w+) cards? from the (?:top|bottom) of the Tower\b", ("add",)),
+    (r"\bReveal the top\b",                      ("look", "look_take", "mill_take")),
+    (r"\bChoose another player\b",               ("choose_player", "lose_card", "lose_letter",
+                                                  "reveal_hand", "stat_duel", "exchange_player",
+                                                  "give_draw", "each_player")),
 ]
 
 
@@ -54,9 +62,9 @@ def kinds(spec: dict) -> set[str]:
         elif isinstance(v, list):
             for x in v:
                 walk(x)
-    for slot in ("cost", "interact", "core", "kicker", "condition", "persistent", "filter"):
+    for slot in ("cost", "interact", "core", "kicker", "condition", "persistent",
+                 "filter", "effects"):
         walk(spec.get(slot))
-    # a gated slot is fired by the condition, so it counts as covered
     return out
 
 
