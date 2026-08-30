@@ -188,6 +188,7 @@ def spec_for(content: dict) -> dict:
     # The execution plan the game actually runs: effects in printed order. The
     # slot vector above stays for the design gates, which classify shapes.
     s["effects"] = FX.apply_scaling(FX.effects_of(t), t)
+    s = mark_cost(s)
     return s
 
 
@@ -219,6 +220,26 @@ def _branches(t: str):
 
 def _same(a, b) -> bool:
     return bool(a) and bool(b) and all(b.get(k) == v for k, v in a.items())
+
+
+# A COST is not an effect: "costs are paid before effects", and an ability whose
+# cost cannot be paid does not happen. ADAM discards one of your Pages before it
+# rebuilds the Tower and draws four - with no Page, it should do nothing at all,
+# and instead it was skipping the price and keeping the goods.
+#
+# In the printed grammar a cost is the first clause and it takes something of
+# yours away, so that is exactly what gets marked.
+COST_KINDS = ("discard", "bury", "discard_page", "spend_letter")
+
+
+def mark_cost(spec: dict) -> dict:
+    effects = spec.get("effects") or []
+    if not effects:
+        return spec
+    first = effects[0]
+    if first.get("kind") in COST_KINDS and first.get("from", "hand") == "hand":
+        first["cost"] = True
+    return spec
 
 
 def attach_branches(spec: dict, t: str) -> dict:
