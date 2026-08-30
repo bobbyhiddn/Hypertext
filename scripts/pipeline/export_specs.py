@@ -13,6 +13,7 @@ import json, re, sys
 from pathlib import Path
 from hypertext.cards import ability_grammar as ag
 
+ROOT = Path(__file__).resolve().parents[2]
 SERIES = Path("series/2026-Q1")
 NUM = {"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9,"ten":10,
        "twelve":12,"fifteen":15,"twenty":20,"twenty-two":22,"a":1,"an":1}
@@ -30,6 +31,11 @@ def cost_of(t: str):
                   "filter":{"stat":m.group(2), "min":n(m.group(3))}}
     if re.search(r"\bDiscard one of your Pages\b", t, re.I): return {"kind":"discard_page", "n":1}
     m = re.search(r"^Put (\w+) card from your hand on the bottom of the Tower", t, re.I)
+    if m: return {"kind":"bury", "n":n(m.group(1),1), "from":"hand", "to":"tower_bottom"}
+    # ENOCH words the same cost as a choice: "Choose one card in your hand and put
+    # that chosen card on the bottom of the Tower, then draw two cards."
+    m = re.search(r"\bChoose (\w+) card in your hand and put that chosen card "
+                  r"on the bottom of the Tower\b", t, re.I)
     if m: return {"kind":"bury", "n":n(m.group(1),1), "from":"hand", "to":"tower_bottom"}
     return None
 
@@ -79,7 +85,9 @@ def core_of(t: str, kind: str):
         m2 = re.search(r"\badd (?:up to )?(\w+) of those cards\b", t, re.I)
         return {"kind":"mill_take", "mill":n(m.group(1),1) if m else 1, "take":n(m2.group(1),1) if m2 else 1}
     if kind in ("reveal_take","reveal_test"):
-        return {"kind":"reveal_take" if kind=="reveal_take" else "reveal_test", "n":1}
+        # FIRE reveals into Sheol; every other reveal core takes the card to hand
+        to = "sheol" if re.search(r"put that revealed card into Sheol", t, re.I) else "hand"
+        return {"kind":"reveal_take" if kind=="reveal_take" else "reveal_test", "n":1, "to":to}
     if kind == "reset_tower":  return {"kind":"reset_tower"}
     if kind == "activate_sheol": return {"kind":"activate_sheol", "where":"sheol"}
     if kind == "exchange_player": return {"kind":"exchange_player", "n":1}
@@ -171,7 +179,60 @@ def spec_for(content: dict) -> dict:
          "kicker": kicker_of(t, c["kicker"]), "condition": condition_of(t, c["condition"]),
          "interact": interact_of(t, c["interact"]), "persistent": persistent_of(t),
          "timing": {"kind": c["timing"]}, "text": t}
-    return {k: v for k, v in s.items() if v is not None}
+    # KINGDOM hands every player a new Lot; nothing in the 7-slot vector carries it.
+    if re.search(r"exchanges that player's Lot for a new one", t, re.I):
+        s["interact"] = {"kind": "exchange_lots", "who": "each"}
+    s = {k: v for k, v in s.items() if v is not None}
+    return attach_branches(s, t)
+
+
+# A CONDITION with no consequent does nothing. Nine cards in the set print
+# "if <test>, <reward>" and the reward has to survive extraction, so parse the
+# clause after the test into an effect of its own.
+def _clause_effect(clause: str):
+    if not clause: return None
+    clause = clause.split(".")[0]
+    m = re.search(r"\bgain (\w+) Letters?\b", clause, re.I)
+    if m: return {"kind":"gain_letter", "n":n(m.group(1),1)}
+    m = re.search(r"\bdraw (\w+) cards? from the Tower\b", clause, re.I)
+    if m: return {"kind":"draw", "n":n(m.group(1),1)}
+    m = re.search(r"\badd (up to )?(\w+) cards? from Sheol to your hand\b", clause, re.I)
+    if m: return {"kind":"recover", "n":n(m.group(2),1), "up_to": bool(m.group(1))}
+    return None
+
+
+def _branches(t: str):
+    """The 'then' and 'otherwise' clauses of a printed conditional."""
+    m = re.search(r"\b[Ii]f\b(.*)$", t, re.S)
+    if not m: return None, None
+    rest = m.group(1)
+    i = rest.find(",")
+    if i < 0: return None, None
+    parts = re.split(r";\s*otherwise,?\s*", rest[i+1:], maxsplit=1, flags=re.I)
+    return parts[0], (parts[1] if len(parts) > 1 else None)
+
+
+def _same(a, b) -> bool:
+    return bool(a) and bool(b) and all(b.get(k) == v for k, v in a.items())
+
+
+def attach_branches(spec: dict, t: str) -> dict:
+    """Give the CONDITION its consequent, or mark that it gates the CORE."""
+    cond = spec.get("condition")
+    if not cond: return spec
+    met, otherwise = _branches(t)
+    core, kicker = spec.get("core"), spec.get("kicker")
+    e_met, e_not = _clause_effect(met), _clause_effect(otherwise)
+    if e_met:
+        if _same(e_met, core):     cond["gates"], cond["gates_when"] = "core", "met"
+        elif _same(e_met, kicker): cond["gates"], cond["gates_when"] = "kicker", "met"
+        else:                      cond["when_met"] = e_met
+    if e_not:
+        # CONFUSE: the CORE is the *otherwise* branch, not the reward
+        if _same(e_not, core): cond["gates"], cond["gates_when"] = "core", "not"
+        else:                  cond["when_not"] = e_not
+    return spec
+
 
 def lua(v, indent=2):
     pad = " " * indent
@@ -197,6 +258,36 @@ def main(out: Path):
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"wrote {len(specs)} specs -> {out}")
     return specs
+def export_lots(out: Path):
+    """Lot recipes, structure intact.
+
+    The first export flattened every recipe to a list of card types, which
+    silently destroyed the seven Lots whose recipes are *counted groups*
+    ("4 of one type + 1 any") rather than fixed types - they could never be
+    matched. templates/phases.yml is upstream; keep recipe.kind.
+    """
+    import yaml
+    doc = yaml.safe_load((ROOT / "templates" / "phases.yml").read_text(encoding="utf-8"))
+    sizes = {5: (8, 2, 1), 6: (10, 2, 1), 7: (14, 3, 2)}
+    lots = []
+    for ph in doc["phases"]:
+        cv, owner, visitor = sizes[ph["cards"]]
+        lots.append({"id": ph["id"], "name": ph["name"], "cards": ph["cards"],
+                     "recipe": ph["recipe"], "display": ph["display"],
+                     "chapter_value": cv, "owner_letters": owner, "visitor_letters": visitor})
+    lines = ["-- GENERATED by scripts/pipeline/export_specs.py in the Hypertext repo.",
+             "-- Do not edit by hand: templates/phases.yml is upstream of this file.",
+             "return {"]
+    for l in lots:
+        lines.append(f"  [{l['id']}] = " + lua(l) + ",")
+    lines.append("}")
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"wrote {len(lots)} lots -> {out}")
+    return lots
+
 
 if __name__ == "__main__":
-    main(Path(sys.argv[1] if len(sys.argv) > 1 else "/tmp/cards.lua"))
+    if len(sys.argv) > 1 and sys.argv[1] == "lots":
+        export_lots(Path(sys.argv[2] if len(sys.argv) > 2 else "/tmp/lots.lua"))
+    else:
+        main(Path(sys.argv[1] if len(sys.argv) > 1 else "/tmp/cards.lua"))
