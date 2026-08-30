@@ -130,7 +130,7 @@ serve in either role:
 | Role | Lifetime | Function |
 |------|----------|----------|
 | **Chapter Lot** | Current Chapter | One shared recipe everyone may Record against. Recording it creates a **Page** worth the Lot's Chapter Value. |
-| **Portion Lot** | Current Chapter | A personal recipe assigned to one player. Anyone may Record against it for **Letters**; no Page is created. |
+| **Portion Lot** | Current Chapter | A personal recipe **dealt** to one player. Anyone may Record against it for **Letters**; no Page is created. |
 
 ### Lot values by size
 
@@ -246,12 +246,15 @@ Portion Lot per player, drawn from a single Lot deck.
 1. Gather all 90 Word Cards and shuffle them to form the Tower.
 2. Move the top card of the Tower face-up to Sheol. This seeded card cannot be Redeemed.
 3. Reveal one Chapter Lot from the Lot deck that has not been used this game.
-4. Deal two Lot Cards face-down to each player as Portion Lot candidates.
-5. Each player chooses one candidate as their Portion Lot, before receiving Word Cards.
-6. Reveal the chosen Portion Lots face-up in front of their owners. Return the unchosen candidates to the Lot deck.
-7. Deal seven Word Cards to each player.
-8. Reset Letters, Wreaths, Record markers, Redeem markers, and temporary effects.
-9. Establish the starting player. The starting player rotates clockwise after each Chapter.
+4. Deal one Lot Card face-up to each player as their Portion Lot. It is **dealt, not chosen** — a portion is what falls to you.
+5. Deal seven Word Cards to each player.
+6. Reset Letters, Wreaths, Record markers, Redeem markers, and temporary effects.
+7. Establish the starting player. The starting player rotates clockwise after each Chapter.
+
+No player picks their Portion Lot. The game is named for casting lots, the
+tiebreaker is *"the lot fell on Matthias"*, and a portion is allotted rather than
+selected — a Lot you did not choose is the constraint you have to play around,
+and choosing it away is choosing the game away.
 
 ---
 
