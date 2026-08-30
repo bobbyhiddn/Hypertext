@@ -14,6 +14,44 @@ set one is signed off · **done** = kept for the record.
 
 ---
 
+## Standing constraint: Actions cannot open pull requests
+
+**Deliberately off.** `can_approve_pull_request_reviews` is `false` on this repository, which is
+GitHub's single switch for *"allow GitHub Actions to create and approve pull requests"*. It blocks
+both halves: a workflow using `github.token` can neither open a PR nor approve one.
+
+This is a real constraint on the generation pipelines, not a free win. Three workflows open a pull
+request as their last step, and all three will fail there while the switch is off:
+
+| Workflow | Step | Token |
+| --- | --- | --- |
+| `daily-hypertext.yml` | `gh pr create` for each generated card | `PR_BOT_TOKEN` → `github.token` |
+| `demo-hypertext.yml` | `gh pr create` for the random demo card | `github.token` |
+| `template-refinement-card.yml` | `gh pr create` for the refined template | `PR_BOT_TOKEN` → `github.token` |
+
+`revise-hypertext.yml` and `daily-hypertext-continue.yml` only *comment* on a pull request that
+already exists, which the switch does not touch. Neither do the gates, audits or the Pages deploy.
+
+Nothing is broken today: every one of those five workflows is `workflow_dispatch` only — there is
+no `schedule:` trigger anywhere in `.github/workflows/` — so none of them fires unattended, and set
+one was generated locally rather than through them. The cost is deferred until the day a batch is
+driven from CI again.
+
+When that day comes there are two ways back, and they are not equivalent:
+
+1. **Re-enable the switch** — `gh api -X PUT repos/bobbyhiddn/Hypertext/actions/permissions/workflow
+   -f default_workflow_permissions=read -F can_approve_pull_request_reviews=true`. One command, but
+   it restores *approval* as well as creation, so a workflow could self-approve into `main`.
+2. **Add a `PR_BOT_TOKEN` secret** — a fine-grained PAT with `pull_requests: write` on this
+   repository only. The three workflows already prefer it over `github.token`, so nothing else has
+   to change, and the Actions switch stays off. `demo-hypertext.yml` hardcodes `github.token` and
+   would need the same `${{ secrets.PR_BOT_TOKEN || github.token }}` fallback as its siblings.
+
+Option 2 is the one to take. Option 1 is the shortcut that gives an automated actor a vote on what
+lands. Either way, the branch protection ruleset on `main` still stands: no force-push, no deletion.
+
+---
+
 ## Now
 
 ### 1. Playtest three, and the rules that come out of it
@@ -167,8 +205,8 @@ point it at their own subject.
 - **The public site** — write-up and card gallery on GitHub Pages, built by `deploy-gallery.yml`
 - **Licensing** — PolyForm Small Business for the software, CC BY-NC-SA 4.0 for the cards and art
 - **Repository hardening** — Dependabot alerts and updates, secret scanning with push protection,
-  actions restricted to GitHub-owned and verified, read-only default workflow token, and a ruleset
-  blocking force-push and deletion on `main`
+  actions restricted to GitHub-owned and verified, read-only default workflow token, Actions barred
+  from creating or approving pull requests, and a ruleset blocking force-push and deletion on `main`
 - **Model drift fixed** — `review.py` had fallen back to `gemini-2.0-flash` and Lot grading was
   pinned to `gemini-3-pro-preview`; both ids are gone from the API. Model choice now comes from
   `gemini.config` and a test fails on any id that is not the configured pair

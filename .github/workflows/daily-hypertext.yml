@@ -122,6 +122,10 @@ jobs:
           git commit -m "Daily Hypertext: ${DATE} (pending review)" || exit 0
           git push --set-upstream origin "${BRANCH}"
           gh label create "daily-hypertext" --description "Daily Hypertext card awaiting review" --color "0E8A16" --force || true
+          # NOTE: Actions are barred from creating pull requests on this repository
+          #       ("allow GitHub Actions to create and approve pull requests" is off),
+          #       so this step fails unless PR_BOT_TOKEN is set. See plans/roadmap.md,
+          #       "Standing constraint: Actions cannot open pull requests".
           gh pr create \
             --title "Daily Hypertext: ${DATE} (#${VARIANT}) - ${CARD_SLUG}" \
             --body "## Staged daily card (Option ${VARIANT} of 3)

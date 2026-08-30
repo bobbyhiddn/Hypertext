@@ -52,4 +52,8 @@ jobs:
           git config user.email "hypertext-bot@users.noreply.github.com"
           git commit -m "Demo Hypertext: ${DATE} (${CARD_SLUG})" || exit 0
           git push --set-upstream origin "${BRANCH}"
+          # NOTE: Actions are barred from creating pull requests on this repository
+          #       ("allow GitHub Actions to create and approve pull requests" is off),
+          #       so this step fails unless PR_BOT_TOKEN is set. See plans/roadmap.md,
+          #       "Standing constraint: Actions cannot open pull requests".
           gh pr create --title "Demo Hypertext: ${DATE} (${CARD_SLUG})" --body "Randomly-generated demo card (agent-picked word + recipe + render)." --base main --head "${BRANCH}"
