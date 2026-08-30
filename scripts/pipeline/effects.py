@@ -289,6 +289,13 @@ def _condition(test: str, t: str) -> dict | None:
 
 def effects_of(text: str) -> list[dict[str, Any]]:
     """The card's execution plan: effects in printed order, conditionals nested."""
+    # "At the start of your next turn, ..." - everything after it is deferred, and
+    # firing it now would be the card doing its whole job a turn early.
+    m = re.search(r"\bAt the start of your next turn,\s*", text)
+    if m:
+        return (effects_of(text[:m.start()])
+                + [{"kind": "delay", "when": "next_turn",
+                    "effects": effects_of(text[m.end():])}])
     head, test, branches = _branches(text)
     if not branches:
         return scan(text)
