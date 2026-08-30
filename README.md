@@ -8,6 +8,9 @@ in this repository, gated card by card, signed, and printed for playtesting.
 **Status: pre-alpha.** Two playtested iterations, a third on the way, one physical deck
 ordered from The Game Crafter. Publication is targeted for 2027.
 
+- **Play it in your browser:** <https://hypertext-game.fly.dev> — solitaire against the
+  clock, or against the computer. No install, phone or desktop. Source:
+  [Hypertext — Game](https://github.com/bobbyhiddn/Hypertext-Game)
 - **The game, how it plays, and how it was built:** <https://bobbyhiddn.github.io/Hypertext/>
 - **Every card face:** <https://bobbyhiddn.github.io/Hypertext/gallery/>
 - **Rules of play:** [docs/rules.md](docs/rules.md)
