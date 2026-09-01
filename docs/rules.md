@@ -452,7 +452,24 @@ Each player's Chapter score is:
 > **Chapter Value of each Page created this Chapter**
 > **+ remaining Letters × 3**
 > **+ Wreath points**
-> **− 1 per card remaining in hand**
+> **− the held cost of every card remaining in hand**
+
+**Held cost** (2026-09-01 erratum). A card left in your hand costs by rarity, not
+a flat point: a card you could not afford to play is the most expensive thing to
+be caught holding.
+
+| Rarity | Held cost |
+|--------|-----------|
+| **COMMON** | −1 |
+| **UNCOMMON** | −1 |
+| **RARE** | −2 |
+| **GLORIOUS** | −3 |
+
+The steeper −1 / −2 / −3 / −5 was measured and set aside: it doubles what an
+average card costs to hold and takes solitaire over three turns to a mean near
+zero with two in five games finishing negative. The ceiling is unchanged either
+way, because a player who empties their hand pays nothing — a harsher table only
+digs out the floor.
 
 - Spent Letters score nothing.
 - Records to Portion Lots do not score directly; their value is the Letters they earned.
@@ -550,7 +567,7 @@ If players are tied for the highest score after the final Chapter:
 | Visitor Letters (5 / 6 / 7-card) | 1 / 1 / 2 |
 | Record Wreath · Empty Wreath | +2 · +2 |
 | Retained Letter | 3 points |
-| Card left in hand | −1 point |
+| Card left in hand | −1 COMMON · −1 UNCOMMON · −2 RARE · −3 GLORIOUS |
 
 ### Alpha hypotheses
 
