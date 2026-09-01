@@ -150,10 +150,9 @@ split: `PORTION VALUE: 1/2 LETTERS` on 5- and 6-card Lots and
 *visitor Letters / owner Letters*. Canonical faces: `templates/lot/v002/`.
 
 Only Chapter Lot Records create Pages, and the Chapter Lot may be Recorded **as
-many times as you can fill it** — so a Chapter is not bounded by one Page per
-player. A hand that keeps matching the shared recipe keeps making Pages, which is
-what makes drawing wide worth doing. Portion Lots are the ones limited to once
-each per Chapter.
+many times as you can fill it** — so a Chapter is bounded by the cards you can
+draw, not by one Page per player. A hand that keeps matching the shared recipe
+keeps making Pages, which is what makes drawing wide worth doing.
 
 ### The 30 Lots
 
@@ -250,7 +249,7 @@ Portion Lot per player, drawn from a single Lot deck.
 3. Reveal one Chapter Lot from the Lot deck that has not been used this game.
 4. Deal one Lot Card face-up to each player as their Portion Lot. It is **dealt, not chosen** — a portion is what falls to you.
 5. Deal seven Word Cards to each player.
-6. Reset Letters, Wreaths, Record markers, Redeem markers, and temporary effects.
+6. Reset Letters, Wreaths, Redeem markers, and temporary effects.
 7. Establish the starting player. The starting player rotates clockwise after each Chapter.
 
 No player picks their Portion Lot. The game is named for casting lots, the
@@ -325,9 +324,13 @@ You may Record exact card combinations from your hand that match any active
 Lot, and may Record several in one Record stage.
 
 - The **Chapter Lot** has no limit: Record it as many times as you can fill it,
-  making a Page each time.
-- Each **Portion Lot** may be Recorded **once per Chapter by each player** — your
-  own once, and each other player's once.
+  making a Page each time. What stops you is your hand — every Record spends five
+  to seven cards, and the Tower only gives you so many.
+- A **Portion Lot** pays **once per Chapter to each player** — your own portion is
+  a single allotment, and each other player's is one visit.
+
+The Chapter Lot pays roughly double a Portion Lot for the same cards, so it is
+what you fill when you can. The Portion Lots are what you fill when you cannot.
 
 | You Record… | Matching cards go to | You gain | Page created? |
 |-------------|----------------------|----------|---------------|
@@ -341,7 +344,6 @@ Procedure:
 2. Reveal the required cards from your hand.
 3. Declare any TITLE substitution.
 4. Verify the recipe matches exactly.
-5. If it was a Portion Lot, mark yourself as having Recorded it this Chapter.
 6. If you Recorded the Chapter Lot, place the cards face-up in your Pages. Otherwise move them to Sheol and take the Letters.
 
 The first player to Record the Chapter Lot takes the **Record Wreath**.
@@ -494,7 +496,7 @@ After scoring:
 4. Confirm all 90 cards are present.
 5. Shuffle them into a fresh Tower.
 6. Clear all Pages.
-7. Reset Letters, Wreaths, Record markers, and Redeem markers.
+7. Reset Letters, Wreaths, and Redeem markers.
 8. End all temporary effects.
 9. Rotate the starting player clockwise.
 10. Begin the next Chapter Setup: reveal the next unused Chapter Lot and deal new Portion Lot candidates.
