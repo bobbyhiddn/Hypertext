@@ -149,9 +149,11 @@ split: `PORTION VALUE: 1/2 LETTERS` on 5- and 6-card Lots and
 `PORTION VALUE: 2/3 LETTERS` on 7-card Lots — read it as
 *visitor Letters / owner Letters*. Canonical faces: `templates/lot/v002/`.
 
-Because only Chapter Lot Records create Pages, and every player may Record the
-Chapter Lot once per Chapter, the points available in a Chapter are bounded by
-one Page per player plus Letters and Wreaths.
+Only Chapter Lot Records create Pages, and the Chapter Lot may be Recorded **as
+many times as you can fill it** — so a Chapter is not bounded by one Page per
+player. A hand that keeps matching the shared recipe keeps making Pages, which is
+what makes drawing wide worth doing. Portion Lots are the ones limited to once
+each per Chapter.
 
 ### The 30 Lots
 
@@ -320,8 +322,12 @@ Activated cards and their costs cannot be Redeemed.
 ### 3. Record
 
 You may Record exact card combinations from your hand that match any active
-Lot. Every player may Record each active Lot **once per Chapter**, and may
-Record several different Lots in one Record stage.
+Lot, and may Record several in one Record stage.
+
+- The **Chapter Lot** has no limit: Record it as many times as you can fill it,
+  making a Page each time.
+- Each **Portion Lot** may be Recorded **once per Chapter by each player** — your
+  own once, and each other player's once.
 
 | You Record… | Matching cards go to | You gain | Page created? |
 |-------------|----------------------|----------|---------------|
@@ -335,7 +341,7 @@ Procedure:
 2. Reveal the required cards from your hand.
 3. Declare any TITLE substitution.
 4. Verify the recipe matches exactly.
-5. Mark yourself as having Recorded that Lot this Chapter.
+5. If it was a Portion Lot, mark yourself as having Recorded it this Chapter.
 6. If you Recorded the Chapter Lot, place the cards face-up in your Pages. Otherwise move them to Sheol and take the Letters.
 
 The first player to Record the Chapter Lot takes the **Record Wreath**.
